@@ -9,7 +9,7 @@ namespace WrathForged.Common
     {
         public static ContainerBuilder RegisterCommon(this ContainerBuilder builder, IConfiguration configuration)
         {
-            Console.ForegroundColor = ConsoleColor.Green;
+            Console.ForegroundColor = ConsoleColor.DarkRed;
             Console.WriteLine(@"```````````````````````````````````````````````````````````````````````````````````````");
             Console.WriteLine(@"███████╗ ██████╗ ██████╗  ██████╗ ███████╗██████╗      ██████╗ ██████╗ ██████╗ ███████╗");
             Console.WriteLine(@"██╔════╝██╔═══██╗██╔══██╗██╔════╝ ██╔════╝██╔══██╗    ██╔════╝██╔═══██╗██╔══██╗██╔════╝");
@@ -27,6 +27,7 @@ namespace WrathForged.Common
              .Enrich.FromLogContext()
              .CreateLogger();
 
+            builder.RegisterInstance(configuration).As<IConfiguration>().SingleInstance();
             builder.RegisterType<ClassFactory>().SingleInstance();
             builder.RegisterInstance(Log.Logger).SingleInstance();
             return builder;

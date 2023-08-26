@@ -1,6 +1,7 @@
 ﻿using Autofac;
 using Microsoft.Extensions.Configuration;
 using Serilog;
+using WrathForged.Authorization.Server;
 using WrathForged.Authorization.Server.Workers;
 using WrathForged.Common;
 using WrathForged.Database;
@@ -12,10 +13,9 @@ var configBuilder = new ConfigurationBuilder()
 var configuration = configBuilder.Build() as IConfiguration;
 
 var builder = new ContainerBuilder();
-builder.RegisterInstance(configuration).As<IConfiguration>().SingleInstance();
 builder.RegisterCommon(configuration);
 builder.RegisterDatabase(configuration);
-builder.RegisterType<RealmListCache>().SingleInstance();
+builder.RegisterAuth(configuration);
 var container = builder.Build();
 
 container.InitializeCommon();
