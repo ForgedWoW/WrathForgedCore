@@ -1,4 +1,5 @@
-﻿using Autofac;
+﻿using System.Diagnostics;
+using Autofac;
 using Microsoft.Extensions.Configuration;
 using Serilog;
 
@@ -8,6 +9,19 @@ namespace WrathForged.Common
     {
         public static ContainerBuilder RegisterCommon(this ContainerBuilder builder, IConfiguration configuration)
         {
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine(@"```````````````````````````````````````````````````````````````````````````````````````");
+            Console.WriteLine(@"███████╗ ██████╗ ██████╗  ██████╗ ███████╗██████╗      ██████╗ ██████╗ ██████╗ ███████╗");
+            Console.WriteLine(@"██╔════╝██╔═══██╗██╔══██╗██╔════╝ ██╔════╝██╔══██╗    ██╔════╝██╔═══██╗██╔══██╗██╔════╝");
+            Console.WriteLine(@"█████╗  ██║   ██║██████╔╝██║  ███╗█████╗  ██║  ██║    ██║     ██║   ██║██████╔╝█████╗  ");
+            Console.WriteLine(@"██╔══╝  ██║   ██║██╔══██╗██║   ██║██╔══╝  ██║  ██║    ██║     ██║   ██║██╔══██╗██╔══╝  ");
+            Console.WriteLine(@"██║     ╚██████╔╝██║  ██║╚██████╔╝███████╗██████╔╝    ╚██████╗╚██████╔╝██║  ██║███████╗");
+            Console.WriteLine(@"╚═╝      ╚═════╝ ╚═╝  ╚═╝ ╚═════╝ ╚══════╝╚═════╝      ╚═════╝ ╚═════╝ ╚═╝  ╚═╝╚══════╝");
+            Console.WriteLine($"{Process.GetCurrentProcess().ProcessName.PadLeft(87)}");
+            Console.WriteLine(@"```````````````````````````````````````````````````````````````````````````````````````");
+            Console.WriteLine("https://github.com/ForgedWoW/WrathForgedCore \r\n");
+            Console.ResetColor();
+
             Log.Logger = new LoggerConfiguration()
              .ReadFrom.Configuration(configuration)
              .Enrich.FromLogContext()

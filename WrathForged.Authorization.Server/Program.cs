@@ -13,8 +13,8 @@ var configuration = configBuilder.Build() as IConfiguration;
 
 var builder = new ContainerBuilder();
 builder.RegisterInstance(configuration).As<IConfiguration>().SingleInstance();
-builder.RegisterDatabase(configuration);
 builder.RegisterCommon(configuration);
+builder.RegisterDatabase(configuration);
 builder.RegisterType<RealmListCache>().SingleInstance();
 var container = builder.Build();
 

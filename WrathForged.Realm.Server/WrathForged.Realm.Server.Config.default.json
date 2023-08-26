@@ -25,7 +25,8 @@
             {
               "Name": "File",
               "Args": {
-                "path": "Logs/log-{Date}.log",
+                "rollingInterval": "Day",
+                "path": "Logs/WrathForged.Realm.log..log",
                 "formatter": "Serilog.Formatting.Compact.CompactJsonFormatter, Serilog.Formatting.Compact"
               }
             }
@@ -45,7 +46,8 @@
                   {
                     "Name": "File",
                     "Args": {
-                      "path": "Logs/{SourceContext}-{Date}.log",
+                      "rollingInterval": "Day",
+                      "path": "Logs/WrathForged.Authorization.{SourceContext}..log",
                       "formatter": "Serilog.Formatting.Compact.CompactJsonFormatter, Serilog.Formatting.Compact"
                     }
                   }
