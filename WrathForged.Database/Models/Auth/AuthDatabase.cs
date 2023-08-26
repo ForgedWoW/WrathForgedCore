@@ -4,13 +4,13 @@ using Microsoft.EntityFrameworkCore;
 
 namespace WrathForged.Database.Models.Auth;
 
-public partial class AuthContext : DbContext
+public partial class AuthDatabase : DbContext
 {
-    public AuthContext()
+    public AuthDatabase()
     {
     }
 
-    public AuthContext(DbContextOptions<AuthContext> options)
+    public AuthDatabase(DbContextOptions<AuthDatabase> options)
         : base(options)
     {
     }

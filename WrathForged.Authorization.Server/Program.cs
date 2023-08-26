@@ -24,3 +24,6 @@ builder.RegisterInstance(Log.Logger).SingleInstance();
 var container = builder.Build();
 
 container.Resolve<ClassFactory>().Initialize(container);
+
+
+Log.CloseAndFlush();

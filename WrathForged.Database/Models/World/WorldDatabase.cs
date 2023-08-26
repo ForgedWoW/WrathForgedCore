@@ -4,13 +4,13 @@ using Microsoft.EntityFrameworkCore;
 
 namespace WrathForged.Database.Models.World;
 
-public partial class WorldContext : DbContext
+public partial class WorldDatabase : DbContext
 {
-    public WorldContext()
+    public WorldDatabase()
     {
     }
 
-    public WorldContext(DbContextOptions<WorldContext> options)
+    public WorldDatabase(DbContextOptions<WorldDatabase> options)
         : base(options)
     {
     }

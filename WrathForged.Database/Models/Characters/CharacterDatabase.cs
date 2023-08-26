@@ -4,13 +4,13 @@ using Microsoft.EntityFrameworkCore;
 
 namespace WrathForged.Database.Models.Characters;
 
-public partial class CharactersContext : DbContext
+public partial class CharacterDatabase : DbContext
 {
-    public CharactersContext()
+    public CharacterDatabase()
     {
     }
 
-    public CharactersContext(DbContextOptions<CharactersContext> options)
+    public CharacterDatabase(DbContextOptions<CharacterDatabase> options)
         : base(options)
     {
     }
