@@ -1,6 +1,6 @@
 ﻿using System.Reflection;
 
-namespace WrathForged.Models
+namespace WrathForged.Common
 {
     public static class IOHelpers
     {

@@ -2,11 +2,11 @@
 using Autofac;
 using Autofac.Core;
 
-namespace WrathForged.Models
+namespace WrathForged.Common
 {
     public class ClassFactory
     {
-        public IContainer Container { get; private set; }
+        public IContainer? Container { get; private set; }
 
         public void Initialize(IContainer container)
         {
@@ -68,7 +68,7 @@ namespace WrathForged.Models
             };
         }
 
-        public IEnumerable<T> ResolveAllNonRegistered<T>(string scriptDir = null)
+        public IEnumerable<T> ResolveAllNonRegistered<T>(string? scriptDir = null)
         {
             var assemblies = IOHelpers.GetAllAssembliesInDir(scriptDir);
 

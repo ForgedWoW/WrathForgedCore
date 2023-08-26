@@ -5,7 +5,7 @@ namespace WrathForged.Database.Models.Auth;
 
 public partial class BuildInfo
 {
-    public int Build { get; set; }
+    public uint Build { get; set; }
 
     public int? MajorVersion { get; set; }
 
