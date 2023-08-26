@@ -1,0 +1,67 @@
+{
+  "ConnectionStrings": {
+    "auth": "server=23.116.116.43; database=auth; user=trinity; password=trinity",
+    "world": "server=23.116.116.43; database=world; user=trinity; password=trinity",
+    "characters": "server=23.116.116.43; database=characters; user=trinity; password=trinity"
+  },
+  "Serilog": {
+    "Using": [
+      "Serilog.Sinks.Console",
+      "Serilog.Sinks.File",
+      "Serilog.Exceptions",
+      "Serilog.Sinks.Async"
+    ],
+    "MinimumLevel": "Debug",
+    "WriteTo": [
+      {
+        "Name": "Console"
+      },
+      {
+        "Name": "Async",
+        "batchSizeLimit": 100,
+        "period": "00:00:02",
+        "Args": {
+          "configure": [
+            {
+              "Name": "File",
+              "Args": {
+                "path": "Logs/log-{Date}.log",
+                "formatter": "Serilog.Formatting.Compact.CompactJsonFormatter, Serilog.Formatting.Compact"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Name": "Async",
+        "batchSizeLimit": 100,
+        "period": "00:00:02",
+        "Args": {
+          "configure": [
+            {
+              "Name": "SubLogger",
+              "Args": {
+                "configure": [
+                  {
+                    "Name": "File",
+                    "Args": {
+                      "path": "Logs/{SourceContext}-{Date}.log",
+                      "formatter": "Serilog.Formatting.Compact.CompactJsonFormatter, Serilog.Formatting.Compact"
+                    }
+                  }
+                ],
+                "filter": "Contains(Properties['SourceContext'], SourceContext)"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "Enrich": [
+      "FromLogContext",
+      "WithMachineName",
+      "WithThreadId",
+      "WithExceptionDetails"
+    ]
+  }
+}
