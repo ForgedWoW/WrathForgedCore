@@ -9,13 +9,13 @@ using WrathForged.Database.Models.Auth;
 
 namespace WrathForged.Authorization.Server.Workers
 {
-    public class RealmList
+    public class RealmListCache
     {
         private readonly AuthDatabase _authDatabase;
         private Dictionary<uint, Realmlist> _realms = new Dictionary<uint, Realmlist>();
         Timer _timer;
 
-        public RealmList(AuthDatabase authDatabase, IConfiguration configuration)
+        public RealmListCache(AuthDatabase authDatabase, IConfiguration configuration)
         {
             _authDatabase = authDatabase;
             _timer = new Timer(Update, null, 0, TimeSpan.FromSeconds(configuration.GetDefaultValue("RealmStatusUpdate", 20)).Milliseconds);
