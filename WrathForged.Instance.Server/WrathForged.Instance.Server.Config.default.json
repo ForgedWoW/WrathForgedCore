@@ -1,8 +1,8 @@
 {
   "ConnectionStrings": {
-    "auth": "server=23.116.116.43; database=auth; user=trinity; password=trinity",
-    "world": "server=23.116.116.43; database=world; user=trinity; password=trinity",
-    "characters": "server=23.116.116.43; database=characters; user=trinity; password=trinity"
+    "auth": "server=127.0.0.1; database=auth; user=trinity; password=trinity",
+    "world": "server=127.0.0.1; database=world; user=trinity; password=trinity",
+    "characters": "server=127.0.0.1; database=characters; user=trinity; password=trinity"
   },
   "Serilog": {
     "Using": [
