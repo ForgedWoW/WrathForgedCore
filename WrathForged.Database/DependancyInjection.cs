@@ -11,9 +11,9 @@ namespace WrathForged.Database
     {
         public static ContainerBuilder RegisterDatabase(this ContainerBuilder builder, IConfiguration configuration)
         {
-            builder.RegisterType<AuthDatabase>().WithParameter("options", new DbContextOptionsBuilder<AuthDatabase>().UseMySql(ServerVersion.AutoDetect(configuration.GetConnectionString("auth")))).InstancePerLifetimeScope();
-            builder.RegisterType<WorldDatabase>().WithParameter("options", new DbContextOptionsBuilder<WorldDatabase>().UseMySql(ServerVersion.AutoDetect(configuration.GetConnectionString("world")))).InstancePerLifetimeScope();
-            builder.RegisterType<CharacterDatabase>().WithParameter("options", new DbContextOptionsBuilder<CharacterDatabase>().UseMySql(ServerVersion.AutoDetect(configuration.GetConnectionString("characters")))).InstancePerLifetimeScope();
+            builder.RegisterType<AuthDatabase>().WithParameter("options", new DbContextOptionsBuilder<AuthDatabase>().UseMySql(configuration.GetConnectionString("auth"), ServerVersion.AutoDetect(configuration.GetConnectionString("auth"))).Options).InstancePerLifetimeScope();
+            builder.RegisterType<WorldDatabase>().WithParameter("options", new DbContextOptionsBuilder<WorldDatabase>().UseMySql(configuration.GetConnectionString("world"), ServerVersion.AutoDetect(configuration.GetConnectionString("world"))).Options).InstancePerLifetimeScope();
+            builder.RegisterType<CharacterDatabase>().WithParameter("options", new DbContextOptionsBuilder<CharacterDatabase>().UseMySql(configuration.GetConnectionString("characters"), ServerVersion.AutoDetect(configuration.GetConnectionString("characters"))).Options).InstancePerLifetimeScope();
             return builder;
         }
     }
