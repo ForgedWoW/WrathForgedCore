@@ -1,4 +1,6 @@
-﻿using System.Reflection;
+﻿// Copyright (c) Forged WoW LLC <https://github.com/ForgedWoW/WrathForgedCore>
+// Licensed under GPL-3.0 license. See <https://github.com/ForgedWoW/WrathForgedCore/blob/master/LICENSE> for full information.
+using System.Reflection;
 using Autofac;
 using Autofac.Core;
 
@@ -25,8 +27,8 @@ namespace WrathForged.Common
 
         public T ResolveWithPositionalParameters<T>(params object[] parameters)
         {
-            var positionalParameters = new Parameter[parameters.Length];
-            for (var i = 0; i < parameters.Length; i++)
+            Parameter[] positionalParameters = new Parameter[parameters.Length];
+            for (int i = 0; i < parameters.Length; i++)
                 positionalParameters[i] = new PositionalParameter(i, parameters[i]);
 
             return Container.Resolve<T>(positionalParameters);
@@ -41,8 +43,8 @@ namespace WrathForged.Common
         public T ActiveNonRegistered<T>(params object[] args) where T : class
         {
             args ??= Array.Empty<object>();
-            var constructors = typeof(T).GetConstructors();
-            var highest = constructors.OrderByDescending(x => x.GetParameters().Length).First();
+            ConstructorInfo[] constructors = typeof(T).GetConstructors();
+            ConstructorInfo highest = constructors.OrderByDescending(x => x.GetParameters().Length).First();
 
             return highest.GetParameters().Length switch
             {
@@ -70,13 +72,12 @@ namespace WrathForged.Common
 
         public IEnumerable<T> ResolveAllNonRegistered<T>(string? scriptDir = null)
         {
-            var assemblies = IOHelpers.GetAllAssembliesInDir(scriptDir);
+            List<Assembly> assemblies = IOHelpers.GetAllAssembliesInDir(scriptDir);
 
-            foreach (var type in from assembly in assemblies from type in assembly.GetTypes() where IOHelpers.DoesTypeSupportInterface(type, typeof(T)) select type)
+            foreach (Type? type in from assembly in assemblies from type in assembly.GetTypes() where IOHelpers.DoesTypeSupportInterface(type, typeof(T)) select type)
             {
-
-                var constructors = type.GetConstructors();
-                var highest = constructors.OrderByDescending(x => x.GetParameters().Length).First();
+                ConstructorInfo[] constructors = type.GetConstructors();
+                ConstructorInfo highest = constructors.OrderByDescending(x => x.GetParameters().Length).First();
 
                 yield return highest.GetParameters().Length switch
                 {

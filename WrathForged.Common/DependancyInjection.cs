@@ -1,4 +1,6 @@
-﻿using System.Diagnostics;
+﻿// Copyright (c) Forged WoW LLC <https://github.com/ForgedWoW/WrathForgedCore>
+// Licensed under GPL-3.0 license. See <https://github.com/ForgedWoW/WrathForgedCore/blob/master/LICENSE> for full information.
+using System.Diagnostics;
 using Autofac;
 using Microsoft.Extensions.Configuration;
 using Serilog;
@@ -17,7 +19,7 @@ namespace WrathForged.Common
             Console.WriteLine(@"██╔══╝  ██║   ██║██╔══██╗██║   ██║██╔══╝  ██║  ██║    ██║     ██║   ██║██╔══██╗██╔══╝  ");
             Console.WriteLine(@"██║     ╚██████╔╝██║  ██║╚██████╔╝███████╗██████╔╝    ╚██████╗╚██████╔╝██║  ██║███████╗");
             Console.WriteLine(@"╚═╝      ╚═════╝ ╚═╝  ╚═╝ ╚═════╝ ╚══════╝╚═════╝      ╚═════╝ ╚═════╝ ╚═╝  ╚═╝╚══════╝");
-            Console.WriteLine($"{Process.GetCurrentProcess().ProcessName.PadLeft(87)}");
+            Console.WriteLine($"{Process.GetCurrentProcess().ProcessName,87}");
             Console.WriteLine(@"```````````````````````````````````````````````````````````````````````````````````````");
             Console.WriteLine("https://github.com/ForgedWoW/WrathForgedCore \r\n");
             Console.ResetColor();

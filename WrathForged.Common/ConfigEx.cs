@@ -1,4 +1,6 @@
-﻿using Microsoft.Extensions.Configuration;
+﻿// Copyright (c) Forged WoW LLC <https://github.com/ForgedWoW/WrathForgedCore>
+// Licensed under GPL-3.0 license. See <https://github.com/ForgedWoW/WrathForgedCore/blob/master/LICENSE> for full information.
+using Microsoft.Extensions.Configuration;
 
 namespace WrathForged.Common
 {
@@ -6,7 +8,7 @@ namespace WrathForged.Common
     {
         public static T GetDefaultValue<T>(this IConfiguration config, string key, T defaultValue)
         {
-            var value = config[key];
+            string? value = config[key];
 
             if (value == null)
                 return defaultValue;
@@ -21,5 +23,4 @@ namespace WrathForged.Common
             return value.GetHashCode() != defaultValue.GetHashCode();
         }
     }
-
 }

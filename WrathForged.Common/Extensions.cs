@@ -1,14 +1,16 @@
-﻿namespace WrathForged.Common
+﻿// Copyright (c) Forged WoW LLC <https://github.com/ForgedWoW/WrathForgedCore>
+// Licensed under GPL-3.0 license. See <https://github.com/ForgedWoW/WrathForgedCore/blob/master/LICENSE> for full information.
+namespace WrathForged.Common
 {
     public static class Extensions
     {
         public static byte[] Combine(this byte[] data, params byte[][] pData)
         {
-            var combined = data;
+            byte[] combined = data;
 
-            foreach (var arr in pData)
+            foreach (byte[] arr in pData)
             {
-                var currentSize = combined.Length;
+                int currentSize = combined.Length;
 
                 Array.Resize(ref combined, currentSize + arr.Length);
 
@@ -20,11 +22,11 @@
 
         public static object[] Combine(this object[] data, params object[][] pData)
         {
-            var combined = data;
+            object[] combined = data;
 
-            foreach (var arr in pData)
+            foreach (object[] arr in pData)
             {
-                var currentSize = combined.Length;
+                int currentSize = combined.Length;
 
                 Array.Resize(ref combined, currentSize + arr.Length);
 

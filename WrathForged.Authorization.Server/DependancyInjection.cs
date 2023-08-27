@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿// Copyright (c) Forged WoW LLC <https://github.com/ForgedWoW/WrathForgedCore>
+// Licensed under GPL-3.0 license. See <https://github.com/ForgedWoW/WrathForgedCore/blob/master/LICENSE> for full information.
 using Autofac;
 using Microsoft.Extensions.Configuration;
-using WrathForged.Authorization.Server.Workers;
 
 namespace WrathForged.Authorization.Server
 {
@@ -13,7 +9,6 @@ namespace WrathForged.Authorization.Server
     {
         public static ContainerBuilder RegisterAuth(this ContainerBuilder builder, IConfiguration configuration)
         {
-            
             return builder;
         }
     }

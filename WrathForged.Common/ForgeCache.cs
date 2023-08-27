@@ -1,15 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿// Copyright (c) Forged WoW LLC <https://github.com/ForgedWoW/WrathForgedCore>
+// Licensed under GPL-3.0 license. See <https://github.com/ForgedWoW/WrathForgedCore/blob/master/LICENSE> for full information.
 using System.Runtime.Caching;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace WrathForged.Common
 {
     public class ForgeCache
     {
-        MemoryCache _cache = new MemoryCache("ForgeCache");
+        private readonly MemoryCache _cache = new("ForgeCache");
 
         public T Get<T>(string key)
         {
@@ -24,7 +21,7 @@ namespace WrathForged.Common
             if (expiration == TimeSpan.Zero)
                 throw new ArgumentException("Must be greater than zero", nameof(expiration));
 
-            var value = refresh();
+            T? value = refresh();
 
             if (value == null)
                 throw new ArgumentNullException(nameof(value));
@@ -89,6 +86,5 @@ namespace WrathForged.Common
         {
             _cache.Remove(key);
         }
-
     }
 }

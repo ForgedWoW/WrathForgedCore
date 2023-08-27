@@ -1,4 +1,6 @@
-﻿using Autofac;
+﻿// Copyright (c) Forged WoW LLC <https://github.com/ForgedWoW/WrathForgedCore>
+// Licensed under GPL-3.0 license. See <https://github.com/ForgedWoW/WrathForgedCore/blob/master/LICENSE> for full information.
+using Autofac;
 using Microsoft.Extensions.Configuration;
 using Serilog;
 using WrathForged.Authorization.Server;
@@ -6,17 +8,17 @@ using WrathForged.Authorization.Server.Workers;
 using WrathForged.Common;
 using WrathForged.Database;
 
-var configBuilder = new ConfigurationBuilder()
+IConfigurationBuilder configBuilder = new ConfigurationBuilder()
                     .SetBasePath(Directory.GetCurrentDirectory())
                     .AddJsonFile("WrathForged.Authorization.Server.Config.json", false, true);
 
-var configuration = configBuilder.Build() as IConfiguration;
+IConfiguration configuration = configBuilder.Build();
 
-var builder = new ContainerBuilder();
+ContainerBuilder builder = new();
 builder.RegisterCommon(configuration);
 builder.RegisterDatabase(configuration);
 builder.RegisterAuth(configuration);
-var container = builder.Build();
+IContainer container = builder.Build();
 
 container.InitializeCommon();
 container.Resolve<CacheBuilder>().Build();

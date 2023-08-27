@@ -1,10 +1,11 @@
-﻿using System.Reflection;
+﻿// Copyright (c) Forged WoW LLC <https://github.com/ForgedWoW/WrathForgedCore>
+// Licensed under GPL-3.0 license. See <https://github.com/ForgedWoW/WrathForgedCore/blob/master/LICENSE> for full information.
+using System.Reflection;
 
 namespace WrathForged.Common
 {
     public static class IOHelpers
     {
-
         /// <summary>
         ///     Compares the values of 2 objects
         /// </summary>
@@ -14,28 +15,28 @@ namespace WrathForged.Common
             if (obj1 == null || obj2 == null)
                 return obj1 == obj2;
 
-            var type = obj1.GetType();
+            Type type = obj1.GetType();
 
             if (type != obj2.GetType())
                 return false;
 
-            var properties = type.GetProperties(BindingFlags.Public | BindingFlags.Instance);
+            PropertyInfo[] properties = type.GetProperties(BindingFlags.Public | BindingFlags.Instance);
 
-            foreach (var property in properties)
+            foreach (PropertyInfo property in properties)
             {
-                var value1 = property.GetValue(obj1);
-                var value2 = property.GetValue(obj2);
+                object? value1 = property.GetValue(obj1);
+                object? value2 = property.GetValue(obj2);
 
                 if (!Equals(value1, value2))
                     return false;
             }
 
-            var fields = type.GetFields(BindingFlags.Public | BindingFlags.Instance);
+            FieldInfo[] fields = type.GetFields(BindingFlags.Public | BindingFlags.Instance);
 
-            foreach (var field in fields)
+            foreach (FieldInfo field in fields)
             {
-                var value1 = field.GetValue(obj1);
-                var value2 = field.GetValue(obj2);
+                object? value1 = field.GetValue(obj1);
+                object? value2 = field.GetValue(obj2);
 
                 if (!Equals(value1, value2))
                     return false;
@@ -62,14 +63,14 @@ namespace WrathForged.Common
         public static List<Assembly> GetAllAssembliesInDir(string? path = null, bool loadGameAssembly = true, bool loadScriptsDll = true)
         {
             path ??= ".\\Scripts";
-            var assemblies = new List<Assembly>();
+            List<Assembly> assemblies = new();
 
             if (!Directory.Exists(path))
                 Directory.CreateDirectory(path);
 
-            var dir = new DirectoryInfo(path);
+            DirectoryInfo dir = new(path);
 
-            var dlls = dir.GetFiles("*.dll", SearchOption.AllDirectories);
+            FileInfo[] dlls = dir.GetFiles("*.dll", SearchOption.AllDirectories);
 
             assemblies.AddRange(dlls.Select(dll => Assembly.LoadFile(dll.FullName)));
 
@@ -84,9 +85,9 @@ namespace WrathForged.Common
 
         public static IEnumerable<T> GetAllObjectsFromAssemblies<T>(string path)
         {
-            var assemblies = GetAllAssembliesInDir(path);
+            List<Assembly> assemblies = GetAllAssembliesInDir(path);
 
-            foreach (var type in from assembly in assemblies from type in assembly.GetTypes() where DoesTypeSupportInterface(type, typeof(T)) select type)
+            foreach (Type? type in from assembly in assemblies from type in assembly.GetTypes() where DoesTypeSupportInterface(type, typeof(T)) select type)
                 yield return (T)Activator.CreateInstance(type);
         }
     }
