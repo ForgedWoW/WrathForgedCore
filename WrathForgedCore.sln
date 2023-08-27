@@ -17,8 +17,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WrathForged.Common", "Wrath
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Servers", "Servers", "{264ED1D0-2D40-4CBF-8400-EB9522C5C2E9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WrathForged.Serialization", "WrathForged.Serialization\WrathForged.Serialization.csproj", "{8748A309-F986-4815-A149-DE31099114DB}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -49,10 +47,6 @@ Global
 		{72E7BB12-F32F-4692-98E6-F3E9FF21FD01}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{72E7BB12-F32F-4692-98E6-F3E9FF21FD01}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{72E7BB12-F32F-4692-98E6-F3E9FF21FD01}.Release|Any CPU.Build.0 = Release|Any CPU
-		{8748A309-F986-4815-A149-DE31099114DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8748A309-F986-4815-A149-DE31099114DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8748A309-F986-4815-A149-DE31099114DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8748A309-F986-4815-A149-DE31099114DB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

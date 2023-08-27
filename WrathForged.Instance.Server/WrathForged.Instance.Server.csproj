@@ -11,7 +11,6 @@
     <ProjectReference Include="..\WrathForged.Common\WrathForged.Common.csproj" />
     <ProjectReference Include="..\WrathForged.Database\WrathForged.Database.csproj" />
     <ProjectReference Include="..\WrathForged.Models\WrathForged.Models.csproj" />
-    <ProjectReference Include="..\WrathForged.Serialization\WrathForged.Serialization.csproj" />
   </ItemGroup>
 
   <ItemGroup>
