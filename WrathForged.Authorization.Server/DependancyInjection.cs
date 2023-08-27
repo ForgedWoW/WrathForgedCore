@@ -13,7 +13,7 @@ namespace WrathForged.Authorization.Server
     {
         public static ContainerBuilder RegisterAuth(this ContainerBuilder builder, IConfiguration configuration)
         {
-            builder.RegisterType<RealmListCache>().SingleInstance();
+            
             return builder;
         }
     }

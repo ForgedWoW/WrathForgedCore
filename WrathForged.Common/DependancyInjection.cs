@@ -30,6 +30,7 @@ namespace WrathForged.Common
             builder.RegisterInstance(configuration).As<IConfiguration>().SingleInstance();
             builder.RegisterType<ClassFactory>().SingleInstance();
             builder.RegisterInstance(Log.Logger).SingleInstance();
+            builder.RegisterType<ForgeCache>().SingleInstance();
             return builder;
         }
 

@@ -19,11 +19,10 @@ builder.RegisterAuth(configuration);
 var container = builder.Build();
 
 container.InitializeCommon();
-container.Resolve<RealmListCache>();
+container.Resolve<CacheBuilder>().Build();
 
 Console.CancelKeyPress += (sender, e) =>
 {
-    container.Resolve<RealmListCache>().Close();
     Log.CloseAndFlush();
 };
 
