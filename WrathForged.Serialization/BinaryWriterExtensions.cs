@@ -87,7 +87,7 @@ namespace WrathForged.Serialization
                     break;
 
                 case ForgedTypeCode.Int32:
-                    writer.Write(Convert.ToInt32(value));
+                    writer.Write((int)value);
                     break;
 
                 case ForgedTypeCode.Int64:

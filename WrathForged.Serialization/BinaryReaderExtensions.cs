@@ -82,7 +82,10 @@ namespace WrathForged.Serialization
                     return reader.ReadBoolean();
 
                 case ForgedTypeCode.Byte:
-                    return reader.ReadByte();
+                    if (actualType.IsEnum)
+                        return Enum.ToObject(actualType, reader.ReadByte());
+                    else
+                        return reader.ReadByte();
 
                 case ForgedTypeCode.SByte:
                     return reader.ReadSByte();
@@ -91,19 +94,28 @@ namespace WrathForged.Serialization
                     return reader.ReadChar();
 
                 case ForgedTypeCode.Int16:
-                    return reader.ReadInt16();
+                    if (actualType.IsEnum)
+                        return Enum.ToObject(actualType, reader.ReadInt16());
+                    else
+                        return reader.ReadInt16();
 
                 case ForgedTypeCode.UInt16:
                     return reader.ReadUInt16();
 
                 case ForgedTypeCode.Int32:
-                    return reader.ReadInt32();
+                    if (actualType.IsEnum)
+                        return Enum.ToObject(actualType, reader.ReadInt32());
+                    else
+                        return reader.ReadInt32();
 
                 case ForgedTypeCode.UInt32:
                     return reader.ReadUInt32();
 
                 case ForgedTypeCode.Int64:
-                    return reader.ReadInt64();
+                    if (actualType.IsEnum)
+                        return Enum.ToObject(actualType, reader.ReadInt64());
+                    else
+                        return reader.ReadInt64();
 
                 case ForgedTypeCode.UInt64:
                     return reader.ReadUInt64();
