@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace WrathForged.Serialization
 {
-    public static class BinaryReaderExtentions
+    public static class BinaryReaderExtensions
     {
         public static T Read<T>(this BinaryReader reader, T obj)
         {
@@ -72,20 +72,56 @@ namespace WrathForged.Serialization
             return obj;
         }
 
-        private static object ReadValue(BinaryReader reader, Type actualType, TypeCode overrideType)
+        private static object ReadValue(BinaryReader reader, Type actualType, ForgedTypeCode overrideType)
         {
-            var typeToUse = overrideType != TypeCode.Empty ? overrideType : Type.GetTypeCode(actualType);
+            var typeToUse = overrideType != ForgedTypeCode.Empty ? overrideType : (ForgedTypeCode)Type.GetTypeCode(actualType);
 
             switch (typeToUse)
             {
-                case TypeCode.Boolean:
+                case ForgedTypeCode.Boolean:
                     return reader.ReadBoolean();
 
-                case TypeCode.Byte:
+                case ForgedTypeCode.Byte:
                     return reader.ReadByte();
-                // ... handle other cases similarly ...
+
+                case ForgedTypeCode.SByte:
+                    return reader.ReadSByte();
+
+                case ForgedTypeCode.Char:
+                    return reader.ReadChar();
+
+                case ForgedTypeCode.Int16:
+                    return reader.ReadInt16();
+
+                case ForgedTypeCode.UInt16:
+                    return reader.ReadUInt16();
+
+                case ForgedTypeCode.Int32:
+                    return reader.ReadInt32();
+
+                case ForgedTypeCode.UInt32:
+                    return reader.ReadUInt32();
+
+                case ForgedTypeCode.Int64:
+                    return reader.ReadInt64();
+
+                case ForgedTypeCode.UInt64:
+                    return reader.ReadUInt64();
+
+                case ForgedTypeCode.Single:
+                    return reader.ReadSingle();
+
+                case ForgedTypeCode.Double:
+                    return reader.ReadDouble();
+
+                case ForgedTypeCode.Decimal:
+                    return reader.ReadDecimal();
+
+                case ForgedTypeCode.String:
+                    return reader.ReadString();
+
                 default:
-                    throw new NotSupportedException($"TypeCode {typeToUse} not supported.");
+                    throw new NotSupportedException($"ForgedTypeCode {typeToUse} not supported.");
             }
         }
 

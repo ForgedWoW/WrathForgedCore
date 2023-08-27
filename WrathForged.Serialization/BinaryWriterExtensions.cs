@@ -1,16 +1,12 @@
 ﻿// Copyright (c) Forged WoW LLC <https://github.com/ForgedWoW/WrathForgedCore>
 // Licensed under GPL-3.0 license. See <https://github.com/ForgedWoW/WrathForgedCore/blob/master/LICENSE> for full information.
-using System;
 using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
 using System.Reflection;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace WrathForged.Serialization
 {
-    public static class BinaryWriterExtentions
+    public static class BinaryWriterExtensions
     {
         public static void Write<T>(this BinaryWriter writer, T obj)
         {
@@ -59,72 +55,89 @@ namespace WrathForged.Serialization
         }
 
         // Enhanced helper method to encapsulate the value writing logic:
-        private static void WriteValue(BinaryWriter writer, object value, Type actualType, TypeCode overrideType)
+        private static void WriteValue(BinaryWriter writer, object value, Type actualType, ForgedTypeCode overrideType)
         {
             // If an override type is provided, use it. Otherwise, derive from the actual type.
-            var typeToUse = overrideType != TypeCode.Empty ? overrideType : Type.GetTypeCode(actualType);
+            var typeToUse = overrideType != ForgedTypeCode.Empty ? overrideType : (ForgedTypeCode)Type.GetTypeCode(actualType);
 
             switch (typeToUse)
             {
-                case TypeCode.Boolean:
+                case ForgedTypeCode.Boolean:
                     writer.Write(Convert.ToBoolean(value));
                     break;
 
-                case TypeCode.Byte:
+                case ForgedTypeCode.Byte:
                     writer.Write(Convert.ToByte(value));
                     break;
 
-                case TypeCode.Char:
+                case ForgedTypeCode.Char:
                     writer.Write(Convert.ToChar(value));
                     break;
 
-                case TypeCode.Decimal:
+                case ForgedTypeCode.Decimal:
                     writer.Write(Convert.ToDecimal(value));
                     break;
 
-                case TypeCode.Double:
+                case ForgedTypeCode.Double:
                     writer.Write(Convert.ToDouble(value));
                     break;
 
-                case TypeCode.Int16:
+                case ForgedTypeCode.Int16:
                     writer.Write(Convert.ToInt16(value));
                     break;
 
-                case TypeCode.Int32:
+                case ForgedTypeCode.Int32:
                     writer.Write(Convert.ToInt32(value));
                     break;
 
-                case TypeCode.Int64:
+                case ForgedTypeCode.Int64:
                     writer.Write(Convert.ToInt64(value));
                     break;
 
-                case TypeCode.SByte:
+                case ForgedTypeCode.SByte:
                     writer.Write(Convert.ToSByte(value));
                     break;
 
-                case TypeCode.Single:
+                case ForgedTypeCode.Single:
                     writer.Write(Convert.ToSingle(value));
                     break;
 
-                case TypeCode.String:
+                case ForgedTypeCode.String:
                     writer.Write(value as string);
                     break;
 
-                case TypeCode.UInt16:
+                case ForgedTypeCode.UInt16:
                     writer.Write(Convert.ToUInt16(value));
                     break;
 
-                case TypeCode.UInt32:
+                case ForgedTypeCode.UInt32:
                     writer.Write(Convert.ToUInt32(value));
                     break;
 
-                case TypeCode.UInt64:
+                case ForgedTypeCode.UInt64:
                     writer.Write(Convert.ToUInt64(value));
+                    break;
+
+                case ForgedTypeCode.CString:
+                    writer.Write((value as string).ToCString());
+                    break;
+
+                case ForgedTypeCode.ASCIIString:
+                    writer.Write(Encoding.ASCII.GetBytes(value as string));
                     break;
 
                 default:
                     throw new NotSupportedException($"TypeCode {typeToUse} not supported.");
             }
+        }
+
+        private static byte[] ToCString(this string str)
+        {
+            byte[] utf8StringBytes = Encoding.UTF8.GetBytes(str);
+            byte[] data = new byte[utf8StringBytes.Length + 1];
+            Array.Copy(utf8StringBytes, data, utf8StringBytes.Length);
+            data[data.Length - 1] = 0;
+            return data;
         }
     }
 }

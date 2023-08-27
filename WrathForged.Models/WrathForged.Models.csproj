@@ -26,4 +26,8 @@
     <ProjectReference Include="..\WrathForged.Serialization\WrathForged.Serialization.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Auth\" />
+  </ItemGroup>
+
 </Project>

@@ -4,13 +4,13 @@ namespace WrathForged.Serialization
 {
     public class SerializablePropertyAttribute : Attribute
     {
-        public SerializablePropertyAttribute(uint index, TypeCode overrideType = TypeCode.Empty)
+        public SerializablePropertyAttribute(uint index, ForgedTypeCode overrideType = ForgedTypeCode.Empty)
         {
             Index = index;
             OverrideType = overrideType;
         }
 
         public uint Index { get; }
-        public TypeCode OverrideType { get; }
+        public ForgedTypeCode OverrideType { get; }
     }
 }
