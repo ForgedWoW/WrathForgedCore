@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net7.0</TargetFramework>
@@ -15,43 +15,6 @@
   <ItemGroup>
     <PackageReference Include="Autofac" Version="7.1.0" />
     <PackageReference Include="Discord.Net.Core" Version="3.12.0" />
-    <PackageReference Include="FreecraftCore.API.Common" Version="6.0.134" />
-    <PackageReference Include="FreecraftCore.API.Common.Addon" Version="5.0.11" />
-    <PackageReference Include="FreecraftCore.API.Common.Auth" Version="5.0.11" />
-    <PackageReference Include="FreecraftCore.API.Common.Character" Version="5.0.11" />
-    <PackageReference Include="FreecraftCore.API.Common.Chat" Version="4.0.10" />
-    <PackageReference Include="FreecraftCore.API.Common.Core" Version="4.0.10" />
-    <PackageReference Include="FreecraftCore.API.Common.Entity.Identity" Version="5.0.11" />
-    <PackageReference Include="FreecraftCore.API.Common.Movement" Version="5.0.11" />
-    <PackageReference Include="FreecraftCore.API.Common.Warden" Version="5.0.11" />
-    <PackageReference Include="FreecraftCore.API.Data" Version="6.0.134" />
-    <PackageReference Include="FreecraftCore.API.GDBC" Version="6.0.134" />
-    <PackageReference Include="FreecraftCore.Crypto.BigInteger" Version="6.0.134" />
-    <PackageReference Include="FreecraftCore.Crypto.Common" Version="6.0.134" />
-    <PackageReference Include="FreecraftCore.Crypto.Packet" Version="4.0.10" />
-    <PackageReference Include="FreecraftCore.Crypto.RC4" Version="4.0.10" />
-    <PackageReference Include="FreecraftCore.Crypto.Session" Version="4.0.10" />
-    <PackageReference Include="FreecraftCore.Crypto.SRP6" Version="4.0.10" />
-    <PackageReference Include="FreecraftCore.Crypto.Stream" Version="4.0.10" />
-    <PackageReference Include="FreecraftCore.Network.Common" Version="4.0.10" />
-    <PackageReference Include="FreecraftCore.Network.Routing" Version="4.0.10" />
-    <PackageReference Include="FreecraftCore.Packet.Auth" Version="6.0.134" />
-    <PackageReference Include="FreecraftCore.Packet.Common" Version="6.0.134" />
-    <PackageReference Include="FreecraftCore.Packet.Game" Version="6.0.134" />
-    <PackageReference Include="FreecraftCore.Serializer" Version="4.1.62" />
-    <PackageReference Include="FreecraftCore.Serializer.API" Version="3.0.39" />
-    <PackageReference Include="FreecraftCore.Serializer.API.Service" Version="1.0.0" />
-    <PackageReference Include="FreecraftCore.Serializer.Compiler" Version="4.1.62" />
-    <PackageReference Include="FreecraftCore.Serializer.Compression" Version="1.0.0" />
-    <PackageReference Include="FreecraftCore.Serializer.Core" Version="1.0.0" />
-    <PackageReference Include="FreecraftCore.Serializer.KnownTypes.Decorators" Version="1.0.0" />
-    <PackageReference Include="FreecraftCore.Serializer.KnownTypes.Primitives" Version="1.0.0" />
-    <PackageReference Include="FreecraftCore.Serializer.KnownTypes.Special" Version="1.0.0" />
-    <PackageReference Include="FreecraftCore.Serializer.Metadata" Version="4.1.62" />
-    <PackageReference Include="FreecraftCore.Serializer.Metadata.Internal" Version="1.0.0" />
-    <PackageReference Include="FreecraftCore.Serializer.Stream.Default" Version="1.0.0" />
-    <PackageReference Include="GladNet3.Serializer.FreecraftCore" Version="3.0.48" />
-    <PackageReference Include="GladNet3.Server.DotNetTcpServer" Version="3.0.48" />
     <PackageReference Include="Serilog" Version="3.0.1" />
     <PackageReference Include="Serilog.Enrichers.Thread" Version="3.1.0" />
     <PackageReference Include="Serilog.Exceptions" Version="8.4.0" />
@@ -62,7 +25,6 @@
     <PackageReference Include="Serilog.Sinks.Console" Version="4.1.0" />
     <PackageReference Include="Serilog.Sinks.Discord.JKamue" Version="1.0.0" />
     <PackageReference Include="Serilog.Sinks.File" Version="5.0.0" />
-    <PackageReference Include="System.Security.Permissions" Version="7.0.0" />
     <PackageReference Include="System.Threading.Tasks.Dataflow" Version="7.0.0" />
   </ItemGroup>
 
