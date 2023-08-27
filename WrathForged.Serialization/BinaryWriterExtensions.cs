@@ -15,21 +15,21 @@ namespace WrathForged.Serialization
                 throw new InvalidOperationException($"{typeof(T).Name} is not marked with ForgeSerializableAttribute.");
 
             // Reflect and get properties with SerializablePropertyAttribute in order
-            var properties = typeof(T).GetProperties()
+            List<PropertyInfo> properties = typeof(T).GetProperties()
                 .Where(prop => Attribute.IsDefined(prop, typeof(SerializablePropertyAttribute)))
                 .OrderBy(prop => ((SerializablePropertyAttribute)prop.GetCustomAttribute(typeof(SerializablePropertyAttribute))).Index)
                 .ToList();
 
-            foreach (var prop in properties)
+            foreach (PropertyInfo? prop in properties)
             {
-                var attribute = (SerializablePropertyAttribute)prop.GetCustomAttribute(typeof(SerializablePropertyAttribute));
-                var value = prop.GetValue(obj);
+                SerializablePropertyAttribute? attribute = (SerializablePropertyAttribute)prop.GetCustomAttribute(typeof(SerializablePropertyAttribute));
+                object? value = prop.GetValue(obj);
 
                 if (value is Array arrayValue)
                 {
                     writer.Write(arrayValue.Length);  // Write the array length
-                    var elementType = prop.PropertyType.GetElementType();
-                    foreach (var item in arrayValue)
+                    Type? elementType = prop.PropertyType.GetElementType();
+                    foreach (object? item in arrayValue)
                     {
                         WriteValue(writer, item, elementType, attribute.OverrideType);  // Write each array item
                     }
@@ -37,8 +37,8 @@ namespace WrathForged.Serialization
                 else if (value is IList listValue && value.GetType().IsGenericType)
                 {
                     writer.Write(listValue.Count);  // Write the list count
-                    var elementType = prop.PropertyType.GetGenericArguments()[0];
-                    foreach (var item in listValue)
+                    Type elementType = prop.PropertyType.GetGenericArguments()[0];
+                    foreach (object? item in listValue)
                     {
                         WriteValue(writer, item, elementType, attribute.OverrideType);  // Write each list item
                     }
@@ -58,7 +58,7 @@ namespace WrathForged.Serialization
         private static void WriteValue(BinaryWriter writer, object value, Type actualType, ForgedTypeCode overrideType)
         {
             // If an override type is provided, use it. Otherwise, derive from the actual type.
-            var typeToUse = overrideType != ForgedTypeCode.Empty ? overrideType : (ForgedTypeCode)Type.GetTypeCode(actualType);
+            ForgedTypeCode typeToUse = overrideType != ForgedTypeCode.Empty ? overrideType : (ForgedTypeCode)Type.GetTypeCode(actualType);
 
             switch (typeToUse)
             {
@@ -136,7 +136,7 @@ namespace WrathForged.Serialization
             byte[] utf8StringBytes = Encoding.UTF8.GetBytes(str);
             byte[] data = new byte[utf8StringBytes.Length + 1];
             Array.Copy(utf8StringBytes, data, utf8StringBytes.Length);
-            data[data.Length - 1] = 0;
+            data[^1] = 0;
             return data;
         }
     }

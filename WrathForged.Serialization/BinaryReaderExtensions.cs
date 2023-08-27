@@ -1,12 +1,7 @@
 ﻿// Copyright (c) Forged WoW LLC <https://github.com/ForgedWoW/WrathForgedCore>
 // Licensed under GPL-3.0 license. See <https://github.com/ForgedWoW/WrathForgedCore/blob/master/LICENSE> for full information.
-using System;
 using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
 using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace WrathForged.Serialization
 {
@@ -19,24 +14,24 @@ namespace WrathForged.Serialization
 
         public static T Read<T>(this BinaryReader reader) where T : new()
         {
-            var obj = new T();
+            T obj = new();
 
             if (!Attribute.IsDefined(typeof(T), typeof(ForgeSerializableAttribute)))
                 throw new InvalidOperationException($"{typeof(T).Name} is not marked with ForgeSerializableAttribute.");
 
-            var properties = typeof(T).GetProperties()
+            List<PropertyInfo> properties = typeof(T).GetProperties()
                 .Where(prop => Attribute.IsDefined(prop, typeof(SerializablePropertyAttribute)))
                 .OrderBy(prop => ((SerializablePropertyAttribute)prop.GetCustomAttribute(typeof(SerializablePropertyAttribute))).Index)
                 .ToList();
 
-            foreach (var prop in properties)
+            foreach (PropertyInfo? prop in properties)
             {
-                var attribute = (SerializablePropertyAttribute)prop.GetCustomAttribute(typeof(SerializablePropertyAttribute));
+                SerializablePropertyAttribute? attribute = (SerializablePropertyAttribute)prop.GetCustomAttribute(typeof(SerializablePropertyAttribute));
 
                 if (prop.PropertyType.IsArray)
                 {
-                    var length = reader.ReadInt32(); // Read array length
-                    var array = Array.CreateInstance(prop.PropertyType.GetElementType(), length);
+                    int length = reader.ReadInt32(); // Read array length
+                    Array array = Array.CreateInstance(prop.PropertyType.GetElementType(), length);
 
                     for (int i = 0; i < length; i++)
                     {
@@ -47,9 +42,9 @@ namespace WrathForged.Serialization
                 }
                 else if (typeof(IList).IsAssignableFrom(prop.PropertyType) && prop.PropertyType.IsGenericType)
                 {
-                    var count = reader.ReadInt32(); // Read list count
-                    var listType = prop.PropertyType.GetGenericArguments()[0];
-                    var list = (IList)Activator.CreateInstance(typeof(List<>).MakeGenericType(listType));
+                    int count = reader.ReadInt32(); // Read list count
+                    Type listType = prop.PropertyType.GetGenericArguments()[0];
+                    IList? list = (IList)Activator.CreateInstance(typeof(List<>).MakeGenericType(listType));
 
                     for (int i = 0; i < count; i++)
                     {
@@ -60,7 +55,7 @@ namespace WrathForged.Serialization
                 }
                 else if (Attribute.IsDefined(prop.PropertyType, typeof(ForgeSerializableAttribute)))
                 {
-                    var value = ReadMethodForType(prop.PropertyType).Invoke(reader, null);
+                    object? value = ReadMethodForType(prop.PropertyType).Invoke(reader, null);
                     prop.SetValue(obj, value);
                 }
                 else
@@ -74,7 +69,7 @@ namespace WrathForged.Serialization
 
         private static object ReadValue(BinaryReader reader, Type actualType, ForgedTypeCode overrideType)
         {
-            var typeToUse = overrideType != ForgedTypeCode.Empty ? overrideType : (ForgedTypeCode)Type.GetTypeCode(actualType);
+            ForgedTypeCode typeToUse = overrideType != ForgedTypeCode.Empty ? overrideType : (ForgedTypeCode)Type.GetTypeCode(actualType);
 
             switch (typeToUse)
             {
@@ -139,7 +134,7 @@ namespace WrathForged.Serialization
 
         private static MethodInfo ReadMethodForType(Type type)
         {
-            var method = typeof(BinaryReaderExtensions).GetMethod("Read", BindingFlags.Public | BindingFlags.Static);
+            MethodInfo? method = typeof(BinaryReaderExtensions).GetMethod("Read", BindingFlags.Public | BindingFlags.Static);
             return method.MakeGenericMethod(type);
         }
     }
