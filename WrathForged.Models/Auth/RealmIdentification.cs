@@ -18,10 +18,5 @@ namespace WrathForged.Models.Auth
 
         [SerializableProperty(2)]
         public uint RealmID { get; }
-
-        public RealmIdentification(uint realmID)
-        {
-            RealmID = realmID;
-        }
     }
 }

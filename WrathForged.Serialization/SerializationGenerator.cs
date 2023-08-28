@@ -60,12 +60,10 @@ namespace WrathForged.Serialization
 
             sourceBuilder.AppendLine($"namespace {symbol.ContainingNamespace.ToDisplayString()}");
             sourceBuilder.AppendLine("{");
-            sourceBuilder.AppendLine($"public static class {symbol.Name}Serialization");
-            sourceBuilder.AppendLine("{");
-            sourceBuilder.AppendLine($"    public static byte[] Serialize({symbol.Name} instance)");
+            sourceBuilder.AppendLine($"    public static class {symbol.Name}SerializationExtensions");
             sourceBuilder.AppendLine("    {");
-            sourceBuilder.AppendLine("        using var ms = new System.IO.MemoryStream();");
-            sourceBuilder.AppendLine("        using var writer = new System.IO.BinaryWriter(ms);");
+            sourceBuilder.AppendLine($"        public static void Serialize(this {symbol.Name} instance, System.IO.BinaryWriter writer)");
+            sourceBuilder.AppendLine("        {");
 
             foreach (var prop in properties)
             {
@@ -89,9 +87,8 @@ namespace WrathForged.Serialization
                 }
             }
 
-            sourceBuilder.AppendLine("        return ms.ToArray();");
+            sourceBuilder.AppendLine("        }");
             sourceBuilder.AppendLine("    }");
-            sourceBuilder.AppendLine("}");
             sourceBuilder.AppendLine("}");
 
             return sourceBuilder.ToString();
