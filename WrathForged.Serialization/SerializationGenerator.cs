@@ -1,23 +1,42 @@
-﻿using System;
+﻿// Copyright (c) Forged WoW LLC <https://github.com/ForgedWoW/WrathForgedCore>
+// Licensed under GPL-3.0 license. See <https://github.com/ForgedWoW/WrathForgedCore/blob/master/LICENSE> for full information.
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using Microsoft.CodeAnalysis;
+using WrathForged.Serialization.Generators;
 
-namespace WrathForged.Serialization.Generators
+namespace WrathForged.Serialization
 {
     [Generator]
     public class SerializationGenerator : ISourceGenerator
     {
         private readonly string _attributeName = nameof(SerializablePropertyAttribute);
-        private readonly Dictionary<string, IForgedTypeGenerator> _generators = new Dictionary<string, IForgedTypeGenerator>(StringComparer.InvariantCultureIgnoreCase)
-        {
-            { nameof(String), new StringGenerator() }
-        };
+
+        private Dictionary<string, IForgedTypeGenerator> _generatorsByName;
+        private Dictionary<TypeKind, IForgedTypeGenerator> _generatorsByTypeKind;
+        private Dictionary<SpecialType, IForgedTypeGenerator> _generatorsBySpecialType;
 
         public void Initialize(GeneratorInitializationContext context)
         {
             context.RegisterForSyntaxNotifications(() => new SerializationSyntaxReceiver());
+
+            _generatorsByTypeKind = new Dictionary<TypeKind, IForgedTypeGenerator>()
+            {
+                { TypeKind.Enum, new EnumTypeGenerator() },
+                { TypeKind.Array, new ArrayTypeGenerator(this) }
+            };
+
+            _generatorsByName = new Dictionary<string, IForgedTypeGenerator>(StringComparer.InvariantCultureIgnoreCase)
+            {
+                { nameof(String), new StringGenerator() }
+            };
+
+            _generatorsBySpecialType = new Dictionary<SpecialType, IForgedTypeGenerator>()
+            {
+                { SpecialType.System_Collections_Generic_IList_T, new ListTypeGenerator(this) }
+            };
         }
 
         public void Execute(GeneratorExecutionContext context)
@@ -55,13 +74,14 @@ namespace WrathForged.Serialization.Generators
                     {
                         return (uint)indexArg.Value;
                     }
+
                     return 0u;
                 }).ToList();
 
             if (!properties.Any())
                 return string.Empty;
 
-            StringBuilder sourceBuilder = new StringBuilder();
+            var sourceBuilder = new StringBuilder();
             sourceBuilder.AppendLine("using System;");
             sourceBuilder.AppendLine("using WrathForged.Serialization;");
             sourceBuilder.AppendLine($"namespace {symbol.ContainingNamespace.ToDisplayString()}");
@@ -73,31 +93,11 @@ namespace WrathForged.Serialization.Generators
 
             foreach (var prop in properties)
             {
-                var forgedTypeCode = GetTypeCodeFromTypeName(prop.Type.Name);
                 var attr = prop.GetAttributes().FirstOrDefault(a => a.AttributeClass.Name == _attributeName);
-
-                // Get the override type
-                var overrideTypeArg = attr?.NamedArguments.FirstOrDefault(arg => arg.Key == "OverrideType");
-
-                if (overrideTypeArg.HasValue &&
-                    !string.IsNullOrEmpty(overrideTypeArg.Value.Value.ToString()) &&
-                    Enum.TryParse<ForgedTypeCode>(overrideTypeArg.Value.Value.ToString(), true, out var overrideCode) &&
-                    overrideCode != ForgedTypeCode.Empty)
+                var propertySerializationCode = GenerateTypeSerializationCode(context.Compilation, symbol, prop.Type, attr, $"instance.{prop.Name}");
+                if (!string.IsNullOrEmpty(propertySerializationCode))
                 {
-                    forgedTypeCode = overrideCode;
-                }
-
-                if (IsPrimitiveOrSimpleType(forgedTypeCode))
-                {
-                    sourceBuilder.AppendLine($"        writer.Write(instance.{prop.Name});");
-                }
-                else if(_generators.TryGetValue(prop.Type.Name, out var generator))
-                {
-                    sourceBuilder.AppendLine(generator.GenerateTypeCode(prop, attr, forgedTypeCode));
-                }
-                else if (HasSerializeExtensionMethod(context.Compilation, symbol))
-                {
-                    sourceBuilder.AppendLine($"        instance.{prop.Name}.Serialize(writer);");
+                    sourceBuilder.AppendLine(propertySerializationCode);
                 }
             }
 
@@ -106,6 +106,44 @@ namespace WrathForged.Serialization.Generators
             sourceBuilder.AppendLine("}");
 
             return sourceBuilder.ToString();
+        }
+
+        // Needed for arrays/lists
+        internal string GenerateTypeSerializationCode(Compilation compilation, INamedTypeSymbol containerSymbol, ITypeSymbol typeSymbol, AttributeData attr, string variableName)
+        {
+            var forgedTypeCode = GetTypeCodeFromTypeName(typeSymbol.Name);
+            var overrideTypeArg = attr?.NamedArguments.FirstOrDefault(arg => arg.Key == "OverrideType");
+            if (overrideTypeArg.HasValue &&
+                !string.IsNullOrEmpty(overrideTypeArg.Value.Value.ToString()) &&
+                Enum.TryParse<ForgedTypeCode>(overrideTypeArg.Value.Value.ToString(), true, out var overrideCode) &&
+                overrideCode != ForgedTypeCode.Empty)
+            {
+                forgedTypeCode = overrideCode;
+            }
+
+            // Based on the type, generate the serialization code
+            if (IsPrimitiveOrSimpleType(forgedTypeCode))
+            {
+                return $"writer.Write({variableName});";
+            }
+            else if (_generatorsByTypeKind.TryGetValue(typeSymbol.TypeKind, out var forgedTypeGenerator))
+            {
+                return forgedTypeGenerator.GenerateTypeCodeSerializeForType(typeSymbol, attr, forgedTypeCode, compilation, containerSymbol, variableName);
+            }
+            else if (_generatorsByName.TryGetValue(typeSymbol.Name, out var generator))
+            {
+                return generator.GenerateTypeCodeSerializeForType(typeSymbol, attr, forgedTypeCode, compilation, containerSymbol, variableName);
+            }
+            else if (_generatorsBySpecialType.TryGetValue(typeSymbol.SpecialType, out var specialTypeGenerator))
+            {
+                return specialTypeGenerator.GenerateTypeCodeSerializeForType(typeSymbol, attr, forgedTypeCode, compilation, containerSymbol, variableName);
+            }
+            else if (HasSerializeExtensionMethod(compilation, containerSymbol))
+            {
+                return $"{variableName}.Serialize(writer);";
+            }
+
+            return string.Empty; // Return empty if no suitable serialization method found.
         }
 
         private static ForgedTypeCode GetTypeCodeFromTypeName(string typeName)
