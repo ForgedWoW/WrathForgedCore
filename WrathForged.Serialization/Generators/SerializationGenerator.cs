@@ -32,7 +32,7 @@ namespace WrathForged.Serialization.Generators
                 if (modelSymbol == null)
                     continue;
 
-                var source = GenerateSerializationCode(modelSymbol);
+                var source = GenerateSerializationCode(context, modelSymbol);
 
                 if (string.IsNullOrEmpty(source))
                     continue;
@@ -41,7 +41,7 @@ namespace WrathForged.Serialization.Generators
             }
         }
 
-        private string GenerateSerializationCode(INamedTypeSymbol symbol)
+        private string GenerateSerializationCode(GeneratorExecutionContext context, INamedTypeSymbol symbol)
         {
             //System.Diagnostics.Debugger.Launch();
             var properties = symbol.GetMembers()
@@ -95,6 +95,10 @@ namespace WrathForged.Serialization.Generators
                 {
                     sourceBuilder.AppendLine(generator.GenerateTypeCode(prop, attr, forgedTypeCode));
                 }
+                else if (HasSerializeExtensionMethod(context.Compilation, symbol))
+                {
+                    sourceBuilder.AppendLine($"        instance.{prop.Name}.Serialize(writer);");
+                }
             }
 
             sourceBuilder.AppendLine("        }");
@@ -139,6 +143,29 @@ namespace WrathForged.Serialization.Generators
                 default:
                     return false;
             }
+        }
+
+        private bool HasSerializeExtensionMethod(Compilation compilation, INamedTypeSymbol typeSymbol)
+        {
+            var potentialMethods = compilation.SourceModule.GlobalNamespace
+                .GetNamespaceMembers()
+                .SelectMany(ns => ns.GetTypeMembers())
+                .Where(t => t.IsStatic)
+                .SelectMany(t => t.GetMembers().OfType<IMethodSymbol>())
+                .Where(m => m.IsStatic)
+                .Where(m => m.Name == "Serialize");
+
+            foreach (var method in potentialMethods)
+            {
+                if (method is IMethodSymbol serializeMethod
+                    && serializeMethod.Parameters.Length > 0
+                    && SymbolEqualityComparer.Default.Equals(serializeMethod.Parameters[0].Type, typeSymbol))
+                {
+                    return true;
+                }
+            }
+
+            return false;
         }
     }
 }
