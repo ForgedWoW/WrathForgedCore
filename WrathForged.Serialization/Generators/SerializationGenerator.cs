@@ -1,14 +1,19 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using Microsoft.CodeAnalysis;
 
-namespace WrathForged.Serialization
+namespace WrathForged.Serialization.Generators
 {
     [Generator]
     public class SerializationGenerator : ISourceGenerator
     {
         private readonly string _attributeName = nameof(SerializablePropertyAttribute);
+        private readonly Dictionary<string, IForgedTypeGenerator> _generators = new Dictionary<string, IForgedTypeGenerator>(StringComparer.InvariantCultureIgnoreCase)
+        {
+            { nameof(String), new StringGenerator() }
+        };
 
         public void Initialize(GeneratorInitializationContext context)
         {
@@ -24,15 +29,15 @@ namespace WrathForged.Serialization
             {
                 var modelSymbol = context.Compilation.GetSemanticModel(classDeclaration.SyntaxTree).GetDeclaredSymbol(classDeclaration) as INamedTypeSymbol;
 
-                if (modelSymbol != null)
-                {
-                    var source = GenerateSerializationCode(modelSymbol);
+                if (modelSymbol == null)
+                    continue;
 
-                    if (string.IsNullOrEmpty(source))
-                        continue;
+                var source = GenerateSerializationCode(modelSymbol);
 
-                    context.AddSource($"{modelSymbol.Name}_Serialization", source);
-                }
+                if (string.IsNullOrEmpty(source))
+                    continue;
+
+                context.AddSource($"{modelSymbol.Name}_Serialization", source);
             }
         }
 
@@ -57,7 +62,8 @@ namespace WrathForged.Serialization
                 return string.Empty;
 
             StringBuilder sourceBuilder = new StringBuilder();
-
+            sourceBuilder.AppendLine("using System;");
+            sourceBuilder.AppendLine("using WrathForged.Serialization;");
             sourceBuilder.AppendLine($"namespace {symbol.ContainingNamespace.ToDisplayString()}");
             sourceBuilder.AppendLine("{");
             sourceBuilder.AppendLine($"    public static class {symbol.Name}SerializationExtensions");
@@ -85,6 +91,10 @@ namespace WrathForged.Serialization
                 {
                     sourceBuilder.AppendLine($"        writer.Write(instance.{prop.Name});");
                 }
+                else if(_generators.TryGetValue(prop.Type.Name, out var generator))
+                {
+                    sourceBuilder.AppendLine(generator.GenerateTypeCode(prop, attr, forgedTypeCode));
+                }
             }
 
             sourceBuilder.AppendLine("        }");
@@ -98,6 +108,7 @@ namespace WrathForged.Serialization
         {
             switch (typeName)
             {
+                case "string":
                 case "String":
                     return ForgedTypeCode.String;
 
