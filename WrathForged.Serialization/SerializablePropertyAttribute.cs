@@ -6,12 +6,13 @@ namespace WrathForged.Serialization
 {
     public class SerializablePropertyAttribute : Attribute
     {
-        public SerializablePropertyAttribute(uint index, ForgedTypeCode overrideType = default, TypeCode collectionSizeLengthType = default, uint collectionSizeIndex = 0)
+        public SerializablePropertyAttribute(uint index, ForgedTypeCode overrideType = default, TypeCode collectionSizeLengthType = default, uint collectionSizeIndex = 0, uint fixedCollectionSize = 0)
         {
             Index = index;
             OverrideType = overrideType;
             CollectionSizeLengthType = collectionSizeLengthType;
             CollectionSizeIndex = collectionSizeIndex;
+            FixedCollectionSize = fixedCollectionSize;
         }
 
         /// <summary>
@@ -34,5 +35,10 @@ namespace WrathForged.Serialization
         ///    The index of the property that contains the size of the collection. Only use this if the collection size is not written to the stream immediately before the collection items.
         /// </summary>
         public uint CollectionSizeIndex { get; }
+
+        /// <summary>
+        ///     Set when the array or list has a fixed size and is not written to the stream.
+        /// </summary>
+        public uint FixedCollectionSize { get; }
     }
 }

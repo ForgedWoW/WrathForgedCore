@@ -178,6 +178,11 @@ namespace WrathForged.Serialization
 
         internal string GenerateCollectionSizeCode(AttributeData attribute, string variableName, CollectionType collectionType)
         {
+            var fixedCollectionSize = (uint)attribute.NamedArguments.FirstOrDefault(na => na.Key == "FixedCollectionSize").Value.Value;
+
+            if (fixedCollectionSize != 0)
+                return string.Empty;
+
             var lengthType = attribute.NamedArguments.FirstOrDefault(na => na.Key == "CollectionSizeLengthType").Value.Value?.ToString() ?? "Empty";
 
             string lengthWriteMethod;
