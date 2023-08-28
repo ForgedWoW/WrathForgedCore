@@ -94,6 +94,16 @@ namespace WrathForged.Serialization
             foreach (var prop in properties)
             {
                 var attr = prop.GetAttributes().FirstOrDefault(a => a.AttributeClass.Name == _attributeName);
+
+                // Determine the type of the collection (Array, List, or None).
+                var collectionType = DetermineCollectionType(prop.Type);
+
+                if (collectionType != CollectionType.None)
+                {
+                    var collectionSizeCode = GenerateCollectionSizeCode(attr, $"instance.{prop.Name}", collectionType);
+                    sourceBuilder.AppendLine(collectionSizeCode);
+                }
+
                 var propertySerializationCode = GenerateTypeSerializationCode(context.Compilation, symbol, prop.Type, attr, $"instance.{prop.Name}");
                 if (!string.IsNullOrEmpty(propertySerializationCode))
                 {
@@ -144,6 +154,86 @@ namespace WrathForged.Serialization
             }
 
             return string.Empty; // Return empty if no suitable serialization method found.
+        }
+
+        internal CollectionType DetermineCollectionType(ITypeSymbol typeSymbol)
+        {
+            if (typeSymbol.SpecialType == SpecialType.System_Array)
+            {
+                return CollectionType.Array;
+            }
+
+            if (typeSymbol is INamedTypeSymbol namedTypeSymbol && namedTypeSymbol.AllInterfaces.Any(i => i.OriginalDefinition.SpecialType == SpecialType.System_Collections_Generic_IList_T))
+            {
+                return CollectionType.List;
+            }
+
+            return CollectionType.None;
+        }
+
+        internal string GenerateCollectionSizeCode(AttributeData attribute, string variableName, CollectionType collectionType)
+        {
+            var lengthType = attribute.NamedArguments.FirstOrDefault(na => na.Key == "CollectionSizeLengthType").Value.Value?.ToString() ?? "Empty";
+
+            string lengthWriteMethod;
+            string zeroWriteMethod;
+            switch (lengthType)
+            {
+                case "Byte":
+                    lengthWriteMethod = $"writer.Write((byte){variableName}.Count);";
+                    zeroWriteMethod = "writer.Write((byte)0);";
+                    break;
+
+                case "SByte":
+                    lengthWriteMethod = $"writer.Write((sbyte){variableName}.Count);";
+                    zeroWriteMethod = "writer.Write((sbyte)0);";
+                    break;
+
+                case "Int16":
+                    lengthWriteMethod = $"writer.Write((short){variableName}.Count);";
+                    zeroWriteMethod = "writer.Write((short)0);";
+                    break;
+
+                case "UInt16":
+                    lengthWriteMethod = $"writer.Write((ushort){variableName}.Count);";
+                    zeroWriteMethod = "writer.Write((ushort)0);";
+                    break;
+
+                case "UInt32":
+                    lengthWriteMethod = $"writer.Write((uint){variableName}.Count);";
+                    zeroWriteMethod = "writer.Write((uint)0);";
+                    break;
+
+                case "Int64":
+                    lengthWriteMethod = $"writer.Write((long){variableName}.Count);";
+                    zeroWriteMethod = "writer.Write((long)0);";
+                    break;
+
+                case "UInt64":
+                    lengthWriteMethod = $"writer.Write((ulong){variableName}.Count);";
+                    zeroWriteMethod = "writer.Write((ulong)0);";
+                    break;
+
+                default:
+                    lengthWriteMethod = $"writer.Write({variableName}.Count);";
+                    zeroWriteMethod = "writer.Write(0);";
+                    break;
+            }
+
+            if (collectionType == CollectionType.Array)
+            {
+                lengthWriteMethod = lengthWriteMethod.Replace(".Count", ".Length");
+            }
+
+            return $@"
+                if ({variableName} == null || {variableName}.Count == 0)
+                {{
+                    {zeroWriteMethod}
+                }}
+                else
+                {{
+                    {lengthWriteMethod}
+                }}";
         }
 
         private static ForgedTypeCode GetTypeCodeFromTypeName(string typeName)

@@ -1,5 +1,6 @@
 ﻿// Copyright (c) Forged WoW LLC <https://github.com/ForgedWoW/WrathForgedCore>
 // Licensed under GPL-3.0 license. See <https://github.com/ForgedWoW/WrathForgedCore/blob/master/LICENSE> for full information.
+using System.Linq;
 using System.Text;
 using Microsoft.CodeAnalysis;
 
@@ -16,34 +17,30 @@ namespace WrathForged.Serialization.Generators
 
         public string GenerateTypeCodeSerializeForType(ITypeSymbol typeSymbol, AttributeData attribute, ForgedTypeCode typeCode, Compilation compilation, INamedTypeSymbol symbol, string variableName)
         {
-            // Ensure the type is indeed a list
-            if (!(typeSymbol is INamedTypeSymbol namedTypeSymbol && namedTypeSymbol.IsGenericType &&
-                  namedTypeSymbol.ConstructedFrom.ToDisplayString().StartsWith("System.Collections.Generic.List<")))
-            {
-                return string.Empty;
-            }
-
             var listSerialization = new StringBuilder();
 
-            listSerialization.AppendLine($"if ({variableName} == null");
-            listSerialization.AppendLine("{");
-            listSerialization.AppendLine($"writer.Write(0);");
-            listSerialization.AppendLine("}");
-            listSerialization.AppendLine("else");
-            listSerialization.AppendLine("{");
-            // Write the list count first
-            listSerialization.AppendLine($"writer.Write({variableName}.Count);");
+            var collectionType = _serializationGenerator.DetermineCollectionType(typeSymbol);
 
-            // Serialize each list item
+            // Check if the size was already written using CollectionSizeIndex
+            var collectionSizeIndex = (uint?)attribute.NamedArguments.FirstOrDefault(na => na.Key == "CollectionSizeIndex").Value.Value;
+
+            if (!collectionSizeIndex.HasValue)
+            {
+                listSerialization.AppendLine(_serializationGenerator.GenerateCollectionSizeCode(attribute, variableName, collectionType));
+            }
+
+            listSerialization.AppendLine($"if ({variableName} != null)");
+            listSerialization.AppendLine("{");
             listSerialization.AppendLine($"foreach (var item in {variableName})");
             listSerialization.AppendLine("{");
 
-            var elementType = namedTypeSymbol.TypeArguments[0];
-            var elementSerializationCode = _serializationGenerator.GenerateTypeSerializationCode(compilation, symbol, elementType, attribute, "item");
-
-            if (!string.IsNullOrEmpty(elementSerializationCode))
+            // Serialize each list item using pattern matching
+            if (typeSymbol is INamedTypeSymbol namedTypeSymbol && namedTypeSymbol.IsGenericType && namedTypeSymbol.TypeArguments.Length == 1)
             {
-                listSerialization.Append(elementSerializationCode);
+                var itemType = namedTypeSymbol.TypeArguments[0];
+                var elementSerializationCode = _serializationGenerator.GenerateTypeSerializationCode(compilation, symbol, itemType, attribute, "item");
+                if (!string.IsNullOrEmpty(elementSerializationCode))
+                    listSerialization.Append(elementSerializationCode);
             }
 
             listSerialization.AppendLine("}");
