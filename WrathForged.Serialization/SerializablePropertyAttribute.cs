@@ -6,9 +6,12 @@ namespace WrathForged.Serialization
 {
     public class SerializablePropertyAttribute : Attribute
     {
-        public SerializablePropertyAttribute(uint index)
+        public SerializablePropertyAttribute(uint index, ForgedTypeCode overrideType = default, TypeCode collectionSizeLengthType = default, uint collectionSizeIndex = 0)
         {
             Index = index;
+            OverrideType = overrideType;
+            CollectionSizeLengthType = collectionSizeLengthType;
+            CollectionSizeIndex = collectionSizeIndex;
         }
 
         /// <summary>

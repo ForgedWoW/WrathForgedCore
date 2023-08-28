@@ -88,6 +88,13 @@ namespace WrathForged.Serialization
             sourceBuilder.AppendLine("{");
             sourceBuilder.AppendLine($"    public static class {symbol.Name}SerializationExtensions");
             sourceBuilder.AppendLine("    {");
+            BuildSerializer(context, symbol, properties, sourceBuilder);
+
+            return sourceBuilder.ToString();
+        }
+
+        private void BuildSerializer(GeneratorExecutionContext context, INamedTypeSymbol symbol, List<IPropertySymbol> properties, StringBuilder sourceBuilder)
+        {
             sourceBuilder.AppendLine($"        public static void Serialize(this {symbol.Name} instance, System.IO.BinaryWriter writer)");
             sourceBuilder.AppendLine("        {");
 
@@ -114,8 +121,6 @@ namespace WrathForged.Serialization
             sourceBuilder.AppendLine("        }");
             sourceBuilder.AppendLine("    }");
             sourceBuilder.AppendLine("}");
-
-            return sourceBuilder.ToString();
         }
 
         // Needed for arrays/lists
