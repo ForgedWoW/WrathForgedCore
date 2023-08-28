@@ -4,13 +4,8 @@
     <TargetFramework>net7.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+	  <EmitCompilerGeneratedFiles>true</EmitCompilerGeneratedFiles>
   </PropertyGroup>
-
-  <ItemGroup>
-    <Compile Remove="Auth\**" />
-    <EmbeddedResource Remove="Auth\**" />
-    <None Remove="Auth\**" />
-  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Autofac" Version="7.1.0" />
@@ -26,6 +21,10 @@
     <PackageReference Include="Serilog.Sinks.Discord.JKamue" Version="1.0.0" />
     <PackageReference Include="Serilog.Sinks.File" Version="5.0.0" />
     <PackageReference Include="System.Threading.Tasks.Dataflow" Version="7.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\WrathForged.Serialization\WrathForged.Serialization.csproj" OutputItemType="Analyzer" />
   </ItemGroup>
 
 </Project>
