@@ -89,8 +89,36 @@ namespace WrathForged.Serialization
             sourceBuilder.AppendLine($"    public static class {symbol.Name}SerializationExtensions");
             sourceBuilder.AppendLine("    {");
             BuildSerializer(context, symbol, properties, sourceBuilder);
-
+            BuildDeserializer(context, symbol, properties, sourceBuilder);
             return sourceBuilder.ToString();
+        }
+
+        private void BuildDeserializer(GeneratorExecutionContext context, INamedTypeSymbol symbol, List<IPropertySymbol> properties, StringBuilder sourceBuilder)
+        {
+            sourceBuilder.AppendLine($"        public static {symbol.Name} Deserialize(System.IO.BinaryReader reader)");
+            sourceBuilder.AppendLine("        {");
+            sourceBuilder.AppendLine($"            var instance = new {symbol.Name}();");
+
+            foreach (var prop in properties)
+            {
+                var attr = prop.GetAttributes().FirstOrDefault(a => a.AttributeClass.Name == _attributeName);
+
+                var collectionType = DetermineCollectionType(prop.Type);
+                if (collectionType != CollectionType.None)
+                {
+                    var collectionSizeCode = GenerateCollectionDeserializationSizeCode(attr);
+                    sourceBuilder.AppendLine(collectionSizeCode);
+                }
+
+                var propertyDeserializationCode = GenerateTypeDeserializationCode(context.Compilation, symbol, prop.Type, attr, prop.Name);
+                if (!string.IsNullOrEmpty(propertyDeserializationCode))
+                {
+                    sourceBuilder.AppendLine($"            instance.{prop.Name} = {propertyDeserializationCode}");
+                }
+            }
+
+            sourceBuilder.AppendLine("            return instance;");
+            sourceBuilder.AppendLine("        }");
         }
 
         private void BuildSerializer(GeneratorExecutionContext context, INamedTypeSymbol symbol, List<IPropertySymbol> properties, StringBuilder sourceBuilder)
@@ -159,6 +187,67 @@ namespace WrathForged.Serialization
             }
 
             return string.Empty; // Return empty if no suitable serialization method found.
+        }
+
+        internal string GenerateTypeDeserializationCode(Compilation compilation, INamedTypeSymbol containerSymbol, ITypeSymbol typeSymbol, AttributeData attr, string variableName)
+        {
+            var forgedTypeCode = GetTypeCodeFromTypeName(typeSymbol.Name);
+            var overrideTypeArg = attr?.NamedArguments.FirstOrDefault(arg => arg.Key == "OverrideType");
+            if (overrideTypeArg.HasValue &&
+                !string.IsNullOrEmpty(overrideTypeArg.Value.Value.ToString()) &&
+                Enum.TryParse<ForgedTypeCode>(overrideTypeArg.Value.Value.ToString(), true, out var overrideCode) &&
+                overrideCode != ForgedTypeCode.Empty)
+            {
+                forgedTypeCode = overrideCode;
+            }
+
+            // Based on the type, generate the deserialization code
+            if (IsPrimitiveOrSimpleType(forgedTypeCode))
+            {
+                return $"{variableName} = reader.Read{forgedTypeCode}();";
+            }
+            else if (typeSymbol is IArrayTypeSymbol arrayType && arrayType.ElementType.SpecialType == SpecialType.System_Byte)
+            {
+                var fixedSizeArg = (uint)attr.NamedArguments.FirstOrDefault(arg => arg.Key == "FixedCollectionSize").Value.Value;
+                var sizeLengthTypeArg = attr.NamedArguments.FirstOrDefault(arg => arg.Key == "CollectionSizeLengthType").Value.Value.ToString();
+                var sizeIndexArg = (uint)attr.NamedArguments.FirstOrDefault(arg => arg.Key == "CollectionSizeIndex").Value.Value;
+
+                if (fixedSizeArg != 0)
+                {
+                    return $"{variableName} = reader.ReadBytes({fixedSizeArg});";
+                }
+                else if (!string.IsNullOrEmpty(sizeLengthTypeArg) && Enum.TryParse(sizeLengthTypeArg, out TypeCode sizeLengthType) && sizeLengthType != TypeCode.Empty)
+                {
+                    return $"{variableName} = reader.ReadBytes(reader.Read{sizeLengthTypeArg}());";
+                }
+                else if (sizeIndexArg != 0)
+                {
+                    // Assuming there's a method that can jump to a specific index in the stream, read the size, and then return back to the original position, named 'GetSizeFromStreamIndex'.
+                    return $"{variableName} = reader.ReadBytes(GetSizeFromStreamIndex(reader, sizeIndex));";
+                }
+                else
+                {
+                    throw new InvalidOperationException($"Unable to determine the size for deserializing byte array for {variableName}.");
+                }
+            }
+            else if (_generatorsByTypeKind.TryGetValue(typeSymbol.TypeKind, out var forgedTypeGenerator))
+            {
+                return forgedTypeGenerator.GenerateTypeCodeDeserializeForType(typeSymbol, attr, forgedTypeCode, compilation, containerSymbol);
+            }
+            else if (_generatorsByName.TryGetValue(typeSymbol.Name, out var generator))
+            {
+                return generator.GenerateTypeCodeDeserializeForType(typeSymbol, attr, forgedTypeCode, compilation, containerSymbol);
+            }
+            else if (_generatorsBySpecialType.TryGetValue(typeSymbol.SpecialType, out var specialTypeGenerator))
+            {
+                return specialTypeGenerator.GenerateTypeCodeDeserializeForType(typeSymbol, attr, forgedTypeCode, compilation, containerSymbol);
+            }
+            else if (HasDeserializeExtensionMethod(compilation, containerSymbol))
+            {
+                return $"{variableName} = {typeSymbol.Name}.Deserialize(reader);";
+            }
+
+            return string.Empty; // Return empty if no suitable deserialization method found.
         }
 
         internal CollectionType DetermineCollectionType(ITypeSymbol typeSymbol)
@@ -292,6 +381,29 @@ namespace WrathForged.Serialization
                 .SelectMany(t => t.GetMembers().OfType<IMethodSymbol>())
                 .Where(m => m.IsStatic)
                 .Where(m => m.Name == "Serialize");
+
+            foreach (var method in potentialMethods)
+            {
+                if (method is IMethodSymbol serializeMethod
+                    && serializeMethod.Parameters.Length > 0
+                    && SymbolEqualityComparer.Default.Equals(serializeMethod.Parameters[0].Type, typeSymbol))
+                {
+                    return true;
+                }
+            }
+
+            return false;
+        }
+
+        private bool HasDeserializeExtensionMethod(Compilation compilation, INamedTypeSymbol typeSymbol)
+        {
+            var potentialMethods = compilation.SourceModule.GlobalNamespace
+                .GetNamespaceMembers()
+                .SelectMany(ns => ns.GetTypeMembers())
+                .Where(t => t.IsStatic)
+                .SelectMany(t => t.GetMembers().OfType<IMethodSymbol>())
+                .Where(m => m.IsStatic)
+                .Where(m => m.Name == "Deserialize");
 
             foreach (var method in potentialMethods)
             {

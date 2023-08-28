@@ -13,5 +13,12 @@ namespace WrathForged.Serialization.Generators
            Compilation compilation,
            INamedTypeSymbol symbol,
            string variableName);
+
+        string GenerateTypeCodeDeserializeForType(
+           ITypeSymbol typeSymbol,
+           AttributeData attribute,
+           ForgedTypeCode typeCode,
+           Compilation compilation,
+           INamedTypeSymbol symbol);
     }
 }
