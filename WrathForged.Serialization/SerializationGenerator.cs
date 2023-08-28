@@ -132,7 +132,7 @@ namespace WrathForged.Serialization
             }
 
             // Based on the type, generate the serialization code
-            if (IsPrimitiveOrSimpleType(forgedTypeCode))
+            if (IsPrimitiveOrSimpleType(forgedTypeCode) || typeSymbol is IArrayTypeSymbol arrayType && arrayType.ElementType.SpecialType == SpecialType.System_Byte)
             {
                 return $"writer.Write({variableName});";
             }

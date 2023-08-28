@@ -1,5 +1,7 @@
 ﻿// Copyright (c) Forged WoW LLC <https://github.com/ForgedWoW/WrathForgedCore>
 // Licensed under GPL-3.0 license. See <https://github.com/ForgedWoW/WrathForgedCore/blob/master/LICENSE> for full information.
+using System;
+using System.Linq;
 using Microsoft.CodeAnalysis;
 
 namespace WrathForged.Serialization.Generators
@@ -13,10 +15,59 @@ namespace WrathForged.Serialization.Generators
 
             var underlyingType = (typeSymbol as INamedTypeSymbol)?.EnumUnderlyingType;
 
-            if (underlyingType == null)
-                return string.Empty;
+            // Check if OverrideType attribute exists
+            var overrideTypeArg = attribute?.NamedArguments.FirstOrDefault(arg => arg.Key == "OverrideType");
+            if (overrideTypeArg.HasValue &&
+                !string.IsNullOrEmpty(overrideTypeArg.Value.Value.ToString()) &&
+                Enum.TryParse<ForgedTypeCode>(overrideTypeArg.Value.Value.ToString(), true, out var overrideCode) &&
+                overrideCode != ForgedTypeCode.Empty)
+            {
+                typeCode = overrideCode;  // override the typeCode with the one from attribute
+            }
 
-            switch (underlyingType.SpecialType)
+            var typeToUse = underlyingType?.SpecialType ?? default;
+
+            // Modify the typeToUse based on the overridden type, if necessary
+            switch (typeCode)
+            {
+                case ForgedTypeCode.SByte:
+                    typeToUse = SpecialType.System_SByte;
+                    break;
+
+                case ForgedTypeCode.Byte:
+                    typeToUse = SpecialType.System_Byte;
+                    break;
+
+                case ForgedTypeCode.Int16:
+                    typeToUse = SpecialType.System_Int16;
+                    break;
+
+                case ForgedTypeCode.UInt16:
+                    typeToUse = SpecialType.System_UInt16;
+                    break;
+
+                case ForgedTypeCode.Int32:
+                    typeToUse = SpecialType.System_Int32;
+                    break;
+
+                case ForgedTypeCode.UInt32:
+                    typeToUse = SpecialType.System_UInt32;
+                    break;
+
+                case ForgedTypeCode.Int64:
+                    typeToUse = SpecialType.System_Int64;
+                    break;
+
+                case ForgedTypeCode.UInt64:
+                    typeToUse = SpecialType.System_UInt64;
+                    break;
+
+                default:
+                    typeToUse = SpecialType.System_Int32; // defaulting to int
+                    break;
+            }
+
+            switch (typeToUse)
             {
                 case SpecialType.System_Byte:
                     return $"writer.Write((byte){variableName});";
@@ -35,7 +86,7 @@ namespace WrathForged.Serialization.Generators
                 case SpecialType.System_UInt64:
                     return $"writer.Write((ulong){variableName});";
                 default:
-                    return string.Empty;
+                    return $"writer.Write((int){variableName});";
             }
         }
     }
