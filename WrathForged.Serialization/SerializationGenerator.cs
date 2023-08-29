@@ -14,10 +14,10 @@ namespace WrathForged.Serialization
     public class SerializationGenerator : ISourceGenerator
     {
         private readonly string _attributeName = nameof(SerializablePropertyAttribute);
-        private readonly ushort _nextIndex = 0;
         private Dictionary<string, IForgedTypeGenerator> _generatorsByName;
         private Dictionary<TypeKind, IForgedTypeGenerator> _generatorsByTypeKind;
         private Dictionary<SpecialType, IForgedTypeGenerator> _generatorsBySpecialType;
+        private bool _collectionSizeWritten;
 
         public void Initialize(GeneratorInitializationContext context)
         {
@@ -46,6 +46,7 @@ namespace WrathForged.Serialization
             if (!(context.SyntaxReceiver is SerializationSyntaxReceiver receiver))
                 return;
 
+            System.Diagnostics.Debugger.Launch();
             foreach (var classDeclaration in receiver.CandidateClasses)
             {
                 var modelSymbol = context.Compilation.GetSemanticModel(classDeclaration.SyntaxTree).GetDeclaredSymbol(classDeclaration) as INamedTypeSymbol;
@@ -64,7 +65,7 @@ namespace WrathForged.Serialization
 
         private string GenerateSerializationCode(GeneratorExecutionContext context, INamedTypeSymbol symbol)
         {
-            //System.Diagnostics.Debugger.Launch();
+            _collectionSizeWritten = false;
             var properties = symbol.GetMembers()
                 .OfType<IPropertySymbol>()
                 .Where(prop => prop.GetAttributes().Any(attr => attr.AttributeClass.Name == _attributeName))
@@ -85,6 +86,7 @@ namespace WrathForged.Serialization
 
             var sourceBuilder = new StringBuilder();
             sourceBuilder.AppendLine("using System;");
+            sourceBuilder.AppendLine("using System.Net;");
             sourceBuilder.AppendLine("using WrathForged.Serialization;");
             sourceBuilder.AppendLine($"namespace {symbol.ContainingNamespace.ToDisplayString()}");
             sourceBuilder.AppendLine("{");
@@ -92,6 +94,8 @@ namespace WrathForged.Serialization
             sourceBuilder.AppendLine("    {");
             BuildSerializer(context, symbol, properties, sourceBuilder);
             BuildDeserializer(context, symbol, properties, sourceBuilder);
+            sourceBuilder.AppendLine("    }");
+            sourceBuilder.AppendLine("}");
             return sourceBuilder.ToString();
         }
 
@@ -106,36 +110,43 @@ namespace WrathForged.Serialization
 
             foreach (var prop in properties)
             {
-                var attr = prop.GetAttributes().FirstOrDefault(a => a.AttributeClass.Name == _attributeName);
-
-                // Check if the property has a CollectionSizeIndex attribute
-                if (attr.NamedArguments.Any(arg => arg.Key == "CollectionSizeIndex"))
+                try
                 {
-                    var collectionSizeIndex = (uint)attr.NamedArguments.FirstOrDefault(arg => arg.Key == "CollectionSizeIndex").Value.Value;
-                    sourceBuilder.AppendLine($" cachedSizes[{collectionSizeIndex}] = reader.ReadInt32();"); // Assuming size is stored as int
-                    continue;
-                }
+                    var attr = prop.GetAttributes().FirstOrDefault(a => a.AttributeClass.Name == _attributeName);
 
-                var collectionType = DetermineCollectionType(prop.Type);
-                if (collectionType != CollectionType.None)
-                {
-                    // Check if the property references a cached CollectionSizeIndex
+                    // Check if the property has a CollectionSizeIndex attribute
                     if (attr.NamedArguments.Any(arg => arg.Key == "CollectionSizeIndex"))
                     {
-                        var sizeIndexArg = (uint)attr.NamedArguments.FirstOrDefault(arg => arg.Key == "CollectionSizeIndex").Value.Value;
-                        sourceBuilder.AppendLine($" var collectionSize = cachedSizes[{sizeIndexArg}];");
+                        var collectionSizeIndex = (uint)attr.NamedArguments.FirstOrDefault(arg => arg.Key == "CollectionSizeIndex").Value.Value;
+                        sourceBuilder.AppendLine($" cachedSizes[{collectionSizeIndex}] = reader.ReadInt32();"); // Assuming size is stored as int
+                        continue;
                     }
-                    else
+
+                    var collectionType = DetermineCollectionType(prop.Type);
+                    if (collectionType != CollectionType.None)
                     {
-                        var collectionSizeCode = GenerateCollectionDeserializationSizeCode(attr);
-                        sourceBuilder.AppendLine(collectionSizeCode);
+                        // Check if the property references a cached CollectionSizeIndex
+                        if (attr.NamedArguments.Any(arg => arg.Key == "CollectionSizeIndex"))
+                        {
+                            var sizeIndexArg = (uint)attr.NamedArguments.FirstOrDefault(arg => arg.Key == "CollectionSizeIndex").Value.Value;
+                            sourceBuilder.AppendLine($" var collectionSize = cachedSizes[{sizeIndexArg}];");
+                        }
+                        else
+                        {
+                            var collectionSizeCode = GenerateCollectionDeserializationSizeCode(attr);
+                            sourceBuilder.AppendLine(collectionSizeCode);
+                        }
+                    }
+
+                    var propertyDeserializationCode = GenerateTypeDeserializationCode(context.Compilation, symbol, prop.Type, attr, prop.Name);
+                    if (!string.IsNullOrEmpty(propertyDeserializationCode))
+                    {
+                        sourceBuilder.AppendLine(propertyDeserializationCode);
                     }
                 }
-
-                var propertyDeserializationCode = GenerateTypeDeserializationCode(context.Compilation, symbol, prop.Type, attr, prop.Name);
-                if (!string.IsNullOrEmpty(propertyDeserializationCode))
+                catch (Exception ex)
                 {
-                    sourceBuilder.AppendLine($" instance.{prop.Name} = {propertyDeserializationCode}");
+                    throw new Exception($"Error generating deserialization code for property {prop.Name} on type {symbol.Name}", ex);
                 }
             }
 
@@ -158,7 +169,9 @@ namespace WrathForged.Serialization
                 if (collectionType != CollectionType.None)
                 {
                     var collectionSizeCode = GenerateCollectionSizeCode(attr, $"instance.{prop.Name}", collectionType);
-                    sourceBuilder.AppendLine(collectionSizeCode);
+
+                    if (!string.IsNullOrEmpty(collectionSizeCode))
+                        sourceBuilder.AppendLine(collectionSizeCode);
                 }
 
                 var propertySerializationCode = GenerateTypeSerializationCode(context.Compilation, symbol, prop.Type, attr, $"instance.{prop.Name}");
@@ -169,8 +182,6 @@ namespace WrathForged.Serialization
             }
 
             sourceBuilder.AppendLine("        }");
-            sourceBuilder.AppendLine("    }");
-            sourceBuilder.AppendLine("}");
         }
 
         // Needed for arrays/lists
@@ -226,47 +237,58 @@ namespace WrathForged.Serialization
             // Based on the type, generate the deserialization code
             if (IsPrimitiveOrSimpleType(forgedTypeCode))
             {
-                return $"{variableName} = reader.Read{forgedTypeCode}();";
+                return $"instance.{variableName} = reader.Read{forgedTypeCode}();";
             }
             else if (typeSymbol is IArrayTypeSymbol arrayType && arrayType.ElementType.SpecialType == SpecialType.System_Byte)
             {
-                var fixedSizeArg = (uint)attr.NamedArguments.FirstOrDefault(arg => arg.Key == "FixedCollectionSize").Value.Value;
-                var sizeLengthTypeArg = attr.NamedArguments.FirstOrDefault(arg => arg.Key == "CollectionSizeLengthType").Value.Value.ToString();
-                var sizeIndexArg = (uint)attr.NamedArguments.FirstOrDefault(arg => arg.Key == "CollectionSizeIndex").Value.Value;
+                var fixedSizeArg = 0u;
+
+                if (attr.NamedArguments.Any(arg => arg.Key == "FixedCollectionSize"))
+                    fixedSizeArg = (uint)attr.NamedArguments.FirstOrDefault(arg => arg.Key == "FixedCollectionSize").Value.Value;
+
+                var sizeLengthTypeArg = string.Empty;
+
+                if (attr.NamedArguments.Any(arg => arg.Key == "CollectionSizeLengthType"))
+                    sizeLengthTypeArg = ((TypeCode)attr.NamedArguments.FirstOrDefault(arg => arg.Key == "CollectionSizeLengthType").Value.Value).ToString();
+
+                var sizeIndexArg = 0u;
+
+                if (attr.NamedArguments.Any(arg => arg.Key == "CollectionSizeIndex"))
+                    sizeIndexArg = (uint)attr.NamedArguments.FirstOrDefault(arg => arg.Key == "CollectionSizeIndex").Value.Value;
 
                 if (fixedSizeArg != 0)
                 {
-                    return $"{variableName} = reader.ReadBytes({fixedSizeArg});";
+                    return $"instance.{variableName} = reader.ReadBytes(collectionSize);";
                 }
                 else if (!string.IsNullOrEmpty(sizeLengthTypeArg) && Enum.TryParse(sizeLengthTypeArg, out TypeCode sizeLengthType) && sizeLengthType != TypeCode.Empty)
                 {
-                    return $"{variableName} = reader.ReadBytes(reader.Read{sizeLengthTypeArg}());";
+                    return $"instance.{variableName} = reader.ReadBytes(collectionSize);";
                 }
                 else if (sizeIndexArg != 0)
                 {
                     // Assuming there's a method that can jump to a specific index in the stream, read the size, and then return back to the original position, named 'GetSizeFromStreamIndex'.
-                    return $"{variableName} = reader.ReadBytes(GetSizeFromStreamIndex(reader, sizeIndex));";
+                    return $"instance.{variableName} = reader.ReadBytes(GetSizeFromStreamIndex(reader, sizeIndex));";
                 }
                 else
                 {
-                    throw new InvalidOperationException($"Unable to determine the size for deserializing byte array for {variableName}.");
+                    return $"instance.{variableName} = reader.ReadBytes(collectionSize);";
                 }
             }
             else if (_generatorsByTypeKind.TryGetValue(typeSymbol.TypeKind, out var forgedTypeGenerator))
             {
-                return forgedTypeGenerator.GenerateTypeCodeDeserializeForType(typeSymbol, attr, forgedTypeCode, compilation, containerSymbol);
+                return forgedTypeGenerator.GenerateTypeCodeDeserializeForType(typeSymbol, attr, forgedTypeCode, compilation, containerSymbol, variableName);
             }
             else if (_generatorsByName.TryGetValue(typeSymbol.Name, out var generator))
             {
-                return generator.GenerateTypeCodeDeserializeForType(typeSymbol, attr, forgedTypeCode, compilation, containerSymbol);
+                return generator.GenerateTypeCodeDeserializeForType(typeSymbol, attr, forgedTypeCode, compilation, containerSymbol, variableName);
             }
             else if (_generatorsBySpecialType.TryGetValue(typeSymbol.SpecialType, out var specialTypeGenerator))
             {
-                return specialTypeGenerator.GenerateTypeCodeDeserializeForType(typeSymbol, attr, forgedTypeCode, compilation, containerSymbol);
+                return specialTypeGenerator.GenerateTypeCodeDeserializeForType(typeSymbol, attr, forgedTypeCode, compilation, containerSymbol, variableName);
             }
             else if (HasDeserializeExtensionMethod(compilation, containerSymbol))
             {
-                return $"{variableName} = {typeSymbol.Name}.Deserialize(reader);";
+                return $"instance.{variableName} = {typeSymbol.Name}.Deserialize(reader);";
             }
 
             return string.Empty; // Return empty if no suitable deserialization method found.
@@ -274,12 +296,15 @@ namespace WrathForged.Serialization
 
         internal CollectionType DetermineCollectionType(ITypeSymbol typeSymbol)
         {
-            if (typeSymbol.SpecialType == SpecialType.System_Array)
+            // Check if it's an array
+            if (typeSymbol is IArrayTypeSymbol)
             {
                 return CollectionType.Array;
             }
 
-            if (typeSymbol is INamedTypeSymbol namedTypeSymbol && namedTypeSymbol.AllInterfaces.Any(i => i.OriginalDefinition.SpecialType == SpecialType.System_Collections_Generic_IList_T))
+            // Check if it's a list
+            if (typeSymbol is INamedTypeSymbol namedTypeSymbol &&
+                namedTypeSymbol.AllInterfaces.Any(i => i.OriginalDefinition.ToDisplayString() == "System.Collections.Generic.IList<T>"))
             {
                 return CollectionType.List;
             }
@@ -289,12 +314,15 @@ namespace WrathForged.Serialization
 
         internal string GenerateCollectionSizeCode(AttributeData attribute, string variableName, CollectionType collectionType)
         {
-            var fixedCollectionSize = (uint)attribute.NamedArguments.FirstOrDefault(na => na.Key == "FixedCollectionSize").Value.Value;
+            var fixedCollectionSize = 0u;
+
+            if (attribute.NamedArguments.Any(arg => arg.Key == "FixedCollectionSize"))
+                fixedCollectionSize = (uint)attribute.NamedArguments.FirstOrDefault(arg => arg.Key == "FixedCollectionSize").Value.Value;
 
             if (fixedCollectionSize != 0)
                 return string.Empty;
 
-            var lengthType = attribute.NamedArguments.FirstOrDefault(na => na.Key == "CollectionSizeLengthType").Value.Value?.ToString() ?? "Empty";
+            var lengthType = attribute.NamedArguments.FirstOrDefault(na => na.Key == "CollectionSizeLengthType").Value.Value?.ToString() ?? string.Empty;
 
             string lengthWriteMethod;
             string zeroWriteMethod;
@@ -341,7 +369,7 @@ namespace WrathForged.Serialization
                     break;
             }
 
-            if (collectionType == CollectionType.Array)
+            if (collectionType == CollectionType.List)
             {
                 lengthWriteMethod = lengthWriteMethod.Replace(".Count", ".Length");
             }
@@ -360,13 +388,19 @@ namespace WrathForged.Serialization
         internal string GenerateCollectionDeserializationSizeCode(AttributeData attr)
         {
             var codeBuilder = new StringBuilder();
+            var prefix = "collectionSize = ";
+            if (!_collectionSizeWritten)
+            {
+                _collectionSizeWritten = true;
+                prefix = "var collectionSize = ";
+            }
 
             // Check for FixedCollectionSize attribute
             var fixedSizeArg = attr.NamedArguments.FirstOrDefault(arg => arg.Key == "FixedCollectionSize");
             if (fixedSizeArg.Key != null && fixedSizeArg.Value.Value != null)
             {
                 var fixedSize = (uint)fixedSizeArg.Value.Value;
-                codeBuilder.AppendLine($"var collectionSize = {fixedSize};");
+                codeBuilder.AppendLine($"{prefix}{fixedSize};");
                 return codeBuilder.ToString();
             }
 
@@ -374,8 +408,8 @@ namespace WrathForged.Serialization
             var sizeLengthTypeArg = attr.NamedArguments.FirstOrDefault(arg => arg.Key == "CollectionSizeLengthType");
             if (sizeLengthTypeArg.Key != null && sizeLengthTypeArg.Value.Value != null)
             {
-                var sizeLengthType = sizeLengthTypeArg.Value.Value.ToString();
-                codeBuilder.AppendLine($"var collectionSize = reader.Read{sizeLengthType}();");
+                var sizeLengthType = ((TypeCode)sizeLengthTypeArg.Value.Value).ToString();
+                codeBuilder.AppendLine($"{prefix}reader.Read{sizeLengthType}();");
                 return codeBuilder.ToString();
             }
 
@@ -384,12 +418,12 @@ namespace WrathForged.Serialization
             if (sizeIndexArg.Key != null && sizeIndexArg.Value.Value != null)
             {
                 var collectionSizeIndex = (uint)sizeIndexArg.Value.Value;
-                codeBuilder.AppendLine($"var collectionSize = cachedSizes[{collectionSizeIndex}];");
+                codeBuilder.AppendLine($"{prefix}cachedSizes[{collectionSizeIndex}];");
                 return codeBuilder.ToString();
             }
 
             // Default case (this might be an error scenario or you can handle it differently)
-            codeBuilder.AppendLine($"var collectionSize = 0; // Default size or handle error");
+            codeBuilder.AppendLine($"{prefix}reader.ReadInt32();");
             return codeBuilder.ToString();
         }
 

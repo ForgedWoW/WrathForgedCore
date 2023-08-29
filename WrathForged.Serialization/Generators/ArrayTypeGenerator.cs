@@ -1,7 +1,6 @@
 ﻿// Copyright (c) Forged WoW LLC <https://github.com/ForgedWoW/WrathForgedCore>
 // Licensed under GPL-3.0 license. See <https://github.com/ForgedWoW/WrathForgedCore/blob/master/LICENSE> for full information.
 using System;
-using System.Linq;
 using System.Text;
 using Microsoft.CodeAnalysis;
 
@@ -23,12 +22,10 @@ namespace WrathForged.Serialization.Generators
             var collectionType = _serializationGenerator.DetermineCollectionType(typeSymbol);
 
             // Check if the size was already written using CollectionSizeIndex
-            var collectionSizeIndex = (uint?)attribute.NamedArguments.FirstOrDefault(na => na.Key == "CollectionSizeIndex").Value.Value;
+            var size = _serializationGenerator.GenerateCollectionSizeCode(attribute, variableName, collectionType);
 
-            if (!collectionSizeIndex.HasValue)
-            {
-                arraySerialization.AppendLine(_serializationGenerator.GenerateCollectionSizeCode(attribute, variableName, collectionType));
-            }
+            if (!string.IsNullOrEmpty(size))
+                arraySerialization.AppendLine(size);
 
             arraySerialization.AppendLine($"if ({variableName} != null)");
             arraySerialization.AppendLine("{");
@@ -49,7 +46,7 @@ namespace WrathForged.Serialization.Generators
             return arraySerialization.ToString();
         }
 
-        public string GenerateTypeCodeDeserializeForType(ITypeSymbol typeSymbol, AttributeData attr, ForgedTypeCode forgedTypeCode, Compilation compilation, INamedTypeSymbol containerSymbol)
+        public string GenerateTypeCodeDeserializeForType(ITypeSymbol typeSymbol, AttributeData attr, ForgedTypeCode forgedTypeCode, Compilation compilation, INamedTypeSymbol containerSymbol, string variableName)
         {
             if (!(typeSymbol is IArrayTypeSymbol arrayType))
             {
@@ -62,15 +59,15 @@ namespace WrathForged.Serialization.Generators
             var elementType = arrayType.ElementType.Name;
 
             // Generate code to create a new array instance
-            codeBuilder.AppendLine($"var array = new {elementType}[collectionSize];");
+            codeBuilder.AppendLine($"var {variableName}Array = new {elementType}[collectionSize];");
 
             // Loop through the array and generate code to deserialize each element
             codeBuilder.AppendLine("for (int i = 0; i < collectionSize; i++)");
             codeBuilder.AppendLine("{");
-            codeBuilder.AppendLine($"    array[i] = reader.Read{elementType}();"); // This assumes a direct mapping between elementType and reader methods. Adjust if needed.
+            codeBuilder.AppendLine($"    {variableName}Array[i] = reader.Read{elementType}();"); // This assumes a direct mapping between elementType and reader methods. Adjust if needed.
             codeBuilder.AppendLine("}");
 
-            codeBuilder.AppendLine("return array;");
+            codeBuilder.AppendLine($"instance.{variableName} = {variableName}Array;");
 
             return codeBuilder.ToString();
         }

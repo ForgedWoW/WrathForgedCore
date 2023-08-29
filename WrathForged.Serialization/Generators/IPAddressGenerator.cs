@@ -16,7 +16,5 @@ namespace WrathForged.Serialization
         {
             return $"instance.{variableName} = new IPAddress(reader.ReadBytes(4));"; // Assuming IPv4 for simplicity
         }
-
-        public string GenerateTypeCodeDeserializeForType(ITypeSymbol typeSymbol, AttributeData attribute, ForgedTypeCode typeCode, Compilation compilation, INamedTypeSymbol symbol) => throw new System.NotImplementedException();
     }
 }

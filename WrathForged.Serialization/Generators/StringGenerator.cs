@@ -39,34 +39,24 @@ public class StringGenerator : IForgedTypeGenerator
 
     public string GenerateTypeCodeDeserializeForType(ITypeSymbol typeSymbol, AttributeData attribute, ForgedTypeCode typeCode, Compilation compilation, INamedTypeSymbol symbol, string variableName)
     {
-        var deserialization = new StringBuilder();
-
         switch (typeCode)
         {
             case ForgedTypeCode.CString:
-                deserialization.AppendLine($"instance.{variableName} = Encoding.ASCII.GetString(reader.ReadCString());");
-                break;
+                return $"{variableName} = Encoding.ASCII.GetString(reader.ReadCString());";
 
             case ForgedTypeCode.ASCIIString:
                 if (attribute.NamedArguments.Any(arg => arg.Key == "FixedSize"))
                 {
                     var fixedSize = attribute.NamedArguments.First(arg => arg.Key == "FixedSize").Value.Value;
-                    deserialization.AppendLine($"instance.{variableName} = Encoding.ASCII.GetString(reader.ReadBytes({fixedSize})).TrimEnd('\\0');");
+                    return $"{variableName} = Encoding.ASCII.GetString(reader.ReadBytes({fixedSize})).TrimEnd('\\0');";
                 }
                 else
                 {
-                    deserialization.AppendLine($"instance.{variableName} = Encoding.ASCII.GetString(reader.ReadByteArray());");
+                    return $"{variableName} = Encoding.ASCII.GetString(reader.ReadByteArray());";
                 }
 
-                break;
-
             default:
-                deserialization.AppendLine($"instance.{variableName} = reader.ReadString();");
-                break;
+                return $"instance.{variableName} = reader.ReadString();";
         }
-
-        return deserialization.ToString();
     }
-
-    public string GenerateTypeCodeDeserializeForType(ITypeSymbol typeSymbol, AttributeData attribute, ForgedTypeCode typeCode, Compilation compilation, INamedTypeSymbol symbol) => throw new System.NotImplementedException();
 }

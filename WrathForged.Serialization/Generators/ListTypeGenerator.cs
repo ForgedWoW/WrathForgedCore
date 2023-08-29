@@ -1,7 +1,6 @@
 ﻿// Copyright (c) Forged WoW LLC <https://github.com/ForgedWoW/WrathForgedCore>
 // Licensed under GPL-3.0 license. See <https://github.com/ForgedWoW/WrathForgedCore/blob/master/LICENSE> for full information.
 using System;
-using System.Linq;
 using System.Text;
 using Microsoft.CodeAnalysis;
 
@@ -23,12 +22,10 @@ namespace WrathForged.Serialization.Generators
             var collectionType = _serializationGenerator.DetermineCollectionType(typeSymbol);
 
             // Check if the size was already written using CollectionSizeIndex
-            var collectionSizeIndex = (uint?)attribute.NamedArguments.FirstOrDefault(na => na.Key == "CollectionSizeIndex").Value.Value;
+            var size = _serializationGenerator.GenerateCollectionSizeCode(attribute, variableName, collectionType);
 
-            if (!collectionSizeIndex.HasValue)
-            {
-                listSerialization.AppendLine(_serializationGenerator.GenerateCollectionSizeCode(attribute, variableName, collectionType));
-            }
+            if (!string.IsNullOrEmpty(size))
+                listSerialization.AppendLine(size);
 
             listSerialization.AppendLine($"if ({variableName} != null)");
             listSerialization.AppendLine("{");
@@ -50,7 +47,7 @@ namespace WrathForged.Serialization.Generators
             return listSerialization.ToString();
         }
 
-        public string GenerateTypeCodeDeserializeForType(ITypeSymbol typeSymbol, AttributeData attr, ForgedTypeCode forgedTypeCode, Compilation compilation, INamedTypeSymbol containerSymbol)
+        public string GenerateTypeCodeDeserializeForType(ITypeSymbol typeSymbol, AttributeData attr, ForgedTypeCode forgedTypeCode, Compilation compilation, INamedTypeSymbol containerSymbol, string variableName)
         {
             if (!(typeSymbol is INamedTypeSymbol namedType) || !namedType.IsGenericType || namedType.TypeArguments.Length != 1)
             {
@@ -63,16 +60,15 @@ namespace WrathForged.Serialization.Generators
             var elementType = namedType.TypeArguments[0].Name;
 
             // Generate code to create a new list instance
-            codeBuilder.AppendLine($"var list = new List<{elementType}>();");
+            codeBuilder.AppendLine($"var {variableName}List = new List<{elementType}>();");
 
             // Loop through the list and generate code to deserialize each element
             codeBuilder.AppendLine("for (int i = 0; i < collectionSize; i++)");
             codeBuilder.AppendLine("{");
-            codeBuilder.AppendLine($"    var element = reader.Read{elementType}();"); // This assumes a direct mapping between elementType and reader methods. Adjust if needed.
-            codeBuilder.AppendLine("    list.Add(element);");
+            codeBuilder.AppendLine($"    {variableName}List.Add(reader.Read{elementType}());");
             codeBuilder.AppendLine("}");
 
-            codeBuilder.AppendLine("return list;");
+            codeBuilder.AppendLine($"instance.{variableName} = {variableName}List;");
 
             return codeBuilder.ToString();
         }

@@ -17,7 +17,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WrathForged.Common", "Wrath
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Servers", "Servers", "{264ED1D0-2D40-4CBF-8400-EB9522C5C2E9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WrathForged.Serialization", "WrathForged.Serialization\WrathForged.Serialization.csproj", "{BB2191FB-9B54-4E5D-928B-0B4FDFAF4EAA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WrathForged.Serialization", "WrathForged.Serialization\WrathForged.Serialization.csproj", "{BB2191FB-9B54-4E5D-928B-0B4FDFAF4EAA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{331A121A-9AD8-4E43-B696-B94A0C9C958F}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

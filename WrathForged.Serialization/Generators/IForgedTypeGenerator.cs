@@ -19,6 +19,7 @@ namespace WrathForged.Serialization.Generators
            AttributeData attribute,
            ForgedTypeCode typeCode,
            Compilation compilation,
-           INamedTypeSymbol symbol);
+           INamedTypeSymbol symbol,
+           string variableName);
     }
 }

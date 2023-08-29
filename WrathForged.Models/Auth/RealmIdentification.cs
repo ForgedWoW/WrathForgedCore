@@ -8,12 +8,12 @@ namespace WrathForged.Models.Auth
     public class RealmIdentification
     {
         [SerializableProperty(0)]
-        public uint RegionID { get; } = 0;
+        public uint RegionID { get; set; } = 0;
 
         [SerializableProperty(1)]
-        public uint BattlegroupID { get; } = 0;
+        public uint BattlegroupID { get; set; } = 0;
 
         [SerializableProperty(2)]
-        public uint RealmID { get; }
+        public uint RealmID { get; set; }
     }
 }
