@@ -7,5 +7,6 @@ namespace WrathForged.Serialization
 {
     public class ForgedSerializableAttribute : Attribute
     {
+        public uint PacketID { get; set; }
     }
 }
