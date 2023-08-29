@@ -8,7 +8,7 @@ using WrathForged.Authorization.Server.Workers;
 using WrathForged.Common;
 using WrathForged.Database;
 
-IConfigurationBuilder configBuilder = new ConfigurationBuilder()
+var configBuilder = new ConfigurationBuilder()
                     .SetBasePath(Directory.GetCurrentDirectory())
                     .AddJsonFile("WrathForged.Authorization.Server.Config.json", false, true);
 
@@ -18,7 +18,7 @@ ContainerBuilder builder = new();
 builder.RegisterCommon(configuration);
 builder.RegisterDatabase(configuration);
 builder.RegisterAuth(configuration);
-IContainer container = builder.Build();
+var container = builder.Build();
 
 container.InitializeCommon();
 container.Resolve<CacheBuilder>().Build();

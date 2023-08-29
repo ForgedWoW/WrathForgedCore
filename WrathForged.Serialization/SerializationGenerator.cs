@@ -46,7 +46,7 @@ namespace WrathForged.Serialization
             if (!(context.SyntaxReceiver is SerializationSyntaxReceiver receiver))
                 return;
 
-            System.Diagnostics.Debugger.Launch();
+            //System.Diagnostics.Debugger.Launch();
             foreach (var classDeclaration in receiver.CandidateClasses)
             {
                 var modelSymbol = context.Compilation.GetSemanticModel(classDeclaration.SyntaxTree).GetDeclaredSymbol(classDeclaration) as INamedTypeSymbol;
@@ -224,71 +224,78 @@ namespace WrathForged.Serialization
 
         internal string GenerateTypeDeserializationCode(Compilation compilation, INamedTypeSymbol containerSymbol, ITypeSymbol typeSymbol, AttributeData attr, string variableName)
         {
-            var forgedTypeCode = GetTypeCodeFromTypeName(typeSymbol.Name);
-            var overrideTypeArg = attr?.NamedArguments.FirstOrDefault(arg => arg.Key == "OverrideType");
-            if (overrideTypeArg.HasValue &&
-                !string.IsNullOrEmpty(overrideTypeArg.Value.Value.ToString()) &&
-                Enum.TryParse<ForgedTypeCode>(overrideTypeArg.Value.Value.ToString(), true, out var overrideCode) &&
-                overrideCode != ForgedTypeCode.Empty)
+            try
             {
-                forgedTypeCode = overrideCode;
-            }
-
-            // Based on the type, generate the deserialization code
-            if (IsPrimitiveOrSimpleType(forgedTypeCode))
-            {
-                return $"instance.{variableName} = reader.Read{forgedTypeCode}();";
-            }
-            else if (typeSymbol is IArrayTypeSymbol arrayType && arrayType.ElementType.SpecialType == SpecialType.System_Byte)
-            {
-                var fixedSizeArg = 0u;
-
-                if (attr.NamedArguments.Any(arg => arg.Key == "FixedCollectionSize"))
-                    fixedSizeArg = (uint)attr.NamedArguments.FirstOrDefault(arg => arg.Key == "FixedCollectionSize").Value.Value;
-
-                var sizeLengthTypeArg = string.Empty;
-
-                if (attr.NamedArguments.Any(arg => arg.Key == "CollectionSizeLengthType"))
-                    sizeLengthTypeArg = ((TypeCode)attr.NamedArguments.FirstOrDefault(arg => arg.Key == "CollectionSizeLengthType").Value.Value).ToString();
-
-                var sizeIndexArg = 0u;
-
-                if (attr.NamedArguments.Any(arg => arg.Key == "CollectionSizeIndex"))
-                    sizeIndexArg = (uint)attr.NamedArguments.FirstOrDefault(arg => arg.Key == "CollectionSizeIndex").Value.Value;
-
-                if (fixedSizeArg != 0)
+                var forgedTypeCode = GetTypeCodeFromTypeName(typeSymbol.Name);
+                var overrideTypeArg = attr?.NamedArguments.FirstOrDefault(arg => arg.Key == "OverrideType");
+                if (overrideTypeArg.HasValue &&
+                    !string.IsNullOrEmpty(overrideTypeArg.Value.Value.ToString()) &&
+                    Enum.TryParse<ForgedTypeCode>(overrideTypeArg.Value.Value.ToString(), true, out var overrideCode) &&
+                    overrideCode != ForgedTypeCode.Empty)
                 {
-                    return $"instance.{variableName} = reader.ReadBytes(collectionSize);";
+                    forgedTypeCode = overrideCode;
                 }
-                else if (!string.IsNullOrEmpty(sizeLengthTypeArg) && Enum.TryParse(sizeLengthTypeArg, out TypeCode sizeLengthType) && sizeLengthType != TypeCode.Empty)
+
+                // Based on the type, generate the deserialization code
+                if (IsPrimitiveOrSimpleType(forgedTypeCode))
                 {
-                    return $"instance.{variableName} = reader.ReadBytes(collectionSize);";
+                    return $"instance.{variableName} = reader.Read{forgedTypeCode}();";
                 }
-                else if (sizeIndexArg != 0)
+                else if (typeSymbol is IArrayTypeSymbol arrayType && arrayType.ElementType.SpecialType == SpecialType.System_Byte)
                 {
-                    // Assuming there's a method that can jump to a specific index in the stream, read the size, and then return back to the original position, named 'GetSizeFromStreamIndex'.
-                    return $"instance.{variableName} = reader.ReadBytes(GetSizeFromStreamIndex(reader, sizeIndex));";
+                    var fixedSizeArg = 0u;
+
+                    if (attr.NamedArguments.Any(arg => arg.Key == "FixedCollectionSize"))
+                        fixedSizeArg = (uint)attr.NamedArguments.FirstOrDefault(arg => arg.Key == "FixedCollectionSize").Value.Value;
+
+                    var sizeLengthTypeArg = string.Empty;
+
+                    if (attr.NamedArguments.Any(arg => arg.Key == "CollectionSizeLengthType"))
+                        sizeLengthTypeArg = ((TypeCode)attr.NamedArguments.FirstOrDefault(arg => arg.Key == "CollectionSizeLengthType").Value.Value).ToString();
+
+                    var sizeIndexArg = 0u;
+
+                    if (attr.NamedArguments.Any(arg => arg.Key == "CollectionSizeIndex"))
+                        sizeIndexArg = (uint)attr.NamedArguments.FirstOrDefault(arg => arg.Key == "CollectionSizeIndex").Value.Value;
+
+                    if (fixedSizeArg != 0)
+                    {
+                        return $"instance.{variableName} = reader.ReadBytes(collectionSize);";
+                    }
+                    else if (!string.IsNullOrEmpty(sizeLengthTypeArg) && Enum.TryParse(sizeLengthTypeArg, out TypeCode sizeLengthType) && sizeLengthType != TypeCode.Empty)
+                    {
+                        return $"instance.{variableName} = reader.ReadBytes(collectionSize);";
+                    }
+                    else if (sizeIndexArg != 0)
+                    {
+                        // Assuming there's a method that can jump to a specific index in the stream, read the size, and then return back to the original position, named 'GetSizeFromStreamIndex'.
+                        return $"instance.{variableName} = reader.ReadBytes(GetSizeFromStreamIndex(reader, sizeIndex));";
+                    }
+                    else
+                    {
+                        return $"instance.{variableName} = reader.ReadBytes(collectionSize);";
+                    }
                 }
-                else
+                else if (_generatorsByTypeKind.TryGetValue(typeSymbol.TypeKind, out var forgedTypeGenerator))
                 {
-                    return $"instance.{variableName} = reader.ReadBytes(collectionSize);";
+                    return forgedTypeGenerator.GenerateTypeCodeDeserializeForType(typeSymbol, attr, forgedTypeCode, compilation, containerSymbol, variableName);
+                }
+                else if (_generatorsByName.TryGetValue(typeSymbol.Name, out var generator))
+                {
+                    return generator.GenerateTypeCodeDeserializeForType(typeSymbol, attr, forgedTypeCode, compilation, containerSymbol, variableName);
+                }
+                else if (_generatorsBySpecialType.TryGetValue(typeSymbol.SpecialType, out var specialTypeGenerator))
+                {
+                    return specialTypeGenerator.GenerateTypeCodeDeserializeForType(typeSymbol, attr, forgedTypeCode, compilation, containerSymbol, variableName);
+                }
+                else if (HasDeserializeExtensionMethod(compilation, containerSymbol))
+                {
+                    return $"instance.{variableName} = {typeSymbol.Name}.Deserialize(reader);";
                 }
             }
-            else if (_generatorsByTypeKind.TryGetValue(typeSymbol.TypeKind, out var forgedTypeGenerator))
+            catch (Exception ex)
             {
-                return forgedTypeGenerator.GenerateTypeCodeDeserializeForType(typeSymbol, attr, forgedTypeCode, compilation, containerSymbol, variableName);
-            }
-            else if (_generatorsByName.TryGetValue(typeSymbol.Name, out var generator))
-            {
-                return generator.GenerateTypeCodeDeserializeForType(typeSymbol, attr, forgedTypeCode, compilation, containerSymbol, variableName);
-            }
-            else if (_generatorsBySpecialType.TryGetValue(typeSymbol.SpecialType, out var specialTypeGenerator))
-            {
-                return specialTypeGenerator.GenerateTypeCodeDeserializeForType(typeSymbol, attr, forgedTypeCode, compilation, containerSymbol, variableName);
-            }
-            else if (HasDeserializeExtensionMethod(compilation, containerSymbol))
-            {
-                return $"instance.{variableName} = {typeSymbol.Name}.Deserialize(reader);";
+                throw new Exception($"Error generating deserialization code for type '{typeSymbol.Name}'.", ex);
             }
 
             return string.Empty; // Return empty if no suitable deserialization method found.
@@ -324,58 +331,58 @@ namespace WrathForged.Serialization
 
             var lengthType = attribute.NamedArguments.FirstOrDefault(na => na.Key == "CollectionSizeLengthType").Value.Value?.ToString() ?? string.Empty;
 
+            var sizeProperty = "Length";
+
+            if (collectionType == CollectionType.List)
+                sizeProperty = "Count";
+
             string lengthWriteMethod;
             string zeroWriteMethod;
             switch (lengthType)
             {
                 case "Byte":
-                    lengthWriteMethod = $"writer.Write((byte){variableName}.Count);";
+                    lengthWriteMethod = $"writer.Write((byte){variableName}.{sizeProperty});";
                     zeroWriteMethod = "writer.Write((byte)0);";
                     break;
 
                 case "SByte":
-                    lengthWriteMethod = $"writer.Write((sbyte){variableName}.Count);";
+                    lengthWriteMethod = $"writer.Write((sbyte){variableName}.{sizeProperty});";
                     zeroWriteMethod = "writer.Write((sbyte)0);";
                     break;
 
                 case "Int16":
-                    lengthWriteMethod = $"writer.Write((short){variableName}.Count);";
+                    lengthWriteMethod = $"writer.Write((short){variableName}.{sizeProperty});";
                     zeroWriteMethod = "writer.Write((short)0);";
                     break;
 
                 case "UInt16":
-                    lengthWriteMethod = $"writer.Write((ushort){variableName}.Count);";
+                    lengthWriteMethod = $"writer.Write((ushort){variableName}.{sizeProperty});";
                     zeroWriteMethod = "writer.Write((ushort)0);";
                     break;
 
                 case "UInt32":
-                    lengthWriteMethod = $"writer.Write((uint){variableName}.Count);";
+                    lengthWriteMethod = $"writer.Write((uint){variableName}.{sizeProperty});";
                     zeroWriteMethod = "writer.Write((uint)0);";
                     break;
 
                 case "Int64":
-                    lengthWriteMethod = $"writer.Write((long){variableName}.Count);";
+                    lengthWriteMethod = $"writer.Write((long){variableName}.{sizeProperty});";
                     zeroWriteMethod = "writer.Write((long)0);";
                     break;
 
                 case "UInt64":
-                    lengthWriteMethod = $"writer.Write((ulong){variableName}.Count);";
+                    lengthWriteMethod = $"writer.Write((ulong){variableName}.{sizeProperty});";
                     zeroWriteMethod = "writer.Write((ulong)0);";
                     break;
 
                 default:
-                    lengthWriteMethod = $"writer.Write({variableName}.Count);";
+                    lengthWriteMethod = $"writer.Write({variableName}.{sizeProperty});";
                     zeroWriteMethod = "writer.Write(0);";
                     break;
             }
 
-            if (collectionType == CollectionType.List)
-            {
-                lengthWriteMethod = lengthWriteMethod.Replace(".Count", ".Length");
-            }
-
             return $@"
-                if ({variableName} == null || {variableName}.Count == 0)
+                if ({variableName} == null || {variableName}.{sizeProperty} == 0)
                 {{
                     {zeroWriteMethod}
                 }}
