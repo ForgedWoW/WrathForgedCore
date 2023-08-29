@@ -3,6 +3,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Text;
 using Microsoft.CodeAnalysis;
 using WrathForged.Serialization.Generators;
@@ -13,7 +14,7 @@ namespace WrathForged.Serialization
     public class SerializationGenerator : ISourceGenerator
     {
         private readonly string _attributeName = nameof(SerializablePropertyAttribute);
-
+        private readonly ushort _nextIndex = 0;
         private Dictionary<string, IForgedTypeGenerator> _generatorsByName;
         private Dictionary<TypeKind, IForgedTypeGenerator> _generatorsByTypeKind;
         private Dictionary<SpecialType, IForgedTypeGenerator> _generatorsBySpecialType;
@@ -30,7 +31,8 @@ namespace WrathForged.Serialization
 
             _generatorsByName = new Dictionary<string, IForgedTypeGenerator>(StringComparer.InvariantCultureIgnoreCase)
             {
-                { nameof(String), new StringGenerator() }
+                { nameof(String), new StringGenerator() },
+                { nameof(IPAddress), new IPAddressGenerator() }
             };
 
             _generatorsBySpecialType = new Dictionary<SpecialType, IForgedTypeGenerator>()

@@ -1,64 +1,72 @@
 ﻿// Copyright (c) Forged WoW LLC <https://github.com/ForgedWoW/WrathForgedCore>
 // Licensed under GPL-3.0 license. See <https://github.com/ForgedWoW/WrathForgedCore/blob/master/LICENSE> for full information.
+using System.Linq;
 using System.Text;
 using Microsoft.CodeAnalysis;
+using WrathForged.Serialization;
+using WrathForged.Serialization.Generators;
 
-namespace WrathForged.Serialization.Generators
+public class StringGenerator : IForgedTypeGenerator
 {
-    internal class StringGenerator : IForgedTypeGenerator
+    public string GenerateTypeCodeSerializeForType(ITypeSymbol typeSymbol, AttributeData attribute, ForgedTypeCode typeCode, Compilation compilation, INamedTypeSymbol symbol, string variableName)
     {
-        public string GenerateTypeCodeSerializeForType(ITypeSymbol typeSymbol, AttributeData attribute, ForgedTypeCode typeCode, Compilation compilation, INamedTypeSymbol symbol, string variableName)
+        var serialization = new StringBuilder();
+
+        if (attribute.NamedArguments.Any(arg => arg.Key == "FixedSize"))
         {
-            var arraySerialization = new StringBuilder();
-            arraySerialization.AppendLine($"if (!string.IsNullOrEmpty(instance.{variableName}));");
-            arraySerialization.AppendLine("{");
-            switch (typeCode)
-            {
-                case ForgedTypeCode.CString:
-                    arraySerialization.AppendLine($"        writer.Write(instance.{variableName}.ToCString());");
-                    break;
-
-                case ForgedTypeCode.ASCIIString:
-                    arraySerialization.AppendLine($"        writer.Write(Encoding.ASCII.GetBytes(instance.{variableName}));");
-                    break;
-
-                default:
-                    arraySerialization.AppendLine($"        writer.Write(instance.{variableName});");
-                    break;
-            }
-
-            arraySerialization.AppendLine("}");
-            return arraySerialization.ToString();
+            var fixedSize = attribute.NamedArguments.First(arg => arg.Key == "FixedSize").Value.Value;
+            serialization.AppendLine($"var fixedSizeString = instance.{variableName}.PadRight({fixedSize}, '\\0').Substring(0, {fixedSize});");
+            variableName = "fixedSizeString";
         }
 
-        public string GenerateTypeCodeDeserializeForType(ITypeSymbol typeSymbol, AttributeData attr, ForgedTypeCode typeCode, Compilation compilation, INamedTypeSymbol containerSymbol)
+        switch (typeCode)
         {
-            var codeBuilder = new StringBuilder();
+            case ForgedTypeCode.CString:
+                serialization.AppendLine($"writer.Write({variableName}.ToCString());");
+                break;
 
-            // Read the string length (assuming it's prefixed as an int32)
-            codeBuilder.AppendLine("var strLength = reader.ReadInt32();");
-            // Read the bytes
-            codeBuilder.AppendLine("var strBytes = reader.ReadBytes(strLength);");
+            case ForgedTypeCode.ASCIIString:
+                serialization.AppendLine($"writer.Write(Encoding.ASCII.GetBytes({variableName}));");
+                break;
 
-            // Convert the bytes back to a string based on the typeCode
-            switch (typeCode)
-            {
-                case ForgedTypeCode.CString:
-                    codeBuilder.AppendLine("var str = strBytes.FromCString();");
-                    break;
-
-                case ForgedTypeCode.ASCIIString:
-                    codeBuilder.AppendLine("var str = Encoding.ASCII.GetString(strBytes);");
-                    break;
-
-                default:
-                    codeBuilder.AppendLine("var str = Encoding.UTF8.GetString(strBytes);"); // Default to UTF-8, adjust if needed
-                    break;
-            }
-
-            codeBuilder.AppendLine("return str;");
-
-            return codeBuilder.ToString();
+            default:
+                serialization.AppendLine($"writer.Write({variableName});");
+                break;
         }
+
+        return serialization.ToString();
     }
+
+    public string GenerateTypeCodeDeserializeForType(ITypeSymbol typeSymbol, AttributeData attribute, ForgedTypeCode typeCode, Compilation compilation, INamedTypeSymbol symbol, string variableName)
+    {
+        var deserialization = new StringBuilder();
+
+        switch (typeCode)
+        {
+            case ForgedTypeCode.CString:
+                deserialization.AppendLine($"instance.{variableName} = Encoding.ASCII.GetString(reader.ReadCString());");
+                break;
+
+            case ForgedTypeCode.ASCIIString:
+                if (attribute.NamedArguments.Any(arg => arg.Key == "FixedSize"))
+                {
+                    var fixedSize = attribute.NamedArguments.First(arg => arg.Key == "FixedSize").Value.Value;
+                    deserialization.AppendLine($"instance.{variableName} = Encoding.ASCII.GetString(reader.ReadBytes({fixedSize})).TrimEnd('\\0');");
+                }
+                else
+                {
+                    deserialization.AppendLine($"instance.{variableName} = Encoding.ASCII.GetString(reader.ReadByteArray());");
+                }
+
+                break;
+
+            default:
+                deserialization.AppendLine($"instance.{variableName} = reader.ReadString();");
+                break;
+        }
+
+        return deserialization.ToString();
+    }
+
+    public string GenerateTypeCodeDeserializeForType(ITypeSymbol typeSymbol, AttributeData attribute, ForgedTypeCode typeCode, Compilation compilation, INamedTypeSymbol symbol) => throw new System.NotImplementedException();
 }
