@@ -95,30 +95,50 @@ namespace WrathForged.Serialization
 
         private void BuildDeserializer(GeneratorExecutionContext context, INamedTypeSymbol symbol, List<IPropertySymbol> properties, StringBuilder sourceBuilder)
         {
-            sourceBuilder.AppendLine($"        public static {symbol.Name} Deserialize(System.IO.BinaryReader reader)");
-            sourceBuilder.AppendLine("        {");
-            sourceBuilder.AppendLine($"            var instance = new {symbol.Name}();");
+            sourceBuilder.AppendLine($" public static {symbol.Name} Deserialize(System.IO.BinaryReader reader)");
+            sourceBuilder.AppendLine(" {");
+            sourceBuilder.AppendLine($" var instance = new {symbol.Name}();");
+
+            // Dictionary to cache sizes for properties with CollectionSizeIndex
+            sourceBuilder.AppendLine(" var cachedSizes = new Dictionary<uint, int>();");
 
             foreach (var prop in properties)
             {
                 var attr = prop.GetAttributes().FirstOrDefault(a => a.AttributeClass.Name == _attributeName);
 
+                // Check if the property has a CollectionSizeIndex attribute
+                if (attr.NamedArguments.Any(arg => arg.Key == "CollectionSizeIndex"))
+                {
+                    var collectionSizeIndex = (uint)attr.NamedArguments.FirstOrDefault(arg => arg.Key == "CollectionSizeIndex").Value.Value;
+                    sourceBuilder.AppendLine($" cachedSizes[{collectionSizeIndex}] = reader.ReadInt32();"); // Assuming size is stored as int
+                    continue;
+                }
+
                 var collectionType = DetermineCollectionType(prop.Type);
                 if (collectionType != CollectionType.None)
                 {
-                    var collectionSizeCode = GenerateCollectionDeserializationSizeCode(attr);
-                    sourceBuilder.AppendLine(collectionSizeCode);
+                    // Check if the property references a cached CollectionSizeIndex
+                    if (attr.NamedArguments.Any(arg => arg.Key == "CollectionSizeIndex"))
+                    {
+                        var sizeIndexArg = (uint)attr.NamedArguments.FirstOrDefault(arg => arg.Key == "CollectionSizeIndex").Value.Value;
+                        sourceBuilder.AppendLine($" var collectionSize = cachedSizes[{sizeIndexArg}];");
+                    }
+                    else
+                    {
+                        var collectionSizeCode = GenerateCollectionDeserializationSizeCode(attr);
+                        sourceBuilder.AppendLine(collectionSizeCode);
+                    }
                 }
 
                 var propertyDeserializationCode = GenerateTypeDeserializationCode(context.Compilation, symbol, prop.Type, attr, prop.Name);
                 if (!string.IsNullOrEmpty(propertyDeserializationCode))
                 {
-                    sourceBuilder.AppendLine($"            instance.{prop.Name} = {propertyDeserializationCode}");
+                    sourceBuilder.AppendLine($" instance.{prop.Name} = {propertyDeserializationCode}");
                 }
             }
 
-            sourceBuilder.AppendLine("            return instance;");
-            sourceBuilder.AppendLine("        }");
+            sourceBuilder.AppendLine(" return instance;");
+            sourceBuilder.AppendLine(" }");
         }
 
         private void BuildSerializer(GeneratorExecutionContext context, INamedTypeSymbol symbol, List<IPropertySymbol> properties, StringBuilder sourceBuilder)
@@ -333,6 +353,42 @@ namespace WrathForged.Serialization
                 {{
                     {lengthWriteMethod}
                 }}";
+        }
+
+        internal string GenerateCollectionDeserializationSizeCode(AttributeData attr)
+        {
+            var codeBuilder = new StringBuilder();
+
+            // Check for FixedCollectionSize attribute
+            var fixedSizeArg = attr.NamedArguments.FirstOrDefault(arg => arg.Key == "FixedCollectionSize");
+            if (fixedSizeArg.Key != null && fixedSizeArg.Value.Value != null)
+            {
+                var fixedSize = (uint)fixedSizeArg.Value.Value;
+                codeBuilder.AppendLine($"var collectionSize = {fixedSize};");
+                return codeBuilder.ToString();
+            }
+
+            // Check for CollectionSizeLengthType attribute
+            var sizeLengthTypeArg = attr.NamedArguments.FirstOrDefault(arg => arg.Key == "CollectionSizeLengthType");
+            if (sizeLengthTypeArg.Key != null && sizeLengthTypeArg.Value.Value != null)
+            {
+                var sizeLengthType = sizeLengthTypeArg.Value.Value.ToString();
+                codeBuilder.AppendLine($"var collectionSize = reader.Read{sizeLengthType}();");
+                return codeBuilder.ToString();
+            }
+
+            // Check for CollectionSizeIndex reference
+            var sizeIndexArg = attr.NamedArguments.FirstOrDefault(arg => arg.Key == "CollectionSizeIndex");
+            if (sizeIndexArg.Key != null && sizeIndexArg.Value.Value != null)
+            {
+                var collectionSizeIndex = (uint)sizeIndexArg.Value.Value;
+                codeBuilder.AppendLine($"var collectionSize = cachedSizes[{collectionSizeIndex}];");
+                return codeBuilder.ToString();
+            }
+
+            // Default case (this might be an error scenario or you can handle it differently)
+            codeBuilder.AppendLine($"var collectionSize = 0; // Default size or handle error");
+            return codeBuilder.ToString();
         }
 
         private static ForgedTypeCode GetTypeCodeFromTypeName(string typeName)

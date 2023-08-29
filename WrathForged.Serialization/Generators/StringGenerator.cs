@@ -30,5 +30,35 @@ namespace WrathForged.Serialization.Generators
             arraySerialization.AppendLine("}");
             return arraySerialization.ToString();
         }
+
+        public string GenerateTypeCodeDeserializeForType(ITypeSymbol typeSymbol, AttributeData attr, ForgedTypeCode typeCode, Compilation compilation, INamedTypeSymbol containerSymbol)
+        {
+            var codeBuilder = new StringBuilder();
+
+            // Read the string length (assuming it's prefixed as an int32)
+            codeBuilder.AppendLine("var strLength = reader.ReadInt32();");
+            // Read the bytes
+            codeBuilder.AppendLine("var strBytes = reader.ReadBytes(strLength);");
+
+            // Convert the bytes back to a string based on the typeCode
+            switch (typeCode)
+            {
+                case ForgedTypeCode.CString:
+                    codeBuilder.AppendLine("var str = strBytes.FromCString();");
+                    break;
+
+                case ForgedTypeCode.ASCIIString:
+                    codeBuilder.AppendLine("var str = Encoding.ASCII.GetString(strBytes);");
+                    break;
+
+                default:
+                    codeBuilder.AppendLine("var str = Encoding.UTF8.GetString(strBytes);"); // Default to UTF-8, adjust if needed
+                    break;
+            }
+
+            codeBuilder.AppendLine("return str;");
+
+            return codeBuilder.ToString();
+        }
     }
 }

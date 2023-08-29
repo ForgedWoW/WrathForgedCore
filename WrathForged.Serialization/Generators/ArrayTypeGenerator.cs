@@ -1,5 +1,6 @@
 ﻿// Copyright (c) Forged WoW LLC <https://github.com/ForgedWoW/WrathForgedCore>
 // Licensed under GPL-3.0 license. See <https://github.com/ForgedWoW/WrathForgedCore/blob/master/LICENSE> for full information.
+using System;
 using System.Linq;
 using System.Text;
 using Microsoft.CodeAnalysis;
@@ -46,6 +47,32 @@ namespace WrathForged.Serialization.Generators
             arraySerialization.AppendLine("}");
 
             return arraySerialization.ToString();
+        }
+
+        public string GenerateTypeCodeDeserializeForType(ITypeSymbol typeSymbol, AttributeData attr, ForgedTypeCode forgedTypeCode, Compilation compilation, INamedTypeSymbol containerSymbol)
+        {
+            if (!(typeSymbol is IArrayTypeSymbol arrayType))
+            {
+                throw new InvalidOperationException("Expected an array type.");
+            }
+
+            var codeBuilder = new StringBuilder();
+
+            // Determine the type of the array elements
+            var elementType = arrayType.ElementType.Name;
+
+            // Generate code to create a new array instance
+            codeBuilder.AppendLine($"var array = new {elementType}[collectionSize];");
+
+            // Loop through the array and generate code to deserialize each element
+            codeBuilder.AppendLine("for (int i = 0; i < collectionSize; i++)");
+            codeBuilder.AppendLine("{");
+            codeBuilder.AppendLine($"    array[i] = reader.Read{elementType}();"); // This assumes a direct mapping between elementType and reader methods. Adjust if needed.
+            codeBuilder.AppendLine("}");
+
+            codeBuilder.AppendLine("return array;");
+
+            return codeBuilder.ToString();
         }
     }
 }

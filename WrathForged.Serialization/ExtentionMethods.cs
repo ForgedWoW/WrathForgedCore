@@ -1,4 +1,6 @@
-﻿using System;
+﻿// Copyright (c) Forged WoW LLC <https://github.com/ForgedWoW/WrathForgedCore>
+// Licensed under GPL-3.0 license. See <https://github.com/ForgedWoW/WrathForgedCore/blob/master/LICENSE> for full information.
+using System;
 using System.Text;
 
 namespace WrathForged.Serialization
@@ -12,6 +14,15 @@ namespace WrathForged.Serialization
             Array.Copy(utf8StringBytes, data, utf8StringBytes.Length);
             data[data.Length - 1] = 0;
             return data;
+        }
+
+        public static string FromCString(this byte[] bytes)
+        {
+            // Assuming the byte array ends with a null byte (0x00) which is typical for C-style strings
+            var length = Array.IndexOf(bytes, (byte)0);
+            if (length < 0)
+                length = bytes.Length; // If no null byte is found, use the entire array
+            return Encoding.UTF8.GetString(bytes, 0, length);
         }
     }
 }

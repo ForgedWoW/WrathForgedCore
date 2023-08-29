@@ -1,5 +1,6 @@
 ﻿// Copyright (c) Forged WoW LLC <https://github.com/ForgedWoW/WrathForgedCore>
 // Licensed under GPL-3.0 license. See <https://github.com/ForgedWoW/WrathForgedCore/blob/master/LICENSE> for full information.
+using System;
 using System.Linq;
 using System.Text;
 using Microsoft.CodeAnalysis;
@@ -47,6 +48,33 @@ namespace WrathForged.Serialization.Generators
             listSerialization.AppendLine("}");
 
             return listSerialization.ToString();
+        }
+
+        public string GenerateTypeCodeDeserializeForType(ITypeSymbol typeSymbol, AttributeData attr, ForgedTypeCode forgedTypeCode, Compilation compilation, INamedTypeSymbol containerSymbol)
+        {
+            if (!(typeSymbol is INamedTypeSymbol namedType) || !namedType.IsGenericType || namedType.TypeArguments.Length != 1)
+            {
+                throw new InvalidOperationException("Expected a generic list type.");
+            }
+
+            var codeBuilder = new StringBuilder();
+
+            // Determine the type of the list elements
+            var elementType = namedType.TypeArguments[0].Name;
+
+            // Generate code to create a new list instance
+            codeBuilder.AppendLine($"var list = new List<{elementType}>();");
+
+            // Loop through the list and generate code to deserialize each element
+            codeBuilder.AppendLine("for (int i = 0; i < collectionSize; i++)");
+            codeBuilder.AppendLine("{");
+            codeBuilder.AppendLine($"    var element = reader.Read{elementType}();"); // This assumes a direct mapping between elementType and reader methods. Adjust if needed.
+            codeBuilder.AppendLine("    list.Add(element);");
+            codeBuilder.AppendLine("}");
+
+            codeBuilder.AppendLine("return list;");
+
+            return codeBuilder.ToString();
         }
     }
 }

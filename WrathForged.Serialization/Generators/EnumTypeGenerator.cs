@@ -2,6 +2,7 @@
 // Licensed under GPL-3.0 license. See <https://github.com/ForgedWoW/WrathForgedCore/blob/master/LICENSE> for full information.
 using System;
 using System.Linq;
+using System.Text;
 using Microsoft.CodeAnalysis;
 
 namespace WrathForged.Serialization.Generators
@@ -88,6 +89,21 @@ namespace WrathForged.Serialization.Generators
                 default:
                     return $"writer.Write((int){variableName});";
             }
+        }
+
+        public string GenerateTypeCodeDeserializeForType(ITypeSymbol typeSymbol, AttributeData attr, ForgedTypeCode forgedTypeCode, Compilation compilation, INamedTypeSymbol containerSymbol)
+        {
+            var codeBuilder = new StringBuilder();
+
+            // Determine the underlying type of the enum
+            var underlyingType = (typeSymbol as INamedTypeSymbol)?.EnumUnderlyingType.Name;
+
+            // Generate code to read the underlying type from the stream and cast it to the enum type
+            codeBuilder.AppendLine($"var enumValue = ({typeSymbol.Name})reader.Read{underlyingType}();");
+
+            codeBuilder.AppendLine("return enumValue;");
+
+            return codeBuilder.ToString();
         }
     }
 }
