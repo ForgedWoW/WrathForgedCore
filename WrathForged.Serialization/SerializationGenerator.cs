@@ -101,7 +101,7 @@ namespace WrathForged.Serialization
 
         private void BuildDeserializer(GeneratorExecutionContext context, INamedTypeSymbol symbol, List<IPropertySymbol> properties, StringBuilder sourceBuilder)
         {
-            sourceBuilder.AppendLine($" public static {symbol.Name} Deserialize(System.IO.BinaryReader reader)");
+            sourceBuilder.AppendLine($" public static {symbol.Name} Read{symbol.Name}(this System.IO.BinaryReader reader)");
             sourceBuilder.AppendLine(" {");
             sourceBuilder.AppendLine($" var instance = new {symbol.Name}();");
 
@@ -198,9 +198,13 @@ namespace WrathForged.Serialization
             }
 
             // Based on the type, generate the serialization code
-            if (IsPrimitiveOrSimpleType(forgedTypeCode) || typeSymbol is IArrayTypeSymbol arrayType && arrayType.ElementType.SpecialType == SpecialType.System_Byte)
+            if (IsPrimitiveOrSimpleType(forgedTypeCode))
             {
                 return $"writer.Write({variableName});";
+            }
+            else if (typeSymbol is IArrayTypeSymbol arrayType && arrayType.ElementType.SpecialType == SpecialType.System_Byte)
+            {
+                return $"if({variableName} != null){{" + $"writer.Write({variableName});}}";
             }
             else if (_generatorsByTypeKind.TryGetValue(typeSymbol.TypeKind, out var forgedTypeGenerator))
             {
@@ -290,7 +294,7 @@ namespace WrathForged.Serialization
                 }
                 else if (HasDeserializeExtensionMethod(compilation, containerSymbol))
                 {
-                    return $"instance.{variableName} = {typeSymbol.Name}.Deserialize(reader);";
+                    return $"instance.{variableName} = reader.Read{typeSymbol.Name}();";
                 }
             }
             catch (Exception ex)
@@ -502,7 +506,7 @@ namespace WrathForged.Serialization
                 .Where(t => t.IsStatic)
                 .SelectMany(t => t.GetMembers().OfType<IMethodSymbol>())
                 .Where(m => m.IsStatic)
-                .Where(m => m.Name == "Deserialize");
+                .Where(m => m.Name == $"Read{typeSymbol.Name}");
 
             foreach (var method in potentialMethods)
             {

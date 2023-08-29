@@ -19,7 +19,6 @@ builder.RegisterCommon(configuration);
 builder.RegisterDatabase(configuration);
 builder.RegisterAuth(configuration);
 var container = builder.Build();
-
 container.InitializeCommon();
 container.Resolve<CacheBuilder>().Build();
 
