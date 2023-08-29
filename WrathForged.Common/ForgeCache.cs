@@ -13,6 +13,11 @@ namespace WrathForged.Common
             return (T)_cache.Get(key);
         }
 
+        public T Get<T>()
+        {
+            return (T)_cache.Get(typeof(T).Name);
+        }
+
         public void Set<T>(TimeSpan expiration, Func<T> refresh)
         {
             if (refresh == null)
@@ -21,7 +26,7 @@ namespace WrathForged.Common
             if (expiration == TimeSpan.Zero)
                 throw new ArgumentException("Must be greater than zero", nameof(expiration));
 
-            T? value = refresh();
+            var value = refresh();
 
             if (value == null)
                 throw new ArgumentNullException(nameof(value));
