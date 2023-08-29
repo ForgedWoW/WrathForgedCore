@@ -34,6 +34,22 @@ namespace WrathForged.Common
             Set(value.GetType().Name, value, expiration, refresh);
         }
 
+        public void Set<T>(string key, TimeSpan expiration, Func<T> refresh)
+        {
+            if (refresh == null)
+                throw new ArgumentNullException(nameof(refresh));
+
+            if (expiration == TimeSpan.Zero)
+                throw new ArgumentException("Must be greater than zero", nameof(expiration));
+
+            var value = refresh();
+
+            if (value == null)
+                throw new ArgumentNullException(nameof(value));
+
+            Set(key, value, expiration, refresh);
+        }
+
         public void Set<T>(T value, TimeSpan expiration, Func<T> refresh)
         {
             if (value == null)

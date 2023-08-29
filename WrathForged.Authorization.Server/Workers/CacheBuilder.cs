@@ -21,8 +21,8 @@ namespace WrathForged.Authorization.Server.Workers
 
         public void Build()
         {
-            _forgeCache.Set(TimeSpan.FromSeconds(_configuration.GetDefaultValue("RealmStatusUpdate", 20)), () => _authDatabase.Realmlists.ToDictionary(d => d.Id, d => d));
-            _forgeCache.Set(TimeSpan.FromSeconds(_configuration.GetDefaultValue("RealmStatusUpdate", 20)), () => _authDatabase.BuildInfos.ToDictionary(d => d.Build, d => d));
+            _forgeCache.Set(AuthCacheKeys.REALM_LISTS, TimeSpan.FromSeconds(_configuration.GetDefaultValue("RealmStatusUpdate", 20)), () => _authDatabase.Realmlists.ToDictionary(d => d.Id, d => d));
+            _forgeCache.Set(AuthCacheKeys.BUILD_INFOS, TimeSpan.FromSeconds(_configuration.GetDefaultValue("RealmStatusUpdate", 20)), () => _authDatabase.BuildInfos.ToDictionary(d => d.Build, d => d));
         }
     }
 }
