@@ -4,6 +4,7 @@ using System.Diagnostics;
 using Autofac;
 using Microsoft.Extensions.Configuration;
 using Serilog;
+using WrathForged.Common.Networking;
 
 namespace WrathForged.Common
 {
@@ -32,7 +33,10 @@ namespace WrathForged.Common
             builder.RegisterInstance(configuration).As<IConfiguration>().SingleInstance();
             builder.RegisterType<ClassFactory>().SingleInstance();
             builder.RegisterInstance(Log.Logger).SingleInstance();
+            builder.RegisterType<ProgramExit>().SingleInstance();
+            builder.RegisterType<ClientTCPServer>().SingleInstance();
             builder.RegisterType<ForgeCache>().SingleInstance();
+
             return builder;
         }
 

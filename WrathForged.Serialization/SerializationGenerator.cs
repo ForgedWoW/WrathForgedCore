@@ -101,9 +101,8 @@ namespace WrathForged.Serialization
 
         private void BuildDeserializer(GeneratorExecutionContext context, INamedTypeSymbol symbol, List<IPropertySymbol> properties, StringBuilder sourceBuilder)
         {
-            sourceBuilder.AppendLine($" public static {symbol.Name} Read{symbol.Name}(this System.IO.BinaryReader reader)");
+            sourceBuilder.AppendLine($" public static {symbol.Name} Read(this {symbol.Name} instance, System.IO.BinaryReader reader)");
             sourceBuilder.AppendLine(" {");
-            sourceBuilder.AppendLine($" var instance = new {symbol.Name}();");
 
             // Dictionary to cache sizes for properties with CollectionSizeIndex
             sourceBuilder.AppendLine(" var cachedSizes = new Dictionary<uint, int>();");
