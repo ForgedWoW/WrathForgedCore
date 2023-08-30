@@ -14,6 +14,7 @@ namespace WrathForged.Serialization
     public class SerializationGenerator : ISourceGenerator
     {
         private readonly string _attributeName = nameof(SerializablePropertyAttribute);
+        private readonly string _forgedSerializableName = nameof(ForgedSerializableAttribute).Replace("Attribute", "");
         private Dictionary<string, IForgedTypeGenerator> _generatorsByName;
         private Dictionary<TypeKind, IForgedTypeGenerator> _generatorsByTypeKind;
         private Dictionary<SpecialType, IForgedTypeGenerator> _generatorsBySpecialType;
@@ -99,10 +100,19 @@ namespace WrathForged.Serialization
 
         private void BuildDeserializer(GeneratorExecutionContext context, INamedTypeSymbol symbol, List<IPropertySymbol> properties, StringBuilder sourceBuilder)
         {
-            var forgedSerializableAttribute = (ForgedSerializableAttribute)symbol.GetAttributes().FirstOrDefault(a => a.AttributeClass.Name == nameof(ForgedSerializableAttribute) || a.AttributeClass.Name == nameof(ForgedSerializableAttribute).Replace("Attribute", ""))?.AttributeConstructor;
+            var forgedSerializableAttributeData = symbol.GetAttributes().FirstOrDefault(a => a.AttributeClass.Name.Contains(_forgedSerializableName));
 
-            sourceBuilder.AppendLine($"[DeserializeDefinition({string.Join(",", forgedSerializableAttribute.PacketIDs)})]");
-            sourceBuilder.AppendLine($"public static {symbol.Name} Read{symbol.Name}(System.IO.BinaryReader reader)");
+            if (forgedSerializableAttributeData != null)
+            {
+                var packetIdsArgument = forgedSerializableAttributeData.NamedArguments.FirstOrDefault(arg => arg.Key == "PacketIDs");
+                if (packetIdsArgument.Key != null)
+                {
+                    var packetIds = packetIdsArgument.Value.Values.Select(val => val.Value.ToString());
+                    sourceBuilder.AppendLine($"[DeserializeDefinition({string.Join(",", packetIds)})]");
+                }
+            }
+
+            sourceBuilder.AppendLine($"public static {symbol.Name} Read{symbol.Name}(this System.IO.BinaryReader reader)");
             sourceBuilder.AppendLine("{");
             sourceBuilder.AppendLine($"{symbol.Name} instance = new {symbol.Name}();");
             sourceBuilder.AppendLine("var cachedSizes = new Dictionary<uint, int>();");
