@@ -4,12 +4,12 @@ using Serilog;
 
 namespace WrathForged.Common
 {
-    public class ProgramExit
+    public class ProgramExitNotifier
     {
         private readonly ILogger _logger;
         private readonly CancellationTokenSource _cancelationTokenSource = new(); // Global cancellation token source for stopping the server.
 
-        public ProgramExit(ILogger logger)
+        public ProgramExitNotifier(ILogger logger)
         {
             _logger = logger;
         }
@@ -18,14 +18,20 @@ namespace WrathForged.Common
 
         public event EventHandler ExitProgram;
 
+        /// <summary>
+        ///     The Logger and common services are stopped here. DO not attempt to use them.
+        /// </summary>
+        public event EventHandler ExitProgramLate;
+
         public CancellationToken GetCancellationToken() => _cancelationTokenSource.Token;
 
-        public void Stop()
+        public void NotifyStop()
         {
             _logger.Information("Server Stop requested.");
             _cancelationTokenSource.Cancel();
 
             ExitProgram?.Invoke(this, EventArgs.Empty);
+            ExitProgramLate?.Invoke(this, EventArgs.Empty);
             _logger.Information("Server Stop completed.");
         }
     }

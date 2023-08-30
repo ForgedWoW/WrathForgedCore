@@ -17,6 +17,9 @@
       "Serilog.Sinks.Async"
     ],
     "MinimumLevel": "Debug",
+    "OtherLogLevels": {
+      "Microsoft.EntityFrameworkCore.Database.Command": "Error"
+    },
     "WriteTo": [
       {
         "Name": "Console"

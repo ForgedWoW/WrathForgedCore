@@ -30,10 +30,22 @@ namespace WrathForged.Common
              .Enrich.FromLogContext()
              .CreateLogger();
 
+            var exitNotifier = new ProgramExitNotifier(Log.Logger);
+
+            exitNotifier.ExitProgram += (sender, e) =>
+            {
+                Log.Logger.Information("WrathForged.Common is shutting down.");
+            };
+
+            exitNotifier.ExitProgramLate += (sender, e) =>
+            {
+                Log.CloseAndFlush();
+            };
+
             builder.RegisterInstance(configuration).As<IConfiguration>().SingleInstance();
             builder.RegisterType<ClassFactory>().SingleInstance();
             builder.RegisterInstance(Log.Logger).SingleInstance();
-            builder.RegisterType<ProgramExit>().SingleInstance();
+            builder.RegisterInstance(exitNotifier).SingleInstance();
             builder.RegisterType<ClientTCPServer>().SingleInstance();
             builder.RegisterType<ForgeCache>().SingleInstance();
 

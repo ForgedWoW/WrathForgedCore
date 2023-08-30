@@ -2,7 +2,6 @@
 // Licensed under GPL-3.0 license. See <https://github.com/ForgedWoW/WrathForgedCore/blob/master/LICENSE> for full information.
 using Autofac;
 using Microsoft.Extensions.Configuration;
-using Serilog;
 using WrathForged.Authorization.Server;
 using WrathForged.Authorization.Server.Workers;
 using WrathForged.Common;
@@ -24,7 +23,8 @@ container.Resolve<CacheBuilder>().Build();
 
 Console.CancelKeyPress += (sender, e) =>
 {
-    Log.CloseAndFlush();
+    container.ShutdownDatabase();
+    container.Resolve<ProgramExitNotifier>().NotifyStop();
 };
 
 await Task.Delay(-1);

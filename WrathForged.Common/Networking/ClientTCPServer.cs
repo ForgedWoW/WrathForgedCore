@@ -12,13 +12,13 @@ namespace WrathForged.Common.Networking
     {
         private readonly IConfiguration _configuration;
         private readonly ILogger _logger;
-        private readonly ProgramExit _programExit;
+        private readonly ProgramExitNotifier _programExit;
         private TcpListener _tcpListener;
         private readonly List<ClientSocket> _clients = new();
         private readonly ActionBlock<DataReceivedEventArgs> _dataProcessingBlock;
         private readonly ActionBlock<ClientConnectionChangeEvent> _connectionProcessingBlock;
 
-        public ClientTCPServer(IConfiguration configuration, ILogger logger, ProgramExit programExit)
+        public ClientTCPServer(IConfiguration configuration, ILogger logger, ProgramExitNotifier programExit)
         {
             _configuration = configuration;
             _logger = logger;
@@ -30,7 +30,7 @@ namespace WrathForged.Common.Networking
                     if (data.EventHandler == null)
                         return;
 
-                    foreach (EventHandler<DataReceivedEventArgs> handler in data.EventHandler.GetInvocationList())
+                    foreach (var handler in data.EventHandler.GetInvocationList().Cast<EventHandler<DataReceivedEventArgs>>())
                         try
                         {
                             handler?.Invoke(this, data);
@@ -54,7 +54,7 @@ namespace WrathForged.Common.Networking
                     if (data.EventHandler == null)
                         return;
 
-                    foreach (EventHandler<ClientConnectionChangeEvent> handler in data.EventHandler.GetInvocationList())
+                    foreach (var handler in data.EventHandler.GetInvocationList().Cast<EventHandler<ClientConnectionChangeEvent>>())
                         try
                         {
                             handler?.Invoke(this, data);

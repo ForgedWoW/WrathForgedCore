@@ -85,7 +85,7 @@ namespace WrathForged.Common.Networking
             {
                 await _writeSemaphore.WaitAsync(); // Wait until there's data to write
 
-                if (_writeQueue.TryDequeue(out var data))
+                while (_writeQueue.TryDequeue(out var data))
                 {
                     try
                     {

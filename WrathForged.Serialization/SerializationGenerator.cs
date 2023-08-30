@@ -49,9 +49,7 @@ namespace WrathForged.Serialization
             //System.Diagnostics.Debugger.Launch();
             foreach (var classDeclaration in receiver.CandidateClasses)
             {
-                var modelSymbol = context.Compilation.GetSemanticModel(classDeclaration.SyntaxTree).GetDeclaredSymbol(classDeclaration) as INamedTypeSymbol;
-
-                if (modelSymbol == null)
+                if (!(context.Compilation.GetSemanticModel(classDeclaration.SyntaxTree).GetDeclaredSymbol(classDeclaration) is INamedTypeSymbol modelSymbol))
                     continue;
 
                 var source = GenerateSerializationCode(context, modelSymbol);
