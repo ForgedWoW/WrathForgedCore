@@ -1,5 +1,6 @@
 ﻿// Copyright (c) Forged WoW LLC <https://github.com/ForgedWoW/WrathForgedCore>
 // Licensed under GPL-3.0 license. See <https://github.com/ForgedWoW/WrathForgedCore/blob/master/LICENSE> for full information.
+using System.Collections.Concurrent;
 using System.Net;
 using System.Net.Sockets;
 using System.Threading.Tasks.Dataflow;
@@ -12,6 +13,10 @@ namespace WrathForged.Common.Networking
         private readonly TcpClient _client;
         private readonly ILogger _logger;
         private readonly ActionBlock<DataReceivedEventArgs> _actionBlock;
+        private readonly SemaphoreSlim _writeSemaphore = new(1, 1);
+        private readonly ConcurrentQueue<byte[]> _writeQueue = new();
+
+        private readonly NetworkStream _stream;
 
         public ClientSocket(TcpClient client, ILogger logger, ActionBlock<DataReceivedEventArgs> actionBlock)
         {
@@ -23,8 +28,9 @@ namespace WrathForged.Common.Networking
             _client.LingerState = new LingerOption(true, 0);
             IPEndPoint = _client.Client.RemoteEndPoint as IPEndPoint;
 
-            Stream = _client.GetStream();
+            _stream = _client.GetStream();
             _ = StartListening();
+            _ = ProcessWriteQueue();
         }
 
         public event EventHandler OnDisconnect;
@@ -35,7 +41,14 @@ namespace WrathForged.Common.Networking
 
         public IPEndPoint? IPEndPoint { get; }
 
-        public NetworkStream Stream { get; }
+        public void EnqueueWrite(byte[] data)
+        {
+            if (data == null || data.Length == 0)
+                return;
+
+            _writeQueue.Enqueue(data);
+            _writeSemaphore.Release();
+        }
 
         public void Disconnect()
         {
@@ -50,7 +63,7 @@ namespace WrathForged.Common.Networking
             {
                 try
                 {
-                    var bytesRead = await Stream.ReadAsync(buffer);
+                    var bytesRead = await _stream.ReadAsync(buffer);
                     if (bytesRead > 0)
                     {
                         var data = buffer[..bytesRead].ToArray();
@@ -62,6 +75,27 @@ namespace WrathForged.Common.Networking
                     Disconnect();
                     _logger.Error(ex, "Error while reading from client");
                     break;
+                }
+            }
+        }
+
+        private async Task ProcessWriteQueue()
+        {
+            while (true)
+            {
+                await _writeSemaphore.WaitAsync(); // Wait until there's data to write
+
+                if (_writeQueue.TryDequeue(out var data))
+                {
+                    try
+                    {
+                        _stream.Write(data, 0, data.Length);
+                    }
+                    catch (Exception ex)
+                    {
+                        _logger.Error(ex, "Error while sending data to client");
+                        Disconnect();
+                    }
                 }
             }
         }
