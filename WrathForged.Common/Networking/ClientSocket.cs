@@ -12,7 +12,6 @@ namespace WrathForged.Common.Networking
         private readonly TcpClient _client;
         private readonly ILogger _logger;
         private readonly ActionBlock<DataReceivedEventArgs> _actionBlock;
-        private readonly NetworkStream _stream;
 
         public ClientSocket(TcpClient client, ILogger logger, ActionBlock<DataReceivedEventArgs> actionBlock)
         {
@@ -24,8 +23,8 @@ namespace WrathForged.Common.Networking
             _client.LingerState = new LingerOption(true, 0);
             IPEndPoint = _client.Client.RemoteEndPoint as IPEndPoint;
 
-            _stream = _client.GetStream();
-            StartListening();
+            Stream = _client.GetStream();
+            _ = StartListening();
         }
 
         public event EventHandler OnDisconnect;
@@ -36,26 +35,25 @@ namespace WrathForged.Common.Networking
 
         public IPEndPoint? IPEndPoint { get; }
 
+        public NetworkStream Stream { get; }
+
         public void Disconnect()
         {
             _client.Close();
             OnDisconnect?.Invoke(this, EventArgs.Empty);
         }
 
-        private async void StartListening()
+        private async Task StartListening()
         {
-            var buffer = new byte[0x4000];
-            int bytesRead;
-
+            var buffer = new Memory<byte>(new byte[0x4000]);
             while (_client.Connected)
             {
                 try
                 {
-                    bytesRead = await _stream.ReadAsync(buffer, 0, buffer.Length);
+                    var bytesRead = await Stream.ReadAsync(buffer);
                     if (bytesRead > 0)
                     {
-                        var data = new byte[bytesRead];
-                        System.Buffer.BlockCopy(buffer, 0, data, 0, bytesRead);
+                        var data = buffer[..bytesRead].ToArray();
                         _actionBlock.Post(new DataReceivedEventArgs(this, data, OnDataReceived));
                     }
                 }
