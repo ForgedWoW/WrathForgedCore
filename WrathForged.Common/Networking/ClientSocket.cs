@@ -81,7 +81,7 @@ namespace WrathForged.Common.Networking
 
         private async Task ProcessWriteQueue()
         {
-            while (true)
+            while (_client.Connected)
             {
                 await _writeSemaphore.WaitAsync(); // Wait until there's data to write
 
