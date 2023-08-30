@@ -3,6 +3,7 @@
 using Autofac;
 using Microsoft.Extensions.Configuration;
 using WrathForged.Authorization.Server.Workers;
+using WrathForged.Common.Networking;
 
 namespace WrathForged.Authorization.Server
 {
@@ -10,6 +11,7 @@ namespace WrathForged.Authorization.Server
     {
         public static ContainerBuilder RegisterAuth(this ContainerBuilder builder, IConfiguration configuration)
         {
+            builder.RegisterType<ClientTCPServer>().SingleInstance();
             builder.RegisterType<CacheBuilder>().SingleInstance();
             return builder;
         }
