@@ -7,7 +7,7 @@ namespace WrathForged.Common
 {
     public class ForgedModelDeserialization
     {
-        public Dictionary<uint, MethodInfo> DeserializationMethodsCache = new();
+        public Dictionary<PacketScope, Dictionary<uint, MethodInfo>> DeserializationMethodsCache = new();
 
         public ForgedModelDeserialization()
         {
@@ -19,9 +19,15 @@ namespace WrathForged.Common
             foreach (var method in methodsWithAttribute)
             {
                 var attribute = (DeserializeDefinitionAttribute)method.GetCustomAttributes(typeof(DeserializeDefinitionAttribute), false).First();
+                if (!DeserializationMethodsCache.TryGetValue(attribute.Scope, out var scopeDictionary))
+                {
+                    scopeDictionary = new Dictionary<uint, MethodInfo>();
+                    DeserializationMethodsCache[attribute.Scope] = scopeDictionary;
+                }
+
                 foreach (var packetId in attribute.PacketIDs)
                 {
-                    DeserializationMethodsCache[packetId] = method;
+                    scopeDictionary[packetId] = method;
                 }
             }
         }

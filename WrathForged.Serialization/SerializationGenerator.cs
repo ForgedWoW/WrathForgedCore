@@ -105,10 +105,11 @@ namespace WrathForged.Serialization
             if (forgedSerializableAttributeData != null)
             {
                 var packetIdsArgument = forgedSerializableAttributeData.NamedArguments.FirstOrDefault(arg => arg.Key == "PacketIDs");
-                if (packetIdsArgument.Key != null)
+                var scopeArgument = forgedSerializableAttributeData.NamedArguments.FirstOrDefault(arg => arg.Key == "Scope");
+                if (packetIdsArgument.Key != null && scopeArgument.Key != null)
                 {
                     var packetIds = packetIdsArgument.Value.Values.Select(val => val.Value.ToString());
-                    sourceBuilder.AppendLine($"[DeserializeDefinition({string.Join(",", packetIds)})]");
+                    sourceBuilder.AppendLine($"[DeserializeDefinition(PacketScope.{(PacketScope)scopeArgument.Value.Value}, {string.Join(",", packetIds)})]");
                 }
             }
 

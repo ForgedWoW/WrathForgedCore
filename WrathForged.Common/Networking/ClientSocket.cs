@@ -35,9 +35,9 @@ namespace WrathForged.Common.Networking
 
         public event EventHandler OnDisconnect;
 
-        public bool IsConnected => _client.Connected;
-
         public event EventHandler<DataReceivedEventArgs> OnDataReceived;
+
+        public bool IsConnected => _client.Connected;
 
         public IPEndPoint? IPEndPoint { get; }
 

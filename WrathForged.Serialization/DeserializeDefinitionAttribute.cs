@@ -7,10 +7,12 @@ namespace WrathForged.Serialization
     [AttributeUsage(AttributeTargets.Method, AllowMultiple = false)]
     public class DeserializeDefinitionAttribute : Attribute
     {
+        public PacketScope Scope { get; }
         public uint[] PacketIDs { get; }
 
-        public DeserializeDefinitionAttribute(params uint[] packetIDs)
+        public DeserializeDefinitionAttribute(PacketScope scope, params uint[] packetIDs)
         {
+            Scope = scope;
             PacketIDs = packetIDs;
         }
     }
