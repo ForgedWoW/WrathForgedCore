@@ -99,11 +99,13 @@ namespace WrathForged.Serialization
 
         private void BuildDeserializer(GeneratorExecutionContext context, INamedTypeSymbol symbol, List<IPropertySymbol> properties, StringBuilder sourceBuilder)
         {
-            sourceBuilder.AppendLine($" public static {symbol.Name} Read(this {symbol.Name} instance, System.IO.BinaryReader reader)");
-            sourceBuilder.AppendLine(" {");
+            var forgedSerializableAttribute = (ForgedSerializableAttribute)symbol.GetAttributes().FirstOrDefault(a => a.AttributeClass.Name == nameof(ForgedSerializableAttribute) || a.AttributeClass.Name == nameof(ForgedSerializableAttribute).Replace("Attribute", ""))?.AttributeConstructor;
 
-            // Dictionary to cache sizes for properties with CollectionSizeIndex
-            sourceBuilder.AppendLine(" var cachedSizes = new Dictionary<uint, int>();");
+            sourceBuilder.AppendLine($"[DeserializeDefinition({string.Join(",", forgedSerializableAttribute.PacketIDs)})]");
+            sourceBuilder.AppendLine($"public static {symbol.Name} Read{symbol.Name}(System.IO.BinaryReader reader)");
+            sourceBuilder.AppendLine("{");
+            sourceBuilder.AppendLine($"{symbol.Name} instance = new {symbol.Name}();");
+            sourceBuilder.AppendLine("var cachedSizes = new Dictionary<uint, int>();");
 
             foreach (var prop in properties)
             {
