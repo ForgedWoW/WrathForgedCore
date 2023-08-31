@@ -9,13 +9,6 @@ namespace WrathForged.Common
 {
     public class ForgedModelDeserialization
     {
-        public enum DeserializationResult
-        {
-            Success,
-            Failure,
-            UnknownPacket
-        }
-
         private readonly ILogger _logger;
         public Dictionary<PacketScope, Dictionary<uint, MethodInfo>> DeserializationMethodsCache = new();
 
@@ -60,7 +53,17 @@ namespace WrathForged.Common
 
             try
             {
-                packet = method.Invoke(null, new object[] { buffer.Reader });
+                // Create an array to hold the parameters for the method invocation
+                var parameters = new object?[] { buffer.Reader, null }; // Assuming the method has one input and one out parameter
+
+                // Invoke the method
+                var result = method.Invoke(null, parameters);
+
+                // Retrieve the out parameter's value from the array
+                packet = parameters[1];
+
+                if (result != null)
+                    return (DeserializationResult)result; // Assuming the method returns a DeserializationResult
             }
             catch (Exception ex)
             {
@@ -68,7 +71,7 @@ namespace WrathForged.Common
                 packet = null;
             }
 
-            return packet != null ? DeserializationResult.Success : DeserializationResult.Failure;
+            return DeserializationResult.Error;
         }
     }
 }

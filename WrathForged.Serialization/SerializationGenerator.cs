@@ -113,9 +113,11 @@ namespace WrathForged.Serialization
                 }
             }
 
-            sourceBuilder.AppendLine($"public static {symbol.Name} Read{symbol.Name}(this System.IO.BinaryReader reader)");
+            sourceBuilder.AppendLine($"public static DeserializationResult Read{symbol.Name}(this System.IO.BinaryReader reader, out {symbol.Name}? instance)");
             sourceBuilder.AppendLine("{");
-            sourceBuilder.AppendLine($"{symbol.Name} instance = new {symbol.Name}();");
+            sourceBuilder.AppendLine("try");
+            sourceBuilder.AppendLine("{");
+            sourceBuilder.AppendLine($"{symbol.Name} tempInstance = new {symbol.Name}();");
             sourceBuilder.AppendLine("var cachedSizes = new Dictionary<uint, int>();");
 
             foreach (var prop in properties)
@@ -160,8 +162,20 @@ namespace WrathForged.Serialization
                 }
             }
 
-            sourceBuilder.AppendLine(" return instance;");
-            sourceBuilder.AppendLine(" }");
+            sourceBuilder.AppendLine("instance = tempInstance;");
+            sourceBuilder.AppendLine("return DeserializationResult.Success;");
+            sourceBuilder.AppendLine("}");
+            sourceBuilder.AppendLine("catch (EndOfStreamException)");
+            sourceBuilder.AppendLine("{");
+            sourceBuilder.AppendLine("instance = null;");
+            sourceBuilder.AppendLine("return DeserializationResult.EndOfStream;");
+            sourceBuilder.AppendLine("}");
+            sourceBuilder.AppendLine("catch (Exception)");
+            sourceBuilder.AppendLine("{");
+            sourceBuilder.AppendLine("instance = null;");
+            sourceBuilder.AppendLine("return DeserializationResult.Error;");
+            sourceBuilder.AppendLine("}");
+            sourceBuilder.AppendLine("}");
         }
 
         private void BuildSerializer(GeneratorExecutionContext context, INamedTypeSymbol symbol, List<IPropertySymbol> properties, StringBuilder sourceBuilder)
