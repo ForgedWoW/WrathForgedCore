@@ -46,9 +46,11 @@ namespace WrathForged.Common
             builder.RegisterType<ClassFactory>().SingleInstance();
             builder.RegisterInstance(Log.Logger).SingleInstance();
             builder.RegisterInstance(exitNotifier).SingleInstance();
-            builder.RegisterType<ClientTCPServer>().SingleInstance();
+            builder.RegisterType<TCPServer>();
+            builder.RegisterType<WoWClientServer>();
             builder.RegisterType<ForgeCache>().SingleInstance();
             builder.RegisterType<ForgedModelDeserialization>().SingleInstance();
+            builder.RegisterType<PacketRouter>().SingleInstance();
 
             return builder;
         }

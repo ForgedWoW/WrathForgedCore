@@ -33,9 +33,33 @@ namespace WrathForged.Common.Networking
             _ = ProcessWriteQueue();
         }
 
-        public event EventHandler OnDisconnect;
+        private EventHandler _onDisconnect;
+        private EventHandler<DataReceivedEventArgs> _onDataReceived;
 
-        public event EventHandler<DataReceivedEventArgs> OnDataReceived;
+#pragma warning disable CS8601 // Possible null reference assignment. -= is causing this warning for some reason.
+
+        // with client disconnects, we need to remove the delegates from the backing fields so the GC can collect them
+        public event EventHandler OnDisconnect
+        {
+            add { _onDisconnect += value; }
+            remove
+            {
+                if (_onDisconnect != null && value != null)
+                    _onDisconnect -= value;
+            }
+        }
+
+        public event EventHandler<DataReceivedEventArgs> OnDataReceived
+        {
+            add { _onDataReceived += value; }
+            remove
+            {
+                if (_onDataReceived != null && value != null)
+                    _onDataReceived -= value;
+            }
+        }
+
+#pragma warning restore CS8601 // Possible null reference assignment.
 
         public bool IsConnected => _client.Connected;
 
@@ -53,7 +77,20 @@ namespace WrathForged.Common.Networking
         public void Disconnect()
         {
             _client.Close();
-            OnDisconnect?.Invoke(this, EventArgs.Empty);
+
+            // Raise the OnDisconnect event
+            _onDisconnect?.Invoke(this, EventArgs.Empty);
+
+#pragma warning disable CS8601 // Possible null reference assignment. -= is causing this warning for some reason.
+            // Clear all delegates from the backing fields
+            if (_onDisconnect != null)
+                foreach (var d in _onDisconnect.GetInvocationList())
+                    _onDisconnect -= (EventHandler)d;
+
+            if (_onDataReceived != null)
+                foreach (var d in _onDataReceived.GetInvocationList())
+                    _onDataReceived -= (EventHandler<DataReceivedEventArgs>)d;
+#pragma warning restore CS8601 // Possible null reference assignment.
         }
 
         private async Task StartListening()
@@ -67,7 +104,7 @@ namespace WrathForged.Common.Networking
                     if (bytesRead > 0)
                     {
                         var data = buffer[..bytesRead].ToArray();
-                        _actionBlock.Post(new DataReceivedEventArgs(this, data, OnDataReceived));
+                        _actionBlock.Post(new DataReceivedEventArgs(this, data, _onDataReceived));
                     }
                 }
                 catch (Exception ex)

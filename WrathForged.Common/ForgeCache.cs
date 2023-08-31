@@ -26,10 +26,7 @@ namespace WrathForged.Common
             if (expiration == TimeSpan.Zero)
                 throw new ArgumentException("Must be greater than zero", nameof(expiration));
 
-            var value = refresh();
-
-            if (value == null)
-                throw new ArgumentNullException(nameof(value));
+            var value = refresh() ?? throw new InvalidDataException(nameof(refresh) + $" returned null data");
 
             Set(value.GetType().Name, value, expiration, refresh);
         }
@@ -42,10 +39,7 @@ namespace WrathForged.Common
             if (expiration == TimeSpan.Zero)
                 throw new ArgumentException("Must be greater than zero", nameof(expiration));
 
-            var value = refresh();
-
-            if (value == null)
-                throw new ArgumentNullException(nameof(value));
+            var value = refresh() ?? throw new InvalidDataException(nameof(refresh) + $" returned null data for key {key}");
 
             Set(key, value, expiration, refresh);
         }

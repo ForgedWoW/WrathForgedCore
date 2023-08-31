@@ -1,15 +1,18 @@
 ﻿// Copyright (c) Forged WoW LLC <https://github.com/ForgedWoW/WrathForgedCore>
 // Licensed under GPL-3.0 license. See <https://github.com/ForgedWoW/WrathForgedCore/blob/master/LICENSE> for full information.
 using System.Reflection;
+using Serilog;
+using WrathForged.Common.Networking;
 using WrathForged.Serialization;
 
 namespace WrathForged.Common
 {
     public class ForgedModelDeserialization
     {
+        private readonly ILogger _logger;
         public Dictionary<PacketScope, Dictionary<uint, MethodInfo>> DeserializationMethodsCache = new();
 
-        public ForgedModelDeserialization()
+        public ForgedModelDeserialization(ILogger logger)
         {
             var methodsWithAttribute = AppDomain.CurrentDomain.GetAssemblies()
                 .SelectMany(assembly => assembly.GetTypes())
@@ -30,6 +33,35 @@ namespace WrathForged.Common
                     scopeDictionary[packetId] = method;
                 }
             }
+
+            _logger = logger;
+        }
+
+        public bool TryDeserialize(PacketScope scope, uint packetId, PacketBuffer buffer, out object? packet)
+        {
+            if (!DeserializationMethodsCache.TryGetValue(scope, out var scopeDictionary))
+            {
+                packet = null;
+                return false;
+            }
+
+            if (!scopeDictionary.TryGetValue(packetId, out var method))
+            {
+                packet = null;
+                return false;
+            }
+
+            try
+            {
+                packet = method.Invoke(null, new object[] { buffer.Reader });
+            }
+            catch (Exception ex)
+            {
+                _logger.Error(ex, "Failed to deserialize packet {PacketId} for scope {Scope}", packetId, scope);
+                packet = null;
+            }
+
+            return packet != null;
         }
     }
 }
