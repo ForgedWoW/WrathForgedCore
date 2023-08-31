@@ -42,6 +42,12 @@ public class PacketBuffer : IDisposable
         return (_internalStream.Length - _internalStream.Position) >= length;
     }
 
+    public void Clear()
+    {
+        _internalStream.SetLength(0);
+        _internalStream.Position = 0;
+    }
+
     public void Dispose()
     {
         Reader.Dispose();

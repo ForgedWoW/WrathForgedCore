@@ -51,18 +51,21 @@ namespace WrathForged.Common.Networking
 
             while (clientBuffer.CanReadLength(headerSize))
             {
-                var codePosition = clientBuffer.Reader.BaseStream.Position;
-                var code = clientBuffer.Reader.ReadUInt16();
-                var result = _forgedModelDeserialization.TryDeserialize(_packetScope, code, clientBuffer, out var packet);
+                var packetIdPosition = clientBuffer.Reader.BaseStream.Position;
+                var packetId = clientBuffer.Reader.ReadUInt16();
+                var result = _forgedModelDeserialization.TryDeserialize(_packetScope, packetId, clientBuffer, out var packet);
                 if (result == ForgedModelDeserialization.DeserializationResult.Success && packet != null)
-                    _packetRouter.Route(_packetScope, code, packet);
+                    _packetRouter.Route(_packetScope, packetId, packet);
                 else
                 {
                     // If packet is null, it means the packet is incomplete.
                     // Reset the position to before the code and break out of the loop.
-                    // if the result is not due to failure, it means the packet is unknown and we should not reset the position.
+                    // if the result is not due to failure, it means the packet is unknown.
                     if (result == ForgedModelDeserialization.DeserializationResult.Failure)
-                        clientBuffer.Reader.BaseStream.Position = codePosition;
+                        clientBuffer.Reader.BaseStream.Position = packetIdPosition;
+                    else
+                        clientBuffer.Clear(); // Clear the buffer if the packet is unknown
+
                     break;
                 }
             }
