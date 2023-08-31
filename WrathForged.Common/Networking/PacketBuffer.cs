@@ -44,6 +44,11 @@ public class PacketBuffer : IDisposable
         return (_internalStream.Length - _internalStream.Position) >= length;
     }
 
+    public Memory<byte> GetBuffer()
+    {
+        return new Memory<byte>(_internalStream.GetBuffer(), 0, (int)_internalStream.Length);
+    }
+
     public void Clear()
     {
         _internalStream.SetLength(0);

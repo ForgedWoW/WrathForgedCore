@@ -13,7 +13,7 @@ namespace WrathForged.Common.Networking
         {
             var methodsWithAttribute = AppDomain.CurrentDomain.GetAssemblies()
                 .SelectMany(assembly => assembly.GetTypes())
-                .SelectMany(type => type.GetMethods(BindingFlags.Static | BindingFlags.Public))
+                .SelectMany(type => type.GetMethods(BindingFlags.Static | BindingFlags.Public | BindingFlags.NonPublic))
                 .Where(method => method.GetCustomAttributes(typeof(PacketHandlerAttribute), false).Length > 0);
 
             foreach (var method in methodsWithAttribute)
@@ -35,7 +35,7 @@ namespace WrathForged.Common.Networking
             }
         }
 
-        public void Route(PacketScope scope, uint packetId, object packet)
+        public void Route(ClientSocket client, PacketScope scope, uint packetId, object packet)
         {
             if (packet == null)
                 return;
@@ -47,7 +47,7 @@ namespace WrathForged.Common.Networking
                 return;
 
             foreach (var method in methodList)
-                method.Invoke(null, new object[] { packet });
+                method.Invoke(null, new object[] { client, packet });
         }
     }
 }

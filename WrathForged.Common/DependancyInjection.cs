@@ -51,6 +51,7 @@ namespace WrathForged.Common
             builder.RegisterType<ForgeCache>().SingleInstance();
             builder.RegisterType<ForgedModelDeserialization>().SingleInstance();
             builder.RegisterType<PacketRouter>().SingleInstance();
+            builder.RegisterType<PacketEncryption>();
 
             return builder;
         }
