@@ -5,6 +5,8 @@ namespace WrathForged.Common.Networking;
 public class PacketBuffer : IDisposable
 {
     private readonly MemoryStream _internalStream;
+    private bool _disposedValue;
+
     public BinaryReader Reader { get; }
 
     public PacketBuffer()
@@ -48,9 +50,28 @@ public class PacketBuffer : IDisposable
         _internalStream.Position = 0;
     }
 
+    protected virtual void Dispose(bool disposing)
+    {
+        if (!_disposedValue)
+        {
+            if (disposing)
+            {
+                Reader.Dispose();
+                _internalStream.Dispose();
+            }
+
+            _disposedValue = true;
+        }
+    }
+
+    ~PacketBuffer()
+    {
+        Dispose(disposing: false);
+    }
+
     public void Dispose()
     {
-        Reader.Dispose();
-        _internalStream.Dispose();
+        Dispose(disposing: true);
+        GC.SuppressFinalize(this);
     }
 }
