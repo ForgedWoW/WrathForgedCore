@@ -16,7 +16,7 @@ IConfiguration configuration = configBuilder.Build();
 ContainerBuilder builder = new();
 builder.RegisterCommon(configuration);
 builder.RegisterDatabase(configuration);
-builder.RegisterAuth(configuration);
+builder.RegisterAuth();
 var container = builder.Build();
 container.InitializeCommon();
 container.Resolve<CacheBuilder>().Build();
