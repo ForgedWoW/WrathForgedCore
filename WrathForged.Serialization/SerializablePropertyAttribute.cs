@@ -36,5 +36,16 @@ namespace WrathForged.Serialization
         ///     Set when the array or list has a fixed size and is not written to the stream.
         /// </summary>
         public uint FixedCollectionSize { get; set; }
+
+        /// <summary>
+        ///     If this property is default value then it will not be serialized and sent to the stream.
+        /// </summary>
+        public bool DontSerializeWhenDefaultValue { get; set; }
+
+        /// <summary>
+        ///    If the value of the property index is default value then this property will not be serialized and sent to the stream.
+        ///    The index must apper before this property in the serialized stream.
+        /// </summary>
+        public uint DontSerializeWhenIndexIsDefaultValue { get; set; } = uint.MaxValue;
     }
 }

@@ -15,22 +15,22 @@ public class StringGenerator : IForgedTypeGenerator
         if (attribute.NamedArguments.Any(arg => arg.Key == "FixedSize"))
         {
             var fixedSize = attribute.NamedArguments.First(arg => arg.Key == "FixedSize").Value.Value;
-            serialization.AppendLine($"var fixedSizeString = instance.{variableName}.PadRight({fixedSize}, '\\0').Substring(0, {fixedSize});");
+            serialization.AppendLine($"var fixedSizeString = instance.{variableName}?.PadRight({fixedSize}, '\\0').Substring(0, {fixedSize}) ?? string.Empty;");
             variableName = "fixedSizeString";
         }
 
         switch (typeCode)
         {
             case ForgedTypeCode.CString:
-                serialization.AppendLine($"writer.Write({variableName}.ToCString());");
+                serialization.AppendLine($"if ({variableName} != null) {{ writer.Write({variableName}.ToCString()); }} else {{ writer.Write(string.Empty.ToCString()); }}");
                 break;
 
             case ForgedTypeCode.ASCIIString:
-                serialization.AppendLine($"writer.Write(Encoding.ASCII.GetBytes({variableName}));");
+                serialization.AppendLine($"if ({variableName} != null) {{ writer.Write(Encoding.ASCII.GetBytes({variableName})); }} else {{ writer.Write(Encoding.ASCII.GetBytes(string.Empty)); }}");
                 break;
 
             default:
-                serialization.AppendLine($"writer.Write({variableName});");
+                serialization.AppendLine($"if ({variableName} != null) {{ writer.Write({variableName}); }} else {{ writer.Write(string.Empty); }}");
                 break;
         }
 

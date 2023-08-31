@@ -9,7 +9,7 @@ namespace WrathForged.Serialization
     {
         public string GenerateTypeCodeSerializeForType(ITypeSymbol typeSymbol, AttributeData attribute, ForgedTypeCode typeCode, Compilation compilation, INamedTypeSymbol symbol, string variableName)
         {
-            return $"writer.Write({variableName}.GetAddressBytes());";
+            return $"if ({variableName} != null) {{ writer.Write({variableName}.GetAddressBytes()); }} else {{ writer.Write(IPAddress.Loopback.GetAddressBytes()); }}";
         }
 
         public string GenerateTypeCodeDeserializeForType(ITypeSymbol typeSymbol, AttributeData attribute, ForgedTypeCode typeCode, Compilation compilation, INamedTypeSymbol symbol, string variableName)

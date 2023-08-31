@@ -84,21 +84,35 @@ namespace WrathForged.Serialization
                 return string.Empty;
 
             var sourceBuilder = new StringBuilder();
-            sourceBuilder.AppendLine("using System;");
-            sourceBuilder.AppendLine("using System.Net;");
-            sourceBuilder.AppendLine("using WrathForged.Serialization;");
-            sourceBuilder.AppendLine($"namespace {symbol.ContainingNamespace.ToDisplayString()}");
-            sourceBuilder.AppendLine("{");
-            sourceBuilder.AppendLine($"    public static class {symbol.Name}SerializationExtensions");
-            sourceBuilder.AppendLine("    {");
+            var requiredNamespaces = new HashSet<string>();
+
+            // Serialize and Deserialize
             BuildSerializer(context, symbol, properties, sourceBuilder);
-            BuildDeserializer(context, symbol, properties, sourceBuilder);
+            BuildDeserializer(context, symbol, properties, sourceBuilder, requiredNamespaces);
+
+            // Append the namespace and class definitions
+            sourceBuilder.Insert(0, $"namespace {symbol.ContainingNamespace.ToDisplayString()}" +
+                "{" +
+                $"    public static class {symbol.Name}SerializationExtensions" +
+                "    {"
+            );
             sourceBuilder.AppendLine("    }");
             sourceBuilder.AppendLine("}");
+
+            // Append the collected required namespaces at the beginning
+            // Default usings
+            sourceBuilder.Insert(0, "using System;");
+            sourceBuilder.Insert(0, "using WrathForged.Serialization;");
+            foreach (var ns in requiredNamespaces)
+            {
+                if (!string.IsNullOrEmpty(ns))
+                    sourceBuilder.Insert(0, $"using {ns};\n");
+            }
+
             return sourceBuilder.ToString();
         }
 
-        private void BuildDeserializer(GeneratorExecutionContext context, INamedTypeSymbol symbol, List<IPropertySymbol> properties, StringBuilder sourceBuilder)
+        private void BuildDeserializer(GeneratorExecutionContext context, INamedTypeSymbol symbol, List<IPropertySymbol> properties, StringBuilder sourceBuilder, HashSet<string> requiredNamespaces)
         {
             var forgedSerializableAttributeData = symbol.GetAttributes().FirstOrDefault(a => a.AttributeClass.Name.Contains(_forgedSerializableName));
 
@@ -117,11 +131,12 @@ namespace WrathForged.Serialization
             sourceBuilder.AppendLine("{");
             sourceBuilder.AppendLine("try");
             sourceBuilder.AppendLine("{");
-            sourceBuilder.AppendLine($"{symbol.Name} tempInstance = new {symbol.Name}();");
+            sourceBuilder.AppendLine($"instance = new {symbol.Name}();");
             sourceBuilder.AppendLine("var cachedSizes = new Dictionary<uint, int>();");
 
             foreach (var prop in properties)
             {
+                requiredNamespaces.Add(prop?.Type?.ContainingNamespace?.ToString());
                 try
                 {
                     var attr = prop.GetAttributes().FirstOrDefault(a => a.AttributeClass.Name == _attributeName);
@@ -162,7 +177,6 @@ namespace WrathForged.Serialization
                 }
             }
 
-            sourceBuilder.AppendLine("instance = tempInstance;");
             sourceBuilder.AppendLine("return DeserializationResult.Success;");
             sourceBuilder.AppendLine("}");
             sourceBuilder.AppendLine("catch (EndOfStreamException)");
@@ -180,12 +194,22 @@ namespace WrathForged.Serialization
 
         private void BuildSerializer(GeneratorExecutionContext context, INamedTypeSymbol symbol, List<IPropertySymbol> properties, StringBuilder sourceBuilder)
         {
-            sourceBuilder.AppendLine($"        public static void Serialize(this {symbol.Name} instance, System.IO.BinaryWriter writer)");
-            sourceBuilder.AppendLine("        {");
-
+            sourceBuilder.AppendLine($"public static void Serialize(this {symbol.Name} instance, System.IO.BinaryWriter writer)");
+            sourceBuilder.AppendLine("{");
+            sourceBuilder.AppendLine("Dictionary<uint, bool> hasDefaultValue = new Dictionary<uint, bool>();");
             foreach (var prop in properties)
             {
                 var attr = prop.GetAttributes().FirstOrDefault(a => a.AttributeClass.Name == _attributeName);
+                // Check for the DontSerializeWhenDefaultValue attribute property
+                var dontSerializeWhenDefaultValueArg = attr?.NamedArguments.FirstOrDefault(arg => arg.Key == "DontSerializeWhenDefaultValue");
+                var dontSerializeWhenDefaultValue = dontSerializeWhenDefaultValueArg?.Value.Value as bool? ?? false;
+
+                var indexArg = attr.ConstructorArguments.First();
+                var dontSerializeWhenIndexIsDefaultValueArg = attr.NamedArguments.FirstOrDefault(arg => arg.Key == "DontSerializeWhenIndexIsDefaultValue");
+                var dontSerializeWhenIndexIsDefaultValue = dontSerializeWhenIndexIsDefaultValueArg.Value.Value as uint? ?? uint.MaxValue;
+
+                var index = (uint)indexArg.Value;
+                sourceBuilder.AppendLine($"hasDefaultValue[{index}] = instance.{prop.Name} == default;");
 
                 // Determine the type of the collection (Array, List, or None).
                 var collectionType = DetermineCollectionType(prop.Type);
@@ -193,22 +217,33 @@ namespace WrathForged.Serialization
                 if (collectionType != CollectionType.None)
                 {
                     var collectionSizeCode = GenerateCollectionSizeCode(attr, $"instance.{prop.Name}", collectionType);
-
                     if (!string.IsNullOrEmpty(collectionSizeCode))
                         sourceBuilder.AppendLine(collectionSizeCode);
                 }
 
                 var propertySerializationCode = GenerateTypeSerializationCode(context.Compilation, symbol, prop.Type, attr, $"instance.{prop.Name}");
+
+                // If DontSerializeWhenDefaultValue is set, wrap the serialization code with a check
+                if (dontSerializeWhenDefaultValue)
+                {
+                    //var defaultValue = prop.Type.IsValueType ? Activator.CreateInstance(Type.GetType(prop.Type.ToDisplayString())).ToString() : "null";
+                    propertySerializationCode = $"if(instance.{prop.Name} != default) {{ {propertySerializationCode} }}";
+                }
+
+                if (dontSerializeWhenIndexIsDefaultValue != uint.MaxValue)
+                {
+                    propertySerializationCode = $"if(!hasDefaultValue[{dontSerializeWhenIndexIsDefaultValue}]) {{ {propertySerializationCode} }}";
+                }
+
                 if (!string.IsNullOrEmpty(propertySerializationCode))
                 {
                     sourceBuilder.AppendLine(propertySerializationCode);
                 }
             }
 
-            sourceBuilder.AppendLine("        }");
+            sourceBuilder.AppendLine("}");
         }
 
-        // Needed for arrays/lists
         internal string GenerateTypeSerializationCode(Compilation compilation, INamedTypeSymbol containerSymbol, ITypeSymbol typeSymbol, AttributeData attr, string variableName)
         {
             var forgedTypeCode = GetTypeCodeFromTypeName(typeSymbol.Name);
