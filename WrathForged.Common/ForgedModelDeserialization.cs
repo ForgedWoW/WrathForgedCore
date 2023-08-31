@@ -9,6 +9,13 @@ namespace WrathForged.Common
 {
     public class ForgedModelDeserialization
     {
+        public enum DeserializationResult
+        {
+            Success,
+            Failure,
+            UnknownPacket
+        }
+
         private readonly ILogger _logger;
         public Dictionary<PacketScope, Dictionary<uint, MethodInfo>> DeserializationMethodsCache = new();
 
@@ -37,18 +44,18 @@ namespace WrathForged.Common
             _logger = logger;
         }
 
-        public bool TryDeserialize(PacketScope scope, uint packetId, PacketBuffer buffer, out object? packet)
+        public DeserializationResult TryDeserialize(PacketScope scope, uint packetId, PacketBuffer buffer, out object? packet)
         {
             if (!DeserializationMethodsCache.TryGetValue(scope, out var scopeDictionary))
             {
                 packet = null;
-                return false;
+                return DeserializationResult.UnknownPacket;
             }
 
             if (!scopeDictionary.TryGetValue(packetId, out var method))
             {
                 packet = null;
-                return false;
+                return DeserializationResult.UnknownPacket;
             }
 
             try
@@ -61,7 +68,7 @@ namespace WrathForged.Common
                 packet = null;
             }
 
-            return packet != null;
+            return packet != null ? DeserializationResult.Success : DeserializationResult.Failure;
         }
     }
 }
