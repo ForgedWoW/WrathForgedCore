@@ -1,5 +1,6 @@
 ﻿// Copyright (c) Forged WoW LLC <https://github.com/ForgedWoW/WrathForgedCore>
 // Licensed under GPL-3.0 license. See <https://github.com/ForgedWoW/WrathForgedCore/blob/master/LICENSE> for full information.
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -53,7 +54,7 @@ namespace WrathForged.Serialization
             if (!(context.SyntaxReceiver is SerializationSyntaxReceiver receiver))
                 return;
 
-            System.Diagnostics.Debugger.Launch();
+            //System.Diagnostics.Debugger.Launch();
             foreach (var classDeclaration in receiver.CandidateClasses)
             {
                 if (!(context.Compilation.GetSemanticModel(classDeclaration.SyntaxTree).GetDeclaredSymbol(classDeclaration) is INamedTypeSymbol modelSymbol))
@@ -149,9 +150,9 @@ namespace WrathForged.Serialization
                     var attr = prop.GetAttributes().FirstOrDefault(a => a.AttributeClass.Name == _attributeName);
 
                     // Check if the property has a CollectionSizeIndex attribute
-                    if (attr.NamedArguments.Any(arg => arg.Key == "CollectionSizeIndex"))
+                    if (attr.HasNamedArg("CollectionSizeIndex"))
                     {
-                        var collectionSizeIndex = (uint)attr.NamedArguments.FirstOrDefault(arg => arg.Key == "CollectionSizeIndex").Value.Value;
+                        var collectionSizeIndex = attr.GetNamedArg<uint>("CollectionSizeIndex", 0);
                         sourceBuilder.AppendLine($" cachedSizes[{collectionSizeIndex}] = reader.ReadInt32();"); // Assuming size is stored as int
                         continue;
                     }
@@ -160,9 +161,9 @@ namespace WrathForged.Serialization
                     if (collectionType != CollectionType.None)
                     {
                         // Check if the property references a cached CollectionSizeIndex
-                        if (attr.NamedArguments.Any(arg => arg.Key == "CollectionSizeIndex"))
+                        if (attr.HasNamedArg("CollectionSizeIndex"))
                         {
-                            var sizeIndexArg = (uint)attr.NamedArguments.FirstOrDefault(arg => arg.Key == "CollectionSizeIndex").Value.Value;
+                            var sizeIndexArg = attr.GetNamedArg<uint>("CollectionSizeIndex", 0);
                             sourceBuilder.AppendLine($" var collectionSize = cachedSizes[{sizeIndexArg}];");
                         }
                         else
@@ -208,12 +209,10 @@ namespace WrathForged.Serialization
             {
                 var attr = prop.GetAttributes().FirstOrDefault(a => a.AttributeClass.Name == _attributeName);
                 // Check for the DontSerializeWhenDefaultValue attribute property
-                var dontSerializeWhenDefaultValueArg = attr?.NamedArguments.FirstOrDefault(arg => arg.Key == "DontSerializeWhenDefaultValue");
-                var dontSerializeWhenDefaultValue = dontSerializeWhenDefaultValueArg?.Value.Value as bool? ?? false;
+                var dontSerializeWhenDefaultValue = attr.GetNamedArg("DontSerializeWhenDefaultValue", false);
 
                 var indexArg = attr.ConstructorArguments.First();
-                var dontSerializeWhenIndexIsDefaultValueArg = attr.NamedArguments.FirstOrDefault(arg => arg.Key == "DontSerializeWhenIndexIsDefaultValue");
-                var dontSerializeWhenIndexIsDefaultValue = dontSerializeWhenIndexIsDefaultValueArg.Value.Value as uint? ?? uint.MaxValue;
+                var dontSerializeWhenIndexIsDefaultValue = attr.GetNamedArg("DontSerializeWhenIndexIsDefaultValue", uint.MaxValue);
 
                 var index = (uint)indexArg.Value;
                 sourceBuilder.AppendLine($"hasDefaultValue[{index}] = instance.{prop.Name} == default;");
@@ -254,14 +253,9 @@ namespace WrathForged.Serialization
         internal string GenerateTypeSerializationCode(Compilation compilation, INamedTypeSymbol containerSymbol, ITypeSymbol typeSymbol, AttributeData attr, string variableName)
         {
             var forgedTypeCode = GetTypeCodeFromTypeName(typeSymbol.Name);
-            var overrideTypeArg = attr?.NamedArguments.FirstOrDefault(arg => arg.Key == "OverrideType");
-            if (overrideTypeArg.HasValue &&
-                !string.IsNullOrEmpty(overrideTypeArg.Value.Value.ToString()) &&
-                Enum.TryParse<ForgedTypeCode>(overrideTypeArg.Value.Value.ToString(), true, out var overrideCode) &&
-                overrideCode != ForgedTypeCode.Empty)
-            {
+            var overrideCode = attr.GetNamedArg("OverrideType", ForgedTypeCode.Empty);
+            if (overrideCode != ForgedTypeCode.Empty)
                 forgedTypeCode = overrideCode;
-            }
 
             // Based on the type, generate the serialization code
             if (IsPrimitiveOrSimpleType(forgedTypeCode))
@@ -307,14 +301,9 @@ namespace WrathForged.Serialization
             try
             {
                 var forgedTypeCode = GetTypeCodeFromTypeName(typeSymbol.Name);
-                var overrideTypeArg = attr?.NamedArguments.FirstOrDefault(arg => arg.Key == "OverrideType");
-                if (overrideTypeArg.HasValue &&
-                    !string.IsNullOrEmpty(overrideTypeArg.Value.Value.ToString()) &&
-                    Enum.TryParse<ForgedTypeCode>(overrideTypeArg.Value.Value.ToString(), true, out var overrideCode) &&
-                    overrideCode != ForgedTypeCode.Empty)
-                {
+                var overrideCode = attr.GetNamedArg("OverrideType", ForgedTypeCode.Empty);
+                if (overrideCode != ForgedTypeCode.Empty)
                     forgedTypeCode = overrideCode;
-                }
 
                 // Based on the type, generate the deserialization code
                 if (IsPrimitiveOrSimpleType(forgedTypeCode))
@@ -326,18 +315,18 @@ namespace WrathForged.Serialization
                 {
                     var fixedSizeArg = 0u;
 
-                    if (attr.NamedArguments.Any(arg => arg.Key == "FixedCollectionSize"))
-                        fixedSizeArg = (uint)attr.NamedArguments.FirstOrDefault(arg => arg.Key == "FixedCollectionSize").Value.Value;
+                    if (attr.HasNamedArg("FixedCollectionSize"))
+                        fixedSizeArg = attr.GetNamedArg("FixedCollectionSize", 0u);
 
                     var sizeLengthTypeArg = string.Empty;
 
-                    if (attr.NamedArguments.Any(arg => arg.Key == "CollectionSizeLengthType"))
-                        sizeLengthTypeArg = ((TypeCode)attr.NamedArguments.FirstOrDefault(arg => arg.Key == "CollectionSizeLengthType").Value.Value).ToString();
+                    if (attr.HasNamedArg("CollectionSizeLengthType"))
+                        sizeLengthTypeArg = ((TypeCode)attr.GetNamedArg("CollectionSizeLengthType", 0)).ToString();
 
                     var sizeIndexArg = 0u;
 
-                    if (attr.NamedArguments.Any(arg => arg.Key == "CollectionSizeIndex"))
-                        sizeIndexArg = (uint)attr.NamedArguments.FirstOrDefault(arg => arg.Key == "CollectionSizeIndex").Value.Value;
+                    if (attr.HasNamedArg("CollectionSizeIndex"))
+                        sizeIndexArg = attr.GetNamedArg("CollectionSizeIndex", 0u);
 
                     if (fixedSizeArg != 0)
                     {
@@ -411,15 +400,12 @@ namespace WrathForged.Serialization
 
         internal string GenerateCollectionSizeCode(AttributeData attribute, string variableName, CollectionType collectionType)
         {
-            var fixedCollectionSize = 0u;
-
-            if (attribute.NamedArguments.Any(arg => arg.Key == "FixedCollectionSize"))
-                fixedCollectionSize = (uint)attribute.NamedArguments.FirstOrDefault(arg => arg.Key == "FixedCollectionSize").Value.Value;
+            var fixedCollectionSize = attribute.GetNamedArg("FixedCollectionSize", 0u);
 
             if (fixedCollectionSize != 0)
                 return string.Empty;
 
-            var lengthType = attribute.NamedArguments.FirstOrDefault(na => na.Key == "CollectionSizeLengthType").Value.Value?.ToString() ?? string.Empty;
+            var lengthType = attribute.GetNamedArg("CollectionSizeLengthType", TypeCode.Empty).ToString();
 
             var sizeProperty = "Length";
 

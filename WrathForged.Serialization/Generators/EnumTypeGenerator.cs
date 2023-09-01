@@ -1,7 +1,5 @@
 ﻿// Copyright (c) Forged WoW LLC <https://github.com/ForgedWoW/WrathForgedCore>
 // Licensed under GPL-3.0 license. See <https://github.com/ForgedWoW/WrathForgedCore/blob/master/LICENSE> for full information.
-using System;
-using System.Linq;
 using Microsoft.CodeAnalysis;
 
 namespace WrathForged.Serialization.Generators
@@ -16,14 +14,9 @@ namespace WrathForged.Serialization.Generators
             var underlyingType = (typeSymbol as INamedTypeSymbol)?.EnumUnderlyingType;
 
             // Check if OverrideType attribute exists
-            var overrideTypeArg = attribute?.NamedArguments.FirstOrDefault(arg => arg.Key == "OverrideType");
-            if (overrideTypeArg.HasValue &&
-                !string.IsNullOrEmpty(overrideTypeArg.Value.Value.ToString()) &&
-                Enum.TryParse<ForgedTypeCode>(overrideTypeArg.Value.Value.ToString(), true, out var overrideCode) &&
-                overrideCode != ForgedTypeCode.Empty)
-            {
+            var overrideCode = attribute.GetNamedArg("OverrideType", ForgedTypeCode.Empty);
+            if (overrideCode != ForgedTypeCode.Empty)
                 typeCode = overrideCode;  // override the typeCode with the one from attribute
-            }
 
             var typeToUse = underlyingType?.SpecialType ?? default;
 

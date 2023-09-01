@@ -1,7 +1,6 @@
 ﻿// Copyright (c) Forged WoW LLC <https://github.com/ForgedWoW/WrathForgedCore>
 // Licensed under GPL-3.0 license. See <https://github.com/ForgedWoW/WrathForgedCore/blob/master/LICENSE> for full information.
 
-using System.Linq;
 using System.Text;
 using Microsoft.CodeAnalysis;
 
@@ -13,15 +12,15 @@ namespace WrathForged.Serialization.Generators
         {
             var serialization = new StringBuilder();
 
-            if (attribute.NamedArguments.Any(arg => arg.Key == "FixedSize"))
+            if (attribute.HasNamedArg("FixedSize"))
             {
-                var fixedSize = attribute.NamedArguments.FirstOrDefault(arg => arg.Key == "FixedSize").Value.Value;
+                var fixedSize = attribute.GetNamedArg("FixedSize", string.Empty);
                 serialization.AppendLine($"var fixedSizeString = instance.{variableName}?.PadRight({fixedSize}, '\\0').Substring(0, {fixedSize}) ?? string.Empty;");
                 variableName = "fixedSizeString";
             }
 
-            var reverseSerialization = (bool?)attribute.NamedArguments.FirstOrDefault(arg => arg.Key == "ReversedString").Value.Value;
-            var reverseString = reverseSerialization == true ? ".Reverse()" : "";
+            var reverseSerialization = attribute.GetNamedArg("ReversedString", false);
+            var reverseString = reverseSerialization ? ".Reverse()" : "";
 
             switch (typeCode)
             {
@@ -30,7 +29,7 @@ namespace WrathForged.Serialization.Generators
                     break;
 
                 case ForgedTypeCode.ASCIIString:
-                    serialization.AppendLine($"if ({variableName} != null) {{ writer.Write(Encoding.ASCII.GetBytes({variableName}){reverseString}); }} else {{ writer.Write(Encoding.ASCII.GetBytes(string.Empty)); }}");
+                    serialization.AppendLine($"if ({variableName} != null) {{ writer.Write(System.Text.Encoding.ASCII.GetBytes({variableName}{reverseString})); }} else {{ writer.Write(System.Text.Encoding.ASCII.GetBytes(string.Empty)); }}");
                     break;
 
                 default:
@@ -43,23 +42,23 @@ namespace WrathForged.Serialization.Generators
 
         public string GenerateTypeCodeDeserializeForType(ITypeSymbol typeSymbol, AttributeData attribute, ForgedTypeCode typeCode, Compilation compilation, INamedTypeSymbol symbol, string variableName)
         {
-            var reverseSerialization = (bool?)attribute.NamedArguments.FirstOrDefault(arg => arg.Key == "ReversedString").Value.Value;
-            var reverseString = reverseSerialization == true ? ".Reverse()" : "";
+            var reverseSerialization = attribute.GetNamedArg("ReversedString", false);
+            var reverseString = reverseSerialization ? ".Reverse()" : "";
 
             switch (typeCode)
             {
                 case ForgedTypeCode.CString:
-                    return $"instance.{variableName} = Encoding.ASCII.GetString(reader.ReadCString()).TrimEnd('\\0'){reverseString};";
+                    return $"instance.{variableName} = System.Text.Encoding.ASCII.GetString(reader.ReadCString()).TrimEnd('\\0'){reverseString};";
 
                 case ForgedTypeCode.ASCIIString:
-                    if (attribute.NamedArguments.Any(arg => arg.Key == "FixedSize"))
+                    if (attribute.HasNamedArg("FixedSize"))
                     {
-                        var fixedSize = attribute.NamedArguments.FirstOrDefault(arg => arg.Key == "FixedSize").Value.Value;
-                        return $"instance.{variableName} = Encoding.ASCII.GetString(reader.ReadBytes({fixedSize})).TrimEnd('\\0'){reverseString};";
+                        var fixedSize = attribute.GetNamedArg("FixedSize", 0);
+                        return $"instance.{variableName} = System.Text.Encoding.ASCII.GetString(reader.ReadBytes({fixedSize})).TrimEnd('\\0'){reverseString};";
                     }
                     else
                     {
-                        return $"instance.{variableName} = Encoding.ASCII.GetString(reader.ReadByteArray()).TrimEnd('\\0'){reverseString};";
+                        return $"instance.{variableName} = System.Text.Encoding.ASCII.GetString(reader.ReadByte()).TrimEnd('\\0'){reverseString};";
                     }
 
                 default:
