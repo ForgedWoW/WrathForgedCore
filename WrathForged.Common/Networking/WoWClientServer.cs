@@ -57,7 +57,6 @@ namespace WrathForged.Common.Networking
             do
             {
                 PacketId packetId;
-                int headerSize;
 
                 if (_packetScope == PacketScope.Auth)
                 {
@@ -71,32 +70,34 @@ namespace WrathForged.Common.Networking
                     var currentBufferPosition = (int)session.PacketBuffer.Reader.BaseStream.Position;
                     var packetLength = 0;
 
+                    int headerSize;
+
                     if (session.IsEncrypted)
                     {
-                        var firstByte = session.GetDecryptedByte(session.PacketBuffer.GetBuffer().Slice(currentBufferPosition, 1), 0);
+                        var firstByte = session.PacketEncryption.GetDecryptedByte(session.PacketBuffer.GetBuffer().Slice(currentBufferPosition, 1), 0);
                         var isLargePacket = (firstByte & 0x80) != 0;
 
                         if (isLargePacket)
                         {
                             if (session.PacketBuffer.Reader.BaseStream.Length - currentBufferPosition < LARGE_PACKET_HEADER_SIZE)
                             {
-                                session.DecryptUntil = 0;
+                                session.PacketEncryption.DecryptUntil = 0;
                                 return;
                             }
 
                             packetLength = (firstByte & 0x7F) << 16;
-                            packetLength |= session.GetDecryptedByte(session.PacketBuffer.GetBuffer().Slice(currentBufferPosition + 1, 1), 1) << 8;
-                            packetLength |= session.GetDecryptedByte(session.PacketBuffer.GetBuffer().Slice(currentBufferPosition + 2, 1), 2);
+                            packetLength |= session.PacketEncryption.GetDecryptedByte(session.PacketBuffer.GetBuffer().Slice(currentBufferPosition + 1, 1), 1) << 8;
+                            packetLength |= session.PacketEncryption.GetDecryptedByte(session.PacketBuffer.GetBuffer().Slice(currentBufferPosition + 2, 1), 2);
 
-                            packetId = new PacketId(session.GetDecryptedOpcode(session.PacketBuffer.GetBuffer().Slice(currentBufferPosition + 3, 4)), _packetScope);
+                            packetId = new PacketId(session.PacketEncryption.GetDecryptedOpcode(session.PacketBuffer.GetBuffer().Slice(currentBufferPosition + 3, 4)), _packetScope);
                             headerSize = LARGE_PACKET_HEADER_SIZE;
                         }
                         else
                         {
                             packetLength |= firstByte << 8;
-                            packetLength |= session.GetDecryptedByte(session.PacketBuffer.GetBuffer().Slice(currentBufferPosition + 1, 1), 1);
+                            packetLength |= session.PacketEncryption.GetDecryptedByte(session.PacketBuffer.GetBuffer().Slice(currentBufferPosition + 1, 1), 1);
 
-                            packetId = new PacketId(session.GetDecryptedOpcode(session.PacketBuffer.GetBuffer().Slice(currentBufferPosition + 2, 3)), _packetScope);
+                            packetId = new PacketId(session.PacketEncryption.GetDecryptedOpcode(session.PacketBuffer.GetBuffer().Slice(currentBufferPosition + 2, 3)), _packetScope);
                             headerSize = HEADER_SIZE;
                         }
                     }
@@ -113,7 +114,7 @@ namespace WrathForged.Common.Networking
                     if (!session.PacketBuffer.CanReadLength(packetLength))
                     {
                         if (session.IsEncrypted)
-                            session.DecryptUntil = headerSize;
+                            session.PacketEncryption.DecryptUntil = headerSize;
 
                         return;
                     }

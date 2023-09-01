@@ -41,7 +41,7 @@ namespace WrathForged.Common.Networking
         // with client disconnects, we need to remove the delegates from the backing fields so the GC can collect them
         public event EventHandler OnDisconnect
         {
-            add { _onDisconnect += value; }
+            add => _onDisconnect += value;
             remove
             {
                 if (_onDisconnect != null && value != null)
@@ -51,7 +51,7 @@ namespace WrathForged.Common.Networking
 
         public event EventHandler<DataReceivedEventArgs> OnDataReceived
         {
-            add { _onDataReceived += value; }
+            add => _onDataReceived += value;
             remove
             {
                 if (_onDataReceived != null && value != null)

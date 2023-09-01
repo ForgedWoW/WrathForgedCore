@@ -1,12 +1,16 @@
 ﻿// Copyright (c) Forged WoW LLC <https://github.com/ForgedWoW/WrathForgedCore>
 // Licensed under GPL-3.0 license. See <https://github.com/ForgedWoW/WrathForgedCore/blob/master/LICENSE> for full information.
+using System.Buffers.Binary;
 using System.Security.Cryptography;
+using Serilog;
 using WrathForged.Common.Cryptography;
 
 namespace WrathForged.Common.Networking
 {
     public class PacketEncryption
     {
+        private readonly ILogger _logger;
+
         /// <summary>
 		/// The amount of bytes to drop from the stream initially.
 		///
@@ -39,6 +43,9 @@ namespace WrathForged.Common.Networking
 
         private static readonly HMACSHA1 _encryptServerDataHMAC = new(_serverEncryptionKey);
 
+        private int _decryptSeq;
+        public int DecryptUntil { get; set; } = -1;
+
         /// <summary>
         /// Encrypts data sent to the client
         /// </summary>
@@ -49,8 +56,9 @@ namespace WrathForged.Common.Networking
         /// </summary>
         private readonly ARC4 _decryptClientData;
 
-        public PacketEncryption(byte[] sessionKey)
+        public PacketEncryption(byte[] sessionKey, ILogger logger)
         {
+            _logger = logger;
             var encryptHash = _encryptServerDataHMAC.ComputeHash(sessionKey);
             var decryptHash = _decryptClientDataHMAC.ComputeHash(sessionKey);
 
@@ -81,6 +89,70 @@ namespace WrathForged.Common.Networking
         public void Encrypt(byte[] data, int start, int count)
         {
             _encryptServerData.Process(data, start, count);
+        }
+
+        public byte GetDecryptedByte(Memory<byte> inputData, int baseOffset, int offset)
+        {
+            if (Interlocked.Exchange(ref _decryptSeq, 1) == 1)
+                _logger.Warning("Decrypting out of order packet");
+
+            var dataStartOffset = baseOffset + offset;
+            if (DecryptUntil < offset)
+            {
+                Decrypt(inputData, dataStartOffset, 1);
+            }
+
+            Interlocked.Exchange(ref _decryptSeq, 0);
+
+            return inputData.Span[dataStartOffset];
+        }
+
+        public byte GetDecryptedByte(Memory<byte> inputData, int offset)
+        {
+            if (Interlocked.Exchange(ref _decryptSeq, 1) == 1)
+                _logger.Warning("Decrypting out of order packet");
+
+            if (DecryptUntil < offset)
+            {
+                Decrypt(inputData, 0, 1);
+            }
+
+            Interlocked.Exchange(ref _decryptSeq, 0);
+
+            return inputData.Span[0];
+        }
+
+        public int GetDecryptedOpcode(PacketBuffer packetBuffer, int baseOffset, int offset)
+        {
+            var inputData = packetBuffer.GetBuffer();
+            var dataStartOffset = baseOffset + offset;
+
+            if (DecryptUntil < offset + 4)
+            {
+                Decrypt(inputData, dataStartOffset, 4);
+            }
+
+            return BinaryPrimitives.ReadInt32LittleEndian(inputData.Span[dataStartOffset..]);
+        }
+
+        public int GetDecryptedOpcode(Memory<byte> inputData, int offset)
+        {
+            if (DecryptUntil < offset + 4)
+            {
+                Decrypt(inputData, 0, 4);
+            }
+
+            return BinaryPrimitives.ReadInt32LittleEndian(inputData.Span[..4]);
+        }
+
+        public int GetDecryptedOpcode(Memory<byte> inputData)
+        {
+            if (DecryptUntil < inputData.Length)
+            {
+                Decrypt(inputData, 0, inputData.Length);
+            }
+
+            return BinaryPrimitives.ReadInt32LittleEndian(inputData.Span);
         }
     }
 }
