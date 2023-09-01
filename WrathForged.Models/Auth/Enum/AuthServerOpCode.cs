@@ -6,7 +6,7 @@ namespace WrathForged.Models.Auth.Enum
     /// <summary>
     /// Enumeration of all authentication operations.
     /// </summary>
-    public enum AuthOperationCode : byte
+    public enum AuthServerOpCode : byte
     {
         AUTH_LOGON_CHALLENGE = 0x00,
         AUTH_LOGON_PROOF = 0x01,
@@ -17,6 +17,9 @@ namespace WrathForged.Models.Auth.Enum
         XFER_DATA = 0x31,
         XFER_ACCEPT = 0x32,
         XFER_RESUME = 0x33,
-        XFER_CANCEL = 0x34
+        XFER_CANCEL = 0x34,
+        Maximum = 100,
+
+        Unknown = byte.MaxValue,
     }
 }

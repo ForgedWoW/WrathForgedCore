@@ -1,7 +1,7 @@
 ﻿// Copyright (c) Forged WoW LLC <https://github.com/ForgedWoW/WrathForgedCore>
 // Licensed under GPL-3.0 license. See <https://github.com/ForgedWoW/WrathForgedCore/blob/master/LICENSE> for full information.
-using System.Buffers.Binary;
 using Serilog;
+using WrathForged.Models.Networking;
 using WrathForged.Serialization;
 
 namespace WrathForged.Common.Networking
@@ -16,11 +16,7 @@ namespace WrathForged.Common.Networking
         private readonly ForgedModelDeserialization _forgedModelDeserialization;
         private readonly PacketRouter _packetRouter;
         private readonly ILogger _logger;
-        private readonly Dictionary<ClientSocket, PacketBuffer> _clientBuffers = new();
-        private readonly PacketEncryption _packetEncryption;
-        private readonly int _encrypt;
-        private int _decryptSeq;
-        private int _decryptUntil = -1;
+        private readonly Dictionary<ClientSocket, WoWClientSession> _clientSessions = new();
 
         public WoWClientServer(PacketScope packetScope, ForgedModelDeserialization forgedModelDeserialization, TCPServer tCPServer, PacketRouter packetRouter, ILogger logger)
         {
@@ -45,117 +41,110 @@ namespace WrathForged.Common.Networking
             if (sender != null && sender is ClientSocket clientSocket)
             {
                 // Remove the buffer associated with the disconnected client
-                if (_clientBuffers.ContainsKey(clientSocket))
+                if (_clientSessions.ContainsKey(clientSocket))
                 {
-                    _clientBuffers[clientSocket].Dispose();
-                    _clientBuffers.Remove(clientSocket);
+                    _clientSessions[clientSocket].PacketBuffer.Dispose();
+                    _clientSessions.Remove(clientSocket);
                 }
             }
         }
 
         private void DataReceived(object? sender, DataReceivedEventArgs e)
         {
-            var clientBuffer = GetOrCreateBufferForClient(e.Client);
-            clientBuffer.AppendData(e.Data);
+            var session = GetOrCreateSessionForClient(e.Client);
+            session.PacketBuffer.AppendData(e.Data);
 
-            // Assuming the packet header is just a UInt16 for the code
-            var headerSize = sizeof(byte);
-
-            if (_packetScope != PacketScope.Auth)
+            do
             {
-                headerSize = HEADER_SIZE;
-                var currentBufferPosition = (int)clientBuffer.Reader.BaseStream.Position;
-                var firstByte = GetDecryptedByte(clientBuffer.GetBuffer().Slice(currentBufferPosition, 1), 0, 0);
-                var isLargePacket = (firstByte & 0x80) != 0;
+                PacketId packetId;
+                int headerSize;
 
-                if (isLargePacket)
+                if (_packetScope == PacketScope.Auth)
                 {
-                    // packetLength has 23 bits
-                    if (clientBuffer.Reader.BaseStream.Length - currentBufferPosition < LARGE_PACKET_HEADER_SIZE)
-                    {
-                        _decryptUntil = 0;
+                    if (session.PacketBuffer.CanReadLength(sizeof(byte)))
+                        packetId = new PacketId(session.PacketBuffer.Reader.ReadByte(), PacketScope.Auth);
+                    else
                         return;
+                }
+                else
+                {
+                    var currentBufferPosition = (int)session.PacketBuffer.Reader.BaseStream.Position;
+                    var packetLength = 0;
+
+                    if (session.IsEncrypted)
+                    {
+                        var firstByte = session.GetDecryptedByte(session.PacketBuffer.GetBuffer().Slice(currentBufferPosition, 1), 0);
+                        var isLargePacket = (firstByte & 0x80) != 0;
+
+                        if (isLargePacket)
+                        {
+                            if (session.PacketBuffer.Reader.BaseStream.Length - currentBufferPosition < LARGE_PACKET_HEADER_SIZE)
+                            {
+                                session.DecryptUntil = 0;
+                                return;
+                            }
+
+                            packetLength = (firstByte & 0x7F) << 16;
+                            packetLength |= session.GetDecryptedByte(session.PacketBuffer.GetBuffer().Slice(currentBufferPosition + 1, 1), 1) << 8;
+                            packetLength |= session.GetDecryptedByte(session.PacketBuffer.GetBuffer().Slice(currentBufferPosition + 2, 1), 2);
+
+                            packetId = new PacketId(session.GetDecryptedOpcode(session.PacketBuffer.GetBuffer().Slice(currentBufferPosition + 3, 4)), _packetScope);
+                            headerSize = LARGE_PACKET_HEADER_SIZE;
+                        }
+                        else
+                        {
+                            packetLength |= firstByte << 8;
+                            packetLength |= session.GetDecryptedByte(session.PacketBuffer.GetBuffer().Slice(currentBufferPosition + 1, 1), 1);
+
+                            packetId = new PacketId(session.GetDecryptedOpcode(session.PacketBuffer.GetBuffer().Slice(currentBufferPosition + 2, 3)), _packetScope);
+                            headerSize = HEADER_SIZE;
+                        }
+                    }
+                    else
+                    {
+                        var bufferSpan = session.PacketBuffer.GetBuffer().Span.Slice(currentBufferPosition, HEADER_SIZE);
+                        packetLength = bufferSpan[0] << 8 | bufferSpan[1];
+
+                        // the opcode is actually 4 bytes, but can never go over 2, so we skip the last 2
+                        packetId = new PacketId((bufferSpan[2] | bufferSpan[3] << 8), _packetScope);
+                        headerSize = HEADER_SIZE;
                     }
 
-                    packetLength = (firstByte & 0x7F) << 16;
-                    packetLength |= GetDecryptedByte(recvBuffer, offset, 1) << 8;
-                    packetLength |= GetDecryptedByte(recvBuffer, offset, 2);
+                    if (!session.PacketBuffer.CanReadLength(packetLength))
+                    {
+                        if (session.IsEncrypted)
+                            session.DecryptUntil = headerSize;
 
-                    opcode = GetDecryptedOpcode(recvBuffer, offset, 3);
-                    headerSize = RealmPacketIn.LARGE_PACKET_HEADER_SIZE;
+                        return;
+                    }
                 }
-                else
-                {
-                    // packetLength has 15 bits
-                    packetLength |= firstByte << 8;
-                    packetLength |= GetDecryptedByte(recvBuffer, offset, 1);
 
-                    opcode = (RealmServerOpCode)GetDecryptedOpcode(recvBuffer, offset, 2);
-                    headerSize = RealmPacketIn.HEADER_SIZE;
-                }
-            }
-
-            while (clientBuffer.CanReadLength(headerSize))
-            {
-                var packetIdPosition = clientBuffer.Reader.BaseStream.Position;
-                var packetId = clientBuffer.Reader.ReadUInt16();
-                var result = _forgedModelDeserialization.TryDeserialize(_packetScope, packetId, clientBuffer, out var packet);
+                var packetIdPosition = session.PacketBuffer.Reader.BaseStream.Position;
+                var result = _forgedModelDeserialization.TryDeserialize(_packetScope, packetId.Id, session.PacketBuffer, out var packet);
 
                 if (result == DeserializationResult.Success && packet != null)
-                    _packetRouter.Route(e.Client, _packetScope, packetId, packet);
+                    _packetRouter.Route(session, packetId, packet);
                 else
                 {
-                    // If packet is null, it means the packet is incomplete.
-                    // Reset the position to before the code and break out of the loop.
-                    // if the result is not due to EndOfStream, it means the packet is unknown or the deserialization failed. We should clear the buffer to get rid of the unknown packet.
                     if (result == DeserializationResult.EndOfStream)
-                        clientBuffer.Reader.BaseStream.Position = packetIdPosition;
+                        session.PacketBuffer.Reader.BaseStream.Position = packetIdPosition;
                     else
-                        clientBuffer.Clear(); // Clear the buffer if the packet is unknown
+                        session.PacketBuffer.Clear();
 
                     break;
                 }
-            }
+            } while (session.PacketBuffer.Reader.BaseStream.Position < session.PacketBuffer.Reader.BaseStream.Length);
         }
 
-        private PacketBuffer GetOrCreateBufferForClient(ClientSocket client)
+        private WoWClientSession GetOrCreateSessionForClient(ClientSocket client)
         {
-            if (!_clientBuffers.TryGetValue(client, out var buffer))
+            if (!_clientSessions.TryGetValue(client, out var session))
             {
-                buffer = new PacketBuffer();
-                _clientBuffers[client] = buffer;
+                session = new WoWClientSession(client, new PacketBuffer(), _logger);
+                _clientSessions[client] = session;
             }
 
-            return buffer;
-        }
-
-        private byte GetDecryptedByte(Memory<byte> inputData, int baseOffset, int offset)
-        {
-            if (Interlocked.Exchange(ref _decryptSeq, 1) == 1)
-                _logger.Warning("Decrypting out of order packet");
-
-            var dataStartOffset = baseOffset + offset;
-            if (_decryptUntil < offset)
-            {
-                _packetEncryption.Decrypt(inputData, dataStartOffset, 1);
-            }
-
-            Interlocked.Exchange(ref _decryptSeq, 0);
-
-            return inputData.Span[dataStartOffset];
-        }
-
-        private int GetDecryptedOpcode(PacketBuffer packetBuffer, int baseOffset, int offset)
-        {
-            var inputData = packetBuffer.GetBuffer();
-            var dataStartOffset = baseOffset + offset;
-
-            if (_decryptUntil < offset + 4)
-            {
-                _packetEncryption.Decrypt(inputData, dataStartOffset, 4);
-            }
-
-            return BinaryPrimitives.ReadInt32LittleEndian(inputData.Span[dataStartOffset..]);
+            return session;
         }
     }
 }

@@ -8,9 +8,9 @@ namespace WrathForged.Serialization
     public class DeserializeDefinitionAttribute : Attribute
     {
         public PacketScope Scope { get; }
-        public uint[] PacketIDs { get; }
+        public int[] PacketIDs { get; }
 
-        public DeserializeDefinitionAttribute(PacketScope scope, params uint[] packetIDs)
+        public DeserializeDefinitionAttribute(PacketScope scope, params int[] packetIDs)
         {
             Scope = scope;
             PacketIDs = packetIDs;

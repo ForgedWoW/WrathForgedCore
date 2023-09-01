@@ -10,7 +10,7 @@ namespace WrathForged.Common
     public class ForgedModelDeserialization
     {
         private readonly ILogger _logger;
-        public Dictionary<PacketScope, Dictionary<uint, MethodInfo>> DeserializationMethodsCache = new();
+        public Dictionary<PacketScope, Dictionary<int, MethodInfo>> DeserializationMethodsCache = new();
 
         public ForgedModelDeserialization(ILogger logger)
         {
@@ -24,7 +24,7 @@ namespace WrathForged.Common
                 var attribute = (DeserializeDefinitionAttribute)method.GetCustomAttributes(typeof(DeserializeDefinitionAttribute), false).First();
                 if (!DeserializationMethodsCache.TryGetValue(attribute.Scope, out var scopeDictionary))
                 {
-                    scopeDictionary = new Dictionary<uint, MethodInfo>();
+                    scopeDictionary = new Dictionary<int, MethodInfo>();
                     DeserializationMethodsCache[attribute.Scope] = scopeDictionary;
                 }
 
@@ -37,7 +37,7 @@ namespace WrathForged.Common
             _logger = logger;
         }
 
-        public DeserializationResult TryDeserialize(PacketScope scope, uint packetId, PacketBuffer buffer, out object? packet)
+        public DeserializationResult TryDeserialize(PacketScope scope, int packetId, PacketBuffer buffer, out object? packet)
         {
             if (!DeserializationMethodsCache.TryGetValue(scope, out var scopeDictionary))
             {

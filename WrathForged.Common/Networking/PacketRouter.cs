@@ -1,6 +1,7 @@
 ﻿// Copyright (c) Forged WoW LLC <https://github.com/ForgedWoW/WrathForgedCore>
 // Licensed under GPL-3.0 license. See <https://github.com/ForgedWoW/WrathForgedCore/blob/master/LICENSE> for full information.
 using System.Reflection;
+using WrathForged.Models.Networking;
 using WrathForged.Serialization;
 
 namespace WrathForged.Common.Networking
@@ -35,19 +36,19 @@ namespace WrathForged.Common.Networking
             }
         }
 
-        public void Route(ClientSocket client, PacketScope scope, uint packetId, object packet)
+        public void Route(WoWClientSession session, PacketId packetId, object packet)
         {
             if (packet == null)
                 return;
 
-            if (!DeserializationMethodsCache.TryGetValue(scope, out var scopeDictionary))
+            if (!DeserializationMethodsCache.TryGetValue(packetId.Scope, out var scopeDictionary))
                 return;
 
-            if (!scopeDictionary.TryGetValue(packetId, out var methodList))
+            if (!scopeDictionary.TryGetValue(packetId.Id, out var methodList))
                 return;
 
             foreach (var method in methodList)
-                method.Invoke(null, new object[] { client, packet });
+                method.Invoke(null, new object[] { session, packet });
         }
     }
 }
