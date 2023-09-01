@@ -1,9 +1,9 @@
 ﻿// Copyright (c) Forged WoW LLC <https://github.com/ForgedWoW/WrathForgedCore>
 // Licensed under GPL-3.0 license. See <https://github.com/ForgedWoW/WrathForgedCore/blob/master/LICENSE> for full information.
-using Microsoft.CodeAnalysis;
-using WrathForged.Serialization.Generators;
 
-namespace WrathForged.Serialization
+using Microsoft.CodeAnalysis;
+
+namespace WrathForged.Serialization.Generators
 {
     public class IPAddressGenerator : IForgedTypeGenerator
     {

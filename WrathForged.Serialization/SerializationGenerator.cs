@@ -18,6 +18,7 @@ namespace WrathForged.Serialization
         private Dictionary<string, IForgedTypeGenerator> _generatorsByName;
         private Dictionary<TypeKind, IForgedTypeGenerator> _generatorsByTypeKind;
         private Dictionary<SpecialType, IForgedTypeGenerator> _generatorsBySpecialType;
+        private Dictionary<ForgedTypeCode, IForgedTypeGenerator> _generatorsByTypeCode;
         private bool _collectionSizeWritten;
 
         public void Initialize(GeneratorInitializationContext context)
@@ -40,6 +41,11 @@ namespace WrathForged.Serialization
             {
                 { SpecialType.System_Collections_Generic_IList_T, new ListTypeGenerator(this) }
             };
+
+            _generatorsByTypeCode = new Dictionary<ForgedTypeCode, IForgedTypeGenerator>()
+            {
+                { ForgedTypeCode.StringParsedEnum, new StringParsedEnumGenerator() }
+            };
         }
 
         public void Execute(GeneratorExecutionContext context)
@@ -47,7 +53,7 @@ namespace WrathForged.Serialization
             if (!(context.SyntaxReceiver is SerializationSyntaxReceiver receiver))
                 return;
 
-            //System.Diagnostics.Debugger.Launch();
+            System.Diagnostics.Debugger.Launch();
             foreach (var classDeclaration in receiver.CandidateClasses)
             {
                 if (!(context.Compilation.GetSemanticModel(classDeclaration.SyntaxTree).GetDeclaredSymbol(classDeclaration) is INamedTypeSymbol modelSymbol))
@@ -262,23 +268,33 @@ namespace WrathForged.Serialization
             {
                 return $"writer.Write({variableName});";
             }
-            else if (typeSymbol is IArrayTypeSymbol arrayType && arrayType.ElementType.SpecialType == SpecialType.System_Byte)
+
+            if (typeSymbol is IArrayTypeSymbol arrayType && arrayType.ElementType.SpecialType == SpecialType.System_Byte)
             {
                 return $"if({variableName} != null){{" + $"writer.Write({variableName});}}";
             }
-            else if (_generatorsByTypeKind.TryGetValue(typeSymbol.TypeKind, out var forgedTypeGenerator))
+
+            if (_generatorsByTypeCode.TryGetValue(forgedTypeCode, out var forgedTypeCodeGenerator))
+            {
+                return forgedTypeCodeGenerator.GenerateTypeCodeSerializeForType(typeSymbol, attr, forgedTypeCode, compilation, containerSymbol, variableName);
+            }
+
+            if (_generatorsByTypeKind.TryGetValue(typeSymbol.TypeKind, out var forgedTypeGenerator))
             {
                 return forgedTypeGenerator.GenerateTypeCodeSerializeForType(typeSymbol, attr, forgedTypeCode, compilation, containerSymbol, variableName);
             }
-            else if (_generatorsByName.TryGetValue(typeSymbol.Name, out var generator))
+
+            if (_generatorsByName.TryGetValue(typeSymbol.Name, out var generator))
             {
                 return generator.GenerateTypeCodeSerializeForType(typeSymbol, attr, forgedTypeCode, compilation, containerSymbol, variableName);
             }
-            else if (_generatorsBySpecialType.TryGetValue(typeSymbol.SpecialType, out var specialTypeGenerator))
+
+            if (_generatorsBySpecialType.TryGetValue(typeSymbol.SpecialType, out var specialTypeGenerator))
             {
                 return specialTypeGenerator.GenerateTypeCodeSerializeForType(typeSymbol, attr, forgedTypeCode, compilation, containerSymbol, variableName);
             }
-            else if (HasSerializeExtensionMethod(compilation, containerSymbol))
+
+            if (HasSerializeExtensionMethod(compilation, containerSymbol))
             {
                 return $"{variableName}.Serialize(writer);";
             }
@@ -305,7 +321,8 @@ namespace WrathForged.Serialization
                 {
                     return $"instance.{variableName} = reader.Read{forgedTypeCode}();";
                 }
-                else if (typeSymbol is IArrayTypeSymbol arrayType && arrayType.ElementType.SpecialType == SpecialType.System_Byte)
+
+                if (typeSymbol is IArrayTypeSymbol arrayType && arrayType.ElementType.SpecialType == SpecialType.System_Byte)
                 {
                     var fixedSizeArg = 0u;
 
@@ -326,33 +343,42 @@ namespace WrathForged.Serialization
                     {
                         return $"instance.{variableName} = reader.ReadBytes(collectionSize);";
                     }
-                    else if (!string.IsNullOrEmpty(sizeLengthTypeArg) && Enum.TryParse(sizeLengthTypeArg, out TypeCode sizeLengthType) && sizeLengthType != TypeCode.Empty)
+
+                    if (!string.IsNullOrEmpty(sizeLengthTypeArg) && Enum.TryParse(sizeLengthTypeArg, out TypeCode sizeLengthType) && sizeLengthType != TypeCode.Empty)
                     {
                         return $"instance.{variableName} = reader.ReadBytes(collectionSize);";
                     }
-                    else if (sizeIndexArg != 0)
+
+                    if (sizeIndexArg != 0)
                     {
                         // Assuming there's a method that can jump to a specific index in the stream, read the size, and then return back to the original position, named 'GetSizeFromStreamIndex'.
                         return $"instance.{variableName} = reader.ReadBytes(GetSizeFromStreamIndex(reader, sizeIndex));";
                     }
-                    else
-                    {
-                        return $"instance.{variableName} = reader.ReadBytes(collectionSize);";
-                    }
+
+                    return $"instance.{variableName} = reader.ReadBytes(collectionSize);";
                 }
-                else if (_generatorsByTypeKind.TryGetValue(typeSymbol.TypeKind, out var forgedTypeGenerator))
+
+                if (_generatorsByTypeCode.TryGetValue(forgedTypeCode, out var forgedTypeCodeGenerator))
+                {
+                    return forgedTypeCodeGenerator.GenerateTypeCodeDeserializeForType(typeSymbol, attr, forgedTypeCode, compilation, containerSymbol, variableName);
+                }
+
+                if (_generatorsByTypeKind.TryGetValue(typeSymbol.TypeKind, out var forgedTypeGenerator))
                 {
                     return forgedTypeGenerator.GenerateTypeCodeDeserializeForType(typeSymbol, attr, forgedTypeCode, compilation, containerSymbol, variableName);
                 }
-                else if (_generatorsByName.TryGetValue(typeSymbol.Name, out var generator))
+
+                if (_generatorsByName.TryGetValue(typeSymbol.Name, out var generator))
                 {
                     return generator.GenerateTypeCodeDeserializeForType(typeSymbol, attr, forgedTypeCode, compilation, containerSymbol, variableName);
                 }
-                else if (_generatorsBySpecialType.TryGetValue(typeSymbol.SpecialType, out var specialTypeGenerator))
+
+                if (_generatorsBySpecialType.TryGetValue(typeSymbol.SpecialType, out var specialTypeGenerator))
                 {
                     return specialTypeGenerator.GenerateTypeCodeDeserializeForType(typeSymbol, attr, forgedTypeCode, compilation, containerSymbol, variableName);
                 }
-                else if (HasDeserializeExtensionMethod(compilation, containerSymbol))
+
+                if (HasDeserializeExtensionMethod(compilation, containerSymbol))
                 {
                     return $"instance.{variableName} = reader.Read{typeSymbol.Name}();";
                 }

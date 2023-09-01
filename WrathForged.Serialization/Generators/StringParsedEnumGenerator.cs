@@ -7,7 +7,7 @@ using Microsoft.CodeAnalysis;
 
 namespace WrathForged.Serialization.Generators
 {
-    public class StringGenerator : IForgedTypeGenerator
+    public class StringParsedEnumGenerator : IForgedTypeGenerator
     {
         public string GenerateTypeCodeSerializeForType(ITypeSymbol typeSymbol, AttributeData attribute, ForgedTypeCode typeCode, Compilation compilation, INamedTypeSymbol symbol, string variableName)
         {
@@ -20,7 +20,7 @@ namespace WrathForged.Serialization.Generators
                 variableName = "fixedSizeString";
             }
 
-            var reverseSerialization = (bool?)attribute.NamedArguments.FirstOrDefault(arg => arg.Key == "ReversedString").Value.Value;
+            var reverseSerialization = (bool?)attribute.NamedArguments.First(arg => arg.Key == "ReversedString").Value.Value;
             var reverseString = reverseSerialization == true ? ".Reverse()" : "";
 
             switch (typeCode)
@@ -49,21 +49,21 @@ namespace WrathForged.Serialization.Generators
             switch (typeCode)
             {
                 case ForgedTypeCode.CString:
-                    return $"instance.{variableName} = Encoding.ASCII.GetString(reader.ReadCString()).TrimEnd('\\0'){reverseString};";
+                    return $"if (Enum.TryParse(typeof({typeSymbol.Name}), Encoding.ASCII.GetString(reader.ReadCString()).TrimEnd('\\0'){reverseString}, out var {variableName}Val)) {{ instance.{variableName} = {variableName}Val; }}";
 
                 case ForgedTypeCode.ASCIIString:
                     if (attribute.NamedArguments.Any(arg => arg.Key == "FixedSize"))
                     {
-                        var fixedSize = attribute.NamedArguments.FirstOrDefault(arg => arg.Key == "FixedSize").Value.Value;
-                        return $"instance.{variableName} = Encoding.ASCII.GetString(reader.ReadBytes({fixedSize})).TrimEnd('\\0'){reverseString};";
+                        var fixedSize = attribute.NamedArguments.First(arg => arg.Key == "FixedSize").Value.Value;
+                        return $"if (Enum.TryParse(typeof({typeSymbol.Name}), Encoding.ASCII.GetString(reader.ReadBytes({fixedSize})).TrimEnd('\\0'){reverseString}, out var {variableName}Val)) {{ instance.{variableName} = {variableName}Val; }}";
                     }
                     else
                     {
-                        return $"instance.{variableName} = Encoding.ASCII.GetString(reader.ReadByteArray()).TrimEnd('\\0'){reverseString};";
+                        return $"if (Enum.TryParse(typeof({typeSymbol.Name}), Encoding.ASCII.GetString(reader.ReadByteArray()).TrimEnd('\\0'){reverseString}, out var {variableName}Val)) {{ instance.{variableName} = {variableName}Val; }}";
                     }
 
                 default:
-                    return $"instance.{variableName} = reader.ReadString().TrimEnd('\\0'){reverseString};";
+                    return $"if (Enum.TryParse(typeof({typeSymbol.Name}), reader.ReadString().TrimEnd('\\0'){reverseString}, out var {variableName}Val)) {{ instance.{variableName} = {variableName}Val; }}";
             }
         }
     }

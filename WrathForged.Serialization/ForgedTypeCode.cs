@@ -111,5 +111,10 @@ namespace WrathForged.Serialization
 
         ASCIIString = 19,
         CString = 20,
+
+        /// <summary>
+        ///     A Enum type represented in the stream as a string.
+        /// </summary>
+        StringParsedEnum = 21,
     }
 }
