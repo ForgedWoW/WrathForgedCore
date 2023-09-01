@@ -1,6 +1,9 @@
 ﻿// Copyright (c) Forged WoW LLC <https://github.com/ForgedWoW/WrathForgedCore>
 // Licensed under GPL-3.0 license. See <https://github.com/ForgedWoW/WrathForgedCore/blob/master/LICENSE> for full information.
+
+using System.Diagnostics.Metrics;
 using Serilog;
+using WrathForged.Common.Observability;
 using WrathForged.Models.Networking;
 using WrathForged.Serialization;
 
@@ -17,8 +20,11 @@ namespace WrathForged.Common.Networking
         private readonly PacketRouter _packetRouter;
         private readonly ILogger _logger;
         private readonly Dictionary<ClientSocket, WoWClientSession> _clientSessions = new();
+        private readonly Meter _meter;
+        private readonly Counter<long> _connectionCounter;
 
-        public WoWClientServer(PacketScope packetScope, ForgedModelDeserialization forgedModelDeserialization, TCPServer tCPServer, PacketRouter packetRouter, ILogger logger)
+        public WoWClientServer(PacketScope packetScope, ForgedModelDeserialization forgedModelDeserialization, TCPServer tCPServer, PacketRouter packetRouter, ILogger logger,
+                               MeterFactory meterFactory)
         {
             _packetScope = packetScope;
             _forgedModelDeserialization = forgedModelDeserialization;
@@ -26,6 +32,8 @@ namespace WrathForged.Common.Networking
             _packetRouter = packetRouter;
             _logger = logger;
             TCPServer.OnClientConnected += TCPServer_OnClientConnected;
+            _meter = meterFactory.GetOrCreateMeter(MeterKeys.WRATHFORGED_COMMON);
+            _connectionCounter = _meter.CreateCounter<long>("WoWClientConnections", "Number of connections from WoW Clients");
         }
 
         public TCPServer TCPServer { get; }
@@ -34,19 +42,21 @@ namespace WrathForged.Common.Networking
         {
             e.OnDataReceived += DataReceived;
             e.OnDisconnect += Disconnected;
+            _connectionCounter.Add(1);
         }
 
         private void Disconnected(object? sender, EventArgs e)
         {
-            if (sender != null && sender is ClientSocket clientSocket)
-            {
-                // Remove the buffer associated with the disconnected client
-                if (_clientSessions.ContainsKey(clientSocket))
-                {
-                    _clientSessions[clientSocket].PacketBuffer.Dispose();
-                    _clientSessions.Remove(clientSocket);
-                }
-            }
+            if (sender is not ClientSocket clientSocket)
+                return;
+
+            // Remove the buffer associated with the disconnected client
+            if (!_clientSessions.ContainsKey(clientSocket))
+                return;
+
+            _clientSessions[clientSocket].PacketBuffer.Dispose();
+            _clientSessions.Remove(clientSocket);
+            _connectionCounter.Add(-1);
         }
 
         private void DataReceived(object? sender, DataReceivedEventArgs e)
