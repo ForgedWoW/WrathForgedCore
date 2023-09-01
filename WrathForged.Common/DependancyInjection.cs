@@ -3,6 +3,8 @@
 using System.Diagnostics;
 using Autofac;
 using Microsoft.Extensions.Configuration;
+using OpenTelemetry;
+using OpenTelemetry.Trace;
 using Serilog;
 using WrathForged.Common.Networking;
 
@@ -52,6 +54,34 @@ namespace WrathForged.Common
             builder.RegisterType<ForgedModelDeserialization>().SingleInstance();
             builder.RegisterType<PacketRouter>().SingleInstance();
             builder.RegisterType<PacketEncryption>();
+
+            var telemetryType = configuration.GetDefaultValue("Telemetry:Types", "").Split(',', StringSplitOptions.TrimEntries | StringSplitOptions.TrimEntries).ToList(); // Assuming you have a key like this in your JSON
+
+            var tracerProviderBuilder = Sdk.CreateTracerProviderBuilder().AddSource(Process.GetCurrentProcess().ProcessName);
+
+            if (telemetryType.Contains("OpenTelemetryProtocol", StringComparer.InvariantCultureIgnoreCase))
+            {
+                tracerProviderBuilder.AddOtlpExporter(options =>
+                                     {
+                                         options.Endpoint = new Uri(configuration.GetDefaultValue("Telemetry:OpenTelemetryProtocol:Endpoint", "http://localhost:4317"));
+                                     });
+            }
+            else if (telemetryType.Contains("Zipkin", StringComparer.InvariantCultureIgnoreCase))
+            {
+                tracerProviderBuilder.AddZipkinExporter(options =>
+                                     {
+                                         options.Endpoint = new Uri(configuration.GetDefaultValue("Telemetry:Zipkin:Endpoint", "http://localhost:9411/api/v2/spans"));
+                                     });
+            }
+
+            var tracerProvider = tracerProviderBuilder.Build();
+
+            if (tracerProvider != null)
+                builder.RegisterInstance(tracerProvider.GetTracer(Process.GetCurrentProcess().ProcessName))
+                       .As<Tracer>()
+                       .SingleInstance();
+            else
+                Log.Logger.Warning("Telemetry is not configured or there was an error setting it up. Please configure it in the appsettings.json file.");
 
             return builder;
         }
