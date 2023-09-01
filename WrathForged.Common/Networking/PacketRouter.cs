@@ -8,7 +8,7 @@ namespace WrathForged.Common.Networking
 {
     public class PacketRouter
     {
-        public Dictionary<PacketScope, Dictionary<uint, List<MethodInfo>>> DeserializationMethodsCache = new();
+        public Dictionary<PacketScope, Dictionary<int, List<MethodInfo>>> DeserializationMethodsCache = new();
 
         public PacketRouter()
         {
@@ -22,7 +22,7 @@ namespace WrathForged.Common.Networking
                 var attribute = (PacketHandlerAttribute)method.GetCustomAttributes(typeof(PacketHandlerAttribute), false).First();
                 if (!DeserializationMethodsCache.TryGetValue(attribute.Scope, out var scopeDictionary))
                 {
-                    scopeDictionary = new Dictionary<uint, List<MethodInfo>>();
+                    scopeDictionary = new Dictionary<int, List<MethodInfo>>();
                     DeserializationMethodsCache[attribute.Scope] = scopeDictionary;
                 }
 

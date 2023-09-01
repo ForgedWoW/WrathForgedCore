@@ -7,13 +7,13 @@ namespace WrathForged.Common.Networking
     [AttributeUsage(AttributeTargets.Method, AllowMultiple = true)]
     public sealed class PacketHandlerAttribute : Attribute
     {
-        public PacketHandlerAttribute(PacketScope scope, uint id)
+        public PacketHandlerAttribute(PacketScope scope, int id)
         {
             Scope = scope;
             Id = id;
         }
 
         public PacketScope Scope { get; }
-        public uint Id { get; }
+        public int Id { get; }
     }
 }
