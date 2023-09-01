@@ -47,5 +47,10 @@ namespace WrathForged.Serialization
         ///    The index must apper before this property in the serialized stream.
         /// </summary>
         public uint DontSerializeWhenIndexIsDefaultValue { get; set; } = uint.MaxValue;
+
+        /// <summary>
+        ///     If the string is reversed then it will be reversed after being deserialized.
+        /// </summary>
+        public bool ReversedString { get; set; }
     }
 }

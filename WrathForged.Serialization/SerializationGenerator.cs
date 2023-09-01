@@ -102,6 +102,7 @@ namespace WrathForged.Serialization
             // Append the collected required namespaces at the beginning
             // Default usings
             sourceBuilder.Insert(0, "using System;");
+            sourceBuilder.Insert(0, "using System.Linq;");
             sourceBuilder.Insert(0, "using WrathForged.Serialization;");
             foreach (var ns in requiredNamespaces)
             {

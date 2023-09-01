@@ -19,18 +19,21 @@ public class StringGenerator : IForgedTypeGenerator
             variableName = "fixedSizeString";
         }
 
+        var reverseSerialization = (bool?)attribute.NamedArguments.First(arg => arg.Key == "ReversedString").Value.Value;
+        var reverseString = reverseSerialization == true ? ".Reverse()" : "";
+
         switch (typeCode)
         {
             case ForgedTypeCode.CString:
-                serialization.AppendLine($"if ({variableName} != null) {{ writer.Write({variableName}.ToCString()); }} else {{ writer.Write(string.Empty.ToCString()); }}");
+                serialization.AppendLine($"if ({variableName} != null) {{ writer.Write({variableName}{reverseString}.ToCString()); }} else {{ writer.Write(string.Empty.ToCString()); }}");
                 break;
 
             case ForgedTypeCode.ASCIIString:
-                serialization.AppendLine($"if ({variableName} != null) {{ writer.Write(Encoding.ASCII.GetBytes({variableName})); }} else {{ writer.Write(Encoding.ASCII.GetBytes(string.Empty)); }}");
+                serialization.AppendLine($"if ({variableName} != null) {{ writer.Write(Encoding.ASCII.GetBytes({variableName}){reverseString}); }} else {{ writer.Write(Encoding.ASCII.GetBytes(string.Empty)); }}");
                 break;
 
             default:
-                serialization.AppendLine($"if ({variableName} != null) {{ writer.Write({variableName}); }} else {{ writer.Write(string.Empty); }}");
+                serialization.AppendLine($"if ({variableName} != null) {{ writer.Write({variableName}{reverseString}); }} else {{ writer.Write(string.Empty); }}");
                 break;
         }
 
@@ -39,24 +42,27 @@ public class StringGenerator : IForgedTypeGenerator
 
     public string GenerateTypeCodeDeserializeForType(ITypeSymbol typeSymbol, AttributeData attribute, ForgedTypeCode typeCode, Compilation compilation, INamedTypeSymbol symbol, string variableName)
     {
+        var reverseSerialization = (bool?)attribute.NamedArguments.First(arg => arg.Key == "ReversedString").Value.Value;
+        var reverseString = reverseSerialization == true ? ".Reverse()" : "";
+
         switch (typeCode)
         {
             case ForgedTypeCode.CString:
-                return $"{variableName} = Encoding.ASCII.GetString(reader.ReadCString());";
+                return $"{variableName} = Encoding.ASCII.GetString(reader.ReadCString()).TrimEnd('\\0'){reverseString};";
 
             case ForgedTypeCode.ASCIIString:
                 if (attribute.NamedArguments.Any(arg => arg.Key == "FixedSize"))
                 {
                     var fixedSize = attribute.NamedArguments.First(arg => arg.Key == "FixedSize").Value.Value;
-                    return $"{variableName} = Encoding.ASCII.GetString(reader.ReadBytes({fixedSize})).TrimEnd('\\0');";
+                    return $"{variableName} = Encoding.ASCII.GetString(reader.ReadBytes({fixedSize})).TrimEnd('\\0'){reverseString};";
                 }
                 else
                 {
-                    return $"{variableName} = Encoding.ASCII.GetString(reader.ReadByteArray());";
+                    return $"{variableName} = Encoding.ASCII.GetString(reader.ReadByteArray()).TrimEnd('\\0'){reverseString};";
                 }
 
             default:
-                return $"instance.{variableName} = reader.ReadString();";
+                return $"instance.{variableName} = reader.ReadString().TrimEnd('\\0'){reverseString};";
         }
     }
 }
