@@ -72,9 +72,15 @@ namespace WrathForged.Models.Networking
             return $"{Scope} {packetName}:{Id}";
         }
 
-        public override bool Equals(object obj)
+        public override bool Equals(object? obj)
         {
-            throw new NotImplementedException();
+            if (obj == null)
+                return false;
+
+            if (obj is PacketId packetId)
+                return this == packetId;
+
+            return false;
         }
 
         public override int GetHashCode()
