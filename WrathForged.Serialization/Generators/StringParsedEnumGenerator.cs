@@ -20,20 +20,20 @@ namespace WrathForged.Serialization.Generators
             }
 
             var reverseSerialization = attribute.GetNamedArg("ReversedString", false);
-            var reverseString = reverseSerialization ? ".Reverse()" : "";
+            var reverseString = reverseSerialization ? ".Reverse().ToString()" : "";
 
             switch (typeCode)
             {
                 case ForgedTypeCode.CString:
-                    serialization.AppendLine($"if ({variableName} != null) {{ writer.Write({variableName}.ToString(){reverseString}.ToCString()); }} else {{ writer.Write(string.Empty.ToCString()); }}");
+                    serialization.AppendLine($"writer.Write({variableName}.ToString(){reverseString}.ToCString());");
                     break;
 
                 case ForgedTypeCode.ASCIIString:
-                    serialization.AppendLine($"if ({variableName} != null) {{ writer.Write(System.Text.Encoding.ASCII.GetBytes({variableName}.ToString(){reverseString})); }} else {{ writer.Write(System.Text.Encoding.ASCII.GetBytes(string.Empty)); }}");
+                    serialization.AppendLine($"writer.Write(System.Text.Encoding.ASCII.GetBytes({variableName}.ToString(){reverseString}));");
                     break;
 
                 default:
-                    serialization.AppendLine($"if ({variableName} != null) {{ writer.Write({variableName}.ToString(){reverseString}); }} else {{ writer.Write(string.Empty); }}");
+                    serialization.AppendLine($"writer.Write({variableName}.ToString(){reverseString});");
                     break;
             }
 
@@ -43,26 +43,24 @@ namespace WrathForged.Serialization.Generators
         public string GenerateTypeCodeDeserializeForType(ITypeSymbol typeSymbol, AttributeData attribute, ForgedTypeCode typeCode, Compilation compilation, INamedTypeSymbol symbol, string variableName)
         {
             var reverseSerialization = attribute.GetNamedArg("ReversedString", false);
-            var reverseString = reverseSerialization ? ".Reverse()" : "";
+            var reverseString = reverseSerialization ? ".Reverse().ToString()" : "";
 
             switch (typeCode)
             {
                 case ForgedTypeCode.CString:
-                    return $"if (System.Enum.TryParse(typeof({typeSymbol.Name}), System.Text.Encoding.ASCII.GetString(reader.ReadCString()).TrimEnd('\\0'){reverseString}, out var {variableName}Val)) {{ instance.{variableName} = {variableName}Val; }}";
+                    return $"if (System.Enum.TryParse(typeof({typeSymbol.Name}), System.Text.Encoding.ASCII.GetString(reader.ReadCString()).TrimEnd('\\0'){reverseString}, out var {variableName}Val)) {{ instance.{variableName} = ({typeSymbol.Name}){variableName}Val; }}";
 
                 case ForgedTypeCode.ASCIIString:
                     if (attribute.HasNamedArg("FixedSize"))
-                    {
-                        var fixedSize = attribute.GetNamedArg("FixedSize", 0);
-                        return $"if (System.Enum.TryParse(typeof({typeSymbol.Name}), System.Text.Encoding.ASCII.GetString(reader.ReadBytes({fixedSize})).TrimEnd('\\0'){reverseString}, out var {variableName}Val)) {{ instance.{variableName} = {variableName}Val; }}";
-                    }
-                    else
-                    {
-                        return $"if (System.Enum.TryParse(typeof({typeSymbol.Name}), System.Text.Encoding.ASCII.GetString(reader.ReadByte()).TrimEnd('\\0'){reverseString}, out var {variableName}Val)) {{ instance.{variableName} = {variableName}Val; }}";
-                    }
+                        return $"instance.{variableName} = System.Text.Encoding.ASCII.GetString(reader.ReadBytes({attribute.GetNamedArg("FixedSize", 0)})).TrimEnd('\\0'){reverseString};";
+
+                    return $"instance.{variableName} = System.Text.Encoding.ASCII.GetString(reader.ReadChars()).TrimEnd('\\0'){reverseString};";
 
                 default:
-                    return $"if (System.Enum.TryParse(typeof({typeSymbol.Name}), reader.ReadString().TrimEnd('\\0'){reverseString}, out var {variableName}Val)) {{ instance.{variableName} = {variableName}Val; }}";
+                    if (attribute.HasNamedArg("FixedSize"))
+                        return $"if (System.Enum.TryParse(typeof({typeSymbol.Name}), new string(reader.ReadChars({attribute.GetNamedArg("FixedSize", 0)})).TrimEnd('\\0'){reverseString}, out var {variableName}Val)) {{ instance.{variableName} = ({typeSymbol.Name}){variableName}Val; }}";
+
+                    return $"if (System.Enum.TryParse(typeof({typeSymbol.Name}), new string(reader.ReadChars({attribute.AddCollectionSizeRead()})).TrimEnd('\\0'){reverseString}, out var {variableName}Val)) {{ instance.{variableName} = ({typeSymbol.Name}){variableName}Val; }}";
             }
         }
     }

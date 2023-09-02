@@ -7,7 +7,7 @@ using WrathForged.Serialization;
 
 namespace WrathForged.Models.Auth
 {
-    [ForgedSerializable(Scope = PacketScope.Auth, PacketIDs = new[] { (uint)AuthServerOpCode.AUTH_LOGON_CHALLENGE })]
+    [ForgedSerializable(Scope = PacketScope.Auth, PacketIDs = new[] { (uint)AuthServerOpCode.AUTH_LOGON_CHALLENGE, (uint)AuthServerOpCode.AUTH_RECONNECT_CHALLENGE })]
     public class AuthLogonChallengeRequest
     {
         /// <summary>

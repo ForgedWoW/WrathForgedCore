@@ -64,7 +64,9 @@ namespace WrathForged.Serialization
 
                 if (string.IsNullOrEmpty(source))
                     continue;
-
+#if DEBUG
+                System.Diagnostics.Debug.WriteLine(source);
+#endif
                 context.AddSource($"{modelSymbol.Name}_Serialization", source);
             }
         }
@@ -405,7 +407,7 @@ namespace WrathForged.Serialization
             if (fixedCollectionSize != 0)
                 return string.Empty;
 
-            var lengthType = attribute.GetNamedArg("CollectionSizeLengthType", TypeCode.Empty).ToString();
+            var lengthType = attribute.GetNamedArg("CollectionSizeLengthType", TypeCode.Empty);
 
             var sizeProperty = "Length";
 
@@ -416,37 +418,37 @@ namespace WrathForged.Serialization
             string zeroWriteMethod;
             switch (lengthType)
             {
-                case "Byte":
+                case TypeCode.Byte:
                     lengthWriteMethod = $"writer.Write((byte){variableName}.{sizeProperty});";
                     zeroWriteMethod = "writer.Write((byte)0);";
                     break;
 
-                case "SByte":
+                case TypeCode.SByte:
                     lengthWriteMethod = $"writer.Write((sbyte){variableName}.{sizeProperty});";
                     zeroWriteMethod = "writer.Write((sbyte)0);";
                     break;
 
-                case "Int16":
+                case TypeCode.Int16:
                     lengthWriteMethod = $"writer.Write((short){variableName}.{sizeProperty});";
                     zeroWriteMethod = "writer.Write((short)0);";
                     break;
 
-                case "UInt16":
+                case TypeCode.UInt16:
                     lengthWriteMethod = $"writer.Write((ushort){variableName}.{sizeProperty});";
                     zeroWriteMethod = "writer.Write((ushort)0);";
                     break;
 
-                case "UInt32":
+                case TypeCode.UInt32:
                     lengthWriteMethod = $"writer.Write((uint){variableName}.{sizeProperty});";
                     zeroWriteMethod = "writer.Write((uint)0);";
                     break;
 
-                case "Int64":
+                case TypeCode.Int64:
                     lengthWriteMethod = $"writer.Write((long){variableName}.{sizeProperty});";
                     zeroWriteMethod = "writer.Write((long)0);";
                     break;
 
-                case "UInt64":
+                case TypeCode.UInt64:
                     lengthWriteMethod = $"writer.Write((ulong){variableName}.{sizeProperty});";
                     zeroWriteMethod = "writer.Write((ulong)0);";
                     break;
@@ -458,14 +460,7 @@ namespace WrathForged.Serialization
             }
 
             return $@"
-                if ({variableName} == null || {variableName}.{sizeProperty} == 0)
-                {{
-                    {zeroWriteMethod}
-                }}
-                else
-                {{
-                    {lengthWriteMethod}
-                }}";
+                if ({variableName} == null || {variableName}.{sizeProperty} == 0) {{ {zeroWriteMethod} }} else {{ {lengthWriteMethod} }}";
         }
 
         internal string GenerateCollectionDeserializationSizeCode(AttributeData attr)

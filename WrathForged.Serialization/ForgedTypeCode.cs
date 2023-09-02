@@ -116,5 +116,7 @@ namespace WrathForged.Serialization
         ///     A Enum type represented in the stream as a string.
         /// </summary>
         StringParsedEnum = 21,
+
+        PascalString = 22,
     }
 }
