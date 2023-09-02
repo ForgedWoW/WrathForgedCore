@@ -33,7 +33,14 @@ namespace WrathForged.Serialization.Generators
                     break;
 
                 default:
-                    serialization.AppendLine($"if ({variableName} != null) {{ writer.Write({variableName}{reverseString}); }} else {{ writer.Write(string.Empty); }}");
+                    serialization.AppendLine($"if ({variableName} != null) {{");
+                    var sizeTypeName = attribute.GetTypeNameFromTypeCode();
+                    serialization.AppendLine($"    writer.Write(({sizeTypeName}){variableName}{reverseString}.Length);"); // Cast the string length and then write it
+                    serialization.AppendLine($"    writer.Write({variableName}{reverseString}.ToCharArray());");          // Write the string as a character array
+                    serialization.AppendLine($"}} else {{");
+                    serialization.AppendLine($"    writer.Write(({sizeTypeName})0);");  // Write 0 length for empty string
+                    serialization.AppendLine($"    writer.Write(new char[0]);");  // Write an empty character array
+                    serialization.AppendLine($"}}");
                     break;
             }
 

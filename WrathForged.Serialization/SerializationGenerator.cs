@@ -7,6 +7,7 @@ using System.Linq;
 using System.Net;
 using System.Text;
 using Microsoft.CodeAnalysis;
+using Microsoft.CodeAnalysis.CSharp;
 using WrathForged.Serialization.Generators;
 
 namespace WrathForged.Serialization
@@ -95,6 +96,10 @@ namespace WrathForged.Serialization
             var sourceBuilder = new StringBuilder();
             var requiredNamespaces = new HashSet<string>();
 
+            sourceBuilder.AppendLine("");
+            sourceBuilder.AppendLine("#pragma warning disable CS8602");
+            sourceBuilder.AppendLine("#pragma warning disable CS8604");
+            sourceBuilder.AppendLine("");
             // Serialize and Deserialize
             BuildSerializer(context, symbol, properties, sourceBuilder);
             BuildDeserializer(context, symbol, properties, sourceBuilder, requiredNamespaces);
@@ -110,13 +115,13 @@ namespace WrathForged.Serialization
 
             // Append the collected required namespaces at the beginning
             // Default usings
-            sourceBuilder.Insert(0, "using System;");
-            sourceBuilder.Insert(0, "using System.Linq;");
-            sourceBuilder.Insert(0, "using WrathForged.Serialization;");
+            sourceBuilder.Insert(0, "using System;\r\n");
+            sourceBuilder.Insert(0, "using System.Linq;\r\n");
+            sourceBuilder.Insert(0, "using WrathForged.Serialization;\r\n");
             foreach (var ns in requiredNamespaces)
             {
                 if (!string.IsNullOrEmpty(ns))
-                    sourceBuilder.Insert(0, $"using {ns};\n");
+                    sourceBuilder.Insert(0, $"using {ns};\r\n");
             }
 
             return sourceBuilder.ToString();

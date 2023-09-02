@@ -15,7 +15,7 @@ namespace WrathForged.Serialization.Generators
             if (attribute.HasNamedArg("FixedSize"))
             {
                 var fixedSize = attribute.GetNamedArg("FixedSize", string.Empty);
-                serialization.AppendLine($"var fixedSizeString = instance.{variableName}?.PadRight({fixedSize}, '\\0').Substring(0, {fixedSize}) ?? string.Empty;");
+                serialization.AppendLine($"var fixedSizeString = instance.{variableName}.ToString().PadRight({fixedSize}, '\\0').Substring(0, {fixedSize});");
                 variableName = "fixedSizeString";
             }
 
@@ -33,7 +33,9 @@ namespace WrathForged.Serialization.Generators
                     break;
 
                 default:
-                    serialization.AppendLine($"writer.Write({variableName}.ToString(){reverseString});");
+                    var sizeTypeName = attribute.GetTypeNameFromTypeCode();
+                    serialization.AppendLine($"writer.Write(({sizeTypeName}){variableName}.ToString(){reverseString}.Length);"); // Cast the string length to the correct type
+                    serialization.AppendLine($"writer.Write({variableName}.ToString(){reverseString}.ToCharArray());");          // Write the string as a character array
                     break;
             }
 
