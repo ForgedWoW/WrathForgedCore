@@ -4,7 +4,7 @@ using Microsoft.Extensions.Configuration;
 using WrathForged.Common;
 using WrathForged.Database.Models.Auth;
 
-namespace WrathForged.Authorization.Server.Workers
+namespace WrathForged.Authorization.Server.Caching
 {
     public class CacheBuilder
     {

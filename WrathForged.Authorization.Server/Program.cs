@@ -3,7 +3,7 @@
 using Autofac;
 using Microsoft.Extensions.Configuration;
 using WrathForged.Authorization.Server;
-using WrathForged.Authorization.Server.Workers;
+using WrathForged.Authorization.Server.Caching;
 using WrathForged.Common;
 using WrathForged.Database;
 

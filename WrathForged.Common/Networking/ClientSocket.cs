@@ -26,7 +26,9 @@ namespace WrathForged.Common.Networking
             _client.ReceiveBufferSize = 0x4000;
             _client.NoDelay = true;
             _client.LingerState = new LingerOption(true, 0);
-            IPEndPoint = _client.Client.RemoteEndPoint as IPEndPoint;
+
+            if (_client.Client.RemoteEndPoint is IPEndPoint iPEndPoint)
+                IPEndPoint = iPEndPoint;
 
             _stream = _client.GetStream();
             _ = StartListening();
@@ -63,7 +65,7 @@ namespace WrathForged.Common.Networking
 
         public bool IsConnected => _client.Connected;
 
-        public IPEndPoint? IPEndPoint { get; }
+        public IPEndPoint IPEndPoint { get; }
 
         public void EnqueueWrite(byte[] data)
         {

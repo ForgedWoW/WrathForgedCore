@@ -5,7 +5,7 @@ namespace WrathForged.Common.Networking
     /// <summary>
     ///     Used at the time of DI to register a packet handler. Multiple packet handlers can be registered for the same container.
     /// </summary>
-    public interface IPacketHandler
+    public interface IPacketService
     {
     }
 }
