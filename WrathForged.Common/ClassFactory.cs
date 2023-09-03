@@ -8,7 +8,7 @@ namespace WrathForged.Common
 {
     public class ClassFactory
     {
-        public IContainer? Container { get; private set; }
+        public IContainer Container { get; private set; }
 
         public void Initialize(IContainer container)
         {
@@ -27,8 +27,8 @@ namespace WrathForged.Common
 
         public T ResolveWithPositionalParameters<T>(params object[] parameters)
         {
-            Parameter[] positionalParameters = new Parameter[parameters.Length];
-            for (int i = 0; i < parameters.Length; i++)
+            var positionalParameters = new Parameter[parameters.Length];
+            for (var i = 0; i < parameters.Length; i++)
                 positionalParameters[i] = new PositionalParameter(i, parameters[i]);
 
             return Container.Resolve<T>(positionalParameters);
@@ -43,8 +43,8 @@ namespace WrathForged.Common
         public T ActiveNonRegistered<T>(params object[] args) where T : class
         {
             args ??= Array.Empty<object>();
-            ConstructorInfo[] constructors = typeof(T).GetConstructors();
-            ConstructorInfo highest = constructors.OrderByDescending(x => x.GetParameters().Length).First();
+            var constructors = typeof(T).GetConstructors();
+            var highest = constructors.OrderByDescending(x => x.GetParameters().Length).First();
 
             return highest.GetParameters().Length switch
             {
@@ -72,12 +72,12 @@ namespace WrathForged.Common
 
         public IEnumerable<T> ResolveAllNonRegistered<T>(string? scriptDir = null)
         {
-            List<Assembly> assemblies = IOHelpers.GetAllAssembliesInDir(scriptDir);
+            var assemblies = IOHelpers.GetAllAssembliesInDir(scriptDir);
 
-            foreach (Type? type in from assembly in assemblies from type in assembly.GetTypes() where IOHelpers.DoesTypeSupportInterface(type, typeof(T)) select type)
+            foreach (var type in from assembly in assemblies from type in assembly.GetTypes() where IOHelpers.DoesTypeSupportInterface(type, typeof(T)) select type)
             {
-                ConstructorInfo[] constructors = type.GetConstructors();
-                ConstructorInfo highest = constructors.OrderByDescending(x => x.GetParameters().Length).First();
+                var constructors = type.GetConstructors();
+                var highest = constructors.OrderByDescending(x => x.GetParameters().Length).First();
 
                 yield return highest.GetParameters().Length switch
                 {

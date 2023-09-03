@@ -15,28 +15,28 @@ namespace WrathForged.Common
             if (obj1 == null || obj2 == null)
                 return obj1 == obj2;
 
-            Type type = obj1.GetType();
+            var type = obj1.GetType();
 
             if (type != obj2.GetType())
                 return false;
 
-            PropertyInfo[] properties = type.GetProperties(BindingFlags.Public | BindingFlags.Instance);
+            var properties = type.GetProperties(BindingFlags.Public | BindingFlags.Instance);
 
-            foreach (PropertyInfo property in properties)
+            foreach (var property in properties)
             {
-                object? value1 = property.GetValue(obj1);
-                object? value2 = property.GetValue(obj2);
+                var value1 = property.GetValue(obj1);
+                var value2 = property.GetValue(obj2);
 
                 if (!Equals(value1, value2))
                     return false;
             }
 
-            FieldInfo[] fields = type.GetFields(BindingFlags.Public | BindingFlags.Instance);
+            var fields = type.GetFields(BindingFlags.Public | BindingFlags.Instance);
 
-            foreach (FieldInfo field in fields)
+            foreach (var field in fields)
             {
-                object? value1 = field.GetValue(obj1);
-                object? value2 = field.GetValue(obj2);
+                var value1 = field.GetValue(obj1);
+                var value2 = field.GetValue(obj2);
 
                 if (!Equals(value1, value2))
                     return false;
@@ -52,7 +52,8 @@ namespace WrathForged.Common
 
         public static bool DoesTypeSupportInterface(Type type, Type inter)
         {
-            if (type == inter) return false;
+            if (type == inter)
+                return false;
 
             if (inter.IsAssignableFrom(type))
                 return true;
@@ -70,7 +71,7 @@ namespace WrathForged.Common
 
             DirectoryInfo dir = new(path);
 
-            FileInfo[] dlls = dir.GetFiles("*.dll", SearchOption.AllDirectories);
+            var dlls = dir.GetFiles("*.dll", SearchOption.AllDirectories);
 
             assemblies.AddRange(dlls.Select(dll => Assembly.LoadFile(dll.FullName)));
 
@@ -85,9 +86,9 @@ namespace WrathForged.Common
 
         public static IEnumerable<T> GetAllObjectsFromAssemblies<T>(string path)
         {
-            List<Assembly> assemblies = GetAllAssembliesInDir(path);
+            var assemblies = GetAllAssembliesInDir(path);
 
-            foreach (Type? type in from assembly in assemblies from type in assembly.GetTypes() where DoesTypeSupportInterface(type, typeof(T)) select type)
+            foreach (var type in from assembly in assemblies from type in assembly.GetTypes() where DoesTypeSupportInterface(type, typeof(T)) select type)
                 yield return (T)Activator.CreateInstance(type);
         }
     }

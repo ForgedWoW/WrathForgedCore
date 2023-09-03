@@ -1,6 +1,7 @@
 ﻿// Copyright (c) Forged WoW LLC <https://github.com/ForgedWoW/WrathForgedCore>
 // Licensed under GPL-3.0 license. See <https://github.com/ForgedWoW/WrathForgedCore/blob/master/LICENSE> for full information.
 using System.Reflection;
+using Autofac;
 using WrathForged.Models.Networking;
 using WrathForged.Serialization;
 
@@ -10,29 +11,33 @@ namespace WrathForged.Common.Networking
     {
         public Dictionary<PacketScope, Dictionary<int, List<MethodInfo>>> DeserializationMethodsCache = new();
 
-        public PacketRouter()
+        public PacketRouter(ClassFactory classFactory)
         {
-            var methodsWithAttribute = AppDomain.CurrentDomain.GetAssemblies()
-                .SelectMany(assembly => assembly.GetTypes())
-                .SelectMany(type => type.GetMethods(BindingFlags.Static | BindingFlags.Public | BindingFlags.NonPublic))
-                .Where(method => method.GetCustomAttributes(typeof(PacketHandlerAttribute), false).Length > 0);
+            var packetHandlers = classFactory.Container.Resolve<IEnumerable<IPacketHandler>>();
 
-            foreach (var method in methodsWithAttribute)
+            foreach (var handler in packetHandlers)
             {
-                var attribute = (PacketHandlerAttribute)method.GetCustomAttributes(typeof(PacketHandlerAttribute), false).First();
-                if (!DeserializationMethodsCache.TryGetValue(attribute.Scope, out var scopeDictionary))
-                {
-                    scopeDictionary = new Dictionary<int, List<MethodInfo>>();
-                    DeserializationMethodsCache[attribute.Scope] = scopeDictionary;
-                }
+                var type = handler.GetType();
+                var methods = type.GetMethods(BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic)
+                    .Where(method => method.GetCustomAttributes(typeof(PacketHandlerAttribute), false).Length > 0);
 
-                if (!scopeDictionary.TryGetValue(attribute.Id, out var methodList))
+                foreach (var method in methods)
                 {
-                    methodList = new List<MethodInfo>();
-                    scopeDictionary[attribute.Id] = methodList;
-                }
+                    var attribute = (PacketHandlerAttribute)method.GetCustomAttributes(typeof(PacketHandlerAttribute), false).First();
+                    if (!DeserializationMethodsCache.TryGetValue(attribute.Scope, out var scopeDictionary))
+                    {
+                        scopeDictionary = new Dictionary<int, List<MethodInfo>>();
+                        DeserializationMethodsCache[attribute.Scope] = scopeDictionary;
+                    }
 
-                methodList.Add(method);
+                    if (!scopeDictionary.TryGetValue(attribute.Id, out var methodList))
+                    {
+                        methodList = new List<MethodInfo>();
+                        scopeDictionary[attribute.Id] = methodList;
+                    }
+
+                    methodList.Add(method);
+                }
             }
         }
 

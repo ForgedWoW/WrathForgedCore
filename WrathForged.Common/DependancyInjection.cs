@@ -86,6 +86,8 @@ namespace WrathForged.Common
             else
                 Log.Logger.Warning("Telemetry is not configured or there was an error setting it up. Please configure it in the appsettings.json file.");
 
+            // Scripting
+
             return builder;
         }
 

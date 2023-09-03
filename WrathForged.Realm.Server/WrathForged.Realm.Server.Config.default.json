@@ -83,5 +83,8 @@
     "Zipkin": {
       "Endpoint": "http://localhost:9411/api/v2/spans"
     }
+  },
+  "Scipts": {
+    "Directory": ".\\Scripts"
   }
 }
