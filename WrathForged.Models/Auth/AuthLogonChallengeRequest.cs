@@ -83,6 +83,7 @@ namespace WrathForged.Models.Auth
         /// <summary>
         /// Could be Username or maybe Email.
         /// </summary>
+        [SerializableProperty(12)]
         public string Identity { get; set; }
     }
 }

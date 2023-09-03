@@ -21,8 +21,24 @@ namespace WrathForged.Authorization.Server.Workers
 
         public void Build()
         {
-            _forgeCache.Set(AuthCacheKeys.REALM_LISTS, TimeSpan.FromSeconds(_configuration.GetDefaultValue("RealmStatusUpdate", 20)), () => _authDatabase.Realmlists.ToDictionary(d => d.Id, d => d));
-            _forgeCache.Set(AuthCacheKeys.BUILD_INFOS, TimeSpan.FromSeconds(_configuration.GetDefaultValue("RealmStatusUpdate", 20)), () => _authDatabase.BuildInfos.ToDictionary(d => d.Build, d => d));
+            var cacheUpdate = TimeSpan.FromSeconds(_configuration.GetDefaultValue("RealmStatusUpdate", 20));
+            _forgeCache.Set(AuthCacheKeys.REALM_LISTS, cacheUpdate, () => _authDatabase.Realmlists.ToDictionary(d => d.Id, d => d));
+            _forgeCache.Set(AuthCacheKeys.BUILD_INFOS, cacheUpdate, () => _authDatabase.BuildInfos.ToDictionary(d => d.Build, d => d));
+            _forgeCache.Set(AuthCacheKeys.ACCOUNT_BANS, cacheUpdate, () => _authDatabase.AccountBanneds.Where(b => b.Active == 1).ToDictionary(d => d.Id, d => d));
+            _forgeCache.Set(AuthCacheKeys.IP_BANS, cacheUpdate, () => _authDatabase.IpBanneds.Where(b => CheckBanDate(b)).ToDictionary(d => d.Ip, d => d));
+        }
+
+        private static bool CheckBanDate(IpBanned b)
+        {
+            if (b.Bandate != 0)
+            {
+                if (b.Unbandate == 0)
+                    return false;
+
+                return b.Unbandate != 0 && b.Unbandate.FromUnixTime() < DateTime.UtcNow;
+            }
+
+            return true;
         }
     }
 }

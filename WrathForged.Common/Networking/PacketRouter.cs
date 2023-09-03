@@ -9,7 +9,7 @@ namespace WrathForged.Common.Networking
 {
     public class PacketRouter
     {
-        public Dictionary<PacketScope, Dictionary<int, List<MethodInfo>>> DeserializationMethodsCache = new();
+        public Dictionary<PacketScope, Dictionary<int, List<MethodInfo>>> PacketHandlerCache = new();
 
         public PacketRouter(ClassFactory classFactory)
         {
@@ -24,10 +24,10 @@ namespace WrathForged.Common.Networking
                 foreach (var method in methods)
                 {
                     var attribute = (PacketHandlerAttribute)method.GetCustomAttributes(typeof(PacketHandlerAttribute), false).First();
-                    if (!DeserializationMethodsCache.TryGetValue(attribute.Scope, out var scopeDictionary))
+                    if (!PacketHandlerCache.TryGetValue(attribute.Scope, out var scopeDictionary))
                     {
                         scopeDictionary = new Dictionary<int, List<MethodInfo>>();
-                        DeserializationMethodsCache[attribute.Scope] = scopeDictionary;
+                        PacketHandlerCache[attribute.Scope] = scopeDictionary;
                     }
 
                     if (!scopeDictionary.TryGetValue(attribute.Id, out var methodList))
@@ -46,7 +46,7 @@ namespace WrathForged.Common.Networking
             if (packet == null)
                 return;
 
-            if (!DeserializationMethodsCache.TryGetValue(packetId.Scope, out var scopeDictionary))
+            if (!PacketHandlerCache.TryGetValue(packetId.Scope, out var scopeDictionary))
                 return;
 
             if (!scopeDictionary.TryGetValue(packetId.Id, out var methodList))

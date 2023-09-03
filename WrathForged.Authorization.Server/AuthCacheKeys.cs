@@ -6,5 +6,7 @@ namespace WrathForged.Authorization.Server
     {
         internal const string REALM_LISTS = "RealmLists";
         internal const string BUILD_INFOS = "BuildInfos";
+        internal const string ACCOUNT_BANS = "AccountBans";
+        internal const string IP_BANS = "IpBans";
     }
 }
