@@ -2,6 +2,8 @@
 // Licensed under GPL-3.0 license. See <https://github.com/ForgedWoW/WrathForgedCore/blob/master/LICENSE> for full information.
 using Autofac;
 using WrathForged.Authorization.Server.Caching;
+using WrathForged.Authorization.Server.Workers;
+using WrathForged.Common.Networking;
 
 namespace WrathForged.Authorization.Server
 {
@@ -9,7 +11,9 @@ namespace WrathForged.Authorization.Server
     {
         public static ContainerBuilder RegisterAuth(this ContainerBuilder builder)
         {
-            builder.RegisterType<CacheBuilder>().SingleInstance();
+            _ = builder.RegisterType<WoWClientServer>().WithParameter(new PositionalParameter(0, Serialization.PacketScope.Auth)).SingleInstance();
+            _ = builder.RegisterType<ClientLoginSerivce>().As<IPacketService>().AsSelf().SingleInstance();
+            _ = builder.RegisterType<CacheBuilder>().SingleInstance();
             return builder;
         }
     }

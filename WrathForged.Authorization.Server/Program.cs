@@ -5,6 +5,7 @@ using Microsoft.Extensions.Configuration;
 using WrathForged.Authorization.Server;
 using WrathForged.Authorization.Server.Caching;
 using WrathForged.Common;
+using WrathForged.Common.Networking;
 using WrathForged.Database;
 
 var configBuilder = new ConfigurationBuilder()
@@ -20,10 +21,11 @@ builder.RegisterAuth();
 var container = builder.Build();
 container.InitializeCommon();
 container.Resolve<CacheBuilder>().Build();
+container.Resolve<WoWClientServer>().TCPServer.Start();
 
 Console.CancelKeyPress += (sender, e) =>
 {
-    container.ShutdownDatabase();
+    _ = container.ShutdownDatabase();
     container.Resolve<ProgramExitNotifier>().NotifyStop();
 };
 

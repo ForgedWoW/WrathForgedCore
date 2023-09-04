@@ -13,7 +13,7 @@ namespace WrathForged.Common.Networking
 
         public PacketRouter(ClassFactory classFactory)
         {
-            var packetHandlers = classFactory.Container.Resolve<IEnumerable<IPacketHandler>>();
+            var packetHandlers = classFactory.Container.Resolve<IEnumerable<IPacketService>>();
 
             foreach (var handler in packetHandlers)
             {
@@ -44,16 +44,24 @@ namespace WrathForged.Common.Networking
         public void Route(WoWClientSession session, PacketId packetId, object packet)
         {
             if (packet == null)
+            {
                 return;
+            }
 
             if (!PacketHandlerCache.TryGetValue(packetId.Scope, out var scopeDictionary))
+            {
                 return;
+            }
 
             if (!scopeDictionary.TryGetValue(packetId.Id, out var methodList))
+            {
                 return;
+            }
 
             foreach (var method in methodList)
-                method.Invoke(null, new object[] { session, packet });
+            {
+                _ = method.Invoke(null, new object[] { session, packet });
+            }
         }
     }
 }

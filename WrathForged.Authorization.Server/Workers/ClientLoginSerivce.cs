@@ -1,9 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿// Copyright (c) Forged WoW LLC <https://github.com/ForgedWoW/WrathForgedCore>
+// Licensed under GPL-3.0 license. See <https://github.com/ForgedWoW/WrathForgedCore/blob/master/LICENSE> for full information.
 using System.Net;
-using System.Text;
-using System.Threading.Tasks;
 using Microsoft.Extensions.Configuration;
 using WrathForged.Common;
 using WrathForged.Common.Networking;
@@ -27,7 +24,6 @@ namespace WrathForged.Authorization.Server.Workers
         [PacketHandler(Serialization.PacketScope.Auth, AuthServerOpCode.AUTH_LOGON_CHALLENGE)]
         public void ChallangeRequest(WoWClientSession session, AuthLogonChallengeRequest authLogonChallenge)
         {
-
         }
 
         private void LoginFailed(WoWClientSession session, AuthStatus status)
@@ -43,7 +39,6 @@ namespace WrathForged.Authorization.Server.Workers
 
             if (_configuration.GetDefaultValue("MaxLoginAttempts", 5) <= tracker.Attempts)
             {
-                
             }
         }
     }

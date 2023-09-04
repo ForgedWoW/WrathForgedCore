@@ -36,10 +36,16 @@ namespace WrathForged.Common.Networking
             var bindIp = IPAddress.Any;
 
             if (bindIpString != "*")
+            {
                 if (IPAddress.TryParse(bindIpString, out var newAddress))
+                {
                     bindIp = newAddress;
+                }
                 else
+                {
                     _logger.Error("Invalid IP address specified for configuration: ClientTCPServer:BindIP");
+                }
+            }
 
             Start(_configuration.GetDefaultValue("ClientTCPServer:Port", defaultPort), bindIp);
         }
@@ -50,7 +56,7 @@ namespace WrathForged.Common.Networking
 
             _tcpListener = new TcpListener(bindIp, port);
             _tcpListener.Start();
-            _tcpListener.BeginAcceptTcpClient(OnAccept, _tcpListener);
+            _ = _tcpListener.BeginAcceptTcpClient(OnAccept, _tcpListener);
         }
 
         public void Stop()
@@ -60,7 +66,9 @@ namespace WrathForged.Common.Networking
             lock (_clients)
             {
                 foreach (var client in _clients)
+                {
                     client.Disconnect();
+                }
 
                 _clients.Clear();
             }
@@ -69,9 +77,11 @@ namespace WrathForged.Common.Networking
         internal void RemoveClient(ClientSocket clientSocket)
         {
             lock (_clients)
-                _clients.Remove(clientSocket);
+            {
+                _ = _clients.Remove(clientSocket);
+            }
 
-            _connectionProcessingBlock.Post(new ClientConnectionChangeEvent(clientSocket, OnClientDisconnected));
+            _ = _connectionProcessingBlock.Post(new ClientConnectionChangeEvent(clientSocket, OnClientDisconnected));
         }
 
         private void SetupTPL()
@@ -80,9 +90,12 @@ namespace WrathForged.Common.Networking
                data =>
                {
                    if (data.EventHandler == null)
+                   {
                        return;
+                   }
 
                    foreach (var handler in data.EventHandler.GetInvocationList().Cast<EventHandler<DataReceivedEventArgs>>())
+                   {
                        try
                        {
                            handler?.Invoke(this, data);
@@ -91,6 +104,7 @@ namespace WrathForged.Common.Networking
                        {
                            _logger.Error(ex, "Error processing data from client");
                        }
+                   }
                },
                new ExecutionDataflowBlockOptions
                {
@@ -104,9 +118,12 @@ namespace WrathForged.Common.Networking
                 data =>
                 {
                     if (data.EventHandler == null)
+                    {
                         return;
+                    }
 
                     foreach (var handler in data.EventHandler.GetInvocationList().Cast<EventHandler<ClientConnectionChangeEvent>>())
+                    {
                         try
                         {
                             handler?.Invoke(this, data);
@@ -115,6 +132,7 @@ namespace WrathForged.Common.Networking
                         {
                             _logger.Error(ex, "Error connection change of client");
                         }
+                    }
                 },
                 new ExecutionDataflowBlockOptions
                 {
@@ -128,19 +146,26 @@ namespace WrathForged.Common.Networking
         private void OnAccept(IAsyncResult ar)
         {
             if (_programExit.IsExiting)
+            {
                 return;
+            }
+
             var client = _tcpListener.EndAcceptTcpClient(ar);
 
             if (client == null || !client.Connected)
+            {
                 return;
+            }
 
             var clientSocket = new ClientSocket(client, _logger, _dataProcessingBlock);
             clientSocket.OnDisconnect += (sender, args) => RemoveClient(clientSocket);
 
             lock (_clients)
+            {
                 _clients.Add(clientSocket);
+            }
 
-            _connectionProcessingBlock.Post(new ClientConnectionChangeEvent(clientSocket, OnClientConnected));
+            _ = _connectionProcessingBlock.Post(new ClientConnectionChangeEvent(clientSocket, OnClientConnected));
         }
     }
 }

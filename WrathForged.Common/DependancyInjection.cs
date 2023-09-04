@@ -45,17 +45,16 @@ namespace WrathForged.Common
                 Log.CloseAndFlush();
             };
 
-            builder.RegisterInstance(configuration).As<IConfiguration>().SingleInstance();
-            builder.RegisterType<ClassFactory>().SingleInstance();
-            builder.RegisterInstance(Log.Logger).SingleInstance();
-            builder.RegisterInstance(exitNotifier).SingleInstance();
-            builder.RegisterType<TCPServer>();
-            builder.RegisterType<WoWClientServer>();
-            builder.RegisterType<ForgeCache>().SingleInstance();
-            builder.RegisterType<ForgedModelDeserialization>().SingleInstance();
-            builder.RegisterType<PacketRouter>().SingleInstance();
-            builder.RegisterType<PacketEncryption>();
-            builder.RegisterType<MeterFactory>().SingleInstance();
+            _ = builder.RegisterInstance(configuration).As<IConfiguration>().SingleInstance();
+            _ = builder.RegisterType<ClassFactory>().SingleInstance();
+            _ = builder.RegisterInstance(Log.Logger).SingleInstance();
+            _ = builder.RegisterInstance(exitNotifier).SingleInstance();
+            _ = builder.RegisterType<TCPServer>();
+            _ = builder.RegisterType<ForgeCache>().SingleInstance();
+            _ = builder.RegisterType<ForgedModelDeserialization>().SingleInstance();
+            _ = builder.RegisterType<PacketRouter>().SingleInstance();
+            _ = builder.RegisterType<PacketEncryption>();
+            _ = builder.RegisterType<MeterFactory>().SingleInstance();
 
             // configure OpenTelemetry
             var telemetryType = configuration.GetDefaultValue("Telemetry:Types", "").Split(',', StringSplitOptions.TrimEntries | StringSplitOptions.TrimEntries).ToList(); // Assuming you have a key like this in your JSON
@@ -64,14 +63,14 @@ namespace WrathForged.Common
 
             if (telemetryType.Contains("OpenTelemetryProtocol", StringComparer.InvariantCultureIgnoreCase))
             {
-                tracerProviderBuilder.AddOtlpExporter(options =>
+                _ = tracerProviderBuilder.AddOtlpExporter(options =>
                                      {
                                          options.Endpoint = new Uri(configuration.GetDefaultValue("Telemetry:OpenTelemetryProtocol:Endpoint", "http://localhost:4317"));
                                      });
             }
             else if (telemetryType.Contains("Zipkin", StringComparer.InvariantCultureIgnoreCase))
             {
-                tracerProviderBuilder.AddZipkinExporter(options =>
+                _ = tracerProviderBuilder.AddZipkinExporter(options =>
                                      {
                                          options.Endpoint = new Uri(configuration.GetDefaultValue("Telemetry:Zipkin:Endpoint", "http://localhost:9411/api/v2/spans"));
                                      });
@@ -80,11 +79,15 @@ namespace WrathForged.Common
             var tracerProvider = tracerProviderBuilder.Build();
 
             if (tracerProvider != null)
-                builder.RegisterInstance(tracerProvider.GetTracer(Process.GetCurrentProcess().ProcessName))
+            {
+                _ = builder.RegisterInstance(tracerProvider.GetTracer(Process.GetCurrentProcess().ProcessName))
                        .As<Tracer>()
                        .SingleInstance();
+            }
             else
+            {
                 Log.Logger.Warning("Telemetry is not configured or there was an error setting it up. Please configure it in the appsettings.json file.");
+            }
 
             // Scripting
 

@@ -28,17 +28,6 @@ namespace WrathForged.Authorization.Server.Caching
             _forgeCache.Set(AuthCacheKeys.IP_BANS, cacheUpdate, () => _authDatabase.IpBanneds.Where(b => CheckBanDate(b)).ToDictionary(d => d.Ip, d => d));
         }
 
-        private static bool CheckBanDate(IpBanned b)
-        {
-            if (b.Bandate != 0)
-            {
-                if (b.Unbandate == 0)
-                    return false;
-
-                return b.Unbandate != 0 && b.Unbandate.FromUnixTime() < DateTime.UtcNow;
-            }
-
-            return true;
-        }
+        private static bool CheckBanDate(IpBanned b) => b.Bandate == 0 || b.Unbandate != 0 && b.Unbandate != 0 && b.Unbandate.FromUnixTime() < DateTime.UtcNow;
     }
 }
