@@ -57,6 +57,7 @@ namespace WrathForged.Common.Networking
             _tcpListener = new TcpListener(bindIp, port);
             _tcpListener.Start();
             _ = _tcpListener.BeginAcceptTcpClient(OnAccept, _tcpListener);
+            _logger.Information("Listening for TCP connections on {BindIP}:{Port}", bindIp, port);
         }
 
         public void Stop()
@@ -72,6 +73,8 @@ namespace WrathForged.Common.Networking
 
                 _clients.Clear();
             }
+
+            _logger.Information("Stopped listening for TCP connections");
         }
 
         internal void RemoveClient(ClientSocket clientSocket)
@@ -108,7 +111,7 @@ namespace WrathForged.Common.Networking
                },
                new ExecutionDataflowBlockOptions
                {
-                   MaxDegreeOfParallelism = _configuration.GetDefaultValue("ClientTCPServer:Threads", 10), // Limit the number of concurrent operations
+                   MaxDegreeOfParallelism = _configuration.GetDefaultValue("ClientTCPServer:Threads", 20), // Limit the number of concurrent operations
                    CancellationToken = _programExit.GetCancellationToken(),
                    EnsureOrdered = true,
                    NameFormat = "ClientTCPServer Data Processing Thread {1}"
@@ -136,7 +139,7 @@ namespace WrathForged.Common.Networking
                 },
                 new ExecutionDataflowBlockOptions
                 {
-                    MaxDegreeOfParallelism = _configuration.GetDefaultValue("ClientTCPServer:Threads", 10), // Limit the number of concurrent operations
+                    MaxDegreeOfParallelism = _configuration.GetDefaultValue("ClientTCPServer:Threads", 20), // Limit the number of concurrent operations
                     CancellationToken = _programExit.GetCancellationToken(),
                     EnsureOrdered = true,
                     NameFormat = "Client Connection Change Thread {1}"

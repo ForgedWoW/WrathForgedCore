@@ -2,6 +2,7 @@
 // Licensed under GPL-3.0 license. See <https://github.com/ForgedWoW/WrathForgedCore/blob/master/LICENSE> for full information.
 using Autofac;
 using Microsoft.Extensions.Configuration;
+using Serilog;
 using WrathForged.Authorization.Server;
 using WrathForged.Authorization.Server.Caching;
 using WrathForged.Common;
@@ -16,17 +17,24 @@ IConfiguration configuration = configBuilder.Build();
 
 ContainerBuilder builder = new();
 builder.RegisterCommon(configuration);
-builder.RegisterDatabase(configuration);
+builder.RegisterDatabase(configuration, Log.Logger);
 builder.RegisterAuth();
 var container = builder.Build();
 container.InitializeCommon();
 container.Resolve<CacheBuilder>().Build();
 container.Resolve<WoWClientServer>().TCPServer.Start();
 
-Console.CancelKeyPress += (sender, e) =>
+Log.Logger.Information("Auth Server started.");
+var notifier = container.Resolve<ProgramExitNotifier>();
+
+Console.CancelKeyPress += async (sender, e) =>
 {
-    _ = container.ShutdownDatabase();
-    container.Resolve<ProgramExitNotifier>().NotifyStop();
+    e.Cancel = true;
+    await container.ShutdownDatabase();
+    notifier.NotifyStop();
 };
 
-await Task.Delay(-1);
+while (!notifier.IsExiting)
+{
+    await Task.Delay(1000);
+}

@@ -9,12 +9,9 @@ namespace WrathForged.Common
         private readonly ILogger _logger;
         private readonly CancellationTokenSource _cancelationTokenSource = new(); // Global cancellation token source for stopping the server.
 
-        public ProgramExitNotifier(ILogger logger)
-        {
-            _logger = logger;
-        }
+        public ProgramExitNotifier(ILogger logger) => _logger = logger;
 
-        public bool IsExiting => _cancelationTokenSource.IsCancellationRequested;
+        public bool IsExiting { get; private set; }
 
         public event EventHandler ExitProgram;
 
@@ -28,6 +25,7 @@ namespace WrathForged.Common
         public void NotifyStop()
         {
             _logger.Information("Server Stop requested.");
+            IsExiting = true;
             _cancelationTokenSource.Cancel();
 
             ExitProgram?.Invoke(this, EventArgs.Empty);

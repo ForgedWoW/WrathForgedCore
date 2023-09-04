@@ -11,26 +11,23 @@
       "Serilog.Exceptions",
       "Serilog.Sinks.Async"
     ],
-    "MinimumLevel": "Debug",
-    "OtherLogLevels": {
-      "Microsoft.EntityFrameworkCore.Database.Command": "Error"
+    "MinimumLevel": {
+      "Default": "Debug",
+      "Override": {
+        "Microsoft": "Warning",
+        "Microsoft.EntityFrameworkCore": "Error"
+      }
     },
     "WriteTo": [
       {
-        "Name": "Console"
-      },
-      {
-        "Name": "Async",
-        "batchSizeLimit": 100,
-        "period": "00:00:02",
+        "Name": "Console",
         "Args": {
-          "configure": [
+          "outputTemplate": "{Timestamp:yyyy-MM-dd HH:mm:ss.fff zzz} [{Level:u3}] {Message:lj}{NewLine}{Exception}",
+          "filter": [
             {
-              "Name": "File",
+              "Name": "ByExcluding",
               "Args": {
-                "rollingInterval": "Day",
-                "path": "Logs/WrathForged.Realm.log..log",
-                "formatter": "Serilog.Formatting.Compact.CompactJsonFormatter, Serilog.Formatting.Compact"
+                "expression": "StartsWith(SourceContext, 'Microsoft.EntityFrameworkCore')"
               }
             }
           ]
@@ -43,19 +40,43 @@
         "Args": {
           "configure": [
             {
-              "Name": "SubLogger",
+              "Name": "File",
               "Args": {
-                "configure": [
+                "rollingInterval": "Day",
+                "path": "Logs/WrathForged.Instance.log..log",
+                "formatter": "Serilog.Formatting.Compact.CompactJsonFormatter, Serilog.Formatting.Compact",
+                "filter": [
                   {
-                    "Name": "File",
+                    "Name": "ByExcluding",
                     "Args": {
-                      "rollingInterval": "Day",
-                      "path": "Logs/WrathForged.Authorization.{SourceContext}..log",
-                      "formatter": "Serilog.Formatting.Compact.CompactJsonFormatter, Serilog.Formatting.Compact"
+                      "expression": "StartsWith(SourceContext, 'Microsoft.EntityFrameworkCore')"
                     }
                   }
-                ],
-                "filter": "Contains(Properties['SourceContext'], SourceContext)"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Name": "Async",
+        "batchSizeLimit": 100,
+        "Args": {
+          "configure": [
+            {
+              "Name": "File",
+              "Args": {
+                "path": "Logs/WrathForged.Instance.DatabaseLogs..log",
+                "rollingInterval": "Day",
+                "formatter": "Serilog.Formatting.Compact.CompactJsonFormatter, Serilog.Formatting.Compact",
+                "filter": [
+                  {
+                    "Name": "ByIncludingOnly",
+                    "Args": {
+                      "expression": "StartsWith(SourceContext, 'Microsoft.EntityFrameworkCore')"
+                    }
+                  }
+                ]
               }
             }
           ]

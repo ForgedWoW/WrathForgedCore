@@ -47,7 +47,7 @@ namespace WrathForged.Common
 
             _ = builder.RegisterInstance(configuration).As<IConfiguration>().SingleInstance();
             _ = builder.RegisterType<ClassFactory>().SingleInstance();
-            _ = builder.RegisterInstance(Log.Logger).SingleInstance();
+            _ = builder.RegisterInstance(Log.Logger).As<ILogger>().SingleInstance();
             _ = builder.RegisterInstance(exitNotifier).SingleInstance();
             _ = builder.RegisterType<TCPServer>();
             _ = builder.RegisterType<ForgeCache>().SingleInstance();

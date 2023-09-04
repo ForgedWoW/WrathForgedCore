@@ -14,44 +14,33 @@ namespace WrathForged.Database
 {
     public static class DependancyInjection
     {
-        public static ContainerBuilder RegisterDatabase(this ContainerBuilder builder, IConfiguration configuration)
+        public static ContainerBuilder RegisterDatabase(this ContainerBuilder builder, IConfiguration configuration, Serilog.ILogger logger)
         {
-            var logLevelConfig = configuration["Serilog:OtherLogLevels:Microsoft.EntityFrameworkCore.Database.Command"];
-            var logLevel = string.IsNullOrEmpty(logLevelConfig)
-                ? LogLevel.Error
-                : Enum.Parse<LogLevel>(logLevelConfig);
+            var loggerFactory = new LoggerFactory().AddSerilog(logger);
 
-            var loggerFactory = LoggerFactory.Create(builder =>
-            {
-                builder.AddSerilog().AddFilter((category, level) =>
-                    category == DbLoggerCategory.Database.Command.Name && level == logLevel);
-            });
-
-            builder.RegisterType<AuthDatabase>()
+            _ = builder.RegisterType<AuthDatabase>()
                 .WithParameter("options", new DbContextOptionsBuilder<AuthDatabase>()
                 .UseLoggerFactory(loggerFactory)
-                .UseMySql(configuration.GetConnectionString("auth"), ServerVersion.AutoDetect(configuration.GetConnectionString("auth"))).Options)
-                .InstancePerLifetimeScope();
-            builder.RegisterType<WorldDatabase>()
+                .UseMySql(configuration.GetConnectionString("auth"), ServerVersion.AutoDetect(configuration.GetConnectionString("auth"))).Options);
+
+            _ = builder.RegisterType<WorldDatabase>()
                 .WithParameter("options", new DbContextOptionsBuilder<WorldDatabase>()
                 .UseLoggerFactory(loggerFactory)
-                .UseMySql(configuration.GetConnectionString("world"), ServerVersion.AutoDetect(configuration.GetConnectionString("world"))).Options)
-                .InstancePerLifetimeScope();
-            builder.RegisterType<CharacterDatabase>()
+                .UseMySql(configuration.GetConnectionString("world"), ServerVersion.AutoDetect(configuration.GetConnectionString("world"))).Options);
+
+            _ = builder.RegisterType<CharacterDatabase>()
                 .WithParameter("options", new DbContextOptionsBuilder<CharacterDatabase>()
                 .UseLoggerFactory(loggerFactory)
-                .UseMySql(configuration.GetConnectionString("characters"), ServerVersion.AutoDetect(configuration.GetConnectionString("characters"))).Options)
-                .InstancePerLifetimeScope();
+                .UseMySql(configuration.GetConnectionString("characters"), ServerVersion.AutoDetect(configuration.GetConnectionString("characters"))).Options);
 
             return builder;
         }
 
-        public static IContainer ShutdownDatabase(this IContainer container)
+        public static async Task ShutdownDatabase(this IContainer container)
         {
-            container.Resolve<AuthDatabase>().Dispose();
-            container.Resolve<WorldDatabase>().Dispose();
-            container.Resolve<CharacterDatabase>().Dispose();
-            return container;
+            await container.Resolve<AuthDatabase>().DisposeAsync();
+            await container.Resolve<WorldDatabase>().DisposeAsync();
+            await container.Resolve<CharacterDatabase>().DisposeAsync();
         }
     }
 }

@@ -2,23 +2,24 @@
 // Licensed under GPL-3.0 license. See <https://github.com/ForgedWoW/WrathForgedCore/blob/master/LICENSE> for full information.
 using System.Net;
 using Microsoft.Extensions.Configuration;
+using WrathForged.Authorization.Server.Validators;
 using WrathForged.Common;
 using WrathForged.Common.Networking;
 using WrathForged.Models.Auth;
 using WrathForged.Models.Auth.Enum;
 
-namespace WrathForged.Authorization.Server.Workers
+namespace WrathForged.Authorization.Server.Services
 {
     public class ClientLoginSerivce : IPacketService
     {
-        private readonly ForgeCache _forgeCache;
         private readonly IConfiguration _configuration;
+        private readonly BanValidator _banValidator;
         private readonly Dictionary<IPAddress, LoginTracker> _loginTracker = new();
 
-        public ClientLoginSerivce(ForgeCache forgeCache, IConfiguration configuration)
+        public ClientLoginSerivce(IConfiguration configuration, BanValidator banValidator)
         {
-            _forgeCache = forgeCache;
             _configuration = configuration;
+            _banValidator = banValidator;
         }
 
         [PacketHandler(Serialization.PacketScope.Auth, AuthServerOpCode.AUTH_LOGON_CHALLENGE)]

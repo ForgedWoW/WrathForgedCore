@@ -6,24 +6,16 @@ namespace WrathForged.Common
 {
     public class ForgeCache
     {
+        public ForgeCache(ProgramExitNotifier programExitNotifier) => programExitNotifier.ExitProgram += ProgramExitNotifier_ExitProgram;
+
+        private void ProgramExitNotifier_ExitProgram(object? sender, EventArgs e) => _cache.Dispose();
+
         private readonly MemoryCache _cache = new("ForgeCache");
         private readonly Dictionary<string, Func<object>> _refreshFunctions = new();
 
-        public T? Get<T>(string key)
-        {
-            if (!_cache.Contains(typeof(T).Name))
-                return default;
+        public T? Get<T>(string key) => !_cache.Contains(typeof(T).Name) ? default : (T)_cache.Get(key);
 
-            return (T)_cache.Get(key);
-        }
-
-        public T? Get<T>()
-        {
-            if (!_cache.Contains(typeof(T).Name))
-                return default;
-
-            return (T)_cache.Get(typeof(T).Name);
-        }
+        public T? Get<T>() => !_cache.Contains(typeof(T).Name) ? default : (T)_cache.Get(typeof(T).Name);
 
         public bool TryGet<T>(out T? value)
         {
@@ -52,10 +44,14 @@ namespace WrathForged.Common
         public void Set<T>(TimeSpan expiration, Func<T> refresh)
         {
             if (refresh == null)
+            {
                 throw new ArgumentNullException(nameof(refresh));
+            }
 
             if (expiration == TimeSpan.Zero)
+            {
                 throw new ArgumentException("Must be greater than zero", nameof(expiration));
+            }
 
             var value = refresh() ?? throw new InvalidDataException(nameof(refresh) + $" returned null data");
 
@@ -65,10 +61,14 @@ namespace WrathForged.Common
         public void Set<T>(string key, TimeSpan expiration, Func<T> refresh)
         {
             if (refresh == null)
+            {
                 throw new ArgumentNullException(nameof(refresh));
+            }
 
             if (expiration == TimeSpan.Zero)
+            {
                 throw new ArgumentException("Must be greater than zero", nameof(expiration));
+            }
 
             var value = refresh() ?? throw new InvalidDataException(nameof(refresh) + $" returned null data for key {key}");
 
@@ -78,13 +78,19 @@ namespace WrathForged.Common
         public void Set<T>(T value, TimeSpan expiration, Func<T> refresh)
         {
             if (value == null)
+            {
                 throw new ArgumentNullException(nameof(value));
+            }
 
             if (refresh == null)
+            {
                 throw new ArgumentNullException(nameof(refresh));
+            }
 
             if (expiration == TimeSpan.Zero)
+            {
                 throw new ArgumentException("Must be greater than zero", nameof(expiration));
+            }
 
             Set(value.GetType().Name, value, expiration, refresh);
         }
@@ -92,16 +98,24 @@ namespace WrathForged.Common
         public void Set<T>(string key, T value, TimeSpan expiration, Func<T> refresh)
         {
             if (value == null)
+            {
                 throw new ArgumentNullException(nameof(value));
+            }
 
             if (refresh == null)
+            {
                 throw new ArgumentNullException(nameof(refresh));
+            }
 
             if (expiration == TimeSpan.Zero)
+            {
                 throw new ArgumentException("Must be greater than zero", nameof(expiration));
+            }
 
             if (string.IsNullOrEmpty(key))
+            {
                 throw new ArgumentException("Must be set", nameof(key));
+            }
 
             _refreshFunctions[key] = () => refresh();
             _cache.Set(key, value, new CacheItemPolicy()
@@ -110,7 +124,9 @@ namespace WrathForged.Common
                 RemovedCallback = (arguments) =>
                 {
                     if (arguments.RemovedReason == CacheEntryRemovedReason.Expired)
+                    {
                         Set(key, refresh(), expiration, refresh);
+                    }
                 }
             });
         }
@@ -118,13 +134,19 @@ namespace WrathForged.Common
         public void Set<T>(string key, T value, TimeSpan expiration)
         {
             if (value == null)
+            {
                 throw new ArgumentNullException(nameof(value));
+            }
 
             if (expiration == TimeSpan.Zero)
+            {
                 throw new ArgumentException("Must be greater than zero", nameof(expiration));
+            }
 
             if (string.IsNullOrEmpty(key))
+            {
                 throw new ArgumentException("Must be set", nameof(key));
+            }
 
             _cache.Set(key, value, new CacheItemPolicy() { AbsoluteExpiration = DateTime.UtcNow.Add(expiration) });
         }
@@ -138,10 +160,9 @@ namespace WrathForged.Common
                 var updatedValue = refreshFunc();
 
                 // Retrieve the current cache item's policy
-                var cacheItemPolicy = _cache.Get(key) as CacheItemPolicy;
 
                 // Update the cache with the new value
-                if (cacheItemPolicy != null)
+                if (_cache.Get(key) is CacheItemPolicy cacheItemPolicy)
                 {
                     _cache.Set(key, updatedValue, cacheItemPolicy);
                 }
@@ -150,8 +171,8 @@ namespace WrathForged.Common
 
         public void Remove(string key)
         {
-            _cache.Remove(key);
-            _refreshFunctions.Remove(key);
+            _ = _cache.Remove(key);
+            _ = _refreshFunctions.Remove(key);
         }
     }
 }
