@@ -16,7 +16,7 @@ namespace WrathForged.Common.Networking
     {
         public static Encoding DefaultEncoding = Encoding.UTF8;
 
-        public PrimitiveWriter(Stream stream) : base(stream)
+        public PrimitiveWriter() : base(new MemoryStream())
         {
         }
 
