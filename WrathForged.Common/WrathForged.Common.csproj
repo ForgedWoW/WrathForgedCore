@@ -1,23 +1,24 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFramework>net7.0</TargetFramework>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
-  </PropertyGroup>
+	<PropertyGroup>
+		<TargetFramework>net7.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+	</PropertyGroup>
 
-  <ItemGroup>
-    <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="7.0.0" />
-    <PackageReference Include="OpenTelemetry" Version="1.5.1" />
-    <PackageReference Include="OpenTelemetry.Api" Version="1.5.1" />
-    <PackageReference Include="OpenTelemetry.Exporter.OpenTelemetryProtocol" Version="1.5.1" />
-    <PackageReference Include="OpenTelemetry.Exporter.Zipkin" Version="1.5.1" />
-    <PackageReference Include="OpenTelemetry.Instrumentation.Runtime" Version="1.5.0" />
-    <PackageReference Include="System.Runtime.Caching" Version="7.0.0" />
-  </ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="7.0.0" />
+		<PackageReference Include="OpenTelemetry" Version="1.5.1" />
+		<PackageReference Include="OpenTelemetry.Api" Version="1.5.1" />
+		<PackageReference Include="OpenTelemetry.Exporter.OpenTelemetryProtocol" Version="1.5.1" />
+		<PackageReference Include="OpenTelemetry.Exporter.Zipkin" Version="1.5.1" />
+		<PackageReference Include="OpenTelemetry.Instrumentation.Runtime" Version="1.5.0" />
+		<PackageReference Include="System.Runtime.Caching" Version="7.0.0" />
+	</ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\WrathForged.Models\WrathForged.Models.csproj" />
-  </ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\WrathForged.Models\WrathForged.Models.csproj" />
+		<ProjectReference Include="..\WrathForged.Database\WrathForged.Database.csproj" />
+	</ItemGroup>
 
 </Project>

@@ -1,6 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-
+﻿// Copyright (c) Forged WoW LLC <https://github.com/ForgedWoW/WrathForgedCore>
+// Licensed under GPL-3.0 license. See <https://github.com/ForgedWoW/WrathForgedCore/blob/master/LICENSE> for full information.
 namespace WrathForged.Database.Models.Auth;
 
 /// <summary>
@@ -37,13 +36,13 @@ public partial class Account
 
     public uint FailedLogins { get; set; }
 
-    public byte Locked { get; set; }
+    public bool Locked { get; set; }
 
     public string LockCountry { get; set; } = null!;
 
     public DateTime? LastLogin { get; set; }
 
-    public byte Online { get; set; }
+    public bool Online { get; set; }
 
     public byte Expansion { get; set; }
 

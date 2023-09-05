@@ -31,15 +31,35 @@ namespace WrathForged.Authorization.Server.Services
             using var authDatabase = _classFactory.Resolve<AuthDatabase>();
 
             var account = authDatabase.Accounts.FirstOrDefault(x => x.Username == authLogonChallenge.Identity || x.RegMail == authLogonChallenge.Identity);
+            var packet = new WoWClientPacketOut(AuthServerOpCode.AUTH_LOGON_CHALLENGE);
 
             if (account == null)
             {
-                session.ClientSocket.EnqueueWrite();
+                new AuthResponse()
+                {
+                    Status = AuthStatus.WOW_FAIL_UNKNOWN_ACCOUNT
+                }.Serialize(packet.Writer);
+
+                session.ClientSocket.EnqueueWrite(packet);
+                return;
+            }
+
+            var ipString = session.ClientSocket.IPEndPoint.Address.ToString();
+
+            if (account.Locked && account.LastIp != ipString)
+            {
+                LoginFailed(session, AuthStatus.WOW_FAIL_UNLOCKABLE_LOCK, packet);
+                return;
+            }
+
+            if (_banValidator.IsBanned(account.Id, ipString))
+            {
+                LoginFailed(session, AuthStatus.WOW_FAIL_SUSPENDED, packet);
                 return;
             }
         }
 
-        private void LoginFailed(WoWClientSession session, AuthStatus status)
+        private void LoginFailed(WoWClientSession session, AuthStatus status, WoWClientPacketOut packet)
         {
             if (!_loginTracker.TryGetValue(session.ClientSocket.IPEndPoint.Address, out var tracker))
             {
@@ -53,6 +73,13 @@ namespace WrathForged.Authorization.Server.Services
             if (_configuration.GetDefaultValue("MaxLoginAttempts", 5) <= tracker.Attempts)
             {
             }
+
+            new AuthResponse()
+            {
+                Status = status
+            }.Serialize(packet.Writer);
+
+            session.ClientSocket.EnqueueWrite(packet);
         }
     }
 }
