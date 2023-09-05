@@ -17,7 +17,7 @@ namespace WrathForged.Common
 
         public T? Get<T>() => !_cache.Contains(typeof(T).Name) ? default : (T)_cache.Get(typeof(T).Name);
 
-        public bool TryGet<T>(out T? value)
+        public bool TryGet<T>(out T value)
         {
             if (!_cache.Contains(typeof(T).Name))
             {
@@ -29,7 +29,7 @@ namespace WrathForged.Common
             return true;
         }
 
-        public bool TryGet<T>(string key, out T? value)
+        public bool TryGet<T>(string key, out T value)
         {
             if (!_cache.Contains(key))
             {

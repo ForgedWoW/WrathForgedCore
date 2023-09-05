@@ -108,5 +108,8 @@
   "Scipts": {
     "Directory": ".\\Scripts"
   },
-  "RealmStatusUpdate": 20
+  "RealmStatusUpdateTime_Seconds": 20,
+  "BackgroundWorkProcessor": {
+    "ThreadCount": 10
+  }
 }

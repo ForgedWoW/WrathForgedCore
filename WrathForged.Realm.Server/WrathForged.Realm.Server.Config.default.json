@@ -107,5 +107,8 @@
   },
   "Scipts": {
     "Directory": ".\\Scripts"
+  },
+  "BackgroundWorkProcessor": {
+    "ThreadCount": 10
   }
 }

@@ -8,6 +8,7 @@ using OpenTelemetry.Trace;
 using Serilog;
 using WrathForged.Common.Networking;
 using WrathForged.Common.Observability;
+using WrathForged.Common.Threading;
 
 namespace WrathForged.Common
 {
@@ -55,6 +56,7 @@ namespace WrathForged.Common
             _ = builder.RegisterType<PacketRouter>().SingleInstance();
             _ = builder.RegisterType<PacketEncryption>();
             _ = builder.RegisterType<MeterFactory>().SingleInstance();
+            _ = builder.RegisterType<BackgroundWorkProcessor>();
 
             // configure OpenTelemetry
             var telemetryType = configuration.GetDefaultValue("Telemetry:Types", "").Split(',', StringSplitOptions.TrimEntries | StringSplitOptions.TrimEntries).ToList(); // Assuming you have a key like this in your JSON
