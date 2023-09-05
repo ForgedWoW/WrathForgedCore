@@ -1,5 +1,7 @@
 ﻿// Copyright (c) Forged WoW LLC <https://github.com/ForgedWoW/WrathForgedCore>
 // Licensed under GPL-3.0 license. See <https://github.com/ForgedWoW/WrathForgedCore/blob/master/LICENSE> for full information.
+using System.Collections.Concurrent;
+using System.Reflection;
 using WrathForged.Models.Networking;
 using WrathForged.Serialization;
 
@@ -8,6 +10,7 @@ namespace WrathForged.Common.Networking
     public class WoWClientPacketOut : IDisposable
     {
         private bool _disposedValue;
+        private static readonly ConcurrentDictionary<Type, MethodInfo> _serializers = new();
 
         public WoWClientPacketOut(PacketId packetId, int headerSize = -1)
         {
@@ -69,8 +72,18 @@ namespace WrathForged.Common.Networking
 
         public void WriteObject<T>(T obj)
         {
+            if (obj == null)
+                return;
+
             // Get the type of the object
             var type = obj.GetType();
+
+            if (_serializers.TryGetValue(type, out var serializer))
+            {
+                // If we have a serializer for this type, use it
+                _ = serializer.Invoke(null, new object[] { obj, Writer });
+                return;
+            }
 
             // Get the namespace and construct the name of the static class
             var namespaceName = type.Namespace;
@@ -87,10 +100,15 @@ namespace WrathForged.Common.Networking
                 // Find the Serialize method which is an extension method
                 var method = extensionClass.GetMethod("Serialize", new[] { type, typeof(BinaryWriter) });
 
-                // If the method was found, invoke it with the object and the writer
-                _ = method != null
-                    ? method.Invoke(null, new object[] { obj, Writer })
-                    : throw new InvalidOperationException($"Serialize method not found for type {type.FullName}");
+                if (method != null)
+                {
+                    _ = _serializers.TryAdd(type, method);
+                    _ = method.Invoke(null, new object[] { obj, Writer });
+                }
+                else
+                {
+                    throw new InvalidOperationException($"Serialize method not found for type {type.FullName}");
+                }
             }
             else
             {
