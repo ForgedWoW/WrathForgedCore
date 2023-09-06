@@ -7,6 +7,13 @@ namespace WrathForged.Common.Networking
 {
     public class WoWClientSession
     {
+        public enum AuthState
+        {
+            LoggedOut,
+            AwaitingCredentials,
+            LoggingIn,
+        }
+
         private byte[]? _sessionKey;
         private readonly ILogger _logger;
 
@@ -25,14 +32,17 @@ namespace WrathForged.Common.Networking
                 _sessionKey = value;
 
                 if (value == null)
+                {
+                    PacketEncryption = null;
                     return;
+                }
 
                 PacketEncryption = new PacketEncryption(value, _logger);
             }
         }
 
         public bool IsEncrypted => _sessionKey != null;
-
+        public AuthState State { get; set; } = AuthState.LoggedOut;
         public PacketEncryption? PacketEncryption { get; private set; }
         public ClientSocket ClientSocket { get; }
         public PacketBuffer PacketBuffer { get; }

@@ -4,6 +4,7 @@ using System.Net;
 using Microsoft.Extensions.Configuration;
 using WrathForged.Authorization.Server.Validators;
 using WrathForged.Common;
+using WrathForged.Common.Cryptography;
 using WrathForged.Common.Networking;
 using WrathForged.Database.Models.Auth;
 using WrathForged.Models.Auth;
@@ -16,13 +17,15 @@ namespace WrathForged.Authorization.Server.Services
         private readonly IConfiguration _configuration;
         private readonly BanValidator _banValidator;
         private readonly ClassFactory _classFactory;
+        private readonly RandomUtilities _randomUtilities;
         private readonly Dictionary<IPAddress, LoginTracker> _loginTracker = new();
 
-        public ClientLoginSerivce(IConfiguration configuration, BanValidator banValidator, ClassFactory classFactory)
+        public ClientLoginSerivce(IConfiguration configuration, BanValidator banValidator, ClassFactory classFactory, RandomUtilities randomUtilities)
         {
             _configuration = configuration;
             _banValidator = banValidator;
             _classFactory = classFactory;
+            _randomUtilities = randomUtilities;
         }
 
         [PacketHandler(Serialization.PacketScope.Auth, AuthServerOpCode.AUTH_LOGON_CHALLENGE)]
@@ -59,6 +62,10 @@ namespace WrathForged.Authorization.Server.Services
                     LoginFailed(session, AuthStatus.WOW_FAIL_SUSPENDED, packet);
                     return;
             }
+
+            session.Account = account;
+            session.SessionKey = _randomUtilities.RandomBytes(16);
+            session.State = WoWClientSession.AuthState.AwaitingCredentials;
         }
 
         private void LoginFailed(WoWClientSession session, AuthStatus status, WoWClientPacketOut packet)
