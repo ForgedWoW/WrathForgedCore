@@ -35,12 +35,7 @@ namespace WrathForged.Authorization.Server.Services
 
             if (account == null)
             {
-                new AuthResponse()
-                {
-                    Status = AuthStatus.WOW_FAIL_UNKNOWN_ACCOUNT
-                }.Serialize(packet.Writer);
-
-                session.ClientSocket.EnqueueWrite(packet);
+                LoginFailed(session, AuthStatus.WOW_FAIL_UNKNOWN_ACCOUNT, packet);
                 return;
             }
 
