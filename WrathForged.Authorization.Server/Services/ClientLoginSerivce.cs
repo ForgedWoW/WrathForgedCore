@@ -2,6 +2,7 @@
 // Licensed under GPL-3.0 license. See <https://github.com/ForgedWoW/WrathForgedCore/blob/master/LICENSE> for full information.
 using System.Net;
 using Microsoft.Extensions.Configuration;
+using Serilog;
 using WrathForged.Authorization.Server.Validators;
 using WrathForged.Common;
 using WrathForged.Common.Cryptography;
@@ -18,14 +19,17 @@ namespace WrathForged.Authorization.Server.Services
         private readonly BanValidator _banValidator;
         private readonly ClassFactory _classFactory;
         private readonly RandomUtilities _randomUtilities;
+        private readonly ILogger _logger;
         private readonly Dictionary<IPAddress, LoginTracker> _loginTracker = new();
 
-        public ClientLoginSerivce(IConfiguration configuration, BanValidator banValidator, ClassFactory classFactory, RandomUtilities randomUtilities)
+        public ClientLoginSerivce(IConfiguration configuration, BanValidator banValidator, ClassFactory classFactory, RandomUtilities randomUtilities,
+                                  ILogger logger)
         {
             _configuration = configuration;
             _banValidator = banValidator;
             _classFactory = classFactory;
             _randomUtilities = randomUtilities;
+            _logger = logger;
         }
 
         [PacketHandler(Serialization.PacketScope.Auth, AuthServerOpCode.AUTH_LOGON_CHALLENGE)]
@@ -38,6 +42,7 @@ namespace WrathForged.Authorization.Server.Services
 
             if (account == null)
             {
+                _logger.Debug("Failed login attempt for {Identity} from {Address}. Account not found.", authLogonChallenge.Identity, session.ClientSocket.IPEndPoint.Address);
                 LoginFailed(session, AuthStatus.WOW_FAIL_UNKNOWN_ACCOUNT, packet);
                 return;
             }
@@ -46,7 +51,8 @@ namespace WrathForged.Authorization.Server.Services
 
             if (account.Locked && account.LastIp != ipString)
             {
-                LoginFailed(session, AuthStatus.WOW_FAIL_UNLOCKABLE_LOCK, packet);
+                _logger.Debug("Failed login attempt for {Identity} from {Address}. Account locked to IpAddress {LockedIp}", authLogonChallenge.Identity, session.ClientSocket.IPEndPoint.Address, account.LastIp);
+                LoginFailed(session, AuthStatus.WOW_FAIL_LOCKED_ENFORCED, packet);
                 return;
             }
 
@@ -55,14 +61,17 @@ namespace WrathForged.Authorization.Server.Services
             switch (banState)
             {
                 case BanValidator.BanType.Banned:
+                    _logger.Debug("Failed login attempt for {Identity} from {Address}. Account banned.", authLogonChallenge.Identity, session.ClientSocket.IPEndPoint.Address);
                     LoginFailed(session, AuthStatus.WOW_FAIL_BANNED, packet);
                     return;
 
                 case BanValidator.BanType.Suspended:
+                    _logger.Debug("Failed login attempt for {Identity} from {Address}. Account suspended.", authLogonChallenge.Identity, session.ClientSocket.IPEndPoint.Address);
                     LoginFailed(session, AuthStatus.WOW_FAIL_SUSPENDED, packet);
                     return;
             }
 
+            _logger.Debug("Login attempt for {Identity} from {Address}. Assigning session token.", authLogonChallenge.Identity, session.ClientSocket.IPEndPoint.Address);
             session.Account = account;
             session.SessionKey = _randomUtilities.RandomBytes(16);
             session.State = WoWClientSession.AuthState.AwaitingCredentials;
@@ -81,6 +90,9 @@ namespace WrathForged.Authorization.Server.Services
 
             if (_configuration.GetDefaultValue("MaxLoginAttempts", 5) <= tracker.Attempts)
             {
+                _logger.Debug("Too many failed login attempts from {Address}. Disconnecting.", session.ClientSocket.IPEndPoint.Address);
+                session.ClientSocket.Disconnect();
+                return;
             }
 
             new AuthResponse()

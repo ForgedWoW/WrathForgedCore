@@ -37,7 +37,7 @@ namespace WrathForged.Authorization.Server.Caching
             _forgeCache.Set(AuthCacheKeys.ACCOUNT_BANS, cacheUpdate, () =>
             {
                 using var bannedAccountsContext = _classFactory.Resolve<AuthDatabase>();
-                return bannedAccountsContext.AccountBanneds.Where(b => b.Active == 1).ToDictionary(d => d.Id, d => d);
+                return bannedAccountsContext.AccountBanneds.ToDictionary(d => d.Id, d => d).Where(b => b.Value.Active || b.Value.Unbandate.FromUnixTime() < DateTime.UtcNow).ToDictionary(d => d.Key, d => d.Value);
             });
 
             _forgeCache.Set(AuthCacheKeys.IP_BANS, cacheUpdate, () =>
