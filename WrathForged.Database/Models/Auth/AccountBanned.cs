@@ -20,5 +20,5 @@ public partial class AccountBanned
 
     public string Banreason { get; set; } = null!;
 
-    public byte Active { get; set; }
+    public bool Active { get; set; }
 }

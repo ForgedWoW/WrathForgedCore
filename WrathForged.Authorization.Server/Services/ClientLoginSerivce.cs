@@ -52,10 +52,17 @@ namespace WrathForged.Authorization.Server.Services
                 return;
             }
 
-            if (_banValidator.IsBanned(account.Id, ipString))
+            var banState = _banValidator.GetBanState(account.Id, ipString);
+
+            switch (banState)
             {
-                LoginFailed(session, AuthStatus.WOW_FAIL_SUSPENDED, packet);
-                return;
+                case BanValidator.BanType.Banned:
+                    LoginFailed(session, AuthStatus.WOW_FAIL_BANNED, packet);
+                    return;
+
+                case BanValidator.BanType.Suspended:
+                    LoginFailed(session, AuthStatus.WOW_FAIL_SUSPENDED, packet);
+                    return;
             }
         }
 

@@ -1,48 +1,60 @@
 ﻿// Copyright (c) Forged WoW LLC <https://github.com/ForgedWoW/WrathForgedCore>
 // Licensed under GPL-3.0 license. See <https://github.com/ForgedWoW/WrathForgedCore/blob/master/LICENSE> for full information.
 using WrathForged.Common;
-using WrathForged.Common.Threading;
 using WrathForged.Database.Models.Auth;
 
 namespace WrathForged.Authorization.Server.Validators
 {
     public class BanValidator
     {
+        public enum BanType
+        {
+            None,
+            Banned,
+            Suspended
+        }
+
         private readonly ForgeCache _forgeCache;
         private readonly ClassFactory _classFactory;
 
-        public BanValidator(ForgeCache forgeCache, ClassFactory classFactory, BackgroundWorkProcessor backgroundWorkProcessor)
+        public BanValidator(ForgeCache forgeCache, ClassFactory classFactory)
         {
             _forgeCache = forgeCache;
             _classFactory = classFactory;
-            backgroundWorkProcessor.Add(() =>
-            {
-                using var authDatabase = _classFactory.Resolve<AuthDatabase>();
-                foreach (var act in authDatabase.AccountBanneds.Where(a => a.Unbandate.FromUnixTime() < DateTime.UtcNow).ToList())
-                {
-                    act.Active = 0;
-                }
-
-                _ = authDatabase.SaveChanges();
-            }, TimeSpan.FromMinutes(10));
         }
 
-        public bool IsBanned(uint accountId, string ipAddress)
+        public BanType GetBanState(uint accountId, string ipAddress)
         {
-            return (_forgeCache.TryGet(AuthCacheKeys.ACCOUNT_BANS, out Dictionary<uint, AccountBanned> accountBans) &&
-                accountBans.TryGetValue(accountId, out var accountBan) &&
-                accountBan.Active != 0) || (_forgeCache.TryGet(AuthCacheKeys.IP_BANS, out Dictionary<string, IpBanned> ipBans) &&
-                ipBans.TryGetValue(ipAddress, out var ipBan) &&
-                ipBan.Unbandate.FromUnixTime() > DateTime.UtcNow);
+            if (_forgeCache.TryGet(AuthCacheKeys.ACCOUNT_BANS, out Dictionary<uint, AccountBanned> accountBans) && accountBans.TryGetValue(accountId, out var accountBan))
+            {
+                return accountBan.Active ? BanType.Banned : BanType.Suspended;
+            }
+
+            if (_forgeCache.TryGet(AuthCacheKeys.IP_BANS, out Dictionary<string, IpBanned> ipBans) && ipBans.TryGetValue(ipAddress, out var ipBan))
+            {
+                if (ipBan.Unbandate == default)
+                    return BanType.Banned;
+                else if (ipBan.Unbandate.FromUnixTime() > DateTime.UtcNow)
+                    return BanType.Suspended;
+            }
+
+            return BanType.None;
         }
 
-        public void BanAccount(uint accountId, string banReason, string bannedBy, DateTime unbanDate)
+        /// <summary>
+        ///     if unbanDate is not set, the ban is permanent
+        /// </summary>
+        /// <param name="accountId"></param>
+        /// <param name="banReason"></param>
+        /// <param name="bannedBy"></param>
+        /// <param name="unbanDate"></param>
+        public void BanAccount(uint accountId, string banReason, string bannedBy, DateTime unbanDate = default)
         {
             using var authDatabase = _classFactory.Resolve<AuthDatabase>();
             var accountBan = new AccountBanned
             {
                 Id = accountId,
-                Active = 1,
+                Active = unbanDate == default,
                 Banreason = banReason,
                 Bannedby = bannedBy,
                 Bandate = DateTime.UtcNow.ToUnixTime(),
@@ -79,7 +91,7 @@ namespace WrathForged.Authorization.Server.Validators
 
             if (accountBan != null)
             {
-                accountBan.Active = 0;
+                accountBan.Active = false;
                 accountBan.Unbandate = DateTime.UtcNow.ToUnixTime();
                 _ = authDatabase.SaveChanges();
                 _forgeCache.UpdateKey(AuthCacheKeys.ACCOUNT_BANS);
