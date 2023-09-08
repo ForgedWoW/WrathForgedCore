@@ -3,6 +3,7 @@
 
 using System.Security.Cryptography;
 using System.Text;
+using WrathForged.Models.Cryptography;
 
 namespace WrathForged.Common.Cryptography
 {
@@ -22,57 +23,39 @@ namespace WrathForged.Common.Cryptography
             /// Default constructor
             /// </summary>
             /// <param name="data">the data to broker</param>
-            public HashDataBroker(byte[] data)
-            {
-                RawData = data;
-            }
+            public HashDataBroker(byte[] data) => RawData = data;
 
             internal byte[] RawData;
 
-            internal int Length
-            {
-                get { return RawData.Length; }
-            }
+            internal int Length => RawData.Length;
 
             /// <summary>
             /// Implicit operator for byte[]->HashDataBroker casts
             /// </summary>
             /// <param name="data">the data to broker</param>
             /// <returns>a HashDataBroker object representing the original data</returns>
-            public static implicit operator HashDataBroker(byte[] data)
-            {
-                return new HashDataBroker(data);
-            }
+            public static implicit operator HashDataBroker(byte[] data) => new(data);
 
             /// <summary>
             /// Implicit operator for string->HashDataBroker casts
             /// </summary>
             /// <param name="str">the data to broker</param>
             /// <returns>a HashDataBroker object representing the original data</returns>
-            public static implicit operator HashDataBroker(string str)
-            {
-                return new HashDataBroker(Encoding.UTF8.GetBytes(str));
-            }
+            public static implicit operator HashDataBroker(string str) => new(Encoding.UTF8.GetBytes(str));
 
             /// <summary>
             /// Implicit operator for BigInteger->HashDataBroker casts
             /// </summary>
             /// <param name="integer">the data to broker</param>
             /// <returns>a HashDataBroker object representing the original data</returns>
-            public static implicit operator HashDataBroker(BigInteger integer)
-            {
-                return new HashDataBroker(integer.GetBytes());
-            }
+            public static implicit operator HashDataBroker(BigInteger integer) => new(integer.GetBytes());
 
             /// <summary>
             /// Implicit operator for uint->HashDataBroker casts
             /// </summary>
             /// <param name="integer">the data to broker</param>
             /// <returns>a HashDataBroker object representing the original data</returns>
-            public static implicit operator HashDataBroker(uint integer)
-            {
-                return new HashDataBroker(new BigInteger(integer).GetBytes());
-            }
+            public static implicit operator HashDataBroker(uint integer) => new(new BigInteger(integer).GetBytes());
         }
 
         /// <summary>
@@ -103,9 +86,6 @@ namespace WrathForged.Common.Cryptography
         /// <param name="algorithm"></param>
         /// <param name="brokers"></param>
         /// <returns></returns>
-        public static BigInteger HashToBigInteger(HashAlgorithm algorithm, params HashDataBroker[] brokers)
-        {
-            return new BigInteger(FinalizeHash(algorithm, brokers));
-        }
+        public static BigInteger HashToBigInteger(HashAlgorithm algorithm, params HashDataBroker[] brokers) => new(FinalizeHash(algorithm, brokers));
     }
 }

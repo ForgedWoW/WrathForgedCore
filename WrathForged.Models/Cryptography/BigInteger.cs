@@ -1,13 +1,12 @@
 ﻿// Copyright (c) Forged WoW LLC <https://github.com/ForgedWoW/WrathForgedCore>
 // Licensed under GPL-3.0 license. See <https://github.com/ForgedWoW/WrathForgedCore/blob/master/LICENSE> for full information.
 
-using System.CodeDom.Compiler;
-using System.Runtime.Serialization;
+using WrathForged.Serialization;
 
-namespace WrathForged.Common.Cryptography
+namespace WrathForged.Models.Cryptography
 {
-    [Serializable]
-    public partial class BigInteger : ISerializable
+    [ForgedSerializable]
+    public class BigInteger
     {
         /// <summary>
         /// Maximum length of the BigInteger in uint. (4 bytes)
@@ -103,12 +102,12 @@ namespace WrathForged.Common.Cryptography
             if (tempVal > 0) // overflow check for +ve value
             {
                 if (value != 0 || (_data[MAX_LENGTH - 1] & 0x80000000) != 0)
-                    throw (new ArithmeticException("Positive overflow in constructor."));
+                    throw new ArithmeticException("Positive overflow in constructor.");
             }
             else if (tempVal < 0) // underflow check for -ve value
             {
                 if (value != -1 || (_data[DataLength - 1] & 0x80000000) == 0)
-                    throw (new ArithmeticException("Negative underflow in constructor."));
+                    throw new ArithmeticException("Negative underflow in constructor.");
             }
 
             if (DataLength == 0)
@@ -135,7 +134,7 @@ namespace WrathForged.Common.Cryptography
             }
 
             if (value != 0 || (_data[MAX_LENGTH - 1] & 0x80000000) != 0)
-                throw (new ArithmeticException("Positive overflow in constructor."));
+                throw new ArithmeticException("Positive overflow in constructor.");
 
             if (DataLength == 0)
                 DataLength = 1;
@@ -147,7 +146,12 @@ namespace WrathForged.Common.Cryptography
 
         public BigInteger(BigInteger bi)
         {
-            SetValue(bi);
+            _data = new uint[MAX_LENGTH];
+
+            DataLength = bi.DataLength;
+
+            for (var i = 0; i < DataLength; i++)
+                _data[i] = bi._data[i];
         }
 
         public void SetValue(BigInteger bi)
@@ -189,7 +193,7 @@ namespace WrathForged.Common.Cryptography
         {
             var multiplier = new BigInteger(1);
             var result = new BigInteger();
-            value = (value.ToUpper()).Trim();
+            value = value.ToUpper().Trim();
             var limit = 0;
 
             if (value[0] == '-')
@@ -199,36 +203,38 @@ namespace WrathForged.Common.Cryptography
             {
                 int posVal = value[i];
 
-                if (posVal >= '0' && posVal <= '9')
+                if (posVal is >= '0' and <= '9')
                     posVal -= '0';
-                else if (posVal >= 'A' && posVal <= 'Z')
-                    posVal = (posVal - 'A') + 10;
+                else if (posVal is >= 'A' and <= 'Z')
+                    posVal = posVal - 'A' + 10;
                 else
                     posVal = 9999999; // arbitrary large
 
                 if (posVal >= radix)
-                    throw (new ArithmeticException("Invalid string in constructor."));
+                {
+                    throw new ArithmeticException("Invalid string in constructor.");
+                }
                 else
                 {
                     if (value[0] == '-')
                         posVal = -posVal;
 
-                    result = result + (multiplier * posVal);
+                    result += multiplier * posVal;
 
                     if ((i - 1) >= limit)
-                        multiplier = multiplier * radix;
+                        multiplier *= radix;
                 }
             }
 
             if (value[0] == '-') // negative values
             {
                 if ((result._data[MAX_LENGTH - 1] & 0x80000000) == 0)
-                    throw (new ArithmeticException("Negative underflow in constructor."));
+                    throw new ArithmeticException("Negative underflow in constructor.");
             }
             else // positive values
             {
                 if ((result._data[MAX_LENGTH - 1] & 0x80000000) != 0)
-                    throw (new ArithmeticException("Positive overflow in constructor."));
+                    throw new ArithmeticException("Positive overflow in constructor.");
             }
 
             _data = new uint[MAX_LENGTH];
@@ -268,7 +274,7 @@ namespace WrathForged.Common.Cryptography
                 DataLength++;
 
             if (DataLength > MAX_LENGTH)
-                throw (new ArithmeticException("Byte overflow in constructor."));
+                throw new ArithmeticException("Byte overflow in constructor.");
 
             _data = new uint[MAX_LENGTH];
 
@@ -313,7 +319,7 @@ namespace WrathForged.Common.Cryptography
                 DataLength++;
 
             if (DataLength > MAX_LENGTH || inLen > inData.Length)
-                throw (new ArithmeticException("Byte overflow in constructor."));
+                throw new ArithmeticException("Byte overflow in constructor.");
 
             _data = new uint[MAX_LENGTH];
 
@@ -348,7 +354,7 @@ namespace WrathForged.Common.Cryptography
             DataLength = inData.Length;
 
             if (DataLength > MAX_LENGTH)
-                throw (new ArithmeticException("Byte overflow in constructor."));
+                throw new ArithmeticException("Byte overflow in constructor.");
 
             _data = new uint[MAX_LENGTH];
 
@@ -376,30 +382,15 @@ namespace WrathForged.Common.Cryptography
         // For BigInteger bi = 10;
         //***********************************************************************
 
-        public static explicit operator BigInteger(long value)
-        {
-            return (new BigInteger(value));
-        }
+        public static explicit operator BigInteger(long value) => new(value);
 
-        public static explicit operator BigInteger(ulong value)
-        {
-            return (new BigInteger(value));
-        }
+        public static explicit operator BigInteger(ulong value) => new(value);
 
-        public static explicit operator BigInteger(int value)
-        {
-            return (new BigInteger(value));
-        }
+        public static explicit operator BigInteger(int value) => new(value);
 
-        public static explicit operator BigInteger(uint value)
-        {
-            return (new BigInteger((ulong)value));
-        }
+        public static explicit operator BigInteger(uint value) => new((ulong)value);
 
-        public static implicit operator BigInteger(byte[] value)
-        {
-            return (new BigInteger(value));
-        }
+        public static implicit operator BigInteger(byte[] value) => new(value);
 
         #endregion Overloading of the typecast operator.
 
@@ -407,9 +398,10 @@ namespace WrathForged.Common.Cryptography
 
         public static BigInteger operator +(BigInteger bi1, BigInteger bi2)
         {
-            var result = new BigInteger();
-
-            result.DataLength = (bi1.DataLength > bi2.DataLength) ? bi1.DataLength : bi2.DataLength;
+            var result = new BigInteger
+            {
+                DataLength = (bi1.DataLength > bi2.DataLength) ? bi1.DataLength : bi2.DataLength
+            };
 
             long carry = 0;
             for (var i = 0; i < result.DataLength; i++)
@@ -421,7 +413,7 @@ namespace WrathForged.Common.Cryptography
 
             if (carry != 0 && result.DataLength < MAX_LENGTH)
             {
-                result._data[result.DataLength] = (uint)(carry);
+                result._data[result.DataLength] = (uint)carry;
                 result.DataLength++;
             }
 
@@ -430,34 +422,19 @@ namespace WrathForged.Common.Cryptography
 
             // overflow check
             var lastPos = MAX_LENGTH - 1;
-            if ((bi1._data[lastPos] & 0x80000000) == (bi2._data[lastPos] & 0x80000000) &&
-                (result._data[lastPos] & 0x80000000) != (bi1._data[lastPos] & 0x80000000))
-            {
-                throw (new ArithmeticException());
-            }
-
-            return result;
+            return (bi1._data[lastPos] & 0x80000000) == (bi2._data[lastPos] & 0x80000000) &&
+                (result._data[lastPos] & 0x80000000) != (bi1._data[lastPos] & 0x80000000)
+                ? throw new ArithmeticException()
+                : result;
         }
 
-        public static BigInteger operator +(BigInteger bi1, long bi2)
-        {
-            return bi1 + (BigInteger)bi2;
-        }
+        public static BigInteger operator +(BigInteger bi1, long bi2) => bi1 + (BigInteger)bi2;
 
-        public static BigInteger operator +(BigInteger bi1, ulong bi2)
-        {
-            return bi1 + (BigInteger)bi2;
-        }
+        public static BigInteger operator +(BigInteger bi1, ulong bi2) => bi1 + (BigInteger)bi2;
 
-        public static BigInteger operator +(BigInteger bi1, int bi2)
-        {
-            return bi1 + (BigInteger)bi2;
-        }
+        public static BigInteger operator +(BigInteger bi1, int bi2) => bi1 + (BigInteger)bi2;
 
-        public static BigInteger operator +(BigInteger bi1, uint bi2)
-        {
-            return bi1 + (BigInteger)bi2;
-        }
+        public static BigInteger operator +(BigInteger bi1, uint bi2) => bi1 + (BigInteger)bi2;
 
         //***********************************************************************
         // Overloading of the unary ++ operator
@@ -483,7 +460,9 @@ namespace WrathForged.Common.Cryptography
             }
 
             if (index > result.DataLength)
+            {
                 result.DataLength = index;
+            }
             else
             {
                 while (result.DataLength > 1 && result._data[result.DataLength - 1] == 0)
@@ -496,13 +475,10 @@ namespace WrathForged.Common.Cryptography
             // overflow if initial value was +ve but ++ caused a sign
             // change to negative.
 
-            if ((bi1._data[lastPos] & 0x80000000) == 0 &&
-                (result._data[lastPos] & 0x80000000) != (bi1._data[lastPos] & 0x80000000))
-            {
-                throw (new ArithmeticException("Overflow in ++."));
-            }
-
-            return result;
+            return (bi1._data[lastPos] & 0x80000000) == 0 &&
+                (result._data[lastPos] & 0x80000000) != (bi1._data[lastPos] & 0x80000000)
+                ? throw new ArithmeticException("Overflow in ++.")
+                : result;
         }
 
         //***********************************************************************
@@ -515,13 +491,13 @@ namespace WrathForged.Common.Cryptography
             // if we proceed.
 
             if (bi1.DataLength == 1 && bi1._data[0] == 0)
-                return (new BigInteger());
+                return new BigInteger();
 
             var result = new BigInteger(bi1);
 
             // 1's complement
             for (var i = 0; i < MAX_LENGTH; i++)
-                result._data[i] = ~(bi1._data[i]);
+                result._data[i] = ~bi1._data[i];
 
             // add one to result of 1's complement
             long carry = 1;
@@ -540,7 +516,7 @@ namespace WrathForged.Common.Cryptography
             }
 
             if ((bi1._data[MAX_LENGTH - 1] & 0x80000000) == (result._data[MAX_LENGTH - 1] & 0x80000000))
-                throw (new ArithmeticException("Overflow in negation.\n"));
+                throw new ArithmeticException("Overflow in negation.\n");
 
             result.DataLength = MAX_LENGTH;
 
@@ -555,9 +531,10 @@ namespace WrathForged.Common.Cryptography
 
         public static BigInteger operator -(BigInteger bi1, BigInteger bi2)
         {
-            var result = new BigInteger();
-
-            result.DataLength = (bi1.DataLength > bi2.DataLength) ? bi1.DataLength : bi2.DataLength;
+            var result = new BigInteger
+            {
+                DataLength = (bi1.DataLength > bi2.DataLength) ? bi1.DataLength : bi2.DataLength
+            };
 
             long carryIn = 0;
             for (var i = 0; i < result.DataLength; i++)
@@ -567,10 +544,7 @@ namespace WrathForged.Common.Cryptography
                 diff = bi1._data[i] - (long)bi2._data[i] - carryIn;
                 result._data[i] = (uint)(diff & 0xFFFFFFFF);
 
-                if (diff < 0)
-                    carryIn = 1;
-                else
-                    carryIn = 0;
+                carryIn = diff < 0 ? 1 : 0;
             }
 
             // roll over to negative
@@ -588,34 +562,19 @@ namespace WrathForged.Common.Cryptography
             // overflow check
 
             var lastPos = MAX_LENGTH - 1;
-            if ((bi1._data[lastPos] & 0x80000000) != (bi2._data[lastPos] & 0x80000000) &&
-                (result._data[lastPos] & 0x80000000) != (bi1._data[lastPos] & 0x80000000))
-            {
-                throw (new ArithmeticException());
-            }
-
-            return result;
+            return (bi1._data[lastPos] & 0x80000000) != (bi2._data[lastPos] & 0x80000000) &&
+                (result._data[lastPos] & 0x80000000) != (bi1._data[lastPos] & 0x80000000)
+                ? throw new ArithmeticException()
+                : result;
         }
 
-        public static BigInteger operator -(BigInteger bi1, long bi2)
-        {
-            return bi1 - (BigInteger)bi2;
-        }
+        public static BigInteger operator -(BigInteger bi1, long bi2) => bi1 - (BigInteger)bi2;
 
-        public static BigInteger operator -(BigInteger bi1, ulong bi2)
-        {
-            return bi1 - (BigInteger)bi2;
-        }
+        public static BigInteger operator -(BigInteger bi1, ulong bi2) => bi1 - (BigInteger)bi2;
 
-        public static BigInteger operator -(BigInteger bi1, int bi2)
-        {
-            return bi1 - (BigInteger)bi2;
-        }
+        public static BigInteger operator -(BigInteger bi1, int bi2) => bi1 - (BigInteger)bi2;
 
-        public static BigInteger operator -(BigInteger bi1, uint bi2)
-        {
-            return bi1 - (BigInteger)bi2;
-        }
+        public static BigInteger operator -(BigInteger bi1, uint bi2) => bi1 - (BigInteger)bi2;
 
         //***********************************************************************
         // Overloading of the unary -- operator
@@ -654,13 +613,10 @@ namespace WrathForged.Common.Cryptography
             // overflow if initial value was -ve but -- caused a sign
             // change to positive.
 
-            if ((bi1._data[lastPos] & 0x80000000) != 0 &&
-                (result._data[lastPos] & 0x80000000) != (bi1._data[lastPos] & 0x80000000))
-            {
-                throw (new ArithmeticException("Underflow in --."));
-            }
-
-            return result;
+            return (bi1._data[lastPos] & 0x80000000) != 0 &&
+                (result._data[lastPos] & 0x80000000) != (bi1._data[lastPos] & 0x80000000)
+                ? throw new ArithmeticException("Underflow in --.")
+                : result;
         }
 
         #endregion Overloading of add, subtract operators
@@ -709,7 +665,7 @@ namespace WrathForged.Common.Cryptography
                                     result._data[k] + mcarry;
 
                         result._data[k] = (uint)(val & 0xFFFFFFFF);
-                        mcarry = (val >> 32);
+                        mcarry = val >> 32;
                     }
 
                     if (mcarry != 0)
@@ -718,7 +674,7 @@ namespace WrathForged.Common.Cryptography
             }
             catch (Exception)
             {
-                throw (new ArithmeticException("Multiplication overflow."));
+                throw new ArithmeticException("Multiplication overflow.");
             }
 
             result.DataLength = bi1.DataLength + bi2.DataLength;
@@ -737,7 +693,9 @@ namespace WrathForged.Common.Cryptography
                     // a max negative number in 2's complement.
 
                     if (result.DataLength == 1)
+                    {
                         return result;
+                    }
                     else
                     {
                         var isMaxNeg = true;
@@ -752,35 +710,20 @@ namespace WrathForged.Common.Cryptography
                     }
                 }
 
-                throw (new ArithmeticException("Multiplication overflow."));
+                throw new ArithmeticException("Multiplication overflow.");
             }
 
             // if input has different signs, then result is -ve
-            if (bi1Neg != bi2Neg)
-                return -result;
-
-            return result;
+            return bi1Neg != bi2Neg ? -result : result;
         }
 
-        public static BigInteger operator *(BigInteger bi1, long bi2)
-        {
-            return bi1 * (BigInteger)bi2;
-        }
+        public static BigInteger operator *(BigInteger bi1, long bi2) => bi1 * (BigInteger)bi2;
 
-        public static BigInteger operator *(BigInteger bi1, ulong bi2)
-        {
-            return bi1 * (BigInteger)bi2;
-        }
+        public static BigInteger operator *(BigInteger bi1, ulong bi2) => bi1 * (BigInteger)bi2;
 
-        public static BigInteger operator *(BigInteger bi1, int bi2)
-        {
-            return bi1 * (BigInteger)bi2;
-        }
+        public static BigInteger operator *(BigInteger bi1, int bi2) => bi1 * (BigInteger)bi2;
 
-        public static BigInteger operator *(BigInteger bi1, uint bi2)
-        {
-            return bi1 * (BigInteger)bi2;
-        }
+        public static BigInteger operator *(BigInteger bi1, uint bi2) => bi1 * (BigInteger)bi2;
 
         //***********************************************************************
         // Private function that supports the division of two numbers with
@@ -812,8 +755,8 @@ namespace WrathForged.Common.Cryptography
 
             for (var i = 0; i < bi1.DataLength; i++)
                 remainder[i] = bi1._data[i];
-            ShiftLeft(remainder, shift);
-            bi2 = bi2 << shift;
+            _ = ShiftLeft(remainder, shift);
+            bi2 <<= shift;
 
             /*
             Console.WriteLine("bi1 Len = {0}, bi2 Len = {1}", bi1.dataLength, bi2.dataLength);
@@ -1016,32 +959,17 @@ namespace WrathForged.Common.Cryptography
                 else
                     MultiByteDivide(bi1, bi2, quotient, remainder);
 
-                if (dividendNeg != divisorNeg)
-                    return -quotient;
-
-                return quotient;
+                return dividendNeg != divisorNeg ? -quotient : quotient;
             }
         }
 
-        public static BigInteger operator /(BigInteger bi1, long bi2)
-        {
-            return bi1 / (BigInteger)bi2;
-        }
+        public static BigInteger operator /(BigInteger bi1, long bi2) => bi1 / (BigInteger)bi2;
 
-        public static BigInteger operator /(BigInteger bi1, ulong bi2)
-        {
-            return bi1 / (BigInteger)bi2;
-        }
+        public static BigInteger operator /(BigInteger bi1, ulong bi2) => bi1 / (BigInteger)bi2;
 
-        public static BigInteger operator /(BigInteger bi1, int bi2)
-        {
-            return bi1 / (BigInteger)bi2;
-        }
+        public static BigInteger operator /(BigInteger bi1, int bi2) => bi1 / (BigInteger)bi2;
 
-        public static BigInteger operator /(BigInteger bi1, uint bi2)
-        {
-            return bi1 / (BigInteger)bi2;
-        }
+        public static BigInteger operator /(BigInteger bi1, uint bi2) => bi1 / (BigInteger)bi2;
 
         //***********************************************************************
         // Overloading of modulus operator
@@ -1075,52 +1003,25 @@ namespace WrathForged.Common.Cryptography
                 else
                     MultiByteDivide(bi1, bi2, quotient, remainder);
 
-                if (dividendNeg)
-                    return -remainder;
-
-                return remainder;
+                return dividendNeg ? -remainder : remainder;
             }
         }
 
-        public static BigInteger operator %(BigInteger bi1, long bi2)
-        {
-            return bi1 % (BigInteger)bi2;
-        }
+        public static BigInteger operator %(BigInteger bi1, long bi2) => bi1 % (BigInteger)bi2;
 
-        public static BigInteger operator %(BigInteger bi1, ulong bi2)
-        {
-            return bi1 % (BigInteger)bi2;
-        }
+        public static BigInteger operator %(BigInteger bi1, ulong bi2) => bi1 % (BigInteger)bi2;
 
-        public static BigInteger operator %(BigInteger bi1, int bi2)
-        {
-            return bi1 % (BigInteger)bi2;
-        }
+        public static BigInteger operator %(BigInteger bi1, int bi2) => bi1 % (BigInteger)bi2;
 
-        public static BigInteger operator %(BigInteger bi1, uint bi2)
-        {
-            return bi1 % (BigInteger)bi2;
-        }
+        public static BigInteger operator %(BigInteger bi1, uint bi2) => bi1 % (BigInteger)bi2;
 
-        public static BigInteger operator %(long bi1, BigInteger bi2)
-        {
-            return (BigInteger)bi1 % bi2;
-        }
+        public static BigInteger operator %(long bi1, BigInteger bi2) => (BigInteger)bi1 % bi2;
 
-        public static BigInteger operator %(ulong bi1, BigInteger bi2)
-        {
-            return (BigInteger)bi1 % bi2;
-        }
+        public static BigInteger operator %(ulong bi1, BigInteger bi2) => (BigInteger)bi1 % bi2;
 
-        public static BigInteger operator %(int bi1, BigInteger bi2)
-        {
-            return (BigInteger)bi1 % bi2;
-        }
+        public static BigInteger operator %(int bi1, BigInteger bi2) => (BigInteger)bi1 % bi2;
 
-        public static BigInteger operator %(uint bi1, BigInteger bi2)
-        {
-            return (BigInteger)bi1 % bi2;
-        }
+        public static BigInteger operator %(uint bi1, BigInteger bi2) => (BigInteger)bi1 % bi2;
 
         #endregion Overloading of multiplication, division and modulus
 
@@ -1234,7 +1135,7 @@ namespace WrathForged.Common.Cryptography
                     val |= carry;
 
                     carry = ((ulong)buffer[i]) << invShift;
-                    buffer[i] = (uint)(val);
+                    buffer[i] = (uint)val;
                 }
 
                 count -= shiftAmount;
@@ -1260,7 +1161,7 @@ namespace WrathForged.Common.Cryptography
             var result = new BigInteger(bi1);
 
             for (var i = 0; i < MAX_LENGTH; i++)
-                result._data[i] = ~(bi1._data[i]);
+                result._data[i] = ~bi1._data[i];
 
             result.DataLength = MAX_LENGTH;
 
@@ -1350,69 +1251,35 @@ namespace WrathForged.Common.Cryptography
         {
             if (bi1 == null && bi2 == null)
                 return true;
-            if (bi1 as object == null && bi2 as object == null)
+            if ((bi1 as object) == null && (bi2 as object) == null)
                 return true;
-            else if (bi1 as object == null || bi2 as object == null)
+            else if ((bi1 as object) == null || (bi2 as object) == null)
                 return false;
 
             return bi1.Equals(bi2);
         }
 
-        public static bool operator ==(BigInteger bi1, uint bi2)
-        {
-            return bi1 == (BigInteger)bi2;
-        }
+        public static bool operator ==(BigInteger bi1, uint bi2) => bi1 == (BigInteger)bi2;
 
-        public static bool operator ==(BigInteger bi1, int bi2)
-        {
-            return bi1 == (BigInteger)bi2;
-        }
+        public static bool operator ==(BigInteger bi1, int bi2) => bi1 == (BigInteger)bi2;
 
-        public static bool operator ==(BigInteger bi1, long bi2)
-        {
-            return bi1 == (BigInteger)bi2;
-        }
+        public static bool operator ==(BigInteger bi1, long bi2) => bi1 == (BigInteger)bi2;
 
-        public static bool operator ==(BigInteger bi1, ulong bi2)
-        {
-            return bi1 == (BigInteger)bi2;
-        }
+        public static bool operator ==(BigInteger bi1, ulong bi2) => bi1 == (BigInteger)bi2;
 
-        public static bool operator !=(BigInteger bi1, BigInteger bi2)
-        {
-            if (bi1 is null && bi2 is null)
-                return false;
-            else if (bi1 is null || bi2 is null)
-                return true;
-            else
-                return !(bi1.Equals(bi2));
-        }
+        public static bool operator !=(BigInteger bi1, BigInteger bi2) => (bi1 is not null || bi2 is not null) && (bi1 is null || bi2 is null || !bi1.Equals(bi2));
 
-        public static bool operator !=(BigInteger bi1, uint bi2)
-        {
-            return bi1 != (BigInteger)bi2;
-        }
+        public static bool operator !=(BigInteger bi1, uint bi2) => bi1 != (BigInteger)bi2;
 
-        public static bool operator !=(BigInteger bi1, int bi2)
-        {
-            return bi1 != (BigInteger)bi2;
-        }
+        public static bool operator !=(BigInteger bi1, int bi2) => bi1 != (BigInteger)bi2;
 
-        public static bool operator !=(BigInteger bi1, long bi2)
-        {
-            return bi1 != (BigInteger)bi2;
-        }
+        public static bool operator !=(BigInteger bi1, long bi2) => bi1 != (BigInteger)bi2;
 
-        public static bool operator !=(BigInteger bi1, ulong bi2)
-        {
-            return bi1 != (BigInteger)bi2;
-        }
+        public static bool operator !=(BigInteger bi1, ulong bi2) => bi1 != (BigInteger)bi2;
 
         public override bool Equals(object? o)
         {
-            var bi = o as BigInteger;
-
-            if (bi is null)
+            if (o is not BigInteger bi)
                 return false;
 
             if (DataLength != bi.DataLength)
@@ -1448,35 +1315,16 @@ namespace WrathForged.Common.Cryptography
             for (pos = len - 1; pos >= 0 && bi1._data[pos] == bi2._data[pos]; pos--)
                 ;
 
-            if (pos >= 0)
-            {
-                if (bi1._data[pos] > bi2._data[pos])
-                    return true;
-                return false;
-            }
-
-            return false;
+            return pos >= 0 && bi1._data[pos] > bi2._data[pos];
         }
 
-        public static bool operator >(BigInteger bi1, long bi2)
-        {
-            return bi1 > (BigInteger)bi2;
-        }
+        public static bool operator >(BigInteger bi1, long bi2) => bi1 > (BigInteger)bi2;
 
-        public static bool operator >(BigInteger bi1, ulong bi2)
-        {
-            return bi1 > (BigInteger)bi2;
-        }
+        public static bool operator >(BigInteger bi1, ulong bi2) => bi1 > (BigInteger)bi2;
 
-        public static bool operator >(BigInteger bi1, int bi2)
-        {
-            return bi1 > (BigInteger)bi2;
-        }
+        public static bool operator >(BigInteger bi1, int bi2) => bi1 > (BigInteger)bi2;
 
-        public static bool operator >(BigInteger bi1, uint bi2)
-        {
-            return bi1 > (BigInteger)bi2;
-        }
+        public static bool operator >(BigInteger bi1, uint bi2) => bi1 > (BigInteger)bi2;
 
         public static bool operator <(BigInteger bi1, BigInteger bi2)
         {
@@ -1495,85 +1343,36 @@ namespace WrathForged.Common.Cryptography
             for (pos = len - 1; pos >= 0 && bi1._data[pos] == bi2._data[pos]; pos--)
                 ;
 
-            if (pos >= 0)
-            {
-                if (bi1._data[pos] < bi2._data[pos])
-                    return true;
-                return false;
-            }
-
-            return false;
+            return pos >= 0 && bi1._data[pos] < bi2._data[pos];
         }
 
-        public static bool operator <(BigInteger bi1, long bi2)
-        {
-            return bi1 < (BigInteger)bi2;
-        }
+        public static bool operator <(BigInteger bi1, long bi2) => bi1 < (BigInteger)bi2;
 
-        public static bool operator <(BigInteger bi1, ulong bi2)
-        {
-            return bi1 < (BigInteger)bi2;
-        }
+        public static bool operator <(BigInteger bi1, ulong bi2) => bi1 < (BigInteger)bi2;
 
-        public static bool operator <(BigInteger bi1, int bi2)
-        {
-            return bi1 < (BigInteger)bi2;
-        }
+        public static bool operator <(BigInteger bi1, int bi2) => bi1 < (BigInteger)bi2;
 
-        public static bool operator <(BigInteger bi1, uint bi2)
-        {
-            return bi1 < (BigInteger)bi2;
-        }
+        public static bool operator <(BigInteger bi1, uint bi2) => bi1 < (BigInteger)bi2;
 
-        public static bool operator >=(BigInteger bi1, BigInteger bi2)
-        {
-            return (bi1 == bi2 || bi1 > bi2);
-        }
+        public static bool operator >=(BigInteger bi1, BigInteger bi2) => bi1 == bi2 || bi1 > bi2;
 
-        public static bool operator >=(BigInteger bi1, long bi2)
-        {
-            return bi1 >= (BigInteger)bi2;
-        }
+        public static bool operator >=(BigInteger bi1, long bi2) => bi1 >= (BigInteger)bi2;
 
-        public static bool operator >=(BigInteger bi1, ulong bi2)
-        {
-            return bi1 >= (BigInteger)bi2;
-        }
+        public static bool operator >=(BigInteger bi1, ulong bi2) => bi1 >= (BigInteger)bi2;
 
-        public static bool operator >=(BigInteger bi1, int bi2)
-        {
-            return bi1 >= (BigInteger)bi2;
-        }
+        public static bool operator >=(BigInteger bi1, int bi2) => bi1 >= (BigInteger)bi2;
 
-        public static bool operator >=(BigInteger bi1, uint bi2)
-        {
-            return bi1 >= (BigInteger)bi2;
-        }
+        public static bool operator >=(BigInteger bi1, uint bi2) => bi1 >= (BigInteger)bi2;
 
-        public static bool operator <=(BigInteger bi1, BigInteger bi2)
-        {
-            return (bi1 == bi2 || bi1 < bi2);
-        }
+        public static bool operator <=(BigInteger bi1, BigInteger bi2) => bi1 == bi2 || bi1 < bi2;
 
-        public static bool operator <=(BigInteger bi1, long bi2)
-        {
-            return bi1 <= (BigInteger)bi2;
-        }
+        public static bool operator <=(BigInteger bi1, long bi2) => bi1 <= (BigInteger)bi2;
 
-        public static bool operator <=(BigInteger bi1, ulong bi2)
-        {
-            return bi1 <= (BigInteger)bi2;
-        }
+        public static bool operator <=(BigInteger bi1, ulong bi2) => bi1 <= (BigInteger)bi2;
 
-        public static bool operator <=(BigInteger bi1, int bi2)
-        {
-            return bi1 <= (BigInteger)bi2;
-        }
+        public static bool operator <=(BigInteger bi1, int bi2) => bi1 <= (BigInteger)bi2;
 
-        public static bool operator <=(BigInteger bi1, uint bi2)
-        {
-            return bi1 <= (BigInteger)bi2;
-        }
+        public static bool operator <=(BigInteger bi1, uint bi2) => bi1 <= (BigInteger)bi2;
 
         #endregion Overloading of comparison operators
 
@@ -1583,55 +1382,31 @@ namespace WrathForged.Common.Cryptography
         // Returns max(this, bi)
         //***********************************************************************
 
-        public BigInteger Max(BigInteger bi)
-        {
-            if (this > bi)
-                return (new BigInteger(this));
-            else
-                return (new BigInteger(bi));
-        }
+        public BigInteger Max(BigInteger bi) => this > bi ? new BigInteger(this) : new BigInteger(bi);
 
         //***********************************************************************
         // Returns min(this, bi)
         //***********************************************************************
 
-        public BigInteger Min(BigInteger bi)
-        {
-            if (this < bi)
-                return (new BigInteger(this));
-            else
-                return (new BigInteger(bi));
-        }
+        public BigInteger Min(BigInteger bi) => this < bi ? new BigInteger(this) : new BigInteger(bi);
 
         //***********************************************************************
         // Returns the absolute value
         //***********************************************************************
 
-        public BigInteger Abs()
-        {
-            if ((_data[MAX_LENGTH - 1] & 0x80000000) != 0)
-                return (-this);
-            else
-                return (new BigInteger(this));
-        }
+        public BigInteger Abs() => (_data[MAX_LENGTH - 1] & 0x80000000) != 0 ? -this : new BigInteger(this);
 
         #endregion Max, min, abs
 
         #region ToString, GetHashCode
 
-        public override int GetHashCode()
-        {
-            return ToString().GetHashCode();
-        }
+        public override int GetHashCode() => ToString().GetHashCode();
 
         //***********************************************************************
         // Returns a string representing the BigInteger in base 10.
         //***********************************************************************
 
-        public override string ToString()
-        {
-            return "0x" + ToString(16);
-        }
+        public override string ToString() => "0x" + ToString(16);
 
         //***********************************************************************
         // Returns a string representing the BigInteger in sign-and-magnitude
@@ -1646,8 +1421,8 @@ namespace WrathForged.Common.Cryptography
 
         public string ToString(int radix)
         {
-            if (radix < 2 || radix > 36)
-                throw (new ArgumentException("Radix must be >= 2 and <= 36"));
+            if (radix is < 2 or > 36)
+                throw new ArgumentException("Radix must be >= 2 and <= 36");
 
             var charSet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
             var result = "";
@@ -1672,17 +1447,16 @@ namespace WrathForged.Common.Cryptography
             var biRadix = new BigInteger(radix);
 
             if (a.DataLength == 1 && a._data[0] == 0)
+            {
                 result = "0";
+            }
             else
             {
                 while (a.DataLength > 1 || (a.DataLength == 1 && a._data[0] != 0))
                 {
                     SingleByteDivide(a, biRadix, quotient, remainder);
 
-                    if (remainder._data[0] < 10)
-                        result = remainder._data[0] + result;
-                    else
-                        result = charSet[(int)remainder._data[0] - 10] + result;
+                    result = remainder._data[0] < 10 ? remainder._data[0] + result : charSet[(int)remainder._data[0] - 10] + result;
 
                     a = quotient;
                 }
@@ -1729,7 +1503,7 @@ namespace WrathForged.Common.Cryptography
         public BigInteger ModPow(BigInteger exp, BigInteger n)
         {
             if ((exp._data[MAX_LENGTH - 1] & 0x80000000) != 0)
-                throw (new ArithmeticException("Positive exponents only."));
+                throw new ArithmeticException("Positive exponents only.");
 
             var resultNum = (BigInteger)1;
             BigInteger tempNum;
@@ -1741,7 +1515,9 @@ namespace WrathForged.Common.Cryptography
                 thisNegative = true;
             }
             else
+            {
                 tempNum = this % n; // ensures (tempNum * tempNum) < b^(2k)
+            }
 
             if ((n._data[MAX_LENGTH - 1] & 0x80000000) != 0) // negative n
                 n = -n;
@@ -1753,7 +1529,7 @@ namespace WrathForged.Common.Cryptography
             constant._data[i] = 0x00000001;
             constant.DataLength = i + 1;
 
-            constant = constant / n;
+            constant /= n;
             var totalBits = exp.BitCount();
             var count = 0;
 
@@ -1774,9 +1550,7 @@ namespace WrathForged.Common.Cryptography
 
                     if (tempNum.DataLength == 1 && tempNum._data[0] == 1)
                     {
-                        if (thisNegative && (exp._data[0] & 0x1) != 0) //odd exp
-                            return -resultNum;
-                        return resultNum;
+                        return thisNegative && (exp._data[0] & 0x1) != 0 ? -resultNum : resultNum;
                     }
 
                     count++;
@@ -1785,10 +1559,7 @@ namespace WrathForged.Common.Cryptography
                 }
             }
 
-            if (thisNegative && (exp._data[0] & 0x1) != 0) //odd exp
-                return -resultNum;
-
-            return resultNum;
+            return thisNegative && (exp._data[0] & 0x1) != 0 ? -resultNum : resultNum;
         }
 
         //***********************************************************************
@@ -1850,7 +1621,7 @@ namespace WrathForged.Common.Cryptography
                                 r2._data[t] + mcarry;
 
                     r2._data[t] = (uint)(val & 0xFFFFFFFF);
-                    mcarry = (val >> 32);
+                    mcarry = val >> 32;
                 }
 
                 if (t < kPlusOne)
@@ -1885,15 +1656,9 @@ namespace WrathForged.Common.Cryptography
             BigInteger x;
             BigInteger y;
 
-            if ((_data[MAX_LENGTH - 1] & 0x80000000) != 0) // negative
-                x = -this;
-            else
-                x = this;
+            x = (_data[MAX_LENGTH - 1] & 0x80000000) != 0 ? -this : this;
 
-            if ((bi._data[MAX_LENGTH - 1] & 0x80000000) != 0) // negative
-                y = -bi;
-            else
-                y = bi;
+            y = (bi._data[MAX_LENGTH - 1] & 0x80000000) != 0 ? -bi : bi;
 
             var g = y;
 
@@ -1920,7 +1685,7 @@ namespace WrathForged.Common.Cryptography
                 dwords++;
 
             if (dwords > MAX_LENGTH)
-                throw (new ArithmeticException("Number of required bits > maxLength."));
+                throw new ArithmeticException("Number of required bits > maxLength.");
 
             for (var i = 0; i < dwords; i++)
                 _data[i] = (uint)(rand.NextDouble() * 0x100000000);
@@ -1937,7 +1702,9 @@ namespace WrathForged.Common.Cryptography
                 _data[dwords - 1] &= mask;
             }
             else
+            {
                 _data[dwords - 1] |= 0x80000000;
+            }
 
             DataLength = dwords;
 
@@ -1970,7 +1737,7 @@ namespace WrathForged.Common.Cryptography
                 mask >>= 1;
             }
 
-            bits += ((DataLength - 1) << 5);
+            bits += (DataLength - 1) << 5;
 
             return bits;
         }
@@ -2000,18 +1767,14 @@ namespace WrathForged.Common.Cryptography
 
         public bool FermatLittleTest(int confidence)
         {
-            BigInteger thisVal;
-            if ((_data[MAX_LENGTH - 1] & 0x80000000) != 0) // negative
-                thisVal = -this;
-            else
-                thisVal = this;
+            var thisVal = (_data[MAX_LENGTH - 1] & 0x80000000) != 0 ? -this : this;
 
             if (thisVal.DataLength == 1)
             {
                 // test small numbers
-                if (thisVal._data[0] == 0 || thisVal._data[0] == 1)
+                if (thisVal._data[0] is 0 or 1)
                     return false;
-                else if (thisVal._data[0] == 2 || thisVal._data[0] == 3)
+                else if (thisVal._data[0] is 2 or 3)
                     return true;
             }
 
@@ -2020,7 +1783,7 @@ namespace WrathForged.Common.Cryptography
 
             var bits = thisVal.BitCount();
             var a = new BigInteger();
-            var p_sub1 = thisVal - (new BigInteger(1));
+            var p_sub1 = thisVal - new BigInteger(1);
             var rand = new Random();
 
             for (var round = 0; round < confidence; round++)
@@ -2089,18 +1852,14 @@ namespace WrathForged.Common.Cryptography
 
         public bool RabinMillerTest(int confidence)
         {
-            BigInteger thisVal;
-            if ((_data[MAX_LENGTH - 1] & 0x80000000) != 0) // negative
-                thisVal = -this;
-            else
-                thisVal = this;
+            var thisVal = (_data[MAX_LENGTH - 1] & 0x80000000) != 0 ? -this : this;
 
             if (thisVal.DataLength == 1)
             {
                 // test small numbers
-                if (thisVal._data[0] == 0 || thisVal._data[0] == 1)
+                if (thisVal._data[0] is 0 or 1)
                     return false;
-                else if (thisVal._data[0] == 2 || thisVal._data[0] == 3)
+                else if (thisVal._data[0] is 2 or 3)
                     return true;
             }
 
@@ -2108,7 +1867,7 @@ namespace WrathForged.Common.Cryptography
                 return false;
 
             // calculate values of s and t
-            var p_sub1 = thisVal - (new BigInteger(1));
+            var p_sub1 = thisVal - new BigInteger(1);
             var s = 0;
 
             for (var index = 0; index < p_sub1.DataLength; index++)
@@ -2182,7 +1941,7 @@ namespace WrathForged.Common.Cryptography
                         break;
                     }
 
-                    b = (b * b) % thisVal;
+                    b = b * b % thisVal;
                 }
 
                 if (result == false)
@@ -2214,18 +1973,14 @@ namespace WrathForged.Common.Cryptography
 
         public bool SolovayStrassenTest(int confidence)
         {
-            BigInteger thisVal;
-            if ((_data[MAX_LENGTH - 1] & 0x80000000) != 0) // negative
-                thisVal = -this;
-            else
-                thisVal = this;
+            var thisVal = (_data[MAX_LENGTH - 1] & 0x80000000) != 0 ? -this : this;
 
             if (thisVal.DataLength == 1)
             {
                 // test small numbers
-                if (thisVal._data[0] == 0 || thisVal._data[0] == 1)
+                if (thisVal._data[0] is 0 or 1)
                     return false;
-                else if (thisVal._data[0] == 2 || thisVal._data[0] == 3)
+                else if (thisVal._data[0] is 2 or 3)
                     return true;
             }
 
@@ -2301,25 +2056,18 @@ namespace WrathForged.Common.Cryptography
 
         public bool LucasStrongTest()
         {
-            BigInteger thisVal;
-            if ((_data[MAX_LENGTH - 1] & 0x80000000) != 0) // negative
-                thisVal = -this;
-            else
-                thisVal = this;
+            var thisVal = (_data[MAX_LENGTH - 1] & 0x80000000) != 0 ? -this : this;
 
             if (thisVal.DataLength == 1)
             {
                 // test small numbers
-                if (thisVal._data[0] == 0 || thisVal._data[0] == 1)
+                if (thisVal._data[0] is 0 or 1)
                     return false;
-                else if (thisVal._data[0] == 2 || thisVal._data[0] == 3)
+                else if (thisVal._data[0] is 2 or 3)
                     return true;
             }
 
-            if ((thisVal._data[0] & 0x1) == 0) // even numbers
-                return false;
-
-            return LucasStrongTestHelper(thisVal);
+            return (thisVal._data[0] & 0x1) != 0 && LucasStrongTestHelper(thisVal);
         }
 
         private static bool LucasStrongTestHelper(BigInteger thisVal)
@@ -2337,7 +2085,9 @@ namespace WrathForged.Common.Cryptography
                 var Jresult = Jacobi((BigInteger)D, thisVal);
 
                 if (Jresult == -1)
+                {
                     done = true; // J(D, this) = 1
+                }
                 else
                 {
                     if (Jresult == 0 && thisVal > Math.Abs(D)) // divisor found
@@ -2399,7 +2149,7 @@ namespace WrathForged.Common.Cryptography
             constant._data[nLen] = 0x00000001;
             constant.DataLength = nLen + 1;
 
-            constant = constant / thisVal;
+            constant /= thisVal;
 
             var lucas =
                 LucasSequenceHelper((BigInteger)1, (BigInteger)Q, t, thisVal,
@@ -2423,7 +2173,7 @@ namespace WrathForged.Common.Cryptography
 
                     //lucas[1] = ((lucas[1] * lucas[1]) - (lucas[2] << 1)) % thisVal;
 
-                    if ((lucas[1].DataLength == 1 && lucas[1]._data[0] == 0))
+                    if (lucas[1].DataLength == 1 && lucas[1]._data[0] == 0)
                         isPrime = true;
                 }
 
@@ -2441,7 +2191,7 @@ namespace WrathForged.Common.Cryptography
                     if ((lucas[2]._data[MAX_LENGTH - 1] & 0x80000000) != 0)
                         lucas[2] += thisVal;
 
-                    var temp = (Q * Jacobi((BigInteger)Q, thisVal)) % thisVal;
+                    var temp = Q * Jacobi((BigInteger)Q, thisVal) % thisVal;
                     if ((temp._data[MAX_LENGTH - 1] & 0x80000000) != 0)
                         temp += thisVal;
 
@@ -2463,11 +2213,7 @@ namespace WrathForged.Common.Cryptography
 
         public bool IsProbablePrime(int confidence)
         {
-            BigInteger thisVal;
-            if ((_data[MAX_LENGTH - 1] & 0x80000000) != 0) // negative
-                thisVal = -this;
-            else
-                thisVal = this;
+            var thisVal = (_data[MAX_LENGTH - 1] & 0x80000000) != 0 ? -this : this;
 
             // test for divisibility by primes < 2000
             for (var p = 0; p < PrimesBelow2000.Length; p++)
@@ -2489,7 +2235,9 @@ namespace WrathForged.Common.Cryptography
             }
 
             if (thisVal.RabinMillerTest(confidence))
+            {
                 return true;
+            }
             else
             {
                 //Console.WriteLine("Not prime!  Failed primality test\n");
@@ -2521,18 +2269,14 @@ namespace WrathForged.Common.Cryptography
 
         public bool IsProbablePrime()
         {
-            BigInteger thisVal;
-            if ((_data[MAX_LENGTH - 1] & 0x80000000) != 0) // negative
-                thisVal = -this;
-            else
-                thisVal = this;
+            var thisVal = (_data[MAX_LENGTH - 1] & 0x80000000) != 0 ? -this : this;
 
             if (thisVal.DataLength == 1)
             {
                 // test small numbers
-                if (thisVal._data[0] == 0 || thisVal._data[0] == 1)
+                if (thisVal._data[0] is 0 or 1)
                     return false;
-                else if (thisVal._data[0] == 2 || thisVal._data[0] == 3)
+                else if (thisVal._data[0] is 2 or 3)
                     return true;
             }
 
@@ -2560,7 +2304,7 @@ namespace WrathForged.Common.Cryptography
             // Perform BASE 2 Rabin-Miller Test
 
             // calculate values of s and t
-            var p_sub1 = thisVal - (new BigInteger(1));
+            var p_sub1 = thisVal - new BigInteger(1);
             var s = 0;
 
             for (var index = 0; index < p_sub1.DataLength; index++)
@@ -2599,7 +2343,7 @@ namespace WrathForged.Common.Cryptography
                     break;
                 }
 
-                b = (b * b) % thisVal;
+                b = b * b % thisVal;
             }
 
             // if number is strong pseudoprime to base 2, then do a strong lucas test
@@ -2660,28 +2404,19 @@ namespace WrathForged.Common.Cryptography
 
         #endregion Primality generation
 
-        public byte LeastSignificantByte()
-        {
-            return ByteValue();
-        }
+        public byte LeastSignificantByte() => ByteValue();
 
         //***********************************************************************
         // Returns the lowest byte of the BigInteger as a byte.
         //***********************************************************************
 
-        public byte ByteValue()
-        {
-            return (byte)_data[0];
-        }
+        public byte ByteValue() => (byte)_data[0];
 
         //***********************************************************************
         // Returns the lowest 4 bytes of the BigInteger as an int.
         //***********************************************************************
 
-        public int IntValue()
-        {
-            return (int)_data[0];
-        }
+        public int IntValue() => (int)_data[0];
 
         //***********************************************************************
         // Returns the lowest 8 bytes of the BigInteger as a long.
@@ -2715,7 +2450,7 @@ namespace WrathForged.Common.Cryptography
         {
             // Jacobi defined only for odd integers
             if ((b._data[0] & 0x1) == 0)
-                throw (new ArgumentException("Jacobi defined only for odd integers."));
+                throw new ArgumentException("Jacobi defined only for odd integers.");
 
             if (a >= b)
                 a %= b;
@@ -2726,10 +2461,7 @@ namespace WrathForged.Common.Cryptography
 
             if (a < 0)
             {
-                if ((((b - 1)._data[0]) & 0x2) == 0) //if( (((b-1) >> 1).data[0] & 0x1) == 0)
-                    return Jacobi(-a, b);
-                else
-                    return -Jacobi(-a, b);
+                return (((b - 1)._data[0]) & 0x2) == 0 ? Jacobi(-a, b) : -Jacobi(-a, b);
             }
 
             var e = 0;
@@ -2759,10 +2491,7 @@ namespace WrathForged.Common.Cryptography
             if ((b._data[0] & 0x3) == 3 && (a1._data[0] & 0x3) == 3)
                 s = -s;
 
-            if (a1.DataLength == 1 && a1._data[0] == 1)
-                return s;
-            else
-                return (s * Jacobi(b % a1, a1));
+            return a1.DataLength == 1 && a1._data[0] == 1 ? s : s * Jacobi(b % a1, a1);
         }
 
         //***********************************************************************
@@ -2817,9 +2546,9 @@ namespace WrathForged.Common.Cryptography
             }
 
             if (r[0].DataLength > 1 || (r[0].DataLength == 1 && r[0]._data[0] != 1))
-                throw (new ArithmeticException("No inverse!"));
+                throw new ArithmeticException("No inverse!");
 
-            var result = ((p[0] - (p[1] * q[0])) % modulus);
+            var result = (p[0] - (p[1] * q[0])) % modulus;
 
             if ((result._data[MAX_LENGTH - 1] & 0x80000000) != 0)
                 result += modulus; // get the least positive modulus
@@ -2865,9 +2594,9 @@ namespace WrathForged.Common.Cryptography
             {
                 for (var b = 0; b < 4; b++)
                 {
-                    if (i * 4 + b >= realNumBytes)
+                    if ((i * 4) + b >= realNumBytes)
                         return result;
-                    result[i * 4 + b] = (byte)(_data[i] >> (b * 8) & 0xff);
+                    result[(i * 4) + b] = (byte)((_data[i] >> (b * 8)) & 0xff);
                 }
             }
 
@@ -2878,16 +2607,11 @@ namespace WrathForged.Common.Cryptography
         {
             for (var i = 0; i < length / 2; i++)
             {
-                var temp = buffer[i];
-                buffer[i] = buffer[length - i - 1];
-                buffer[length - i - 1] = temp;
+                (buffer[length - i - 1], buffer[i]) = (buffer[i], buffer[length - i - 1]);
             }
         }
 
-        protected static void Reverse<T>(T[] buffer)
-        {
-            Reverse(buffer, buffer.Length);
-        }
+        protected static void Reverse<T>(T[] buffer) => Reverse(buffer, buffer.Length);
 
         public byte[] GetBytesBE(int numBytes)
         {
@@ -2953,7 +2677,7 @@ namespace WrathForged.Common.Cryptography
             if ((numBits & 0x1) != 0) // odd number of bits
                 numBits = (numBits >> 1) + 1;
             else
-                numBits = (numBits >> 1);
+                numBits >>= 1;
 
             var bytePos = numBits >> 5;
             var bitPos = (byte)(numBits & 0x1F);
@@ -2962,7 +2686,9 @@ namespace WrathForged.Common.Cryptography
 
             var result = new BigInteger();
             if (bitPos == 0)
+            {
                 mask = 0x80000000;
+            }
             else
             {
                 mask = (uint)1 << bitPos;
@@ -3044,7 +2770,7 @@ namespace WrathForged.Common.Cryptography
             constant._data[nLen] = 0x00000001;
             constant.DataLength = nLen + 1;
 
-            constant = constant / n;
+            constant /= n;
 
             // calculate values of s and t
             var s = 0;
@@ -3086,7 +2812,7 @@ namespace WrathForged.Common.Cryptography
             var result = new BigInteger[3];
 
             if ((k._data[0] & 0x00000001) == 0)
-                throw (new ArgumentException("Argument k must be odd."));
+                throw new ArgumentException("Argument k must be odd.");
 
             var numbits = k.BitCount();
             var mask = (uint)0x1 << ((numbits & 0x1F) - 1);
@@ -3111,7 +2837,7 @@ namespace WrathForged.Common.Cryptography
                     {
                         // index doubling with addition
 
-                        u1 = (u1 * v1) % n;
+                        u1 = u1 * v1 % n;
 
                         v = ((v * v1) - (P * Q_k)) % n;
                         v1 = BarrettReduction(v1 * v1, n, constant);
@@ -3122,7 +2848,7 @@ namespace WrathForged.Common.Cryptography
                         else
                             Q_k = BarrettReduction(Q_k * Q_k, n, constant);
 
-                        Q_k = (Q_k * Q) % n;
+                        Q_k = Q_k * Q % n;
                     }
                     else
                     {
@@ -3139,7 +2865,9 @@ namespace WrathForged.Common.Cryptography
                             flag = false;
                         }
                         else
+                        {
                             Q_k = BarrettReduction(Q_k * Q_k, n, constant);
+                        }
                     }
 
                     mask >>= 1;
@@ -3158,12 +2886,12 @@ namespace WrathForged.Common.Cryptography
             else
                 Q_k = BarrettReduction(Q_k * Q_k, n, constant);
 
-            Q_k = (Q_k * Q) % n;
+            Q_k = Q_k * Q % n;
 
             for (var i = 0; i < s; i++)
             {
                 // index doubling
-                u1 = (u1 * v) % n;
+                u1 = u1 * v % n;
                 v = ((v * v) - (Q_k << 1)) % n;
 
                 if (flag)
@@ -3172,7 +2900,9 @@ namespace WrathForged.Common.Cryptography
                     flag = false;
                 }
                 else
+                {
                     Q_k = BarrettReduction(Q_k * Q_k, n, constant);
+                }
             }
 
             result[0] = u1;
@@ -3180,41 +2910,6 @@ namespace WrathForged.Common.Cryptography
             result[2] = Q_k;
 
             return result;
-        }
-    }
-
-    [GeneratedCode("System.Runtime.Serialization", "3.0.0.0")]
-    public partial class BigInteger : object, ISerializable
-    {
-        private SerializationInfo _info;
-
-        public BigInteger(SerializationInfo info, StreamingContext context)
-        {
-            this._info = info;
-        }
-
-        public SerializationInfo SerializationInfo
-        {
-            get { return _info; }
-            set { _info = value; }
-        }
-
-        public void GetObjectData(SerializationInfo info, StreamingContext context)
-        {
-            if ((SerializationInfo == null))
-            {
-                return;
-            }
-
-            var enumerator = SerializationInfo.GetEnumerator();
-            for (
-                ;
-                enumerator.MoveNext();
-                )
-            {
-                var entry = enumerator.Current;
-                info.AddValue(entry.Name, entry.Value);
-            }
         }
     }
 }

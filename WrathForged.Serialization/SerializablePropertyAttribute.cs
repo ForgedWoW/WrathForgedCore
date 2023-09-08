@@ -6,10 +6,7 @@ namespace WrathForged.Serialization
 {
     public class SerializablePropertyAttribute : Attribute
     {
-        public SerializablePropertyAttribute(uint index)
-        {
-            Index = index;
-        }
+        public SerializablePropertyAttribute(uint index) => Index = index;
 
         /// <summary>
         ///     The index of the property in the serialized stream.

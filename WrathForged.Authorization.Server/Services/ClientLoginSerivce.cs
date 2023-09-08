@@ -73,6 +73,7 @@ namespace WrathForged.Authorization.Server.Services
 
             _logger.Debug("Login attempt for {Identity} from {Address}. Assigning session token.", authLogonChallenge.Identity, session.ClientSocket.IPEndPoint.Address);
             session.Account = account;
+            session.PasswordAuthenticator = new PasswordAuthenticator(new SecureRemotePassword(account.Username, account.SessionKeyAuth, true));
             session.SessionKey = _randomUtilities.RandomBytes(16);
             session.State = WoWClientSession.AuthState.AwaitingCredentials;
         }
