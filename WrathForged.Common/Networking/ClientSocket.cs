@@ -130,7 +130,7 @@ namespace WrathForged.Common.Networking
                 catch (Exception ex)
                 {
                     Disconnect();
-                    _logger.Error(ex, "Error while reading from client");
+                    _logger.Debug(ex, "Error while reading from client");
                     break;
                 }
             }
@@ -151,7 +151,7 @@ namespace WrathForged.Common.Networking
                     }
                     catch (Exception ex)
                     {
-                        _logger.Error(ex, "Error while sending data to client");
+                        _logger.Debug(ex, "Error while sending data to client");
                         Disconnect();
                     }
                 }
@@ -164,7 +164,7 @@ namespace WrathForged.Common.Networking
                     }
                     catch (Exception ex)
                     {
-                        _logger.Error(ex, "Error while sending data to client");
+                        _logger.Debug(ex, "Error while sending data to client");
                         Disconnect();
                     }
                 }
