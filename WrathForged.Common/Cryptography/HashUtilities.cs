@@ -1,9 +1,9 @@
 ﻿// Copyright (c) Forged WoW LLC <https://github.com/ForgedWoW/WrathForgedCore>
 // Licensed under GPL-3.0 license. See <https://github.com/ForgedWoW/WrathForgedCore/blob/master/LICENSE> for full information.
 
+using System.Numerics;
 using System.Security.Cryptography;
 using System.Text;
-using WrathForged.Models.Cryptography;
 
 namespace WrathForged.Common.Cryptography
 {
@@ -48,14 +48,14 @@ namespace WrathForged.Common.Cryptography
             /// </summary>
             /// <param name="integer">the data to broker</param>
             /// <returns>a HashDataBroker object representing the original data</returns>
-            public static implicit operator HashDataBroker(BigInteger integer) => new(integer.GetBytes());
+            public static implicit operator HashDataBroker(BigInteger integer) => new(integer.ToByteArray());
 
             /// <summary>
             /// Implicit operator for uint->HashDataBroker casts
             /// </summary>
             /// <param name="integer">the data to broker</param>
             /// <returns>a HashDataBroker object representing the original data</returns>
-            public static implicit operator HashDataBroker(uint integer) => new(new BigInteger(integer).GetBytes());
+            public static implicit operator HashDataBroker(uint integer) => new(new BigInteger(integer).ToByteArray());
         }
 
         /// <summary>

@@ -55,7 +55,7 @@ namespace WrathForged.Common.Networking
                 return;
 
             _clientSessions[clientSocket].PacketBuffer.Dispose();
-            _clientSessions.Remove(clientSocket);
+            _ = _clientSessions.Remove(clientSocket);
             _connectionCounter.Add(-1);
         }
 
@@ -114,16 +114,16 @@ namespace WrathForged.Common.Networking
                     else
                     {
                         var bufferSpan = session.PacketBuffer.GetBuffer().Span.Slice(currentBufferPosition, HEADER_SIZE);
-                        packetLength = bufferSpan[0] << 8 | bufferSpan[1];
+                        packetLength = (bufferSpan[0] << 8) | bufferSpan[1];
 
                         // the opcode is actually 4 bytes, but can never go over 2, so we skip the last 2
-                        packetId = new PacketId((bufferSpan[2] | bufferSpan[3] << 8), _packetScope);
+                        packetId = new PacketId(bufferSpan[2] | (bufferSpan[3] << 8), _packetScope);
                         headerSize = HEADER_SIZE;
                     }
 
                     if (!session.PacketBuffer.CanReadLength(packetLength))
                     {
-                        if (session.IsEncrypted)
+                        if (session.IsEncrypted && session.PacketEncryption != null)
                             session.PacketEncryption.DecryptUntil = headerSize;
 
                         return;
@@ -134,7 +134,9 @@ namespace WrathForged.Common.Networking
                 var result = _forgedModelDeserialization.TryDeserialize(_packetScope, packetId.Id, session.PacketBuffer, out var packet);
 
                 if (result == DeserializationResult.Success && packet != null)
+                {
                     _packetRouter.Route(session, packetId, packet);
+                }
                 else
                 {
                     if (result == DeserializationResult.EndOfStream)
@@ -151,7 +153,7 @@ namespace WrathForged.Common.Networking
         {
             if (!_clientSessions.TryGetValue(client, out var session))
             {
-                session = new WoWClientSession(client, new PacketBuffer(), _logger);
+                session = new WoWClientSession(client, new PacketBuffer(_logger), _logger);
                 _clientSessions[client] = session;
             }
 

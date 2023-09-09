@@ -103,6 +103,8 @@ namespace WrathForged.Common.Threading
             }
         }
 
+#pragma warning disable CS8618
+
         private class ScheduledAction
         {
             public Action Action { get; set; }

@@ -1,5 +1,7 @@
 ﻿// Copyright (c) Forged WoW LLC <https://github.com/ForgedWoW/WrathForgedCore>
 // Licensed under GPL-3.0 license. See <https://github.com/ForgedWoW/WrathForgedCore/blob/master/LICENSE> for full information.
+using Serilog;
+
 namespace WrathForged.Common.Networking;
 
 public class PacketBuffer : IDisposable
@@ -7,12 +9,12 @@ public class PacketBuffer : IDisposable
     private readonly MemoryStream _internalStream;
     private bool _disposedValue;
 
-    public BinaryReader Reader { get; }
+    public PrimitiveReader Reader { get; }
 
-    public PacketBuffer()
+    public PacketBuffer(ILogger logger)
     {
         _internalStream = new MemoryStream();
-        Reader = new BinaryReader(_internalStream);
+        Reader = new PrimitiveReader(_internalStream, logger);
     }
 
     public void AppendData(byte[] data)
@@ -39,15 +41,9 @@ public class PacketBuffer : IDisposable
         _internalStream.Position = 0; // Reset position for reading
     }
 
-    public bool CanReadLength(int length)
-    {
-        return (_internalStream.Length - _internalStream.Position) >= length;
-    }
+    public bool CanReadLength(int length) => (_internalStream.Length - _internalStream.Position) >= length;
 
-    public Memory<byte> GetBuffer()
-    {
-        return new Memory<byte>(_internalStream.GetBuffer(), 0, (int)_internalStream.Length);
-    }
+    public Memory<byte> GetBuffer() => new(_internalStream.GetBuffer(), 0, (int)_internalStream.Length);
 
     public void Clear()
     {

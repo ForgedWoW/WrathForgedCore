@@ -1,7 +1,9 @@
 ﻿// Copyright (c) Forged WoW LLC <https://github.com/ForgedWoW/WrathForgedCore>
 // Licensed under GPL-3.0 license. See <https://github.com/ForgedWoW/WrathForgedCore/blob/master/LICENSE> for full information.
+using System.Security.Cryptography;
 using System.Text;
 using WrathForged.Common.Networking;
+using WrathForged.Models.Auth;
 
 namespace WrathForged.Common.Cryptography
 {
@@ -22,7 +24,7 @@ namespace WrathForged.Common.Cryptography
         {
             get;
             set;
-        }
+        } = new byte[0];
 
         /// <summary>
         /// Writes the server's challenge.
@@ -43,45 +45,50 @@ namespace WrathForged.Common.Cryptography
         /// </summary>
         /// <param name="packet">the packet to read from</param>
         /// <returns>true if the client proof matches; false otherwise</returns>
-        public bool IsClientProofValid(PacketIn packet)
+        public bool IsClientProofValid(PrimitiveReader packet)
         {
             SRP.PublicEphemeralValueA = packet.ReadBigInteger(32);
 
-            BigInteger proof = packet.ReadBigInteger(20);
+            var proof = packet.ReadBigInteger(20);
 
             // SHA1 of PublicEphemeralValueA and the 16 random bytes sent in
             // AUTH_LOGON_CHALLENGE from the server
-            byte[] arr = packet.ReadBytes(20);
+            _ = packet.ReadBytes(20);
 
-            byte keyCount = packet.ReadByte();
+            var keyCount = packet.ReadByte();
             for (var i = 0; i < keyCount; i++)
             {
-                ushort keyUnk1 = packet.ReadUInt16();
-                uint keyUnk2 = packet.ReadUInt32();
-                byte[] keyUnkArray = packet.ReadBytes(4);
+                _ = packet.ReadUInt16();
+
+                _ = packet.ReadUInt32();
+
+                _ = packet.ReadBytes(4);
+
                 // sha of the SRP's PublicEphemeralValueA, PublicEphemeralValueB,
                 // and 20 unknown bytes
-                byte[] keyUnkSha = packet.ReadBytes(20);
+                _ = packet.ReadBytes(20);
             }
 
-            byte securityFlags = packet.ReadByte();
+            var securityFlags = packet.ReadByte();
 
             if ((securityFlags & 1) != 0)
             {
                 // PIN
-                byte[] pinRandom = packet.ReadBytes(16);
-                byte[] pinSha = packet.ReadBytes(20);
+                _ = packet.ReadBytes(16);
+
+                _ = packet.ReadBytes(20);
             }
 
             if ((securityFlags & 2) != 0)
             {
-                byte[] security2Buf = packet.ReadBytes(20);
+                _ = packet.ReadBytes(20);
             }
 
             if ((securityFlags & 4) != 0)
             {
-                byte arrLen = packet.ReadByte();
-                byte[] security4Buf = packet.ReadBytes(arrLen);
+                var arrLen = packet.ReadByte();
+
+                _ = packet.ReadBytes(arrLen);
             }
 
             return SRP.IsClientProofValid(proof);
@@ -104,24 +111,25 @@ namespace WrathForged.Common.Cryptography
             packet.Write(0L);
         }
 
-        public bool IsReconnectProofValid(PacketIn packet, AuthenticationInfo authInfo)
+        public bool IsReconnectProofValid(PrimitiveReader packet, AuthenticationInfo authInfo)
         {
             //md5 hash of account name and secure random
-            byte[] md5Hash = packet.ReadBytes(16);
+            var md5Hash = packet.ReadBytes(16);
 
             //byte[20] sha1 hash of accountname, md5 from above, reconnectProof, byte[40] sessionkey
-            byte[] shaHash1 = packet.ReadBytes(20);
+            var shaHash1 = packet.ReadBytes(20);
+
             //byte[20] sha1 hash of md5 from above and byte[20] (all zero)
-            byte[] shaHash2 = packet.ReadBytes(20);
+            _ = packet.ReadBytes(20);
 
-            byte[] username = WCellConstants.DefaultEncoding.GetBytes(SRP.Username);
+            var username = Encoding.UTF8.GetBytes(SRP.Username);
 
-            var sha = new SHA1Managed();
-            sha.TransformBlock(username, 0, username.Length, username, 0);
-            sha.TransformBlock(md5Hash, 0, md5Hash.Length, md5Hash, 0);
-            sha.TransformBlock(ReconnectProof, 0, ReconnectProof.Length, ReconnectProof, 0);
-            sha.TransformBlock(authInfo.SessionKey, 0, authInfo.SessionKey.Length, authInfo.SessionKey, 0);
-            byte[] hash = sha.TransformFinalBlock(new byte[0], 0, 0);
+            var sha = SHA1.Create();
+            _ = sha.TransformBlock(username, 0, username.Length, username, 0);
+            _ = sha.TransformBlock(md5Hash, 0, md5Hash.Length, md5Hash, 0);
+            _ = sha.TransformBlock(ReconnectProof, 0, ReconnectProof.Length, ReconnectProof, 0);
+            _ = sha.TransformBlock(authInfo.SessionKey, 0, authInfo.SessionKey.Length, authInfo.SessionKey, 0);
+            var hash = sha.TransformFinalBlock(new byte[0], 0, 0);
 
             for (var i = 0; i < 20; i++)
             {

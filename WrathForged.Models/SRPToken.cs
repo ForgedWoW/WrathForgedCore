@@ -2,6 +2,8 @@
 // Licensed under GPL-3.0 license. See <https://github.com/ForgedWoW/WrathForgedCore/blob/master/LICENSE> for full information.
 using WrathForged.Serialization;
 
+#pragma warning disable CS8618
+
 namespace WrathForged.Models
 {
     /// <summary>
@@ -9,7 +11,7 @@ namespace WrathForged.Models
 	/// Review http://srp.stanford.edu/design.html for more information
 	/// </summary>
 	[ForgedSerializable]
-    public class SRPToken
+    public record SRPToken
     {
         /// <summary>
         /// Half of the ephemerial public key.

@@ -1,6 +1,7 @@
 ﻿// Copyright (c) Forged WoW LLC <https://github.com/ForgedWoW/WrathForgedCore>
 // Licensed under GPL-3.0 license. See <https://github.com/ForgedWoW/WrathForgedCore/blob/master/LICENSE> for full information.
 using System.Net;
+using System.Numerics;
 using Microsoft.Extensions.Configuration;
 using Serilog;
 using WrathForged.Authorization.Server.Validators;
@@ -33,7 +34,7 @@ namespace WrathForged.Authorization.Server.Services
         }
 
         [PacketHandler(Serialization.PacketScope.Auth, AuthServerOpCode.AUTH_LOGON_CHALLENGE)]
-        public void ChallangeRequest(WoWClientSession session, AuthLogonChallengeRequest authLogonChallenge)
+        public async void ChallangeRequest(WoWClientSession session, AuthLogonChallengeRequest authLogonChallenge)
         {
             using var authDatabase = _classFactory.Resolve<AuthDatabase>();
 
@@ -73,9 +74,12 @@ namespace WrathForged.Authorization.Server.Services
 
             _logger.Debug("Login attempt for {Identity} from {Address}. Assigning session token.", authLogonChallenge.Identity, session.ClientSocket.IPEndPoint.Address);
             session.Account = account;
-            session.PasswordAuthenticator = new PasswordAuthenticator(new SecureRemotePassword(account.Username, account.SessionKeyAuth, true));
             session.SessionKey = _randomUtilities.RandomBytes(16);
+            account.SessionKeyAuth = session.SessionKey;
+            session.PasswordAuthenticator = new PasswordAuthenticator(new SecureRemotePassword(account.Username, new BigInteger(account.SessionKeyAuth), true));
             session.State = WoWClientSession.AuthState.AwaitingCredentials;
+
+            _ = await authDatabase.SaveChangesAsync();
         }
 
         private void LoginFailed(WoWClientSession session, AuthStatus status, WoWClientPacketOut packet)

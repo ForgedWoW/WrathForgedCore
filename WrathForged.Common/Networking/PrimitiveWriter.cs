@@ -1,10 +1,8 @@
 ﻿// Copyright (c) Forged WoW LLC <https://github.com/ForgedWoW/WrathForgedCore>
 // Licensed under GPL-3.0 license. See <https://github.com/ForgedWoW/WrathForgedCore/blob/master/LICENSE> for full information.
 using System.Net;
-using System.Text
-
-;
-using WrathForged.Common.Cryptography;
+using System.Numerics;
+using System.Text;
 
 namespace WrathForged.Common.Networking
 {
@@ -326,7 +324,7 @@ namespace WrathForged.Common.Networking
         /// <param name="bigInt">BigInteger to write</param>
         public virtual void WriteBigInt(BigInteger bigInt)
         {
-            var data = bigInt.GetBytes();
+            var data = bigInt.ToByteArray();
 
             base.Write(data);
         }
@@ -349,7 +347,7 @@ namespace WrathForged.Common.Networking
         /// <param name="bigInt">BigInteger to write</param>
         public virtual void WriteBigIntLength(BigInteger bigInt)
         {
-            var data = bigInt.GetBytes();
+            var data = bigInt.ToByteArray();
 
             base.Write((byte)data.Length);
             base.Write(data);

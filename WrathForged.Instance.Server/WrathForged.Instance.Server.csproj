@@ -1,23 +1,23 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <OutputType>Exe</OutputType>
-    <TargetFramework>net7.0</TargetFramework>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
-  </PropertyGroup>
+	<PropertyGroup>
+		<OutputType>Exe</OutputType>
+		<TargetFramework>net7.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+	</PropertyGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\WrathForged.Common\WrathForged.Common.csproj" />
-    <ProjectReference Include="..\WrathForged.Database\WrathForged.Database.csproj" />
-    <ProjectReference Include="..\WrathForged.Models\WrathForged.Models.csproj" />
-    <ProjectReference Include="..\WrathForged.Serialization\WrathForged.Serialization.csproj" />
-  </ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\WrathForged.Common\WrathForged.Common.csproj" />
+		<ProjectReference Include="..\WrathForged.Database\WrathForged.Database.csproj" />
+		<ProjectReference Include="..\WrathForged.Models\WrathForged.Models.csproj" />
+		<ProjectReference Include="..\WrathForged.Serialization\WrathForged.Serialization.csproj" />
+	</ItemGroup>
 
-  <ItemGroup>
-    <None Update="WrathForged.Instance.Server.Config.default.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-  </ItemGroup>
+	<ItemGroup>
+		<None Update="WrathForged.Instance.Server.Config.default.json">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</None>
+	</ItemGroup>
 
 </Project>

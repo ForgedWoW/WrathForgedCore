@@ -15,17 +15,20 @@ namespace WrathForged.Common.Networking
             LoggingIn,
         }
 
-        private byte[]? _sessionKey;
+        private byte[] _sessionKey;
         private readonly ILogger _logger;
+        private static readonly byte[] _defaultSessionKey = new byte[32];
 
         public WoWClientSession(ClientSocket clientSocket, PacketBuffer packetBuffer, ILogger logger)
         {
             ClientSocket = clientSocket;
             PacketBuffer = packetBuffer;
             _logger = logger;
+            _sessionKey = _defaultSessionKey;
+            PacketEncryption = new PacketEncryption(_sessionKey, logger);
         }
 
-        public byte[]? SessionKey
+        public byte[] SessionKey
         {
             get => _sessionKey;
             set
@@ -34,7 +37,7 @@ namespace WrathForged.Common.Networking
 
                 if (value == null)
                 {
-                    PacketEncryption = null;
+                    PacketEncryption = new PacketEncryption(_defaultSessionKey, _logger);
                     return;
                 }
 
@@ -42,9 +45,9 @@ namespace WrathForged.Common.Networking
             }
         }
 
-        public bool IsEncrypted => _sessionKey != null;
+        public bool IsEncrypted => _sessionKey != _defaultSessionKey;
         public AuthState State { get; set; } = AuthState.LoggedOut;
-        public PacketEncryption? PacketEncryption { get; private set; }
+        public PacketEncryption PacketEncryption { get; private set; }
         public ClientSocket ClientSocket { get; }
         public PacketBuffer PacketBuffer { get; }
         public Account? Account { get; set; }

@@ -2,6 +2,10 @@
 // Licensed under GPL-3.0 license. See <https://github.com/ForgedWoW/WrathForgedCore/blob/master/LICENSE> for full information.
 using System.Reflection;
 
+#pragma warning disable CS8600
+#pragma warning disable CS8603
+#pragma warning disable CS8604
+
 namespace WrathForged.Common
 {
     public static class IOHelpers
@@ -45,20 +49,13 @@ namespace WrathForged.Common
             return true;
         }
 
-        public static bool AreObjectsNotEqual(object obj1, object obj2)
-        {
-            return !AreObjectsEqual(obj1, obj2);
-        }
+        public static bool AreObjectsNotEqual(object obj1, object obj2) => !AreObjectsEqual(obj1, obj2);
 
         public static bool DoesTypeSupportInterface(Type type, Type inter)
         {
-            if (type == inter)
-                return false;
-
-            if (inter.IsAssignableFrom(type))
-                return true;
-
-            return type.GetInterfaces().Any(i => i.IsGenericType && i.GetGenericTypeDefinition() == inter) || type.GetInterfaces().Any(i => i == inter);
+            return type != inter
+&& (inter.IsAssignableFrom(type)
+|| type.GetInterfaces().Any(i => i.IsGenericType && i.GetGenericTypeDefinition() == inter) || type.GetInterfaces().Any(i => i == inter));
         }
 
         public static List<Assembly> GetAllAssembliesInDir(string? path = null, bool loadGameAssembly = true, bool loadScriptsDll = true)
@@ -67,7 +64,7 @@ namespace WrathForged.Common
             List<Assembly> assemblies = new();
 
             if (!Directory.Exists(path))
-                Directory.CreateDirectory(path);
+                _ = Directory.CreateDirectory(path);
 
             DirectoryInfo dir = new(path);
 

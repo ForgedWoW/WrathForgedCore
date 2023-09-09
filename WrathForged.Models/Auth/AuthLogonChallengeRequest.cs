@@ -5,10 +5,12 @@ using System.Net;
 using WrathForged.Models.Auth.Enum;
 using WrathForged.Serialization;
 
+#pragma warning disable CS8618
+
 namespace WrathForged.Models.Auth
 {
     [ForgedSerializable(Scope = PacketScope.Auth, PacketIDs = new[] { (uint)AuthServerOpCode.AUTH_LOGON_CHALLENGE, (uint)AuthServerOpCode.AUTH_RECONNECT_CHALLENGE })]
-    public class AuthLogonChallengeRequest
+    public record AuthLogonChallengeRequest
     {
         /// <summary>
         /// Authentication protocol version to use.
