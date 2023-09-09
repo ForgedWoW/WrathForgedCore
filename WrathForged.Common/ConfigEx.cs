@@ -32,7 +32,7 @@ namespace WrathForged.Common
         {
             value = config.GetDefaultValue(name, defaultValue);
 
-            return value.GetHashCode() != defaultValue.GetHashCode();
+            return value?.GetHashCode() != defaultValue?.GetHashCode();
         }
     }
 }

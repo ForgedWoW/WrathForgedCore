@@ -4,26 +4,22 @@ using System.Reflection;
 using Autofac;
 using Autofac.Core;
 
+#pragma warning disable CS8618
+#pragma warning disable CS8600
+#pragma warning disable CS8603
+#pragma warning disable CS8714
+
 namespace WrathForged.Common
 {
     public class ClassFactory
     {
         public IContainer Container { get; private set; }
 
-        public void Initialize(IContainer container)
-        {
-            Container = container;
-        }
+        public void Initialize(IContainer container) => Container = container;
 
-        public T Resolve<T>()
-        {
-            return Container.Resolve<T>();
-        }
+        public T Resolve<T>() => Container.Resolve<T>();
 
-        public T Resolve<T>(params Parameter[] parameters)
-        {
-            return Container.Resolve<T>(parameters);
-        }
+        public T Resolve<T>(params Parameter[] parameters) => Container.Resolve<T>(parameters);
 
         public T ResolveWithPositionalParameters<T>(params object[] parameters)
         {

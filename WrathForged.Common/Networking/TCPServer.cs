@@ -6,6 +6,8 @@ using System.Threading.Tasks.Dataflow;
 using Microsoft.Extensions.Configuration;
 using Serilog;
 
+#pragma warning disable CS8618
+
 namespace WrathForged.Common.Networking
 {
     public class TCPServer
@@ -54,6 +56,12 @@ namespace WrathForged.Common.Networking
         {
             bindIp ??= IPAddress.Any;
 
+            if (_tcpListener != null)
+            {
+                _logger.Warning("TcpListener already started.");
+                return;
+            }
+
             _tcpListener = new TcpListener(bindIp, port);
             _tcpListener.Start();
             _ = _tcpListener.BeginAcceptTcpClient(OnAccept, _tcpListener);
@@ -62,6 +70,9 @@ namespace WrathForged.Common.Networking
 
         public void Stop()
         {
+            if (_tcpListener == null)
+                return;
+
             _tcpListener.Stop();
 
             lock (_clients)

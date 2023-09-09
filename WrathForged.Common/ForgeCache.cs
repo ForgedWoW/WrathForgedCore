@@ -2,6 +2,9 @@
 // Licensed under GPL-3.0 license. See <https://github.com/ForgedWoW/WrathForgedCore/blob/master/LICENSE> for full information.
 using System.Runtime.Caching;
 
+#pragma warning disable CS8601
+#pragma warning disable CS8603
+
 namespace WrathForged.Common
 {
     public class ForgeCache

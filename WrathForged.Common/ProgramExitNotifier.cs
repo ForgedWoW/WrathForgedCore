@@ -2,6 +2,8 @@
 // Licensed under GPL-3.0 license. See <https://github.com/ForgedWoW/WrathForgedCore/blob/master/LICENSE> for full information.
 using Serilog;
 
+#pragma warning disable CS8618
+
 namespace WrathForged.Common
 {
     public class ProgramExitNotifier
