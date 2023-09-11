@@ -11,13 +11,14 @@ ADD FOREIGN KEY (Parent) REFERENCES achievement_category(ID);
 ALTER TABLE achievement_criteria
 ADD FOREIGN KEY (Achievement_Id) REFERENCES achievement(ID);
 
-ALTER TABLE achievement_criteria
+ALTER TABLE areagroup
 ADD FOREIGN KEY (AreaID_1) REFERENCES areatable(ID),
 ADD FOREIGN KEY (AreaID_2) REFERENCES areatable(ID),
 ADD FOREIGN KEY (AreaID_3) REFERENCES areatable(ID),
 ADD FOREIGN KEY (AreaID_4) REFERENCES areatable(ID),
 ADD FOREIGN KEY (AreaID_5) REFERENCES areatable(ID),
-ADD FOREIGN KEY (AreaID_6) REFERENCES areatable(ID);
+ADD FOREIGN KEY (AreaID_6) REFERENCES areatable(ID),
+ADD FOREIGN KEY (NextAreaID) REFERENCES areagroup(ID);
 
 ALTER TABLE areapoi
 ADD FOREIGN KEY (AreaID) REFERENCES areatable(ID);
@@ -112,7 +113,7 @@ ADD FOREIGN KEY (NPCSoundID) REFERENCES npcsounds(ID),
 ADD FOREIGN KEY (ParticleColorID) REFERENCES particlecolor(ID),
 ADD FOREIGN KEY (ObjectEffectPackageID) REFERENCES objecteffectpackage(ID);
 
-ALTER TABLE creaturedisplayinfo
+ALTER TABLE creaturedisplayinfoextra
 ADD FOREIGN KEY (DisplayRaceID) REFERENCES chrraces(ID),
 ADD FOREIGN KEY (NPCItemDisplay_1) REFERENCES itemdisplayinfo(ID),
 ADD FOREIGN KEY (NPCItemDisplay_2) REFERENCES itemdisplayinfo(ID),
@@ -174,7 +175,7 @@ ADD FOREIGN KEY (Spells_2) REFERENCES spell(ID),
 ADD FOREIGN KEY (Spells_3) REFERENCES spell(ID),
 ADD FOREIGN KEY (Spells_4) REFERENCES spell(ID);
 
-ALTER TABLE creaturesounddata
+ALTER TABLE deaththudlookups
 ADD FOREIGN KEY (TerraintypeSoundID) REFERENCES terraintype(ID),
 ADD FOREIGN KEY (SoundEntryID) REFERENCES soundentries(ID),
 ADD FOREIGN KEY (SoundEntryIDWater) REFERENCES soundentries(ID);
@@ -285,19 +286,13 @@ ADD FOREIGN KEY (Q_6) REFERENCES gmsurveyquestions(ID),
 ADD FOREIGN KEY (Q_7) REFERENCES gmsurveyquestions(ID),
 ADD FOREIGN KEY (Q_8) REFERENCES gmsurveyquestions(ID),
 ADD FOREIGN KEY (Q_9) REFERENCES gmsurveyquestions(ID),
-ADD FOREIGN KEY (Q_10) REFERENCES gmsurveyquestions(ID),
-ADD FOREIGN KEY (Q_11) REFERENCES gmsurveyquestions(ID),
-ADD FOREIGN KEY (Q_12) REFERENCES gmsurveyquestions(ID),
-ADD FOREIGN KEY (Q_13) REFERENCES gmsurveyquestions(ID),
-ADD FOREIGN KEY (Q_14) REFERENCES gmsurveyquestions(ID),
-ADD FOREIGN KEY (Q_15) REFERENCES gmsurveyquestions(ID);
+ADD FOREIGN KEY (Q_10) REFERENCES gmsurveyquestions(ID);
 
 ALTER TABLE groundeffecttexture
 ADD FOREIGN KEY (DoodadId_1) REFERENCES groundeffectdoodad(ID),
 ADD FOREIGN KEY (DoodadId_2) REFERENCES groundeffectdoodad(ID),
 ADD FOREIGN KEY (DoodadId_3) REFERENCES groundeffectdoodad(ID),
-ADD FOREIGN KEY (DoodadId_4) REFERENCES groundeffectdoodad(ID),
-ADD FOREIGN KEY (TerrainType) REFERENCES terraintype(ID);
+ADD FOREIGN KEY (DoodadId_4) REFERENCES groundeffectdoodad(ID);
 
 ALTER TABLE holidays
 ADD FOREIGN KEY (HolidayNameID) REFERENCES holidaynames(ID),
@@ -321,7 +316,7 @@ ADD FOREIGN KEY (ItemID_2) REFERENCES itemcache(ID),
 ADD FOREIGN KEY (ItemID_3) REFERENCES itemcache(ID),
 ADD FOREIGN KEY (ItemID_4) REFERENCES itemcache(ID),
 ADD FOREIGN KEY (ItemID_5) REFERENCES itemcache(ID),
-ADD FOREIGN KEY (iRefID_PurchaseGroup) REFERENCES itempurchasegroup(ID);
+ADD FOREIGN KEY (ItemPurchaseGroup) REFERENCES itempurchasegroup(ID);
 
 ALTER TABLE itemgroupsounds
 ADD FOREIGN KEY (Pickup) REFERENCES soundentries(ID),
@@ -407,7 +402,7 @@ ADD FOREIGN KEY (LightSkyboxID) REFERENCES lightskybox(ID);
 ALTER TABLE loadingscreentaxisplines
 ADD FOREIGN KEY (PathID) REFERENCES taxipath(ID);
 
-ALTER TABLE lock
+ALTER TABLE `lock`
 ADD FOREIGN KEY (Type_1) REFERENCES locktype(ID),
 ADD FOREIGN KEY (Type_2) REFERENCES locktype(ID),
 ADD FOREIGN KEY (Type_3) REFERENCES locktype(ID),
@@ -493,7 +488,7 @@ ADD FOREIGN KEY (MapID) REFERENCES map(ID);
 ALTER TABLE soundentries
 ADD FOREIGN KEY (SoundEntriesAdvancedID) REFERENCES soundentriesadvanced(ID);
 
-ALTER TABLE soundemitters
+ALTER TABLE soundentriesadvanced
 ADD FOREIGN KEY (SoundEntryID) REFERENCES soundentries(ID);
 
 ALTER TABLE soundwatertype
@@ -609,10 +604,6 @@ ALTER TABLE spellvisualkitmodelattach
 ADD FOREIGN KEY (ParentSpellVisualKitID) REFERENCES spellvisualkit(ID),
 ADD FOREIGN KEY (SpellVisualEffectNameID) REFERENCES spellvisualeffectname(ID);
 
-ALTER TABLE spellvisualprecasttransitions
-ADD FOREIGN KEY (LoadAnimation) REFERENCES animationdata(ID),
-ADD FOREIGN KEY (HoldAnimation) REFERENCES animationdata(ID);
-
 ALTER TABLE stationery
 ADD FOREIGN KEY (ItemID) REFERENCES item(ID);
 
@@ -666,7 +657,7 @@ ALTER TABLE vehicleuiindseat
 ADD FOREIGN KEY (VehicleUIIndicatorID) REFERENCES vehicleuiindicator(ID);
 
 ALTER TABLE vocaluisounds
-ADD FOREIGN KEY (iRefID_ChrRaces) REFERENCES chrraces(ID),
+ADD FOREIGN KEY (RaceID) REFERENCES chrraces(ID),
 ADD FOREIGN KEY (MaleNormalSound) REFERENCES soundentries(ID),
 ADD FOREIGN KEY (FemaleNormalSound) REFERENCES soundentries(ID),
 ADD FOREIGN KEY (MalePissedSound) REFERENCES soundentries(ID),
