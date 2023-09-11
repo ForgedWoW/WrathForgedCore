@@ -1,0 +1,12 @@
+DROP TABLE IF EXISTS `TerraintypeSounds`; 
+CREATE TABLE `TerraintypeSounds` ( `ID` INT NOT NULL DEFAULT '0', PRIMARY KEY (`ID`)) ENGINE=InnoDB DEFAULT CHARSET=utf8; 
+INSERT INTO `TerraintypeSounds` VALUES (1); 
+INSERT INTO `TerraintypeSounds` VALUES (2); 
+INSERT INTO `TerraintypeSounds` VALUES (3); 
+INSERT INTO `TerraintypeSounds` VALUES (4); 
+INSERT INTO `TerraintypeSounds` VALUES (5); 
+INSERT INTO `TerraintypeSounds` VALUES (6); 
+INSERT INTO `TerraintypeSounds` VALUES (7); 
+INSERT INTO `TerraintypeSounds` VALUES (8); 
+INSERT INTO `TerraintypeSounds` VALUES (9); 
+INSERT INTO `TerraintypeSounds` VALUES (10); 

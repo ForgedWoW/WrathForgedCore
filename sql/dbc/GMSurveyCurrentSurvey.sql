@@ -1,0 +1,11 @@
+DROP TABLE IF EXISTS `GMSurveyCurrentSurvey`; 
+CREATE TABLE `GMSurveyCurrentSurvey` ( `ID` INT NOT NULL DEFAULT '0', `GMSURVEY_ID` INT NOT NULL DEFAULT '0', PRIMARY KEY (`ID`)) ENGINE=InnoDB DEFAULT CHARSET=utf8; 
+INSERT INTO `GMSurveyCurrentSurvey` VALUES (0,9); 
+INSERT INTO `GMSurveyCurrentSurvey` VALUES (1,9); 
+INSERT INTO `GMSurveyCurrentSurvey` VALUES (2,9); 
+INSERT INTO `GMSurveyCurrentSurvey` VALUES (3,9); 
+INSERT INTO `GMSurveyCurrentSurvey` VALUES (4,9); 
+INSERT INTO `GMSurveyCurrentSurvey` VALUES (5,9); 
+INSERT INTO `GMSurveyCurrentSurvey` VALUES (6,9); 
+INSERT INTO `GMSurveyCurrentSurvey` VALUES (7,9); 
+INSERT INTO `GMSurveyCurrentSurvey` VALUES (8,9); 

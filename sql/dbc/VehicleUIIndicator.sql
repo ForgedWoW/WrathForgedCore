@@ -1,0 +1,11 @@
+DROP TABLE IF EXISTS `VehicleUIIndicator`; 
+CREATE TABLE `VehicleUIIndicator` ( `ID` INT NOT NULL DEFAULT '0', `BackgroundTexture` TEXT NULL, PRIMARY KEY (`ID`)) ENGINE=InnoDB DEFAULT CHARSET=utf8; 
+INSERT INTO `VehicleUIIndicator` VALUES (221,"Interface\Vehicles\SeatIndicator\Vehicle-Demolisher.blp"); 
+INSERT INTO `VehicleUIIndicator` VALUES (222,"Interface\Vehicles\SeatIndicator\Vehicle-Demolisher.blp"); 
+INSERT INTO `VehicleUIIndicator` VALUES (223,"Interface\Vehicles\SeatIndicator\Vehicle-SiegeEngine.blp"); 
+INSERT INTO `VehicleUIIndicator` VALUES (224,"Interface\Vehicles\SeatIndicator\vehicle-motorcycle.blp"); 
+INSERT INTO `VehicleUIIndicator` VALUES (225,"Interface\Vehicles\SeatIndicator\vehicle-mammoth.blp"); 
+INSERT INTO `VehicleUIIndicator` VALUES (226,"Interface\Vehicles\SeatIndicator\vehicle-motorcycle.blp"); 
+INSERT INTO `VehicleUIIndicator` VALUES (227,"Interface\Vehicles\SeatIndicator\Vehicle-SiegeEngine.blp"); 
+INSERT INTO `VehicleUIIndicator` VALUES (228,"Interface\Vehicles\SeatIndicator\Vehicle-Bomber.blp"); 
+INSERT INTO `VehicleUIIndicator` VALUES (249,"Interface\Vehicles\SeatIndicator\vehicle-rocket.blp"); 

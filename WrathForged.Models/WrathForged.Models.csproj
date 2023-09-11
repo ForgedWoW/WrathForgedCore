@@ -28,4 +28,8 @@
 		<ProjectReference Include="..\WrathForged.Serialization\WrathForged.Serialization.csproj" OutputItemType="Analyzer" />
 	</ItemGroup>
 
+	<ItemGroup>
+	  <Folder Include="Chat\Enum\" />
+	</ItemGroup>
+
 </Project>

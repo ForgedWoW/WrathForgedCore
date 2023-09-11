@@ -1,0 +1,13 @@
+DROP TABLE IF EXISTS `ObjectEffectModifier`; 
+CREATE TABLE `ObjectEffectModifier` ( `ID` INT NOT NULL DEFAULT '0', `InputType` INT NOT NULL DEFAULT '0', `MapType` INT NOT NULL DEFAULT '0', `OutputType` INT NOT NULL DEFAULT '0', `Param_1` FLOAT NOT NULL DEFAULT '0', `Param_2` FLOAT NOT NULL DEFAULT '0', `Param_3` FLOAT NOT NULL DEFAULT '0', `Param_4` FLOAT NOT NULL DEFAULT '0', PRIMARY KEY (`ID`)) ENGINE=InnoDB DEFAULT CHARSET=utf8; 
+INSERT INTO `ObjectEffectModifier` VALUES (65,1,1,1,5,30,0.7,1.3); 
+INSERT INTO `ObjectEffectModifier` VALUES (121,1,1,1,5,30,0.7,1.3); 
+INSERT INTO `ObjectEffectModifier` VALUES (123,1,1,1,5,30,1,1.3); 
+INSERT INTO `ObjectEffectModifier` VALUES (124,1,1,1,5,30,0.7,1.3); 
+INSERT INTO `ObjectEffectModifier` VALUES (141,1,1,1,5,30,0.7,1.3); 
+INSERT INTO `ObjectEffectModifier` VALUES (161,1,1,1,5,30,0.7,1.3); 
+INSERT INTO `ObjectEffectModifier` VALUES (181,1,1,1,5,30,0.7,1.3); 
+INSERT INTO `ObjectEffectModifier` VALUES (182,1,1,1,5,30,0.7,1.3); 
+INSERT INTO `ObjectEffectModifier` VALUES (184,1,1,1,5,30,0.7,1.3); 
+INSERT INTO `ObjectEffectModifier` VALUES (201,1,1,1,5,30,0.7,1.3); 
+INSERT INTO `ObjectEffectModifier` VALUES (202,1,1,1,5,30,0.7,1.3); 
