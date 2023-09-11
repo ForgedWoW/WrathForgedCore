@@ -7,10 +7,6 @@ UPDATE achievement SET Shares_Criteria = NULL WHERE Shares_Criteria IN (0, -1);
 
 UPDATE achievement_category SET Parent = NULL WHERE Parent IN (0, -1);
 
--- Delete invalid mappings. Its junk data anyway.
-DELETE ac FROM achievement_criteria ac
-LEFT JOIN achievement a ON ac.Achievement_Id = a.ID
-WHERE ac.Achievement_Id IS NOT NULL AND a.ID IS NULL;
 UPDATE achievement_criteria SET Achievement_Id = NULL WHERE Achievement_Id IN (0, -1);
 
 UPDATE areagroup SET AreaID_1 = NULL WHERE AreaID_1 IN (0, -1);
@@ -317,12 +313,7 @@ HelmetGeosetVis_2 = CASE WHEN HelmetGeosetVis_2 IN (0, -1) THEN NULL ELSE Helmet
 ItemVisual = CASE WHEN ItemVisual IN (0, -1) THEN NULL ELSE ItemVisual END;
 
 UPDATE itemextendedcost 
-SET 
-ItemID_1 = CASE WHEN ItemID_1 IN (0, -1) THEN NULL ELSE ItemID_1 END,
-ItemID_2 = CASE WHEN ItemID_2 IN (0, -1) THEN NULL ELSE ItemID_2 END,
-ItemID_3 = CASE WHEN ItemID_3 IN (0, -1) THEN NULL ELSE ItemID_3 END,
-ItemID_4 = CASE WHEN ItemID_4 IN (0, -1) THEN NULL ELSE ItemID_4 END,
-ItemID_5 = CASE WHEN ItemID_5 IN (0, -1) THEN NULL ELSE ItemID_5 END,
+SET
 ItemPurchaseGroup = CASE WHEN ItemPurchaseGroup IN (0, -1) THEN NULL ELSE ItemPurchaseGroup END;
 
 UPDATE itemgroupsounds 
@@ -751,5 +742,5 @@ UPDATE zoneintromusictable SET
 SoundID = CASE WHEN SoundID IN (0, -1) THEN NULL ELSE SoundID END;
 
 UPDATE zonemusic SET 
-DayMusic = CASE WHEN DayMusic IN (0, -1) THEN NULL ELSE DayMusic END,
-NightMusic = CASE WHEN NightMusic IN (0, -1) THEN NULL ELSE NightMusic END;
+Sounds_1 = CASE WHEN Sounds_1 IN (0, -1) THEN NULL ELSE Sounds_1 END,
+Sounds_2 = CASE WHEN Sounds_2 IN (0, -1) THEN NULL ELSE Sounds_2 END;

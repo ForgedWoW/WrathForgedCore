@@ -79,7 +79,7 @@ ALTER TABLE chatchannels
 ADD FOREIGN KEY (FactionGroup) REFERENCES factiongroup(ID);
 
 ALTER TABLE chrclasses
-ADD FOREIGN KEY (CinematicSequenceID) REFERENCES camera(ID);
+ADD FOREIGN KEY (CinematicSequenceID) REFERENCES cinematicsequences(ID);
 
 ALTER TABLE chrraces
 ADD FOREIGN KEY (FactionID) REFERENCES factiontemplate(ID),
@@ -94,14 +94,14 @@ ADD FOREIGN KEY (SoundID) REFERENCES soundentries(ID);
 
 ALTER TABLE cinematicsequences
 ADD FOREIGN KEY (SoundID) REFERENCES soundentries(ID),
-ADD FOREIGN KEY (Camera_1) REFERENCES camera(ID),
-ADD FOREIGN KEY (Camera_2) REFERENCES camera(ID),
-ADD FOREIGN KEY (Camera_3) REFERENCES camera(ID),
-ADD FOREIGN KEY (Camera_4) REFERENCES camera(ID),
-ADD FOREIGN KEY (Camera_5) REFERENCES camera(ID),
-ADD FOREIGN KEY (Camera_6) REFERENCES camera(ID),
-ADD FOREIGN KEY (Camera_7) REFERENCES camera(ID),
-ADD FOREIGN KEY (Camera_8) REFERENCES camera(ID);
+ADD FOREIGN KEY (Camera_1) REFERENCES cinematiccamera(ID),
+ADD FOREIGN KEY (Camera_2) REFERENCES cinematiccamera(ID),
+ADD FOREIGN KEY (Camera_3) REFERENCES cinematiccamera(ID),
+ADD FOREIGN KEY (Camera_4) REFERENCES cinematiccamera(ID),
+ADD FOREIGN KEY (Camera_5) REFERENCES cinematiccamera(ID),
+ADD FOREIGN KEY (Camera_6) REFERENCES cinematiccamera(ID),
+ADD FOREIGN KEY (Camera_7) REFERENCES cinematiccamera(ID),
+ADD FOREIGN KEY (Camera_8) REFERENCES cinematiccamera(ID);
 
 ALTER TABLE creaturedisplayinfo
 ADD FOREIGN KEY (ModelID) REFERENCES creaturemodeldata(ID),
@@ -230,9 +230,6 @@ ADD FOREIGN KEY (VisualkitID) REFERENCES soundentries(ID);
 ALTER TABLE faction
 ADD FOREIGN KEY (ParentFactionID) REFERENCES faction(ID);
 
-ALTER TABLE faction
-ADD FOREIGN KEY (ParentFactionID) REFERENCES faction(ID);
-
 ALTER TABLE factiontemplate
 ADD FOREIGN KEY (Faction) REFERENCES faction(ID),
 ADD FOREIGN KEY (Enemies_1) REFERENCES faction(ID),
@@ -311,11 +308,6 @@ ADD FOREIGN KEY (HelmetGeosetVis_2) REFERENCES helmetgeosetvisdata(ID),
 ADD FOREIGN KEY (ItemVisual) REFERENCES itemvisuals(ID);
 
 ALTER TABLE itemextendedcost
-ADD FOREIGN KEY (ItemID_1) REFERENCES itemcache(ID),
-ADD FOREIGN KEY (ItemID_2) REFERENCES itemcache(ID),
-ADD FOREIGN KEY (ItemID_3) REFERENCES itemcache(ID),
-ADD FOREIGN KEY (ItemID_4) REFERENCES itemcache(ID),
-ADD FOREIGN KEY (ItemID_5) REFERENCES itemcache(ID),
 ADD FOREIGN KEY (ItemPurchaseGroup) REFERENCES itempurchasegroup(ID);
 
 ALTER TABLE itemgroupsounds
@@ -376,9 +368,6 @@ ADD FOREIGN KEY (SetSpellID_7) REFERENCES spell(ID),
 ADD FOREIGN KEY (SetSpellID_8) REFERENCES spell(ID),
 ADD FOREIGN KEY (RequiredSkill) REFERENCES skillline(ID);
 
-ALTER TABLE itemsubclass
-ADD FOREIGN KEY (ClassID) REFERENCES itemclass(ClassID);
-
 ALTER TABLE itemvisuals
 ADD FOREIGN KEY (Slot_1) REFERENCES itemvisualeffects(ID),
 ADD FOREIGN KEY (Slot_2) REFERENCES itemvisualeffects(ID),
@@ -414,7 +403,7 @@ ADD FOREIGN KEY (Type_8) REFERENCES locktype(ID);
 
 ALTER TABLE map
 ADD FOREIGN KEY (AreaTableID) REFERENCES areatable(ID),
-ADD FOREIGN KEY (LoadingScreenID) REFERENCES loadingscreen(ID),
+ADD FOREIGN KEY (LoadingScreenID) REFERENCES loadingscreens(ID),
 ADD FOREIGN KEY (CorpseMapID) REFERENCES map(ID);
 
 ALTER TABLE mapdifficulty
@@ -618,9 +607,6 @@ ADD FOREIGN KEY (SpellRank_6) REFERENCES spell(ID),
 ADD FOREIGN KEY (SpellRank_7) REFERENCES spell(ID),
 ADD FOREIGN KEY (SpellRank_8) REFERENCES spell(ID),
 ADD FOREIGN KEY (SpellRank_9) REFERENCES spell(ID),
-ADD FOREIGN KEY (PrereqTalent_1) REFERENCES talent(ID),
-ADD FOREIGN KEY (PrereqTalent_2) REFERENCES talent(ID),
-ADD FOREIGN KEY (PrereqTalent_3) REFERENCES talent(ID),
 ADD FOREIGN KEY (RequiredSpellID) REFERENCES spell(ID);
 
 ALTER TABLE talenttab
@@ -693,7 +679,7 @@ ADD FOREIGN KEY (AmbienceID) REFERENCES soundentries(ID);
 
 ALTER TABLE wmoareatable
   ADD FOREIGN KEY (SoundProviderPref) REFERENCES soundproviderpreferences(ID),
-  ADD FOREIGN KEY (SoundProviderPrefUnderwater) REFERENCES soundproviderprefunderwater(ID),
+  ADD FOREIGN KEY (SoundProviderPrefUnderwater) REFERENCES soundproviderpreferences(ID),
   ADD FOREIGN KEY (AmbienceID) REFERENCES soundambience(ID),
   ADD FOREIGN KEY (ZoneMusic) REFERENCES zonemusic(ID),
   ADD FOREIGN KEY (AreaTableID) REFERENCES areatable(ID),
@@ -740,5 +726,5 @@ ALTER TABLE zoneintromusictable
 ADD FOREIGN KEY (SoundID) REFERENCES soundentries(ID);
 
 ALTER TABLE zonemusic
-ADD FOREIGN KEY (DayMusic) REFERENCES soundentries(ID),
-ADD FOREIGN KEY (NightMusic) REFERENCES soundentries(ID);
+ADD FOREIGN KEY (Sounds_1) REFERENCES soundentries(ID),
+ADD FOREIGN KEY (Sounds_2) REFERENCES soundentries(ID);

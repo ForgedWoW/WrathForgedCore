@@ -310,11 +310,6 @@ MODIFY HelmetGeosetVis_2 INT NULL,
 MODIFY ItemVisual INT NULL;
 
 ALTER TABLE itemextendedcost
-MODIFY ItemID_1 INT NULL,
-MODIFY ItemID_2 INT NULL,
-MODIFY ItemID_3 INT NULL,
-MODIFY ItemID_4 INT NULL,
-MODIFY ItemID_5 INT NULL,
 MODIFY ItemPurchaseGroup INT NULL;
 
 ALTER TABLE itemgroupsounds
@@ -524,7 +519,7 @@ MODIFY ActiveIconID INT NULL,
 MODIFY RequiredAreasID INT NULL,
 MODIFY RuneCostID INT NULL,
 MODIFY SpellMissileID INT NULL,
-MODIFY SpellDescriptionVariableID INT UNSIGNED NULL,
+MODIFY SpellDescriptionVariableID INT NULL,
 MODIFY SpellDifficultyID INT NULL,
 MODIFY PowerDisplayID INT NULL;
 
@@ -739,6 +734,6 @@ ALTER TABLE zoneintromusictable
 MODIFY SoundID INT NULL;
 
 ALTER TABLE zonemusic
-MODIFY DayMusic INT NULL,
-MODIFY NightMusic INT NULL;
+MODIFY Sounds_1 INT NULL,
+MODIFY Sounds_2 INT NULL;
 
