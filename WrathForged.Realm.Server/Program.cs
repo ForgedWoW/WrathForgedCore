@@ -7,6 +7,8 @@ using Serilog;
 using WrathForged.Common;
 using WrathForged.Common.Networking;
 using WrathForged.Database;
+using WrathForged.Database.Models.DBC;
+using Z.EntityFramework.Plus;
 
 var configBuilder = new ConfigurationBuilder()
                     .SetBasePath(Directory.GetCurrentDirectory())
@@ -20,7 +22,8 @@ builder.RegisterDatabase(configuration, Log.Logger);
 
 var container = builder.Build();
 container.InitializeCommon();
-
+var dbc = container.Resolve<DBCDatabase>();
+var item = dbc.Items.Where(i => i.Id == 1);
 container.Resolve<WoWClientServer>().TCPServer.Start();
 
 Log.Logger.Information("Realm Server started.");

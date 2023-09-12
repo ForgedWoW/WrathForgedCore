@@ -3,6 +3,7 @@
 
 using Autofac;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Caching.Memory;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using Serilog;
@@ -10,6 +11,7 @@ using WrathForged.Database.Models.Auth;
 using WrathForged.Database.Models.Characters;
 using WrathForged.Database.Models.DBC;
 using WrathForged.Database.Models.World;
+using Z.EntityFramework.Plus;
 
 namespace WrathForged.Database
 {
@@ -18,7 +20,7 @@ namespace WrathForged.Database
         public static ContainerBuilder RegisterDatabase(this ContainerBuilder builder, IConfiguration configuration, Serilog.ILogger logger)
         {
             var loggerFactory = new LoggerFactory().AddSerilog(logger);
-
+            
             _ = builder.RegisterType<AuthDatabase>()
                 .WithParameter("options", new DbContextOptionsBuilder<AuthDatabase>()
                 .UseLoggerFactory(loggerFactory)
@@ -37,7 +39,20 @@ namespace WrathForged.Database
             _ = builder.RegisterType<DBCDatabase>()
                 .WithParameter("options", new DbContextOptionsBuilder<DBCDatabase>()
                 .UseLoggerFactory(loggerFactory)
+                .UseMemoryCache(new MemoryCache(new MemoryCacheOptions()))
                 .UseMySql(configuration.GetConnectionString("dbc"), ServerVersion.AutoDetect(configuration.GetConnectionString("dbc"))).Options);
+
+            var slidingTimeoutstr = configuration["Database:SlidingCacheTimeout_Hours"];
+            var hours = 2;
+
+            if (!string.IsNullOrEmpty(slidingTimeoutstr) && int.TryParse(slidingTimeoutstr, out var parsedTimeout))
+                hours = parsedTimeout;
+
+            var options = new MemoryCacheEntryOptions() { SlidingExpiration = TimeSpan.FromHours(hours) };
+            var queryCache = new ForgeDBCache(new MemoryCacheOptions(), loggerFactory);
+            QueryCacheManager.Cache = queryCache;    
+            QueryCacheManager.DefaultMemoryCacheEntryOptions = options;
+            builder.RegisterInstance(queryCache).As<ForgeDBCache>().SingleInstance();
 
             return builder;
         }
@@ -47,6 +62,7 @@ namespace WrathForged.Database
             await container.Resolve<AuthDatabase>().DisposeAsync();
             await container.Resolve<WorldDatabase>().DisposeAsync();
             await container.Resolve<CharacterDatabase>().DisposeAsync();
+            container.Resolve<ForgeDBCache>().Dispose();
         }
     }
 }
