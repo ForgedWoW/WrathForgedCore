@@ -1,4 +1,6 @@
-﻿using System;
+﻿// Copyright (c) Forged WoW LLC <https://github.com/ForgedWoW/WrathForgedCore>
+// Licensed under GPL-3.0 license. See <https://github.com/ForgedWoW/WrathForgedCore/blob/master/LICENSE> for full information.
+using System;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 using WrathForged.Database.Models.DBC;
@@ -501,10 +503,6 @@ public partial class DBCDatabase : DbContext
     public virtual DbSet<Zoneintromusictable> Zoneintromusictables { get; set; }
 
     public virtual DbSet<Zonemusic> Zonemusics { get; set; }
-
-    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-        => optionsBuilder.UseMySql("server=23.116.116.43;database=dbc;user=JBurlison;password=James123", Microsoft.EntityFrameworkCore.ServerVersion.Parse("8.0.31-mysql"));
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -13077,5 +13075,5 @@ public partial class DBCDatabase : DbContext
         OnModelCreatingPartial(modelBuilder);
     }
 
-    partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
+    private partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
 }
