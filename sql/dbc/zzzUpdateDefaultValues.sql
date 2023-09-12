@@ -18,6 +18,7 @@ UPDATE areagroup SET AreaID_6 = NULL WHERE AreaID_6 IN (0, -1);
 UPDATE areagroup SET NextAreaID = NULL WHERE NextAreaID IN (0, -1);
 
 UPDATE areapoi SET AreaID = NULL WHERE AreaID IN (0, -1);
+UPDATE areapoi SET FactionID = NULL WHERE FactionID IN (0, -1);
 
 UPDATE areatable SET ContinentID = NULL WHERE ContinentID IN (0, -1);
 UPDATE areatable SET ParentAreaID = NULL WHERE ParentAreaID IN (0, -1);
@@ -318,10 +319,10 @@ ItemPurchaseGroup = CASE WHEN ItemPurchaseGroup IN (0, -1) THEN NULL ELSE ItemPu
 
 UPDATE itemgroupsounds 
 SET 
-Pickup = CASE WHEN Pickup IN (0, -1) THEN NULL ELSE Pickup END,
-`Drop` = CASE WHEN `Drop` IN (0, -1) THEN NULL ELSE `Drop` END,
-`Close` = CASE WHEN `Close` IN (0, -1) THEN NULL ELSE `Close` END,
-`Use` = CASE WHEN `Use` IN (0, -1) THEN NULL ELSE `Use` END;
+Sound_1 = CASE WHEN Sound_1 IN (0, -1) THEN NULL ELSE Sound_1 END,
+Sound_2 = CASE WHEN Sound_2 IN (0, -1) THEN NULL ELSE Sound_2 END,
+Sound_3 = CASE WHEN Sound_3 IN (0, -1) THEN NULL ELSE Sound_3 END,
+Sound_4 = CASE WHEN Sound_4 IN (0, -1) THEN NULL ELSE Sound_4 END;
 
 UPDATE itempurchasegroup 
 SET 
@@ -658,10 +659,10 @@ VehicleUIIndicatorID = CASE WHEN VehicleUIIndicatorID IN (0, -1) THEN NULL ELSE 
 
 UPDATE vocaluisounds SET 
 RaceID = CASE WHEN RaceID IN (0, -1) THEN NULL ELSE RaceID END,
-MaleNormalSound = CASE WHEN MaleNormalSound IN (0, -1) THEN NULL ELSE MaleNormalSound END,
-FemaleNormalSound = CASE WHEN FemaleNormalSound IN (0, -1) THEN NULL ELSE FemaleNormalSound END,
-MalePissedSound = CASE WHEN MalePissedSound IN (0, -1) THEN NULL ELSE MalePissedSound END,
-FemalePissedSound = CASE WHEN FemalePissedSound IN (0, -1) THEN NULL ELSE FemalePissedSound END;
+NormalSoundID_1 = CASE WHEN NormalSoundID_1 IN (0, -1) THEN NULL ELSE NormalSoundID_1 END,
+NormalSoundID_2 = CASE WHEN NormalSoundID_2 IN (0, -1) THEN NULL ELSE NormalSoundID_2 END,
+PissedSoundID_1 = CASE WHEN PissedSoundID_1 IN (0, -1) THEN NULL ELSE PissedSoundID_1 END,
+PissedSoundID_2 = CASE WHEN PissedSoundID_2 IN (0, -1) THEN NULL ELSE PissedSoundID_2 END;
 
 UPDATE weaponimpactsounds SET 
 ImpactSoundID_1 = CASE WHEN ImpactSoundID_1 IN (0, -1) THEN NULL ELSE ImpactSoundID_1 END,

@@ -21,6 +21,7 @@ MODIFY AreaID_6 INT NULL,
 MODIFY NextAreaID INT NULL;
 
 ALTER TABLE areapoi
+MODIFY FactionID INT NULL,
 MODIFY AreaID INT NULL;
 
 ALTER TABLE areatable
@@ -313,10 +314,10 @@ ALTER TABLE itemextendedcost
 MODIFY ItemPurchaseGroup INT NULL;
 
 ALTER TABLE itemgroupsounds
-MODIFY Pickup INT NULL,
-MODIFY `Drop` INT NULL,
-MODIFY `Close` INT NULL,
-MODIFY `Use` INT NULL;
+MODIFY Sound_1 INT NULL,
+MODIFY Sound_2 INT NULL,
+MODIFY Sound_3 INT NULL,
+MODIFY Sound_4 INT NULL;
 
 ALTER TABLE itempurchasegroup
 MODIFY ItemID_1 INT NULL,
@@ -488,6 +489,7 @@ MODIFY SoundEntryID INT NULL;
 ALTER TABLE soundwatertype
 MODIFY SoundID INT NULL;
 
+UPDATE spell SET SpellDescriptionVariableID = 0 WHERE SpellDescriptionVariableID = 4294967295;
 ALTER TABLE spell
 MODIFY Category INT NULL,
 MODIFY DispelType INT NULL,
@@ -652,10 +654,10 @@ MODIFY VehicleUIIndicatorID INT NULL;
 
 ALTER TABLE vocaluisounds
 MODIFY RaceID INT NULL,
-MODIFY MaleNormalSound INT NULL,
-MODIFY FemaleNormalSound INT NULL,
-MODIFY MalePissedSound INT NULL,
-MODIFY FemalePissedSound INT NULL;
+MODIFY NormalSoundID_1 INT NULL,
+MODIFY NormalSoundID_2 INT NULL,
+MODIFY PissedSoundID_1 INT NULL,
+MODIFY PissedSoundID_2 INT NULL;
 
 ALTER TABLE weaponimpactsounds
 MODIFY ImpactSoundID_1 INT NULL,

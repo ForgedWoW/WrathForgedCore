@@ -306,7 +306,7 @@ INSERT INTO `SpellChainEffects` VALUES (364,0.334,1,0,1.4,2999,0,"Textures\Spell
 INSERT INTO `SpellChainEffects` VALUES (365,0.334,1.5,0,1.4,2999,0,"Textures\SpellChainEffects\DrainManaLightning_Inverted.blp",6,27,0.07,3,4,3.7,8.45,0.27,0,0.23,0.72,0.25,1.885,6.8,0,0,0,0,0,0,0,0,0,0,0.1,0.1,0.4,0.65,100,2,10,255,255,255,255,4,"m!m!m!m!m!",0,2,0); 
 INSERT INTO `SpellChainEffects` VALUES (366,0.997,0.3,0,1.2,3970,299,"Textures\SpellChainEffects\SoulBeam_Desaturated.blp",96,2,0,3,3,2,4,0,0.75,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1000,0,0,0,0,50,0.4098,0.5,255,255,255,255,3,"",0,2,0); 
 INSERT INTO `SpellChainEffects` VALUES (367,0.3925,0.375,0,0.75,999,300,"Textures\SpellChainEffects\SoulBeam_Inverted.blp",22,28,0.18,3,3,2,6.1,0.855,0,0.06,0.17,0.3,0.9739,0,0,3.142,0,0,0.45,0,0,6.786,-5.781,0,0.31,0.46,0.03,0.18,0,0,0,255,255,255,255,4,"",0,2,0); 
-INSERT INTO `SpellChainEffects` VALUES (368,0.1,0.15485,0,1,2000,200,"spells\textures\Beam_FireRed.blp",97,27,0,3,3,2,4,0,0.698,0.66,1.42,0,0,2,0,0,0,0,0,1.257,-1.257,5.027,-5.027,0,0,0,0,0,17,8.506,10.6,255,255,136,136,3,"",0,2,0); SpellChainEffects
+INSERT INTO `SpellChainEffects` VALUES (368,0.1,0.15485,0,1,2000,200,"spells\textures\Beam_FireRed.blp",97,27,0,3,3,2,4,0,0.698,0.66,1.42,0,0,2,0,0,0,0,0,1.257,-1.257,5.027,-5.027,0,0,0,0,0,17,8.506,10.6,255,255,136,136,3,"",0,2,0);
 INSERT INTO `SpellChainEffects` VALUES (369,1.66,0.25,0,-1.1,19999,300,"Textures\SpellChainEffects\DrainManaLightning_Inverted.blp",4,0,0,0,0,0,0,0,0.75,0,0,0.3,0.4712,6.8,1.602,1.602,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,255,255,255,255,4,"",1,2,0); 
 INSERT INTO `SpellChainEffects` VALUES (370,0.1,0.5,0.02,1,1999,300,"Textures\SpellChainEffects\Lightning_Inverted.blp",22,28,0.05,3,3,2,6.1,0.855,0,0.02,0.1,0.3,0.9739,0,0,3.142,0,0,3,-0.3491,0.3491,0,0,0,0.31,0.46,0.03,0.18,0,0,0,255,255,255,255,4,"",0,2,0); 
 INSERT INTO `SpellChainEffects` VALUES (372,0.1,0.229775,0,0,2000,200,"Spells\Textures\Beam_ChainIron.blp",97,27,0,3,3,2,4,0,0.698,0.66,1.42,0.25,0,4.4,0,0,0,0,0,0.2827,-1.257,1.508,-5.027,0,0,0,0,0,18.5,100,1,255,255,255,255,2,"",0,2,0); 
@@ -423,7 +423,7 @@ INSERT INTO `SpellChainEffects` VALUES (486,0.4315,0.5045,0,-0.15,240,300,"Textu
 INSERT INTO `SpellChainEffects` VALUES (487,3.1615,0.129875,0,0,1000,154,"Textures\SpellChainEffects\RopeBeam.blp",36,0,0,0,0,0,0,0,0.99,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,20,9999,0,255,255,255,255,2,"",0,2,0); 
 INSERT INTO `SpellChainEffects` VALUES (488,1,0.079925,0,-1.55,999,254,"Textures\SpellChainEffects\Beam_Red.blp",77,27,0.1075,7,6,8,8,0,0.5495,1.2,0.45,0.25,0.3456,8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,20,4,1,255,155,232,150,3,"",0,2,0); 
 INSERT INTO `SpellChainEffects` VALUES (489,1,0.3047,0.0035,0.85,1000,300,"Textures\SpellChainEffects\Lightning_Desaturated.blp",97,16,0.055,3,3,2,4,0,0.75,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-50,5.707,4.8,255,0,255,7,3,"i#i#i#",0,11.5,0); 
-INSERT INTO `SpellChainEffects` VALUES (490,1,0.35465,0.0035,-0.85,1000,300,"Textures\SpellChainEffects\Lightning_Desaturated.blp",97,16,0.055,3,3,2,4,0,0.75,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,21.5,4,1,255,0,255,7,3,"SpellChainEffectsSpellChainEffects",0,11.5,0SpellChainEffects
+INSERT INTO `SpellChainEffects` VALUES (490,1,0.35465,0.0035,-0.85,1000,300,"Textures\SpellChainEffects\Lightning_Desaturated.blp",97,16,0.055,3,3,2,4,0,0.75,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,21.5,4,1,255,0,255,7,3,"SpellChainEffectsSpellChainEffects",0,11.5,0);
 INSERT INTO `SpellChainEffects` VALUES (491,4,0.425,0.0065,-5,999,300,"Textures\SpellChainEffects\Beam_Purple.blp",38,27,0.5,10,10,0,0,0,0,0.08,0.11,0.75,0,-21.6,0,0,0,0,2.5,0,0,0,0,1000,1.31,0,3,3,-99,0.2099,1.2,255,106,106,106,3,"",0,2,0); 
 INSERT INTO `SpellChainEffects` VALUES (492,0.1,0.375,0,1.55,9998999,0,"spells\textures\Beam_SmokeGrey.blp",324,20,0,3,3,2,4,1.575,0.95,0.66,1.42,0,0.1571,1.2,0,0,0,0,0,2.136,-2.576,0.754,-1.005,10000,0,0,0,0,-25,150,2,255,247,61,0,3,"m#",0,8.906,0); 
 INSERT INTO `SpellChainEffects` VALUES (493,0.256,0.625,0,3,1000,300,"SPELLS\TEXTURES\Beam_WaterGreen.blp",71,27,0.5,4,4,1,5,3,0.8,0,0.1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,20,4,1,255,255,255,255,3,"",0,2,0); 
@@ -458,9 +458,7 @@ INSERT INTO `SpellChainEffects` VALUES (522,0.607,0.429575,0.007,-3.9,2000,200,"
 INSERT INTO `SpellChainEffects` VALUES (523,0.1,0.229775,0,0,2000,200,"Spells\Textures\Beam_ChainIron.blp",449,27,0,3,3,2,4,0,0.698,0.66,1.42,0.1,0,0.8,0,0,0,0,0,0.2827,-1.257,1.508,-5.027,0,0,0,0,0,20,100,1,255,255,255,255,2,"",0,2,0); 
 INSERT INTO `SpellChainEffects` VALUES (524,0.4315,0.5,0,5,1000,200,"spells\textures\Beam_SmokeGrey.blp",0,0,0,0,0,0,0,0,0.99,0,0,0,0.6283,6,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,255,0,36,255,3,"",0,2,0); 
 INSERT INTO `SpellChainEffects` VALUES (525,1,0.379625,0,0.7,1000,300,"Textures\SpellChainEffects\RopeBeam.blp",288,27,0,3,3,2,4,0,0.75,0,0,1.6,0.09425,0,-0.1885,0.7226,-7.54,6.535,0.85,0,0,1.005,6.409,0,0,0,0,0,50,100,0,255,107,128,50,2,"",0,10,0); 
-INSERT INTO `SpellChainEffects` VALUES (526,1,0.379625,0,0.55,1000,300,"Textures\SpellChainEffects\RopeBeam.blp",288,27,0,3,3,2,4,0,0.75,0,0,3.25,0.1257,0,-0.1885,0.7226,0.2513,0.377,0.85,0,0,1.005,2.89,0,0,0,0,0,50,100,0,255,97,112,39,2,"
-SpellChainEffects
-",SpellChainEffects
+INSERT INTO `SpellChainEffects` VALUES (526,1,0.379625,0,0.55,1000,300,"Textures\SpellChainEffects\RopeBeam.blp",288,27,0,3,3,2,4,0,0.75,0,0,3.25,0.1257,0,-0.1885,0.7226,0.2513,0.377,0.85,0,0,1.005,2.89,0,0,0,0,0,50,100,0,255,97,112,39,2,"SpellChainEffects",0,10,0);
 INSERT INTO `SpellChainEffects` VALUES (527,1,0.379625,0,0.7,1000,300,"Textures\SpellChainEffects\RopeBeam.blp",288,27,0,3,3,2,4,0,0.75,0,0,2.4,0.2513,0.8,-0.1885,0.7226,-7.54,6.535,0.85,0,0,1.005,6.409,0,0,0,0,0,50,100,0,255,107,128,50,2,"",0,10,0); 
 INSERT INTO `SpellChainEffects` VALUES (528,100,0.85415,0,1.15,3058,0,"Textures\SpellChainEffects\WhiteBeam.blp",167,51,0,9,5,0,0,0,0.99,0.8,1.42,4.4,0.09425,-5.6,0.06283,1.414,-0.754,1.508,0,0,0,0,0,0,0,0,0,0,30,0.01,14.8,151,0,200,39,3,"",0,2,0); 
 INSERT INTO `SpellChainEffects` VALUES (530,2.78,0.75,0.01,2,1000,200,"Textures\SpellChainEffects\SoulBeam.blp",4,0,0,0,0,0,0,0,0.75,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,255,255,255,255,3,"",0,2,0); 
@@ -586,7 +584,7 @@ INSERT INTO `SpellChainEffects` VALUES (652,1,0.3,0,1.2,1000,300,"textures\WEATH
 INSERT INTO `SpellChainEffects` VALUES (653,0.4315,0.35465,0,1.2,1000,300,"textures\SpellChainEffects\ShockLightning_Desaturated.blp",78,27,0.2075,3,3,2,4,0,0.75,0,0.8,0,0,-1E-06,0,0,0,0,0,0,0,0,0,0,0,0,0,0,20,4,1,255,248,159,100,3,"
 SpellChainEffects
 SpellChainEffects
-",0,2,0); SpellChainEffects
+",0,2,0);
 INSERT INTO `SpellChainEffects` VALUES (654,1,0.229775,0,1.2,1000,300,"textures\WEATHER\WEATHERMISTGRAINY01.BLP",104,27,0,3,3,2,4,0,0.75,0,0,1,0.1257,-1E-06,0,0,0,0,0,0,0,0,0,0,0,0,0,0,31.5,1.509,4.8,255,255,5,26,3,"",0,2,0); 
 INSERT INTO `SpellChainEffects` VALUES (655,0.6655,0.3,0,1.2,1000,300,"textures\SpellChainEffects\Beam_Red.blp",64,27,0,3,3,2,4,0,0.75,0,0,0.25,0.5655,6,0,0,0,0,0,0,0,0,0,0,0,0,0,0,20,4,1,255,233,100,20,3,"",0,2,0); 
 INSERT INTO `SpellChainEffects` VALUES (657,0.7045,0.225,0,2.75,499,300,"spells\textures\Beam_FireRed.blp",0,20,0,3,3,2,4,0,0.698,0.66,1.42,0,0,-1E-06,0,0,11.18,0,0,0.01745,-0.01745,0,0,0,0,0,0,0,50,12,1,126,255,255,255,3,"",0,2,0); 
@@ -699,7 +697,7 @@ INSERT INTO `SpellChainEffects` VALUES (777,4,0.8042,0,-3.15,3020,0,"spells\text
 INSERT INTO `SpellChainEffects` VALUES (778,0.295,0.2,0,2,1000,200,"SPELLS\TEXTURES\Beam_SpiritLink.blp",192,0,0,3,5,1,3,0,0.297,0,0,0,0,0,0,0,0,0,0.2,4.712,4.712,3.142,3.142,0,0.1,0.2,0.3,0.5,50,5,2,255,0,44,252,2,"k",0,100,0); 
 INSERT INTO `SpellChainEffects` VALUES (779,4,0.2,0,2,1000,200,"SPELLS\TEXTURES\Beam_SpiritLink.blp",192,0,0,3,5,1,3,0,0.297,0,0,0,0,0,0,0,0,0,0.2,0,0,3.142,3.142,0,0.1,0.2,0.3,0.5,50,5,2,255,55,0,53,2,"o",3,11.1,0); 
 INSERT INTO `SpellChainEffects` VALUES (780,4,0.5,0,2,1000,200,"Textures\SpellChainEffects\ManaBeam.blp",320,0,0,3,5,1,3,0,0.297,0,0,0,0,0,0,0,0,0,0,0,0,17.45,17.45,0,0.1,0.2,0.3,0.5,50,5,2,51,240,240,240,3,"
-1!1SpellChainEffects
+1!1",3,11.1,0);
 INSERT INTO `SpellChainEffects` VALUES (781,4,0.2,0,2,1000,200,"SPELLS\TEXTURES\Beam_SpiritLink.blp",192,0,0,3,5,1,3,0,0.297,0,0,0,0,0,0,0,0,0,0.3,0,0,3.142,3.142,0,0.1,0.2,0.3,0.5,50,5,2,255,3,0,253,2,"o",3,11.1,0); 
 INSERT INTO `SpellChainEffects` VALUES (782,0.295,0.2,0,2,1000,200,"SPELLS\TEXTURES\Beam_SpiritLink.blp",192,0,0,3,5,1,3,0,0.297,0,0,0,0,0,0,0,0,0,0.3,2.094,2.094,3.142,3.142,0,0.1,0.2,0.3,0.5,50,5,2,255,0,7,255,2,"k",3,100,0); 
 INSERT INTO `SpellChainEffects` VALUES (783,0.295,0.2,0,2,1000,200,"SPELLS\TEXTURES\Beam_SpiritLink.blp",192,0,0,3,5,1,3,0,0.297,0,0,0,0,0,0,0,0,0,0.3,4.712,4.712,3.142,3.142,0,0.1,0.2,0.3,0.5,50,5,2,255,14,0,247,2,"k",3,100,0); 
@@ -903,7 +901,7 @@ INSERT INTO `SpellChainEffects` VALUES (1032,2.78,1.004,0.04,1,1000,300,"Texture
 INSERT INTO `SpellChainEffects` VALUES (1033,2.78,0.579425,0.04,1,1000,300,"Textures\SpellChainEffects\Lightning_Desaturated.blp",4,0,0,0,0,0,0,0,0.75,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,255,6,162,0,3,"",1,2,0); 
 INSERT INTO `SpellChainEffects` VALUES (1034,2.78,0.229775,0.04,1,1000,300,"Textures\SpellChainEffects\Lightning.blp",4,0,0,0,0,0,0,0,0.75,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,255,6,233,30,3,"		",0,2,0); 
 INSERT INTO `SpellChainEffects` VALUES (1035,2,0.3,0.05,2,1999,0,"Textures\SpellChainEffects\Lightning.blp",70,27,0,5,10,1.9,1.9,0,0.7029,0.02,0.02,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,20,4,1,89,54,0,255,2,"
-",1,2,0); SpellChainEffects
+",1,2,0);
 INSERT INTO `SpellChainEffects` VALUES (1036,2,0.5,0.05,2,1999,0,"Textures\SpellChainEffects\Beam_Purple.blp",70,27,0,5,10,1.9,1.9,0,0.7029,0.02,0.02,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,20,4,1,255,36,0,255,3,"",0,2,0); 
 INSERT INTO `SpellChainEffects` VALUES (1037,0.1975,0.195,0,1.2,1499,300,"Spells\Textures\beam_firered.blp",328,27,0,3,3,2,4,0,0.75,0,0,0.2,1.257,30,0,0,0,0,5,0,0,0,0,0,0,0,0,0,30,2,10,127,212,0,0,3,"",0,20,0); 
 INSERT INTO `SpellChainEffects` VALUES (1043,2.78,0.325,0.04,1,499,300,"Spells\Textures\beam_summongargoyle.blp",4,0,0,0,0,0,0,0,0.75,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,255,255,255,255,2,"",0,2,0); 

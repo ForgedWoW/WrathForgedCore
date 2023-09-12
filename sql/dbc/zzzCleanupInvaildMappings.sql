@@ -40,8 +40,10 @@ ag.NextAreaID = CASE WHEN ag.NextAreaID IS NOT NULL AND ag1.ID IS NULL THEN NULL
 
 UPDATE areapoi ap
 LEFT JOIN areatable at ON ap.AreaID = at.ID
+LEFT JOIN faction f ON ap.FactionID = f.ID
 SET 
-ap.AreaID = CASE WHEN ap.AreaID IS NOT NULL AND at.ID IS NULL THEN NULL ELSE ap.AreaID END;
+ap.AreaID = CASE WHEN ap.AreaID IS NOT NULL AND at.ID IS NULL THEN NULL ELSE ap.AreaID END,
+ap.FactionID = CASE WHEN ap.FactionID IS NOT NULL AND f.ID IS NULL THEN NULL ELSE ap.FactionID END;
 
 -- For areatable
 UPDATE areatable a
@@ -382,14 +384,9 @@ dm.MapID = IF(dm.MapID IS NOT NULL AND m.ID IS NULL, NULL, dm.MapID),
 dm.ParentWorldMapID = IF(dm.ParentWorldMapID IS NOT NULL AND wma.ID IS NULL, NULL, dm.ParentWorldMapID);
 
 -- For dungeonmapchunk
-UPDATE dungeonmapchunk dmc
-LEFT JOIN map m ON dmc.MapID = m.ID
-LEFT JOIN wmoareatable wat ON dmc.WmoGroupID = wat.ID
-LEFT JOIN dungeonmap dm ON dmc.DungeonMapID = dm.ID
-SET 
-dmc.MapID = IF(dmc.MapID IS NOT NULL AND m.ID IS NULL, NULL, dmc.MapID),
-dmc.WmoGroupID = IF(dmc.WmoGroupID IS NOT NULL AND wat.ID IS NULL, NULL, dmc.WmoGroupID),
-dmc.DungeonMapID = IF(dmc.DungeonMapID IS NOT NULL AND dm.ID IS NULL, NULL, dmc.DungeonMapID);
+UPDATE dungeonmapchunk SET MapID = NULL WHERE MapID NOT IN (SELECT ID FROM map);
+UPDATE dungeonmapchunk SET WmoGroupID = NULL WHERE WmoGroupID NOT IN (SELECT WMOGroupID FROM wmoareatable);
+UPDATE dungeonmapchunk SET DungeonMapID = NULL WHERE DungeonMapID NOT IN (SELECT ID FROM dungeonmap);
 
 -- For emotes
 UPDATE emotes e
@@ -505,7 +502,7 @@ UPDATE dungeonmap SET ParentWorldMapID = NULL WHERE ParentWorldMapID NOT IN (SEL
 
 -- dungeonmapchunk table
 UPDATE dungeonmapchunk SET MapID = NULL WHERE MapID NOT IN (SELECT ID FROM map);
-UPDATE dungeonmapchunk SET WmoGroupID = NULL WHERE WmoGroupID NOT IN (SELECT ID FROM wmoareatable);
+UPDATE dungeonmapchunk SET WmoGroupID = NULL WHERE WmoGroupID NOT IN (SELECT WMOGroupID FROM wmoareatable);
 UPDATE dungeonmapchunk SET DungeonMapID = NULL WHERE DungeonMapID NOT IN (SELECT ID FROM dungeonmap);
 
 -- emotes table
@@ -620,10 +617,10 @@ UPDATE itemdisplayinfo SET ItemVisual = NULL WHERE ItemVisual NOT IN (SELECT ID 
 UPDATE itemextendedcost SET ItemPurchaseGroup = NULL WHERE ItemPurchaseGroup NOT IN (SELECT ID FROM itempurchasegroup);
 
 -- itemgroupsounds table
-UPDATE itemgroupsounds SET Pickup = NULL WHERE Pickup NOT IN (SELECT ID FROM soundentries);
-UPDATE itemgroupsounds SET `Drop` = NULL WHERE `Drop` NOT IN (SELECT ID FROM soundentries);
-UPDATE itemgroupsounds SET `Close` = NULL WHERE `Close` NOT IN (SELECT ID FROM soundentries);
-UPDATE itemgroupsounds SET `Use` = NULL WHERE `Use` NOT IN (SELECT ID FROM soundentries);
+UPDATE itemgroupsounds SET Sound_1 = NULL WHERE Sound_1 NOT IN (SELECT ID FROM soundentries);
+UPDATE itemgroupsounds SET Sound_2 = NULL WHERE Sound_2 NOT IN (SELECT ID FROM soundentries);
+UPDATE itemgroupsounds SET Sound_3 = NULL WHERE Sound_3 NOT IN (SELECT ID FROM soundentries);
+UPDATE itemgroupsounds SET Sound_4 = NULL WHERE Sound_4 NOT IN (SELECT ID FROM soundentries);
 
 -- itempurchasegroup table
 UPDATE itempurchasegroup SET ItemID_1 = NULL WHERE ItemID_1 NOT IN (SELECT ID FROM item);
@@ -808,8 +805,8 @@ UPDATE spell SET EffectMechanic_3 = NULL WHERE EffectMechanic_3 NOT IN (SELECT I
 UPDATE spell SET EffectRadiusIndex_1 = NULL WHERE EffectRadiusIndex_1 NOT IN (SELECT ID FROM spellradius);
 UPDATE spell SET EffectRadiusIndex_2 = NULL WHERE EffectRadiusIndex_2 NOT IN (SELECT ID FROM spellradius);
 UPDATE spell SET EffectRadiusIndex_3 = NULL WHERE EffectRadiusIndex_3 NOT IN (SELECT ID FROM spellradius);
-UPDATE spell SET RequiredTotemCategoryID_1 = NULL WHERE RequiredTotemCategoryID_1 NOT IN (SELECT ID FROM item);
-UPDATE spell SET RequiredTotemCategoryID_2 = NULL WHERE RequiredTotemCategoryID_2 NOT IN (SELECT ID FROM item);
+UPDATE spell SET RequiredTotemCategoryID_1 = NULL WHERE RequiredTotemCategoryID_1 NOT IN (SELECT ID FROM totemcategory);
+UPDATE spell SET RequiredTotemCategoryID_2 = NULL WHERE RequiredTotemCategoryID_2 NOT IN (SELECT ID FROM totemcategory);
 UPDATE spell SET Reagent_1 = NULL WHERE Reagent_1 NOT IN (SELECT ID FROM item);
 UPDATE spell SET Reagent_2 = NULL WHERE Reagent_2 NOT IN (SELECT ID FROM item);
 UPDATE spell SET Reagent_3 = NULL WHERE Reagent_3 NOT IN (SELECT ID FROM item);
@@ -841,9 +838,9 @@ UPDATE spelleffectcamerashakes SET CameraShake_2 = NULL WHERE CameraShake_2 NOT 
 UPDATE spelleffectcamerashakes SET CameraShake_3 = NULL WHERE CameraShake_3 NOT IN (SELECT ID FROM camerashakes);
 
 -- spellitemenchantment table
-UPDATE spellitemenchantment SET Effect_1 = NULL WHERE Effect_1 NOT IN (SELECT ID FROM spell);
-UPDATE spellitemenchantment SET Effect_2 = NULL WHERE Effect_2 NOT IN (SELECT ID FROM spell);
-UPDATE spellitemenchantment SET Effect_3 = NULL WHERE Effect_3 NOT IN (SELECT ID FROM spell);
+UPDATE spellitemenchantment SET Effect_1 = NULL WHERE Effect_1 NOT IN (SELECT ID FROM spelldispeltype);
+UPDATE spellitemenchantment SET Effect_2 = NULL WHERE Effect_2 NOT IN (SELECT ID FROM spelldispeltype);
+UPDATE spellitemenchantment SET Effect_3 = NULL WHERE Effect_3 NOT IN (SELECT ID FROM spelldispeltype);
 UPDATE spellitemenchantment SET ItemVisual = NULL WHERE ItemVisual NOT IN (SELECT ID FROM itemvisuals);
 UPDATE spellitemenchantment SET Src_ItemID = NULL WHERE Src_ItemID NOT IN (SELECT ID FROM item);
 UPDATE spellitemenchantment SET Condition_Id = NULL WHERE Condition_Id NOT IN (SELECT ID FROM spellitemenchantmentcondition);
@@ -955,10 +952,10 @@ UPDATE vehicleuiindseat SET VehicleUIIndicatorID = NULL WHERE VehicleUIIndicator
 
 -- vocaluisounds table
 UPDATE vocaluisounds SET RaceID = NULL WHERE RaceID NOT IN (SELECT ID FROM chrraces);
-UPDATE vocaluisounds SET MaleNormalSound = NULL WHERE MaleNormalSound NOT IN (SELECT ID FROM soundentries);
-UPDATE vocaluisounds SET FemaleNormalSound = NULL WHERE FemaleNormalSound NOT IN (SELECT ID FROM soundentries);
-UPDATE vocaluisounds SET MalePissedSound = NULL WHERE MalePissedSound NOT IN (SELECT ID FROM soundentries);
-UPDATE vocaluisounds SET FemalePissedSound = NULL WHERE FemalePissedSound NOT IN (SELECT ID FROM soundentries);
+UPDATE vocaluisounds SET NormalSoundID_1 = NULL WHERE NormalSoundID_1 NOT IN (SELECT ID FROM soundentries);
+UPDATE vocaluisounds SET NormalSoundID_2 = NULL WHERE NormalSoundID_2 NOT IN (SELECT ID FROM soundentries);
+UPDATE vocaluisounds SET PissedSoundID_1 = NULL WHERE PissedSoundID_1 NOT IN (SELECT ID FROM soundentries);
+UPDATE vocaluisounds SET PissedSoundID_2 = NULL WHERE PissedSoundID_2 NOT IN (SELECT ID FROM soundentries);
 
 -- weaponimpactsounds table
 UPDATE weaponimpactsounds SET ImpactSoundID_1 = NULL WHERE ImpactSoundID_1 NOT IN (SELECT ID FROM soundentries);

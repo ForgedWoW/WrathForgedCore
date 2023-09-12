@@ -21,8 +21,10 @@ ADD FOREIGN KEY (AreaID_6) REFERENCES areatable(ID),
 ADD FOREIGN KEY (NextAreaID) REFERENCES areagroup(ID);
 
 ALTER TABLE areapoi
+ADD FOREIGN KEY (FactionID) REFERENCES faction(ID),
 ADD FOREIGN KEY (AreaID) REFERENCES areatable(ID);
 
+CREATE INDEX idx_wmogroupid ON areatable (WMOGroupID);
 ALTER TABLE areatable
 ADD FOREIGN KEY (ContinentID) REFERENCES map(ID),
 ADD FOREIGN KEY (ParentAreaID) REFERENCES areatable(ID),
@@ -193,7 +195,7 @@ ADD FOREIGN KEY (ParentWorldMapID) REFERENCES worldmaparea(ID);
 
 ALTER TABLE dungeonmapchunk
 ADD FOREIGN KEY (MapID) REFERENCES map(ID),
-ADD FOREIGN KEY (WmoGroupID) REFERENCES wmoareatable(ID),
+ADD FOREIGN KEY (WmoGroupID) REFERENCES wmoareatable(WMOGroupID),
 ADD FOREIGN KEY (DungeonMapID) REFERENCES dungeonmap(ID);
 
 ALTER TABLE emotes
@@ -311,10 +313,10 @@ ALTER TABLE itemextendedcost
 ADD FOREIGN KEY (ItemPurchaseGroup) REFERENCES itempurchasegroup(ID);
 
 ALTER TABLE itemgroupsounds
-ADD FOREIGN KEY (Pickup) REFERENCES soundentries(ID),
-ADD FOREIGN KEY (`Drop`) REFERENCES soundentries(ID),
-ADD FOREIGN KEY (`Close`) REFERENCES soundentries(ID),
-ADD FOREIGN KEY (`Use`) REFERENCES soundentries(ID);
+ADD FOREIGN KEY (Sound_1) REFERENCES soundentries(ID),
+ADD FOREIGN KEY (Sound_2) REFERENCES soundentries(ID),
+ADD FOREIGN KEY (Sound_3) REFERENCES soundentries(ID),
+ADD FOREIGN KEY (Sound_4) REFERENCES soundentries(ID);
 
 ALTER TABLE itempurchasegroup
 ADD FOREIGN KEY (ItemID_1) REFERENCES item(ID),
@@ -497,8 +499,8 @@ ADD FOREIGN KEY (EffectMechanic_3) REFERENCES spellmechanic(ID),
 ADD FOREIGN KEY (EffectRadiusIndex_1) REFERENCES spellradius(ID),
 ADD FOREIGN KEY (EffectRadiusIndex_2) REFERENCES spellradius(ID),
 ADD FOREIGN KEY (EffectRadiusIndex_3) REFERENCES spellradius(ID),
-ADD FOREIGN KEY (RequiredTotemCategoryID_1) REFERENCES item(ID),
-ADD FOREIGN KEY (RequiredTotemCategoryID_2) REFERENCES item(ID),
+ADD FOREIGN KEY (RequiredTotemCategoryID_1) REFERENCES totemcategory(ID),
+ADD FOREIGN KEY (RequiredTotemCategoryID_2) REFERENCES totemcategory(ID),
 ADD FOREIGN KEY (Reagent_1) REFERENCES item(ID),
 ADD FOREIGN KEY (Reagent_2) REFERENCES item(ID),
 ADD FOREIGN KEY (Reagent_3) REFERENCES item(ID),
@@ -530,9 +532,9 @@ ADD FOREIGN KEY (CameraShake_2) REFERENCES camerashakes(ID),
 ADD FOREIGN KEY (CameraShake_3) REFERENCES camerashakes(ID);
 
 ALTER TABLE spellitemenchantment
-  ADD FOREIGN KEY (Effect_1) REFERENCES spell(ID),
-  ADD FOREIGN KEY (Effect_2) REFERENCES spell(ID),
-  ADD FOREIGN KEY (Effect_3) REFERENCES spell(ID),
+  ADD FOREIGN KEY (Effect_1) REFERENCES spelldispeltype(ID),
+  ADD FOREIGN KEY (Effect_2) REFERENCES spelldispeltype(ID),
+  ADD FOREIGN KEY (Effect_3) REFERENCES spelldispeltype(ID),
   ADD FOREIGN KEY (ItemVisual) REFERENCES itemvisuals(ID),
   ADD FOREIGN KEY (Src_ItemID) REFERENCES item(ID),
   ADD FOREIGN KEY (Condition_Id) REFERENCES spellitemenchantmentcondition(ID),
@@ -644,10 +646,10 @@ ADD FOREIGN KEY (VehicleUIIndicatorID) REFERENCES vehicleuiindicator(ID);
 
 ALTER TABLE vocaluisounds
 ADD FOREIGN KEY (RaceID) REFERENCES chrraces(ID),
-ADD FOREIGN KEY (MaleNormalSound) REFERENCES soundentries(ID),
-ADD FOREIGN KEY (FemaleNormalSound) REFERENCES soundentries(ID),
-ADD FOREIGN KEY (MalePissedSound) REFERENCES soundentries(ID),
-ADD FOREIGN KEY (FemalePissedSound) REFERENCES soundentries(ID);
+ADD FOREIGN KEY (NormalSoundID_1) REFERENCES soundentries(ID),
+ADD FOREIGN KEY (NormalSoundID_2) REFERENCES soundentries(ID),
+ADD FOREIGN KEY (PissedSoundID_1) REFERENCES soundentries(ID),
+ADD FOREIGN KEY (PissedSoundID_2) REFERENCES soundentries(ID);
 
 ALTER TABLE weaponimpactsounds
 ADD FOREIGN KEY (ImpactSoundID_1) REFERENCES soundentries(ID),
