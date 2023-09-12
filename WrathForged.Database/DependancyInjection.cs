@@ -8,6 +8,7 @@ using Microsoft.Extensions.Logging;
 using Serilog;
 using WrathForged.Database.Models.Auth;
 using WrathForged.Database.Models.Characters;
+using WrathForged.Database.Models.DBC;
 using WrathForged.Database.Models.World;
 
 namespace WrathForged.Database
@@ -32,6 +33,11 @@ namespace WrathForged.Database
                 .WithParameter("options", new DbContextOptionsBuilder<CharacterDatabase>()
                 .UseLoggerFactory(loggerFactory)
                 .UseMySql(configuration.GetConnectionString("characters"), ServerVersion.AutoDetect(configuration.GetConnectionString("characters"))).Options);
+
+            _ = builder.RegisterType<DBCDatabase>()
+                .WithParameter("options", new DbContextOptionsBuilder<DBCDatabase>()
+                .UseLoggerFactory(loggerFactory)
+                .UseMySql(configuration.GetConnectionString("dbc"), ServerVersion.AutoDetect(configuration.GetConnectionString("dbc"))).Options);
 
             return builder;
         }
