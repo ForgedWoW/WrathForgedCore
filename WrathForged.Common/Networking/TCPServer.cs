@@ -32,26 +32,6 @@ namespace WrathForged.Common.Networking
         public EventHandler<ClientSocket> OnClientConnected;
         public EventHandler<ClientSocket> OnClientDisconnected;
 
-        public void Start(int defaultPort = 8085)
-        {
-            var bindIpString = _configuration.GetDefaultValue("ClientTCPServer:BindIP", "*");
-            var bindIp = IPAddress.Any;
-
-            if (bindIpString != "*")
-            {
-                if (IPAddress.TryParse(bindIpString, out var newAddress))
-                {
-                    bindIp = newAddress;
-                }
-                else
-                {
-                    _logger.Error("Invalid IP address specified for configuration: ClientTCPServer:BindIP");
-                }
-            }
-
-            Start(_configuration.GetDefaultValue("ClientTCPServer:Port", defaultPort), bindIp);
-        }
-
         public void Start(int port, IPAddress? bindIp = null)
         {
             bindIp ??= IPAddress.Any;

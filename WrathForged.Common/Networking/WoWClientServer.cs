@@ -2,6 +2,8 @@
 // Licensed under GPL-3.0 license. See <https://github.com/ForgedWoW/WrathForgedCore/blob/master/LICENSE> for full information.
 
 using System.Diagnostics.Metrics;
+using System.Net;
+using Microsoft.Extensions.Configuration;
 using Serilog;
 using WrathForged.Common.Observability;
 using WrathForged.Models.Networking;
@@ -19,24 +21,46 @@ namespace WrathForged.Common.Networking
         private readonly ForgedModelDeserialization _forgedModelDeserialization;
         private readonly PacketRouter _packetRouter;
         private readonly ILogger _logger;
+        private readonly IConfiguration _configuration;
         private readonly Dictionary<ClientSocket, WoWClientSession> _clientSessions = new();
         private readonly Meter _meter;
         private readonly Counter<long> _connectionCounter;
 
         public WoWClientServer(PacketScope packetScope, ForgedModelDeserialization forgedModelDeserialization, TCPServer tCPServer, PacketRouter packetRouter, ILogger logger,
-                               MeterFactory meterFactory)
+                               MeterFactory meterFactory, IConfiguration configuration)
         {
             _packetScope = packetScope;
             _forgedModelDeserialization = forgedModelDeserialization;
             TCPServer = tCPServer;
             _packetRouter = packetRouter;
             _logger = logger;
+            _configuration = configuration;
             TCPServer.OnClientConnected += TCPServer_OnClientConnected;
             _meter = meterFactory.GetOrCreateMeter(MeterKeys.WRATHFORGED_COMMON);
             _connectionCounter = _meter.CreateCounter<long>("WoWClientConnections", "Number of connections from WoW Clients");
         }
 
         public TCPServer TCPServer { get; }
+
+        public void Start(int defaultPort = 8085)
+        {
+            var bindIpString = _configuration.GetDefaultValue("ClientTCPServer:BindIP", "*");
+            var bindIp = IPAddress.Any;
+
+            if (bindIpString != "*")
+            {
+                if (IPAddress.TryParse(bindIpString, out var newAddress))
+                {
+                    bindIp = newAddress;
+                }
+                else
+                {
+                    _logger.Error("Invalid IP address specified for configuration: ClientTCPServer:BindIP");
+                }
+            }
+
+            TCPServer.Start(_configuration.GetDefaultValue("ClientTCPServer:Port", defaultPort), bindIp);
+        }
 
         private void TCPServer_OnClientConnected(object? sender, ClientSocket e)
         {

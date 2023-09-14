@@ -23,7 +23,7 @@ builder.RegisterAuth();
 var container = builder.Build();
 container.InitializeCommon();
 container.Resolve<CacheBuilder>().Build();
-container.Resolve<WoWClientServer>().TCPServer.Start();
+container.Resolve<WoWClientServer>().Start();
 
 Log.Logger.Information("Auth Server started.");
 var notifier = container.Resolve<ProgramExitNotifier>();

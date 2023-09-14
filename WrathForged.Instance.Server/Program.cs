@@ -23,7 +23,7 @@ _ = builder.RegisterType<WoWClientServer>().WithParameter(new PositionalParamete
 var container = builder.Build();
 container.InitializeCommon();
 
-container.Resolve<WoWClientServer>().TCPServer.Start();
+container.Resolve<WoWClientServer>().Start();
 
 Log.Logger.Information("Instance Server started.");
 var notifier = container.Resolve<ProgramExitNotifier>();

@@ -1,79 +1,118 @@
 ﻿// Copyright (c) Forged WoW LLC <https://github.com/ForgedWoW/WrathForgedCore>
 // Licensed under GPL-3.0 license. See <https://github.com/ForgedWoW/WrathForgedCore/blob/master/LICENSE> for full information.
+using WrathForged.Database.DBC;
+
 namespace WrathForged.Database.Models.DBC;
 
+[DBCBound("AreaTable.dbc")]
 public partial class Areatable
 {
+    [DBCPropertyBinding(0, DBCBindingType.UINT)]
     public int Id { get; set; }
 
+    [DBCPropertyBinding(1, DBCBindingType.UINT, CanBeNull = true)]
     public int? ContinentId { get; set; }
 
+    [DBCPropertyBinding(2, DBCBindingType.UINT, CanBeNull = true)]
     public int? ParentAreaId { get; set; }
 
+    [DBCPropertyBinding(3, DBCBindingType.UINT)]
     public int AreaBit { get; set; }
 
+    [DBCPropertyBinding(4, DBCBindingType.UINT)]
     public int Flags { get; set; }
 
+    [DBCPropertyBinding(5, DBCBindingType.UINT, CanBeNull = true)]
     public int? SoundProviderPref { get; set; }
 
+    [DBCPropertyBinding(6, DBCBindingType.UINT, CanBeNull = true)]
     public int? SoundProviderPrefUnderwater { get; set; }
 
+    [DBCPropertyBinding(7, DBCBindingType.UINT, CanBeNull = true)]
     public int? AmbienceId { get; set; }
 
+    [DBCPropertyBinding(8, DBCBindingType.UINT, CanBeNull = true)]
     public int? ZoneMusic { get; set; }
 
+    [DBCPropertyBinding(9, DBCBindingType.UINT, CanBeNull = true)]
     public int? IntroSound { get; set; }
 
+    [DBCPropertyBinding(10, DBCBindingType.UINT)]
     public int ExplorationLevel { get; set; }
 
+    [DBCPropertyBinding(11, DBCBindingType.STRING)]
     public string? AreaNameLangEnUs { get; set; }
 
+    [DBCPropertyBinding(12, DBCBindingType.STRING)]
     public string? AreaNameLangEnGb { get; set; }
 
+    [DBCPropertyBinding(13, DBCBindingType.STRING)]
     public string? AreaNameLangKoKr { get; set; }
 
+    [DBCPropertyBinding(14, DBCBindingType.STRING)]
     public string? AreaNameLangFrFr { get; set; }
 
+    [DBCPropertyBinding(15, DBCBindingType.STRING)]
     public string? AreaNameLangDeDe { get; set; }
 
+    [DBCPropertyBinding(16, DBCBindingType.STRING)]
     public string? AreaNameLangEnCn { get; set; }
 
+    [DBCPropertyBinding(17, DBCBindingType.STRING)]
     public string? AreaNameLangZhCn { get; set; }
 
+    [DBCPropertyBinding(18, DBCBindingType.STRING)]
     public string? AreaNameLangEnTw { get; set; }
 
+    [DBCPropertyBinding(19, DBCBindingType.STRING)]
     public string? AreaNameLangZhTw { get; set; }
 
+    [DBCPropertyBinding(20, DBCBindingType.STRING)]
     public string? AreaNameLangEsEs { get; set; }
 
+    [DBCPropertyBinding(21, DBCBindingType.STRING)]
     public string? AreaNameLangEsMx { get; set; }
 
+    [DBCPropertyBinding(22, DBCBindingType.STRING)]
     public string? AreaNameLangRuRu { get; set; }
 
+    [DBCPropertyBinding(23, DBCBindingType.STRING)]
     public string? AreaNameLangPtPt { get; set; }
 
+    [DBCPropertyBinding(24, DBCBindingType.STRING)]
     public string? AreaNameLangPtBr { get; set; }
 
+    [DBCPropertyBinding(25, DBCBindingType.STRING)]
     public string? AreaNameLangItIt { get; set; }
 
+    [DBCPropertyBinding(26, DBCBindingType.STRING)]
     public string? AreaNameLangUnk { get; set; }
 
+    [DBCPropertyBinding(27, DBCBindingType.UINT)]
     public uint AreaNameLangMask { get; set; }
 
+    [DBCPropertyBinding(28, DBCBindingType.STRING)]
     public int FactionGroupMask { get; set; }
 
+    [DBCPropertyBinding(29, DBCBindingType.UINT, CanBeNull = true)]
     public int? LiquidTypeId1 { get; set; }
 
+    [DBCPropertyBinding(30, DBCBindingType.UINT, CanBeNull = true)]
     public int? LiquidTypeId2 { get; set; }
 
+    [DBCPropertyBinding(31, DBCBindingType.UINT, CanBeNull = true)]
     public int? LiquidTypeId3 { get; set; }
 
+    [DBCPropertyBinding(32, DBCBindingType.UINT, CanBeNull = true)]
     public int? LiquidTypeId4 { get; set; }
 
+    [DBCPropertyBinding(33, DBCBindingType.FLOAT)]
     public float MinElevation { get; set; }
 
+    [DBCPropertyBinding(34, DBCBindingType.FLOAT)]
     public float AmbientMultiplier { get; set; }
 
+    [DBCPropertyBinding(35, DBCBindingType.UINT, CanBeNull = true)]
     public int? Lightid { get; set; }
 
     public virtual Soundambience? Ambience { get; set; }
