@@ -7,28 +7,28 @@ namespace WrathForged.Database.Models.DBC;
 [DBCBound("AreaGroup.dbc")]
 public partial class Areagroup
 {
-    [DBCPropertyBinding(0, DBCBindingType.UINT)]
+    [DBCPropertyBinding(0, DBCBindingType.INT)]
     public int Id { get; set; }
 
-    [DBCPropertyBinding(1, DBCBindingType.UINT, CanBeNull = true)]
+    [DBCPropertyBinding(1, DBCBindingType.INT, CanBeNull = true)]
     public int? AreaId1 { get; set; }
 
-    [DBCPropertyBinding(2, DBCBindingType.UINT, CanBeNull = true)]
+    [DBCPropertyBinding(2, DBCBindingType.INT, CanBeNull = true)]
     public int? AreaId2 { get; set; }
 
-    [DBCPropertyBinding(3, DBCBindingType.UINT, CanBeNull = true)]
+    [DBCPropertyBinding(3, DBCBindingType.INT, CanBeNull = true)]
     public int? AreaId3 { get; set; }
 
-    [DBCPropertyBinding(4, DBCBindingType.UINT, CanBeNull = true)]
+    [DBCPropertyBinding(4, DBCBindingType.INT, CanBeNull = true)]
     public int? AreaId4 { get; set; }
 
-    [DBCPropertyBinding(5, DBCBindingType.UINT, CanBeNull = true)]
+    [DBCPropertyBinding(5, DBCBindingType.INT, CanBeNull = true)]
     public int? AreaId5 { get; set; }
 
-    [DBCPropertyBinding(6, DBCBindingType.UINT, CanBeNull = true)]
+    [DBCPropertyBinding(6, DBCBindingType.INT, CanBeNull = true)]
     public int? AreaId6 { get; set; }
 
-    [DBCPropertyBinding(7, DBCBindingType.UINT, CanBeNull = true)]
+    [DBCPropertyBinding(7, DBCBindingType.INT, CanBeNull = true)]
     public int? NextAreaId { get; set; }
 
     public virtual Areatable? AreaId1Navigation { get; set; }

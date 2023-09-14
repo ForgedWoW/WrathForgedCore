@@ -4,14 +4,18 @@ using WrathForged.Database.DBC;
 
 namespace WrathForged.Database.Models.DBC;
 
-[DBCBound("AttackAnimTypes.dbc")]
-public partial class Attackanimtype
+[DBCBound("Cfg_Configs.dbc")]
+public partial class CfgConfigs
 {
     [DBCPropertyBinding(0, DBCBindingType.INT)]
     public int Id { get; set; }
 
-    [DBCPropertyBinding(1, DBCBindingType.STRING)]
-    public string? Name { get; set; }
+    [DBCPropertyBinding(1, DBCBindingType.INT)]
+    public int RealmType { get; set; }
 
-    public virtual ICollection<Attackanimkit> Attackanimkits { get; set; } = new List<Attackanimkit>();
+    [DBCPropertyBinding(2, DBCBindingType.INT)]
+    public int PlayerKillingAllowed { get; set; }
+
+    [DBCPropertyBinding(3, DBCBindingType.INT)]
+    public int Roleplaying { get; set; }
 }

@@ -7,40 +7,40 @@ namespace WrathForged.Database.Models.DBC;
 [DBCBound("AreaPOI.dbc")]
 public partial class Areapoi
 {
-    [DBCPropertyBinding(0, DBCBindingType.UINT)]
+    [DBCPropertyBinding(0, DBCBindingType.INT)]
     public int Id { get; set; }
 
-    [DBCPropertyBinding(1, DBCBindingType.UINT)]
+    [DBCPropertyBinding(1, DBCBindingType.INT)]
     public int Importance { get; set; }
 
-    [DBCPropertyBinding(2, DBCBindingType.UINT)]
+    [DBCPropertyBinding(2, DBCBindingType.INT)]
     public int Icon1 { get; set; }
 
-    [DBCPropertyBinding(3, DBCBindingType.UINT)]
+    [DBCPropertyBinding(3, DBCBindingType.INT)]
     public int Icon2 { get; set; }
 
-    [DBCPropertyBinding(4, DBCBindingType.UINT)]
+    [DBCPropertyBinding(4, DBCBindingType.INT)]
     public int Icon3 { get; set; }
 
-    [DBCPropertyBinding(5, DBCBindingType.UINT)]
+    [DBCPropertyBinding(5, DBCBindingType.INT)]
     public int Icon4 { get; set; }
 
-    [DBCPropertyBinding(6, DBCBindingType.UINT)]
+    [DBCPropertyBinding(6, DBCBindingType.INT)]
     public int Icon5 { get; set; }
 
-    [DBCPropertyBinding(7, DBCBindingType.UINT)]
+    [DBCPropertyBinding(7, DBCBindingType.INT)]
     public int Icon6 { get; set; }
 
-    [DBCPropertyBinding(8, DBCBindingType.UINT)]
+    [DBCPropertyBinding(8, DBCBindingType.INT)]
     public int Icon7 { get; set; }
 
-    [DBCPropertyBinding(9, DBCBindingType.UINT)]
+    [DBCPropertyBinding(9, DBCBindingType.INT)]
     public int Icon8 { get; set; }
 
-    [DBCPropertyBinding(10, DBCBindingType.UINT)]
+    [DBCPropertyBinding(10, DBCBindingType.INT)]
     public int Icon9 { get; set; }
 
-    [DBCPropertyBinding(11, DBCBindingType.UINT, CanBeNull = true)]
+    [DBCPropertyBinding(11, DBCBindingType.INT, CanBeNull = true)]
     public int? FactionId { get; set; }
 
     [DBCPropertyBinding(12, DBCBindingType.FLOAT)]
@@ -52,13 +52,13 @@ public partial class Areapoi
     [DBCPropertyBinding(14, DBCBindingType.FLOAT)]
     public float Z { get; set; }
 
-    [DBCPropertyBinding(15, DBCBindingType.UINT)]
+    [DBCPropertyBinding(15, DBCBindingType.INT)]
     public int ContinentId { get; set; }
 
-    [DBCPropertyBinding(16, DBCBindingType.UINT)]
+    [DBCPropertyBinding(16, DBCBindingType.INT)]
     public int Flags { get; set; }
 
-    [DBCPropertyBinding(17, DBCBindingType.UINT, CanBeNull = true)]
+    [DBCPropertyBinding(17, DBCBindingType.INT, CanBeNull = true)]
     public int? AreaId { get; set; }
 
     [DBCPropertyBinding(18, DBCBindingType.STRING)]
@@ -109,7 +109,7 @@ public partial class Areapoi
     [DBCPropertyBinding(33, DBCBindingType.STRING)]
     public string? NameLangUnk { get; set; }
 
-    [DBCPropertyBinding(34, DBCBindingType.UINT)]
+    [DBCPropertyBinding(34, DBCBindingType.INT)]
     public uint NameLangMask { get; set; }
 
     [DBCPropertyBinding(35, DBCBindingType.STRING)]
@@ -160,13 +160,13 @@ public partial class Areapoi
     [DBCPropertyBinding(50, DBCBindingType.STRING)]
     public string? DescriptionLangUnk { get; set; }
 
-    [DBCPropertyBinding(51, DBCBindingType.UINT)]
+    [DBCPropertyBinding(51, DBCBindingType.INT)]
     public uint DescriptionLangMask { get; set; }
 
-    [DBCPropertyBinding(52, DBCBindingType.UINT)]
+    [DBCPropertyBinding(52, DBCBindingType.INT)]
     public int WorldStateId { get; set; }
 
-    [DBCPropertyBinding(53, DBCBindingType.UINT)]
+    [DBCPropertyBinding(53, DBCBindingType.INT)]
     public int WorldMapLink { get; set; }
 
     public virtual Areatable? Area { get; set; }

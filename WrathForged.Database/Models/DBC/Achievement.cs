@@ -7,7 +7,7 @@ namespace WrathForged.Database.Models.DBC;
 [DBCBound("Achievement.dbc")]
 public partial class Achievement
 {
-    [DBCPropertyBinding(0, DBCBindingType.UINT)]
+    [DBCPropertyBinding(0, DBCBindingType.INT)]
     public int Id { get; set; }
 
     [DBCPropertyBinding(1, DBCBindingType.INT, DefaultValue = -1)]
@@ -67,7 +67,7 @@ public partial class Achievement
     [DBCPropertyBinding(19, DBCBindingType.STRING)]
     public string? TitleLangUnk { get; set; }
 
-    [DBCPropertyBinding(20, DBCBindingType.UINT)]
+    [DBCPropertyBinding(20, DBCBindingType.INT)]
     public uint TitleLangMask { get; set; }
 
     [DBCPropertyBinding(21, DBCBindingType.STRING)]
@@ -118,22 +118,22 @@ public partial class Achievement
     [DBCPropertyBinding(36, DBCBindingType.STRING)]
     public string? DescriptionLangUnk { get; set; }
 
-    [DBCPropertyBinding(37, DBCBindingType.UINT)]
+    [DBCPropertyBinding(37, DBCBindingType.INT)]
     public uint DescriptionLangMask { get; set; }
 
-    [DBCPropertyBinding(38, DBCBindingType.UINT)]
+    [DBCPropertyBinding(38, DBCBindingType.INT)]
     public int? Category { get; set; }
 
-    [DBCPropertyBinding(39, DBCBindingType.UINT)]
+    [DBCPropertyBinding(39, DBCBindingType.INT)]
     public int Points { get; set; }
 
-    [DBCPropertyBinding(40, DBCBindingType.UINT)]
+    [DBCPropertyBinding(40, DBCBindingType.INT)]
     public int UiOrder { get; set; }
 
-    [DBCPropertyBinding(41, DBCBindingType.UINT)]
+    [DBCPropertyBinding(41, DBCBindingType.INT)]
     public int Flags { get; set; }
 
-    [DBCPropertyBinding(42, DBCBindingType.UINT, CanBeNull = true)]
+    [DBCPropertyBinding(42, DBCBindingType.INT, CanBeNull = true)]
     public int? IconId { get; set; }
 
     [DBCPropertyBinding(43, DBCBindingType.STRING)]
@@ -184,13 +184,13 @@ public partial class Achievement
     [DBCPropertyBinding(58, DBCBindingType.STRING)]
     public string? RewardLangUnk { get; set; }
 
-    [DBCPropertyBinding(59, DBCBindingType.UINT)]
+    [DBCPropertyBinding(59, DBCBindingType.INT)]
     public uint RewardLangMask { get; set; }
 
-    [DBCPropertyBinding(60, DBCBindingType.UINT)]
+    [DBCPropertyBinding(60, DBCBindingType.INT)]
     public int MinimumCriteria { get; set; }
 
-    [DBCPropertyBinding(61, DBCBindingType.UINT, CanBeNull = true)]
+    [DBCPropertyBinding(61, DBCBindingType.INT, CanBeNull = true)]
     public int? SharesCriteria { get; set; }
 
     public virtual ICollection<AchievementCriterion> AchievementCriteria { get; set; } = new List<AchievementCriterion>();

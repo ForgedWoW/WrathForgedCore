@@ -7,9 +7,9 @@ namespace WrathForged.Database.Models.DBC;
 [DBCBound("BankBagSlotPrices.dbc")]
 public partial class Bankbagslotprice
 {
-    [DBCPropertyBinding(0, DBCBindingType.UINT)]
+    [DBCPropertyBinding(0, DBCBindingType.INT)]
     public int Id { get; set; }
 
-    [DBCPropertyBinding(1, DBCBindingType.UINT)]
+    [DBCPropertyBinding(1, DBCBindingType.INT)]
     public int Cost { get; set; }
 }

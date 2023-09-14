@@ -7,19 +7,19 @@ namespace WrathForged.Database.Models.DBC;
 [DBCBound("AttackAnimKits.dbc")]
 public partial class Attackanimkit
 {
-    [DBCPropertyBinding(0, DBCBindingType.UINT)]
+    [DBCPropertyBinding(0, DBCBindingType.INT)]
     public int Id { get; set; }
 
-    [DBCPropertyBinding(1, DBCBindingType.UINT, CanBeNull = true)]
+    [DBCPropertyBinding(1, DBCBindingType.INT, CanBeNull = true)]
     public int? Animation { get; set; }
 
-    [DBCPropertyBinding(2, DBCBindingType.UINT, CanBeNull = true)]
+    [DBCPropertyBinding(2, DBCBindingType.INT, CanBeNull = true)]
     public int? Type { get; set; }
 
-    [DBCPropertyBinding(3, DBCBindingType.UINT)]
+    [DBCPropertyBinding(3, DBCBindingType.INT)]
     public int Flags { get; set; }
 
-    [DBCPropertyBinding(4, DBCBindingType.UINT)]
+    [DBCPropertyBinding(4, DBCBindingType.INT)]
     public int Field04 { get; set; }
 
     public virtual Animationdatum? AnimationNavigation { get; set; }

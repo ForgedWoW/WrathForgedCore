@@ -7,36 +7,36 @@ namespace WrathForged.Database.Models.DBC;
 [DBCBound("BannedAddOns.dbc")]
 public partial class Bannedaddon
 {
-    [DBCPropertyBinding(0, DBCBindingType.UINT)]
+    [DBCPropertyBinding(0, DBCBindingType.INT)]
     public int Id { get; set; }
 
-    [DBCPropertyBinding(1, DBCBindingType.UINT)]
+    [DBCPropertyBinding(1, DBCBindingType.INT)]
     public uint NameMd51 { get; set; }
 
-    [DBCPropertyBinding(2, DBCBindingType.UINT)]
+    [DBCPropertyBinding(2, DBCBindingType.INT)]
     public uint NameMd52 { get; set; }
 
-    [DBCPropertyBinding(3, DBCBindingType.UINT)]
+    [DBCPropertyBinding(3, DBCBindingType.INT)]
     public uint NameMd53 { get; set; }
 
-    [DBCPropertyBinding(4, DBCBindingType.UINT)]
+    [DBCPropertyBinding(4, DBCBindingType.INT)]
     public uint NameMd54 { get; set; }
 
-    [DBCPropertyBinding(5, DBCBindingType.UINT)]
+    [DBCPropertyBinding(5, DBCBindingType.INT)]
     public uint VersionMd51 { get; set; }
 
-    [DBCPropertyBinding(6, DBCBindingType.UINT)]
+    [DBCPropertyBinding(6, DBCBindingType.INT)]
     public uint VersionMd52 { get; set; }
 
-    [DBCPropertyBinding(7, DBCBindingType.UINT)]
+    [DBCPropertyBinding(7, DBCBindingType.INT)]
     public uint VersionMd53 { get; set; }
 
-    [DBCPropertyBinding(8, DBCBindingType.UINT)]
+    [DBCPropertyBinding(8, DBCBindingType.INT)]
     public uint VersionMd54 { get; set; }
 
-    [DBCPropertyBinding(9, DBCBindingType.UINT)]
+    [DBCPropertyBinding(9, DBCBindingType.INT)]
     public int LastModified { get; set; }
 
-    [DBCPropertyBinding(10, DBCBindingType.UINT)]
+    [DBCPropertyBinding(10, DBCBindingType.INT)]
     public int Flags { get; set; }
 }

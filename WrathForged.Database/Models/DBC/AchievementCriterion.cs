@@ -7,31 +7,31 @@ namespace WrathForged.Database.Models.DBC;
 [DBCBound("Achievement_Criteria.dbc")]
 public partial class AchievementCriterion
 {
-    [DBCPropertyBinding(0, DBCBindingType.UINT)]
+    [DBCPropertyBinding(0, DBCBindingType.INT)]
     public int Id { get; set; }
 
-    [DBCPropertyBinding(1, DBCBindingType.UINT)]
+    [DBCPropertyBinding(1, DBCBindingType.INT)]
     public int? AchievementId { get; set; }
 
-    [DBCPropertyBinding(2, DBCBindingType.UINT)]
+    [DBCPropertyBinding(2, DBCBindingType.INT)]
     public int Type { get; set; }
 
-    [DBCPropertyBinding(3, DBCBindingType.UINT)]
+    [DBCPropertyBinding(3, DBCBindingType.INT)]
     public int AssetId { get; set; }
 
-    [DBCPropertyBinding(4, DBCBindingType.UINT)]
+    [DBCPropertyBinding(4, DBCBindingType.INT)]
     public int Quantity { get; set; }
 
-    [DBCPropertyBinding(5, DBCBindingType.UINT)]
+    [DBCPropertyBinding(5, DBCBindingType.INT)]
     public int StartEvent { get; set; }
 
-    [DBCPropertyBinding(6, DBCBindingType.UINT)]
+    [DBCPropertyBinding(6, DBCBindingType.INT)]
     public int StartAsset { get; set; }
 
-    [DBCPropertyBinding(7, DBCBindingType.UINT)]
+    [DBCPropertyBinding(7, DBCBindingType.INT)]
     public int FailEvent { get; set; }
 
-    [DBCPropertyBinding(8, DBCBindingType.UINT)]
+    [DBCPropertyBinding(8, DBCBindingType.INT)]
     public int FailAsset { get; set; }
 
     [DBCPropertyBinding(9, DBCBindingType.STRING)]
@@ -82,22 +82,22 @@ public partial class AchievementCriterion
     [DBCPropertyBinding(24, DBCBindingType.STRING)]
     public string? DescriptionLangUnk { get; set; }
 
-    [DBCPropertyBinding(25, DBCBindingType.UINT)]
+    [DBCPropertyBinding(25, DBCBindingType.INT)]
     public uint DescriptionLangMask { get; set; }
 
-    [DBCPropertyBinding(26, DBCBindingType.UINT)]
+    [DBCPropertyBinding(26, DBCBindingType.INT)]
     public int Flags { get; set; }
 
-    [DBCPropertyBinding(27, DBCBindingType.UINT)]
+    [DBCPropertyBinding(27, DBCBindingType.INT)]
     public int TimerStartEvent { get; set; }
 
-    [DBCPropertyBinding(28, DBCBindingType.UINT)]
+    [DBCPropertyBinding(28, DBCBindingType.INT)]
     public int TimerAssetId { get; set; }
 
-    [DBCPropertyBinding(29, DBCBindingType.UINT)]
+    [DBCPropertyBinding(29, DBCBindingType.INT)]
     public int TimerTime { get; set; }
 
-    [DBCPropertyBinding(30, DBCBindingType.UINT)]
+    [DBCPropertyBinding(30, DBCBindingType.INT)]
     public int UiOrder { get; set; }
 
     public virtual Achievement? Achievement { get; set; }

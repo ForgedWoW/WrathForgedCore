@@ -7,13 +7,13 @@ namespace WrathForged.Database.Models.DBC;
 [DBCBound("CameraShakes.dbc")]
 public partial class Camerashake
 {
-    [DBCPropertyBinding(0, DBCBindingType.UINT)]
+    [DBCPropertyBinding(0, DBCBindingType.INT)]
     public int Id { get; set; }
 
-    [DBCPropertyBinding(1, DBCBindingType.UINT)]
+    [DBCPropertyBinding(1, DBCBindingType.INT)]
     public int ShakeType { get; set; }
 
-    [DBCPropertyBinding(2, DBCBindingType.UINT)]
+    [DBCPropertyBinding(2, DBCBindingType.INT)]
     public int Direction { get; set; }
 
     [DBCPropertyBinding(3, DBCBindingType.FLOAT)]
