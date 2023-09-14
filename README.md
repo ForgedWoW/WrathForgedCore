@@ -26,4 +26,4 @@ Actively accepts Pull Requests.
 ## Requirements
 - .NET 7.0 installed
 - [Trinity Core Database](https://trinitycore.info/install/Database-Installation)
-- [Trinity Core AuthServer](https://github.com/TrinityCore/TrinityCore/tree/3.3.5)]
+- [Trinity Core AuthServer](https://github.com/TrinityCore/TrinityCore/tree/3.3.5)
