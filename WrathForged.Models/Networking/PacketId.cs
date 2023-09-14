@@ -43,28 +43,19 @@ namespace WrathForged.Models.Networking
             }
         }
 
-        public static implicit operator PacketId(AuthServerOpCode val)
-        {
-            return new PacketId(val);
-        }
+        public static implicit operator PacketId(AuthServerOpCode val) => new(val);
 
-        public static implicit operator PacketId(RealmServerOpCode val)
-        {
-            return new PacketId(val, PacketScope.ClientInstance);
-        }
+        public static implicit operator PacketId(RealmServerOpCode val) => new(val, PacketScope.ClientToInstance);
 
         public static bool operator ==(PacketId a, PacketId b)
         {
             return a.Id == b.Id &&
-                (a.Scope == PacketScope.Auth && b.Scope == PacketScope.Auth || // if both are auth packets, they are equal
+                ((a.Scope == PacketScope.Auth && b.Scope == PacketScope.Auth) || // if both are auth packets, they are equal
                 (a.Scope != PacketScope.Auth && b.Scope != PacketScope.Auth && a.Scope != b.Scope) || // if both are realm packets, they are equal event if they are different realm scopes
                 a.Scope == b.Scope); // if both are equil
         }
 
-        public static bool operator !=(PacketId a, PacketId b)
-        {
-            return !(a == b);
-        }
+        public static bool operator !=(PacketId a, PacketId b) => !(a == b);
 
         public override string ToString()
         {
@@ -77,15 +68,9 @@ namespace WrathForged.Models.Networking
             if (obj == null)
                 return false;
 
-            if (obj is PacketId packetId)
-                return this == packetId;
-
-            return false;
+            return obj is PacketId packetId && this == packetId;
         }
 
-        public override int GetHashCode()
-        {
-            return Id.GetHashCode() ^ (int.MaxValue * (int)Scope);
-        }
+        public override int GetHashCode() => Id.GetHashCode() ^ (int.MaxValue * (int)Scope);
     }
 }

@@ -20,7 +20,7 @@ namespace WrathForged.Database
         public static ContainerBuilder RegisterDatabase(this ContainerBuilder builder, IConfiguration configuration, Serilog.ILogger logger)
         {
             var loggerFactory = new LoggerFactory().AddSerilog(logger);
-            
+
             _ = builder.RegisterType<AuthDatabase>()
                 .WithParameter("options", new DbContextOptionsBuilder<AuthDatabase>()
                 .UseLoggerFactory(loggerFactory)
@@ -50,18 +50,18 @@ namespace WrathForged.Database
 
             var options = new MemoryCacheEntryOptions() { SlidingExpiration = TimeSpan.FromHours(hours) };
             var queryCache = new ForgeDBCache(new MemoryCacheOptions(), loggerFactory);
-            QueryCacheManager.Cache = queryCache;    
+            QueryCacheManager.Cache = queryCache;
             QueryCacheManager.DefaultMemoryCacheEntryOptions = options;
-            builder.RegisterInstance(queryCache).As<ForgeDBCache>().SingleInstance();
+            _ = builder.RegisterInstance(queryCache).As<ForgeDBCache>().SingleInstance();
 
             return builder;
         }
 
-        public static async Task ShutdownDatabase(this IContainer container)
+        public static void ShutdownDatabase(this IContainer container)
         {
-            await container.Resolve<AuthDatabase>().DisposeAsync();
-            await container.Resolve<WorldDatabase>().DisposeAsync();
-            await container.Resolve<CharacterDatabase>().DisposeAsync();
+            container.Resolve<AuthDatabase>().Dispose();
+            container.Resolve<WorldDatabase>().Dispose();
+            container.Resolve<CharacterDatabase>().Dispose();
             container.Resolve<ForgeDBCache>().Dispose();
         }
     }

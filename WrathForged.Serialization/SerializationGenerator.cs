@@ -82,12 +82,7 @@ namespace WrathForged.Serialization
                 {
                     var attr = prop.GetAttributes().FirstOrDefault(a => a.AttributeClass.Name == _attributeName);
                     var indexArg = attr.ConstructorArguments.First();
-                    if (indexArg.Value != null)
-                    {
-                        return (uint)indexArg.Value;
-                    }
-
-                    return 0u;
+                    return indexArg.Value != null ? (uint)indexArg.Value : 0u;
                 }).ToList();
 
             if (!properties.Any())
@@ -96,32 +91,32 @@ namespace WrathForged.Serialization
             var sourceBuilder = new StringBuilder();
             var requiredNamespaces = new HashSet<string>();
 
-            sourceBuilder.AppendLine("");
-            sourceBuilder.AppendLine("#pragma warning disable CS8602");
-            sourceBuilder.AppendLine("#pragma warning disable CS8604");
-            sourceBuilder.AppendLine("");
+            _ = sourceBuilder.AppendLine("");
+            _ = sourceBuilder.AppendLine("#pragma warning disable CS8602");
+            _ = sourceBuilder.AppendLine("#pragma warning disable CS8604");
+            _ = sourceBuilder.AppendLine("");
             // Serialize and Deserialize
             BuildSerializer(context, symbol, properties, sourceBuilder);
             BuildDeserializer(context, symbol, properties, sourceBuilder, requiredNamespaces);
 
             // Append the namespace and class definitions
-            sourceBuilder.Insert(0, $"namespace {symbol.ContainingNamespace.ToDisplayString()}" +
+            _ = sourceBuilder.Insert(0, $"namespace {symbol.ContainingNamespace.ToDisplayString()}" +
                 "{" +
-                $"    public static class {symbol.Name}SerializationExtensions" +
+                $"    public partial class {symbol.Name}" +
                 "    {"
             );
-            sourceBuilder.AppendLine("    }");
-            sourceBuilder.AppendLine("}");
+            _ = sourceBuilder.AppendLine("    }");
+            _ = sourceBuilder.AppendLine("}");
 
             // Append the collected required namespaces at the beginning
             // Default usings
-            sourceBuilder.Insert(0, "using System;\r\n");
-            sourceBuilder.Insert(0, "using System.Linq;\r\n");
-            sourceBuilder.Insert(0, "using WrathForged.Serialization;\r\n");
+            _ = sourceBuilder.Insert(0, "using System;\r\n");
+            _ = sourceBuilder.Insert(0, "using System.Linq;\r\n");
+            _ = sourceBuilder.Insert(0, "using WrathForged.Serialization;\r\n");
             foreach (var ns in requiredNamespaces)
             {
                 if (!string.IsNullOrEmpty(ns))
-                    sourceBuilder.Insert(0, $"using {ns};\r\n");
+                    _ = sourceBuilder.Insert(0, $"using {ns};\r\n");
             }
 
             return sourceBuilder.ToString();
@@ -138,20 +133,20 @@ namespace WrathForged.Serialization
                 if (packetIdsArgument.Key != null && scopeArgument.Key != null)
                 {
                     var packetIds = packetIdsArgument.Value.Values.Select(val => val.Value.ToString());
-                    sourceBuilder.AppendLine($"[DeserializeDefinition(PacketScope.{(PacketScope)scopeArgument.Value.Value}, {string.Join(",", packetIds)})]");
+                    _ = sourceBuilder.AppendLine($"[DeserializeDefinition(PacketScope.{(PacketScope)scopeArgument.Value.Value}, {string.Join(",", packetIds)})]");
                 }
             }
 
-            sourceBuilder.AppendLine($"public static DeserializationResult Read{symbol.Name}(this System.IO.BinaryReader reader, out {symbol.Name}? instance)");
-            sourceBuilder.AppendLine("{");
-            sourceBuilder.AppendLine("try");
-            sourceBuilder.AppendLine("{");
-            sourceBuilder.AppendLine($"instance = new {symbol.Name}();");
-            sourceBuilder.AppendLine("var cachedSizes = new Dictionary<uint, int>();");
+            _ = sourceBuilder.AppendLine($"public DeserializationResult Read{symbol.Name}(this System.IO.BinaryReader reader, out {symbol.Name}? instance)");
+            _ = sourceBuilder.AppendLine("{");
+            _ = sourceBuilder.AppendLine("try");
+            _ = sourceBuilder.AppendLine("{");
+            _ = sourceBuilder.AppendLine($"instance = new {symbol.Name}();");
+            _ = sourceBuilder.AppendLine("var cachedSizes = new Dictionary<uint, int>();");
 
             foreach (var prop in properties)
             {
-                requiredNamespaces.Add(prop?.Type?.ContainingNamespace?.ToString());
+                _ = requiredNamespaces.Add(prop?.Type?.ContainingNamespace?.ToString());
                 try
                 {
                     var attr = prop.GetAttributes().FirstOrDefault(a => a.AttributeClass.Name == _attributeName);
@@ -160,7 +155,7 @@ namespace WrathForged.Serialization
                     if (attr.HasNamedArg("CollectionSizeIndex"))
                     {
                         var collectionSizeIndex = attr.GetNamedArg<uint>("CollectionSizeIndex", 0);
-                        sourceBuilder.AppendLine($" cachedSizes[{collectionSizeIndex}] = reader.ReadInt32();"); // Assuming size is stored as int
+                        _ = sourceBuilder.AppendLine($" cachedSizes[{collectionSizeIndex}] = reader.ReadInt32();"); // Assuming size is stored as int
                         continue;
                     }
 
@@ -171,19 +166,19 @@ namespace WrathForged.Serialization
                         if (attr.HasNamedArg("CollectionSizeIndex"))
                         {
                             var sizeIndexArg = attr.GetNamedArg<uint>("CollectionSizeIndex", 0);
-                            sourceBuilder.AppendLine($" var collectionSize = cachedSizes[{sizeIndexArg}];");
+                            _ = sourceBuilder.AppendLine($" var collectionSize = cachedSizes[{sizeIndexArg}];");
                         }
                         else
                         {
                             var collectionSizeCode = GenerateCollectionDeserializationSizeCode(attr);
-                            sourceBuilder.AppendLine(collectionSizeCode);
+                            _ = sourceBuilder.AppendLine(collectionSizeCode);
                         }
                     }
 
                     var propertyDeserializationCode = GenerateTypeDeserializationCode(context.Compilation, symbol, prop.Type, attr, prop.Name);
                     if (!string.IsNullOrEmpty(propertyDeserializationCode))
                     {
-                        sourceBuilder.AppendLine(propertyDeserializationCode);
+                        _ = sourceBuilder.AppendLine(propertyDeserializationCode);
                     }
                 }
                 catch (Exception ex)
@@ -192,26 +187,26 @@ namespace WrathForged.Serialization
                 }
             }
 
-            sourceBuilder.AppendLine("return DeserializationResult.Success;");
-            sourceBuilder.AppendLine("}");
-            sourceBuilder.AppendLine("catch (EndOfStreamException)");
-            sourceBuilder.AppendLine("{");
-            sourceBuilder.AppendLine("instance = null;");
-            sourceBuilder.AppendLine("return DeserializationResult.EndOfStream;");
-            sourceBuilder.AppendLine("}");
-            sourceBuilder.AppendLine("catch (Exception)");
-            sourceBuilder.AppendLine("{");
-            sourceBuilder.AppendLine("instance = null;");
-            sourceBuilder.AppendLine("return DeserializationResult.Error;");
-            sourceBuilder.AppendLine("}");
-            sourceBuilder.AppendLine("}");
+            _ = sourceBuilder.AppendLine("return DeserializationResult.Success;");
+            _ = sourceBuilder.AppendLine("}");
+            _ = sourceBuilder.AppendLine("catch (EndOfStreamException)");
+            _ = sourceBuilder.AppendLine("{");
+            _ = sourceBuilder.AppendLine("instance = null;");
+            _ = sourceBuilder.AppendLine("return DeserializationResult.EndOfStream;");
+            _ = sourceBuilder.AppendLine("}");
+            _ = sourceBuilder.AppendLine("catch (Exception)");
+            _ = sourceBuilder.AppendLine("{");
+            _ = sourceBuilder.AppendLine("instance = null;");
+            _ = sourceBuilder.AppendLine("return DeserializationResult.Error;");
+            _ = sourceBuilder.AppendLine("}");
+            _ = sourceBuilder.AppendLine("}");
         }
 
         private void BuildSerializer(GeneratorExecutionContext context, INamedTypeSymbol symbol, List<IPropertySymbol> properties, StringBuilder sourceBuilder)
         {
-            sourceBuilder.AppendLine($"public static void Serialize(this {symbol.Name} instance, System.IO.BinaryWriter writer)");
-            sourceBuilder.AppendLine("{");
-            sourceBuilder.AppendLine("Dictionary<uint, bool> hasDefaultValue = new Dictionary<uint, bool>();");
+            _ = sourceBuilder.AppendLine($"public void Serialize(this {symbol.Name} instance, System.IO.BinaryWriter writer)");
+            _ = sourceBuilder.AppendLine("{");
+            _ = sourceBuilder.AppendLine("Dictionary<uint, bool> hasDefaultValue = new Dictionary<uint, bool>();");
             foreach (var prop in properties)
             {
                 var attr = prop.GetAttributes().FirstOrDefault(a => a.AttributeClass.Name == _attributeName);
@@ -222,7 +217,7 @@ namespace WrathForged.Serialization
                 var dontSerializeWhenIndexIsDefaultValue = attr.GetNamedArg("DontSerializeWhenIndexIsDefaultValue", uint.MaxValue);
 
                 var index = (uint)indexArg.Value;
-                sourceBuilder.AppendLine($"hasDefaultValue[{index}] = instance.{prop.Name} == default;");
+                _ = sourceBuilder.AppendLine($"hasDefaultValue[{index}] = instance.{prop.Name} == default;");
 
                 // Determine the type of the collection (Array, List, or None).
                 var collectionType = DetermineCollectionType(prop.Type);
@@ -231,7 +226,7 @@ namespace WrathForged.Serialization
                 {
                     var collectionSizeCode = GenerateCollectionSizeCode(attr, $"instance.{prop.Name}", collectionType);
                     if (!string.IsNullOrEmpty(collectionSizeCode))
-                        sourceBuilder.AppendLine(collectionSizeCode);
+                        _ = sourceBuilder.AppendLine(collectionSizeCode);
                 }
 
                 var propertySerializationCode = GenerateTypeSerializationCode(context.Compilation, symbol, prop.Type, attr, $"instance.{prop.Name}");
@@ -250,11 +245,11 @@ namespace WrathForged.Serialization
 
                 if (!string.IsNullOrEmpty(propertySerializationCode))
                 {
-                    sourceBuilder.AppendLine(propertySerializationCode);
+                    _ = sourceBuilder.AppendLine(propertySerializationCode);
                 }
             }
 
-            sourceBuilder.AppendLine("}");
+            _ = sourceBuilder.AppendLine("}");
         }
 
         internal string GenerateTypeSerializationCode(Compilation compilation, INamedTypeSymbol containerSymbol, ITypeSymbol typeSymbol, AttributeData attr, string variableName)
@@ -295,7 +290,7 @@ namespace WrathForged.Serialization
                 return specialTypeGenerator.GenerateTypeCodeSerializeForType(typeSymbol, attr, forgedTypeCode, compilation, containerSymbol, variableName);
             }
 
-            if (HasSerializeExtensionMethod(compilation, containerSymbol))
+            if (typeSymbol.GetAttributes().Any(a => a.AttributeClass.Name == _forgedSerializableName))
             {
                 return $"{variableName}.Serialize(writer);";
             }
@@ -374,7 +369,7 @@ namespace WrathForged.Serialization
                     return specialTypeGenerator.GenerateTypeCodeDeserializeForType(typeSymbol, attr, forgedTypeCode, compilation, containerSymbol, variableName);
                 }
 
-                if (HasDeserializeExtensionMethod(compilation, containerSymbol))
+                if (typeSymbol.GetAttributes().Any(a => a.AttributeClass.Name == _forgedSerializableName))
                 {
                     return $"instance.{variableName} = reader.Read{typeSymbol.Name}();";
                 }
@@ -396,13 +391,10 @@ namespace WrathForged.Serialization
             }
 
             // Check if it's a list
-            if (typeSymbol is INamedTypeSymbol namedTypeSymbol &&
-                namedTypeSymbol.AllInterfaces.Any(i => i.OriginalDefinition.ToDisplayString() == "System.Collections.Generic.IList<T>"))
-            {
-                return CollectionType.List;
-            }
-
-            return CollectionType.None;
+            return typeSymbol is INamedTypeSymbol namedTypeSymbol &&
+                namedTypeSymbol.AllInterfaces.Any(i => i.OriginalDefinition.ToDisplayString() == "System.Collections.Generic.IList<T>")
+                ? CollectionType.List
+                : CollectionType.None;
         }
 
         internal string GenerateCollectionSizeCode(AttributeData attribute, string variableName, CollectionType collectionType)
@@ -483,7 +475,7 @@ namespace WrathForged.Serialization
             if (fixedSizeArg.Key != null && fixedSizeArg.Value.Value != null)
             {
                 var fixedSize = (uint)fixedSizeArg.Value.Value;
-                codeBuilder.AppendLine($"{prefix}{fixedSize};");
+                _ = codeBuilder.AppendLine($"{prefix}{fixedSize};");
                 return codeBuilder.ToString();
             }
 
@@ -492,7 +484,7 @@ namespace WrathForged.Serialization
             if (sizeLengthTypeArg.Key != null && sizeLengthTypeArg.Value.Value != null)
             {
                 var sizeLengthType = ((TypeCode)sizeLengthTypeArg.Value.Value).ToString();
-                codeBuilder.AppendLine($"{prefix}reader.Read{sizeLengthType}();");
+                _ = codeBuilder.AppendLine($"{prefix}reader.Read{sizeLengthType}();");
                 return codeBuilder.ToString();
             }
 
@@ -501,12 +493,12 @@ namespace WrathForged.Serialization
             if (sizeIndexArg.Key != null && sizeIndexArg.Value.Value != null)
             {
                 var collectionSizeIndex = (uint)sizeIndexArg.Value.Value;
-                codeBuilder.AppendLine($"{prefix}cachedSizes[{collectionSizeIndex}];");
+                _ = codeBuilder.AppendLine($"{prefix}cachedSizes[{collectionSizeIndex}];");
                 return codeBuilder.ToString();
             }
 
             // Default case (this might be an error scenario or you can handle it differently)
-            codeBuilder.AppendLine($"{prefix}reader.ReadInt32();");
+            _ = codeBuilder.AppendLine($"{prefix}reader.ReadInt32();");
             return codeBuilder.ToString();
         }
 
@@ -545,52 +537,6 @@ namespace WrathForged.Serialization
                 default:
                     return false;
             }
-        }
-
-        private bool HasSerializeExtensionMethod(Compilation compilation, INamedTypeSymbol typeSymbol)
-        {
-            var potentialMethods = compilation.SourceModule.GlobalNamespace
-                .GetNamespaceMembers()
-                .SelectMany(ns => ns.GetTypeMembers())
-                .Where(t => t.IsStatic)
-                .SelectMany(t => t.GetMembers().OfType<IMethodSymbol>())
-                .Where(m => m.IsStatic)
-                .Where(m => m.Name == "Serialize");
-
-            foreach (var method in potentialMethods)
-            {
-                if (method is IMethodSymbol serializeMethod
-                    && serializeMethod.Parameters.Length > 0
-                    && SymbolEqualityComparer.Default.Equals(serializeMethod.Parameters[0].Type, typeSymbol))
-                {
-                    return true;
-                }
-            }
-
-            return false;
-        }
-
-        private bool HasDeserializeExtensionMethod(Compilation compilation, INamedTypeSymbol typeSymbol)
-        {
-            var potentialMethods = compilation.SourceModule.GlobalNamespace
-                .GetNamespaceMembers()
-                .SelectMany(ns => ns.GetTypeMembers())
-                .Where(t => t.IsStatic)
-                .SelectMany(t => t.GetMembers().OfType<IMethodSymbol>())
-                .Where(m => m.IsStatic)
-                .Where(m => m.Name == $"Read{typeSymbol.Name}");
-
-            foreach (var method in potentialMethods)
-            {
-                if (method is IMethodSymbol serializeMethod
-                    && serializeMethod.Parameters.Length > 0
-                    && SymbolEqualityComparer.Default.Equals(serializeMethod.Parameters[0].Type, typeSymbol))
-                {
-                    return true;
-                }
-            }
-
-            return false;
         }
     }
 }

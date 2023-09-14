@@ -5,10 +5,10 @@ using Autofac;
 using Microsoft.Extensions.Configuration;
 using Serilog;
 using WrathForged.Common;
+using WrathForged.Common.CommandLine;
 using WrathForged.Common.Networking;
 using WrathForged.Database;
-using WrathForged.Database.Models.DBC;
-using Z.EntityFramework.Plus;
+using WrathForged.Serialization;
 
 var configBuilder = new ConfigurationBuilder()
                     .SetBasePath(Directory.GetCurrentDirectory())
@@ -19,6 +19,7 @@ IConfiguration configuration = configBuilder.Build();
 ContainerBuilder builder = new();
 builder.RegisterCommon(configuration);
 builder.RegisterDatabase(configuration, Log.Logger);
+_ = builder.RegisterType<WoWClientServer>().WithParameter(new PositionalParameter(0, PacketScope.ClientToRealm)).SingleInstance();
 
 var container = builder.Build();
 container.InitializeCommon();
@@ -28,14 +29,10 @@ container.Resolve<WoWClientServer>().TCPServer.Start();
 Log.Logger.Information("Realm Server started.");
 var notifier = container.Resolve<ProgramExitNotifier>();
 
-Console.CancelKeyPress += async (sender, e) =>
+Console.CancelKeyPress += (sender, e) =>
 {
     e.Cancel = true;
-    await container.ShutdownDatabase();
-    notifier.NotifyStop();
+    notifier.NotifyStop("ctrl+c pressed.");
 };
 
-while (!notifier.IsExiting)
-{
-    await Task.Delay(1000);
-}
+container.Resolve<CommandLineReader>().ReadCommandLineUntilProgramExit();

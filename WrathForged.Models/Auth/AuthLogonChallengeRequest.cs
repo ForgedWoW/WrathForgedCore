@@ -10,7 +10,7 @@ using WrathForged.Serialization;
 namespace WrathForged.Models.Auth
 {
     [ForgedSerializable(Scope = PacketScope.Auth, PacketIDs = new[] { (uint)AuthServerOpCode.AUTH_LOGON_CHALLENGE, (uint)AuthServerOpCode.AUTH_RECONNECT_CHALLENGE })]
-    public record AuthLogonChallengeRequest
+    public partial record AuthLogonChallengeRequest
     {
         /// <summary>
         /// Authentication protocol version to use.
@@ -20,7 +20,6 @@ namespace WrathForged.Models.Auth
         [SerializableProperty(0)]
         public ProtocolVersion Protocol { get; set; }
 
-        //We don't need to expose this really. Shouldn't need to be checked. This isn't C++
         /// <summary>
         /// Packet size. Computed by Trinitycore as the size of the payload + the username size.
         /// </summary>
@@ -30,7 +29,6 @@ namespace WrathForged.Models.Auth
         /// <summary>
         /// Game the client is for.
         /// </summary>
-        ///
         [SerializableProperty(2, OverrideType = ForgedTypeCode.StringParsedEnum, FixedCollectionSize = 4)]
         public ClientType ClientType { get; set; }
 

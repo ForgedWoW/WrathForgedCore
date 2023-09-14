@@ -19,6 +19,8 @@ namespace WrathForged.Common
 
         public T Resolve<T>() => Container.Resolve<T>();
 
+        public IEnumerable<T> ResolveAll<T>() => Container.Resolve<IEnumerable<T>>();
+
         public T Resolve<T>(params Parameter[] parameters) => Container.Resolve<T>(parameters);
 
         public T ResolveWithPositionalParameters<T>(params object[] parameters)

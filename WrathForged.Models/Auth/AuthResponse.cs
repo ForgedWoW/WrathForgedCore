@@ -6,7 +6,7 @@ using WrathForged.Serialization;
 namespace WrathForged.Models.Auth
 {
     [ForgedSerializable]
-    public class AuthResponse
+    public partial record AuthResponse
     {
         [SerializableProperty(0)]
         public AuthStatus Status { get; set; }

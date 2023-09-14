@@ -1,10 +1,10 @@
 ﻿// Copyright (c) Forged WoW LLC <https://github.com/ForgedWoW/WrathForgedCore>
 // Licensed under GPL-3.0 license. See <https://github.com/ForgedWoW/WrathForgedCore/blob/master/LICENSE> for full information.
-namespace WrathForged.Models.Auth
+namespace WrathForged.Common.DBC
 {
-    public record LoginTracker
+    public struct DBCBody
     {
-        public DateTime LastAttempt { get; set; }
-        public int Attempts { get; set; }
+        // Column Name -> Column Value
+        public Dictionary<string, object>[] RecordMaps;
     }
 }

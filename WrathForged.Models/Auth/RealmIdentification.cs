@@ -5,13 +5,13 @@ using WrathForged.Serialization;
 namespace WrathForged.Models.Auth
 {
     [ForgedSerializable]
-    public class RealmIdentification
+    public partial record RealmIdentification
     {
         [SerializableProperty(0)]
-        public uint RegionID { get; set; } = 0;
+        public uint RegionID { get; set; }
 
         [SerializableProperty(1)]
-        public uint BattlegroupID { get; set; } = 0;
+        public uint BattlegroupID { get; set; }
 
         [SerializableProperty(2)]
         public uint RealmID { get; set; }

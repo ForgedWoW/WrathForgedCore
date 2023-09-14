@@ -6,6 +6,8 @@ using Microsoft.Extensions.Configuration;
 using OpenTelemetry;
 using OpenTelemetry.Trace;
 using Serilog;
+using WrathForged.Common.CommandLine;
+using WrathForged.Common.CommandLine.Commands;
 using WrathForged.Common.Cryptography;
 using WrathForged.Common.Networking;
 using WrathForged.Common.Observability;
@@ -35,7 +37,8 @@ namespace WrathForged.Common
              .Enrich.FromLogContext()
              .CreateLogger();
 
-            var exitNotifier = new ProgramExitNotifier(Log.Logger);
+            var classFactory = new ClassFactory();
+            var exitNotifier = new ProgramExitNotifier(Log.Logger, classFactory);
 
             exitNotifier.ExitProgram += (sender, e) =>
             {
@@ -48,7 +51,7 @@ namespace WrathForged.Common
             };
 
             _ = builder.RegisterInstance(configuration).As<IConfiguration>().SingleInstance();
-            _ = builder.RegisterType<ClassFactory>().SingleInstance();
+            _ = builder.RegisterInstance(classFactory).SingleInstance();
             _ = builder.RegisterInstance(Log.Logger).As<ILogger>().SingleInstance();
             _ = builder.RegisterInstance(exitNotifier).SingleInstance();
             _ = builder.RegisterType<TCPServer>();
@@ -59,6 +62,8 @@ namespace WrathForged.Common
             _ = builder.RegisterType<MeterFactory>().SingleInstance();
             _ = builder.RegisterType<BackgroundWorkProcessor>().SingleInstance();
             _ = builder.RegisterType<RandomUtilities>().SingleInstance();
+            _ = builder.RegisterType<CommandLineReader>().SingleInstance();
+            _ = builder.RegisterType<ProgramExitCommand>().As<ICommandLineArgumentHandler>().SingleInstance();
 
             // configure OpenTelemetry
             var telemetryType = configuration.GetDefaultValue("Telemetry:Types", "").Split(',', StringSplitOptions.TrimEntries | StringSplitOptions.TrimEntries).ToList(); // Assuming you have a key like this in your JSON
