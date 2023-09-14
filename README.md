@@ -5,7 +5,7 @@
 Actively accepts Pull Requests.
 
 ## Architecture
-![Architecture](WrathForgedArchitecture.png)
+![Architecture](Architecture.png)
 
 
 ### Technologies
