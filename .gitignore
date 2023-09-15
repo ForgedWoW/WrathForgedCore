@@ -400,3 +400,5 @@ FodyWeavers.xsd
 /sql/dbc/.vscode
 /sql/.vscode
 /.vscode
+/WrathForged.Database/sql/dbc/.vscode
+*/.vscode
