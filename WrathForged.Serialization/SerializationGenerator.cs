@@ -68,7 +68,7 @@ namespace WrathForged.Serialization
 #if DEBUG
                 System.Diagnostics.Debug.WriteLine(source);
 #endif
-                context.AddSource($"{modelSymbol.Name}_Serialization", source);
+                context.AddSource($"{modelSymbol.Name}SerializationExtensions", source);
             }
         }
 
@@ -101,9 +101,9 @@ namespace WrathForged.Serialization
 
             // Append the namespace and class definitions
             _ = sourceBuilder.Insert(0, $"namespace {symbol.ContainingNamespace.ToDisplayString()}" +
-                "{" +
-                $"    public partial class {symbol.Name}" +
-                "    {"
+                " {\r\n" +
+                $"    public static class {symbol.Name}SerializationExtensions\r\n" +
+                "    {\r\n"
             );
             _ = sourceBuilder.AppendLine("    }");
             _ = sourceBuilder.AppendLine("}");
