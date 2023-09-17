@@ -10,28 +10,28 @@ public partial class Battlemasterlist
     [DBCPropertyBinding(0, DBCBindingType.INT)]
     public int Id { get; set; }
 
-    [DBCPropertyBinding(1, DBCBindingType.INT, CanBeNull = true)]
+    [DBCPropertyBinding(1, DBCBindingType.INT, Nullable = true)]
     public int? MapId1 { get; set; }
 
-    [DBCPropertyBinding(2, DBCBindingType.INT, CanBeNull = true)]
+    [DBCPropertyBinding(2, DBCBindingType.INT, Nullable = true)]
     public int? MapId2 { get; set; }
 
-    [DBCPropertyBinding(3, DBCBindingType.INT, CanBeNull = true)]
+    [DBCPropertyBinding(3, DBCBindingType.INT, Nullable = true)]
     public int? MapId3 { get; set; }
 
-    [DBCPropertyBinding(4, DBCBindingType.INT, CanBeNull = true)]
+    [DBCPropertyBinding(4, DBCBindingType.INT, Nullable = true)]
     public int? MapId4 { get; set; }
 
-    [DBCPropertyBinding(5, DBCBindingType.INT, CanBeNull = true)]
+    [DBCPropertyBinding(5, DBCBindingType.INT, Nullable = true)]
     public int? MapId5 { get; set; }
 
-    [DBCPropertyBinding(6, DBCBindingType.INT, CanBeNull = true)]
+    [DBCPropertyBinding(6, DBCBindingType.INT, Nullable = true)]
     public int? MapId6 { get; set; }
 
-    [DBCPropertyBinding(7, DBCBindingType.INT, CanBeNull = true)]
+    [DBCPropertyBinding(7, DBCBindingType.INT, Nullable = true)]
     public int? MapId7 { get; set; }
 
-    [DBCPropertyBinding(8, DBCBindingType.INT, CanBeNull = true)]
+    [DBCPropertyBinding(8, DBCBindingType.INT, Nullable = true)]
     public int? MapId8 { get; set; }
 
     [DBCPropertyBinding(9, DBCBindingType.INT)]

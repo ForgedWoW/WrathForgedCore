@@ -10,7 +10,7 @@ public partial class Areatrigger
     [DBCPropertyBinding(0, DBCBindingType.INT)]
     public int Id { get; set; }
 
-    [DBCPropertyBinding(1, DBCBindingType.INT, CanBeNull = true)]
+    [DBCPropertyBinding(1, DBCBindingType.INT, Nullable = true)]
     public int? ContinentId { get; set; }
 
     [DBCPropertyBinding(2, DBCBindingType.FLOAT)]

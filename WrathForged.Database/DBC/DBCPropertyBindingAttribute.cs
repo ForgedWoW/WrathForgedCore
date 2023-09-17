@@ -25,6 +25,6 @@ namespace WrathForged.Database.DBC
         /// <summary>
         ///     Used for non nullable types that can be null in the dbc such as uint or float. This will end up being empty if the value is null.
         /// </summary>
-        public bool CanBeNull { get; set; } = false;
+        public bool Nullable { get; set; } = false;
     }
 }

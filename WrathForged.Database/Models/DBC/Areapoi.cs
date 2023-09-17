@@ -40,7 +40,7 @@ public partial class Areapoi
     [DBCPropertyBinding(10, DBCBindingType.INT)]
     public int Icon9 { get; set; }
 
-    [DBCPropertyBinding(11, DBCBindingType.INT, CanBeNull = true)]
+    [DBCPropertyBinding(11, DBCBindingType.INT, Nullable = true)]
     public int? FactionId { get; set; }
 
     [DBCPropertyBinding(12, DBCBindingType.FLOAT)]
@@ -58,7 +58,7 @@ public partial class Areapoi
     [DBCPropertyBinding(16, DBCBindingType.INT)]
     public int Flags { get; set; }
 
-    [DBCPropertyBinding(17, DBCBindingType.INT, CanBeNull = true)]
+    [DBCPropertyBinding(17, DBCBindingType.INT, Nullable = true)]
     public int? AreaId { get; set; }
 
     [DBCPropertyBinding(18, DBCBindingType.STRING)]

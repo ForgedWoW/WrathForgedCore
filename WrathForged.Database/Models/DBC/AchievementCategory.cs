@@ -10,7 +10,7 @@ public partial class AchievementCategory
     [DBCPropertyBinding(0, DBCBindingType.INT)]
     public int Id { get; set; }
 
-    [DBCPropertyBinding(1, DBCBindingType.INT, CanBeNull = true)]
+    [DBCPropertyBinding(1, DBCBindingType.INT, Nullable = true)]
     public int? Parent { get; set; }
 
     [DBCPropertyBinding(2, DBCBindingType.STRING)]

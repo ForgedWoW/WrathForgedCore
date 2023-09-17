@@ -10,10 +10,10 @@ public partial class Attackanimkit
     [DBCPropertyBinding(0, DBCBindingType.INT)]
     public int Id { get; set; }
 
-    [DBCPropertyBinding(1, DBCBindingType.INT, CanBeNull = true)]
+    [DBCPropertyBinding(1, DBCBindingType.INT, Nullable = true)]
     public int? Animation { get; set; }
 
-    [DBCPropertyBinding(2, DBCBindingType.INT, CanBeNull = true)]
+    [DBCPropertyBinding(2, DBCBindingType.INT, Nullable = true)]
     public int? Type { get; set; }
 
     [DBCPropertyBinding(3, DBCBindingType.INT)]

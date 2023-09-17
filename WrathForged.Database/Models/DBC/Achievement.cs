@@ -13,10 +13,10 @@ public partial class Achievement
     [DBCPropertyBinding(1, DBCBindingType.INT, DefaultValue = -1)]
     public int Faction { get; set; }
 
-    [DBCPropertyBinding(2, DBCBindingType.INT, CanBeNull = true)]
+    [DBCPropertyBinding(2, DBCBindingType.INT, Nullable = true)]
     public int? InstanceId { get; set; }
 
-    [DBCPropertyBinding(3, DBCBindingType.INT, CanBeNull = true)]
+    [DBCPropertyBinding(3, DBCBindingType.INT, Nullable = true)]
     public int? Supercedes { get; set; }
 
     [DBCPropertyBinding(4, DBCBindingType.STRING)]
@@ -133,7 +133,7 @@ public partial class Achievement
     [DBCPropertyBinding(41, DBCBindingType.INT)]
     public int Flags { get; set; }
 
-    [DBCPropertyBinding(42, DBCBindingType.INT, CanBeNull = true)]
+    [DBCPropertyBinding(42, DBCBindingType.INT, Nullable = true)]
     public int? IconId { get; set; }
 
     [DBCPropertyBinding(43, DBCBindingType.STRING)]
@@ -190,7 +190,7 @@ public partial class Achievement
     [DBCPropertyBinding(60, DBCBindingType.INT)]
     public int MinimumCriteria { get; set; }
 
-    [DBCPropertyBinding(61, DBCBindingType.INT, CanBeNull = true)]
+    [DBCPropertyBinding(61, DBCBindingType.INT, Nullable = true)]
     public int? SharesCriteria { get; set; }
 
     public virtual ICollection<AchievementCriterion> AchievementCriteria { get; set; } = new List<AchievementCriterion>();
