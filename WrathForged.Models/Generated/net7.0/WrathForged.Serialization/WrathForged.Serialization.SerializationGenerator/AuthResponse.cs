@@ -31,12 +31,10 @@ return DeserializationResult.Success;
 }
 catch (EndOfStreamException)
 {
-instance = null;
 return DeserializationResult.EndOfStream;
 }
 catch (Exception)
 {
-instance = null;
 return DeserializationResult.Error;
 }
 }

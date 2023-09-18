@@ -201,12 +201,10 @@ namespace WrathForged.Serialization
             _ = sourceBuilder.AppendLine("}");
             _ = sourceBuilder.AppendLine("catch (EndOfStreamException)");
             _ = sourceBuilder.AppendLine("{");
-            _ = sourceBuilder.AppendLine("instance = null;");
             _ = sourceBuilder.AppendLine("return DeserializationResult.EndOfStream;");
             _ = sourceBuilder.AppendLine("}");
             _ = sourceBuilder.AppendLine("catch (Exception)");
             _ = sourceBuilder.AppendLine("{");
-            _ = sourceBuilder.AppendLine("instance = null;");
             _ = sourceBuilder.AppendLine("return DeserializationResult.Error;");
             _ = sourceBuilder.AppendLine("}");
             _ = sourceBuilder.AppendLine("}");
