@@ -5,7 +5,13 @@
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
 		<EmitCompilerGeneratedFiles>true</EmitCompilerGeneratedFiles>
+		<GeneratedFolder>Generated</GeneratedFolder>
+		<CompilerGeneratedFilesOutputPath>$(GeneratedFolder)\$(TargetFramework)</CompilerGeneratedFilesOutputPath>
 	</PropertyGroup>
+	<ItemGroup>
+		<!-- Exclude the output of source generators from the compilation -->
+		<Compile Remove="$(CompilerGeneratedFilesOutputPath)/**/*.cs" />
+	</ItemGroup>
 
 	<ItemGroup>
 		<PackageReference Include="Autofac" Version="7.1.0" />
@@ -25,11 +31,11 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<ProjectReference Include="..\WrathForged.Serialization\WrathForged.Serialization.csproj" OutputItemType="Analyzer" />
+		<ProjectReference Include="..\WrathForged.Serialization.Models\WrathForged.Serialization.Models.csproj" />
+		<ProjectReference Include="..\WrathForged.Serialization\WrathForged.Serialization.csproj" OutputItemType="Analyzer" ReferenceOutputAssembly="false" />
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Folder Include="Chat\Enum\" />
+		<Folder Include="Chat\Enum\" />
 	</ItemGroup>
-
 </Project>

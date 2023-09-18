@@ -19,6 +19,6 @@ namespace WrathForged.Common.DBC
                 Type = DBCBindingType.UNKNOWN;
         }
 
-        private DBCBindingType DetermineType(string type) => Enum.TryParse(type.ToUpper(), out DBCBindingType result) ? result : DBCBindingType.UNKNOWN;
+        private static DBCBindingType DetermineType(string type) => Enum.TryParse(type.ToUpper(), out DBCBindingType result) ? result : DBCBindingType.UNKNOWN;
     }
 }

@@ -1,13 +1,11 @@
 ﻿// Copyright (c) Forged WoW LLC <https://github.com/ForgedWoW/WrathForgedCore>
 // Licensed under GPL-3.0 license. See <https://github.com/ForgedWoW/WrathForgedCore/blob/master/LICENSE> for full information.
 
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Net;
 using System.Text;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
+using Microsoft.CodeAnalysis.Text;
 using WrathForged.Serialization.Generators;
 
 namespace WrathForged.Serialization
@@ -17,48 +15,36 @@ namespace WrathForged.Serialization
     {
         private readonly string _attributeName = nameof(SerializablePropertyAttribute);
         private readonly string _forgedSerializableName = nameof(ForgedSerializableAttribute).Replace("Attribute", "");
-        private Dictionary<string, IForgedTypeGenerator> _generatorsByName;
-        private Dictionary<TypeKind, IForgedTypeGenerator> _generatorsByTypeKind;
-        private Dictionary<SpecialType, IForgedTypeGenerator> _generatorsBySpecialType;
-        private Dictionary<ForgedTypeCode, IForgedTypeGenerator> _generatorsByTypeCode;
+        private readonly Dictionary<string, IForgedTypeGenerator> _generatorsByName = new(StringComparer.InvariantCultureIgnoreCase);
+        private readonly Dictionary<TypeKind, IForgedTypeGenerator> _generatorsByTypeKind = new();
+        private readonly Dictionary<SpecialType, IForgedTypeGenerator> _generatorsBySpecialType = new();
+        private readonly Dictionary<ForgedTypeCode, IForgedTypeGenerator> _generatorsByTypeCode = new();
         private bool _collectionSizeWritten;
 
-        public void Initialize(GeneratorInitializationContext context)
+        public SerializationGenerator()
         {
-            context.RegisterForSyntaxNotifications(() => new SerializationSyntaxReceiver());
+            _generatorsByTypeKind.Add(TypeKind.Enum, new EnumTypeGenerator());
+            _generatorsByTypeKind.Add(TypeKind.Array, new ArrayTypeGenerator(this));
 
-            _generatorsByTypeKind = new Dictionary<TypeKind, IForgedTypeGenerator>()
-            {
-                { TypeKind.Enum, new EnumTypeGenerator() },
-                { TypeKind.Array, new ArrayTypeGenerator(this) }
-            };
+            _generatorsByName.Add(nameof(IPAddress), new IPAddressGenerator());
+            _generatorsByName.Add(nameof(String), new StringGenerator());
 
-            _generatorsByName = new Dictionary<string, IForgedTypeGenerator>(StringComparer.InvariantCultureIgnoreCase)
-            {
-                { nameof(String), new StringGenerator() },
-                { nameof(IPAddress), new IPAddressGenerator() }
-            };
+            _generatorsBySpecialType.Add(SpecialType.System_Collections_Generic_IList_T, new ListTypeGenerator(this));
 
-            _generatorsBySpecialType = new Dictionary<SpecialType, IForgedTypeGenerator>()
-            {
-                { SpecialType.System_Collections_Generic_IList_T, new ListTypeGenerator(this) }
-            };
-
-            _generatorsByTypeCode = new Dictionary<ForgedTypeCode, IForgedTypeGenerator>()
-            {
-                { ForgedTypeCode.StringParsedEnum, new StringParsedEnumGenerator() }
-            };
+            _generatorsByTypeCode.Add(ForgedTypeCode.StringParsedEnum, new StringParsedEnumGenerator());
         }
+
+        public void Initialize(GeneratorInitializationContext context) => context.RegisterForSyntaxNotifications(() => new SerializationSyntaxReceiver());
 
         public void Execute(GeneratorExecutionContext context)
         {
-            if (!(context.SyntaxReceiver is SerializationSyntaxReceiver receiver))
+            if (context.SyntaxReceiver is not SerializationSyntaxReceiver receiver)
                 return;
 
-            //System.Diagnostics.Debugger.Launch();
+            System.Diagnostics.Debugger.Launch();
             foreach (var classDeclaration in receiver.CandidateClasses)
             {
-                if (!(context.Compilation.GetSemanticModel(classDeclaration.SyntaxTree).GetDeclaredSymbol(classDeclaration) is INamedTypeSymbol modelSymbol))
+                if (context.Compilation.GetSemanticModel(classDeclaration.SyntaxTree).GetDeclaredSymbol(classDeclaration) is not INamedTypeSymbol modelSymbol)
                     continue;
 
                 var source = GenerateSerializationCode(context, modelSymbol);
@@ -68,7 +54,7 @@ namespace WrathForged.Serialization
 #if DEBUG
                 System.Diagnostics.Debug.WriteLine(source);
 #endif
-                context.AddSource($"{modelSymbol.Name}SerializationExtensions", source);
+                context.AddSource($"{modelSymbol.Name}SerializationExtensions", SourceText.From(source));
             }
         }
 
@@ -77,12 +63,12 @@ namespace WrathForged.Serialization
             _collectionSizeWritten = false;
             var properties = symbol.GetMembers()
                 .OfType<IPropertySymbol>()
-                .Where(prop => prop.GetAttributes().Any(attr => attr.AttributeClass.Name == _attributeName))
+                .Where(prop => prop.GetAttributes().Any(attr => attr.AttributeClass?.Name == _attributeName))
                 .OrderBy(prop =>
                 {
-                    var attr = prop.GetAttributes().FirstOrDefault(a => a.AttributeClass.Name == _attributeName);
-                    var indexArg = attr.ConstructorArguments.First();
-                    return indexArg.Value != null ? (uint)indexArg.Value : 0u;
+                    var attr = prop.GetAttributes().FirstOrDefault(a => a.AttributeClass?.Name == _attributeName);
+                    var indexArg = attr?.ConstructorArguments.First();
+                    return indexArg.HasValue && indexArg.Value.Value != null ? (uint)indexArg.Value.Value : 0u;
                 }).ToList();
 
             if (!properties.Any())
@@ -124,15 +110,15 @@ namespace WrathForged.Serialization
 
         private void BuildDeserializer(GeneratorExecutionContext context, INamedTypeSymbol symbol, List<IPropertySymbol> properties, StringBuilder sourceBuilder, HashSet<string> requiredNamespaces)
         {
-            var forgedSerializableAttributeData = symbol.GetAttributes().FirstOrDefault(a => a.AttributeClass.Name.Contains(_forgedSerializableName));
+            var forgedSerializableAttributeData = symbol.GetAttributes().FirstOrDefault(a => a.AttributeClass != null && a.AttributeClass.Name.Contains(_forgedSerializableName));
 
             if (forgedSerializableAttributeData != null)
             {
                 var packetIdsArgument = forgedSerializableAttributeData.NamedArguments.FirstOrDefault(arg => arg.Key == "PacketIDs");
                 var scopeArgument = forgedSerializableAttributeData.NamedArguments.FirstOrDefault(arg => arg.Key == "Scope");
-                if (packetIdsArgument.Key != null && scopeArgument.Key != null)
+                if (packetIdsArgument.Key != null && scopeArgument.Key != null && scopeArgument.Value.Value != null)
                 {
-                    var packetIds = packetIdsArgument.Value.Values.Select(val => val.Value.ToString());
+                    var packetIds = packetIdsArgument.Value.Values.Where(val => val.Value != null).Select(val => val.Value?.ToString());
                     _ = sourceBuilder.AppendLine($"[DeserializeDefinition(PacketScope.{(PacketScope)scopeArgument.Value.Value}, {string.Join(",", packetIds)})]");
                 }
             }
@@ -146,10 +132,17 @@ namespace WrathForged.Serialization
 
             foreach (var prop in properties)
             {
-                _ = requiredNamespaces.Add(prop?.Type?.ContainingNamespace?.ToString());
+                var ns = prop.Type.ContainingNamespace.ToString();
+
+                if (ns != null && !string.IsNullOrEmpty(ns) && ns != "System" && ns != "System.Collections.Generic")
+                    _ = requiredNamespaces.Add(ns);
+
                 try
                 {
-                    var attr = prop.GetAttributes().FirstOrDefault(a => a.AttributeClass.Name == _attributeName);
+                    var attr = prop.GetAttributes().FirstOrDefault(a => a.AttributeClass?.Name == _attributeName);
+
+                    if (attr == null)
+                        continue;
 
                     // Check if the property has a CollectionSizeIndex attribute
                     if (attr.HasNamedArg("CollectionSizeIndex"))
@@ -209,14 +202,18 @@ namespace WrathForged.Serialization
             _ = sourceBuilder.AppendLine("Dictionary<uint, bool> hasDefaultValue = new Dictionary<uint, bool>();");
             foreach (var prop in properties)
             {
-                var attr = prop.GetAttributes().FirstOrDefault(a => a.AttributeClass.Name == _attributeName);
+                var attr = prop.GetAttributes().FirstOrDefault(a => a.AttributeClass?.Name == _attributeName);
+
+                if (attr == null)
+                    continue;
+
                 // Check for the DontSerializeWhenDefaultValue attribute property
                 var dontSerializeWhenDefaultValue = attr.GetNamedArg("DontSerializeWhenDefaultValue", false);
 
-                var indexArg = attr.ConstructorArguments.First();
+                var indexArg = attr.ConstructorArguments.FirstOrDefault();
                 var dontSerializeWhenIndexIsDefaultValue = attr.GetNamedArg("DontSerializeWhenIndexIsDefaultValue", uint.MaxValue);
 
-                var index = (uint)indexArg.Value;
+                var index = indexArg.Value != null ? (uint)indexArg.Value : 0;
                 _ = sourceBuilder.AppendLine($"hasDefaultValue[{index}] = instance.{prop.Name} == default;");
 
                 // Determine the type of the collection (Array, List, or None).
@@ -290,7 +287,7 @@ namespace WrathForged.Serialization
                 return specialTypeGenerator.GenerateTypeCodeSerializeForType(typeSymbol, attr, forgedTypeCode, compilation, containerSymbol, variableName);
             }
 
-            if (typeSymbol.GetAttributes().Any(a => a.AttributeClass.Name == _forgedSerializableName))
+            if (typeSymbol.GetAttributes().Any(a => a.AttributeClass?.Name == _forgedSerializableName))
             {
                 return $"{variableName}.Serialize(writer);";
             }
@@ -369,7 +366,7 @@ namespace WrathForged.Serialization
                     return specialTypeGenerator.GenerateTypeCodeDeserializeForType(typeSymbol, attr, forgedTypeCode, compilation, containerSymbol, variableName);
                 }
 
-                if (typeSymbol.GetAttributes().Any(a => a.AttributeClass.Name == _forgedSerializableName))
+                if (typeSymbol.GetAttributes().Any(a => a.AttributeClass?.Name == _forgedSerializableName))
                 {
                     return $"instance.{variableName} = reader.Read{typeSymbol.Name}();";
                 }
@@ -504,39 +501,20 @@ namespace WrathForged.Serialization
 
         private static ForgedTypeCode GetTypeCodeFromTypeName(string typeName)
         {
-            switch (typeName)
+            return typeName switch
             {
-                case "string":
-                case "String":
-                    return ForgedTypeCode.String;
-
-                default:
-                    return Enum.TryParse(typeName, out ForgedTypeCode result) ? result : ForgedTypeCode.Empty;
-            }
+                "string" or "String" => ForgedTypeCode.String,
+                _ => Enum.TryParse(typeName, out ForgedTypeCode result) ? result : ForgedTypeCode.Empty,
+            };
         }
 
         private bool IsPrimitiveOrSimpleType(ForgedTypeCode typeCode)
         {
-            switch (typeCode)
+            return typeCode switch
             {
-                case ForgedTypeCode.Boolean:
-                case ForgedTypeCode.Byte:
-                case ForgedTypeCode.Char:
-                case ForgedTypeCode.Decimal:
-                case ForgedTypeCode.Double:
-                case ForgedTypeCode.Int16:
-                case ForgedTypeCode.Int32:
-                case ForgedTypeCode.Int64:
-                case ForgedTypeCode.SByte:
-                case ForgedTypeCode.Single:
-                case ForgedTypeCode.UInt16:
-                case ForgedTypeCode.UInt32:
-                case ForgedTypeCode.UInt64:
-                    return true;
-
-                default:
-                    return false;
-            }
+                ForgedTypeCode.Boolean or ForgedTypeCode.Byte or ForgedTypeCode.Char or ForgedTypeCode.Decimal or ForgedTypeCode.Double or ForgedTypeCode.Int16 or ForgedTypeCode.Int32 or ForgedTypeCode.Int64 or ForgedTypeCode.SByte or ForgedTypeCode.Single or ForgedTypeCode.UInt16 or ForgedTypeCode.UInt32 or ForgedTypeCode.UInt64 => true,
+                _ => false,
+            };
         }
     }
 }

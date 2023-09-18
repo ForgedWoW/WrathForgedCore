@@ -121,7 +121,7 @@ namespace WrathForged.Common.Networking
         {
             if (length < 1)
             {
-                throw new ArgumentOutOfRangeException("length", "string length must be greater than zero!");
+                throw new ArgumentOutOfRangeException(nameof(length), "string length must be greater than zero!");
             }
 
             if (!EnsureData(length))
@@ -167,7 +167,7 @@ namespace WrathForged.Common.Networking
         {
             if (length < 1)
             {
-                throw new ArgumentOutOfRangeException("length", "BigInteger length must be greater than zero!");
+                throw new ArgumentOutOfRangeException(nameof(length), "BigInteger length must be greater than zero!");
             }
 
             if (!EnsureData(length))

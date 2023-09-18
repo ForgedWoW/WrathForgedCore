@@ -20,12 +20,11 @@ namespace WrathForged.Common.Threading
 
         public LimitedThreadTaskManager(ExecutionDataflowBlockOptions? blockOptions = null)
         {
-            if (blockOptions == null)
-                blockOptions = new ExecutionDataflowBlockOptions()
-                {
-                    MaxDegreeOfParallelism = 1,
-                    EnsureOrdered = true
-                };
+            blockOptions ??= new ExecutionDataflowBlockOptions()
+            {
+                MaxDegreeOfParallelism = 1,
+                EnsureOrdered = true
+            };
 
             _blockOptions = blockOptions;
             _cancellationToken = new CancellationTokenSource();
@@ -33,10 +32,7 @@ namespace WrathForged.Common.Threading
             _actionBlock = new ActionBlock<Action>(ProcessTask, _blockOptions);
         }
 
-        public void Deactivate()
-        {
-            _actionBlock.Complete();
-        }
+        public void Deactivate() => _actionBlock.Complete();
 
         /// <summary>
         ///     Schedules all work queued
@@ -57,10 +53,7 @@ namespace WrathForged.Common.Threading
         ///     Scheduled actions start as soon as there is a thread available.
         /// </summary>
         /// <param name="a"> </param>
-        public void Schedule(Action a)
-        {
-            _actionBlock.Post(a);
-        }
+        public void Schedule(Action a) => _actionBlock.Post(a);
 
         /// <summary>
         ///     Staged actions will not execute until <see cref="Wait" /> or <see cref="ExecuteStaged" /> is called.
@@ -88,7 +81,7 @@ namespace WrathForged.Common.Threading
 
                 while (!_actionBlock.Completion.IsCompleted && _actionBlock.InputCount != 0 & i != 3) // after 3 its too long we have to tick
                 {
-                    _actionBlock.Completion.Wait(1000);
+                    _ = _actionBlock.Completion.Wait(1000);
                     i++;
                 }
 

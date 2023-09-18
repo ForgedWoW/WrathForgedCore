@@ -17,76 +17,39 @@ namespace WrathForged.Serialization.Generators
             var overrideCode = attribute.GetNamedArg("OverrideType", ForgedTypeCode.Empty);
             if (overrideCode != ForgedTypeCode.Empty)
                 typeCode = overrideCode;  // override the typeCode with the one from attribute
-
-            var typeToUse = underlyingType?.SpecialType ?? default;
+            _ = underlyingType?.SpecialType ?? default;
 
             // Modify the typeToUse based on the overridden type, if necessary
-            switch (typeCode)
+            var typeToUse = typeCode switch
             {
-                case ForgedTypeCode.SByte:
-                    typeToUse = SpecialType.System_SByte;
-                    break;
-
-                case ForgedTypeCode.Byte:
-                    typeToUse = SpecialType.System_Byte;
-                    break;
-
-                case ForgedTypeCode.Int16:
-                    typeToUse = SpecialType.System_Int16;
-                    break;
-
-                case ForgedTypeCode.UInt16:
-                    typeToUse = SpecialType.System_UInt16;
-                    break;
-
-                case ForgedTypeCode.Int32:
-                    typeToUse = SpecialType.System_Int32;
-                    break;
-
-                case ForgedTypeCode.UInt32:
-                    typeToUse = SpecialType.System_UInt32;
-                    break;
-
-                case ForgedTypeCode.Int64:
-                    typeToUse = SpecialType.System_Int64;
-                    break;
-
-                case ForgedTypeCode.UInt64:
-                    typeToUse = SpecialType.System_UInt64;
-                    break;
-
-                default:
-                    typeToUse = SpecialType.System_Int32; // defaulting to int
-                    break;
-            }
-
-            switch (typeToUse)
+                ForgedTypeCode.SByte => SpecialType.System_SByte,
+                ForgedTypeCode.Byte => SpecialType.System_Byte,
+                ForgedTypeCode.Int16 => SpecialType.System_Int16,
+                ForgedTypeCode.UInt16 => SpecialType.System_UInt16,
+                ForgedTypeCode.Int32 => SpecialType.System_Int32,
+                ForgedTypeCode.UInt32 => SpecialType.System_UInt32,
+                ForgedTypeCode.Int64 => SpecialType.System_Int64,
+                ForgedTypeCode.UInt64 => SpecialType.System_UInt64,
+                _ => SpecialType.System_Int32,// defaulting to int
+            };
+            return typeToUse switch
             {
-                case SpecialType.System_Byte:
-                    return $"writer.Write((byte){variableName});";
-                case SpecialType.System_SByte:
-                    return $"writer.Write((sbyte){variableName});";
-                case SpecialType.System_Int16:
-                    return $"writer.Write((short){variableName});";
-                case SpecialType.System_UInt16:
-                    return $"writer.Write((ushort){variableName});";
-                case SpecialType.System_Int32:
-                    return $"writer.Write((int){variableName});";
-                case SpecialType.System_UInt32:
-                    return $"writer.Write((uint){variableName});";
-                case SpecialType.System_Int64:
-                    return $"writer.Write((long){variableName});";
-                case SpecialType.System_UInt64:
-                    return $"writer.Write((ulong){variableName});";
-                default:
-                    return $"writer.Write((int){variableName});";
-            }
+                SpecialType.System_Byte => $"writer.Write((byte){variableName});",
+                SpecialType.System_SByte => $"writer.Write((sbyte){variableName});",
+                SpecialType.System_Int16 => $"writer.Write((short){variableName});",
+                SpecialType.System_UInt16 => $"writer.Write((ushort){variableName});",
+                SpecialType.System_Int32 => $"writer.Write((int){variableName});",
+                SpecialType.System_UInt32 => $"writer.Write((uint){variableName});",
+                SpecialType.System_Int64 => $"writer.Write((long){variableName});",
+                SpecialType.System_UInt64 => $"writer.Write((ulong){variableName});",
+                _ => $"writer.Write((int){variableName});",
+            };
         }
 
         public string GenerateTypeCodeDeserializeForType(ITypeSymbol typeSymbol, AttributeData attr, ForgedTypeCode forgedTypeCode, Compilation compilation, INamedTypeSymbol containerSymbol, string variableName)
         {
             // Determine the underlying type of the enum
-            var underlyingType = (typeSymbol as INamedTypeSymbol)?.EnumUnderlyingType.Name;
+            var underlyingType = (typeSymbol as INamedTypeSymbol)?.EnumUnderlyingType?.Name;
 
             // Generate code to read the underlying type from the stream and cast it to the enum type
             return $"instance.{variableName} = ({typeSymbol.Name})reader.Read{underlyingType}();";

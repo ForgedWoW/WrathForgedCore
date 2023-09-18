@@ -215,9 +215,9 @@ namespace WrathForged.Common
 
         public int WritePacked(PrimitiveWriter binWriter) => binWriter.WritePackedUInt64(Full);
 
-        public override bool Equals(object? obj) => obj != null && obj is EntityId && Equals((EntityId)obj);
+        public override bool Equals(object? obj) => obj != null && obj is EntityId entityId && Equals(entityId);
 
-        public int CompareTo(object obj) => obj is EntityId ? Full.CompareTo(((EntityId)obj).Full) : obj is ulong ? Full.CompareTo((ulong)obj) : -1;
+        public int CompareTo(object obj) => obj is EntityId entity ? Full.CompareTo(entity.Full) : obj is ulong id ? Full.CompareTo(id) : -1;
 
         public bool Equals(EntityId other) => other.Full == Full;
 
