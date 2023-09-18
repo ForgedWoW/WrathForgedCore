@@ -21,7 +21,8 @@ namespace WrathForged.Serialization
         private readonly Dictionary<ForgedTypeCode, IForgedTypeGenerator> _generatorsByTypeCode = new();
         private bool _collectionSizeWritten;
 
-        public SerializationGenerator()
+
+        public void Initialize(GeneratorInitializationContext context)
         {
             _generatorsByTypeKind.Add(TypeKind.Enum, new EnumTypeGenerator());
             _generatorsByTypeKind.Add(TypeKind.Array, new ArrayTypeGenerator(this));
@@ -34,14 +35,12 @@ namespace WrathForged.Serialization
             _generatorsByTypeCode.Add(ForgedTypeCode.StringParsedEnum, new StringParsedEnumGenerator());
         }
 
-        public void Initialize(GeneratorInitializationContext context) => context.RegisterForSyntaxNotifications(() => new SerializationSyntaxReceiver());
-
         public void Execute(GeneratorExecutionContext context)
         {
             if (context.SyntaxReceiver is not SerializationSyntaxReceiver receiver)
                 return;
 
-            System.Diagnostics.Debugger.Launch();
+            //System.Diagnostics.Debugger.Launch();
             foreach (var classDeclaration in receiver.CandidateClasses)
             {
                 if (context.Compilation.GetSemanticModel(classDeclaration.SyntaxTree).GetDeclaredSymbol(classDeclaration) is not INamedTypeSymbol modelSymbol)
