@@ -68,7 +68,7 @@ namespace WrathForged.Serialization.Generators
             codeBuilder.AppendLine($"    {variableName}List.Add(reader.Read{elementType}());");
             codeBuilder.AppendLine("}");
 
-            codeBuilder.AppendLine($"instance.{variableName} = {variableName}List;");
+            codeBuilder.AppendLine($"{variableName} = {variableName}List;");
 
             return codeBuilder.ToString();
         }

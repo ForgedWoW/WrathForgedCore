@@ -52,7 +52,7 @@ namespace WrathForged.Serialization.Generators
             var underlyingType = (typeSymbol as INamedTypeSymbol)?.EnumUnderlyingType?.Name;
 
             // Generate code to read the underlying type from the stream and cast it to the enum type
-            return $"instance.{variableName} = ({typeSymbol.Name})reader.Read{underlyingType}();";
+            return $"{variableName} = ({typeSymbol.Name})reader.Read{underlyingType}();";
         }
     }
 }

@@ -67,7 +67,7 @@ namespace WrathForged.Serialization.Generators
             codeBuilder.AppendLine($"    {variableName}Array[i] = reader.Read{elementType}();"); // This assumes a direct mapping between elementType and reader methods. Adjust if needed.
             codeBuilder.AppendLine("}");
 
-            codeBuilder.AppendLine($"instance.{variableName} = {variableName}Array;");
+            codeBuilder.AppendLine($"{variableName} = {variableName}Array;");
 
             return codeBuilder.ToString();
         }

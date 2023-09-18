@@ -8,6 +8,7 @@ namespace WrathForged.Serialization
     public class SerializationSyntaxReceiver : ISyntaxReceiver
     {
         public List<ClassDeclarationSyntax> CandidateClasses { get; } = new List<ClassDeclarationSyntax>();
+        public List<RecordDeclarationSyntax> CandidateRecords { get; } = new List<RecordDeclarationSyntax>();
         private readonly string _attributeName = nameof(ForgedSerializableAttribute).Replace("Attribute", "");
 
         public void OnVisitSyntaxNode(SyntaxNode syntaxNode)
@@ -23,6 +24,22 @@ namespace WrathForged.Serialization
                         if (attribute.Name.ToString().Contains(_attributeName))
                         {
                             CandidateClasses.Add(classDeclarationSyntax);
+                            return; // No need to check further attributes for this class
+                        }
+                    }
+                }
+            }
+
+            if (syntaxNode is RecordDeclarationSyntax recordDeclarationSyntax
+               && recordDeclarationSyntax.AttributeLists.Count > 0)
+            {
+                foreach (var attributeList in recordDeclarationSyntax.AttributeLists)
+                {
+                    foreach (var attribute in attributeList.Attributes)
+                    {
+                        if (attribute.Name.ToString().Contains(_attributeName))
+                        {
+                            CandidateRecords.Add(recordDeclarationSyntax);
                             return; // No need to check further attributes for this class
                         }
                     }

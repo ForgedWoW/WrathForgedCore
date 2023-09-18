@@ -11,6 +11,9 @@
 	<ItemGroup>
 		<!-- Exclude the output of source generators from the compilation -->
 		<Compile Remove="$(CompilerGeneratedFilesOutputPath)/**/*.cs" />
+		<Compile Remove="Chat\**" />
+		<EmbeddedResource Remove="Chat\**" />
+		<None Remove="Chat\**" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -33,9 +36,5 @@
 	<ItemGroup>
 		<ProjectReference Include="..\WrathForged.Serialization.Models\WrathForged.Serialization.Models.csproj" />
 		<ProjectReference Include="..\WrathForged.Serialization\WrathForged.Serialization.csproj" OutputItemType="Analyzer" ReferenceOutputAssembly="false" />
-	</ItemGroup>
-
-	<ItemGroup>
-		<Folder Include="Chat\Enum\" />
 	</ItemGroup>
 </Project>

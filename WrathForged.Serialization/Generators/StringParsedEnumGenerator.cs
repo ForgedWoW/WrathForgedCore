@@ -15,7 +15,7 @@ namespace WrathForged.Serialization.Generators
             if (attribute.HasNamedArg("FixedSize"))
             {
                 var fixedSize = attribute.GetNamedArg("FixedSize", string.Empty);
-                serialization.AppendLine($"var fixedSizeString = instance.{variableName}.ToString().PadRight({fixedSize}, '\\0').Substring(0, {fixedSize});");
+                serialization.AppendLine($"var fixedSizeString = {variableName}.ToString().PadRight({fixedSize}, '\\0').Substring(0, {fixedSize});");
                 variableName = "fixedSizeString";
             }
 
@@ -50,19 +50,19 @@ namespace WrathForged.Serialization.Generators
             switch (typeCode)
             {
                 case ForgedTypeCode.CString:
-                    return $"if (System.Enum.TryParse(typeof({typeSymbol.Name}), System.Text.Encoding.ASCII.GetString(reader.ReadCString()).TrimEnd('\\0'){reverseString}, out var {variableName}Val)) {{ instance.{variableName} = ({typeSymbol.Name}){variableName}Val; }}";
+                    return $"if (System.Enum.TryParse(typeof({typeSymbol.Name}), System.Text.Encoding.ASCII.GetString(reader.ReadCString()).TrimEnd('\\0'){reverseString}, out var {variableName}Val)) {{ {variableName} = ({typeSymbol.Name}){variableName}Val; }}";
 
                 case ForgedTypeCode.ASCIIString:
                     if (attribute.HasNamedArg("FixedSize"))
-                        return $"instance.{variableName} = System.Text.Encoding.ASCII.GetString(reader.ReadBytes({attribute.GetNamedArg("FixedSize", 0)})).TrimEnd('\\0'){reverseString};";
+                        return $"{variableName} = System.Text.Encoding.ASCII.GetString(reader.ReadBytes({attribute.GetNamedArg("FixedSize", 0)})).TrimEnd('\\0'){reverseString};";
 
-                    return $"instance.{variableName} = System.Text.Encoding.ASCII.GetString(reader.ReadChars()).TrimEnd('\\0'){reverseString};";
+                    return $"{variableName} = System.Text.Encoding.ASCII.GetString(reader.ReadChars()).TrimEnd('\\0'){reverseString};";
 
                 default:
                     if (attribute.HasNamedArg("FixedSize"))
-                        return $"if (System.Enum.TryParse(typeof({typeSymbol.Name}), new string(reader.ReadChars({attribute.GetNamedArg("FixedSize", 0)})).TrimEnd('\\0'){reverseString}, out var {variableName}Val)) {{ instance.{variableName} = ({typeSymbol.Name}){variableName}Val; }}";
+                        return $"if (System.Enum.TryParse(typeof({typeSymbol.Name}), new string(reader.ReadChars({attribute.GetNamedArg("FixedSize", 0)})).TrimEnd('\\0'){reverseString}, out var {variableName}Val)) {{ {variableName} = ({typeSymbol.Name}){variableName}Val; }}";
 
-                    return $"if (System.Enum.TryParse(typeof({typeSymbol.Name}), new string(reader.ReadChars({attribute.AddCollectionSizeRead()})).TrimEnd('\\0'){reverseString}, out var {variableName}Val)) {{ instance.{variableName} = ({typeSymbol.Name}){variableName}Val; }}";
+                    return $"if (System.Enum.TryParse(typeof({typeSymbol.Name}), new string(reader.ReadChars({attribute.AddCollectionSizeRead()})).TrimEnd('\\0'){reverseString}, out var {variableName}Val)) {{ {variableName} = ({typeSymbol.Name}){variableName}Val; }}";
             }
         }
     }

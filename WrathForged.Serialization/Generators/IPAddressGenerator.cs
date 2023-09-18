@@ -14,7 +14,7 @@ namespace WrathForged.Serialization.Generators
 
         public string GenerateTypeCodeDeserializeForType(ITypeSymbol typeSymbol, AttributeData attribute, ForgedTypeCode typeCode, Compilation compilation, INamedTypeSymbol symbol, string variableName)
         {
-            return $"instance.{variableName} = new IPAddress(reader.ReadBytes(4));"; // Assuming IPv4 for simplicity
+            return $"{variableName} = new IPAddress(reader.ReadBytes(4));"; // Assuming IPv4 for simplicity
         }
     }
 }

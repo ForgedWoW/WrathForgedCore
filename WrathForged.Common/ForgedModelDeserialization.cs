@@ -16,7 +16,7 @@ namespace WrathForged.Common
         {
             var methodsWithAttribute = AppDomain.CurrentDomain.GetAssemblies()
                 .SelectMany(assembly => assembly.GetTypes())
-                .SelectMany(type => type.GetMethods(BindingFlags.Static | BindingFlags.Public))
+                .SelectMany(type => type.GetMethods(BindingFlags.Instance | BindingFlags.Public))
                 .Where(method => method.GetCustomAttributes(typeof(DeserializeDefinitionAttribute), false).Length > 0);
 
             foreach (var method in methodsWithAttribute)
@@ -54,10 +54,17 @@ namespace WrathForged.Common
             try
             {
                 // Create an array to hold the parameters for the method invocation
-                var parameters = new object?[] { buffer.Reader, null }; // Assuming the method has one input and one out parameter
+                var parameters = new object?[] { buffer.Reader }; // Assuming the method has one input and one out parameter
 
                 // Invoke the method
-                var result = method.Invoke(null, parameters);
+                if (method.DeclaringType == null)
+                {
+                    packet = null;
+                    return DeserializationResult.UnknownPacket;
+                }
+
+                packet = Activator.CreateInstance(method.DeclaringType);
+                var result = method.Invoke(packet, parameters);
 
                 // Retrieve the out parameter's value from the array
                 packet = parameters[1];

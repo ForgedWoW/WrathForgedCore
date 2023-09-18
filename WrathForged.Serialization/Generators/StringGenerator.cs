@@ -15,7 +15,7 @@ namespace WrathForged.Serialization.Generators
             if (attribute.HasNamedArg("FixedSize"))
             {
                 var fixedSize = attribute.GetNamedArg("FixedSize", string.Empty);
-                serialization.AppendLine($"var fixedSizeString = instance.{variableName}?.PadRight({fixedSize}, '\\0').Substring(0, {fixedSize}) ?? string.Empty;");
+                serialization.AppendLine($"var fixedSizeString = {variableName}?.PadRight({fixedSize}, '\\0').Substring(0, {fixedSize}) ?? string.Empty;");
                 variableName = "fixedSizeString";
             }
 
@@ -55,19 +55,19 @@ namespace WrathForged.Serialization.Generators
             switch (typeCode)
             {
                 case ForgedTypeCode.CString:
-                    return $"instance.{variableName} = System.Text.Encoding.ASCII.GetString(reader.ReadCString()).TrimEnd('\\0'){reverseString};";
+                    return $"{variableName} = System.Text.Encoding.ASCII.GetString(reader.ReadCString()).TrimEnd('\\0'){reverseString};";
 
                 case ForgedTypeCode.ASCIIString:
                     if (attribute.HasNamedArg("FixedSize"))
-                        return $"instance.{variableName} = System.Text.Encoding.ASCII.GetString(reader.ReadBytes({attribute.GetNamedArg("FixedSize", 0)})).TrimEnd('\\0'){reverseString};";
+                        return $"{variableName} = System.Text.Encoding.ASCII.GetString(reader.ReadBytes({attribute.GetNamedArg("FixedSize", 0)})).TrimEnd('\\0'){reverseString};";
 
-                    return $"instance.{variableName} = System.Text.Encoding.ASCII.GetString(reader.ReadChars({attribute.AddCollectionSizeRead()})).TrimEnd('\\0'){reverseString};";
+                    return $"{variableName} = System.Text.Encoding.ASCII.GetString(reader.ReadChars({attribute.AddCollectionSizeRead()})).TrimEnd('\\0'){reverseString};";
 
                 default:
                     if (attribute.HasNamedArg("FixedSize"))
-                        return $"instance.{variableName} = new string(reader.ReadChars({attribute.GetNamedArg("FixedSize", 0)})).TrimEnd('\\0'){reverseString};";
+                        return $"{variableName} = new string(reader.ReadChars({attribute.GetNamedArg("FixedSize", 0)})).TrimEnd('\\0'){reverseString};";
 
-                    return $"instance.{variableName} = new string(reader.ReadChars({attribute.AddCollectionSizeRead()})).TrimEnd('\\0'){reverseString};";
+                    return $"{variableName} = new string(reader.ReadChars({attribute.AddCollectionSizeRead()})).TrimEnd('\\0'){reverseString};";
             }
         }
     }

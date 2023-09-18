@@ -5,6 +5,7 @@ using System.Net;
 using System.Text;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
+using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.CodeAnalysis.Text;
 using WrathForged.Serialization.Generators;
 
@@ -24,6 +25,9 @@ namespace WrathForged.Serialization
 
         public void Initialize(GeneratorInitializationContext context)
         {
+            System.Diagnostics.Debugger.Launch();
+            context.RegisterForSyntaxNotifications(() => new SerializationSyntaxReceiver());
+
             _generatorsByTypeKind.Add(TypeKind.Enum, new EnumTypeGenerator());
             _generatorsByTypeKind.Add(TypeKind.Array, new ArrayTypeGenerator(this));
 
@@ -46,7 +50,7 @@ namespace WrathForged.Serialization
                 if (context.Compilation.GetSemanticModel(classDeclaration.SyntaxTree).GetDeclaredSymbol(classDeclaration) is not INamedTypeSymbol modelSymbol)
                     continue;
 
-                var source = GenerateSerializationCode(context, modelSymbol);
+                var source = GenerateSerializationCode(context, modelSymbol, "class");
 
                 if (string.IsNullOrEmpty(source))
                     continue;
@@ -55,9 +59,24 @@ namespace WrathForged.Serialization
 #endif
                 context.AddSource($"{modelSymbol.Name}SerializationExtensions", SourceText.From(source));
             }
+
+            foreach (var classDeclaration in receiver.CandidateRecords)
+            {
+                if (context.Compilation.GetSemanticModel(classDeclaration.SyntaxTree).GetDeclaredSymbol(classDeclaration) is not INamedTypeSymbol modelSymbol)
+                    continue;
+
+                var source = GenerateSerializationCode(context, modelSymbol, "record");
+
+                if (string.IsNullOrEmpty(source))
+                    continue;
+#if DEBUG
+                System.Diagnostics.Debug.WriteLine(source);
+#endif
+                context.AddSource($"{modelSymbol.Name}SerializationExtensions", SourceText.From(source, Encoding.UTF8));
+            }
         }
 
-        private string GenerateSerializationCode(GeneratorExecutionContext context, INamedTypeSymbol symbol)
+        private string GenerateSerializationCode(GeneratorExecutionContext context, INamedTypeSymbol symbol, string classOrRecord)
         {
             _collectionSizeWritten = false;
             var properties = symbol.GetMembers()
@@ -87,7 +106,7 @@ namespace WrathForged.Serialization
             // Append the namespace and class definitions
             _ = sourceBuilder.Insert(0, $"namespace {symbol.ContainingNamespace.ToDisplayString()}" +
                 " {\r\n" +
-                $"    public static class {symbol.Name}SerializationExtensions\r\n" +
+                $"    public partial {classOrRecord} {symbol.Name}SerializationExtensions\r\n" +
                 "    {\r\n"
             );
             _ = sourceBuilder.AppendLine("    }");
@@ -122,16 +141,15 @@ namespace WrathForged.Serialization
                 }
             }
 
-            _ = sourceBuilder.AppendLine($"public DeserializationResult Read{symbol.Name}(this System.IO.BinaryReader reader, out {symbol.Name}? instance)");
+            _ = sourceBuilder.AppendLine($"public DeserializationResult Read(System.IO.BinaryReader reader)");
             _ = sourceBuilder.AppendLine("{");
             _ = sourceBuilder.AppendLine("try");
             _ = sourceBuilder.AppendLine("{");
-            _ = sourceBuilder.AppendLine($"instance = new {symbol.Name}();");
             _ = sourceBuilder.AppendLine("var cachedSizes = new Dictionary<uint, int>();");
 
             foreach (var prop in properties)
             {
-                var ns = prop.Type.ContainingNamespace.ToString();
+                var ns = prop.Type.ContainingNamespace?.ToString();
 
                 if (ns != null && !string.IsNullOrEmpty(ns) && ns != "System" && ns != "System.Collections.Generic")
                     _ = requiredNamespaces.Add(ns);
@@ -196,7 +214,7 @@ namespace WrathForged.Serialization
 
         private void BuildSerializer(GeneratorExecutionContext context, INamedTypeSymbol symbol, List<IPropertySymbol> properties, StringBuilder sourceBuilder)
         {
-            _ = sourceBuilder.AppendLine($"public void Serialize(this {symbol.Name} instance, System.IO.BinaryWriter writer)");
+            _ = sourceBuilder.AppendLine($"public void Serialize(System.IO.BinaryWriter writer)");
             _ = sourceBuilder.AppendLine("{");
             _ = sourceBuilder.AppendLine("Dictionary<uint, bool> hasDefaultValue = new Dictionary<uint, bool>();");
             foreach (var prop in properties)
@@ -213,25 +231,25 @@ namespace WrathForged.Serialization
                 var dontSerializeWhenIndexIsDefaultValue = attr.GetNamedArg("DontSerializeWhenIndexIsDefaultValue", uint.MaxValue);
 
                 var index = indexArg.Value != null ? (uint)indexArg.Value : 0;
-                _ = sourceBuilder.AppendLine($"hasDefaultValue[{index}] = instance.{prop.Name} == default;");
+                _ = sourceBuilder.AppendLine($"hasDefaultValue[{index}] = {prop.Name} == default;");
 
                 // Determine the type of the collection (Array, List, or None).
                 var collectionType = DetermineCollectionType(prop.Type);
 
                 if (collectionType != CollectionType.None)
                 {
-                    var collectionSizeCode = GenerateCollectionSizeCode(attr, $"instance.{prop.Name}", collectionType);
+                    var collectionSizeCode = GenerateCollectionSizeCode(attr, $"{prop.Name}", collectionType);
                     if (!string.IsNullOrEmpty(collectionSizeCode))
                         _ = sourceBuilder.AppendLine(collectionSizeCode);
                 }
 
-                var propertySerializationCode = GenerateTypeSerializationCode(context.Compilation, symbol, prop.Type, attr, $"instance.{prop.Name}");
+                var propertySerializationCode = GenerateTypeSerializationCode(context.Compilation, symbol, prop.Type, attr, $"{prop.Name}");
 
                 // If DontSerializeWhenDefaultValue is set, wrap the serialization code with a check
                 if (dontSerializeWhenDefaultValue)
                 {
                     //var defaultValue = prop.Type.IsValueType ? Activator.CreateInstance(Type.GetType(prop.Type.ToDisplayString())).ToString() : "null";
-                    propertySerializationCode = $"if(instance.{prop.Name} != default) {{ {propertySerializationCode} }}";
+                    propertySerializationCode = $"if({prop.Name} != default) {{ {propertySerializationCode} }}";
                 }
 
                 if (dontSerializeWhenIndexIsDefaultValue != uint.MaxValue)
@@ -306,7 +324,7 @@ namespace WrathForged.Serialization
                 // Based on the type, generate the deserialization code
                 if (IsPrimitiveOrSimpleType(forgedTypeCode))
                 {
-                    return $"instance.{variableName} = reader.Read{forgedTypeCode}();";
+                    return $"{variableName} = reader.Read{forgedTypeCode}();";
                 }
 
                 if (typeSymbol is IArrayTypeSymbol arrayType && arrayType.ElementType.SpecialType == SpecialType.System_Byte)
@@ -328,21 +346,21 @@ namespace WrathForged.Serialization
 
                     if (fixedSizeArg != 0)
                     {
-                        return $"instance.{variableName} = reader.ReadBytes(collectionSize);";
+                        return $"{variableName} = reader.ReadBytes(collectionSize);";
                     }
 
                     if (!string.IsNullOrEmpty(sizeLengthTypeArg) && Enum.TryParse(sizeLengthTypeArg, out TypeCode sizeLengthType) && sizeLengthType != TypeCode.Empty)
                     {
-                        return $"instance.{variableName} = reader.ReadBytes(collectionSize);";
+                        return $"{variableName} = reader.ReadBytes(collectionSize);";
                     }
 
                     if (sizeIndexArg != 0)
                     {
                         // Assuming there's a method that can jump to a specific index in the stream, read the size, and then return back to the original position, named 'GetSizeFromStreamIndex'.
-                        return $"instance.{variableName} = reader.ReadBytes(GetSizeFromStreamIndex(reader, sizeIndex));";
+                        return $"{variableName} = reader.ReadBytes(GetSizeFromStreamIndex(reader, sizeIndex));";
                     }
 
-                    return $"instance.{variableName} = reader.ReadBytes(collectionSize);";
+                    return $"{variableName} = reader.ReadBytes(collectionSize);";
                 }
 
                 if (_generatorsByTypeCode.TryGetValue(forgedTypeCode, out var forgedTypeCodeGenerator))
@@ -367,7 +385,7 @@ namespace WrathForged.Serialization
 
                 if (typeSymbol.GetAttributes().Any(a => a.AttributeClass?.Name == _forgedSerializableName))
                 {
-                    return $"instance.{variableName} = reader.Read{typeSymbol.Name}();";
+                    return $"{variableName} = reader.Read{typeSymbol.Name}();";
                 }
             }
             catch (Exception ex)
