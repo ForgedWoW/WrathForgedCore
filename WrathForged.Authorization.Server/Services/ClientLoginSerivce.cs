@@ -100,10 +100,10 @@ namespace WrathForged.Authorization.Server.Services
                 return;
             }
 
-            packet.WriteObject(new AuthResponse()
+            new AuthResponse()
             {
                 Status = status
-            });
+            }.Serialize(packet.Writer);
 
             session.ClientSocket.EnqueueWrite(packet);
         }

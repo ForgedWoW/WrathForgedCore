@@ -9,8 +9,8 @@
 		<CompilerGeneratedFilesOutputPath>$(GeneratedFolder)\$(TargetFramework)</CompilerGeneratedFilesOutputPath>
 	</PropertyGroup>
 	<ItemGroup>
-		<!-- Exclude the output of source generators from the compilation -->
-		<Compile Remove="$(CompilerGeneratedFilesOutputPath)/**/*.cs" />
+		<!-- Exclude the output of source generators from the compilation 
+		<Compile Remove="$(CompilerGeneratedFilesOutputPath)/**/*.cs" />-->
 	</ItemGroup>
 
 	<ItemGroup>

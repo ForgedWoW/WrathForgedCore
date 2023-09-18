@@ -11,7 +11,7 @@ namespace WrathForged.Models
 	/// Review http://srp.stanford.edu/design.html for more information
 	/// </summary>
 	[ForgedSerializable]
-    public record SRPToken
+    public partial record SRPToken
     {
         /// <summary>
         /// Half of the ephemerial public key.
