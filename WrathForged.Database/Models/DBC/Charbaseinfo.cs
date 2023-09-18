@@ -7,13 +7,13 @@ namespace WrathForged.Database.Models.DBC;
 [DBCBound("CharBaseInfo.dbc")]
 public partial class Charbaseinfo
 {
-    [DBCPropertyBinding(0, DBCBindingType.INT)]
+    [DBCPropertyBinding(0, DBCBindingType.INT32)]
     public int Id { get; set; }
 
-    [DBCPropertyBinding(1, DBCBindingType.INT, Nullable = true)]
+    [DBCPropertyBinding(1, DBCBindingType.INT32, Nullable = true)]
     public int? RaceId { get; set; }
 
-    [DBCPropertyBinding(2, DBCBindingType.INT, Nullable = true)]
+    [DBCPropertyBinding(2, DBCBindingType.INT32, Nullable = true)]
     public int? ClassId { get; set; }
 
     public virtual Chrclass? Class { get; set; }

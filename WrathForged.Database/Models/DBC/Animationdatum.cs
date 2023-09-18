@@ -7,28 +7,28 @@ namespace WrathForged.Database.Models.DBC;
 [DBCBound("AnimationData.dbc")]
 public partial class Animationdatum
 {
-    [DBCPropertyBinding(0, DBCBindingType.INT)]
+    [DBCPropertyBinding(0, DBCBindingType.INT32)]
     public int Id { get; set; }
 
     [DBCPropertyBinding(1, DBCBindingType.STRING)]
     public string? Name { get; set; }
 
-    [DBCPropertyBinding(2, DBCBindingType.INT)]
+    [DBCPropertyBinding(2, DBCBindingType.INT32)]
     public int Weaponflags { get; set; }
 
-    [DBCPropertyBinding(3, DBCBindingType.INT)]
+    [DBCPropertyBinding(3, DBCBindingType.INT32)]
     public int Bodyflags { get; set; }
 
-    [DBCPropertyBinding(4, DBCBindingType.INT)]
+    [DBCPropertyBinding(4, DBCBindingType.INT32)]
     public int Flags { get; set; }
 
-    [DBCPropertyBinding(5, DBCBindingType.INT)]
+    [DBCPropertyBinding(5, DBCBindingType.INT32)]
     public int Fallback { get; set; }
 
-    [DBCPropertyBinding(6, DBCBindingType.INT)]
+    [DBCPropertyBinding(6, DBCBindingType.INT32)]
     public int BehaviorId { get; set; }
 
-    [DBCPropertyBinding(7, DBCBindingType.INT)]
+    [DBCPropertyBinding(7, DBCBindingType.INT32)]
     public int BehaviorTier { get; set; }
 
     public virtual ICollection<Attackanimkit> Attackanimkits { get; set; } = new List<Attackanimkit>();

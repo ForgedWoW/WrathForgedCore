@@ -7,16 +7,16 @@ namespace WrathForged.Database.Models.DBC;
 [DBCBound("Cfg_Categories.dbc")]
 public partial class CfgCategory
 {
-    [DBCPropertyBinding(0, DBCBindingType.INT)]
+    [DBCPropertyBinding(0, DBCBindingType.INT32)]
     public int Id { get; set; }
 
-    [DBCPropertyBinding(1, DBCBindingType.INT)]
+    [DBCPropertyBinding(1, DBCBindingType.INT32)]
     public int LocaleMask { get; set; }
 
-    [DBCPropertyBinding(2, DBCBindingType.INT)]
+    [DBCPropertyBinding(2, DBCBindingType.INT32)]
     public int CharsetMask { get; set; }
 
-    [DBCPropertyBinding(3, DBCBindingType.INT)]
+    [DBCPropertyBinding(3, DBCBindingType.INT32)]
     public int Flags { get; set; }
 
     [DBCPropertyBinding(4, DBCBindingType.STRING)]
@@ -67,6 +67,6 @@ public partial class CfgCategory
     [DBCPropertyBinding(19, DBCBindingType.STRING)]
     public string? NameLangUnk { get; set; }
 
-    [DBCPropertyBinding(20, DBCBindingType.INT)]
+    [DBCPropertyBinding(20, DBCBindingType.INT32)]
     public uint NameLangMask { get; set; }
 }

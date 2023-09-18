@@ -7,16 +7,16 @@ namespace WrathForged.Database.Models.DBC;
 [DBCBound("CharSections.dbc")]
 public partial class Charsection
 {
-    [DBCPropertyBinding(0, DBCBindingType.INT)]
+    [DBCPropertyBinding(0, DBCBindingType.INT32)]
     public int Id { get; set; }
 
-    [DBCPropertyBinding(1, DBCBindingType.INT, Nullable = true)]
+    [DBCPropertyBinding(1, DBCBindingType.INT32, Nullable = true)]
     public int? RaceId { get; set; }
 
-    [DBCPropertyBinding(2, DBCBindingType.INT)]
+    [DBCPropertyBinding(2, DBCBindingType.INT32)]
     public int SexId { get; set; }
 
-    [DBCPropertyBinding(3, DBCBindingType.INT)]
+    [DBCPropertyBinding(3, DBCBindingType.INT32)]
     public int BaseSection { get; set; }
 
     [DBCPropertyBinding(4, DBCBindingType.STRING)]
@@ -28,13 +28,13 @@ public partial class Charsection
     [DBCPropertyBinding(6, DBCBindingType.STRING)]
     public string? TextureName3 { get; set; }
 
-    [DBCPropertyBinding(7, DBCBindingType.INT)]
+    [DBCPropertyBinding(7, DBCBindingType.INT32)]
     public int Flags { get; set; }
 
-    [DBCPropertyBinding(8, DBCBindingType.INT)]
+    [DBCPropertyBinding(8, DBCBindingType.INT32)]
     public int VariationIndex { get; set; }
 
-    [DBCPropertyBinding(9, DBCBindingType.INT)]
+    [DBCPropertyBinding(9, DBCBindingType.INT32)]
     public int ColorIndex { get; set; }
 
     public virtual Chrrace? Race { get; set; }

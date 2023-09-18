@@ -7,10 +7,10 @@ namespace WrathForged.Database.Models.DBC;
 [DBCBound("AreaTrigger.dbc")]
 public partial class Areatrigger
 {
-    [DBCPropertyBinding(0, DBCBindingType.INT)]
+    [DBCPropertyBinding(0, DBCBindingType.INT32)]
     public int Id { get; set; }
 
-    [DBCPropertyBinding(1, DBCBindingType.INT, Nullable = true)]
+    [DBCPropertyBinding(1, DBCBindingType.INT32, Nullable = true)]
     public int? ContinentId { get; set; }
 
     [DBCPropertyBinding(2, DBCBindingType.FLOAT)]

@@ -7,10 +7,10 @@ namespace WrathForged.Database.Models.DBC;
 [DBCBound("BarberShopStyle.dbc")]
 public partial class Barbershopstyle
 {
-    [DBCPropertyBinding(0, DBCBindingType.INT)]
+    [DBCPropertyBinding(0, DBCBindingType.INT32)]
     public int Id { get; set; }
 
-    [DBCPropertyBinding(1, DBCBindingType.INT)]
+    [DBCPropertyBinding(1, DBCBindingType.INT32)]
     public int Type { get; set; }
 
     [DBCPropertyBinding(2, DBCBindingType.STRING)]
@@ -61,7 +61,7 @@ public partial class Barbershopstyle
     [DBCPropertyBinding(17, DBCBindingType.STRING)]
     public string? DisplayNameLangUnk { get; set; }
 
-    [DBCPropertyBinding(18, DBCBindingType.INT)]
+    [DBCPropertyBinding(18, DBCBindingType.INT32)]
     public uint DisplayNameLangMask { get; set; }
 
     [DBCPropertyBinding(19, DBCBindingType.STRING)]
@@ -112,18 +112,18 @@ public partial class Barbershopstyle
     [DBCPropertyBinding(34, DBCBindingType.STRING)]
     public string? DescriptionLangUnk { get; set; }
 
-    [DBCPropertyBinding(35, DBCBindingType.INT)]
+    [DBCPropertyBinding(35, DBCBindingType.INT32)]
     public uint DescriptionLangMask { get; set; }
 
     [DBCPropertyBinding(36, DBCBindingType.FLOAT)]
     public float CostModifier { get; set; }
 
-    [DBCPropertyBinding(37, DBCBindingType.INT)]
+    [DBCPropertyBinding(37, DBCBindingType.INT32)]
     public int Race { get; set; }
 
-    [DBCPropertyBinding(38, DBCBindingType.INT)]
+    [DBCPropertyBinding(38, DBCBindingType.INT32)]
     public int Sex { get; set; }
 
-    [DBCPropertyBinding(39, DBCBindingType.INT)]
+    [DBCPropertyBinding(39, DBCBindingType.INT32)]
     public int Data { get; set; }
 }

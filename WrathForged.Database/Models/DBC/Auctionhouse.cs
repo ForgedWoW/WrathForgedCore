@@ -7,16 +7,16 @@ namespace WrathForged.Database.Models.DBC;
 [DBCBound("AuctionHouse.dbc")]
 public partial class Auctionhouse
 {
-    [DBCPropertyBinding(0, DBCBindingType.INT)]
+    [DBCPropertyBinding(0, DBCBindingType.INT32)]
     public int Id { get; set; }
 
-    [DBCPropertyBinding(1, DBCBindingType.INT, Nullable = true)]
+    [DBCPropertyBinding(1, DBCBindingType.INT32, Nullable = true)]
     public int? FactionId { get; set; }
 
-    [DBCPropertyBinding(2, DBCBindingType.INT)]
+    [DBCPropertyBinding(2, DBCBindingType.INT32)]
     public int DepositRate { get; set; }
 
-    [DBCPropertyBinding(3, DBCBindingType.INT)]
+    [DBCPropertyBinding(3, DBCBindingType.INT32)]
     public int ConsignmentRate { get; set; }
 
     [DBCPropertyBinding(4, DBCBindingType.STRING)]
@@ -67,7 +67,7 @@ public partial class Auctionhouse
     [DBCPropertyBinding(19, DBCBindingType.STRING)]
     public string? NameLangUnk { get; set; }
 
-    [DBCPropertyBinding(20, DBCBindingType.INT)]
+    [DBCPropertyBinding(20, DBCBindingType.INT32)]
     public uint NameLangMask { get; set; }
 
     public virtual Faction? Faction { get; set; }

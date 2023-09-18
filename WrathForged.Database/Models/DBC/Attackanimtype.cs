@@ -7,7 +7,7 @@ namespace WrathForged.Database.Models.DBC;
 [DBCBound("AttackAnimTypes.dbc")]
 public partial class Attackanimtype
 {
-    [DBCPropertyBinding(0, DBCBindingType.INT)]
+    [DBCPropertyBinding(0, DBCBindingType.INT32)]
     public int Id { get; set; }
 
     [DBCPropertyBinding(1, DBCBindingType.STRING)]

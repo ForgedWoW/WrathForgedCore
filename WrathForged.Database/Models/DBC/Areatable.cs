@@ -7,37 +7,37 @@ namespace WrathForged.Database.Models.DBC;
 [DBCBound("AreaTable.dbc")]
 public partial class Areatable
 {
-    [DBCPropertyBinding(0, DBCBindingType.INT)]
+    [DBCPropertyBinding(0, DBCBindingType.INT32)]
     public int Id { get; set; }
 
-    [DBCPropertyBinding(1, DBCBindingType.INT, Nullable = true)]
+    [DBCPropertyBinding(1, DBCBindingType.INT32, Nullable = true)]
     public int? ContinentId { get; set; }
 
-    [DBCPropertyBinding(2, DBCBindingType.INT, Nullable = true)]
+    [DBCPropertyBinding(2, DBCBindingType.INT32, Nullable = true)]
     public int? ParentAreaId { get; set; }
 
-    [DBCPropertyBinding(3, DBCBindingType.INT)]
+    [DBCPropertyBinding(3, DBCBindingType.INT32)]
     public int AreaBit { get; set; }
 
-    [DBCPropertyBinding(4, DBCBindingType.INT)]
+    [DBCPropertyBinding(4, DBCBindingType.INT32)]
     public int Flags { get; set; }
 
-    [DBCPropertyBinding(5, DBCBindingType.INT, Nullable = true)]
+    [DBCPropertyBinding(5, DBCBindingType.INT32, Nullable = true)]
     public int? SoundProviderPref { get; set; }
 
-    [DBCPropertyBinding(6, DBCBindingType.INT, Nullable = true)]
+    [DBCPropertyBinding(6, DBCBindingType.INT32, Nullable = true)]
     public int? SoundProviderPrefUnderwater { get; set; }
 
-    [DBCPropertyBinding(7, DBCBindingType.INT, Nullable = true)]
+    [DBCPropertyBinding(7, DBCBindingType.INT32, Nullable = true)]
     public int? AmbienceId { get; set; }
 
-    [DBCPropertyBinding(8, DBCBindingType.INT, Nullable = true)]
+    [DBCPropertyBinding(8, DBCBindingType.INT32, Nullable = true)]
     public int? ZoneMusic { get; set; }
 
-    [DBCPropertyBinding(9, DBCBindingType.INT, Nullable = true)]
+    [DBCPropertyBinding(9, DBCBindingType.INT32, Nullable = true)]
     public int? IntroSound { get; set; }
 
-    [DBCPropertyBinding(10, DBCBindingType.INT)]
+    [DBCPropertyBinding(10, DBCBindingType.INT32)]
     public int ExplorationLevel { get; set; }
 
     [DBCPropertyBinding(11, DBCBindingType.STRING)]
@@ -88,22 +88,22 @@ public partial class Areatable
     [DBCPropertyBinding(26, DBCBindingType.STRING)]
     public string? AreaNameLangUnk { get; set; }
 
-    [DBCPropertyBinding(27, DBCBindingType.INT)]
+    [DBCPropertyBinding(27, DBCBindingType.INT32)]
     public uint AreaNameLangMask { get; set; }
 
     [DBCPropertyBinding(28, DBCBindingType.STRING)]
     public int FactionGroupMask { get; set; }
 
-    [DBCPropertyBinding(29, DBCBindingType.INT, Nullable = true)]
+    [DBCPropertyBinding(29, DBCBindingType.INT32, Nullable = true)]
     public int? LiquidTypeId1 { get; set; }
 
-    [DBCPropertyBinding(30, DBCBindingType.INT, Nullable = true)]
+    [DBCPropertyBinding(30, DBCBindingType.INT32, Nullable = true)]
     public int? LiquidTypeId2 { get; set; }
 
-    [DBCPropertyBinding(31, DBCBindingType.INT, Nullable = true)]
+    [DBCPropertyBinding(31, DBCBindingType.INT32, Nullable = true)]
     public int? LiquidTypeId3 { get; set; }
 
-    [DBCPropertyBinding(32, DBCBindingType.INT, Nullable = true)]
+    [DBCPropertyBinding(32, DBCBindingType.INT32, Nullable = true)]
     public int? LiquidTypeId4 { get; set; }
 
     [DBCPropertyBinding(33, DBCBindingType.FLOAT)]
@@ -112,7 +112,7 @@ public partial class Areatable
     [DBCPropertyBinding(34, DBCBindingType.FLOAT)]
     public float AmbientMultiplier { get; set; }
 
-    [DBCPropertyBinding(35, DBCBindingType.INT, Nullable = true)]
+    [DBCPropertyBinding(35, DBCBindingType.INT32, Nullable = true)]
     public int? Lightid { get; set; }
 
     public virtual Soundambience? Ambience { get; set; }

@@ -7,10 +7,10 @@ namespace WrathForged.Database.Models.DBC;
 [DBCBound("Achievement_Category.dbc")]
 public partial class AchievementCategory
 {
-    [DBCPropertyBinding(0, DBCBindingType.INT)]
+    [DBCPropertyBinding(0, DBCBindingType.INT32)]
     public int Id { get; set; }
 
-    [DBCPropertyBinding(1, DBCBindingType.INT, Nullable = true)]
+    [DBCPropertyBinding(1, DBCBindingType.INT32, Nullable = true)]
     public int? Parent { get; set; }
 
     [DBCPropertyBinding(2, DBCBindingType.STRING)]
@@ -61,10 +61,10 @@ public partial class AchievementCategory
     [DBCPropertyBinding(17, DBCBindingType.STRING)]
     public string? NameLangUnk { get; set; }
 
-    [DBCPropertyBinding(18, DBCBindingType.INT)]
+    [DBCPropertyBinding(18, DBCBindingType.INT32)]
     public uint NameLangMask { get; set; }
 
-    [DBCPropertyBinding(19, DBCBindingType.INT)]
+    [DBCPropertyBinding(19, DBCBindingType.INT32)]
     public int UiOrder { get; set; }
 
     public virtual ICollection<Achievement> Achievements { get; set; } = new List<Achievement>();

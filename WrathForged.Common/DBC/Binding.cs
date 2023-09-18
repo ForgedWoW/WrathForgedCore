@@ -28,13 +28,13 @@ namespace WrathForged.Common.DBC
             {
                 switch (field.Type)
                 {
-                    case DBCBindingType.INT:
+                    case DBCBindingType.INT32:
                     {
                         size += sizeof(int);
                         break;
                     }
                     case DBCBindingType.STRING:
-                    case DBCBindingType.UINT:
+                    case DBCBindingType.UINT32:
                     {
                         size += sizeof(uint);
                         break;

@@ -5,8 +5,8 @@ namespace WrathForged.Database.DBC
 {
     public enum DBCBindingType
     {
-        INT,
-        UINT,
+        INT32,
+        UINT32,
         UINT8,
         FLOAT,
         DOUBLE,

@@ -7,10 +7,10 @@ namespace WrathForged.Database.Models.DBC;
 [DBCBound("CharHairTextures.dbc")]
 public partial class Charhairtexture
 {
-    [DBCPropertyBinding(0, DBCBindingType.INT)]
+    [DBCPropertyBinding(0, DBCBindingType.INT32)]
     public int Id { get; set; }
 
-    [DBCPropertyBinding(1, DBCBindingType.INT, Nullable = true)]
+    [DBCPropertyBinding(1, DBCBindingType.INT32, Nullable = true)]
     public int? Race { get; set; }
 
     [DBCPropertyBinding(2, DBCBindingType.UINT8)]
@@ -19,16 +19,16 @@ public partial class Charhairtexture
     [DBCPropertyBinding(3, DBCBindingType.UINT8)]
     public byte Field03 { get; set; }
 
-    [DBCPropertyBinding(4, DBCBindingType.INT)]
+    [DBCPropertyBinding(4, DBCBindingType.INT32)]
     public int Field041 { get; set; }
 
-    [DBCPropertyBinding(5, DBCBindingType.INT)]
+    [DBCPropertyBinding(5, DBCBindingType.INT32)]
     public int Field042 { get; set; }
 
-    [DBCPropertyBinding(6, DBCBindingType.INT)]
+    [DBCPropertyBinding(6, DBCBindingType.INT32)]
     public int Field043 { get; set; }
 
-    [DBCPropertyBinding(7, DBCBindingType.INT)]
+    [DBCPropertyBinding(7, DBCBindingType.INT32)]
     public int Field044 { get; set; }
 
     public virtual Chrrace? RaceNavigation { get; set; }

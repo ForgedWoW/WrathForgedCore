@@ -7,37 +7,37 @@ namespace WrathForged.Database.Models.DBC;
 [DBCBound("BattlemasterList.dbc")]
 public partial class Battlemasterlist
 {
-    [DBCPropertyBinding(0, DBCBindingType.INT)]
+    [DBCPropertyBinding(0, DBCBindingType.INT32)]
     public int Id { get; set; }
 
-    [DBCPropertyBinding(1, DBCBindingType.INT, Nullable = true)]
+    [DBCPropertyBinding(1, DBCBindingType.INT32, Nullable = true)]
     public int? MapId1 { get; set; }
 
-    [DBCPropertyBinding(2, DBCBindingType.INT, Nullable = true)]
+    [DBCPropertyBinding(2, DBCBindingType.INT32, Nullable = true)]
     public int? MapId2 { get; set; }
 
-    [DBCPropertyBinding(3, DBCBindingType.INT, Nullable = true)]
+    [DBCPropertyBinding(3, DBCBindingType.INT32, Nullable = true)]
     public int? MapId3 { get; set; }
 
-    [DBCPropertyBinding(4, DBCBindingType.INT, Nullable = true)]
+    [DBCPropertyBinding(4, DBCBindingType.INT32, Nullable = true)]
     public int? MapId4 { get; set; }
 
-    [DBCPropertyBinding(5, DBCBindingType.INT, Nullable = true)]
+    [DBCPropertyBinding(5, DBCBindingType.INT32, Nullable = true)]
     public int? MapId5 { get; set; }
 
-    [DBCPropertyBinding(6, DBCBindingType.INT, Nullable = true)]
+    [DBCPropertyBinding(6, DBCBindingType.INT32, Nullable = true)]
     public int? MapId6 { get; set; }
 
-    [DBCPropertyBinding(7, DBCBindingType.INT, Nullable = true)]
+    [DBCPropertyBinding(7, DBCBindingType.INT32, Nullable = true)]
     public int? MapId7 { get; set; }
 
-    [DBCPropertyBinding(8, DBCBindingType.INT, Nullable = true)]
+    [DBCPropertyBinding(8, DBCBindingType.INT32, Nullable = true)]
     public int? MapId8 { get; set; }
 
-    [DBCPropertyBinding(9, DBCBindingType.INT)]
+    [DBCPropertyBinding(9, DBCBindingType.INT32)]
     public int InstanceType { get; set; }
 
-    [DBCPropertyBinding(10, DBCBindingType.INT)]
+    [DBCPropertyBinding(10, DBCBindingType.INT32)]
     public int GroupsAllowed { get; set; }
 
     [DBCPropertyBinding(11, DBCBindingType.STRING)]
@@ -88,19 +88,19 @@ public partial class Battlemasterlist
     [DBCPropertyBinding(26, DBCBindingType.STRING)]
     public string? NameLangUnk { get; set; }
 
-    [DBCPropertyBinding(27, DBCBindingType.INT)]
+    [DBCPropertyBinding(27, DBCBindingType.INT32)]
     public uint NameLangMask { get; set; }
 
-    [DBCPropertyBinding(28, DBCBindingType.INT)]
+    [DBCPropertyBinding(28, DBCBindingType.INT32)]
     public int MaxGroupSize { get; set; }
 
-    [DBCPropertyBinding(29, DBCBindingType.INT)]
+    [DBCPropertyBinding(29, DBCBindingType.INT32)]
     public int HolidayWorldState { get; set; }
 
-    [DBCPropertyBinding(30, DBCBindingType.INT)]
+    [DBCPropertyBinding(30, DBCBindingType.INT32)]
     public int Minlevel { get; set; }
 
-    [DBCPropertyBinding(31, DBCBindingType.INT)]
+    [DBCPropertyBinding(31, DBCBindingType.INT32)]
     public int Maxlevel { get; set; }
 
     public virtual Map? MapId1Navigation { get; set; }
