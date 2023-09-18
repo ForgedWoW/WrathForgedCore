@@ -11,9 +11,6 @@
 	<ItemGroup>
 		<!-- Exclude the output of source generators from the compilation -->
 		<Compile Remove="$(CompilerGeneratedFilesOutputPath)/**/*.cs" />
-		<Compile Remove="Chat\**" />
-		<EmbeddedResource Remove="Chat\**" />
-		<None Remove="Chat\**" />
 	</ItemGroup>
 
 	<ItemGroup>

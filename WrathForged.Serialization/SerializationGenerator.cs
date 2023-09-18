@@ -25,7 +25,7 @@ namespace WrathForged.Serialization
 
         public void Initialize(GeneratorInitializationContext context)
         {
-            System.Diagnostics.Debugger.Launch();
+            //System.Diagnostics.Debugger.Launch();
             context.RegisterForSyntaxNotifications(() => new SerializationSyntaxReceiver());
 
             _generatorsByTypeKind.Add(TypeKind.Enum, new EnumTypeGenerator());
@@ -57,7 +57,7 @@ namespace WrathForged.Serialization
 #if DEBUG
                 System.Diagnostics.Debug.WriteLine(source);
 #endif
-                context.AddSource($"{modelSymbol.Name}SerializationExtensions", SourceText.From(source));
+                context.AddSource($"{modelSymbol.Name}", SourceText.From(source));
             }
 
             foreach (var classDeclaration in receiver.CandidateRecords)
@@ -72,7 +72,7 @@ namespace WrathForged.Serialization
 #if DEBUG
                 System.Diagnostics.Debug.WriteLine(source);
 #endif
-                context.AddSource($"{modelSymbol.Name}SerializationExtensions", SourceText.From(source, Encoding.UTF8));
+                context.AddSource($"{modelSymbol.Name}", SourceText.From(source, Encoding.UTF8));
             }
         }
 
@@ -106,7 +106,7 @@ namespace WrathForged.Serialization
             // Append the namespace and class definitions
             _ = sourceBuilder.Insert(0, $"namespace {symbol.ContainingNamespace.ToDisplayString()}" +
                 " {\r\n" +
-                $"    public partial {classOrRecord} {symbol.Name}SerializationExtensions\r\n" +
+                $"    public partial {classOrRecord} {symbol.Name}\r\n" +
                 "    {\r\n"
             );
             _ = sourceBuilder.AppendLine("    }");

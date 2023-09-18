@@ -81,38 +81,21 @@ namespace WrathForged.Common.Networking
             if (_serializers.TryGetValue(type, out var serializer))
             {
                 // If we have a serializer for this type, use it
-                _ = serializer.Invoke(null, new object[] { obj, Writer });
+                _ = serializer.Invoke(obj, new object[] { Writer });
                 return;
             }
 
-            // Get the namespace and construct the name of the static class
-            var namespaceName = type.Namespace;
-            var staticClassName = $"{type.Name}SerializationExtensions";
+            // Find the Serialize method which is an extension method
+            var method = type.GetMethod("Serialize", new[] { type });
 
-            // Combine namespace and class name to get the fully qualified name of the static class
-            var fullClassName = $"{namespaceName}.{staticClassName}";
-
-            // Get the static class using its fully qualified name
-            var extensionClass = Type.GetType(fullClassName);
-
-            if (extensionClass != null)
+            if (method != null)
             {
-                // Find the Serialize method which is an extension method
-                var method = extensionClass.GetMethod("Serialize", new[] { type, typeof(BinaryWriter) });
-
-                if (method != null)
-                {
-                    _ = _serializers.TryAdd(type, method);
-                    _ = method.Invoke(null, new object[] { obj, Writer });
-                }
-                else
-                {
-                    throw new InvalidOperationException($"Serialize method not found for type {type.FullName}");
-                }
+                _ = _serializers.TryAdd(type, method);
+                _ = method.Invoke(obj, new object[] { Writer });
             }
             else
             {
-                throw new InvalidOperationException($"Serialization extension class not found for type {type.FullName}");
+                throw new InvalidOperationException($"Serialize method not found for type {type.FullName}");
             }
         }
 
