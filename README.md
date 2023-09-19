@@ -23,7 +23,8 @@ Actively accepts Pull Requests.
     - A note on this, all traffic is still routed through the Realm Server so you want the Instance servers to be on the same network as the Realm Server
 - [ ] Web API for server management, and front end UIs such as Account management, armory or wiki.
 
-## Requirements
+## Setup
+### Requirements
 - .NET 7.0 installed
 - [Trinity Core Database](https://trinitycore.info/install/Database-Installation)
 - [Trinity Core AuthServer](https://github.com/TrinityCore/TrinityCore/tree/3.3.5)
