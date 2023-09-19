@@ -64,7 +64,7 @@ namespace WrathForged.Common.DBC
          * Calculates and returns the number of fields the structure represented by this binding contains.
          */
 
-        public uint CalcFieldCount() => Fields == null ? 0 : (uint)Fields.Length;
+        public int CalcFieldCount() => Fields == null ? 0 : Fields.Length;
 
         /**
          * Returns the number of rows in the database for the given binding/table name.

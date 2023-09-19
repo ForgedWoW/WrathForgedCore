@@ -27,3 +27,25 @@ Actively accepts Pull Requests.
 - .NET 7.0 installed
 - [Trinity Core Database](https://trinitycore.info/install/Database-Installation)
 - [Trinity Core AuthServer](https://github.com/TrinityCore/TrinityCore/tree/3.3.5)
+
+### Importing Existing DBC
+This process is required for entity framework to work with the DBC files. This is a one time process. After all data is manipulated in the database. dbcs can be exported using the realm server command line.
+Use your existing DBC files from your TrinityCore installation and import them into the database.
+
+1. Create a new database in your MySQL server called `dbc`
+2. Use [WDBX Editor](https://github.com/robinsch/WDBXEditor) to run the following command:
+
+NOTE: change the paths to match your environment
+```bash
+cd "C:\WoWData\3.3.5 AC\dbc"
+for %%F in (*.dbc) do (
+    "C:\WoWTools\WDBX.Editor\WDBX Editor.exe" -export -f "C:\WoWData\3.3.5 AC\dbc\%%F" -b 12340 -o "C:\WoWData\3.3.5 AC\sql\%%~nF.sql"
+)
+```
+
+3. Import the SQL files into your `dbc` database
+4. Run the following SQL in this order to perpare the dbc database
+    1. https://github.com/ForgedWoW/WrathForgedCore/blob/main/WrathForged.Database/sql/dbc/zzzAllowFK.sql - This allows foreign keys to be created by setting fields to allow null. These fields have default 0 or -1 and dont have valid mappings. in SQL with FK, these need to be null.
+    2. https://github.com/ForgedWoW/WrathForgedCore/blob/main/WrathForged.Database/sql/dbc/zzzCleanupInvaiMappings.sql - This cleans up invalid mappings, there is invalid mappings and dead data in 3.3.5 dbc files. these are non existing mappings from over versions.
+    3. https://github.com/ForgedWoW/WrathForgedCore/blob/main/WrathForged.Database/sql/dbc/zzzUpdateDefaultValues.sql - fields that have foreign keys and have a default value such as 0 or -1, these need to be null to denote to the foreign key that there is no mapping as the value is default.
+    4. https://github.com/ForgedWoW/WrathForgedCore/blob/main/WrathForged.Database/sql/dbc/zzzzAlterTables.sql - Sets the FK on the tables.
