@@ -22,745 +22,745 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <None Update="sql\dbc\Achievement.sql">
+	  <None Update="sql\base\dbc\Achievement.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\Achievement_Category.sql">
+	  <None Update="sql\base\dbc\Achievement_Category.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\Achievement_Criteria.sql">
+	  <None Update="sql\base\dbc\Achievement_Criteria.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\AnimationData.sql">
+	  <None Update="sql\base\dbc\AnimationData.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\AreaGroup.sql">
+	  <None Update="sql\base\dbc\AreaGroup.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\AreaPOI.sql">
+	  <None Update="sql\base\dbc\AreaPOI.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\AreaTable.sql">
+	  <None Update="sql\base\dbc\AreaTable.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\AreaTrigger.sql">
+	  <None Update="sql\base\dbc\AreaTrigger.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\AttackAnimKits.sql">
+	  <None Update="sql\base\dbc\AttackAnimKits.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\AttackAnimTypes.sql">
+	  <None Update="sql\base\dbc\AttackAnimTypes.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\AuctionHouse.sql">
+	  <None Update="sql\base\dbc\AuctionHouse.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\BankBagSlotPrices.sql">
+	  <None Update="sql\base\dbc\BankBagSlotPrices.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\BannedAddOns.sql">
+	  <None Update="sql\base\dbc\BannedAddOns.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\BarberShopStyle.sql">
+	  <None Update="sql\base\dbc\BarberShopStyle.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\BattlemasterList.sql">
+	  <None Update="sql\base\dbc\BattlemasterList.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\CameraShakes.sql">
+	  <None Update="sql\base\dbc\CameraShakes.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\Cfg_Categories.sql">
+	  <None Update="sql\base\dbc\Cfg_Categories.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\CharacterFacialHairStyles.sql">
+	  <None Update="sql\base\dbc\CharacterFacialHairStyles.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\CharBaseInfo.sql">
+	  <None Update="sql\base\dbc\CharBaseInfo.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\CharHairGeosets.sql">
+	  <None Update="sql\base\dbc\CharHairGeosets.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\CharHairTextures.sql">
+	  <None Update="sql\base\dbc\CharHairTextures.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\CharSections.sql">
+	  <None Update="sql\base\dbc\CharSections.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\CharStartOutfit.sql">
+	  <None Update="sql\base\dbc\CharStartOutfit.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\CharTitles.sql">
+	  <None Update="sql\base\dbc\CharTitles.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\ChatChannels.sql">
+	  <None Update="sql\base\dbc\ChatChannels.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\ChatProfanity.sql">
+	  <None Update="sql\base\dbc\ChatProfanity.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\ChrClasses.sql">
+	  <None Update="sql\base\dbc\ChrClasses.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\ChrRaces.sql">
+	  <None Update="sql\base\dbc\ChrRaces.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\CinematicCamera.sql">
+	  <None Update="sql\base\dbc\CinematicCamera.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\CinematicSequences.sql">
+	  <None Update="sql\base\dbc\CinematicSequences.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\CreatureDisplayInfo.sql">
+	  <None Update="sql\base\dbc\CreatureDisplayInfo.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\CreatureDisplayInfoExtra.sql">
+	  <None Update="sql\base\dbc\CreatureDisplayInfoExtra.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\CreatureFamily.sql">
+	  <None Update="sql\base\dbc\CreatureFamily.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\CreatureModelData.sql">
+	  <None Update="sql\base\dbc\CreatureModelData.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\CreatureMovementInfo.sql">
+	  <None Update="sql\base\dbc\CreatureMovementInfo.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\CreatureSoundData.sql">
+	  <None Update="sql\base\dbc\CreatureSoundData.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\CreatureSpellData.sql">
+	  <None Update="sql\base\dbc\CreatureSpellData.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\CreatureType.sql">
+	  <None Update="sql\base\dbc\CreatureType.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\CurrencyCategory.sql">
+	  <None Update="sql\base\dbc\CurrencyCategory.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\CurrencyTypes.sql">
+	  <None Update="sql\base\dbc\CurrencyTypes.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\DanceMoves.sql">
+	  <None Update="sql\base\dbc\DanceMoves.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\DeathThudLookups.sql">
+	  <None Update="sql\base\dbc\DeathThudLookups.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\DeclinedWord.sql">
+	  <None Update="sql\base\dbc\DeclinedWord.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\DeclinedWordCases.sql">
+	  <None Update="sql\base\dbc\DeclinedWordCases.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\DestructibleModelData.sql">
+	  <None Update="sql\base\dbc\DestructibleModelData.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\DungeonEncounter.sql">
+	  <None Update="sql\base\dbc\DungeonEncounter.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\DungeonMap.sql">
+	  <None Update="sql\base\dbc\DungeonMap.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\DungeonMapChunk.sql">
+	  <None Update="sql\base\dbc\DungeonMapChunk.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\DurabilityCosts.sql">
+	  <None Update="sql\base\dbc\DurabilityCosts.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\DurabilityQuality.sql">
+	  <None Update="sql\base\dbc\DurabilityQuality.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\Emotes.sql">
+	  <None Update="sql\base\dbc\Emotes.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\EmotesText.sql">
+	  <None Update="sql\base\dbc\EmotesText.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\EmotesTextData.sql">
+	  <None Update="sql\base\dbc\EmotesTextData.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\EmotesTextSound.sql">
+	  <None Update="sql\base\dbc\EmotesTextSound.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\EnvironmentalDamage.sql">
+	  <None Update="sql\base\dbc\EnvironmentalDamage.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\Exhaustion.sql">
+	  <None Update="sql\base\dbc\Exhaustion.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\Faction.sql">
+	  <None Update="sql\base\dbc\Faction.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\FactionGroup.sql">
+	  <None Update="sql\base\dbc\FactionGroup.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\FactionTemplate.sql">
+	  <None Update="sql\base\dbc\FactionTemplate.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\FileData.sql">
+	  <None Update="sql\base\dbc\FileData.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\FootprintTextures.sql">
+	  <None Update="sql\base\dbc\FootprintTextures.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\FootstepTerrainLookup.sql">
+	  <None Update="sql\base\dbc\FootstepTerrainLookup.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\GameObjectArtKit.sql">
+	  <None Update="sql\base\dbc\GameObjectArtKit.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\GameObjectDisplayInfo.sql">
+	  <None Update="sql\base\dbc\GameObjectDisplayInfo.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\GameTables.sql">
+	  <None Update="sql\base\dbc\GameTables.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\GameTips.sql">
+	  <None Update="sql\base\dbc\GameTips.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\GemProperties.sql">
+	  <None Update="sql\base\dbc\GemProperties.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\GlyphProperties.sql">
+	  <None Update="sql\base\dbc\GlyphProperties.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\GlyphSlot.sql">
+	  <None Update="sql\base\dbc\GlyphSlot.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\GMSurveyAnswers.sql">
+	  <None Update="sql\base\dbc\GMSurveyAnswers.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\GMSurveyCurrentSurvey.sql">
+	  <None Update="sql\base\dbc\GMSurveyCurrentSurvey.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\GMSurveyQuestions.sql">
+	  <None Update="sql\base\dbc\GMSurveyQuestions.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\GMSurveySurveys.sql">
+	  <None Update="sql\base\dbc\GMSurveySurveys.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\GMTicketCategory.sql">
+	  <None Update="sql\base\dbc\GMTicketCategory.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\GroundEffectDoodad.sql">
+	  <None Update="sql\base\dbc\GroundEffectDoodad.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\GroundEffectTexture.sql">
+	  <None Update="sql\base\dbc\GroundEffectTexture.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\gtBarberShopCostBase.sql">
+	  <None Update="sql\base\dbc\gtBarberShopCostBase.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\gtChanceToMeleeCrit.sql">
+	  <None Update="sql\base\dbc\gtChanceToMeleeCrit.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\gtChanceToMeleeCritBase.sql">
+	  <None Update="sql\base\dbc\gtChanceToMeleeCritBase.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\gtChanceToSpellCrit.sql">
+	  <None Update="sql\base\dbc\gtChanceToSpellCrit.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\gtChanceToSpellCritBase.sql">
+	  <None Update="sql\base\dbc\gtChanceToSpellCritBase.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\gtCombatRatings.sql">
+	  <None Update="sql\base\dbc\gtCombatRatings.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\gtNPCManaCostScaler.sql">
+	  <None Update="sql\base\dbc\gtNPCManaCostScaler.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\gtOCTClassCombatRatingScalar.sql">
+	  <None Update="sql\base\dbc\gtOCTClassCombatRatingScalar.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\gtOCTRegenHP.sql">
+	  <None Update="sql\base\dbc\gtOCTRegenHP.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\gtOCTRegenMP.sql">
+	  <None Update="sql\base\dbc\gtOCTRegenMP.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\gtRegenHPPerSpt.sql">
+	  <None Update="sql\base\dbc\gtRegenHPPerSpt.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\gtRegenMPPerSpt.sql">
+	  <None Update="sql\base\dbc\gtRegenMPPerSpt.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\HelmetGeosetVisData.sql">
+	  <None Update="sql\base\dbc\HelmetGeosetVisData.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\HolidayDescriptions.sql">
+	  <None Update="sql\base\dbc\HolidayDescriptions.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\HolidayNames.sql">
+	  <None Update="sql\base\dbc\HolidayNames.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\Holidays.sql">
+	  <None Update="sql\base\dbc\Holidays.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\Item.sql">
+	  <None Update="sql\base\dbc\Item.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\ItemBagFamily.sql">
+	  <None Update="sql\base\dbc\ItemBagFamily.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\ItemClass.sql">
+	  <None Update="sql\base\dbc\ItemClass.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\ItemCondExtCosts.sql">
+	  <None Update="sql\base\dbc\ItemCondExtCosts.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\ItemDisplayInfo.sql">
+	  <None Update="sql\base\dbc\ItemDisplayInfo.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\ItemExtendedCost.sql">
+	  <None Update="sql\base\dbc\ItemExtendedCost.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\ItemGroupSounds.sql">
+	  <None Update="sql\base\dbc\ItemGroupSounds.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\ItemLimitCategory.sql">
+	  <None Update="sql\base\dbc\ItemLimitCategory.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\ItemPetFood.sql">
+	  <None Update="sql\base\dbc\ItemPetFood.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\ItemPurchaseGroup.sql">
+	  <None Update="sql\base\dbc\ItemPurchaseGroup.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\ItemRandomProperties.sql">
+	  <None Update="sql\base\dbc\ItemRandomProperties.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\ItemRandomSuffix.sql">
+	  <None Update="sql\base\dbc\ItemRandomSuffix.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\ItemSet.sql">
+	  <None Update="sql\base\dbc\ItemSet.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\ItemSubClass.sql">
+	  <None Update="sql\base\dbc\ItemSubClass.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\ItemSubClassMask.sql">
+	  <None Update="sql\base\dbc\ItemSubClassMask.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\ItemVisualEffects.sql">
+	  <None Update="sql\base\dbc\ItemVisualEffects.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\ItemVisuals.sql">
+	  <None Update="sql\base\dbc\ItemVisuals.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\Languages.sql">
+	  <None Update="sql\base\dbc\Languages.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\LanguageWords.sql">
+	  <None Update="sql\base\dbc\LanguageWords.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\LFGDungeonExpansion.sql">
+	  <None Update="sql\base\dbc\LFGDungeonExpansion.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\LFGDungeonGroup.sql">
+	  <None Update="sql\base\dbc\LFGDungeonGroup.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\LFGDungeons.sql">
+	  <None Update="sql\base\dbc\LFGDungeons.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\Light.sql">
+	  <None Update="sql\base\dbc\Light.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\LightFloatBand.sql">
+	  <None Update="sql\base\dbc\LightFloatBand.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\LightIntBand.sql">
+	  <None Update="sql\base\dbc\LightIntBand.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\LightParams.sql">
+	  <None Update="sql\base\dbc\LightParams.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\LightSkybox.sql">
+	  <None Update="sql\base\dbc\LightSkybox.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\LiquidMaterial.sql">
+	  <None Update="sql\base\dbc\LiquidMaterial.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\LiquidType.sql">
+	  <None Update="sql\base\dbc\LiquidType.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\LoadingScreens.sql">
+	  <None Update="sql\base\dbc\LoadingScreens.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\LoadingScreenTaxiSplines.sql">
+	  <None Update="sql\base\dbc\LoadingScreenTaxiSplines.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\Lock.sql">
+	  <None Update="sql\base\dbc\Lock.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\LockType.sql">
+	  <None Update="sql\base\dbc\LockType.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\MailTemplate.sql">
+	  <None Update="sql\base\dbc\MailTemplate.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\Map.sql">
+	  <None Update="sql\base\dbc\Map.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\MapDifficulty.sql">
+	  <None Update="sql\base\dbc\MapDifficulty.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\Material.sql">
+	  <None Update="sql\base\dbc\Material.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\Movie.sql">
+	  <None Update="sql\base\dbc\Movie.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\MovieFileData.sql">
+	  <None Update="sql\base\dbc\MovieFileData.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\MovieVariation.sql">
+	  <None Update="sql\base\dbc\MovieVariation.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\NameGen.sql">
+	  <None Update="sql\base\dbc\NameGen.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\NamesProfanity.sql">
+	  <None Update="sql\base\dbc\NamesProfanity.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\NamesReserved.sql">
+	  <None Update="sql\base\dbc\NamesReserved.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\NPCSounds.sql">
+	  <None Update="sql\base\dbc\NPCSounds.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\ObjectEffect.sql">
+	  <None Update="sql\base\dbc\ObjectEffect.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\ObjectEffectGroup.sql">
+	  <None Update="sql\base\dbc\ObjectEffectGroup.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\ObjectEffectModifier.sql">
+	  <None Update="sql\base\dbc\ObjectEffectModifier.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\ObjectEffectPackage.sql">
+	  <None Update="sql\base\dbc\ObjectEffectPackage.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\ObjectEffectPackageElem.sql">
+	  <None Update="sql\base\dbc\ObjectEffectPackageElem.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\OverrideSpellData.sql">
+	  <None Update="sql\base\dbc\OverrideSpellData.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\Package.sql">
+	  <None Update="sql\base\dbc\Package.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\PageTextMaterial.sql">
+	  <None Update="sql\base\dbc\PageTextMaterial.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\PaperDollItemFrame.sql">
+	  <None Update="sql\base\dbc\PaperDollItemFrame.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\ParticleColor.sql">
+	  <None Update="sql\base\dbc\ParticleColor.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\PetitionType.sql">
+	  <None Update="sql\base\dbc\PetitionType.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\PetPersonality.sql">
+	  <None Update="sql\base\dbc\PetPersonality.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\PowerDisplay.sql">
+	  <None Update="sql\base\dbc\PowerDisplay.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\PvpDifficulty.sql">
+	  <None Update="sql\base\dbc\PvpDifficulty.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\QuestFactionReward.sql">
+	  <None Update="sql\base\dbc\QuestFactionReward.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\QuestInfo.sql">
+	  <None Update="sql\base\dbc\QuestInfo.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\QuestSort.sql">
+	  <None Update="sql\base\dbc\QuestSort.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\QuestXP.sql">
+	  <None Update="sql\base\dbc\QuestXP.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\RandPropPoints.sql">
+	  <None Update="sql\base\dbc\RandPropPoints.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\Resistances.sql">
+	  <None Update="sql\base\dbc\Resistances.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\ScalingStatDistribution.sql">
+	  <None Update="sql\base\dbc\ScalingStatDistribution.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\ScalingStatValues.sql">
+	  <None Update="sql\base\dbc\ScalingStatValues.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\ScreenEffect.sql">
+	  <None Update="sql\base\dbc\ScreenEffect.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\ServerMessages.sql">
+	  <None Update="sql\base\dbc\ServerMessages.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\SheatheSoundLookups.sql">
+	  <None Update="sql\base\dbc\SheatheSoundLookups.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\SkillCostsData.sql">
+	  <None Update="sql\base\dbc\SkillCostsData.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\SkillLine.sql">
+	  <None Update="sql\base\dbc\SkillLine.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\SkillLineAbility.sql">
+	  <None Update="sql\base\dbc\SkillLineAbility.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\SkillLineCategory.sql">
+	  <None Update="sql\base\dbc\SkillLineCategory.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\SkillRaceClassInfo.sql">
+	  <None Update="sql\base\dbc\SkillRaceClassInfo.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\SkillTiers.sql">
+	  <None Update="sql\base\dbc\SkillTiers.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\SoundAmbience.sql">
+	  <None Update="sql\base\dbc\SoundAmbience.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\SoundEmitters.sql">
+	  <None Update="sql\base\dbc\SoundEmitters.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\SoundEntries.sql">
+	  <None Update="sql\base\dbc\SoundEntries.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\SoundEntriesAdvanced.sql">
+	  <None Update="sql\base\dbc\SoundEntriesAdvanced.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\SoundFilter.sql">
+	  <None Update="sql\base\dbc\SoundFilter.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\SoundFilterElem.sql">
+	  <None Update="sql\base\dbc\SoundFilterElem.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\SoundProviderPreferences.sql">
+	  <None Update="sql\base\dbc\SoundProviderPreferences.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\SoundSamplePreferences.sql">
+	  <None Update="sql\base\dbc\SoundSamplePreferences.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\SoundWaterType.sql">
+	  <None Update="sql\base\dbc\SoundWaterType.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\SpamMessages.sql">
+	  <None Update="sql\base\dbc\SpamMessages.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\Spell.sql">
+	  <None Update="sql\base\dbc\Spell.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\SpellCastTimes.sql">
+	  <None Update="sql\base\dbc\SpellCastTimes.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\SpellCategory.sql">
+	  <None Update="sql\base\dbc\SpellCategory.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\SpellChainEffects.sql">
+	  <None Update="sql\base\dbc\SpellChainEffects.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\SpellDescriptionVariables.sql">
+	  <None Update="sql\base\dbc\SpellDescriptionVariables.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\SpellDifficulty.sql">
+	  <None Update="sql\base\dbc\SpellDifficulty.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\SpellDispelType.sql">
+	  <None Update="sql\base\dbc\SpellDispelType.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\SpellDuration.sql">
+	  <None Update="sql\base\dbc\SpellDuration.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\SpellEffectCameraShakes.sql">
+	  <None Update="sql\base\dbc\SpellEffectCameraShakes.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\SpellFocusObject.sql">
+	  <None Update="sql\base\dbc\SpellFocusObject.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\SpellIcon.sql">
+	  <None Update="sql\base\dbc\SpellIcon.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\SpellItemEnchantment.sql">
+	  <None Update="sql\base\dbc\SpellItemEnchantment.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\SpellItemEnchantmentCondition.sql">
+	  <None Update="sql\base\dbc\SpellItemEnchantmentCondition.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\SpellMechanic.sql">
+	  <None Update="sql\base\dbc\SpellMechanic.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\SpellMissile.sql">
+	  <None Update="sql\base\dbc\SpellMissile.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\SpellMissileMotion.sql">
+	  <None Update="sql\base\dbc\SpellMissileMotion.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\SpellRadius.sql">
+	  <None Update="sql\base\dbc\SpellRadius.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\SpellRange.sql">
+	  <None Update="sql\base\dbc\SpellRange.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\SpellRuneCost.sql">
+	  <None Update="sql\base\dbc\SpellRuneCost.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\SpellShapeshiftForm.sql">
+	  <None Update="sql\base\dbc\SpellShapeshiftForm.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\SpellVisual.sql">
+	  <None Update="sql\base\dbc\SpellVisual.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\SpellVisualEffectName.sql">
+	  <None Update="sql\base\dbc\SpellVisualEffectName.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\SpellVisualKit.sql">
+	  <None Update="sql\base\dbc\SpellVisualKit.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\SpellVisualKitAreaModel.sql">
+	  <None Update="sql\base\dbc\SpellVisualKitAreaModel.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\SpellVisualKitModelAttach.sql">
+	  <None Update="sql\base\dbc\SpellVisualKitModelAttach.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\SpellVisualPrecastTransitions.sql">
+	  <None Update="sql\base\dbc\SpellVisualPrecastTransitions.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\StableSlotPrices.sql">
+	  <None Update="sql\base\dbc\StableSlotPrices.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\Startup_Strings.sql">
+	  <None Update="sql\base\dbc\Startup_Strings.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\Stationery.sql">
+	  <None Update="sql\base\dbc\Stationery.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\StringLookups.sql">
+	  <None Update="sql\base\dbc\StringLookups.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\SummonProperties.sql">
+	  <None Update="sql\base\dbc\SummonProperties.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\Talent.sql">
+	  <None Update="sql\base\dbc\Talent.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\TalentTab.sql">
+	  <None Update="sql\base\dbc\TalentTab.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\TaxiNodes.sql">
+	  <None Update="sql\base\dbc\TaxiNodes.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\TaxiPath.sql">
+	  <None Update="sql\base\dbc\TaxiPath.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\TaxiPathNode.sql">
+	  <None Update="sql\base\dbc\TaxiPathNode.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\TeamContributionPoints.sql">
+	  <None Update="sql\base\dbc\TeamContributionPoints.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\TerrainType.sql">
+	  <None Update="sql\base\dbc\TerrainType.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\TerrainTypeSounds.sql">
+	  <None Update="sql\base\dbc\TerrainTypeSounds.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\TotemCategory.sql">
+	  <None Update="sql\base\dbc\TotemCategory.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\TransportAnimation.sql">
+	  <None Update="sql\base\dbc\TransportAnimation.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\TransportPhysics.sql">
+	  <None Update="sql\base\dbc\TransportPhysics.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\TransportRotation.sql">
+	  <None Update="sql\base\dbc\TransportRotation.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\UISoundLookups.sql">
+	  <None Update="sql\base\dbc\UISoundLookups.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\UnitBlood.sql">
+	  <None Update="sql\base\dbc\UnitBlood.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\UnitBloodLevels.sql">
+	  <None Update="sql\base\dbc\UnitBloodLevels.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\Vehicle.sql">
+	  <None Update="sql\base\dbc\Vehicle.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\VehicleSeat.sql">
+	  <None Update="sql\base\dbc\VehicleSeat.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\VehicleUIIndicator.sql">
+	  <None Update="sql\base\dbc\VehicleUIIndicator.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\VehicleUIIndSeat.sql">
+	  <None Update="sql\base\dbc\VehicleUIIndSeat.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\VideoHardware.sql">
+	  <None Update="sql\base\dbc\VideoHardware.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\VocalUISounds.sql">
+	  <None Update="sql\base\dbc\VocalUISounds.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\WeaponImpactSounds.sql">
+	  <None Update="sql\base\dbc\WeaponImpactSounds.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\WeaponSwingSounds2.sql">
+	  <None Update="sql\base\dbc\WeaponSwingSounds2.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\Weather.sql">
+	  <None Update="sql\base\dbc\Weather.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\WMOAreaTable.sql">
+	  <None Update="sql\base\dbc\WMOAreaTable.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\WorldMapArea.sql">
+	  <None Update="sql\base\dbc\WorldMapArea.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\WorldMapContinent.sql">
+	  <None Update="sql\base\dbc\WorldMapContinent.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\WorldMapOverlay.sql">
+	  <None Update="sql\base\dbc\WorldMapOverlay.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\WorldMapTransforms.sql">
+	  <None Update="sql\base\dbc\WorldMapTransforms.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\WorldSafeLocs.sql">
+	  <None Update="sql\base\dbc\WorldSafeLocs.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\WorldStateUI.sql">
+	  <None Update="sql\base\dbc\WorldStateUI.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\WorldStateZoneSounds.sql">
+	  <None Update="sql\base\dbc\WorldStateZoneSounds.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\WowError_Strings.sql">
+	  <None Update="sql\base\dbc\WowError_Strings.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\ZoneIntroMusicTable.sql">
+	  <None Update="sql\base\dbc\ZoneIntroMusicTable.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\ZoneMusic.sql">
+	  <None Update="sql\base\dbc\ZoneMusic.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\zzzAllowFK.sql">
+	  <None Update="sql\base\dbc\zzzAllowFK.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\zzzCleanupInvaildMappings.sql">
+	  <None Update="sql\base\dbc\zzzCleanupInvaildMappings.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\zzzUpdateDefaultValues.sql">
+	  <None Update="sql\base\dbc\zzzUpdateDefaultValues.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="sql\dbc\zzzzAlterTables.sql">
+	  <None Update="sql\base\dbc\zzzzAlterTables.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
 	</ItemGroup>

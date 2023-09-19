@@ -1,5 +1,5 @@
-﻿// Copyright (c) Forged WoW LLC <https://github.com/ForgedWoW/WrathForgedCore>
-// Licensed under GPL-3.0 license. See <https://github.com/ForgedWoW/WrathForgedCore/blob/master/LICENSE> for full information.
+﻿// Copyright (c) Forged WoW LLC <https://github.com/ForgedWoW/WrathForgedCore> Licensed under
+// GPL-3.0 license. See <https://github.com/ForgedWoW/WrathForgedCore/blob/master/LICENSE> for full information.
 
 using Autofac;
 using Microsoft.EntityFrameworkCore;
@@ -11,6 +11,7 @@ using WrathForged.Database.Models.Auth;
 using WrathForged.Database.Models.Characters;
 using WrathForged.Database.Models.DBC;
 using WrathForged.Database.Models.World;
+using WrathForged.Database.Updates;
 using Z.EntityFramework.Plus;
 
 namespace WrathForged.Database
@@ -54,7 +55,14 @@ namespace WrathForged.Database
             QueryCacheManager.DefaultMemoryCacheEntryOptions = options;
             _ = builder.RegisterInstance(queryCache).As<ForgeDBCache>().SingleInstance();
 
+            builder.RegisterType<DatabaseUpdater>().SingleInstance();
+
             return builder;
+        }
+
+        public static void InitializeDatabase(this IContainer container)
+        {
+            container.Resolve<DatabaseUpdater>().Update();
         }
 
         public static void ShutdownDatabase(this IContainer container)

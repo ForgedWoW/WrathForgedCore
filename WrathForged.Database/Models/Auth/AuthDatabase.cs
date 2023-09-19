@@ -55,6 +55,12 @@ public partial class AuthDatabase : DbContext
 
     public virtual DbSet<VwRbac> VwRbacs { get; set; }
 
+    public void RunSqlFile(string filePath)
+    {
+        string sql = File.ReadAllText(filePath);
+        Database.ExecuteSqlRaw(sql);
+    }
+
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder

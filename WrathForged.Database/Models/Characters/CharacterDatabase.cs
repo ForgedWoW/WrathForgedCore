@@ -197,6 +197,12 @@ public partial class CharacterDatabase : DbContext
 
     public virtual DbSet<Worldstate> Worldstates { get; set; }
 
+    public void RunSqlFile(string filePath)
+    {
+        string sql = File.ReadAllText(filePath);
+        Database.ExecuteSqlRaw(sql);
+    }
+
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder

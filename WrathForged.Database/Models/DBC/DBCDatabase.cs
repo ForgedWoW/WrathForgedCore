@@ -503,6 +503,12 @@ public partial class DBCDatabase : DbContext
 
     public virtual DbSet<Zonemusic> Zonemusics { get; set; }
 
+    public void RunSqlFile(string filePath)
+    {
+        string sql = File.ReadAllText(filePath);
+        Database.ExecuteSqlRaw(sql);
+    }
+
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         _ = modelBuilder

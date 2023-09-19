@@ -14,6 +14,7 @@ using WrathForged.Common.Networking;
 using WrathForged.Common.Observability;
 using WrathForged.Common.Scripting.Interfaces.CoreEvents;
 using WrathForged.Common.Threading;
+using WrathForged.Database;
 
 namespace WrathForged.Common
 {
@@ -127,6 +128,7 @@ namespace WrathForged.Common
         {
             var cf = container.Resolve<ClassFactory>();
             cf.Initialize(container);
+            container.InitializeDatabase();
 
             foreach (var f in cf.ResolveAll<IOnServerInitialize>())
                 f.OnServerInitialize();

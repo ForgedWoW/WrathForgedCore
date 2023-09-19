@@ -46,13 +46,14 @@ for %%F in (*.dbc) do (
 
 3. Import the SQL files into your `dbc` database
 4. Run the following SQL in this order to perpare the dbc database
-    1. https://github.com/ForgedWoW/WrathForgedCore/blob/main/WrathForged.Database/sql/dbc/zzzAllowFK.sql - This allows foreign keys to be created by setting fields to allow null. These fields have default 0 or -1 and dont have valid mappings. in SQL with FK, these need to be null.
-    2. https://github.com/ForgedWoW/WrathForgedCore/blob/main/WrathForged.Database/sql/dbc/zzzCleanupInvaiMappings.sql - This cleans up invalid mappings, there is invalid mappings and dead data in 3.3.5 dbc files. these are non existing mappings from over versions.
-    3. https://github.com/ForgedWoW/WrathForgedCore/blob/main/WrathForged.Database/sql/dbc/zzzUpdateDefaultValues.sql - fields that have foreign keys and have a default value such as 0 or -1, these need to be null to denote to the foreign key that there is no mapping as the value is default.
-    4. https://github.com/ForgedWoW/WrathForgedCore/blob/main/WrathForged.Database/sql/dbc/zzzzAlterTables.sql - Sets the FK on the tables.
+    1. https://github.com/ForgedWoW/WrathForgedCore/blob/main/WrathForged.Database/sql/base/dbc/zzzAllowFK.sql - This allows foreign keys to be created by setting fields to allow null. These fields have default 0 or -1 and dont have valid mappings. in SQL with FK, these need to be null.
+    2. https://github.com/ForgedWoW/WrathForgedCore/blob/main/WrathForged.Database/sql/base/dbc/zzzCleanupInvaiMappings.sql - This cleans up invalid mappings, there is invalid mappings and dead data in 3.3.5 dbc files. these are non existing mappings from over versions.
+    3. https://github.com/ForgedWoW/WrathForgedCore/blob/main/WrathForged.Database/sql/base/dbc/zzzUpdateDefaultValues.sql - fields that have foreign keys and have a default value such as 0 or -1, these need to be null to denote to the foreign key that there is no mapping as the value is default.
+    4. https://github.com/ForgedWoW/WrathForgedCore/blob/main/WrathForged.Database/sql/base/dbc/zzzzAlterTables.sql - Sets the FK on the tables.
 
 
 
 ## Extendability
 Use `IModule` interface from Autofac to register DI or impliment the interface `IRegisterDependancyInjection` to be passed the DI container, logger and configuraiton.
 
+See [Scripts for more help](https://github.com/ForgedWoW/WrathForgedCore/blob/main/Help/Scripts.md)

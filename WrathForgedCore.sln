@@ -32,6 +32,9 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WrathForged.Serialization.Models", "WrathForged.Serialization.Models\WrathForged.Serialization.Models.csproj", "{1DF260C9-C0A0-4D11-AAAC-D6C207705FD7}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Help", "Help", "{B0A82B25-3DB7-4637-A20B-E89C8F82DB10}"
+	ProjectSection(SolutionItems) = preProject
+		Scripts.md = Scripts.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

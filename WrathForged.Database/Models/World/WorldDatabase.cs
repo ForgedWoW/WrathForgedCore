@@ -393,6 +393,12 @@ public partial class WorldDatabase : DbContext
 
     public virtual DbSet<WaypointScript> WaypointScripts { get; set; }
 
+    public void RunSqlFile(string filePath)
+    {
+        string sql = File.ReadAllText(filePath);
+        Database.ExecuteSqlRaw(sql);
+    }
+
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         _ = modelBuilder
@@ -4449,5 +4455,5 @@ public partial class WorldDatabase : DbContext
         OnModelCreatingPartial(modelBuilder);
     }
 
-    private partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
+    partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
 }
