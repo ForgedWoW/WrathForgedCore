@@ -1,22 +1,31 @@
 ﻿using System;
 using System.Collections.Generic;
+using WrathForged.Database.DBC;
 
 namespace WrathForged.Database.Models.DBC;
 
+[DBCBound("CinematicCamera.dbc")]
 public partial class Cinematiccamera
 {
+    [DBCPropertyBinding(0, DBCBindingType.INT32)]
     public int Id { get; set; }
 
+    [DBCPropertyBinding(1, DBCBindingType.STRING)]
     public string? Model { get; set; }
 
+    [DBCPropertyBinding(2, DBCBindingType.INT32, Nullable = true)]
     public int? SoundId { get; set; }
 
+    [DBCPropertyBinding(3, DBCBindingType.FLOAT)]
     public float OriginX { get; set; }
 
+    [DBCPropertyBinding(4, DBCBindingType.FLOAT)]
     public float OriginY { get; set; }
 
+    [DBCPropertyBinding(5, DBCBindingType.FLOAT)]
     public float OriginZ { get; set; }
 
+    [DBCPropertyBinding(6, DBCBindingType.FLOAT)]
     public float OriginFacing { get; set; }
 
     public virtual ICollection<Cinematicsequence> CinematicsequenceCamera1Navigations { get; set; } = new List<Cinematicsequence>();
