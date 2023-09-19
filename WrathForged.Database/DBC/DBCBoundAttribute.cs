@@ -1,5 +1,5 @@
-﻿// Copyright (c) Forged WoW LLC <https://github.com/ForgedWoW/WrathForgedCore>
-// Licensed under GPL-3.0 license. See <https://github.com/ForgedWoW/WrathForgedCore/blob/master/LICENSE> for full information.
+﻿// Copyright (c) Forged WoW LLC <https://github.com/ForgedWoW/WrathForgedCore> Licensed under
+// GPL-3.0 license. See <https://github.com/ForgedWoW/WrathForgedCore/blob/master/LICENSE> for full information.
 namespace WrathForged.Database.DBC
 {
     [AttributeUsage(AttributeTargets.Class)]
@@ -7,6 +7,6 @@ namespace WrathForged.Database.DBC
     {
         public DBCBoundAttribute(string name) => Name = name;
 
-        private string Name { get; set; }
+        public string Name { get; set; }
     }
 }

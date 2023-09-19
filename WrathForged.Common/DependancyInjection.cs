@@ -1,5 +1,5 @@
-﻿// Copyright (c) Forged WoW LLC <https://github.com/ForgedWoW/WrathForgedCore>
-// Licensed under GPL-3.0 license. See <https://github.com/ForgedWoW/WrathForgedCore/blob/master/LICENSE> for full information.
+﻿// Copyright (c) Forged WoW LLC <https://github.com/ForgedWoW/WrathForgedCore> Licensed under
+// GPL-3.0 license. See <https://github.com/ForgedWoW/WrathForgedCore/blob/master/LICENSE> for full information.
 using System.Diagnostics;
 using Autofac;
 using Microsoft.Extensions.Configuration;
@@ -9,8 +9,10 @@ using Serilog;
 using WrathForged.Common.CommandLine;
 using WrathForged.Common.CommandLine.Commands;
 using WrathForged.Common.Cryptography;
+using WrathForged.Common.DBC;
 using WrathForged.Common.Networking;
 using WrathForged.Common.Observability;
+using WrathForged.Common.Scripting.Interfaces.CoreEvents;
 using WrathForged.Common.Threading;
 
 namespace WrathForged.Common
@@ -64,6 +66,8 @@ namespace WrathForged.Common
             _ = builder.RegisterType<RandomUtilities>().SingleInstance();
             _ = builder.RegisterType<CommandLineReader>().SingleInstance();
             _ = builder.RegisterType<ProgramExitCommand>().As<ICommandLineArgumentHandler>().SingleInstance();
+            _ = builder.RegisterType<DBCSerializer>().SingleInstance();
+            _ = builder.RegisterType<DBCDeserializer>().SingleInstance();
 
             // configure OpenTelemetry
             var telemetryType = configuration.GetDefaultValue("Telemetry:Types", "").Split(',', StringSplitOptions.TrimEntries | StringSplitOptions.TrimEntries).ToList(); // Assuming you have a key like this in your JSON
@@ -100,12 +104,33 @@ namespace WrathForged.Common
 
             // Scripting
 
+            // DI
+            IOHelpers.GetAllAssembliesInDir(configuration.GetDefaultValue("Scripting:Directory", ".\\Scripts"))
+                      .ForEach(assembly =>
+                      {
+                          _ = builder.RegisterAssemblyModules(assembly);
+
+                          foreach (var type in assembly.GetTypes())
+                          {
+                              if (typeof(IRegisterDependancyInjection).IsAssignableFrom(type))
+                              {
+                                  var instance = Activator.CreateInstance(type) as IRegisterDependancyInjection;
+                                  instance?.RegisterDependancyInjection(builder, configuration, Log.Logger);
+                              }
+                          }
+                      });
+
             return builder;
         }
 
         public static IContainer InitializeCommon(this IContainer container)
         {
-            container.Resolve<ClassFactory>().Initialize(container);
+            var cf = container.Resolve<ClassFactory>();
+            cf.Initialize(container);
+
+            foreach (var f in cf.ResolveAll<IOnServerInitialize>())
+                f.OnServerInitialize();
+
             return container;
         }
     }

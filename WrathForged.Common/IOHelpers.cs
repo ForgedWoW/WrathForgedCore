@@ -1,5 +1,5 @@
-﻿// Copyright (c) Forged WoW LLC <https://github.com/ForgedWoW/WrathForgedCore>
-// Licensed under GPL-3.0 license. See <https://github.com/ForgedWoW/WrathForgedCore/blob/master/LICENSE> for full information.
+﻿// Copyright (c) Forged WoW LLC <https://github.com/ForgedWoW/WrathForgedCore> Licensed under
+// GPL-3.0 license. See <https://github.com/ForgedWoW/WrathForgedCore/blob/master/LICENSE> for full information.
 using System.Reflection;
 
 #pragma warning disable CS8600
@@ -13,7 +13,7 @@ namespace WrathForged.Common
         /// <summary>
         ///     Compares the values of 2 objects
         /// </summary>
-        /// <returns> if types are equal and have the same property values </returns>
+        /// <returns>if types are equal and have the same property values</returns>
         public static bool AreObjectsEqual(object obj1, object obj2)
         {
             if (obj1 == null || obj2 == null)

@@ -1,14 +1,20 @@
-﻿// Copyright (c) Forged WoW LLC <https://github.com/ForgedWoW/WrathForgedCore>
-// Licensed under GPL-3.0 license. See <https://github.com/ForgedWoW/WrathForgedCore/blob/master/LICENSE> for full information.
+﻿// Copyright (c) Forged WoW LLC <https://github.com/ForgedWoW/WrathForgedCore> Licensed under
+// GPL-3.0 license. See <https://github.com/ForgedWoW/WrathForgedCore/blob/master/LICENSE> for full information.
 using System.CommandLine;
+using WrathForged.Common.Localization;
 
 namespace WrathForged.Common.CommandLine.Commands
 {
     public class ProgramExitCommand : ICommandLineArgumentHandler
     {
         private readonly ProgramExitNotifier _programExitNotifier;
+        private readonly Dictionary<uint, string[]> _locale;
 
-        public ProgramExitCommand(ProgramExitNotifier programExitNotifier) => _programExitNotifier = programExitNotifier;
+        public ProgramExitCommand(ProgramExitNotifier programExitNotifier, ForgeCache forgeCache)
+        {
+            _programExitNotifier = programExitNotifier;
+            _locale = forgeCache.GetLocale();
+        }
 
         public Command AddCommand()
         {

@@ -1,10 +1,9 @@
 ﻿// Copyright (c) Forged WoW LLC <https://github.com/ForgedWoW/WrathForgedCore> Licensed under
 // GPL-3.0 license. See <https://github.com/ForgedWoW/WrathForgedCore/blob/master/LICENSE> for full information.
-namespace WrathForged.Database.Models.World;
-
-public partial class TrinityString
+namespace WrathForged.Common.Scripting.Interfaces.CoreEvents
 {
-    public uint Entry { get; set; }
-
-    public string[] Content { get; set; } = new string[9];
+    public interface IOnServerInitialize
+    {
+        void OnServerInitialize();
+    }
 }
