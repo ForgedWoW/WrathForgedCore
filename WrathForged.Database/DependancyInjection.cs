@@ -1,7 +1,7 @@
 ﻿// Copyright (c) Forged WoW LLC <https://github.com/ForgedWoW/WrathForgedCore> Licensed under
 // GPL-3.0 license. See <https://github.com/ForgedWoW/WrathForgedCore/blob/master/LICENSE> for full information.
 
-using Autofac;
+using Grace.DependencyInjection;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Caching.Memory;
 using Microsoft.Extensions.Configuration;
@@ -18,30 +18,30 @@ namespace WrathForged.Database
 {
     public static class DependancyInjection
     {
-        public static ContainerBuilder RegisterDatabase(this ContainerBuilder builder, IConfiguration configuration, Serilog.ILogger logger)
+        public static IExportRegistrationBlock RegisterDatabase(this IExportRegistrationBlock builder, IConfiguration configuration, Serilog.ILogger logger)
         {
             var loggerFactory = new LoggerFactory().AddSerilog(logger);
 
-            _ = builder.RegisterType<AuthDatabase>()
-                .WithParameter("options", new DbContextOptionsBuilder<AuthDatabase>()
+            _ = builder.Export<AuthDatabase>()
+                .WithCtorParam(() => new DbContextOptionsBuilder<AuthDatabase>()
                 .UseLoggerFactory(loggerFactory)
-                .UseMySql(configuration.GetConnectionString("auth"), ServerVersion.AutoDetect(configuration.GetConnectionString("auth"))).Options);
+                .UseMySql(configuration.GetConnectionString("auth"), ServerVersion.AutoDetect(configuration.GetConnectionString("auth"))).Options).Named("options");
 
-            _ = builder.RegisterType<WorldDatabase>()
-                .WithParameter("options", new DbContextOptionsBuilder<WorldDatabase>()
+            _ = builder.Export<WorldDatabase>()
+                .WithCtorParam(() => new DbContextOptionsBuilder<WorldDatabase>()
                 .UseLoggerFactory(loggerFactory)
-                .UseMySql(configuration.GetConnectionString("world"), ServerVersion.AutoDetect(configuration.GetConnectionString("world"))).Options);
+                .UseMySql(configuration.GetConnectionString("world"), ServerVersion.AutoDetect(configuration.GetConnectionString("world"))).Options).Named("options");
 
-            _ = builder.RegisterType<CharacterDatabase>()
-                .WithParameter("options", new DbContextOptionsBuilder<CharacterDatabase>()
+            _ = builder.Export<CharacterDatabase>()
+                .WithCtorParam(() => new DbContextOptionsBuilder<CharacterDatabase>()
                 .UseLoggerFactory(loggerFactory)
-                .UseMySql(configuration.GetConnectionString("characters"), ServerVersion.AutoDetect(configuration.GetConnectionString("characters"))).Options);
+                .UseMySql(configuration.GetConnectionString("characters"), ServerVersion.AutoDetect(configuration.GetConnectionString("characters"))).Options).Named("options");
 
-            _ = builder.RegisterType<DBCDatabase>()
-                .WithParameter("options", new DbContextOptionsBuilder<DBCDatabase>()
+            _ = builder.Export<DBCDatabase>()
+                .WithCtorParam(() => new DbContextOptionsBuilder<DBCDatabase>()
                 .UseLoggerFactory(loggerFactory)
                 .UseMemoryCache(new MemoryCache(new MemoryCacheOptions()))
-                .UseMySql(configuration.GetConnectionString("dbc"), ServerVersion.AutoDetect(configuration.GetConnectionString("dbc"))).Options);
+                .UseMySql(configuration.GetConnectionString("dbc"), ServerVersion.AutoDetect(configuration.GetConnectionString("dbc"))).Options).Named("options");
 
             var slidingTimeoutstr = configuration["Database:SlidingCacheTimeout_Hours"];
             var hours = 2;
@@ -53,24 +53,24 @@ namespace WrathForged.Database
             var queryCache = new ForgeDBCache(new MemoryCacheOptions(), loggerFactory);
             QueryCacheManager.Cache = queryCache;
             QueryCacheManager.DefaultMemoryCacheEntryOptions = options;
-            _ = builder.RegisterInstance(queryCache).As<ForgeDBCache>().SingleInstance();
+            _ = builder.ExportInstance(queryCache).As<ForgeDBCache>().Lifestyle.Singleton();
 
-            builder.RegisterType<DatabaseUpdater>().SingleInstance();
+            builder.Export<DatabaseUpdater>().Lifestyle.Singleton();
 
             return builder;
         }
 
-        public static void InitializeDatabase(this IContainer container)
+        public static void InitializeDatabase(this DependencyInjectionContainer container)
         {
-            container.Resolve<DatabaseUpdater>().Update();
+            container.Locate<DatabaseUpdater>().Update();
         }
 
-        public static void ShutdownDatabase(this IContainer container)
+        public static void ShutdownDatabase(this DependencyInjectionContainer container)
         {
-            container.Resolve<AuthDatabase>().Dispose();
-            container.Resolve<WorldDatabase>().Dispose();
-            container.Resolve<CharacterDatabase>().Dispose();
-            container.Resolve<ForgeDBCache>().Dispose();
+            container.Locate<AuthDatabase>().Dispose();
+            container.Locate<WorldDatabase>().Dispose();
+            container.Locate<CharacterDatabase>().Dispose();
+            container.Locate<ForgeDBCache>().Dispose();
         }
     }
 }

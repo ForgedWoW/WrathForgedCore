@@ -1,6 +1,6 @@
 ﻿// Copyright (c) Forged WoW LLC <https://github.com/ForgedWoW/WrathForgedCore>
 // Licensed under GPL-3.0 license. See <https://github.com/ForgedWoW/WrathForgedCore/blob/master/LICENSE> for full information.
-using Autofac;
+using Grace.DependencyInjection;
 using Microsoft.Extensions.Configuration;
 using Serilog;
 using WrathForged.Authorization.Server;
@@ -15,18 +15,21 @@ var configBuilder = new ConfigurationBuilder()
                     .AddJsonFile("WrathForged.Authorization.Server.Config.json", false, true);
 
 IConfiguration configuration = configBuilder.Build();
+DependencyInjectionContainer container = new DependencyInjectionContainer();
+container.Configure(c =>
+{
+    c.ExportInstance(configuration).As<IConfiguration>().Lifestyle.SingletonPerScope();
+    c.RegisterDatabase(configuration, Log.Logger);
+    c.RegisterAuth();
+});
 
-ContainerBuilder builder = new();
-builder.RegisterCommon(configuration);
-builder.RegisterDatabase(configuration, Log.Logger);
-builder.RegisterAuth();
-var container = builder.Build();
+
 container.InitializeCommon();
-container.Resolve<CacheBuilder>().Build();
-container.Resolve<WoWClientServer>().Start();
+container.Locate<CacheBuilder>().Build();
+container.Locate<WoWClientServer>().Start();
 
 Log.Logger.Information("Auth Server started.");
-var notifier = container.Resolve<ProgramExitNotifier>();
+var notifier = container.Locate<ProgramExitNotifier>();
 
 Console.CancelKeyPress += (sender, e) =>
 {
@@ -34,4 +37,4 @@ Console.CancelKeyPress += (sender, e) =>
     notifier.NotifyStop("ctrl+c pressed.");
 };
 
-container.Resolve<CommandLineReader>().ReadCommandLineUntilProgramExit();
+container.Locate<CommandLineReader>().ReadCommandLineUntilProgramExit();

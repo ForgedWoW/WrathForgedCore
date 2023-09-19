@@ -1,7 +1,7 @@
 ﻿// Copyright (c) Forged WoW LLC <https://github.com/ForgedWoW/WrathForgedCore> Licensed under
 // GPL-3.0 license. See <https://github.com/ForgedWoW/WrathForgedCore/blob/master/LICENSE> for full information.
 using System.Diagnostics;
-using Autofac;
+using Grace.DependencyInjection;
 using Microsoft.Extensions.Configuration;
 using OpenTelemetry;
 using OpenTelemetry.Trace;
@@ -20,7 +20,7 @@ namespace WrathForged.Common
 {
     public static class DependancyInjection
     {
-        public static ContainerBuilder RegisterCommon(this ContainerBuilder builder, IConfiguration configuration)
+        public static IExportRegistrationBlock RegisterCommon(this IExportRegistrationBlock builder, IConfiguration configuration)
         {
             Console.ForegroundColor = ConsoleColor.DarkRed;
             Console.WriteLine(@"```````````````````````````````````````````````````````````````````````````````````````");
@@ -53,22 +53,22 @@ namespace WrathForged.Common
                 Log.CloseAndFlush();
             };
 
-            _ = builder.RegisterInstance(configuration).As<IConfiguration>().SingleInstance();
-            _ = builder.RegisterInstance(classFactory).SingleInstance();
-            _ = builder.RegisterInstance(Log.Logger).As<ILogger>().SingleInstance();
-            _ = builder.RegisterInstance(exitNotifier).SingleInstance();
-            _ = builder.RegisterType<TCPServer>();
-            _ = builder.RegisterType<ForgeCache>().SingleInstance();
-            _ = builder.RegisterType<ForgedModelDeserialization>().SingleInstance();
-            _ = builder.RegisterType<PacketRouter>().SingleInstance();
-            _ = builder.RegisterType<PacketEncryption>();
-            _ = builder.RegisterType<MeterFactory>().SingleInstance();
-            _ = builder.RegisterType<BackgroundWorkProcessor>().SingleInstance();
-            _ = builder.RegisterType<RandomUtilities>().SingleInstance();
-            _ = builder.RegisterType<CommandLineReader>().SingleInstance();
-            _ = builder.RegisterType<ProgramExitCommand>().As<ICommandLineArgumentHandler>().SingleInstance();
-            _ = builder.RegisterType<DBCSerializer>().SingleInstance();
-            _ = builder.RegisterType<DBCDeserializer>().SingleInstance();
+            _ = builder.ExportInstance(configuration).As<IConfiguration>().Lifestyle.Singleton();
+            _ = builder.ExportInstance(classFactory).Lifestyle.Singleton();
+            _ = builder.ExportInstance(Log.Logger).As<ILogger>().Lifestyle.Singleton();
+            _ = builder.ExportInstance(exitNotifier).Lifestyle.Singleton();
+            _ = builder.Export<TCPServer>();
+            _ = builder.Export<ForgeCache>().Lifestyle.Singleton();
+            _ = builder.Export<ForgedModelDeserialization>().Lifestyle.Singleton();
+            _ = builder.Export<PacketRouter>().Lifestyle.Singleton();
+            _ = builder.Export<PacketEncryption>();
+            _ = builder.Export<MeterFactory>().Lifestyle.Singleton();
+            _ = builder.Export<BackgroundWorkProcessor>().Lifestyle.Singleton();
+            _ = builder.Export<RandomUtilities>().Lifestyle.Singleton();
+            _ = builder.Export<CommandLineReader>().Lifestyle.Singleton();
+            _ = builder.Export<ProgramExitCommand>().As<ICommandLineArgumentHandler>().Lifestyle.Singleton();
+            _ = builder.Export<DBCSerializer>().Lifestyle.Singleton();
+            _ = builder.Export<DBCDeserializer>().Lifestyle.Singleton();
 
             // configure OpenTelemetry
             var telemetryType = configuration.GetDefaultValue("Telemetry:Types", "").Split(',', StringSplitOptions.TrimEntries | StringSplitOptions.TrimEntries).ToList(); // Assuming you have a key like this in your JSON
@@ -94,9 +94,7 @@ namespace WrathForged.Common
 
             if (tracerProvider != null)
             {
-                _ = builder.RegisterInstance(tracerProvider.GetTracer(Process.GetCurrentProcess().ProcessName))
-                       .As<Tracer>()
-                       .SingleInstance();
+                _ = builder.ExportInstance(tracerProvider.GetTracer(Process.GetCurrentProcess().ProcessName)).Lifestyle.Singleton();
             }
             else
             {
@@ -109,8 +107,6 @@ namespace WrathForged.Common
             IOHelpers.GetAllAssembliesInDir(configuration.GetDefaultValue("Scripting:Directory", ".\\Scripts"))
                       .ForEach(assembly =>
                       {
-                          _ = builder.RegisterAssemblyModules(assembly);
-
                           foreach (var type in assembly.GetTypes())
                           {
                               if (typeof(IRegisterDependancyInjection).IsAssignableFrom(type))
@@ -124,9 +120,9 @@ namespace WrathForged.Common
             return builder;
         }
 
-        public static IContainer InitializeCommon(this IContainer container)
+        public static DependencyInjectionContainer InitializeCommon(this DependencyInjectionContainer container)
         {
-            var cf = container.Resolve<ClassFactory>();
+            var cf = container.Locate<ClassFactory>();
             cf.Initialize(container);
             container.InitializeDatabase();
 

@@ -54,6 +54,6 @@ for %%F in (*.dbc) do (
 
 
 ## Extendability
-Use `IModule` interface from Autofac to register DI or impliment the interface `IRegisterDependancyInjection` to be passed the DI container, logger and configuraiton.
+Impliment the interface `IRegisterDependancyInjection` to be passed the DI container, logger and configuraiton.
 
 See [Scripts for more help](https://github.com/ForgedWoW/WrathForgedCore/blob/main/Help/Scripts.md)

@@ -1,8 +1,7 @@
 ﻿// Copyright (c) Forged WoW LLC <https://github.com/ForgedWoW/WrathForgedCore>
 // Licensed under GPL-3.0 license. See <https://github.com/ForgedWoW/WrathForgedCore/blob/master/LICENSE> for full information.
 using System.Reflection;
-using Autofac;
-using Autofac.Core;
+using Grace.DependencyInjection;
 
 #pragma warning disable CS8618
 #pragma warning disable CS8600
@@ -13,76 +12,31 @@ namespace WrathForged.Common
 {
     public class ClassFactory
     {
-        public IContainer Container { get; private set; }
+        public DependencyInjectionContainer Container { get; private set; }
 
-        public void Initialize(IContainer container) => Container = container;
+        public void Initialize(DependencyInjectionContainer container) => Container = container;
 
-        public T Resolve<T>() => Container.Resolve<T>();
+        public T Resolve<T>() => Container.Locate<T>();
 
-        public IEnumerable<T> ResolveAll<T>() => Container.Resolve<IEnumerable<T>>();
+        public IEnumerable<T> ResolveAll<T>() => Container.Locate<IEnumerable<T>>();
 
-        public T Resolve<T>(params Parameter[] parameters) => Container.Resolve<T>(parameters);
+        /// <summary>
+        ///     Gets a object from the container with the given parameters
+        /// </summary>
+        /// <typeparam name="T">The object type</typeparam>
+        /// <param name="parameters">Addtional parameters keyed by the parameter name</param>
+        /// <returns>The resolved object</returns>
+        public T Resolve<T>(Dictionary<string, object> parameters) => Container.Locate<T>(parameters);
 
+        /// <summary>
+        ///     Gets a object from the container with the given parameters in the order they appear in the constructor
+        /// </summary>
+        /// <typeparam name="T">The object type</typeparam>
+        /// <param name="parameters">The parameters in the order they appear in the constructor</param>
+        /// <returns>The resloved object</returns>
         public T ResolveWithPositionalParameters<T>(params object[] parameters)
         {
-            var positionalParameters = new Parameter[parameters.Length];
-            for (var i = 0; i < parameters.Length; i++)
-                positionalParameters[i] = new PositionalParameter(i, parameters[i]);
-
-            return Container.Resolve<T>(positionalParameters);
-        }
-
-        /// <summary>
-        ///     Create a instance of any class with dependency injection that was not registered in the container at program start
-        /// </summary>
-        /// <typeparam name="T">The object type you wish to activate</typeparam>
-        /// <param name="args">Arguments in order that they appear in the constructor. Must be the first args of the constructor.</param>
-        /// <returns>A new instance of T</returns>
-        public T ActiveNonRegistered<T>(params object[] args) where T : class
-        {
-            args ??= Array.Empty<object>();
-            var constructors = typeof(T).GetConstructors();
-            var highest = constructors.OrderByDescending(x => x.GetParameters().Length).First();
-
-            return highest.GetParameters().Length switch
-            {
-                0 or 99 => Activator.CreateInstance(typeof(T)) as T,
-                _ => Activator.CreateInstance(typeof(T), args.Combine(highest.GetParameters().Where(p => p.ParameterType.IsClass).Select(param => Container.Resolve(param.ParameterType)).ToArray())) as T
-            };
-        }
-
-        /// <summary>
-        ///     Create a instance of any class with dependency injection that was not registered in the container at program start
-        /// </summary>
-        /// <typeparam name="T">The object type you wish to activate</typeparam>
-        /// <param name="constructor">the explicit constructor you wish to use</param>
-        /// <param name="args">Arguments in order that they appear in the constructor. Must be the first args of the constructor.</param>
-        /// <returns>A new instance of T</returns>
-        public T ActiveNonRegistered<T>(ConstructorInfo constructor, params object[] args) where T : class
-        {
-            args ??= Array.Empty<object>();
-            return constructor.GetParameters().Length switch
-            {
-                0 or 99 => Activator.CreateInstance(typeof(T)) as T,
-                _ => Activator.CreateInstance(typeof(T), args.Combine(constructor.GetParameters().Where(p => p.ParameterType.IsClass).Select(param => Container.Resolve(param.ParameterType)).ToArray())) as T
-            };
-        }
-
-        public IEnumerable<T> ResolveAllNonRegistered<T>(string? scriptDir = null)
-        {
-            var assemblies = IOHelpers.GetAllAssembliesInDir(scriptDir);
-
-            foreach (var type in from assembly in assemblies from type in assembly.GetTypes() where IOHelpers.DoesTypeSupportInterface(type, typeof(T)) select type)
-            {
-                var constructors = type.GetConstructors();
-                var highest = constructors.OrderByDescending(x => x.GetParameters().Length).First();
-
-                yield return highest.GetParameters().Length switch
-                {
-                    0 or 99 => (T)Activator.CreateInstance(type),
-                    _ => (T)Activator.CreateInstance(type, highest.GetParameters().Where(p => p.ParameterType.IsClass).Select(param => Container.Resolve(param.ParameterType)).ToArray())
-                };
-            }
+            return Container.Locate<T>(parameters);
         }
     }
 }
