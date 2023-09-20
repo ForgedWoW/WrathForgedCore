@@ -1,11 +1,12 @@
 ﻿// Copyright (c) Forged WoW LLC <https://github.com/ForgedWoW/WrathForgedCore>
 // Licensed under GPL-3.0 license. See <https://github.com/ForgedWoW/WrathForgedCore/blob/master/LICENSE> for full information.
 
+using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Net;
 using System.Text;
 using Microsoft.CodeAnalysis;
-using Microsoft.CodeAnalysis.CSharp;
-using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.CodeAnalysis.Text;
 using WrathForged.Serialization.Generators;
 
@@ -22,10 +23,9 @@ namespace WrathForged.Serialization
         private readonly Dictionary<ForgedTypeCode, IForgedTypeGenerator> _generatorsByTypeCode = new();
         private bool _collectionSizeWritten;
 
-
         public void Initialize(GeneratorInitializationContext context)
         {
-            //System.Diagnostics.Debugger.Launch();
+            _ = System.Diagnostics.Debugger.Launch();
             context.RegisterForSyntaxNotifications(() => new SerializationSyntaxReceiver());
 
             _generatorsByTypeKind.Add(TypeKind.Enum, new EnumTypeGenerator());
@@ -44,7 +44,7 @@ namespace WrathForged.Serialization
             if (context.SyntaxReceiver is not SerializationSyntaxReceiver receiver)
                 return;
 
-            //System.Diagnostics.Debugger.Launch();
+            System.Diagnostics.Debugger.Launch();
             foreach (var classDeclaration in receiver.CandidateClasses)
             {
                 if (context.Compilation.GetSemanticModel(classDeclaration.SyntaxTree).GetDeclaredSymbol(classDeclaration) is not INamedTypeSymbol modelSymbol)

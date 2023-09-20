@@ -4,10 +4,11 @@
 		<TargetFramework>net7.0</TargetFramework>
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
-		<EmitCompilerGeneratedFiles>true</EmitCompilerGeneratedFiles>
-		<GeneratedFolder>Generated</GeneratedFolder>
-		<CompilerGeneratedFilesOutputPath>$(GeneratedFolder)\$(TargetFramework)</CompilerGeneratedFilesOutputPath>
 	</PropertyGroup>
+
+	<ItemGroup>
+		<Content Remove="C:\Users\JBurl\.nuget\packages\serilog.sinks.graylog\3.0.2\contentFiles\any\net7.0\README.md" />
+	</ItemGroup>
 
 	<ItemGroup>
 		<PackageReference Include="Discord.Net.Core" Version="3.12.0" />
