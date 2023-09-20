@@ -12,6 +12,7 @@ using WrathForged.Common.CommandLine;
 using WrathForged.Common.CommandLine.Commands;
 using WrathForged.Common.Cryptography;
 using WrathForged.Common.DBC;
+using WrathForged.Common.Localization;
 using WrathForged.Common.Networking;
 using WrathForged.Common.Observability;
 using WrathForged.Common.Scripting.Interfaces.CoreEvents;
@@ -71,6 +72,9 @@ namespace WrathForged.Common
             _ = builder.Export<ProgramExitCommand>().As<ICommandLineArgumentHandler>().Lifestyle.Singleton();
             _ = builder.Export<DBCSerializer>().Lifestyle.Singleton();
             _ = builder.Export<DBCDeserializer>().Lifestyle.Singleton();
+
+            _ = builder.Export<ClientLocalizer>();
+            _ = builder.Export<Localizer>().Lifestyle.Singleton();
 
             // configure OpenTelemetry
             var telemetryType = configuration.GetDefaultValue("Telemetry:Types", "").Split(',', StringSplitOptions.TrimEntries | StringSplitOptions.TrimEntries).ToList(); // Assuming you have a key like this in your JSON

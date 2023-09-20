@@ -131,5 +131,7 @@
   },
   "BackgroundWorkProcessor": {
     "ThreadCount": 10
-  }
+  },
+  "ServerLocale_INFO": "0-8, https://github.com/ForgedWoW/WrathForgedCore/blob/main/WrathForged.Common/Localization/LocaleConst.cs",
+  "ServerLocale": 0
 }

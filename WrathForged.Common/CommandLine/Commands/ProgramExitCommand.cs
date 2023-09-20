@@ -8,12 +8,12 @@ namespace WrathForged.Common.CommandLine.Commands
     public class ProgramExitCommand : ICommandLineArgumentHandler
     {
         private readonly ProgramExitNotifier _programExitNotifier;
-        private readonly Dictionary<uint, string[]> _locale;
+        private readonly Localizer _localizer;
 
-        public ProgramExitCommand(ProgramExitNotifier programExitNotifier, ForgeCache forgeCache)
+        public ProgramExitCommand(ProgramExitNotifier programExitNotifier, Localizer localizer)
         {
             _programExitNotifier = programExitNotifier;
-            _locale = forgeCache.GetLocale();
+            _localizer = localizer;
         }
 
         public Command AddCommand()
