@@ -1,6 +1,7 @@
 ﻿// Copyright (c) Forged WoW LLC <https://github.com/ForgedWoW/WrathForgedCore> Licensed under
 // GPL-3.0 license. See <https://github.com/ForgedWoW/WrathForgedCore/blob/master/LICENSE> for full information.
 using Microsoft.EntityFrameworkCore;
+using WrathForged.Database.Models;
 
 namespace WrathForged.Database.Models.World;
 

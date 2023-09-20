@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
+using WrathForged.Database.Models;
 
 namespace WrathForged.Database.Models.Characters;
 

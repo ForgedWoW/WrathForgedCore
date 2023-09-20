@@ -8,6 +8,7 @@
 	</PropertyGroup>
 
 	<ItemGroup>
+	  <None Remove="WrathForged.Authorization.Server.Config.default.json" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -18,9 +19,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<None Update="WrathForged.Authorization.Server.Config.default.json">
-			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-		</None>
+	  <Resource Include="WrathForged.Authorization.Server.Config.default.json">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Resource>
 	</ItemGroup>
 
 </Project>

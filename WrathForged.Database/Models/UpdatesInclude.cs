@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace WrathForged.Database.Models.Characters;
+﻿namespace WrathForged.Database.Models;
 
 /// <summary>
 /// List of directories where we want to include sql updates.

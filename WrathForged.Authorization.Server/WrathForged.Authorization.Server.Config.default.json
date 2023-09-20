@@ -5,7 +5,8 @@
     "characters": "server=127.0.0.1; database=characters; user=trinity; password=trinity"
   },
   "Database": {
-    "SlidingCacheTimeout_Hours": 2
+    "SlidingCacheTimeout_Hours": 2,
+    "SQLDir": ".\\sql"
   },
   "ClientTCPServer": {
     "BindIP": "*",

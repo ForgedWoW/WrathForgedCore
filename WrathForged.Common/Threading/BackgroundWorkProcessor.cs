@@ -75,9 +75,7 @@ namespace WrathForged.Common.Threading
                 }
 
                 foreach (var actionToRemove in actionsToRemove)
-                {
                     _ = _scheduledActions.Remove(actionToRemove);
-                }
             }
 
             foreach (var actionToExecute in actionsToExecute)
