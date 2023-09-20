@@ -13,7 +13,7 @@ namespace WrathForged.Common
 
             if (value == null)
             {
-                Log.Logger.Warning("Failed to find {key} in config", key);
+                Log.Logger.Warning("Failed to find {Key} in config", key);
                 return defaultValue;
             }
 
@@ -23,7 +23,7 @@ namespace WrathForged.Common
             }
             catch
             {
-                Log.Logger.Warning("Failed to convert {key} to {type}", key, typeof(T).Name);
+                Log.Logger.Warning("Failed to convert {Key} to {Type}", key, typeof(T).Name);
                 return defaultValue;
             }
         }

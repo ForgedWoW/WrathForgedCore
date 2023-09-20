@@ -13,6 +13,22 @@
     "Port": 8085,
     "Threads": 10
   },
+  "Serilog LINKS": [
+    "The Following are installed by default and availabe for use via config:",
+    "https://serilog.net/",
+    "https://github.com/JKamue/Serilog-Sinks-Discord",
+    "https://github.com/FantasticFiasco/serilog-sinks-http",
+    "https://github.com/serilog-contrib/serilog-sinks-splunk",
+    "https://github.com/serilog-contrib/serilog-sinks-grafana-loki",
+    "https://github.com/lyng-dev/serilog-sinks-rabbitmq",
+    "https://github.com/whir1/serilog-sinks-graylog",
+    "https://github.com/TeleSoftas/serilog-sinks-mariadb",
+    "https://github.com/serilog/serilog-expressions",
+    "https://github.com/serilog/serilog-formatting-compact",
+    "Additional Sinks: Console, Log, MongoDB, and Async.",
+    "Additional Enrichers: Thread",
+    "Additional Formatters: Compact"
+  ],
   "Serilog": {
     "Using": [
       "Serilog.Sinks.Console",
@@ -109,7 +125,7 @@
       "Endpoint": "http://localhost:9411/api/v2/spans"
     }
   },
-  "Scipts": {
+  "Scripting": {
     "Directory": ".\\Scripts"
   },
   "BackgroundWorkProcessor": {

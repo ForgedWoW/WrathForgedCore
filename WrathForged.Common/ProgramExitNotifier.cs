@@ -51,7 +51,7 @@ namespace WrathForged.Common
             }
 
             _secondsTilStop = secondsTilStop;
-            _logger.Information("Server Delayed Stop requested in {0) seconds.", secondsTilStop);
+            _logger.Information("Server Delayed Stop requested in {0} seconds.", secondsTilStop);
             ExitingInSeconds?.Invoke(this, _secondsTilStop);
 
             _timer = Task.Run(async () =>
@@ -78,6 +78,7 @@ namespace WrathForged.Common
             ExitProgramLate?.Invoke(this, EventArgs.Empty);
             _classFactory.Container.ShutdownDatabase();
             _logger.Information("Server Stop completed.");
+            Environment.Exit(0);
         }
 
         public void CancelDelayedStop()

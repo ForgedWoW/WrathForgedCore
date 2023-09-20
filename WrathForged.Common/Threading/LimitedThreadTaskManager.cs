@@ -88,7 +88,7 @@ namespace WrathForged.Common.Threading
                 if (i == 3 && !_actionBlock.Completion.IsCompleted)
                 {
                     _cancellationToken.Cancel(); // abort the task if we hit 3
-                    Log.Logger.Fatal("_actionBlock.Completion.Wait over 3 seconds." + Environment.NewLine + Environment.StackTrace);
+                    Log.Logger.Fatal("_actionBlock.Completion.Wait over 3 seconds.{0}{1}", Environment.NewLine, Environment.StackTrace);
                 }
             }
             catch (Exception ex)
