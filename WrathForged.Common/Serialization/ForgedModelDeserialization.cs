@@ -4,6 +4,7 @@ using System.Reflection;
 using Serilog;
 using WrathForged.Common.Networking;
 using WrathForged.Common.Scripting;
+using WrathForged.Common.Serialization.Serializers;
 using WrathForged.Serialization;
 using WrathForged.Serialization.Models;
 
@@ -16,37 +17,53 @@ namespace WrathForged.Common.Serialization
         /// <summary>
         ///     A cache of all the deserialization definitions for each object and their properties
         /// </summary>
-        //                          Scope                  OpCode  ObjType         PropertyName, SerializationMetadata
-        private readonly Dictionary<PacketScope, Dictionary<uint, (Type, Dictionary<string, (SerializablePropertyAttribute, PropertyInfo)>)>> _deserializationMethodsCache = new();
+        //                          Scope                  OpCode  ObjType   PropertyName, SerializationMetadata
+        private readonly Dictionary<PacketScope, Dictionary<uint, (Type, List<PropertyMeta>)>> _deserializationMethodsCache = new();
 
-        public ForgedModelDeserialization(ILogger logger, ScriptLoader assemblyLoader)
+        private readonly Dictionary<Type, IForgedTypeSerialization> _serializers = new();
+        private readonly Dictionary<ForgedTypeCode, IForgedTypeSerialization> _forgedTypeCodeSerializers = new();
+
+        public ForgedModelDeserialization(ILogger logger, ScriptLoader assemblyLoader, ClassFactory classFactory)
         {
             var classesWithAttribute = assemblyLoader.GetAllTypesWithClassAttribute<ForgedSerializableAttribute>();
 
+            // Build the deserialization cache
             foreach (var cls in classesWithAttribute)
             {
                 var attribute = (ForgedSerializableAttribute)cls.GetCustomAttributes(typeof(ForgedSerializableAttribute), false).First();
 
                 if (!_deserializationMethodsCache.TryGetValue(attribute.Scope, out var scopeDictionary))
                 {
-                    scopeDictionary = new Dictionary<uint, (Type, Dictionary<string, (SerializablePropertyAttribute, PropertyInfo)>)>();
+                    scopeDictionary = new Dictionary<uint, (Type, List<PropertyMeta>)>();
                     _deserializationMethodsCache[attribute.Scope] = scopeDictionary;
                 }
 
                 foreach (var packetId in attribute.PacketIDs)
                 {
-                    var propertyAttributes = new Dictionary<string, (SerializablePropertyAttribute, PropertyInfo)>();
+                    var propertyAttributes = new List<PropertyMeta>();
 
                     foreach (var prop in cls.GetProperties())
                     {
                         var propAtt = prop.GetCustomAttribute<SerializablePropertyAttribute>();
 
                         if (propAtt != null)
-                            propertyAttributes[prop.Name] = (propAtt, prop);
+                            propertyAttributes.Add(new PropertyMeta(propAtt, prop));
                     }
 
+                    propertyAttributes.Sort();
                     scopeDictionary[packetId] = (cls, propertyAttributes);
                 }
+            }
+
+            var serializers = classFactory.ResolveAll<IForgedTypeSerialization>();
+
+            foreach (var s in serializers)
+            {
+                foreach (var t in s.SupportedTypes)
+                    _serializers[t] = s;
+
+                foreach (var tc in s.SupportedForgedTypeCodes)
+                    _forgedTypeCodeSerializers[tc] = s;
             }
 
             _logger = logger;
@@ -72,7 +89,19 @@ namespace WrathForged.Common.Serialization
 
                 foreach (var prop in deserializationDefinition.Item2)
                 {
-                    prop.Value.Item2.SetValue(instance, buffer);
+                    var isArray = prop.Property.PropertyType.IsArray;
+
+                    if (_forgedTypeCodeSerializers.TryGetValue(prop.Attribute.OverrideType, out var forgedTypeSerialization) ||
+                        _serializers.TryGetValue(prop.Property.PropertyType, out forgedTypeSerialization))
+                    {
+                        if (forgedTypeSerialization == null)
+                            continue;
+
+                        var result = forgedTypeSerialization.Deserialize(buffer, prop.Attribute);
+
+                        if (result != null)
+                            prop.Property.SetValue(instance, result);
+                    }
                 }
 
                 packet = instance;
