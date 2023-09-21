@@ -2,6 +2,7 @@
 // GPL-3.0 license. See <https://github.com/ForgedWoW/WrathForgedCore/blob/master/LICENSE> for full information.
 using System.CommandLine;
 using WrathForged.Common.CommandLine;
+using WrathForged.Common.Scripting;
 using WrathForged.Database.DBC;
 using WrathForged.Database.Models.DBC;
 
@@ -13,13 +14,13 @@ namespace WrathForged.Common.DBC.Commands
         private readonly DBCDatabase _dbcDatabase;
         private readonly List<string> _dbcDefs = new();
 
-        public DBCExportCommand(DBCSerializer dbcSerializer, DBCDatabase dbcDatabase)
+        public DBCExportCommand(DBCSerializer dbcSerializer, DBCDatabase dbcDatabase, ScriptLoader scriptLoader)
         {
             _dbcSerializer = dbcSerializer;
             _dbcDatabase = dbcDatabase;
-            foreach (var record in IOHelpers.GetAllObjectsFromAssemblies<IDBCRecord>(".\\"))
+            foreach (var record in scriptLoader.GetAllTypesThatUseInterface<IDBCRecord>())
             {
-                var att = record.GetType().GetCustomAttributes(typeof(DBCBoundAttribute), true).FirstOrDefault();
+                var att = record.GetCustomAttributes(typeof(DBCBoundAttribute), true).FirstOrDefault();
 
                 if (att == null)
                     continue;
@@ -57,6 +58,8 @@ namespace WrathForged.Common.DBC.Commands
 
             return command;
         }
+
+        Command ICommandLineArgumentHandler.AddCommand() => throw new NotImplementedException();
 
         private void Export(IEnumerable<string> names, string outputDir)
         {
