@@ -20,7 +20,7 @@ namespace WrathForged.Common.DBC
             _logger = logger;
         }
 
-        public void Serialize<T>(IEnumerable<T> items, string filePath) where T : class, IDBCRecord
+        public static void Serialize<T>(IEnumerable<T> items, string filePath) where T : class
         {
             if (typeof(T).GetCustomAttribute(typeof(DBCBoundAttribute)) is not DBCBoundAttribute dbcAtt)
                 return;

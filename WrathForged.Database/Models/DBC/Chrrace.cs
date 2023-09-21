@@ -1,11 +1,11 @@
-﻿// Copyright (c) Forged WoW LLC <https://github.com/ForgedWoW/WrathForgedCore> Licensed under
-// GPL-3.0 license. See <https://github.com/ForgedWoW/WrathForgedCore/blob/master/LICENSE> for full information.
+﻿using System;
+using System.Collections.Generic;
 using WrathForged.Database.DBC;
 
 namespace WrathForged.Database.Models.DBC;
 
 [DBCBound("ChrRaces.dbc")]
-public partial class Chrrace : IDBCRecord
+public partial class Chrrace
 {
     [DBCPropertyBinding(0, DBCBindingType.INT32)]
     public int Id { get; set; }

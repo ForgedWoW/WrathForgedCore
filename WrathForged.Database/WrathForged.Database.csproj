@@ -11,13 +11,12 @@
 	  <None Remove="sql\updates\auth\void.sql" />
 	  <None Remove="sql\updates\character\void.sql" />
 	  <None Remove="sql\updates\dbc\void.sql" />
-	  <None Remove="sql\updates\world\Locale.sql" />
 	  <None Remove="sql\updates\world\void.sql" />
 	</ItemGroup>
 
 	<ItemGroup>
 		<PackageReference Include="Grace" Version="7.2.1" />
-		<PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.11">
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.2">
 		  <PrivateAssets>all</PrivateAssets>
 		  <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
 		</PackageReference>
@@ -27,7 +26,7 @@
 	<ItemGroup>
 		<PackageReference Include="Serilog" Version="3.0.1" />
 		<PackageReference Include="Serilog.Extensions.Logging" Version="7.0.0" />
-		<PackageReference Include="Z.EntityFramework.Plus.EFCore" Version="7.100.0.1" />
+		<PackageReference Include="Z.EntityFramework.Plus.EFCore" Version="7.100.0" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -41,9 +40,6 @@
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </Resource>
 	  <Resource Include="sql\updates\dbc\void.sql">
-	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-	  </Resource>
-	  <Resource Include="sql\updates\world\Locale.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </Resource>
 	  <Resource Include="sql\updates\world\void.sql">
