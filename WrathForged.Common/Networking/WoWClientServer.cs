@@ -6,6 +6,7 @@ using System.Net;
 using Microsoft.Extensions.Configuration;
 using Serilog;
 using WrathForged.Common.Observability;
+using WrathForged.Common.Serialization;
 using WrathForged.Models.Networking;
 using WrathForged.Serialization;
 

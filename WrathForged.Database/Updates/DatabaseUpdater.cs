@@ -1,4 +1,4 @@
-﻿// Copyright (c) Forged WoW LLC <https://github.com/ForgedWoW/WrathForgedCore> 
+﻿// Copyright (c) Forged WoW LLC <https://github.com/ForgedWoW/WrathForgedCore>
 // Licensed under GPL-3.0 license. See <https://github.com/ForgedWoW/WrathForgedCore/blob/master/LICENSE> for full information.
 using System.Security.Cryptography;
 using System.Text;
@@ -155,6 +155,10 @@ namespace WrathForged.Database.Updates
         {
             var updatePath = GetDefaultValue(_configuration, "Database:SQLDir", ".\\sql");
             var path = Path.Combine(updatePath, "updates", dbName);
+
+            if (!Directory.Exists(path))
+                return new SQLUpdates();
+
             var sqlToRun = Directory.GetFiles(path, $"*.sql", SearchOption.AllDirectories).Select(p => new FileInfo(p)).ToList();
 
             var newUpdates = new SQLUpdates();

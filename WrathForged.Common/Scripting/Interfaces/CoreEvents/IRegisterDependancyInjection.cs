@@ -4,9 +4,9 @@ using Grace.DependencyInjection;
 using Microsoft.Extensions.Configuration;
 using Serilog;
 
-namespace WrathForged.Common
+namespace WrathForged.Common.Scripting.Interfaces.CoreEvents
 {
-    public interface IRegisterDependancyInjection
+    public interface IRegisterDependancyInjection : IForgedScript
     {
         void RegisterDependancyInjection(IExportRegistrationBlock builder, IConfiguration configuration, ILogger logger)
         {

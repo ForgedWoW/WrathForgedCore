@@ -3,9 +3,11 @@
 
 using System.CommandLine;
 
+using WrathForged.Common.Scripting.Interfaces;
+
 namespace WrathForged.Common.CommandLine
 {
-    public interface ICommandLineArgumentHandler
+    public interface ICommandLineArgumentHandler : IForgedScript
     {
         Command AddCommand();
     }

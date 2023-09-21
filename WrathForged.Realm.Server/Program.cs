@@ -15,12 +15,12 @@ var configBuilder = new ConfigurationBuilder()
 
 IConfiguration configuration = configBuilder.Build();
 
-DependencyInjectionContainer container = new DependencyInjectionContainer();
+var container = new DependencyInjectionContainer();
 container.Configure(c =>
 {
-    c.RegisterCommon(configuration);
-    c.RegisterDatabase(configuration, Log.Logger);
-    c.Export<WoWClientServer>().WithCtorParam(() => PacketScope.ClientToRealm).Lifestyle.Singleton();
+    _ = c.RegisterCommon(configuration);
+    _ = c.RegisterDatabase(configuration, Log.Logger);
+    _ = c.Export<WoWClientServer>().WithCtorParam(() => PacketScope.ClientToRealm).Lifestyle.Singleton();
 });
 
 container.InitializeCommon();

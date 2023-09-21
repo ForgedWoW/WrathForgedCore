@@ -6,11 +6,11 @@ namespace WrathForged.Common
     {
         public static byte[] Combine(this byte[] data, params byte[][] pData)
         {
-            byte[] combined = data;
+            var combined = data;
 
-            foreach (byte[] arr in pData)
+            foreach (var arr in pData)
             {
-                int currentSize = combined.Length;
+                var currentSize = combined.Length;
 
                 Array.Resize(ref combined, currentSize + arr.Length);
 
@@ -22,11 +22,11 @@ namespace WrathForged.Common
 
         public static object[] Combine(this object[] data, params object[][] pData)
         {
-            object[] combined = data;
+            var combined = data;
 
-            foreach (object[] arr in pData)
+            foreach (var arr in pData)
             {
-                int currentSize = combined.Length;
+                var currentSize = combined.Length;
 
                 Array.Resize(ref combined, currentSize + arr.Length);
 
@@ -34,6 +34,14 @@ namespace WrathForged.Common
             }
 
             return combined;
+        }
+
+        public static void AddRange<T>(this HashSet<T> hashSet, IEnumerable<T> collection)
+        {
+            foreach (var item in collection)
+            {
+                _ = hashSet.Add(item);
+            }
         }
     }
 }

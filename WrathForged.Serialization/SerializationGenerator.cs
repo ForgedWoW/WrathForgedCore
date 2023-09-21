@@ -8,6 +8,7 @@ using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.CodeAnalysis.Text;
 using WrathForged.Serialization.Generators;
+using WrathForged.Serialization.Models;
 
 namespace WrathForged.Serialization
 {

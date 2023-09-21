@@ -1,10 +1,10 @@
-﻿// Copyright (c) Forged WoW LLC <https://github.com/ForgedWoW/WrathForgedCore> Licensed under
-// GPL-3.0 license. See <https://github.com/ForgedWoW/WrathForgedCore/blob/master/LICENSE> for full information.
+﻿// Copyright (c) Forged WoW LLC <https://github.com/ForgedWoW/WrathForgedCore>
+// Licensed under GPL-3.0 license. See <https://github.com/ForgedWoW/WrathForgedCore/blob/master/LICENSE> for full information.
+
 using System.Reflection;
 
 #pragma warning disable CS8600
 #pragma warning disable CS8603
-#pragma warning disable CS8604
 
 namespace WrathForged.Common
 {
@@ -54,39 +54,43 @@ namespace WrathForged.Common
         public static bool DoesTypeSupportInterface(Type type, Type inter)
         {
             return type != inter
-&& (inter.IsAssignableFrom(type)
-|| type.GetInterfaces().Any(i => i.IsGenericType && i.GetGenericTypeDefinition() == inter) || type.GetInterfaces().Any(i => i == inter));
+                    && (inter.IsAssignableFrom(type)
+                    || type.GetInterfaces().Any(i => i.IsGenericType && i.GetGenericTypeDefinition() == inter) || type.GetInterfaces().Any(i => i == inter));
         }
 
-        public static List<Assembly> GetAllAssembliesInDir(string? path = null, bool loadGameAssembly = true, bool loadScriptsDll = true)
+        public static HashSet<Assembly> GetAllAssembliesInDir(params string[] path)
         {
-            path ??= ".\\Scripts";
-            List<Assembly> assemblies = new();
+            if (path.Length == 0)
+                path = new[] { ".\\Scripts" };
 
-            if (!Directory.Exists(path))
-                _ = Directory.CreateDirectory(path);
+            HashSet<Assembly> assemblies = new();
 
-            DirectoryInfo dir = new(path);
+            foreach (var pathPart in path)
+            {
+                if (!Directory.Exists(pathPart))
+                    _ = Directory.CreateDirectory(pathPart);
 
-            var dlls = dir.GetFiles("*.dll", SearchOption.AllDirectories);
+                DirectoryInfo dir = new(pathPart);
 
-            assemblies.AddRange(dlls.Select(dll => Assembly.LoadFile(dll.FullName)));
+                var dlls = dir.GetFiles("*.dll", SearchOption.AllDirectories);
 
-            if (loadGameAssembly)
-                assemblies.Add(Assembly.GetEntryAssembly());
+                assemblies.AddRange(dlls.Select(dll => Assembly.LoadFile(dll.FullName)));
+            }
 
-            if (loadScriptsDll && File.Exists(AppContext.BaseDirectory + "Scripts.dll"))
-                assemblies.Add(Assembly.LoadFile(AppContext.BaseDirectory + "Scripts.dll"));
+            assemblies.AddRange(AppDomain.CurrentDomain.GetAssemblies());
 
             return assemblies;
         }
 
-        public static IEnumerable<T> GetAllObjectsFromAssemblies<T>(string path)
+        public static IEnumerable<T> GetAllObjectsThatUseInterface<T>(this Assembly assembly)
         {
-            var assemblies = GetAllAssembliesInDir(path);
+            var interf = typeof(T);
+            var types = assembly.GetTypes().Where(t => DoesTypeSupportInterface(t, interf));
 
-            foreach (var type in from assembly in assemblies from type in assembly.GetTypes() where DoesTypeSupportInterface(type, typeof(T)) select type)
+            foreach (var type in types)
+            {
                 yield return (T)Activator.CreateInstance(type);
+            }
         }
     }
 }

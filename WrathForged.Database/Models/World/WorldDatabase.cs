@@ -1,7 +1,6 @@
 ﻿// Copyright (c) Forged WoW LLC <https://github.com/ForgedWoW/WrathForgedCore> Licensed under
 // GPL-3.0 license. See <https://github.com/ForgedWoW/WrathForgedCore/blob/master/LICENSE> for full information.
 using Microsoft.EntityFrameworkCore;
-using WrathForged.Database.Models;
 
 namespace WrathForged.Database.Models.World;
 
@@ -396,8 +395,8 @@ public partial class WorldDatabase : DbContext
 
     public void RunSqlFile(string filePath)
     {
-        string sql = File.ReadAllText(filePath);
-        Database.ExecuteSqlRaw(sql);
+        var sql = File.ReadAllText(filePath);
+        _ = Database.ExecuteSqlRaw(sql);
     }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -4034,38 +4033,46 @@ public partial class WorldDatabase : DbContext
         {
             _ = entity.HasKey(e => e.Entry).HasName("PRIMARY");
 
-            _ = entity
-                .ToTable("trinity_string")
+            _ = entity.ToTable("trinity_string")
                 .UseCollation("utf8mb4_unicode_ci");
 
             _ = entity.Property(e => e.Entry)
                 .ValueGeneratedNever()
                 .HasColumnName("entry");
-            _ = entity.Property(e => e.Content[0])
+
+            _ = entity.Property(e => e.Content0)
                 .HasColumnType("mediumtext")
                 .HasColumnName("content_default");
-            _ = entity.Property(e => e.Content[1])
+
+            _ = entity.Property(e => e.Content1)
                 .HasColumnType("mediumtext")
                 .HasColumnName("content_loc1");
-            _ = entity.Property(e => e.Content[2])
+
+            _ = entity.Property(e => e.Content2)
                 .HasColumnType("mediumtext")
                 .HasColumnName("content_loc2");
-            _ = entity.Property(e => e.Content[3])
+
+            _ = entity.Property(e => e.Content3)
                 .HasColumnType("mediumtext")
                 .HasColumnName("content_loc3");
-            _ = entity.Property(e => e.Content[4])
+
+            _ = entity.Property(e => e.Content4)
                 .HasColumnType("mediumtext")
                 .HasColumnName("content_loc4");
-            _ = entity.Property(e => e.Content[5])
+
+            _ = entity.Property(e => e.Content5)
                 .HasColumnType("mediumtext")
                 .HasColumnName("content_loc5");
-            _ = entity.Property(e => e.Content[6])
+
+            _ = entity.Property(e => e.Content6)
                 .HasColumnType("mediumtext")
                 .HasColumnName("content_loc6");
-            _ = entity.Property(e => e.Content[7])
+
+            _ = entity.Property(e => e.Content7)
                 .HasColumnType("mediumtext")
                 .HasColumnName("content_loc7");
-            _ = entity.Property(e => e.Content[8])
+
+            _ = entity.Property(e => e.Content8)
                 .HasColumnType("mediumtext")
                 .HasColumnName("content_loc8");
         });

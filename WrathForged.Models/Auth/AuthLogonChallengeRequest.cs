@@ -4,6 +4,7 @@
 using System.Net;
 using WrathForged.Models.Auth.Enum;
 using WrathForged.Serialization;
+using WrathForged.Serialization.Models;
 
 #pragma warning disable CS8618
 

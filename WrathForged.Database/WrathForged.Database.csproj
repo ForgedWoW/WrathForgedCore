@@ -11,6 +11,7 @@
 	  <None Remove="sql\updates\auth\void.sql" />
 	  <None Remove="sql\updates\character\void.sql" />
 	  <None Remove="sql\updates\dbc\void.sql" />
+	  <None Remove="sql\updates\world\Locale.sql" />
 	  <None Remove="sql\updates\world\void.sql" />
 	</ItemGroup>
 
@@ -40,6 +41,9 @@
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </Resource>
 	  <Resource Include="sql\updates\dbc\void.sql">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Resource>
+	  <Resource Include="sql\updates\world\Locale.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </Resource>
 	  <Resource Include="sql\updates\world\void.sql">

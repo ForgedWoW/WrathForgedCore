@@ -9,13 +9,15 @@ using OpenTelemetry;
 using OpenTelemetry.Trace;
 using Serilog;
 using WrathForged.Common.CommandLine;
-using WrathForged.Common.CommandLine.Commands;
 using WrathForged.Common.Cryptography;
 using WrathForged.Common.DBC;
 using WrathForged.Common.Localization;
 using WrathForged.Common.Networking;
 using WrathForged.Common.Observability;
+using WrathForged.Common.Scripting;
+using WrathForged.Common.Scripting.Interfaces;
 using WrathForged.Common.Scripting.Interfaces.CoreEvents;
+using WrathForged.Common.Serialization;
 using WrathForged.Common.Threading;
 using WrathForged.Database;
 
@@ -69,12 +71,12 @@ namespace WrathForged.Common
             _ = builder.Export<BackgroundWorkProcessor>().Lifestyle.Singleton();
             _ = builder.Export<RandomUtilities>().Lifestyle.Singleton();
             _ = builder.Export<CommandLineReader>().Lifestyle.Singleton();
-            _ = builder.Export<ProgramExitCommand>().As<ICommandLineArgumentHandler>().Lifestyle.Singleton();
             _ = builder.Export<DBCSerializer>().Lifestyle.Singleton();
             _ = builder.Export<DBCDeserializer>().Lifestyle.Singleton();
 
             _ = builder.Export<ClientLocalizer>();
             _ = builder.Export<Localizer>().Lifestyle.Singleton();
+            _ = builder.Export<ScriptLoader>().Lifestyle.Singleton();
 
             // configure OpenTelemetry
             var telemetryType = configuration.GetDefaultValue("Telemetry:Types", "").Split(',', StringSplitOptions.TrimEntries | StringSplitOptions.TrimEntries).ToList(); // Assuming you have a key like this in your JSON
@@ -107,30 +109,26 @@ namespace WrathForged.Common
                 Log.Logger.Warning("Telemetry is not configured or there was an error setting it up. Please configure it in the appsettings.json file.");
             }
 
-            // Scripting
-
-            // DI
-            IOHelpers.GetAllAssembliesInDir(configuration.GetDefaultValue("Scripting:Directory", ".\\Scripts"))
-                      .ForEach(assembly =>
-                      {
-                          foreach (var type in assembly.GetTypes())
-                          {
-                              if (typeof(IRegisterDependancyInjection).IsAssignableFrom(type))
-                              {
-                                  var instance = Activator.CreateInstance(type) as IRegisterDependancyInjection;
-                                  instance?.RegisterDependancyInjection(builder, configuration, Log.Logger);
-                              }
-                          }
-                      });
-
             return builder;
         }
 
         public static DependencyInjectionContainer InitializeCommon(this DependencyInjectionContainer container)
         {
             var cf = container.Locate<ClassFactory>();
-            cf.Initialize(container);
+            cf.SetContainer(container);
             container.InitializeDatabase();
+
+            var sl = container.Locate<ScriptLoader>();
+            container.Configure(c =>
+            {
+                var config = container.Locate<IConfiguration>();
+                var logger = container.Locate<ILogger>();
+
+                foreach (var di in sl.GetAllObjectsWithInterface<IRegisterDependancyInjection>())
+                    di.RegisterDependancyInjection(c, config, logger);
+            });
+
+            sl.RegisterAllTypesThatUseBaseInterface<IForgedScript>();
 
             foreach (var f in cf.ResolveAll<IOnServerInitialize>())
                 f.OnServerInitialize();

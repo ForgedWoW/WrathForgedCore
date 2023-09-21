@@ -4,9 +4,6 @@
 		<TargetFramework>net7.0</TargetFramework>
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
-		<EmitCompilerGeneratedFiles>true</EmitCompilerGeneratedFiles>
-		<GeneratedFolder>Generated</GeneratedFolder>
-		<CompilerGeneratedFilesOutputPath>$(GeneratedFolder)\$(TargetFramework)</CompilerGeneratedFilesOutputPath>
 	</PropertyGroup>
 
 	<ItemGroup>
@@ -35,6 +32,5 @@
 
 	<ItemGroup>
 		<ProjectReference Include="..\WrathForged.Serialization.Models\WrathForged.Serialization.Models.csproj" />
-		<ProjectReference Include="..\WrathForged.Serialization\WrathForged.Serialization.csproj" OutputItemType="Analyzer" ReferenceOutputAssembly="false" />
 	</ItemGroup>
 </Project>
