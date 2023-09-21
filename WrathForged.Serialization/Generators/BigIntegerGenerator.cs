@@ -6,10 +6,6 @@ namespace WrathForged.Serialization.Generators
 {
     public class BigIntegerGenerator : IForgedTypeGenerator
     {
-        private readonly SerializationGenerator _serializationGenerator;
-
-        public BigIntegerGenerator(SerializationGenerator serializationGenerator) => _serializationGenerator = serializationGenerator;
-
         public string GenerateTypeCodeDeserializeForType(ITypeSymbol typeSymbol, AttributeData attribute, ForgedTypeCode typeCode, Compilation compilation, INamedTypeSymbol symbol, string variableName) => $"writer.Write({variableName}.ToByteArray());";
 
         public string GenerateTypeCodeSerializeForType(ITypeSymbol typeSymbol, AttributeData attribute, ForgedTypeCode typeCode, Compilation compilation, INamedTypeSymbol symbol, string variableName) => $"{variableName} = new BigInteger(reader.ReadBytes({attribute.GetNamedArg<uint>("FixedCollectionSize", 0)}));";

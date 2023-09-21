@@ -17,7 +17,7 @@
 
 	<ItemGroup>
 		<PackageReference Include="Grace" Version="7.2.1" />
-		<PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.2">
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.11">
 		  <PrivateAssets>all</PrivateAssets>
 		  <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
 		</PackageReference>
@@ -27,7 +27,7 @@
 	<ItemGroup>
 		<PackageReference Include="Serilog" Version="3.0.1" />
 		<PackageReference Include="Serilog.Extensions.Logging" Version="7.0.0" />
-		<PackageReference Include="Z.EntityFramework.Plus.EFCore" Version="7.100.0" />
+		<PackageReference Include="Z.EntityFramework.Plus.EFCore" Version="7.100.0.1" />
 	</ItemGroup>
 
 	<ItemGroup>

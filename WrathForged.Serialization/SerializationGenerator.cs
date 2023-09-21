@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
+using System.Numerics;
 using System.Text;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.Text;
@@ -17,10 +18,10 @@ namespace WrathForged.Serialization
     {
         private readonly string _attributeName = nameof(SerializablePropertyAttribute);
         private readonly string _forgedSerializableName = nameof(ForgedSerializableAttribute).Replace("Attribute", "");
-        private readonly Dictionary<string, IForgedTypeGenerator> _generatorsByName = new(StringComparer.InvariantCultureIgnoreCase);
-        private readonly Dictionary<TypeKind, IForgedTypeGenerator> _generatorsByTypeKind = new();
-        private readonly Dictionary<SpecialType, IForgedTypeGenerator> _generatorsBySpecialType = new();
-        private readonly Dictionary<ForgedTypeCode, IForgedTypeGenerator> _generatorsByTypeCode = new();
+        private readonly Dictionary<string, IForgedTypeGenerator> _generatorsByName = new Dictionary<string, IForgedTypeGenerator>(StringComparer.InvariantCultureIgnoreCase);
+        private readonly Dictionary<TypeKind, IForgedTypeGenerator> _generatorsByTypeKind = new Dictionary<TypeKind, IForgedTypeGenerator>();
+        private readonly Dictionary<SpecialType, IForgedTypeGenerator> _generatorsBySpecialType = new Dictionary<SpecialType, IForgedTypeGenerator>();
+        private readonly Dictionary<ForgedTypeCode, IForgedTypeGenerator> _generatorsByTypeCode = new Dictionary<ForgedTypeCode, IForgedTypeGenerator>();
         private bool _collectionSizeWritten;
 
         public void Initialize(GeneratorInitializationContext context)
@@ -33,6 +34,7 @@ namespace WrathForged.Serialization
 
             _generatorsByName.Add(nameof(IPAddress), new IPAddressGenerator());
             _generatorsByName.Add(nameof(String), new StringGenerator());
+            _generatorsByName.Add(nameof(BigInteger), new BigIntegerGenerator());
 
             _generatorsBySpecialType.Add(SpecialType.System_Collections_Generic_IList_T, new ListTypeGenerator(this));
 
@@ -41,38 +43,41 @@ namespace WrathForged.Serialization
 
         public void Execute(GeneratorExecutionContext context)
         {
-            if (context.SyntaxReceiver is not SerializationSyntaxReceiver receiver)
-                return;
-
-            System.Diagnostics.Debugger.Launch();
-            foreach (var classDeclaration in receiver.CandidateClasses)
+            _ = System.Diagnostics.Debugger.Launch();
+            if (context.SyntaxReceiver is SerializationSyntaxReceiver receiver)
             {
-                if (context.Compilation.GetSemanticModel(classDeclaration.SyntaxTree).GetDeclaredSymbol(classDeclaration) is not INamedTypeSymbol modelSymbol)
-                    continue;
+                System.Diagnostics.Debugger.Launch();
+                foreach (var classDeclaration in receiver.CandidateClasses)
+                {
+                    if (context.Compilation.GetSemanticModel(classDeclaration.SyntaxTree).GetDeclaredSymbol(classDeclaration) is INamedTypeSymbol modelSymbol)
+                    {
 
-                var source = GenerateSerializationCode(context, modelSymbol, "class");
+                        var source = GenerateSerializationCode(context, modelSymbol, "class");
 
-                if (string.IsNullOrEmpty(source))
-                    continue;
+                        if (string.IsNullOrEmpty(source))
+                            continue;
 #if DEBUG
-                System.Diagnostics.Debug.WriteLine(source);
+                        System.Diagnostics.Debug.WriteLine(source);
 #endif
-                context.AddSource($"{modelSymbol.Name}", SourceText.From(source));
-            }
+                        context.AddSource($"{modelSymbol.Name}", SourceText.From(source));
+                    }
+                }
 
-            foreach (var classDeclaration in receiver.CandidateRecords)
-            {
-                if (context.Compilation.GetSemanticModel(classDeclaration.SyntaxTree).GetDeclaredSymbol(classDeclaration) is not INamedTypeSymbol modelSymbol)
-                    continue;
+                foreach (var classDeclaration in receiver.CandidateRecords)
+                {
+                    if (context.Compilation.GetSemanticModel(classDeclaration.SyntaxTree).GetDeclaredSymbol(classDeclaration) is INamedTypeSymbol modelSymbol)
+                    {
 
-                var source = GenerateSerializationCode(context, modelSymbol, "record");
+                        var source = GenerateSerializationCode(context, modelSymbol, "record");
 
-                if (string.IsNullOrEmpty(source))
-                    continue;
+                        if (string.IsNullOrEmpty(source))
+                            continue;
 #if DEBUG
-                System.Diagnostics.Debug.WriteLine(source);
+                        System.Diagnostics.Debug.WriteLine(source);
 #endif
-                context.AddSource($"{modelSymbol.Name}", SourceText.From(source, Encoding.UTF8));
+                        context.AddSource($"{modelSymbol.Name}", SourceText.From(source, Encoding.UTF8));
+                    }
+                }
             }
         }
 
@@ -516,20 +521,37 @@ namespace WrathForged.Serialization
 
         private static ForgedTypeCode GetTypeCodeFromTypeName(string typeName)
         {
-            return typeName switch
+            switch (typeName)
             {
-                "string" or "String" => ForgedTypeCode.String,
-                _ => Enum.TryParse(typeName, out ForgedTypeCode result) ? result : ForgedTypeCode.Empty,
-            };
+                case "string":
+                case "String":
+                    return ForgedTypeCode.String;
+                default:
+                    return Enum.TryParse(typeName, out ForgedTypeCode result) ? result : ForgedTypeCode.Empty;
+            }
         }
 
         private bool IsPrimitiveOrSimpleType(ForgedTypeCode typeCode)
         {
-            return typeCode switch
+            switch (typeCode)
             {
-                ForgedTypeCode.Boolean or ForgedTypeCode.Byte or ForgedTypeCode.Char or ForgedTypeCode.Decimal or ForgedTypeCode.Double or ForgedTypeCode.Int16 or ForgedTypeCode.Int32 or ForgedTypeCode.Int64 or ForgedTypeCode.SByte or ForgedTypeCode.Single or ForgedTypeCode.UInt16 or ForgedTypeCode.UInt32 or ForgedTypeCode.UInt64 => true,
-                _ => false,
-            };
+                case ForgedTypeCode.Boolean:
+                case ForgedTypeCode.Byte:
+                case ForgedTypeCode.Char:
+                case ForgedTypeCode.Decimal:
+                case ForgedTypeCode.Double:
+                case ForgedTypeCode.Int16:
+                case ForgedTypeCode.Int32:
+                case ForgedTypeCode.Int64:
+                case ForgedTypeCode.SByte:
+                case ForgedTypeCode.Single:
+                case ForgedTypeCode.UInt16:
+                case ForgedTypeCode.UInt32:
+                case ForgedTypeCode.UInt64:
+                    return true;
+                default:
+                    return false;
+            }
         }
     }
 }
