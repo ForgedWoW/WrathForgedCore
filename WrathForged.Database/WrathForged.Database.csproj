@@ -34,21 +34,21 @@
 	  <Resource Include="sql\base\dbc\_Create.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </Resource>
-	  <Resource Include="sql\updates\auth\void.sql">
+	  <Content Include="sql\updates\auth\void.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-	  </Resource>
-	  <Resource Include="sql\updates\character\void.sql">
+	  </Content>
+	  <Content Include="sql\updates\character\void.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-	  </Resource>
-	  <Resource Include="sql\updates\dbc\void.sql">
+	  </Content>
+	  <Content Include="sql\updates\dbc\void.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-	  </Resource>
-	  <Resource Include="sql\updates\world\Locale.sql">
+	  </Content>
+	  <Content Include="sql\updates\world\Locale.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-	  </Resource>
-	  <Resource Include="sql\updates\world\void.sql">
+	  </Content>
+	  <Content Include="sql\updates\world\void.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-	  </Resource>
+	  </Content>
 	</ItemGroup>
 
 	<ItemGroup>
