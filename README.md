@@ -54,6 +54,6 @@ for %%F in (*.dbc) do (
 
 
 ## Extendability
-Impliment the interface `IRegisterDependancyInjection` to be passed the DI container, logger and configuraiton.
+Impliment the interface `IRegisterDependancyInjection` to be passed the DI container, logger and configuraiton. You can also impliment any scripting interface and it will automatically be loaded into the DI container (interfaces with base type of `IForgedScript`).
 
-See [Scripts for more help](https://github.com/ForgedWoW/WrathForgedCore/blob/main/Help/Scripts.md)
+See [Scripts for more help](https://github.com/ForgedWoW/WrathForgedCore/blob/main/Help/Scripts.md) NOTE: all scripts have `IForgedScript` as the base script and are loaded into the DI container automatically as a singleton. Use `IRegisterDependancyInjection` to manually register if you require a different pattern. 
