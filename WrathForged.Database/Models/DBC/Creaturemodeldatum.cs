@@ -5,7 +5,7 @@ using WrathForged.Database.DBC;
 namespace WrathForged.Database.Models.DBC;
 
 [DBCBound("CreatureModelData.dbc")]
-public partial class Creaturemodeldatum
+public partial class Creaturemodeldatum : IDBCRecord
 {
     [DBCPropertyBinding(0, DBCBindingType.INT32)]
     public int Id { get; set; }

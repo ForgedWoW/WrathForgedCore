@@ -55,15 +55,12 @@ namespace WrathForged.Database
             QueryCacheManager.DefaultMemoryCacheEntryOptions = options;
             _ = builder.ExportInstance(queryCache).As<ForgeDBCache>().Lifestyle.Singleton();
 
-            builder.Export<DatabaseUpdater>().Lifestyle.Singleton();
+            _ = builder.Export<DatabaseUpdater>().Lifestyle.Singleton();
 
             return builder;
         }
 
-        public static void InitializeDatabase(this DependencyInjectionContainer container)
-        {
-            container.Locate<DatabaseUpdater>().Update();
-        }
+        public static void InitializeDatabase(this DependencyInjectionContainer container) => container.Locate<DatabaseUpdater>().Update();
 
         public static void ShutdownDatabase(this DependencyInjectionContainer container)
         {
