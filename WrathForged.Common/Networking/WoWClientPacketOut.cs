@@ -1,7 +1,6 @@
 ﻿// Copyright (c) Forged WoW LLC <https://github.com/ForgedWoW/WrathForgedCore>
 // Licensed under GPL-3.0 license. See <https://github.com/ForgedWoW/WrathForgedCore/blob/master/LICENSE> for full information.
-using System.Collections.Concurrent;
-using System.Reflection;
+using WrathForged.Common.Serialization;
 using WrathForged.Models.Networking;
 using WrathForged.Serialization;
 
@@ -10,10 +9,11 @@ namespace WrathForged.Common.Networking
     public class WoWClientPacketOut : IDisposable
     {
         private bool _disposedValue;
-        private static readonly ConcurrentDictionary<Type, MethodInfo> _serializers = new();
+        private readonly ForgedModelSerializer _forgedModelSerializer;
 
-        public WoWClientPacketOut(PacketId packetId, int headerSize = -1)
+        public WoWClientPacketOut(ForgedModelSerializer forgedModelSerializer, PacketId packetId, int headerSize = -1)
         {
+            _forgedModelSerializer = forgedModelSerializer;
             PacketId = packetId;
             Writer = new PrimitiveWriter();
             MemoryStream = (MemoryStream)Writer.BaseStream;
@@ -75,28 +75,7 @@ namespace WrathForged.Common.Networking
             if (obj == null)
                 return;
 
-            // Get the type of the object
-            var type = obj.GetType();
-
-            if (_serializers.TryGetValue(type, out var serializer))
-            {
-                // If we have a serializer for this type, use it
-                _ = serializer.Invoke(obj, new object[] { Writer });
-                return;
-            }
-
-            // Find the Serialize method which is an extension method
-            var method = type.GetMethod("Serialize", new[] { type });
-
-            if (method != null)
-            {
-                _ = _serializers.TryAdd(type, method);
-                _ = method.Invoke(obj, new object[] { Writer });
-            }
-            else
-            {
-                throw new InvalidOperationException($"Serialize method not found for type {type.FullName}");
-            }
+            _forgedModelSerializer.Serialize(PacketId, PacketId, Writer, obj);
         }
 
         protected virtual void Dispose(bool disposing)

@@ -1,5 +1,6 @@
 ﻿// Copyright (c) Forged WoW LLC <https://github.com/ForgedWoW/WrathForgedCore>
 // Licensed under GPL-3.0 license. See <https://github.com/ForgedWoW/WrathForgedCore/blob/master/LICENSE> for full information.
+
 using System.Buffers.Binary;
 using System.Security.Cryptography;
 using Serilog;
@@ -73,23 +74,17 @@ namespace WrathForged.Common.Networking
 
             // Use the 2 encryption objects to generate a common starting point
             var syncBuffer = new byte[DROP_N];
-            _encryptServerData.Process(syncBuffer, 0, syncBuffer.Length);
+            _ = _encryptServerData.Process(syncBuffer, 0, syncBuffer.Length);
 
             // Use the 2 decryption objects to generate a common starting point
             syncBuffer = new byte[DROP_N];
             //decryptServerData.Process(syncBuffer, 0, syncBuffer.Length);
-            _decryptClientData.Process(syncBuffer, 0, syncBuffer.Length);
+            _ = _decryptClientData.Process(syncBuffer, 0, syncBuffer.Length);
         }
 
-        public void Decrypt(Memory<byte> data, int start, int count)
-        {
-            _decryptClientData.Process(data, start, count);
-        }
+        public void Decrypt(Memory<byte> data, int start, int count) => _decryptClientData.Process(data, start, count);
 
-        public void Encrypt(byte[] data, int start, int count)
-        {
-            _encryptServerData.Process(data, start, count);
-        }
+        public void Encrypt(byte[] data, int start, int count) => _encryptServerData.Process(data, start, count);
 
         public byte GetDecryptedByte(Memory<byte> inputData, int baseOffset, int offset)
         {
@@ -102,7 +97,7 @@ namespace WrathForged.Common.Networking
                 Decrypt(inputData, dataStartOffset, 1);
             }
 
-            Interlocked.Exchange(ref _decryptSeq, 0);
+            _ = Interlocked.Exchange(ref _decryptSeq, 0);
 
             return inputData.Span[dataStartOffset];
         }
@@ -117,12 +112,12 @@ namespace WrathForged.Common.Networking
                 Decrypt(inputData, 0, 1);
             }
 
-            Interlocked.Exchange(ref _decryptSeq, 0);
+            _ = Interlocked.Exchange(ref _decryptSeq, 0);
 
             return inputData.Span[0];
         }
 
-        public int GetDecryptedOpcode(PacketBuffer packetBuffer, int baseOffset, int offset)
+        public uint GetDecryptedOpcode(PacketBuffer packetBuffer, int baseOffset, int offset)
         {
             var inputData = packetBuffer.GetBuffer();
             var dataStartOffset = baseOffset + offset;
@@ -132,27 +127,27 @@ namespace WrathForged.Common.Networking
                 Decrypt(inputData, dataStartOffset, 4);
             }
 
-            return BinaryPrimitives.ReadInt32LittleEndian(inputData.Span[dataStartOffset..]);
+            return (uint)BinaryPrimitives.ReadInt32LittleEndian(inputData.Span[dataStartOffset..]);
         }
 
-        public int GetDecryptedOpcode(Memory<byte> inputData, int offset)
+        public uint GetDecryptedOpcode(Memory<byte> inputData, int offset)
         {
             if (DecryptUntil < offset + 4)
             {
                 Decrypt(inputData, 0, 4);
             }
 
-            return BinaryPrimitives.ReadInt32LittleEndian(inputData.Span[..4]);
+            return (uint)BinaryPrimitives.ReadInt32LittleEndian(inputData.Span[..4]);
         }
 
-        public int GetDecryptedOpcode(Memory<byte> inputData)
+        public uint GetDecryptedOpcode(Memory<byte> inputData)
         {
             if (DecryptUntil < inputData.Length)
             {
                 Decrypt(inputData, 0, inputData.Length);
             }
 
-            return BinaryPrimitives.ReadInt32LittleEndian(inputData.Span);
+            return (uint)BinaryPrimitives.ReadInt32LittleEndian(inputData.Span);
         }
     }
 }

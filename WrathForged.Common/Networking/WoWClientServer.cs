@@ -19,7 +19,7 @@ namespace WrathForged.Common.Networking
         public const int LARGE_PACKET_THRESHOLD = 32767;
 
         private readonly PacketScope _packetScope;
-        private readonly ForgedModelDeserialization _forgedModelDeserialization;
+        private readonly ForgedModelSerializer _forgedModelDeserialization;
         private readonly PacketRouter _packetRouter;
         private readonly ILogger _logger;
         private readonly IConfiguration _configuration;
@@ -27,7 +27,7 @@ namespace WrathForged.Common.Networking
         private readonly Meter _meter;
         private readonly Counter<long> _connectionCounter;
 
-        public WoWClientServer(PacketScope packetScope, ForgedModelDeserialization forgedModelDeserialization, TCPServer tCPServer, PacketRouter packetRouter, ILogger logger,
+        public WoWClientServer(PacketScope packetScope, ForgedModelSerializer forgedModelDeserialization, TCPServer tCPServer, PacketRouter packetRouter, ILogger logger,
                                MeterFactory meterFactory, IConfiguration configuration)
         {
             _packetScope = packetScope;
@@ -178,7 +178,7 @@ namespace WrathForged.Common.Networking
         {
             if (!_clientSessions.TryGetValue(client, out var session))
             {
-                session = new WoWClientSession(client, new PacketBuffer(_logger), _logger);
+                session = new WoWClientSession(client, new PacketBuffer(_logger), _logger, _forgedModelDeserialization);
                 _clientSessions[client] = session;
             }
 

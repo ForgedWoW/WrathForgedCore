@@ -1,5 +1,6 @@
 ﻿// Copyright (c) Forged WoW LLC <https://github.com/ForgedWoW/WrathForgedCore>
 // Licensed under GPL-3.0 license. See <https://github.com/ForgedWoW/WrathForgedCore/blob/master/LICENSE> for full information.
+
 using System.Net;
 using System.Numerics;
 using Microsoft.Extensions.Configuration;
@@ -39,7 +40,7 @@ namespace WrathForged.Authorization.Server.Services
             using var authDatabase = _classFactory.Resolve<AuthDatabase>();
 
             var account = authDatabase.Accounts.FirstOrDefault(x => x.Username == authLogonChallenge.Identity || x.RegMail == authLogonChallenge.Identity);
-            var packet = new WoWClientPacketOut(AuthServerOpCode.AUTH_LOGON_CHALLENGE);
+            var packet = session.NewClientMessage(AuthServerOpCode.AUTH_LOGON_CHALLENGE);
 
             if (account == null)
             {

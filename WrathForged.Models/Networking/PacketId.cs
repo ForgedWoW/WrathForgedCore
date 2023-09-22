@@ -1,5 +1,6 @@
 ﻿// Copyright (c) Forged WoW LLC <https://github.com/ForgedWoW/WrathForgedCore>
 // Licensed under GPL-3.0 license. See <https://github.com/ForgedWoW/WrathForgedCore/blob/master/LICENSE> for full information.
+
 using WrathForged.Models.Auth.Enum;
 using WrathForged.Models.Realm.Enum;
 using WrathForged.Serialization;
@@ -11,23 +12,23 @@ namespace WrathForged.Models.Networking
         public PacketScope Scope { get; }
         public AuthServerOpCode AuthOpCode { get; }
         public RealmServerOpCode RealmOpCode { get; }
-        public int Id { get; }
+        public uint Id { get; }
 
         public PacketId(AuthServerOpCode opCode)
         {
             Scope = PacketScope.Auth;
             AuthOpCode = opCode;
-            Id = (int)opCode;
+            Id = (uint)opCode;
         }
 
         public PacketId(RealmServerOpCode opCode, PacketScope packetScope)
         {
             Scope = packetScope;
             RealmOpCode = opCode;
-            Id = (int)opCode;
+            Id = (uint)opCode;
         }
 
-        public PacketId(int id, PacketScope packetScope)
+        public PacketId(uint id, PacketScope packetScope)
         {
             Scope = packetScope;
             Id = id;
@@ -43,9 +44,33 @@ namespace WrathForged.Models.Networking
             }
         }
 
+        public PacketId(int id, PacketScope packetScope)
+        {
+            Scope = packetScope;
+            Id = (uint)id;
+            switch (packetScope)
+            {
+                case PacketScope.Auth:
+                    AuthOpCode = (AuthServerOpCode)id;
+                    break;
+
+                default:
+                    RealmOpCode = (RealmServerOpCode)id;
+                    break;
+            }
+        }
+
         public static implicit operator PacketId(AuthServerOpCode val) => new(val);
 
         public static implicit operator PacketId(RealmServerOpCode val) => new(val, PacketScope.ClientToInstance);
+
+        public static implicit operator uint(PacketId val) => val.Id;
+
+        public static implicit operator AuthServerOpCode(PacketId val) => val.AuthOpCode;
+
+        public static implicit operator RealmServerOpCode(PacketId val) => val.RealmOpCode;
+
+        public static implicit operator PacketScope(PacketId val) => val.Scope;
 
         public static bool operator ==(PacketId a, PacketId b)
         {
@@ -63,13 +88,7 @@ namespace WrathForged.Models.Networking
             return $"{Scope} {packetName}:{Id}";
         }
 
-        public override bool Equals(object? obj)
-        {
-            if (obj == null)
-                return false;
-
-            return obj is PacketId packetId && this == packetId;
-        }
+        public override bool Equals(object? obj) => obj != null && obj is PacketId packetId && this == packetId;
 
         public override int GetHashCode() => Id.GetHashCode() ^ (int.MaxValue * (int)Scope);
     }

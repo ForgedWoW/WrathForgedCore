@@ -3,6 +3,7 @@
 using System;
 using System.Text;
 using Microsoft.CodeAnalysis;
+using WrathForged.Serialization.Models;
 
 namespace WrathForged.Serialization.Generators
 {

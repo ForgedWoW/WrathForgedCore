@@ -1,5 +1,5 @@
-﻿// Copyright (c) Forged WoW LLC <https://github.com/ForgedWoW/WrathForgedCore> Licensed under
-// GPL-3.0 license. See <https://github.com/ForgedWoW/WrathForgedCore/blob/master/LICENSE> for full information.
+﻿// Copyright (c) Forged WoW LLC <https://github.com/ForgedWoW/WrathForgedCore>
+// Licensed under GPL-3.0 license. See <https://github.com/ForgedWoW/WrathForgedCore/blob/master/LICENSE> for full information.
 using System.Reflection;
 using Serilog;
 using WrathForged.Common.Networking;
@@ -10,7 +10,7 @@ using WrathForged.Serialization.Models;
 
 namespace WrathForged.Common.Serialization
 {
-    public class ForgedModelDeserialization
+    public class ForgedModelSerializer
     {
         private readonly ILogger _logger;
 
@@ -23,7 +23,7 @@ namespace WrathForged.Common.Serialization
         private readonly Dictionary<Type, IForgedTypeSerialization> _serializers = new();
         private readonly Dictionary<ForgedTypeCode, IForgedTypeSerialization> _forgedTypeCodeSerializers = new();
 
-        public ForgedModelDeserialization(ILogger logger, ScriptLoader assemblyLoader, ClassFactory classFactory)
+        public ForgedModelSerializer(ILogger logger, ScriptLoader assemblyLoader, ClassFactory classFactory)
         {
             var classesWithAttribute = assemblyLoader.GetAllTypesWithClassAttribute<ForgedSerializableAttribute>();
 
@@ -69,7 +69,20 @@ namespace WrathForged.Common.Serialization
             _logger = logger;
         }
 
-        public DeserializationResult TryDeserialize(PacketScope scope, int packetId, PacketBuffer buffer, out object? packet)
+        public void Serialize(PacketScope scope, uint packetId, PrimitiveWriter writer, object obj)
+        {
+            if (!_deserializationMethodsCache.TryGetValue(scope, out var scopeDictionary) ||
+                !scopeDictionary.TryGetValue(packetId, out var deserializationDefinition))
+            {
+                return;
+            }
+
+            foreach (var prop in deserializationDefinition.Item2)
+            {
+            }
+        }
+
+        public DeserializationResult TryDeserialize(PacketScope scope, uint packetId, PacketBuffer buffer, out object? packet)
         {
             if (!_deserializationMethodsCache.TryGetValue(scope, out var scopeDictionary))
             {
@@ -77,7 +90,7 @@ namespace WrathForged.Common.Serialization
                 return DeserializationResult.UnknownPacket;
             }
 
-            if (!scopeDictionary.TryGetValue((uint)packetId, out var deserializationDefinition))
+            if (!scopeDictionary.TryGetValue(packetId, out var deserializationDefinition))
             {
                 packet = null;
                 return DeserializationResult.UnknownPacket;
@@ -86,17 +99,20 @@ namespace WrathForged.Common.Serialization
             try
             {
                 var instance = Activator.CreateInstance(deserializationDefinition.Item1);
-
+                Dictionary<uint, uint> collectionSizes = new();
                 foreach (var prop in deserializationDefinition.Item2)
                 {
-                    var isCollection = prop.Property.PropertyType.IsArray || (prop.Property.PropertyType.IsGenericType && prop.Property.PropertyType.GetGenericTypeDefinition() == typeof(List<>));
-                    var result = isCollection ? ProcessCollection(buffer, prop)
-                        : prop.Property.PropertyType.IsEnum
-                        ? ProcessEnum(buffer, prop)
-                        : ProcessProperty(buffer, prop);
+                    var isCollection = prop.ReflectedProperty.PropertyType.IsArray ||
+                                        (prop.ReflectedProperty.PropertyType.IsGenericType && prop.ReflectedProperty.PropertyType.GetGenericTypeDefinition() == typeof(List<>)) ||
+                                        (prop.ReflectedProperty.PropertyType.IsGenericType && prop.ReflectedProperty.PropertyType.GetGenericTypeDefinition() == typeof(HashSet<>));
+
+                    var result = isCollection ? ProcessCollection(buffer, prop, collectionSizes)
+                        : prop.ReflectedProperty.PropertyType.IsEnum
+                        ? _forgedTypeCodeSerializers[ForgedTypeCode.Enum].Deserialize(buffer, prop, collectionSizes)
+                        : ProcessProperty(buffer, prop, collectionSizes);
 
                     if (result != null)
-                        prop.Property.SetValue(instance, result);
+                        prop.ReflectedProperty.SetValue(instance, result);
                 }
 
                 packet = instance;
@@ -111,19 +127,25 @@ namespace WrathForged.Common.Serialization
             return DeserializationResult.Error;
         }
 
-        private object? ProcessEnum(PacketBuffer buffer, PropertyMeta prop)
+        private object? ProcessCollection(PacketBuffer buffer, PropertyMeta prop, Dictionary<uint, uint> collectionSizes)
         {
+            var collectionSize = buffer.GetCollectionSize(prop, collectionSizes);
+            List<object?> collection = new();
+            for (var i = 0; i < collectionSize; i++)
+                collection.Add(ProcessProperty(buffer, prop, collectionSizes));
+
+            return prop.ReflectedProperty.PropertyType.IsArray
+                    ? collection.ToArray()
+                    : prop.ReflectedProperty.PropertyType.GetGenericTypeDefinition() == typeof(List<>)
+                    ? collection
+                    : collection.ToHashSet();
         }
 
-        private object? ProcessCollection(PacketBuffer buffer, PropertyMeta prop)
+        private object? ProcessProperty(PacketBuffer buffer, PropertyMeta prop, Dictionary<uint, uint> collectionSizes)
         {
-        }
-
-        private object? ProcessProperty(PacketBuffer buffer, PropertyMeta prop)
-        {
-            return _forgedTypeCodeSerializers.TryGetValue(prop.Attribute.OverrideType, out var forgedTypeSerialization) ||
-                       _serializers.TryGetValue(prop.Property.PropertyType, out forgedTypeSerialization)
-                ? forgedTypeSerialization?.Deserialize(buffer, prop.Attribute)
+            return _forgedTypeCodeSerializers.TryGetValue(prop.SerializationMetadata.OverrideType, out var forgedTypeSerialization) ||
+                       _serializers.TryGetValue(prop.ReflectedProperty.PropertyType, out forgedTypeSerialization)
+                ? forgedTypeSerialization?.Deserialize(buffer, prop, collectionSizes)
                 : null;
         }
     }

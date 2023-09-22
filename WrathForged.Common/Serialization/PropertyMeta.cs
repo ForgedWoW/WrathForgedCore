@@ -1,26 +1,28 @@
-﻿using System.Reflection;
+﻿// Copyright (c) Forged WoW LLC <https://github.com/ForgedWoW/WrathForgedCore>
+// Licensed under GPL-3.0 license. See <https://github.com/ForgedWoW/WrathForgedCore/blob/master/LICENSE> for full information.
+using System.Reflection;
 using WrathForged.Serialization;
 
 namespace WrathForged.Common.Serialization
 {
-    internal class PropertyMeta : IComparable<PropertyMeta>
+    public class PropertyMeta : IComparable<PropertyMeta>
     {
-        internal PropertyMeta(SerializablePropertyAttribute attribute, PropertyInfo property)
+        public PropertyMeta(SerializablePropertyAttribute attribute, PropertyInfo property)
         {
-            Attribute = attribute;
-            Property = property;
+            SerializationMetadata = attribute;
+            ReflectedProperty = property;
         }
 
-        internal SerializablePropertyAttribute Attribute { get; set; }
-        internal PropertyInfo Property { get; set; }
+        public SerializablePropertyAttribute SerializationMetadata { get; set; }
+        public PropertyInfo ReflectedProperty { get; set; }
 
         public int CompareTo(PropertyMeta? other)
         {
             return other == null
                 ? 1
-                : Attribute == null && other.Attribute == null
+                : SerializationMetadata == null && other.SerializationMetadata == null
                 ? 0
-                : Attribute == null ? -1 : other.Attribute == null ? 1 : Attribute.Index.CompareTo(other.Attribute.Index);
+                : SerializationMetadata == null ? -1 : other.SerializationMetadata == null ? 1 : SerializationMetadata.Index.CompareTo(other.SerializationMetadata.Index);
         }
     }
 }

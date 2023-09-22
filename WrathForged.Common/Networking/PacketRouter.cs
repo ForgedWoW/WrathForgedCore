@@ -1,5 +1,6 @@
 ﻿// Copyright (c) Forged WoW LLC <https://github.com/ForgedWoW/WrathForgedCore>
 // Licensed under GPL-3.0 license. See <https://github.com/ForgedWoW/WrathForgedCore/blob/master/LICENSE> for full information.
+
 using System.Reflection;
 using WrathForged.Models.Networking;
 using WrathForged.Serialization;
@@ -12,7 +13,7 @@ namespace WrathForged.Common.Networking
 
         public PacketRouter(ClassFactory classFactory)
         {
-            var packetHandlers = classFactory.ResolveAll<IEnumerable<IPacketService>>();
+            var packetHandlers = classFactory.ResolveAll<IPacketService>();
 
             foreach (var handler in packetHandlers)
             {

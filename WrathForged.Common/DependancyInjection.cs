@@ -63,7 +63,7 @@ namespace WrathForged.Common
             _ = builder.ExportInstance(exitNotifier).Lifestyle.Singleton();
             _ = builder.Export<TCPServer>();
             _ = builder.Export<ForgeCache>().Lifestyle.Singleton();
-            _ = builder.Export<ForgedModelDeserialization>().Lifestyle.Singleton();
+            _ = builder.Export<ForgedModelSerializer>().Lifestyle.Singleton();
             _ = builder.Export<PacketRouter>().Lifestyle.Singleton();
             _ = builder.Export<PacketEncryption>();
             _ = builder.Export<MeterFactory>().Lifestyle.Singleton();
