@@ -1,5 +1,5 @@
-﻿// Copyright (c) Forged WoW LLC <https://github.com/ForgedWoW/WrathForgedCore>
-// Licensed under GPL-3.0 license. See <https://github.com/ForgedWoW/WrathForgedCore/blob/master/LICENSE> for full information.
+﻿// Copyright (c) Forged WoW LLC <https://github.com/ForgedWoW/WrathForgedCore> Licensed under
+// GPL-3.0 license. See <https://github.com/ForgedWoW/WrathForgedCore/blob/master/LICENSE> for full information.
 using System.Reflection;
 using Serilog;
 using WrathForged.Common.Networking;
@@ -17,7 +17,7 @@ namespace WrathForged.Common.Serialization
         /// <summary>
         ///     A cache of all the deserialization definitions for each object and their properties
         /// </summary>
-        //                          Scope                  OpCode  ObjType   PropertyName, SerializationMetadata
+        // Scope OpCode ObjType PropertyName, SerializationMetadata
         private readonly Dictionary<PacketScope, Dictionary<uint, (Type, List<PropertyMeta>)>> _deserializationMethodsCache = new();
 
         private readonly Dictionary<Type, IForgedTypeSerialization> _serializers = new();
@@ -89,19 +89,14 @@ namespace WrathForged.Common.Serialization
 
                 foreach (var prop in deserializationDefinition.Item2)
                 {
-                    var isArray = prop.Property.PropertyType.IsArray;
+                    var isCollection = prop.Property.PropertyType.IsArray || (prop.Property.PropertyType.IsGenericType && prop.Property.PropertyType.GetGenericTypeDefinition() == typeof(List<>));
+                    var result = isCollection ? ProcessCollection(buffer, prop)
+                        : prop.Property.PropertyType.IsEnum
+                        ? ProcessEnum(buffer, prop)
+                        : ProcessProperty(buffer, prop);
 
-                    if (_forgedTypeCodeSerializers.TryGetValue(prop.Attribute.OverrideType, out var forgedTypeSerialization) ||
-                        _serializers.TryGetValue(prop.Property.PropertyType, out forgedTypeSerialization))
-                    {
-                        if (forgedTypeSerialization == null)
-                            continue;
-
-                        var result = forgedTypeSerialization.Deserialize(buffer, prop.Attribute);
-
-                        if (result != null)
-                            prop.Property.SetValue(instance, result);
-                    }
+                    if (result != null)
+                        prop.Property.SetValue(instance, result);
                 }
 
                 packet = instance;
@@ -114,6 +109,22 @@ namespace WrathForged.Common.Serialization
 
             packet = null;
             return DeserializationResult.Error;
+        }
+
+        private object? ProcessEnum(PacketBuffer buffer, PropertyMeta prop)
+        {
+        }
+
+        private object? ProcessCollection(PacketBuffer buffer, PropertyMeta prop)
+        {
+        }
+
+        private object? ProcessProperty(PacketBuffer buffer, PropertyMeta prop)
+        {
+            return _forgedTypeCodeSerializers.TryGetValue(prop.Attribute.OverrideType, out var forgedTypeSerialization) ||
+                       _serializers.TryGetValue(prop.Property.PropertyType, out forgedTypeSerialization)
+                ? forgedTypeSerialization?.Deserialize(buffer, prop.Attribute)
+                : null;
         }
     }
 }
