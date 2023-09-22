@@ -1,5 +1,5 @@
-﻿// Copyright (c) Forged WoW LLC <https://github.com/ForgedWoW/WrathForgedCore>
-// Licensed under GPL-3.0 license. See <https://github.com/ForgedWoW/WrathForgedCore/blob/master/LICENSE> for full information.
+﻿// Copyright (c) Forged WoW LLC <https://github.com/ForgedWoW/WrathForgedCore> Licensed under
+// GPL-3.0 license. See <https://github.com/ForgedWoW/WrathForgedCore/blob/master/LICENSE> for full information.
 
 using System.Reflection;
 using WrathForged.Models.Networking;
@@ -9,7 +9,7 @@ namespace WrathForged.Common.Networking
 {
     public class PacketRouter
     {
-        public Dictionary<PacketScope, Dictionary<int, List<MethodInfo>>> PacketHandlerCache = new();
+        public Dictionary<PacketScope, Dictionary<uint, List<MethodInfo>>> PacketHandlerCache = new();
 
         public PacketRouter(ClassFactory classFactory)
         {
@@ -26,7 +26,7 @@ namespace WrathForged.Common.Networking
                     var attribute = (PacketHandlerAttribute)method.GetCustomAttributes(typeof(PacketHandlerAttribute), false).First();
                     if (!PacketHandlerCache.TryGetValue(attribute.Scope, out var scopeDictionary))
                     {
-                        scopeDictionary = new Dictionary<int, List<MethodInfo>>();
+                        scopeDictionary = new Dictionary<uint, List<MethodInfo>>();
                         PacketHandlerCache[attribute.Scope] = scopeDictionary;
                     }
 

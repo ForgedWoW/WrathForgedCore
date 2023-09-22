@@ -1,4 +1,6 @@
-﻿using WrathForged.Database.Models.World;
+﻿// Copyright (c) Forged WoW LLC <https://github.com/ForgedWoW/WrathForgedCore> Licensed under
+// GPL-3.0 license. See <https://github.com/ForgedWoW/WrathForgedCore/blob/master/LICENSE> for full information.
+using WrathForged.Database.Models.World;
 
 namespace WrathForged.Common.Localization
 {
@@ -15,7 +17,16 @@ namespace WrathForged.Common.Localization
             CurrentLocale = locale;
 
             foreach (var tc in _worldDatabase.TrinityStrings)
-                _locale[tc.Entry] = !string.IsNullOrEmpty(tc.Content[CurrentLocale]) ? tc.Content[CurrentLocale] : tc.Content[LocaleConst.LOCALE_ENUS];
+            {
+                var proposed = tc.Content[CurrentLocale];
+                var en = tc.Content[LocaleConst.LOCALE_ENUS];
+
+                _locale[tc.Entry] = !string.IsNullOrEmpty(proposed)
+                                    ? proposed
+                                    : !string.IsNullOrEmpty(en)
+                                    ? en
+                                    : string.Empty;
+            }
         }
 
         public string Localize(uint entry, string? defaultValue = null) => _locale.TryGetValue(entry, out var value) ? value : defaultValue ?? $"";
