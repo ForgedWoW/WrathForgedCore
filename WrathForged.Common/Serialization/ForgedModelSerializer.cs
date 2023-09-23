@@ -88,7 +88,7 @@ namespace WrathForged.Common.Serialization
                     continue;
                 }
 
-                SerializeProperty(writer, prop, obj);
+                SerializeProperty(writer, prop, deserializationDefinition.Item2, obj);
             }
         }
 
@@ -156,7 +156,7 @@ namespace WrathForged.Common.Serialization
             var collection = (IEnumerable)obj;
             writer.SerializeCollectionSize(prop, otherMeta, obj);
             foreach (var item in collection)
-                SerializeProperty(writer, prop, item);
+                SerializeProperty(writer, prop, otherMeta, item);
         }
 
         private object? DeserializeProperty(PacketBuffer buffer, PropertyMeta prop, Dictionary<uint, uint> collectionSizes)
@@ -167,12 +167,12 @@ namespace WrathForged.Common.Serialization
                 : null;
         }
 
-        private void SerializeProperty(PrimitiveWriter writer, PropertyMeta prop, object obj)
+        private void SerializeProperty(PrimitiveWriter writer, PropertyMeta prop, List<PropertyMeta> otherMeta, object obj)
         {
             if (_forgedTypeCodeSerializers.TryGetValue(prop.SerializationMetadata.OverrideType, out var forgedTypeSerialization) ||
                             _serializers.TryGetValue(prop.ReflectedProperty.PropertyType, out forgedTypeSerialization))
             {
-                forgedTypeSerialization?.Serialize(writer, prop, obj);
+                forgedTypeSerialization?.Serialize(writer, prop, otherMeta, obj);
             }
         }
     }

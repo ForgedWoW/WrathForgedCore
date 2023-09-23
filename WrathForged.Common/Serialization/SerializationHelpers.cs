@@ -14,7 +14,7 @@ namespace WrathForged.Common.Serialization
 
             if (size == 0 && meta.SerializationMetadata.CollectionSizeIndex != 0)
             {
-                size = collectionSizes[meta.SerializationMetadata.CollectionSizeIndex];
+                size = (int)collectionSizes[meta.SerializationMetadata.CollectionSizeIndex];
             }
             else if (size == 0)
             {
@@ -31,31 +31,31 @@ namespace WrathForged.Common.Serialization
                             break;
 
                         case TypeCode.UInt32:
-                            size = packetBuffer.Reader.ReadUInt32();
+                            size = (int)packetBuffer.Reader.ReadUInt32();
                             break;
 
                         case TypeCode.Int16:
-                            size = (uint)packetBuffer.Reader.ReadInt16();
+                            size = (int)(uint)packetBuffer.Reader.ReadInt16();
                             break;
 
                         case TypeCode.Int32:
-                            size = (uint)packetBuffer.Reader.ReadInt32();
+                            size = (int)(uint)packetBuffer.Reader.ReadInt32();
                             break;
 
                         case TypeCode.Int64:
-                            size = (uint)packetBuffer.Reader.ReadInt64();
+                            size = (int)(uint)packetBuffer.Reader.ReadInt64();
                             break;
                     }
                 }
                 else
                 {
-                    size = packetBuffer.Reader.ReadUInt32();
+                    size = (int)packetBuffer.Reader.ReadUInt32();
                 }
             }
 
-            collectionSizes[meta.SerializationMetadata.Index] = size;
+            collectionSizes[meta.SerializationMetadata.Index] = (uint)size;
 
-            return size;
+            return (uint)size;
         }
 
         public static void SerializeCollectionSize(this PrimitiveWriter writer, PropertyMeta prop, List<PropertyMeta> otherMeta, object obj)
@@ -63,10 +63,9 @@ namespace WrathForged.Common.Serialization
             uint size = 0;
             // Fixed size, so no need to write the size.
             if (prop.SerializationMetadata.FixedCollectionSize != 0)
-            {
-                size = prop.SerializationMetadata.FixedCollectionSize;
-            }
-            else if (prop.SerializationMetadata.CollectionSizeIndex != 0)
+                return;
+
+            if (prop.SerializationMetadata.CollectionSizeIndex != 0)
             {
                 // Get the size from the collection size index
                 var sizeMeta = otherMeta[(int)prop.SerializationMetadata.CollectionSizeIndex];

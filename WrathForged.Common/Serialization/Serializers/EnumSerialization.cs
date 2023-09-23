@@ -43,7 +43,7 @@ namespace WrathForged.Common.Serialization.Serializers
             };
         }
 
-        public void Serialize(PrimitiveWriter writer, PropertyMeta propertyMeta, object obj)
+        public void Serialize(PrimitiveWriter writer, PropertyMeta propertyMeta, List<PropertyMeta> otherMeta, object obj)
         {
             var underlyingType = propertyMeta.ReflectedProperty.PropertyType.GetEnumUnderlyingType();
             var typeToUse = propertyMeta.SerializationMetadata.OverrideType;
