@@ -1,11 +1,10 @@
-﻿// Copyright (c) Forged WoW LLC <https://github.com/ForgedWoW/WrathForgedCore>
-// Licensed under GPL-3.0 license. See <https://github.com/ForgedWoW/WrathForgedCore/blob/master/LICENSE> for full information.
+﻿// Copyright (c) Forged WoW LLC <https://github.com/ForgedWoW/WrathForgedCore> Licensed under
+// GPL-3.0 license. See <https://github.com/ForgedWoW/WrathForgedCore/blob/master/LICENSE> for full information.
 
 using System.Net;
 using System.Text;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
-using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.CodeAnalysis.Text;
 using WrathForged.Serialization.Generators;
 using WrathForged.Serialization.Models;
@@ -23,7 +22,6 @@ namespace WrathForged.Serialization
         private readonly Dictionary<ForgedTypeCode, IForgedTypeGenerator> _generatorsByTypeCode = new();
         private bool _collectionSizeWritten;
 
-
         public void Initialize(GeneratorInitializationContext context)
         {
             //System.Diagnostics.Debugger.Launch();
@@ -36,8 +34,6 @@ namespace WrathForged.Serialization
             _generatorsByName.Add(nameof(String), new StringGenerator());
 
             _generatorsBySpecialType.Add(SpecialType.System_Collections_Generic_IList_T, new ListTypeGenerator(this));
-
-            _generatorsByTypeCode.Add(ForgedTypeCode.StringParsedEnum, new StringParsedEnumGenerator());
         }
 
         public void Execute(GeneratorExecutionContext context)
@@ -113,8 +109,7 @@ namespace WrathForged.Serialization
             _ = sourceBuilder.AppendLine("    }");
             _ = sourceBuilder.AppendLine("}");
 
-            // Append the collected required namespaces at the beginning
-            // Default usings
+            // Append the collected required namespaces at the beginning Default usings
             _ = sourceBuilder.Insert(0, "using System;\r\n");
             _ = sourceBuilder.Insert(0, "using System.Linq;\r\n");
             _ = sourceBuilder.Insert(0, "using WrathForged.Serialization;\r\n");
@@ -355,7 +350,9 @@ namespace WrathForged.Serialization
 
                     if (sizeIndexArg != 0)
                     {
-                        // Assuming there's a method that can jump to a specific index in the stream, read the size, and then return back to the original position, named 'GetSizeFromStreamIndex'.
+                        // Assuming there's a method that can jump to a specific index in the
+                        // stream, read the size, and then return back to the original position,
+                        // named 'GetSizeFromStreamIndex'.
                         return $"{variableName} = reader.ReadBytes(GetSizeFromStreamIndex(reader, sizeIndex));";
                     }
 

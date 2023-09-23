@@ -121,6 +121,8 @@ namespace WrathForged.Common.Serialization
                         ? _forgedTypeCodeSerializers[ForgedTypeCode.Enum].Deserialize(buffer, prop, collectionSizes)
                         : DeserializeProperty(buffer, prop, collectionSizes);
 
+                    result = EvaluateSpecialCasting(buffer, prop, result);
+
                     if (result != null)
                         prop.ReflectedProperty.SetValue(instance, result);
                 }
@@ -142,7 +144,7 @@ namespace WrathForged.Common.Serialization
             var collectionSize = buffer.GetCollectionSize(prop, collectionSizes);
             List<object?> collection = new();
             for (var i = 0; i < collectionSize; i++)
-                collection.Add(DeserializeProperty(buffer, prop, collectionSizes));
+                collection.Add(EvaluateSpecialCasting(buffer, prop, DeserializeProperty(buffer, prop, collectionSizes)));
 
             return prop.ReflectedProperty.PropertyType.IsArray
                     ? collection.ToArray()
@@ -174,6 +176,24 @@ namespace WrathForged.Common.Serialization
             {
                 forgedTypeSerialization?.Serialize(writer, prop, otherMeta, obj);
             }
+        }
+
+        private object? EvaluateSpecialCasting(PacketBuffer buffer, PropertyMeta prop, object? val)
+        {
+            if (val == null)
+                return null;
+
+            // check of its a enum we need to parse its value from a string.
+            return prop.ReflectedProperty.PropertyType.IsEnum &&
+                 (prop.SerializationMetadata.OverrideType is ForgedTypeCode.String or
+                                                             ForgedTypeCode.ASCIIString or
+                                                             ForgedTypeCode.CString or
+                                                             ForgedTypeCode.PascalString or
+                                                             ForgedTypeCode.FourCCString) &&
+                Enum.TryParse(prop.ReflectedProperty.PropertyType, (string)val, true, out var result) &&
+                result != null
+                ? result
+                : val;
         }
     }
 }
