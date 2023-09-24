@@ -65,7 +65,7 @@ namespace WrathForged.Common.DBC.Commands
         {
             foreach (var name in names)
             {
-                switch (name.ToLower())
+                switch (name.Trim().ToLower())
                 {
                     case "achievement.dbc":
                         _dbcSerializer.Serialize(_dbcDatabase.Achievements, outputDir);
