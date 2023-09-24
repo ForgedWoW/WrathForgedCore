@@ -8,13 +8,13 @@ namespace WrathForged.Common.Serialization
 {
     public static class SerializationHelpers
     {
-        public static uint GetCollectionSize(this PacketBuffer packetBuffer, PropertyMeta meta, Dictionary<uint, uint> collectionSizes)
+        public static int GetCollectionSize(this PacketBuffer packetBuffer, PropertyMeta meta, Dictionary<uint, int> collectionSizes)
         {
             var size = meta.SerializationMetadata.FixedCollectionSize;
 
             if (size == 0 && meta.SerializationMetadata.CollectionSizeIndex != 0)
             {
-                size = (int)collectionSizes[meta.SerializationMetadata.CollectionSizeIndex];
+                size = collectionSizes[meta.SerializationMetadata.CollectionSizeIndex];
             }
             else if (size == 0)
             {
@@ -35,15 +35,15 @@ namespace WrathForged.Common.Serialization
                             break;
 
                         case TypeCode.Int16:
-                            size = (int)(uint)packetBuffer.Reader.ReadInt16();
+                            size = packetBuffer.Reader.ReadInt16();
                             break;
 
                         case TypeCode.Int32:
-                            size = (int)(uint)packetBuffer.Reader.ReadInt32();
+                            size = packetBuffer.Reader.ReadInt32();
                             break;
 
                         case TypeCode.Int64:
-                            size = (int)(uint)packetBuffer.Reader.ReadInt64();
+                            size = (int)packetBuffer.Reader.ReadInt64();
                             break;
                     }
                 }
@@ -53,9 +53,9 @@ namespace WrathForged.Common.Serialization
                 }
             }
 
-            collectionSizes[meta.SerializationMetadata.Index] = (uint)size;
+            collectionSizes[meta.SerializationMetadata.Index] = size;
 
-            return (uint)size;
+            return size;
         }
 
         public static void SerializeCollectionSize(this PrimitiveWriter writer, PropertyMeta prop, List<PropertyMeta> otherMeta, object obj)

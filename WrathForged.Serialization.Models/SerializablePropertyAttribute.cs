@@ -3,6 +3,7 @@
 
 namespace WrathForged.Serialization.Models
 {
+    [AttributeUsage(AttributeTargets.Property)]
     public class SerializablePropertyAttribute : Attribute
     {
         public SerializablePropertyAttribute(uint index) => Index = index;
@@ -49,8 +50,8 @@ namespace WrathForged.Serialization.Models
         public uint DontSerializeWhenIndexIsDefaultValue { get; set; } = uint.MaxValue;
 
         /// <summary>
-        ///     If the string is reversed then it will be reversed after being deserialized.
+        ///     Flags for specific serialization behaviors
         /// </summary>
-        public bool ReversedString { get; set; }
+        public SerializationFlags Flags { get; set; } = SerializationFlags.None;
     }
 }

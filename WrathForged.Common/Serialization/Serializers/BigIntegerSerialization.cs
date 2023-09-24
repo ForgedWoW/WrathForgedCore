@@ -15,11 +15,22 @@ namespace WrathForged.Common.Serialization.Serializers
 
         public HashSet<ForgedTypeCode> SupportedForgedTypeCodes { get; } = new HashSet<ForgedTypeCode>();
 
-        public object? Deserialize(PacketBuffer packetBuffer, PropertyMeta propertyMeta, Dictionary<uint, uint> collectionSizes) => new BigInteger(packetBuffer.Reader.ReadBytes(propertyMeta.SerializationMetadata.FixedCollectionSize));
+        public object? Deserialize(PacketBuffer packetBuffer, PropertyMeta propertyMeta, Dictionary<uint, int> collectionSizes)
+        {
+            var size = propertyMeta.SerializationMetadata.FixedCollectionSize;
+
+            if (propertyMeta.SerializationMetadata.Flags.HasFlag(SerializationFlags.BigIntegerWithLength) && size == 0)
+                size = packetBuffer.GetCollectionSize(propertyMeta, collectionSizes);
+
+            return new BigInteger(packetBuffer.Reader.ReadBytes(size));
+        }
 
         public void Serialize(PrimitiveWriter writer, PropertyMeta propertyMeta, List<PropertyMeta> otherMeta, object obj)
         {
             var val = propertyMeta.ReflectedProperty.GetValue(obj);
+
+            if (propertyMeta.SerializationMetadata.Flags.HasFlag(SerializationFlags.BigIntegerWithLength) && propertyMeta.SerializationMetadata.FixedCollectionSize == 0)
+                writer.SerializeCollectionSize(propertyMeta, otherMeta, obj);
 
             if (val != null)
                 writer.Write(((BigInteger)val).ToByteArray());

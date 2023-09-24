@@ -392,7 +392,7 @@ namespace WrathForged.Serialization
             return string.Empty; // Return empty if no suitable deserialization method found.
         }
 
-        internal CollectionType DetermineCollectionType(ITypeSymbol typeSymbol)
+        internal static CollectionType DetermineCollectionType(ITypeSymbol typeSymbol)
         {
             // Check if it's an array
             if (typeSymbol is IArrayTypeSymbol)
@@ -407,7 +407,7 @@ namespace WrathForged.Serialization
                 : CollectionType.None;
         }
 
-        internal string GenerateCollectionSizeCode(AttributeData attribute, string variableName, CollectionType collectionType)
+        internal static string GenerateCollectionSizeCode(AttributeData attribute, string variableName, CollectionType collectionType)
         {
             var fixedCollectionSize = attribute.GetNamedArg("FixedCollectionSize", 0u);
 
@@ -521,7 +521,7 @@ namespace WrathForged.Serialization
             };
         }
 
-        private bool IsPrimitiveOrSimpleType(ForgedTypeCode typeCode)
+        private static bool IsPrimitiveOrSimpleType(ForgedTypeCode typeCode)
         {
             return typeCode switch
             {

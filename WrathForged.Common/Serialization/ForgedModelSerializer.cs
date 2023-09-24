@@ -109,7 +109,7 @@ namespace WrathForged.Common.Serialization
             try
             {
                 var instance = Activator.CreateInstance(deserializationDefinition.Item1);
-                Dictionary<uint, uint> collectionSizes = new();
+                Dictionary<uint, int> collectionSizes = new();
                 foreach (var prop in deserializationDefinition.Item2)
                 {
                     var isCollection = prop.ReflectedProperty.PropertyType.IsArray ||
@@ -121,7 +121,7 @@ namespace WrathForged.Common.Serialization
                         ? _forgedTypeCodeSerializers[ForgedTypeCode.Enum].Deserialize(buffer, prop, collectionSizes)
                         : DeserializeProperty(buffer, prop, collectionSizes);
 
-                    result = EvaluateSpecialCasting(buffer, prop, result);
+                    result = EvaluateSpecialCasting(prop, result);
 
                     if (result != null)
                         prop.ReflectedProperty.SetValue(instance, result);
@@ -139,12 +139,12 @@ namespace WrathForged.Common.Serialization
             return DeserializationResult.Error;
         }
 
-        private object? DeserializeCollection(PacketBuffer buffer, PropertyMeta prop, Dictionary<uint, uint> collectionSizes)
+        private object? DeserializeCollection(PacketBuffer buffer, PropertyMeta prop, Dictionary<uint, int> collectionSizes)
         {
             var collectionSize = buffer.GetCollectionSize(prop, collectionSizes);
             List<object?> collection = new();
             for (var i = 0; i < collectionSize; i++)
-                collection.Add(EvaluateSpecialCasting(buffer, prop, DeserializeProperty(buffer, prop, collectionSizes)));
+                collection.Add(EvaluateSpecialCasting(prop, DeserializeProperty(buffer, prop, collectionSizes)));
 
             return prop.ReflectedProperty.PropertyType.IsArray
                     ? collection.ToArray()
@@ -161,7 +161,7 @@ namespace WrathForged.Common.Serialization
                 SerializeProperty(writer, prop, otherMeta, item);
         }
 
-        private object? DeserializeProperty(PacketBuffer buffer, PropertyMeta prop, Dictionary<uint, uint> collectionSizes)
+        private object? DeserializeProperty(PacketBuffer buffer, PropertyMeta prop, Dictionary<uint, int> collectionSizes)
         {
             return _forgedTypeCodeSerializers.TryGetValue(prop.SerializationMetadata.OverrideType, out var forgedTypeSerialization) ||
                        _serializers.TryGetValue(prop.ReflectedProperty.PropertyType, out forgedTypeSerialization)
@@ -178,7 +178,7 @@ namespace WrathForged.Common.Serialization
             }
         }
 
-        private object? EvaluateSpecialCasting(PacketBuffer buffer, PropertyMeta prop, object? val)
+        private static object? EvaluateSpecialCasting(PropertyMeta prop, object? val)
         {
             if (val == null)
                 return null;

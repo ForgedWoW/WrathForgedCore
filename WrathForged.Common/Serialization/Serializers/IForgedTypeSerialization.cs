@@ -11,7 +11,7 @@ namespace WrathForged.Common.Serialization.Serializers
 
         HashSet<ForgedTypeCode> SupportedForgedTypeCodes { get; }
 
-        object? Deserialize(PacketBuffer packetBuffer, PropertyMeta propertyMeta, Dictionary<uint, uint> collectionSizes);
+        object? Deserialize(PacketBuffer packetBuffer, PropertyMeta propertyMeta, Dictionary<uint, int> collectionSizes);
 
         void Serialize(PrimitiveWriter writer, PropertyMeta propertyMeta, List<PropertyMeta> otherMeta, object obj);
     }

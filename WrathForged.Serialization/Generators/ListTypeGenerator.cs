@@ -20,10 +20,10 @@ namespace WrathForged.Serialization.Generators
         {
             var listSerialization = new StringBuilder();
 
-            var collectionType = _serializationGenerator.DetermineCollectionType(typeSymbol);
+            var collectionType = SerializationGenerator.DetermineCollectionType(typeSymbol);
 
             // Check if the size was already written using CollectionSizeIndex
-            var size = _serializationGenerator.GenerateCollectionSizeCode(attribute, variableName, collectionType);
+            var size = SerializationGenerator.GenerateCollectionSizeCode(attribute, variableName, collectionType);
 
             if (!string.IsNullOrEmpty(size))
                 listSerialization.AppendLine(size);

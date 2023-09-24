@@ -10,7 +10,7 @@ namespace WrathForged.Common.Serialization.Serializers
         public HashSet<Type> SupportedTypes { get; } = new HashSet<Type>() { typeof(decimal) };
         public HashSet<ForgedTypeCode> SupportedForgedTypeCodes { get; } = new HashSet<ForgedTypeCode>();
 
-        public object? Deserialize(PacketBuffer packetBuffer, PropertyMeta propertyMeta, Dictionary<uint, uint> collectionSizes) => packetBuffer.Reader.ReadDecimal();
+        public object? Deserialize(PacketBuffer packetBuffer, PropertyMeta propertyMeta, Dictionary<uint, int> collectionSizes) => packetBuffer.Reader.ReadDecimal();
 
         public void Serialize(PrimitiveWriter writer, PropertyMeta propertyMeta, List<PropertyMeta> otherMeta, object obj)
         {

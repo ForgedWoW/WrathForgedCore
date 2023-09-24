@@ -11,12 +11,12 @@ namespace WrathForged.Common.Serialization.Serializers
         public HashSet<Type> SupportedTypes { get; } = new HashSet<Type>();
         public HashSet<ForgedTypeCode> SupportedForgedTypeCodes { get; } = new HashSet<ForgedTypeCode>() { ForgedTypeCode.PascalString };
 
-        public object? Deserialize(PacketBuffer packetBuffer, PropertyMeta propertyMeta, Dictionary<uint, uint> collectionSizes)
+        public object? Deserialize(PacketBuffer packetBuffer, PropertyMeta propertyMeta, Dictionary<uint, int> collectionSizes)
         {
             var length = packetBuffer.GetCollectionSize(propertyMeta, collectionSizes);
             var text = Encoding.ASCII.GetString(packetBuffer.Reader.ReadBytes((int)length)).TrimEnd('\0');
 
-            if (propertyMeta.SerializationMetadata.ReversedString)
+            if (propertyMeta.SerializationMetadata.Flags.HasFlag(SerializationFlags.ReversedString))
             {
                 var charArray = text.ToCharArray();
                 Array.Reverse(charArray);
@@ -31,7 +31,7 @@ namespace WrathForged.Common.Serialization.Serializers
             var text = propertyMeta.ReflectedProperty.GetValue(obj) as string ?? string.Empty;
             writer.SerializeCollectionSize(propertyMeta, otherMeta, obj);
 
-            if (propertyMeta.SerializationMetadata.ReversedString)
+            if (propertyMeta.SerializationMetadata.Flags.HasFlag(SerializationFlags.ReversedString))
             {
                 var charArray = text.ToCharArray();
                 Array.Reverse(charArray);
