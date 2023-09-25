@@ -1,6 +1,7 @@
 ﻿// Copyright (c) Forged WoW LLC <https://github.com/ForgedWoW/WrathForgedCore>
 // Licensed under GPL-3.0 license. See <https://github.com/ForgedWoW/WrathForgedCore/blob/master/LICENSE> for full information.
 using System.CommandLine;
+using System.Reflection;
 using Microsoft.EntityFrameworkCore;
 using Serilog;
 using WrathForged.Common.CommandLine;
@@ -16,7 +17,7 @@ namespace WrathForged.Common.DBC.Commands
         private readonly DBCDatabase _dbcDatabase;
         private readonly ILogger _logger;
         private readonly List<string> _dbcDefs = new();
-        private readonly Dictionary<string, DbSet<IDBCRecord>> _dbSets = new(StringComparer.InvariantCultureIgnoreCase);
+        private readonly Dictionary<string, PropertyInfo> _dbSets = new(StringComparer.InvariantCultureIgnoreCase);
 
         public DBCExportCommand(DBCSerializer dbcSerializer, DBCDatabase dbcDatabase, ScriptLoader scriptLoader, ILogger logger)
         {
@@ -46,10 +47,7 @@ namespace WrathForged.Common.DBC.Commands
                         continue;
 
                     var at = (DBCBoundAttribute)att;
-                    var val = prop.GetValue(_dbcDatabase);
-
-                    if (val != null)
-                        _dbSets[at.Name] = (DbSet<IDBCRecord>)val;
+                    _dbSets[at.Name] = prop;
                 }
             }
         }
@@ -95,11 +93,24 @@ namespace WrathForged.Common.DBC.Commands
 
         private void Export(IEnumerable<string> names, string outputDir)
         {
+            _logger.Information("Exporting {NamesCount} DBC's to {OutputDir}", names.Count(), outputDir);
+
             foreach (var name in names)
             {
-                if (_dbSets.TryGetValue(name, out var dBCRecords))
+                _logger.Information("Exporting DBC {Name}", name);
+                if (_dbSets.TryGetValue(name, out var propertyInfo))
                 {
-                    _dbcSerializer.Serialize(dBCRecords, outputDir);
+                    var propVal = propertyInfo.GetValue(_dbcDatabase);
+
+                    if (propVal != null)
+                    {
+                        _dbcSerializer.Serialize((IEnumerable<IDBCRecord>)propVal, outputDir);
+                        _logger.Information("Export of {Name}: Successful", name);
+                    }
+                    else
+                    {
+                        _logger.Warning("Export of {Name}: Unsuccessful", name);
+                    }
                 }
                 else
                 {
