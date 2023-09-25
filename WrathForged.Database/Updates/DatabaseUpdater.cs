@@ -169,8 +169,8 @@ namespace WrathForged.Database.Updates
 
             var indexByHash = updates.Updates.Where(u => u.Hash != null).Select(u => u.Hash).ToHashSet();
 
-            _logger.Information("Running {0} SQL updates for {1} database.", sqlToRun.Count, WORLD_DATABASE);
-
+            _logger.Information("Checking {0} SQL updates for {1} database.", sqlToRun.Count, dbName);
+            var startTime = DateTime.UtcNow;
             foreach (var sql in sqlToRun)
             {
                 if (sql.Name == "void.sql")
@@ -222,6 +222,9 @@ namespace WrathForged.Database.Updates
                     _logger.Error(ex, "Error running SQL update: {0}", sql);
                 }
             }
+
+            if (newUpdates.Updates != null)
+                _logger.Information("Ran {0} SQL updates for {1} database in {3}.", sqlToRun.Count, dbName, (DateTime.UtcNow - startTime).ToString());
 
             return newUpdates;
         }
