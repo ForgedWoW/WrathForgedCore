@@ -18,7 +18,6 @@ using WrathForged.Common.Scripting.Interfaces;
 using WrathForged.Common.Scripting.Interfaces.CoreEvents;
 using WrathForged.Common.Serialization;
 using WrathForged.Common.Threading;
-using WrathForged.Common.Util.ConvertConfigValue;
 using WrathForged.Database;
 
 namespace WrathForged.Common
@@ -27,7 +26,7 @@ namespace WrathForged.Common
     {
         public static IExportRegistrationBlock RegisterCommon(this IExportRegistrationBlock builder, IConfiguration configuration)
         {
-            Console.ForegroundColor = configuration.GetDefaultValueWithConverter<WrathEnumConverter, ConsoleColor>("Console:HighlightColor", ConsoleColor.DarkRed);
+            Console.ForegroundColor = ConsoleColor.DarkRed;
             Console.WriteLine(@"```````````````````````````````````````````````````````````````````````````````````````");
             Console.WriteLine(@"███████╗ ██████╗ ██████╗  ██████╗ ███████╗██████╗      ██████╗ ██████╗ ██████╗ ███████╗");
             Console.WriteLine(@"██╔════╝██╔═══██╗██╔══██╗██╔════╝ ██╔════╝██╔══██╗    ██╔════╝██╔═══██╗██╔══██╗██╔════╝");
@@ -38,7 +37,7 @@ namespace WrathForged.Common
             Console.WriteLine($"{Process.GetCurrentProcess().ProcessName,87}");
             Console.WriteLine(@"```````````````````````````````````````````````````````````````````````````````````````");
             Console.WriteLine("https://github.com/ForgedWoW/WrathForgedCore \r\n");
-            Console.ForegroundColor = configuration.GetDefaultValueWithConverter<WrathEnumConverter, ConsoleColor>("Console:DefaultColor", ConsoleColor.White);
+            Console.ResetColor();
 
             Log.Logger = new LoggerConfiguration()
              .ReadFrom.Configuration(configuration)

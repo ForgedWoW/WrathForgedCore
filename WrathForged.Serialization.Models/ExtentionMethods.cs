@@ -1,9 +1,9 @@
 ﻿// Copyright (c) Forged WoW LLC <https://github.com/ForgedWoW/WrathForgedCore>
 // Licensed under GPL-3.0 license. See <https://github.com/ForgedWoW/WrathForgedCore/blob/master/LICENSE> for full information.
-using System;
+
 using System.Text;
 
-namespace WrathForged.Serialization
+namespace WrathForged.Serialization.Models
 {
     public static class ExtentionMethods
     {
@@ -12,7 +12,7 @@ namespace WrathForged.Serialization
             var utf8StringBytes = Encoding.UTF8.GetBytes(str);
             var data = new byte[utf8StringBytes.Length + 1];
             Array.Copy(utf8StringBytes, data, utf8StringBytes.Length);
-            data[data.Length - 1] = 0;
+            data[^1] = 0;
             return data;
         }
 

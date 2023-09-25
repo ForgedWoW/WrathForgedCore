@@ -2376,7 +2376,6 @@ namespace WrathForged.Models.Realm.Enum
         UMSG_UNKNOWN_1292 = 1292, // not found
         SMSG_REDIRECT_CLIENT = 1293, // uint32 ip, uint16 port, uint32 unk, uint8[20] hash
         CMSG_UNKNOWN_1294 = 1294, // something with networking
-        SMSG_UNKNOWN_1295 = 1294, //
         CMSG_UNKNOWN_1296 = 1295, // something with networking
         SMSG_UNKNOWN_1297 = 1296, //
         CMSG_UNKNOWN_1298 = 1297, // something with networking

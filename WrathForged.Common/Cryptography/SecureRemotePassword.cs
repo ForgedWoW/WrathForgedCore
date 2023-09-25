@@ -111,6 +111,8 @@ namespace WrathForged.Common.Cryptography
             set => _srpParams = value;
         }
 
+        private static RandomNumberGenerator RandomGenerator { get; } = RandomNumberGenerator.Create();
+
         /// <summary>
         /// Are we the server? This should be set before calculation commences.
         /// </summary>
@@ -142,9 +144,9 @@ namespace WrathForged.Common.Cryptography
         /// <returns></returns>
         public static BigInteger RandomNumber() => RandomNumber(SRPParameters.KEY_LENGTH);
 
-        public BigInteger Modulus => Parameters.Modulus;
+        public static BigInteger Modulus => SRPParameters.Modulus;
 
-        public BigInteger Generator => Parameters.Generator;
+        public static BigInteger Generator => SRPParameters.Generator;
 
         /// <summary>
         /// 'k' in the spec. In SRP-6a k = H(N, g). Older versions have k = 3.
@@ -360,7 +362,7 @@ namespace WrathForged.Common.Cryptography
             }
         }
 
-        public BigInteger Hash(params HashUtilities.HashDataBroker[] brokers) => HashUtilities.HashToBigInteger(SRPParameters.Hash, brokers);
+        public static BigInteger Hash(params HashUtilities.HashDataBroker[] brokers) => HashUtilities.HashToBigInteger(SRPParameters.Hash, brokers);
 
         /// <summary>
         /// Generate a random number of a specified size
@@ -371,7 +373,7 @@ namespace WrathForged.Common.Cryptography
         {
             var buffer = new byte[size];
 
-            SRPParameters.RandomGenerator.GetBytes(buffer);
+            RandomGenerator.GetBytes(buffer);
 
             // Must make sure the most significant byte is not zero
             if (buffer[0] == 0)
@@ -411,7 +413,7 @@ namespace WrathForged.Common.Cryptography
             /// <summary>
             /// Random number generator for this instance.
             /// </summary>
-            public static RandomNumberGenerator RandomGenerator = RandomNumberGenerator.Create();
+            public RandomNumberGenerator RandomGenerator = RandomNumberGenerator.Create();
 
             /// <summary>
             /// Version of this instance.
@@ -491,9 +493,9 @@ namespace WrathForged.Common.Cryptography
             /// </summary>
             /// <remarks>Referred to as 'N' in the spec.</remarks>
             /// <remarks>Defaults to 128 bits.</remarks>
-            public BigInteger Modulus => _modulus;
+            public static BigInteger Modulus => _modulus;
 
-            public BigInteger Generator => _generator;
+            public static BigInteger Generator => _generator;
 
             public static SRPParameters Defaults => new();
         }

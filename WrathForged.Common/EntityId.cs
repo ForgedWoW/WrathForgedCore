@@ -1,5 +1,6 @@
 ﻿// Copyright (c) Forged WoW LLC <https://github.com/ForgedWoW/WrathForgedCore>
 // Licensed under GPL-3.0 license. See <https://github.com/ForgedWoW/WrathForgedCore/blob/master/LICENSE> for full information.
+
 using System.Runtime.InteropServices;
 using WrathForged.Common.Networking;
 using WrathForged.Common.Util;
@@ -12,7 +13,6 @@ namespace WrathForged.Common
     public enum HighId : ushort
     {
         Unit = 0xF130,
-        UnitPet = 0xF140,
 
         //Unit = 0xF550,
         Unit_F4 = 0xF430,
@@ -145,7 +145,7 @@ namespace WrathForged.Common
 
         public uint Low
         {
-            get => _low & LOW_MASK;
+            readonly get => _low & LOW_MASK;
 
             private set
             {
@@ -154,11 +154,11 @@ namespace WrathForged.Common
             }
         }
 
-        public uint Entry => _entry & ENTRY_MASK;
+        public readonly uint Entry => _entry & ENTRY_MASK;
 
         public HighId High
         {
-            get => (HighId)(_high >> 16);
+            readonly get => (HighId)(_high >> 16);
             private set
             {
                 _high &= ~HIGH_MASK;
@@ -166,21 +166,21 @@ namespace WrathForged.Common
             }
         }
 
-        public bool HasEntry =>
+        public readonly bool HasEntry =>
                 //return ((m_high >> 16) & 0xFF) != 0;
                 SeventhByte != HighGuidType.NoEntry;
 
-        public uint LowRaw => _low;
+        public readonly uint LowRaw => _low;
 
-        public uint HighRaw => _high;
+        public readonly uint HighRaw => _high;
 
-        public bool IsItem => EighthByte == HighGuid8.Item;
+        public readonly bool IsItem => EighthByte == HighGuid8.Item;
 
-        public HighGuidType SeventhByte => (HighGuidType)((_high & HIGH_7_MASK) >> 16);
+        public readonly HighGuidType SeventhByte => (HighGuidType)((_high & HIGH_7_MASK) >> 16);
 
-        public HighGuid8 EighthByte => (HighGuid8)((_high & HIGH_8_MASK) >> 24);
+        public readonly HighGuid8 EighthByte => (HighGuid8)((_high & HIGH_8_MASK) >> 24);
 
-        public ObjectTypeId ObjectType
+        public readonly ObjectTypeId ObjectType
         {
             get
             {
@@ -213,19 +213,19 @@ namespace WrathForged.Common
             }
         }
 
-        public int WritePacked(PrimitiveWriter binWriter) => binWriter.WritePackedUInt64(Full);
+        public readonly int WritePacked(PrimitiveWriter binWriter) => binWriter.WritePackedUInt64(Full);
 
-        public override bool Equals(object? obj) => obj != null && obj is EntityId entityId && Equals(entityId);
+        public override readonly bool Equals(object? obj) => obj != null && obj is EntityId entityId && Equals(entityId);
 
-        public int CompareTo(object obj) => obj is EntityId entity ? Full.CompareTo(entity.Full) : obj is ulong id ? Full.CompareTo(id) : -1;
+        public readonly int CompareTo(object obj) => obj is EntityId entity ? Full.CompareTo(entity.Full) : obj is ulong id ? Full.CompareTo(id) : -1;
 
-        public bool Equals(EntityId other) => other.Full == Full;
+        public readonly bool Equals(EntityId other) => other.Full == Full;
 
         public static bool operator ==(EntityId left, EntityId right) => left.Equals(right);
 
         public static bool operator !=(EntityId left, EntityId right) => !left.Equals(right);
 
-        public override string ToString()
+        public override readonly string ToString()
         {
             if (Full == 0)
             {
@@ -255,7 +255,7 @@ namespace WrathForged.Common
 
         public static EntityId GetUnitId(uint id, uint entry) => new(id, entry, HighId.Unit);
 
-        public static EntityId GetPetId(uint id, uint petNumber) => new(id, petNumber, HighId.UnitPet);
+        public static EntityId GetPetId(uint id, uint petNumber) => new(id, petNumber, HighId.Pet);
 
         public static EntityId GetPlayerId(uint low) => new(low, 0, HighId.Player);
 
@@ -265,40 +265,40 @@ namespace WrathForged.Common
 
         public static EntityId GetMOTransportId(uint low, uint entry) => new(low, entry, HighId.MoTransport);
 
-        public override int GetHashCode() => Full.GetHashCode();
+        public override readonly int GetHashCode() => Full.GetHashCode();
 
-        public TypeCode GetTypeCode() => TypeCode.Object;
+        public readonly TypeCode GetTypeCode() => TypeCode.Object;
 
-        public bool ToBoolean(IFormatProvider provider) => throw new InvalidCastException("Cannot cast EntityId to Boolean");
+        public readonly bool ToBoolean(IFormatProvider provider) => throw new InvalidCastException("Cannot cast EntityId to Boolean");
 
-        public byte ToByte(IFormatProvider provider) => throw new InvalidCastException("Cannot cast EntityId to Byte");
+        public readonly byte ToByte(IFormatProvider provider) => throw new InvalidCastException("Cannot cast EntityId to Byte");
 
-        public char ToChar(IFormatProvider provider) => throw new InvalidCastException("Cannot cast EntityId to Char");
+        public readonly char ToChar(IFormatProvider provider) => throw new InvalidCastException("Cannot cast EntityId to Char");
 
-        public DateTime ToDateTime(IFormatProvider provider) => throw new InvalidCastException("Cannot cast EntityId to DateTime");
+        public readonly DateTime ToDateTime(IFormatProvider provider) => throw new InvalidCastException("Cannot cast EntityId to DateTime");
 
-        public decimal ToDecimal(IFormatProvider provider) => throw new InvalidCastException("Cannot cast EntityId to Decimal");
+        public readonly decimal ToDecimal(IFormatProvider provider) => throw new InvalidCastException("Cannot cast EntityId to Decimal");
 
-        public double ToDouble(IFormatProvider provider) => throw new InvalidCastException("Cannot cast EntityId to Double");
+        public readonly double ToDouble(IFormatProvider provider) => throw new InvalidCastException("Cannot cast EntityId to Double");
 
-        public short ToInt16(IFormatProvider provider) => throw new InvalidCastException("Cannot cast EntityId to Int16");
+        public readonly short ToInt16(IFormatProvider provider) => throw new InvalidCastException("Cannot cast EntityId to Int16");
 
-        public int ToInt32(IFormatProvider provider) => throw new InvalidCastException("Cannot cast EntityId to Int32");
+        public readonly int ToInt32(IFormatProvider provider) => throw new InvalidCastException("Cannot cast EntityId to Int32");
 
-        public long ToInt64(IFormatProvider provider) => (long)Full;
+        public readonly long ToInt64(IFormatProvider provider) => (long)Full;
 
-        public sbyte ToSByte(IFormatProvider provider) => throw new InvalidCastException("Cannot cast EntityId to SByte");
+        public readonly sbyte ToSByte(IFormatProvider provider) => throw new InvalidCastException("Cannot cast EntityId to SByte");
 
-        public float ToSingle(IFormatProvider provider) => throw new InvalidCastException("Cannot cast EntityId to Single");
+        public readonly float ToSingle(IFormatProvider provider) => throw new InvalidCastException("Cannot cast EntityId to Single");
 
-        public string ToString(IFormatProvider provider) => ToString();
+        public readonly string ToString(IFormatProvider provider) => ToString();
 
-        public object ToType(Type conversionType, IFormatProvider provider) => Convert.ChangeType(Full, conversionType);
+        public readonly object ToType(Type conversionType, IFormatProvider provider) => Convert.ChangeType(Full, conversionType);
 
-        public ushort ToUInt16(IFormatProvider provider) => throw new InvalidCastException("Cannot cast EntityId to UInt16");
+        public readonly ushort ToUInt16(IFormatProvider provider) => throw new InvalidCastException("Cannot cast EntityId to UInt16");
 
-        public uint ToUInt32(IFormatProvider provider) => throw new InvalidCastException("Cannot cast EntityId to UInt32");
+        public readonly uint ToUInt32(IFormatProvider provider) => throw new InvalidCastException("Cannot cast EntityId to UInt32");
 
-        public ulong ToUInt64(IFormatProvider provider) => Full;
+        public readonly ulong ToUInt64(IFormatProvider provider) => Full;
     }
 }

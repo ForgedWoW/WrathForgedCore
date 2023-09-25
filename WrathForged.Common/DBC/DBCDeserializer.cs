@@ -1,8 +1,8 @@
-﻿// Copyright (c) Forged WoW LLC <https://github.com/ForgedWoW/WrathForgedCore> Licensed under
-// GPL-3.0 license. See <https://github.com/ForgedWoW/WrathForgedCore/blob/master/LICENSE> for full information.
+﻿// Copyright (c) Forged WoW LLC <https://github.com/ForgedWoW/WrathForgedCore>
+// Licensed under GPL-3.0 license. See <https://github.com/ForgedWoW/WrathForgedCore/blob/master/LICENSE> for full information.
+
 using System.Reflection;
 using System.Text;
-using Microsoft.Extensions.Configuration;
 using Serilog;
 using WrathForged.Database.DBC;
 
@@ -10,16 +10,11 @@ namespace WrathForged.Common.DBC
 {
     public class DBCDeserializer
     {
-        private readonly IConfiguration _configuration;
         private readonly ILogger _logger;
 
-        public DBCDeserializer(IConfiguration configuration, ILogger logger)
-        {
-            _configuration = configuration;
-            _logger = logger;
-        }
+        public DBCDeserializer(ILogger logger) => _logger = logger;
 
-        public static IEnumerable<T> Deserialize<T>(string filePath) where T : class, new()
+        public IEnumerable<T> Deserialize<T>(string filePath) where T : class, new()
         {
             if (typeof(T).GetCustomAttribute(typeof(DBCBoundAttribute)) is not DBCBoundAttribute dbcAtt)
                 return Enumerable.Empty<T>();
@@ -56,18 +51,43 @@ namespace WrathForged.Common.DBC
                     if (property.GetCustomAttribute(typeof(DBCPropertyBindingAttribute)) is not DBCPropertyBindingAttribute attribute)
                         continue;
 
-                    object value = attribute.BindingType switch
+                    object? value;
+                    switch (attribute.BindingType)
                     {
-                        DBCBindingType.INT32 => reader.ReadInt32(),
-                        DBCBindingType.UINT32 => reader.ReadUInt32(),
-                        DBCBindingType.UINT8 => reader.ReadByte(),
-                        DBCBindingType.FLOAT => reader.ReadSingle(),
-                        DBCBindingType.DOUBLE => reader.ReadDouble(),
-                        DBCBindingType.STRING => Encoding.UTF8.GetString(stringBlock, reader.ReadInt32(), (int)(stringBlock.Length - reader.BaseStream.Position)),
-                        DBCBindingType.UNKNOWN or DBCBindingType.IGNORE_ORDER or _ => throw new InvalidOperationException("Unsupported binding type"),
-                    };
+                        case DBCBindingType.INT32:
+                            value = reader.ReadInt32();
+                            break;
 
-                    property.SetValue(item, value);
+                        case DBCBindingType.UINT32:
+                            value = reader.ReadUInt32();
+                            break;
+
+                        case DBCBindingType.UINT8:
+                            value = reader.ReadByte();
+                            break;
+
+                        case DBCBindingType.FLOAT:
+                            value = reader.ReadSingle();
+                            break;
+
+                        case DBCBindingType.DOUBLE:
+                            value = reader.ReadDouble();
+                            break;
+
+                        case DBCBindingType.STRING:
+                            value = Encoding.UTF8.GetString(stringBlock, reader.ReadInt32(), (int)(stringBlock.Length - reader.BaseStream.Position));
+                            break;
+
+                        case DBCBindingType.UNKNOWN:
+                        case DBCBindingType.IGNORE_ORDER:
+                        default:
+                            _logger.Warning("Unsupported binding type {BindingType}", attribute.BindingType);
+                            value = null;
+                            break;
+                    }
+
+                    if (value != null)
+                        property.SetValue(item, value);
                 }
 
                 items.Add(item);

@@ -33,10 +33,10 @@ namespace WrathForged.Common.Cryptography
         public void WriteServerChallenge(PrimitiveWriter packet)
         {
             packet.WriteBigInt(SRP.PublicEphemeralValueB, 32);
-            packet.WriteBigIntLength(SRP.Generator, 1);
+            packet.WriteBigIntLength(SecureRemotePassword.Generator, 1);
 
             // We will pad this out to 32 bytes.
-            packet.WriteBigIntLength(SRP.Modulus, 32);
+            packet.WriteBigIntLength(SecureRemotePassword.Modulus, 32);
             packet.WriteBigInt(SRP.Salt);
         }
 

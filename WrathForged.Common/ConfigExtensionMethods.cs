@@ -39,7 +39,7 @@ namespace WrathForged.Common
                 return defaultValue;
             }
 
-            var retVal = _converters.TryGetValue(type, out var convertConfigValue) ? convertConfigValue.Convert<T>(value) : (T?)Convert.ChangeType(value, type);
+            var retVal = _converters.TryGetValue(typeof(C), out var convertConfigValue) ? convertConfigValue.Convert<T>(value) : (T?)Convert.ChangeType(value, type);
 
             if (retVal == null)
             {

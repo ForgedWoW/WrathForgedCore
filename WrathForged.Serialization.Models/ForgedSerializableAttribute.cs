@@ -3,6 +3,7 @@
 
 namespace WrathForged.Serialization.Models
 {
+    [AttributeUsage(AttributeTargets.Class)]
     public class ForgedSerializableAttribute : Attribute
     {
         public PacketScope Scope { get; set; }

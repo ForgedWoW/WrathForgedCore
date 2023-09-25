@@ -19,14 +19,14 @@ namespace WrathForged.Common.CommandLine.Commands
 
         public Command AddCommand()
         {
-            var command = new Command("--exit", "Exits the program.");
-            command.AddAlias("--quit");
-            command.AddAlias("--stop");
-            var timeArg = new Argument<int>("time", "the number of seconds to start the shutdown in, this is optional")
+            var command = new Command("--" + _localizer.Localize(30006), _localizer.Localize(30000));
+            command.AddAlias("--" + _localizer.Localize(30007));
+            command.AddAlias("--" + _localizer.Localize(30008));
+            var timeArg = new Argument<int>(_localizer.Localize(30004), _localizer.Localize(30001))
             {
                 Arity = ArgumentArity.ZeroOrOne
             };
-            var reasonArg = new Argument<string>("reason", "the reason for the shutdown, this is optional")
+            var reasonArg = new Argument<string>(_localizer.Localize(30005), _localizer.Localize(30002))
             {
                 Arity = ArgumentArity.ZeroOrOne
             };
@@ -35,9 +35,9 @@ namespace WrathForged.Common.CommandLine.Commands
             command.SetHandler((time, reason) =>
             {
                 if (time != 0)
-                    _programExitNotifier.NotifyStopDelayed(time, reason ?? "Exit program called.");
+                    _programExitNotifier.NotifyStopDelayed(time, reason ?? _localizer.Localize(30003));
                 else
-                    _programExitNotifier.NotifyStop(reason ?? "Exit program called.");
+                    _programExitNotifier.NotifyStop(reason ?? _localizer.Localize(30003));
             }, timeArg, reasonArg);
 
             return command;

@@ -1,5 +1,6 @@
 ﻿// Copyright (c) Forged WoW LLC <https://github.com/ForgedWoW/WrathForgedCore>
 // Licensed under GPL-3.0 license. See <https://github.com/ForgedWoW/WrathForgedCore/blob/master/LICENSE> for full information.
+
 using System.Net;
 using System.Numerics;
 using System.Text;
@@ -9,7 +10,7 @@ namespace WrathForged.Common.Networking
 {
     public class PrimitiveReader : BinaryReader
     {
-        public static Encoding DefaultEncoding = Encoding.UTF8;
+        public static Encoding DefaultEncoding { get; } = Encoding.UTF8;
         private readonly ILogger _logger;
 
         public PrimitiveReader(MemoryStream memoryStream, ILogger logger)

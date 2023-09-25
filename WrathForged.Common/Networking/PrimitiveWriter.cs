@@ -1,5 +1,6 @@
 ﻿// Copyright (c) Forged WoW LLC <https://github.com/ForgedWoW/WrathForgedCore>
 // Licensed under GPL-3.0 license. See <https://github.com/ForgedWoW/WrathForgedCore/blob/master/LICENSE> for full information.
+
 using System.Net;
 using System.Numerics;
 using System.Text;
@@ -12,7 +13,7 @@ namespace WrathForged.Common.Networking
     /// </summary>
     public class PrimitiveWriter : BinaryWriter
     {
-        public static Encoding DefaultEncoding = Encoding.UTF8;
+        public static Encoding DefaultEncoding { get; } = Encoding.UTF8;
 
         public PrimitiveWriter() : base(new MemoryStream())
         {

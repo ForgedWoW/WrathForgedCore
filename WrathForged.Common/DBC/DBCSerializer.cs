@@ -1,9 +1,8 @@
-﻿// Copyright (c) Forged WoW LLC <https://github.com/ForgedWoW/WrathForgedCore> Licensed under
-// GPL-3.0 license. See <https://github.com/ForgedWoW/WrathForgedCore/blob/master/LICENSE> for full information.
+﻿// Copyright (c) Forged WoW LLC <https://github.com/ForgedWoW/WrathForgedCore>
+// Licensed under GPL-3.0 license. See <https://github.com/ForgedWoW/WrathForgedCore/blob/master/LICENSE> for full information.
 using System.Reflection;
 using System.Runtime.InteropServices;
 using System.Text;
-using Microsoft.Extensions.Configuration;
 using Serilog;
 using WrathForged.Database.DBC;
 
@@ -11,14 +10,9 @@ namespace WrathForged.Common.DBC
 {
     public class DBCSerializer
     {
-        private readonly IConfiguration _configuration;
         private readonly ILogger _logger;
 
-        public DBCSerializer(IConfiguration configuration, ILogger logger)
-        {
-            _configuration = configuration;
-            _logger = logger;
-        }
+        public DBCSerializer(ILogger logger) => _logger = logger;
 
         public void Serialize<T>(IEnumerable<T> items, string filePath) where T : class, IDBCRecord
         {
@@ -103,7 +97,8 @@ namespace WrathForged.Common.DBC
                         case DBCBindingType.UNKNOWN:
                         case DBCBindingType.IGNORE_ORDER:
                         default:
-                            throw new InvalidOperationException("Unsupported binding type");
+                            _logger.Warning("Unsupported binding type {BindingType}", attribute.BindingType);
+                            break;
                     }
                 }
             }

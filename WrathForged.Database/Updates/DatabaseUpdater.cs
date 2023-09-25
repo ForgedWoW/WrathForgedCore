@@ -164,10 +164,9 @@ namespace WrathForged.Database.Updates
 
             var newUpdates = new SQLUpdates();
 
-            if (sqlToRun == null || sqlToRun.Count > 0)
+            if (sqlToRun == null || sqlToRun.Count == 0)
                 return newUpdates;
 
-            var indexByName = updates.Updates.Select(u => u.Name).ToHashSet();
             var indexByHash = updates.Updates.Where(u => u.Hash != null).Select(u => u.Hash).ToHashSet();
 
             _logger.Information("Running {0} SQL updates for {1} database.", sqlToRun.Count, WORLD_DATABASE);
@@ -180,9 +179,6 @@ namespace WrathForged.Database.Updates
                 var hash = CalculateHash(sql.FullName);
 
                 if (indexByHash.Contains(hash)) // Already applied
-                    continue;
-
-                if (indexByName.Contains(sql.Name)) // Already applied
                     continue;
 
                 // check if the path the file is in is archived
@@ -209,6 +205,9 @@ namespace WrathForged.Database.Updates
                     _ = dbContext.Database.ExecuteSqlRaw(File.ReadAllText(sql.FullName));
                     var elapsed = DateTime.UtcNow - updateStart;
                     _logger.Information("SQL update {0} took {1}.", sql.Name, elapsed.ToString());
+
+                    newUpdates.Updates ??= new List<Update>();
+
                     newUpdates.Updates.Add(new Update()
                     {
                         Name = sql.Name,
