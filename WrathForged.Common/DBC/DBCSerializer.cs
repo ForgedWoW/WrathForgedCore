@@ -3,6 +3,7 @@
 using System.Reflection;
 using System.Runtime.InteropServices;
 using System.Text;
+using Microsoft.EntityFrameworkCore;
 using Serilog;
 using WrathForged.Database.DBC;
 
@@ -14,22 +15,30 @@ namespace WrathForged.Common.DBC
 
         public DBCSerializer(ILogger logger) => _logger = logger;
 
-        public void Serialize<T>(IEnumerable<T> items, string filePath) where T : class, IDBCRecord
+        public void Serialize<T>(IEnumerable<T> itemsEn, string filePath, PropertyInfo prop) where T : class, IDBCRecord
         {
-            if (typeof(T).GetCustomAttribute(typeof(DBCBoundAttribute)) is not DBCBoundAttribute dbcAtt)
+            var type = typeof(T);
+
+            if (prop.PropertyType.IsGenericType && prop.PropertyType.GetGenericTypeDefinition() == typeof(DbSet<>))
+                type = prop.PropertyType.GetGenericArguments()[0];
+            else
+                return;
+
+            if (type.GetCustomAttribute(typeof(DBCBoundAttribute)) is not DBCBoundAttribute dbcAtt)
                 return;
 
             using var writer = new BinaryWriter(File.Open(Path.Combine(filePath, dbcAtt.Name), FileMode.Create));
-            var type = typeof(T);
+
             var properties = type.GetProperties()
                                  .Where(p => Attribute.IsDefined(p, typeof(DBCPropertyBindingAttribute)))
                                  .OrderBy(p => (p.GetCustomAttribute(typeof(DBCPropertyBindingAttribute)) as DBCPropertyBindingAttribute)?.ColumnIndex)
                                  .ToArray();
 
+            var items = itemsEn.ToArray(); // execute the sql query, load all into memory
             var header = new DBCHeader
             {
                 Magic = 0x43424457, // 'WDBC'
-                RecordCount = (uint)items.Count(),
+                RecordCount = (uint)items.Length,
                 FieldCount = (uint)properties.Length,
                 RecordSize = (uint)properties.Sum(p => Marshal.SizeOf(p.PropertyType)),
                 StringBlockSize = (uint)items.SelectMany(item => properties.Select(p => p.GetValue(item)?.ToString() ?? string.Empty))

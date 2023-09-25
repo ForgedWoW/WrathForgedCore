@@ -104,7 +104,7 @@ namespace WrathForged.Common.DBC.Commands
 
                     if (propVal != null)
                     {
-                        _dbcSerializer.Serialize((IEnumerable<IDBCRecord>)propVal, outputDir);
+                        _dbcSerializer.Serialize((IEnumerable<IDBCRecord>)propVal, outputDir, propertyInfo);
                         _logger.Information("Export of {Name}: Successful", name);
                     }
                     else
