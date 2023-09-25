@@ -11,7 +11,7 @@ namespace WrathForged.Common
         ///     Convert a string to another value.
         /// </summary>
         /// <param name="value"></param>
-        /// <returns></returns>
+        /// <returns><see langword="null"/> or the converted object</returns>
         T? Convert<T>(string value);
     }
 }

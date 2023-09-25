@@ -10,7 +10,7 @@ Use to add addtional commands to the servers command line window.
 
 | Interface | Description |
 | --------- | ----------- |
-| [ICommandLineArgumentHandler](https://github.com/ForgedWoW/WrathForgedCore/blob/main/WrathForged.Common/CommandLine/ICommandLineArgumentHandler.cs)|Registers a new command line for the server to use. Automatically adds it to -help. [Example Impl](https://github.com/ForgedWoW/WrathForgedCore/blob/main/WrathForged.Common/CommandLine/Commands/ProgramExitCommand.cs)|
+| [ICommandLineArgumentHandler](https://github.com/ForgedWoW/WrathForgedCore/blob/main/WrathForged.Common/CommandLine/ICommandLineArgumentHandler.cs)|Registers a new command line for the server to use. Automatically adds it to --help. [Example Impl](https://github.com/ForgedWoW/WrathForgedCore/blob/main/WrathForged.Common/CommandLine/Commands/ProgramExitCommand.cs)|
 
 ### Configuration
 | Interface | Description |

@@ -1,5 +1,6 @@
 ﻿// Copyright (c) Forged WoW LLC <https://github.com/ForgedWoW/WrathForgedCore>
 // Licensed under GPL-3.0 license. See <https://github.com/ForgedWoW/WrathForgedCore/blob/master/LICENSE> for full information.
+
 using Serilog;
 using WrathForged.Database;
 
@@ -22,15 +23,28 @@ namespace WrathForged.Common
             _classFactory = classFactory;
         }
 
+        /// <summary>
+        ///     <see langword="true"/> if a delayed stop is requested, <see langword="false"/> otherwise.
+        /// </summary>
         public bool DelayedStopRequested => _timer != null;
+
+        /// <summary>
+        ///     Set to <see langword="true"/> when the server is starting the exit process. This is set before any exit events are called and before any cancellation tokens are cancelled.
+        /// </summary>
         public bool IsExiting { get; private set; }
 
+        /// <summary>
+        ///     Called when the server is exiting in X seconds. This is called once, when the timer is started.
+        /// </summary>
         public event EventHandler<int> ExitingInSeconds;
 
+        /// <summary>
+        ///     Called on program exit. Logger and common services are still available.
+        /// </summary>
         public event EventHandler ExitProgram;
 
         /// <summary>
-        ///     The Logger and common services are stopped here. DO not attempt to use them.
+        ///     The Logger and common services are stopped here. DO NOT attempt to use them. Database is still available.
         /// </summary>
         public event EventHandler ExitProgramLate;
 

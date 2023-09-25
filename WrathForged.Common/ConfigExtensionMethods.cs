@@ -19,8 +19,8 @@ namespace WrathForged.Common
         }
 
         /// <summary>
-        ///      Gets a value from config, if it doesn't exist, returns the default value. <see cref="IConvertConfigValue"/> is automatically used if it can convert the value. These are automatically registered at startup.
-        ///      If the converter returns null, the default value is returned.
+        ///      Gets a value from config, if it doesn't exist, returns the <paramref name="defaultValue"/>. <see cref="IConvertConfigValue"/> is automatically used if it can convert the value. These are automatically registered at startup.
+        ///      If the converter returns <see langword="null"/>, the <paramref name="defaultValue"/> is returned.
         /// </summary>
         /// <typeparam name="T">Type of Object</typeparam>
         /// <typeparam name="C">The Converter Type</typeparam>
@@ -51,7 +51,7 @@ namespace WrathForged.Common
         }
 
         /// <summary>
-        ///      Gets a value from config, if it doesn't exist, returns the default value.
+        ///      Gets a value from config, if it doesn't exist, returns the <paramref name="defaultValue"/>.
         /// </summary>
         /// <typeparam name="T">Type of Object</typeparam>
         /// <param name="config">IConfiguration from Microsoft</param>
