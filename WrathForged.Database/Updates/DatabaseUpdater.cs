@@ -224,7 +224,7 @@ namespace WrathForged.Database.Updates
             }
 
             if (newUpdates.Updates != null)
-                _logger.Information("Ran {0} SQL updates for {1} database in {3}.", sqlToRun.Count, dbName, (DateTime.UtcNow - startTime).ToString());
+                _logger.Information("Ran {0} SQL updates for {1} database in {2}.", sqlToRun.Count, dbName, (DateTime.UtcNow - startTime).ToString());
 
             return newUpdates;
         }

@@ -1,49 +1,72 @@
-﻿using System;
-using System.Collections.Generic;
+﻿// Copyright (c) Forged WoW LLC <https://github.com/ForgedWoW/WrathForgedCore>
+// Licensed under GPL-3.0 license. See <https://github.com/ForgedWoW/WrathForgedCore/blob/master/LICENSE> for full information.
+using WrathForged.Database.DBC;
 
-namespace WrathForged.Database.Models.DBC;
-
-public partial class Gmsurveyanswer
+namespace WrathForged.Database.Models.DBC
 {
-    public int Id { get; set; }
+    [DBCBound("GMSurveyAnswers.dbc")]
+    public partial class Gmsurveyanswer : IDBCRecord
+    {
+        [DBCPropertyBinding(0, DBCBindingType.INT32)]
+        public int Id { get; set; }
 
-    public int SortIndex { get; set; }
+        [DBCPropertyBinding(1, DBCBindingType.INT32)]
+        public int SortIndex { get; set; }
 
-    public int? GmsurveyQuestionId { get; set; }
+        [DBCPropertyBinding(2, DBCBindingType.INT32, Nullable = true)]
+        public int? GmsurveyQuestionId { get; set; }
 
-    public string? AnswerLangEnUs { get; set; }
+        [DBCPropertyBinding(3, DBCBindingType.STRING, Nullable = true)]
+        public string? AnswerLangEnUs { get; set; }
 
-    public string? AnswerLangEnGb { get; set; }
+        [DBCPropertyBinding(4, DBCBindingType.STRING, Nullable = true)]
+        public string? AnswerLangEnGb { get; set; }
 
-    public string? AnswerLangKoKr { get; set; }
+        [DBCPropertyBinding(5, DBCBindingType.STRING, Nullable = true)]
+        public string? AnswerLangKoKr { get; set; }
 
-    public string? AnswerLangFrFr { get; set; }
+        [DBCPropertyBinding(6, DBCBindingType.STRING, Nullable = true)]
+        public string? AnswerLangFrFr { get; set; }
 
-    public string? AnswerLangDeDe { get; set; }
+        [DBCPropertyBinding(7, DBCBindingType.STRING, Nullable = true)]
+        public string? AnswerLangDeDe { get; set; }
 
-    public string? AnswerLangEnCn { get; set; }
+        [DBCPropertyBinding(8, DBCBindingType.STRING, Nullable = true)]
+        public string? AnswerLangEnCn { get; set; }
 
-    public string? AnswerLangZhCn { get; set; }
+        [DBCPropertyBinding(9, DBCBindingType.STRING, Nullable = true)]
+        public string? AnswerLangZhCn { get; set; }
 
-    public string? AnswerLangEnTw { get; set; }
+        [DBCPropertyBinding(10, DBCBindingType.STRING, Nullable = true)]
+        public string? AnswerLangEnTw { get; set; }
 
-    public string? AnswerLangZhTw { get; set; }
+        [DBCPropertyBinding(11, DBCBindingType.STRING, Nullable = true)]
+        public string? AnswerLangZhTw { get; set; }
 
-    public string? AnswerLangEsEs { get; set; }
+        [DBCPropertyBinding(12, DBCBindingType.STRING, Nullable = true)]
+        public string? AnswerLangEsEs { get; set; }
 
-    public string? AnswerLangEsMx { get; set; }
+        [DBCPropertyBinding(13, DBCBindingType.STRING, Nullable = true)]
+        public string? AnswerLangEsMx { get; set; }
 
-    public string? AnswerLangRuRu { get; set; }
+        [DBCPropertyBinding(14, DBCBindingType.STRING, Nullable = true)]
+        public string? AnswerLangRuRu { get; set; }
 
-    public string? AnswerLangPtPt { get; set; }
+        [DBCPropertyBinding(15, DBCBindingType.STRING, Nullable = true)]
+        public string? AnswerLangPtPt { get; set; }
 
-    public string? AnswerLangPtBr { get; set; }
+        [DBCPropertyBinding(16, DBCBindingType.STRING, Nullable = true)]
+        public string? AnswerLangPtBr { get; set; }
 
-    public string? AnswerLangItIt { get; set; }
+        [DBCPropertyBinding(17, DBCBindingType.STRING, Nullable = true)]
+        public string? AnswerLangItIt { get; set; }
 
-    public string? AnswerLangUnk { get; set; }
+        [DBCPropertyBinding(18, DBCBindingType.STRING, Nullable = true)]
+        public string? AnswerLangUnk { get; set; }
 
-    public uint AnswerLangMask { get; set; }
+        [DBCPropertyBinding(19, DBCBindingType.UINT32)]
+        public uint AnswerLangMask { get; set; }
 
-    public virtual Gmsurveyquestion? GmsurveyQuestion { get; set; }
+        public virtual Gmsurveyquestion? GmsurveyQuestion { get; set; }
+    }
 }

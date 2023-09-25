@@ -1,13 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
+﻿// Copyright (c) Forged WoW LLC <https://github.com/ForgedWoW/WrathForgedCore>
+// Licensed under GPL-3.0 license. See <https://github.com/ForgedWoW/WrathForgedCore/blob/master/LICENSE> for full information.
 
-namespace WrathForged.Database.Models.DBC;
+using WrathForged.Database.DBC;
 
-public partial class Declinedword
+namespace WrathForged.Database.Models.DBC
 {
-    public int Id { get; set; }
+    [DBCBound("Declinedword.dbc")]
+    public partial class Declinedword : IDBCRecord
+    {
+        [DBCPropertyBinding(0, DBCBindingType.INT32)]
+        public int Id { get; set; }
 
-    public string? Word { get; set; }
+        [DBCPropertyBinding(1, DBCBindingType.STRING, Nullable = true)]
+        public string? Word { get; set; }
 
-    public virtual ICollection<Declinedwordcase> Declinedwordcases { get; set; } = new List<Declinedwordcase>();
+        public virtual ICollection<Declinedwordcase> Declinedwordcases { get; set; } = new List<Declinedwordcase>();
+    }
 }

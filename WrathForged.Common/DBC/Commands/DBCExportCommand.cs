@@ -1,6 +1,7 @@
 ﻿// Copyright (c) Forged WoW LLC <https://github.com/ForgedWoW/WrathForgedCore>
 // Licensed under GPL-3.0 license. See <https://github.com/ForgedWoW/WrathForgedCore/blob/master/LICENSE> for full information.
 using System.CommandLine;
+using Microsoft.EntityFrameworkCore;
 using Serilog;
 using WrathForged.Common.CommandLine;
 using WrathForged.Common.Scripting;
@@ -15,6 +16,7 @@ namespace WrathForged.Common.DBC.Commands
         private readonly DBCDatabase _dbcDatabase;
         private readonly ILogger _logger;
         private readonly List<string> _dbcDefs = new();
+        private readonly Dictionary<string, DbSet<IDBCRecord>> _dbSets = new(StringComparer.InvariantCultureIgnoreCase);
 
         public DBCExportCommand(DBCSerializer dbcSerializer, DBCDatabase dbcDatabase, ScriptLoader scriptLoader, ILogger logger)
         {
@@ -29,6 +31,26 @@ namespace WrathForged.Common.DBC.Commands
                     continue;
 
                 _dbcDefs.Add(((DBCBoundAttribute)att).Name);
+            }
+
+            var dbcSets = typeof(DBCDatabase).GetProperties(System.Reflection.BindingFlags.Public | System.Reflection.BindingFlags.Instance);
+
+            foreach (var prop in dbcSets)
+            {
+                if (prop.PropertyType.IsGenericType && prop.PropertyType.GetGenericTypeDefinition() == typeof(DbSet<>))
+                {
+                    var type = prop.PropertyType.GetGenericArguments()[0];
+                    var att = type.GetCustomAttributes(typeof(DBCBoundAttribute), true).FirstOrDefault();
+
+                    if (att == null)
+                        continue;
+
+                    var at = (DBCBoundAttribute)att;
+                    var val = prop.GetValue(_dbcDatabase);
+
+                    if (val != null)
+                        _dbSets[at.Name] = (DbSet<IDBCRecord>)val;
+                }
             }
         }
 
@@ -75,15 +97,13 @@ namespace WrathForged.Common.DBC.Commands
         {
             foreach (var name in names)
             {
-                switch (name.Trim().ToLower())
+                if (_dbSets.TryGetValue(name, out var dBCRecords))
                 {
-                    case "achievement.dbc":
-                        _dbcSerializer.Serialize(_dbcDatabase.Achievements, outputDir);
-                        break;
-
-                    case "achievement_category.dbc":
-                        _dbcSerializer.Serialize(_dbcDatabase.AchievementCategories, outputDir);
-                        break;
+                    _dbcSerializer.Serialize(dBCRecords, outputDir);
+                }
+                else
+                {
+                    _logger.Warning("Could not find DBC {Name}", name);
                 }
             }
         }
