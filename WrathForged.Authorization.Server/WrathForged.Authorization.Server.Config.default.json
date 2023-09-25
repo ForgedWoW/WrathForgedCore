@@ -133,5 +133,12 @@
     "ThreadCount": 10
   },
   "ServerLocale_INFO": "0-8, https://github.com/ForgedWoW/WrathForgedCore/blob/main/WrathForged.Common/Localization/LocaleConst.cs",
-  "ServerLocale": 0
+  "ServerLocale": 0,
+  "Console": {
+    "BeepOnStartup": "true",
+    "COLOR_INFO": "https://learn.microsoft.com/en-us/dotnet/api/system.consolecolor?view=net-7.0",
+    "BackgroundColor": "Black",
+    "DefaultColor": "White",
+    "HighlightColor": "DarkRed"
+  }
 }

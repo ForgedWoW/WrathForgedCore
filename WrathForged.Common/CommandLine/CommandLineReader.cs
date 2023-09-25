@@ -1,7 +1,10 @@
 ﻿// Copyright (c) Forged WoW LLC <https://github.com/ForgedWoW/WrathForgedCore>
 // Licensed under GPL-3.0 license. See <https://github.com/ForgedWoW/WrathForgedCore/blob/master/LICENSE> for full information.
+
 using System.CommandLine;
+using Microsoft.Extensions.Configuration;
 using Serilog;
+using WrathForged.Common.Util.ConvertConfigValue;
 
 namespace WrathForged.Common.CommandLine
 {
@@ -10,12 +13,14 @@ namespace WrathForged.Common.CommandLine
         private readonly ProgramExitNotifier _programExitNotifier;
         private readonly ILogger _logger;
         private readonly ClassFactory _classFactory;
+        private readonly IConfiguration _configuration;
 
-        public CommandLineReader(ProgramExitNotifier programExitNotifier, ILogger logger, ClassFactory classFactory)
+        public CommandLineReader(ProgramExitNotifier programExitNotifier, ILogger logger, ClassFactory classFactory, IConfiguration configuration)
         {
             _programExitNotifier = programExitNotifier;
             _logger = logger;
             _classFactory = classFactory;
+            _configuration = configuration;
         }
 
         public async void ReadCommandLineUntilProgramExit()
@@ -29,8 +34,16 @@ namespace WrathForged.Common.CommandLine
                 rootCommand.AddCommand(commandLineArgumentHandler.AddCommand());
             }
 
+            Console.ForegroundColor = _configuration.GetDefaultValueWithConverter<WrathEnumConverter, ConsoleColor>("Console:HighlightColor", ConsoleColor.DarkRed);
+
+            if (_configuration.GetDefaultValueWithConverter<BoolConverter, bool>("Console:BeepOnStartup", true))
+                Console.Beep();
+
             while (!_programExitNotifier.IsExiting)
             {
+                Console.ForegroundColor = _configuration.GetDefaultValueWithConverter<WrathEnumConverter, ConsoleColor>("Console:HighlightColor", ConsoleColor.DarkRed);
+                Console.Write("> ");
+                Console.ForegroundColor = _configuration.GetDefaultValueWithConverter<WrathEnumConverter, ConsoleColor>("Console:DefaultColor", ConsoleColor.White);
                 var commandLine = Console.ReadLine();
 
                 if (string.IsNullOrWhiteSpace(commandLine))

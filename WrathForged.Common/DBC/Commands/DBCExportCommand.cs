@@ -1,6 +1,7 @@
-﻿// Copyright (c) Forged WoW LLC <https://github.com/ForgedWoW/WrathForgedCore> Licensed under
-// GPL-3.0 license. See <https://github.com/ForgedWoW/WrathForgedCore/blob/master/LICENSE> for full information.
+﻿// Copyright (c) Forged WoW LLC <https://github.com/ForgedWoW/WrathForgedCore>
+// Licensed under GPL-3.0 license. See <https://github.com/ForgedWoW/WrathForgedCore/blob/master/LICENSE> for full information.
 using System.CommandLine;
+using Serilog;
 using WrathForged.Common.CommandLine;
 using WrathForged.Common.Scripting;
 using WrathForged.Database.DBC;
@@ -12,12 +13,14 @@ namespace WrathForged.Common.DBC.Commands
     {
         private readonly DBCSerializer _dbcSerializer;
         private readonly DBCDatabase _dbcDatabase;
+        private readonly ILogger _logger;
         private readonly List<string> _dbcDefs = new();
 
-        public DBCExportCommand(DBCSerializer dbcSerializer, DBCDatabase dbcDatabase, ScriptLoader scriptLoader)
+        public DBCExportCommand(DBCSerializer dbcSerializer, DBCDatabase dbcDatabase, ScriptLoader scriptLoader, ILogger logger)
         {
             _dbcSerializer = dbcSerializer;
             _dbcDatabase = dbcDatabase;
+            _logger = logger;
             foreach (var record in scriptLoader.GetAllTypesThatUseInterface<IDBCRecord>())
             {
                 var att = record.GetCustomAttributes(typeof(DBCBoundAttribute), true).FirstOrDefault();
@@ -44,22 +47,29 @@ namespace WrathForged.Common.DBC.Commands
             command.AddArgument(dbcs);
             command.SetHandler((outputDir, names) =>
             {
-                if (string.IsNullOrEmpty(outputDir))
-                    outputDir = ".\\dbc\\";
+                try
+                {
+                    if (string.IsNullOrEmpty(outputDir))
+                        outputDir = ".\\dbc\\";
 
-                if (!Directory.Exists(outputDir))
-                    _ = Directory.CreateDirectory(outputDir);
+                    outputDir = outputDir.Replace("\"", string.Empty);
 
-                if (!string.IsNullOrWhiteSpace(names))
-                    Export(names.Split(',', StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries), outputDir);
-                else
-                    Export(_dbcDefs, outputDir);
+                    if (!Directory.Exists(outputDir))
+                        _ = Directory.CreateDirectory(outputDir);
+
+                    if (!string.IsNullOrWhiteSpace(names))
+                        Export(names.Split(',', StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries), outputDir);
+                    else
+                        Export(_dbcDefs, outputDir);
+                }
+                catch (Exception ex)
+                {
+                    _logger.Error(ex, "Failed to export DBC's");
+                }
             }, outputPath, dbcs);
 
             return command;
         }
-
-        Command ICommandLineArgumentHandler.AddCommand() => throw new NotImplementedException();
 
         private void Export(IEnumerable<string> names, string outputDir)
         {
