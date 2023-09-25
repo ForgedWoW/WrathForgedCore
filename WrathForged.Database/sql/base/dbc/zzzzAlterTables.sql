@@ -24,7 +24,8 @@ ALTER TABLE areapoi
 ADD FOREIGN KEY (FactionID) REFERENCES faction(ID),
 ADD FOREIGN KEY (AreaID) REFERENCES areatable(ID);
 
-CREATE INDEX idx_wmogroupid ON areatable (WMOGroupID);
+CREATE INDEX idx_wmogroupid ON wmoareatable(WMOGroupID);
+
 ALTER TABLE areatable
 ADD FOREIGN KEY (ContinentID) REFERENCES map(ID),
 ADD FOREIGN KEY (ParentAreaID) REFERENCES areatable(ID),
