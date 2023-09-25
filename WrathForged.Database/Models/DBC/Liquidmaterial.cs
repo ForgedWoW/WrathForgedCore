@@ -1,13 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
+﻿// Copyright (c) Forged WoW LLC <https://github.com/ForgedWoW/WrathForgedCore>
+// Licensed under GPL-3.0 license. See <https://github.com/ForgedWoW/WrathForgedCore/blob/master/LICENSE> for full information.
+using WrathForged.Database.DBC;
 
-namespace WrathForged.Database.Models.DBC;
-
-public partial class Liquidmaterial
+namespace WrathForged.Database.Models.DBC
 {
-    public int Id { get; set; }
+    [DBCBound("LiquidMaterial.dbc")]
+    public partial class Liquidmaterial : IDBCRecord
+    {
+        [DBCPropertyBinding(0, DBCBindingType.INT32)]
+        public int Id { get; set; }
 
-    public int Lvf { get; set; }
+        [DBCPropertyBinding(1, DBCBindingType.INT32)]
+        public int Lvf { get; set; }
 
-    public int Flags { get; set; }
+        [DBCPropertyBinding(2, DBCBindingType.INT32)]
+        public int Flags { get; set; }
+    }
 }
