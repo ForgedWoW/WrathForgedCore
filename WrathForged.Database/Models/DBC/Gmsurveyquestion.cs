@@ -61,7 +61,6 @@ namespace WrathForged.Database.Models.DBC
         [DBCPropertyBinding(17, DBCBindingType.UINT32)]
         public uint QuestionLangMask { get; set; }
 
-
         public virtual ICollection<Gmsurveyanswer> Gmsurveyanswers { get; set; } = new List<Gmsurveyanswer>();
 
         public virtual ICollection<Gmsurveysurvey> GmsurveysurveyQ10Navigations { get; set; } = new List<Gmsurveysurvey>();
@@ -84,3 +83,4 @@ namespace WrathForged.Database.Models.DBC
 
         public virtual ICollection<Gmsurveysurvey> GmsurveysurveyQ9Navigations { get; set; } = new List<Gmsurveysurvey>();
     }
+}

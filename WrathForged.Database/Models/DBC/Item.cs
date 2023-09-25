@@ -31,6 +31,10 @@ namespace WrathForged.Database.Models.DBC
         [DBCPropertyBinding(7, DBCBindingType.INT32)]
         public int SheatheType { get; set; }
 
+        public virtual Itemclass? Class { get; set; }
+
+        public virtual Itemdisplayinfo? DisplayInfo { get; set; }
+
         public virtual ICollection<Itempurchasegroup> ItempurchasegroupItemId1Navigations { get; set; } = new List<Itempurchasegroup>();
 
         public virtual ICollection<Itempurchasegroup> ItempurchasegroupItemId2Navigations { get; set; } = new List<Itempurchasegroup>();

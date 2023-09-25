@@ -154,7 +154,22 @@ namespace WrathForged.Database.Models.DBC
         [DBCPropertyBinding(48, DBCBindingType.INT32)]
         public int CalendarFlags10 { get; set; }
 
-        [DBCPropertyBinding(49, DBCBindingType.INT32)]
+        [DBCPropertyBinding(49, DBCBindingType.INT32, Nullable = true)]
+        public int? HolidayNameId { get; set; }
+
+        [DBCPropertyBinding(50, DBCBindingType.INT32, Nullable = true)]
+        public int? HolidayDescriptionId { get; set; }
+
+        [DBCPropertyBinding(51, DBCBindingType.STRING)]
+        public string? TextureFilename { get; set; }
+
+        [DBCPropertyBinding(52, DBCBindingType.INT32)]
+        public int Priority { get; set; }
+
+        [DBCPropertyBinding(53, DBCBindingType.INT32)]
+        public int CalendarFilterType { get; set; }
+
+        [DBCPropertyBinding(54, DBCBindingType.INT32)]
         public int Flags { get; set; }
 
         public virtual Holidaydescription? HolidayDescription { get; set; }
