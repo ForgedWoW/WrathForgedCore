@@ -1,5 +1,6 @@
 ﻿// Copyright (c) Forged WoW LLC <https://github.com/ForgedWoW/WrathForgedCore>
 // Licensed under GPL-3.0 license. See <https://github.com/ForgedWoW/WrathForgedCore/blob/master/LICENSE> for full information.
+
 using System.Security.Cryptography;
 using System.Text;
 using Microsoft.EntityFrameworkCore;
@@ -58,7 +59,7 @@ namespace WrathForged.Database.Updates
                 UpdateDBC();
         }
 
-        private bool IsDatabaseConnected(DbContext context)
+        private static bool IsDatabaseConnected(DbContext context)
         {
             try
             {
@@ -243,12 +244,11 @@ namespace WrathForged.Database.Updates
             }
         }
 
-        private string CalculateHash(string fileName)
+        private static string CalculateHash(string fileName)
         {
-            using var sha1 = SHA1.Create();
             var text = File.ReadAllText(fileName).Replace("\r", "");
 
-            return sha1.ComputeHash(Encoding.UTF8.GetBytes(text)).ToHexString();
+            return SHA1.HashData(Encoding.UTF8.GetBytes(text)).ToHexString();
         }
     }
 }

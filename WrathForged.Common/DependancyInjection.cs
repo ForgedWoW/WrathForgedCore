@@ -133,7 +133,7 @@ namespace WrathForged.Common
             foreach (var f in cf.ResolveAll<IOnServerInitialize>())
                 f.OnServerInitialize();
 
-            container.Locate<IConfiguration>().AddConverter(cf.ResolveAll<IConvertConfigValue>());
+            ConfigExtensionMethods.AddConverter(cf.ResolveAll<IConvertConfigValue>());
 
             return container;
         }

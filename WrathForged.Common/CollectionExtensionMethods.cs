@@ -13,7 +13,7 @@ namespace WrathForged.Common
         public static void Add<T, V>(this IDictionary<T, List<V>> dict, T key, V val)
         {
             if (dict == null)
-                throw new ArgumentNullException();
+                throw new ArgumentNullException(nameof(dict));
 
             if (!dict.TryGetValue(key, out var list))
             {
@@ -27,7 +27,7 @@ namespace WrathForged.Common
         public static void Add<T, V>(this IDictionary<T, HashSet<V>> dict, T key, V val)
         {
             if (dict == null)
-                throw new ArgumentNullException();
+                throw new ArgumentNullException(nameof(dict));
 
             if (!dict.TryGetValue(key, out var list))
             {

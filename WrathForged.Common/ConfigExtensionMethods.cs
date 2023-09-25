@@ -10,12 +10,12 @@ namespace WrathForged.Common
     {
         private static readonly Dictionary<Type, IConvertConfigValue> _converters = new();
 
-        public static void AddConverter(this IConfiguration config, IConvertConfigValue converter) => _converters[converter.GetType()] = converter;
+        public static void AddConverter(IConvertConfigValue converter) => _converters[converter.GetType()] = converter;
 
-        public static void AddConverter(this IConfiguration config, IEnumerable<IConvertConfigValue> converter)
+        public static void AddConverter(IEnumerable<IConvertConfigValue> converter)
         {
             foreach (var conv in converter)
-                config.AddConverter(conv);
+                AddConverter(conv);
         }
 
         /// <summary>

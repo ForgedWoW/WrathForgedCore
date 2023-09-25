@@ -1,5 +1,6 @@
 ﻿// Copyright (c) Forged WoW LLC <https://github.com/ForgedWoW/WrathForgedCore>
 // Licensed under GPL-3.0 license. See <https://github.com/ForgedWoW/WrathForgedCore/blob/master/LICENSE> for full information.
+
 using System.Collections.Concurrent;
 using System.Net;
 using System.Net.Sockets;
@@ -101,7 +102,8 @@ namespace WrathForged.Common.Networking
             {
                 foreach (var d in _onDisconnect.GetInvocationList())
                 {
-                    _onDisconnect -= (EventHandler)d;
+                    if (d != null)
+                        _onDisconnect -= (EventHandler)d;
                 }
             }
 
@@ -109,7 +111,8 @@ namespace WrathForged.Common.Networking
             {
                 foreach (var d in _onDataReceived.GetInvocationList())
                 {
-                    _onDataReceived -= (EventHandler<DataReceivedEventArgs>)d;
+                    if (d != null)
+                        _onDataReceived -= (EventHandler<DataReceivedEventArgs>)d;
                 }
             }
 #pragma warning restore CS8601 // Possible null reference assignment.
