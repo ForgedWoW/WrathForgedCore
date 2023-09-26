@@ -86,6 +86,7 @@ namespace WrathForged.Common.DBC
 
             using MemoryStream stringWriter = new();
             stringWriter.WriteByte(0);
+            stringSize++; // null/empty string
             foreach (var item in items)
             {
                 foreach (var property in properties)

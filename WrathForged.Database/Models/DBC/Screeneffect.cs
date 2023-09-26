@@ -1,27 +1,40 @@
-﻿using System;
-using System.Collections.Generic;
+﻿// Copyright (c) Forged WoW LLC <https://github.com/ForgedWoW/WrathForgedCore>
+// Licensed under GPL-3.0 license. See <https://github.com/ForgedWoW/WrathForgedCore/blob/master/LICENSE> for full information.
+using WrathForged.Database.DBC;
 
-namespace WrathForged.Database.Models.DBC;
-
-public partial class Screeneffect
+namespace WrathForged.Database.Models.DBC
 {
-    public int Id { get; set; }
+    [DBCBound("ScreenEffect.dbc")]
+    public partial class Screeneffect : IDBCRecord
+    {
+        [DBCPropertyBinding(0, DBCBindingType.INT32)]
+        public int Id { get; set; }
 
-    public string? Name { get; set; }
+        [DBCPropertyBinding(1, DBCBindingType.STRING, Nullable = true)]
+        public string? Name { get; set; }
 
-    public int Effect { get; set; }
+        [DBCPropertyBinding(2, DBCBindingType.INT32)]
+        public int Effect { get; set; }
 
-    public int Param1 { get; set; }
+        [DBCPropertyBinding(3, DBCBindingType.INT32)]
+        public int Param1 { get; set; }
 
-    public int Param2 { get; set; }
+        [DBCPropertyBinding(4, DBCBindingType.INT32)]
+        public int Param2 { get; set; }
 
-    public int Param3 { get; set; }
+        [DBCPropertyBinding(5, DBCBindingType.INT32)]
+        public int Param3 { get; set; }
 
-    public int Param4 { get; set; }
+        [DBCPropertyBinding(6, DBCBindingType.INT32)]
+        public int Param4 { get; set; }
 
-    public int LightParamsId { get; set; }
+        [DBCPropertyBinding(7, DBCBindingType.INT32)]
+        public int LightParamsId { get; set; }
 
-    public int SoundAmbienceId { get; set; }
+        [DBCPropertyBinding(8, DBCBindingType.INT32)]
+        public int SoundAmbienceId { get; set; }
 
-    public int ZoneMusicId { get; set; }
+        [DBCPropertyBinding(9, DBCBindingType.INT32)]
+        public int ZoneMusicId { get; set; }
+    }
 }
