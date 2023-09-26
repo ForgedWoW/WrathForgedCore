@@ -95,7 +95,7 @@ namespace WrathForged.Common.DBC.Commands
         private void Export(IEnumerable<string> names, string outputDir)
         {
             _logger.Information("Exporting {NamesCount} DBC's to {OutputDir}", names.Count(), outputDir);
-
+            var startTime = DateTime.UtcNow;
             foreach (var name in names)
             {
                 _logger.Information("Exporting DBC {Name}", name);
@@ -126,6 +126,8 @@ namespace WrathForged.Common.DBC.Commands
                     _logger.Error(ex, "Failed to export DBC {Name}", name);
                 }
             }
+
+            _logger.Information("Exporting DBC's completed in {Time}", (DateTime.UtcNow - startTime).ToReadableString());
         }
     }
 }

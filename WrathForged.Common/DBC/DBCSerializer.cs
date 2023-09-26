@@ -101,7 +101,7 @@ namespace WrathForged.Common.DBC
 
                         case DBCBindingType.STRING:
                             var stringValue = value != null ? (string)value : string.Empty;
-                            writer.Write((int)stringWriter.Position);
+                            writer.Write(BitConverter.GetBytes(stringWriter.Position), 0, recordSize);
                             stringValue = stringValue.Replace("\r\n", "\n").Replace(Environment.NewLine, "\n");
 
                             if (stringValue == string.Empty) // empty string is just a null terminator
