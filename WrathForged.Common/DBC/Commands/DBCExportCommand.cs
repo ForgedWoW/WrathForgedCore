@@ -104,8 +104,9 @@ namespace WrathForged.Common.DBC.Commands
 
                     if (propVal != null)
                     {
+                        var now = DateTime.UtcNow;
                         _dbcSerializer.Serialize((IEnumerable<IDBCRecord>)propVal, outputDir, propertyInfo);
-                        _logger.Information("Export of {Name}: Successful", name);
+                        _logger.Information("Export of {Name}: Successful in {Time}", name, (DateTime.UtcNow - now).ToString());
                     }
                     else
                     {

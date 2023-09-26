@@ -67,7 +67,7 @@ public partial class Achievement : IDBCRecord
     [DBCPropertyBinding(19, DBCBindingType.STRING)]
     public string? TitleLangUnk { get; set; }
 
-    [DBCPropertyBinding(20, DBCBindingType.INT32)]
+    [DBCPropertyBinding(20, DBCBindingType.UINT32)]
     public uint TitleLangMask { get; set; }
 
     [DBCPropertyBinding(21, DBCBindingType.STRING)]
@@ -118,7 +118,7 @@ public partial class Achievement : IDBCRecord
     [DBCPropertyBinding(36, DBCBindingType.STRING)]
     public string? DescriptionLangUnk { get; set; }
 
-    [DBCPropertyBinding(37, DBCBindingType.INT32)]
+    [DBCPropertyBinding(37, DBCBindingType.UINT32)]
     public uint DescriptionLangMask { get; set; }
 
     [DBCPropertyBinding(38, DBCBindingType.INT32)]
@@ -184,7 +184,7 @@ public partial class Achievement : IDBCRecord
     [DBCPropertyBinding(58, DBCBindingType.STRING)]
     public string? RewardLangUnk { get; set; }
 
-    [DBCPropertyBinding(59, DBCBindingType.INT32)]
+    [DBCPropertyBinding(59, DBCBindingType.UINT32)]
     public uint RewardLangMask { get; set; }
 
     [DBCPropertyBinding(60, DBCBindingType.INT32)]
