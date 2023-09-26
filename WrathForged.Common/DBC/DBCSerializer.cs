@@ -86,7 +86,7 @@ namespace WrathForged.Common.DBC
             writer.BaseStream.Position = headerSize; // Skip the header for now, we write it last after we know the sizes
 
             using MemoryStream stringWriter = new();
-            var size = sizeof(uint);
+            stringWriter.WriteByte(0);
             foreach (var item in items)
             {
                 foreach (var property in properties)
@@ -135,13 +135,14 @@ namespace WrathForged.Common.DBC
 
                         case DBCBindingType.STRING:
                             var stringValue = value != null ? (string)value : string.Empty;
-                            stringValue = stringValue.Replace("\r\n", "\n").Replace(Environment.NewLine, "\n");
 
                             if (stringValue == string.Empty) // empty string is just a null terminator
                             {
-                                writer.Write(BitConverter.GetBytes(0), 0, size);
+                                writer.Write(0);
                                 break;
                             }
+
+                            stringValue = stringValue.Replace("\r\n", "\n").Replace(Environment.NewLine, "\n");
 
                             var strBytes = Encoding.UTF8.GetBytes(stringValue);
                             writer.Write((int)stringWriter.Position);
@@ -163,6 +164,8 @@ namespace WrathForged.Common.DBC
 
             _logger.Debug("Record Size: {RecordSize} String Size: {StringSize} Record Count: {RecordCount}", recordSize, stringSize, recordCount);
 
+            stringWriter.Position = 0;
+            writer.BaseStream.Position = writer.BaseStream.Length;
             stringWriter.CopyTo(writer.BaseStream);
             writer.BaseStream.Position = 0;
 
