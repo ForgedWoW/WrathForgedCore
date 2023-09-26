@@ -13,7 +13,7 @@ public partial class Achievement : IDBCRecord
     [DBCPropertyBinding(1, DBCBindingType.INT32, DefaultValue = -1)]
     public int Faction { get; set; }
 
-    [DBCPropertyBinding(2, DBCBindingType.INT32, Nullable = true)]
+    [DBCPropertyBinding(2, DBCBindingType.INT32, DefaultValue = -1)]
     public int? InstanceId { get; set; }
 
     [DBCPropertyBinding(3, DBCBindingType.INT32, Nullable = true)]

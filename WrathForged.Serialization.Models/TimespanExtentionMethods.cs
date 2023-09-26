@@ -20,8 +20,7 @@ namespace WrathForged.Serialization.Models
             if (span.Seconds > 0)
                 _ = formatted.Append($"{span.Seconds}s ");
 
-            if (span.Milliseconds > 0)
-                _ = formatted.Append($"{span.Milliseconds}ms ");
+            _ = formatted.Append($"{span.Milliseconds}ms ");
 
             return formatted.ToString().Trim();
         }
