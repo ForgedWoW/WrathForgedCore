@@ -10,8 +10,6 @@ namespace WrathForged.Database.DBC
         SBYTE,
         INT32,
         UINT32,
-        LONG,
-        ULONG,
         FLOAT,
         DOUBLE,
         STRING,

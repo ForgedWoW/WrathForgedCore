@@ -8,6 +8,9 @@ using WrathForged.Common.CommandLine;
 using WrathForged.Common.Networking;
 using WrathForged.Database;
 using WrathForged.Serialization;
+using WrathForged.Serialization.Models;
+
+var initializationStart = DateTime.UtcNow;
 
 var configBuilder = new ConfigurationBuilder()
                     .SetBasePath(Directory.GetCurrentDirectory())
@@ -27,7 +30,7 @@ container.InitializeCommon();
 
 container.Locate<WoWClientServer>().Start();
 
-Log.Logger.Information("Realm Server started.");
+Log.Logger.Information("Realm Server started in {InitializationTime}.", (DateTime.UtcNow - initializationStart).ToReadableString());
 var notifier = container.Locate<ProgramExitNotifier>();
 
 Console.CancelKeyPress += (sender, e) =>

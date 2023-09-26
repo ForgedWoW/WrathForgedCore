@@ -8,6 +8,7 @@ using WrathForged.Common.CommandLine;
 using WrathForged.Common.Scripting;
 using WrathForged.Database.DBC;
 using WrathForged.Database.Models.DBC;
+using WrathForged.Serialization.Models;
 
 namespace WrathForged.Common.DBC.Commands
 {
@@ -108,7 +109,7 @@ namespace WrathForged.Common.DBC.Commands
                         {
                             var now = DateTime.UtcNow;
                             _dbcSerializer.Serialize((IEnumerable<IDBCRecord>)propVal, outputDir, propertyInfo);
-                            _logger.Information("Export of {Name}: Successful in {Time}", name, (DateTime.UtcNow - now).ToString());
+                            _logger.Information("Export of {Name}: Successful in {Time}", name, (DateTime.UtcNow - now).ToReadableString());
                         }
                         else
                         {

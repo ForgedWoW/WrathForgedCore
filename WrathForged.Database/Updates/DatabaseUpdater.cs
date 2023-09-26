@@ -11,6 +11,7 @@ using WrathForged.Database.Models.Auth;
 using WrathForged.Database.Models.Characters;
 using WrathForged.Database.Models.DBC;
 using WrathForged.Database.Models.World;
+using WrathForged.Serialization.Models;
 
 namespace WrathForged.Database.Updates
 {
@@ -204,7 +205,7 @@ namespace WrathForged.Database.Updates
                     var updateStart = DateTime.UtcNow;
                     _ = dbContext.Database.ExecuteSqlRaw(File.ReadAllText(sql.FullName));
                     var elapsed = DateTime.UtcNow - updateStart;
-                    _logger.Information("SQL update {0} took {1}.", sql.Name, elapsed.ToString());
+                    _logger.Information("SQL update {0} took {1}.", sql.Name, elapsed.ToReadableString());
 
                     newUpdates.Updates ??= new List<Update>();
 
@@ -224,7 +225,7 @@ namespace WrathForged.Database.Updates
             }
 
             if (newUpdates.Updates != null)
-                _logger.Information("Ran {0} SQL updates for {1} database in {2}.", sqlToRun.Count, dbName, (DateTime.UtcNow - startTime).ToString());
+                _logger.Information("Ran {0} SQL updates for {1} database in {2}.", sqlToRun.Count, dbName, (DateTime.UtcNow - startTime).ToReadableString());
 
             return newUpdates;
         }

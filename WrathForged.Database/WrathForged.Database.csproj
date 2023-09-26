@@ -52,6 +52,10 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <ProjectReference Include="..\WrathForged.Serialization.Models\WrathForged.Serialization.Models.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
 	  <None Update="sql\base\dbc\Achievement.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>

@@ -37,7 +37,7 @@ namespace WrathForged.Common.DBC
 
             _logger.Debug("Serializing {Count} records for {DBCName}", items.Count, dbcAtt.Name);
 
-            var recordSize = 0u; // Initialize the total record size
+            var recordSize = sizeof(uint); // Initialize the record size
             var stringSize = 0u; // Initialize the total string size
             var recordCount = 0; // Initialize the total record count
             var stringCount = 0u; // Initialize the total string count
@@ -69,51 +69,33 @@ namespace WrathForged.Common.DBC
                     switch (attribute.BindingType)
                     {
 
-                        case DBCBindingType.BYTE:
-                            writer.Write(value != null ? (byte)value : (byte)0);
-                            recordSize += sizeof(sbyte);
+                        case DBCBindingType.SBYTE:
+                            writer.Write(BitConverter.GetBytes(value != null ? (sbyte)value : 0), 0, recordSize);
                             recordCount++;
                             break;
 
-                        case DBCBindingType.SBYTE:
-                            writer.Write(value != null ? (sbyte)value : (sbyte)0);
-                            recordSize += sizeof(byte);
+                        case DBCBindingType.BYTE:
+                            writer.Write(BitConverter.GetBytes(value != null ? (byte)value : 0u), 0, recordSize);
                             recordCount++;
                             break;
 
                         case DBCBindingType.INT32:
-                            writer.Write(value != null ? (int)value : 0);
-                            recordSize += sizeof(int);
+                            writer.Write(BitConverter.GetBytes(value != null ? (int)value : 0), 0, recordSize);
                             recordCount++;
                             break;
 
                         case DBCBindingType.UINT32:
-                            writer.Write(value != null ? (uint)value : 0u);
-                            recordSize += sizeof(uint);
-                            recordCount++;
-                            break;
-
-                        case DBCBindingType.LONG:
-                            writer.Write(value != null ? (long)value : 0L);
-                            recordSize += sizeof(long);
-                            recordCount++;
-                            break;
-
-                        case DBCBindingType.ULONG:
-                            writer.Write(value != null ? (ulong)value : 0ul);
-                            recordSize += sizeof(ulong);
+                            writer.Write(BitConverter.GetBytes(value != null ? (uint)value : 0u), 0, recordSize);
                             recordCount++;
                             break;
 
                         case DBCBindingType.FLOAT:
-                            writer.Write(value != null ? (float)value : 0f);
-                            recordSize += sizeof(float);
+                            writer.Write(BitConverter.GetBytes(value != null ? (float)value : 0f), 0, recordSize);
                             recordCount++;
                             break;
 
                         case DBCBindingType.DOUBLE:
-                            writer.Write(value != null ? (double)value : 0d);
-                            recordSize += sizeof(double);
+                            writer.Write(BitConverter.GetBytes(value != null ? (double)value : 0d), 0, recordSize);
                             recordCount++;
                             break;
 
