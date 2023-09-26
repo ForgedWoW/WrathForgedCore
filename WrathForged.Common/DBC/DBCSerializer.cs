@@ -40,7 +40,6 @@ namespace WrathForged.Common.DBC
             var recordSize = 0; // Initialize the record size 248
             var stringSize = 0u; // Initialize the total string size
             var recordCount = items.Count; // Initialize the total record count
-            var stringCount = 0u; // Initialize the total string count
 
             foreach (var property in properties)
             {
@@ -111,27 +110,27 @@ namespace WrathForged.Common.DBC
                     {
 
                         case DBCBindingType.SBYTE:
-                            writer.Write(BitConverter.GetBytes(value != null ? (sbyte)value : 0), 0, size);
+                            writer.Write(value != null ? (sbyte)value : (sbyte)0);
                             break;
 
                         case DBCBindingType.BYTE:
-                            writer.Write(BitConverter.GetBytes(value != null ? (byte)value : 0u), 0, size);
+                            writer.Write(value != null ? (byte)value : (byte)0);
                             break;
 
                         case DBCBindingType.INT32:
-                            writer.Write(BitConverter.GetBytes(value != null ? (int)value : 0), 0, size);
+                            writer.Write(value != null ? (int)value : 0);
                             break;
 
                         case DBCBindingType.UINT32:
-                            writer.Write(BitConverter.GetBytes(value != null ? (uint)value : 0u), 0, size);
+                            writer.Write(value != null ? (uint)value : 0u);
                             break;
 
                         case DBCBindingType.FLOAT:
-                            writer.Write(BitConverter.GetBytes(value != null ? (float)value : 0f), 0, size);
+                            writer.Write(value != null ? (float)value : 0f);
                             break;
 
                         case DBCBindingType.DOUBLE:
-                            writer.Write(BitConverter.GetBytes(value != null ? (double)value : 0d), 0, size);
+                            writer.Write(value != null ? (double)value : 0d);
                             break;
 
                         case DBCBindingType.STRING:
@@ -151,7 +150,6 @@ namespace WrathForged.Common.DBC
                             stringWriter.WriteByte(0);
 
                             stringSize += (uint)strBytes.Length + 1u; // Size of the string + null terminator
-                            stringCount++; // Count of the string
                             break;
 
                         case DBCBindingType.UNKNOWN:
@@ -163,7 +161,7 @@ namespace WrathForged.Common.DBC
                 }
             }
 
-            _logger.Debug("Record Size: {RecordSize} String Size: {StringSize} Record Count: {RecordCount} String Count: {StringCount}", recordSize, stringSize, recordCount, stringCount);
+            _logger.Debug("Record Size: {RecordSize} String Size: {StringSize} Record Count: {RecordCount}", recordSize, stringSize, recordCount);
 
             stringWriter.CopyTo(writer.BaseStream);
             writer.BaseStream.Position = 0;
