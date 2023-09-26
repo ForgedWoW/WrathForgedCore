@@ -35,8 +35,18 @@ namespace WrathForged.Common.DBC
 
             var items = itemsEn.ToList(); // execute the sql query, load all into memory
 
+            _logger.Debug("Serializing {Count} records for {DBCName}", items.Count, dbcAtt.Name);
+
             var recordSize = 0u; // Initialize the total record size
             var stringSize = 0u; // Initialize the total string size
+            var recordCount = 0; // Initialize the total record count
+            var stringCount = 0u; // Initialize the total string count
+
+            var headerSize = 4 + (sizeof(uint) * 4); // 4 bytes for the magic, 4 uints for the header
+            writer.BaseStream.Position = headerSize; // Skip the header for now, we write it last after we know the sizes
+
+            using MemoryStream stringWriter = new();
+
             foreach (var item in items)
             {
                 foreach (var property in properties)
@@ -58,105 +68,73 @@ namespace WrathForged.Common.DBC
 
                     switch (attribute.BindingType)
                     {
-                        case DBCBindingType.INT32:
-                            recordSize += sizeof(int);
+
+                        case DBCBindingType.BYTE:
+                            writer.Write(value != null ? (byte)value : (byte)0);
+                            recordSize += sizeof(sbyte);
+                            recordCount++;
                             break;
 
-                        case DBCBindingType.UINT32:
-                            recordSize += sizeof(uint);
-                            break;
-
-                        case DBCBindingType.UINT8:
+                        case DBCBindingType.SBYTE:
+                            writer.Write(value != null ? (sbyte)value : (sbyte)0);
                             recordSize += sizeof(byte);
+                            recordCount++;
                             break;
 
-                        case DBCBindingType.FLOAT:
-                            recordSize += sizeof(float);
-                            break;
-
-                        case DBCBindingType.DOUBLE:
-                            recordSize += sizeof(double);
-                            break;
-
-                        case DBCBindingType.STRING:
-                            var stringValue = value != null ? (string)value : string.Empty;
-                            stringSize += (uint)Encoding.UTF8.GetByteCount(stringValue) + 1; // Size of the string
-                            break;
-
-                        case DBCBindingType.UNKNOWN:
-                        case DBCBindingType.IGNORE_ORDER:
-                        default:
-                            _logger.Warning("Unsupported binding type {BindingType}", attribute.BindingType);
-                            break;
-                    }
-                }
-            }
-
-            var header = new DBCHeader
-            {
-                Magic = 0x43424457, // 'WDBC'
-                RecordCount = (uint)items.Count,
-                FieldCount = (uint)properties.Count,
-                RecordSize = recordSize,
-                StringBlockSize = stringSize
-            };
-
-            writer.Write(header.Magic);
-            writer.Write(header.RecordCount);
-            writer.Write(header.FieldCount);
-            writer.Write(header.RecordSize);
-            writer.Write(header.StringBlockSize);
-
-            var stringBlock = new List<byte>();
-            var stringBlockOffset = 0;
-
-            foreach (var item in items)
-            {
-                foreach (var property in properties)
-                {
-                    if (property.GetCustomAttribute(typeof(DBCPropertyBindingAttribute)) is not DBCPropertyBindingAttribute attribute)
-                        continue;
-
-                    var value = property.GetValue(item);
-
-                    if (value == default && attribute.DefaultValue != null)
-                    {
-                        value = attribute.DefaultValue;
-                    }
-
-                    if (value == default && attribute.Nullable)
-                    {
-                        value = null;
-                    }
-
-                    switch (attribute.BindingType)
-                    {
                         case DBCBindingType.INT32:
                             writer.Write(value != null ? (int)value : 0);
+                            recordSize += sizeof(int);
+                            recordCount++;
                             break;
 
                         case DBCBindingType.UINT32:
                             writer.Write(value != null ? (uint)value : 0u);
+                            recordSize += sizeof(uint);
+                            recordCount++;
                             break;
 
-                        case DBCBindingType.UINT8:
-                            writer.Write(value != null ? (byte)value : (byte)0);
+                        case DBCBindingType.LONG:
+                            writer.Write(value != null ? (long)value : 0L);
+                            recordSize += sizeof(long);
+                            recordCount++;
+                            break;
+
+                        case DBCBindingType.ULONG:
+                            writer.Write(value != null ? (ulong)value : 0ul);
+                            recordSize += sizeof(ulong);
+                            recordCount++;
                             break;
 
                         case DBCBindingType.FLOAT:
                             writer.Write(value != null ? (float)value : 0f);
+                            recordSize += sizeof(float);
+                            recordCount++;
                             break;
 
                         case DBCBindingType.DOUBLE:
                             writer.Write(value != null ? (double)value : 0d);
+                            recordSize += sizeof(double);
+                            recordCount++;
                             break;
 
                         case DBCBindingType.STRING:
                             var stringValue = value != null ? (string)value : string.Empty;
-                            writer.Write(stringBlockOffset);
-                            stringBlock.AddRange(Encoding.UTF8.GetBytes(stringValue));
-                            stringBlock.Add(0);
-                            stringBlockOffset += Encoding.UTF8.GetByteCount(stringValue) + 1;
+                            writer.Write((int)stringWriter.Position);
+                            stringValue = stringValue.Replace("\r\n", "\n").Replace(Environment.NewLine, "\n");
+
+                            if (stringValue == string.Empty) // empty string is just a null terminator
+                            {
+                                stringWriter.WriteByte(0);
+                                stringSize++;
+                                stringCount++;
+                                break;
+                            }
+
+                            var strBytes = Encoding.UTF8.GetBytes(stringValue);
+                            stringWriter.Write(strBytes, 0, strBytes.Length);
+                            stringWriter.WriteByte(0);
+                            stringSize += (uint)strBytes.Length + 1u; // Size of the string + null terminator
+                            stringCount++; // Count of the string
                             break;
 
                         case DBCBindingType.UNKNOWN:
@@ -168,7 +146,16 @@ namespace WrathForged.Common.DBC
                 }
             }
 
-            writer.Write(stringBlock.ToArray());
+            _logger.Debug("Record Size: {RecordSize} String Size: {StringSize} Record Count: {RecordCount} String Count: {StringCount}", recordSize, stringSize, recordCount, stringCount);
+
+            stringWriter.CopyTo(writer.BaseStream);
+            writer.BaseStream.Position = 0;
+
+            writer.Write(Encoding.UTF8.GetBytes("WDBC")); // 4 bytes
+            writer.Write(recordCount);
+            writer.Write((uint)properties.Count);
+            writer.Write(recordSize);
+            writer.Write(stringSize);
         }
     }
 }

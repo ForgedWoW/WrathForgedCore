@@ -26,10 +26,10 @@ public partial class Charstartoutfit : IDBCRecord
     [DBCPropertyBinding(2, DBCBindingType.INT32, Nullable = true)]
     public int? ClassId { get; set; }
 
-    [DBCPropertyBinding(3, DBCBindingType.UINT8)]
+    [DBCPropertyBinding(3, DBCBindingType.BYTE)]
     public byte SexId { get; set; }
 
-    [DBCPropertyBinding(4, DBCBindingType.UINT8)]
+    [DBCPropertyBinding(4, DBCBindingType.BYTE)]
     public byte OutfitId { get; set; }
 
     [DBCPropertyBinding(5, DBCBindingType.INT32)]

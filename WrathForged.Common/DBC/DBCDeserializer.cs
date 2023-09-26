@@ -28,7 +28,7 @@ namespace WrathForged.Common.DBC
             var header = new DBCHeader
             {
                 Magic = reader.ReadUInt32(),
-                RecordCount = reader.ReadUInt32(),
+                RecordCount = (uint)reader.ReadInt32(),
                 FieldCount = reader.ReadUInt32(),
                 RecordSize = reader.ReadUInt32(),
                 StringBlockSize = reader.ReadUInt32()
@@ -62,7 +62,7 @@ namespace WrathForged.Common.DBC
                             value = reader.ReadUInt32();
                             break;
 
-                        case DBCBindingType.UINT8:
+                        case DBCBindingType.BYTE:
                             value = reader.ReadByte();
                             break;
 

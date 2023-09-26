@@ -98,24 +98,31 @@ namespace WrathForged.Common.DBC.Commands
             foreach (var name in names)
             {
                 _logger.Information("Exporting DBC {Name}", name);
-                if (_dbSets.TryGetValue(name, out var propertyInfo))
+                try
                 {
-                    var propVal = propertyInfo.GetValue(_dbcDatabase);
-
-                    if (propVal != null)
+                    if (_dbSets.TryGetValue(name, out var propertyInfo))
                     {
-                        var now = DateTime.UtcNow;
-                        _dbcSerializer.Serialize((IEnumerable<IDBCRecord>)propVal, outputDir, propertyInfo);
-                        _logger.Information("Export of {Name}: Successful in {Time}", name, (DateTime.UtcNow - now).ToString());
+                        var propVal = propertyInfo.GetValue(_dbcDatabase);
+
+                        if (propVal != null)
+                        {
+                            var now = DateTime.UtcNow;
+                            _dbcSerializer.Serialize((IEnumerable<IDBCRecord>)propVal, outputDir, propertyInfo);
+                            _logger.Information("Export of {Name}: Successful in {Time}", name, (DateTime.UtcNow - now).ToString());
+                        }
+                        else
+                        {
+                            _logger.Warning("Export of {Name}: Unsuccessful", name);
+                        }
                     }
                     else
                     {
-                        _logger.Warning("Export of {Name}: Unsuccessful", name);
+                        _logger.Warning("Could not find DBC {Name}", name);
                     }
                 }
-                else
+                catch (Exception ex)
                 {
-                    _logger.Warning("Could not find DBC {Name}", name);
+                    _logger.Error(ex, "Failed to export DBC {Name}", name);
                 }
             }
         }

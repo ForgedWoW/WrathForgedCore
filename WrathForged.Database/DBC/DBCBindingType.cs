@@ -5,12 +5,15 @@ namespace WrathForged.Database.DBC
 {
     public enum DBCBindingType
     {
+        UNKNOWN,
+        BYTE,
+        SBYTE,
         INT32,
         UINT32,
-        UINT8,
+        LONG,
+        ULONG,
         FLOAT,
         DOUBLE,
-        UNKNOWN,
         STRING,
         IGNORE_ORDER
     }

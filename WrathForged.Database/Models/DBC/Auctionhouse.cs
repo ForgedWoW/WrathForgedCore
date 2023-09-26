@@ -67,7 +67,7 @@ public partial class Auctionhouse : IDBCRecord
     [DBCPropertyBinding(19, DBCBindingType.STRING)]
     public string? NameLangUnk { get; set; }
 
-    [DBCPropertyBinding(20, DBCBindingType.INT32)]
+    [DBCPropertyBinding(20, DBCBindingType.UINT32)]
     public uint NameLangMask { get; set; }
 
     public virtual Faction? Faction { get; set; }

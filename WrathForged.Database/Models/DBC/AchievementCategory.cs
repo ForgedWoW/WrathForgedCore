@@ -61,7 +61,7 @@ public partial class AchievementCategory : IDBCRecord
     [DBCPropertyBinding(17, DBCBindingType.STRING)]
     public string? NameLangUnk { get; set; }
 
-    [DBCPropertyBinding(18, DBCBindingType.INT32)]
+    [DBCPropertyBinding(18, DBCBindingType.UINT32)]
     public uint NameLangMask { get; set; }
 
     [DBCPropertyBinding(19, DBCBindingType.INT32)]

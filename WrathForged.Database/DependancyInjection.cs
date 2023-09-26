@@ -64,10 +64,13 @@ namespace WrathForged.Database
 
         public static void ShutdownDatabase(this DependencyInjectionContainer container)
         {
+            var logger = container.Locate<Serilog.ILogger>();
+            logger.Information("WrathForged.Database is shutting down.");
             container.Locate<AuthDatabase>().Dispose();
             container.Locate<WorldDatabase>().Dispose();
             container.Locate<CharacterDatabase>().Dispose();
             container.Locate<ForgeDBCache>().Dispose();
+            logger.Information("WrathForged.Database shut down complete.");
         }
     }
 }

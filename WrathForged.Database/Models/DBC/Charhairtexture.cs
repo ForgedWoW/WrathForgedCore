@@ -13,10 +13,10 @@ public partial class Charhairtexture : IDBCRecord
     [DBCPropertyBinding(1, DBCBindingType.INT32, Nullable = true)]
     public int? Race { get; set; }
 
-    [DBCPropertyBinding(2, DBCBindingType.UINT8)]
+    [DBCPropertyBinding(2, DBCBindingType.BYTE)]
     public byte Gender { get; set; }
 
-    [DBCPropertyBinding(3, DBCBindingType.UINT8)]
+    [DBCPropertyBinding(3, DBCBindingType.BYTE)]
     public byte Field03 { get; set; }
 
     [DBCPropertyBinding(4, DBCBindingType.INT32)]

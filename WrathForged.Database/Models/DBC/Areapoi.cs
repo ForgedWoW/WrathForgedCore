@@ -109,7 +109,7 @@ public partial class Areapoi : IDBCRecord
     [DBCPropertyBinding(33, DBCBindingType.STRING)]
     public string? NameLangUnk { get; set; }
 
-    [DBCPropertyBinding(34, DBCBindingType.INT32)]
+    [DBCPropertyBinding(34, DBCBindingType.UINT32)]
     public uint NameLangMask { get; set; }
 
     [DBCPropertyBinding(35, DBCBindingType.STRING)]
@@ -160,7 +160,7 @@ public partial class Areapoi : IDBCRecord
     [DBCPropertyBinding(50, DBCBindingType.STRING)]
     public string? DescriptionLangUnk { get; set; }
 
-    [DBCPropertyBinding(51, DBCBindingType.INT32)]
+    [DBCPropertyBinding(51, DBCBindingType.UINT32)]
     public uint DescriptionLangMask { get; set; }
 
     [DBCPropertyBinding(52, DBCBindingType.INT32)]

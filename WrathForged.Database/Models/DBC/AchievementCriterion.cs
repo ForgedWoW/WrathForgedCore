@@ -82,7 +82,7 @@ public partial class AchievementCriterion : IDBCRecord
     [DBCPropertyBinding(24, DBCBindingType.STRING)]
     public string? DescriptionLangUnk { get; set; }
 
-    [DBCPropertyBinding(25, DBCBindingType.INT32)]
+    [DBCPropertyBinding(25, DBCBindingType.UINT32)]
     public uint DescriptionLangMask { get; set; }
 
     [DBCPropertyBinding(26, DBCBindingType.INT32)]

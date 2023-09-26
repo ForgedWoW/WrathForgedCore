@@ -88,7 +88,7 @@ public partial class Battlemasterlist : IDBCRecord
     [DBCPropertyBinding(26, DBCBindingType.STRING)]
     public string? NameLangUnk { get; set; }
 
-    [DBCPropertyBinding(27, DBCBindingType.INT32)]
+    [DBCPropertyBinding(27, DBCBindingType.UINT32)]
     public uint NameLangMask { get; set; }
 
     [DBCPropertyBinding(28, DBCBindingType.INT32)]

@@ -88,10 +88,10 @@ public partial class Areatable : IDBCRecord
     [DBCPropertyBinding(26, DBCBindingType.STRING)]
     public string? AreaNameLangUnk { get; set; }
 
-    [DBCPropertyBinding(27, DBCBindingType.INT32)]
+    [DBCPropertyBinding(27, DBCBindingType.UINT32)]
     public uint AreaNameLangMask { get; set; }
 
-    [DBCPropertyBinding(28, DBCBindingType.STRING)]
+    [DBCPropertyBinding(28, DBCBindingType.INT32)]
     public int FactionGroupMask { get; set; }
 
     [DBCPropertyBinding(29, DBCBindingType.INT32, Nullable = true)]

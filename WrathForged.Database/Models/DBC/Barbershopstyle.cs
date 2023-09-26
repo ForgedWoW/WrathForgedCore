@@ -61,7 +61,7 @@ public partial class Barbershopstyle : IDBCRecord
     [DBCPropertyBinding(17, DBCBindingType.STRING)]
     public string? DisplayNameLangUnk { get; set; }
 
-    [DBCPropertyBinding(18, DBCBindingType.INT32)]
+    [DBCPropertyBinding(18, DBCBindingType.UINT32)]
     public uint DisplayNameLangMask { get; set; }
 
     [DBCPropertyBinding(19, DBCBindingType.STRING)]
@@ -112,7 +112,7 @@ public partial class Barbershopstyle : IDBCRecord
     [DBCPropertyBinding(34, DBCBindingType.STRING)]
     public string? DescriptionLangUnk { get; set; }
 
-    [DBCPropertyBinding(35, DBCBindingType.INT32)]
+    [DBCPropertyBinding(35, DBCBindingType.UINT32)]
     public uint DescriptionLangMask { get; set; }
 
     [DBCPropertyBinding(36, DBCBindingType.FLOAT)]
