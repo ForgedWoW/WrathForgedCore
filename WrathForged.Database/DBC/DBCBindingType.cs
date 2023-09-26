@@ -12,7 +12,6 @@ namespace WrathForged.Database.DBC
         UINT32,
         FLOAT,
         DOUBLE,
-        STRING,
-        IGNORE_ORDER
+        STRING
     }
 }

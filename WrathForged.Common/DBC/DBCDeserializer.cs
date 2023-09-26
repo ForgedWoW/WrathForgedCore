@@ -79,7 +79,6 @@ namespace WrathForged.Common.DBC
                             break;
 
                         case DBCBindingType.UNKNOWN:
-                        case DBCBindingType.IGNORE_ORDER:
                         default:
                             _logger.Warning("Unsupported binding type {BindingType}", attribute.BindingType);
                             value = null;
