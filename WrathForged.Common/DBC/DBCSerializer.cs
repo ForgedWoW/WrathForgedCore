@@ -64,6 +64,14 @@ namespace WrathForged.Common.DBC
                         recordSize += sizeof(uint);
                         break;
 
+                    case DBCBindingType.LONG:
+                        recordSize += sizeof(long);
+                        break;
+
+                    case DBCBindingType.ULONG:
+                        recordSize += sizeof(ulong);
+                        break;
+
                     case DBCBindingType.FLOAT:
                         recordSize += sizeof(float);
                         break;
@@ -123,6 +131,14 @@ namespace WrathForged.Common.DBC
 
                         case DBCBindingType.UINT32:
                             writer.Write(value != null ? (uint)value : 0u);
+                            break;
+
+                        case DBCBindingType.LONG:
+                            writer.Write(value != null ? (long)value : 0L);
+                            break;
+
+                        case DBCBindingType.ULONG:
+                            writer.Write(value != null ? (ulong)value : 0ul);
                             break;
 
                         case DBCBindingType.FLOAT:
