@@ -1,7 +1,6 @@
 ﻿// Copyright (c) Forged WoW LLC <https://github.com/ForgedWoW/WrathForgedCore>
 // Licensed under GPL-3.0 license. See <https://github.com/ForgedWoW/WrathForgedCore/blob/master/LICENSE> for full information.
 using System.Reflection;
-using System.Runtime.InteropServices;
 using System.Text;
 using Microsoft.EntityFrameworkCore;
 using Serilog;
@@ -32,17 +31,74 @@ namespace WrathForged.Common.DBC
             var properties = type.GetProperties()
                                  .Where(p => Attribute.IsDefined(p, typeof(DBCPropertyBindingAttribute)))
                                  .OrderBy(p => (p.GetCustomAttribute(typeof(DBCPropertyBindingAttribute)) as DBCPropertyBindingAttribute)?.ColumnIndex)
-                                 .ToArray();
+                                 .ToList();
 
-            var items = itemsEn.ToArray(); // execute the sql query, load all into memory
+            var items = itemsEn.ToList(); // execute the sql query, load all into memory
+
+            var recordSize = 0u; // Initialize the total record size
+            var stringSize = 0u; // Initialize the total string size
+            foreach (var item in items)
+            {
+                foreach (var property in properties)
+                {
+                    if (property.GetCustomAttribute(typeof(DBCPropertyBindingAttribute)) is not DBCPropertyBindingAttribute attribute)
+                        continue;
+
+                    var value = property.GetValue(item);
+
+                    if (value == default && attribute.DefaultValue != null)
+                    {
+                        value = attribute.DefaultValue;
+                    }
+
+                    if (value == default && attribute.Nullable)
+                    {
+                        value = null;
+                    }
+
+                    switch (attribute.BindingType)
+                    {
+                        case DBCBindingType.INT32:
+                            recordSize += sizeof(int);
+                            break;
+
+                        case DBCBindingType.UINT32:
+                            recordSize += sizeof(uint);
+                            break;
+
+                        case DBCBindingType.UINT8:
+                            recordSize += sizeof(byte);
+                            break;
+
+                        case DBCBindingType.FLOAT:
+                            recordSize += sizeof(float);
+                            break;
+
+                        case DBCBindingType.DOUBLE:
+                            recordSize += sizeof(double);
+                            break;
+
+                        case DBCBindingType.STRING:
+                            var stringValue = value != null ? (string)value : string.Empty;
+                            stringSize += (uint)Encoding.UTF8.GetByteCount(stringValue) + 1; // Size of the string
+                            break;
+
+                        case DBCBindingType.UNKNOWN:
+                        case DBCBindingType.IGNORE_ORDER:
+                        default:
+                            _logger.Warning("Unsupported binding type {BindingType}", attribute.BindingType);
+                            break;
+                    }
+                }
+            }
+
             var header = new DBCHeader
             {
                 Magic = 0x43424457, // 'WDBC'
-                RecordCount = (uint)items.Length,
-                FieldCount = (uint)properties.Length,
-                RecordSize = (uint)properties.Sum(p => Marshal.SizeOf(p.PropertyType)),
-                StringBlockSize = (uint)items.SelectMany(item => properties.Select(p => p.GetValue(item)?.ToString() ?? string.Empty))
-                                       .Sum(value => Encoding.UTF8.GetByteCount(value) + 1)
+                RecordCount = (uint)items.Count,
+                FieldCount = (uint)properties.Count,
+                RecordSize = recordSize,
+                StringBlockSize = stringSize
             };
 
             writer.Write(header.Magic);
