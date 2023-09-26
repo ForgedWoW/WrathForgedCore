@@ -1710,7 +1710,7 @@ public partial class DBCDatabase : DbContext
             _ = entity.HasKey(e => e.Id).HasName("PRIMARY");
 
             _ = entity
-                .ToTable("cfg_categories")
+                .ToTable("cfg_configs")
                 .HasCharSet("utf8mb3")
                 .UseCollation("utf8mb3_general_ci");
 
