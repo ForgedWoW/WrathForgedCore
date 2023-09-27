@@ -1,22 +1,22 @@
 DROP TABLE IF EXISTS `SoundFilter`; 
 CREATE TABLE `SoundFilter` ( `ID` INT NOT NULL DEFAULT '0', `Name` TEXT NULL, PRIMARY KEY (`ID`)) ENGINE=InnoDB DEFAULT CHARSET=utf8; 
-INSERT INTO `SoundFilter` VALUES (1,"Death Knight Human Male"); 
-INSERT INTO `SoundFilter` VALUES (2,"Death Knight Human Female"); 
-INSERT INTO `SoundFilter` VALUES (3,"Death Knight Dwarf Male"); 
-INSERT INTO `SoundFilter` VALUES (4,"Death Knight Dwarf Female"); 
-INSERT INTO `SoundFilter` VALUES (5,"Death Knight NightElf Male"); 
-INSERT INTO `SoundFilter` VALUES (6,"Death Knight NightElf Female"); 
-INSERT INTO `SoundFilter` VALUES (7,"Death Knight Gnome Male"); 
-INSERT INTO `SoundFilter` VALUES (8,"Death Knight Gnome Female"); 
-INSERT INTO `SoundFilter` VALUES (9,"Death Knight Draenei Male"); 
-INSERT INTO `SoundFilter` VALUES (10,"Death Knight Draenei Female"); 
-INSERT INTO `SoundFilter` VALUES (11,"Death Knight Orc Male"); 
-INSERT INTO `SoundFilter` VALUES (12,"Death Knight Orc Female"); 
-INSERT INTO `SoundFilter` VALUES (13,"Death Knight Scourge Male"); 
-INSERT INTO `SoundFilter` VALUES (14,"Death Knight Scourge Female"); 
-INSERT INTO `SoundFilter` VALUES (15,"Death Knight Tauren Male"); 
-INSERT INTO `SoundFilter` VALUES (16,"Death Knight Tauren Female"); 
-INSERT INTO `SoundFilter` VALUES (17,"Death Knight Troll Male"); 
-INSERT INTO `SoundFilter` VALUES (18,"Death Knight Troll Female"); 
-INSERT INTO `SoundFilter` VALUES (19,"Death Knight BloodElf Male"); 
-INSERT INTO `SoundFilter` VALUES (20,"Death Knight BloodElf Female"); 
+INSERT INTO `SoundFilter` VALUES (1,"Death Knight Human Male"),
+(2,"Death Knight Human Female"),
+(3,"Death Knight Dwarf Male"),
+(4,"Death Knight Dwarf Female"),
+(5,"Death Knight NightElf Male"),
+(6,"Death Knight NightElf Female"),
+(7,"Death Knight Gnome Male"),
+(8,"Death Knight Gnome Female"),
+(9,"Death Knight Draenei Male"),
+(10,"Death Knight Draenei Female"),
+(11,"Death Knight Orc Male"),
+(12,"Death Knight Orc Female"),
+(13,"Death Knight Scourge Male"),
+(14,"Death Knight Scourge Female"),
+(15,"Death Knight Tauren Male"),
+(16,"Death Knight Tauren Female"),
+(17,"Death Knight Troll Male"),
+(18,"Death Knight Troll Female"),
+(19,"Death Knight BloodElf Male"),
+(20,"Death Knight BloodElf Female"); 

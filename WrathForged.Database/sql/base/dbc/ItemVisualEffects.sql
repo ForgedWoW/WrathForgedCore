@@ -1,95 +1,95 @@
 DROP TABLE IF EXISTS `ItemVisualEffects`; 
 CREATE TABLE `ItemVisualEffects` ( `ID` INT NOT NULL DEFAULT '0', `Model` TEXT NULL, PRIMARY KEY (`ID`)) ENGINE=InnoDB DEFAULT CHARSET=utf8; 
-INSERT INTO `ItemVisualEffects` VALUES (1,"Spells\Enchantments\BlueGlow_High.mdx"); 
-INSERT INTO `ItemVisualEffects` VALUES (2,"Spells\Enchantments\BlueGlow_Low.mdx"); 
-INSERT INTO `ItemVisualEffects` VALUES (3,"Spells\Enchantments\BlueFlame_Low.mdx"); 
-INSERT INTO `ItemVisualEffects` VALUES (42,"Spells\Enchantments\SkullBalls.mdx"); 
-INSERT INTO `ItemVisualEffects` VALUES (45,"Spells\Enchantments\RedFlame_Low.mdx"); 
-INSERT INTO `ItemVisualEffects` VALUES (46,"Spells\Enchantments\PoisonDrip.mdx"); 
-INSERT INTO `ItemVisualEffects` VALUES (47,"Spells\Enchantments\Sparkle_A.mdx"); 
-INSERT INTO `ItemVisualEffects` VALUES (48,"Spells\Enchantments\YellowGlow_Low.mdx"); 
-INSERT INTO `ItemVisualEffects` VALUES (49,"Spells\Enchantments\Rune_Intellect.mdx"); 
-INSERT INTO `ItemVisualEffects` VALUES (50,"Spells\Enchantments\RedGlow_Low.mdx"); 
-INSERT INTO `ItemVisualEffects` VALUES (51,"Spells\Enchantments\Shaman_Fire.mdx"); 
-INSERT INTO `ItemVisualEffects` VALUES (52,"Spells\Enchantments\Shaman_Frost.mdx"); 
-INSERT INTO `ItemVisualEffects` VALUES (61,"Spells\Enchantments\\"); 
-INSERT INTO `ItemVisualEffects` VALUES (62,"Spells\Enchantments\BlueGlow_Med.mdx"); 
-INSERT INTO `ItemVisualEffects` VALUES (81,"Spells\Enchantments\Shaman_Rock.mdx"); 
-INSERT INTO `ItemVisualEffects` VALUES (101,"Spells\Enchantments\Shaman_Wind.mdx"); 
-INSERT INTO `ItemVisualEffects` VALUES (121,"Spells\Enchantments\RedGlow_High.mdx"); 
-INSERT INTO `ItemVisualEffects` VALUES (122,"Spells\Enchantments\YellowGlow_High.mdx"); 
-INSERT INTO `ItemVisualEffects` VALUES (123,"Spells\Enchantments\WhiteGlow_Low.mdx"); 
-INSERT INTO `ItemVisualEffects` VALUES (124,"Spells\Enchantments\WhiteGlow_High.mdx"); 
-INSERT INTO `ItemVisualEffects` VALUES (125,"Spells\Enchantments\GreenGlow_Low.mdx"); 
-INSERT INTO `ItemVisualEffects` VALUES (126,"Spells\Enchantments\GreenGlow_High.mdx"); 
-INSERT INTO `ItemVisualEffects` VALUES (127,"Spells\Enchantments\PurpleGlow_Low.mdx"); 
-INSERT INTO `ItemVisualEffects` VALUES (141,"Spells\Enchantments\PurpleGlow_High.mdx"); 
-INSERT INTO `ItemVisualEffects` VALUES (142,"Spells\Enchantments\BlackGlow_Low.mdx"); 
-INSERT INTO `ItemVisualEffects` VALUES (143,"Spells\Enchantments\BlackGlow_High.mdx"); 
-INSERT INTO `ItemVisualEffects` VALUES (144,"Spells\Enchantments\WhiteFlame_Low.mdx"); 
-INSERT INTO `ItemVisualEffects` VALUES (145,"Spells\Enchantments\GreenFlame_Low.mdx"); 
-INSERT INTO `ItemVisualEffects` VALUES (146,"Spells\Enchantments\PurpleFlame_Low.mdx"); 
-INSERT INTO `ItemVisualEffects` VALUES (147,"Spells\Enchantments\YellowFlame_Low.mdx"); 
-INSERT INTO `ItemVisualEffects` VALUES (148,"Spells\Enchantments\BlackFlame_Low.mdx"); 
-INSERT INTO `ItemVisualEffects` VALUES (149,"Spells\Enchantments\Shaman_Purple.mdx"); 
-INSERT INTO `ItemVisualEffects` VALUES (150,"Spells\Enchantments\Shaman_Green.mdx"); 
-INSERT INTO `ItemVisualEffects` VALUES (151,"Spells\Enchantments\Shaman_Red.mdx"); 
-INSERT INTO `ItemVisualEffects` VALUES (152,"Spells\Enchantments\Shaman_Yellow.mdx"); 
-INSERT INTO `ItemVisualEffects` VALUES (153,"Spells\Lightning_PreCast_Low_Hand.mdx"); 
-INSERT INTO `ItemVisualEffects` VALUES (154,"Spells\Lightning_Cast_Hand.mdx"); 
-INSERT INTO `ItemVisualEffects` VALUES (155,"Spells\Cyclone_Caster_State.mdx"); 
-INSERT INTO `ItemVisualEffects` VALUES (156,"Spells\SlowingStrike_Cast_Hand.mdx"); 
-INSERT INTO `ItemVisualEffects` VALUES (157,"Spells\Shadow_Strikes_State_Hand.mdx"); 
-INSERT INTO `ItemVisualEffects` VALUES (158,"Spells\Fire_Blue_PreCast_Uber_Hand.mdx"); 
-INSERT INTO `ItemVisualEffects` VALUES (159,"Spells\ShamanisticRage_State_Hand.mdx"); 
-INSERT INTO `ItemVisualEffects` VALUES (160,"Spells\Fel_Fire_PreCast_Uber_Hand.mdx"); 
-INSERT INTO `ItemVisualEffects` VALUES (161,"Spells\FaerieFire.mdx"); 
-INSERT INTO `ItemVisualEffects` VALUES (162,"Spells\Firework_RomanCandle_Missle_01.mdx"); 
-INSERT INTO `ItemVisualEffects` VALUES (163,"Spells\Shadow_Mend_Impact.mdx"); 
-INSERT INTO `ItemVisualEffects` VALUES (164,"Spells\Shadow_Frost_Weapon_Effect.mdx"); 
-INSERT INTO `ItemVisualEffects` VALUES (165,"Spells\Banish_Chest_Blue.mdx"); 
-INSERT INTO `ItemVisualEffects` VALUES (166,"Spells\IncinerateBlue_Impact_Base.mdx"); 
-INSERT INTO `ItemVisualEffects` VALUES (167,"Spells\BloodBold_Missile_Low.mdx"); 
-INSERT INTO `ItemVisualEffects` VALUES (168,"Spells\Fear_State_Head.mdx"); 
-INSERT INTO `ItemVisualEffects` VALUES (169,"Spells\Fire_SmokeTrail.mdx"); 
-INSERT INTO `ItemVisualEffects` VALUES (170,"Spells\Infernal_Smoke_Rec.mdx"); 
-INSERT INTO `ItemVisualEffects` VALUES (171,"Spells\ArcanePower_State_Chest.mdx"); 
-INSERT INTO `ItemVisualEffects` VALUES (172,"Spells\ConjureItem.mdx"); 
-INSERT INTO `ItemVisualEffects` VALUES (173,"Spells\Cripple_State_Base.mdx"); 
-INSERT INTO `ItemVisualEffects` VALUES (174,"Spells\CurseElements_Impact_Head.mdx"); 
-INSERT INTO `ItemVisualEffects` VALUES (175,"Spells\DetectMagic_Recursive.mdx"); 
-INSERT INTO `ItemVisualEffects` VALUES (176,"Spells\Dispel_Low_Recursive.mdx"); 
-INSERT INTO `ItemVisualEffects` VALUES (177,"Spells\Holy_Precast_Low_Hand.mdx"); 
-INSERT INTO `ItemVisualEffects` VALUES (178,"Spells\Vengeance_State_Hand.mdx"); 
-INSERT INTO `ItemVisualEffects` VALUES (179,"Spells\Summon_Precast_Hand.mdx"); 
-INSERT INTO `ItemVisualEffects` VALUES (182,"Spells\Enchantments\MongooseGlow_High.mdx"); 
-INSERT INTO `ItemVisualEffects` VALUES (183,"Spells\Enchantments\SavageryGlow_High.mdx"); 
-INSERT INTO `ItemVisualEffects` VALUES (184,"Spells\Enchantments\SoulfrostGlow_High.mdx"); 
-INSERT INTO `ItemVisualEffects` VALUES (185,"Spells\Enchantments\SunfireGlow_High.mdx"); 
-INSERT INTO `ItemVisualEffects` VALUES (186,"Spells\Enchantments\BattlemasterGlow_High.mdx"); 
-INSERT INTO `ItemVisualEffects` VALUES (187,"Spells\Enchantments\SpellSurgeGlow_High.mdx"); 
-INSERT INTO `ItemVisualEffects` VALUES (188,"Spells\DarkShade.mdx"); 
-INSERT INTO `ItemVisualEffects` VALUES (189,"Spells\BlackMagic_Precast_Base.mdx"); 
-INSERT INTO `ItemVisualEffects` VALUES (190,"Spells\Shadow_DotParticle.mdx"); 
-INSERT INTO `ItemVisualEffects` VALUES (191,"Spells\ManaBurn_Chest.mdx"); 
-INSERT INTO `ItemVisualEffects` VALUES (192,"Spells\BlackShot_Missile.mdx"); 
-INSERT INTO `ItemVisualEffects` VALUES (193,"Spells\Enchantments\ExecutionerGlow_High.mdx"); 
-INSERT INTO `ItemVisualEffects` VALUES (194,"Spells\Enchantments\DisintigrateGlow_High.mdx"); 
-INSERT INTO `ItemVisualEffects` VALUES (195,"Spells\IcyEnchant_High.mdx"); 
-INSERT INTO `ItemVisualEffects` VALUES (196,"Creature\kobold.mdx"); 
-INSERT INTO `ItemVisualEffects` VALUES (197,"creature\kobold\kobold.mdx"); 
-INSERT INTO `ItemVisualEffects` VALUES (198,"Creature\Turkey\turkey.mdx"); 
-INSERT INTO `ItemVisualEffects` VALUES (199,"spells\Fireworks_RWB_01.mdx"); 
-INSERT INTO `ItemVisualEffects` VALUES (200,"creature\Kiljaeden\Kiljaeden.mdx"); 
-INSERT INTO `ItemVisualEffects` VALUES (201,"World\Generic\PVP\Fires\LowPolyFire.mdx"); 
-INSERT INTO `ItemVisualEffects` VALUES (202,"Spells\FireStrike_Missile_Low.mdx"); 
-INSERT INTO `ItemVisualEffects` VALUES (203,"Spells\Fire_PreCast_Uber_Hand.mdx"); 
-INSERT INTO `ItemVisualEffects` VALUES (204,"Spells\Ice_Precast_Med_Hand.mdx"); 
-INSERT INTO `ItemVisualEffects` VALUES (205,"Spells\AcidLiquidBreath.mdx"); 
-INSERT INTO `ItemVisualEffects` VALUES (206,"Spells\PoisonShot_Missile.mdx"); 
-INSERT INTO `ItemVisualEffects` VALUES (207,"Spells\DeathKnight_FrozenRuneWeapon_State.mdx"); 
-INSERT INTO `ItemVisualEffects` VALUES (208,"Spells\LightningBolt_Impact_Chest.mdx"); 
-INSERT INTO `ItemVisualEffects` VALUES (210,"Spells\LightningBolt_Missile.mdx"); 
-INSERT INTO `ItemVisualEffects` VALUES (212,"Spells\FireShot_Missile.mdx"); 
-INSERT INTO `ItemVisualEffects` VALUES (213,"Spells\Archimonde_Fire.mdx"); 
-INSERT INTO `ItemVisualEffects` VALUES (215,"Spells\Holy_Missile_Low.mdx"); 
+INSERT INTO `ItemVisualEffects` VALUES (1,"Spells\Enchantments\BlueGlow_High.mdx"),
+(2,"Spells\Enchantments\BlueGlow_Low.mdx"),
+(3,"Spells\Enchantments\BlueFlame_Low.mdx"),
+(42,"Spells\Enchantments\SkullBalls.mdx"),
+(45,"Spells\Enchantments\RedFlame_Low.mdx"),
+(46,"Spells\Enchantments\PoisonDrip.mdx"),
+(47,"Spells\Enchantments\Sparkle_A.mdx"),
+(48,"Spells\Enchantments\YellowGlow_Low.mdx"),
+(49,"Spells\Enchantments\Rune_Intellect.mdx"),
+(50,"Spells\Enchantments\RedGlow_Low.mdx"),
+(51,"Spells\Enchantments\Shaman_Fire.mdx"),
+(52,"Spells\Enchantments\Shaman_Frost.mdx"),
+(61,"Spells\Enchantments\\"),
+(62,"Spells\Enchantments\BlueGlow_Med.mdx"),
+(81,"Spells\Enchantments\Shaman_Rock.mdx"),
+(101,"Spells\Enchantments\Shaman_Wind.mdx"),
+(121,"Spells\Enchantments\RedGlow_High.mdx"),
+(122,"Spells\Enchantments\YellowGlow_High.mdx"),
+(123,"Spells\Enchantments\WhiteGlow_Low.mdx"),
+(124,"Spells\Enchantments\WhiteGlow_High.mdx"),
+(125,"Spells\Enchantments\GreenGlow_Low.mdx"),
+(126,"Spells\Enchantments\GreenGlow_High.mdx"),
+(127,"Spells\Enchantments\PurpleGlow_Low.mdx"),
+(141,"Spells\Enchantments\PurpleGlow_High.mdx"),
+(142,"Spells\Enchantments\BlackGlow_Low.mdx"),
+(143,"Spells\Enchantments\BlackGlow_High.mdx"),
+(144,"Spells\Enchantments\WhiteFlame_Low.mdx"),
+(145,"Spells\Enchantments\GreenFlame_Low.mdx"),
+(146,"Spells\Enchantments\PurpleFlame_Low.mdx"),
+(147,"Spells\Enchantments\YellowFlame_Low.mdx"),
+(148,"Spells\Enchantments\BlackFlame_Low.mdx"),
+(149,"Spells\Enchantments\Shaman_Purple.mdx"),
+(150,"Spells\Enchantments\Shaman_Green.mdx"),
+(151,"Spells\Enchantments\Shaman_Red.mdx"),
+(152,"Spells\Enchantments\Shaman_Yellow.mdx"),
+(153,"Spells\Lightning_PreCast_Low_Hand.mdx"),
+(154,"Spells\Lightning_Cast_Hand.mdx"),
+(155,"Spells\Cyclone_Caster_State.mdx"),
+(156,"Spells\SlowingStrike_Cast_Hand.mdx"),
+(157,"Spells\Shadow_Strikes_State_Hand.mdx"),
+(158,"Spells\Fire_Blue_PreCast_Uber_Hand.mdx"),
+(159,"Spells\ShamanisticRage_State_Hand.mdx"),
+(160,"Spells\Fel_Fire_PreCast_Uber_Hand.mdx"),
+(161,"Spells\FaerieFire.mdx"),
+(162,"Spells\Firework_RomanCandle_Missle_01.mdx"),
+(163,"Spells\Shadow_Mend_Impact.mdx"),
+(164,"Spells\Shadow_Frost_Weapon_Effect.mdx"),
+(165,"Spells\Banish_Chest_Blue.mdx"),
+(166,"Spells\IncinerateBlue_Impact_Base.mdx"),
+(167,"Spells\BloodBold_Missile_Low.mdx"),
+(168,"Spells\Fear_State_Head.mdx"),
+(169,"Spells\Fire_SmokeTrail.mdx"),
+(170,"Spells\Infernal_Smoke_Rec.mdx"),
+(171,"Spells\ArcanePower_State_Chest.mdx"),
+(172,"Spells\ConjureItem.mdx"),
+(173,"Spells\Cripple_State_Base.mdx"),
+(174,"Spells\CurseElements_Impact_Head.mdx"),
+(175,"Spells\DetectMagic_Recursive.mdx"),
+(176,"Spells\Dispel_Low_Recursive.mdx"),
+(177,"Spells\Holy_Precast_Low_Hand.mdx"),
+(178,"Spells\Vengeance_State_Hand.mdx"),
+(179,"Spells\Summon_Precast_Hand.mdx"),
+(182,"Spells\Enchantments\MongooseGlow_High.mdx"),
+(183,"Spells\Enchantments\SavageryGlow_High.mdx"),
+(184,"Spells\Enchantments\SoulfrostGlow_High.mdx"),
+(185,"Spells\Enchantments\SunfireGlow_High.mdx"),
+(186,"Spells\Enchantments\BattlemasterGlow_High.mdx"),
+(187,"Spells\Enchantments\SpellSurgeGlow_High.mdx"),
+(188,"Spells\DarkShade.mdx"),
+(189,"Spells\BlackMagic_Precast_Base.mdx"),
+(190,"Spells\Shadow_DotParticle.mdx"),
+(191,"Spells\ManaBurn_Chest.mdx"),
+(192,"Spells\BlackShot_Missile.mdx"),
+(193,"Spells\Enchantments\ExecutionerGlow_High.mdx"),
+(194,"Spells\Enchantments\DisintigrateGlow_High.mdx"),
+(195,"Spells\IcyEnchant_High.mdx"),
+(196,"Creature\kobold.mdx"),
+(197,"creature\kobold\kobold.mdx"),
+(198,"Creature\Turkey\turkey.mdx"),
+(199,"spells\Fireworks_RWB_01.mdx"),
+(200,"creature\Kiljaeden\Kiljaeden.mdx"),
+(201,"World\Generic\PVP\Fires\LowPolyFire.mdx"),
+(202,"Spells\FireStrike_Missile_Low.mdx"),
+(203,"Spells\Fire_PreCast_Uber_Hand.mdx"),
+(204,"Spells\Ice_Precast_Med_Hand.mdx"),
+(205,"Spells\AcidLiquidBreath.mdx"),
+(206,"Spells\PoisonShot_Missile.mdx"),
+(207,"Spells\DeathKnight_FrozenRuneWeapon_State.mdx"),
+(208,"Spells\LightningBolt_Impact_Chest.mdx"),
+(210,"Spells\LightningBolt_Missile.mdx"),
+(212,"Spells\FireShot_Missile.mdx"),
+(213,"Spells\Archimonde_Fire.mdx"),
+(215,"Spells\Holy_Missile_Low.mdx"); 

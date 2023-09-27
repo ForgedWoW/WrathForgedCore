@@ -1,89 +1,89 @@
 DROP TABLE IF EXISTS `GameTables`; 
 CREATE TABLE `GameTables` ( `ID` INT NOT NULL DEFAULT '0', `Name` TEXT NULL, `NumRows` INT NOT NULL DEFAULT '0', `NumColumns` INT NOT NULL DEFAULT '0', PRIMARY KEY (`ID`)) ENGINE=InnoDB DEFAULT CHARSET=utf8; 
-INSERT INTO `GameTables` VALUES (1,"ExpByLevelDiff",200,1); 
-INSERT INTO `GameTables` VALUES (2,"hpBonusByLevel",11,32); 
-INSERT INTO `GameTables` VALUES (3,"ExpToNextLevel",100,1); 
-INSERT INTO `GameTables` VALUES (4,"energyBonusByLevel",11,32); 
-INSERT INTO `GameTables` VALUES (5,"MonsterACByLevel",100,1); 
-INSERT INTO `GameTables` VALUES (6,"HPPerStaminaByClass",1,10); 
-INSERT INTO `GameTables` VALUES (7,"StatPotionsPerLevelByClass",5,10); 
-INSERT INTO `GameTables` VALUES (8,"RelativeACPerClass",1,10); 
-INSERT INTO `GameTables` VALUES (9,"EnergyPerSpiritByClass",1,10); 
-INSERT INTO `GameTables` VALUES (10,"RelativeClassBaseEnergy",1,10); 
-INSERT INTO `GameTables` VALUES (11,"OCTLevelExperience",100,6); 
-INSERT INTO `GameTables` VALUES (12,"OCTBaseHPByClass",100,11); 
-INSERT INTO `GameTables` VALUES (13,"OCTNPCExpectedStamina",100,11); 
-INSERT INTO `GameTables` VALUES (14,"OCTHPFromItems",100,11); 
-INSERT INTO `GameTables` VALUES (15,"OCTNPCHPScaler",100,1); 
-INSERT INTO `GameTables` VALUES (16,"OCTRaceStats",5,11); 
-INSERT INTO `GameTables` VALUES (17,"OCTClassStats",5,11); 
-INSERT INTO `GameTables` VALUES (18,"OCTNPCExpectedAgility",100,11); 
-INSERT INTO `GameTables` VALUES (19,"OCTNPCExpectedIntellect",100,11); 
-INSERT INTO `GameTables` VALUES (20,"OCTNPCExpectedStrength",100,11); 
-INSERT INTO `GameTables` VALUES (21,"OCTChanceToDodge",100,11); 
-INSERT INTO `GameTables` VALUES (22,"OCTChanceToBlock",100,11); 
-INSERT INTO `GameTables` VALUES (23,"OCTChanceToEvade",100,11); 
-INSERT INTO `GameTables` VALUES (24,"OCTNPCDpsScaler",100,1); 
-INSERT INTO `GameTables` VALUES (25,"OCTHPPerStamina",100,11); 
-INSERT INTO `GameTables` VALUES (26,"OCTBaseMPByClass",100,11); 
-INSERT INTO `GameTables` VALUES (27,"OCTMPPerSpirit",100,11); 
-INSERT INTO `GameTables` VALUES (28,"OCTNPCExpectedSpirit",100,11); 
-INSERT INTO `GameTables` VALUES (29,"OCTMPFromItems",100,11); 
-INSERT INTO `GameTables` VALUES (30,"OCTRegenHP",100,11); 
-INSERT INTO `GameTables` VALUES (31,"OCTRegenMP",100,11); 
-INSERT INTO `GameTables` VALUES (32,"OCTChanceToParry",100,11); 
-INSERT INTO `GameTables` VALUES (33,"XPGroupBonus",40,2); 
-INSERT INTO `GameTables` VALUES (34,"RegenHPPerSpt",100,11); 
-INSERT INTO `GameTables` VALUES (35,"RegenMPPerSpt",100,11); 
-INSERT INTO `GameTables` VALUES (36,"ResistanceInnateFire",100,11); 
-INSERT INTO `GameTables` VALUES (37,"ResistanceInnateFrost",100,11); 
-INSERT INTO `GameTables` VALUES (38,"ResistanceInnateHoly",100,11); 
-INSERT INTO `GameTables` VALUES (39,"ResistanceInnateNature",100,11); 
-INSERT INTO `GameTables` VALUES (40,"ResistanceInnateShadow",100,11); 
-INSERT INTO `GameTables` VALUES (41,"BonusDamageFromStats",5,11); 
-INSERT INTO `GameTables` VALUES (42,"OCTNPCExpectedResistHoly",100,11); 
-INSERT INTO `GameTables` VALUES (43,"OCTNPCExpectedResistFire",100,11); 
-INSERT INTO `GameTables` VALUES (44,"OCTNPCExpectedResistNature",100,11); 
-INSERT INTO `GameTables` VALUES (45,"OCTNPCExpectedResistFrost",100,11); 
-INSERT INTO `GameTables` VALUES (46,"OCTNPCExpectedResistShadow",100,11); 
-INSERT INTO `GameTables` VALUES (47,"OCTNPCExpectedResistPhysical",100,11); 
-INSERT INTO `GameTables` VALUES (48,"OCTMPPerIntellect",100,11); 
-INSERT INTO `GameTables` VALUES (49,"NpcTotalHp",100,11); 
-INSERT INTO `GameTables` VALUES (50,"RageGenScaler",100,1); 
-INSERT INTO `GameTables` VALUES (51,"AttackPower",100,11); 
-INSERT INTO `GameTables` VALUES (52,"NpcTotalMp",100,11); 
-INSERT INTO `GameTables` VALUES (53,"ShapeshiftDPS",100,32); 
-INSERT INTO `GameTables` VALUES (54,"PCBaseAgility",22,12); 
-INSERT INTO `GameTables` VALUES (55,"PCBaseIntellect",22,12); 
-INSERT INTO `GameTables` VALUES (56,"PCBaseSpirit",22,12); 
-INSERT INTO `GameTables` VALUES (57,"PCBaseStamina",22,12); 
-INSERT INTO `GameTables` VALUES (58,"PCBaseStrength",22,12); 
-INSERT INTO `GameTables` VALUES (59,"ShieldBlockRegular",300,8); 
-INSERT INTO `GameTables` VALUES (60,"ShieldBlockBuckler",300,8); 
-INSERT INTO `GameTables` VALUES (61,"NPCManaCostScaler",100,1); 
-INSERT INTO `GameTables` VALUES (62,"AttackPowerRanged",100,11); 
-INSERT INTO `GameTables` VALUES (63,"ChanceToMeleeCrit",100,11); 
-INSERT INTO `GameTables` VALUES (64,"ChanceToSpellCrit",100,11); 
-INSERT INTO `GameTables` VALUES (65,"ChanceToMeleeCritBase",1,11); 
-INSERT INTO `GameTables` VALUES (66,"ChanceToSpellCritBase",1,11); 
-INSERT INTO `GameTables` VALUES (67,"ChanceToDodgeBase",1,11); 
-INSERT INTO `GameTables` VALUES (68,"PCExpectedStrength",100,11); 
-INSERT INTO `GameTables` VALUES (69,"PCExpectedStamina",100,11); 
-INSERT INTO `GameTables` VALUES (70,"PCExpectedAgility",100,11); 
-INSERT INTO `GameTables` VALUES (71,"PCExpectedIntellect",100,11); 
-INSERT INTO `GameTables` VALUES (72,"PCExpectedSpirit",100,11); 
-INSERT INTO `GameTables` VALUES (73,"PVPRanks",18,1); 
-INSERT INTO `GameTables` VALUES (74,"NpcTotalHpExp1",100,11); 
-INSERT INTO `GameTables` VALUES (75,"NpcDamageByClass",100,11); 
-INSERT INTO `GameTables` VALUES (76,"NpcDamageByClassExp1",100,11); 
-INSERT INTO `GameTables` VALUES (77,"CombatRatings",100,32); 
-INSERT INTO `GameTables` VALUES (78,"NpcTotalHpExp2",100,11); 
-INSERT INTO `GameTables` VALUES (79,"NpcDamageByClassExp2",100,11); 
-INSERT INTO `GameTables` VALUES (80,"BarberShopCostBase",100,1); 
-INSERT INTO `GameTables` VALUES (81,"NPCExpectedResistPhysExp1",100,11); 
-INSERT INTO `GameTables` VALUES (82,"NPCExpectedResistPhysExp2",100,11); 
-INSERT INTO `GameTables` VALUES (83,"OCTClassCombatRatingScalar",32,11); 
-INSERT INTO `GameTables` VALUES (84,"NpcTotalHpExp3",100,11); 
-INSERT INTO `GameTables` VALUES (85,"NpcDamageByClassExp3",100,11); 
-INSERT INTO `GameTables` VALUES (86,"NPCExpectedResistPhysExp3",100,11); 
-INSERT INTO `GameTables` VALUES (87,"SpellScaling",100,11); 
+INSERT INTO `GameTables` VALUES (1,"ExpByLevelDiff",200,1),
+(2,"hpBonusByLevel",11,32),
+(3,"ExpToNextLevel",100,1),
+(4,"energyBonusByLevel",11,32),
+(5,"MonsterACByLevel",100,1),
+(6,"HPPerStaminaByClass",1,10),
+(7,"StatPotionsPerLevelByClass",5,10),
+(8,"RelativeACPerClass",1,10),
+(9,"EnergyPerSpiritByClass",1,10),
+(10,"RelativeClassBaseEnergy",1,10),
+(11,"OCTLevelExperience",100,6),
+(12,"OCTBaseHPByClass",100,11),
+(13,"OCTNPCExpectedStamina",100,11),
+(14,"OCTHPFromItems",100,11),
+(15,"OCTNPCHPScaler",100,1),
+(16,"OCTRaceStats",5,11),
+(17,"OCTClassStats",5,11),
+(18,"OCTNPCExpectedAgility",100,11),
+(19,"OCTNPCExpectedIntellect",100,11),
+(20,"OCTNPCExpectedStrength",100,11),
+(21,"OCTChanceToDodge",100,11),
+(22,"OCTChanceToBlock",100,11),
+(23,"OCTChanceToEvade",100,11),
+(24,"OCTNPCDpsScaler",100,1),
+(25,"OCTHPPerStamina",100,11),
+(26,"OCTBaseMPByClass",100,11),
+(27,"OCTMPPerSpirit",100,11),
+(28,"OCTNPCExpectedSpirit",100,11),
+(29,"OCTMPFromItems",100,11),
+(30,"OCTRegenHP",100,11),
+(31,"OCTRegenMP",100,11),
+(32,"OCTChanceToParry",100,11),
+(33,"XPGroupBonus",40,2),
+(34,"RegenHPPerSpt",100,11),
+(35,"RegenMPPerSpt",100,11),
+(36,"ResistanceInnateFire",100,11),
+(37,"ResistanceInnateFrost",100,11),
+(38,"ResistanceInnateHoly",100,11),
+(39,"ResistanceInnateNature",100,11),
+(40,"ResistanceInnateShadow",100,11),
+(41,"BonusDamageFromStats",5,11),
+(42,"OCTNPCExpectedResistHoly",100,11),
+(43,"OCTNPCExpectedResistFire",100,11),
+(44,"OCTNPCExpectedResistNature",100,11),
+(45,"OCTNPCExpectedResistFrost",100,11),
+(46,"OCTNPCExpectedResistShadow",100,11),
+(47,"OCTNPCExpectedResistPhysical",100,11),
+(48,"OCTMPPerIntellect",100,11),
+(49,"NpcTotalHp",100,11),
+(50,"RageGenScaler",100,1),
+(51,"AttackPower",100,11),
+(52,"NpcTotalMp",100,11),
+(53,"ShapeshiftDPS",100,32),
+(54,"PCBaseAgility",22,12),
+(55,"PCBaseIntellect",22,12),
+(56,"PCBaseSpirit",22,12),
+(57,"PCBaseStamina",22,12),
+(58,"PCBaseStrength",22,12),
+(59,"ShieldBlockRegular",300,8),
+(60,"ShieldBlockBuckler",300,8),
+(61,"NPCManaCostScaler",100,1),
+(62,"AttackPowerRanged",100,11),
+(63,"ChanceToMeleeCrit",100,11),
+(64,"ChanceToSpellCrit",100,11),
+(65,"ChanceToMeleeCritBase",1,11),
+(66,"ChanceToSpellCritBase",1,11),
+(67,"ChanceToDodgeBase",1,11),
+(68,"PCExpectedStrength",100,11),
+(69,"PCExpectedStamina",100,11),
+(70,"PCExpectedAgility",100,11),
+(71,"PCExpectedIntellect",100,11),
+(72,"PCExpectedSpirit",100,11),
+(73,"PVPRanks",18,1),
+(74,"NpcTotalHpExp1",100,11),
+(75,"NpcDamageByClass",100,11),
+(76,"NpcDamageByClassExp1",100,11),
+(77,"CombatRatings",100,32),
+(78,"NpcTotalHpExp2",100,11),
+(79,"NpcDamageByClassExp2",100,11),
+(80,"BarberShopCostBase",100,1),
+(81,"NPCExpectedResistPhysExp1",100,11),
+(82,"NPCExpectedResistPhysExp2",100,11),
+(83,"OCTClassCombatRatingScalar",32,11),
+(84,"NpcTotalHpExp3",100,11),
+(85,"NpcDamageByClassExp3",100,11),
+(86,"NPCExpectedResistPhysExp3",100,11),
+(87,"SpellScaling",100,11); 

@@ -1,42 +1,42 @@
 DROP TABLE IF EXISTS `ScreenEffect`; 
 CREATE TABLE `ScreenEffect` ( `ID` INT NOT NULL DEFAULT '0', `Name` TEXT NULL, `Effect` INT NOT NULL DEFAULT '0', `Param_1` INT NOT NULL DEFAULT '0', `Param_2` INT NOT NULL DEFAULT '0', `Param_3` INT NOT NULL DEFAULT '0', `Param_4` INT NOT NULL DEFAULT '0', `LightParamsID` INT NOT NULL DEFAULT '0', `SoundAmbienceID` INT NOT NULL DEFAULT '0', `ZoneMusicID` INT NOT NULL DEFAULT '0', PRIMARY KEY (`ID`)) ENGINE=InnoDB DEFAULT CHARSET=utf8; 
-INSERT INTO `ScreenEffect` VALUES (1,"Ghost Screen Effect",1,0,0,0,0,4,462,36); 
-INSERT INTO `ScreenEffect` VALUES (21,"Arthas Memory Events",3,-1023410176,4,0,0,-1,0,0); 
-INSERT INTO `ScreenEffect` VALUES (41,"Borean Tundra - Mist of the Kvaldir",3,-1,6,40,0,-1,0,0); 
-INSERT INTO `ScreenEffect` VALUES (43,"ZP - Zombie-Vision",3,-939589632,4,0,0,-1,0,0); 
-INSERT INTO `ScreenEffect` VALUES (61,"BOTM - Jungle Madness",3,-864698789,2,25,0,-1,0,0); 
-INSERT INTO `ScreenEffect` VALUES (81,"Invis Screen Effect",2,0,0,0,0,4,462,36); 
-INSERT INTO `ScreenEffect` VALUES (82,"Zul'Drak - Altar of Quetz'lun - ELM",1,0,0,0,0,4,462,36); 
-INSERT INTO `ScreenEffect` VALUES (101,"Quest - Eye of Acherus",3,-184549376,4,0,0,-1,0,0); 
-INSERT INTO `ScreenEffect` VALUES (121,"Quest - Invis Screen Effect",2,0,0,0,0,4,462,36); 
-INSERT INTO `ScreenEffect` VALUES (122,"Quest - Ghost Screen Effect",1,0,0,0,0,4,462,36); 
-INSERT INTO `ScreenEffect` VALUES (123,"Quest - Realm of Shadows",3,-2062348516,1,60,0,-1,0,0); 
-INSERT INTO `ScreenEffect` VALUES (141,"Ebon Hold - Chapter II Skybox (DND)",0,0,0,0,0,5,472,449); 
-INSERT INTO `ScreenEffect` VALUES (161,"CoT Stratholme - Time Warp",3,-7574272,8,40,0,-1,0,0); 
-INSERT INTO `ScreenEffect` VALUES (181,"Ebon HOld - Chapter IV - Finale",0,0,0,0,0,-1,474,452); 
-INSERT INTO `ScreenEffect` VALUES (201,"Ebon Hold - Transition",3,-16777216,1,100,0,-1,0,0); 
-INSERT INTO `ScreenEffect` VALUES (221,"Howling Fjord - Echo of Ymiron",2,0,0,0,0,-1,0,0); 
-INSERT INTO `ScreenEffect` VALUES (222,"DrakTharon - Skeleton Form",3,-6420736,4,10,0,-1,0,0); 
-INSERT INTO `ScreenEffect` VALUES (242,"Quest - Iron Colossus Battle (Skybox)",0,0,0,0,0,5,0,0); 
-INSERT INTO `ScreenEffect` VALUES (262,"Icecrown - Argent Skytalon",3,-1787661710,9,0,0,-1,0,209); 
-INSERT INTO `ScreenEffect` VALUES (282,"Icecrown - Emerald Nightmare",3,-872349952,2,25,0,1,28,0); 
-INSERT INTO `ScreenEffect` VALUES (302,"Icecrown - Argent Defenders",0,0,0,0,0,2,0,0); 
-INSERT INTO `ScreenEffect` VALUES (322,"Ebon Hold - Chapter III",0,0,0,0,0,-1,473,452); 
-INSERT INTO `ScreenEffect` VALUES (342,"Dragonblight - World of Shadows",2,0,0,0,0,3,474,452); 
-INSERT INTO `ScreenEffect` VALUES (362,"Icecrown - Naz'anak",3,3355442,200,20,0,3,0,0); 
-INSERT INTO `ScreenEffect` VALUES (382,"Icecrown Bomber - See Cloak Dome",3,1941958144,2,0,0,0,0,0); 
-INSERT INTO `ScreenEffect` VALUES (402,"Icecrown - Sniper Rifle",3,0,8,30,0,-1,0,0); 
-INSERT INTO `ScreenEffect` VALUES (422,"CoA Black - Twilight Shift",3,-176267558,4,0,0,-1,0,0); 
-INSERT INTO `ScreenEffect` VALUES (442,"Ebon Hold - Chapter IV Skybox (DND)",0,0,0,0,0,5,472,502); 
-INSERT INTO `ScreenEffect` VALUES (462,"Drakil'jin Death",1,0,0,0,0,4,462,36); 
-INSERT INTO `ScreenEffect` VALUES (482,"Ulduar Raid - Worm Hole",1,0,0,0,0,4,0,36); 
-INSERT INTO `ScreenEffect` VALUES (502,"Ulduar Raid - Phase Punch Effect 01",3,-1,12,60,0,-1,0,0); 
-INSERT INTO `ScreenEffect` VALUES (602,"Hrothgar's Landing - Mist of the Kvaldir",3,-1,8,40,0,-1,0,0); 
-INSERT INTO `ScreenEffect` VALUES (743,"Icecrown Raid - Gushing Wound Screen",3,-6420736,4,10,0,-1,0,0); 
-INSERT INTO `ScreenEffect` VALUES (744,"Icecrown Raid - Swarming Shadows",3,-946974528,4,0,0,-1,0,0); 
-INSERT INTO `ScreenEffect` VALUES (747,"Ruby Sanctum - Twilight Shift",3,-176267558,4,0,0,4,505,0); 
-INSERT INTO `ScreenEffect` VALUES (756,"CC Prologue - ET - Big Battle",0,0,0,0,0,-1,0,574); 
-INSERT INTO `ScreenEffect` VALUES (757,"CC Prologue - ET - Med Battle",0,0,0,0,0,-1,0,572); 
-INSERT INTO `ScreenEffect` VALUES (758,"CC Prologue - ET - Magic",0,0,0,0,0,-1,0,573); 
-INSERT INTO `ScreenEffect` VALUES (759,"CC Prologue - ET - Quiet",0,0,0,0,0,-1,0,571); 
-INSERT INTO `ScreenEffect` VALUES (760,"CC Prologue - ET - Rally",0,0,0,0,0,-1,0,570); 
+INSERT INTO `ScreenEffect` VALUES (1,"Ghost Screen Effect",1,0,0,0,0,4,462,36),
+(21,"Arthas Memory Events",3,-1023410176,4,0,0,-1,0,0),
+(41,"Borean Tundra - Mist of the Kvaldir",3,-1,6,40,0,-1,0,0),
+(43,"ZP - Zombie-Vision",3,-939589632,4,0,0,-1,0,0),
+(61,"BOTM - Jungle Madness",3,-864698789,2,25,0,-1,0,0),
+(81,"Invis Screen Effect",2,0,0,0,0,4,462,36),
+(82,"Zul'Drak - Altar of Quetz'lun - ELM",1,0,0,0,0,4,462,36),
+(101,"Quest - Eye of Acherus",3,-184549376,4,0,0,-1,0,0),
+(121,"Quest - Invis Screen Effect",2,0,0,0,0,4,462,36),
+(122,"Quest - Ghost Screen Effect",1,0,0,0,0,4,462,36),
+(123,"Quest - Realm of Shadows",3,-2062348516,1,60,0,-1,0,0),
+(141,"Ebon Hold - Chapter II Skybox (DND)",0,0,0,0,0,5,472,449),
+(161,"CoT Stratholme - Time Warp",3,-7574272,8,40,0,-1,0,0),
+(181,"Ebon HOld - Chapter IV - Finale",0,0,0,0,0,-1,474,452),
+(201,"Ebon Hold - Transition",3,-16777216,1,100,0,-1,0,0),
+(221,"Howling Fjord - Echo of Ymiron",2,0,0,0,0,-1,0,0),
+(222,"DrakTharon - Skeleton Form",3,-6420736,4,10,0,-1,0,0),
+(242,"Quest - Iron Colossus Battle (Skybox)",0,0,0,0,0,5,0,0),
+(262,"Icecrown - Argent Skytalon",3,-1787661710,9,0,0,-1,0,209),
+(282,"Icecrown - Emerald Nightmare",3,-872349952,2,25,0,1,28,0),
+(302,"Icecrown - Argent Defenders",0,0,0,0,0,2,0,0),
+(322,"Ebon Hold - Chapter III",0,0,0,0,0,-1,473,452),
+(342,"Dragonblight - World of Shadows",2,0,0,0,0,3,474,452),
+(362,"Icecrown - Naz'anak",3,3355442,200,20,0,3,0,0),
+(382,"Icecrown Bomber - See Cloak Dome",3,1941958144,2,0,0,0,0,0),
+(402,"Icecrown - Sniper Rifle",3,0,8,30,0,-1,0,0),
+(422,"CoA Black - Twilight Shift",3,-176267558,4,0,0,-1,0,0),
+(442,"Ebon Hold - Chapter IV Skybox (DND)",0,0,0,0,0,5,472,502),
+(462,"Drakil'jin Death",1,0,0,0,0,4,462,36),
+(482,"Ulduar Raid - Worm Hole",1,0,0,0,0,4,0,36),
+(502,"Ulduar Raid - Phase Punch Effect 01",3,-1,12,60,0,-1,0,0),
+(602,"Hrothgar's Landing - Mist of the Kvaldir",3,-1,8,40,0,-1,0,0),
+(743,"Icecrown Raid - Gushing Wound Screen",3,-6420736,4,10,0,-1,0,0),
+(744,"Icecrown Raid - Swarming Shadows",3,-946974528,4,0,0,-1,0,0),
+(747,"Ruby Sanctum - Twilight Shift",3,-176267558,4,0,0,4,505,0),
+(756,"CC Prologue - ET - Big Battle",0,0,0,0,0,-1,0,574),
+(757,"CC Prologue - ET - Med Battle",0,0,0,0,0,-1,0,572),
+(758,"CC Prologue - ET - Magic",0,0,0,0,0,-1,0,573),
+(759,"CC Prologue - ET - Quiet",0,0,0,0,0,-1,0,571),
+(760,"CC Prologue - ET - Rally",0,0,0,0,0,-1,0,570); 

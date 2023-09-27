@@ -1,3967 +1,3967 @@
 DROP TABLE IF EXISTS `SpellVisualEffectName`; 
 CREATE TABLE `SpellVisualEffectName` ( `ID` INT NOT NULL DEFAULT '0', `Name` TEXT NULL, `FileName` TEXT NULL, `AreaEffectSize` FLOAT NOT NULL DEFAULT '0', `Scale` FLOAT NOT NULL DEFAULT '0', `MinAllowedScale` FLOAT NOT NULL DEFAULT '0', `MaxAllowedScale` FLOAT NOT NULL DEFAULT '0', PRIMARY KEY (`ID`)) ENGINE=InnoDB DEFAULT CHARSET=utf8; 
-INSERT INTO `SpellVisualEffectName` VALUES (1,"SeedOfCorruption_State","Spells\SeedOfCorruption_State.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (2,"FireBolt Impact Chest","Spells\FireBolt_ImpactDD_Med_Chest.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3,"zzOLD__Heal","Spells\Heal\Heal.mdl",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4,"zzOLD__HealCast","Spells\HealCast\HealCast.mdl",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6,"Teleport In","Spells\TeleportIn\TeleportIn.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (10,"zzOLD__Teleport Cast","Spells\TeleportCast\TeleportCast.mdl",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (11,"Footstep Spray Snow Run","Particles\FootstepSpraySnow.mdl",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (12,"Footstep Spray Snow Walk","Particles\FootstepSpraySnowWalk.mdl",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (14,"HARDCODED Loot Art","Particles\LootFX.mdl",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (17,"Shadow Precast Low Hand","Spells\Shadow_Precast_Low_Hand.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (18,"zzOLD__Death Touch Cast","Spells\DeathTouchCast\DeathTouchCast.mdl",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (20,"zzOLD__Heal Hands","Spells\HealHands\HealHands.mdl",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (21,"HARDCODED Unit Level Up","Spells\LevelUp\LevelUp.mdl",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (23,"zzOLD__FreezingFinger2_Impact_Head","Particles\FreezingFinger2_Impact_Head.MDL",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (24,"zzOLD__FreezingFinger_Impact_Chest","Particles\FreezingFinger_Impact_Chest.MDL",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (25,"zzOLD__FreezingFinger_Impact_Base","Particles\FreezingFinger_Impact_Base.MDL",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (26,"zzOLD__FrostCastConeofCold","Particles\FrostCastConeofCold.MDL",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (27,"zzOLD__Portal","Spells\Summon03\Summon03.mdl",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (28,"zzOLD__Numb_Impact_Base","Particles\Numb_Impact_Base.MDL",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (29,"zzOLD__FreezingCloud_Impact_Base","Particles\FreezingCloud_Impact_Base.MDL",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (30,"zzOLD__Numb_Precast_Hand","Particles\Numb_Precast_Hand.MDL",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (32,"zzOLD__FrostBolt Missle","Particles\FrostBolt_Missle.mdl",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (33,"zzOLD__FrostBlast_Precast_Hand","Particles\FrostBlast_Precast_Hand.MDL",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (34,"zzOLD__FrostBolt Impact","Particles\FrostBolt_Impact_Chest.mdl",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (36,"zzOLD__Freeze_Impact_Base","Particles\Freeze_Impact_Base.MDL",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (37,"zzOLD__Freeze_Impact_Chest","Particles\Freeze_Impact_Chest.MDL",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (38,"zzOLD__FrostArmor_Impact_Head","Particles\FrostArmor_Impact_Head.MDL",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (39,"zzOLD__FrostNova_Impact_Chest","Particles\FrostNova_Impact_Chest.MDL",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (40,"zzOLD__FreezeNova_Impact_Chest","Particles\FreezeNova_Impact_Chest.MDL",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (41,"zzOLD__FreezingFinger4_Impact_Head","Particles\FreezingFinger4_Impact_Head.mdl",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (42,"zzOLD__StarStun_State_Head","horse2.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (43,"zzOLD__CorrodeArmor_Impact_Head","Particles\CorrodeArmor_Impact_Head.MDL",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (44,"Earth Burrow Cast (Red)","Spells\BurrowEarth_Hellfire_Missile.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (45,"Fire Precast Low Hand","Spells\Fire_Precast_Low_Hand.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (46,"zzOLD__BurningBlast_Precast_Base","Particles\BurningBlast_Precast_Base.MDL",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (47,"Readiness Impact Chest","spells\readiness_impact_chest.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (48,"zzOLD__BoltofIce_Impact_Chest","Particles\BoltofIce_Impact_Chest.mdl",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (49,"zzOLD__FrostBlast_Precast_Base","Particles\FrostBlast_Precast_Base.mdl",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (50,"StunSwirl State Head","Spells\StunSwirl_State_Head.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (51,"zzOLD__WalkofFire","Particles\WalkofFire_area.mdl",2,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (53,"zzOLD__Frost_Precast_Base","Particles\Frost_Precast_Base.mdl",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (54,"Ice Precast Uber Head","Spells\Ice_Precast_Uber_Head.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (55,"Combat Blood Spurt Back Large Red","Particles\BloodSpurts\BloodSpurtLarge.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (56,"zzOLD__BoltofFire_missle","Particles\BoltofFire_missle.mdl",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (57,"zzOLD__FireShield_Impact_Base","Particles\FireShield_Impact_Base.mdl",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (58,"zzOLD__Frost_Cast_Chest","Particles\Frost_Cast_Chest.mdl",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (59,"zzOLD__Frost_Precast_Chest","Particles\Frost_Precast_Chest.mdl",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (60,"zzOLD__Frost_Cast_Base","Particles\Frost_Cast_Base.mdl",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (61,"zzOLD__Frost_Precast3_Base","Particles\Frost_Precast3_Base.mdl",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (62,"zzOLD__Frost_Cast2_Base","Particles\Frost_Cast2_Base.mdl",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (63,"zzOLD__Frost_Precast_Low_Hand","particles\coldbreath.mdx",1,1.2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (64,"zzOLD__Frost_Cast_Hand","Particles\Frost_Cast_Hand.mdl",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (65,"zzOLD__BurningBlast_Cast_Base","Particles\BurningBlast_Cast_Base.mdl",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (66,"zzOLD__FreezingFinger1_Impact_Head","Particles\FreezingFinger1_Impact_Head.mdl",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (67,"zzOLD__FrostBlast_Cast_Base","Particles\FrostBlast_Cast_Base.mdl",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (68,"zzOLD__FreezingFinger3_Impact_Head","Particles\FreezingFinger3_Impact_Head.mdl",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (69,"zzOLD__CircleofFlame_area","Particles\CircleofFlame_area.mdl",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (70,"Rejuvenation Impact Base","Spells\Rejuvenation_Impact_Base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (71,"zzOLD__Rejuvenation Impact Chest","Particles\NaturesTouch1_Impact_Chest.mdl",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (72,"zzOLD__Nature_Precast_Base","Particles\Nature_Precast_Base.mdl",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (73,"Nature Cast Hand","Spells\Nature_Cast_Hand.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (74,"CallLightning Impact","Spells\CallLightning_Impact.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (75,"zzOLD__FireShield_State_Base","Particles\FireShield_State_Base.mdl",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (77,"zzOLD__CallStorm_PreCast_Base","Particles\CallStorm_PreCast_Base.mdl",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (78,"zzOLD__LightningShield_Impact_Chest","Particles\LightningShield_Impact_Chest.mdl",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (79,"EntanglingRoots_Impact_Base","Particles\EntanglingRoots_Impact_Base.mdl",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (80,"EntanglingRoots State","Spells\EntanglingRoots_State.mdx",1,1,0.01,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (81,"zzOLD__FrostCloud_Cast_Base","Particles\FrostCloud_Cast_Base.mdl",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (82,"zzOLD__Nature_Cast_Base","Particles\Nature_Cast_Base.mdl",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (83,"Ice ImpactDD Low Chest","Spells\Ice_ImpactDD_Low_Chest.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (84,"zzOLD__IcePrison_State_Base","Particles\IcePrison_State.mdl",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (85,"zzOLD__Resurrection_Impact_Base","Particles\Resurrection_Impact_Base.mdl",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (86,"Defensive Stance Impact Chest","Spells\DefensiveStance_Impact_Chest.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (87,"zzOLD__LightningShield_Cast_Base","Particles\LightningShield_Cast_Base.mdl",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (88,"Lightning PreCast Low Hand","Spells\Lightning_PreCast_Low_Hand.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (89,"Immolate Impact Chest","Spells\Immolate_Impact_Chest.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (90,"SliceDice Impact Chest","Spells\SliceDice_Impact_Chest.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (91,"zzOLD__BloodLust_Impact_Base","Particles\BloodLust_Impact_Base.mdl",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (92,"zzOLD__Dismember_Impact_Chest","Particles\Dismember_Impact_Chest.mdl",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (93,"ShieldBash Impact Chest","Spells\ShieldBash_Impact_Chest.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (94,"BloodLust State Hand","Spells\BloodLust_State_Hand.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (95,"Missile: Meteor (Scale: x3)","spells\Meteor_Ball_Missile.mdx",1,3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (96,"zzOLD__Lightning_PreCast_Base","Particles\Lightning_PreCast_Base.mdl",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (97,"Cripple State Chest","Spells\Cripple_State_Chest.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (98,"Alexander's Test Missile","Spells\Missile_Wave_Ice.m2",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (99,"Food HealEffect Base","Spells\Food_HealEffect_Base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (100,"Teleport","Spells\Teleport.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (101,"HeadSplitter Impact Chest","Spells\HeadSplitter_Impact_Chest.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (102,"Bloodlust Cast Hand","Spells\BloodLust_Cast_Hand.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (103,"SummonPet PreCast Impact Base","Spells\SummonPet_Impact_Base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (104,"zzOLD__DismemberBlood_Impact_Chest","Particles\DismemberBlood_Impact_Chest.mdl",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (105,"Footstep Spray Dirt Run","Particles\FootstepSprayDirt.mdl",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (106,"Footstep Spray Dirt Walk","Particles\FootstepSprayDirtWalk.mdl",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (107,"HARDCODED Breath Cold","Particles\ColdBreath.mdl",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (108,"HARDCODED Breath Underwater","Particles\Bubbles.mdl",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (109,"Combat Blood Spurt Front Small Red","Particles\BloodSpurts\BloodSpurt.mdl",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (110,"Holy ImpactDD Uber Chest","Spells\Holy_ImpactDD_Uber_Chest.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (117,"Ice Precast Low Hand","Spells\Ice_Precast_Low_Hand.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (118,"zzOLD__Hit Splat Physical Big","Particles\BloodSpurts\HitSprite.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (119,"Holy Precast Uber Hand","Spells\Holy_Precast_Uber_Hand.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (120,"zzOLD__Hit Splat Holy Small","Particles\BloodSpurts\HitSprite.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (121,"Ice Precast Med Hand","Spells\Ice_Precast_Med_Hand.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (122,"Ice Precast High Base","Spells\Ice_Precast_High_Base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (123,"Holy Precast High Base","Spells\Holy_Precast_High_Base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (124,"Holy ImpactDD Med Chest","Spells\Holy_ImpactDD_Med_Chest.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (125,"Holy ImpactDD High Chest","Spells\Holy_ImpactDD_High_Chest.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (126,"Ice Precast High Hand","Spells\Ice_Precast_High_Hand.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (127,"Ice Precast Uber Hand","Spells\Ice_Precast_Uber_Hand.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (128,"Ice Precast Uber Base","Spells\Ice_Precast_Uber_Base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (129,"Holy ImpactDD Low Chest","Spells\Holy_ImpactDD_Low_Chest.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (130,"Holy Precast Med Hand","Spells\Holy_Precast_Med_Hand.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (131,"Holy Precast High Hand","Spells\Holy_Precast_High_Hand.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (134,"zzOLD__Heal Precast Base","Particles\Heal_Precast_Base.mdl",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (135,"Holy Precast Low Hand","Spells\Holy_Precast_Low_Hand.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (136,"zzOLD__Heal Cast Base","Particles\Heal_cast_Base.mdl",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (140,"zzOLD__Heal_Impact_Base","Particles\Heal_Impact_Base.mdl",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (141,"zzOLD__Heal Precast Chest","Particles\Heal_Precast_Chest.mdl",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (142,"zzOLD__HolySmite Impact","Particles\HolySmite_Impact_Chest.mdl",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (143,"zzOLD__HolySmite Precast Base","Particles\HolySmite_Precast_Base.mdl",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (144,"zzOLD__Restoration_Precast_Chest","Particles\Restoration_PreCast_Chest.mdl",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (145,"zzOLD__Restoration_Precast_Base","Particles\Restoration_Precast_Base.mdl",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (146,"Nature Precast Hand","Spells\Nature_PreCast_Low_Hand.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (147,"Restoration Impact Base","Spells\Restoration_Impact_Base.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (148,"Holy ImpactDD Uber Base","Spells\Holy_ImpactDD_Uber_Base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (149,"Shadow ImpactDD Low Chest","Spells\Shadow_ImpactDD_Low_Chest.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (150,"Shadow ImpactDD Med Base","Spells\Shadow_ImpactDD_Med_Base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (151,"Missile: DeathCoil Missile","Spells\DeathCoil_Missile.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (152,"zzOLD__Bloodlust_PreCast_Hand","Particles\Bloodlust_PreCast_Hand.mdl",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (153,"PiercingStrike_Cast_Hand","Particles\PiercingStrike_Cast_Hand.mdl",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (154,"zzOLD__BurningBlast_Impact","Particles\BurningBlast_Impact_Chest.mdl",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (155,"zzOLD__HealSelf_Impact_Base","Particles\HealSelf_Impact_Base.mdl",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (156,"zzOLD__HealSelf_PreCast_Hand","Particles\HealSelf_PreCast_Hand.mdl",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (157,"LightningBolt Missile","Spells\LightningBolt_Missile.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (158,"Slow Impact Base","Spells\Slow_Impact_Base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (159,"zzOLD__LogInEffect_Precast_Base","Particles\LoginFX.mdl",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (160,"zzOLD__Corruption Impact Head","Particles\CorrodeArmor_Impact_Head.mdl",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (161,"zzOLD__Power Word Shadow Impact","Particles\PWShadow_Impact.mdl",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (162,"Invisibility Impact","Spells\Invisibility_Impact_Base.mdl",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (163,"Invisibility PreCast Hands","Particles\Invisibility_PreCast_Hand.mdl",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (164,"Combat Blood Spurt Front Large Red","Particles\BloodSpurts\BloodSpurtLarge.mdl",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (167,"zzOLD__MoltenBlast_Impact","Particles\MoltenBlast_Impact.mdl",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (168,"Brilliance Aura Base","Spells\BrillianceAura.mdl",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (169,"SummonPet Cast Impact Base","Spells\SummonPet_Cast_Impact_Base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (170,"Summon Precast Hand","Spells\Summon_PreCast_Hand.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (171,"Mining Pick","Spells\MiningPick_SpellObject.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (172,"zzOLD__FrostNova_AE","Particles\FrostNova_AE_Impact.mdl",50,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (173,"LightningShield Impact Base","Spells\LightningShield_Impact_Base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (174,"zzOLD__Fizzle Physical","Particles\Physical_Fizzle_Hand.mdl",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (175,"zzOLD__Fizzle Holy","Particles\Holy_Fizzle_Hand.mdl",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (176,"zzOLD__Fizzle Fire","Particles\Fire_Fizzle_Hand.mdl",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (177,"zzOLD__Fizzle Nature","Particles\Nature_Fizzle_Hand.mdl",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (178,"zzOLD__Fizzle Frost","Particles\Frost_Fizzle_Hand.mdl",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (179,"zzOLD__Fizzle Shadow","Particles\Shadow_Fizzle_Hand.mdl",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (180,"zzOLD__DivineSmite_Precast_Base","Particles\DivineSmite_Precast_Base.mdl",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (181,"zzOLD__DivineSmite_Impact_Chest","Particles\DivineSmite_Impact_Chest.mdl",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (182,"zzOLD__DivineSmite Impact Base","Particles\DivineSmite_Impact_Base.mdl",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (183,"Combat Blood Spurt Front Small Green","Particles\BloodSpurts\BloodSpurtGreen.mdl",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (184,"Combat Blood Spurt Front Large Green","Particles\BloodSpurts\BloodSpurtGreenLarge.mdl",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (187,"FireShield Impact Head","Spells\FireShield_Impact_Head.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (188,"FireBolt Missile Low","Spells\FireBolt_Missile_Low.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (189,"Clayon Test Impact","Spells\Druid_Berserk.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (190,"BlessingofStrength Base","Spells\BlessingofStrength_Base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (191,"BlessingofAgility Base","Spells\BlessingofAgility_Base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (192,"Invisible Cube","spells\invisible.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (193,"BlessingofStamina Base","Spells\BlessingofStamina_Base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (194,"zzOLD__Blessing Stamina Impact Base 3","Spells\BlessingofStamina_Base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (195,"BlessingofProtection Base","Spells\BlessingofProtection_Base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (196,"Arcane Torrent Cast","Spells\ArcaneTorrent.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (197,"zzOLD__Holy Light Impact Base","Particles\HolyLight_Impact_Base.mdl",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (198,"zzOLD__InnerFire Impact Base","Particles\InnerFire_Impact_Base.mdl",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (200,"HARDCODED Footstep Water Run Spray","Particles\FootstepSprayWater.mdl",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (201,"HARDCODED Footstep Water Walk Spray","Particles\FootstepSprayWaterWalk.mdl",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (202,"zzOLD__Character Morph Effect","Particles\MorphFX.mdl",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (205,"zzOLD__Frost_Precast_High_Hand","Particles\Frost_Precast_High_Hand.mdl",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (206,"zzOLD__Frost_Precast_Med_Hand","Particles\Frost_Precast_Med_Hand.mdl",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (207,"zzOLD__Frost_Precast_Uber_Hand","Particles\Frost_Precast_Uber_Hand.mdl",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (208,"zzOLD__Frost_Precast_High_Base","Particles\Frost_Precast_High_Base.mdl",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (210,"zzOLD__Frost_Precast_Uber_Base","Particles\Frost_Precast_Uber_Base.mdl",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (211,"Holy Precast Uber Base","Spells\Holy_Precast_Uber_Base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (212,"Fire ImpactDD High Chest","Spells\Fire_ImpactDD_High_Chest.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (213,"Fire ImpactDD High Base","Spells\Fire_ImpactDD_High_Base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (214,"Ice ImpactDD Med Chest","Spells\Ice_ImpactDD_Med_Chest.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (215,"Swipe Caster","Spells\SwipeCaster.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (216,"Ice ImpactDD Uber Chest","Spells\Ice_ImpactDD_Uber_Chest.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (217,"Fire ImpactDD Low Chest","Spells\Fire_ImpactDD_Low_Chest.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (218,"Fire ImpactDD Med Chest","Spells\Fire_ImpactDD_Med_Chest.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (219,"Fire ImpactDD Uber Base","Spells\Fire_ImpactDD_Uber_Base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (220,"Fire ImpactDD Uber Chest","Spells\Fire_ImpactDD_Uber_Chest.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (221,"Ice Precast High Head","Spells\Ice_Precast_High_Head.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (222,"Holy ImpactDD High Base","Spells\Holy_ImpactDD_High_Base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (223,"DeathCoil Impact Chest","spells\DeathCoil_Impact_Chest.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (224,"Holy Missile Low","Spells\Holy_Missile_Low.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (225,"Holy Missile Med","Spells\Holy_Missile_Med.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (226,"Holy Missile High","Spells\Holy_Missile_High.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (227,"Holy Missile Uber","Spells\Holy_Missile_Uber.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (228,"BloodyExplosion","Spells\BloodyExplosion.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (229,"Flamestrike ImpactDD Med Base","Spells\FlameStrike_ImpactDD_Med_Base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (230,"Poison ImpactDot Med Chest","Spells\Poison_ImpactDot_Med_Chest.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (231,"Ice Missile Low","Spells\Ice_Missile_Low.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (232,"Ice Missile Med","Spells\Ice_Missile_Med.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (233,"Ice Missile High","Spells\Frostbolt.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (234,"Ice Missile Uber","Spells\Ice_Missile_Uber.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (235,"zzOLD__Ice ImpactDOT Low Base","Spells\Ice_ImpactDOT_Low.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (236,"Poison StateDot Med Base","Spells\Poison_ImpactDot_Med_Base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (237,"FireStrike Missile Low","Spells\FireStrike_Missile_Low.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (238,"FrostArmor Low Head","Spells\FrostArmor_Low_Head.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (239,"Shadow ImpactBuff Base","Spells\Shadow_ImpactBuff_Base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (240,"Dispel Low Base","Spells\Dispel_Low_Base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (241,"DemonArmor Impact Head","Spells\DemonArmor_Impact_Head.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (242,"Item - Potion Healing","Spells\PotionA_SpellObject.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (243,"PotionB SpellObject","Spells\PotionB_SpellObject.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (244,"HolyLight Low Head","Spells\HolyLight_Low_Head.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (245,"LayonHands Low Chest","Spells\LayonHands_Low_Chest.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (246,"LayonHands Low Head","Spells\LayonHands_Low_Head.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (247,"HolyWordHeal Base","Spells\HolyWordHeal_Base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (248,"Greater Heal Low Base","Spells\GreaterHeal_Low_Base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (249,"Heal Low Base","Spells\Heal_Low_Base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (251,"Corruption State Base","Spells\Corruption_ImpactDot_Med_Base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (252,"Fire DOT State Chest","Spells\Fire_DOT_State_Chest.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (253,"Nullify base","Spells\Nullify_base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (254,"ChainsofIce Low Base","Spells\ChainsofIce_Low_Base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (255,"Sleep State Head","Spells\Sleep_State_Head.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (256,"Dynamite Lit","Spells\DynamiteA_SpellObject.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (257,"Bomb Explosion","Spells\Bomb_ExplosionA.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (258,"Dynamite Missile","Spells\DynamiteA_Missile.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (259,"Frostbolt Missile","spells\frostbolt.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (260,"SealofMight Low Base","Spells\SealofMight_Low_Base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (261,"BurningSpirit Impact Base","Spells\BurningSpirit_Impact_Base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (262,"DivineShield Low Chest","Spells\DivineShield_Low_Chest.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (263,"DivineShield Low Base","Spells\DivineShield_Low_Base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (264,"BurningIntellect Impact Base","Spells\BurningIntellect_Impact_Base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (265,"ArcaneIntellect Impact Base","Spells\ArcaneIntellect_Impact_Base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (266,"Taunt Head","Spells\Taunt_Head.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (267,"Conjure Item","Spells\ConjureItem.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (268,"Devotion Aura Base","Spells\DevotionAura_Base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (269,"Conjure Item Cast","Spells\ConjureItemCast.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (270,"Soul Funnel Impact Chest","Spells\SoulFunnel_Impact_Chest.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (271,"Mana Funnel Impact Chest","Spells\ManaFunnel_Impact_Chest.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (272,"Magic PreCast Hand","Spells\Magic_PreCast_Hand.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (273,"Rake","Spells\Rake.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (274,"Anti-Shadow Impact Base","Spells\AntiShadow_Impact_Base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (276,"Bestow Disease Impact Chest","Spells\BestowDisease_Impact_Chest.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (277,"Create Soulstone Cast","Spells\CreateSoulstone_Cast.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (278,"RetributionAura Base","Spells\RetributionAura_Base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (279,"Resurrection Low Base","Spells\Resurrection_Low_Base.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (280,"Polymorph Impact","Spells\Polymorph_Impact.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (281,"LightningBolt Impact Chest","Spells\LightningBolt_Impact_Chest.mdx",1,0.35,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (282,"Frost Nova Area","Spells\Frost_Nova_area.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (284,"Frost Nova state","Spells\Frost_Nova_state.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (285,"Immolate State","Spells\Immolate_State.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (286,"Maul Impact","Spells\MaulImpact.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (287,"Fire Precast Hand","Spells\Fire_Precast_Hand.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (288,"Fire Cast Hand","Spells\Fire_Cast_Hand.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (289,"Harm Undead Aura Base","Spells\HarmUndeadAura_Base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (290,"Maul Cast Base","Spells\MaulCasterBase.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (291,"Nature Precast Chest","Spells\Nature_Precast_Chest.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (292,"Flamestrike Area","Spells\Flamestrike_Area.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (293,"Lightning Cast Hand","Spells\Lightning_Cast_Hand.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (294,"HolySmite Low Chest","Spells\HolySmite_Low_Chest.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (296,"LightningShield State Base","Spells\LightningShield_State_Base.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (297,"Immolate State Base","Spells\Immolate_State_Base.mdx",1,1,0.01,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (298,"Life Tap State Chest","Spells\Lifetap_State_Chest.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (299,"Smash Impact Chest","Spells\Smash_Impact_Chest.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (300,"ShadowWordDominate Chest","Spells\ShadowWordDominate_Chest.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (301,"ShadowWordSilence Breath","Spells\ShadowWordSilence_Breath.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (303,"Anti-Magic PreCast Hand","Spells\AntiMagic_PreCast_Hand.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (304,"Anti-Magic State Base","Spells\AntiMagic_State_Base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (305,"ShadowWordPain Chest","Spells\ShadowWordPain_Chest.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (306,"Magic Unlock","Spells\MagicUnlock.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (307,"Dark Ritual PreCast Base","Spells\DarkRitual_PreCast_Base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (308,"ShadowWordFumble Head","Spells\ShadowWordFumble_Head.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (309,"Detect Invisibility Impact Base","Spells\DetectInvis_Impact_Base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (310,"Detect Invisibility Impact Head","Spells\DetectInvis_Impact_Head.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (311,"CurseofWeakness Head","Spells\CurseofWeakness_Head.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (312,"CurseofFrailty Head","Spells\CurseofFrailty_Head.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (313,"RemoveCurse Base","Spells\RemoveCurse_Base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (314,"NullifyDisease Base","Spells\NullifyDisease_Base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (315,"NullifyPoison Base","Spells\NullifyPoison_Base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (320,"RighteousFury Chest","Spells\RighteousFury_Chest.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (321,"MoltenBlast Impact Chest","Spells\MoltenBlast_Impact_Chest.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (322,"Arcane Barrage Missile","spells\mage_arcanebarrage_missile.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (323,"Swipe Impact","Spells\SwipeImpact.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (325,"Faerie Fire Head State","Spells\FaerieFire.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (326,"HolyProtection Chest","Spells\HolyProtection_Chest.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (328,"LightningStorm Cloud State","Spells\LightningStorm_Cloud_State.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (330,"Shock Missile","Spells\Shock_Missile.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (331,"Shock Impact Chest","Spells\Shock_Impact_Chest.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (332,"Chainlightning Impact Chest","Spells\ChainLightning_Impact_Chest.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (333,"PrayerofHealing Chest","Spells\PrayerofHealing_Chest.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (334,"Spirit Armor Impact Head","Spells\SpiritArmor_Impact_Head.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (335,"Anti-Holy Impact Base","Spells\AntiHoly_Impact_Base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (336,"RighteousnessAura Base","Spells\RighteousnessAura_Base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (337,"BeastRageCaster","Spells\BeastRageCaster.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (339,"BeastRage State Head","Spells\BeastRageState.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (340,"Basic Strike","Spells\BasicStrike.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (341,"Thorns Base","Spells\Thorns_Base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (342,"Thorns Low Chest","Spells\Thorns_Low_Chest.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (343,"Taunt Cast Base","Spells\Taunt_Cast.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (345,"ChallengingShout Cast Base","Spells\ChallengingShout_Cast_Base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (346,"InnerFire Base","Spells\InnerFire_Base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (347,"Learn Impact Base","Spells\Learn_Impact_Base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (348,"Mark of the Beast Impact Head","Spells\MarkofBeast_Impact_Head.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (349,"ThunderClap Cast Base","Spells\ThunderClap_Cast_Base.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (350,"Purge Impact Chest","Spells\Purge_Impact_Chest.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (351,"Unyielding Will Impact Chest","Spells\Unyielding_Will_Impact_Chest.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (354,"Undying Strength Impact Chest","Spells\Undying_Strength_Impact_Chest.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (355,"Cyclone State","Spells\Cyclone_State.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (356,"Slowing Strike Cast Hand","Spells\SlowingStrike_Cast_Hand.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (357,"Slowing Strike Impact Chest","Spells\SlowingStrike_Impact_Chest.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (358,"Slowing Strike Impact Base","Spells\SlowingStrike_Impact_Base.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (360,"Astral Recall Impact Base","Spells\Astral_Recall_Impact_Base.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (361,"Whirlwind Base","Spells\Whirlwind_State_Base.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (362,"Arrow Fire","Item\ObjectComponents\Ammo\ArrowFireFlight_01.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (363,"Arrow Ice","Item\ObjectComponents\Ammo\ArrowIceFlight_01.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (365,"Fireball Missile Low","Spells\Fireball_Missile_Low.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (367,"Invisibility Impact Chest","Spells\Invisibility_Impact_Chest.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (368,"Recklessness Impact Chest","Spells\Recklessness_Impact_Chest.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (370,"CounterSpell Impact Chest","Spells\CounterSpell_Impact_Chest.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (371,"ShadowProtection Chest","Spells\ShadowProtection_Chest.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (372,"ProtectionFromNature Chest","Spells\ProtectionFromNature_Chest.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (373,"ProtectionFromFire Chest","Spells\ProtectionFromFire_Chest.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (374,"ResistFrost Chest","Spells\ResistFrost_Chest.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (375,"BattleShout Cast Base","Spells\BattleShout_Cast_Base.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (376,"IntimidatingShout Cast Base","Spells\IntimidatingShout_Cast_Base.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (377,"DemoralizingShout Cast Base","Spells\DemoralizingShout_Cast_Base.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (378,"Strike Cast Base","Spells\Strike_Cast_Chest.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (379,"FinishingBlow Impact Chest","Spells\Feint_Impact_Chest.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (380,"SinisterStrike Base Cast","Spells\SinisterStrike_Base_Cast.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (381,"Kick Impact Chest","Spells\Kick_Chest_Impact.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (389,"Vanish Cast Base","spells\vanish_cast_base.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (392,"Magic Cast Hand","Spells\Magic_Cast_Hand.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (393,"Item - Bread","Spells\Item_Bread.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (394,"BackStab Impact Chest","spells\backstab_impact_chest.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (396,"BackStab Cast Base","Spells\BackStab_Cast_Base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (397,"Gouge Precast State Hand","Spells\Gouge_Precast_State_Hand.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (398,"Blizzard Impact Base","Spells\Blizzard_Impact_Base.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (399,"Arcane Missile","Spells\Arcane_Missile.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (401,"Arcane Impact Chest","Spells\Magic_Impact_Chest.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (402,"Sap Impact Head","Spells\Sap_Impact_Chest.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (403,"Sap Cast Base","Spells\Sap_Cast_Base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (404,"Cheap Shot Impact","Spells\CheapShot_Impact_Chest.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (405,"Arcane Missile Lvl 1 - 1.00","Spells\Arcane_Missile_Lvl1.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (406,"Arcane Missile Lvl 2","Spells\Arcane_Missile_Lvl2.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (407,"Arcane Missile Lvl 3","Spells\Arcane_Missile_Lvl3.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (408,"Arcane Missile Lvl 4","Spells\Arcane_Missile_Lvl4.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (409,"Polymorph Impact Base","Spells\Polymorph_Impact_Base.mdx",0,1,0.01,5); 
-INSERT INTO `SpellVisualEffectName` VALUES (410,"HolyLight Impact Head","Spells\HolyLight_Impact_Head.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (411,"Totem Cleansing SpellObject","Spells\TotemB_SpellObject.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (412,"HolyWord Fortitude Impact Base","Spells\HolyWord_Fortitude_Impact_Base.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (413,"ShadowWordBefuddle Head","Spells\ShadowWordBefuddle_Head.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (414,"Renew Base","Spells\Renew_Base.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (415,"Renew Chest","Spells\Renew_Chest.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (416,"Fan of Knives Impact","spells\fanofknives_impact.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (417,"Item - Tankard","Spells\TankardA_SpellObject.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (420,"Flamestrike Impact Base","Spells\Flamestrike_Impact_Base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (421,"Ice Cast Low Hand","Spells\Ice_Precast_Low_Hand.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (422,"MageArmor Impact Head","Spells\MageArmor_Impact_Head.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (423,"Lesser Heal Impact Base","Spells\LesserHeal_Base.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (424,"FireShieldFinal Impact Head","Spells\FireShieldFinal_Impact_Head.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (425,"Ward: Fire Impact Chest","Spells\FireWard_Impact_Chest.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (426,"Ward: Frost Impact Chest","Spells\FrostWard_Impact_Chest.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (427,"Seal Of Might Impact Base","Spells\SealOfMight_Impact_Base.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (428,"Seal Of Wrath Impact Base","Spells\SealOfWrath_Impact_Base.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (429,"Seal Of Fury Impact Base","Spells\SealOfFury_Impact_Base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (430,"Seal Of Salvation Impact Base","Spells\SealOfSalvation_Impact_Base.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (431,"Seal Of Wisdom Impact Base","Spells\SealOfWisdom_Impact_Base.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (432,"Seal Of Protection Impact Base","Spells\SealOfProtection_Impact_Base.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (433,"MoltenBlast Missile Lvl2","Spells\MoltenBlast_Missile_Lvl2.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (434,"MoltenBlast Missile lvl3","Spells\MoltenBlast_Missile_Lvl3.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (435,"Healing Aura Base","Spells\HealingAura_Base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (436,"Mind Rot Head Impact","Spells\MindRot_Head.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (437,"FarSight Impact Base","Spells\FarSight_Impact_Base.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (438,"Purify Base","Spells\Purify_Base.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (439,"Turn Undead Cast","Spells\TurnUndead_Impact.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (440,"Flare Cast Base","Spells\Flare_Cast_Base.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (441,"Resistance Aura Base","Spells\ResistanceAura_Base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (442,"Fist Of Justice Cast","Spells\FistOfJustice_Cast_Base.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (444,"Fist of justice Impact chest","Spells\FistOfJustice_Impact_Chest.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (445,"Exorcism Impact Chest","Spells\Exorcism_Impact_Chest.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (446,"Purge New Impact Chest","Spells\Purge_New_Impact_Chest.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (447,"Holy Ward Impact","Spells\HolyWard_Impact_Chest.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (448,"Rain Of Fire Impact Base","Spells\RainOfFire_Impact_Base.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (449,"Fire Resistance Impact Base","Spells\FireResistance_Impact_Base.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (450,"Nature Resistance Impact Base","Spells\NatureResistance_Impact_Base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (451,"ArcaneSpirit Impact Base","Spells\ArcaneSpirit_Impact_Base.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (452,"Fear Impact Head","Spells\Fear_Impact_Chest.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (453,"Fear State","Spells\Fear_State_Head.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (454,"Cleanse Base","Spells\Clense_Base.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (455,"BloodBoil_Impact_Chest","Spells\BloodBoil_Impact_Chest.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (456,"Curse Of Tongues Impact Chest","Spells\CurseOfTongues_Impact.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (457,"Curse Of Tongues State Chest","Spells\CurseOfTongues_State_Chest.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (458,"Cleave Impact Chest","Spells\Cleave_Impact_Chest.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (459,"Ward: Shadow Impact Chest","Spells\ShadowWard_Impact_Chest.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (460,"Shield Wall Impact Base","Spells\ShieldWall_Impact_Base.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (461,"SpellBreak Cast Base","Spells\SpellBreak_Cast_Base.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (462,"Cripple State Base","Spells\Cripple_State_Base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (463,"Balance Of Nature Impact Base","Spells\BalanceOfNature_Impact_Base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (464,"Demon Breath Impact Head","Spells\DemonBreath_Impact_Head.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (465,"Fireworks Red Dots","Spells\Fireworks_Red_01.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (466,"Pathfind Cast Head","Spells\Pathfind_Cast_Head.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (467,"ManaInfuse Base","Spells\ManaInfuse_Base.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (468,"Waterbreathing Impact Base","Spells\Waterbreathing_Impact_Base.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (469,"BeastSoothe State Head","Spells\BeastSoothe_State_Head.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (470,"Pestilence Impact Chest","Spells\Pestilence_Impact_Chest.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (474,"Cripple Impact Base","Spells\Cripple_Impact_Base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (475,"MarkofWild Impact Head","Spells\MarkofWild_Impact_Head.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (476,"BurningSpirit Impact Head","Spells\BurningSpirit_Impact_Head.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (477,"Spell Object : Smithing Hammer","Spells\SpellObject_SmithingHammer.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (478,"Disarm Impact Chest","Spells\Disarm_Impact_Chest.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (479,"Sunder Impact Chest","Spells\Sunder_Impact_Chest.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (480,"SavageBlow Impact Chest","Spells\SavageBlow_Impact_Chest.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (481,"DecisiveStrike Impact Chest","Spells\DecisiveStrike_Impact_Chest.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (482,"Beast Call Impact Head","Spells\BeastCall_Impact_Head.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (502,"FireBlast Impact Chest","Spells\FireBlast_Impact_Chest.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (503,"Fireball Missile High","Spells\Fireball_Missile_High.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (522,"Maim Impact Chest","Spells\Maim_Impact_Chest.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (523,"Shot: Fire Missile","Spells\FireShot_Missile.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (524,"Shot: Frost Missile","Spells\FrostShot_Missile.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (525,"Shot: Blinding Missile","Spells\BlindingShot_Missile.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (526,"Blinding Shot Impact Chest","Spells\BlindingShot_Impact.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (527,"Multi Shot Impact Chest","Spells\MultiShot_Impact.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (528,"Shot: Multi Missile","Spells\MultiShot_Missile.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (529,"Maul Cast Bears","Spells\Maul.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (532,"Combat Blood Spurt Front Small Black","Particles\BloodSpurts\BloodSpurtBlack.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (533,"Combat Blood Spurt Front Large Black","Particles\BloodSpurts\BloodSpurtBlackLarge.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (534,"Combat Blood Spurt Back Small Red","Particles\BloodSpurts\BloodSpurt.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (535,"Combat Blood Spurt Back Small Green","Particles\BloodSpurts\BloodSpurtGreen.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (536,"Combat Blood Spurt Back Small Black","Particles\BloodSpurts\BloodSpurtBlack.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (537,"Combat Blood Spurt Back Large Green","Particles\BloodSpurts\BloodSpurtGreenLarge.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (538,"Combat Blood Spurt Back Large Black","Particles\BloodSpurts\BloodSpurtBlackLarge.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (539,"Curse of Mannoroth Impact Head","Spells\CurseofMannoroth_Head.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (540,"ShadowStrike Impact Chest","Spells\ShadowStrike_Impact_Chest.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (542,"Sap State Head","Spells\Sap_State_Head.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (543,"Demoralizing Shout Impact Head","Spells\DemoralizingShout_Impact_Head.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (544,"Intimidating Shout Impact Head","Spells\IntimidatingShout_Impact_Head.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (545,"Ribbon Trail","Spells\RibbonTrail.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (546,"Sprint Cast Base","Spells\Sprint_Cast_Base.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (547,"Inner Rage Impact Chest","Spells\InnerRage_Impact_Chest.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (548,"Shadow ImpactDD Med Chest","Spells\Shadow_ImpactDD_Med_Chest.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (565,"Druid Morph Impact","Spells\DruidMorph_Impact_Base.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (585,"Nightmare Impact Base","Spells\Nightmare_Impact_Base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (586,"Summon Water Elemental Impact","Spells\WaterElemental_Impact_Base.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (587,"MoltenBlast Missile lvl1","Spells\MoltenBlast_Missile.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (588,"Fire Blast Impact Chest","Spells\Fire_ImpactDD_Chest.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (589,"Eviscerate Impact Chest","Spells\Eviscerate_Impact_Chest.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (590,"Eviscerate Cast Hands","Spells\Eviscerate_Cast_Hands.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (591,"Distract Impact Chest","Spells\Distract_Impact_Chest.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (592,"Kidney Shot Cast Base","Spells\KidneyShot_Base_Cast.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (593,"Retribution Aura Red Base","Spells\RetributionAuraRed_Base.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (594,"Net State","Spells\Net_State.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (595,"Web State","Spells\Web_State.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (596,"Seal of Sacrifice Impact Base","Spells\SealOfSacrifice_Impact_Base.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (614,"FlamestrikeSmall Impact Base","Spells\FlamestrikeSmall_Impact_Base.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (615,"Ice Armor Low Head","Spells\IceArmor_Low_Head.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (616,"FrostArmorEffect Impact Chest","Spells\FrostArmorEffect_Impact_Chest.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (617,"Divine Bubble Impact Base","Spells\DivineBubble_Low_Base.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (618,"Missile: Web","Spells\Web_Missile.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (619,"Bind Impact Base","Spells\Bind_Impact_Base.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (620,"Poison ImpactDot Med Base","Spells\Poison_ImpactDot_Med_Base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (621,"Bloody Explosion Green Impact","Spells\BloodyExplosionGreen.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (622,"Spell Object: Wrench","Spells\SpellObject_Wrench.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (623,"Shadow Precast Uber Hand","Spells\Shadow_Precast_Uber_Hand.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (624,"Shadow ImpactDD High Chest","Spells\Shadow_ImpactDD_High_Chest.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (625,"Cone of Cold Hand","Spells\ConeofCold_Hand.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (626,"DruidMorph Aqua Impact Base","Spells\DruidMorph_Aqua_Impact_Base.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (627,"Hellfire Impact Caster Base","Spells\HellFire_Impact_Caster_Base.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (628,"Hellfire Impact Base","Spells\HellFire_Impact_Base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (629,"HolyWord Shield Impact Base","Spells\HolyWordShield_Base.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (630,"HolyWord Shield State Base","Spells\HolyWordShield_State_Base.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (631,"Curse of Elements Impact Head","Spells\CurseElements_Impact_Head.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (632,"Fire ImpactDD Chest","Spells\Fire_ImpactDD_Chest.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (634,"Charge Trail Cast","Spells\ChargeTrail.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (654,"Curse Of Agony Head Impact","Spells\CurseofAgony_Head.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (655,"HolyWordShield State Chest","Spells\HolyWordShield_State_Chest.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (674,"HolyDivineShield State Base","Spells\HolyDivineShield_State_Base.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (675,"Missile: GooBolt","Spells\GooBolt_Missile_Low.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (694,"Missile: Lightning Streak","Spells\LightningStreak_Missile.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (714,"Fire Nova Area","Spells\FireNova_Area.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (715,"Fire Nova State","Spells\FireNova_State.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (716,"Grounding Totem Impact","Spells\GroundingTotem_Impact.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (717,"Ghost_state","Spells\Ghost_state.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (718,"Mana Shield State Base","Spells\ManaShield_State_Base.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (719,"Dampen Magic Impact Base","Spells\DampenMagic_Impact_Base.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (720,"Amplify Magic Impact Base","Spells\AmplifyMagic_Impact_Base.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (734,"ArcaneExplosion Base","Spells\ArcaneExplosion_Base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (735,"ArcaneExplosion Impact Chest","Spells\ArcaneExplosion_Impact_Chest.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (754,"Environment Damage Drowing Bubbles","Particles\Bubbles.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (794,"Life Tap Impact","Spells\LifeTap.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (814,"Shadow Precast Uber Base","Spells\Shadow_Precast_Uber_Base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (834,"Unholy Shield State Base","Spells\ShadowShield_State_Base.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (835,"Curse of Recklessness Impact Chest","Spells\CurseofRecklessness_Impact_Chest.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (836,"Enslave Demon Impact Chest","Spells\EnslaveDemon_Impact_Chest.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (837,"Enslave Demon Impact Head","Spells\EnslaveDemon_Impact_Head.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (854,"Missile: Water Bolt","Spells\WaterBolt_Missile_Low.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (855,"Banish (Green)","Spells\Banish_Chest.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (856,"Magic Stone Helmet Green","Spells\MagicStoneHelmet_Green.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (874,"Magic Net State","Spells\MagicNet_State.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (894,"Cone of Fire Hand","Spells\ConeofFire_Hand.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (914,"Missile: Boulder","Spells\Boulder_Missile.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (915,"Seaforium Impact Base","Spells\Distract_Impact_Base.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (934,"Spawn Impact Base","Spells\Spawn_Impact_Base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (954,"Summon Ritual Portal","Spells\Summon_Ritual.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (955,"RitualSummoning PreCast Base","Spells\RitualSummoning_PreCast_Base.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (974,"Bind2 Impact Base","Spells\Bind2_Impact_Base.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (994,"Shackle Undead State Base","Spells\UnholyShackles_State_Base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (1014,"CycloneEarth State","Spells\CycloneEarth_State.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (1015,"CycloneFire State","Spells\CycloneFire_State.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (1016,"CycloneWater State","Spells\CycloneWater_State.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (1034,"Slam Impact Chest","Spells\Slam_Impact_Chest.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (1054,"Shadow ImpactDD Uber Chest","Spells\Shadow_ImpactDD_Uber_Chest.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (1074,"Whirlwind Base (Non-World Space)","Spells\Whirlwind_State_Base.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (1094,"Might Aura State Base","Spells\MightAura_Impact_Base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (1095,"Wisdom Aura State","Spells\WisdomAura_Impact_Base.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (1114,"Faerie Fire Impact","Spells\FaerieFire_Impact.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (1115,"RadiationGreen State","Spells\GreenGhost_state.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (1134,"MagePortal: Stormwind","world\generic\activedoodads\spellportals\MagePortal_Stormwind.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (1154,"Gouge Precast State Hand (Non World Space)","Spells\Gouge_Precast_State_Hand.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (1174,"Fireworks Blue Dots","Spells\Fireworks_Blue_01.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (1175,"Fireworks Green Dots","Spells\Fireworks_Green_01.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (1176,"Fireworks Red White Blue Dots","Spells\Fireworks_RWB_01.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (1177,"Fireworks Red Streaks","Spells\Fireworks_RedStreaks_01.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (1178,"Fireworks Yellow Rose","Spells\Fireworks_YellowRose.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (1179,"Missile: Pyroblast","Spells\PyroBlast_Missile.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (1180,"Missile: Wrench","Spells\Missile_Wrench.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (1181,"MagePortal: Darnassus","world\generic\activedoodads\spellportals\MagePortal_Darnassus.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (1182,"Water Bubble Chest State","Spells\WaterBubble.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (1183,"Mount Impact","Spells\DruidMorph_Impact_Base.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (1184,"Dash Impact Chest","Spells\Sprint_Impact_Chest.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (1185,"HARDCODED Mount Poof","spells\mountmorph_impact.mdx",2,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (1202,"Bubble Drunk","Spells\Bubble_Drunk.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (1223,"HARDCODED Inebriated Bubbles","Spells\Bubble_Drunk.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (1242,"Seduction State","Spells\Seduction_State_Head.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (1262,"Shadow ImpactDoT Med Head","Spells\Shadow_ImpactDot_Med_Head.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (1282,"DeathAndDecay Area Base","Spells\DeathAndDecay_Area_Base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (1302,"Clearcasting Impact Chest","Spells\Clearcasting_Impact_Chest.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (1303,"DustCloud Land","Spells\DustCloud_Land.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (1304,"BoneArmor Head","Spells\BoneArmor_Head.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (1305,"MagePortal: Ironforge","world\generic\activedoodads\spellportals\MagePortal_Ironforge.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (1306,"MagePortal: Orgrimmar","world\generic\activedoodads\spellportals\mageportal_ogrimmar.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (1307,"MagePortal: Thunder Bluff","world\generic\activedoodads\spellportals\MagePortal_ThunderBluff.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (1308,"MagePortal: Undercity","world\generic\activedoodads\spellportals\MagePortal_UnderCity.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (1309,"Green Radiation Fog","Spells\GreenRadiationFog.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (1322,"BoneArmor State Chest","Spells\BoneArmor_State_Chest.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (1342,"Acid Breath","Spells\AcidBreath.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (1343,"Scorch Low Chest","Spells\Scorch_Low_Chest.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (1344,"Frost Breath","Spells\FrostBreath.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (1345,"Flame Breath","Spells\FlameBreath.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (1362,"DetectMagic Base","Spells\DetectMagic_Base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (1382,"Sense Demons Impact Head","Spells\SenseDemons_Impact_Head.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (1402,"SoothingKiss Impact Head","Spells\SoothingKiss_Impact_Head.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (1403,"Redemption Base","Spells\Redemption_Base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (1422,"Hellfire Area Base","Spells\HellFire_Area_Base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (1423,"Hellfire Impact Head","Spells\HellFire_Impact_Head.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (1442,"MindBlast Head","Spells\MindBlast_Head.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (1462,"ManaBurn Chest","Spells\ManaBurn_Chest.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (1463,"FlashHeal Base","Spells\FlashHeal_Base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (1482,"Aspect of the Beast Impact Head","Spells\AspectBeast_Impact_Head.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (1483,"Aspect Monkey Impact Head","Spells\AspectMonkey_Impact_Head.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (1502,"Aspect Wolf Impact Head","Spells\AspectWolf_Impact_Head.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (1503,"Aspect Snake Impact Head","Spells\AspectSnake_Impact_Head.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (1522,"Shot: Poison Missile","Spells\PoisonShot_Missile.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (1523,"Mana ImpactDot Chest","Spells\Mana_ImpactDot_Chest.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (1524,"Shot: Mana Missile","Spells\ManaShot_Missile.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (1542,"Enchant PreCast Hand","Spells\Enchant_PreCast_Hand.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (1543,"Enchant Cast Hand","Spells\Enchant_Cast_Hand.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (1544,"Disenchant PreCast Hands","Spells\DisEnchant_PreCast_Hand.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (1545,"DisEnchant Cast Hands","Spells\DisEnchant_Cast_Hand.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (1546,"Shot: Scorpid Sting","Spells\ScorpidShot_Missile.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (1547,"Shot: Black Arrow","Spells\BlackShot_Missile.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (1548,"Revive Pet Impact Base","Spells\RevivePet_Impact_Base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (1562,"Hunter's Mark Impact Chest","Spells\HuntersMark_Impact_Chest.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (1563,"Hunter's Mark State Head","Spells\HuntersMark_Impact_Head.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (1582,"Beast Lore Impact Base","Spells\BeastLore_Impact_Base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (1583,"Beast Lore Impact Head","Spells\BeastLore_Impact_Head.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (1602,"Shot: Arcane Missile","Spells\ArcaneShot_Missile.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (1603,"Shot: Arcane Volley","Spells\ArcaneVolley_Missile.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (1604,"FreezingTrap","World\Goober\G_FreezingTrap.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (1605,"FrostTrap","World\Goober\G_FrostTrap.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (1606,"ExplosiveTrap","World\Goober\G_ExplosiveTrap.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (1607,"ImmolationTrap","World\Goober\G_ImmolationTrap.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (1608,"Rapid Fire Impact Base","Spells\RapidFire_Base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (1622,"Warhorse Impact Base","Spells\SummonWarHorse_Impact_Base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (1623,"Aspect Hawk Impact Head","Spells\AspectHawk_Impact_Head.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (1624,"Flamestrike Impact","Spells\Flamestrike_Impact.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (1625,"Poison Impact Chest","Spells\Poison_Impact_Chest.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (1626,"Eagle Eye Impact Head","Spells\EagleEye_Impact_Head.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (1642,"Sinister Strike Impact Chest","Spells\SinisterStrike_Impact_Chest.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (1643,"Cleave Cast Base","Spells\Cleave_Cast_Base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (1644,"Blue Glow High","Spells\Enchantments\BlueGlow_High.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (1645,"HARDCODED PetLoyalty Down Base","spells\loyaltydown_impact_base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (1646,"HARDCODED PetLoyalty Down Head","spells\loyaltydown_impact_head.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (1647,"HARDCODED PetLoyalty Up Base","spells\loyaltyup_impact_base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (1648,"HARDCODED PetLoyalty Up Head","spells\loyaltyup_impact_head.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (1649,"EarthShock Impact Chest","Spells\EarthShock_Impact_Chest.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (1650,"Flame Shock Impact Chest","Spells\FlameShock_Impact_Chest.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (1662,"ExposeArmor Head","Spells\ExposeArmor_Head.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (1682,"SliceDice Chest","spells\slicedice_chest.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (1702,"MagePortal: Blank","spells\mageportal_blank.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (1703,"Shadow Precast Med Base","Spells\Shadow_Precast_Med_Base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (1722,"Holy Nova Impact Base","spells\holynova_impact_base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (1742,"Flame Breath 180","spells\flamebreath180.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (1762,"Aspect Cheetah Impact Head","spells\aspectcheetah_impact_head.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (1782,"Missile: Torch","spells\torchspell.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (1783,"Missile: Mug","spells\mug_missile.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (1784,"First Aid Impact Base","spells\firstaid__impact_base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (1785,"First Aid Hand","spells\firstaid_hand.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (1802,"Frost Trap Aura","spells\frosttrap_aura.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (1822,"Arcane Shot Area","spells\arcaneshot_area.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (1842,"Spell Object: Boomerang","spells\spellobject_boomerang.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (1843,"Missile: Boomerang","spells\missile_boomerang.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (1862,"Spell Object: Bomb","spells\spellobject_bomb.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (1863,"Missile: Bomb","spells\missile_bomb.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (1882,"Wrath Precast Hand","spells\wrath_precast_hand.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (1883,"Wrath Impact Chest","spells\wrath_impact_chest.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (1884,"Missile: Wrath","spells\wrath_missile.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (1885,"Moonfire Impact Base","spells\moonfire_impact_base.mdx",1,1,1,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (1886,"Portal: Red","creature\spells\creature_spellportal.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (1902,"Starfire Area","spells\starfire_area.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (1922,"Tranquility Impact","spells\tranquility_impact_base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (1923,"Tranquility Area","spells\tranquility_area.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (1942,"Thorns State Base","spells\thorns_state_base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (1943,"Portal: Blue","spells\creature_spellportal_blue.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (1962,"Missile: Axe Copper","spells\missile_axe_copper.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (1982,"Poison Shield Impact Chest","spells\poisonshield_state_base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (1983,"Ground Dust State","spells\grounddust.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (1984,"Steam State","spells\steam.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (1985,"Blink Impact Chest","spells\blink_impact_chest.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (2002,"NoName Area","spells\noname_area.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (2022,"Defensive Stance Impact Head","spells\defensivestance_impact_head.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (2023,"Battle Stance Impact Head","spells\battlestance_impact_head.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (2024,"Berzerker Stance Impact Head","spells\berzerkerstance_impact_head.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (2042,"Missile: Ziggurat Spirit","spells\zig_missile.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (2062,"Ghostly Strike Impact Chest","spells\ghostlystrike_impact_chest.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (2082,"Mana Tide Infuse Base","spells\manatideinfuse_base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (2102,"Ice Block State","spells\icebarrier_state.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (2103,"Ice Barrier State","spells\iceshield_state.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (2122,"Arcane Power State Chest","spells\arcanepower_state_chest.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (2123,"Inner Focus Impact Chest","spells\innerfocus_impact_chest.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (2142,"Focused Casting State Chest","spells\focusedcasting_state_chest.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (2162,"Piercing Howl Impact Head","spells\piercinghowl_impact_head.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (2163,"Water Walking Impact Head","spells\waterwalking_impact_head.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (2164,"Adrenaline Rush Cast Base","spells\adrenalinerush_cast_base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (2182,"Sweeping Strike Impact Chest","spells\sweepingstrike_impact_chest.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (2202,"Death Wish State Hand","spells\deathwish_state_hand.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (2203,"Presence of Mind Cast Base","spells\presenceofmind_cast_base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (2222,"ShadowSnare Base","Spells\Shadow_Snare_High_base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (2223,"Fear State Base","spells\fear_state_base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (2242,"Vampiric Embrace State Base","spells\vampiricembrace_state_base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (2262,"Missile: Flare","spells\missile_flare.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (2282,"Lash Cast Base","spells\lash_cast_base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (2302,"Eyes of the Beast Impact Head","spells\eyesofbeast_impact_head.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (2322,"Star Shards Impact Base","spells\starshards_impact_base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (2342,"Onyxia Impact Base","spells\onyxia_impact_base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (2362,"Infernal Impact Base","spells\infernal_impact_base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (2382,"Dragon Flame Breath","spells\dragonflamebreath.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (2383,"Dragon Flame Breath 120","spells\dragonflamebreath180.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (2402,"Soulstone Resurrection Base","spells\soulstoneresurrection_base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (2422,"Demonic Sacrifice Felhunter Chest","Spells\DemonicSacrifice_Felhunter_Chest.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (2423,"Light Test","spells\lighttest.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (2442,"Threat Reduce Impact Head","spells\threatreduce_impact_head.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (2462,"Conflagrate Impact Chest","spells\conflagrate_impact_chest.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (2482,"Skull Balls","Spells\Enchantments\SkullBalls.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (2483,"Shadow ImpactDoT Med Chest","Spells\Shadow_ImpactDot_Med_Chest.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (2502,"Heal Ragnaros State Chest","Spells\HealRag_State_Chest.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (2503,"Ragnaros Fire Nova Area","Spells\Rag_FireNova_Area.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (2522,"Shield Wall Warrior Impact Base","spells\shieldwallwar_impact_base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (2542,"Consecration Impact Base","spells\consecration_impact_base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (2562,"Deterrence Impact","spells\deterrence_impact.mdx",1,2.2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (2582,"Demonic Sacrifice Imp Chest","Spells\DemonicSacrifice_Imp_Chest.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (2583,"Demonic Sacrifice Succubus Chest","Spells\DemonicSacrifice_Succubus_Chest.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (2584,"Demonic Sacrifice Voidwalker Chest","Spells\DemonicSacrifice_Voidwalker_Chest.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (2585,"Stoneform State Chest","Spells\Stoneform_State_Base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (2602,"Mana Shield State Chest","spells\manashield_state_chest.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (2622,"Missile: Hammer","spells\missile_hammer.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (2642,"Dragon Sand Breath","spells\corrosivesandbreath.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (2662,"Missile: Snowball","spells\missile_snowball.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (2663,"Snowball Impact Chest","spells\snowball_impact_chest.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (2682,"Missile: Thorns","spells\missile_thorns.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (2683,"DustNova Cast Base","spells\dustnova_cast_base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (2684,"RockyFrost Nova State","spells\rockyfrost_nova_state.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (2702,"HARDCODED Meeting Stone Join","Spells\Bind_Impact_Base.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (2722,"Confused State Head","spells\confused_state_head.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (2762,"Dragon Flame Breath Nefarian","spells\nefarianflamebreath.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (2763,"Nefarian Breath Impact","spells\nefarianflamebreath_impact.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (2782,"Vengeance State Hand","spells\vengeance_state_hand.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (2802,"Nefarian State Base","spells\nefarian_state_base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (2803,"Nefarian Impact Base","spells\nefarian_impact_base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (2822,"Barkskin State Base","spells\barkshield_state_base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (2842,"Missile: Leather Ball","spells\missile_leatherball.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (2843,"Levitate Impact Base","spells\levitate_impact_base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (2844,"LoyaltyDown Impact Base","spells\LoyaltyDown_Impact_Base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (2862,"Fire Reflect State Chest","spells\firereflect_state_chest.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (2863,"Frost Reflect State Chest","spells\frostreflect_state_chest.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (2864,"Shadow Reflect State Chest","spells\shadowreflect_state_chest.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (2865,"Missile: Lightning Bolt (Ivus)","spells\lightningboltivus_missile.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (2882,"Horde CTF Flag Chest","spells\hordectfflag_spell.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (2883,"Alliance CTF Flag Chest","spells\alliancectfflag_spell.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (2902,"Barkskin State Base (New)","spells\barkskin_state_base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (2922,"HARDCODED Reputation","Spells\ReputationLevelUp.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (2942,"MovementImmunity Base","spells\movementimmunity_base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (2962,"Missile: Holy Hammer","spells\holy_hammer_missile.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (2963,"Cat Mark State Head","Spells\CatMark.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (2964,"Level Up","Spells\SpellLevelUp.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (2965,"AbolishMagic Base","spells\abolishmagic_base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (2966,"Hellfire FirePuff Caster Base","spells\HellFire_FirePuff_Caster_Base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (2968,"Green Radiation Fog (Large)","Spells\LargeGreenRadiationFog.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (2969,"Missle: Life Drain","\\guldan\drive2\projects\wow\finaldata\patch_1.7.0\data\spells\lifedrain_missile.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (2970,"Web Spin","spells\webspin.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (2971,"BaseFlagCapRed Impact Base","spells\baseflagcapred_impact_base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (2972,"Missile: BloodBolt","spells\bloodbolt_missile_low.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (2973,"Banish (Red)","spells\bloodbolt_chest.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (2975,"Blue Flame Circle 2.0","Spells\FlameCircleEffect_Blue.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (2978,"Green Radiation Fog (Blue/Green - Magic)","SPELLS\LargeBlueGreenRadiationFog.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (2979,"Gas Breath","spells\acidcloudbreath.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (2980,"Acid Breath (Liquid)","spells\acidliquidbreath.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (2981,"Parachute Wings Head","spells\parachute_wings_head.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (2982,"Trick or Treat - Treat - Head","spells\trickortreat_treat_head.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (2983,"Trick or Treat - Trick - Head","spells\trickortreat_trick_head.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (2984,"Trick or Treat - Treat Head","spells\trickortreat_treat_head.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (2985,"Trick or Treat - Trick Head","spells\trickortreat_trick_head.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (2986,"Thunderclap Cast Base: 20 foot","spells\thunderclap_cast_base.mdx",20,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (2987,"Retaliation State Base (Warrior)","Spells\Retaliation_State_Chest.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (2988,"Firecrackers Thrown","Spells\Firecrackers_Thrown.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (2989,"MoonBeam State Base","Spells\MoonBeam_Impact_Base.mdx",1,1,1,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (2991,"Snowball Powder Impact","spells\SnowballPowdery_Impact_Base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (2992,"Snowball Powdery State","spells\SnowballPowdery_Impact_Base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (2993,"Sand Vortex Base","spells\SandVortex_State_Base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (2994,"Earth Burrow Cast","Spells\BurrowEarth_Brown_Missile.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (2995,"Sandworm Attack Effect Ground Impact","spells\SandWorm_AttackEffects.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (2996,"Holiday - Lunar Festival - Chest Firework Impact","spells\firework_romancandle_impact_chest_01.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (2997,"Missile: Firework - Roman Candle","spells\firework_romancandle_missle_01.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (2998,"Missile: SlimeLesser","spells\SlimeLesser_Missile.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (2999,"Cthun Eye Beam","spells\CthuneEyeAttack.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3000,"Holiday - Lunar Festival - Elune's Candle Cast Hand","spells\romancandle_a_01.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3001,"Missile: SlimeLesserExplode","spells\SlimeLesserExplode_Missile.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3002,"Acid Burn Base","spells\AcidBurn.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3003,"Holiday - Lunar Festival - Right Hand Firework impact","spells\firework_romancandle_impact_chest_01.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3004,"Holiday - Lunar Festival - Left Hand Firework impact","spells\firework_romancandle_impact_chest_01.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3005,"Ice Prison State","spells\IcePrison_Base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3006,"Missile: Shadow Bolt - Epic","spells\DeathBolt_Missile_Low.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3007,"Meteor Impact Base","spells\Meteor_Impact_Base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3008,"Missile: Giant Boulder","spells\BoulderGiant_Missile.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3009,"Holiday - Valentine - Cupid's Bow","spells\holidays\valentines_spellobject_cupidsbow.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3010,"Holiday - Valentine - Cupid's Arrow Impact Chest","spells\holidays\valentines_cupidsarrow_impact_chest.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3011,"Holiday - Valentine - Missle, Cupid's Arrow","spells\holidays\valentines_cupidsarrow_missle.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3012,"Holiday - Valentine - Picnic Blanket","spells\holidays\valentines_blanket.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3013,"Holiday - Valentine - Flower Shower","spells\holidays\valentines_roseshower_impact_base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3014,"Holiday - Valentine - Broken Heart Impact","spells\holidays\valentines_brokenheart.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3015,"Insect Swarm State Chest","Spells\InsectSwarm_State_Chest.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3016,"Holiday - Valentine - Heart State/Impact","spells\holidays\valentines_lookingforloveheart.mdx",1,1,1,50); 
-INSERT INTO `SpellVisualEffectName` VALUES (3021,"Flare Ground State","spells\flare_state_base.mdx",1,1.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3024,"Purple Ghost State","spells\purpleghost_state.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3026,"LightningBoltIvus Missile","Spells\LightningBoltIvus_Missile.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3027,"Acid Breath (45 yd)","spells\acidliquidbreath.mdx",45,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3028,"Holiday - Scourge Invasion, Purple Lightning","spells\naxxramasstrike_impactdd_med_base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3029,"Naxxramas Strike","Spells\NaxxramasStrike_ImpactDD_Med_Base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3030,"Missile: Deathbolt Missile","spells\deathbolt_missile_low.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3031,"Grobbulus Poison Cloud","Spells\Poison_Cloud_Grobbulus.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3032,"Torch","Spells\TorchSpell.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3034,"RadiationRed State","Spells\RedGhost_state.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3035,"Burning Depths Necrolyte Transition","Spells\ShadowSteps_FX.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3036,"Giant Insect Swarm Chest","Spells\GiantInsectSwarm_State_Chest.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3037,"Giant Insect Swarm State","Spells\GiantInsectSwarm_State_Ground.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3038,"Spike Low Base","Spells\Spike_Low_Base.mdx",1,1,0.01,1); 
-INSERT INTO `SpellVisualEffectName` VALUES (3039,"Spike Impact Base","Spells\Spike_Impact_Base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3040,"Flame Circle","spells\flamecircleeffect.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3043,"Ice Nuke Missile","spells\icenuke_missile.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3044,"Ice Nuke Base","spells\IceNuke_Base_Impact.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3045,"Smoke - Infernal","spells\infernal_smoke_rec.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3046,"Smoke: Tauren Colored","world\generic\tauren\passive doodads\smoke\taurencoloredsmoke01.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3047,"Portal: Yellow","spells\creature_spellportal_yellow.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3048,"Portal: Green","spells\creature_spellportal_green.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3049,"Banish (Blue)","spells\banish_chest_blue.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3050,"Banish (Yellow)","spells\banish_chest_yellow.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3051,"Void Zone","creature\portalofkathune\portalofkathune.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3052,"Banish (Purple)","spells\banish_chest_purple.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3053,"Portal: Purple","spells\creature_spellportal_purple.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3054,"Tugofwar - Red Spice Explosion","world\generic\passivedoodads\tugofwar\tugofwar_redspiceexplosion.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3055,"Tugofwar: Missile, Red Spice","world\generic\passivedoodads\tugofwar\tugofwar_redspicemissile.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3056,"Rocket Blast","spells\rocketblast.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3057,"Anti-Magic State Base (Blue)","spells\antimagic_state_blue.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3058,"Tugofwar - Red Dust Cloud aura","spells\reddustcloud.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3060,"Putrid Mushroom","world\goober\g_sporemushroom.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3061,"Missile: Net","Spells\Net_Missile.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3062,"Missile: Nightbane Bone","spells\nightbane_bone_missile.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3064,"Missile: Infernal Ball","spells\Infernal_Ball.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3067,"Red Ghost State","spells\redghost_state.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3068,"Blessing of the Naaru Head","spells\giftofnaaru.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3069,"Abyssal Impact Base","spells\abyssal_impact_base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3070,"Anti-Magic State Base (Red)","spells\antimagic_state_red.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3071,"Doomfire Spell Visual","World\Lordaeron\Stratholme\PassiveDoodads\FX\StratholmeFireSmokeEmberS.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3073,"Missile: Aegis","Spells\Aegis.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3074,"Ice Lance Missile","spells\ice_lance_missile.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3075,"Ice Lance Impact","spells\ice_lance_impact.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3076,"Force Field Effect","World\Kalimdor\DireMaul\ActiveDoodads\Doors\DireMaulBossForceField.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3078,"Mage Dragons Breath","spells\mage_dragons_breath.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3079,"Fel Armor Impact Head","spells\felarmor_impact_head.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3080,"test","spells\acidliquidbreath.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3081,"Ritual Arcane PreCast Base","spells\ritual_arcane_precast_base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3082,"Exploding Stone Impact","spells\exploding_stone_impact.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3083,"Consecration Impact Base (0.5x)","spells\consecration_impact_base.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3084,"Banish (Purple) - 2.00","spells\banish_chest_purple.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3085,"Flame Patch (0.5x)","spells\archimonde_fire.mdx",0.5,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3086,"Combat Blood Spurt Front Large Blue","particles\bloodspurts\bloodspurtbluelarge.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3087,"Silencing Shot Impact","spells\throatshot_impact_chest.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3088,"Missile: Rocket","spells\Missle_Rocket.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3089,"Shadowfury Cast Base","spells\shadowfury_impact_base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3090,"Flame Patch","spells\archimonde_fire.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3091,"Zangarmarsh Arcane Impact","spells\zangarmarsh_arcane_impact.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3092,"Zangarmarsh Arcane Missile","spells\zangarmarsh_arcane_missile.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3093,"Black Stone Crystal State","world\generic\pvp\runes\pvp_rune_invis.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3095,"Cleave Cast Base Purple","spells\cleave_cast_base_purple.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3096,"Deadly Throw Impact Chest","spells\deadly_throw_impact_chest.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3097,"Shadow Strikes State Hand","spells\shadow_strikes_state_hand.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3098,"Arcane Explosion Base Boss","spells\arcaneexplosion_boss_base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3099,"Barkskin State (0.25)","spells\barkskin_state_base.mdx",1,0.25,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3100,"Molten Armor Head","spells\molten_armor_head.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3101,"Item - Atiesh Equip Visual","Spells/Crow_Baked.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3103,"Scourge Summoning Runes","world\goober\g_scourgerunecirclecrystal.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3104,"Fire Ritual Base","spells\ritual_fire_precast_base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3105,"Shadow Nova Cast - (4.00) (40yd)","spells\shadow_nova_area.mdx",1,4,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3106,"Flame Circle (3.00)","Spells\FlameCircleEffect.mdx",1,3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3107,"Incinerate Missile","spells\incinerate_low_base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3108,"Incinerate Impact","spells\incinerate_impact_base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3109,"BloodLust Player Cast Head","spells\bloodlust_player_cast_head.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3110,"BloodLust Player State Head","spells\bloodlust_player_state_head.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3111,"Fel Flame Shock Impact Chest","spells\fel_flameshock_impact_chest.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3112,"Shadow Nova Cast","spells\shadow_nova_area_noprojection.mdx",1,1,0.01,2); 
-INSERT INTO `SpellVisualEffectName` VALUES (3113,"Aimed Shot Impact","spells\aimedshot_impact_chest.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3114,"Rocket Launcher Precast","spells\RocketLauncher_PreCast.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3115,"WaterShield Impact Base","spells\watershield_impact_base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3116,"WaterShield State Base","spells\watershield_state_base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3117,"Earth Shield Impact","spells\earthshield_impact_base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3118,"Earth Shield State","spells\earthshield_state_base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3119,"Scorpid Sting Impact","spells\scorpidsting_impact_base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3120,"ShadowGuard_State_Base","spells\shadowshield_state_base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3121,"Tranquility Area (0.5x)","spells\tranquility_area.mdx",0.5,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3122,"ShadowGuard Impact Base","spells\shadowshield_impact.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3123,"Soulshatter Impact Base","spells\soulshatter_impact.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3125,"Cloud: White","spells\whiteradiationfog.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3126,"Rocket Launcher Cast","spells\RocketLauncher_Cast.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3127,"Mutilate Impact","spells\mutilate_impact_chest.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3128,"Spell Reflection","spells\spellreflection_state_shield.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3129,"Ritual of Souls Base","world\goober\g_ritualofsouls.mdx",1,3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3130,"Shadow Strikes State","spells\shadow_strikes_state_hand.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3131,"Missile: Nightbane Fire","spells\nightbane_fire_missile.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3132,"Infernal Impact Base (3.00)","spells\infernal_impact_base.mdx",1,3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3133,"Shadow Shield State Base","Spells\ShadowShield_State_Base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3134,"Missile: Sonic Boom","Spells\SonicBoom_Missile_High.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3135,"Portal: Ritual of Summoning","world\generic\activedoodads\instanceportal\summon_ritual.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3136,"Missile: Abyssal Ball","spells\abyssal_ball.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3137,"Ice Barrier State Chest","spells\ice_barrier_state_chest.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3138,"Blessing of Protection State Chest","spells\blessingofprotection_chest.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3139,"Dreadlord Carrion Impact","spells\dreadlord_carrion_impact.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3140,"Dreadlord Carrion Swarm Cast","spells\dreadlord_carrion_swarm_cast.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3141,"Draenei Spirit Red","world\expansion01\doodads\auchindoun\passivedoodads\spirit_fx\draenei_spirit_red.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3142,"Missile: Infernal Ball (5.00)","spells\Infernal_Ball.mdx",1,5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3143,"Nightbane Area Base","spells\nightbane_area_base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3144,"Blessing of Spell Protection Base","spells\blessingofspellprotection_base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3145,"Avenging Wrath Impact Base","spells\avengingwrath_impact_base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3146,"Avenging Wrath State Chest","spells\avengingwrath_state_chest.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3147,"Seal of Blood Impact Base","spells\sealofblood_impact_base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3148,"Divine illumination base","spells\divineillumination_base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3149,"Smoke Flare (Blue)","spells\SmokeFlare_Blue.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3150,"Smoke Flare (Red)","spells\SmokeFlare_Red.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3151,"Smoke Flare (Green)","spells\SmokeFlare_Green.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3152,"Smoke Flare (Purple)","spells\SmokeFlare_Purple.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3153,"Smoke Flare (White)","spells\SmokeFlare_White.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3154,"Waterbreathing Impact Base (.25)","Spells\Waterbreathing_Impact_Base.mdx",1,0.25,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3155,"Seal of Righteousness Impact","spells\sealofrighteous_impact_base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3156,"Sonic Wave Blast Down Cast","spells\sonicwave_cast_down.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3157,"MoonBeam (Blue)","spells\MoonBeamBlue_Impact_Base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3158,"MoonBeam (Red)","spells\MoonBeamRed_Impact_Base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3159,"Arcane Explosion Boss Base (.75)","spells\arcaneexplosion_boss_base.mdx",1,0.75,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3160,"Blessing Of Wisdom Base","spells\blessingofwisdom_base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3161,"Seal of Command Impact","spells\sealofcommand_impact_base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3162,"Cloud: Red","spells\redradiationfog.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3163,"Judgement of Light Impact Chest (1.00)","spells\judgement_impact_chest.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3164,"Water Elemental Impact Base","spells\waterelemental_impact_base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3165,"Combat Blood Spurt Back Large Blue","particles\bloodspurts\bloodspurtbluelarge.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3166,"Cloud: Orange","spells\orangeradiationfog.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3167,"Cloud: Green","spells\greenradiationfog.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3168,"Ghost_state (Red)","spells\redghost_state.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3169,"Fel Fire Precast Hand","spells\fel_fire_precast_hand.m2",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3170,"Red Radiation Fog","spells\redradiationfog.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3171,"Green Radiation Fog","spells\greenradiationfog.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3172,"Orange Radiation Fog","spells\orangeradiationfog.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3173,"Blue Radiation Fog","spells\blueradiationfog.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3174,"Black Radiation Fog","spells\blackradiationfog.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3175,"White Radiation Fog","spells\whiteradiationfog.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3176,"Sonic Wave Blast Cast","spells\sonicwave_cast.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3177,"Cloud: Blue","spells\blueradiationfog.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3178,"Cloud: Black","spells\blackradiationfog.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3180,"Seal of Vengeance Impact Base","spells\sealofvengeance_impact_base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3181,"Magtheridon Cieling Chunk Impact","spells\MagtheradonCeilingChunk.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3182,"HolyShield_State_Base","spells\holyshield_state.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3183,"Heroism Cast","spells\heroism_cast.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3184,"Heroism State","spells\heroism_state.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3185,"ShadowWord Death Impact","spells\shadowword_death_impact.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3186,"Prayer of Mending Impact Head","spells\prayerofmending_impact_head.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3187,"Seal of Crusader Cast","spells\sealofcrusader_impact.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3188,"Victory Rush Impact","spells\victory_rush_impact.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3189,"Shadow Nova Cast - (2.00)","spells\shadow_nova_area.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3190,"Seal of Light Impact Base","spells\sealoflight_impact_base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3191,"Circle of Renewal Impact","spells\circle_of_renewal_impact.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3192,"Symbol of Hope Impact Base","spells\symbolofhope_impact_base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3193,"Missile: Abyssal Ball (5.00)","spells\abyssal_ball.mdx",1,5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3194,"Frost Trap Aura (0.10)","Spells\FrostTrap_Aura.mdx",1,0.1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3195,"Missile: Saw Blade","spells\missile_sawblade.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3196,"Consume Magic Impact","spells\consume_magic_impact.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3197,"Upper Deck Promo Firework Cast","world\goober\g_promotion_purple.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3198,"Ground Rune (Blue)","World\Goober\G_RuneGroundBlue01.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3199,"Infernal Impact (5.00)","spells\infernal_impact.mdx",1,5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3200,"Missile: Nightbane Bone Shards","spells\nightbane_bone_spurs.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3201,"SummonPet PreCast Impact Base (4.00)","Spells\SummonPet_Impact_Base.mdx",1,4,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3202,"Infernal Impact (2.00)","spells\infernal_impact.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3203,"Fel Fire Precast Hand Uber","spells\fel_fire_precast_uber_hand.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3204,"Flames (Stratholme Small)","world\lordaeron\stratholme\passivedoodads\fx\stratholmefiresmokeembers.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3205,"Missile: Abyssal Ball (2.00)","spells\abyssal_ball.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3207,"HARDCODED Resist Spell","spells\resist_immune_effect.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3208,"Arcane Torrent Cast (5x)","Spells\ArcaneTorrent.mdx",1,5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3209,"Ice Ritual Precast Base","spells\ritual_frost_precast_base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3210,"Pain Suppression","spells\painsuppression_state.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3212,"Missile: Infernal Ball (2.00)","spells\Infernal_Ball.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3213,"Gift of the water Spirit Base imapct","spells\giftwaterspirit_impact_base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3214,"Shadow Mend Impact","spells\Shadow_Mend_Impact.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3215,"Rain of Fel Fire","Spells\Fel_RainOfFire_Impact_Base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3216,"Broggok Poison Cloud","Spells\Poison_Cloud_Grobbulus.mdx",0.5,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3217,"Ice Block State","spells\icebarrier_state.mdx",0.5,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3218,"Barkskin State (0.50)","spells\barkskin_state_base.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3219,"Combat Blood Spurt Front Small Blue","particles\bloodspurts\bloodspurtblue.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3220,"Fel Fireball Missile High","spells\fel_fireball_missile_high.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3221,"Fel Fire Impact Chest DD High","spells\fel_fire_impactdd_high_chest.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3222,"Mass Dispel","Spells\Mass_Dispell_Impact.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3223,"Fel Immolate Impact Chest","spells\fel_immolate_impact_chest.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3224,"Combat Blood Spurt Back Small Blue","particles\bloodspurts\bloodspurtblue.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3225,"Focused Casting State Chest (0.25)","spells\focusedcasting_state_chest.mdx",1,0.25,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3226,"Shades of Darkness Cast - 2.00","spells\shadesofdarkness_cast.mdx",3,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3227,"Fel Fireblast Impact Chest","spells\fel_fireblast_impact_chest.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3228,"Arena - Gold Flag (Alliance)","spells\GoldArenaflag_spell.mdx",1,1.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3229,"Focused Casting State Chest (0.5)","spells\focusedcasting_state_chest.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3230,"Fel Flame Patch","spells\fel_archimonde_fire.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3231,"Fel Immolation","Spells\Fel_Immolate_State_Base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3232,"Shadow Shield Impact Base","spells\shadowshield_impact.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3233,"Breath: Nightbane Smoke","spells\nightbane_breath.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3234,"Mass Dispell Impact","spells\Mass_Dispell_Impact.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3235,"Missile: Soul","spells\SoulShatter_Missile.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3236,"SoulShatter Cast","spells\SoulShatter_Cast.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3237,"Restoration Impact Base (8x)","Spells\Restoration_Impact_Base.mdx",0,8,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3238,"Fire Nova Area (0.25)","Spells\FireNova_Area.mdx",1,0.25,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3239,"Envenom Impact","spells\envenom_impact_chest.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3240,"LifeBloom Impact","spells\LifeBloom_Impact.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3241,"LifeBloom State","spells\LifeBloom_State.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3242,"Mangle Impact","spells\Mangle_Impact.mdx",1,1,0.01,8); 
-INSERT INTO `SpellVisualEffectName` VALUES (3243,"Lacerate Impact","spells\Lacerate_Impact.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3244,"Maim Impact","spells\Mame_Impact.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3245,"Force of Nature Impact","spells\forceofnature_impact.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3246,"Circle of Renewal Impact","spells\circle_of_renewal_impact.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3247,"Shock Missile [4.0]","Spells\Shock_Missile.mdx",1,4,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3248,"Fire Nova Area (2.00)","Spells\FireNova_Area.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3249,"Missile: Flare (Scale: x2)","spells\missile_flare.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3250,"Detect Invisibility and Stealth State","",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3251,"PvP - Neutral Flag (Green)","Spells\NeutralCTFflag_spell.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3252,"Fel Flame Wreath","Spells\Fel_FlameCircleEffect.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3253,"Detect Invisibility State Head","spells\detectstealth_state_head.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3254,"Polymorph Scale 2","spells\polymorph_impact.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3255,"ArcaneExplosion Base (1.5x)","Spells\ArcaneExplosion_Base.mdx",1,1.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3256,"Missile: Meteor","spells\Meteor_Ball_Missile.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3257,"Hellfire Area Base (Scale 0.20)","Spells\HellFire_Area_Base.mdx",1,0.2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3258,"Quest - Seed of Revitalization - Entangling Roots Effect Big","spells\entanglingroots_state.mdx",1,35,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3259,"Quest - Seed of Revitalization - Giant Insect Swarm Effect Big","spells\giantinsectswarm_state_ground.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3260,"Quest - Seed of Revitalization - Lightning Cloud Effect Big","Spells\LightningStorm_Cloud_State.mdx",1,1.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3261,"Rampage State Head","spells\Rampage_State_Head.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3262,"Quest - Terokkar Forest - Mana Bomb Explosion Base","spells\arcaneexplosion_boss_base.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3263,"Fel Flame Breath (120) - 1.00","Spells\Fel_FlameBreath.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3264,"Banish (Red) - 2.00","spells\bloodbolt_chest.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3265,"World: Book Small 01","World\Generic\Human\Passive Doodads\Books\BookSmall01.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3266,"Quest - Ultris Explosion Cast - Huge Explosion","spells\fire_impactdd_uber_chest.mdx",1,10,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3267,"Misdirection Impact Head","spells\misdirection_impact_head.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3268,"Arena - Gold Flag (Horde)","spells\GoldHordeflag_spell.mdx",1,1.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3269,"Arena - Green Flag (Alliance)","spells\GreenArenaflag_spell.mdx",1,1.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3270,"Arena - Green Flag (Horde)","spells\GreenHordeflag_spell.mdx",1,1.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3271,"Brilliance Aura Base (3.00)","Spells\BrillianceAura.mdl",1,3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3272,"Fel Immolation State x2","spells\fel_immolate_state_base.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3273,"Spellbreaker Impact Chest","Spells\Zangarmarsh_Arcane_Impact.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3274,"Fel Flamestrike Impact Base","spells\fel_flamestrike_impact_base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3275,"Water Bubble Chest State (Big)","spells\waterbubble.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3276,"Water Bubble State (Head) (Small)","spells\waterbubble.mdx",1,0.35,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3277,"World: Book Medium 04","world\generic\human\passive doodads\books\bookmedium04.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3278,"Anti-Magic State - Head","spells\antimagic_state_base.mdx",1,0.8,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3279,"Ritual Arcane PreCast Base","spells\Ritual_Arcane_PreCast_Base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3280,"Quest - Fel Fire Aura (Immolate) State","spells\fel_immolate_state_base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3281,"Quest - Fel Fire (Fire Aura) State","spells\fel_lowpolyfireanim.mdx",1,0.25,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3282,"Quest - Fel Fire Aura (Archimonde Fire) State","spells\fel_archimonde_fire.mdx",1,0.25,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3283,"Quest - Infernal Ball State","spells\infernal_ball.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3284,"Hellfire FirePuff Caster Base (0.50)","spells\HellFire_FirePuff_Caster_Base.mdx",0.5,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3285,"Shadow Fury Impact","spells\ShadowFury_Impact_Base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3286,"Enslave Demon Impact Base","spells\enslavedemon_impact_base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3287,"Fel Fireball State","spells\fel_fireball_missile_high.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3288,"Infernal Impact","spells\infernal_impact.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3289,"Quest - Cosmetic: Steam State","spells\steam.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3290,"Quest - Cosmetic: Water Bolt State","spells\waterbolt_missile_low.mdx",1,1.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3291,"Quest - Cosmetic: Blue Cyclone State","spells\cyclonewater_state.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3292,"Arcane Explosion (0.25)","Spells\ArcaneExplosion_Base.mdx",1,0.25,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3293,"Bloodmyst Crystal 3 (0.25)","World\Expansion01\Doodads\Bloodmyst\Crystals\BloodmystCrystal03.mdx",1,0.25,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3294,"Black Magic Precast Base","spells\BlackMagic_Precast_Base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3295,"Quest - Cosmetic: Earthen Soul State","spells\boulder_missile.mdx",1,1.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3296,"Bloodmyst Crystal 3 (0.15)","World\Expansion01\Doodads\Bloodmyst\Crystals\BloodmystCrystal03.mdx",1,0.15,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3297,"Missile: Ziggurat Spirit (Scale x4)","spells\zig_missile.mdx",1,4,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3298,"Fel Fire Nova Area","spells\fel_firenova_area.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3299,"Fel Fire Nova State","spells\fel_firenova_state.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3300,"Fel Firebolt Missile","spells\fel_firebolt_missile_low.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3301,"Endless Rage State","spells\endlessrage_state_head.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3302,"Arcane Lightning (1)","Spells\arcanelightning.mdx",1,0.65,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3303,"Arcane Lightning (2)","Spells\arcanelightning01.mdx",1,0.65,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3304,"Arcane Lightning (3)","Spells\arcanelightning02.mdx",1,0.65,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3305,"Arcane Impact Chest (Scale x2)","Spells\Magic_Impact_Chest.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3306,"Shadow ImpactDD Uber Chest (Scale x2)","Spells\Shadow_ImpactDD_Uber_Chest.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3307,"Arcane Torrent Cast (0.5x)","Spells\ArcaneTorrent.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3308,"Rampage Impact Head","spells\endlessrage_impact_head.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3309,"Quest - Cosmetic: Fel Fire Aura (Cyrukh) (Left Hand)","spells\fel_lowpolyfireanim.mdx",1,0.15,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3310,"Quest - Cosmetic: Fel Fire Aura (Cyrukh Right Hand)","spells\fel_lowpolyfireanim.mdx",1,0.15,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3311,"Quest - Cosmetic: Fel Fire Aura (Cyrukh Head)","spells\fel_lowpolyfireanim.mdx",1,0.2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3312,"Quest - Infuse Infernal Soul","spells\fel_hellfire_impact_caster_base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3313,"Banish (Purple) - 3.00","spells\banish_chest_purple.mdx",1,3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3314,"Quest - Summon Pet Precast Base (Large 2x Size)","spells\summonpet_impact_base.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3315,"Dampen Magic Impact Base (1.5x)","Spells\DampenMagic_Impact_Base.mdx",0,1.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3316,"ArcaneExplosion Base (2.0x)","Spells\ArcaneExplosion_Base.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3317,"Arcane Power State Chest - 0.50","spells\arcanepower_state_chest.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3318,"Ghost_state (Purple)","spells\purpleghost_state.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3319,"Earth Burrow Cast (Scale x5)","Spells\BurrowEarth_Brown_Missile.mdx",1,5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3320,"Water Elemental Impact Base (Scale x3)","spells\waterelemental_impact_base.mdx",1,3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3321,"Missile: Water Bolt (Scale x3)","Spells\WaterBolt_Missile_Low.mdx",1,3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3322,"Void Zone","creature\portalofkathune\portalofkathune.mdx",1,0.15,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3323,"Quest - Acid Breath Liquid (Small)","spells\acidliquidbreath.mdx",1,0.25,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3324,"The Beast Within State Base","spells\beastwithin_state_base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3325,"Missile: Gold Glaive","World\ENVIRONMENT\DOODAD\GENERALDOODADS\NightElfWeapons\NE_Glaive02.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3326,"Fel Immolation (3x)","Spells\Fel_Immolate_State_Base.mdx",1,3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3327,"Arcane Explosion (0.50)","Spells\ArcaneExplosion_Base.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3328,"Fel Flame Breath 180","spells\fel_flamebreath180.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3329,"Hellfire Raid Dust Impact Base","spells\HellfireRaid_Dust_Impact_Base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3330,"Skull, Chattering","spells\skull.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3331,"Might Aura State Base - 7.00","Spells\MightAura_Impact_Base.mdx",7,7,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3332,"Fire Smoke Trail","spells\Fire_SmokeTrail.mdx",1,5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3333,"Missile: Fire Shot - 2.00","spells\FireShot_Missile.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3334,"Flame Circle (1.35)","spells\flamecircleeffect.mdx",1,1.35,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3335,"Arcane Explosion Base Boss - 2.00","spells\arcaneexplosion_boss_base.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3336,"Quest - A Curse Upon Both of Your Clans (Large)","spells\endlessrage_state_head.mdx",1,5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3337,"Ashbringer","Item\ObjectComponents\Weapon\Sword_2H_Ashbringer.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3338,"Missile: Shadow Bolt - Epic (0.50)","spells\DeathBolt_Missile_Low.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3339,"Missile: Aegis (0.50)","Spells\Aegis.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3340,"Blasted Lands Bone Pile","World\Azeroth\TheBlastedlands\PassiveDoodads\Bones\BlastedLandsBonePile02.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3341,"Enslave Demon Impact Head (2.5x)","Spells\EnslaveDemon_Impact_Head.mdx",0,2.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3342,"Enslave Demon Impact Chest (2.5x)","Spells\EnslaveDemon_Impact_Chest.mdx",0,2.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3344,"Chest 04 (0.5)","World\Generic\ActiveDoodads\Chest04\Chest04.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3345,"Acid Burn Base (0.5)","spells\AcidBurn.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3346,"Missile: Axe Outland Raid D06","spells\Missile_Axe_1HOutlandRaidD06.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3347,"Quest - Fel Fire Nova Cast (Huge)","spells\fel_firenova_area.mdx",1,5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3348,"Steam Impact","spells\Steam.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3349,"Steam State","spells\Steam.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3350,"Quest - The Mark of Kael'Thas State","spells\fire_precast_uber_hand.mdx",1,1.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3351,"Quest - Low Poly Fire (State)","world\generic\pvp\fires\lowpolyfireanim.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3352,"Quest - Archimonde Fire Chest (State)","spells\archimonde_fire.mdx",1,0.75,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3353,"Shadow Nova Cast - (0.50)","spells\shadow_nova_area.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3354,"Arcane Breath","Spells\ArcaneBreath.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3355,"Flare Ground State (2.75x)","spells\flare_state_base.mdx",2.75,2.75,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3356,"Fire Nova Area (0.75x)","Spells\FireNova_Area.mdx",0,0.75,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3357,"Banish (White)","spells\banish_chest_white.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3358,"Shadow Nova Cast - (0.10)","spells\shadow_nova_area.mdx",1,0.1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3359,"Bomb Explosion - (0.10)","Spells\Bomb_ExplosionA.mdx",1,0.1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3360,"Floating Mine","spells\floatingmine.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3361,"Floating Mine Pulse","spells\floatingminepulse.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3362,"Floating Mine (1.5x)","spells\floatingmine.mdx",1,1.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3363,"Floating Mine Pulse (1.5x)","spells\floatingminepulse.mdx",1,1.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3364,"Void Zone (0.25)","creature\portalofkathune\portalofkathune.mdx",1,0.25,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3365,"Quest - Ancient Draenei Warden State","world\expansion01\doodads\auchindoun\passivedoodads\spirit_fx\draenei_spirit_red.mdx",1,3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3366,"Bottle (Green)","World\Generic\Human\Passive Doodads\Bottles\GreenBottle02.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3367,"Mug (Foaming)","World\Generic\Human\Passive Doodads\Mugs\MugFoam01.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3368,"Fel Fire Nova Area (1.5x)","spells\fel_firenova_area.mdx",1.5,1.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3369,"Abyssal Impact Base (0.25)","spells\abyssal_impact_base.mdx",1,0.25,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3370,"Dark Shade","spells\darkshade.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3371,"Arcane Fire Weapon","Spells\Arcane_Fire_Weapon_Effect.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3372,"Quest - Psychedelic Ghost State (Large 2x Size)","spells\ghost_state2.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3373,"Arcane Fire Weapon (2.00)","Spells\Arcane_Fire_Weapon_Effect.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3374,"Defensive Stance Impact Chest (1.5x)","Spells\DefensiveStance_Impact_Chest.mdx",1,1.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3375,"Water Breath","spells\WaterLiquidBreath.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3376,"Missile: Sonic Boom (Small) dlk","Spells\SonicBoom_Missile_High.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3377,"Fel Fire Nova Area (2x)","spells\fel_firenova_area.mdx",2,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3378,"Fel Fire Shield Head","Spells\Fel_Fireshieldfinal_Impact_Head.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3379,"Hellfire Area Base  (7.00)","Spells\HellFire_Area_Base.mdx",1,7,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3380,"Abyssal Impact Base - 1.50","spells\abyssal_impact_base.mdx",1,1.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3381,"Flamestrike Impact Base (1.50)","Spells\Flamestrike_Impact_Base.mdx",1,1.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3382,"FlamestrikeSmall Impact Base (2.5)","Spells\FlamestrikeSmall_Impact_Base.mdx",1,2.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3383,"Wall Sword 01","World\Generic\Human\Passive Doodads\Weapons&Armor\WallSword01.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3384,"Bone Burrow Cast","Spells\BurrowEarth_BoneWaste_Missile.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3385,"Bone Burst (0.25)","Spells\BoneWorm_AttackEffects.mdx",1,0.25,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3386,"Quest - Netherstorm - WaterLiquidBreath Cast","spells\waterliquidbreath.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3388,"Dust Nova x2","spells\dustnova_cast_base.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3389,"Frost Nova Area (2.5x)","Spells\Frost_Nova_area.mdx",1,2.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3390,"Missile: Spear (Human 01)","World\Generic\Human\Passive Doodads\Weapons&Armor\HumanSpear01.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3391,"Quest - Thunderclap Cast Base (Huge)","spells\thunderclap_cast_base.mdx",1,4,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3392,"Water Breath (3.00)","spells\WaterLiquidBreath.mdx",1,3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3393,"Aerie Boulder 03 (0.5)","World\Lordaeron\AeriePeaks\PassiveDoodads\Boulders\AerieBoulder03.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3394,"Ghost_state (Green)","spells\greenghost_state.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3395,"Magic Unlock (2x)","Spells\MagicUnlock.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3396,"Quest - Dark Glare (Small)","spells\cthuneeyeattack.mdx",1,0.25,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3397,"CycloneWater State (5x)","Spells\CycloneWater_State.mdx",0,5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3398,"Missile: Boulder (4.00)","spells\boulder_missile.mdx",0,4,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3399,"Missile: Eye of Kilrogg","creature\spells\EyeOfKilrog.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3400,"Banish (Blue) - 0.25","spells\banish_chest_blue.mdx",1,0.25,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3401,"Banish (Green) - 0.25","Spells\Banish_Chest.mdx",1,0.25,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3402,"Banish (Red) - 0.25","spells\bloodbolt_chest.mdx",1,0.25,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3403,"Missile: Thorns (2x)","spells\missile_thorns.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3404,"Missile: Pine Cone","world\kalimdor\mulgore\passivedoodads\pinecone\pinecone.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3405,"Bone Burrow Cast - 0.25","Spells\BurrowEarth_BoneWaste_Missile.mdx",1,0.25,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3406,"Missile: Soul (x3)","spells\soulshatter_missile.mdx",1,3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3407,"Fel Fireball Missile High (3.00)","spells\fel_fireball_missile_high.mdx",1,3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3408,"Acid Breath (Liquid) (2x)","spells\acidliquidbreath.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3409,"Horde Banner","world\generic\pvp\battlefieldbanners\battlefieldbannerhorde.mdx",1,0.6,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3410,"Feather (Red)","World\Generic\PassiveDoodads\Feathers\FeatherBigRed.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3411,"Fel Hellfire Impact","spells\fel_hellfire_impact_base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3412,"Fel Hellfire Caster Cast Base","spells\fel_hellfire_impact_caster_base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3413,"Feather (Red) - 2.00","World\Generic\PassiveDoodads\Feathers\FeatherBigRed.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3414,"Quest - The Mark of Vashj - Impact","spells\giftwaterspirit_impact_base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3415,"Bottle (Blue)","World\Generic\Human\Passive Doodads\Bottles\Bottle01.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3416,"Acid Burn (Low-Poly)","Spells\Acidburn_Small.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3417,"Acid Burn (Low-Poly) 0.50","Spells\Acidburn_Small.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3418,"Acid Burn Black (Low-Poly) - 0.50","SPELLS\AcidBurn_Small_Black.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3419,"Acid Burn Red (Low-Poly) - 0.50","SPELLS\AcidBurn_Small_Red.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3420,"Bottle (Blue Fancy)","World\Expansion01\Doodads\Generic\BloodElf\Bottles\BE_Bottle01.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3421,"Acid Burn Yellow (Low-Poly) 0.50","Spells\AcidBurn_Small_Yellow.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3422,"Bottle (Frothy Smoke)","World\Generic\Human\Passive Doodads\Bottles\BottleSmoke.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3423,"Acid Burn Blue (Low-Poly) - 0.50","SPELLS\AcidBurn_Small_Blue.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3424,"Smoke Flare (Blue) - 3.00","spells\SmokeFlare_Blue.mdx",1,3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3425,"Acid Burn Orange (Low-Poly) 0.50","Spells\AcidBurn_Small_Orange.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3426,"Acid Burn Purple (Low-Poly) - 0.50","Spells\AcidBurn_Small_Purple.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3427,"Boots (Human Brown Leather 02)","World\Generic\Human\Passive Doodads\Clothing\BootsLeatherBrown01.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3428,"Feather (Brown) - 2.00","World\Generic\PassiveDoodads\Feathers\FeatherBigBrown.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3429,"Feather (Blue) - 2.00","World\Generic\PassiveDoodads\Feathers\FeatherBigBlue.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3430,"Acid Burn Base (2x)","spells\AcidBurn.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3431,"Shock Missile [8.0]","Spells\Shock_Missile.mdx",1,8,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3432,"ArcaneExplosion Base (20yd)","Spells\ArcaneExplosion_Base.mdx",1,2.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3433,"Quest - Fumping Drum Missile","world\generic\tauren\passive doodads\drums\taurendrumsmall01.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3434,"Acid Burn Black","SPELLS\AcidBurn_Black.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3435,"Missile: Soul (x5)","spells\soulshatter_missile.mdx",1,5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3436,"Hellfire Area Base (0.5 Scale)","spells\hellfire_area_base.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3437,"Acid Breath (Liquid) (x0.5)","spells\acidliquidbreath.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3438,"Seal Of Wrath Impact Base - 3.00","Spells\SealOfWrath_Impact_Base.mdx",1,3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3439,"Ward: Fire Impact Chest - 5.00","Spells\FireWard_Impact_Chest.mdx",1,5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3440,"Ritual Of Fire Precast - 2.00","spells\Ritual_Fire_PreCast_Base.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3441,"Meteor Impact Base Red","spells\Meteor_Impact_Base_Red.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3442,"Nightbane Area Base (0.50)","spells\nightbane_area_base.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3443,"Shadow Fissure Base (2.25)","Spells\Shadow_Fissure_Base.mdx",1,2.25,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3444,"Dark Ritual PreCast Base (2.25)","Spells\DarkRitual_PreCast_Base.mdx",1,2.25,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3445,"Fel Hellfire Puff","Spells\Fel_HellFire_FirePuff_Caster_Base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3446,"Quest - Seed of Corruption State (Big) (1.25x)","spells\seedofcorruption_state.mdx",1,1.25,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3447,"Quest - Fire Reflect State (2x)","spells\firereflect_state_chest.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3448,"Consecration Impact Base (1.5x)","spells\consecration_impact_base.mdx",1,1.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3449,"Shadow Nova Cast (4.0)","spells\shadow_nova_area.mdx",1,4,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3450,"Fire Blast Impact Chest - 3.00","Spells\FireBlast_Impact_Chest.mdx",1,3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3451,"Skull Test","World\Azeroth\Elwynn\PassiveDoodads\Skeleton\BattleGladeSkullHumanDark.mdx",1,3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3452,"Dreadlord Carrion Swarm Cast (0.25)","spells\dreadlord_carrion_swarm_cast.mdx",1,0.25,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3453,"Darkmoon Vengeance Head State","Spells\DarkmoonVengeance_Impact_Head.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3454,"Darkmoon Vengeance Impact Chest","Spells\DarkmoonVengeance_Impact_Chest.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3455,"Missile: Mana Shot","Spells\ManaShot_Missile.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3456,"Ward: Holy Impact Chest","Spells\HolyWard_Impact_Chest.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3458,"Soulgrinder Ritual Visual ( in progress)","world\kalimdor\diremaul\activedoodads\nightmaresummoning\nightmarestone.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3459,"Soulgrinder Beam Precast","spells\shadow_precast_uber_hand.mdx",1,3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3460,"Missile: Naga Lord Shell","spells\nagalordshell_missile.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3461,"Missile: Naga Lord Shell (2.5x)","spells\nagalordshell_missile.mdx",1,2.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3462,"Naga Lord Shell Impact","spells\nagalordshell_impact.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3463,"Otherwordly Portal","World\Expansion01\Doodads\TheExodar\Passivedoodads\Sky_Portal\Exodar_Sky_portal.mdx",1,0.35,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3464,"Water Bubble Chest State (0.75x)","Spells\WaterBubble.mdx",0,0.75,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3465,"Seed Of Corruption State - 3.00","Spells\SeedOfCorruption_State.mdx",1,3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3466,"Life Tap State Chest - 5.00","Spells\Lifetap_State_Chest.mdx",1,5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3467,"Fel Flame Patch - 2.00","spells\fel_archimonde_fire.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3468,"Fel Hellfire Impact Base - 3.00","spells\fel_hellfire_impact_base.mdx",1,3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3469,"Fel Immolate Impact Chest - 5.00","spells\fel_immolate_impact_chest.mdx",1,5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3470,"Fel Low Poly Fire - 2.00","spells\Fel_LowPolyFireAnim.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3471,"Shell Shield State","Spells\ShellShield_State_Base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3472,"Dreadlord Carrion Swarm Cast (0.50)","spells\dreadlord_carrion_swarm_cast.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3474,"Intervene Trail","spells\InterveneTrail.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3477,"Intervene Impact","spells\Intervene_Impact_Chest.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3478,"Flames (0.50 Scale)","world\lordaeron\stratholme\passivedoodads\fx\stratholmefiresmokeembers.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3479,"Crystal man visual - Chest","world\kalimdor\ungoro\passivedoodads\crystals\ungorocrystal_blue02.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3480,"Crystal man visual - hand","world\goober\g_jewelblue.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3481,"Crystal Man visual - base","creature\questobjects\creature_powercrystal.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3482,"Arcane Precast","spells\arcanebomb_missle.mdx",1,0.25,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3483,"Missile: Black Shot","spells\blackshot_missile.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3484,"Fel Fireblast Impact Chest (2.00)","spells\fel_fireblast_impact_chest.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3485,"Aura: Yellow","World\Generic\PassiveDoodads\ParticleEmitters\AuraYellow.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3486,"Aura: Red","World\Generic\PassiveDoodads\ParticleEmitters\AuraRed.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3487,"Aura: Green","World\Generic\PassiveDoodads\ParticleEmitters\AuraGreen.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3488,"Aura: Blue","World\Generic\PassiveDoodads\ParticleEmitters\AuraBlue.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3489,"Portal: Boss Shadow ","Spells\Creature_SpellPortal_LargeShadow.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3490,"Missile: Black Shot - 2.00","spells\blackshot_missile.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3491,"Stasis Field","spells\arcanebomb_missle.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3492,"Arcane Nova (Chest)","Spells\FireNova_Blue_Area.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3493,"Missile: Shadowbolt","Spells\Shadowbolt_Missile.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3494,"Impact: Shadowbolt","Spells\Shadowbolt_Chest_Impact.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3495,"Water Elemental Impact Base (2x)","spells\waterelemental_impact_base.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3496,"Item - Demonic Infusion Effect (Fel Fire 0.25 Base)","spells\fel_archimonde_fire.mdx",1,0.25,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3497,"Item - Demonic Infusion (0.25 LHand)","spells\fel_archimonde_fire.mdx",1,0.25,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3498,"Item - Demonic Infusion (0.25 RHand)","spells\fel_archimonde_fire.mdx",1,0.25,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3499,"Item - Demonic Infusion (0.25 LHand) Fel_FlameShock","spells\fel_flameshock_impact_chest.mdx",1,0.25,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3500,"Item - Demonic Infusion (0.25 RHand) Fel_FlameShock","spells\fel_flameshock_impact_chest.mdx",1,0.25,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3501,"Fire Nova: Blue","Spells\FireNova_Blue_Area.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3502,"Fire Nova State - Blue","Spells\FireNova_Blue_State.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3503,"Impact: Fire Blast - Blue","Spells\FireBlast_Blue_Impact_Chest.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3504,"Archimonde Fire - Blue","Spells\Archimonde_Blue_Fire.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3505,"Fel Fireblast Impact Base Large","spells\fel_fireblast_impact_chest.mdx",1,3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3506,"Invisibility Cast","spells\invisibility.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3507,"Blessing of Freedom State","spells\BlessingofFreedom_State.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3508,"Blessing of Freedom Impact","spells\BlessingofFreedom_Impact.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3509,"Blessing of Might Base","spells\BlessingofMight_Base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3510,"Blessing of Light Base","spells\BlessingofLight_Impact.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3511,"Blessing of Protection Impact","spells\BlessingofProtection_Impact.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3512,"Envenom Cast","spells\envenom_cast.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3513,"Blessing of Kings Base","spells\BlessingofKings_Base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3514,"Blessing of Sacrifice Base","spells\BlessingofSacrifice_Impact.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3515,"Immolate Impact Chest (Blue)","spells\Immolate_Blue_Impact_Chest.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3516,"Flame Patch (Blue) - 2.00","spells\Archimonde_Blue_Fire.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3517,"Fire, Low Poly (Blue) - 2.00","spells\LowPolyFireAnim_Blue.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3518,"Hellfire Impact Base (Blue) - 3.00","spells\HellfIre_Blue_Impact_Base.mdx",1,3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3519,"Shadow Precast Uber Hand - 3.00","Spells\Shadow_Precast_Uber_Hand.mdx",1,3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3520,"Shadowbolt Chest Impact - 3.00","spells\Shadowbolt_Chest_Impact.mdx",1,3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3521,"Shadow Strikes State - 5.00","spells\shadow_strikes_state_hand.mdx",1,5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3522,"Missile: Fireball (Blue) - 2.00","spells\Fireball_Blue_Missile_High.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3523,"Fire Precast Hand High (Blue)","spells\Fire_Blue_PreCast_High_Hand.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3524,"Fire ImpactDD High Chest (Blue)","spells\Fire_Blue_ImpactDD_High_Chest.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3525,"FireBlast Impact Chest (Blue)","spells\FireBlast_Blue_Impact_Chest.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3526,"Hellfire FirePuff Caster Base (Blue)","spells\HellFire_Blue_FirePuff_Caster_Base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3527,"Fire Precast Hand High (Blue) - 3.00","spells\Fire_Blue_PreCast_High_Hand.mdx",1,3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3528,"Fel Low Poly Fire","spells\Fel_LowPolyFireAnim.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3529,"Arcane Reflect State Chest","spells\ArcaneReflect_State_Chest.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3530,"Poison Elemental Impact Base (5x)","spells\poisonelemental_impact_base.mdx",1,5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3531,"Fire Precast Hand Blue","Spells\Fire_Blue_Precast_Hand.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3532,"Missile: Fireball (Blue)","spells\Fireball_Blue_Missile_High.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3533,"Anti-Magic State Base (Blue) - 2.00","spells\antimagic_state_blue.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3534,"Mine Cart","world\azeroth\stranglethorn\passivedoodads\gemminecar02\gemminecar03.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3535,"Quest - Confused State (2x)","spells\confused_state_head.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3536,"Quest - Purple Zzz's (Beast Soothe)","spells\beastsoothe_state_head.mdx",1,1.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3537,"Item - Big Meat","World\Generic\Human\Passive Doodads\Food&Utensils\TurkeyLeg.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3538,"Missile: Illidan's Glaive","spells\Illidan_Glave_Missile.mdx",1,1.35,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3539,"Arcane Power State Chest (3)","spells\arcanepower_state_chest.mdx",1,3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3540,"Undead Fire Large","World\Generic\Human\Passive Doodads\Fire\UndeadFireLarge.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3541,"Wave: Water","Spells\Wave_Water.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3542,"Missile: Yellow Crystal","world\expansion01\doodads\silvermyst\crystals\silvermystcrystal01_yellow.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3543,"Crystal, Yellow Large","world\expansion01\doodads\silvermyst\crystals\silvermystcrystal03_yellow.mdx",1,1.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3544,"Ethereal Ring, Cannon","World\Expansion01\Doodads\Shattrath\Passivedoodads\Lighting\Ancient_D_Standing_Light.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3545,"Flame Circle (Blue)","spells\FlameCircleEffect_Blue.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3546,"Fire Precast Hand High (Blue) - 10.00","spells\Fire_Blue_PreCast_High_Hand.mdx",1,10,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3547,"Flame Circle (Blue) - 1.25","spells\FlameCircleEffect_Blue.mdx",1,1.25,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3548,"Quest - Oldie's Rotten Pumpkin Missile","world\lordaeron\scholomance\passivedoodads\diseasedpumpkin\diseasedpumpkin.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3549,"Flame Breath - 180 (Blue)","Spells\FlameBreath180_Blue.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3550,"Quest - Trope's Skull Barrage","world\expansion01\doodads\ghostlands\skulls\swath_skull.mdx",1,3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3551,"Nightmare Stone State","World\Kalimdor\DireMaul\ActiveDoodads\NightmareSummoning\NightmareStone.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3552,"Quest - Oldie's Rotten Pumpkin Impact","Spells\Exploding_Stone_Impact.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3553,"Quest - Ichman's Blazing Fireball State","spells\archimonde_fire.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3554,"Quest - Dragonmaw Race: Mulverick's Great Balls Impact","Spells\LightningBoltIvus_Missile.mdx",1,1.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3555,"Immolate State Base (Blue)","Spells\Immolate_Blue_State_Base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3557,"Flame Breath (Blue)","Spells\FlameBreath_Blue.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3558,"FlamestrikeSmall Impact Base (Blue) -  2.00","spells\FlamestrikeSmall_Blue_Impact_Base.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3559,"Portal: Boss Holy","spells\Creature_SpellPortalLarge_Yellow.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3560,"Acid Breath Liquid (0.25)","spells\acidliquidbreath.mdx",1,0.25,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3561,"FlamestrikeSmall Impact Base (Blue) -  3.00","spells\FlamestrikeSmall_Blue_Impact_Base.mdx",1,3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3562,"Missile: Firebolt (Blue)","Spells\FireBolt_Blue_Missile_Low.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3563,"Fire Nova: Blue (0.50)","Spells\FireNova_Blue_Area.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3564,"Missile: Black Shot - 5.00","spells\blackshot_missile.mdx",1,5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3565,"Shadow Nova Cast - 3.00","spells\shadow_nova_area.mdx",1,3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3566,"Missile: Deathbolt Missile - 3.00","spells\deathbolt_missile_low.mdx",1,3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3567,"Arcane Torrent Cast (2.5x)","Spells\ArcaneTorrent.mdx",1,2.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3568,"Arcane Power State Chest (5.00)","spells\arcanepower_state_chest.mdx",1,5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3569,"Wave: Water (0.25)","Spells\Wave_Water.mdx",1,0.25,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3570,"Shades of Darkness Cast - 4.00","spells\shadesofdarkness_cast.mdx",1,4,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3571,"Missile: Black Shot - 3.00","spells\blackshot_missile.mdx",1,3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3572,"Flame Patch (Blue) - 1.00","spells\Archimonde_Blue_Fire.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3573,"Brute Cologne","Spells\GreenGhost_state.mdx",1,1.25,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3574,"Crashing Wave: Poison","Spells\Missile_Wave_WaterGreen.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3575,"Crashing Wave: Water","Spells\Missile_Wave_Water.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3576,"Crashing Wave: Fire","Spells\Missile_Wave_Fire.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3577,"Fireworks Roman Candle Missile (x2)","spells\firework_romancandle_missle_01.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3578,"Level Up (No Sound)","Spells\LevelUpSpell\LevelUpSpell.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3579,"Aspect of the Wild Impact Head","spells\aspectwild_impact_head.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3580,"Starfire Area (1.5x)","spells\starfire_area.mdx",1,1.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3581,"Cosmetic - Illidari Fire (Fire Globes LH)","spells\fire_smoketrail.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3582,"Cosmetic - Illidari Fire (Fire Globes RH)","spells\fire_smoketrail.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3583,"Quest - Mark of Vash (Water Wave Missile 0.5)","spells\missile_wave_water.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3584,"Quest - Mark of Kael (Wave of Fire 0.25)","spells\missile_wave_fire.mdx",1,0.25,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3585,"Shadow Nova Cast - (1.50)","spells\shadow_nova_area.mdx",1,1.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3586,"Fire Nova Area (10.00)","Spells\FireNova_Area.mdx",1,10,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3587,"Missile: Boulder (2x)","Spells\Boulder_Missile.mdx",0,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3588,"Test Effect","Spells\Frostbolt.mdx",1,10,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3589,"Smoke Flare (Green) - 4.00","spells\smokeflare_green.mdx",1,4,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3590,"Starfire Area (2x)","spells\starfire_area.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3591,"Portal: Large Fire (2.00)","Spells\Creature_SpellPortalLarge_Red.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3592,"Portal: Large Arcane (2.00)","Spells\Creature_SpellPortalLarge_Purple.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3593,"Portal: Large Holy (2.00)","Spells\Creature_SpellPortalLarge_Yellow.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3594,"Portal: Large Nature (2.00)","Spells\Creature_SpellPortalLarge_Green.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3595,"Portal: Large Frost (2.00)","spells\Creature_SpellPortalLarge_Blue.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3596,"Portal: Boss Arcane","Spells\Creature_SpellPortalLarge_Purple.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3597,"Portal: Boss Fire","spells\Creature_SpellPortalLarge_Red.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3598,"Portal: Boss Nature","spells\Creature_SpellPortalLarge_Green.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3599,"Portal: Boss Frost","spells\Creature_SpellPortalLarge_Blue.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3600,"Immolate State Base (Blue) - 2.00","Spells\Immolate_Blue_State_Base.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3601,"Bucket","World\Generic\Human\Passive Doodads\Buckets\Bucket.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3602,"Hellfire FirePuff Caster Base (Blue) (0.50)","spells\HellFire_Blue_FirePuff_Caster_Base.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3603,"Pumpkin (x0.5)","World\Goober\G_Pumpkin_02.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3604,"Bomb Explosion (x2)","Spells\Bomb_ExplosionA.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3605,"Bucket (x2.0, carried)","Item\ObjectComponents\Weapon\Misc_1H_Bucket_A_01.mdx",0,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3606,"Arcane Ward Impact Chest","spells\ArcaneWard_Impact_Chest.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3607,"Pumpkin Visual (x0.66)","world\azeroth\duskwood\passivedoodads\bush\pumpkin01.mdx",1,0.66,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3608,"Arcane Bomb - 1.00","spells\arcanebomb_missle.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3609,"Arcane Bomb - 1.00","spells\arcanebomb_missle.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3610,"Poison Elemental Impact Base (2x)","spells\poisonelemental_impact_base.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3611,"BloodyMeat02 (1.5)","World\Generic\Human\Passive Doodads\Meat\BloodyMeat02.mdx",1,1.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3612,"BloodyMeat01 (1.5)","World\Generic\Human\Passive Doodads\Meat\BloodyMeat01.mdx",1,1.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3613,"Poison Elemental Impact Base","spells\poisonelemental_impact_base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3614,"Bloody Explosion Green Impact (x2.0)","Spells\BloodyExplosionGreen.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3615,"Blessing of Salvation Impact","spells\blessingofsalvation_impact.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3616,"Missile: Thrown Dagger","Item\ObjectComponents\Weapon\Thrown_1H_Dagger_A_01.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3617,"Flame Patch 2.0","spells\archimonde_fire.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3618,"Bucket (x1.0, carried)","Item\ObjectComponents\Weapon\Misc_1H_Bucket_A_01.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3619,"Missile: Skull - 2.00","World\Expansion01\Doodads\Ghostlands\Skulls\Swath_Skull.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3620,"Smoke - Ash Tree","World\Azeroth\BurningSteppes\PassiveDoodads\Smoke\AshTreeSmoke01.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3622,"Shield: Arcane Force (Dark)","Spells\ArcaneForceShield_Dark.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3623,"Shield: Arcane Force (Yellow)","Spells\ArcaneForceShield_Yellow.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3624,"Shield: Arcane Force (Red)","Spells\ArcaneForceShield_Red.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3625,"Shield: Arcane Force (Blue)","Spells\ArcaneForceShield_Blue.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3626,"Shield: Arcane Force (Green)","Spells\ArcaneForceShield_Green.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3627,"Shield: Arcane Force (Purple)","spells\ArcaneForceShield_Purple.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3628,"Shield: Fire Force (Dark)","Spells\FireForceShield_Dark.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3629,"Shield: Fire Force (Purple)","Spells\FireForceShield_Purple.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3630,"Shield: Fire Force (Green)","Spells\FireForceShield_Green.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3631,"Shield: Fire Force (Blue)","Spells\FireForceShield_Blue.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3632,"Shield: Fire Force (Yellow)","Spells\FireForceShield_Yellow.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3633,"Shield: Fire Force (Red)","Spells\FireForceShield_Red.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3636,"Water Elemental Low Impact Base (x2)","spells\waterelementallow_impact_base.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3637,"Steam Burst Impact","Spells\WaterSteam_Impact.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3638,"Quest - Dragonflayer Blaze State","spells\archimonde_fire.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3639,"Ghost_state (Multi-Color)","Spells\Ghost_state2.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3640,"Missile: Harpoon (Large 2x)","world\azeroth\bootybay\passivedoodad\harpoons\harpoon01.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3641,"Stratholme Fire - Small (x0.5)","world\lordaeron\stratholme\passivedoodads\fx\stratholmefiresmokeembers.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3642,"Quest - Spout","Spells\WaterLiquidBreath.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3643,"Quest - Stratholme Fire State","world\lordaeron\stratholme\passivedoodads\fx\stratholmefiresmokeembers.mdx",1,1.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3645,"Smoke - Ash Tree (x0.25)","World\Azeroth\BurningSteppes\PassiveDoodads\Smoke\AshTreeSmoke01.mdx",1,0.25,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3646,"Spore Stalk State","World\Kalimdor\Mauradon\PassiveDoodads\CorruptedPlants\MaraudonSporeTree.mdx",1,0.25,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3647,"Fire Nova Area (0.5)","Spells\FireNova_Area.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3648,"Pumpkin Head, Flaming","World\Generic\PassiveDoodads\Oktoberfest\FlamingPumpkinHead.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3649,"Pumpkin Head, Flaming (x0.67)","World\Generic\PassiveDoodads\Oktoberfest\FlamingPumpkinHead.mdx",1,0.67,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3650,"Forsaken Banner","World\Lordaeron\Plagueland\PassiveDoodads\ForsakenBanner\ForsakenBanner01.mdx",1,0.7,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3651,"Incinerate Impact (Blue)","spells\incinerateblue_impact_base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3652,"Incinerate Missile (Blue)","spells\incinerateblue_low_base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3653,"Force Shield Fire (Red)","Spells\fireforceshield_red.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3654,"Force Shield Fire (Blue)","Spells\fireforceshield_blue.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3655,"Flame Patch (Blue) - 0.20","spells\Archimonde_Blue_Fire.mdx",1,0.2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3656,"Water Elemental Impact Base (5x)","spells\waterelemental_impact_base.mdx",1,5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3657,"Fire Nova Area (0.50)","Spells\FireNova_Area.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3658,"Pillar: Blue","spells\MoonBeamBlue_Impact_Base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3659,"Inner Focus Impact Chest - 0.50","spells\innerfocus_impact_chest.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3660,"Dark Iron Node Particle Rock","world\azeroth\burningsteppes\activedoodads\darkironnode\darkironnodeparticlerock.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3661,"Missile: Fireball (Blue) 0.3","spells\Fireball_Blue_Missile_High.mdx",1,0.3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3662,"Flame Patch (Blue) - 0.5","spells\Archimonde_Blue_Fire.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3663,"Fel Flame Breath (120) - 0.33","spells\fel_flamebreath.mdx",1,0.33,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3664,"Item - Tankard - HUGE","Spells\TankardA_SpellObject.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3665,"Wisp","Creature\Wisp\Wisp.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3666,"Wisp (x2.0)","Creature\Wisp\Wisp.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3667,"Missile: Wave (Shadow)","Spells\Missile_Wave_Shadow.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3668,"Dark Shade - 3.00","spells\darkshade.mdx",1,3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3669,"Shield: Arcane Force (Dark) - 4.00","Spells\ArcaneForceShield_Dark.mdx",1,4,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3670,"Shadow Precast Uber Hand - 5.00","Spells\Shadow_Precast_Uber_Hand.mdx",1,5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3671,"Arcane Power State Chest (2)","spells\arcanepower_state_chest.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3672,"Loot FX","particles\lootfx.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3673,"Shield: Arcane Force (Red 2x)","Spells\ArcaneForceShield_Red.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3674,"Shield: Arcane Force (Yellow 2x)","Spells\ArcaneForceShield_Yellow.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3675,"Shield: Arcane Force (Blue 2x)","Spells\ArcaneForceShield_Blue.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3676,"Shield: Arcane Force (Dark 2x)","Spells\ArcaneForceShield_Dark.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3677,"Flame Patch (0.3x)","spells\archimonde_fire.mdx",1,0.3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3678,"Smoke Flare (Red) - 6.00","spells\SmokeFlare_Red.mdx",1,6,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3679,"Cannon (x0.7)","World\Goober\G_Cannon01.mdx",1,0.7,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3680,"Wheel","World\KhazModan\Ironforge\PassiveDoodads\SteamTank\RuinedSteamTankWheel01.mdx",1,0.6,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3681,"Flamestrike ImpactDD Med Base - 3.00","Spells\FlameStrike_ImpactDD_Med_Base.mdx",1,3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3682,"Wave: Fire","spells\Missile_Wave_Fire.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3683,"Immolate State - 3.00","Spells\Immolate_State.mdx",1,3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3684,"Fire Patch - 0.25","spells\Archimonde_Fire.mdx",1,0.25,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3685,"Cyclone State (5x)","Spells\Cyclone_State.mdx",1,5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3686,"Vial","World\Expansion01\Doodads\Generic\Arakkoa\AK_Alchemybottle02.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3689,"Quest - ArcaneForceShield_Yellow State","spells\FireForceShield_Yellow.mdx",1,1.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3690,"Flamestrike Impact (2x)","Spells\Flamestrike_Impact.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3691,"Water Elemental Impact Base (0.5x)","spells\waterelemental_impact_base.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3692,"Bucket, New","world\goober\g_water_buckets_03.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3693,"Army of the Dead Area Impact","Spells\SummonGhouls.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3694,"Druid Morph Impact (2.0)","Spells\DruidMorph_Impact_Base.mdx",0,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3695,"Death and Decay Ground Runes","Spells\DeathAndDecay_Area_Runes.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3696,"Ground Rupture","spells\ground_rupture.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3697,"Meat","World\Expansion01\Doodads\Generic\BloodElf\Food\BE_Meat01.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3698,"ForceShield Fire Blue","Spells\FireForceShield_Blue.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3699,"Forceshield Fire Dark (1.5x)","Spells\FireForceShield_Dark.mdx",1,1.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3700,"Missile: Vrykul Harpoon","item\objectcomponents\weapon\thrown_1h_harpoon_d_01.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3701,"Acid Breath (Liquid)","spells\acidliquidbreath.mdx",1,0.05,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3702,"Carpet: Blue","World\Generic\Tauren\Passive Doodads\TaurenRugs\TaurenRug03.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3703,"Carpet: Purple (Torn)","World\Lordaeron\Scholomance\PassiveDoodads\Candles\Scholme_PurpleRug.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3705,"Shadow Precast Uber Hand - 2.00","Spells\Shadow_Precast_Uber_Hand.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3706,"Small Smoke Flare, White","spells\SmokeFlare_White.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3707,"Rag Doll","world\generic\human\passive doodads\dolls\ragdoll01.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3708,"Quest - ForceShieldFlamesDark State","spells\FireForceShield_Dark.mdx",1,1.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3709,"Missile: Pyroblast (2.00)","Spells\PyroBlast_Missile.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3710,"Force Shield Arcane (Dark)","Spells\ArcaneForceShield_Dark.mdx",1,1.2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3711,"Death and Decay Impact","spells\deathanddecay.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3712,"Keg","World\Generic\Dwarf\Passive Doodads\TavernStuff\AleKegSingle.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3713,"Headless Horseman Head - 1.50","Spells\HeadlessHorsemanHelmet.mdx",1.5,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3714,"Force Shield Arcane (Purple)","spells\arcaneforceshield_purple.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3716,"Force Shield Arcane (Purple x3.00)","spells\arcaneforceshield_purple.mdx",1,3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3717,"Force Shield Arcane (Purple x6.00)","spells\arcaneforceshield_purple.mdx",1,6,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3718,"Boat State (Blood Elf)","World\Expansion01\Doodads\Generic\BloodElf\Rowboat\BE_Rowboat.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3719,"Sack State (5.00)","World\Azeroth\Stranglethorn\PassiveDoodads\TrollDungeonSacks\TrollDungeonSacks.mdx",1,5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3720,"Dynamite Bundle State","World\Generic\Dwarf\Passive Doodads\Dynamite\GunShopDynamiteBundle.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3722,"G_RuneBlue","World\Goober\g_RuneBlue01.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3723,"Force Shield Fire (Blue) x3","Spells\fireforceshield_blue.mdx",1,3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3724,"Boat State","world\azeroth\swamposorrow\passivedoodads\swampboats\swampboat01.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3725,"Steam Impact, Billowing","Spells\WaterSteam_Impact.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3726,"Bloody Explosion Green Impact (x0.25)","Spells\BloodyExplosionGreen.mdx",1,0.25,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3727,"Rifle (x1.0, carried)","item\objectcomponents\weapon\firearm_2h_rifle_a_06.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3728,"Quest - Vrykul Harpoon Missile","Spells\Harpoon_Fire_Missile.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3729,"Missile: Harpoon (Vrykul)","Spells\Harpoon_Fire_Missile.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3730,"Quest - Vrykul Harpoon (Small)","Spells\Harpoon_Fire_Missile.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3731,"Force Shield Fire (Purple)","Spells\fireforceshield_purple.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3732,"B-Ball","Spells\Fireball_Blue_Missile_High.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3733,"CycloneFire State (0.5x)","Spells\CycloneFire_State.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3734,"Net Missile (0.5)","Spells\Net_State.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3735,"Archway State","World\Generic\Centaur\Passive Doodads\CentaurRuins\Centaur_Arch01.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3736,"Exploding Stone Impact (Huge)","spells\exploding_stone_impact.mdx",1,5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3737,"Smoke Flare (White) - 5.00","spells\SmokeFlare_White.mdx",1,5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3738,"Hunter's Mark State Head (Huge)","Spells\HuntersMark_Impact_Head.mdx",1,30,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3739,"Pumpkin Head, Flaming (0.35)","World\Generic\PassiveDoodads\Oktoberfest\FlamingPumpkinHead.mdx",1,0.35,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3740,"Earth Burrow Cast (2.00)","spells\burrowearth_brown_missile.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3741,"Flame Patch (0.15x)","spells\archimonde_fire.mdx",1,0.15,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3742,"Quest - Buoy (4x)","spells\floatingmine.mdx",1,4,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3743,"HolyDivineShield State Base (2x)","Spells\HolyDivineShield_State_Base.mdx",0,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3744,"Sled","World\Expansion02\Doodads\WinterTauren\WT_Sled_01.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3745,"Rain of Candy Impact Base","spells\rainofcandys_impact_base.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3746,"Quest - Hawk Hunting (Precast)","Creature\StormCrowDruid\StormCrowDruid_Q.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3747,"Shock Impact Chest - 2.00","Spells\Shock_Impact_Chest.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3748,"Fel Fire Nova Area (3x)","spells\fel_firenova_area.mdx",3,3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3749,"Fel Fire Precast Hand (0.5x)","spells\fel_fire_precast_hand.m2",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3750,"FactoryEnergyCube - 1.00","World\Expansion01\Doodads\Generic\Draenei\TempestKeep\FactoryEnergyCube.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3751,"Banish (Purple) - 0.50","spells\banish_chest_purple.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3752,"Missile: Fish (Orange)","world\azeroth\bootybay\passivedoodad\deadfish\fishdeadorange.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3753,"Arcane Bomb - 5.00","spells\arcanebomb_missle.mdx",1,5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3754,"Mug Hit (bounce)","spells\mug_missile_hitbounce.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3755,"Quest - Force Shield Dark (Small)","spells\FireForceShield_Dark.mdx",1,0.25,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3756,"Nature Precast Chest - 0.30","Spells\Nature_Precast_Chest.mdx",1,0.3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3757,"Invisibility Impact - 0.50","Spells\Invisibility_Impact_Chest.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3758,"Whirlwind Base (0.5x)","Spells\Whirlwind_State_Base.mdx",0,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3759,"Cyclone State (0.75x)","Spells\Cyclone_State.mdx",1,0.75,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3760,"Cyclone State (0.75x)","Spells\Cyclone_State.mdx",1,0.75,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3761,"Item - Broom, Magic","creature\broommount\broommount.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3762,"Canon_Impact_Dust Impact (Chest)","spells\Canon_Impact_Dust.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3763,"Druid Morph Impact (3.0)","Spells\DruidMorph_Impact_Base.mdx",0,3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3764,"Fireworks Pink Heart","spells\valentinefirework.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3765,"Frost Breath (Small)","Spells\FrostBreath.mdx",1,0.25,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3766,"Ice Prison State (Small)","spells\IcePrison_Base.mdx",1,0.3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3767,"Frost Breath - 5.00","Spells\FrostBreath.mdx",1,5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3768,"Ice Block State - 2.00","spells\icebarrier_state.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3769,"Fel Flame Circle - 2.00","spells\Fel_FlameCircleEffect.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3770,"Fel Flame Patch - 4.00","spells\fel_archimonde_fire.mdx",1,4,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3771,"Fel Flame Patch - 0.50","spells\fel_archimonde_fire.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3772,"Ice Lance Missile - 3.00","spells\ice_lance_missile.mdx",1,3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3773,"Arcane Bomb - 2.00","spells\arcanebomb_missle.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3774,"Fel Flame Patch - 0.25","spells\fel_archimonde_fire.mdx",1,0.25,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3775,"Fel Low Poly Fire","spells\Fel_LowPolyFireAnim.mdx",1,0.1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3776,"Snow Rain - 2.00","Spells\ChristmasSnowRain.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3777,"Quest - Boulder Assault","world\generic\human\passive doodads\catapultruins\catapultball01.mdx",1,1.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3778,"Cannonball Missile","world\generic\human\passive doodads\catapultruins\catapultball01.mdx",1,0.35,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3779,"Holiday - Christmas - Snowflakes","spells\christmassnowrain.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3780,"Ghost_state (Multi-Color 0.6x)","Spells\Ghost_state2.mdx",1,0.6,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3781,"BloodyExplosion - 3.00","Spells\BloodyExplosion.mdx",1,3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3782,"Scourge Summoning Runes (0.3)","world\goober\g_scourgerunecirclecrystal.mdx",1,0.3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3783,"Soul Funnel Impact Chest (6.0x)","Spells\SoulFunnel_Impact_Chest.mdx",1,6,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3784,"Soul Funnel Impact Chest (2.0x)","Spells\SoulFunnel_Impact_Chest.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3785,"Soul Funnel Impact Chest (8.0x)","Spells\SoulFunnel_Impact_Chest.mdx",1,8,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3786,"Blessing of Protection Base (Classic)","spells\Blessingofprotection_State_Classic.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3787,"Missile: Upper Deck Paper Airplane, Zeppelin","Creature\Paperairplane_Zeppelin\Paperairplane_Zeppelin.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3788,"Missile: Upper Deck Paper Airplane, Gyro","Creature\Paperairplane_Gyro\Paperairplane_Gyro.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3789,"Missile: Blood Elf Power Orb (Green) (x0.10)","world\expansion01\doodads\generic\bloodelf\powerorb\bloodelf_powerorb_green.mdx",1,0.1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3790,"Sunder Impact Chest - 2.00","Spells\Sunder_Impact_Chest.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3791,"Shattered Sun Banner","World\Expansion02\Doodads\Generic\Sunshatter\Banner\Sunshatter_Banner01.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3792,"LightningStorm Cloud Low State","Spells\LightningStorm_CloudLow_State.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3793,"Rocket, small","Spells\Missle_Rocket.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3796,"Fel Lightning PreCast Low Hand","Spells\Lightning_Fel_PreCast_Low_Hand.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3797,"Fel Lightning Cast Hand","Spells\Lightning_Fel_Cast_Hand.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3798,"Fel ChainLightning Impact Chest","Spells\ChainLightning_Fel_Impact_Chest.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3799,"Parachute State","spells\Parachute.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3800,"Fel Seeping Gaseous Nova","spells\seepinggaseous_fel_nova.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3801,"BlueGreenRadiationFog","spells\largebluegreenradiationfog.mdx",1,1.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3802,"Flame Breath - Midsummer","spells\flamebreathmff.mdx",1,0.85,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3803,"Gaseous Form","Spells\GaseousForm.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3804,"Nature Precast Chest - 3.00","Spells\Nature_Precast_Chest.mdx",1,3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3805,"Holiday - Midsummer - Toy - Petals Shower","spells\summerfest_roseshower_impact_base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3806,"Flame Circle (0.80)","spells\flamecircleeffect.mdx",1,0.8,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3807,"Hunter's Mark State Head HOLD","spells\huntersmark_impact_head_hold.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3808,"Steam Impact, Billowing (x2.0)","Spells\WaterSteam_Impact.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3809,"Fireball Missile Low (x0.5)","Spells\Fireball_Missile_Low.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3810,"Mana Funnel Impact Chest (3x)","Spells\ManaFunnel_Impact_Chest.mdx",1,3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3811,"Form Shadow Precast","Spells\Shadow_Form_Precast.mdx",1,0.3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3812,"Form Fire Precast","Spells\Fire_Form_Precast.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3813,"Arcane Power State Chest - 8.00","spells\arcanepower_state_chest.mdx",1,8,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3814,"Seeping Gas (Fel) - 3.00","spells\SeepingGaseous_Fel_Nova.mdx",1,3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3815,"Nature Precast Chest - 10.00","Spells\Nature_Precast_Chest.mdx",1,10,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3816,"Acid Cloud Breath - 2.00","spells\AcidCloudBreath.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3817,"Red Dust Cloud - 10.00","spells\RedDustCloud.mdx",1,10,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3818,"Radiation Fog (Blue-Green) - 3.00","spells\LargeBlueGreenRadiationFog.mdx",1,3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3819,"Steam State (Small)","spells\Steam.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3820,"Bomb Explosion (x1.5","Spells\Bomb_ExplosionA.mdx",1,1.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3821,"Torch (x1.5)","Spells\TorchSpell.mdx",1,1.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3822,"Bow Shot (Thori'dal)","Spells\ArcaneShot_Missile2.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3823,"Blood Elf Orb State","World\Expansion01\Doodads\Generic\BloodElf\ScryingOrb\BE_ScryingOrb.mdx",1,1.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3824,"Bonfire","World\Azeroth\BurningSteppes\PassiveDoodads\Bonfire\OrcBonFire.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3826,"Seeping Gaseous Fel Nova - 1.00","spells\SeepingGaseous_Fel_Nova.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3827,"Seeping Gaseous Fel Nova - 0.50","spells\SeepingGaseous_Fel_Nova.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3828,"Green Ground Fog - 1.00","World\Generic\PassiveDoodads\ParticleEmitters\GreenGroundFog.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3829,"Horde Banner 03","world\generic\orc\passive doodads\hordebanners\hordebanner03.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3830,"TEMP","Creature\Cloud\CloudSwampGas.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3831,"Cloud: Green - 3.00","spells\greenradiationfog.mdx",1,3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3832,"MoltenBlast Impact Chest (2x)","Spells\MoltenBlast_Impact_Chest.mdx",0,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3833,"Warsong Land Mine Missile","World\Goober\LandMineAlteracValley.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3834,"Quest - Flies","World\Critter\flies\flies01.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3835,"Divine Shield Blue","spells\holydivineshieldblue_state_base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3836,"Smoke Flare, White, Very Small","spells\SmokeFlare_White.mdx",1,0.25,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3837,"Silithid Egg State","World\Kalimdor\Silithus\PassiveDoodads\Eggs\SilithidEgg.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3838,"Form Arcane Precast","Spells\Arcane_Form_Precast.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3839,"Frost Bolt Missile - 4.00","Spells\Frostbolt.mdx",1,4,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3840,"Ice ImpactDD Uber Chest 10.00","Spells\Ice_ImpactDD_Uber_Chest.mdx",1,10,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3841,"Fire Blast Impact Chest - 2.00","Spells\Fire_ImpactDD_Chest.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3842,"Incinerate Missile (Blue, 0.6x)","spells\incinerateblue_low_base.mdx",1,0.6,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3843,"Seeping Gaseous Fel Nova - 0.5","spells\SeepingGaseous_Fel_Nova.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3844,"Arcane Power State Chest (0.5","spells\arcanepower_state_chest.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3845,"Acid Breath - 2.00","Spells\AcidBreath.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3846,"Grobbulus Poison Cloud - 2.00","Spells\Poison_Cloud_Grobbulus.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3847,"Flare Ground State (1.5x)","spells\flare_state_base.mdx",1.5,1.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3848,"Flare Ground State (0.75x)","spells\flare_state_base.mdx",0.75,0.75,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3849,"Fireball Missile Low, Large","Spells\Fireball_Missile_Low.mdx",1,3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3850,"Missile: Shadowbolt - 4.00","Spells\Shadowbolt_Missile.mdx",1,4,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3851,"Missile: Snowball (3.0x)","spells\missile_snowball.mdx",1,3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3852,"Frost Nova Area (0.2x)","Spells\Frost_Nova_area.mdx",1,0.2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3853,"Frost Reflect State Chest (3.0x)","spells\frostreflect_state_chest.mdx",1,3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3854,"Missile: Snowball (6.0x)","spells\missile_snowball.mdx",1,6,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3855,"Portal: Boss Shadow - 0.50","Spells\Creature_SpellPortal_LargeShadow.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3856,"Fire Smoke Trail (Normal Size)","spells\Fire_SmokeTrail.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3857,"Quest - Bloodspore Harvest","spells\enchantments\SavageryGlow_High.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3858,"RedFlame_Low","spells\enchantments\redflame_low.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3859,"RedGlow_High","spells\enchantments\redglow_high.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3860,"Portal: Boss Purple - 0.50","Spells\Creature_SpellPortalLarge_Purple.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3861,"Shaman_Red","Spells\Enchantments\Shaman_Red.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3862,"NefarianFlameBreath State","spells\NefarianFlameBreath.mdx",1,0.05,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3863,"Bread Slice (0.50)","world\generic\human\passive doodads\food\breadslice.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3864,"Void Zone - 0.60","creature\portalofkathune\portalofkathune.mdx",1,0.6,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3865,"Dark Shade - 5.00","spells\darkshade.mdx",1,5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3866,"Dark Shade (small)","spells\darkshade.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3867,"Black Magic Precast Base - 2.00","spells\BlackMagic_Precast_Base.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3868,"Shadow Fury Impact - 0.50","spells\ShadowFury_Impact_Base.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3869,"Flamestrike Impact (0.5x)","Spells\Flamestrike_Impact.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3870,"Missile: Black Shot - 2.0","spells\blackshot_missile.mdx",1,20,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3871,"Arcane Bomb - 2.50","spells\arcanebomb_missle.mdx",1,2.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3872,"Flame Breath (Small)","Spells\FlameBreath.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3873,"Abyssal Impact Base - 2.50","spells\abyssal_impact_base.mdx",1,2.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3874,"Flare Ground State (2.5x)","spells\flare_state_base.mdx",2.5,2.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3875,"ShadowWord Death Impact - 3.00","spells\shadowword_death_impact.mdx",1,3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3876,"Fire Precast Hand 8.0","Spells\Fire_Precast_Hand.mdx",1,8,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3877,"Fel Fireball Missile High (2.00)","spells\fel_fireball_missile_high.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3878,"ShadowWordDominate Chest - 3.00","Spells\ShadowWordDominate_Chest.mdx",1,3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3879,"ShadowSnare Base - 3.00","Spells\Shadow_Snare_High_base.mdx",1,3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3880,"MagePortal: Strand of the Ancients","world\generic\activedoodads\spellportals\portal_strandoftheancients.mdx",1,0.3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3881,"Dark Shade - 3.00","spells\darkshade.mdx",1,3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3882,"Frost Bolt Missile 5.0","Spells\Frostbolt.mdx",1,5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3883,"Ice ImpactDD Uber Chest 2.0","Spells\Ice_ImpactDD_Uber_Chest.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3884,"Shadow Shield Impact Base - 1.50","spells\shadowshield_impact.mdx",1,1.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3885,"Frost Trap Aura NoMist","SPELLS\FrostTrap_Aura_noMist.M2",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3886,"Frost Trap Aura NoMist 2.0","SPELLS\FrostTrap_Aura_noMist.M2",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3887,"Dark Shade - 2.00","spells\darkshade.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3888,"Cripple State Chest - 2.00","Spells\Cripple_State_Chest.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3889,"Quest - Sunshatter Shield","Spells\ShellShield_State_Base.mdx",1,3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3890,"Force Shield Fire (Red) 2.0","Spells\fireforceshield_red.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3891,"Fire Precast Hand 4.0","Spells\Fire_Precast_Hand.mdx",1,4,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3892,"Fire Rift","World\ENVIRONMENT\DOODAD\GENERALDOODADS\ElementalRifts\FireRift.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3893,"Flare Ground State (12.0x)","spells\flare_state_base.mdx",1,12,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3894,"Red Glow High 15.0","Spells\Enchantments\RedGlow_High.mdx",1,15,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3895,"Red Flame Low 5.0","Spells\Enchantments\RedFlame_Low.mdx",1,5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3896,"Fireball Missile High 4.0","Spells\Fireball_Missile_High.mdx",1,4,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3897,"Immolate Impact Chest 5.0","Spells\Immolate_Impact_Chest.mdx",1,5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3898,"Bomb Explosion (x4)","Spells\Bomb_ExplosionA.mdx",1,4,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3899,"Flames (0.35 scale)","world\lordaeron\stratholme\passivedoodads\fx\stratholmefiresmokeembers.mdx",1,0.35,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3901,"Missile: Crate","World\Goober\G_Crate01.mdx",1,0.6,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3902,"Fire Precast Hand 2.0","Spells\Fire_Precast_Hand.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3903,"Acid Breath (Liquid) - 0.25","spells\acidliquidbreath.mdx",1,0.25,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3904,"Stratholme Fire Smoke Ember","World\Lordaeron\Stratholme\PassiveDoodads\FX\StratholmeFireSmokeEmberM.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3905,"Force Shield Arcane (Yellow)","spells\arcaneforceshield_yellow.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3906,"DivineShield Low Chest (x4.00)","Spells\DivineShield_Low_Chest.mdx",1,4,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3907,"DivineShield Low Base (x2.00)","Spells\DivineShield_Low_Base.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3908,"Fire_SmokeTrail","spells\fire_smoketrail.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3909,"Steam State 2x","spells\steam.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3910,"Shadow Nova Cast Non Projected - (0.10)","Spells\Shadow_Nova_area_noProjection.mdx",1,0.1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3911,"Frost Bolt Missile 2.5","Spells\Frostbolt.mdx",1,2.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3912,"Missile: Shadowbolt (No Ribbon) - 2.00","spells\ShadowBolt_Missile_NoRibbon.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3913,"Cannon Impact (x2)","Spells\Canon_Impact_Dust.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3914,"Acid Cloud Breath Smoke - 2.00","spells\AcidCloudBreath_GroundSmoke.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3915,"Acid Cloud Breath (Fast)  - 2.00","spells\AcidCloudBreath_Fast.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3916,"Banish (Dark) - 2.00","spells\Banish_Chest_Dark.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3917,"Ice Precast Uber Hand 2.0x","Spells\Ice_Precast_Uber_Hand.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3918,"Ice Missile Uber 5.0x","Spells\Ice_Missile_Uber.mdx",1,5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3919,"Ice Missile Low 5.0x","Spells\Ice_Missile_Low.mdx",1,5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3920,"Flame Circle","spells\flamecircleeffect.mdx",1,0.2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3921,"Snowball Powder Impact (3.0)","spells\SnowballPowdery_Impact_Base.mdx",1,3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3922,"Snow Powder Base","spells\SnowballPowdery_Impact_Base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3923,"Snow Powder Base (0.75)","spells\SnowballPowdery_Impact_Base.mdx",1,0.75,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3924,"Frost Slash","Spells\FrostSlash_Base_Cast.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3925,"Fire Elemental Totem (2.0)","Creature\Spells\FireElementalTotem.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3926,"Blood Elf Epic Orb State","World\Expansion01\Doodads\Generic\BloodElf\ScryingOrb\BE_ScryingOrb_Epic.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3927,"Missile: Arcane Bomb Orb","World\Expansion01\Doodads\Terokkar\Bomb\BE_ArcaneBomb_Orb.mdx",1,0.25,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3928,"Fire Reflect State Chest (2.00)","spells\firereflect_state_chest.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3929,"Flames (0.25 scale)","world\lordaeron\stratholme\passivedoodads\fx\stratholmefiresmokeembers.mdx",1,0.25,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3930,"Holy Form Precast","spells\holy_form_precast.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3931,"Cheat Death Impact","Spells\Cheat_Death.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3932,"Cheat Death (New)","Spells\Cheat_Death.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3933,"Cheat Death State","Spells\Cheat_Death.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3934,"Banish (Blue) (2.0)","spells\banish_chest_blue.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3935,"Shadow Missile","Spells\ShadowMissile.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3936,"Missile: Spear (Human 3.0)","World\Generic\Human\Passive Doodads\Weapons&Armor\HumanSpear01.mdx",1,3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3937,"Shadow Missile (3.0)","spells\shadowmissile_noshadow.mdx",3,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3938,"Ice Cast Low Hand (10.0)","Spells\Ice_Precast_Low_Hand.mdx",1,10,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3939,"Form Shadow Precast x2","Spells\Shadow_Form_Precast.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3940,"Sonic Wave Blast Cast - 2.00","spells\sonicwave_cast.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3941,"Frost Breath - 7.00","Spells\FrostBreath.mdx",1,7,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3942,"RitualSummoning PreCast Base (x2.00)","Spells\RitualSummoning_PreCast_Base.mdx",0,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3943,"Snowball Impact Head (10.00)","spells\snowball_impact_chest.mdx",1,10,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3944,"Missile: Snowball (1.5x)","spells\missile_snowball.mdx",1,1.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3945,"Low Poly Fire","World\Generic\PVP\Fires\LowPolyFireAnim.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3946,"Missile: Deathbolt Missile - 2.00","spells\deathbolt_missile_low.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3947,"Missile: Snowball (2.0x)","spells\missile_snowball.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3948,"Upper Deck - Weather Machine - Rain","spells\Goblin_Weather_Machine_Rain.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3949,"Upper Deck - Weather Machine - Lightning","spells\Goblin_Weather_Machine_Lightning.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3950,"Upper Deck - Weather Machine - Snow","spells\Goblin_Weather_Machine_Snow.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3951,"Upper Deck - Weather Machine - Sunny","spells\Goblin_Weather_Machine_Sunny.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3952,"Upper Deck - Weather Machine - Cloudy","spells\Goblin_Weather_Machine_Cloudy.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3953,"Force Shield and Explosion","spells\forceshield_andxplosion.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3954,"Sunwell Beam FX","spells\sunwell_beamfx.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3955,"Curse of Elements Impact Head (2.00)","Spells\CurseElements_Impact_Head.mdx",0,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3956,"Ice Block State - 4.00","spells\icebarrier_state.mdx",1,4,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3957,"Sleep State (Reduced)","Spells\Sleep_State_Head.mdx",1,0.75,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3958,"Blue Power Focus","Creature\QuestObjects\Creature_PowerCrystal.mdx",1,10,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3959,"Dark Fire Shield State","Spells\FireForceShield_Red.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3960,"Quest - Entropius Body","world\goober\g_jewelblack.mdx",1,3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3961,"Missile: Grizzly Hills Tree","World\Expansion02\Doodads\GrizzlyHills\Trees\GrizzlyHills_Tree12.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3962,"Quest - Sunwell Ignition!","spells\Sunwell_BeamFX.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3963,"Missile: Extra Giant Boulder","spells\BoulderGiant_Missile.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3964,"Firework Roman Candle Impact","Spells\Firework_RomanCandle_Impact_Chest_01.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3965,"Fireworks Roman Candle Missile","spells\firework_romancandle_missle_01.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3966,"Firework Roman Candle Impact (2.0x)","Spells\Firework_RomanCandle_Impact_Chest_01.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3967,"Flame Circle (Blue) (0.75x)","spells\FlameCircleEffect_Blue.mdx",1,0.75,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3968,"Flame Patch (0.75x)","spells\archimonde_fire.mdx",1,0.75,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3969,"Ice Block State - 8.00","spells\icebarrier_state.mdx",1,8,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3970,"Frost Bolt Missile - 6.00","Spells\Frostbolt.mdx",1,6,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3971,"Ice Lance Impact (10.0)","spells\ice_lance_impact.mdx",1,10,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3972,"Missile: Sonic Wave - 2.00","spells\sonicwave_missile.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3973,"Portal: Boss Fel Green","Spells\Sunwell_Fel_Portal.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3974,"Cold Breath (1.5)","particles\ColdBreath.mdx",1,1.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3975,"Missile: Shirt","World\Generic\Human\Passive Doodads\Clothing\FoldedShirtBrown.mdx",1,1.2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3977,"Missile: Snowball (4.0x)","spells\missile_snowball.mdx",1,4,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3978,"ArcaneExplosion - 5.00","Spells\ArcaneExplosion_Base.mdx",1,5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3979,"TreeTrunk","World\Expansion02\Doodads\GrizzlyHills\Trees\GrizzlyHills_TreeTrunk01.mdx",1,0.4,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3980,"Missile: Grizzly Hills Tree (0.5)","World\Expansion02\Doodads\GrizzlyHills\Trees\GrizzlyHills_Tree12.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3981,"TreeLeaf","World\Expansion02\Doodads\Scholazar\Trees\Sholazar_TreeLeafB.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3982,"Missile: Pony Keg - 0.50","world\generic\human\passive doodads\beerkegs\beerkeg01_nocollide.mdx",0.5,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3983,"Arcane Missile Lvl 4 (2.00)","Spells\Arcane_Missile_Lvl4.mdx",0,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3984,"FireForceShield_Red (Large)","spells\fireforceshield_red.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3985,"SoulFrostGlow_High (Base)","spells\enchantments\soulfrostglow_high.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3986,"Bloody Explosion Green Impact (x3.0)","Spells\BloodyExplosionGreen.mdx",1,3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3987,"Missle: Ice Rock","World\Expansion02\Doodads\DragonBlight\DragonBlight_IceRock_02.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3988,"Missile: Ice Boulder ","World\Expansion02\Doodads\DragonBlight\DragonBlight_IceRock_02.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3990,"Quest - Turd Missile","spells\SlimeLesserExplode_Missile.mdx",1,0.2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3991,"Bone Burst (1.5)","Spells\BoneWorm_AttackEffects.mdx",1,1.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3992,"Missile: Boulder (8x)","spells\boulder_missile.mdx",1,8,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3993,"CycloneWater State (3x)","Spells\CycloneWater_State.mdx",1,3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3994,"Acid Breath (0.5x)","Spells\AcidBreath.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3995,"Steam Impact, Billowing (x0.5)","Spells\WaterSteam_Impact.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3996,"Missile: Goo Bolt (0.5x)","Spells\GooBolt_Missile_Low.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3997,"Keg, Dark Iron (0.3x)","World\Generic\DarkIronDwarf\Passive Doodads\Kegs\DarkIronKeg01.mdx",1,0.4,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3998,"Mug Hit (bounce) (2x)","spells\mug_missile_hitbounce.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (3999,"Vengeance State Hand - 4.00","spells\vengeance_state_hand.mdx",1,4,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4000,"Water Elemental Impact Base (25x)","spells\waterelemental_impact_base.mdx",1,25,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4001,"Quest - Sniper Gun","world\generic\human\passive doodads\gunshop\gunsniperrifle.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4002,"Missile: BloodBolt","spells\bloodbolt_missile_low.mdx",0,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4003,"Call Lightning Impact","spells\calllightning_impact.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4004,"Form Arcane Precast - 2.00","Spells\Arcane_Form_Precast.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4005,"Frost Reflect State Chest","spells\frostreflect_state_chest.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4006,"Ice Nuke Base","spells\IceNuke_Base_Impact.mdx",1,0.15,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4007,"Shock Impact Chest - 3.00","Spells\Shock_Impact_Chest.mdx",1,3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4008,"Shock Missile [2.0]","Spells\Shock_Missile.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4009,"Banish (Dark)","spells\Banish_Chest_Dark.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4010,"Aura: Red, Tall (1.00)","world\generic\passivedoodads\particleemitters\auraredtall.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4011,"Fire ImpactDD Uber Chest","spells\fire_impactdd_uber_chest.mdx",1,10,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4012,"Missile: Blinding Shot (2.00)","spells\blindingshot_missile.mdx",0,10,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4013,"Missile: Saw","spells\missile_sawblade.mdx",0,4,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4014,"Missile: Rocket (Large)","spells\missle_rocket.mdx",0,4,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4015,"Lightning Nova","spells\lightning_ring_nova.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4016,"Fireball Missile High 5.0","spells\fireball_missile_high.mdx",0,5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4017,"Acid Burn Black (Low-Poly)","SPELLS\AcidBurn_Small_Black.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4018,"Ice Block State - 1.50","spells\icebarrier_state.mdx",1,1.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4019,"Form Arcane Precast - 3.00","Spells\Arcane_Form_Precast.mdx",1,3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4020,"MoonBeamRed_Impact_Base","spells\moonbeamred_impact_base.mdx",1,0.6,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4021,"Blood Elf Power Orb (Red)","world\expansion01\doodads\generic\bloodelf\powerorb\bloodelf_powerorb_red.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4022,"Holy Missile Low (Copy)","Spells\Holy_Missile_Low.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4023,"TEST - Holy Missile Low (Copy)","Spells\Holy_Missile_Low.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4024,"TEST - Holy Missile Low","Spells\Holy_Missile_Low.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4025,"TEST - Holy Missile Low (Copy2)","Spells\Holy_Missile_Low.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4026,"TEST - Holy Missile Low (Copy3)","Spells\Holy_Missile_Low.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4027,"TEST - Holy Missile Low (Copy4)","Spells\Holy_Missile_Low.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4028,"Ward: Fire Impact Chest","Spells\FireWard_Impact_Chest.mdx",0,1.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4029,"Fire Cast Hand","Spells\Fire_Cast_Hand.mdx",0,5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4030,"Meat","World\Expansion01\Doodads\Generic\BloodElf\Food\BE_Meat01.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4031,"Frost_Form","spells\frost_form_precast.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4032,"Crow Circling State","spells\crow_baked.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4033,"Arcane Barrage Missile","spells\mage_arcanebarrage_missile.mdx",0,0.75,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4034,"Missile: Harpoon","world\azeroth\bootybay\passivedoodad\harpoons\harpoon01.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4035,"Missile: Blight Bomb","world\expansion01\doodads\generic\bloodelf\powerorb\bloodelf_powerorb_green.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4036,"Missile: Plague Barrel (1.0)","world\expansion02\doodads\generic\forsaken\fk_plaguebarrel.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4037,"Acid Cloud Breath Smoke","spells\acidcloudbreath_groundsmoke.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4038,"Deep Freeze","spells\mage_deepfreeze.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4039,"Persistent Area: Forsaken Blight (HUGE)","spells\transport_ship_ud_fx.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4040,"Hot Streak Impact Chest","spells\mage_hotstreak.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4041,"Decimate State Effect","spells\decimate_state.mdx",0,3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4042,"Decimate Impact","spells\decimate_impact_chest.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4043,"Atrocity Impact","spells\warlock_atrocity.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4044,"Demonic Circle Summon Impact Base","spells\demoniccirclesummon_base.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4045,"Demonic Circle Teleport Impact","spells\demoniccirclesummon_teleport.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4046,"Haunt Impact Chest","spells\shadow_mend_impact.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4047,"Shadowflame Cast","spells\warlock_shadowflame.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4048,"Living Bomb State","spells\mage_livingbomb_state.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4049,"Living Bomb Explosion Area","spells\mage_livingbomb_area.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4050,"Deep Freeze State","spells\mage_deepfreeze.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4051,"Incanter's Absorption Impact","spells\mage_incantersabsorbtion.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4052,"Netherwind Presence Impact","spells\mage_netherwingpresence.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4053,"Arcane Barrage Impact","spells\mage_arcanebarrage_impact.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4054,"Bloodbath Impact","spells\warrior_bloodbath.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4055,"Bloodsurge Impact","spells\warrior_bloodsurge.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4056,"Safeguard State","spells\warrior_safeguard.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4057,"Shockwave Impact","spells\warrior_shockwave_impact.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4058,"Shockwave Area","spells\warrior_shockwave_area.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4059,"Bladestorm State","spells\warrior_bladestorm.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4060,"Clayton Test","spells\DeathAndDecay_Area_Runes.m2",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4061,"Arcane Bomb - 1.50","spells\arcanebomb_missle.mdx",1,1.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4062,"ShadowStrike Impact Chest (3.00)","Spells\ShadowStrike_Impact_Chest.mdx",1,3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4063,"Ballista Bow","world\generic\human\passive doodads\ballistaruins\ballistabow01.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4064,"Ballista Frame","world\generic\human\passive doodads\ballistaruins\ballistaframe01.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4065,"Ballista Missile","world\generic\human\passive doodads\ballistaruins\ballistamissle01.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4066,"Ballista Wheel","world\generic\human\passive doodads\ballistaruins\ballistawheel01.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4067,"Missile: Sonic Boom","Spells\SonicBoom_Missile_High.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4068,"Missile: Sonic Boom","Spells\SonicBoom_Missile_High.mdx",1,1.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4069,"Sonic Impact DD Uber Chest","spell\sonicboom_impactdd_uber_chest.mdx",0,0.15,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4070,"Summon Precast Hand","Spells\Summon_PreCast_Hand.mdx",1,5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4071,"Banish (White)","spells\banish_chest_white.mdx",1,0.2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4072,"White Glow","spells\enchantments\whiteglow_high.mdx",0,5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4074,"Missile: Sonic Boom","spells\sonicboom_missile_high.mdx",1,0.25,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4094,"SunfireGlow_High","spells\enchantments\sunfireglow_high.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4095,"Explosion (New)","spells\canon_impact_dust.mdx",0,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4096,"Missile: Nightbane Bone (Large)","spells\nightbane_bone_missile.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4097,"Explosion (New) (Dest_Tower_Impact)","spells\dest_tower_impact_fx.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4098,"Quest - Destroyed Tower Pieces","world\expansion02\doodads\generic\destructible\guardtower\dest_tower_damaged.mdx",0,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4099,"Sinkhole","world\expansion02\doodads\generic\nerubian\pits\nb_smallsinkhole01.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4100,"Shredder Smoke","world\generic\passivedoodads\particleemitters\blacksmith_smoke.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4101,"Creature - Smoldering State Base","spells\nefarian_state_base.mdx",1,0.25,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4102,"Creature - Smoldering State Base","spells\nefarian_state_base.mdx",1,0.4,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4103,"Creature - Smoldering State Base","spells\nefarian_state_base.mdx",1,0.05,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4104,"Shot: Thori'dal","spells\starshards_impact_base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4105,"TEST - Effect","particles\bubbles.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4106,"Bind Impact Base","Spells\Bind_Impact_Base.mdx",0,0.3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4107,"Banish (Blue)","spells\banish_chest_blue.mdx",1,3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4108,"Flames (Stratholme Small)","world\lordaeron\stratholme\passivedoodads\fx\stratholmefiresmokeembers.mdx",1,1.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4109,"Gift of the water Spirit Base imapct","spells\giftwaterspirit_impact_base.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4110,"Smoke - Smoldering Geist","spells\infernal_smoke_rec.mdx",0,0.2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4111,"Shredder Smoke Small","world\generic\passivedoodads\particleemitters\blacksmith_smoke.mdx",0,0.25,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4112,"Earth Burrow Cast","Spells\BurrowEarth_Brown_Missile.mdx",0.5,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4113,"Flames","world\lordaeron\stratholme\passivedoodads\fx\stratholmefiresmokeembers.mdx",1,3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4114,"Banish (Purple)","spells\banish_chest_purple.mdx",1,0.25,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4115,"Earth Burrow Cast","Spells\BurrowEarth_Brown_Missile.mdx",0.25,0.25,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4116,"Missile: Harpoon (Fire)","spells\harpoon_fire_missile.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4117,"Item - Pet Toy - Fetch Ball (red)","world\generic\human\passive doodads\clothing\clothyarnballred.mdx",1,1.5,1,1); 
-INSERT INTO `SpellVisualEffectName` VALUES (4118,"Missile: Grizzly Hills Boulder","World\Expansion02\Doodads\GrizzlyHills\Rocks\GrizzlyHills_Boulder01.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4119,"Missile: Grizzly Hills Boulder (x2)","World\Expansion02\Doodads\GrizzlyHills\Rocks\GrizzlyHills_Boulder01.mdx",1,2.25,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4120,"Dust Stomp Base","Spells\DustCloud_Land.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4121,"Faerie Fire Head State","Spells\FaerieFire.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4122,"Arcane Bomb - 4.00","spells\arcanebomb_missle.mdx",1,4,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4123,"Faerie Fire Head State No Glow","Spells\FaerieFire_NoGlow.mdx",1,1.75,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4124,"Faerie Fire Impact No Glow","Spells\FaerieFire_NoGlow_Impact.mdx",0,1.75,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4125,"Item - Offhand Rose Bouquet","item\objectcomponents\weapon\offhand_rosebouquet_a_01.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4126,"LowPolyFire","world\generic\pvp\fires\lowpolyfire.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4127,"Holy ImpactDd Uber Chest (3.00)","spells\holy_impactdd_uber_chest.mdx",0,3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4128,"Sparkle Trail","spells\sparktrail.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4129,"Sparkle","spells\enchantments\sparkle_a.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4130,"Ember Flame State","World\Lordaeron\Stratholme\PassiveDoodads\FX\StratholmeFireSmokeEmberM.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4131,"LightningBolt Impact Chest","Spells\LightningBolt_Impact_Chest.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4132,"LightningBolt Impact Chest 4.00","Spells\LightningBolt_Impact_Chest.mdx",1,4,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4133,"Bomb Explosion (x8)","Spells\Bomb_ExplosionA.mdx",1,8,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4134,"MoltenBlast Impact Chest (5x)","Spells\MoltenBlast_Impact_Chest.mdx",0,5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4135,"Blue Fire Ring","World\Expansion02\Doodads\ZulDrak\LightFX\Zuldrak_Blue_Fire.mdx",0,0.2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4136,"Quest - Gnome Overload","spells\Goblin_Weather_Machine_Lightning.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4137,"Bomb Explosion (x8)","Spells\Bomb_ExplosionA.mdx",1,8,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4138,"Object: Fishing Pole","World\Azeroth\BootyBay\PassiveDoodad\FishingPoles\FishingPole02.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4139,"Floating Mine Pulse (5x)","spells\floatingminepulse.mdx",1,5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4140,"Floating Mine (5x)","spells\floatingmine.mdx",1,5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4141,"Missile: Wild Carrot","World\SkillActivated\TradeskillNodes\Bush_Sansam.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4142,"Arcane Bomb - 2.75","spells\arcanebomb_missle.mdx",1,2.75,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4143,"Goblin RC Car (Red)","world\generic\goblin\passivedoodads\goblinrocketcarts\goblinrocketcart_rc.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4144,"Stratholme Fire Smoke Ember (0.3)","World\Lordaeron\Stratholme\PassiveDoodads\FX\StratholmeFireSmokeEmberM.mdx",1,0.3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4145,"Arcane Bomb - 3.0","spells\arcanebomb_missle.mdx",1,3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4146,"Ruby Acorn - EntanglingRoots State","Spells\EntanglingRoots_State.mdx",1,3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4147,"Stratholme Fire Smoke Ember (0.5)","World\Lordaeron\Stratholme\PassiveDoodads\FX\StratholmeFireSmokeEmberM.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4148,"Stratholme Fire Smoke Ember (0.15)","World\Lordaeron\Stratholme\PassiveDoodads\FX\StratholmeFireSmokeEmberM.mdx",1,0.15,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4149,"Bomb Explosion - (0.25)","Spells\Bomb_ExplosionA.mdx",1,0.25,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4150,"DustCloud Land (0.5)","Spells\DustCloud_Land.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4151,"DivineAegis Low Base","spells\arcaneforceshield_yellow.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4152,"Missile: Rocket (X-Large)","spells\missle_rocket.mdx",0,6,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4153,"Goblin Rocket Cart (0.2)","world\generic\goblin\passivedoodads\goblinrocketcarts\goblinrocketcart_rc.mdx",0,0.2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4154,"Immolate State (4.0)","spells\immolate_state.mdx",1,4,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4155,"Flame Patch (0.20x)","spells\archimonde_fire.mdx",1,0.2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4156,"Goblin Control Panel (0.1)","world\generic\goblin\passivedoodads\controlpanel\goblincontrolpanel.mdx",0,0.1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4157,"Fel Seeping Gaseous Nova","spells\seepinggaseous_fel_nova.mdx",1,0.7,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4158,"Ground Rupture","spells\ground_rupture.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4159,"Earth Burrow Cast","Spells\BurrowEarth_Brown_Missile.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4160,"Object - Thel'zan's Phylactery","world\generic\passivedoodads\furniture\containers\lichcontainer01.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4161,"Canon_Impact_Dust Impact (Chest)","spells\Canon_Impact_Dust.mdx",1,3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4162,"Tower Impact","spells\Dest_Tower_Impact_FX.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4163,"Quest - Arcane Barrage Cosmetic","spells\Mage_ArcaneBarrage_Missile.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4164,"Portal: Boss Fire","spells\Creature_SpellPortalLarge_Red.mdx",1.9,1.9,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4165,"Ghost_state (Green) (0.3)","spells\greenghost_state.mdx",1,0.3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4166,"Death and Decay Ground Runes","Spells\DeathAndDecay_Area_Runes.mdx",1,0.1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4167,"Missile: Shadowbolt (No Ribbon)","spells\ShadowBolt_Missile_NoRibbon.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4168,"Hellfire Raid Dust Impact Base","spells\HellfireRaid_Dust_Impact_Base.mdx",1,1.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4169,"Flame Breath (x0.5)","Spells\FlameBreath.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4170,"LightningStorm Cloud Low","Spells\LightningStorm_CloudLow_State.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4171,"Swamp Gas (White)","Creature\Cloud\CloudSwampGas_Shadowmoon_White.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4172,"Cloud: White","spells\whiteradiationfog.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4173,"Quest - Frostmourne Encased","spells\mage_deepfreeze.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4174,"Deep Freeze","spells\mage_deepfreeze.mdx",0,1.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4175,"Shadow Missile","Spells\ShadowMissile.mdx",3,8,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4176,"Magic Impact Chest","spells\magic_impact_chest.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4177,"Caltrop (0.1)","World\Outland\PassiveDoodads\Caltrop01.mdx",0.1,0.1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4178,"Missile: Pine Cone (0.7)","world\kalimdor\mulgore\passivedoodads\pinecone\pinecone.mdx",1,0.7,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4179,"Ground Rupture","spells\ground_rupture.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4180,"Acid Breath (0.2x)","Spells\AcidBreath.mdx",1,0.2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4181,"Arcane Bomb","spells\arcanebomb_missle.mdx",1,1.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4182,"Fire DOT State Chest","Spells\Fire_DOT_State_Chest.mdx",1,3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4183,"Slow Impact Base","Spells\Slow_Impact_Base.mdx",1,3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4184,"Fire Reflect State Chest","spells\firereflect_state_chest.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4185,"Shadowstep Cast Base (1.00)","spells\shadowsteps_fx.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4186,"RadiationRed State (x3)","Spells\RedGhost_state.mdx",1,3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4187,"Ghost_state (Green, x0.1)","spells\greenghost_state.mdx",1,0.1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4188,"Ghost_state (Red, x0.1)","spells\redghost_state.mdx",1,0.1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4189,"BOTM - Honey Brew - Bee Aura","Spells\GiantInsectSwarm_State_Ground.mdx",1,0.1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4190,"Renew Base (x 0.10)","Spells\Renew_Base.mdx",0,0.1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4191,"Brew Bubble State","creature\waterbubblecreature\waterbubblecreature.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4192,"BOTM - Bubble Brew - Bubble Breath Aura","particles\bubbles.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4193,"Missile: Boulder (4x)","Spells\Boulder_Missile.mdx",0,4,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4194,"Missile: Ziggurat Spirit (0.50)","spells\zig_missile.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4195,"Ice Spike","Spells\IceSpike_Impact_Base.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4196,"Ice Spike","Spells\IceSpike_Impact_Base.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4197,"Penance Missile","spells\priest_pennance_missile.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4198,"Dispersion Base","spells\priest_dispersion.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4199,"Force Shield Arcane (Green)","Spells\ArcaneForceShield_Green.mdx",1,1.2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4200,"Visual Test Cube","spells\unitcube.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4201,"MoonBeam State Base (Pat's Copyl)","Spells\MoonBeam_Impact_Base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4202,"Ice Lance Missile - 0.50","spells\ice_lance_missile.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4203,"LightningStorm Cloud Low State","Spells\LightningStorm_CloudLow_State.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4204,"LightningStorm Cloud Low State","Spells\LightningStorm_CloudLow_State.mdx",1,0.1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4205,"MoonBeam State Base (Small)","Spells\MoonBeam_Impact_Base.mdx",1,0.6,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4206,"Hurricane Low","Spells\LightningStorm_CloudLow_State.mdx",0,0.05,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4207,"GreenFlame_Low","spells\enchantments\greenflame_low.mdx",0,4,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4208,"GreenFlame_Low","spells\enchantments\greenflame_low.mdx",0,6,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4209,"Force Shield Fire (Red)","Spells\fireforceshield_red.mdx",1,4,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4210,"Fel FlamestrikeSmall Impact Base","spells\fel_flamestrikesmall_impact_base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4211,"Fel Flame Patch - 0.15","spells\fel_archimonde_fire.mdx",1,0.15,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4212,"Invisibility Impact Chest","Spells\Invisibility_Impact_Chest.mdx",1,4,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4213,"Banish (Blue) - 0.5","spells\banish_chest_blue.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4214,"Banish (Red) 0.50","spells\bloodbolt_chest.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4215,"SunfireGlow_High (8.00)","spells\enchantments\sunfireglow_high.mdx",0,8,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4216,"Missile: Shadowbolt (No Ribbon) (4.00)","spells\ShadowBolt_Missile_NoRibbon.mdx",1,4,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4217,"CallLightning Impact (Red)","spells\flamestrike_impactdd_med_base.mdx",1,0.38,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4218,"Earth Burrow Cast (0.5)","Spells\BurrowEarth_Brown_Missile.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4219,"Throw Bone","World\Generic\PassiveDoodads\Furniture\Refuse\Bone01.mdx",0,1.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4220,"Divine Hymn Birth Impact Base","spells\priest_divinehymn.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4221,"GreenGlow_High","spells\enchantments\greenglow_high.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4222,"Sandworm Base","\World\Kalimdor\Silithus\ActiveDoodads\SandWorm\SandWorm_RockBase.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4223,"Earth Burrow Cast","Spells\BurrowEarth_Brown_Missile.mdx",0.35,0.35,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4224,"Smoke - Infernal","spells\infernal_smoke_rec.mdx",2,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4225,"LightningStorm Cloud Low State","Spells\LightningStorm_CloudLow_State.mdx",1,0.05,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4226,"Item - Polearm - C","\Item\ObjectComponents\Weapon\Polearm_2H_Bladed_C_01.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4227,"Fireball_Blue_Missile_High","spells\fireball_blue_missile_high.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4228,"Flare, Horde (Red)","world\goober\g_flarehorde.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4229,"Arcane Bomb - 6.00","spells\arcanebomb_missle.mdx",1,6,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4230,"Ice Spike","Spells\IceSpike_Impact_Base.mdx",0,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4231,"ProtectionFromFire Chest (Large)","Spells\ProtectionFromFire_Chest.mdx",0,3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4232,"WaterShield State (Low)","spells\watershield_state_base_s.mdx",1,1.2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4233,"Missile: Wave (Water)","spells\missile_wave_water.m2",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4234,"Missile: Apple","World\Generic\PassiveDoodads\Fruits\Fruit_Apple.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4235,"Gas Breath (0.5)","spells\acidcloudbreath.mdx",0,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4236,"Ice Precast Low Hand","Spells\Ice_Precast_Low_Hand.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4237,"Ice Cast Low Hand","Spells\Ice_Precast_Low_Hand.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4238,"Ritual Frost PreCast Base","spells\Ritual_Frost_PreCast_Base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4239,"Ice Spike Impact","Spells\IceSpike_Impact_New.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4240,"Ice Spike Impact","Spells\IceSpike_Impact_New.mdx",0,1.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4241,"Shadow Fissure Base","Spells\Shadow_Fissure_Base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4242,"Fireball Missile High (2.5)","spells\fireball_missile_high.mdx",0,2.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4243,"Slow Impact Base","Spells\Slow_Impact_Base.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4244,"DustCloud Land (Copy)","Spells\DustCloud_Land.mdx",1,0.3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4245,"LightningShield State (Low)","spells\lightningshield_state_base_s.mdx",0,1.4,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4246,"Snowball Powdery State","spells\SnowballPowdery_Impact_Base.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4247,"Missile: DeathCoil Missile (Death Knight)","Spells\DeathKnight_DeathCoil_Missile.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4248,"Missile: Crypt Scarab","creature\cryptscarab\crypt_scarab.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4249,"Raven Bolt","Spells\Crow_Baked.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4250,"LightningStorm Cloud State","Spells\LightningStorm_Cloud_State.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4251,"Tranquility Area","spells\tranquility_area.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4252,"Tranquility Area","spells\tranquility_area.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4253,"BloodBoil_Impact_Chest (Death Knight)","SPELLS\DeathKnight_BloodBoil.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4254,"Blood Presence Impact","SPELLS\DeathKnight_BloodPresence.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4255,"Blood Strike (Slash)","SPELLS\DeathKnight_BloodStrike.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4256,"Blood Tap","SPELLS\DeathKnight_BloodTap.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4257,"Death Pact Impact (Caster)","SPELLS\DeathKnight_DeathPactCaster.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4258,"Death Pact Impact (Target)","SPELLS\DeathKnight_DeathPactTarget.mdx",1,1.3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4259,"Frost Presence","SPELLS\DeathKnight_FrostPresence.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4260,"Corpse Explosion Impact Dest","SPELLS\DeathKnight_CorpseExplosion.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4261,"Icebound Fortitude","SPELLS\DeathKnight_IceboundFortitude.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4262,"Icy Touch Impact","SPELLS\DeathKnight_IcyTouch.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4263,"Mind Freeze","SPELLS\DeathKnight_MindFreeze.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4264,"Strangulate Impact Head","SPELLS\DeathKnight_Strangulate.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4265,"Deathcharger Impact Base","SPELLS\DeathKnight_SummonWarHorse_Impact_Base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4266,"Unholy Presence Impact Head","SPELLS\DeathKnight_UnholyPresence.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4267,"Hungering Cold State","SPELLS\IceSpike_Impact_New.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4268,"Shockwave","SPELLS\Warrior_ShockWave_Area.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4269,"Shield: Arcane Force (Dark)","Spells\ArcaneForceShield_Dark.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4270,"DeathCoil Impact Chest (Death Knight)","spells\DeathCoil_Impact_Chest.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4271,"Shield: Arcane Force (Dark)","Spells\ArcaneForceShield_Dark.mdx",1,1.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4273,"Blue Fire Ring","World\Expansion02\Doodads\ZulDrak\LightFX\Zuldrak_Blue_Fire.mdx",0,0.3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4274,"Arcane Reflect State Chest","spells\ArcaneReflect_State_Chest.mdx",1,4,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4275,"HolyWordShield State Chest (0.20)","Spells\HolyWordShield_State_Chest.mdx",0,0.2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4276,"Oil Breath (Liquid)","spells\OilLiquidBreath.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4277,"LightningBolt Missile (2.00)","Spells\LightningBolt_Missile.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4278,"Lightning Nova","spells\lightning_ring_nova.mdx",1,0.75,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4279,"Missile: Orange Crystal","world\expansion01\doodads\silvermyst\crystals\silvermystcrystalsmall01_orange.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4280,"Sword Impale Chest","Item\ObjectComponents\Weapon\Sword_1H_Draenei_A_01.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4281,"Missile: Rocket (Medium)","spells\missle_rocket.mdx",0,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4282,"Ghoul Explode","SPELLS\DeathKnight_Ghoul_Explode.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4283,"Red Glow High 5.0","Spells\Enchantments\RedGlow_High.mdx",1,5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4284,"RedGlow_High (5.0)","spells\enchantments\redglow_high.mdx",1,5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4285,"Lightning Nova (x3)","spells\lightning_ring_nova.mdx",1,3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4286,"Decimate Missile","spells\decimate_missile.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4287,"Arcane Missile Lvl 1 - 2.00","Spells\Arcane_Missile_Lvl1.mdx",0,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4288,"Magic Cast Hand","Spells\Magic_Cast_Hand.mdx",1,20,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4289,"Holy Missile Low - 2.00","Spells\Holy_Missile_Low.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4290,"BloodLust State Hand (3.0)","Spells\BloodLust_State_Hand.mdx",1,3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4291,"BloodLust State Hand (5.0)","Spells\BloodLust_State_Hand.mdx",1,5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4292,"RedGlow_High (3.0)","spells\enchantments\redglow_high.mdx",1,3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4293,"Magic PreCast Hand","Spells\Magic_PreCast_Hand.mdx",1,3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4294,"Missile: Black Shot","spells\blackshot_missile.mdx",1,20,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4295,"Banish (Dark)","spells\Banish_Chest_Dark.mdx",1,4,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4296,"Shadow Nova Cast - (3.00)","spells\shadow_nova_area.mdx",1,3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4297,"BloodLust State Hand (2.0)","Spells\BloodLust_State_Hand.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4298,"Eradication State Hand","spells\eradication_hand.mdx",0,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4299,"Frost Trap Aura","spells\frosttrap_aura.mdx",1,1.2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4300,"Form Shadow Precast","Spells\Shadow_Form_Precast.mdx",1,1.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4301,"Seeping Gaseous Nova","spells\seepinggaseous_nova.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4302,"BloodyExplosion (0.5)","Spells\BloodyExplosion.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4303,"Force Shield Fire (Red)","Spells\fireforceshield_red.mdx",1,0.75,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4304,"Spellbreaker Impact Chest","Spells\Zangarmarsh_Arcane_Impact.mdx",1,4,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4305,"Web State","Spells\Web_State.mdx",0,3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4306,"Arcane Fire Weapon (4.00)","Spells\Arcane_Fire_Weapon_Effect.mdx",1,4,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4307,"Low Poly Blue Fire","Spells\LowPolyFireAnim_Blue.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4308,"Smoking Corpse State (Subtle)","world\expansion02\doodads\howlingfjord\firefx\burntstonetreesmoke_vfx.mdx",1,0.1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4309,"Shadowflame Cast Head","spells\shadowflame_caster.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4310,"ShadowFlame PreCast","spells\shadowflame_cast_hand.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4311,"Acid Cloud Breath Smoke (0.5)","spells\acidcloudbreath_groundsmoke.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4312,"Nature Precast Hand","Spells\Nature_PreCast_Low_Hand.mdx",1,20,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4313,"Fire Precast Hand Med","Spells\Fire_Precast_Med_Hand.mdx",0,20,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4314,"Ghost_state (Green) (0.5)","spells\greenghost_state.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4315,"Magic PreCast Hand","Spells\Magic_PreCast_Hand.mdx",1,20,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4316,"Arcane Barrage Missile - 2.00","spells\mage_arcanebarrage_missile.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4317,"Magic Cast Hand","Spells\Magic_Cast_Hand.mdx",1,3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4318,"Decimate","spells\decimate_missile.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4319,"Decimate Impact Chest","spells\decimate_impact_chest.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4320,"Zangarmarsh Arcane Impact","spells\zangarmarsh_arcane_impact.mdx",1,4,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4321,"ShadowFlame State Base","spells\shadowflame_state.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4322,"ShadowFlame Impact","spells\shadowflame_impact.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4323,"LoveStruck Chest","spells\lovestruck_state_chest.mdx",0,1.3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4325,"Sandfern State - Base","World\Expansion02\Doodads\Scholazar\Bushes\Sholazar_Fern_QuestOnly.mdx",1,0.6,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4326,"Decimate State Effect","spells\decimate_state.mdx",0,3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4327,"Decimate State Effect","spells\decimate_state.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4328,"Missile: Basic Bullet","Item\ObjectComponents\Ammo\BulletFlight_01.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4329,"Teleport","Spells\Teleport.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4330,"Object - Sled (0.25)","world\expansion02\doodads\wintertauren\wt_sled_02.mdx",0,0.25,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4331,"Wave: Nature","spells\Missile_Wave_Nature.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4332,"Bomb","spells\missile_bomb.mdx",1,1.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4333,"Decimate State Effect","spells\decimate_state.mdx",0,12,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4334,"Decimate Impact Chest","spells\decimate_impact_chest.mdx",1,3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4335,"Nature Form","spells\nature_form_precast.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4336,"Nature Form (x2)","spells\nature_form_precast.mdx",0,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4337,"ShadowStrike Impact Chest","Spells\ShadowStrike_Impact_Chest.mdx",1,5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4338,"EarthShock Impact Chest (x2)","Spells\EarthShock_Impact_Chest.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4339,"Sparkle","spells\enchantments\sparkle_a.mdx",0,10,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4340,"Shot: Chimera Shot","spells\chimerashot_missile.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4341,"Chimera Shot Impact","spells\chimerashot_impact.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4342,"Zangarmarsh Arcane Impact","spells\zangarmarsh_arcane_impact.mdx",1,6,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4343,"Quest - Raise Dead","spells\demoniccirclesummon_base.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4344,"Lightning Cast Hand","Spells\Lightning_Cast_Hand.mdx",0,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4345,"ThunderClap Cast Base","Spells\ThunderClap_Cast_Base.mdx",0,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4346,"ThunderClap Cast Base","Spells\ThunderClap_Cast_Base.mdx",0,0.9,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4347,"Icebound Fortitude","SPELLS\DeathKnight_IceboundFortitude.mdx",1,1.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4348,"Incinerate Missile (Blue)","spells\incinerateblue_low_base.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4349,"Snowball Powder Impact","spells\SnowballPowdery_Impact_Base.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4350,"Meteor Impact Base Red","spells\Meteor_Impact_Base_Red.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4351,"Missile: GooBolt (2.00)","Spells\GooBolt_Missile_Low.mdx",0,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4352,"Sap State Head","Spells\Sap_State_Head.mdx",1,1.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4353,"Shield: Arcane Force (Yellow)","Spells\ArcaneForceShield_Yellow.mdx",1,1.25,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4354,"Banish (Yellow)","spells\banish_chest_yellow.mdx",1,0.2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4355,"Air Rift","world\environment\doodad\generaldoodads\elementalrifts\airrift.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4356,"UDE PVP Flag","world\generic\pvp\upperdeck\ud_pvptaunt.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4357,"Camouflage Head","spells\camouflage_head.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4358,"Camouflage Chest","spells\camouflage_impact.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4359,"Camouflage Hands","spells\camouflage_hands.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4360,"Camouflage Base","spells\camouflage_base.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4361,"Chimera Shot Missile","spells\chimerashot_missile.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4362,"Archimonde Fire","spells\archimonde_fire.mdx",1,1.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4363,"ThunderClap Cast Base","Spells\ThunderClap_Cast_Base.mdx",0,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4364,"ThunderClap Cast Base","Spells\ThunderClap_Cast_Base.mdx",0,3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4365,"Quest - Disintegrate Base","spells\enchantments\disintigrateglow_high.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4366,"Quest - Soulfrost Base","spells\enchantments\soulfrostglow_high.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4367,"Quest - Executioner Base","spells\enchantments\executionerglow_high.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4368,"Quest - Spellsurge Base","spells\enchantments\spellsurgeglow_high.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4369,"Arcane Bomb","spells\arcanebomb_missle.mdx",1,0.75,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4370,"Item - Bottle (Green) ","spells\tankardb_spellobject.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4371,"Missile: Trap","World\Goober\G_BearTrapReverse.mdx",1,1.3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4372,"EarthShock Impact Chest (x3)","Spells\EarthShock_Impact_Chest.mdx",1,3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4373,"Portal: Boss Fire","spells\Creature_SpellPortalLarge_Red.mdx",3,3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4374,"Spell Surge High","Spells\Enchantments\SpellSurgeGlow_High.mdx",1,10,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4375,"Missile: Banana Bunch","World\Generic\PassiveDoodads\Fruits\Fruit_BananaBunch.mdx",1,1.6,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4376,"Missile: Orange","World\Generic\PassiveDoodads\Fruits\Fruit_Orange.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4377,"Missile: Pear","World\Generic\PassiveDoodads\Fruits\Fruit_Pear.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4378,"Red Dust Cloud","spells\RedDustCloud.mdx",1,3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4379,"Portal: Large Nature","Spells\Creature_SpellPortalLarge_Green.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4380,"Nature Form (x4)","spells\nature_form_precast.mdx",0,4,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4381,"Frost Slash ","Spells\FrostSlash_Base_Cast.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4382,"Cyclone - Wind - Blue","Spells\Cyclone_Caster_State.mdx",0,0.8,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4383,"Frost Slash","Spells\FrostSlash_Base_Cast.mdx",1,0.1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4384,"Summon Ghouls","spells\summonghouls.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4385,"Dream Lash (Green Portal)","Spells\Creature_SpellPortal_Green.mdx",0,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4386,"BlueGreenFog Missile","Spells\LargeBlueGreenRadiationFog.mdx",0,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4387,"Blue Green Mist","Spells\LargeBlueGreenRadiationFog.mdx",0,0.3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4388,"Cobra Strikes Impact Head","spells\cobrastrikes_impact.mdx",0,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4389,"Green Radiation Fog (Blue/Green - Magic)","SPELLS\LargeBlueGreenRadiationFog.mdx",1,1.3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4390,"Hunter's Mark State Head","Spells\HuntersMark_Impact_Head.mdx",1,4,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4391,"Cripple State Base","Spells\Cripple_State_Base.mdx",1,1.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4392,"HARDCODED Achievement Base","spells\Achievement_OnRoot.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4393,"Hellfire Area Base (Scale 0.05)","Spells\HellFire_Area_Base.mdx",1,0.05,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4394,"RedFlame_Low","spells\enchantments\redflame_low.mdx",1,4,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4395,"Lightning Cast Uber Hands (Ingvar Missile)","Spells\LightningBoltIvus_Missile.mdx",0,0.15,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4396,"Form Fire Precast ","Spells\Fire_Form_Precast.mdx",1,2.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4397,"Form Fire Precast","Spells\Fire_Form_Precast.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4398,"WaterShield State (Low)","spells\watershield_state_base_s.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4399,"Frost Nova Area","Spells\Frost_Nova_area.mdx",1,0.3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4400,"Missile: Assassinate","spells\assassinate_missile.mdx",0,0.7,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4401,"Scourge Summon Spell Rune","Spells\Creature_ScourgeRuneCircleCrystal.mdx",0,0.4,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4402,"Net State","Spells\Net_State.mdx",0,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4403,"Cannon Impact ","Spells\Canon_Impact_Dust.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4404,"Deathcharger Impact Base","spells\deathknight_summonwarhorse_impact_base.mdx",0,0.25,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4405,"Thunder Caster Impact","spells\shaman_thunder.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4406,"Earthliving Impact Base","spells\shaman_earthliving_target.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4407,"Aerie Boulder 03 (1)","World\Lordaeron\AeriePeaks\PassiveDoodads\Boulders\AerieBoulder03.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4408,"Item - Old Scroll","world\khazmodan\uldaman\passivedoodads\scrolls\uldamanscroll01.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4409,"Rocket Blast Down","spells\rocketblast_down.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4410,"Infected Wounds Base","spells\druid_infectedwounds.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4411,"Infected Wounds Base","spells\druid_infectedwounds.mdx",0,1.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4412,"Quest - Teleport Visual (Evil)","spells\shaman_astralshift.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4413,"Confetti Explosion","world\generic\upperdeck\ud_confetti_01.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4414,"RadiationGreen State (3x)","Spells\GreenGhost_state.mdx",0,3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4415,"Banish (Dark)","spells\Banish_Chest_Dark.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4416,"Orange Radiation Fog, Small","spells\orangeradiationfog.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4417,"Missile: DeathCoil Missile - 2.00","Spells\DeathCoil_Missile.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4418,"Cannonball Missile (Tiny)","world\generic\human\passive doodads\catapultruins\catapultball01.mdx",1,0.1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4419,"CallLightning Impact","Spells\CallLightning_Impact.mdx",1,3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4420,"Gorloc Missle","creature\oracle\oracle.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4421,"Gorloc","creature\oracle\oracle.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4422,"LowPolyFire","world\generic\pvp\fires\lowpolyfire.mdx",1,0.25,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4423,"AshPeople03","world\azeroth\burningsteppes\passivedoodads\ashpeople\ashpeople03.mdx",1,1.75,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4424,"BloodyMeat01","World\Generic\Human\Passive Doodads\Meat\BloodyMeat01.mdx",1,2.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4425,"Icy Veins FX","spells\icyveins_fx.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4426,"Ice Block State","spells\icebarrier_state.mdx",1,0.75,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4427,"Missile: G_IceBlock (x0.5)","world\goober\g_iceblock.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4428,"Meatwagon Roller","world\generic\undead\passive doodads\meatwagonpieces\meatwagonroller.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4429,"Meatwagon Frame","world\generic\undead\passive doodads\meatwagonpieces\meatwagonbody.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4430,"Meatwagon Grill","world\generic\undead\passive doodads\meatwagonpieces\meatwagongrill.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4431,"Meatwagon Wheel","world\generic\undead\passive doodads\meatwagonpieces\meatwagonwheel.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4432,"Bloodbath Impact","spells\warrior_bloodbath.mdx",0,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4433,"Holy Precast Low Hand (2.0)","Spells\Holy_Precast_Low_Hand.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4434,"Renew Chest","Spells\Renew_Chest.mdx",0,5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4435,"Renew Base","Spells\Renew_Base.mdx",0,5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4436,"Sprint Cast Base","Spells\Sprint_Cast_Base.mdx",0,5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4437,"Immolate Impact Chest","Spells\Immolate_Impact_Chest.mdx",1,5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4438,"Immolate State Base","Spells\Immolate_State_Base.mdx",1,5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4439,"Tugofwar: Missile, Red Spice (2.00)","world\generic\passivedoodads\tugofwar\tugofwar_redspicemissile.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4440,"Missile: Boulder (1.5x)","Spells\Boulder_Missile.mdx",0,1.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4441,"Seeping Gas (Fel)","spells\SeepingGaseous_Fel_Nova.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4442,"Rune Tap  Base","Spells\DeathKnight_RuneTap.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4443,"Mark of Blood Impact","Spells\DeathKnight_MarkofBlood.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4444,"Hysteria Base","Spells\DeathKnight_Hysteria.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4445,"Deathchill Hands High","Spells\DeathKnight_Deathchill.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4446,"Flamestrike Area","Spells\Flamestrike_Area.mdx",1,0.1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4447,"Flamestrike Impact Base","Spells\Flamestrike_Impact_Base.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4448,"Stoneform State Chest","Spells\Stoneform_State_Base.mdx",1,4,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4449,"Void Zone (0.34)","creature\portalofkathune\portalofkathune.mdx",1,0.34,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4450,"Quest - Gift of the Harvester","world\goober\g_gastrap.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4451,"Ice Barrier State Chest","spells\ice_barrier_state_chest.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4452,"Bloodbath Impact (5.0)","spells\warrior_bloodbath.mdx",0,5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4453,"Bone","world\generic\passivedoodads\furniture\refuse\bone01.mdx",0,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4454,"Web State","Spells\Web_State.mdx",0,0.3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4455,"Web Spin","spells\webspin.mdx",1,0.3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4456,"BoneArmor State Chest (Death Knight)","Spells\DeathKnight_BoneArmor.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4457,"Dismantle State Head","spells\dismantle_state.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4458,"Dwarf Bone","world\khazmodan\wetlands\passivedoodads\dwarfbones\dwarvebone01.mdx",0,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4459,"BloodyMeat01 (0.7)","World\Generic\Human\Passive Doodads\Meat\BloodyMeat01.mdx",1,0.7,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4460,"Dispersion Base","spells\priest_dispersion.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4461,"Quest - Ebon Hold Flamethrower","world\expansion02\doodads\generic\vrykul\fires\vr_forgefire_01.mdx",0,0.05,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4462,"Snowball Impact Chest","spells\snowball_impact_chest.mdx",1,5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4463,"Snowball Impact Chest","spells\snowball_impact_chest.mdx",1,20,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4464,"Troll Tiki Mask 01","world\generic\troll\passive doodads\tikimasks\troll_tikimask01.mdx",0,0.4,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4465,"Troll Tiki Mask 02","world\generic\troll\passive doodads\tikimasks\troll_tikimask02.mdx",0,0.4,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4466,"Troll Tiki Mask 03","world\generic\troll\passive doodads\tikimasks\troll_tikimask03.mdx",0,0.4,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4467,"IntimidatingShout Cast Base","Spells\IntimidatingShout_Cast_Base.mdx",0,5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4468,"Astral Shift State","spells\shaman_astralshift.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4469,"Lava Burst Missile","spells\shaman_lavaburst_missile.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4470,"Lava Burst Impact","spells\shaman_lavaburst.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4471,"Berserk State Head","spells\druid_berserk.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4472,"Eclipse Impact Base","spells\druid_eclipse.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4473,"Flourish Impact","spells\druid_flourish.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4474,"Infected Wounds Impact Base","spells\druid_infectedwounds.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4475,"Nourish Impact Base","spells\druid_nourish.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4476,"Starfall Area","spells\druid_starfallmissile.mdx",1,1.3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4477,"Starfall State","spells\druid_starfallstate.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4478,"Flavor - Sword in Chest","world\azeroth\elwynn\passivedoodads\battlegladesword\battlegladesword.mdx",0,1.8,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4479,"Flavor - Arrow in Face","world\generic\human\passive doodads\weapons&armor\orcarrow.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4480,"Arcane Force Shield (Dark) Base","spells\arcaneforceshield_dark.mdx",0,1.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4481,"Ghost_state (Red)","spells\redghost_state.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4482,"Quest - Icebound Visage","SPELLS\IceboundFortitude_Ground.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4483,"Voodoo Doll","World\Generic\Orc\Passive Doodads\VoodooStuff\VoodooDoll02.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4484,"Seeping Gaseous Fel Nova","spells\SeepingGaseous_Fel_Nova.mdx",1,0.35,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4485,"Drink Noth's Special Brew Impact","spells\energizegain_rage.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4486,"Quest - Create Plague Cauldron","world\environment\doodad\plaguelands\activedoodads\plaguecauldronactive.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4487,"Anti-Magic Zone","Spells\DeathKnight_AntiMagicZone.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4488,"Obliterate (Slash)","Spells\DeathKnight_Obliterate.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4489,"Wandering Plague Impact","spells\DeathKnight_WanderingPlague.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4490,"Howling Blast Primary","spells\DeathKnight_HowlingBlastPrimary.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4491,"Howling Blast Impact","Spells\DeathKnight_HowlingBlastSecondary.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4492,"Plague Strike (Slash)","Spells\DeathKnight_PlagueStrikeCaster.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4493,"Plague Strike State","Spells\DeathKnight_PlagueStrikeState.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4494,"Chainlightning Impact Chest","Spells\ChainLightning_Impact_Chest.mdx",0,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4495,"Quest - Persuasive Strike","spells\Infernal_Smoke_Rec.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4496,"Quest - BurntStoneTreeSmoke_VFX","world\expansion02\doodads\howlingfjord\firefx\burntstonetreesmoke_vfx.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4497,"Dark Fire Shield State","Spells\FireForceShield_Red.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4498,"Frost Strike (Slash)","Spells\DeathKnight_FrostStrike.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4499,"Acid Burn, Orange","spells\acidburn_orange.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4500,"Blood Strike Impact","Spells\DeathKnight_BloodStrike_Impact.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4501,"Frost Strike Impact","Spells\DeathKnight_FrostStrike_Impact.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4502,"Obliterate Impact","Spells\DeathKnight_Obliterate_Impact.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4503,"Plague Strike (Impact)","Spells\DeathKnight_PlagueStrikeCaster_Impact.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4504,"Lightning Nova","spells\lightning_ring_nova.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4505,"Anti-Magic Zone (Small)","Spells\DeathKnight_AntiMagicZone.mdx",0,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4506,"Holy Nova (Small)","spells\holynova_impact_base.mdx",0.5,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4507,"Floating Mine Nexus","spells\floatingminenexus.mdx",1,1.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4508,"Floating Mine Nexus Pulse","spells\floatingminenexuspulse.mdx",1,1.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4509,"BloodyExplosion","Spells\BloodyExplosion.mdx",1,1.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4510,"Earthliving Base Flowers","Spells\Shaman_Earthliving_Ground.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4511,"Fire Force Shield Dark State","spells\fireforceshield_dark.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4512,"Earthliving Base Flowers","Spells\Shaman_Earthliving_Ground.mdx",0,1.3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4513,"Thunder Caster Impact","spells\shaman_thunder.mdx",1,0.2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4514,"Shockwave Area","spells\warrior_shockwave_area.mdx",0,0.4,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4515,"Bladestorm State","spells\warrior_bladestorm.mdx",0,0.7,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4516,"Lightning Nova","spells\lightning_ring_nova.mdx",1,0.35,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4517,"Lightning Nova","spells\lightning_ring_nova.mdx",1,0.2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4518,"Rejek's Sword","World\KhazModan\Badlands\PassiveDoodads\QuestBlade\QuestBladeBadlands.mdx",1,2.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4519,"Canon_Impact_Dust Impact (Chest)","spells\Canon_Impact_Dust.mdx",1,0.6,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4520,"Cannon Impact","Spells\Canon_Impact_Dust.mdx",1,0.6,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4521,"Missile: Pack","world\generic\satyr\passive doodads\container\satyrcontainer02.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4522,"Clayton - Death and Decay Test","spells\deathanddecay_area_base.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4523,"Missile: Pack (x0.75)","world\generic\satyr\passive doodads\container\satyrcontainer02.mdx",1,0.75,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4524,"Web State","Spells\Web_State.mdx",0,6,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4525,"Ice Nuke Missile","spells\IceNuke_Missile.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4526,"Ice Nuke Missile (Small)","spells\IceNuke_Missile.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4527,"Ice Nuke Missile (Frostbrood)","spells\IceNuke_Missile.mdx",0.35,0.35,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4528,"Ice Nuke Base (Frostbrood)","spells\IceNuke_Base_Impact.mdx",0.5,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4529,"Unholy Blight","Spells\DeathKnight_UnholyBlight.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4530,"Lichborne","Spells\DeathKnight_Lichborne_State.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4531,"Frozen Rune Weapon Cast","Spells\DeathKnight_FrozenRuneWeapon_Impact.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4532,"Arcane Force Shield (Dark)","spells\arcaneforceshield_dark.mdx",0,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4533,"Hungering Cold Area","Spells\DeathKnight_HungeringCold.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4534,"Empower Runeweapon Cast","spells\deathknight_empowerruneblade.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4535,"Dancing Runeblade Area","Spells\DeathKnight_DancingRuneblade_Spawn.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4536,"Dancing Runeweapon State","Spells\DeathKnight_DancingRuneblade_State.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4537,"CycloneWater State","Spells\CycloneWater_State.mdx",0,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4538,"Runeblade Despawn","Spells\DeathKnight_DancingRuneblade_DeSpawn.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4539,"Golem Head State","World\KhazModan\Blackrock\PassiveDoodads\GolemParts\CannonGolemBust.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4540,"Thunder Caster Impact","spells\shaman_thunder.mdx",1,0.35,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4541,"Web: Vertical Stretch","World\Expansion01\Doodads\Terokkar\Webs\TerokkarWeb02.mdx",0,4,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4542,"Missile: Web (4.00)","Spells\Web_Missile.mdx",0,4,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4543,"Death Pact Impact (Large)","SPELLS\DeathKnight_DeathPactTarget.mdx",2,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4544,"Chimera Shot Impact Chest","spells\chimerashot_impact.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4545,"Unholy Blight State","Spells\DeathKnight_UnholyBlight_State.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4546,"Master's Call Impact Head","spells\masterscall_impact.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4547,"Water Nova","Spells\Water_Nova.mdx",0,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4548,"Skull, Chattering","spells\skull.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4549,"Bear Trap State","spells\beartrap_state.mdx",1,1.2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4550,"Meat (1.5)","World\Expansion01\Doodads\Generic\BloodElf\Food\BE_Meat01.mdx",1,1.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4551,"Bone","world\generic\passivedoodads\furniture\refuse\bone01.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4552,"Bone Burrow Cast","Spells\BurrowEarth_BoneWaste_Missile.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4553,"Earth Burrow Cast","Spells\BurrowEarth_Brown_Missile.mdx",0.1,0.1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4554,"Quest - Devour Humanoid","spells\energizegain_rage.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4555,"BoneArmor State Chest","Spells\BoneArmor_State_Chest.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4556,"Bone Burrow Cast","Spells\BurrowEarth_BoneWaste_Missile.mdx",1,0.1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4557,"Bladestorm State","spells\warrior_bladestorm.mdx",0,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4558,"Bear Rug","World\Generic\Human\Passive Doodads\Rugs\GeneralBearSkinRug01.mdx",0,0.8,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4559,"Ghost_state","Spells\Ghost_state.mdx",0,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4560,"Death and Decay Ground Runes (Med)","Spells\DeathAndDecay_Area_Runes.mdx",0.5,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4561,"Death and Decay Ground Runes","Spells\DeathAndDecay_Area_Runes.mdx",0.25,0.25,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4562,"Spike Impact Base","Spells\Spike_Impact_Base.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4563,"Kill Shot Impact Chest","spells\assassinate_impact.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4564,"Shot: Kill Shot Missile","spells\assassinate_missile.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4565,"Ribbon Trail","Spells\RibbonTrail.mdx",0,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4566,"Quest - The Might of Mograine","Spells\Cripple_State_Base.mdx",0.25,0.25,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4567,"Sunwell Beam FX (Micro)","spells\sunwell_beamfx.mdx",0.05,0.05,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4568,"Quest - The Light of Dawn (Mograine State)","World\Expansion02\Doodads\Ulduar\UL_Swirl_Orb_Cloud.mdx",0.05,0.05,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4569,"Quest - The Light of Dawn (State)","spells\holybomb_missle.mdx",0.75,0.75,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4570,"Ashbringer (Corrupt)","Item\ObjectComponents\Weapon\Sword_2H_AshbringerCorrupt.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4571,"Quest - The Light of Dawn (State)","spells\holybomb_missle.mdx",1.5,1.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4572,"Strangulate State","SPELLS\DeathKnight_Strangulate_Chain.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4573,"Defensive Stance Impact Head","spells\defensivestance_impact_head.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4574,"Berzerker Stance Impact Head","spells\berzerkerstance_impact_head.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4575,"Battle Stance Impact Head","spells\battlestance_impact_head.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4576,"Focused Attacks Impact ","spells\focused_attacks_impact.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4577,"Cut To The Chase Impact Base","spells\cuttothechase_impact.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4578,"Hunger for Blood State","spells\hungerforblood_state.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4579,"Hunger for Blood Impact Base","spells\hungerforblood_impact.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4580,"Fire Bomb","spells\firebomb_missle.mdx",1,8,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4581,"Stay of Execution Impact Chest","spells\stayofexecution_impact.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4582,"Murder Spree Impact Chest","spells\murder_spree_impact.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4583,"Honor Among Thieves Impact Base","spells\honor_among_thieves_impact.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4584,"Ward: Fire Impact Chest","Spells\FireWard_Impact_Chest.mdx",0,3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4585,"Shadow Dance Impact Chest","spells\shadowdance_state.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4586,"Explosive Shot Missile","spells\explosive_shot_missile.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4587,"Explosive Shot Impact Chest","spells\explosive_shot_impact.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4588,"MoonBeamRed_Impact_Base ","spells\moonbeamred_impact_base.mdx",1,0.3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4589,"Force Shield and Explosion","spells\forceshield_andxplosion.mdx",1,3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4590,"DustNova Cast Base","spells\dustnova_cast_base.mdx",1,0.05,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4591,"Bone Burrow Cast","Spells\BurrowEarth_BoneWaste_Missile.mdx",1,0.05,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4592,"Earth Burrow Cast","Spells\BurrowEarth_Brown_Missile.mdx",0.1,0.05,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4593,"Infectious Poisons Impact Head","spells\devious_impact.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4594,"Wrongfully Accused Impact Chest","spells\wrongfully_accused_impact.mdx",0,1,1,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4595,"Unfair Advantage Impact Chest","spells\unfairadvantage_cast.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4596,"Waylay State","spells\waylay_state.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4597,"Missile: Holy Symbol","item\objectcomponents\weapon\misc_1h_holysymbol_a_01.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4598,"Missile: Holy Symbol 2.00","item\objectcomponents\weapon\misc_1h_holysymbol_a_01.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4599,"Missile: Blight Crystal","world\expansion01\doodads\silvermyst\crystals\silvermystcrystal03_orange.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4600,"Judgement of Justice Impact Chest (1.00)","spells\judgement_impact_chest_red.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4601,"Judgement of Wisdom Impact Chest","spells\judgement_impact_chest_blue.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4602,"Acid Burn Orange (Low-Poly)","Spells\AcidBurn_Small_Orange.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4603,"DustNova Cast Base","spells\dustnova_cast_base.mdx",1,0.85,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4604,"Orange Radiation Fog","spells\orangeradiationfog.mdx",1,3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4605,"Acid Burn Orange (Low-Poly)","Spells\AcidBurn_Small_Orange.mdx",1,3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4606,"Portal: Boss Frost","spells\Creature_SpellPortalLarge_Blue.mdx",1,0.25,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4607,"Ritual Arcane PreCast Base","spells\Ritual_Arcane_PreCast_Base.mdx",1,2.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4608,"MoonBeam (Blue)","spells\MoonBeamBlue_Impact_Base.mdx",1,0.2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4609,"Portal: Blue","spells\creature_spellportal_blue.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4610,"Arcane Missile 2","spells\arcaneshot_missile2.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4611,"Arcane Barrage Impact","spells\mage_arcanebarrage_impact.mdx",0,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4612,"Potion Red Square SpellObject","spells\potion_red03_spellobject.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4613,"Potion Red Crystal SpellObject","spells\potion_red02_spellobject.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4614,"Potion Red Normal SpellObject","spells\potion_red01_spellobject.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4615,"Potion Black Standard SpellObject","spells\potion_black01_spellobject.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4616,"Portal: Boss Fire","spells\Creature_SpellPortalLarge_Red.mdx",4,4,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4617,"Ghoul Explode (Simple)","SPELLS\DeathKnight_Ghoul_Explode_simple.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4618,"LowPolyFireNoSmoke","world\generic\pvp\fires\lowpolyfire_nosmoke.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4619,"Holy Precast Uber Base","Spells\Holy_Precast_Uber_Base.mdx",1,4,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4620,"Holy Precast High Hand","Spells\Holy_Precast_High_Hand.mdx",1,4,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4621,"Renew Chest","Spells\Renew_Chest.mdx",0,10,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4622,"Renew Base","Spells\Renew_Base.mdx",0,10,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4623,"CycloneEarth State","Spells\CycloneEarth_State.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4624,"Atrocity Impact","spells\warlock_atrocity.mdx",0,3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4625,"Missile: Stone Spiral","spells\enchantments\shaman_rock.mdx",1,4,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4626,"Exploding Stone Impact","spells\exploding_stone_impact.mdx",1,0.25,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4627,"Red Crystal","world\kalimdor\silithus\passivedoodads\crystals\floatingredcrystalbroken03.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4628,"Icebound Fortitude Ground","Spells\IceboundFortitude_Ground.mdx",0,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4629,"Frost_Form","spells\frost_form_precast.mdx",0,0.4,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4630,"Frozen Rune Weapon State","Spells\DeathKnight_FrozenRuneWeapon_State.mdx",0,2.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4631,"Deathchill Hands High","Spells\DeathKnight_Deathchill.mdx",0,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4632,"Ice Barrier State","spells\iceshield_state.mdx",1,0.25,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4633,"Shield of Righteousness Cast Chest","spells\shield_of_vengeance_cast.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4634,"ChallengingShout Cast Base (Large)","Spells\ChallengingShout_Cast_Base.mdx",1,10,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4635,"Beacon of Light Impact Base","spells\beacon_of_light_impact.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4636,"Drakuru's Skull Missile","world\expansion01\doodads\ghostlands\skulls\swath_skull.mdx",0,5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4637,"Item - Potion Iron","spells\potion_iron01_spellobject.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4638,"shield of vengeance cast chest","spells\shield_of_vengeance_cast.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4639,"Shield of Righteousness Impact Chest","spells\shield_of_vengeance_impact.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4640,"Judgements of the Wise Impact Chest","spells\judgements_of_the_wise_impact.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4641,"Banish (Purple)","spells\banish_chest_purple.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4642,"ShadowFlame PreCast","spells\shadowflame_cast_hand.mdx",0,5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4643,"Missile: Deathbolt Missile","spells\deathbolt_missile_low.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4644,"Shadow Strikes State","spells\shadow_strikes_state_hand.mdx",1,5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4645,"Quest - Might of Mograine Flag","spells\SC_CTFflag_spell.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4646,"Missile: Water Bolt (2.00)","Spells\WaterBolt_Missile_Low.mdx",0,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4647,"Missile: Hammer of the Righteous","spells\hammer_of_the_righteous_missile.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4648,"Hammer of the Righteous Impact","spells\hammer_of_the_righteous_impact.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4649,"Hammer of the Righteous Cast","spells\hammer_of_the_righteous_cast.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4651,"Guarded by the Light Impact Chest","spells\guarded_by_light_impact.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4652,"Hammer of the Righteous Cast Hand","spells\hammer_of_the_righteous_cast.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4653,"Hammer of the Righteous Impact","spells\hammer_of_the_righteous_impact.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4654,"Hammer of the Righteous Missile","spells\hammer_of_the_righteous_missile.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4655,"The Art of War Impact","spells\the_art_of_war_impact.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4656,"Banner, Argent Dawn","world\generic\human\passive doodads\banners\bannerargentdawn.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4657,"Sacred Shield Impact","spells\blessed_mending_impact.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4658,"Sacred Shield Proc State Chest","spells\blessed_mending_proc_impact.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4659,"Taunt Head (Yellow)","spells\taunt_head_yellow.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4660,"Taunt Head (Orange)","spells\taunt_head_orange.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4661,"MoonBeam State Base","Spells\MoonBeam_Impact_Base.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4662,"Ice Missile","spells\icenuke_missile.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4663,"Cannon Impact (x4)","Spells\Canon_Impact_Dust.mdx",1,4,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4664,"Red CTF Flag Chest","spells\redctfflag_spell.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4665,"Dancing Runeblade Area","Spells\DeathKnight_DancingRuneblade_Spawn.mdx",2,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4666,"Strangulate State","SPELLS\DeathKnight_Strangulate_Chain.mdx",0.5,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4667,"Shadow Mend Impact","spells\Shadow_Mend_Impact.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4668,"Banish (Yellow)","spells\banish_chest_yellow.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4669,"Master's Call Impact","spells\masterscall_impact.mdx",1,1.3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4670,"Strangulate State on Head","SPELLS\DeathKnight_Strangulate_Chain.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4671,"Spirit Link Base Effect","spells\shaman_spiritlink.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4672,"BeastRage State Head","Spells\BeastRageState.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4673,"Charred Earth (0.1)","spells\nightbane_area_base.mdx",1,0.1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4674,"Divine Storm Cast","spells\divine_storm_state.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4675,"Divine Storm Impact Damage","spells\divine_storm_impact_damage.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4676,"Divine Storm Heal","spells\divine_storm_impact_heal.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4677,"Infusion of Light Impact Base","spells\infusion_of_light_impact.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4678,"Ice Nuke Base (Frostbrood) (small)","spells\IceNuke_Base_Impact.mdx",0.1,0.1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4679,"Sacred Cleansing Impact Head","spells\sacred_cleansing_impact.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4680,"Haunt Impact Heal Chest (Large)","spells\haunt_heal.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4681,"Haunt Missile","spells\haunt_missile.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4682,"Haunt Impact Damage","spells\haunt_impact.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4683,"Trueshot Aura Cast","spells\trueshot_aura_cast_base.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4684,"Cripple State Base","Spells\Cripple_State_Base.mdx",2,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4685,"Ancestral Awakening Impact Base","spells\shaman_ancestralawakening.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4686,"Judgement of the Pure Impact","spells\judgement_of_the_pure_impact.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4687,"Cripple State Base","Spells\Cripple_State_Base.mdx",3.5,3.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4688,"Explosion (New) (Dest_Tower_Impact) (small)","spells\dest_tower_impact_fx.mdx",0,0.25,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4689,"FlamestrikeSmall Impact Base","spells\flamestrikesmall_impact_base.mdx",0,0.25,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4690,"DustCloud Land","Spells\DustCloud_Land.mdx",1,3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4691,"Demon Strike Cast Base","spells\mangle_impact.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4692,"Throw Bone Armor","Spells\DeathKnight_BoneArmor.mdx",0,0.75,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4693,"Turn the Tables Impact","spells\turnthetables_impact.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4694,"Dismantle Impact State","spells\dismantle_state.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4695,"Ice Block State - 6.00","spells\icebarrier_state.mdx",1,6,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4696,"Crashing Wave: Poison (0.5)","Spells\Missile_Wave_WaterGreen.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4697,"Demon Strike Impact Chest","spells\mangle_impact_demon.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4698,"Portal: Boss Shadow","Spells\Creature_SpellPortal_LargeShadow.mdx",1,1.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4699,"Smoke Flare, White, Very Small","spells\SmokeFlare_White.mdx",1,0.1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4700,"Ice ImpactDD Uber Chest 4.0","Spells\Ice_ImpactDD_Uber_Chest.mdx",1,4,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4701,"Haunt Heal Missile","spells\haunt_missile_soul.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4702,"Ice Block Object","world\goober\g_iceblock.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4703,"Ribbon Trail","Spells\RibbonTrail.mdx",0,3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4704,"Missile: Demolisher","spells\Demolisher_Missile.mdx",3,3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4705,"Missile: Demolisher (2.50)","Spells\Demolisher_Missile.mdx",0,2.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4706,"Missile: Plague Barrel (2.5)","Spells\ForsakenCatapult_Missile.mdx",0,2.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4707,"Missile: Siege Tank (2.5)","Spells\SiegeTank_Missile.mdx",0,2.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4708,"Quest - Fire Extinguisher State","world\generic\dwarf\passive doodads\tavernstuff\brewerytanks01.mdx",0.15,0.15,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4709,"Blue_PotionB01 (Large)","spells\potion_blue01_spellobject.mdx",2,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4710,"Nature Form","spells\nature_form_precast.mdx",0,1.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4711,"DustCloud Land","Spells\DustCloud_Land.mdx",1,1.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4712,"Missile: Plague Barrel (New)","spells\ForsakenCatapult_Missile.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4713,"Eye of Acherus 02","world\expansion02\doodads\generic\scourge\sc_eyeofacherus_02.mdx",0,6,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4714,"Explosion: Fel","spells\Xplosion_Fel_Impact.mdx",1,3.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4715,"Explosion: Firey","spells\Xplosion_Fire_Impact.mdx",1,3.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4716,"Explosion: Dust","spells\Xplosion_Dust_Impact.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4717,"Bind2 Impact Base","Spells\Bind2_Impact_Base.mdx",0,3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4718,"Ghost_state","Spells\Ghost_state.mdx",0,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4719,"Ghostly Strike Impact Chest","spells\ghostlystrike_impact_chest.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4720,"Explosion: Firey (small)","spells\Xplosion_Fire_Impact.mdx",1,0.75,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4721,"Explosion: Firey (very small)","spells\Xplosion_Fire_Impact.mdx",1,0.25,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4722,"Rocket Blast Down (Small)","spells\rocketblast_down.mdx",0.25,0.25,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4723,"ThunderClap Cast Base","Spells\ThunderClap_Cast_Base.mdx",0,4,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4724,"Item - Wine Glass Purple","spells\wineglass_01_spellobject.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4725,"Snowball Impact Chest","spells\snowball_impact_chest.mdx",1,10,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4726,"Guardian Spirit State Base","spells\priest_guardianspirit.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4727,"Blood Elf Power Orb","world\expansion01\doodads\generic\bloodelf\powerorb\bloodelf_powerorb_red.mdx",0,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4728,"Item - Wine Glass White","spells\wineglass_02_spellobject.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4729,"Savage Roar Impact Head","spells\endlessrage_impact_head.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4730,"Force Shield Fire (Blue)","Spells\fireforceshield_blue.mdx",1,1.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4731,"ForceShield Fire Blue","Spells\FireForceShield_Blue.mdx",1,1.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4732,"Ghost_state","Spells\Ghost_state.mdx",0,0.2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4733,"Missile: Tuskarr Fishing Hook","world\expansion02\doodads\generic\tuskarr\ts_fishinghook_hook.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4734,"Seaforium Impact Base","Spells\Distract_Impact_Base.mdx",0,3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4735,"Spell Object: Plague Bomb (Green)","world\expansion02\doodads\generic\scourge\sc_plaguebomb_green.mdx",1,0.15,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4736,"Haunt Missile (Large)","spells\haunt_missile.mdx",3,3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4737,"BloodStrike Impact (Large)","spells\deathknight_bloodstrike_impact.mdx",4,4,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4738,"Thunder Hold","spells\shaman_thunder_hold.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4739,"Missile: Cyclone (Small)","Spells\Cyclone_Caster_State.mdx",0.25,0.25,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4740,"Arcane Explosion (2.0)","Spells\ArcaneExplosion_Base.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4741,"Dragon Breath: Fire","Spells\DragonBreath_Fire.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4742,"Sleep State Head","Spells\Sleep_State_Head.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4743,"Metamorphosis Impact Base","spells\metamorphosis.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4744,"Quest - Healing Winds","spells\Divine_Protector_State.mdx",0,10,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4745,"Ghost_state","Spells\Ghost_state.mdx",0,0.75,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4746,"Missile: Rocket (small)","spells\Missle_Rocket.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4747,"Acid Breath (Liquid)","spells\acidliquidbreath.mdx",1,0.75,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4748,"IntimidatingShout Cast Base","Spells\IntimidatingShout_Cast_Base.mdx",0,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4749,"Dragon Breath Fire (New)","spells\DragonBreath_Fire.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4750,"Anti-Magic Zone","Spells\DeathKnight_AntiMagicZone.mdx",0,0.45,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4751,"Earth Spike","Spells\GroundSpike_Impact.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4752,"Bone Arm","SPELLS\BoneArm_01.mdx",0,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4753,"Pet Toy - Pet Grooming Kit State","particles\lootfx.mdx",1.5,1.5,1,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4754,"Sparkle","spells\enchantments\sparkle_a.mdx",0,5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4755,"Living Bomb Explosion Area (Large)","spells\mage_livingbomb_area.mdx",2,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4756,"Xplosion Dust","spells\Xplosion_Dust_Impact.mdx",2,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4757,"Quest - Air Revenant Entrance Cast","spells\cyclone_caster_state.mdx",0,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4758,"Water Nova","Spells\Water_Nova.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4759,"Missile: Boulder (3x)","Spells\Boulder_Missile.mdx",0,3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4760,"Missile: Boulder (4.5x)","Spells\Boulder_Missile.mdx",0,4.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4761,"Acid Burn Purple (Low-Poly) - 0.75","Spells\AcidBurn_Small_Purple.mdx",1,0.75,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4762,"Cripple Impact Base","Spells\Cripple_Impact_Base.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4763,"Portal: Boss Light Fire","spells\Creature_SpellPortalLarge_LightRed.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4764,"GrayStone02","world\generic\passivedoodads\graystone\graystone02.mdx",1,0.2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4765,"DustNova Cast Base","spells\dustnova_cast_base.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4766,"DiremaulMagicVortex","World\Kalimdor\DireMaul\PassiveDoodads\Vortex\DiremaulMagicVortex.mdx",0,0.01,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4767,"SkyVortex","World\Expansion02\Doodads\ZulDrak\SkyVortex\ZulDrak_SkyVortex.mdx",0,0.05,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4768,"Detect Magic Recursive","spells\DetectMagic_Recursive.mdx",0,30,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4769,"Magic Burst","spells\MagicBurst_Impact.mdx",0,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4770,"Thunder Hold","spells\shaman_thunder_hold.mdx",1,1.3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4771,"Fire Bomb","spells\firebomb_missle.mdx",1,2.25,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4772,"CycloneWater State","Spells\CycloneWater_State.mdx",0,20,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4773,"Missile: Cyclone (Large)","Spells\Cyclone_Caster_State_Scaled.mdx",8,8,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4774,"Sack (Open at Top)","World\Azeroth\Stranglethorn\PassiveDoodads\TrollDungeonSacks\TrollDungeonSacks.mdx",1,0.6,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4775,"Sack (Closed)","world\generic\passivedoodads\furniture\containers\sack01.mdx",1,0.6,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4776,"Fire Bomb","spells\firebomb_missle.mdx",1,0.75,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4777,"MagePortal: Blank","spells\mageportal_blank.mdx",1,5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4778,"Fire ImpactDD Uber Chest","Spells\Fire_ImpactDD_Uber_Chest.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4779,"BloodLust State Hand","Spells\BloodLust_State_Hand.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4780,"Instance Portal: Blue","spells\InstanceNewPortal_Blue.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4781,"Arcane Ward Impact Chest","spells\ArcaneWard_Impact_Chest.mdx",1,3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4782,"Lightning PreCast Low Hand","Spells\Lightning_PreCast_Low_Hand.mdx",1,3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4783,"Anti-Magic Zone","Spells\DeathKnight_AntiMagicZone.mdx",0,0.25,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4784,"Shredder Smoke 0.5","world\generic\passivedoodads\particleemitters\blacksmith_smoke.mdx",0,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4785,"Bone (Large)","world\generic\passivedoodads\furniture\refuse\bone01.mdx",0,3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4786,"Mind Sear Target Impact Base","spells\priest_mindshear.mdx",0,1,0.01,1); 
-INSERT INTO `SpellVisualEffectName` VALUES (4787,"Mind Sear Impact","Spells\ArcaneExplosion_Impact_Chest.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4788,"Zangarmarsh Arcane Missile (2.00)","spells\zangarmarsh_arcane_missile.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4789,"Retribution Aura Red Base","Spells\RetributionAuraRed_Base.mdx",0,1.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4790,"Air Rift","world\environment\doodad\generaldoodads\elementalrifts\airrift.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4791,"Dragon Breath: Arcane","Spells\DragonBreath_Arcane.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4792,"LightningBoltIvus Missile","Spells\LightningBoltIvus_Missile.mdx",1,0.4,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4793,"Banner, Knights of the Ebon Blade 02","world\expansion02\doodads\generic\ebonblade\ebonblade_banner02.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4794,"Acid Burn (Low-Poly)","Spells\Acidburn_Small.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4795,"Shell Shield State","Spells\ShellShield_State_Base.mdx",1,0.75,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4796,"Dragon Breath: Fire","Spells\DragonBreath_Fire.mdx",0,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4797,"Arcane Barrage Impact","spells\mage_arcanebarrage_impact.mdx",0,8,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4798,"Devastate Impact Chest","spells\warrior_devastate.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4799,"Quest - Frost_Ground_Trail_HighQ","spells\Frost_Ground_Trail_HighQ.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4800,"RockyFrost Nova State (0.5)","spells\rockyfrost_nova_state.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4801,"Smoke - Infernal","spells\infernal_smoke_rec.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4802,"Dragon Breath: Arcane","Spells\DragonBreath_Arcane.mdx",0,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4803,"ArcaneExplosion Base","Spells\ArcaneExplosion_Base.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4804,"Arcane Barrage Impact","spells\mage_arcanebarrage_impact.mdx",0,6,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4805,"Arcane Barrage Impact","spells\mage_arcanebarrage_impact.mdx",0,4,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4806,"Fire_SmokeTrail","spells\fire_smoketrail.mdx",1,3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4807,"Frost Bolt Missile","Spells\Frostbolt.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4808,"Arcane Torrent Cast","Spells\ArcaneTorrent.mdx",1,4,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4809,"Smoke Flare (Red)","spells\SmokeFlare_Red.mdx",1,3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4810,"Fan of Knives","spells\fanofknives_missile.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4811,"Fan of Knives Missile","spells\fanofknives_missile.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4812,"Fan of Knives Impact","spells\fanofknives_impact.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4813,"Fan of Knives Cast","spells\fanofknives_precast.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4814,"Thunder Caster Impact","spells\shaman_thunder.mdx",1,13,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4815,"Lightning Cast Hand","Spells\Lightning_Cast_Hand.mdx",0,5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4816,"Cone of Cold Hand (Small)","Spells\ConeofCold_Hand.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4817,"Lightning PreCast Low Hand","Spells\Lightning_PreCast_Low_Hand.mdx",1,5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4818,"LightningBolt Missile","Spells\LightningBolt_Missile.mdx",1,10,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4819,"Cone of Cold Breath (Small)","Spells\ConeofCold_Mouth.mdx",0,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4820,"Missile: Web (2.00)","Spells\Web_Missile.mdx",0,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4821,"Missile: Frost Giant, Ice Spear","world\expansion02\doodads\generic\frostgiant\frostgiant_spear01.mdx",1,0.2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4822,"Quest - Argent Champion","spells\argentcrusade_ctfflag_spell.mdx",0,0.6,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4823,"Quest - Time Snap Missile","creature\timerift\time_rift1.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4824,"LightningBolt Missile (5.00)","Spells\LightningBolt_Missile.mdx",1,5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4825,"Thorim's Hammer","item\objectcomponents\weapon\mace_1h_ulduarraidnotskinable_d_01.mdx",1,8,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4826,"Missile: Siege Tank (1.00)","Spells\SiegeTank_Missile.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4827,"Yogg-Saron Tentacles","World\Expansion02\Doodads\IceCrown\Tentacles\IceCrown_Tentacles_01.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4828,"Arcane Breath (0.75)","Spells\ArcaneBreath.mdx",1,0.75,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4829,"Arcane Barrage Impact","spells\mage_arcanebarrage_impact.mdx",0,0.75,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4830,"Quest - Trapped Crusader Webbing","spells\webspin.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4831,"LightningBolt Missile (9.00)","Spells\LightningBolt_Missile.mdx",1,9,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4832,"DustNova Cast Base","spells\dustnova_cast_base.mdx",1,0.35,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4833,"Divine Storm State","spells\divine_storm_state.mdx",0,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4834,"Guardian Spirit State (Large)","spells\priest_guardianspirit.mdx",0,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4835,"LifeBloom State","spells\LifeBloom_State.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4836,"Nature Cast Hand (Purple)","spells\nature_cast_hand_purple.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4837,"Crashing Wave: Purple","spells\missile_wave_watepurple.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4838,"Bloody Explosion Purple Impact","spells\bloodyexplosionpurple.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4839,"Missile: GooBolt Purple","spells\goobolt_missile_low_purple.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4840,"Acid Breath Purple (Liquid)","spells\acidliquidbreath_purple.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4841,"Crashing Wave: Purple (0.5)","spells\missile_wave_watepurple.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4842,"Starfall State No Moon","spells\starfall_state_nosun.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4843,"Chieftain's Totem State","World\Expansion02\Doodads\WinterTauren\WT_Totem01Snow.mdx",0,0.06,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4844,"Whirlwind Base","Spells\Whirlwind_State_Base.mdx",0,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4845,"Sonic Impact DD Uber Chest","spell\sonicboom_impactdd_uber_chest.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4846,"Sonic Impact DD Uber Chest","spell\sonicboom_impactdd_uber_chest.mdx",0,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4847,"Divine Protector State","spells\Divine_Protector_State.mdx",0,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4848,"Acid Cloud Breath Smoke","spells\acidcloudbreath_groundsmoke.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4849,"Missile: Krusk Spear","world\goober\G_KruskSpear.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4850,"Acid Cloud Breath Smoke (Frost)","spells\AcidCloudBreath_GroundSmoke_Blue.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4851,"Missile: Horn","World\Kalimdor\Silithus\PassiveDoodads\Elven\elventowerSilithusHorn.mdx",0,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4852,"Ghost_state","Spells\Ghost_state.mdx",0,3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4853,"Dragon Breath Frost","spells\DragonBreath_Frost.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4854,"Explosive Gas Nova","spells\explosivegaseous_nova.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4855,"Vrykul Sword 01","world\expansion02\doodads\generic\vrykul\weapons\vr_bm_ sword_01.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4856,"Holy Bomb","Spells\HolyBomb_Missle.mdx",0,0.5,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (4857,"Acid Cloud Breath Blue (Fast)  - 2.00","spells\AcidCloudBreath_Fast_Blue.mdx",2,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4858,"Dragon Breath Frost (Small)","spells\DragonBreath_Frost.mdx",1,0.25,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4859,"Dragon Breath: Fire","spells\DragonBreath_Fire.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4860,"Dragon Breath: Fire","spells\DragonBreath_Fire.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4861,"Fire Smoke Trail","spells\Fire_SmokeTrail.mdx",1,20,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4862,"Fire Reflect State Chest","spells\firereflect_state_chest.mdx",1,4,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4863,"Dragon Breath Frost (Half)","spells\DragonBreath_Frost.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4864,"Shadowstep Cast Base (2.00)","spells\shadowsteps_fx.mdx",0,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4865,"Canon_Impact_Dust Impact (Chest)","spells\Canon_Impact_Dust.mdx",2,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4866,"Rejuvenation Impact Base","Spells\Rejuvenation_Impact_Base.mdx",1,4,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4867,"Seeping Gaseous Fel Nova","spells\SeepingGaseous_Fel_Nova.mdx",1,5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4868,"Ghost_state (Green)","spells\greenghost_state.mdx",1,5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4869,"LifeBloom Impact","spells\LifeBloom_Impact.mdx",1,5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4870,"Fire Bomb","spells\firebomb_missle.mdx",1,17,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4871,"Immolate Impact Chest","Spells\Immolate_Impact_Chest.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4872,"Upper Deck - Weather Machine - Lightning","spells\Goblin_Weather_Machine_Lightning.mdx",1,1.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4873,"Force Shield Arcane (Green)","Spells\ArcaneForceShield_Green.mdx",1,3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4874,"Explosive Shot Impact Chest (Large)","spells\explosive_shot_impact.mdx",4,4,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4875,"Expanding Force Bubble (Large)","spells\Expanding_Force_Bubble.mdx",3,3,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (4876,"Holy Nova Impact Base (Large)","spells\holynova_impact_base.mdx",4,4,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4877,"Holy Missile Uber (Large)","Spells\Holy_Missile_Uber.mdx",3,3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4878,"Arcane Power State Chest","spells\arcanepower_state_chest.mdx",1,25,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4879,"Zangarmarsh Arcane Impact","spells\zangarmarsh_arcane_impact.mdx",1,12,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4880,"Spike State (3 central)","Spells\Spike2_Impact_Base.mdx",0,0.5,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (4881,"Ghoul Explode","SPELLS\DeathKnight_Ghoul_Explode.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4882,"Arcane Impact Chest","Spells\Magic_Impact_Chest.mdx",1,5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4883,"Divine Protector Missile","spells\Divine_Protector_State.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4884,"Cone of Cold Breath (1.00)","Spells\ConeofCold_Mouth.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4885,"Crashing Wave: Fire","Spells\Missile_Wave_Fire.mdx",1,2.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4886,"Portal: Large Nature","Spells\Creature_SpellPortalLarge_Green.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4887,"Mind Sear Target Impact Base","spells\priest_mindshear.mdx",0,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4888,"ShadowWordSilence Breath","Spells\ShadowWordSilence_Breath.mdx",1,3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4889,"Shadow Dance Impact Chest","spells\shadowdance_state.mdx",0,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4890,"Shadow ImpactDD Med Chest","Spells\Shadow_ImpactDD_Med_Chest.mdx",1,4,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4891,"Dragon Breath Shadow","spells\dragonbreath_shadow.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4892,"Xplosion Fire Impact","spells\Xplosion_Fire_Impact.mdx",2,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4893,"Explosion: Firey","spells\Xplosion_Fire_Impact.mdx",1,1.75,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4894,"Cannonball Missile (x1.0 scale)","world\generic\human\passive doodads\catapultruins\catapultball01.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4895,"CycloneFire State","Spells\CycloneFire_State.mdx",0,1.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4896,"LowPolyFire","world\generic\pvp\fires\lowpolyfire.mdx",1,0.1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4897,"Instance Portal (Blue, Arcane)","spells\instancenewportal_blue_arcane.mdx",0,1,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (4898,"Loot FX","particles\lootfx.mdx",1.5,1.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4899,"Blaze","Spells\Archimonde_Fire.mdx",0,0.8,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (4900,"Sunwell Beam FX (Micro)","spells\sunwell_beamfx.mdx",0.2,0.2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4901,"Dragon Breath Fire (New)","spells\DragonBreath_Fire.mdx",0.1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4902,"Dragon Breath Fire (New)","spells\DragonBreath_Fire.mdx",1,0.1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4903,"Quest - Sprinkle Holy Water","spells\potion_silver01_spellobject.mdx",0,1,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (4904,"Sunwell Ground FX","spells\sunwell_groundfx.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4905,"MoonBeam State Base (SmallBlue)","Spells\MoonBeamBlue_Impact_Base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4906,"Path of Frost","Spells\DeathKnight_PathofFrost.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4907,"Icecrown Airship - Cannon Fire","spells\Demolisher_Missile.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4908,"Thunder Hold","spells\shaman_thunder_hold.mdx",1,1.4,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4909,"Energize (Energy) Impact Base","spells\energizegain_energy.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4910,"Energize (Mana) Impact Base","spells\energizegain_mana.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4911,"Energize (Rage) Impact Base","spells\energizegain_rage.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4912,"Energize Lost (Energy) Impact Base","spells\energizelost_energy.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4913,"Energize Lost (Mana) Impact Base","spells\energizelost_mana.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4914,"Energize Lost (Rage) Impact Base","spells\energizelost_rage.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4915,"Energize (Mana) (Minor) Impact Base","spells\manainfuse_base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4916,"Shield Wall Impact Base (x3 scale)","Spells\ShieldWall_Impact_Base.mdx",0,3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4917,"Form Shadow Precast","Spells\Shadow_Form_Precast.mdx",1,3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4918,"Low Poly Fire (Big)","World\Generic\PVP\Fires\LowPolyFireAnim.mdx",1,3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4919,"LowPolyFire","world\generic\pvp\fires\lowpolyfire.mdx",1,2.25,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4920,"Arcane Power State Chest","spells\arcanepower_state_chest.mdx",1,1.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4921,"Portal: Instance Blue Arcane","spells\InstanceNewPortal_Blue_Arcane.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4922,"Shell Shield State","Spells\ShellShield_State_Base.mdx",1,3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4923,"Saronite Pallet","World\Expansion02\Doodads\Generic\Scourge\SC_YoggthoriteBar_Stack_01.mdx",0,2,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (4924,"Flesh Giant Boot","World\Expansion02\Doodads\Generic\Scourge\SC_Fleshgiant_Boot.mdx",0,3,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (4925,"Scourge Crate","World\Expansion02\Doodads\Generic\Scourge\SC_crate_01.mdx",0,2,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (4926,"Flesh Giant Torso","World\Expansion02\Doodads\Generic\Scourge\SC_Fleshgiant_Torso.mdx",0,0.5,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (4927,"Holy Bomb (Large)","Spells\HolyBomb_Missle.mdx",3,3,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (4928,"Divine Storm State (Huge)","spells\divine_storm_state.mdx",3,3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4929,"HolyShield_State_Base (Large)","spells\holyshield_state.mdx",3,3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4930,"Waylay State (Large)","spells\waylay_state.mdx",4,4,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4931,"Deterrence State","spells\deterrence_state_base.mdx",15,15,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4932,"Firestarter Impact Head","spells\Mage_Firestarter.mdx",0,1,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (4933,"Green Summoning State","spells\DemonicCircleSummon_Base.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4934,"Missile Barrage Effect Impact","SPELLS\Mage_MIssilebarrage.mdx",0,1,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (4935,"Missile: Boulder (0.5)","Spells\Boulder_Missile.mdx",0,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4936,"Spell Object: Rock","spells\boulder_missile.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4937,"Quest - Might of Mograine Flag (Freed)","world\expansion02\doodads\generic\ebonblade\ebonblade_banner01.mdx",0.5,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4938,"Portal: Purple","spells\creature_spellportal_purple.mdx",1,0.1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4939,"Banish (Purple)","spells\banish_chest_purple.mdx",1,0.1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4940,"Missile: Banana","World\Generic\PassiveDoodads\Fruits\Fruit_banana.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4941,"Water Breath (Tiny)","spells\WaterLiquidBreath.mdx",1,0.2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4942,"ArcaneExplosion Base","Spells\ArcaneExplosion_Base.mdx",1,3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4943,"Quest - Spit Missile","spells\SlimeLesserExplode_Missile.mdx",1,0.1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4944,"BloodStrike Impact","spells\deathknight_bloodstrike_impact.mdx",4,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4945,"Dragon Breath Fire (New) (Small)","spells\DragonBreath_Fire.mdx",1,0.25,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4946,"Frost Trap Aura","spells\frosttrap_aura.mdx",1,2.25,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4947,"Flames (Small)","world\lordaeron\stratholme\passivedoodads\fx\stratholmefiresmokeembers.mdx",1,0.1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4948,"Item - Fish (New)","world\azeroth\bootybay\passivedoodad\deadfish\fishdeadorange.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4949,"Missile: Rock Shards","World\Expansion02\Doodads\DragonBlight\DragonBlight_Shard_Grey_01.mdx",1,0.1,0.1,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4950,"Banish (Blue)","spells\banish_chest_blue.mdx",1,20,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4951,"Item - Tankard (Large)","Spells\TankardA_SpellObject.mdx",0,1.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4952,"Vanish Cast Base","spells\vanish_cast_base.mdx",0,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4953,"Xplosion Dust","spells\Xplosion_Dust_Impact.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4954,"Ground Rupture","spells\ground_rupture.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4955,"Xplosion Dust","spells\Xplosion_Dust_Impact.mdx",0.5,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4956,"Smoke?","World\Lordaeron\Stratholme\PassiveDoodads\FX\StratholmeSmokeEmitter.mdx",0,1,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (4957,"LightningStorm Cloud Low State","Spells\LightningStorm_CloudLow_State.mdx",2,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4958,"Banish (Purple) - 10x","spells\banish_chest_purple.mdx",1,5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4959,"LightningBolt Missile (0.2)","Spells\LightningBolt_Missile.mdx",1,0.2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4960,"Sparkle (0.5)","spells\enchantments\sparkle_a.mdx",0,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4961,"Nexus_Raid_Floating_platform_Beam","spells\Nexus_Raid_Floating_platform_BeamFX.mdx",0,1,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (4962,"Stoneform State Chest","Spells\Stoneform_State_Base.mdx",1,6,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4963,"Fire ImpactDD Med Chest","Spells\Fire_ImpactDD_Med_Chest.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4964,"Incinerate Impact","spells\incinerate_impact_base.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4965,"Incinerate Missile (2.00)","spells\incinerate_low_base.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4966,"Missile: Yellow Crystal","world\expansion01\doodads\silvermyst\crystals\silvermystcrystal01_yellow.mdx",1,0.05,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4967,"Burning Corpse State","World\Lordaeron\Stratholme\PassiveDoodads\FX\StratholmeFireSmokeEmberM.mdx",1,0.2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4968,"Banish (Red) - 0.40","spells\bloodbolt_chest.mdx",1,0.4,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4969,"Cloud: Red","spells\redradiationfog.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4970,"Explosion - Fel (Plague Barrel)","spells\Xplosion_Fel_Impact.mdx",0,2.5,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (4971,"Acid Cloud Breath Smoke ","spells\acidcloudbreath_groundsmoke.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4972,"Acid Cloud Base","spells\acidcloudbreath_groundsmoke.mdx",0,0.5,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (4973,"Bomb Explosion (x12)","Spells\Bomb_ExplosionA.mdx",1,12,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4974,"Bladestorm State","spells\warrior_bladestorm.mdx",0,1.35,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4975,"MagePortal: Stormwind","world\generic\activedoodads\spellportals\MagePortal_Stormwind.mdx",0,3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4976,"DustNova Cast Base","spells\dustnova_cast_base.mdx",1,0.1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4977,"Plague Strike State","Spells\DeathKnight_PlagueStrikeState.mdx",0,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4978,"Banish (Yellow) ","spells\banish_chest_yellow.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4979,"Arrow Fire (2.0)","Item\ObjectComponents\Ammo\ArrowFireFlight_01.mdx",0,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4980,"Explosion: Firey","spells\Xplosion_Fire_Impact.mdx",1,1.25,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4981,"Explosion: Fel (1.5)","spells\Xplosion_Fel_Impact.mdx",1,1.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4982,"Explosion - Fel (Plague Barrel)","spells\Xplosion_Fel_Impact.mdx",0,1,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (4983,"Dark Ritual PreCast Base","Spells\DarkRitual_PreCast_Base.mdx",1,3.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4984,"Cosmetic - Ship UD FX","spells\Transport_Ship_UD_FX.mdx",0,1,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (4985,"Ghoul Arms","Spells\DeathKnight_Desecration.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4986,"Wave: Water (Small)","Spells\Wave_Water.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4987,"Banner, Battle Standard, Alliance","item\objectcomponents\battlestandards\battlestandard_alliance_a_01\battlestandard_alliance_a_01.mdx",0,3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4988,"Banner, Battle Standard, Horde","item\objectcomponents\battlestandards\battlestandard_horde_a_01\battlestandard_horde_a_01.mdx",0,3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4989,"Quest - Warchief's Blessing (Flag) State","spells\HordeCTFflag_spell.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4990,"B-Ball","Spells\Fireball_Blue_Missile_High.mdx",1,66,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4991,"Water Bubble Chest State (Very Big)","spells\waterbubble.mdx",1,10,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4992,"Force Shield Arcane (Purple)","spells\arcaneforceshield_purple.mdx",1,25,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4993,"Dust Nova","spells\dustnova_cast_base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4994,"Eclipse Impact Base (Wrath)","spells\druid_eclipse_orange.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4995,"Shadow Form New","Spells\Shadow_Form_Precast.mdx",0,2,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (4996,"Groundspike Impact Base","spells\groundspike_impact.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4997,"Gift of the water Spirit Base imapct","spells\giftwaterspirit_impact_base.mdx",1,4,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4998,"Metamorphosis Impact Base)","spells\metamorphosis.mdx",0,4,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (4999,"Shadow Dance Impact Chest","spells\shadowdance_state.mdx",0,8,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5000,"Scourge CTF Flag","spells\SC_CTFflag_spell.mdx",1,1.25,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5001,"Bloody Explosion Green Impact (LARGE)","Spells\BloodyExplosionGreen.mdx",0,8,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5002,"Banner, Hanging, Horde","world\generic\pvp\battlefieldbanners\battlefieldbannerhordeflagonly.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5003,"Missile: Goblin Cannon Rocket","spells\goblin_cannon_missile.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5004,"Arcane Bomb - 18.00","spells\arcanebomb_missle.mdx",1,18,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5005,"ArcaneSpirit Impact Base","Spells\ArcaneSpirit_Impact_Base.mdx",0,3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5006,"Haunt Missile Soul","Spells\Haunt_Missile_Soul.mdx",1,1,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5007,"Coilfang_Blue_Energy.mdx","World\Expansion01\Doodads\Coilfang\Passivedoodads\BlueEnergy\Coilfang_Blue_Energy.mdx",0.5,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5008,"Azjol_Platform_FX_01.mdx","World\Expansion02\Doodads\Ulduar\UL_lightning_Blue01.mdx",1,1,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5009,"WGH - New Windfury","spells\New_Windfury.mdx",0,1,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5010,"Arcane Missile Lvl 1 - 0.50","Spells\Arcane_Missile_Lvl1.mdx",0,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5011,"Banner, Side, Horde","world\generic\pvp\battlefieldbanners\battlefieldbannerhorde.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5012,"Banner, Hanging, Alliance","world\generic\pvp\battlefieldbanners\battlefieldbanneralliance_static_wall.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5013,"Banner, Standing, Alliance","world\generic\pvp\battlefieldbanners\battlefieldbanneralliance.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5014,"Strangulate Impact Head ","SPELLS\DeathKnight_Strangulate.mdx",1,1.8,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5015,"Fire Cast Hand","Spells\Fire_Cast_Hand.mdx",0,3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5016,"Anti-Magic Zone (Big)","Spells\DeathKnight_AntiMagicZone.mdx",0,6,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5017,"ShadowFlame Impact (Large)","spells\shadowflame_impact.mdx",0,3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5018,"Purple Wisp","world\kalimdor\blackfathom\passivedoodads\lights\bfd_wispsmallpurple.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5019,"Souls State","world\expansion02\doodads\generic\scourge\sc_spirits_01.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5020,"Tricks of the Trade Impact","spells\rogue_trick_of_the_trade_impact.mdx",0,1,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5021,"Metamorphosis Impact Base)","spells\metamorphosis.mdx",0,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5022,"Missile: Blood Elf Power Orb (Red) (x0.10)","world\expansion01\doodads\generic\bloodelf\powerorb\bloodelf_powerorb_red.mdx",1,0.1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5023,"Shadow Dance Impact Chest","spells\shadowdance_state.mdx",0,3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5024,"Tricks of the Trade State","spells\rogue_trick_of_the_trade_state.mdx",0,1,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5025,"Death Pact Impact (Huge)","SPELLS\DeathKnight_DeathPactTarget.mdx",5,10,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5026,"Shadow Nova Cast (10.0)","spells\shadow_nova_area.mdx",1,10,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5027,"WGH - Roll Putress Head","world\expansion02\doodads\dalaran\dalaran_helm_mail_northrend_d_01.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5028,"WGH - Strengh of Wrynn","spells\AllianceCtfflag_generic_spell.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5029,"Canon_Impact_Dust Impact (Chest)","spells\Canon_Impact_Dust.mdx",2,10,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5030,"Hellfire Area Base","Spells\HellFire_Area_Base.mdx",1,0.75,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5031,"Ice Precast Uber Hand","Spells\Ice_Precast_Uber_Hand.mdx",1,4,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5032,"DustCloud Land","Spells\DustCloud_Land.mdx",1,5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5033,"Force Shield Arcane (Yellow)","spells\arcaneforceshield_yellow.mdx",1,8,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5034,"Frost Giant Spear","world\expansion02\doodads\generic\frostgiant\frostgiant_spear01.mdx",1,0.1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5035,"Cripple State Chest - 2.0","Spells\Cripple_State_Chest.mdx",2,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5036,"ShadowGuard_State_Base","spells\shadowshield_state_base.mdx",5,5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5037,"Explosion: Firey","spells\Xplosion_Fire_Impact.mdx",1,6,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5038,"Stratholme Fire Smoke Embe","World\Lordaeron\Stratholme\PassiveDoodads\FX\StratholmeFireSmokeEmberM.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5039,"Stratholme Fire Smoke Ember","World\Lordaeron\Stratholme\PassiveDoodads\FX\StratholmeFireSmokeEmberM.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5040,"Swipe Impact","Spells\SwipeImpact.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5041,"Dust Nova","spells\dustnova_cast_base.mdx",0.25,0.25,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5042,"Whirlwind Base","Spells\Whirlwind_State_Base.mdx",0,5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5043,"Frozen Rune Weapon State","Spells\DeathKnight_FrozenRuneWeapon_State.mdx",0,5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5044,"CycloneEarth State","Spells\CycloneEarth_State.mdx",1,3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5045,"Shield Wall Impact Base Blue (large) ","spells\shieldwall_impact_base_blue.mdx",1,10,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5046,"Shield Wall Impact Base Red (large)","spells\shieldwall_impact_base_red.mdx",1,10,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5047,"Cripple State Chest","Spells\Cripple_State_Chest.mdx",0.5,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5048,"Banish (Dark)","spells\Banish_Chest_Dark.mdx",1,0.25,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5049,"Vehicle Flag - Horde (Chest)","World\Generic\PVP\CTFflags\HordeCTFflag.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5050,"Vehicle Flag - Alliance Flag (Blue)","World\Generic\PVP\CTFflags\AllianceCTFflag_Generic.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5051,"Nexus_FX_exterior_Beam.mdx","World\Expansion02\Doodads\Nexus\Nexus_FX_exterior_Beam.mdx",0.1,0.1,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5052,"Banish (Purple) - 3x","spells\banish_chest_purple.mdx",1,3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5053,"Red Glow High","Spells\Enchantments\RedGlow_High.mdx",1,30,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5054,"Shield Wall Impact Base Red (med)","spells\shieldwall_impact_base_red.mdx",1,7,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5055,"Banish (Dark)","spells\Banish_Chest_Dark.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5056,"Shield Wall Impact Base Blue (med)","spells\shieldwall_impact_base_blue.mdx",1,7,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5057,"Fire Bomb","spells\firebomb_missle.mdx",1,1.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5058,"Snake Spin","spells\snakespin.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5059,"Snake Spin","spells\snakespin.mdx",1,0.3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5060,"WGA - Blight Explosion (SPAWN)","spells\Xplosion_Fel_Impact.mdx",3,5,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5061,"Fire Bomb","spells\firebomb_missle.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5062,"FireStrike Missile Low - .5","Spells\FireStrike_Missile_Low.mdx",0,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5063,"Nefarian State Base","spells\nefarian_state_base.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5064,"Grobbulus Poison Cloud","Spells\Poison_Cloud_Grobbulus.mdx",1,0.25,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5065,"Chaos Bolt State Effect","spells\decimate_state.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5066,"Shield: Fire Force (Purple)","Spells\FireForceShield_Purple.mdx",1,3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5067,"Fireball Missile Low - 2.0","Spells\Fireball_Missile_Low.mdx",2,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5068,"Smoke Flare (Purple) - 3.00","spells\SmokeFlare_Purple.mdx",1,3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5069,"Arcane Bomb","spells\arcanebomb_missle.mdx",1,0.25,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5070,"Missile: Arcane Shot - 4.00","spells\ArcaneShot_Missile.mdx",4,4,1,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5071,"Lightning PreCast Low Hand","Spells\Lightning_PreCast_Low_Hand.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5072,"Dalaran Eye","world\expansion02\doodads\dalaran\dalaran_eye_01.mdx",0,0.5,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5073,"Missile: Goblin Rocket","Spells\Goblin_Cannon_Missile.mdx",0,2.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5074,"Sparkle - Giant","spells\enchantments\sparkle_a.mdx",0,50,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5075,"Sparkle - Extra Large","spells\enchantments\sparkle_a.mdx",0,30,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5076,"Banish (Green)","Spells\Banish_Chest.mdx",0,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5077,"GreenGlow_High","spells\enchantments\greenglow_high.mdx",1,10,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5078,"Fire_SmokeTrail","spells\fire_smoketrail.mdx",1,5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5079,"Fel Firebolt Missile","spells\fel_firebolt_missile_low.mdx",1,3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5080,"Fel Firebolt Missile","spells\fel_firebolt_missile_low.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5081,"Object: Book_Dwarf_01","world\generic\human\passive doodads\books\book_dwarf_01.mdx",0,1,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5082,"Retribution Aura Red Base","Spells\RetributionAuraRed_Base.mdx",0,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5083,"Ice Missile Uber 10.0x","Spells\Ice_Missile_Uber.mdx",1,10,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5084,"Object: Book_Human_01","world\generic\human\passive doodads\books\book_human_01.mdx",0,1,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5085,"Object: Book_Human_03","world\generic\human\passive doodads\books\book_human_03.mdx",0,1,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5086,"Object: Book_Human_04","world\generic\human\passive doodads\books\book_human_04.mdx",0,1,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5087,"Object: Book_Troll_02","world\generic\human\passive doodads\books\book_troll_02.mdx",0,1,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5088,"Arena Pipe Flush","World\Expansion02\Doodads\Dalaran\Sewer\DalaranSewer_Arena_Wave_01.mdx",0,1,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5089,"Corpse Explosion Impact Dest","SPELLS\DeathKnight_CorpseExplosion.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5090,"Desecration Area","Spells\DeathKnight_Desecration.mdx",0,1,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5091,"Desecration","Spells\DeathKnight_Desecration_Spawn.M2",0,1,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5092,"Holiday - Valentine - Flower Shower Black","spells\black_roseshower_impact_base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5093,"Missile: Black Shot 0.5","spells\blackshot_missile.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5094,"Frost_Form","spells\frost_form_precast.mdx",0,20,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5095,"Corpse Explosion Impact Dest","SPELLS\DeathKnight_CorpseExplosion.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5096,"Thunder Caster Impact","spells\shaman_thunder.mdx",1,2.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5097,"Shockwave Area","spells\warrior_shockwave_area.mdx",0,5,0.01,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5098,"Holy Precast Uber Hand","Spells\Holy_Precast_Uber_Hand.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5099,"Holy Reflect State Chest","spells\HolyReflect_State_Chest.mdx",0,0.2,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5100,"Missile: Saw Blade (2)","spells\missile_sawblade.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5101,"Smoke Flare (Purple)","spells\SmokeFlare_Purple.mdx",1,0.25,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5102,"Shield: Fire Force (Purple)","Spells\FireForceShield_Purple.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5103,"Riptide Impact Base","spells\mage_riptide_impact.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5104,"Riptide State","spells\mage_riptide_state.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5105,"bunny","creature\rabbit\rabbitgold.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5106,"Sparkle Trail (0.5)","spells\sparktrail.mdx",0,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5107,"Holiday - Valentine - Heart State/Impact","spells\holidays\valentines_lookingforloveheart.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5108,"bunny (0.75)","creature\rabbit\rabbitgold.mdx",0,0.75,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5109,"Cyclone State (2x) ","Spells\Cyclone_State.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5110,"Stratholme Fire Smoke Ember (0.10)","World\Lordaeron\Stratholme\PassiveDoodads\FX\StratholmeFireSmokeEmberM.mdx",1,0.1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5111,"Feather (Brown) - 1.50","World\Generic\PassiveDoodads\Feathers\FeatherBigBrown.mdx",1,1.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5112,"Distract Impact Chest","Spells\Distract_Impact_Chest.mdx",0,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5113,"Hex Impact Base","Spells\Polymorph_Impact_Base.mdx",0.01,1,0.01,1); 
-INSERT INTO `SpellVisualEffectName` VALUES (5114,"Explosion: Firey","spells\Xplosion_Fire_Impact.mdx",1,0.25,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5115,"Canon_Impact_Dust Impact (Chest)","spells\Canon_Impact_Dust.mdx",1,0.25,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5116,"Object: Roast Boar","World\Generic\Human\Passive Doodads\Food\RoastBoarPlatter_nocollision.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5117,"Object: Roast Boar","World\Generic\Human\Passive Doodads\Food\RoastBoarPlatter_nocollision.mdx",1,0.1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5118,"Object: Red Potion","World\Expansion02\Doodads\Generic\Potions\Potion_Red04.mdx",1,0.25,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5119,"Object: Jug01","World\Azeroth\Elwynn\PassiveDoodads\jugs\jug01.mdx",1,0.25,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5121,"Object: BubblingBowl01","World\Generic\Orc\Passive Doodads\VoodooStuff\BubblingBowl01.mdx",1,0.25,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5122,"Object: SmallVials","World\Generic\Human\Passive Doodads\Vials\SmallVials.mdx",1,0.25,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5128,"Toy - Dalaran - Squirt Gun X","spells\waterliquidbreath.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5129,"Chainlightning Impact Chest","Spells\ChainLightning_Impact_Chest.mdx",0,0.75,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5130,"Thunderstorm","Spells\Shaman_Thunder.mdx",0,0.3,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5131,"Thunder Hold ","spells\shaman_thunder_hold.mdx",1,0.3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5132,"Power Infusion","Spells\Priest_PowerInfusion.mdx",0,1,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5133,"Holiday - Cornucopia","World\Generic\PassiveDoodads\Thanksgiving\G_Cornucopia.mdx",1,1,0.1,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5134,"Holiday - Cornucopia","World\Generic\PassiveDoodads\Thanksgiving\G_Cornucopia.mdx",1,0.5,0.1,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5135,"G_RuneBlue2","World\Goober\g_RuneBlue02.mdx",6.5,6.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5136,"MoonBeam (Blue)","spells\MoonBeamBlue_Impact_Base.mdx",1.5,1.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5137,"Blue Glow High","Spells\Enchantments\BlueGlow_High.mdx",5,5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5138,"Dragon Breath Frost","spells\DragonBreath_Frost.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5139,"Acid Cloud Breath Smoke (Frost)","spells\acidcloudbreath_groundsmoke_blue.mdx",0,1,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5140,"Acid Cloud Breath Blue (Fast)","spells\AcidCloudBreath_Fast_Blue.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5141,"Dragon Breath Frost","spells\DragonBreath_Frost.mdx",1,0.25,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5142,"G_RuneGroundPurple01.mdx","World\Goober\G_RuneGroundPurple01.mdx",3,3,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5143,"Egg Basket (Carried)","item\objectcomponents\weapon\offhand_easter_a_01.mdx",1,1,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5144,"Firework Roman Candle Impact (4.0x)","Spells\Firework_RomanCandle_Impact_Chest_01.mdx",1,4,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5145,"Firework Roman Candle Impact (8.0x)","Spells\Firework_RomanCandle_Impact_Chest_01.mdx",1,8,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5146,"Explosion: Firey","spells\Xplosion_Fire_Impact.mdx",1,0.75,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5147,"Dalaran - Shoe Shine State","particles\lootfx.mdx",0.45,0.45,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5148,"Holiday - Lunar Festival - Chest Firework Impact","spells\firework_romancandle_impact_chest_01.mdx",1,4,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5149,"Instance Portal, New (Purple)","spells\instancenewportal_purple.mdx",0,1,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5151,"Deep Freeze State","spells\mage_deepfreeze.mdx",0,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5152,"Rain Of Fire Rune Base","Spells\SummonGround_RainofFire.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5153,"Blizzard Rune Base","Spells\SummonGround_Blizzard.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5154,"Holy Bomb Small","Spells\HolyBomb_Missle.mdx",0,0.25,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5155,"Missile: Star Missile","spells\Ulduar_StarMissile.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5156,"Sunwell Beam FX","spells\sunwell_beamfx.mdx",1,0.75,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5157,"Missile: Rabbit (No Texture!)","creature\rabbit\rabbit.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5158,"Shadowmoon Rune","World\Expansion01\Doodads\Shadowmoon\rune\Shadowmoon_rune1.mdx",0,5,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5159,"Ward: Fel Fire Impact Chest (10.00)","spells\Fel_Fireward_Impact_Chest.mdx",0,10,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5160,"Magic Stone Helmet Red","Spells\MagicStoneHelmet_Red.mdx",0,5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5161,"Anti-Magic State Base Red","spells\antimagic_state_red.mdx",2,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5162,"MoonBeamRed_Impact_Base","spells\moonbeamred_impact_base.mdx",1,0.1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5163,"Eviscerate Impact Chest","Spells\Eviscerate_Impact_Chest.mdx",2,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5164,"Energize (Rage) Impact Base","spells\energizegain_rage.mdx",2,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5165,"Missile: Thorns (5x)","spells\missile_thorns.mdx",1,5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5166,"Flames (Stratholme Small)","world\lordaeron\stratholme\passivedoodads\fx\stratholmefiresmokeembers.mdx",1,0.3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5167,"Flames (Stratholme Medium)","World\Lordaeron\Stratholme\PassiveDoodads\FX\StratholmeFireSmokeEmberM.mdx",1,0.25,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5168,"Dragonblight Shard (Impale)","World\Expansion02\Doodads\DragonBlight\DragonBlight_Shard_03.mdx",0,0.2,0.01,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5169,"MoltenBlast Missile lvl1","Spells\MoltenBlast_Missile.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5170,"MoltenBlast Missile (3.00)","Spells\MoltenBlast_Missile.mdx",1,3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5171,"MoltenBlast Missile (4.00)","Spells\MoltenBlast_Missile.mdx",1,4,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5172,"RockyFrost Nova State","spells\rockyfrost_nova_state.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5173,"RockyFrost Nova State","spells\rockyfrost_nova_state.mdx",1,1.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5174,"Exploding Stone Impact","spells\exploding_stone_impact.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5175,"Exploding Stone Impact","spells\exploding_stone_impact.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5176,"Ritual Arcane PreCast Base","spells\Ritual_Arcane_PreCast_Base.mdx",1,2.75,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5177,"Owlkin Frenzy State","Spells\Druid_Owlkin_Frenzy.mdx",0,1,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5178,"Owlkin Frenzy State","Spells\Druid_Owlkin_Frenzy.mdx",0,2,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5179,"Owlkin Frenzy State","Spells\Druid_Owlkin_Frenzy.mdx",0,1.5,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5180,"Might Aura State Base","Spells\MightAura_Impact_Base.mdx",0,2.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5181,"Aura Yellow Tall","World\Generic\PassiveDoodads\ParticleEmitters\AuraYellowVeryTall.mdx",0,2,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5182,"Holy Nova (Smaller)","spells\holynova_impact_base.mdx",0.5,0.3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5183,"Aura Yellow Tall","World\Generic\PassiveDoodads\ParticleEmitters\AuraYellowVeryTall.mdx",0,3.5,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5184,"Sunfire_Impact_Base","Spells\Sunfire_Impact_Base.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5185,"Ulduar_Missile (3.00)","Spells\Ulduar_Missile.mdx",1,3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5186,"Missile: Meteor (2.00)","spells\Meteor_Ball_Missile.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5187,"Frost Nova Area","Spells\Frost_Nova_area.mdx",1,1.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5188,"FireStrike Missile Low - 2.00","Spells\FireStrike_Missile_Low.mdx",0,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5189,"Nefarian Impact Base","spells\nefarian_impact_base.mdx",0.05,0.05,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5190,"Nefarian Breath Impact","spells\nefarianflamebreath_impact.mdx",5,5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5191,"Flames","world\lordaeron\stratholme\passivedoodads\fx\stratholmefiresmokeembers.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5192,"Fan of Knives Base","spells\fanofknives.mdx",0,1,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5193,"Hodir Ground Freeze","spells\ulduar_bosssmoke.mdx",0,1,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5194,"Lava Burst Impact","spells\shaman_lavaburst.mdx",0,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5195,"Fire Nova Area (0.35)","Spells\FireNova_Area.mdx",1,0.35,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5196,"Missile: Alliance Bomb (0.75)","creature\AllianceBomb\AllianceBomb.mdx",0,0.75,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5197,"Creature - Extraplanar Spore Visual","World\Expansion02\Doodads\GrizzlyHills\Trees\GrizzlyHills_Mushroom03.mdx",0,2.5,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5198,"Lava Elemental Impact Base","spells\LavaElemental_Impact_Base.mdx",0,1,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5199,"Dragon Breath Fire","spells\DragonBreath_Fire.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5200,"BattleShout Cast Base (No Scaling)","Spells\BattleShout_Cast_Base.mdx",0,1,1,1); 
-INSERT INTO `SpellVisualEffectName` VALUES (5201,"Fire: Ground","World\Expansion02\Doodads\HowlingFjord\FireFX\BurntGround01.mdx",0,1,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5202,"Fire: Ground","World\Expansion02\Doodads\HowlingFjord\FireFX\BurntGround01.mdx",0,13,0.1,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5203,"Creature - Lifebinder's Gift Missile","Spells\InstanceNewPortal_Green.mdx",0,0.35,0,0); 
-INSERT INTO `SpellVisualEffectName` VALUES (5204,"Balance Of Nature Impact Base","Spells\BalanceOfNature_Impact_Base.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5205,"Creature - Lifebinder's Gift Visual","Spells\NatureBeam_State_Base.mdx",0,0.25,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5206,"Heal Low Base","Spells\Heal_Low_Base.mdx",1,0.75,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5207,"LightningStorm Cloud Low","Spells\LightningStorm_CloudLow_State.mdx",0,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5208,"LightningStorm Cloud Low Small","Spells\LightningStorm_CloudLow_State.mdx",0,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5209,"Missile: Wrath (Medium)","spells\wrath_missile.mdx",1,2.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5210,"Missile: Wrath (Large)","spells\wrath_missile.mdx",1,6,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5211,"Power Word: Barrier Base","Spells\Priest_PowerWardBarrier.mdx",0,3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5212,"Sunfire Impact Base","Spells\Sunfire_Impact_Base.mdx",0,2.5,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5213,"Sunfire_Impact_base","Spells\Sunfire_Impact_Base.mdx",0,1.5,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5214,"Hurricane Low","Spells\LightningStorm_CloudLow_State.mdx",0,0.3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5215,"Upper Deck - Weather Machine - Rain","spells\Goblin_Weather_Machine_Rain.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5216,"Bladestorm State","spells\warrior_bladestorm.mdx",0,0.25,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5217,"LightningStorm Cloud State","Spells\LightningStorm_Cloud_State.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5218,"Missile: Lightning Bolt (Ivus small)","spells\lightningboltivus_missile.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5219,"Bubble Drunk (No Scaling)","Spells\Bubble_Drunk.mdx",0,1,1,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5220,"Lava Elemental Impact Base","spells\LavaElemental_Impact_Base.mdx",0,2,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5221,"Lash Cast Base","spells\lash_cast_base.mdx",2,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5222,"Banish (White)","spells\banish_chest_white.mdx",1,3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5223,"Banish (Green)","Spells\Banish_Chest.mdx",0,3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5224,"Banish (Green)","Spells\Banish_Chest.mdx",0,3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5225,"Lava Explosion","World\Kalimdor\OnyxiasLair\LavaTraps\OnyziasLairLavaSplash.mdx",0,1,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5226,"Disease Cloud","spells\diseasecloud.mdx",0,1,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5227,"Owlkin Frenzy State","Spells\Druid_Owlkin_Frenzy.mdx",0,0.1,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5229,"Lock and Load Impact","spells\hunter_lockandload.mdx",1,1.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5230,"Rapid Fire Hunter Impact Base","spells\hunter_rapidfire.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5231,"StunSwirl State Head - Large","Spells\StunSwirl_State_Head.mdx",2,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5232,"Holy Missile Low (2.0)","Spells\Holy_Missile_Low.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5233,"Banish (Green)","Spells\Banish_Chest.mdx",0,3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5234,"Balance Of Nature Impact Base","Spells\BalanceOfNature_Impact_Base.mdx",1,0.35,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5235,"Snowball Powdery State","spells\SnowballPowdery_Impact_Base.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5236,"Skybeam, Green","Spells\NatureBeam_State_Base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5237,"Skybeam, Red","Spells\FireBeam_State_Base.mdx",1,1,0.01,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5238,"Skybeam, Lightning","Spells\LightingBeam_State_Base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5239,"Skybeam, Blue","Spells\FrostBeam_State_Base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5240,"Beam Target Ground Effect","Spells\BeamTarget_OnGround.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5241,"Missile: Alliance Bomb (0.50)","creature\AllianceBomb\AllianceBomb.mdx",0,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5242,"Explosion: Frost","Spells\Xplosion_Frost_Impact.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5243,"Explosion: Lightning","Spells\Xplosion_Lightning_Impact.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5244,"Beam Target Ground Effect","Spells\BeamTarget_OnGround.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5245,"Ice Nuke Missile","spells\IceNuke_Missile.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5246,"Missile: Blood Elf Power Orb (Green) (1.00)","world\expansion01\doodads\generic\bloodelf\powerorb\bloodelf_powerorb_green.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5247,"Fire Bomb","spells\firebomb_missle.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5248,"Explosion: Lightning","Spells\Xplosion_Lightning_Impact.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5249,"Missile: Blood Elf Power Orb (Green) (5.00)","world\expansion01\doodads\generic\bloodelf\powerorb\bloodelf_powerorb_green.mdx",1,5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5250,"LightningBolt Missile (18.00)","Spells\LightningBolt_Missile.mdx",1,18,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5251,"Disease Cloud","spells\diseasecloud.mdx",0,3,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5252,"Xplosion_Nature_Impact","Spells\Xplosion_Nature_Impact.mdx",0,1,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5253,"Xplosion_Nature_Impact (2.0)","Spells\Xplosion_Nature_Impact.mdx",0,2,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5254,"Xplosion Lightning Impact","spells\xplosion_fire_impact.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5255,"Xplosion Fire Impact","spells\Xplosion_Fire_Impact.mdx",4,4,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5256,"Bladestorm State","spells\warrior_bladestorm.mdx",0,7,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5257,"Fireball Missile High (3.00)","Spells\Fireball_Missile_High.mdx",0,3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5258,"Fire Bomb","spells\firebomb_missle.mdx",1,0.2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5259,"Land mine","Creature\Spells\LandMine01.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5260,"Thunder Caster Impact","spells\shaman_thunder.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5261,"Rocket - 3.00","Spells\Missle_Rocket02.mdx",1,3,0.1,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5262,"Dark Ritual PreCast Base Blue","spells\darkritual_precast_baseblue.mdx",1,3.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5263,"Shadow Fissure Base Blue (2.25)","Spells\Shadow_Fissure_Baseblue.mdx",1,2.25,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5264,"Flavor - Arrows in Chest","world\generic\human\passive doodads\weapons&armor\humanarrows.mdx",0,1,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5265,"Black Radiation Fog","spells\blackradiationfog.mdx",1,0.75,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5266,"Lava Burst Missile (4.00)","spells\shaman_lavaburst_missile.mdx",1,4,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5267,"Ground Spike","Spells\GroundSpike_Impact.mdx",0,2,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5268,"Frostfire Bolt Missile","spells\mage_firefrostbolt.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5269,"Green Radiation Fog (Blue/Green - Magic)","SPELLS\LargeBlueGreenRadiationFog.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5270,"Shadow Breath (0.50)","Spells\DragonBreath_Shadow.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5272,"Fire Beam State Base","Spells\FireBeam_State_Base.mdx",0,0.5,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5273,"Frost Beam State Base ","Spells\FrostBeam_State_Base.mdx",0,0.5,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5274,"Nature Beam State Base","Spells\NatureBeam_State_Base.mdx",0,0.5,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5275,"Lava Burst Missile (1.5)","spells\shaman_lavaburst_missile.mdx",1,1.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5276,"Arcane Lightning (1) - .1","Spells\arcanelightning.mdx",1,0.1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5277,"Rocket Blast Down (Small)","spells\rocketblast_down.mdx",0.15,0.15,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5278,"Stratholme Fire Smoke Ember","World\Lordaeron\Stratholme\PassiveDoodads\FX\StratholmeFireSmokeEmberM.mdx",1,2.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5279,"Plague Strike State","Spells\DeathKnight_PlagueStrikeState.mdx",0,12,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5280,"Fan of Knives Impact","spells\fanofknives_impact.mdx",1,0.75,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5281,"Fire Patch - 0.025","spells\Archimonde_Fire.mdx",1,0.025,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5282,"Acid Burn Black","SPELLS\AcidBurn_Black.mdx",1,0.7,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5283,"Ground Dust State","spells\grounddust.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5284,"Fire Nova: Blue","Spells\FireNova_Blue_Area.mdx",1,0.25,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5285,"Fireblast Impact (Blue)","spells\FireBlast_Blue_Impact_Chest.mdx",0,1,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5286,"Missile: Stone Block","World\Expansion02\Doodads\Generic\ArgentCrusade\ArgentCrusade_Brick_02.mdx",0.35,0.35,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5287,"Force Shield Arcane (Green)","Spells\ArcaneForceShield_Green.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5288,"Tournament_Pennant_Human01","world\expansion02\doodads\generic\argentcrusade\pennants\tournament_pennant_human01.mdx",0,1,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5289,"Tournament_Pennant_Human02","world\expansion02\doodads\generic\argentcrusade\pennants\tournament_pennant_human02.mdx",0,1,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5290,"Tournament_Pennant_Human03","world\expansion02\doodads\generic\argentcrusade\pennants\tournament_pennant_human03.mdx",0,1,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5291,"New Effect","world\expansion02\doodads\generic\argentcrusade\pennants\tournament_pennant_gnome01.mdx",0,1,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5292,"Tournament_Pennant_Gnome01","world\expansion02\doodads\generic\argentcrusade\pennants\tournament_pennant_gnome01.mdx",0,1,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5293,"Tournament_Pennant_Gnome02","world\expansion02\doodads\generic\argentcrusade\pennants\tournament_pennant_gnome02.mdx",0,1,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5294,"Tournament_Pennant_Gnome03","world\expansion02\doodads\generic\argentcrusade\pennants\tournament_pennant_gnome03.mdx",0,1,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5295,"Tournament_Pennant_Troll01","world\expansion02\doodads\generic\argentcrusade\pennants\tournament_pennant_troll01.mdx",0,1,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5296,"Tournament_Pennant_Troll02","world\expansion02\doodads\generic\argentcrusade\pennants\tournament_pennant_troll02.mdx",0,1,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5297,"Tournament_Pennant_Troll03","world\expansion02\doodads\generic\argentcrusade\pennants\tournament_pennant_troll03.mdx",0,1,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5298,"Tournament_Pennant_BE01","world\expansion02\doodads\generic\argentcrusade\pennants\tournament_pennant_be01.mdx",0,1,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5299,"Tournament_Pennant_BE02","world\expansion02\doodads\generic\argentcrusade\pennants\tournament_pennant_be02.mdx",0,1,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5300,"Tournament_Pennant_BE03","world\expansion02\doodads\generic\argentcrusade\pennants\tournament_pennant_be03.mdx",0,1,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5301,"Tournament_Pennant_NELF01","world\expansion02\doodads\generic\argentcrusade\pennants\tournament_pennant_nelf01.mdx",0,1,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5302,"Tournament_Pennant_NELF02","world\expansion02\doodads\generic\argentcrusade\pennants\tournament_pennant_nelf02.mdx",0,1,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5303,"Tournament_Pennant_NELF03","world\expansion02\doodads\generic\argentcrusade\pennants\tournament_pennant_nelf03.mdx",0,1,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5304,"Tournament_Pennant_Draenei01","world\expansion02\doodads\generic\argentcrusade\pennants\tournament_pennant_draenei01.mdx",0,1,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5305,"Tournament_Pennant_Draenei02","world\expansion02\doodads\generic\argentcrusade\pennants\tournament_pennant_draenei02.mdx",0,1,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5306,"Tournament_Pennant_Draenei03","world\expansion02\doodads\generic\argentcrusade\pennants\tournament_pennant_draenei03.mdx",0,1,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5307,"Tournament_Pennant_Dwarf01","world\expansion02\doodads\generic\argentcrusade\pennants\tournament_pennant_dwarf01.mdx",0,1,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5308,"Tournament_Pennant_Dwarf02","world\expansion02\doodads\generic\argentcrusade\pennants\tournament_pennant_dwarf02.mdx",0,1,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5309,"Tournament_Pennant_Dwarf03","world\expansion02\doodads\generic\argentcrusade\pennants\tournament_pennant_dwarf03.mdx",0,1,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5310,"Tournament_Pennant_FK01","world\expansion02\doodads\generic\argentcrusade\pennants\tournament_pennant_fk01.mdx",0,1,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5311,"Tournament_Pennant_FK02","world\expansion02\doodads\generic\argentcrusade\pennants\tournament_pennant_fk02.mdx",0,1,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5312,"Tournament_Pennant_FK03","world\expansion02\doodads\generic\argentcrusade\pennants\tournament_pennant_fk03.mdx",0,1,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5313,"Tournament_Pennant_Orc01","world\expansion02\doodads\generic\argentcrusade\pennants\tournament_pennant_orc01.mdx",0,1,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5314,"Tournament_Pennant_Orc02","world\expansion02\doodads\generic\argentcrusade\pennants\tournament_pennant_orc02.mdx",0,1,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5315,"Tournament_Pennant_Orc03","world\expansion02\doodads\generic\argentcrusade\pennants\tournament_pennant_orc03.mdx",0,1,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5316,"Tournament_Pennant_Tauren01","world\expansion02\doodads\generic\argentcrusade\pennants\tournament_pennant_tauren01.mdx",0,1,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5317,"Tournament_Pennant_Tauren02","world\expansion02\doodads\generic\argentcrusade\pennants\tournament_pennant_tauren02.mdx",0,1,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5318,"Tournament_Pennant_Tauren03","world\expansion02\doodads\generic\argentcrusade\pennants\tournament_pennant_tauren03.mdx",0,1,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5319,"Power Infusion State","spells\priest_powerinfusion.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5320,"Tidal Force Impact Base","spells\shaman_tidal_force.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5321,"Demonic Empowerment Impact","spells\warlock_demonic_empathy.mdx",1,1.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5323,"Tournament_Pennant_AC02","world\expansion02\doodads\generic\argentcrusade\pennants\tournament_pennant_argentcru02.mdx",0,1,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5324,"Tournament_Pennant_AC03","world\expansion02\doodads\generic\argentcrusade\pennants\tournament_pennant_argentcru03.mdx",0,1,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5325,"Thunder Hold","spells\shaman_thunder_hold.mdx",1,0.2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5326,"Lightning Nova (x2)","spells\lightning_ring_nova.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5330,"Cat Mark State Head","Spells\CatMark.mdx",1,4,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5331,"Tournament_Pennant_AC01","world\expansion02\doodads\generic\argentcrusade\pennants\tournament_pennant_argentcru01.mdx",0,1,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5332,"Tournament_Pennant_EB01","world\expansion02\doodads\generic\argentcrusade\pennants\tournament_pennant_ebonblade01.mdx",0,1,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5333,"Tournament_Pennant_EB02","world\expansion02\doodads\generic\argentcrusade\pennants\tournament_pennant_ebonblade02.mdx",0,1,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5334,"Tournament_Pennant_EB03","world\expansion02\doodads\generic\argentcrusade\pennants\tournament_pennant_ebonblade03.mdx",0,1,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5335,"Ulduar Shield Removal","spells\arcaneforceshield_purple.mdx",1,100,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5336,"Dragon Breath: Fire","Spells\DragonBreath_Fire.mdx",0,0.1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5337,"Holy Precast Low Hand","Spells\Holy_Precast_Low_Hand.mdx",1,0.6,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5338,"Ice Precast Low Hand","Spells\Ice_Precast_Low_Hand.mdx",1,1.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5339,"Missile: Demolisher (Blue)","Spells\Demolisher_Missile_Blue.mdx",0,3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5340,"Missile: Plague Barrel (Blue)","spells\ForsakenCatapult_Missile_Blue.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5341,"Lightning PreCast Low Hand","Spells\Lightning_PreCast_Low_Hand.mdx",1,30,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5342,"Explosion: Dust","spells\Xplosion_Dust_Impact.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5343,"Arcane Explosion Base Boss","spells\arcaneexplosion_boss_base.mdx",1,10,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5344,"Fire Nova Area (0.20)","Spells\FireNova_Area.mdx",1,0.2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5345,"Missile: Leather Ball","spells\missile_leatherball.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5346,"Frost Bolt Missile","Spells\Frostbolt.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5347,"Xplosion_Frost_Impact","Spells\Xplosion_Frost_Impact.mdx",0,2,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5348,"Missile: Grizzly Hills Boulder","World\Expansion02\Doodads\GrizzlyHills\Rocks\GrizzlyHills_Boulder01.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5349,"Explosion Dust Impact","Spells\Xplosion_Dust_Impact.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5350,"Curse of Elements Impact Head","Spells\CurseElements_Impact_Head.mdx",0,4,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5351,"Shockwave Area","spells\warrior_shockwave_area.mdx",0,10,0.01,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5352,"Shockwave Area","spells\warrior_shockwave_area.mdx",0,7,0.01,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5353,"Tournament_Pennant_Hand_AC","world\expansion02\doodads\generic\argentcrusade\pennants\tournament_pennant_argentcru01.mdx",0,0.33,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5354,"Explosion: Dust","spells\Xplosion_Dust_Impact.mdx",1,0.25,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5356,"Hellfire Impact Caster Base","Spells\HellFire_Impact_Caster_Base.mdx",0,3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5357,"Anti-Magic Zone","Spells\DeathKnight_AntiMagicZone.mdx",0,3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5358,"Shadow Nova Cast","spells\shadow_nova_area.mdx",1,8,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5359,"Frostfire Bolt Missile","spells\mage_firefrostbolt.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5361,"Dragon Sand Breath","spells\corrosivesandbreath.mdx",1,0.25,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5362,"Shockwave Area No Pulse","spells\Warrior_ShockWave_NoPulse.mdx",0,7,0.01,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5363,"HolyWordShield State Base","Spells\HolyWordShield_State_Base.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5364,"HolyWord Shield State Base","Spells\HolyWordShield_State_Base.mdx",0,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5366,"Shot: Arcane Missile","Spells\ArcaneShot_Missile.mdx",1,1.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5367,"Acid Burn Base","spells\AcidBurn.mdx",1,0.35,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5368,"Flame Patch (Blue) -","spells\Archimonde_Blue_Fire.mdx",1,1.35,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5369,"shield of vengeance impact","Spells\Shield_of_Vengeance_Impact.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5370,"Missile: DeathCoil Missile","Spells\DeathCoil_Missile.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5372,"Bomb (Large)","spells\missile_bomb.mdx",1,5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5373,"DustCloud Land","Spells\DustCloud_Land.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5375,"Explosion: Firey (Blue)","spells\Xplosion_Fire_Impact_Blue.mdx",1,3.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5381,"Explosion: Lightning","Spells\Xplosion_Lightning_Impact.mdx",1,4,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5382,"Dust Nova","spells\dustnova_cast_base.mdx",0.5,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5384,"Shield: Arcane Force (Green 2x)","Spells\ArcaneForceShield_Green.mdx",0,2,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5385,"Missile: Deathbolt Missile","spells\deathbolt_missile_low.mdx",1,1.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5386,"Fire Nova Area","Spells\FireNova_Area.mdx",1,4,0.01,20); 
-INSERT INTO `SpellVisualEffectName` VALUES (5387,"Shield Wall Impact Base Red","spells\shieldwall_impact_base_red.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5388,"Shield Wall Impact Base Red","spells\shieldwall_impact_base_red.mdx",0,2,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5389,"Shield Wall Impact Base","Spells\ShieldWall_Impact_Base.mdx",0,2,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5390,"Shield Wall impact Base Blue","spells\shieldwall_impact_base_blue.mdx",0,2,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5391,"Missile: EasterEgg01","world\generic\passivedoodads\eastereggs\easteregg01.mdx",1,0.35,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5392,"White Radiation Fog","spells\whiteradiationfog.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5393,"Banish (White)","spells\banish_chest_white.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5394,"Banish (Green)","Spells\Banish_Chest.mdx",0,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5395,"Banish (Purple)","spells\banish_chest_purple.mdx",1,1.25,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5396,"Flare Ground State","spells\flare_state_base.mdx",2.25,2.25,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5398,"Skybeam, Green","Spells\NatureBeam_State_Base.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5399,"Disarm Impact Chest 2x","Spells\Disarm_Impact_Chest.mdx",0,2,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5400,"Blizzard Rune Base","Spells\SummonGround_Blizzard.mdx",0,0.8,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5401,"Black Hole","spells\ulduar_blackhole.mdx",0,1,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5402,"Void Zone (Thick)","creature\portalofkathune\portalofkathunethick.mdx",1,0.08,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5403,"Acid Cloud Breath","spells\AcidCloudBreath.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5404,"Shadow Nova Cast","spells\shadow_nova_area.mdx",1,20,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5405,"Fear State Base","spells\fear_state_base.mdx",1,7,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5406,"Fear State Base","spells\fear_state_base.mdx",1,0.9,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5407,"Fear Impact Head","Spells\Fear_Impact_Chest.mdx",0,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5408,"Shadow Precast Med Base","Spells\Shadow_Precast_Med_Base.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5409,"Nature Beam State Base","Spells\NatureBeam_State_Base.mdx",0,1,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5410,"Nature Beam State Base","Spells\NatureBeam_State_Base.mdx",0,1.5,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5411,"Teleport","Spells\Teleport.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5412,"Acid Cloud Breath Smoke","spells\acidcloudbreath_groundsmoke.mdx",1,0.25,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5413,"Acid Cloud Breath Smoke (Frost)","spells\AcidCloudBreath_GroundSmoke_Blue.mdx",1,0.25,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5414,"Aura Yellow Tall (0.2)","World\Generic\PassiveDoodads\ParticleEmitters\AuraYellowVeryTall.mdx",0,0.2,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5415,"EntanglingRoots State (0.2)","Spells\EntanglingRoots_State.mdx",1,0.2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5416,"Bladestorm State","spells\warrior_bladestorm.mdx",0,1.6,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5417,"LightningBolt Impact Chest","Spells\LightningBolt_Impact_Chest.mdx",1,6,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5418,"Banish (Red)","spells\bloodbolt_chest.mdx",1,3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5419,"Banish (Red)","spells\bloodbolt_chest.mdx",1,0.1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5421,"Arcane Impact Chest","Spells\Magic_Impact_Chest.mdx",0,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5422,"Magic PreCast Hand","Spells\Magic_PreCast_Hand.mdx",1,5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5423,"Magic Cast Hand","Spells\Magic_Cast_Hand.mdx",1,5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5424,"Void Zone (Thick)","creature\portalofkathune\portalofkathunethick.mdx",1,0.04,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5425,"Shadow Form New","Spells\Shadow_Form_Precast.mdx",0,1,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5426,"Mind Sear Cast","Spells\Priest_MindShear.mdx",0,1,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5427,"Shadow Nova Cast - (1.75)","spells\shadow_nova_area.mdx",1,3,0.01,5); 
-INSERT INTO `SpellVisualEffectName` VALUES (5428,"Skybeam, Blue","Spells\FrostBeam_State_Base.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5429,"Shadow Fissure Base","Spells\Shadow_Fissure_Base.mdx",1,1.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5430,"Cone of Fire Hand","Spells\ConeofFire_Hand.mdx",1,4,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5431,"Skybeam, Red","Spells\FireBeam_State_Base.mdx",1,0.5,0.01,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5432,"Sonic Wave Blast Down Cast","spells\sonicwave_cast_down.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5433,"Sonic Wave Blast Cast","spells\sonicwave_cast.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5434,"Sonic Wave Blast Cast - 1.5","spells\sonicwave_cast.mdx",1,1.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5435,"Shockwave Area","spells\warrior_shockwave_area.mdx",0,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5436,"Shadow Fissure Base","Spells\Shadow_Fissure_Base.mdx",1,0.75,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5437,"Dragon Breath Shadow","spells\dragonbreath_shadow.mdx",1,0.75,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5438,"Vampiric Embrace State Base","spells\vampiricembrace_state_base.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5439,"Darkmoon Vengeance Head State (Clamped)","Spells\DarkmoonVengeance_Impact_Head.mdx",1,3,3,3); 
-INSERT INTO `SpellVisualEffectName` VALUES (5440,"Void Zone","creature\portalofkathune\portalofkathune.mdx",1,0.18,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5441,"Dancing Runeweapon State","Spells\DeathKnight_DancingRuneblade_State.mdx",0,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5442,"Shadow Form New","Spells\Shadow_Form_Precast.mdx",0,0.25,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5443,"Shadow Precast Uber Hand","Spells\Shadow_Precast_Uber_Hand.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5444,"ShadowFlame PreCast","spells\shadowflame_cast_hand.mdx",0,0.75,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5445,"Shadow Dance State","Spells\ShadowDance_State.mdx",0,0.6,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5447,"ArcaneExplosion Base (Clamped)","Spells\ArcaneExplosion_Base.mdx",1,4,4,4); 
-INSERT INTO `SpellVisualEffectName` VALUES (5449,"Dragon Sand Breath","spells\corrosivesandbreath.mdx",1,5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5450,"Tournament Shield Red","spells\tournament_shield_red.mdx",0,1,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5451,"Tournament Shield Yellow","spells\tournament_shield_yellow.mdx",0,1,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5452,"Tournament Shield Green","spells\tournament_shield_green.mdx",0,1,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5453,"Reply-Code Alpha","spells\sonicboom_missile_high.mdx",0,25,0.1,25); 
-INSERT INTO `SpellVisualEffectName` VALUES (5454,"Living Bomb State","spells\mage_livingbomb_state.mdx",0,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5455,"Lava Splash","World\Kalimdor\OnyxiasLair\LavaTraps\OnyziasLairLavaSplashStand.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5456,"Fire Bomb","spells\firebomb_missle.mdx",1,0.35,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5457,"Lava Splash","World\Kalimdor\OnyxiasLair\LavaTraps\OnyziasLairLavaSplashStand.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5458,"Flame Patch","spells\archimonde_fire.mdx",1,1.2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5460,"Water Nova","Spells\Water_Nova.mdx",1,5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5461,"Gift of the water Spirit Base impact","spells\giftwaterspirit_impact_base.mdx",1,6,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5462,"Fire ImpactDD Uber Chest","spells\fire_impactdd_uber_chest.mdx",1,7,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5463,"Lightning Nova","spells\lightning_ring_nova.mdx",1,100,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5464,"Item - Val'anyr Shield Effect Low Base","spells\valanry_proc_01.mdx",1,1.25,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5465,"Nature Bomb","World\Goober\G_PulsatingPlant.mdx",0,1,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5466,"Xplosion_Nature_Impact","Spells\Xplosion_Nature_Impact.mdx",0,1.5,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5467,"Pulsating Plant","World\Goober\G_PulsatingPlant.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5468,"Fire Bomb","spells\firebomb_missle.mdx",1,30,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5469,"Skybeam, Green","Spells\NatureBeam_State_Base.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5470,"White Radiation Fog","spells\whiteradiationfog.mdx",1,3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5471,"Banish (Blue)","spells\banish_chest_blue.mdx",1,1.25,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5472,"Frost Nova Area","Spells\Frost_Nova_area.mdx",1,5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5473,"Frost_Form","spells\frost_form_precast.mdx",0,8,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5474,"Frostbolt Missile","spells\frostbolt.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5475,"Banish (Blue)","spells\banish_chest_blue.mdx",1,4,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5476,"Water Bubble Chest State","Spells\WaterBubble.mdx",0,2.25,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5477,"Banish (Blue)","spells\banish_chest_blue.mdx",1,6,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5478,"Hellfire FirePuff Caster Base (Blue)","spells\HellFire_Blue_FirePuff_Caster_Base.mdx",1,5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5479,"Frost Breath","Spells\FrostBreath.mdx",1,0.75,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5480,"Snowball Impact Chest","spells\snowball_impact_chest.mdx",1,4,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5481,"Shell Shield State","Spells\ShellShield_State_Base.mdx",1,4,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5482,"Unquenchable Flames State Base","spells\nefarian_state_base.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5483,"GGOODMANTEST","World\Generic\Human\Passive Doodads\Lights\SFX_FlashingLight_Red.mdx",0,1,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5484,"Flame Patch (Blue) -","spells\Archimonde_Blue_Fire.mdx",1,1.55,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5485,"Magic PreCast Hand","Spells\Magic_PreCast_Hand.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5486,"Arcane Reflect State Chest","spells\ArcaneReflect_State_Chest.mdx",1,0.05,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5487,"Nature Cast Hand","Spells\Nature_Cast_Hand.mdx",1,3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5488,"CycloneFire State","Spells\CycloneFire_State.mdx",0,3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5489,"Kologarn Arm Spawn","Spells\Kologarn_Arm_FadeIn.mdx",0,4,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5490,"Kick Impact Chest","Spells\Kick_Chest_Impact.mdx",1,3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5491,"Missile: Assassinate","spells\assassinate_missile.mdx",0,2.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5492,"Shockwave Area No Pulse","spells\Warrior_ShockWave_NoPulse.mdx",0,2,0.01,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5493,"Dragon Breath Fire (New) ","spells\DragonBreath_Fire.mdx",1,0.25,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5494,"Red Runes","World\Expansion01\Doodads\Generic\Draenei\Holo\DR_Draenei_HoloRunes01_BigRed.mdx",0,0.1,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5495,"Fire_SmokeTrail","spells\fire_smoketrail.mdx",1,15,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5496,"Magic PreCast Hand","Spells\Magic_PreCast_Hand.mdx",1,7,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5497,"Fire: Ground","World\Expansion02\Doodads\HowlingFjord\FireFX\BurntGround01.mdx",0,2,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5498,"Fire: Ground","World\Expansion02\Doodads\HowlingFjord\FireFX\BurntGround01.mdx",0,8,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5499,"Missile: Night Elf Tablet","world\goober\g_netablet.mdx",1,0.075,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5500,"Missile: Titan Disc","world\expansion02\doodads\generic\titan\ti_disc_01.mdx",1,0.01,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5501,"Missile: Frost Giant Shield 03","world\expansion02\doodads\generic\frostgiant\frostgiant_shield03.mdx",1,0.06,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5502,"Missile: Plate","creature\questobjects\plate_creature.mdx",1,0.25,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5503,"Thorim's Stormhammer","Item\ObjectComponents\Weapon\Mace_1H_UlduarRaidNotSkinable_D_01.mdx",0,8,0,0); 
-INSERT INTO `SpellVisualEffectName` VALUES (5504,"Seeping Gaseous Nova","spells\seepinggaseous_nova.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5505,"Ice Nuke Base","spells\IceNuke_Base_Impact.mdx",1,0.05,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5506,"Icy Touch Impact","SPELLS\DeathKnight_IcyTouch.mdx",1,0.3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5507,"Frost Trap Aura","spells\frosttrap_aura.mdx",1,0.25,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5508,"Frost Nova Area","Spells\Frost_Nova_area.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5509,"Icy Touch Impact","SPELLS\DeathKnight_IcyTouch.mdx",1,0.25,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5510,"Frost_Form","spells\frost_form_precast.mdx",0,0.75,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5511,"Lightning Beam (Algalon)","spells\lightingbeam_state_base.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5512,"Pet Toy - Pet Snack - Love","spells\holidays\valentines_lookingforloveheart.mdx",1,1,1,1.1); 
-INSERT INTO `SpellVisualEffectName` VALUES (5513,"Collapsing Star (Algalon)","spells\collapsingstar.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5514,"Shield: Fire Force (Green)","Spells\FireForceShield_Green.mdx",1,1.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5515,"Item - Sif's Remembrance (Icy Veins Analog)","spells\icyveins_fx.mdx",0,0.25,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5516,"Ghost Trap","World\Goober\G_GhostTrap.mdx",1,1.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5517,"Hunter's Mark Impact Chest","Spells\HuntersMark_Impact_Chest.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5518,"Hunter's Mark State Head","Spells\HuntersMark_Impact_Head.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5519,"Aura: Red","World\Generic\PassiveDoodads\ParticleEmitters\AuraRed.mdx",1,3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5520,"Aura: Red (Short)","World\Generic\PassiveDoodads\ParticleEmitters\AuraRedShort.mdx",1,3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5521,"Shell Shield State","Spells\ShellShield_State_Base.mdx",1,3.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5522,"Holy Wave","Spells\Missile_Wave_Holy.mdx",0,0.35,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5523,"Acid Cloud Breath Smoke","spells\acidcloudbreath_groundsmoke.mdx",1,0.75,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5524,"Void Zone","creature\portalofkathune\portalofkathune.mdx",1,0.2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5525,"Dynamite Missile","Spells\DynamiteA_Missile.mdx",1,1.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5526,"Fire Nova Area","Spells\FireNova_Area.mdx",1,3,0.01,20); 
-INSERT INTO `SpellVisualEffectName` VALUES (5527,"Banish (Yellow)","spells\banish_chest_yellow.mdx",1,4,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5529,"Banish (Red)","spells\bloodbolt_chest.mdx",1,5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5530,"Water Breath","spells\WaterLiquidBreath.mdx",1,1.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5531,"Water Nova","Spells\Water_Nova.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5532,"Ice Precast Low Hand","Spells\Ice_Precast_Low_Hand.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5533,"Meat (1.0)","World\Expansion01\Doodads\Generic\BloodElf\Food\BE_Meat01.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5534,"Dragon Breath Frost","spells\DragonBreath_Frost.mdx",1,0.1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5537,"Silithid Abdomen","World\Kalimdor\Silithus\PassiveDoodads\SilithidTankHusks\SilithidTankHuskAbdomen.mdx",1,0.33,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5539,"Path of Frost","Spells\DeathKnight_PathofFrost.mdx",1,4,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5540,"Flare Ground State","spells\flare_state_base.mdx",2.4,2.4,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5543,"PBTable - On Plate - Stuffing, Plate Visual","Spells\Thanksgiving_Stuffing.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5544,"PBTable - On Plate - Yams, Plate Visual","Spells\Thanksgiving_Yams.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5545,"PBTable - On Plate - Pie, Plate Visual","Spells\Thanksgiving_Pie.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5546,"PBTable - On Plate - Turkey, Plate Visual","Spells\Thanksgiving_Turkey.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5547,"PBTable - On Plate - Cranberries, Plate Visual (3.2)","Spells\Thanksgiving_Cranberry.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5548,"Big Bang","spells\sunwell_beamfx_3s.mdx",0.2,0.2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5553,"Blizzard Rune Base","Spells\SummonGround_Blizzard.mdx",0,0.4,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5555,"Ice Block State Selectable","spells\icebarrier_state_selectable.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5565,"Anti-Magic Zone Green","spells\yoggsaron_green.mdx",0,3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5570,"Small Blue Ragdoll","world\generic\human\passive doodads\dolls\ragdoll_05.mdx",1,0.33,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5571,"Blue Ragdoll","world\generic\human\passive doodads\dolls\ragdoll_05.mdx",1,0.65,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5573,"Light Essence","Spells\Enchantments\WhiteGlow_High.mdx",0,15,0.1,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5574,"Banish (Dark) ","spells\Banish_Chest_Dark.mdx",1,0.75,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5575,"Banish (White)","spells\banish_chest_white.mdx",1,0.75,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5576,"Magic Unlock (4x)","Spells\MagicUnlock.mdx",1,4,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5577,"CallLightning Impact (Red) ","spells\flamestrike_impactdd_med_base.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5578,"CallLightning Impact","Spells\CallLightning_Impact.mdx",1,5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5580,"Aura: Red, Tall","world\generic\passivedoodads\particleemitters\auraredtall.mdx",0,5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5581,"Aura: Red, Tall","world\generic\passivedoodads\particleemitters\auraredtall.mdx",0,5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5582,"Flame Shock Impact Chest (Blue)","Spells\FlameShock_Blue_Impact_Chest.mdx",1,5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5583,"Flame Shock Impact Chest","Spells\FlameShock_Impact_Chest.mdx",1,4,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5584,"Portal: Boss Holy","spells\Creature_SpellPortalLarge_Yellow.mdx",1,0.2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5585,"Portal: White","Spells\Creature_SpellPortal_White.mdx",0,0.5,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5586,"Banish (White)","spells\banish_chest_white.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5587,"Envenom Impact","spells\envenom_impact_chest.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5588,"Shield: Arcane Force (Yellow)","Spells\ArcaneForceShield_Yellow.mdx",1,4,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5589,"Frost Trap Aura NoMist","SPELLS\FrostTrap_Aura_noMist.M2",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5590,"DeathKnight Chains of Ice","Spells\DeathKnight_Chains_of_Ice.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5591,"Bubblegum, Pink","world\generic\upperdeck\ud_bubblegum_01.mdx",0,1,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5592,"Flowers (Upper Deck)","world\generic\upperdeck\ud_flowers_01.mdx",0,1,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5593,"Nature Form","spells\nature_form_precast.mdx",0,0.66,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5594,"Bubblegum, Pink (3.1.2)","world\generic\upperdeck\ud_bubblegum_01.mdx",0,1,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5595,"Flowers, Upper Deck (3.1.2)","world\generic\upperdeck\ud_flowers_01.mdx",0,1,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5596,"Nature Form (3.1.2)","spells\nature_form_precast.mdx",0,0.7,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5597,"Spell Object: Plague Bomb (New - Green)","item\objectcomponents\weapon\thrown_1h_bomb_c_01.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5599,"CallLightning Impact (Red)","spells\flamestrike_impactdd_med_base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5601,"Spike Impact Base","Spells\Spike_Impact_Base.mdx",1,1.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5602,"Spike Impact Base","Spells\Spike_Impact_Base.mdx",1,2.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5603,"Holy Reflect State Chest ","spells\HolyReflect_State_Chest.mdx",0,1,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5604,"Earth Burrow Cast","spells\burrowearth_brown_missile.mdx",1,1.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5605,"Banish (Dark)","spells\Banish_Chest_Dark.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5606,"Beacon of Light Impact Base","spells\beacon_of_light_impact.mdx",0,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5608,"Shadow Dance State","Spells\ShadowDance_State.mdx",0,2,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5609,"Warlock Backdraft","Spells\Warlock_Backdraft.mdx",0,1,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5610,"ShadowWordFumble Head","Spells\ShadowWordFumble_Head.mdx",1,3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5611,"Voidwalker Sacrifice Shield State Base","spells\holydivineshielddark_state_base.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5613,"Black Glow","Spells\Enchantments\BlackGlow_High.mdx",0,15,0.1,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5614,"Call Lightning Impact (Black)","Spells\FlameStrike_Black_ImpactDD_Med_Base.mdx",0,1,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5615,"Portal: White","Spells\Creature_SpellPortal_White.mdx",0,1,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5616,"Shades of Darkness Cast","spells\shadesofdarkness_cast.mdx",3,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5617,"Shot: Black Arrow","Spells\BlackShot_Missile.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5618,"Shot: Black Arrow","Spells\BlackShot_Missile.mdx",1,3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5619,"Shot: Black Arrow","Spells\BlackShot_Missile.mdx",1,25,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5620,"Shadow Breath","Spells\DragonBreath_Shadow.mdx",1,0.25,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5621,"Shadow Strikes State","spells\shadow_strikes_state_hand.mdx",1,3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5622,"ShadowStrike Impact Chest","Spells\ShadowStrike_Impact_Chest.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5623,"Holy Precast Uber Base","Spells\Holy_Precast_Uber_Base.mdx",1,0.75,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5624,"LightningBolt Impact Chest","Spells\LightningBolt_Impact_Chest.mdx",1,0.35,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5625,"LightningBolt Impact Chest","Spells\LightningBolt_Impact_Chest.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5629,"Envenom Impact","spells\envenom_impact_chest.mdx",1,3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5631,"Ice Spike","Spells\IceSpike_Impact_Base.mdx",0,4,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5632,"Dragon Breath Fire (New)","spells\DragonBreath_Fire.mdx",1,1.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5634,"ShadowSnare Base","Spells\Shadow_Snare_High_base.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5637,"Fel Blaze","Spells\Fel_Archimonde_Fire.mdx",0,0.8,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5638,"Fire Cast Hand","Spells\Fire_Cast_Hand.mdx",0,15,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5640,"Fel Fire Nova Area","spells\fel_firenova_area.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5641,"Fel Hellfire Puff","Spells\Fel_HellFire_FirePuff_Caster_Base.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5642,"Fel Immolate State Base","Spells\Fel_Immolate_State_Base.mdx",0,1,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5644,"Cranberry Hit (bounce) ","spells\thanksgiving_cranberry_missile_hitbounce.mdx",1,3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5645,"Pie Hit (bounce)","spells\thanksgiving_pie_missile_hitbounce.mdx",1,3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5646,"Stuffing Hit (bounce)","spells\thanksgiving_stuffing_missile_hitbounce.mdx",1,3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5647,"Turkey Hit (bounce)","spells\thanksgiving_turkey_missile_hitbounce.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5648,"Yams Hit (bounce)","spells\thanksgiving_yams_missile_hitbounce.mdx",1,3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5649,"Demonic Empowerment Impact","spells\warlock_demonic_empathy.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5650,"Banish (Purple)","spells\banish_chest_purple.mdx",1,0.75,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5651,"Warlock Demonic Empowerment ","Spells\Warlock_Demonic_Empowerment.mdx",0,1,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5652,"Shadow Breath","Spells\DragonBreath_Shadow.mdx",1,0.05,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5653,"Shadow Shield State Base","Spells\ShadowShield_State_Base.mdx",1,0.2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5654,"Fel Low Poly Fire","spells\Fel_LowPolyFireAnim.mdx",1,0.2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5655,"LowPolyFire","world\generic\pvp\fires\lowpolyfire.mdx",1,0.2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5656,"Hellfire FirePuff Caster Base","spells\HellFire_FirePuff_Caster_Base.mdx",1,5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5657,"Hellfire FirePuff Caster Base","spells\HellFire_FirePuff_Caster_Base.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5658,"Hellfire FirePuff Caster Base","spells\HellFire_FirePuff_Caster_Base.mdx",1,3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5659,"Hellfire FirePuff Caster Base","spells\HellFire_FirePuff_Caster_Base.mdx",1,4,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5660,"Volcano Top","World\Expansion01\Doodads\Shadowmoon\Volcano\ShadowmoonVolcanoTop.mdx",0,0.1,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5661,"Missile: Infernal Ball","spells\Infernal_Ball.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5662,"Force Shield Arcane (Blue)","spells\arcaneforceshield_blue.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5663,"Bomb","spells\missile_bomb.mdx",1,2.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5664,"Shadow Dance State","Spells\ShadowDance_State.mdx",0,3,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5665,"Missile: Glaive, Purple (Siege)","Spells\GlaiveThrowerVehicle_Glaive_Spell_Purple.mdx",0,1.5,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5666,"Frost Trap Aura No Mist, Reflective","spells\frosttrap_aura_nomist_refelctive.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5667,"Nature Form","spells\nature_form_precast.mdx",0,10,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5668,"Eclipse Impact Base","spells\druid_eclipse.mdx",0,5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5669,"Bottle (Frothy Smoke)","World\Generic\Human\Passive Doodads\Bottles\BottleSmoke.mdx",1,1.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5670,"Earth Burrow Cast V2","spells\burrowearth_brown_missile_v2.mdx",1,4,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5671,"Seduction State","Spells\Seduction_State_Head.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5672,"Seduction State","Spells\Seduction_State_Head.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5675,"Light Bomb State","Spells\Impact_Light.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5676,"Missile: Light Bomb","Spells\Missile_Light.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5677,"Missile: Dark Bomb","spells\Missile_Dark.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5678,"Dark Bomb State","Spells\Impact_Dark.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5679,"Dark Missile","Spells\Missile_Dark.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5680,"Impact Dark","Spells\Impact_Dark.mdx",0,1,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5681,"Light Missile","Spells\Missile_Light.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5682,"Impact Light","Spells\Impact_Light.mdx",0,1,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5683,"Frost Trap Aura No Mist, Reflective","spells\frosttrap_aura_nomist_refelctive.mdx",1,1.35,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5684,"Fel Lightning Cast Hand","Spells\Lightning_Fel_Cast_Hand.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5685,"Explosive Shot Missile","spells\explosive_shot_missile.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5686,"Explosion: Dust","spells\Xplosion_Dust_Impact.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5689,"Holy Nova Impact Base","spells\holynova_impact_base.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5690,"Dragon Breath Fire","spells\DragonBreath_Fire.mdx",1,0.3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5691,"Fire Precast Hand","Spells\Fire_Precast_Hand.mdx",0,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5692,"Bomb","spells\missile_bomb.mdx",1,4,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5693,"Frost Breath","Spells\FrostBreath.mdx",1,2.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5694,"Lava Elemental Impact Base","spells\LavaElemental_Impact_Base.mdx",0,1.5,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5695,"Lava Particle Splash","World\Generic\PassiveDoodads\ParticleEmitters\LavaParticleSplash.mdx",0,1,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5696,"Lava Elemental Impact Base","spells\LavaElemental_Impact_Base.mdx",0,0.25,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5697,"Ritual Of Fire Precast","spells\Ritual_Fire_PreCast_Base.mdx",1,0.1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5698,"Lava Burst Impact","spells\shaman_lavaburst.mdx",0,0.25,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5699,"Lava Burst Missile","spells\shaman_lavaburst_missile.mdx",1,0.2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5700,"Lava Burst Missile","spells\shaman_lavaburst_missile.mdx",1,0.3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5701,"Ice Spike Impact Base V2","Spells\IceSpike_Impact_Base_V2.mdx",0,4,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5703,"Anti-Magic Zone Green","Spells\DeathKnight_AntiMagicZone_Green.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5704,"Bomb (Static)","spells\missile_bomb_static.mdx",1,2.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5705,"Bomb (Static)","spells\missile_bomb_static.mdx",1,4,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5706,"Acid Breath (Red) (Liquid)","spells\acidliquidbreathred.mdx",1,0.75,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5707,"Acid Breath (Red) (Liquid)","spells\acidliquidbreathred.mdx",1,0.1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5708,"Tournament_Pennant_Troll00","world\expansion02\doodads\generic\argentcrusade\pennants\tournament_pennant_troll_low.mdx",0,1,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5709,"Tournament_Pennant_Tauren00","world\expansion02\doodads\generic\argentcrusade\pennants\tournament_pennant_tauren_low.mdx",0,1,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5710,"Tournament_Pennant_Orc00","world\expansion02\doodads\generic\argentcrusade\pennants\tournament_pennant_orc_low.mdx",0,1,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5711,"Tournament_Pennant_NELF00","world\expansion02\doodads\generic\argentcrusade\pennants\tournament_pennant_nelf_low.mdx",0,1,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5712,"Tournament_Pennant_Human00","world\expansion02\doodads\generic\argentcrusade\pennants\tournament_pennant_human_low.mdx",0,1,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5713,"Tournament_Pennant_Gnome00","world\expansion02\doodads\generic\argentcrusade\pennants\tournament_pennant_gnome_low.mdx",0,1,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5714,"Tournament_Pennant_FK00","world\expansion02\doodads\generic\argentcrusade\pennants\tournament_pennant_fk_low.mdx",0,1,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5715,"Tournament_Pennant_EB00","world\expansion02\doodads\generic\argentcrusade\pennants\tournament_pennant_ebonblade_low.mdx",0,1,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5716,"Tournament_Pennant_Dwarf00","world\expansion02\doodads\generic\argentcrusade\pennants\tournament_pennant_dwarf_low.mdx",0,1,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5717,"Tournament_Pennant_Draenei00","world\expansion02\doodads\generic\argentcrusade\pennants\tournament_pennant_draenei_low.mdx",0,1,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5718,"Tournament_Pennant_BE00","world\expansion02\doodads\generic\argentcrusade\pennants\tournament_pennant_be_low.mdx",0,1,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5719,"Tournament_Pennant_AC00","world\expansion02\doodads\generic\argentcrusade\pennants\Tournament_Pennant_ArgentCru_Low.mdx",0,1,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5720,"Missile: Holy Hammer","spells\holy_hammer_missile.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5721,"Blizzard Spawn","Spells\Blizzard_Spawn.mdx",1,1,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5722,"Holy ImpactDD Uber Chest","Spells\Holy_ImpactDD_Uber_Chest.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5723,"Holy ImpactDD Uber Base","Spells\Holy_ImpactDD_Uber_Base.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5724,"Silithid Egg State (Copy)","World\Kalimdor\Silithus\PassiveDoodads\Eggs\SilithidEgg.mdx",1,0.25,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5727,"Earth Burrow Cast V2","spells\burrowearth_brown_missile_v2.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5728,"Incinerate Missile","spells\incinerate_low_base.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5729,"Missile: Glaive, Red (Siege)","Spells\GlaiveThrowerVehicle_Glaive_Spell_Red.mdx",0,1.5,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5730,"Deterrence State Chest","spells\deterrence_state_chest.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5731,"Insect Swarm State Chest","Spells\InsectSwarm_State_Chest.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5732,"Black Hole Horizontal","Spells\Ulduar_BlackHole_H.mdx",0,1,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5733,"Black Hole Horizontal","Spells\Ulduar_BlackHole_H.mdx",0,0.5,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5734,"White Black Hole Horizontal","Spells\BlackHole_White_H.mdx",0,1,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5735,"White Black Hole Horizontal","Spells\BlackHole_White_H.mdx",0,0.5,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5736,"Missile: Glaive, Purple (Siege)","Spells\GlaiveThrowerVehicle_Glaive_Spell_Purple.mdx",0,4,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5737,"Holy Missile High","Spells\Holy_Missile_High.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5738,"Missile: Glaive, 4 Blades","World\ENVIRONMENT\DOODAD\GENERALDOODADS\NightElfWeapons\NE_Glaive01.mdx",0,3,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5739,"DustCloud Land (0.2)","Spells\DustCloud_Land.mdx",1,0.2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5740,"PrayerofHealing Chest","Spells\PrayerofHealing_Chest.mdx",1,3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5741,"Acid Spit Missile","spells\shaman_lavaburst_green_missile.mdx",1,0.2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5742,"Acid Spit Impact","spells\shaman_lavaburst_green.mdx",0,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5743,"Acid Spit Missile","spells\shaman_lavaburst_green_missile.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5744,"Missile: Sword","World\Generic\Human\Passive Doodads\Weapons&Armor\HumanSword01.mdx",1,0.75,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5745,"Smoke: Tauren Colored","world\generic\tauren\passive doodads\smoke\taurencoloredsmoke01.mdx",1,3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5746,"Smoke - Infernal","spells\infernal_smoke_rec.mdx",2,5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5747,"Smoke: Tauren Colored","world\generic\tauren\passive doodads\smoke\taurencoloredsmoke01.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5757,"Earth Burrow Cast","spells\burrowearth_brown_missile.mdx",1,1.25,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5766,"Nature Precast Hand","Spells\Nature_PreCast_Low_Hand.mdx",1,3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5767,"Restoration Impact Base","Spells\Restoration_Impact_Base.mdx",0,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5768,"Deathchill Hands High","Spells\DeathKnight_Deathchill.mdx",0,10,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5769,"Black Hole (Ground)","spells\Ulduar_BlackHole_H.mdx",0,1,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5770,"Holy Ward State Chest","spells\holyward_state_chest.mdx",0,1,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5772,"Army of the Dead Area Impact","Spells\SummonGhouls.mdx",1,1.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5773,"Bottle (Green)","World\Generic\Human\Passive Doodads\Bottles\GreenBottle02.mdx",1,1.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5774,"Vehicle Target","interface\vehicles\vehicle_target_02.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5775,"Anti-Magic Zone Green","Spells\DeathKnight_AntiMagicZone_Green.mdx",0,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5776,"Seeping Gaseous Fel Nova - 1.15","spells\SeepingGaseous_Fel_Nova.mdx",1,1.15,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5777,"Force Shield and Explosion","spells\forceshield_andxplosion.mdx",0.65,0.65,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5782,"Desecration Area (1.5)","Spells\DeathKnight_Desecration.mdx",0,1.5,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5783,"Might Aura State Base","Spells\MightAura_Impact_Base.mdx",1,1.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5784,"Ward: Fel Fire Impact Chest (0.50)","spells\Fel_Fireward_Impact_Chest.mdx",0,0.5,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5785,"Missile: DeathCoil Missile (Death Knight)","Spells\DeathKnight_DeathCoil_Missile.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5789,"Titanium Weapon Chain","Spells\Titanium_WeaponChain_01.mdx",0,1,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5790,"Earth Burrow Cast","Spells\BurrowEarth_Brown_Missile.mdx",1,0.75,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5793,"BaseFlagCapRed Impact Base","spells\baseflagcapred_impact_base.mdx",1,0.25,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5800,"Frost Breath - Tournament","Spells\FrostBreath.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5805,"Earth Burrow Cast V2 (Small)","spells\burrowearth_brown_missile_v2.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5806,"Shackle Undead State Base (3.00)","spells\unholyshackles_state_base.mdx",1,3,3,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5808,"Acid Spit Impact","spells\shaman_lavaburst_green.mdx",0,4,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5809,"Acid Spit Missile","spells\shaman_lavaburst_green_missile.mdx",1,2.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5810,"Lava Burst Missile","spells\shaman_lavaburst_missile.mdx",1,2.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5811,"Lava Burst Impact","spells\shaman_lavaburst.mdx",0,4,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5813,"Voidwalker Sacrifice Shield State Base","spells\holydivineshielddark_state_base.mdx",0,3.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5814,"HolyWord Shield State Base","Spells\HolyWordShield_State_Base.mdx",0,10,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5815,"HolyDivineShield State Base","Spells\HolyDivineShield_State_Base.mdx",0,4,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5816,"Voidwalker Sacrifice Shield State Base","spells\holydivineshielddark_state_base.mdx",0,4,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5820,"Infernal Smoke Rec","Spells\Infernal_Smoke_Rec.mdx",0,1,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5835,"Portal: Boss Shadow - 0.3","Spells\Creature_SpellPortal_LargeShadow.mdx",1,0.3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5837,"Rocket Blast Down","spells\rocketblast_down.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5839,"Missile: Wave (Water)","spells\missile_wave_water.m2",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5840,"Massive Saronite Rock","world\expansion02\doodads\azjol-nerub\saronite\saronite_node_01.mdx",4,4,1,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5841,"Flame Shock Impact Chest (Blue)","Spells\FlameShock_Blue_Impact_Chest.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5842,"Dragon Breath Fire (New)","spells\DragonBreath_Fire.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5843,"Tuskarr Net 2","world\expansion02\doodads\generic\tuskarr\giantnets\ts_giantnet02.mdx",0,0.5,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5844,"Tuskarr Net 2","\World\Expansion02\Doodads\Generic\Tuskarr\GiantNets\TS_GiantNet02.mdx",1,1,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5845,"Massive Saronite Rock","world\expansion02\doodads\azjol-nerub\saronite\saronite_node_01.mdx",1.01,1,0.01,5); 
-INSERT INTO `SpellVisualEffectName` VALUES (5846,"Soulstone Resurrection Base","spells\soulstoneresurrection_base.mdx",1,3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5847,"Acid Burn Purple (Low-Poly)","Spells\AcidBurn_Small_Purple.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5848,"Acid Burn Purple (Low-Poly)","Spells\AcidBurn_Small_Purple.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5849,"Spell Portal: Light Red","Spells\Creature_SpellPortalLarge_LightRed.mdx",0,1,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5850,"Level Up: Red","Spells\LevelUp_Red.mdx",0,1,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5851,"Level Up: Red","Spells\LevelUp_Red.mdx",0,8,0.1,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5852,"Druid Morph Impact","Spells\DruidMorph_Impact_Base.mdx",0,15,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5853,"Seeping Gaseous Nova","spells\seepinggaseous_nova.mdx",1,2.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5854,"Missile: Soul","spells\soulshatter_missile.mdx",1,15,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5856,"Flame Circle","spells\flamecircleeffect.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5857,"FlamestrikeSmall Impact Base","Spells\FlamestrikeSmall_Impact_Base.mdx",1,2.75,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5858,"Fire ImpactDD Med Chest","Spells\Fire_ImpactDD_Med_Chest.mdx",1,0.75,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5859,"Dragon Breath Fire (New)","spells\DragonBreath_Fire.mdx",1,0.1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5860,"Red Radiation Fog","spells\redradiationfog.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5861,"Green Radiation Fog","spells\greenradiationfog.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5862,"Ice Precast Uber Base","Spells\Ice_Precast_Uber_Base.mdx",1,8,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5863,"Icecrown Gate Fog 01","World\Expansion02\Doodads\IceCrown\GateFog\IceCrownGateFog01.mdx",0,1,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5864,"Upper Deck - Weather Machine - Snow","spells\Goblin_Weather_Machine_Snow.mdx",1,7.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5865,"Dark Missile","Spells\Missile_Dark.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5866,"Missile: Cyclone (Large)","Spells\Cyclone_Caster_State_Scaled.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5867,"Souls State","world\expansion02\doodads\generic\scourge\sc_spirits_01.mdx",1,0.1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5868,"Snowball Powdery State","spells\SnowballPowdery_Impact_Base.mdx",1,3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5869,"Haunt Missile Soul","Spells\Haunt_Missile_Soul.mdx",1,2,0.1,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5871,"Weapon - Plague Rifle (Green)","spells\firearm_2h_rifle_01_spellobject.mdx",0,1,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5872,"Acid Breath Purple (Liquid)","spells\acidliquidbreath_purple.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5873,"Aura: Blue","World\Generic\PassiveDoodads\ParticleEmitters\AuraBlue.mdx",1,0.15,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5874,"Ice Precast High Base","Spells\Ice_Precast_High_Base.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5875,"Banish (Blue)","spells\banish_chest_blue.mdx",1,0.3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5876,"Arcane Bomb","spells\arcanebomb_missle.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5877,"Missile: Arcane Shot","spells\ArcaneShot_Missile.mdx",1,1,1,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5878,"Justin B Test","spells\Destructible_Dustfall_FX01.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5879,"Shadow Lance","spells\blackshot_missile.mdx",1,5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5881,"Soulstone Resurrection Base Horizontal","Spells\SoulStoneResurrection_Base_02.mdx",1,1,0.1,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5882,"Soulstone Resurrection Base Horizontal","Spells\SoulStoneResurrection_Base_02.mdx",0,3,0.1,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5883,"Snowball Powdery State","spells\SnowballPowdery_Impact_Base.mdx",1,8,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5884,"White Black Hole Horizontal","Spells\BlackHole_White_H.mdx",0,5.5,0.1,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5885,"Ice Precast Uber Base","Spells\Ice_Precast_Uber_Base.mdx",1,1.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5886,"Ice Precast Uber Hand","Spells\Ice_Precast_Uber_Hand.mdx",1,2.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5887,"Explosion: Frost","Spells\Xplosion_Frost_Impact.mdx",1,2.2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5889,"Orange Radiation Fog","spells\orangeradiationfog.mdx",1,7,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5890,"Acid Breath Purple (Liquid) ","spells\acidliquidbreath_purple.mdx",1,0.1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5891,"Creature - Spite Fire Nova (World)","Spells\FireNova_Area.mdx",0.2,0.2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5892,"Creature - Shadowform (Soulguard)","spells\shadow_form_precast.mdx",0,1.7,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5893,"Flames (Blue)","Spells\Archimonde_Blue_Fire.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5894,"Alchemy Table","world\generic\undead\passive doodads\undeadalchemytable\undead_alchemy_table.mdx",0,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5895,"Ice Nuke Missile (Small)","spells\IceNuke_Missile.mdx",0,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5896,"Missile: Rocket (No Particles)","spells\Missle_Rocket_off.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5897,"Acid Breath (Red) (Liquid)","spells\acidliquidbreathred.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5898,"Acid Breath (Red) (Liquid)","spells\acidliquidbreathred.mdx",1,4,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5899,"Tranquility Area","spells\tranquility_area.mdx",1,0.05,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5900,"Shadow Fissure Base Blue","Spells\Shadow_Fissure_Baseblue.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5901,"Brilliance Aura Base","Spells\BrillianceAura.mdl",1,0.65,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5902,"Acid Breath (Red) (Liquid)","spells\acidliquidbreathred.mdx",1,6,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5903,"Missile: Soul","spells\soulshatter_missile.mdx",1,1.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5904,"CycloneFire State","Spells\CycloneFire_State.mdx",1,0.15,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5905,"BurningSpirit Impact Head","Spells\BurningSpirit_Impact_Head.mdx",0,3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5906,"Ice Nuke Missile","spells\IceNuke_Missile.mdx",0,1.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5907,"Sonic Wave Blast Cast","spells\sonicwave_cast.mdx",1,0.25,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5908,"Frost Trap Aura","spells\frosttrap_aura.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5909,"Holy Nova","spells\holynova_impact_base.mdx",0.5,0.15,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5910,"Acid Breath (Red) (Liquid)","spells\acidliquidbreathred.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5912,"Smoke Ring (Forward)","spells\ring_of_smoke_fwd.mdx",0,0.5,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5915,"Fire Bomb","spells\firebomb_missle.mdx",1,0.1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5916,"Ragnaros Fire Nova Area","Spells\Rag_FireNova_Area.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5922,"Pestilence Impact Chest","Spells\Pestilence_Impact_Chest.mdx",0,5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5923,"Unholy Blight State","Spells\DeathKnight_UnholyBlight_State.mdx",0,3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5924,"Soulstone Resurrection Base","spells\soulstoneresurrection_base.mdx",1,2.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5925,"Orange Gas State","Spells\Orange_Gas_01.mdx",1,8,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5926,"Taunt Head (Orange)","spells\taunt_head_orange.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5927,"Missile: Dark Bomb","spells\Missile_Dark.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5930,"Explosion: Dust","spells\Xplosion_Dust_Impact.mdx",1,1.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5931,"Bomb Explosion","Spells\Bomb_ExplosionA.mdx",1,6,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5932,"Living Bomb Explosion Area","spells\mage_livingbomb_area.mdx",0,3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5934,"Force Shield Arcane (Purple)","spells\arcaneforceshield_purple.mdx",1,1.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5935,"Canon_Impact_Dust Impact (Chest)","spells\Canon_Impact_Dust.mdx",2,1.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5936,"Living Bomb Explosion Area","spells\mage_livingbomb_area.mdx",2,2.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5937,"Missile: Boulder","Spells\Boulder_Missile.mdx",0,2.75,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5938,"Ulduar_Missile","Spells\Ulduar_Missile.mdx",1,4,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5939,"Shadow Precast Med Base","Spells\Shadow_Precast_Med_Base.mdx",1,1.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5940,"Acid Ground Cloud Purple","spells\acid_ground_cloud_purple.mdx",1,1.4,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5941,"Acid Ground Cloud","spells\acid_ground_cloud.mdx",1,1.4,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5944,"Deep Freeze State (No Particles)","spells\ice_deepfreeze.mdx",0,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5945,"Void Zone V2.0","Spells\PortalofKathune_V2.mdx",1,1,0.1,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5946,"Blood Elf Power Orb (Red)","world\expansion01\doodads\generic\bloodelf\powerorb\bloodelf_powerorb_red.mdx",0,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5947,"Haunt Missile Soul","Spells\Haunt_Missile_Soul.mdx",1,3,0.1,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5948,"Missile: Pants","World\Generic\Orc\Passive Doodads\Tailoring\Clothes\OrcPants01.mdx",1,0.8,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5949,"Missile: Unmentionables","World\Generic\Human\Passive Doodads\Clothing\FoldedPantsGrey.mdx",1,0.6,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5951,"Army of the Dead Area Impact","Spells\SummonGhouls.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5953,"Bucket","World\Generic\Human\Passive Doodads\Buckets\Bucket.mdx",1,0.6,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5954,"Skull, Chattering","spells\skull.mdx",1,1.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5955,"Blade Barrier","spells\deathknight_bladebarrier.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5956,"Missile: Shirt (Blue)","World\Generic\Human\Passive Doodads\Clothing\FolderShirtGreen.mdx",1,1.2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5957,"Flamestrike Area","Spells\Flamestrike_Area.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5958,"Water Explosion","spells\water_explosion.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5959,"Skull, Chattering","spells\skull.mdx",1,3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5960,"Lava Burst Missile (Green)","spells\shaman_lavaburst_green_missile.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5961,"zzOLD__Ice Block State","spells\icebarrier_state.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5962,"Ice Block Visual State (Sindragosa)","world\expansion02\doodads\azjol-nerub\saronite\saronite_node_01.mdx",0,6.5,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5963,"Flesh Giant Torso","World\Expansion02\Doodads\Generic\Scourge\SC_Fleshgiant_Torso.mdx",0,2,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5964,"Flesh Giant Torso","World\Expansion02\Doodads\Generic\Scourge\SC_Fleshgiant_Torso.mdx",0,1,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5965,"Scourge Crate","World\Expansion02\Doodads\Generic\Scourge\SC_crate_01.mdx",0,3,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5966,"Acid Cloud Breath Smoke","spells\acidcloudbreath_groundsmoke.mdx",1,0.1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5967,"Lava Burst Missile (Green)","spells\shaman_lavaburst_green_missile.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5968,"Upper Deck - Weather Machine - Snow","spells\Goblin_Weather_Machine_Snow.mdx",1,5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5969,"Upper Deck - Weather Machine - Cloudy","spells\Goblin_Weather_Machine_Cloudy.mdx",1,5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5970,"Ice ImpactDD Uber Chest","Spells\Ice_ImpactDD_Uber_Chest.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5971,"Snow Rain","Spells\ChristmasSnowRain.mdx",1,1.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5972,"Ice ImpactDD Low Chest","Spells\Ice_ImpactDD_Low_Chest.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5973,"Ice ImpactDD Uber Chest","Spells\Ice_ImpactDD_Uber_Chest.mdx",1,0.75,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5974,"Lava Burst Missile (Green)","spells\shaman_lavaburst_green_missile.mdx",1,0.3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5975,"Explosive Shot Missile","spells\explosive_shot_missile.mdx",1,10,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5976,"Mongoose Glow High","Spells\Enchantments\MongooseGlow_High.mdx",1,1,0.1,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5977,"Mongoose Glow High","Spells\Enchantments\MongooseGlow_High.mdx",1,5,0.1,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5978,"Smoke Ring","spells\ring_of_smoke.mdx",0,0.5,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5979,"Nature Zone","Spells\NatureZone.mdx",1,0.15,0.1,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5982,"Poison Elemental Impact Base","spells\poisonelemental_impact_base.mdx",1,0.25,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5983,"Bloody Explosion Green Impact","Spells\BloodyExplosionGreen.mdx",1,4,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5984,"Bloody Explosion Green ImpacT","Spells\BloodyExplosionGreen.mdx",1,5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5985,"Enslave Demon Impact Chest (2.0x)","Spells\EnslaveDemon_Impact_Chest.mdx",0,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5986,"Frost Strike Impact","Spells\DeathKnight_FrostStrike_Impact.mdx",0,5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5987,"Xplosion_Frost_Impact","Spells\Xplosion_Frost_Impact.mdx",0,0.75,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5988,"Icebound Fortitude","SPELLS\DeathKnight_IceboundFortitude.mdx",1,10,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5989,"Bloody Explosion Green ImpacT","Spells\BloodyExplosionGreen.mdx",1,6,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5990,"White Black Hole Horizontal","Spells\BlackHole_White_H.mdx",0,3,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5991,"White Black Hole Horizontal","Spells\BlackHole_White_H.mdx",0,3.5,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5992,"Upper Deck - Weather Machine - Snow","spells\Goblin_Weather_Machine_Snow.mdx",1,5.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5993,"Acid Breath (Liquid)","spells\acidliquidbreath.mdx",1,4,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5994,"White Black Hole Horizontal","Spells\BlackHole_White_H.mdx",0,2,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (5995,"Spell Object: Grenade (Gold)","world\generic\passivedoodads\weapons\mohawkgrenade.mdx",1,0.4,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5997,"Fel Fire Nova Area","spells\fel_firenova_area.mdx",1,0.25,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5998,"Missile: SlimeLesserExplode","spells\SlimeLesserExplode_Missile.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (5999,"Missile: SlimeLesser","spells\SlimeLesser_Missile.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6000,"Ice Sphere (Glowing)","spells\snowflakecreature_var1.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6001,"Window Beam Visual","world\generic\passivedoodads\windowbeam\windowbeam01.mdx",0,1.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6002,"Crucible of Souls","Spells\WellOfSouls_Base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6005,"Mohawk Explosion","spells\mohawkexplosion.mdx",1.5,1.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6006,"Ooze Flow","Spells\Goo_Flow_State.mdx",1,1,0.1,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6007,"Ooze Flow","Spells\Goo_Flow_State.mdx",1,2,0.1,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6008,"Quel'Delar","Spells\Sword_1H_QuelDelar_D_01_Spell.mdx",1,0.75,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6009,"Void Zone (Souls)","Spells\Well_Of_Souls_Base.mdx",1,1,0.1,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6010,"Void Zone (Souls)","Spells\Well_Of_Souls_Base.mdx",1,1.25,0.1,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6011,"Void Zone (Souls)","Spells\Well_Of_Souls_Base.mdx",1,2,0.1,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6012,"Void Zone (Souls)","Spells\Well_Of_Souls_Base.mdx",1,0.5,0.1,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6013,"Void Zone (Flame)","Spells\FlameZone.mdx",1,1,0.1,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6014,"Void Zone (Flame)","Spells\FlameZone.mdx",1,1.5,0.1,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6015,"Void Zone (Flame)","Spells\FlameZone.mdx",1,0.25,0.1,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6016,"Void Zone (Flame)","Spells\FlameZone.mdx",1,0.5,0.1,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6017,"Void Zone (Holy)","Spells\HolyZone.mdx",1,1,0.1,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6018,"Void Zone (Holy)","Spells\HolyZone.mdx",1,1.15,0.1,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6019,"Void Zone (Holy)","Spells\HolyZone.mdx",1,0.25,0.1,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6020,"Void Zone (Holy)","Spells\HolyZone.mdx",1,0.5,0.1,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6021,"Void Zone (Nature)","Spells\NatureZone.mdx",1,1,0.1,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6022,"Void Zone (Nature)","Spells\NatureZone.mdx",1,1.5,0.1,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6023,"Void Zone (Nature) ","Spells\NatureZone.mdx",1,1.25,0.1,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6024,"Void Zone (Nature)","Spells\NatureZone.mdx",1,0.5,0.1,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6025,"Ice Block State","spells\icebarrier_state.mdx",0.1,0.24,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6026,"Flame Shock Impact Chest (Blue)","Spells\FlameShock_Blue_Impact_Chest.mdx",1,1.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6028,"Void Zone (Holy)","Spells\HolyZone.mdx",1,2,0.1,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6029,"Mohawk Explosion","spells\mohawkexplosion.mdx",0.25,0.25,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (6030,"Polymorph Impact","spells\polymorph_impact.mdx",0.25,0.25,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (6031,"Soulshatter Impact Base","spells\soulshatter_impact.mdx",1,3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6032,"Acid Liquid Breath - Purple (1.00)","spells\acidliquidbreath_purple.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6035,"Frost Breath","Spells\FrostBreath.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6036,"Fire Bomb","spells\firebomb_missle.mdx",1,10,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6037,"Fire Bomb","spells\firebomb_missle.mdx",1,25,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6038,"Green Bottle (Potion)","World\Expansion02\Doodads\Icecrown\Lab Items\Icecrown_LabBottle_01.mdx",1,1,0.1,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6039,"Orange Bottle (Potion)","World\Expansion02\Doodads\Icecrown\Lab Items\Icecrown_LabBottle_02.mdx",1,1,0.1,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6040,"Green Bottle (Potion)","World\Expansion02\Doodads\Icecrown\Lab Items\Icecrown_LabBottle_01.mdx",1,2,0.1,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6041,"Green Bottle (Potion)","World\Expansion02\Doodads\Icecrown\Lab Items\Icecrown_LabBottle_01.mdx",1,3,0.1,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6042,"Orange Bottle (Potion)","World\Expansion02\Doodads\Icecrown\Lab Items\Icecrown_LabBottle_02.mdx",1,2,0.1,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6043,"Orange Bottle (Potion)","World\Expansion02\Doodads\Icecrown\Lab Items\Icecrown_LabBottle_02.mdx",1,3,0.1,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6044,"Orange Gas State","Spells\Orange_Gas_01.mdx",1,1,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (6045,"Green Bottle (Potion)","World\Expansion02\Doodads\Icecrown\Lab Items\Icecrown_LabBottle_01.mdx",1,5,0.1,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6046,"Green Bottle (Potion)","World\Expansion02\Doodads\Icecrown\Lab Items\Icecrown_LabBottle_01.mdx",1,3.5,0.1,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6047,"Orange Bottle (Potion)","World\Expansion02\Doodads\Icecrown\Lab Items\Icecrown_LabBottle_02.mdx",1,4,0.1,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6048,"Orange Bottle (Potion)","World\Expansion02\Doodads\Icecrown\Lab Items\Icecrown_LabBottle_02.mdx",1,5,0.1,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6049,"Green Bottle (Potion)","World\Expansion02\Doodads\Icecrown\Lab Items\Icecrown_LabBottle_01.mdx",1,6,0.1,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6050,"Green Bottle (Potion)","World\Expansion02\Doodads\Icecrown\Lab Items\Icecrown_LabBottle_01.mdx",1,4,0.1,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6051,"Orange Bottle (Potion)","World\Expansion02\Doodads\Icecrown\Lab Items\Icecrown_LabBottle_02.mdx",1,6,0.1,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6052,"Orange Bottle (Potion)","World\Expansion02\Doodads\Icecrown\Lab Items\Icecrown_LabBottle_02.mdx",1,9,0.1,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6053,"Orange Gas State","Spells\Orange_Gas_01.mdx",1,3,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (6054,"Dustfall FX (JZB)","spells\dustfall_fx.mdx",1,7,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (6055,"Archimonde Fire","spells\archimonde_fire.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6056,"Sylvanas","Creature\LadySylvanasWindrunner\LadySylvanasWindrunner.mdx",0,1.2,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (6057,"Void Zone","creature\portalofkathune\portalofkathune.mdx",1,0.03,0.03,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (6058,"Magic Net State","Spells\MagicNet_State.mdx",0,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6059,"Shadowstep Cast Base","spells\shadowsteps_fx.mdx",0,0.25,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6062,"Weapon - Plague Rifle (Purple)","spells\firearm_2h_rifle_02_spellobject.mdx",0,1,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (6063,"Acid Breath Purple (Liquid)","spells\acidliquidbreath_purple.mdx",0,1,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (6064,"Acid Breath (Liquid)","spells\acidliquidbreath.mdx",0,0.5,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (6065,"Orange Gas State","Spells\Orange_Gas_01.mdx",1,14,0.1,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6066,"Green Bottle (Potion)","World\Expansion02\Doodads\Icecrown\Lab Items\Icecrown_LabBottle_01.mdx",1,0.5,0.1,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6067,"Poison Elemental Impact Base","spells\poisonelemental_impact_base.mdx",1,3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6068,"Wind Shear Impact","spells\shaman_windshear.mdx",1,0.75,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6069,"Black Magic Precast Base","spells\BlackMagic_Precast_Base.mdx",1,1.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6070,"Poison Impact Chest","Spells\Poison_Impact_Chest.mdx",1,0.75,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6071,"Precious Ribbon","\World\Generic\PassiveDoodads\ValentinesDay\ValentinesRibbon01huge.mdx",0,1,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (6072,"Holiday Ribbon","World\Generic\PassiveDoodads\ValentinesDay\ValentinesRibbon01huge.mdx",0,0.1,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (6073,"Blizzard Rune Base (State)","Spells\SummonGround_Blizzard_State.mdx",0,0.8,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6076,"Lava Burst Missile (Green)","spells\shaman_lavaburst_green_missile.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6079,"Flame Breath (Blue)","Spells\FlameBreath_Blue.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6080,"Poison Impact Orange","Spells\Poison_ImpactDot_Orange_Med_Base.mdx",0,1,0.1,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6081,"Poison Elemental Impact (Orange)","Spells\PoisonElemental_Orange_Impact_Base.mdx",1,1,0.1,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6082,"Poison Elemental Impact (Orange)","Spells\PoisonElemental_Orange_Impact_Base.mdx",1,2,0.1,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6083,"Poison Elemental Impact (Orange)","Spells\PoisonElemental_Orange_Impact_Base.mdx",1,5,0.1,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6084,"Orange Gas Plague Cloud L3","Spells\Orange_Gas_Plague_Cloud_L3.mdx",1,1,0.1,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6085,"Orange Gas Plague Cloud L2","Spells\Orange_Gas_Plague_Cloud_L2.mdx",1,1,0.1,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6086,"Orange Gas Plague Cloud L1","Spells\Orange_Gas_Plague_Cloud_L1.mdx",1,1,0.1,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6087,"Taunt Head (Orange)","spells\taunt_head_orange.mdx",1,3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6088,"Insects","World\Generic\PassiveDoodads\FlyingInsects\FlyingSmallInsects.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6089,"Wasp Swarm","World\Kalimdor\Silithus\PassiveDoodads\WaspSwarm\WaspSwarm.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6090,"Wasp Swarm","World\Kalimdor\Silithus\PassiveDoodads\WaspSwarm\WaspSwarm.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6091,"Cat Mark State Head","Spells\CatMark.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6092,"Cat Mark State Head","Spells\CatMark.mdx",1,3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6095,"Missile: BloodBolt","spells\bloodbolt_missile_low.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6096,"Missile: BloodBolt","spells\bloodbolt_missile_low.mdx",1,0.25,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6097,"Cockroach","Creature\Cockroach\Cockroach.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6099,"Acid Cloud Breath Blue (Fast)","spells\AcidCloudBreath_Fast_Blue.mdx",1,0.65,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6101,"Explosion: Firey (Blue) (Small)","spells\Xplosion_Fire_Impact_Blue.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6103,"FlamestrikeSmall Impact Base (Blue)","spells\FlamestrikeSmall_Blue_Impact_Base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6104,"Missile: Demolisher (Blue) (Large)","Spells\Demolisher_Missile_Blue.mdx",0,5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6105,"Soulshatter Impact Base","spells\soulshatter_impact.mdx",1,3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6106,"FireBlast Impact Chest Large (Blue)","spells\FireBlast_Blue_Impact_Chest.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6107,"Xplosion Fire Impact Blue","spells\xplosion_fire_impact_blue.mdx",2,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6108,"Xplosion Fire Impact Blue","spells\xplosion_fire_impact_blue.mdx",2,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6109,"Flame Shock Impact Chest (Blue)","Spells\FlameShock_Blue_Impact_Chest.mdx",1,3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6111,"Poison Elemental Impact Base (8x)","spells\poisonelemental_impact_base.mdx",1,8,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6112,"Ghostly Strike Impact Chest","spells\ghostlystrike_impact_chest.mdx",1,4,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6114,"Ooze Flow","Spells\Goo_Flow_State.mdx",1,0.5,0.1,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6115,"Ooze Flow","Spells\Goo_Flow_State.mdx",1,0.1,0.1,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6116,"Shadow ImpactDD Uber Chest","Spells\Shadow_ImpactDD_Uber_Chest.mdx",1,4,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6117,"Holy Zone State Chest","spells\holyzone.mdx",0,1,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (6118,"Shield: Fire Force (Dark) (Small)","Spells\FireForceShield_Dark.mdx",1,0.3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6119,"Form Arcane Precast","Spells\Arcane_Form_Precast.mdx",1,5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6120,"Shadow Precast Uber Hand","Spells\Shadow_Precast_Uber_Hand.mdx",1,10,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6121,"Light's Vengeance Missile","world\generic\passivedoodads\weapons\hammer_pvpalliance_a_01.mdx",0,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6122,"Dark Ritual PreCast Base Blue","spells\darkritual_precast_baseblue.mdx",1,6,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6123,"Lichborne, Large","Spells\DeathKnight_Lichborne_State.mdx",0,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6124,"Orange Gas Plague Cloud L3","Spells\Orange_Gas_Plague_Cloud_L3.mdx",1,1,0.1,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6125,"Orange Gas Plague Cloud L2","Spells\Orange_Gas_Plague_Cloud_L2.mdx",1,0.6,0.1,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6126,"Orange Gas Plague Cloud L1","Spells\Orange_Gas_Plague_Cloud_L1.mdx",1,0.6,0.1,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6127,"JetPack","spells\jetpack.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6128,"Orange Gas Plague Cloud L1","Spells\Orange_Gas_Plague_Cloud_L1.mdx",1,0.1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6130,"CycloneFire State","Spells\CycloneFire_State.mdx",1,0.1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6131,"Explosion: Fel","spells\Xplosion_Fel_Impact.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6135,"JetPack Flame Only","spells\jetpack_flame.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6137,"Soulshatter Missile","spells\soulshatter_missile.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6138,"Icecrown Snowflake","Spells\Icecrown_Snowflake.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6139,"Quel'Delar","Spells\Sword_1H_QuelDelar_D_01_Spell.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6140,"Oil Breath (Liquid)","spells\OilLiquidBreath.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6141,"Combat Blood Spurt Front Large Black","Particles\BloodSpurts\BloodSpurtBlackLarge.mdx",1,5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6142,"Missile: Black Shot","spells\blackshot_missile.mdx",1,15,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6143,"Combat Blood Spurt Front Large Black","Particles\BloodSpurts\BloodSpurtBlackLarge.mdx",1,7,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6144,"Death Pact Impact (Target)","SPELLS\DeathKnight_DeathPactTarget.mdx",1,0.25,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6145,"Acid Breath (Red) (Liquid)","spells\acidliquidbreathred.mdx",1,0.25,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6146,"Fire Force Shield Purple State","spells\fireforceshield_purple.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6147,"Force Shield Arcane (Purple) (Copy)","spells\arcaneforceshield_purple.mdx",1,1.1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6148,"Force Shield Arcane (Purple)","spells\arcaneforceshield_purple.mdx",1,1.1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6149,"Force Shield Arcane (Purple)","spells\arcaneforceshield_purple.mdx",1,1.2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6152,"Poison Elemental Impact (Orange)","Spells\PoisonElemental_Orange_Impact_Base.mdx",1,7,0.1,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6153,"Poison Elemental Impact (Orange)","Spells\PoisonElemental_Orange_Impact_Base.mdx",1,9,0.1,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6154,"Frost_Form","spells\frost_form_precast.mdx",0,3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6155,"Ice Precast Uber Base","Spells\Ice_Precast_Uber_Base.mdx",1,2.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6156,"Acid Cloud Breath Blue (Fast)","spells\AcidCloudBreath_Fast_Blue.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6157,"Ice Precast Uber Base","Spells\Ice_Precast_Uber_Base.mdx",1,4,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6158,"Ice Precast Uber Base","Spells\Ice_Precast_Uber_Base.mdx",1,3.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6159,"Ritual Of Fire Precast","spells\Ritual_Fire_PreCast_Base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6160,"ForceShield Fire Blue","Spells\FireForceShield_Blue.mdx",1,0.8,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6161,"Force Shield Arcane (Blue)","spells\arcaneforceshield_blue.mdx",1,1.2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6162,"Plague Strike State","Spells\DeathKnight_PlagueStrikeState.mdx",0,4,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6163,"Fel Seeping Gaseous Nova","spells\seepinggaseous_fel_nova.mdx",1,1.75,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6164,"Nexus magic Orb blue","world\expansion02\doodads\nexus\nexus_magicorb_blue_01.mdx",0,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6165,"Nexus Magic Orb Blue","world\expansion02\doodads\nexus\nexus_magicorb_blue_01.mdx",0,1,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (6166,"Fire Bomb","spells\firebomb_missle.mdx",1,0.05,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6167,"Portal: Green","spells\creature_spellportal_green.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6168,"Aura: Green","World\Generic\PassiveDoodads\ParticleEmitters\AuraGreen.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6169,"RadiationGreen State","Spells\GreenGhost_state.mdx",0,3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6170,"Purple Glow High, large","spells\enchantments\purpleglow_high.mdx",5,5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6171,"Shadow Dance State","Spells\ShadowDance_State.mdx",0,6,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (6172,"Holy Bomb (Large)","Spells\HolyBomb_Missle.mdx",3,2,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (6173,"Holy ImpactDD High Chest","Spells\Holy_ImpactDD_High_Chest.mdx",1,10,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6174,"Holy Nova Impact Base (Huge)","spells\holynova_impact_base.mdx",4,6,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6175,"Aura: Yellow, Short","world\generic\passivedoodads\particleemitters\aurayellowshort.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6176,"Yellow Flame","spells\enchantments\yellowflame_low.mdx",0,10,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (6177,"Plague Gas Orange","Spells\Plague_Gas_Orange_02.mdx",1,1,0.1,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6178,"Acid Breath","Spells\AcidBreath.mdx",1,0.75,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6179,"Holy ImpactDD High Chest","Spells\Holy_ImpactDD_High_Chest.mdx",1,3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6180,"Ghoul Explode","SPELLS\DeathKnight_Ghoul_Explode.mdx",1,3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6181,"Missile: SlimeLesserExplode","spells\SlimeLesserExplode_Missile.mdx",1,0.25,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6182,"Holy Missile Low","Spells\Holy_Missile_Low.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6183,"Flamestrike ImpactDD Med Base - 3.00 BLACK","spells\flamestrike_black_impactdd_med_base.mdx",1,3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6184,"Flamestrike ImpactDD Med Base - BLACK","spells\flamestrike_black_impactdd_med_base.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6185,"Anti-Magic Zone Green","Spells\DeathKnight_AntiMagicZone_Green.mdx",0,0.75,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6186,"GreenGlow_High","spells\enchantments\greenglow_high.mdx",1,5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6187,"Nature Precast Chest","Spells\Nature_Precast_Chest.mdx",0,0.8,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6188,"Anti-Magic Zone (Red)","world\expansion02\doodads\icecrown\bloodprince\icecrown_bloodprince_bloodorb.mdx",1,0.1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6189,"Bone Cyclone Impact","Spells\Bone_Cyclone_Impact.mdx",0,1,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (6193,"Warlock Test visual 135131,safds","cube.mdx",0,1,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (6196,"Demonic Circle Teleport Cast","spells\warlock_demoniccircle_teleport.mdx",0,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6197,"Dancing Runeweapon State","Spells\DeathKnight_DancingRuneblade_State.mdx",0,8,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6198,"Plague Strike State","Spells\DeathKnight_PlagueStrikeState.mdx",0,1.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6199,"Missile: SlimeLesserExplode_No Flip","Spells\SlimeLesserExplode_Missile_No_Flip.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6200,"Shadowflame Cast (World)","spells\warlock_shadowflame.mdx",0.1,0.1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6201,"Fear Impact Head","Spells\Fear_Impact_Chest.mdx",0,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6202,"Frosty Swirl Base","spells\frostycircle.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6206,"Void Zone V2.0","Spells\PortalofKathune_V2.mdx",1,2,0.1,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6207,"Shadow Strikes State","spells\shadow_strikes_state_hand.mdx",1,10,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6208,"Anti-Magic Zone (Red)","world\expansion02\doodads\icecrown\bloodprince\icecrown_bloodprince_bloodorb.mdx",1,0.25,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6210,"Molten Core Impact Chest","spells\warlock_backdraft.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6211,"Quest - Sunwell Ignition!","spells\Sunwell_BeamFX.mdx",1,0.1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6212,"Ice Sphere (Glowing)","spells\snowflakecreature_var1.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6213,"Sunwell Ground FX","spells\sunwell_groundfx.mdx",1,0.15,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6214,"Ooze Flow","Spells\Goo_Flow_State.mdx",1,1.5,0.1,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6215,"Fel Seeping Gaseous Nova","spells\seepinggaseous_fel_nova.mdx",1,2.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6216,"Nature Precast Chest","Spells\Nature_Precast_Chest.mdx",1,10,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6218,"Aura: Green","World\Generic\PassiveDoodads\ParticleEmitters\AuraGreen.mdx",1,8,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6219,"Nature Cast Hand","Spells\Nature_Cast_Hand.mdx",1,20,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6220,"Ghost_state (Green)","spells\greenghost_state.mdx",1,3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6222,"Wandering Plague Impact","spells\DeathKnight_WanderingPlague.mdx",0,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6223,"Plague Gas Orange","Spells\Plague_Gas_Orange_02.mdx",1,0.35,0.1,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6224,"Orange Gas Plague Cloud L3 ","Spells\Orange_Gas_Plague_Cloud_L3.mdx",1,0.1,0.1,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6225,"Hellfire Impact Base (Blue)","spells\HellfIre_Blue_Impact_Base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6226,"Aura: Green","World\Generic\PassiveDoodads\ParticleEmitters\AuraGreen.mdx",1,3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6227,"Nature Cast Hand","Spells\Nature_Cast_Hand.mdx",1,10,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6228,"Nature Precast Chest - 5.00","Spells\Nature_Precast_Chest.mdx",1,5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6229,"Aura: Green","World\Generic\PassiveDoodads\ParticleEmitters\AuraGreen.mdx",1,5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6230,"Orange Gas State","Spells\Orange_Gas_01.mdx",1,4,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (6231,"Poison Elemental Impact (Orange)","Spells\PoisonElemental_Orange_Impact_Base.mdx",1,12,0.1,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6232,"Ground Rune (Blue)","World\Goober\G_RuneGroundBlue01.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6233,"Aura: Green, Tall","world\generic\passivedoodads\particleemitters\auragreentall.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6234,"Test Rock","world\azeroth\duskwood\passivedoodads\fence\rockwallrubble.mdx",1,1.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6235,"Explosion: Fel","spells\Xplosion_Fel_Impact.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6236,"Xplosion Fire Impact","spells\Xplosion_Fire_Impact.mdx",2,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6238,"Plague Gas Orange","Spells\Plague_Gas_Orange_02.mdx",1,3,0.1,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6239,"Might Aura State Base","Spells\MightAura_Impact_Base.mdx",1,12,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6240,"Canon_Impact_Dust Impact (Chest)","spells\Canon_Impact_Dust.mdx",1,3.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6241,"Missile: Rocket (Medium)","spells\missle_rocket.mdx",0,2.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6243,"Hellfire Channel Base","Spells\HellFire_Channel_Base.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6245,"Acid Breath (Liquid)","spells\acidliquidbreath.mdx",1,3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6247,"Orange Bottle v2 (Potion)","World\Expansion02\Doodads\Icecrown\Lab Items\Icecrown_LabBottle_03.mdx",1,1,0.1,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6248,"Orange Bottle v2 (Potion)","World\Expansion02\Doodads\Icecrown\Lab Items\Icecrown_LabBottle_03.mdx",1,2,0.1,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6250,"Missile: Soul","spells\soulshatter_missile.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6251,"Missile: Crate (Valentine)","world\generic\passivedoodads\valentinesday\valentinescrate.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6252,"Plague Gas Orange","Spells\Plague_Gas_Orange_02.mdx",1,6,0.1,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6253,"Plague Gas Orange","Spells\Plague_Gas_Orange_02.mdx",1,4,0.1,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6254,"Plague Gas Orange","Spells\Plague_Gas_Orange_02.mdx",1,0.5,0.1,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6255,"Sunder Impact Chest","Spells\Sunder_Impact_Chest.mdx",0,0.35,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6256,"Banish (Green)","Spells\Banish_Chest.mdx",0,5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6257,"Banish (Green)","Spells\Banish_Chest.mdx",0,11,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6258,"Bloodlust Cast Hand","Spells\BloodLust_Cast_Hand.mdx",1,5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6259,"Heroic Throw Impact","spells\warrior_heroicthrow_impact.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6260,"Xplosion_Nature_Impact","Spells\Xplosion_Nature_Impact.mdx",0,5,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (6261,"Missile: Spore","Creature\SporeCreature\SporeCreature.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6262,"Poison Impact Orange","Spells\Poison_ImpactDot_Orange_Med_Base.mdx",0,4,0.1,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6263,"Ooze Flow","Spells\Goo_Flow_State.mdx",1,0.4,0.1,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6264,"Plaguethrower Backpack (Cosmetic)","spells\rshoulder_robe_plague_a_01_spell.mdx",0,1,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (6265,"Skybeam, Red (Neutral)","Spells\FireBeam_Neutral_State_Base.mdx",1,0.25,0.01,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (6266,"LowPolyFire","world\generic\pvp\fires\lowpolyfire.mdx",1,1.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6267,"Hodir Ground Freeze","spells\ulduar_bosssmoke.mdx",0,0.035,0.001,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (6268,"ChainsofIce Low Base","Spells\ChainsofIce_Low_Base.mdx",1,0.2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6269,"Ice Precast Uber Hand","Spells\Ice_Precast_Uber_Hand.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6270,"Orange Bottle v2 (Potion)","World\Expansion02\Doodads\Icecrown\Lab Items\Icecrown_LabBottle_03.mdx",1,0.5,0.1,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6271,"Death and Decay Ground Runes (Green)","spells\deathanddecay_area_runesgreen.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6272,"Blizzard Rune Base","Spells\SummonGround_Blizzard.mdx",0,0.08,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6273,"SnowFlake Missile","spells\snowflakecreature_var1_missile.mdx",0,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6274,"Xplosion_Frost_Impact","Spells\Xplosion_Frost_Impact.mdx",0,1,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (6276,"Orange Gas Plague Cloud L1","Spells\Orange_Gas_Plague_Cloud_L1.mdx",1,0.7,0.1,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6277,"Orange Gas Plague Cloud L2","Spells\Orange_Gas_Plague_Cloud_L2.mdx",1,0.8,0.1,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6278,"Orange Gas Plague Cloud L3","Spells\Orange_Gas_Plague_Cloud_L3.mdx",1,0.8,0.1,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6282,"Fire Bomb","spells\firebomb_missle.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6283,"Plague Strike State (Red)","spells\deathknight_plaguestrikestatered.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6285,"LowPolyFireNoSmoke (TINY)","world\generic\pvp\fires\lowpolyfire_nosmoke.mdx",1,0.03,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6286,"ProtectionFromFire Chest (TINY)","Spells\ProtectionFromFire_Chest.mdx",0,0.05,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6287,"Frostbolt Missile","spells\frostbolt.mdx",1,0.6,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6288,"Ghoul Explode (Simple)","SPELLS\DeathKnight_Ghoul_Explode_simple.mdx",1,10,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6289,"Ghoul Explode (Simple)","SPELLS\DeathKnight_Ghoul_Explode_simple.mdx",1,3.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6290,"Holy ImpactDD Med Chest","Spells\Holy_ImpactDD_Med_Chest.mdx",1,0.75,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6291,"Sporeling","Spells\Sporeling_01.mdx",0,1,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (6292,"Sparkle Trail","spells\sparktrail.mdx",0,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6293,"Sporeling","Spells\Sporeling_01.mdx",0,0.75,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (6294,"Frostmourne","Item\ObjectComponents\Weapon\Sword_2H_Frostmourne_D_02.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6295,"Missile: Shadowbolt (No Ribbon)","spells\ShadowBolt_Missile_NoRibbon.mdx",1,1.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6296,"ShadowWordPain Chest","Spells\ShadowWordPain_Chest.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6297,"Cripple State Chest","Spells\Cripple_State_Chest.mdx",1,3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6298,"Ice Block (New)","Creature\QuestObjects\Creature_IceBlock_Sindragosa.mdx",1,0.75,0.1,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6299,"Orange Bottle v2 (Potion)","World\Expansion02\Doodads\Icecrown\Lab Items\Icecrown_LabBottle_03.mdx",1,1.5,0.1,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6300,"Druid Morph Impact (3.0)","Spells\DruidMorph_Impact_Base.mdx",0,3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6301,"Ghoul Explode (Simple)","SPELLS\DeathKnight_Ghoul_Explode_simple.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6302,"Void Zone (Holy)","Spells\HolyZone.mdx",1,0.15,0.1,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6303,"Ghoul Explode (Simple)","SPELLS\DeathKnight_Ghoul_Explode_simple.mdx",1,6,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6307,"Banish (Red)","spells\bloodbolt_chest.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6308,"Shaman_Red","Spells\Enchantments\Shaman_Red.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6309,"Shaman_Red","Spells\Enchantments\Shaman_Red.mdx",1,4,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6310,"RedGlow_High","spells\enchantments\redglow_high.mdx",1,10,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6311,"Anti-Magic Zone (Red)","world\expansion02\doodads\icecrown\bloodprince\icecrown_bloodprince_bloodorb.mdx",1,0.05,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6312,"Ice ImpactDD Uber Chest","Spells\Ice_ImpactDD_Uber_Chest.mdx",1,0.4,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6313,"Impact Light","Spells\Impact_Light.mdx",0,2,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (6315,"Frost Bolt Missile","Spells\Frostbolt.mdx",1,1.25,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6316,"Missile: Firebolt (Blue)","Spells\FireBolt_Blue_Missile_Low.mdx",1,1.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6317,"Coilfang_Blue_Energy.mdx","World\Expansion01\Doodads\Coilfang\Passivedoodads\BlueEnergy\Coilfang_Blue_Energy.mdx",0.5,0.05,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6318,"Incinerate Missile (Blue) ","spells\incinerateblue_low_base.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6319,"Ice Nuke Missile","spells\IceNuke_Missile.mdx",1,0.01,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6320,"Plague Gas Blue","Spells\Plague_Gas_Blue_01.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6321,"Plague Gas Blue","Spells\Plague_Gas_Blue_01.mdx",1,1.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6323,"HolyLight Impact Head","Spells\HolyLight_Impact_Head.mdx",0,3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6325,"Frosty Swirl Base","spells\frostycircle.mdx",0,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6326,"Plague Strike Impact (Red)","spells\deathknight_plaguestrikecaster_impactred.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6327,"Resistance Aura Base","Spells\ResistanceAura_Base.mdx",1,5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6329,"Create Soulstone Cast","Spells\CreateSoulstone_Cast.mdx",1,3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6330,"Haunt_State","spells\warlock_haunt_state.mdx",0,2,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (6331,"Death Pact Impact (Big)","SPELLS\DeathKnight_DeathPactTarget.mdx",5,5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6332,"Death Pact Cast (Big)","SPELLS\DeathKnight_DeathPactCaster.mdx",5,5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6333,"HolyDivineShield State Base (Red)","Spells\HolyDivineShieldRed_State_Base.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6334,"Blood Rain Impact Chest","spells\blood_rain_impact_base.mdx",0,1,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (6335,"Blood Rain Missile","spells\blood_rain.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6336,"Blood Rain Area Impact","spells\blood_rain_main_impact_base.mdx",0,1,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (6337,"Bloodqueen Fire","spells\bloodqueen_fire.mdx",0,0.75,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (6338,"Blue Hunter's Mark","spells\catmark_blue.mdx",1,1.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6339,"Hunger for Blood State","spells\hungerforblood_state.mdx",0,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6340,"Bloodsurge Impact","spells\warrior_bloodsurge.mdx",0,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6341,"Ice Precast Uber Base V2 (No Purple)","spells\ice_precast_uber_base_var2.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6343,"Warrior Devastate Axe","spells\warrior_devastate_axe.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6344,"Hunger for Blood State","spells\hungerforblood_state.mdx",0,4,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6345,"Icebound Fortitude","SPELLS\DeathKnight_IceboundFortitude.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6346,"Death Pact Impact (Caster)","SPELLS\DeathKnight_DeathPactCaster.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6347,"Frost_Form","spells\frost_form_precast.mdx",0,3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6348,"Blue Fire Ring","World\Expansion02\Doodads\ZulDrak\LightFX\Zuldrak_Blue_Fire.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6349,"Xplosion_Frost_Impact","Spells\Xplosion_Frost_Impact.mdx",0,5,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (6351,"Shadow Form New","Spells\Shadow_Form_Precast.mdx",0,0.75,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (6352,"Impact Dark","Spells\Impact_Dark.mdx",0,0.5,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (6353,"Void Zone V2.0 (0.50)","Spells\PortalofKathune_V2.mdx",1,0.5,0.1,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6354,"BloodBoil_Impact_Chest","Spells\BloodBoil_Impact_Chest.mdx",0,1.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6355,"Missile: Soul","spells\soulshatter_missile.mdx",1,3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6356,"Orange Bottle v2 (Potion)","Spells\Icecrown_LabBottle_03.mdx",1,2.5,0.1,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6357,"MoonBeam (Blue)","spells\MoonBeamBlue_Impact_Base.mdx",1,0.3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6358,"Frostmourne","Item\ObjectComponents\Weapon\Sword_2H_Frostmourne_D_02.mdx",1,2.75,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6359,"Missile: Shadowmourne","spells\shadowmourne_missile.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6361,"Plaguethrower Backpack (Cosmetic, Purple)","spells\rshoulder_robe_plague_a_01_spell_purple.mdx",0,1,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (6362,"Plaguethrower Backpack (Cosmetic, Green)","spells\rshoulder_robe_plague_a_01_spell_green.mdx",0,1,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (6363,"Acid Breath (Fel)","Spells\AcidBreath_SuperGreen.mdx",0,0.8,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (6364,"Frostmourne (Broken)","Item\ObjectComponents\Weapon\Sword_2H_Frostmourne_D_02_Broken.mdx",1,2.75,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6365,"Frostmourne (Broken)","Item\ObjectComponents\Weapon\Sword_2H_Frostmourne_D_02_Broken.mdx",1,2.75,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6366,"Impact Dark","Spells\Impact_Dark.mdx",0,3,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (6367,"Shadowmourne Visual Low","spells\shadowmourne_cast_low.mdx",0,1,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (6368,"Shadowmourne Visual High","spells\shadowmourne_cast_high.mdx",0,1,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (6371,"Missile: Soul (Blue)","spells\soulshatter_missileblue.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6372,"Ice Precast Uber Base V2 (No Purple)","spells\ice_precast_uber_base_var2.mdx",1,4,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6373,"Ice Precast Uber Base V2 (No Purple)","spells\ice_precast_uber_base_var2.mdx",1,3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6374,"Frozen Rune Weapon State","Spells\DeathKnight_FrozenRuneWeapon_State.mdx",0,3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6375,"SkyVortex","World\Expansion02\Doodads\ZulDrak\SkyVortex\ZulDrak_SkyVortex.mdx",0,0.1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6377,"Blood Rain Impact Chest","spells\blood_rain_impact_base.mdx",0,0.3,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (6378,"Soulshatter Missile","spells\soulshatter_missile.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6379,"Blood Rain Area Impact","spells\blood_rain_main_impact_base.mdx",0,0.3,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (6380,"Skybeam, Blue","Spells\FrostBeam_State_Base.mdx",1,0.045,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6381,"Icecrown Soul Missile","world\expansion02\doodads\generic\scourge\sc_spirits_03.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6382,"Low Poly Blue Fire","Spells\LowPolyFireAnim_Blue.mdx",1,0.15,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6383,"Coilfang_Blue_Energy.mdx","World\Expansion01\Doodads\Coilfang\Passivedoodads\BlueEnergy\Coilfang_Blue_Energy.mdx",0.5,0.01,0.001,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6384,"Banish (Blue)","spells\banish_chest_blue.mdx",1,0.15,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6386,"Flames (Blue)","Spells\Archimonde_Blue_Fire.mdx",1,0.75,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6387,"Bone Cyclone Impact","Spells\Bone_Cyclone_Impact.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6388,"Flames (Blue)","Spells\Archimonde_Blue_Fire.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6390,"Shield: Arcane Force (Green Very Large)","Spells\ArcaneForceShield_Green.mdx",0,4,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (6391,"Shadow ImpactDoT Med Head (Copy)","Spells\Shadow_ImpactDot_Med_Head.mdx",0.5,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6392,"Shadowmourne Visual High","spells\shadowmourne_cast_high.mdx",0,1.5,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (6393,"Blood Rain Missile","spells\blood_rain.mdx",0.5,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6394,"Orange Bottle v2 (Potion)","Spells\Icecrown_LabBottle_03_Spell.mdx",1,3,0.1,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6395,"Dark Missile","Spells\Missile_Dark.mdx",1,5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6396,"Black Hole Horizontal","Spells\Ulduar_BlackHole_H.mdx",0,2,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (6397,"Goo Flow State (Black)","Spells\Goo_Flow_StateBlack.mdx",0,1,0.1,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6398,"Goo Flow State (Black)","Spells\Goo_Flow_StateBlack.mdx",0,0.75,0.1,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6399,"Ice Flash","spells\xplosion_frost_impact_b.mdx",0,1,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (6400,"Frost Flash","spells\xplosion_frost_impact_b.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6402,"Frost Flash","spells\xplosion_frost_impact_b.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6403,"Hodir Ground Freeze","spells\ulduar_bosssmoke.mdx",0,0.15,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (6404,"Frosty Swirl Base","spells\frostycircle.mdx",0,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6405,"Seeping Gas (Fel)","spells\SeepingGaseous_Fel_Nova.mdx",1,1.25,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6408,"SC Spirits 02","SC_Spirits_02.mdx",0,1,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (6409,"SC_Spirits_02","world\expansion02\doodads\generic\scourge\sc_spirits_02.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6411,"Call of the Shoveltusk (L)","spells\lshoulder_mail_raidshaman_h_01spell.mdx",0,1,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (6412,"Call of the Shoveltusk (R)","spells\rshoulder_mail_raidshaman_h_01spell.mdx",0,1,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (6413,"Holiday Ribbon ","World\Generic\PassiveDoodads\ValentinesDay\ValentinesRibbon01huge.mdx",0,0.01,0.001,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (6414,"Saberlash","Spells\Saberlash_Impact.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6415,"Warp Storm","creature\warpstorm\warpstorm.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6417,"Arthas Souls Attack","spells\Arthas_Souls_Attack.mdx",0,1,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (6418,"Void Zone (Souls)","Spells\Well_Of_Souls_Base.mdx",1,0.25,0.1,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6420,"Orange Gas Plague Cloud L3 B","Spells\Orange_Gas_Plague_Cloud_L3_B.mdx",1,1,0.1,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6421,"Orange Gas Plague Cloud L2 B","Spells\Orange_Gas_Plague_Cloud_L2_B.mdx",1,1,0.1,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6422,"Orange Gas Plague Cloud L1 B","Spells\Orange_Gas_Plague_Cloud_L1_B.mdx",1,1,0.1,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6423,"bunny (0.01) (.01)","creature\rabbit\rabbitgold.mdx",0,0.75,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6424,"Dragon Wing (left)","World\Expansion02\Doodads\Nexus\Nexus_Dragon_Broken_LeftWing.mdx",0,0.1,0.01,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (6425,"Dragon Wing (right)","World\Expansion02\Doodads\Nexus\Nexus_Dragon_Broken_RightWing.mdx",0,0.1,0.01,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (6426,"Incinerate Missile (Blue)","spells\incinerateblue_low_base.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6427,"Frostmourne Shatters","Spells\Frostmourne_Shatters.mdx",0,0.6,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6428,"Wave: Ice","spells\Missile_Wave_Ice.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6430,"Holy Zone State Chest","spells\holyzone.mdx",0,0.2,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (6431,"Quest - Healing Winds","spells\Divine_Protector_State.mdx",0,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6432,"Missile: Soul (Blue)","spells\SoulShatter_MissileBlue.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6435,"Shadow Nova Cast Non Projected","Spells\Shadow_Nova_area_noProjection.mdx",1,0.75,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6436,"Missile: Shadowmourne ","spells\shadowmourne_missile.mdx",1,0.3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6440,"Massive Saronite Rock","world\expansion02\doodads\azjol-nerub\saronite\saronite_node_01.mdx",4,3,1,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6441,"Tuskarr Net 2","world\expansion02\doodads\generic\tuskarr\giantnets\ts_giantnet02.mdx",0,0.3,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (6448,"Aura: Yellow, Short","world\generic\passivedoodads\particleemitters\aurayellowshort.mdx",1,1.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6449,"Holy ImpactDD High Chest","Spells\Holy_ImpactDD_High_Chest.mdx",1,3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6455,"Shadow Breath","Spells\DragonBreath_Shadow.mdx",1,0.15,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6456,"Shadowbolt Chest Impact","spells\Shadowbolt_Chest_Impact.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6457,"Dark Missile","Spells\Missile_Dark.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6460,"Void Zone V2.0","Spells\PortalofKathune_V2.mdx",1,0.2,0.1,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6461,"Acid Burn Black","SPELLS\AcidBurn_Black.mdx",1,0.45,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6462,"ShadowWord Death Impact ","spells\shadowword_death_impact.mdx",1,15,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6463,"ShadowSnare Base","Spells\Shadow_Snare_High_base.mdx",1,5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6464,"ShadowSnare Base","Spells\Shadow_Snare_High_base.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6467,"Create Soulstone Cast","Spells\CreateSoulstone_Cast.mdx",1,5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6468,"Shadow Nova Cast","spells\shadow_nova_area.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6469,"Wave: Ice","spells\Missile_Wave_Ice.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6475,"GrayStone02","world\generic\passivedoodads\graystone\graystone02.mdx",1,0.05,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6479,"Snowstorm","spells\Snow_Tempest_State.mdx",0,0.55,0.1,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6480,"Ice Nova","spells\Ice_Nova.mdx",0,1,0.1,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6490,"Holy Precast High Hand (Copy)","Spells\Holy_Precast_High_Hand.mdx",1,5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6491,"Holy Bomb (Copy)","Spells\HolyBomb_Missle.mdx",0,0.8,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (6493,"Holy Precast High Hand (Copy)","Spells\Holy_Precast_High_Hand.mdx",1,4,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6495,"Cat Mark State (Green)","Spells\CatMark_Green.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6499,"Bestow Disease Impact Chest","Spells\BestowDisease_Impact_Chest.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6500,"Void Zone V2.0","Spells\PortalofKathune_V2.mdx",1,1.75,0.1,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6519,"Red Hunter's Mark","spells\catmark_red.mdx",1,1.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6520,"Posterboard Effect","world\expansion02\doodads\dalaran\dalaran_forsale_01.mdx",0,1.25,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (6521,"Enervating Brand Impact","spells\devious_impact.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6522,"Shadow Dance State","Spells\ShadowDance_State.mdx",0,0.4,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (6523,"GT Battle - Radiation Cloud","spells\largegreenradiationfog.mdx",1,4,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6524,"Yoggsaron Green Bubble","spells\yoggsaron_green.mdx",1,4,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6525,"GT - Battle - Tank Buster Shield","spells\yoggsaron_green.mdx",1,0.8,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6527,"Flame Zone","spells\flamezone.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6532,"Missile: Bomb (bigger)","spells\missile_bomb.mdx",0,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6537,"Poison Drip","spells\enchantments\poisondrip.mdx",1,1,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (6538,"Poison Drip","spells\enchantments\poisondrip.mdx",1,2,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (6539,"ShadowFlame Impact","spells\shadowflame_impact.mdx",0,1.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6540,"Bloody Explosion Green Impact","spells\bloodyexplosiongreen.mdx",1,3,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (6543,"Gun Stand State","World\Generic\Dwarf\Passive Doodads\Targets\GunTargetStand.mdx",1,0.55,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6544,"Cat Mark State (Blue)","Spells\CatMark_Blue.mdx",1,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6549,"Anti-Magic State Base (Red, Small)","spells\antimagic_state_red.mdx",1,0.15,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6550,"Detect Invisibility State Head (small)","spells\detectstealth_state_head.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6551,"Detect Invisibility Impact Head (Small)","Spells\DetectInvis_Impact_Head.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6552,"Detect Invis State Head (Small)","spells\detectstealth_state_head.mdx",0,0.5,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (6557,"Aura Red Tall","World\Generic\PassiveDoodads\ParticleEmitters\AuraRedVeryTall.mdx",0,2,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (6558,"Aura Blue Tall","World\Generic\PassiveDoodads\ParticleEmitters\AuraBlueVeryTall.mdx",0,3,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (6560,"Smoke Flare (White)","spells\SmokeFlare_White.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6561,"Sack (Small)","World\Azeroth\Stranglethorn\PassiveDoodads\Sack01_01\Sack01_01.mdx",1,0.45,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6563,"Plague Strike Impact (Red)","spells\deathknight_plaguestrikecaster_impactred.mdx",0,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6565,"Warlock Demonic Circle Summon","spells\warlock_demoniccircle_summon.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6566,"Warlock Demonic Circle Teleport","spells\warlock_demoniccircle_teleport.mdx",0,7,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6567,"SummonPet PreCast Impact Base","Spells\SummonPet_Impact_Base.mdx",1,10,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6568,"Ghost_state (Purple) ","spells\purpleghost_state.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6572,"Goblin RC Car (Blue)","world\generic\goblin\passivedoodads\goblinrocketcarts\goblinrocketcart_rc_blue.mdx",0,1,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (6573,"Shield: Fire Force (Purple)","Spells\FireForceShield_Purple.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6574,"Ethereal Portal, On","world\expansion01\doodads\generic\ethereal\portal\et_portal01.mdx",0,0.5,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (6575,"Ethereal Portal, Off","world\expansion01\doodads\generic\ethereal\portal\et_portal01off.mdx",0,0.5,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (6577,"Spell Object: Potion, Green 04","spells\potion_green04_spellobject.mdx",0,1,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (6585,"Missile: Crate","World\Goober\G_Crate01.mdx",1,0.4,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6608,"Missile: Harpoon (Fire)","spells\harpoon_fire_missile.mdx",1,0.3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6613,"Warlock Decimate State Effect","spells\Warlock_Decimate_State.mdx",0,1,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6619,"Missile: Frog","Creature\Frog\ArrowFrog.mdx",1,4,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6623,"Gnome Claw Copter","creature\gnomecopter\gnomecopter.mdx",0,1,1,1); 
-INSERT INTO `SpellVisualEffectName` VALUES (6624,"Blizzard Rune Base","Spells\SummonGround_Blizzard.mdx",0,0.3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6633,"Explosion: Fel","spells\Xplosion_Fel_Impact.mdx",1,5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6635,"Fel Flame Patch - 3.00","spells\fel_archimonde_fire.mdx",1,3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6637,"Fel Flame Breath 180","spells\fel_flamebreath180.mdx",1,3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6638,"Ice Block (New, Opaque)","creature\questobjects\creature_iceblock.mdx",1,0.75,0.1,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6639,"Gaseous Form","Spells\GaseousForm.mdx",1,0.6,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6688,"Cat Mark State (Blue) ","Spells\CatMark_Blue.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6689,"Cat Mark State (Green)","Spells\CatMark_Green.mdx",1,2,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6708,"Goo Flow State (Green)","Spells\Goo_Flow_State.mdx",0,1,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (6712,"Holy Zone State Chest","spells\holyzone.mdx",0,0.4,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (6713,"Holy Zone State Chest","spells\holyzone.mdx",0,0.3,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (6716,"HolyShield_State_Base","spells\holyshield_state.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6717,"HolyShield_State_Base","spells\holyshield_state.mdx",1,0.75,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6718,"HolyShield_State_Base","spells\holyshield_state.mdx",1,1.25,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6729,"Fire Beam State Base","Spells\FireBeam_State_Base.mdx",0,5,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (6731,"Xplosion Fire Impact","spells\Xplosion_Fire_Impact.mdx",4,6,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6732,"Fire Nova Area","Spells\FireNova_Area.mdx",1,5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6733,"Xplosion Fire Impact","spells\Xplosion_Fire_Impact.mdx",0,30,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6751,"Sleep State Head","Spells\Sleep_State_Head.mdx",1,10,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6758,"Missile: Light Bomb","Spells\Missile_Light.mdx",1,0.3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6760,"Shockwave Impact","spells\warrior_shockwave_impact.mdx",0,3,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6761,"Cone of Fire Hand","Spells\ConeofFire_Hand.mdx",1,0.5,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (6770,"Fire Nova Area","Spells\FireNova_Area.mdx",1,15,0.01,100); 
-INSERT INTO `SpellVisualEffectName` VALUES (7003,"Shadow Dance State","Spells\ShadowDance_State.mdx",0,4.5,0.1,10); 
-INSERT INTO `SpellVisualEffectName` VALUES (7087,"Shadow Fury Impact","spells\ShadowFury_Impact_Base.mdx",1,1.5,0.01,100); 
+INSERT INTO `SpellVisualEffectName` VALUES (1,"SeedOfCorruption_State","Spells\SeedOfCorruption_State.mdx",1,1,0.01,100),
+(2,"FireBolt Impact Chest","Spells\FireBolt_ImpactDD_Med_Chest.mdx",1,1,0.01,100),
+(3,"zzOLD__Heal","Spells\Heal\Heal.mdl",1,1,0.01,100),
+(4,"zzOLD__HealCast","Spells\HealCast\HealCast.mdl",1,1,0.01,100),
+(6,"Teleport In","Spells\TeleportIn\TeleportIn.mdx",1,1,0.01,100),
+(10,"zzOLD__Teleport Cast","Spells\TeleportCast\TeleportCast.mdl",1,1,0.01,100),
+(11,"Footstep Spray Snow Run","Particles\FootstepSpraySnow.mdl",1,1,0.01,100),
+(12,"Footstep Spray Snow Walk","Particles\FootstepSpraySnowWalk.mdl",1,1,0.01,100),
+(14,"HARDCODED Loot Art","Particles\LootFX.mdl",1,1,0.01,100),
+(17,"Shadow Precast Low Hand","Spells\Shadow_Precast_Low_Hand.mdx",1,1,0.01,100),
+(18,"zzOLD__Death Touch Cast","Spells\DeathTouchCast\DeathTouchCast.mdl",1,1,0.01,100),
+(20,"zzOLD__Heal Hands","Spells\HealHands\HealHands.mdl",1,1,0.01,100),
+(21,"HARDCODED Unit Level Up","Spells\LevelUp\LevelUp.mdl",1,1,0.01,100),
+(23,"zzOLD__FreezingFinger2_Impact_Head","Particles\FreezingFinger2_Impact_Head.MDL",1,1,0.01,100),
+(24,"zzOLD__FreezingFinger_Impact_Chest","Particles\FreezingFinger_Impact_Chest.MDL",1,1,0.01,100),
+(25,"zzOLD__FreezingFinger_Impact_Base","Particles\FreezingFinger_Impact_Base.MDL",1,1,0.01,100),
+(26,"zzOLD__FrostCastConeofCold","Particles\FrostCastConeofCold.MDL",1,1,0.01,100),
+(27,"zzOLD__Portal","Spells\Summon03\Summon03.mdl",1,1,0.01,100),
+(28,"zzOLD__Numb_Impact_Base","Particles\Numb_Impact_Base.MDL",1,1,0.01,100),
+(29,"zzOLD__FreezingCloud_Impact_Base","Particles\FreezingCloud_Impact_Base.MDL",1,1,0.01,100),
+(30,"zzOLD__Numb_Precast_Hand","Particles\Numb_Precast_Hand.MDL",1,1,0.01,100),
+(32,"zzOLD__FrostBolt Missle","Particles\FrostBolt_Missle.mdl",1,1,0.01,100),
+(33,"zzOLD__FrostBlast_Precast_Hand","Particles\FrostBlast_Precast_Hand.MDL",1,1,0.01,100),
+(34,"zzOLD__FrostBolt Impact","Particles\FrostBolt_Impact_Chest.mdl",1,1,0.01,100),
+(36,"zzOLD__Freeze_Impact_Base","Particles\Freeze_Impact_Base.MDL",1,1,0.01,100),
+(37,"zzOLD__Freeze_Impact_Chest","Particles\Freeze_Impact_Chest.MDL",1,1,0.01,100),
+(38,"zzOLD__FrostArmor_Impact_Head","Particles\FrostArmor_Impact_Head.MDL",1,1,0.01,100),
+(39,"zzOLD__FrostNova_Impact_Chest","Particles\FrostNova_Impact_Chest.MDL",1,1,0.01,100),
+(40,"zzOLD__FreezeNova_Impact_Chest","Particles\FreezeNova_Impact_Chest.MDL",1,1,0.01,100),
+(41,"zzOLD__FreezingFinger4_Impact_Head","Particles\FreezingFinger4_Impact_Head.mdl",1,1,0.01,100),
+(42,"zzOLD__StarStun_State_Head","horse2.mdx",1,1,0.01,100),
+(43,"zzOLD__CorrodeArmor_Impact_Head","Particles\CorrodeArmor_Impact_Head.MDL",1,1,0.01,100),
+(44,"Earth Burrow Cast (Red)","Spells\BurrowEarth_Hellfire_Missile.mdx",1,1,0.01,100),
+(45,"Fire Precast Low Hand","Spells\Fire_Precast_Low_Hand.mdx",1,1,0.01,100),
+(46,"zzOLD__BurningBlast_Precast_Base","Particles\BurningBlast_Precast_Base.MDL",1,1,0.01,100),
+(47,"Readiness Impact Chest","spells\readiness_impact_chest.mdx",1,1,0.01,100),
+(48,"zzOLD__BoltofIce_Impact_Chest","Particles\BoltofIce_Impact_Chest.mdl",1,1,0.01,100),
+(49,"zzOLD__FrostBlast_Precast_Base","Particles\FrostBlast_Precast_Base.mdl",1,1,0.01,100),
+(50,"StunSwirl State Head","Spells\StunSwirl_State_Head.mdx",1,1,0.01,100),
+(51,"zzOLD__WalkofFire","Particles\WalkofFire_area.mdl",2,1,0.01,100),
+(53,"zzOLD__Frost_Precast_Base","Particles\Frost_Precast_Base.mdl",1,1,0.01,100),
+(54,"Ice Precast Uber Head","Spells\Ice_Precast_Uber_Head.mdx",1,1,0.01,100),
+(55,"Combat Blood Spurt Back Large Red","Particles\BloodSpurts\BloodSpurtLarge.mdx",1,1,0.01,100),
+(56,"zzOLD__BoltofFire_missle","Particles\BoltofFire_missle.mdl",1,1,0.01,100),
+(57,"zzOLD__FireShield_Impact_Base","Particles\FireShield_Impact_Base.mdl",1,1,0.01,100),
+(58,"zzOLD__Frost_Cast_Chest","Particles\Frost_Cast_Chest.mdl",1,1,0.01,100),
+(59,"zzOLD__Frost_Precast_Chest","Particles\Frost_Precast_Chest.mdl",1,1,0.01,100),
+(60,"zzOLD__Frost_Cast_Base","Particles\Frost_Cast_Base.mdl",1,1,0.01,100),
+(61,"zzOLD__Frost_Precast3_Base","Particles\Frost_Precast3_Base.mdl",1,1,0.01,100),
+(62,"zzOLD__Frost_Cast2_Base","Particles\Frost_Cast2_Base.mdl",1,1,0.01,100),
+(63,"zzOLD__Frost_Precast_Low_Hand","particles\coldbreath.mdx",1,1.2,0.01,100),
+(64,"zzOLD__Frost_Cast_Hand","Particles\Frost_Cast_Hand.mdl",1,1,0.01,100),
+(65,"zzOLD__BurningBlast_Cast_Base","Particles\BurningBlast_Cast_Base.mdl",1,1,0.01,100),
+(66,"zzOLD__FreezingFinger1_Impact_Head","Particles\FreezingFinger1_Impact_Head.mdl",1,1,0.01,100),
+(67,"zzOLD__FrostBlast_Cast_Base","Particles\FrostBlast_Cast_Base.mdl",1,1,0.01,100),
+(68,"zzOLD__FreezingFinger3_Impact_Head","Particles\FreezingFinger3_Impact_Head.mdl",1,1,0.01,100),
+(69,"zzOLD__CircleofFlame_area","Particles\CircleofFlame_area.mdl",1,1,0.01,100),
+(70,"Rejuvenation Impact Base","Spells\Rejuvenation_Impact_Base.mdx",1,1,0.01,100),
+(71,"zzOLD__Rejuvenation Impact Chest","Particles\NaturesTouch1_Impact_Chest.mdl",1,1,0.01,100),
+(72,"zzOLD__Nature_Precast_Base","Particles\Nature_Precast_Base.mdl",1,1,0.01,100),
+(73,"Nature Cast Hand","Spells\Nature_Cast_Hand.mdx",1,1,0.01,100),
+(74,"CallLightning Impact","Spells\CallLightning_Impact.mdx",1,1,0.01,100),
+(75,"zzOLD__FireShield_State_Base","Particles\FireShield_State_Base.mdl",0,1,0.01,100),
+(77,"zzOLD__CallStorm_PreCast_Base","Particles\CallStorm_PreCast_Base.mdl",1,1,0.01,100),
+(78,"zzOLD__LightningShield_Impact_Chest","Particles\LightningShield_Impact_Chest.mdl",1,1,0.01,100),
+(79,"EntanglingRoots_Impact_Base","Particles\EntanglingRoots_Impact_Base.mdl",1,1,0.01,100),
+(80,"EntanglingRoots State","Spells\EntanglingRoots_State.mdx",1,1,0.01,10),
+(81,"zzOLD__FrostCloud_Cast_Base","Particles\FrostCloud_Cast_Base.mdl",1,1,0.01,100),
+(82,"zzOLD__Nature_Cast_Base","Particles\Nature_Cast_Base.mdl",1,1,0.01,100),
+(83,"Ice ImpactDD Low Chest","Spells\Ice_ImpactDD_Low_Chest.mdx",1,1,0.01,100),
+(84,"zzOLD__IcePrison_State_Base","Particles\IcePrison_State.mdl",1,1,0.01,100),
+(85,"zzOLD__Resurrection_Impact_Base","Particles\Resurrection_Impact_Base.mdl",1,1,0.01,100),
+(86,"Defensive Stance Impact Chest","Spells\DefensiveStance_Impact_Chest.mdx",1,1,0.01,100),
+(87,"zzOLD__LightningShield_Cast_Base","Particles\LightningShield_Cast_Base.mdl",1,1,0.01,100),
+(88,"Lightning PreCast Low Hand","Spells\Lightning_PreCast_Low_Hand.mdx",1,1,0.01,100),
+(89,"Immolate Impact Chest","Spells\Immolate_Impact_Chest.mdx",1,1,0.01,100),
+(90,"SliceDice Impact Chest","Spells\SliceDice_Impact_Chest.mdx",1,1,0.01,100),
+(91,"zzOLD__BloodLust_Impact_Base","Particles\BloodLust_Impact_Base.mdl",1,1,0.01,100),
+(92,"zzOLD__Dismember_Impact_Chest","Particles\Dismember_Impact_Chest.mdl",1,1,0.01,100),
+(93,"ShieldBash Impact Chest","Spells\ShieldBash_Impact_Chest.mdx",1,1,0.01,100),
+(94,"BloodLust State Hand","Spells\BloodLust_State_Hand.mdx",1,1,0.01,100),
+(95,"Missile: Meteor (Scale: x3)","spells\Meteor_Ball_Missile.mdx",1,3,0.01,100),
+(96,"zzOLD__Lightning_PreCast_Base","Particles\Lightning_PreCast_Base.mdl",1,1,0.01,100),
+(97,"Cripple State Chest","Spells\Cripple_State_Chest.mdx",1,1,0.01,100),
+(98,"Alexander's Test Missile","Spells\Missile_Wave_Ice.m2",1,1,0.01,100),
+(99,"Food HealEffect Base","Spells\Food_HealEffect_Base.mdx",1,1,0.01,100),
+(100,"Teleport","Spells\Teleport.mdx",1,1,0.01,100),
+(101,"HeadSplitter Impact Chest","Spells\HeadSplitter_Impact_Chest.mdx",1,1,0.01,100),
+(102,"Bloodlust Cast Hand","Spells\BloodLust_Cast_Hand.mdx",1,1,0.01,100),
+(103,"SummonPet PreCast Impact Base","Spells\SummonPet_Impact_Base.mdx",1,1,0.01,100),
+(104,"zzOLD__DismemberBlood_Impact_Chest","Particles\DismemberBlood_Impact_Chest.mdl",1,1,0.01,100),
+(105,"Footstep Spray Dirt Run","Particles\FootstepSprayDirt.mdl",1,1,0.01,100),
+(106,"Footstep Spray Dirt Walk","Particles\FootstepSprayDirtWalk.mdl",1,1,0.01,100),
+(107,"HARDCODED Breath Cold","Particles\ColdBreath.mdl",1,1,0.01,100),
+(108,"HARDCODED Breath Underwater","Particles\Bubbles.mdl",1,1,0.01,100),
+(109,"Combat Blood Spurt Front Small Red","Particles\BloodSpurts\BloodSpurt.mdl",1,1,0.01,100),
+(110,"Holy ImpactDD Uber Chest","Spells\Holy_ImpactDD_Uber_Chest.mdx",1,1,0.01,100),
+(117,"Ice Precast Low Hand","Spells\Ice_Precast_Low_Hand.mdx",1,1,0.01,100),
+(118,"zzOLD__Hit Splat Physical Big","Particles\BloodSpurts\HitSprite.mdx",1,1,0.01,100),
+(119,"Holy Precast Uber Hand","Spells\Holy_Precast_Uber_Hand.mdx",1,1,0.01,100),
+(120,"zzOLD__Hit Splat Holy Small","Particles\BloodSpurts\HitSprite.mdx",1,1,0.01,100),
+(121,"Ice Precast Med Hand","Spells\Ice_Precast_Med_Hand.mdx",1,1,0.01,100),
+(122,"Ice Precast High Base","Spells\Ice_Precast_High_Base.mdx",1,1,0.01,100),
+(123,"Holy Precast High Base","Spells\Holy_Precast_High_Base.mdx",1,1,0.01,100),
+(124,"Holy ImpactDD Med Chest","Spells\Holy_ImpactDD_Med_Chest.mdx",1,1,0.01,100),
+(125,"Holy ImpactDD High Chest","Spells\Holy_ImpactDD_High_Chest.mdx",1,1,0.01,100),
+(126,"Ice Precast High Hand","Spells\Ice_Precast_High_Hand.mdx",1,1,0.01,100),
+(127,"Ice Precast Uber Hand","Spells\Ice_Precast_Uber_Hand.mdx",1,1,0.01,100),
+(128,"Ice Precast Uber Base","Spells\Ice_Precast_Uber_Base.mdx",1,1,0.01,100),
+(129,"Holy ImpactDD Low Chest","Spells\Holy_ImpactDD_Low_Chest.mdx",1,1,0.01,100),
+(130,"Holy Precast Med Hand","Spells\Holy_Precast_Med_Hand.mdx",1,1,0.01,100),
+(131,"Holy Precast High Hand","Spells\Holy_Precast_High_Hand.mdx",1,1,0.01,100),
+(134,"zzOLD__Heal Precast Base","Particles\Heal_Precast_Base.mdl",1,1,0.01,100),
+(135,"Holy Precast Low Hand","Spells\Holy_Precast_Low_Hand.mdx",1,1,0.01,100),
+(136,"zzOLD__Heal Cast Base","Particles\Heal_cast_Base.mdl",1,1,0.01,100),
+(140,"zzOLD__Heal_Impact_Base","Particles\Heal_Impact_Base.mdl",1,1,0.01,100),
+(141,"zzOLD__Heal Precast Chest","Particles\Heal_Precast_Chest.mdl",1,1,0.01,100),
+(142,"zzOLD__HolySmite Impact","Particles\HolySmite_Impact_Chest.mdl",1,1,0.01,100),
+(143,"zzOLD__HolySmite Precast Base","Particles\HolySmite_Precast_Base.mdl",1,1,0.01,100),
+(144,"zzOLD__Restoration_Precast_Chest","Particles\Restoration_PreCast_Chest.mdl",1,1,0.01,100),
+(145,"zzOLD__Restoration_Precast_Base","Particles\Restoration_Precast_Base.mdl",1,1,0.01,100),
+(146,"Nature Precast Hand","Spells\Nature_PreCast_Low_Hand.mdx",1,1,0.01,100),
+(147,"Restoration Impact Base","Spells\Restoration_Impact_Base.mdx",0,1,0.01,100),
+(148,"Holy ImpactDD Uber Base","Spells\Holy_ImpactDD_Uber_Base.mdx",1,1,0.01,100),
+(149,"Shadow ImpactDD Low Chest","Spells\Shadow_ImpactDD_Low_Chest.mdx",1,1,0.01,100),
+(150,"Shadow ImpactDD Med Base","Spells\Shadow_ImpactDD_Med_Base.mdx",1,1,0.01,100),
+(151,"Missile: DeathCoil Missile","Spells\DeathCoil_Missile.mdx",1,1,0.01,100),
+(152,"zzOLD__Bloodlust_PreCast_Hand","Particles\Bloodlust_PreCast_Hand.mdl",1,1,0.01,100),
+(153,"PiercingStrike_Cast_Hand","Particles\PiercingStrike_Cast_Hand.mdl",1,1,0.01,100),
+(154,"zzOLD__BurningBlast_Impact","Particles\BurningBlast_Impact_Chest.mdl",1,1,0.01,100),
+(155,"zzOLD__HealSelf_Impact_Base","Particles\HealSelf_Impact_Base.mdl",1,1,0.01,100),
+(156,"zzOLD__HealSelf_PreCast_Hand","Particles\HealSelf_PreCast_Hand.mdl",1,1,0.01,100),
+(157,"LightningBolt Missile","Spells\LightningBolt_Missile.mdx",1,1,0.01,100),
+(158,"Slow Impact Base","Spells\Slow_Impact_Base.mdx",1,1,0.01,100),
+(159,"zzOLD__LogInEffect_Precast_Base","Particles\LoginFX.mdl",0,1,0.01,100),
+(160,"zzOLD__Corruption Impact Head","Particles\CorrodeArmor_Impact_Head.mdl",1,1,0.01,100),
+(161,"zzOLD__Power Word Shadow Impact","Particles\PWShadow_Impact.mdl",1,1,0.01,100),
+(162,"Invisibility Impact","Spells\Invisibility_Impact_Base.mdl",1,1,0.01,100),
+(163,"Invisibility PreCast Hands","Particles\Invisibility_PreCast_Hand.mdl",1,1,0.01,100),
+(164,"Combat Blood Spurt Front Large Red","Particles\BloodSpurts\BloodSpurtLarge.mdl",1,1,0.01,100),
+(167,"zzOLD__MoltenBlast_Impact","Particles\MoltenBlast_Impact.mdl",1,1,0.01,100),
+(168,"Brilliance Aura Base","Spells\BrillianceAura.mdl",1,1,0.01,100),
+(169,"SummonPet Cast Impact Base","Spells\SummonPet_Cast_Impact_Base.mdx",1,1,0.01,100),
+(170,"Summon Precast Hand","Spells\Summon_PreCast_Hand.mdx",1,1,0.01,100),
+(171,"Mining Pick","Spells\MiningPick_SpellObject.mdx",1,1,0.01,100),
+(172,"zzOLD__FrostNova_AE","Particles\FrostNova_AE_Impact.mdl",50,1,0.01,100),
+(173,"LightningShield Impact Base","Spells\LightningShield_Impact_Base.mdx",1,1,0.01,100),
+(174,"zzOLD__Fizzle Physical","Particles\Physical_Fizzle_Hand.mdl",1,1,0.01,100),
+(175,"zzOLD__Fizzle Holy","Particles\Holy_Fizzle_Hand.mdl",1,1,0.01,100),
+(176,"zzOLD__Fizzle Fire","Particles\Fire_Fizzle_Hand.mdl",1,1,0.01,100),
+(177,"zzOLD__Fizzle Nature","Particles\Nature_Fizzle_Hand.mdl",1,1,0.01,100),
+(178,"zzOLD__Fizzle Frost","Particles\Frost_Fizzle_Hand.mdl",1,1,0.01,100),
+(179,"zzOLD__Fizzle Shadow","Particles\Shadow_Fizzle_Hand.mdl",1,1,0.01,100),
+(180,"zzOLD__DivineSmite_Precast_Base","Particles\DivineSmite_Precast_Base.mdl",1,1,0.01,100),
+(181,"zzOLD__DivineSmite_Impact_Chest","Particles\DivineSmite_Impact_Chest.mdl",1,1,0.01,100),
+(182,"zzOLD__DivineSmite Impact Base","Particles\DivineSmite_Impact_Base.mdl",1,1,0.01,100),
+(183,"Combat Blood Spurt Front Small Green","Particles\BloodSpurts\BloodSpurtGreen.mdl",1,1,0.01,100),
+(184,"Combat Blood Spurt Front Large Green","Particles\BloodSpurts\BloodSpurtGreenLarge.mdl",1,1,0.01,100),
+(187,"FireShield Impact Head","Spells\FireShield_Impact_Head.mdx",1,1,0.01,100),
+(188,"FireBolt Missile Low","Spells\FireBolt_Missile_Low.mdx",1,1,0.01,100),
+(189,"Clayon Test Impact","Spells\Druid_Berserk.mdx",1,1,0.01,100),
+(190,"BlessingofStrength Base","Spells\BlessingofStrength_Base.mdx",1,1,0.01,100),
+(191,"BlessingofAgility Base","Spells\BlessingofAgility_Base.mdx",1,1,0.01,100),
+(192,"Invisible Cube","spells\invisible.mdx",1,1,0.01,100),
+(193,"BlessingofStamina Base","Spells\BlessingofStamina_Base.mdx",1,1,0.01,100),
+(194,"zzOLD__Blessing Stamina Impact Base 3","Spells\BlessingofStamina_Base.mdx",1,1,0.01,100),
+(195,"BlessingofProtection Base","Spells\BlessingofProtection_Base.mdx",1,1,0.01,100),
+(196,"Arcane Torrent Cast","Spells\ArcaneTorrent.mdx",1,1,0.01,100),
+(197,"zzOLD__Holy Light Impact Base","Particles\HolyLight_Impact_Base.mdl",1,1,0.01,100),
+(198,"zzOLD__InnerFire Impact Base","Particles\InnerFire_Impact_Base.mdl",1,1,0.01,100),
+(200,"HARDCODED Footstep Water Run Spray","Particles\FootstepSprayWater.mdl",1,1,0.01,100),
+(201,"HARDCODED Footstep Water Walk Spray","Particles\FootstepSprayWaterWalk.mdl",1,1,0.01,100),
+(202,"zzOLD__Character Morph Effect","Particles\MorphFX.mdl",1,1,0.01,100),
+(205,"zzOLD__Frost_Precast_High_Hand","Particles\Frost_Precast_High_Hand.mdl",1,1,0.01,100),
+(206,"zzOLD__Frost_Precast_Med_Hand","Particles\Frost_Precast_Med_Hand.mdl",1,1,0.01,100),
+(207,"zzOLD__Frost_Precast_Uber_Hand","Particles\Frost_Precast_Uber_Hand.mdl",1,1,0.01,100),
+(208,"zzOLD__Frost_Precast_High_Base","Particles\Frost_Precast_High_Base.mdl",1,1,0.01,100),
+(210,"zzOLD__Frost_Precast_Uber_Base","Particles\Frost_Precast_Uber_Base.mdl",1,1,0.01,100),
+(211,"Holy Precast Uber Base","Spells\Holy_Precast_Uber_Base.mdx",1,1,0.01,100),
+(212,"Fire ImpactDD High Chest","Spells\Fire_ImpactDD_High_Chest.mdx",0,1,0.01,100),
+(213,"Fire ImpactDD High Base","Spells\Fire_ImpactDD_High_Base.mdx",1,1,0.01,100),
+(214,"Ice ImpactDD Med Chest","Spells\Ice_ImpactDD_Med_Chest.mdx",1,1,0.01,100),
+(215,"Swipe Caster","Spells\SwipeCaster.mdx",1,1,0.01,100),
+(216,"Ice ImpactDD Uber Chest","Spells\Ice_ImpactDD_Uber_Chest.mdx",1,1,0.01,100),
+(217,"Fire ImpactDD Low Chest","Spells\Fire_ImpactDD_Low_Chest.mdx",1,1,0.01,100),
+(218,"Fire ImpactDD Med Chest","Spells\Fire_ImpactDD_Med_Chest.mdx",1,1,0.01,100),
+(219,"Fire ImpactDD Uber Base","Spells\Fire_ImpactDD_Uber_Base.mdx",1,1,0.01,100),
+(220,"Fire ImpactDD Uber Chest","Spells\Fire_ImpactDD_Uber_Chest.mdx",1,1,0.01,100),
+(221,"Ice Precast High Head","Spells\Ice_Precast_High_Head.mdx",1,1,0.01,100),
+(222,"Holy ImpactDD High Base","Spells\Holy_ImpactDD_High_Base.mdx",1,1,0.01,100),
+(223,"DeathCoil Impact Chest","spells\DeathCoil_Impact_Chest.mdx",1,1,0.01,100),
+(224,"Holy Missile Low","Spells\Holy_Missile_Low.mdx",1,1,0.01,100),
+(225,"Holy Missile Med","Spells\Holy_Missile_Med.mdx",1,1,0.01,100),
+(226,"Holy Missile High","Spells\Holy_Missile_High.mdx",1,1,0.01,100),
+(227,"Holy Missile Uber","Spells\Holy_Missile_Uber.mdx",1,1,0.01,100),
+(228,"BloodyExplosion","Spells\BloodyExplosion.mdx",1,1,0.01,100),
+(229,"Flamestrike ImpactDD Med Base","Spells\FlameStrike_ImpactDD_Med_Base.mdx",1,1,0.01,100),
+(230,"Poison ImpactDot Med Chest","Spells\Poison_ImpactDot_Med_Chest.mdx",1,1,0.01,100),
+(231,"Ice Missile Low","Spells\Ice_Missile_Low.mdx",1,1,0.01,100),
+(232,"Ice Missile Med","Spells\Ice_Missile_Med.mdx",1,1,0.01,100),
+(233,"Ice Missile High","Spells\Frostbolt.mdx",1,1,0.01,100),
+(234,"Ice Missile Uber","Spells\Ice_Missile_Uber.mdx",1,1,0.01,100),
+(235,"zzOLD__Ice ImpactDOT Low Base","Spells\Ice_ImpactDOT_Low.mdx",1,1,0.01,100),
+(236,"Poison StateDot Med Base","Spells\Poison_ImpactDot_Med_Base.mdx",1,1,0.01,100),
+(237,"FireStrike Missile Low","Spells\FireStrike_Missile_Low.mdx",0,1,0.01,100),
+(238,"FrostArmor Low Head","Spells\FrostArmor_Low_Head.mdx",1,1,0.01,100),
+(239,"Shadow ImpactBuff Base","Spells\Shadow_ImpactBuff_Base.mdx",1,1,0.01,100),
+(240,"Dispel Low Base","Spells\Dispel_Low_Base.mdx",1,1,0.01,100),
+(241,"DemonArmor Impact Head","Spells\DemonArmor_Impact_Head.mdx",1,1,0.01,100),
+(242,"Item - Potion Healing","Spells\PotionA_SpellObject.mdx",1,1,0.01,100),
+(243,"PotionB SpellObject","Spells\PotionB_SpellObject.mdx",1,1,0.01,100),
+(244,"HolyLight Low Head","Spells\HolyLight_Low_Head.mdx",1,1,0.01,100),
+(245,"LayonHands Low Chest","Spells\LayonHands_Low_Chest.mdx",1,1,0.01,100),
+(246,"LayonHands Low Head","Spells\LayonHands_Low_Head.mdx",1,1,0.01,100),
+(247,"HolyWordHeal Base","Spells\HolyWordHeal_Base.mdx",1,1,0.01,100),
+(248,"Greater Heal Low Base","Spells\GreaterHeal_Low_Base.mdx",1,1,0.01,100),
+(249,"Heal Low Base","Spells\Heal_Low_Base.mdx",1,1,0.01,100),
+(251,"Corruption State Base","Spells\Corruption_ImpactDot_Med_Base.mdx",1,1,0.01,100),
+(252,"Fire DOT State Chest","Spells\Fire_DOT_State_Chest.mdx",1,1,0.01,100),
+(253,"Nullify base","Spells\Nullify_base.mdx",1,1,0.01,100),
+(254,"ChainsofIce Low Base","Spells\ChainsofIce_Low_Base.mdx",1,1,0.01,100),
+(255,"Sleep State Head","Spells\Sleep_State_Head.mdx",1,1,0.01,100),
+(256,"Dynamite Lit","Spells\DynamiteA_SpellObject.mdx",1,1,0.01,100),
+(257,"Bomb Explosion","Spells\Bomb_ExplosionA.mdx",1,1,0.01,100),
+(258,"Dynamite Missile","Spells\DynamiteA_Missile.mdx",1,1,0.01,100),
+(259,"Frostbolt Missile","spells\frostbolt.mdx",1,1,0.01,100),
+(260,"SealofMight Low Base","Spells\SealofMight_Low_Base.mdx",1,1,0.01,100),
+(261,"BurningSpirit Impact Base","Spells\BurningSpirit_Impact_Base.mdx",1,1,0.01,100),
+(262,"DivineShield Low Chest","Spells\DivineShield_Low_Chest.mdx",1,1,0.01,100),
+(263,"DivineShield Low Base","Spells\DivineShield_Low_Base.mdx",1,1,0.01,100),
+(264,"BurningIntellect Impact Base","Spells\BurningIntellect_Impact_Base.mdx",1,1,0.01,100),
+(265,"ArcaneIntellect Impact Base","Spells\ArcaneIntellect_Impact_Base.mdx",1,1,0.01,100),
+(266,"Taunt Head","Spells\Taunt_Head.mdx",1,1,0.01,100),
+(267,"Conjure Item","Spells\ConjureItem.mdx",0,1,0.01,100),
+(268,"Devotion Aura Base","Spells\DevotionAura_Base.mdx",1,1,0.01,100),
+(269,"Conjure Item Cast","Spells\ConjureItemCast.mdx",1,1,0.01,100),
+(270,"Soul Funnel Impact Chest","Spells\SoulFunnel_Impact_Chest.mdx",1,1,0.01,100),
+(271,"Mana Funnel Impact Chest","Spells\ManaFunnel_Impact_Chest.mdx",1,1,0.01,100),
+(272,"Magic PreCast Hand","Spells\Magic_PreCast_Hand.mdx",1,1,0.01,100),
+(273,"Rake","Spells\Rake.mdx",1,1,0.01,100),
+(274,"Anti-Shadow Impact Base","Spells\AntiShadow_Impact_Base.mdx",1,1,0.01,100),
+(276,"Bestow Disease Impact Chest","Spells\BestowDisease_Impact_Chest.mdx",1,1,0.01,100),
+(277,"Create Soulstone Cast","Spells\CreateSoulstone_Cast.mdx",1,1,0.01,100),
+(278,"RetributionAura Base","Spells\RetributionAura_Base.mdx",1,1,0.01,100),
+(279,"Resurrection Low Base","Spells\Resurrection_Low_Base.mdx",0,1,0.01,100),
+(280,"Polymorph Impact","Spells\Polymorph_Impact.mdx",1,1,0.01,100),
+(281,"LightningBolt Impact Chest","Spells\LightningBolt_Impact_Chest.mdx",1,0.35,0.01,100),
+(282,"Frost Nova Area","Spells\Frost_Nova_area.mdx",1,1,0.01,100),
+(284,"Frost Nova state","Spells\Frost_Nova_state.mdx",1,1,0.01,100),
+(285,"Immolate State","Spells\Immolate_State.mdx",1,1,0.01,100),
+(286,"Maul Impact","Spells\MaulImpact.mdx",1,1,0.01,100),
+(287,"Fire Precast Hand","Spells\Fire_Precast_Hand.mdx",0,1,0.01,100),
+(288,"Fire Cast Hand","Spells\Fire_Cast_Hand.mdx",0,1,0.01,100),
+(289,"Harm Undead Aura Base","Spells\HarmUndeadAura_Base.mdx",1,1,0.01,100),
+(290,"Maul Cast Base","Spells\MaulCasterBase.mdx",1,1,0.01,100),
+(291,"Nature Precast Chest","Spells\Nature_Precast_Chest.mdx",0,1,0.01,100),
+(292,"Flamestrike Area","Spells\Flamestrike_Area.mdx",1,1,0.01,100),
+(293,"Lightning Cast Hand","Spells\Lightning_Cast_Hand.mdx",0,1,0.01,100),
+(294,"HolySmite Low Chest","Spells\HolySmite_Low_Chest.mdx",1,1,0.01,100),
+(296,"LightningShield State Base","Spells\LightningShield_State_Base.mdx",0,1,0.01,100),
+(297,"Immolate State Base","Spells\Immolate_State_Base.mdx",1,1,0.01,10),
+(298,"Life Tap State Chest","Spells\Lifetap_State_Chest.mdx",1,1,0.01,100),
+(299,"Smash Impact Chest","Spells\Smash_Impact_Chest.mdx",0,1,0.01,100),
+(300,"ShadowWordDominate Chest","Spells\ShadowWordDominate_Chest.mdx",1,1,0.01,100),
+(301,"ShadowWordSilence Breath","Spells\ShadowWordSilence_Breath.mdx",1,1,0.01,100),
+(303,"Anti-Magic PreCast Hand","Spells\AntiMagic_PreCast_Hand.mdx",1,1,0.01,100),
+(304,"Anti-Magic State Base","Spells\AntiMagic_State_Base.mdx",1,1,0.01,100),
+(305,"ShadowWordPain Chest","Spells\ShadowWordPain_Chest.mdx",1,1,0.01,100),
+(306,"Magic Unlock","Spells\MagicUnlock.mdx",1,1,0.01,100),
+(307,"Dark Ritual PreCast Base","Spells\DarkRitual_PreCast_Base.mdx",1,1,0.01,100),
+(308,"ShadowWordFumble Head","Spells\ShadowWordFumble_Head.mdx",1,1,0.01,100),
+(309,"Detect Invisibility Impact Base","Spells\DetectInvis_Impact_Base.mdx",1,1,0.01,100),
+(310,"Detect Invisibility Impact Head","Spells\DetectInvis_Impact_Head.mdx",1,1,0.01,100),
+(311,"CurseofWeakness Head","Spells\CurseofWeakness_Head.mdx",1,1,0.01,100),
+(312,"CurseofFrailty Head","Spells\CurseofFrailty_Head.mdx",1,1,0.01,100),
+(313,"RemoveCurse Base","Spells\RemoveCurse_Base.mdx",1,1,0.01,100),
+(314,"NullifyDisease Base","Spells\NullifyDisease_Base.mdx",1,1,0.01,100),
+(315,"NullifyPoison Base","Spells\NullifyPoison_Base.mdx",1,1,0.01,100),
+(320,"RighteousFury Chest","Spells\RighteousFury_Chest.mdx",1,1,0.01,100),
+(321,"MoltenBlast Impact Chest","Spells\MoltenBlast_Impact_Chest.mdx",0,1,0.01,100),
+(322,"Arcane Barrage Missile","spells\mage_arcanebarrage_missile.mdx",1,1,0.01,100),
+(323,"Swipe Impact","Spells\SwipeImpact.mdx",1,1,0.01,100),
+(325,"Faerie Fire Head State","Spells\FaerieFire.mdx",1,1,0.01,100),
+(326,"HolyProtection Chest","Spells\HolyProtection_Chest.mdx",1,1,0.01,100),
+(328,"LightningStorm Cloud State","Spells\LightningStorm_Cloud_State.mdx",1,1,0.01,100),
+(330,"Shock Missile","Spells\Shock_Missile.mdx",1,1,0.01,100),
+(331,"Shock Impact Chest","Spells\Shock_Impact_Chest.mdx",0,1,0.01,100),
+(332,"Chainlightning Impact Chest","Spells\ChainLightning_Impact_Chest.mdx",0,1,0.01,100),
+(333,"PrayerofHealing Chest","Spells\PrayerofHealing_Chest.mdx",1,1,0.01,100),
+(334,"Spirit Armor Impact Head","Spells\SpiritArmor_Impact_Head.mdx",0,1,0.01,100),
+(335,"Anti-Holy Impact Base","Spells\AntiHoly_Impact_Base.mdx",1,1,0.01,100),
+(336,"RighteousnessAura Base","Spells\RighteousnessAura_Base.mdx",1,1,0.01,100),
+(337,"BeastRageCaster","Spells\BeastRageCaster.mdx",1,1,0.01,100),
+(339,"BeastRage State Head","Spells\BeastRageState.mdx",1,1,0.01,100),
+(340,"Basic Strike","Spells\BasicStrike.mdx",1,1,0.01,100),
+(341,"Thorns Base","Spells\Thorns_Base.mdx",1,1,0.01,100),
+(342,"Thorns Low Chest","Spells\Thorns_Low_Chest.mdx",1,1,0.01,100),
+(343,"Taunt Cast Base","Spells\Taunt_Cast.mdx",1,1,0.01,100),
+(345,"ChallengingShout Cast Base","Spells\ChallengingShout_Cast_Base.mdx",1,1,0.01,100),
+(346,"InnerFire Base","Spells\InnerFire_Base.mdx",1,1,0.01,100),
+(347,"Learn Impact Base","Spells\Learn_Impact_Base.mdx",1,1,0.01,100),
+(348,"Mark of the Beast Impact Head","Spells\MarkofBeast_Impact_Head.mdx",1,1,0.01,100),
+(349,"ThunderClap Cast Base","Spells\ThunderClap_Cast_Base.mdx",0,1,0.01,100),
+(350,"Purge Impact Chest","Spells\Purge_Impact_Chest.mdx",0,1,0.01,100),
+(351,"Unyielding Will Impact Chest","Spells\Unyielding_Will_Impact_Chest.mdx",1,1,0.01,100),
+(354,"Undying Strength Impact Chest","Spells\Undying_Strength_Impact_Chest.mdx",1,1,0.01,100),
+(355,"Cyclone State","Spells\Cyclone_State.mdx",1,1,0.01,100),
+(356,"Slowing Strike Cast Hand","Spells\SlowingStrike_Cast_Hand.mdx",0,1,0.01,100),
+(357,"Slowing Strike Impact Chest","Spells\SlowingStrike_Impact_Chest.mdx",0,1,0.01,100),
+(358,"Slowing Strike Impact Base","Spells\SlowingStrike_Impact_Base.mdx",0,1,0.01,100),
+(360,"Astral Recall Impact Base","Spells\Astral_Recall_Impact_Base.mdx",0,1,0.01,100),
+(361,"Whirlwind Base","Spells\Whirlwind_State_Base.mdx",0,1,0.01,100),
+(362,"Arrow Fire","Item\ObjectComponents\Ammo\ArrowFireFlight_01.mdx",0,1,0.01,100),
+(363,"Arrow Ice","Item\ObjectComponents\Ammo\ArrowIceFlight_01.mdx",0,1,0.01,100),
+(365,"Fireball Missile Low","Spells\Fireball_Missile_Low.mdx",1,1,0.01,100),
+(367,"Invisibility Impact Chest","Spells\Invisibility_Impact_Chest.mdx",1,1,0.01,100),
+(368,"Recklessness Impact Chest","Spells\Recklessness_Impact_Chest.mdx",0,1,0.01,100),
+(370,"CounterSpell Impact Chest","Spells\CounterSpell_Impact_Chest.mdx",1,1,0.01,100),
+(371,"ShadowProtection Chest","Spells\ShadowProtection_Chest.mdx",0,1,0.01,100),
+(372,"ProtectionFromNature Chest","Spells\ProtectionFromNature_Chest.mdx",0,1,0.01,100),
+(373,"ProtectionFromFire Chest","Spells\ProtectionFromFire_Chest.mdx",0,1,0.01,100),
+(374,"ResistFrost Chest","Spells\ResistFrost_Chest.mdx",0,1,0.01,100),
+(375,"BattleShout Cast Base","Spells\BattleShout_Cast_Base.mdx",0,1,0.01,100),
+(376,"IntimidatingShout Cast Base","Spells\IntimidatingShout_Cast_Base.mdx",0,1,0.01,100),
+(377,"DemoralizingShout Cast Base","Spells\DemoralizingShout_Cast_Base.mdx",0,1,0.01,100),
+(378,"Strike Cast Base","Spells\Strike_Cast_Chest.mdx",0,1,0.01,100),
+(379,"FinishingBlow Impact Chest","Spells\Feint_Impact_Chest.mdx",0,1,0.01,100),
+(380,"SinisterStrike Base Cast","Spells\SinisterStrike_Base_Cast.mdx",0,1,0.01,100),
+(381,"Kick Impact Chest","Spells\Kick_Chest_Impact.mdx",1,1,0.01,100),
+(389,"Vanish Cast Base","spells\vanish_cast_base.mdx",0,1,0.01,100),
+(392,"Magic Cast Hand","Spells\Magic_Cast_Hand.mdx",1,1,0.01,100),
+(393,"Item - Bread","Spells\Item_Bread.mdx",0,1,0.01,100),
+(394,"BackStab Impact Chest","spells\backstab_impact_chest.mdx",1,1,0.01,100),
+(396,"BackStab Cast Base","Spells\BackStab_Cast_Base.mdx",1,1,0.01,100),
+(397,"Gouge Precast State Hand","Spells\Gouge_Precast_State_Hand.mdx",0,1,0.01,100),
+(398,"Blizzard Impact Base","Spells\Blizzard_Impact_Base.mdx",0,1,0.01,100),
+(399,"Arcane Missile","Spells\Arcane_Missile.mdx",0,1,0.01,100),
+(401,"Arcane Impact Chest","Spells\Magic_Impact_Chest.mdx",0,1,0.01,100),
+(402,"Sap Impact Head","Spells\Sap_Impact_Chest.mdx",1,1,0.01,100),
+(403,"Sap Cast Base","Spells\Sap_Cast_Base.mdx",1,1,0.01,100),
+(404,"Cheap Shot Impact","Spells\CheapShot_Impact_Chest.mdx",0,1,0.01,100),
+(405,"Arcane Missile Lvl 1 - 1.00","Spells\Arcane_Missile_Lvl1.mdx",0,1,0.01,100),
+(406,"Arcane Missile Lvl 2","Spells\Arcane_Missile_Lvl2.mdx",0,1,0.01,100),
+(407,"Arcane Missile Lvl 3","Spells\Arcane_Missile_Lvl3.mdx",0,1,0.01,100),
+(408,"Arcane Missile Lvl 4","Spells\Arcane_Missile_Lvl4.mdx",0,1,0.01,100),
+(409,"Polymorph Impact Base","Spells\Polymorph_Impact_Base.mdx",0,1,0.01,5),
+(410,"HolyLight Impact Head","Spells\HolyLight_Impact_Head.mdx",0,1,0.01,100),
+(411,"Totem Cleansing SpellObject","Spells\TotemB_SpellObject.mdx",0,1,0.01,100),
+(412,"HolyWord Fortitude Impact Base","Spells\HolyWord_Fortitude_Impact_Base.mdx",0,1,0.01,100),
+(413,"ShadowWordBefuddle Head","Spells\ShadowWordBefuddle_Head.mdx",0,1,0.01,100),
+(414,"Renew Base","Spells\Renew_Base.mdx",0,1,0.01,100),
+(415,"Renew Chest","Spells\Renew_Chest.mdx",0,1,0.01,100),
+(416,"Fan of Knives Impact","spells\fanofknives_impact.mdx",1,1,0.01,100),
+(417,"Item - Tankard","Spells\TankardA_SpellObject.mdx",0,1,0.01,100),
+(420,"Flamestrike Impact Base","Spells\Flamestrike_Impact_Base.mdx",1,1,0.01,100),
+(421,"Ice Cast Low Hand","Spells\Ice_Precast_Low_Hand.mdx",1,1,0.01,100),
+(422,"MageArmor Impact Head","Spells\MageArmor_Impact_Head.mdx",0,1,0.01,100),
+(423,"Lesser Heal Impact Base","Spells\LesserHeal_Base.mdx",0,1,0.01,100),
+(424,"FireShieldFinal Impact Head","Spells\FireShieldFinal_Impact_Head.mdx",0,1,0.01,100),
+(425,"Ward: Fire Impact Chest","Spells\FireWard_Impact_Chest.mdx",0,1,0.01,100),
+(426,"Ward: Frost Impact Chest","Spells\FrostWard_Impact_Chest.mdx",0,1,0.01,100),
+(427,"Seal Of Might Impact Base","Spells\SealOfMight_Impact_Base.mdx",0,1,0.01,100),
+(428,"Seal Of Wrath Impact Base","Spells\SealOfWrath_Impact_Base.mdx",0,1,0.01,100),
+(429,"Seal Of Fury Impact Base","Spells\SealOfFury_Impact_Base.mdx",1,1,0.01,100),
+(430,"Seal Of Salvation Impact Base","Spells\SealOfSalvation_Impact_Base.mdx",0,1,0.01,100),
+(431,"Seal Of Wisdom Impact Base","Spells\SealOfWisdom_Impact_Base.mdx",0,1,0.01,100),
+(432,"Seal Of Protection Impact Base","Spells\SealOfProtection_Impact_Base.mdx",0,1,0.01,100),
+(433,"MoltenBlast Missile Lvl2","Spells\MoltenBlast_Missile_Lvl2.mdx",0,1,0.01,100),
+(434,"MoltenBlast Missile lvl3","Spells\MoltenBlast_Missile_Lvl3.mdx",0,1,0.01,100),
+(435,"Healing Aura Base","Spells\HealingAura_Base.mdx",1,1,0.01,100),
+(436,"Mind Rot Head Impact","Spells\MindRot_Head.mdx",0,1,0.01,100),
+(437,"FarSight Impact Base","Spells\FarSight_Impact_Base.mdx",0,1,0.01,100),
+(438,"Purify Base","Spells\Purify_Base.mdx",0,1,0.01,100),
+(439,"Turn Undead Cast","Spells\TurnUndead_Impact.mdx",0,1,0.01,100),
+(440,"Flare Cast Base","Spells\Flare_Cast_Base.mdx",0,1,0.01,100),
+(441,"Resistance Aura Base","Spells\ResistanceAura_Base.mdx",1,1,0.01,100),
+(442,"Fist Of Justice Cast","Spells\FistOfJustice_Cast_Base.mdx",0,1,0.01,100),
+(444,"Fist of justice Impact chest","Spells\FistOfJustice_Impact_Chest.mdx",1,1,0.01,100),
+(445,"Exorcism Impact Chest","Spells\Exorcism_Impact_Chest.mdx",0,1,0.01,100),
+(446,"Purge New Impact Chest","Spells\Purge_New_Impact_Chest.mdx",0,1,0.01,100),
+(447,"Holy Ward Impact","Spells\HolyWard_Impact_Chest.mdx",0,1,0.01,100),
+(448,"Rain Of Fire Impact Base","Spells\RainOfFire_Impact_Base.mdx",0,1,0.01,100),
+(449,"Fire Resistance Impact Base","Spells\FireResistance_Impact_Base.mdx",0,1,0.01,100),
+(450,"Nature Resistance Impact Base","Spells\NatureResistance_Impact_Base.mdx",1,1,0.01,100),
+(451,"ArcaneSpirit Impact Base","Spells\ArcaneSpirit_Impact_Base.mdx",0,1,0.01,100),
+(452,"Fear Impact Head","Spells\Fear_Impact_Chest.mdx",0,1,0.01,100),
+(453,"Fear State","Spells\Fear_State_Head.mdx",0,1,0.01,100),
+(454,"Cleanse Base","Spells\Clense_Base.mdx",0,1,0.01,100),
+(455,"BloodBoil_Impact_Chest","Spells\BloodBoil_Impact_Chest.mdx",0,1,0.01,100),
+(456,"Curse Of Tongues Impact Chest","Spells\CurseOfTongues_Impact.mdx",0,1,0.01,100),
+(457,"Curse Of Tongues State Chest","Spells\CurseOfTongues_State_Chest.mdx",0,1,0.01,100),
+(458,"Cleave Impact Chest","Spells\Cleave_Impact_Chest.mdx",1,1,0.01,100),
+(459,"Ward: Shadow Impact Chest","Spells\ShadowWard_Impact_Chest.mdx",1,1,0.01,100),
+(460,"Shield Wall Impact Base","Spells\ShieldWall_Impact_Base.mdx",0,1,0.01,100),
+(461,"SpellBreak Cast Base","Spells\SpellBreak_Cast_Base.mdx",0,1,0.01,100),
+(462,"Cripple State Base","Spells\Cripple_State_Base.mdx",1,1,0.01,100),
+(463,"Balance Of Nature Impact Base","Spells\BalanceOfNature_Impact_Base.mdx",1,1,0.01,100),
+(464,"Demon Breath Impact Head","Spells\DemonBreath_Impact_Head.mdx",0,1,0.01,100),
+(465,"Fireworks Red Dots","Spells\Fireworks_Red_01.mdx",0,1,0.01,100),
+(466,"Pathfind Cast Head","Spells\Pathfind_Cast_Head.mdx",1,1,0.01,100),
+(467,"ManaInfuse Base","Spells\ManaInfuse_Base.mdx",0,1,0.01,100),
+(468,"Waterbreathing Impact Base","Spells\Waterbreathing_Impact_Base.mdx",0,1,0.01,100),
+(469,"BeastSoothe State Head","Spells\BeastSoothe_State_Head.mdx",0,1,0.01,100),
+(470,"Pestilence Impact Chest","Spells\Pestilence_Impact_Chest.mdx",0,1,0.01,100),
+(474,"Cripple Impact Base","Spells\Cripple_Impact_Base.mdx",1,1,0.01,100),
+(475,"MarkofWild Impact Head","Spells\MarkofWild_Impact_Head.mdx",1,1,0.01,100),
+(476,"BurningSpirit Impact Head","Spells\BurningSpirit_Impact_Head.mdx",0,1,0.01,100),
+(477,"Spell Object : Smithing Hammer","Spells\SpellObject_SmithingHammer.mdx",0,1,0.01,100),
+(478,"Disarm Impact Chest","Spells\Disarm_Impact_Chest.mdx",0,1,0.01,100),
+(479,"Sunder Impact Chest","Spells\Sunder_Impact_Chest.mdx",0,1,0.01,100),
+(480,"SavageBlow Impact Chest","Spells\SavageBlow_Impact_Chest.mdx",0,1,0.01,100),
+(481,"DecisiveStrike Impact Chest","Spells\DecisiveStrike_Impact_Chest.mdx",0,1,0.01,100),
+(482,"Beast Call Impact Head","Spells\BeastCall_Impact_Head.mdx",0,1,0.01,100),
+(502,"FireBlast Impact Chest","Spells\FireBlast_Impact_Chest.mdx",0,1,0.01,100),
+(503,"Fireball Missile High","Spells\Fireball_Missile_High.mdx",0,1,0.01,100),
+(522,"Maim Impact Chest","Spells\Maim_Impact_Chest.mdx",0,1,0.01,100),
+(523,"Shot: Fire Missile","Spells\FireShot_Missile.mdx",0,1,0.01,100),
+(524,"Shot: Frost Missile","Spells\FrostShot_Missile.mdx",0,1,0.01,100),
+(525,"Shot: Blinding Missile","Spells\BlindingShot_Missile.mdx",0,1,0.01,100),
+(526,"Blinding Shot Impact Chest","Spells\BlindingShot_Impact.mdx",0,1,0.01,100),
+(527,"Multi Shot Impact Chest","Spells\MultiShot_Impact.mdx",0,1,0.01,100),
+(528,"Shot: Multi Missile","Spells\MultiShot_Missile.mdx",0,1,0.01,100),
+(529,"Maul Cast Bears","Spells\Maul.mdx",1,1,0.01,100),
+(532,"Combat Blood Spurt Front Small Black","Particles\BloodSpurts\BloodSpurtBlack.mdx",1,1,0.01,100),
+(533,"Combat Blood Spurt Front Large Black","Particles\BloodSpurts\BloodSpurtBlackLarge.mdx",1,1,0.01,100),
+(534,"Combat Blood Spurt Back Small Red","Particles\BloodSpurts\BloodSpurt.mdx",1,1,0.01,100),
+(535,"Combat Blood Spurt Back Small Green","Particles\BloodSpurts\BloodSpurtGreen.mdx",1,1,0.01,100),
+(536,"Combat Blood Spurt Back Small Black","Particles\BloodSpurts\BloodSpurtBlack.mdx",1,1,0.01,100),
+(537,"Combat Blood Spurt Back Large Green","Particles\BloodSpurts\BloodSpurtGreenLarge.mdx",1,1,0.01,100),
+(538,"Combat Blood Spurt Back Large Black","Particles\BloodSpurts\BloodSpurtBlackLarge.mdx",1,1,0.01,100),
+(539,"Curse of Mannoroth Impact Head","Spells\CurseofMannoroth_Head.mdx",1,1,0.01,100),
+(540,"ShadowStrike Impact Chest","Spells\ShadowStrike_Impact_Chest.mdx",1,1,0.01,100),
+(542,"Sap State Head","Spells\Sap_State_Head.mdx",1,1,0.01,100),
+(543,"Demoralizing Shout Impact Head","Spells\DemoralizingShout_Impact_Head.mdx",0,1,0.01,100),
+(544,"Intimidating Shout Impact Head","Spells\IntimidatingShout_Impact_Head.mdx",0,1,0.01,100),
+(545,"Ribbon Trail","Spells\RibbonTrail.mdx",0,1,0.01,100),
+(546,"Sprint Cast Base","Spells\Sprint_Cast_Base.mdx",0,1,0.01,100),
+(547,"Inner Rage Impact Chest","Spells\InnerRage_Impact_Chest.mdx",0,1,0.01,100),
+(548,"Shadow ImpactDD Med Chest","Spells\Shadow_ImpactDD_Med_Chest.mdx",1,1,0.01,100),
+(565,"Druid Morph Impact","Spells\DruidMorph_Impact_Base.mdx",0,1,0.01,100),
+(585,"Nightmare Impact Base","Spells\Nightmare_Impact_Base.mdx",1,1,0.01,100),
+(586,"Summon Water Elemental Impact","Spells\WaterElemental_Impact_Base.mdx",0,1,0.01,100),
+(587,"MoltenBlast Missile lvl1","Spells\MoltenBlast_Missile.mdx",1,1,0.01,100),
+(588,"Fire Blast Impact Chest","Spells\Fire_ImpactDD_Chest.mdx",0,1,0.01,100),
+(589,"Eviscerate Impact Chest","Spells\Eviscerate_Impact_Chest.mdx",1,1,0.01,100),
+(590,"Eviscerate Cast Hands","Spells\Eviscerate_Cast_Hands.mdx",1,1,0.01,100),
+(591,"Distract Impact Chest","Spells\Distract_Impact_Chest.mdx",0,1,0.01,100),
+(592,"Kidney Shot Cast Base","Spells\KidneyShot_Base_Cast.mdx",0,1,0.01,100),
+(593,"Retribution Aura Red Base","Spells\RetributionAuraRed_Base.mdx",0,1,0.01,100),
+(594,"Net State","Spells\Net_State.mdx",0,1,0.01,100),
+(595,"Web State","Spells\Web_State.mdx",0,1,0.01,100),
+(596,"Seal of Sacrifice Impact Base","Spells\SealOfSacrifice_Impact_Base.mdx",0,1,0.01,100),
+(614,"FlamestrikeSmall Impact Base","Spells\FlamestrikeSmall_Impact_Base.mdx",0,1,0.01,100),
+(615,"Ice Armor Low Head","Spells\IceArmor_Low_Head.mdx",0,1,0.01,100),
+(616,"FrostArmorEffect Impact Chest","Spells\FrostArmorEffect_Impact_Chest.mdx",0,1,0.01,100),
+(617,"Divine Bubble Impact Base","Spells\DivineBubble_Low_Base.mdx",0,1,0.01,100),
+(618,"Missile: Web","Spells\Web_Missile.mdx",0,1,0.01,100),
+(619,"Bind Impact Base","Spells\Bind_Impact_Base.mdx",0,1,0.01,100),
+(620,"Poison ImpactDot Med Base","Spells\Poison_ImpactDot_Med_Base.mdx",1,1,0.01,100),
+(621,"Bloody Explosion Green Impact","Spells\BloodyExplosionGreen.mdx",0,1,0.01,100),
+(622,"Spell Object: Wrench","Spells\SpellObject_Wrench.mdx",0,1,0.01,100),
+(623,"Shadow Precast Uber Hand","Spells\Shadow_Precast_Uber_Hand.mdx",1,1,0.01,100),
+(624,"Shadow ImpactDD High Chest","Spells\Shadow_ImpactDD_High_Chest.mdx",1,1,0.01,100),
+(625,"Cone of Cold Hand","Spells\ConeofCold_Hand.mdx",1,1,0.01,100),
+(626,"DruidMorph Aqua Impact Base","Spells\DruidMorph_Aqua_Impact_Base.mdx",0,1,0.01,100),
+(627,"Hellfire Impact Caster Base","Spells\HellFire_Impact_Caster_Base.mdx",0,1,0.01,100),
+(628,"Hellfire Impact Base","Spells\HellFire_Impact_Base.mdx",1,1,0.01,100),
+(629,"HolyWord Shield Impact Base","Spells\HolyWordShield_Base.mdx",0,1,0.01,100),
+(630,"HolyWord Shield State Base","Spells\HolyWordShield_State_Base.mdx",0,1,0.01,100),
+(631,"Curse of Elements Impact Head","Spells\CurseElements_Impact_Head.mdx",0,1,0.01,100),
+(632,"Fire ImpactDD Chest","Spells\Fire_ImpactDD_Chest.mdx",0,1,0.01,100),
+(634,"Charge Trail Cast","Spells\ChargeTrail.mdx",0,1,0.01,100),
+(654,"Curse Of Agony Head Impact","Spells\CurseofAgony_Head.mdx",1,1,0.01,100),
+(655,"HolyWordShield State Chest","Spells\HolyWordShield_State_Chest.mdx",0,1,0.01,100),
+(674,"HolyDivineShield State Base","Spells\HolyDivineShield_State_Base.mdx",0,1,0.01,100),
+(675,"Missile: GooBolt","Spells\GooBolt_Missile_Low.mdx",0,1,0.01,100),
+(694,"Missile: Lightning Streak","Spells\LightningStreak_Missile.mdx",0,1,0.01,100),
+(714,"Fire Nova Area","Spells\FireNova_Area.mdx",0,1,0.01,100),
+(715,"Fire Nova State","Spells\FireNova_State.mdx",1,1,0.01,100),
+(716,"Grounding Totem Impact","Spells\GroundingTotem_Impact.mdx",0,1,0.01,100),
+(717,"Ghost_state","Spells\Ghost_state.mdx",0,1,0.01,100),
+(718,"Mana Shield State Base","Spells\ManaShield_State_Base.mdx",0,1,0.01,100),
+(719,"Dampen Magic Impact Base","Spells\DampenMagic_Impact_Base.mdx",0,1,0.01,100),
+(720,"Amplify Magic Impact Base","Spells\AmplifyMagic_Impact_Base.mdx",0,1,0.01,100),
+(734,"ArcaneExplosion Base","Spells\ArcaneExplosion_Base.mdx",1,1,0.01,100),
+(735,"ArcaneExplosion Impact Chest","Spells\ArcaneExplosion_Impact_Chest.mdx",0,1,0.01,100),
+(754,"Environment Damage Drowing Bubbles","Particles\Bubbles.mdx",0,1,0.01,100),
+(794,"Life Tap Impact","Spells\LifeTap.mdx",0,1,0.01,100),
+(814,"Shadow Precast Uber Base","Spells\Shadow_Precast_Uber_Base.mdx",1,1,0.01,100),
+(834,"Unholy Shield State Base","Spells\ShadowShield_State_Base.mdx",0,1,0.01,100),
+(835,"Curse of Recklessness Impact Chest","Spells\CurseofRecklessness_Impact_Chest.mdx",0,1,0.01,100),
+(836,"Enslave Demon Impact Chest","Spells\EnslaveDemon_Impact_Chest.mdx",0,1,0.01,100),
+(837,"Enslave Demon Impact Head","Spells\EnslaveDemon_Impact_Head.mdx",0,1,0.01,100),
+(854,"Missile: Water Bolt","Spells\WaterBolt_Missile_Low.mdx",0,1,0.01,100),
+(855,"Banish (Green)","Spells\Banish_Chest.mdx",0,1,0.01,100),
+(856,"Magic Stone Helmet Green","Spells\MagicStoneHelmet_Green.mdx",0,1,0.01,100),
+(874,"Magic Net State","Spells\MagicNet_State.mdx",0,1,0.01,100),
+(894,"Cone of Fire Hand","Spells\ConeofFire_Hand.mdx",1,1,0.01,100),
+(914,"Missile: Boulder","Spells\Boulder_Missile.mdx",0,1,0.01,100),
+(915,"Seaforium Impact Base","Spells\Distract_Impact_Base.mdx",0,1,0.01,100),
+(934,"Spawn Impact Base","Spells\Spawn_Impact_Base.mdx",1,1,0.01,100),
+(954,"Summon Ritual Portal","Spells\Summon_Ritual.mdx",1,1,0.01,100),
+(955,"RitualSummoning PreCast Base","Spells\RitualSummoning_PreCast_Base.mdx",0,1,0.01,100),
+(974,"Bind2 Impact Base","Spells\Bind2_Impact_Base.mdx",0,1,0.01,100),
+(994,"Shackle Undead State Base","Spells\UnholyShackles_State_Base.mdx",1,1,0.01,100),
+(1014,"CycloneEarth State","Spells\CycloneEarth_State.mdx",1,1,0.01,100),
+(1015,"CycloneFire State","Spells\CycloneFire_State.mdx",0,1,0.01,100),
+(1016,"CycloneWater State","Spells\CycloneWater_State.mdx",0,1,0.01,100),
+(1034,"Slam Impact Chest","Spells\Slam_Impact_Chest.mdx",0,1,0.01,100),
+(1054,"Shadow ImpactDD Uber Chest","Spells\Shadow_ImpactDD_Uber_Chest.mdx",1,1,0.01,100),
+(1074,"Whirlwind Base (Non-World Space)","Spells\Whirlwind_State_Base.mdx",0,1,0.01,100),
+(1094,"Might Aura State Base","Spells\MightAura_Impact_Base.mdx",1,1,0.01,100),
+(1095,"Wisdom Aura State","Spells\WisdomAura_Impact_Base.mdx",0,1,0.01,100),
+(1114,"Faerie Fire Impact","Spells\FaerieFire_Impact.mdx",0,1,0.01,100),
+(1115,"RadiationGreen State","Spells\GreenGhost_state.mdx",0,1,0.01,100),
+(1134,"MagePortal: Stormwind","world\generic\activedoodads\spellportals\MagePortal_Stormwind.mdx",0,1,0.01,100),
+(1154,"Gouge Precast State Hand (Non World Space)","Spells\Gouge_Precast_State_Hand.mdx",0,1,0.01,100),
+(1174,"Fireworks Blue Dots","Spells\Fireworks_Blue_01.mdx",0,1,0.01,100),
+(1175,"Fireworks Green Dots","Spells\Fireworks_Green_01.mdx",0,1,0.01,100),
+(1176,"Fireworks Red White Blue Dots","Spells\Fireworks_RWB_01.mdx",0,1,0.01,100),
+(1177,"Fireworks Red Streaks","Spells\Fireworks_RedStreaks_01.mdx",1,1,0.01,100),
+(1178,"Fireworks Yellow Rose","Spells\Fireworks_YellowRose.mdx",0,1,0.01,100),
+(1179,"Missile: Pyroblast","Spells\PyroBlast_Missile.mdx",1,1,0.01,100),
+(1180,"Missile: Wrench","Spells\Missile_Wrench.mdx",0,1,0.01,100),
+(1181,"MagePortal: Darnassus","world\generic\activedoodads\spellportals\MagePortal_Darnassus.mdx",0,1,0.01,100),
+(1182,"Water Bubble Chest State","Spells\WaterBubble.mdx",0,1,0.01,100),
+(1183,"Mount Impact","Spells\DruidMorph_Impact_Base.mdx",0,1,0.01,100),
+(1184,"Dash Impact Chest","Spells\Sprint_Impact_Chest.mdx",0,1,0.01,100),
+(1185,"HARDCODED Mount Poof","spells\mountmorph_impact.mdx",2,1,0.01,100),
+(1202,"Bubble Drunk","Spells\Bubble_Drunk.mdx",0,1,0.01,100),
+(1223,"HARDCODED Inebriated Bubbles","Spells\Bubble_Drunk.mdx",0,1,0.01,100),
+(1242,"Seduction State","Spells\Seduction_State_Head.mdx",1,1,0.01,100),
+(1262,"Shadow ImpactDoT Med Head","Spells\Shadow_ImpactDot_Med_Head.mdx",1,1,0.01,100),
+(1282,"DeathAndDecay Area Base","Spells\DeathAndDecay_Area_Base.mdx",1,1,0.01,100),
+(1302,"Clearcasting Impact Chest","Spells\Clearcasting_Impact_Chest.mdx",1,1,0.01,100),
+(1303,"DustCloud Land","Spells\DustCloud_Land.mdx",1,1,0.01,100),
+(1304,"BoneArmor Head","Spells\BoneArmor_Head.mdx",1,1,0.01,100),
+(1305,"MagePortal: Ironforge","world\generic\activedoodads\spellportals\MagePortal_Ironforge.mdx",0,1,0.01,100),
+(1306,"MagePortal: Orgrimmar","world\generic\activedoodads\spellportals\mageportal_ogrimmar.mdx",0,1,0.01,100),
+(1307,"MagePortal: Thunder Bluff","world\generic\activedoodads\spellportals\MagePortal_ThunderBluff.mdx",0,1,0.01,100),
+(1308,"MagePortal: Undercity","world\generic\activedoodads\spellportals\MagePortal_UnderCity.mdx",0,1,0.01,100),
+(1309,"Green Radiation Fog","Spells\GreenRadiationFog.mdx",1,1,0.01,100),
+(1322,"BoneArmor State Chest","Spells\BoneArmor_State_Chest.mdx",1,1,0.01,100),
+(1342,"Acid Breath","Spells\AcidBreath.mdx",1,1,0.01,100),
+(1343,"Scorch Low Chest","Spells\Scorch_Low_Chest.mdx",1,1,0.01,100),
+(1344,"Frost Breath","Spells\FrostBreath.mdx",1,1,0.01,100),
+(1345,"Flame Breath","Spells\FlameBreath.mdx",1,1,0.01,100),
+(1362,"DetectMagic Base","Spells\DetectMagic_Base.mdx",1,1,0.01,100),
+(1382,"Sense Demons Impact Head","Spells\SenseDemons_Impact_Head.mdx",1,1,0.01,100),
+(1402,"SoothingKiss Impact Head","Spells\SoothingKiss_Impact_Head.mdx",1,1,0.01,100),
+(1403,"Redemption Base","Spells\Redemption_Base.mdx",1,1,0.01,100),
+(1422,"Hellfire Area Base","Spells\HellFire_Area_Base.mdx",1,1,0.01,100),
+(1423,"Hellfire Impact Head","Spells\HellFire_Impact_Head.mdx",1,1,0.01,100),
+(1442,"MindBlast Head","Spells\MindBlast_Head.mdx",1,1,0.01,100),
+(1462,"ManaBurn Chest","Spells\ManaBurn_Chest.mdx",1,1,0.01,100),
+(1463,"FlashHeal Base","Spells\FlashHeal_Base.mdx",1,1,0.01,100),
+(1482,"Aspect of the Beast Impact Head","Spells\AspectBeast_Impact_Head.mdx",1,1,0.01,100),
+(1483,"Aspect Monkey Impact Head","Spells\AspectMonkey_Impact_Head.mdx",1,1,0.01,100),
+(1502,"Aspect Wolf Impact Head","Spells\AspectWolf_Impact_Head.mdx",1,1,0.01,100),
+(1503,"Aspect Snake Impact Head","Spells\AspectSnake_Impact_Head.mdx",1,1,0.01,100),
+(1522,"Shot: Poison Missile","Spells\PoisonShot_Missile.mdx",1,1,0.01,100),
+(1523,"Mana ImpactDot Chest","Spells\Mana_ImpactDot_Chest.mdx",1,1,0.01,100),
+(1524,"Shot: Mana Missile","Spells\ManaShot_Missile.mdx",1,1,0.01,100),
+(1542,"Enchant PreCast Hand","Spells\Enchant_PreCast_Hand.mdx",1,1,0.01,100),
+(1543,"Enchant Cast Hand","Spells\Enchant_Cast_Hand.mdx",1,1,0.01,100),
+(1544,"Disenchant PreCast Hands","Spells\DisEnchant_PreCast_Hand.mdx",1,1,0.01,100),
+(1545,"DisEnchant Cast Hands","Spells\DisEnchant_Cast_Hand.mdx",1,1,0.01,100),
+(1546,"Shot: Scorpid Sting","Spells\ScorpidShot_Missile.mdx",1,1,0.01,100),
+(1547,"Shot: Black Arrow","Spells\BlackShot_Missile.mdx",1,1,0.01,100),
+(1548,"Revive Pet Impact Base","Spells\RevivePet_Impact_Base.mdx",1,1,0.01,100),
+(1562,"Hunter's Mark Impact Chest","Spells\HuntersMark_Impact_Chest.mdx",1,1,0.01,100),
+(1563,"Hunter's Mark State Head","Spells\HuntersMark_Impact_Head.mdx",1,1,0.01,100),
+(1582,"Beast Lore Impact Base","Spells\BeastLore_Impact_Base.mdx",1,1,0.01,100),
+(1583,"Beast Lore Impact Head","Spells\BeastLore_Impact_Head.mdx",1,1,0.01,100),
+(1602,"Shot: Arcane Missile","Spells\ArcaneShot_Missile.mdx",1,1,0.01,100),
+(1603,"Shot: Arcane Volley","Spells\ArcaneVolley_Missile.mdx",1,1,0.01,100),
+(1604,"FreezingTrap","World\Goober\G_FreezingTrap.mdx",1,1,0.01,100),
+(1605,"FrostTrap","World\Goober\G_FrostTrap.mdx",1,1,0.01,100),
+(1606,"ExplosiveTrap","World\Goober\G_ExplosiveTrap.mdx",1,1,0.01,100),
+(1607,"ImmolationTrap","World\Goober\G_ImmolationTrap.mdx",1,1,0.01,100),
+(1608,"Rapid Fire Impact Base","Spells\RapidFire_Base.mdx",1,1,0.01,100),
+(1622,"Warhorse Impact Base","Spells\SummonWarHorse_Impact_Base.mdx",1,1,0.01,100),
+(1623,"Aspect Hawk Impact Head","Spells\AspectHawk_Impact_Head.mdx",1,1,0.01,100),
+(1624,"Flamestrike Impact","Spells\Flamestrike_Impact.mdx",1,1,0.01,100),
+(1625,"Poison Impact Chest","Spells\Poison_Impact_Chest.mdx",1,1,0.01,100),
+(1626,"Eagle Eye Impact Head","Spells\EagleEye_Impact_Head.mdx",1,1,0.01,100),
+(1642,"Sinister Strike Impact Chest","Spells\SinisterStrike_Impact_Chest.mdx",1,1,0.01,100),
+(1643,"Cleave Cast Base","Spells\Cleave_Cast_Base.mdx",1,1,0.01,100),
+(1644,"Blue Glow High","Spells\Enchantments\BlueGlow_High.mdx",1,1,0.01,100),
+(1645,"HARDCODED PetLoyalty Down Base","spells\loyaltydown_impact_base.mdx",1,1,0.01,100),
+(1646,"HARDCODED PetLoyalty Down Head","spells\loyaltydown_impact_head.mdx",1,1,0.01,100),
+(1647,"HARDCODED PetLoyalty Up Base","spells\loyaltyup_impact_base.mdx",1,1,0.01,100),
+(1648,"HARDCODED PetLoyalty Up Head","spells\loyaltyup_impact_head.mdx",1,1,0.01,100),
+(1649,"EarthShock Impact Chest","Spells\EarthShock_Impact_Chest.mdx",1,1,0.01,100),
+(1650,"Flame Shock Impact Chest","Spells\FlameShock_Impact_Chest.mdx",1,1,0.01,100),
+(1662,"ExposeArmor Head","Spells\ExposeArmor_Head.mdx",1,1,0.01,100),
+(1682,"SliceDice Chest","spells\slicedice_chest.mdx",1,1,0.01,100),
+(1702,"MagePortal: Blank","spells\mageportal_blank.mdx",1,1,0.01,100),
+(1703,"Shadow Precast Med Base","Spells\Shadow_Precast_Med_Base.mdx",1,1,0.01,100),
+(1722,"Holy Nova Impact Base","spells\holynova_impact_base.mdx",1,1,0.01,100),
+(1742,"Flame Breath 180","spells\flamebreath180.mdx",1,1,0.01,100),
+(1762,"Aspect Cheetah Impact Head","spells\aspectcheetah_impact_head.mdx",1,1,0.01,100),
+(1782,"Missile: Torch","spells\torchspell.mdx",1,1,0.01,100),
+(1783,"Missile: Mug","spells\mug_missile.mdx",1,1,0.01,100),
+(1784,"First Aid Impact Base","spells\firstaid__impact_base.mdx",1,1,0.01,100),
+(1785,"First Aid Hand","spells\firstaid_hand.mdx",1,1,0.01,100),
+(1802,"Frost Trap Aura","spells\frosttrap_aura.mdx",1,1,0.01,100),
+(1822,"Arcane Shot Area","spells\arcaneshot_area.mdx",1,1,0.01,100),
+(1842,"Spell Object: Boomerang","spells\spellobject_boomerang.mdx",1,1,0.01,100),
+(1843,"Missile: Boomerang","spells\missile_boomerang.mdx",1,1,0.01,100),
+(1862,"Spell Object: Bomb","spells\spellobject_bomb.mdx",1,1,0.01,100),
+(1863,"Missile: Bomb","spells\missile_bomb.mdx",0,1,0.01,100),
+(1882,"Wrath Precast Hand","spells\wrath_precast_hand.mdx",1,1,0.01,100),
+(1883,"Wrath Impact Chest","spells\wrath_impact_chest.mdx",1,1,0.01,100),
+(1884,"Missile: Wrath","spells\wrath_missile.mdx",1,1,0.01,100),
+(1885,"Moonfire Impact Base","spells\moonfire_impact_base.mdx",1,1,1,100),
+(1886,"Portal: Red","creature\spells\creature_spellportal.mdx",1,1,0.01,100),
+(1902,"Starfire Area","spells\starfire_area.mdx",1,1,0.01,100),
+(1922,"Tranquility Impact","spells\tranquility_impact_base.mdx",1,1,0.01,100),
+(1923,"Tranquility Area","spells\tranquility_area.mdx",1,1,0.01,100),
+(1942,"Thorns State Base","spells\thorns_state_base.mdx",1,1,0.01,100),
+(1943,"Portal: Blue","spells\creature_spellportal_blue.mdx",1,1,0.01,100),
+(1962,"Missile: Axe Copper","spells\missile_axe_copper.mdx",1,1,0.01,100),
+(1982,"Poison Shield Impact Chest","spells\poisonshield_state_base.mdx",1,1,0.01,100),
+(1983,"Ground Dust State","spells\grounddust.mdx",1,1,0.01,100),
+(1984,"Steam State","spells\steam.mdx",1,1,0.01,100),
+(1985,"Blink Impact Chest","spells\blink_impact_chest.mdx",1,1,0.01,100),
+(2002,"NoName Area","spells\noname_area.mdx",1,1,0.01,100),
+(2022,"Defensive Stance Impact Head","spells\defensivestance_impact_head.mdx",1,1,0.01,100),
+(2023,"Battle Stance Impact Head","spells\battlestance_impact_head.mdx",1,1,0.01,100),
+(2024,"Berzerker Stance Impact Head","spells\berzerkerstance_impact_head.mdx",1,1,0.01,100),
+(2042,"Missile: Ziggurat Spirit","spells\zig_missile.mdx",1,1,0.01,100),
+(2062,"Ghostly Strike Impact Chest","spells\ghostlystrike_impact_chest.mdx",1,1,0.01,100),
+(2082,"Mana Tide Infuse Base","spells\manatideinfuse_base.mdx",1,1,0.01,100),
+(2102,"Ice Block State","spells\icebarrier_state.mdx",1,1,0.01,100),
+(2103,"Ice Barrier State","spells\iceshield_state.mdx",1,1,0.01,100),
+(2122,"Arcane Power State Chest","spells\arcanepower_state_chest.mdx",1,1,0.01,100),
+(2123,"Inner Focus Impact Chest","spells\innerfocus_impact_chest.mdx",1,1,0.01,100),
+(2142,"Focused Casting State Chest","spells\focusedcasting_state_chest.mdx",1,1,0.01,100),
+(2162,"Piercing Howl Impact Head","spells\piercinghowl_impact_head.mdx",1,1,0.01,100),
+(2163,"Water Walking Impact Head","spells\waterwalking_impact_head.mdx",1,1,0.01,100),
+(2164,"Adrenaline Rush Cast Base","spells\adrenalinerush_cast_base.mdx",1,1,0.01,100),
+(2182,"Sweeping Strike Impact Chest","spells\sweepingstrike_impact_chest.mdx",1,1,0.01,100),
+(2202,"Death Wish State Hand","spells\deathwish_state_hand.mdx",1,1,0.01,100),
+(2203,"Presence of Mind Cast Base","spells\presenceofmind_cast_base.mdx",1,1,0.01,100),
+(2222,"ShadowSnare Base","Spells\Shadow_Snare_High_base.mdx",1,1,0.01,100),
+(2223,"Fear State Base","spells\fear_state_base.mdx",1,1,0.01,100),
+(2242,"Vampiric Embrace State Base","spells\vampiricembrace_state_base.mdx",1,1,0.01,100),
+(2262,"Missile: Flare","spells\missile_flare.mdx",1,1,0.01,100),
+(2282,"Lash Cast Base","spells\lash_cast_base.mdx",1,1,0.01,100),
+(2302,"Eyes of the Beast Impact Head","spells\eyesofbeast_impact_head.mdx",1,1,0.01,100),
+(2322,"Star Shards Impact Base","spells\starshards_impact_base.mdx",1,1,0.01,100),
+(2342,"Onyxia Impact Base","spells\onyxia_impact_base.mdx",1,1,0.01,100),
+(2362,"Infernal Impact Base","spells\infernal_impact_base.mdx",1,1,0.01,100),
+(2382,"Dragon Flame Breath","spells\dragonflamebreath.mdx",1,1,0.01,100),
+(2383,"Dragon Flame Breath 120","spells\dragonflamebreath180.mdx",1,1,0.01,100),
+(2402,"Soulstone Resurrection Base","spells\soulstoneresurrection_base.mdx",1,1,0.01,100),
+(2422,"Demonic Sacrifice Felhunter Chest","Spells\DemonicSacrifice_Felhunter_Chest.mdx",1,1,0.01,100),
+(2423,"Light Test","spells\lighttest.mdx",1,1,0.01,100),
+(2442,"Threat Reduce Impact Head","spells\threatreduce_impact_head.mdx",1,1,0.01,100),
+(2462,"Conflagrate Impact Chest","spells\conflagrate_impact_chest.mdx",1,1,0.01,100),
+(2482,"Skull Balls","Spells\Enchantments\SkullBalls.mdx",1,1,0.01,100),
+(2483,"Shadow ImpactDoT Med Chest","Spells\Shadow_ImpactDot_Med_Chest.mdx",1,1,0.01,100),
+(2502,"Heal Ragnaros State Chest","Spells\HealRag_State_Chest.mdx",1,1,0.01,100),
+(2503,"Ragnaros Fire Nova Area","Spells\Rag_FireNova_Area.mdx",1,1,0.01,100),
+(2522,"Shield Wall Warrior Impact Base","spells\shieldwallwar_impact_base.mdx",1,1,0.01,100),
+(2542,"Consecration Impact Base","spells\consecration_impact_base.mdx",1,1,0.01,100),
+(2562,"Deterrence Impact","spells\deterrence_impact.mdx",1,2.2,0.01,100),
+(2582,"Demonic Sacrifice Imp Chest","Spells\DemonicSacrifice_Imp_Chest.mdx",1,1,0.01,100),
+(2583,"Demonic Sacrifice Succubus Chest","Spells\DemonicSacrifice_Succubus_Chest.mdx",1,1,0.01,100),
+(2584,"Demonic Sacrifice Voidwalker Chest","Spells\DemonicSacrifice_Voidwalker_Chest.mdx",1,1,0.01,100),
+(2585,"Stoneform State Chest","Spells\Stoneform_State_Base.mdx",1,1,0.01,100),
+(2602,"Mana Shield State Chest","spells\manashield_state_chest.mdx",1,1,0.01,100),
+(2622,"Missile: Hammer","spells\missile_hammer.mdx",1,1,0.01,100),
+(2642,"Dragon Sand Breath","spells\corrosivesandbreath.mdx",1,1,0.01,100),
+(2662,"Missile: Snowball","spells\missile_snowball.mdx",1,1,0.01,100),
+(2663,"Snowball Impact Chest","spells\snowball_impact_chest.mdx",1,1,0.01,100),
+(2682,"Missile: Thorns","spells\missile_thorns.mdx",1,1,0.01,100),
+(2683,"DustNova Cast Base","spells\dustnova_cast_base.mdx",1,1,0.01,100),
+(2684,"RockyFrost Nova State","spells\rockyfrost_nova_state.mdx",1,1,0.01,100),
+(2702,"HARDCODED Meeting Stone Join","Spells\Bind_Impact_Base.mdx",0,1,0.01,100),
+(2722,"Confused State Head","spells\confused_state_head.mdx",1,1,0.01,100),
+(2762,"Dragon Flame Breath Nefarian","spells\nefarianflamebreath.mdx",1,1,0.01,100),
+(2763,"Nefarian Breath Impact","spells\nefarianflamebreath_impact.mdx",1,1,0.01,100),
+(2782,"Vengeance State Hand","spells\vengeance_state_hand.mdx",1,1,0.01,100),
+(2802,"Nefarian State Base","spells\nefarian_state_base.mdx",1,1,0.01,100),
+(2803,"Nefarian Impact Base","spells\nefarian_impact_base.mdx",1,1,0.01,100),
+(2822,"Barkskin State Base","spells\barkshield_state_base.mdx",1,1,0.01,100),
+(2842,"Missile: Leather Ball","spells\missile_leatherball.mdx",1,1,0.01,100),
+(2843,"Levitate Impact Base","spells\levitate_impact_base.mdx",1,1,0.01,100),
+(2844,"LoyaltyDown Impact Base","spells\LoyaltyDown_Impact_Base.mdx",1,1,0.01,100),
+(2862,"Fire Reflect State Chest","spells\firereflect_state_chest.mdx",1,1,0.01,100),
+(2863,"Frost Reflect State Chest","spells\frostreflect_state_chest.mdx",1,1,0.01,100),
+(2864,"Shadow Reflect State Chest","spells\shadowreflect_state_chest.mdx",1,1,0.01,100),
+(2865,"Missile: Lightning Bolt (Ivus)","spells\lightningboltivus_missile.mdx",1,1,0.01,100),
+(2882,"Horde CTF Flag Chest","spells\hordectfflag_spell.mdx",1,1,0.01,100),
+(2883,"Alliance CTF Flag Chest","spells\alliancectfflag_spell.mdx",1,1,0.01,100),
+(2902,"Barkskin State Base (New)","spells\barkskin_state_base.mdx",1,1,0.01,100),
+(2922,"HARDCODED Reputation","Spells\ReputationLevelUp.mdx",1,1,0.01,100),
+(2942,"MovementImmunity Base","spells\movementimmunity_base.mdx",1,1,0.01,100),
+(2962,"Missile: Holy Hammer","spells\holy_hammer_missile.mdx",1,1,0.01,100),
+(2963,"Cat Mark State Head","Spells\CatMark.mdx",1,1,0.01,100),
+(2964,"Level Up","Spells\SpellLevelUp.mdx",1,1,0.01,100),
+(2965,"AbolishMagic Base","spells\abolishmagic_base.mdx",1,1,0.01,100),
+(2966,"Hellfire FirePuff Caster Base","spells\HellFire_FirePuff_Caster_Base.mdx",1,1,0.01,100),
+(2968,"Green Radiation Fog (Large)","Spells\LargeGreenRadiationFog.mdx",1,1,0.01,100),
+(2969,"Missle: Life Drain","\\guldan\drive2\projects\wow\finaldata\patch_1.7.0\data\spells\lifedrain_missile.mdx",1,1,0.01,100),
+(2970,"Web Spin","spells\webspin.mdx",1,1,0.01,100),
+(2971,"BaseFlagCapRed Impact Base","spells\baseflagcapred_impact_base.mdx",1,1,0.01,100),
+(2972,"Missile: BloodBolt","spells\bloodbolt_missile_low.mdx",1,1,0.01,100),
+(2973,"Banish (Red)","spells\bloodbolt_chest.mdx",1,1,0.01,100),
+(2975,"Blue Flame Circle 2.0","Spells\FlameCircleEffect_Blue.mdx",1,2,0.01,100),
+(2978,"Green Radiation Fog (Blue/Green - Magic)","SPELLS\LargeBlueGreenRadiationFog.mdx",1,1,0.01,100),
+(2979,"Gas Breath","spells\acidcloudbreath.mdx",0,1,0.01,100),
+(2980,"Acid Breath (Liquid)","spells\acidliquidbreath.mdx",1,1,0.01,100),
+(2981,"Parachute Wings Head","spells\parachute_wings_head.mdx",0,1,0.01,100),
+(2982,"Trick or Treat - Treat - Head","spells\trickortreat_treat_head.mdx",0,1,0.01,100),
+(2983,"Trick or Treat - Trick - Head","spells\trickortreat_trick_head.mdx",0,1,0.01,100),
+(2984,"Trick or Treat - Treat Head","spells\trickortreat_treat_head.mdx",0,1,0.01,100),
+(2985,"Trick or Treat - Trick Head","spells\trickortreat_trick_head.mdx",0,1,0.01,100),
+(2986,"Thunderclap Cast Base: 20 foot","spells\thunderclap_cast_base.mdx",20,1,0.01,100),
+(2987,"Retaliation State Base (Warrior)","Spells\Retaliation_State_Chest.mdx",1,1,0.01,100),
+(2988,"Firecrackers Thrown","Spells\Firecrackers_Thrown.mdx",1,1,0.01,100),
+(2989,"MoonBeam State Base","Spells\MoonBeam_Impact_Base.mdx",1,1,1,100),
+(2991,"Snowball Powder Impact","spells\SnowballPowdery_Impact_Base.mdx",1,1,0.01,100),
+(2992,"Snowball Powdery State","spells\SnowballPowdery_Impact_Base.mdx",1,1,0.01,100),
+(2993,"Sand Vortex Base","spells\SandVortex_State_Base.mdx",1,1,0.01,100),
+(2994,"Earth Burrow Cast","Spells\BurrowEarth_Brown_Missile.mdx",1,1,0.01,100),
+(2995,"Sandworm Attack Effect Ground Impact","spells\SandWorm_AttackEffects.mdx",1,1,0.01,100),
+(2996,"Holiday - Lunar Festival - Chest Firework Impact","spells\firework_romancandle_impact_chest_01.mdx",1,1,0.01,100),
+(2997,"Missile: Firework - Roman Candle","spells\firework_romancandle_missle_01.mdx",1,1,0.01,100),
+(2998,"Missile: SlimeLesser","spells\SlimeLesser_Missile.mdx",1,1,0.01,100),
+(2999,"Cthun Eye Beam","spells\CthuneEyeAttack.mdx",1,1,0.01,100),
+(3000,"Holiday - Lunar Festival - Elune's Candle Cast Hand","spells\romancandle_a_01.mdx",1,1,0.01,100),
+(3001,"Missile: SlimeLesserExplode","spells\SlimeLesserExplode_Missile.mdx",1,1,0.01,100),
+(3002,"Acid Burn Base","spells\AcidBurn.mdx",1,1,0.01,100),
+(3003,"Holiday - Lunar Festival - Right Hand Firework impact","spells\firework_romancandle_impact_chest_01.mdx",1,1,0.01,100),
+(3004,"Holiday - Lunar Festival - Left Hand Firework impact","spells\firework_romancandle_impact_chest_01.mdx",1,1,0.01,100),
+(3005,"Ice Prison State","spells\IcePrison_Base.mdx",1,1,0.01,100),
+(3006,"Missile: Shadow Bolt - Epic","spells\DeathBolt_Missile_Low.mdx",1,1,0.01,100),
+(3007,"Meteor Impact Base","spells\Meteor_Impact_Base.mdx",1,1,0.01,100),
+(3008,"Missile: Giant Boulder","spells\BoulderGiant_Missile.mdx",1,1,0.01,100),
+(3009,"Holiday - Valentine - Cupid's Bow","spells\holidays\valentines_spellobject_cupidsbow.mdx",1,1,0.01,100),
+(3010,"Holiday - Valentine - Cupid's Arrow Impact Chest","spells\holidays\valentines_cupidsarrow_impact_chest.mdx",1,1,0.01,100),
+(3011,"Holiday - Valentine - Missle, Cupid's Arrow","spells\holidays\valentines_cupidsarrow_missle.mdx",1,1,0.01,100),
+(3012,"Holiday - Valentine - Picnic Blanket","spells\holidays\valentines_blanket.mdx",1,1,0.01,100),
+(3013,"Holiday - Valentine - Flower Shower","spells\holidays\valentines_roseshower_impact_base.mdx",1,1,0.01,100),
+(3014,"Holiday - Valentine - Broken Heart Impact","spells\holidays\valentines_brokenheart.mdx",1,1,0.01,100),
+(3015,"Insect Swarm State Chest","Spells\InsectSwarm_State_Chest.mdx",1,1,0.01,100),
+(3016,"Holiday - Valentine - Heart State/Impact","spells\holidays\valentines_lookingforloveheart.mdx",1,1,1,50),
+(3021,"Flare Ground State","spells\flare_state_base.mdx",1,1.5,0.01,100),
+(3024,"Purple Ghost State","spells\purpleghost_state.mdx",1,1,0.01,100),
+(3026,"LightningBoltIvus Missile","Spells\LightningBoltIvus_Missile.mdx",1,1,0.01,100),
+(3027,"Acid Breath (45 yd)","spells\acidliquidbreath.mdx",45,1,0.01,100),
+(3028,"Holiday - Scourge Invasion, Purple Lightning","spells\naxxramasstrike_impactdd_med_base.mdx",1,1,0.01,100),
+(3029,"Naxxramas Strike","Spells\NaxxramasStrike_ImpactDD_Med_Base.mdx",1,1,0.01,100),
+(3030,"Missile: Deathbolt Missile","spells\deathbolt_missile_low.mdx",1,1,0.01,100),
+(3031,"Grobbulus Poison Cloud","Spells\Poison_Cloud_Grobbulus.mdx",1,1,0.01,100),
+(3032,"Torch","Spells\TorchSpell.mdx",1,1,0.01,100),
+(3034,"RadiationRed State","Spells\RedGhost_state.mdx",1,1,0.01,100),
+(3035,"Burning Depths Necrolyte Transition","Spells\ShadowSteps_FX.mdx",1,1,0.01,100),
+(3036,"Giant Insect Swarm Chest","Spells\GiantInsectSwarm_State_Chest.mdx",1,1,0.01,100),
+(3037,"Giant Insect Swarm State","Spells\GiantInsectSwarm_State_Ground.mdx",1,1,0.01,100),
+(3038,"Spike Low Base","Spells\Spike_Low_Base.mdx",1,1,0.01,1),
+(3039,"Spike Impact Base","Spells\Spike_Impact_Base.mdx",1,1,0.01,100),
+(3040,"Flame Circle","spells\flamecircleeffect.mdx",1,1,0.01,100),
+(3043,"Ice Nuke Missile","spells\icenuke_missile.mdx",1,1,0.01,100),
+(3044,"Ice Nuke Base","spells\IceNuke_Base_Impact.mdx",1,1,0.01,100),
+(3045,"Smoke - Infernal","spells\infernal_smoke_rec.mdx",1,1,0.01,100),
+(3046,"Smoke: Tauren Colored","world\generic\tauren\passive doodads\smoke\taurencoloredsmoke01.mdx",1,1,0.01,100),
+(3047,"Portal: Yellow","spells\creature_spellportal_yellow.mdx",1,1,0.01,100),
+(3048,"Portal: Green","spells\creature_spellportal_green.mdx",1,1,0.01,100),
+(3049,"Banish (Blue)","spells\banish_chest_blue.mdx",1,1,0.01,100),
+(3050,"Banish (Yellow)","spells\banish_chest_yellow.mdx",1,1,0.01,100),
+(3051,"Void Zone","creature\portalofkathune\portalofkathune.mdx",1,1,0.01,100),
+(3052,"Banish (Purple)","spells\banish_chest_purple.mdx",1,1,0.01,100),
+(3053,"Portal: Purple","spells\creature_spellportal_purple.mdx",1,1,0.01,100),
+(3054,"Tugofwar - Red Spice Explosion","world\generic\passivedoodads\tugofwar\tugofwar_redspiceexplosion.mdx",1,1,0.01,100),
+(3055,"Tugofwar: Missile, Red Spice","world\generic\passivedoodads\tugofwar\tugofwar_redspicemissile.mdx",1,1,0.01,100),
+(3056,"Rocket Blast","spells\rocketblast.mdx",1,1,0.01,100),
+(3057,"Anti-Magic State Base (Blue)","spells\antimagic_state_blue.mdx",1,1,0.01,100),
+(3058,"Tugofwar - Red Dust Cloud aura","spells\reddustcloud.mdx",1,1,0.01,100),
+(3060,"Putrid Mushroom","world\goober\g_sporemushroom.mdx",1,1,0.01,100),
+(3061,"Missile: Net","Spells\Net_Missile.mdx",1,1,0.01,100),
+(3062,"Missile: Nightbane Bone","spells\nightbane_bone_missile.mdx",1,1,0.01,100),
+(3064,"Missile: Infernal Ball","spells\Infernal_Ball.mdx",1,1,0.01,100),
+(3067,"Red Ghost State","spells\redghost_state.mdx",1,1,0.01,100),
+(3068,"Blessing of the Naaru Head","spells\giftofnaaru.mdx",1,1,0.01,100),
+(3069,"Abyssal Impact Base","spells\abyssal_impact_base.mdx",1,1,0.01,100),
+(3070,"Anti-Magic State Base (Red)","spells\antimagic_state_red.mdx",1,1,0.01,100),
+(3071,"Doomfire Spell Visual","World\Lordaeron\Stratholme\PassiveDoodads\FX\StratholmeFireSmokeEmberS.mdx",1,1,0.01,100),
+(3073,"Missile: Aegis","Spells\Aegis.mdx",1,1,0.01,100),
+(3074,"Ice Lance Missile","spells\ice_lance_missile.mdx",1,1,0.01,100),
+(3075,"Ice Lance Impact","spells\ice_lance_impact.mdx",1,1,0.01,100),
+(3076,"Force Field Effect","World\Kalimdor\DireMaul\ActiveDoodads\Doors\DireMaulBossForceField.mdx",1,1,0.01,100),
+(3078,"Mage Dragons Breath","spells\mage_dragons_breath.mdx",1,1,0.01,100),
+(3079,"Fel Armor Impact Head","spells\felarmor_impact_head.mdx",1,1,0.01,100),
+(3080,"test","spells\acidliquidbreath.mdx",1,1,0.01,100),
+(3081,"Ritual Arcane PreCast Base","spells\ritual_arcane_precast_base.mdx",1,1,0.01,100),
+(3082,"Exploding Stone Impact","spells\exploding_stone_impact.mdx",1,1,0.01,100),
+(3083,"Consecration Impact Base (0.5x)","spells\consecration_impact_base.mdx",1,0.5,0.01,100),
+(3084,"Banish (Purple) - 2.00","spells\banish_chest_purple.mdx",1,2,0.01,100),
+(3085,"Flame Patch (0.5x)","spells\archimonde_fire.mdx",0.5,0.5,0.01,100),
+(3086,"Combat Blood Spurt Front Large Blue","particles\bloodspurts\bloodspurtbluelarge.mdx",1,1,0.01,100),
+(3087,"Silencing Shot Impact","spells\throatshot_impact_chest.mdx",1,1,0.01,100),
+(3088,"Missile: Rocket","spells\Missle_Rocket.mdx",1,1,0.01,100),
+(3089,"Shadowfury Cast Base","spells\shadowfury_impact_base.mdx",1,1,0.01,100),
+(3090,"Flame Patch","spells\archimonde_fire.mdx",1,1,0.01,100),
+(3091,"Zangarmarsh Arcane Impact","spells\zangarmarsh_arcane_impact.mdx",1,1,0.01,100),
+(3092,"Zangarmarsh Arcane Missile","spells\zangarmarsh_arcane_missile.mdx",1,1,0.01,100),
+(3093,"Black Stone Crystal State","world\generic\pvp\runes\pvp_rune_invis.mdx",1,1,0.01,100),
+(3095,"Cleave Cast Base Purple","spells\cleave_cast_base_purple.mdx",1,1,0.01,100),
+(3096,"Deadly Throw Impact Chest","spells\deadly_throw_impact_chest.mdx",1,1,0.01,100),
+(3097,"Shadow Strikes State Hand","spells\shadow_strikes_state_hand.mdx",1,1,0.01,100),
+(3098,"Arcane Explosion Base Boss","spells\arcaneexplosion_boss_base.mdx",1,1,0.01,100),
+(3099,"Barkskin State (0.25)","spells\barkskin_state_base.mdx",1,0.25,0.01,100),
+(3100,"Molten Armor Head","spells\molten_armor_head.mdx",1,1,0.01,100),
+(3101,"Item - Atiesh Equip Visual","Spells/Crow_Baked.mdx",0,1,0.01,100),
+(3103,"Scourge Summoning Runes","world\goober\g_scourgerunecirclecrystal.mdx",1,1,0.01,100),
+(3104,"Fire Ritual Base","spells\ritual_fire_precast_base.mdx",1,1,0.01,100),
+(3105,"Shadow Nova Cast - (4.00) (40yd)","spells\shadow_nova_area.mdx",1,4,0.01,100),
+(3106,"Flame Circle (3.00)","Spells\FlameCircleEffect.mdx",1,3,0.01,100),
+(3107,"Incinerate Missile","spells\incinerate_low_base.mdx",1,1,0.01,100),
+(3108,"Incinerate Impact","spells\incinerate_impact_base.mdx",1,1,0.01,100),
+(3109,"BloodLust Player Cast Head","spells\bloodlust_player_cast_head.mdx",1,1,0.01,100),
+(3110,"BloodLust Player State Head","spells\bloodlust_player_state_head.mdx",1,1,0.01,100),
+(3111,"Fel Flame Shock Impact Chest","spells\fel_flameshock_impact_chest.mdx",1,1,0.01,100),
+(3112,"Shadow Nova Cast","spells\shadow_nova_area_noprojection.mdx",1,1,0.01,2),
+(3113,"Aimed Shot Impact","spells\aimedshot_impact_chest.mdx",1,1,0.01,100),
+(3114,"Rocket Launcher Precast","spells\RocketLauncher_PreCast.mdx",1,1,0.01,100),
+(3115,"WaterShield Impact Base","spells\watershield_impact_base.mdx",1,1,0.01,100),
+(3116,"WaterShield State Base","spells\watershield_state_base.mdx",1,1,0.01,100),
+(3117,"Earth Shield Impact","spells\earthshield_impact_base.mdx",1,1,0.01,100),
+(3118,"Earth Shield State","spells\earthshield_state_base.mdx",1,1,0.01,100),
+(3119,"Scorpid Sting Impact","spells\scorpidsting_impact_base.mdx",1,1,0.01,100),
+(3120,"ShadowGuard_State_Base","spells\shadowshield_state_base.mdx",1,1,0.01,100),
+(3121,"Tranquility Area (0.5x)","spells\tranquility_area.mdx",0.5,0.5,0.01,100),
+(3122,"ShadowGuard Impact Base","spells\shadowshield_impact.mdx",1,1,0.01,100),
+(3123,"Soulshatter Impact Base","spells\soulshatter_impact.mdx",1,1,0.01,100),
+(3125,"Cloud: White","spells\whiteradiationfog.mdx",1,1,0.01,100),
+(3126,"Rocket Launcher Cast","spells\RocketLauncher_Cast.mdx",1,1,0.01,100),
+(3127,"Mutilate Impact","spells\mutilate_impact_chest.mdx",1,1,0.01,100),
+(3128,"Spell Reflection","spells\spellreflection_state_shield.mdx",1,1,0.01,100),
+(3129,"Ritual of Souls Base","world\goober\g_ritualofsouls.mdx",1,3,0.01,100),
+(3130,"Shadow Strikes State","spells\shadow_strikes_state_hand.mdx",1,1,0.01,100),
+(3131,"Missile: Nightbane Fire","spells\nightbane_fire_missile.mdx",1,1,0.01,100),
+(3132,"Infernal Impact Base (3.00)","spells\infernal_impact_base.mdx",1,3,0.01,100),
+(3133,"Shadow Shield State Base","Spells\ShadowShield_State_Base.mdx",1,1,0.01,100),
+(3134,"Missile: Sonic Boom","Spells\SonicBoom_Missile_High.mdx",1,2,0.01,100),
+(3135,"Portal: Ritual of Summoning","world\generic\activedoodads\instanceportal\summon_ritual.mdx",1,1,0.01,100),
+(3136,"Missile: Abyssal Ball","spells\abyssal_ball.mdx",1,1,0.01,100),
+(3137,"Ice Barrier State Chest","spells\ice_barrier_state_chest.mdx",1,1,0.01,100),
+(3138,"Blessing of Protection State Chest","spells\blessingofprotection_chest.mdx",1,1,0.01,100),
+(3139,"Dreadlord Carrion Impact","spells\dreadlord_carrion_impact.mdx",1,1,0.01,100),
+(3140,"Dreadlord Carrion Swarm Cast","spells\dreadlord_carrion_swarm_cast.mdx",1,1,0.01,100),
+(3141,"Draenei Spirit Red","world\expansion01\doodads\auchindoun\passivedoodads\spirit_fx\draenei_spirit_red.mdx",1,1,0.01,100),
+(3142,"Missile: Infernal Ball (5.00)","spells\Infernal_Ball.mdx",1,5,0.01,100),
+(3143,"Nightbane Area Base","spells\nightbane_area_base.mdx",1,1,0.01,100),
+(3144,"Blessing of Spell Protection Base","spells\blessingofspellprotection_base.mdx",1,1,0.01,100),
+(3145,"Avenging Wrath Impact Base","spells\avengingwrath_impact_base.mdx",1,1,0.01,100),
+(3146,"Avenging Wrath State Chest","spells\avengingwrath_state_chest.mdx",1,1,0.01,100),
+(3147,"Seal of Blood Impact Base","spells\sealofblood_impact_base.mdx",1,1,0.01,100),
+(3148,"Divine illumination base","spells\divineillumination_base.mdx",1,1,0.01,100),
+(3149,"Smoke Flare (Blue)","spells\SmokeFlare_Blue.mdx",1,1,0.01,100),
+(3150,"Smoke Flare (Red)","spells\SmokeFlare_Red.mdx",1,1,0.01,100),
+(3151,"Smoke Flare (Green)","spells\SmokeFlare_Green.mdx",1,1,0.01,100),
+(3152,"Smoke Flare (Purple)","spells\SmokeFlare_Purple.mdx",1,1,0.01,100),
+(3153,"Smoke Flare (White)","spells\SmokeFlare_White.mdx",1,1,0.01,100),
+(3154,"Waterbreathing Impact Base (.25)","Spells\Waterbreathing_Impact_Base.mdx",1,0.25,0.01,100),
+(3155,"Seal of Righteousness Impact","spells\sealofrighteous_impact_base.mdx",1,1,0.01,100),
+(3156,"Sonic Wave Blast Down Cast","spells\sonicwave_cast_down.mdx",1,1,0.01,100),
+(3157,"MoonBeam (Blue)","spells\MoonBeamBlue_Impact_Base.mdx",1,1,0.01,100),
+(3158,"MoonBeam (Red)","spells\MoonBeamRed_Impact_Base.mdx",1,1,0.01,100),
+(3159,"Arcane Explosion Boss Base (.75)","spells\arcaneexplosion_boss_base.mdx",1,0.75,0.01,100),
+(3160,"Blessing Of Wisdom Base","spells\blessingofwisdom_base.mdx",1,1,0.01,100),
+(3161,"Seal of Command Impact","spells\sealofcommand_impact_base.mdx",1,1,0.01,100),
+(3162,"Cloud: Red","spells\redradiationfog.mdx",1,1,0.01,100),
+(3163,"Judgement of Light Impact Chest (1.00)","spells\judgement_impact_chest.mdx",1,1,0.01,100),
+(3164,"Water Elemental Impact Base","spells\waterelemental_impact_base.mdx",1,1,0.01,100),
+(3165,"Combat Blood Spurt Back Large Blue","particles\bloodspurts\bloodspurtbluelarge.mdx",1,1,0.01,100),
+(3166,"Cloud: Orange","spells\orangeradiationfog.mdx",1,1,0.01,100),
+(3167,"Cloud: Green","spells\greenradiationfog.mdx",1,1,0.01,100),
+(3168,"Ghost_state (Red)","spells\redghost_state.mdx",1,1,0.01,100),
+(3169,"Fel Fire Precast Hand","spells\fel_fire_precast_hand.m2",1,1,0.01,100),
+(3170,"Red Radiation Fog","spells\redradiationfog.mdx",1,1,0.01,100),
+(3171,"Green Radiation Fog","spells\greenradiationfog.mdx",1,1,0.01,100),
+(3172,"Orange Radiation Fog","spells\orangeradiationfog.mdx",1,1,0.01,100),
+(3173,"Blue Radiation Fog","spells\blueradiationfog.mdx",1,1,0.01,100),
+(3174,"Black Radiation Fog","spells\blackradiationfog.mdx",1,1,0.01,100),
+(3175,"White Radiation Fog","spells\whiteradiationfog.mdx",1,1,0.01,100),
+(3176,"Sonic Wave Blast Cast","spells\sonicwave_cast.mdx",1,1,0.01,100),
+(3177,"Cloud: Blue","spells\blueradiationfog.mdx",1,1,0.01,100),
+(3178,"Cloud: Black","spells\blackradiationfog.mdx",1,1,0.01,100),
+(3180,"Seal of Vengeance Impact Base","spells\sealofvengeance_impact_base.mdx",1,1,0.01,100),
+(3181,"Magtheridon Cieling Chunk Impact","spells\MagtheradonCeilingChunk.mdx",1,1,0.01,100),
+(3182,"HolyShield_State_Base","spells\holyshield_state.mdx",1,1,0.01,100),
+(3183,"Heroism Cast","spells\heroism_cast.mdx",1,1,0.01,100),
+(3184,"Heroism State","spells\heroism_state.mdx",1,1,0.01,100),
+(3185,"ShadowWord Death Impact","spells\shadowword_death_impact.mdx",1,1,0.01,100),
+(3186,"Prayer of Mending Impact Head","spells\prayerofmending_impact_head.mdx",1,1,0.01,100),
+(3187,"Seal of Crusader Cast","spells\sealofcrusader_impact.mdx",1,1,0.01,100),
+(3188,"Victory Rush Impact","spells\victory_rush_impact.mdx",1,1,0.01,100),
+(3189,"Shadow Nova Cast - (2.00)","spells\shadow_nova_area.mdx",1,2,0.01,100),
+(3190,"Seal of Light Impact Base","spells\sealoflight_impact_base.mdx",1,1,0.01,100),
+(3191,"Circle of Renewal Impact","spells\circle_of_renewal_impact.mdx",1,1,0.01,100),
+(3192,"Symbol of Hope Impact Base","spells\symbolofhope_impact_base.mdx",1,1,0.01,100),
+(3193,"Missile: Abyssal Ball (5.00)","spells\abyssal_ball.mdx",1,5,0.01,100),
+(3194,"Frost Trap Aura (0.10)","Spells\FrostTrap_Aura.mdx",1,0.1,0.01,100),
+(3195,"Missile: Saw Blade","spells\missile_sawblade.mdx",1,1,0.01,100),
+(3196,"Consume Magic Impact","spells\consume_magic_impact.mdx",1,1,0.01,100),
+(3197,"Upper Deck Promo Firework Cast","world\goober\g_promotion_purple.mdx",1,1,0.01,100),
+(3198,"Ground Rune (Blue)","World\Goober\G_RuneGroundBlue01.mdx",1,1,0.01,100),
+(3199,"Infernal Impact (5.00)","spells\infernal_impact.mdx",1,5,0.01,100),
+(3200,"Missile: Nightbane Bone Shards","spells\nightbane_bone_spurs.mdx",1,1,0.01,100),
+(3201,"SummonPet PreCast Impact Base (4.00)","Spells\SummonPet_Impact_Base.mdx",1,4,0.01,100),
+(3202,"Infernal Impact (2.00)","spells\infernal_impact.mdx",1,2,0.01,100),
+(3203,"Fel Fire Precast Hand Uber","spells\fel_fire_precast_uber_hand.mdx",1,1,0.01,100),
+(3204,"Flames (Stratholme Small)","world\lordaeron\stratholme\passivedoodads\fx\stratholmefiresmokeembers.mdx",1,1,0.01,100),
+(3205,"Missile: Abyssal Ball (2.00)","spells\abyssal_ball.mdx",1,2,0.01,100),
+(3207,"HARDCODED Resist Spell","spells\resist_immune_effect.mdx",1,1,0.01,100),
+(3208,"Arcane Torrent Cast (5x)","Spells\ArcaneTorrent.mdx",1,5,0.01,100),
+(3209,"Ice Ritual Precast Base","spells\ritual_frost_precast_base.mdx",1,1,0.01,100),
+(3210,"Pain Suppression","spells\painsuppression_state.mdx",1,1,0.01,100),
+(3212,"Missile: Infernal Ball (2.00)","spells\Infernal_Ball.mdx",1,2,0.01,100),
+(3213,"Gift of the water Spirit Base imapct","spells\giftwaterspirit_impact_base.mdx",1,1,0.01,100),
+(3214,"Shadow Mend Impact","spells\Shadow_Mend_Impact.mdx",1,1,0.01,100),
+(3215,"Rain of Fel Fire","Spells\Fel_RainOfFire_Impact_Base.mdx",1,1,0.01,100),
+(3216,"Broggok Poison Cloud","Spells\Poison_Cloud_Grobbulus.mdx",0.5,0.5,0.01,100),
+(3217,"Ice Block State","spells\icebarrier_state.mdx",0.5,0.5,0.01,100),
+(3218,"Barkskin State (0.50)","spells\barkskin_state_base.mdx",1,0.5,0.01,100),
+(3219,"Combat Blood Spurt Front Small Blue","particles\bloodspurts\bloodspurtblue.mdx",1,1,0.01,100),
+(3220,"Fel Fireball Missile High","spells\fel_fireball_missile_high.mdx",1,1,0.01,100),
+(3221,"Fel Fire Impact Chest DD High","spells\fel_fire_impactdd_high_chest.mdx",1,1,0.01,100),
+(3222,"Mass Dispel","Spells\Mass_Dispell_Impact.mdx",0,1,0.01,100),
+(3223,"Fel Immolate Impact Chest","spells\fel_immolate_impact_chest.mdx",1,1,0.01,100),
+(3224,"Combat Blood Spurt Back Small Blue","particles\bloodspurts\bloodspurtblue.mdx",1,1,0.01,100),
+(3225,"Focused Casting State Chest (0.25)","spells\focusedcasting_state_chest.mdx",1,0.25,0.01,100),
+(3226,"Shades of Darkness Cast - 2.00","spells\shadesofdarkness_cast.mdx",3,2,0.01,100),
+(3227,"Fel Fireblast Impact Chest","spells\fel_fireblast_impact_chest.mdx",1,1,0.01,100),
+(3228,"Arena - Gold Flag (Alliance)","spells\GoldArenaflag_spell.mdx",1,1.5,0.01,100),
+(3229,"Focused Casting State Chest (0.5)","spells\focusedcasting_state_chest.mdx",1,0.5,0.01,100),
+(3230,"Fel Flame Patch","spells\fel_archimonde_fire.mdx",1,1,0.01,100),
+(3231,"Fel Immolation","Spells\Fel_Immolate_State_Base.mdx",1,1,0.01,100),
+(3232,"Shadow Shield Impact Base","spells\shadowshield_impact.mdx",1,1,0.01,100),
+(3233,"Breath: Nightbane Smoke","spells\nightbane_breath.mdx",1,1,0.01,100),
+(3234,"Mass Dispell Impact","spells\Mass_Dispell_Impact.mdx",1,1,0.01,100),
+(3235,"Missile: Soul","spells\SoulShatter_Missile.mdx",1,1,0.01,100),
+(3236,"SoulShatter Cast","spells\SoulShatter_Cast.mdx",1,1,0.01,100),
+(3237,"Restoration Impact Base (8x)","Spells\Restoration_Impact_Base.mdx",0,8,0.01,100),
+(3238,"Fire Nova Area (0.25)","Spells\FireNova_Area.mdx",1,0.25,0.01,100),
+(3239,"Envenom Impact","spells\envenom_impact_chest.mdx",1,1,0.01,100),
+(3240,"LifeBloom Impact","spells\LifeBloom_Impact.mdx",1,1,0.01,100),
+(3241,"LifeBloom State","spells\LifeBloom_State.mdx",1,1,0.01,100),
+(3242,"Mangle Impact","spells\Mangle_Impact.mdx",1,1,0.01,8),
+(3243,"Lacerate Impact","spells\Lacerate_Impact.mdx",1,1,0.01,100),
+(3244,"Maim Impact","spells\Mame_Impact.mdx",1,1,0.01,100),
+(3245,"Force of Nature Impact","spells\forceofnature_impact.mdx",1,1,0.01,100),
+(3246,"Circle of Renewal Impact","spells\circle_of_renewal_impact.mdx",1,1,0.01,100),
+(3247,"Shock Missile [4.0]","Spells\Shock_Missile.mdx",1,4,0.01,100),
+(3248,"Fire Nova Area (2.00)","Spells\FireNova_Area.mdx",1,2,0.01,100),
+(3249,"Missile: Flare (Scale: x2)","spells\missile_flare.mdx",1,2,0.01,100),
+(3250,"Detect Invisibility and Stealth State","",1,1,0.01,100),
+(3251,"PvP - Neutral Flag (Green)","Spells\NeutralCTFflag_spell.mdx",1,1,0.01,100),
+(3252,"Fel Flame Wreath","Spells\Fel_FlameCircleEffect.mdx",1,1,0.01,100),
+(3253,"Detect Invisibility State Head","spells\detectstealth_state_head.mdx",1,1,0.01,100),
+(3254,"Polymorph Scale 2","spells\polymorph_impact.mdx",1,2,0.01,100),
+(3255,"ArcaneExplosion Base (1.5x)","Spells\ArcaneExplosion_Base.mdx",1,1.5,0.01,100),
+(3256,"Missile: Meteor","spells\Meteor_Ball_Missile.mdx",1,1,0.01,100),
+(3257,"Hellfire Area Base (Scale 0.20)","Spells\HellFire_Area_Base.mdx",1,0.2,0.01,100),
+(3258,"Quest - Seed of Revitalization - Entangling Roots Effect Big","spells\entanglingroots_state.mdx",1,35,0.01,100),
+(3259,"Quest - Seed of Revitalization - Giant Insect Swarm Effect Big","spells\giantinsectswarm_state_ground.mdx",1,1,0.01,100),
+(3260,"Quest - Seed of Revitalization - Lightning Cloud Effect Big","Spells\LightningStorm_Cloud_State.mdx",1,1.5,0.01,100),
+(3261,"Rampage State Head","spells\Rampage_State_Head.mdx",1,1,0.01,100),
+(3262,"Quest - Terokkar Forest - Mana Bomb Explosion Base","spells\arcaneexplosion_boss_base.mdx",1,2,0.01,100),
+(3263,"Fel Flame Breath (120) - 1.00","Spells\Fel_FlameBreath.mdx",1,1,0.01,100),
+(3264,"Banish (Red) - 2.00","spells\bloodbolt_chest.mdx",1,2,0.01,100),
+(3265,"World: Book Small 01","World\Generic\Human\Passive Doodads\Books\BookSmall01.mdx",1,1,0.01,100),
+(3266,"Quest - Ultris Explosion Cast - Huge Explosion","spells\fire_impactdd_uber_chest.mdx",1,10,0.01,100),
+(3267,"Misdirection Impact Head","spells\misdirection_impact_head.mdx",1,1,0.01,100),
+(3268,"Arena - Gold Flag (Horde)","spells\GoldHordeflag_spell.mdx",1,1.5,0.01,100),
+(3269,"Arena - Green Flag (Alliance)","spells\GreenArenaflag_spell.mdx",1,1.5,0.01,100),
+(3270,"Arena - Green Flag (Horde)","spells\GreenHordeflag_spell.mdx",1,1.5,0.01,100),
+(3271,"Brilliance Aura Base (3.00)","Spells\BrillianceAura.mdl",1,3,0.01,100),
+(3272,"Fel Immolation State x2","spells\fel_immolate_state_base.mdx",1,2,0.01,100),
+(3273,"Spellbreaker Impact Chest","Spells\Zangarmarsh_Arcane_Impact.mdx",1,1,0.01,100),
+(3274,"Fel Flamestrike Impact Base","spells\fel_flamestrike_impact_base.mdx",1,1,0.01,100),
+(3275,"Water Bubble Chest State (Big)","spells\waterbubble.mdx",1,2,0.01,100),
+(3276,"Water Bubble State (Head) (Small)","spells\waterbubble.mdx",1,0.35,0.01,100),
+(3277,"World: Book Medium 04","world\generic\human\passive doodads\books\bookmedium04.mdx",1,1,0.01,100),
+(3278,"Anti-Magic State - Head","spells\antimagic_state_base.mdx",1,0.8,0.01,100),
+(3279,"Ritual Arcane PreCast Base","spells\Ritual_Arcane_PreCast_Base.mdx",1,1,0.01,100),
+(3280,"Quest - Fel Fire Aura (Immolate) State","spells\fel_immolate_state_base.mdx",1,1,0.01,100),
+(3281,"Quest - Fel Fire (Fire Aura) State","spells\fel_lowpolyfireanim.mdx",1,0.25,0.01,100),
+(3282,"Quest - Fel Fire Aura (Archimonde Fire) State","spells\fel_archimonde_fire.mdx",1,0.25,0.01,100),
+(3283,"Quest - Infernal Ball State","spells\infernal_ball.mdx",1,1,0.01,100),
+(3284,"Hellfire FirePuff Caster Base (0.50)","spells\HellFire_FirePuff_Caster_Base.mdx",0.5,0.5,0.01,100),
+(3285,"Shadow Fury Impact","spells\ShadowFury_Impact_Base.mdx",1,1,0.01,100),
+(3286,"Enslave Demon Impact Base","spells\enslavedemon_impact_base.mdx",1,1,0.01,100),
+(3287,"Fel Fireball State","spells\fel_fireball_missile_high.mdx",1,1,0.01,100),
+(3288,"Infernal Impact","spells\infernal_impact.mdx",1,1,0.01,100),
+(3289,"Quest - Cosmetic: Steam State","spells\steam.mdx",1,1,0.01,100),
+(3290,"Quest - Cosmetic: Water Bolt State","spells\waterbolt_missile_low.mdx",1,1.5,0.01,100),
+(3291,"Quest - Cosmetic: Blue Cyclone State","spells\cyclonewater_state.mdx",1,1,0.01,100),
+(3292,"Arcane Explosion (0.25)","Spells\ArcaneExplosion_Base.mdx",1,0.25,0.01,100),
+(3293,"Bloodmyst Crystal 3 (0.25)","World\Expansion01\Doodads\Bloodmyst\Crystals\BloodmystCrystal03.mdx",1,0.25,0.01,100),
+(3294,"Black Magic Precast Base","spells\BlackMagic_Precast_Base.mdx",1,1,0.01,100),
+(3295,"Quest - Cosmetic: Earthen Soul State","spells\boulder_missile.mdx",1,1.5,0.01,100),
+(3296,"Bloodmyst Crystal 3 (0.15)","World\Expansion01\Doodads\Bloodmyst\Crystals\BloodmystCrystal03.mdx",1,0.15,0.01,100),
+(3297,"Missile: Ziggurat Spirit (Scale x4)","spells\zig_missile.mdx",1,4,0.01,100),
+(3298,"Fel Fire Nova Area","spells\fel_firenova_area.mdx",1,1,0.01,100),
+(3299,"Fel Fire Nova State","spells\fel_firenova_state.mdx",1,1,0.01,100),
+(3300,"Fel Firebolt Missile","spells\fel_firebolt_missile_low.mdx",1,1,0.01,100),
+(3301,"Endless Rage State","spells\endlessrage_state_head.mdx",1,1,0.01,100),
+(3302,"Arcane Lightning (1)","Spells\arcanelightning.mdx",1,0.65,0.01,100),
+(3303,"Arcane Lightning (2)","Spells\arcanelightning01.mdx",1,0.65,0.01,100),
+(3304,"Arcane Lightning (3)","Spells\arcanelightning02.mdx",1,0.65,0.01,100),
+(3305,"Arcane Impact Chest (Scale x2)","Spells\Magic_Impact_Chest.mdx",1,2,0.01,100),
+(3306,"Shadow ImpactDD Uber Chest (Scale x2)","Spells\Shadow_ImpactDD_Uber_Chest.mdx",1,2,0.01,100),
+(3307,"Arcane Torrent Cast (0.5x)","Spells\ArcaneTorrent.mdx",1,0.5,0.01,100),
+(3308,"Rampage Impact Head","spells\endlessrage_impact_head.mdx",1,1,0.01,100),
+(3309,"Quest - Cosmetic: Fel Fire Aura (Cyrukh) (Left Hand)","spells\fel_lowpolyfireanim.mdx",1,0.15,0.01,100),
+(3310,"Quest - Cosmetic: Fel Fire Aura (Cyrukh Right Hand)","spells\fel_lowpolyfireanim.mdx",1,0.15,0.01,100),
+(3311,"Quest - Cosmetic: Fel Fire Aura (Cyrukh Head)","spells\fel_lowpolyfireanim.mdx",1,0.2,0.01,100),
+(3312,"Quest - Infuse Infernal Soul","spells\fel_hellfire_impact_caster_base.mdx",1,1,0.01,100),
+(3313,"Banish (Purple) - 3.00","spells\banish_chest_purple.mdx",1,3,0.01,100),
+(3314,"Quest - Summon Pet Precast Base (Large 2x Size)","spells\summonpet_impact_base.mdx",1,2,0.01,100),
+(3315,"Dampen Magic Impact Base (1.5x)","Spells\DampenMagic_Impact_Base.mdx",0,1.5,0.01,100),
+(3316,"ArcaneExplosion Base (2.0x)","Spells\ArcaneExplosion_Base.mdx",1,2,0.01,100),
+(3317,"Arcane Power State Chest - 0.50","spells\arcanepower_state_chest.mdx",1,0.5,0.01,100),
+(3318,"Ghost_state (Purple)","spells\purpleghost_state.mdx",1,1,0.01,100),
+(3319,"Earth Burrow Cast (Scale x5)","Spells\BurrowEarth_Brown_Missile.mdx",1,5,0.01,100),
+(3320,"Water Elemental Impact Base (Scale x3)","spells\waterelemental_impact_base.mdx",1,3,0.01,100),
+(3321,"Missile: Water Bolt (Scale x3)","Spells\WaterBolt_Missile_Low.mdx",1,3,0.01,100),
+(3322,"Void Zone","creature\portalofkathune\portalofkathune.mdx",1,0.15,0.01,100),
+(3323,"Quest - Acid Breath Liquid (Small)","spells\acidliquidbreath.mdx",1,0.25,0.01,100),
+(3324,"The Beast Within State Base","spells\beastwithin_state_base.mdx",1,1,0.01,100),
+(3325,"Missile: Gold Glaive","World\ENVIRONMENT\DOODAD\GENERALDOODADS\NightElfWeapons\NE_Glaive02.mdx",1,1,0.01,100),
+(3326,"Fel Immolation (3x)","Spells\Fel_Immolate_State_Base.mdx",1,3,0.01,100),
+(3327,"Arcane Explosion (0.50)","Spells\ArcaneExplosion_Base.mdx",1,0.5,0.01,100),
+(3328,"Fel Flame Breath 180","spells\fel_flamebreath180.mdx",1,1,0.01,100),
+(3329,"Hellfire Raid Dust Impact Base","spells\HellfireRaid_Dust_Impact_Base.mdx",1,1,0.01,100),
+(3330,"Skull, Chattering","spells\skull.mdx",1,1,0.01,100),
+(3331,"Might Aura State Base - 7.00","Spells\MightAura_Impact_Base.mdx",7,7,0.01,100),
+(3332,"Fire Smoke Trail","spells\Fire_SmokeTrail.mdx",1,5,0.01,100),
+(3333,"Missile: Fire Shot - 2.00","spells\FireShot_Missile.mdx",1,2,0.01,100),
+(3334,"Flame Circle (1.35)","spells\flamecircleeffect.mdx",1,1.35,0.01,100),
+(3335,"Arcane Explosion Base Boss - 2.00","spells\arcaneexplosion_boss_base.mdx",1,2,0.01,100),
+(3336,"Quest - A Curse Upon Both of Your Clans (Large)","spells\endlessrage_state_head.mdx",1,5,0.01,100),
+(3337,"Ashbringer","Item\ObjectComponents\Weapon\Sword_2H_Ashbringer.mdx",1,1,0.01,100),
+(3338,"Missile: Shadow Bolt - Epic (0.50)","spells\DeathBolt_Missile_Low.mdx",1,0.5,0.01,100),
+(3339,"Missile: Aegis (0.50)","Spells\Aegis.mdx",1,0.5,0.01,100),
+(3340,"Blasted Lands Bone Pile","World\Azeroth\TheBlastedlands\PassiveDoodads\Bones\BlastedLandsBonePile02.mdx",1,1,0.01,100),
+(3341,"Enslave Demon Impact Head (2.5x)","Spells\EnslaveDemon_Impact_Head.mdx",0,2.5,0.01,100),
+(3342,"Enslave Demon Impact Chest (2.5x)","Spells\EnslaveDemon_Impact_Chest.mdx",0,2.5,0.01,100),
+(3344,"Chest 04 (0.5)","World\Generic\ActiveDoodads\Chest04\Chest04.mdx",1,0.5,0.01,100),
+(3345,"Acid Burn Base (0.5)","spells\AcidBurn.mdx",1,0.5,0.01,100),
+(3346,"Missile: Axe Outland Raid D06","spells\Missile_Axe_1HOutlandRaidD06.mdx",1,1,0.01,100),
+(3347,"Quest - Fel Fire Nova Cast (Huge)","spells\fel_firenova_area.mdx",1,5,0.01,100),
+(3348,"Steam Impact","spells\Steam.mdx",1,1,0.01,100),
+(3349,"Steam State","spells\Steam.mdx",1,1,0.01,100),
+(3350,"Quest - The Mark of Kael'Thas State","spells\fire_precast_uber_hand.mdx",1,1.5,0.01,100),
+(3351,"Quest - Low Poly Fire (State)","world\generic\pvp\fires\lowpolyfireanim.mdx",1,0.5,0.01,100),
+(3352,"Quest - Archimonde Fire Chest (State)","spells\archimonde_fire.mdx",1,0.75,0.01,100),
+(3353,"Shadow Nova Cast - (0.50)","spells\shadow_nova_area.mdx",1,0.5,0.01,100),
+(3354,"Arcane Breath","Spells\ArcaneBreath.mdx",1,1,0.01,100),
+(3355,"Flare Ground State (2.75x)","spells\flare_state_base.mdx",2.75,2.75,0.01,100),
+(3356,"Fire Nova Area (0.75x)","Spells\FireNova_Area.mdx",0,0.75,0.01,100),
+(3357,"Banish (White)","spells\banish_chest_white.mdx",1,1,0.01,100),
+(3358,"Shadow Nova Cast - (0.10)","spells\shadow_nova_area.mdx",1,0.1,0.01,100),
+(3359,"Bomb Explosion - (0.10)","Spells\Bomb_ExplosionA.mdx",1,0.1,0.01,100),
+(3360,"Floating Mine","spells\floatingmine.mdx",1,1,0.01,100),
+(3361,"Floating Mine Pulse","spells\floatingminepulse.mdx",1,1,0.01,100),
+(3362,"Floating Mine (1.5x)","spells\floatingmine.mdx",1,1.5,0.01,100),
+(3363,"Floating Mine Pulse (1.5x)","spells\floatingminepulse.mdx",1,1.5,0.01,100),
+(3364,"Void Zone (0.25)","creature\portalofkathune\portalofkathune.mdx",1,0.25,0.01,100),
+(3365,"Quest - Ancient Draenei Warden State","world\expansion01\doodads\auchindoun\passivedoodads\spirit_fx\draenei_spirit_red.mdx",1,3,0.01,100),
+(3366,"Bottle (Green)","World\Generic\Human\Passive Doodads\Bottles\GreenBottle02.mdx",1,1,0.01,100),
+(3367,"Mug (Foaming)","World\Generic\Human\Passive Doodads\Mugs\MugFoam01.mdx",1,1,0.01,100),
+(3368,"Fel Fire Nova Area (1.5x)","spells\fel_firenova_area.mdx",1.5,1.5,0.01,100),
+(3369,"Abyssal Impact Base (0.25)","spells\abyssal_impact_base.mdx",1,0.25,0.01,100),
+(3370,"Dark Shade","spells\darkshade.mdx",1,1,0.01,100),
+(3371,"Arcane Fire Weapon","Spells\Arcane_Fire_Weapon_Effect.mdx",1,1,0.01,100),
+(3372,"Quest - Psychedelic Ghost State (Large 2x Size)","spells\ghost_state2.mdx",1,2,0.01,100),
+(3373,"Arcane Fire Weapon (2.00)","Spells\Arcane_Fire_Weapon_Effect.mdx",1,2,0.01,100),
+(3374,"Defensive Stance Impact Chest (1.5x)","Spells\DefensiveStance_Impact_Chest.mdx",1,1.5,0.01,100),
+(3375,"Water Breath","spells\WaterLiquidBreath.mdx",1,1,0.01,100),
+(3376,"Missile: Sonic Boom (Small) dlk","Spells\SonicBoom_Missile_High.mdx",1,1,0.01,100),
+(3377,"Fel Fire Nova Area (2x)","spells\fel_firenova_area.mdx",2,2,0.01,100),
+(3378,"Fel Fire Shield Head","Spells\Fel_Fireshieldfinal_Impact_Head.mdx",1,1,0.01,100),
+(3379,"Hellfire Area Base  (7.00)","Spells\HellFire_Area_Base.mdx",1,7,0.01,100),
+(3380,"Abyssal Impact Base - 1.50","spells\abyssal_impact_base.mdx",1,1.5,0.01,100),
+(3381,"Flamestrike Impact Base (1.50)","Spells\Flamestrike_Impact_Base.mdx",1,1.5,0.01,100),
+(3382,"FlamestrikeSmall Impact Base (2.5)","Spells\FlamestrikeSmall_Impact_Base.mdx",1,2.5,0.01,100),
+(3383,"Wall Sword 01","World\Generic\Human\Passive Doodads\Weapons&Armor\WallSword01.mdx",1,1,0.01,100),
+(3384,"Bone Burrow Cast","Spells\BurrowEarth_BoneWaste_Missile.mdx",1,1,0.01,100),
+(3385,"Bone Burst (0.25)","Spells\BoneWorm_AttackEffects.mdx",1,0.25,0.01,100),
+(3386,"Quest - Netherstorm - WaterLiquidBreath Cast","spells\waterliquidbreath.mdx",1,1,0.01,100),
+(3388,"Dust Nova x2","spells\dustnova_cast_base.mdx",1,2,0.01,100),
+(3389,"Frost Nova Area (2.5x)","Spells\Frost_Nova_area.mdx",1,2.5,0.01,100),
+(3390,"Missile: Spear (Human 01)","World\Generic\Human\Passive Doodads\Weapons&Armor\HumanSpear01.mdx",1,1,0.01,100),
+(3391,"Quest - Thunderclap Cast Base (Huge)","spells\thunderclap_cast_base.mdx",1,4,0.01,100),
+(3392,"Water Breath (3.00)","spells\WaterLiquidBreath.mdx",1,3,0.01,100),
+(3393,"Aerie Boulder 03 (0.5)","World\Lordaeron\AeriePeaks\PassiveDoodads\Boulders\AerieBoulder03.mdx",1,0.5,0.01,100),
+(3394,"Ghost_state (Green)","spells\greenghost_state.mdx",1,1,0.01,100),
+(3395,"Magic Unlock (2x)","Spells\MagicUnlock.mdx",1,2,0.01,100),
+(3396,"Quest - Dark Glare (Small)","spells\cthuneeyeattack.mdx",1,0.25,0.01,100),
+(3397,"CycloneWater State (5x)","Spells\CycloneWater_State.mdx",0,5,0.01,100),
+(3398,"Missile: Boulder (4.00)","spells\boulder_missile.mdx",0,4,0.01,100),
+(3399,"Missile: Eye of Kilrogg","creature\spells\EyeOfKilrog.mdx",1,1,0.01,100),
+(3400,"Banish (Blue) - 0.25","spells\banish_chest_blue.mdx",1,0.25,0.01,100),
+(3401,"Banish (Green) - 0.25","Spells\Banish_Chest.mdx",1,0.25,0.01,100),
+(3402,"Banish (Red) - 0.25","spells\bloodbolt_chest.mdx",1,0.25,0.01,100),
+(3403,"Missile: Thorns (2x)","spells\missile_thorns.mdx",1,2,0.01,100),
+(3404,"Missile: Pine Cone","world\kalimdor\mulgore\passivedoodads\pinecone\pinecone.mdx",1,1,0.01,100),
+(3405,"Bone Burrow Cast - 0.25","Spells\BurrowEarth_BoneWaste_Missile.mdx",1,0.25,0.01,100),
+(3406,"Missile: Soul (x3)","spells\soulshatter_missile.mdx",1,3,0.01,100),
+(3407,"Fel Fireball Missile High (3.00)","spells\fel_fireball_missile_high.mdx",1,3,0.01,100),
+(3408,"Acid Breath (Liquid) (2x)","spells\acidliquidbreath.mdx",1,2,0.01,100),
+(3409,"Horde Banner","world\generic\pvp\battlefieldbanners\battlefieldbannerhorde.mdx",1,0.6,0.01,100),
+(3410,"Feather (Red)","World\Generic\PassiveDoodads\Feathers\FeatherBigRed.mdx",1,1,0.01,100),
+(3411,"Fel Hellfire Impact","spells\fel_hellfire_impact_base.mdx",1,1,0.01,100),
+(3412,"Fel Hellfire Caster Cast Base","spells\fel_hellfire_impact_caster_base.mdx",1,1,0.01,100),
+(3413,"Feather (Red) - 2.00","World\Generic\PassiveDoodads\Feathers\FeatherBigRed.mdx",1,2,0.01,100),
+(3414,"Quest - The Mark of Vashj - Impact","spells\giftwaterspirit_impact_base.mdx",1,1,0.01,100),
+(3415,"Bottle (Blue)","World\Generic\Human\Passive Doodads\Bottles\Bottle01.mdx",1,1,0.01,100),
+(3416,"Acid Burn (Low-Poly)","Spells\Acidburn_Small.mdx",1,1,0.01,100),
+(3417,"Acid Burn (Low-Poly) 0.50","Spells\Acidburn_Small.mdx",1,0.5,0.01,100),
+(3418,"Acid Burn Black (Low-Poly) - 0.50","SPELLS\AcidBurn_Small_Black.mdx",1,0.5,0.01,100),
+(3419,"Acid Burn Red (Low-Poly) - 0.50","SPELLS\AcidBurn_Small_Red.mdx",1,0.5,0.01,100),
+(3420,"Bottle (Blue Fancy)","World\Expansion01\Doodads\Generic\BloodElf\Bottles\BE_Bottle01.mdx",1,1,0.01,100),
+(3421,"Acid Burn Yellow (Low-Poly) 0.50","Spells\AcidBurn_Small_Yellow.mdx",1,0.5,0.01,100),
+(3422,"Bottle (Frothy Smoke)","World\Generic\Human\Passive Doodads\Bottles\BottleSmoke.mdx",1,1,0.01,100),
+(3423,"Acid Burn Blue (Low-Poly) - 0.50","SPELLS\AcidBurn_Small_Blue.mdx",1,0.5,0.01,100),
+(3424,"Smoke Flare (Blue) - 3.00","spells\SmokeFlare_Blue.mdx",1,3,0.01,100),
+(3425,"Acid Burn Orange (Low-Poly) 0.50","Spells\AcidBurn_Small_Orange.mdx",1,0.5,0.01,100),
+(3426,"Acid Burn Purple (Low-Poly) - 0.50","Spells\AcidBurn_Small_Purple.mdx",1,0.5,0.01,100),
+(3427,"Boots (Human Brown Leather 02)","World\Generic\Human\Passive Doodads\Clothing\BootsLeatherBrown01.mdx",1,1,0.01,100),
+(3428,"Feather (Brown) - 2.00","World\Generic\PassiveDoodads\Feathers\FeatherBigBrown.mdx",1,2,0.01,100),
+(3429,"Feather (Blue) - 2.00","World\Generic\PassiveDoodads\Feathers\FeatherBigBlue.mdx",1,2,0.01,100),
+(3430,"Acid Burn Base (2x)","spells\AcidBurn.mdx",1,2,0.01,100),
+(3431,"Shock Missile [8.0]","Spells\Shock_Missile.mdx",1,8,0.01,100),
+(3432,"ArcaneExplosion Base (20yd)","Spells\ArcaneExplosion_Base.mdx",1,2.5,0.01,100),
+(3433,"Quest - Fumping Drum Missile","world\generic\tauren\passive doodads\drums\taurendrumsmall01.mdx",1,1,0.01,100),
+(3434,"Acid Burn Black","SPELLS\AcidBurn_Black.mdx",1,1,0.01,100),
+(3435,"Missile: Soul (x5)","spells\soulshatter_missile.mdx",1,5,0.01,100),
+(3436,"Hellfire Area Base (0.5 Scale)","spells\hellfire_area_base.mdx",1,0.5,0.01,100),
+(3437,"Acid Breath (Liquid) (x0.5)","spells\acidliquidbreath.mdx",1,0.5,0.01,100),
+(3438,"Seal Of Wrath Impact Base - 3.00","Spells\SealOfWrath_Impact_Base.mdx",1,3,0.01,100),
+(3439,"Ward: Fire Impact Chest - 5.00","Spells\FireWard_Impact_Chest.mdx",1,5,0.01,100),
+(3440,"Ritual Of Fire Precast - 2.00","spells\Ritual_Fire_PreCast_Base.mdx",1,2,0.01,100),
+(3441,"Meteor Impact Base Red","spells\Meteor_Impact_Base_Red.mdx",1,1,0.01,100),
+(3442,"Nightbane Area Base (0.50)","spells\nightbane_area_base.mdx",1,0.5,0.01,100),
+(3443,"Shadow Fissure Base (2.25)","Spells\Shadow_Fissure_Base.mdx",1,2.25,0.01,100),
+(3444,"Dark Ritual PreCast Base (2.25)","Spells\DarkRitual_PreCast_Base.mdx",1,2.25,0.01,100),
+(3445,"Fel Hellfire Puff","Spells\Fel_HellFire_FirePuff_Caster_Base.mdx",1,1,0.01,100),
+(3446,"Quest - Seed of Corruption State (Big) (1.25x)","spells\seedofcorruption_state.mdx",1,1.25,0.01,100),
+(3447,"Quest - Fire Reflect State (2x)","spells\firereflect_state_chest.mdx",1,2,0.01,100),
+(3448,"Consecration Impact Base (1.5x)","spells\consecration_impact_base.mdx",1,1.5,0.01,100),
+(3449,"Shadow Nova Cast (4.0)","spells\shadow_nova_area.mdx",1,4,0.01,100),
+(3450,"Fire Blast Impact Chest - 3.00","Spells\FireBlast_Impact_Chest.mdx",1,3,0.01,100),
+(3451,"Skull Test","World\Azeroth\Elwynn\PassiveDoodads\Skeleton\BattleGladeSkullHumanDark.mdx",1,3,0.01,100),
+(3452,"Dreadlord Carrion Swarm Cast (0.25)","spells\dreadlord_carrion_swarm_cast.mdx",1,0.25,0.01,100),
+(3453,"Darkmoon Vengeance Head State","Spells\DarkmoonVengeance_Impact_Head.mdx",1,1,0.01,100),
+(3454,"Darkmoon Vengeance Impact Chest","Spells\DarkmoonVengeance_Impact_Chest.mdx",1,1,0.01,100),
+(3455,"Missile: Mana Shot","Spells\ManaShot_Missile.mdx",1,1,0.01,100),
+(3456,"Ward: Holy Impact Chest","Spells\HolyWard_Impact_Chest.mdx",1,1,0.01,100),
+(3458,"Soulgrinder Ritual Visual ( in progress)","world\kalimdor\diremaul\activedoodads\nightmaresummoning\nightmarestone.mdx",1,2,0.01,100),
+(3459,"Soulgrinder Beam Precast","spells\shadow_precast_uber_hand.mdx",1,3,0.01,100),
+(3460,"Missile: Naga Lord Shell","spells\nagalordshell_missile.mdx",1,1,0.01,100),
+(3461,"Missile: Naga Lord Shell (2.5x)","spells\nagalordshell_missile.mdx",1,2.5,0.01,100),
+(3462,"Naga Lord Shell Impact","spells\nagalordshell_impact.mdx",1,1,0.01,100),
+(3463,"Otherwordly Portal","World\Expansion01\Doodads\TheExodar\Passivedoodads\Sky_Portal\Exodar_Sky_portal.mdx",1,0.35,0.01,100),
+(3464,"Water Bubble Chest State (0.75x)","Spells\WaterBubble.mdx",0,0.75,0.01,100),
+(3465,"Seed Of Corruption State - 3.00","Spells\SeedOfCorruption_State.mdx",1,3,0.01,100),
+(3466,"Life Tap State Chest - 5.00","Spells\Lifetap_State_Chest.mdx",1,5,0.01,100),
+(3467,"Fel Flame Patch - 2.00","spells\fel_archimonde_fire.mdx",1,2,0.01,100),
+(3468,"Fel Hellfire Impact Base - 3.00","spells\fel_hellfire_impact_base.mdx",1,3,0.01,100),
+(3469,"Fel Immolate Impact Chest - 5.00","spells\fel_immolate_impact_chest.mdx",1,5,0.01,100),
+(3470,"Fel Low Poly Fire - 2.00","spells\Fel_LowPolyFireAnim.mdx",1,2,0.01,100),
+(3471,"Shell Shield State","Spells\ShellShield_State_Base.mdx",1,1,0.01,100),
+(3472,"Dreadlord Carrion Swarm Cast (0.50)","spells\dreadlord_carrion_swarm_cast.mdx",1,0.5,0.01,100),
+(3474,"Intervene Trail","spells\InterveneTrail.mdx",1,1,0.01,100),
+(3477,"Intervene Impact","spells\Intervene_Impact_Chest.mdx",1,1,0.01,100),
+(3478,"Flames (0.50 Scale)","world\lordaeron\stratholme\passivedoodads\fx\stratholmefiresmokeembers.mdx",1,0.5,0.01,100),
+(3479,"Crystal man visual - Chest","world\kalimdor\ungoro\passivedoodads\crystals\ungorocrystal_blue02.mdx",1,1,0.01,100),
+(3480,"Crystal man visual - hand","world\goober\g_jewelblue.mdx",1,1,0.01,100),
+(3481,"Crystal Man visual - base","creature\questobjects\creature_powercrystal.mdx",1,1,0.01,100),
+(3482,"Arcane Precast","spells\arcanebomb_missle.mdx",1,0.25,0.01,100),
+(3483,"Missile: Black Shot","spells\blackshot_missile.mdx",1,1,0.01,100),
+(3484,"Fel Fireblast Impact Chest (2.00)","spells\fel_fireblast_impact_chest.mdx",1,2,0.01,100),
+(3485,"Aura: Yellow","World\Generic\PassiveDoodads\ParticleEmitters\AuraYellow.mdx",1,1,0.01,100),
+(3486,"Aura: Red","World\Generic\PassiveDoodads\ParticleEmitters\AuraRed.mdx",1,1,0.01,100),
+(3487,"Aura: Green","World\Generic\PassiveDoodads\ParticleEmitters\AuraGreen.mdx",1,1,0.01,100),
+(3488,"Aura: Blue","World\Generic\PassiveDoodads\ParticleEmitters\AuraBlue.mdx",1,1,0.01,100),
+(3489,"Portal: Boss Shadow ","Spells\Creature_SpellPortal_LargeShadow.mdx",1,1,0.01,100),
+(3490,"Missile: Black Shot - 2.00","spells\blackshot_missile.mdx",1,2,0.01,100),
+(3491,"Stasis Field","spells\arcanebomb_missle.mdx",1,1,0.01,100),
+(3492,"Arcane Nova (Chest)","Spells\FireNova_Blue_Area.mdx",1,1,0.01,100),
+(3493,"Missile: Shadowbolt","Spells\Shadowbolt_Missile.mdx",1,1,0.01,100),
+(3494,"Impact: Shadowbolt","Spells\Shadowbolt_Chest_Impact.mdx",1,1,0.01,100),
+(3495,"Water Elemental Impact Base (2x)","spells\waterelemental_impact_base.mdx",1,2,0.01,100),
+(3496,"Item - Demonic Infusion Effect (Fel Fire 0.25 Base)","spells\fel_archimonde_fire.mdx",1,0.25,0.01,100),
+(3497,"Item - Demonic Infusion (0.25 LHand)","spells\fel_archimonde_fire.mdx",1,0.25,0.01,100),
+(3498,"Item - Demonic Infusion (0.25 RHand)","spells\fel_archimonde_fire.mdx",1,0.25,0.01,100),
+(3499,"Item - Demonic Infusion (0.25 LHand) Fel_FlameShock","spells\fel_flameshock_impact_chest.mdx",1,0.25,0.01,100),
+(3500,"Item - Demonic Infusion (0.25 RHand) Fel_FlameShock","spells\fel_flameshock_impact_chest.mdx",1,0.25,0.01,100),
+(3501,"Fire Nova: Blue","Spells\FireNova_Blue_Area.mdx",1,1,0.01,100),
+(3502,"Fire Nova State - Blue","Spells\FireNova_Blue_State.mdx",1,1,0.01,100),
+(3503,"Impact: Fire Blast - Blue","Spells\FireBlast_Blue_Impact_Chest.mdx",1,1,0.01,100),
+(3504,"Archimonde Fire - Blue","Spells\Archimonde_Blue_Fire.mdx",1,1,0.01,100),
+(3505,"Fel Fireblast Impact Base Large","spells\fel_fireblast_impact_chest.mdx",1,3,0.01,100),
+(3506,"Invisibility Cast","spells\invisibility.mdx",1,1,0.01,100),
+(3507,"Blessing of Freedom State","spells\BlessingofFreedom_State.mdx",1,1,0.01,100),
+(3508,"Blessing of Freedom Impact","spells\BlessingofFreedom_Impact.mdx",1,1,0.01,100),
+(3509,"Blessing of Might Base","spells\BlessingofMight_Base.mdx",1,1,0.01,100),
+(3510,"Blessing of Light Base","spells\BlessingofLight_Impact.mdx",1,1,0.01,100),
+(3511,"Blessing of Protection Impact","spells\BlessingofProtection_Impact.mdx",1,1,0.01,100),
+(3512,"Envenom Cast","spells\envenom_cast.mdx",1,1,0.01,100),
+(3513,"Blessing of Kings Base","spells\BlessingofKings_Base.mdx",1,1,0.01,100),
+(3514,"Blessing of Sacrifice Base","spells\BlessingofSacrifice_Impact.mdx",1,1,0.01,100),
+(3515,"Immolate Impact Chest (Blue)","spells\Immolate_Blue_Impact_Chest.mdx",1,1,0.01,100),
+(3516,"Flame Patch (Blue) - 2.00","spells\Archimonde_Blue_Fire.mdx",1,2,0.01,100),
+(3517,"Fire, Low Poly (Blue) - 2.00","spells\LowPolyFireAnim_Blue.mdx",1,2,0.01,100),
+(3518,"Hellfire Impact Base (Blue) - 3.00","spells\HellfIre_Blue_Impact_Base.mdx",1,3,0.01,100),
+(3519,"Shadow Precast Uber Hand - 3.00","Spells\Shadow_Precast_Uber_Hand.mdx",1,3,0.01,100),
+(3520,"Shadowbolt Chest Impact - 3.00","spells\Shadowbolt_Chest_Impact.mdx",1,3,0.01,100),
+(3521,"Shadow Strikes State - 5.00","spells\shadow_strikes_state_hand.mdx",1,5,0.01,100),
+(3522,"Missile: Fireball (Blue) - 2.00","spells\Fireball_Blue_Missile_High.mdx",1,2,0.01,100),
+(3523,"Fire Precast Hand High (Blue)","spells\Fire_Blue_PreCast_High_Hand.mdx",1,1,0.01,100),
+(3524,"Fire ImpactDD High Chest (Blue)","spells\Fire_Blue_ImpactDD_High_Chest.mdx",1,1,0.01,100),
+(3525,"FireBlast Impact Chest (Blue)","spells\FireBlast_Blue_Impact_Chest.mdx",1,1,0.01,100),
+(3526,"Hellfire FirePuff Caster Base (Blue)","spells\HellFire_Blue_FirePuff_Caster_Base.mdx",1,1,0.01,100),
+(3527,"Fire Precast Hand High (Blue) - 3.00","spells\Fire_Blue_PreCast_High_Hand.mdx",1,3,0.01,100),
+(3528,"Fel Low Poly Fire","spells\Fel_LowPolyFireAnim.mdx",1,1,0.01,100),
+(3529,"Arcane Reflect State Chest","spells\ArcaneReflect_State_Chest.mdx",1,1,0.01,100),
+(3530,"Poison Elemental Impact Base (5x)","spells\poisonelemental_impact_base.mdx",1,5,0.01,100),
+(3531,"Fire Precast Hand Blue","Spells\Fire_Blue_Precast_Hand.mdx",1,1,0.01,100),
+(3532,"Missile: Fireball (Blue)","spells\Fireball_Blue_Missile_High.mdx",1,1,0.01,100),
+(3533,"Anti-Magic State Base (Blue) - 2.00","spells\antimagic_state_blue.mdx",1,2,0.01,100),
+(3534,"Mine Cart","world\azeroth\stranglethorn\passivedoodads\gemminecar02\gemminecar03.mdx",1,1,0.01,100),
+(3535,"Quest - Confused State (2x)","spells\confused_state_head.mdx",1,2,0.01,100),
+(3536,"Quest - Purple Zzz's (Beast Soothe)","spells\beastsoothe_state_head.mdx",1,1.5,0.01,100),
+(3537,"Item - Big Meat","World\Generic\Human\Passive Doodads\Food&Utensils\TurkeyLeg.mdx",1,1,0.01,100),
+(3538,"Missile: Illidan's Glaive","spells\Illidan_Glave_Missile.mdx",1,1.35,0.01,100),
+(3539,"Arcane Power State Chest (3)","spells\arcanepower_state_chest.mdx",1,3,0.01,100),
+(3540,"Undead Fire Large","World\Generic\Human\Passive Doodads\Fire\UndeadFireLarge.mdx",1,1,0.01,100),
+(3541,"Wave: Water","Spells\Wave_Water.mdx",1,1,0.01,100),
+(3542,"Missile: Yellow Crystal","world\expansion01\doodads\silvermyst\crystals\silvermystcrystal01_yellow.mdx",1,0.5,0.01,100),
+(3543,"Crystal, Yellow Large","world\expansion01\doodads\silvermyst\crystals\silvermystcrystal03_yellow.mdx",1,1.5,0.01,100),
+(3544,"Ethereal Ring, Cannon","World\Expansion01\Doodads\Shattrath\Passivedoodads\Lighting\Ancient_D_Standing_Light.mdx",1,0.5,0.01,100),
+(3545,"Flame Circle (Blue)","spells\FlameCircleEffect_Blue.mdx",1,1,0.01,100),
+(3546,"Fire Precast Hand High (Blue) - 10.00","spells\Fire_Blue_PreCast_High_Hand.mdx",1,10,0.01,100),
+(3547,"Flame Circle (Blue) - 1.25","spells\FlameCircleEffect_Blue.mdx",1,1.25,0.01,100),
+(3548,"Quest - Oldie's Rotten Pumpkin Missile","world\lordaeron\scholomance\passivedoodads\diseasedpumpkin\diseasedpumpkin.mdx",1,1,0.01,100),
+(3549,"Flame Breath - 180 (Blue)","Spells\FlameBreath180_Blue.mdx",1,1,0.01,100),
+(3550,"Quest - Trope's Skull Barrage","world\expansion01\doodads\ghostlands\skulls\swath_skull.mdx",1,3,0.01,100),
+(3551,"Nightmare Stone State","World\Kalimdor\DireMaul\ActiveDoodads\NightmareSummoning\NightmareStone.mdx",1,1,0.01,100),
+(3552,"Quest - Oldie's Rotten Pumpkin Impact","Spells\Exploding_Stone_Impact.mdx",1,2,0.01,100),
+(3553,"Quest - Ichman's Blazing Fireball State","spells\archimonde_fire.mdx",1,1,0.01,100),
+(3554,"Quest - Dragonmaw Race: Mulverick's Great Balls Impact","Spells\LightningBoltIvus_Missile.mdx",1,1.5,0.01,100),
+(3555,"Immolate State Base (Blue)","Spells\Immolate_Blue_State_Base.mdx",1,1,0.01,100),
+(3557,"Flame Breath (Blue)","Spells\FlameBreath_Blue.mdx",1,1,0.01,100),
+(3558,"FlamestrikeSmall Impact Base (Blue) -  2.00","spells\FlamestrikeSmall_Blue_Impact_Base.mdx",1,2,0.01,100),
+(3559,"Portal: Boss Holy","spells\Creature_SpellPortalLarge_Yellow.mdx",1,1,0.01,100),
+(3560,"Acid Breath Liquid (0.25)","spells\acidliquidbreath.mdx",1,0.25,0.01,100),
+(3561,"FlamestrikeSmall Impact Base (Blue) -  3.00","spells\FlamestrikeSmall_Blue_Impact_Base.mdx",1,3,0.01,100),
+(3562,"Missile: Firebolt (Blue)","Spells\FireBolt_Blue_Missile_Low.mdx",1,1,0.01,100),
+(3563,"Fire Nova: Blue (0.50)","Spells\FireNova_Blue_Area.mdx",1,0.5,0.01,100),
+(3564,"Missile: Black Shot - 5.00","spells\blackshot_missile.mdx",1,5,0.01,100),
+(3565,"Shadow Nova Cast - 3.00","spells\shadow_nova_area.mdx",1,3,0.01,100),
+(3566,"Missile: Deathbolt Missile - 3.00","spells\deathbolt_missile_low.mdx",1,3,0.01,100),
+(3567,"Arcane Torrent Cast (2.5x)","Spells\ArcaneTorrent.mdx",1,2.5,0.01,100),
+(3568,"Arcane Power State Chest (5.00)","spells\arcanepower_state_chest.mdx",1,5,0.01,100),
+(3569,"Wave: Water (0.25)","Spells\Wave_Water.mdx",1,0.25,0.01,100),
+(3570,"Shades of Darkness Cast - 4.00","spells\shadesofdarkness_cast.mdx",1,4,0.01,100),
+(3571,"Missile: Black Shot - 3.00","spells\blackshot_missile.mdx",1,3,0.01,100),
+(3572,"Flame Patch (Blue) - 1.00","spells\Archimonde_Blue_Fire.mdx",1,1,0.01,100),
+(3573,"Brute Cologne","Spells\GreenGhost_state.mdx",1,1.25,0.01,100),
+(3574,"Crashing Wave: Poison","Spells\Missile_Wave_WaterGreen.mdx",1,1,0.01,100),
+(3575,"Crashing Wave: Water","Spells\Missile_Wave_Water.mdx",1,1,0.01,100),
+(3576,"Crashing Wave: Fire","Spells\Missile_Wave_Fire.mdx",1,1,0.01,100),
+(3577,"Fireworks Roman Candle Missile (x2)","spells\firework_romancandle_missle_01.mdx",1,2,0.01,100),
+(3578,"Level Up (No Sound)","Spells\LevelUpSpell\LevelUpSpell.mdx",1,1,0.01,100),
+(3579,"Aspect of the Wild Impact Head","spells\aspectwild_impact_head.mdx",1,1,0.01,100),
+(3580,"Starfire Area (1.5x)","spells\starfire_area.mdx",1,1.5,0.01,100),
+(3581,"Cosmetic - Illidari Fire (Fire Globes LH)","spells\fire_smoketrail.mdx",1,1,0.01,100),
+(3582,"Cosmetic - Illidari Fire (Fire Globes RH)","spells\fire_smoketrail.mdx",1,1,0.01,100),
+(3583,"Quest - Mark of Vash (Water Wave Missile 0.5)","spells\missile_wave_water.mdx",1,0.5,0.01,100),
+(3584,"Quest - Mark of Kael (Wave of Fire 0.25)","spells\missile_wave_fire.mdx",1,0.25,0.01,100),
+(3585,"Shadow Nova Cast - (1.50)","spells\shadow_nova_area.mdx",1,1.5,0.01,100),
+(3586,"Fire Nova Area (10.00)","Spells\FireNova_Area.mdx",1,10,0.01,100),
+(3587,"Missile: Boulder (2x)","Spells\Boulder_Missile.mdx",0,2,0.01,100),
+(3588,"Test Effect","Spells\Frostbolt.mdx",1,10,0.01,100),
+(3589,"Smoke Flare (Green) - 4.00","spells\smokeflare_green.mdx",1,4,0.01,100),
+(3590,"Starfire Area (2x)","spells\starfire_area.mdx",1,2,0.01,100),
+(3591,"Portal: Large Fire (2.00)","Spells\Creature_SpellPortalLarge_Red.mdx",1,2,0.01,100),
+(3592,"Portal: Large Arcane (2.00)","Spells\Creature_SpellPortalLarge_Purple.mdx",1,2,0.01,100),
+(3593,"Portal: Large Holy (2.00)","Spells\Creature_SpellPortalLarge_Yellow.mdx",1,2,0.01,100),
+(3594,"Portal: Large Nature (2.00)","Spells\Creature_SpellPortalLarge_Green.mdx",1,2,0.01,100),
+(3595,"Portal: Large Frost (2.00)","spells\Creature_SpellPortalLarge_Blue.mdx",1,2,0.01,100),
+(3596,"Portal: Boss Arcane","Spells\Creature_SpellPortalLarge_Purple.mdx",1,1,0.01,100),
+(3597,"Portal: Boss Fire","spells\Creature_SpellPortalLarge_Red.mdx",1,1,0.01,100),
+(3598,"Portal: Boss Nature","spells\Creature_SpellPortalLarge_Green.mdx",1,1,0.01,100),
+(3599,"Portal: Boss Frost","spells\Creature_SpellPortalLarge_Blue.mdx",1,1,0.01,100),
+(3600,"Immolate State Base (Blue) - 2.00","Spells\Immolate_Blue_State_Base.mdx",1,2,0.01,100),
+(3601,"Bucket","World\Generic\Human\Passive Doodads\Buckets\Bucket.mdx",1,1,0.01,100),
+(3602,"Hellfire FirePuff Caster Base (Blue) (0.50)","spells\HellFire_Blue_FirePuff_Caster_Base.mdx",1,0.5,0.01,100),
+(3603,"Pumpkin (x0.5)","World\Goober\G_Pumpkin_02.mdx",1,0.5,0.01,100),
+(3604,"Bomb Explosion (x2)","Spells\Bomb_ExplosionA.mdx",1,2,0.01,100),
+(3605,"Bucket (x2.0, carried)","Item\ObjectComponents\Weapon\Misc_1H_Bucket_A_01.mdx",0,2,0.01,100),
+(3606,"Arcane Ward Impact Chest","spells\ArcaneWard_Impact_Chest.mdx",1,1,0.01,100),
+(3607,"Pumpkin Visual (x0.66)","world\azeroth\duskwood\passivedoodads\bush\pumpkin01.mdx",1,0.66,0.01,100),
+(3608,"Arcane Bomb - 1.00","spells\arcanebomb_missle.mdx",1,1,0.01,100),
+(3609,"Arcane Bomb - 1.00","spells\arcanebomb_missle.mdx",1,1,0.01,100),
+(3610,"Poison Elemental Impact Base (2x)","spells\poisonelemental_impact_base.mdx",1,2,0.01,100),
+(3611,"BloodyMeat02 (1.5)","World\Generic\Human\Passive Doodads\Meat\BloodyMeat02.mdx",1,1.5,0.01,100),
+(3612,"BloodyMeat01 (1.5)","World\Generic\Human\Passive Doodads\Meat\BloodyMeat01.mdx",1,1.5,0.01,100),
+(3613,"Poison Elemental Impact Base","spells\poisonelemental_impact_base.mdx",1,1,0.01,100),
+(3614,"Bloody Explosion Green Impact (x2.0)","Spells\BloodyExplosionGreen.mdx",1,2,0.01,100),
+(3615,"Blessing of Salvation Impact","spells\blessingofsalvation_impact.mdx",1,1,0.01,100),
+(3616,"Missile: Thrown Dagger","Item\ObjectComponents\Weapon\Thrown_1H_Dagger_A_01.mdx",1,1,0.01,100),
+(3617,"Flame Patch 2.0","spells\archimonde_fire.mdx",1,2,0.01,100),
+(3618,"Bucket (x1.0, carried)","Item\ObjectComponents\Weapon\Misc_1H_Bucket_A_01.mdx",1,1,0.01,100),
+(3619,"Missile: Skull - 2.00","World\Expansion01\Doodads\Ghostlands\Skulls\Swath_Skull.mdx",1,2,0.01,100),
+(3620,"Smoke - Ash Tree","World\Azeroth\BurningSteppes\PassiveDoodads\Smoke\AshTreeSmoke01.mdx",1,1,0.01,100),
+(3622,"Shield: Arcane Force (Dark)","Spells\ArcaneForceShield_Dark.mdx",1,1,0.01,100),
+(3623,"Shield: Arcane Force (Yellow)","Spells\ArcaneForceShield_Yellow.mdx",1,1,0.01,100),
+(3624,"Shield: Arcane Force (Red)","Spells\ArcaneForceShield_Red.mdx",1,1,0.01,100),
+(3625,"Shield: Arcane Force (Blue)","Spells\ArcaneForceShield_Blue.mdx",1,1,0.01,100),
+(3626,"Shield: Arcane Force (Green)","Spells\ArcaneForceShield_Green.mdx",1,1,0.01,100),
+(3627,"Shield: Arcane Force (Purple)","spells\ArcaneForceShield_Purple.mdx",1,1,0.01,100),
+(3628,"Shield: Fire Force (Dark)","Spells\FireForceShield_Dark.mdx",1,1,0.01,100),
+(3629,"Shield: Fire Force (Purple)","Spells\FireForceShield_Purple.mdx",1,1,0.01,100),
+(3630,"Shield: Fire Force (Green)","Spells\FireForceShield_Green.mdx",1,1,0.01,100),
+(3631,"Shield: Fire Force (Blue)","Spells\FireForceShield_Blue.mdx",1,1,0.01,100),
+(3632,"Shield: Fire Force (Yellow)","Spells\FireForceShield_Yellow.mdx",1,1,0.01,100),
+(3633,"Shield: Fire Force (Red)","Spells\FireForceShield_Red.mdx",1,1,0.01,100),
+(3636,"Water Elemental Low Impact Base (x2)","spells\waterelementallow_impact_base.mdx",1,2,0.01,100),
+(3637,"Steam Burst Impact","Spells\WaterSteam_Impact.mdx",1,1,0.01,100),
+(3638,"Quest - Dragonflayer Blaze State","spells\archimonde_fire.mdx",1,1,0.01,100),
+(3639,"Ghost_state (Multi-Color)","Spells\Ghost_state2.mdx",1,1,0.01,100),
+(3640,"Missile: Harpoon (Large 2x)","world\azeroth\bootybay\passivedoodad\harpoons\harpoon01.mdx",1,2,0.01,100),
+(3641,"Stratholme Fire - Small (x0.5)","world\lordaeron\stratholme\passivedoodads\fx\stratholmefiresmokeembers.mdx",1,0.5,0.01,100),
+(3642,"Quest - Spout","Spells\WaterLiquidBreath.mdx",1,0.5,0.01,100),
+(3643,"Quest - Stratholme Fire State","world\lordaeron\stratholme\passivedoodads\fx\stratholmefiresmokeembers.mdx",1,1.5,0.01,100),
+(3645,"Smoke - Ash Tree (x0.25)","World\Azeroth\BurningSteppes\PassiveDoodads\Smoke\AshTreeSmoke01.mdx",1,0.25,0.01,100),
+(3646,"Spore Stalk State","World\Kalimdor\Mauradon\PassiveDoodads\CorruptedPlants\MaraudonSporeTree.mdx",1,0.25,0.01,100),
+(3647,"Fire Nova Area (0.5)","Spells\FireNova_Area.mdx",1,0.5,0.01,100),
+(3648,"Pumpkin Head, Flaming","World\Generic\PassiveDoodads\Oktoberfest\FlamingPumpkinHead.mdx",1,1,0.01,100),
+(3649,"Pumpkin Head, Flaming (x0.67)","World\Generic\PassiveDoodads\Oktoberfest\FlamingPumpkinHead.mdx",1,0.67,0.01,100),
+(3650,"Forsaken Banner","World\Lordaeron\Plagueland\PassiveDoodads\ForsakenBanner\ForsakenBanner01.mdx",1,0.7,0.01,100),
+(3651,"Incinerate Impact (Blue)","spells\incinerateblue_impact_base.mdx",1,1,0.01,100),
+(3652,"Incinerate Missile (Blue)","spells\incinerateblue_low_base.mdx",1,1,0.01,100),
+(3653,"Force Shield Fire (Red)","Spells\fireforceshield_red.mdx",1,1,0.01,100),
+(3654,"Force Shield Fire (Blue)","Spells\fireforceshield_blue.mdx",1,1,0.01,100),
+(3655,"Flame Patch (Blue) - 0.20","spells\Archimonde_Blue_Fire.mdx",1,0.2,0.01,100),
+(3656,"Water Elemental Impact Base (5x)","spells\waterelemental_impact_base.mdx",1,5,0.01,100),
+(3657,"Fire Nova Area (0.50)","Spells\FireNova_Area.mdx",1,0.5,0.01,100),
+(3658,"Pillar: Blue","spells\MoonBeamBlue_Impact_Base.mdx",1,1,0.01,100),
+(3659,"Inner Focus Impact Chest - 0.50","spells\innerfocus_impact_chest.mdx",1,0.5,0.01,100),
+(3660,"Dark Iron Node Particle Rock","world\azeroth\burningsteppes\activedoodads\darkironnode\darkironnodeparticlerock.mdx",1,0.5,0.01,100),
+(3661,"Missile: Fireball (Blue) 0.3","spells\Fireball_Blue_Missile_High.mdx",1,0.3,0.01,100),
+(3662,"Flame Patch (Blue) - 0.5","spells\Archimonde_Blue_Fire.mdx",1,0.5,0.01,100),
+(3663,"Fel Flame Breath (120) - 0.33","spells\fel_flamebreath.mdx",1,0.33,0.01,100),
+(3664,"Item - Tankard - HUGE","Spells\TankardA_SpellObject.mdx",1,2,0.01,100),
+(3665,"Wisp","Creature\Wisp\Wisp.mdx",1,1,0.01,100),
+(3666,"Wisp (x2.0)","Creature\Wisp\Wisp.mdx",1,2,0.01,100),
+(3667,"Missile: Wave (Shadow)","Spells\Missile_Wave_Shadow.mdx",1,1,0.01,100),
+(3668,"Dark Shade - 3.00","spells\darkshade.mdx",1,3,0.01,100),
+(3669,"Shield: Arcane Force (Dark) - 4.00","Spells\ArcaneForceShield_Dark.mdx",1,4,0.01,100),
+(3670,"Shadow Precast Uber Hand - 5.00","Spells\Shadow_Precast_Uber_Hand.mdx",1,5,0.01,100),
+(3671,"Arcane Power State Chest (2)","spells\arcanepower_state_chest.mdx",1,2,0.01,100),
+(3672,"Loot FX","particles\lootfx.mdx",1,1,0.01,100),
+(3673,"Shield: Arcane Force (Red 2x)","Spells\ArcaneForceShield_Red.mdx",1,2,0.01,100),
+(3674,"Shield: Arcane Force (Yellow 2x)","Spells\ArcaneForceShield_Yellow.mdx",1,2,0.01,100),
+(3675,"Shield: Arcane Force (Blue 2x)","Spells\ArcaneForceShield_Blue.mdx",1,2,0.01,100),
+(3676,"Shield: Arcane Force (Dark 2x)","Spells\ArcaneForceShield_Dark.mdx",1,2,0.01,100),
+(3677,"Flame Patch (0.3x)","spells\archimonde_fire.mdx",1,0.3,0.01,100),
+(3678,"Smoke Flare (Red) - 6.00","spells\SmokeFlare_Red.mdx",1,6,0.01,100),
+(3679,"Cannon (x0.7)","World\Goober\G_Cannon01.mdx",1,0.7,0.01,100),
+(3680,"Wheel","World\KhazModan\Ironforge\PassiveDoodads\SteamTank\RuinedSteamTankWheel01.mdx",1,0.6,0.01,100),
+(3681,"Flamestrike ImpactDD Med Base - 3.00","Spells\FlameStrike_ImpactDD_Med_Base.mdx",1,3,0.01,100),
+(3682,"Wave: Fire","spells\Missile_Wave_Fire.mdx",1,1,0.01,100),
+(3683,"Immolate State - 3.00","Spells\Immolate_State.mdx",1,3,0.01,100),
+(3684,"Fire Patch - 0.25","spells\Archimonde_Fire.mdx",1,0.25,0.01,100),
+(3685,"Cyclone State (5x)","Spells\Cyclone_State.mdx",1,5,0.01,100),
+(3686,"Vial","World\Expansion01\Doodads\Generic\Arakkoa\AK_Alchemybottle02.mdx",1,1,0.01,100),
+(3689,"Quest - ArcaneForceShield_Yellow State","spells\FireForceShield_Yellow.mdx",1,1.5,0.01,100),
+(3690,"Flamestrike Impact (2x)","Spells\Flamestrike_Impact.mdx",1,2,0.01,100),
+(3691,"Water Elemental Impact Base (0.5x)","spells\waterelemental_impact_base.mdx",1,0.5,0.01,100),
+(3692,"Bucket, New","world\goober\g_water_buckets_03.mdx",1,1,0.01,100),
+(3693,"Army of the Dead Area Impact","Spells\SummonGhouls.mdx",1,1,0.01,100),
+(3694,"Druid Morph Impact (2.0)","Spells\DruidMorph_Impact_Base.mdx",0,2,0.01,100),
+(3695,"Death and Decay Ground Runes","Spells\DeathAndDecay_Area_Runes.mdx",1,1,0.01,100),
+(3696,"Ground Rupture","spells\ground_rupture.mdx",1,1,0.01,100),
+(3697,"Meat","World\Expansion01\Doodads\Generic\BloodElf\Food\BE_Meat01.mdx",1,1,0.01,100),
+(3698,"ForceShield Fire Blue","Spells\FireForceShield_Blue.mdx",1,1,0.01,100),
+(3699,"Forceshield Fire Dark (1.5x)","Spells\FireForceShield_Dark.mdx",1,1.5,0.01,100),
+(3700,"Missile: Vrykul Harpoon","item\objectcomponents\weapon\thrown_1h_harpoon_d_01.mdx",1,1,0.01,100),
+(3701,"Acid Breath (Liquid)","spells\acidliquidbreath.mdx",1,0.05,0.01,100),
+(3702,"Carpet: Blue","World\Generic\Tauren\Passive Doodads\TaurenRugs\TaurenRug03.mdx",1,1,0.01,100),
+(3703,"Carpet: Purple (Torn)","World\Lordaeron\Scholomance\PassiveDoodads\Candles\Scholme_PurpleRug.mdx",1,1,0.01,100),
+(3705,"Shadow Precast Uber Hand - 2.00","Spells\Shadow_Precast_Uber_Hand.mdx",1,2,0.01,100),
+(3706,"Small Smoke Flare, White","spells\SmokeFlare_White.mdx",1,0.5,0.01,100),
+(3707,"Rag Doll","world\generic\human\passive doodads\dolls\ragdoll01.mdx",1,1,0.01,100),
+(3708,"Quest - ForceShieldFlamesDark State","spells\FireForceShield_Dark.mdx",1,1.5,0.01,100),
+(3709,"Missile: Pyroblast (2.00)","Spells\PyroBlast_Missile.mdx",1,2,0.01,100),
+(3710,"Force Shield Arcane (Dark)","Spells\ArcaneForceShield_Dark.mdx",1,1.2,0.01,100),
+(3711,"Death and Decay Impact","spells\deathanddecay.mdx",1,1,0.01,100),
+(3712,"Keg","World\Generic\Dwarf\Passive Doodads\TavernStuff\AleKegSingle.mdx",1,1,0.01,100),
+(3713,"Headless Horseman Head - 1.50","Spells\HeadlessHorsemanHelmet.mdx",1.5,1,0.01,100),
+(3714,"Force Shield Arcane (Purple)","spells\arcaneforceshield_purple.mdx",1,1,0.01,100),
+(3716,"Force Shield Arcane (Purple x3.00)","spells\arcaneforceshield_purple.mdx",1,3,0.01,100),
+(3717,"Force Shield Arcane (Purple x6.00)","spells\arcaneforceshield_purple.mdx",1,6,0.01,100),
+(3718,"Boat State (Blood Elf)","World\Expansion01\Doodads\Generic\BloodElf\Rowboat\BE_Rowboat.mdx",1,1,0.01,100),
+(3719,"Sack State (5.00)","World\Azeroth\Stranglethorn\PassiveDoodads\TrollDungeonSacks\TrollDungeonSacks.mdx",1,5,0.01,100),
+(3720,"Dynamite Bundle State","World\Generic\Dwarf\Passive Doodads\Dynamite\GunShopDynamiteBundle.mdx",1,1,0.01,100),
+(3722,"G_RuneBlue","World\Goober\g_RuneBlue01.mdx",1,1,0.01,100),
+(3723,"Force Shield Fire (Blue) x3","Spells\fireforceshield_blue.mdx",1,3,0.01,100),
+(3724,"Boat State","world\azeroth\swamposorrow\passivedoodads\swampboats\swampboat01.mdx",1,1,0.01,100),
+(3725,"Steam Impact, Billowing","Spells\WaterSteam_Impact.mdx",1,1,0.01,100),
+(3726,"Bloody Explosion Green Impact (x0.25)","Spells\BloodyExplosionGreen.mdx",1,0.25,0.01,100),
+(3727,"Rifle (x1.0, carried)","item\objectcomponents\weapon\firearm_2h_rifle_a_06.mdx",1,1,0.01,100),
+(3728,"Quest - Vrykul Harpoon Missile","Spells\Harpoon_Fire_Missile.mdx",1,1,0.01,100),
+(3729,"Missile: Harpoon (Vrykul)","Spells\Harpoon_Fire_Missile.mdx",1,1,0.01,100),
+(3730,"Quest - Vrykul Harpoon (Small)","Spells\Harpoon_Fire_Missile.mdx",1,0.5,0.01,100),
+(3731,"Force Shield Fire (Purple)","Spells\fireforceshield_purple.mdx",1,1,0.01,100),
+(3732,"B-Ball","Spells\Fireball_Blue_Missile_High.mdx",1,1,0.01,100),
+(3733,"CycloneFire State (0.5x)","Spells\CycloneFire_State.mdx",1,0.5,0.01,100),
+(3734,"Net Missile (0.5)","Spells\Net_State.mdx",1,0.5,0.01,100),
+(3735,"Archway State","World\Generic\Centaur\Passive Doodads\CentaurRuins\Centaur_Arch01.mdx",1,1,0.01,100),
+(3736,"Exploding Stone Impact (Huge)","spells\exploding_stone_impact.mdx",1,5,0.01,100),
+(3737,"Smoke Flare (White) - 5.00","spells\SmokeFlare_White.mdx",1,5,0.01,100),
+(3738,"Hunter's Mark State Head (Huge)","Spells\HuntersMark_Impact_Head.mdx",1,30,0.01,100),
+(3739,"Pumpkin Head, Flaming (0.35)","World\Generic\PassiveDoodads\Oktoberfest\FlamingPumpkinHead.mdx",1,0.35,0.01,100),
+(3740,"Earth Burrow Cast (2.00)","spells\burrowearth_brown_missile.mdx",1,2,0.01,100),
+(3741,"Flame Patch (0.15x)","spells\archimonde_fire.mdx",1,0.15,0.01,100),
+(3742,"Quest - Buoy (4x)","spells\floatingmine.mdx",1,4,0.01,100),
+(3743,"HolyDivineShield State Base (2x)","Spells\HolyDivineShield_State_Base.mdx",0,2,0.01,100),
+(3744,"Sled","World\Expansion02\Doodads\WinterTauren\WT_Sled_01.mdx",1,2,0.01,100),
+(3745,"Rain of Candy Impact Base","spells\rainofcandys_impact_base.mdx",1,2,0.01,100),
+(3746,"Quest - Hawk Hunting (Precast)","Creature\StormCrowDruid\StormCrowDruid_Q.mdx",1,0.5,0.01,100),
+(3747,"Shock Impact Chest - 2.00","Spells\Shock_Impact_Chest.mdx",1,2,0.01,100),
+(3748,"Fel Fire Nova Area (3x)","spells\fel_firenova_area.mdx",3,3,0.01,100),
+(3749,"Fel Fire Precast Hand (0.5x)","spells\fel_fire_precast_hand.m2",1,0.5,0.01,100),
+(3750,"FactoryEnergyCube - 1.00","World\Expansion01\Doodads\Generic\Draenei\TempestKeep\FactoryEnergyCube.mdx",1,1,0.01,100),
+(3751,"Banish (Purple) - 0.50","spells\banish_chest_purple.mdx",1,0.5,0.01,100),
+(3752,"Missile: Fish (Orange)","world\azeroth\bootybay\passivedoodad\deadfish\fishdeadorange.mdx",1,1,0.01,100),
+(3753,"Arcane Bomb - 5.00","spells\arcanebomb_missle.mdx",1,5,0.01,100),
+(3754,"Mug Hit (bounce)","spells\mug_missile_hitbounce.mdx",1,1,0.01,100),
+(3755,"Quest - Force Shield Dark (Small)","spells\FireForceShield_Dark.mdx",1,0.25,0.01,100),
+(3756,"Nature Precast Chest - 0.30","Spells\Nature_Precast_Chest.mdx",1,0.3,0.01,100),
+(3757,"Invisibility Impact - 0.50","Spells\Invisibility_Impact_Chest.mdx",1,0.5,0.01,100),
+(3758,"Whirlwind Base (0.5x)","Spells\Whirlwind_State_Base.mdx",0,0.5,0.01,100),
+(3759,"Cyclone State (0.75x)","Spells\Cyclone_State.mdx",1,0.75,0.01,100),
+(3760,"Cyclone State (0.75x)","Spells\Cyclone_State.mdx",1,0.75,0.01,100),
+(3761,"Item - Broom, Magic","creature\broommount\broommount.mdx",1,1,0.01,100),
+(3762,"Canon_Impact_Dust Impact (Chest)","spells\Canon_Impact_Dust.mdx",1,1,0.01,100),
+(3763,"Druid Morph Impact (3.0)","Spells\DruidMorph_Impact_Base.mdx",0,3,0.01,100),
+(3764,"Fireworks Pink Heart","spells\valentinefirework.mdx",1,1,0.01,100),
+(3765,"Frost Breath (Small)","Spells\FrostBreath.mdx",1,0.25,0.01,100),
+(3766,"Ice Prison State (Small)","spells\IcePrison_Base.mdx",1,0.3,0.01,100),
+(3767,"Frost Breath - 5.00","Spells\FrostBreath.mdx",1,5,0.01,100),
+(3768,"Ice Block State - 2.00","spells\icebarrier_state.mdx",1,2,0.01,100),
+(3769,"Fel Flame Circle - 2.00","spells\Fel_FlameCircleEffect.mdx",1,2,0.01,100),
+(3770,"Fel Flame Patch - 4.00","spells\fel_archimonde_fire.mdx",1,4,0.01,100),
+(3771,"Fel Flame Patch - 0.50","spells\fel_archimonde_fire.mdx",1,0.5,0.01,100),
+(3772,"Ice Lance Missile - 3.00","spells\ice_lance_missile.mdx",1,3,0.01,100),
+(3773,"Arcane Bomb - 2.00","spells\arcanebomb_missle.mdx",1,2,0.01,100),
+(3774,"Fel Flame Patch - 0.25","spells\fel_archimonde_fire.mdx",1,0.25,0.01,100),
+(3775,"Fel Low Poly Fire","spells\Fel_LowPolyFireAnim.mdx",1,0.1,0.01,100),
+(3776,"Snow Rain - 2.00","Spells\ChristmasSnowRain.mdx",1,2,0.01,100),
+(3777,"Quest - Boulder Assault","world\generic\human\passive doodads\catapultruins\catapultball01.mdx",1,1.5,0.01,100),
+(3778,"Cannonball Missile","world\generic\human\passive doodads\catapultruins\catapultball01.mdx",1,0.35,0.01,100),
+(3779,"Holiday - Christmas - Snowflakes","spells\christmassnowrain.mdx",1,1,0.01,100),
+(3780,"Ghost_state (Multi-Color 0.6x)","Spells\Ghost_state2.mdx",1,0.6,0.01,100),
+(3781,"BloodyExplosion - 3.00","Spells\BloodyExplosion.mdx",1,3,0.01,100),
+(3782,"Scourge Summoning Runes (0.3)","world\goober\g_scourgerunecirclecrystal.mdx",1,0.3,0.01,100),
+(3783,"Soul Funnel Impact Chest (6.0x)","Spells\SoulFunnel_Impact_Chest.mdx",1,6,0.01,100),
+(3784,"Soul Funnel Impact Chest (2.0x)","Spells\SoulFunnel_Impact_Chest.mdx",1,2,0.01,100),
+(3785,"Soul Funnel Impact Chest (8.0x)","Spells\SoulFunnel_Impact_Chest.mdx",1,8,0.01,100),
+(3786,"Blessing of Protection Base (Classic)","spells\Blessingofprotection_State_Classic.mdx",1,1,0.01,100),
+(3787,"Missile: Upper Deck Paper Airplane, Zeppelin","Creature\Paperairplane_Zeppelin\Paperairplane_Zeppelin.mdx",1,1,0.01,100),
+(3788,"Missile: Upper Deck Paper Airplane, Gyro","Creature\Paperairplane_Gyro\Paperairplane_Gyro.mdx",1,1,0.01,100),
+(3789,"Missile: Blood Elf Power Orb (Green) (x0.10)","world\expansion01\doodads\generic\bloodelf\powerorb\bloodelf_powerorb_green.mdx",1,0.1,0.01,100),
+(3790,"Sunder Impact Chest - 2.00","Spells\Sunder_Impact_Chest.mdx",1,2,0.01,100),
+(3791,"Shattered Sun Banner","World\Expansion02\Doodads\Generic\Sunshatter\Banner\Sunshatter_Banner01.mdx",1,1,0.01,100),
+(3792,"LightningStorm Cloud Low State","Spells\LightningStorm_CloudLow_State.mdx",1,1,0.01,100),
+(3793,"Rocket, small","Spells\Missle_Rocket.mdx",1,0.5,0.01,100),
+(3796,"Fel Lightning PreCast Low Hand","Spells\Lightning_Fel_PreCast_Low_Hand.mdx",1,1,0.01,100),
+(3797,"Fel Lightning Cast Hand","Spells\Lightning_Fel_Cast_Hand.mdx",1,1,0.01,100),
+(3798,"Fel ChainLightning Impact Chest","Spells\ChainLightning_Fel_Impact_Chest.mdx",1,1,0.01,100),
+(3799,"Parachute State","spells\Parachute.mdx",1,1,0.01,100),
+(3800,"Fel Seeping Gaseous Nova","spells\seepinggaseous_fel_nova.mdx",1,1,0.01,100),
+(3801,"BlueGreenRadiationFog","spells\largebluegreenradiationfog.mdx",1,1.5,0.01,100),
+(3802,"Flame Breath - Midsummer","spells\flamebreathmff.mdx",1,0.85,0.01,100),
+(3803,"Gaseous Form","Spells\GaseousForm.mdx",1,1,0.01,100),
+(3804,"Nature Precast Chest - 3.00","Spells\Nature_Precast_Chest.mdx",1,3,0.01,100),
+(3805,"Holiday - Midsummer - Toy - Petals Shower","spells\summerfest_roseshower_impact_base.mdx",1,1,0.01,100),
+(3806,"Flame Circle (0.80)","spells\flamecircleeffect.mdx",1,0.8,0.01,100),
+(3807,"Hunter's Mark State Head HOLD","spells\huntersmark_impact_head_hold.mdx",1,1,0.01,100),
+(3808,"Steam Impact, Billowing (x2.0)","Spells\WaterSteam_Impact.mdx",1,2,0.01,100),
+(3809,"Fireball Missile Low (x0.5)","Spells\Fireball_Missile_Low.mdx",1,0.5,0.01,100),
+(3810,"Mana Funnel Impact Chest (3x)","Spells\ManaFunnel_Impact_Chest.mdx",1,3,0.01,100),
+(3811,"Form Shadow Precast","Spells\Shadow_Form_Precast.mdx",1,0.3,0.01,100),
+(3812,"Form Fire Precast","Spells\Fire_Form_Precast.mdx",1,1,0.01,100),
+(3813,"Arcane Power State Chest - 8.00","spells\arcanepower_state_chest.mdx",1,8,0.01,100),
+(3814,"Seeping Gas (Fel) - 3.00","spells\SeepingGaseous_Fel_Nova.mdx",1,3,0.01,100),
+(3815,"Nature Precast Chest - 10.00","Spells\Nature_Precast_Chest.mdx",1,10,0.01,100),
+(3816,"Acid Cloud Breath - 2.00","spells\AcidCloudBreath.mdx",1,2,0.01,100),
+(3817,"Red Dust Cloud - 10.00","spells\RedDustCloud.mdx",1,10,0.01,100),
+(3818,"Radiation Fog (Blue-Green) - 3.00","spells\LargeBlueGreenRadiationFog.mdx",1,3,0.01,100),
+(3819,"Steam State (Small)","spells\Steam.mdx",1,0.5,0.01,100),
+(3820,"Bomb Explosion (x1.5","Spells\Bomb_ExplosionA.mdx",1,1.5,0.01,100),
+(3821,"Torch (x1.5)","Spells\TorchSpell.mdx",1,1.5,0.01,100),
+(3822,"Bow Shot (Thori'dal)","Spells\ArcaneShot_Missile2.mdx",1,1,0.01,100),
+(3823,"Blood Elf Orb State","World\Expansion01\Doodads\Generic\BloodElf\ScryingOrb\BE_ScryingOrb.mdx",1,1.5,0.01,100),
+(3824,"Bonfire","World\Azeroth\BurningSteppes\PassiveDoodads\Bonfire\OrcBonFire.mdx",1,1,0.01,100),
+(3826,"Seeping Gaseous Fel Nova - 1.00","spells\SeepingGaseous_Fel_Nova.mdx",1,1,0.01,100),
+(3827,"Seeping Gaseous Fel Nova - 0.50","spells\SeepingGaseous_Fel_Nova.mdx",1,0.5,0.01,100),
+(3828,"Green Ground Fog - 1.00","World\Generic\PassiveDoodads\ParticleEmitters\GreenGroundFog.mdx",1,1,0.01,100),
+(3829,"Horde Banner 03","world\generic\orc\passive doodads\hordebanners\hordebanner03.mdx",1,1,0.01,100),
+(3830,"TEMP","Creature\Cloud\CloudSwampGas.mdx",1,1,0.01,100),
+(3831,"Cloud: Green - 3.00","spells\greenradiationfog.mdx",1,3,0.01,100),
+(3832,"MoltenBlast Impact Chest (2x)","Spells\MoltenBlast_Impact_Chest.mdx",0,2,0.01,100),
+(3833,"Warsong Land Mine Missile","World\Goober\LandMineAlteracValley.mdx",1,1,0.01,100),
+(3834,"Quest - Flies","World\Critter\flies\flies01.mdx",1,1,0.01,100),
+(3835,"Divine Shield Blue","spells\holydivineshieldblue_state_base.mdx",1,1,0.01,100),
+(3836,"Smoke Flare, White, Very Small","spells\SmokeFlare_White.mdx",1,0.25,0.01,100),
+(3837,"Silithid Egg State","World\Kalimdor\Silithus\PassiveDoodads\Eggs\SilithidEgg.mdx",1,0.5,0.01,100),
+(3838,"Form Arcane Precast","Spells\Arcane_Form_Precast.mdx",1,1,0.01,100),
+(3839,"Frost Bolt Missile - 4.00","Spells\Frostbolt.mdx",1,4,0.01,100),
+(3840,"Ice ImpactDD Uber Chest 10.00","Spells\Ice_ImpactDD_Uber_Chest.mdx",1,10,0.01,100),
+(3841,"Fire Blast Impact Chest - 2.00","Spells\Fire_ImpactDD_Chest.mdx",1,2,0.01,100),
+(3842,"Incinerate Missile (Blue, 0.6x)","spells\incinerateblue_low_base.mdx",1,0.6,0.01,100),
+(3843,"Seeping Gaseous Fel Nova - 0.5","spells\SeepingGaseous_Fel_Nova.mdx",1,0.5,0.01,100),
+(3844,"Arcane Power State Chest (0.5","spells\arcanepower_state_chest.mdx",1,0.5,0.01,100),
+(3845,"Acid Breath - 2.00","Spells\AcidBreath.mdx",1,2,0.01,100),
+(3846,"Grobbulus Poison Cloud - 2.00","Spells\Poison_Cloud_Grobbulus.mdx",1,2,0.01,100),
+(3847,"Flare Ground State (1.5x)","spells\flare_state_base.mdx",1.5,1.5,0.01,100),
+(3848,"Flare Ground State (0.75x)","spells\flare_state_base.mdx",0.75,0.75,0.01,100),
+(3849,"Fireball Missile Low, Large","Spells\Fireball_Missile_Low.mdx",1,3,0.01,100),
+(3850,"Missile: Shadowbolt - 4.00","Spells\Shadowbolt_Missile.mdx",1,4,0.01,100),
+(3851,"Missile: Snowball (3.0x)","spells\missile_snowball.mdx",1,3,0.01,100),
+(3852,"Frost Nova Area (0.2x)","Spells\Frost_Nova_area.mdx",1,0.2,0.01,100),
+(3853,"Frost Reflect State Chest (3.0x)","spells\frostreflect_state_chest.mdx",1,3,0.01,100),
+(3854,"Missile: Snowball (6.0x)","spells\missile_snowball.mdx",1,6,0.01,100),
+(3855,"Portal: Boss Shadow - 0.50","Spells\Creature_SpellPortal_LargeShadow.mdx",1,0.5,0.01,100),
+(3856,"Fire Smoke Trail (Normal Size)","spells\Fire_SmokeTrail.mdx",1,1,0.01,100),
+(3857,"Quest - Bloodspore Harvest","spells\enchantments\SavageryGlow_High.mdx",1,2,0.01,100),
+(3858,"RedFlame_Low","spells\enchantments\redflame_low.mdx",1,1,0.01,100),
+(3859,"RedGlow_High","spells\enchantments\redglow_high.mdx",1,1,0.01,100),
+(3860,"Portal: Boss Purple - 0.50","Spells\Creature_SpellPortalLarge_Purple.mdx",1,0.5,0.01,100),
+(3861,"Shaman_Red","Spells\Enchantments\Shaman_Red.mdx",1,1,0.01,100),
+(3862,"NefarianFlameBreath State","spells\NefarianFlameBreath.mdx",1,0.05,0.01,100),
+(3863,"Bread Slice (0.50)","world\generic\human\passive doodads\food\breadslice.mdx",1,0.5,0.01,100),
+(3864,"Void Zone - 0.60","creature\portalofkathune\portalofkathune.mdx",1,0.6,0.01,100),
+(3865,"Dark Shade - 5.00","spells\darkshade.mdx",1,5,0.01,100),
+(3866,"Dark Shade (small)","spells\darkshade.mdx",1,0.5,0.01,100),
+(3867,"Black Magic Precast Base - 2.00","spells\BlackMagic_Precast_Base.mdx",1,2,0.01,100),
+(3868,"Shadow Fury Impact - 0.50","spells\ShadowFury_Impact_Base.mdx",1,0.5,0.01,100),
+(3869,"Flamestrike Impact (0.5x)","Spells\Flamestrike_Impact.mdx",1,0.5,0.01,100),
+(3870,"Missile: Black Shot - 2.0","spells\blackshot_missile.mdx",1,20,0.01,100),
+(3871,"Arcane Bomb - 2.50","spells\arcanebomb_missle.mdx",1,2.5,0.01,100),
+(3872,"Flame Breath (Small)","Spells\FlameBreath.mdx",1,0.5,0.01,100),
+(3873,"Abyssal Impact Base - 2.50","spells\abyssal_impact_base.mdx",1,2.5,0.01,100),
+(3874,"Flare Ground State (2.5x)","spells\flare_state_base.mdx",2.5,2.5,0.01,100),
+(3875,"ShadowWord Death Impact - 3.00","spells\shadowword_death_impact.mdx",1,3,0.01,100),
+(3876,"Fire Precast Hand 8.0","Spells\Fire_Precast_Hand.mdx",1,8,0.01,100),
+(3877,"Fel Fireball Missile High (2.00)","spells\fel_fireball_missile_high.mdx",1,2,0.01,100),
+(3878,"ShadowWordDominate Chest - 3.00","Spells\ShadowWordDominate_Chest.mdx",1,3,0.01,100),
+(3879,"ShadowSnare Base - 3.00","Spells\Shadow_Snare_High_base.mdx",1,3,0.01,100),
+(3880,"MagePortal: Strand of the Ancients","world\generic\activedoodads\spellportals\portal_strandoftheancients.mdx",1,0.3,0.01,100),
+(3881,"Dark Shade - 3.00","spells\darkshade.mdx",1,3,0.01,100),
+(3882,"Frost Bolt Missile 5.0","Spells\Frostbolt.mdx",1,5,0.01,100),
+(3883,"Ice ImpactDD Uber Chest 2.0","Spells\Ice_ImpactDD_Uber_Chest.mdx",1,2,0.01,100),
+(3884,"Shadow Shield Impact Base - 1.50","spells\shadowshield_impact.mdx",1,1.5,0.01,100),
+(3885,"Frost Trap Aura NoMist","SPELLS\FrostTrap_Aura_noMist.M2",1,1,0.01,100),
+(3886,"Frost Trap Aura NoMist 2.0","SPELLS\FrostTrap_Aura_noMist.M2",1,2,0.01,100),
+(3887,"Dark Shade - 2.00","spells\darkshade.mdx",1,2,0.01,100),
+(3888,"Cripple State Chest - 2.00","Spells\Cripple_State_Chest.mdx",1,2,0.01,100),
+(3889,"Quest - Sunshatter Shield","Spells\ShellShield_State_Base.mdx",1,3,0.01,100),
+(3890,"Force Shield Fire (Red) 2.0","Spells\fireforceshield_red.mdx",1,2,0.01,100),
+(3891,"Fire Precast Hand 4.0","Spells\Fire_Precast_Hand.mdx",1,4,0.01,100),
+(3892,"Fire Rift","World\ENVIRONMENT\DOODAD\GENERALDOODADS\ElementalRifts\FireRift.mdx",1,1,0.01,100),
+(3893,"Flare Ground State (12.0x)","spells\flare_state_base.mdx",1,12,0.01,100),
+(3894,"Red Glow High 15.0","Spells\Enchantments\RedGlow_High.mdx",1,15,0.01,100),
+(3895,"Red Flame Low 5.0","Spells\Enchantments\RedFlame_Low.mdx",1,5,0.01,100),
+(3896,"Fireball Missile High 4.0","Spells\Fireball_Missile_High.mdx",1,4,0.01,100),
+(3897,"Immolate Impact Chest 5.0","Spells\Immolate_Impact_Chest.mdx",1,5,0.01,100),
+(3898,"Bomb Explosion (x4)","Spells\Bomb_ExplosionA.mdx",1,4,0.01,100),
+(3899,"Flames (0.35 scale)","world\lordaeron\stratholme\passivedoodads\fx\stratholmefiresmokeembers.mdx",1,0.35,0.01,100),
+(3901,"Missile: Crate","World\Goober\G_Crate01.mdx",1,0.6,0.01,100),
+(3902,"Fire Precast Hand 2.0","Spells\Fire_Precast_Hand.mdx",1,2,0.01,100),
+(3903,"Acid Breath (Liquid) - 0.25","spells\acidliquidbreath.mdx",1,0.25,0.01,100),
+(3904,"Stratholme Fire Smoke Ember","World\Lordaeron\Stratholme\PassiveDoodads\FX\StratholmeFireSmokeEmberM.mdx",1,1,0.01,100),
+(3905,"Force Shield Arcane (Yellow)","spells\arcaneforceshield_yellow.mdx",1,1,0.01,100),
+(3906,"DivineShield Low Chest (x4.00)","Spells\DivineShield_Low_Chest.mdx",1,4,0.01,100),
+(3907,"DivineShield Low Base (x2.00)","Spells\DivineShield_Low_Base.mdx",1,2,0.01,100),
+(3908,"Fire_SmokeTrail","spells\fire_smoketrail.mdx",1,1,0.01,100),
+(3909,"Steam State 2x","spells\steam.mdx",1,2,0.01,100),
+(3910,"Shadow Nova Cast Non Projected - (0.10)","Spells\Shadow_Nova_area_noProjection.mdx",1,0.1,0.01,100),
+(3911,"Frost Bolt Missile 2.5","Spells\Frostbolt.mdx",1,2.5,0.01,100),
+(3912,"Missile: Shadowbolt (No Ribbon) - 2.00","spells\ShadowBolt_Missile_NoRibbon.mdx",1,2,0.01,100),
+(3913,"Cannon Impact (x2)","Spells\Canon_Impact_Dust.mdx",1,2,0.01,100),
+(3914,"Acid Cloud Breath Smoke - 2.00","spells\AcidCloudBreath_GroundSmoke.mdx",1,2,0.01,100),
+(3915,"Acid Cloud Breath (Fast)  - 2.00","spells\AcidCloudBreath_Fast.mdx",1,2,0.01,100),
+(3916,"Banish (Dark) - 2.00","spells\Banish_Chest_Dark.mdx",1,2,0.01,100),
+(3917,"Ice Precast Uber Hand 2.0x","Spells\Ice_Precast_Uber_Hand.mdx",1,2,0.01,100),
+(3918,"Ice Missile Uber 5.0x","Spells\Ice_Missile_Uber.mdx",1,5,0.01,100),
+(3919,"Ice Missile Low 5.0x","Spells\Ice_Missile_Low.mdx",1,5,0.01,100),
+(3920,"Flame Circle","spells\flamecircleeffect.mdx",1,0.2,0.01,100),
+(3921,"Snowball Powder Impact (3.0)","spells\SnowballPowdery_Impact_Base.mdx",1,3,0.01,100),
+(3922,"Snow Powder Base","spells\SnowballPowdery_Impact_Base.mdx",1,1,0.01,100),
+(3923,"Snow Powder Base (0.75)","spells\SnowballPowdery_Impact_Base.mdx",1,0.75,0.01,100),
+(3924,"Frost Slash","Spells\FrostSlash_Base_Cast.mdx",1,1,0.01,100),
+(3925,"Fire Elemental Totem (2.0)","Creature\Spells\FireElementalTotem.mdx",1,2,0.01,100),
+(3926,"Blood Elf Epic Orb State","World\Expansion01\Doodads\Generic\BloodElf\ScryingOrb\BE_ScryingOrb_Epic.mdx",1,1,0.01,100),
+(3927,"Missile: Arcane Bomb Orb","World\Expansion01\Doodads\Terokkar\Bomb\BE_ArcaneBomb_Orb.mdx",1,0.25,0.01,100),
+(3928,"Fire Reflect State Chest (2.00)","spells\firereflect_state_chest.mdx",1,2,0.01,100),
+(3929,"Flames (0.25 scale)","world\lordaeron\stratholme\passivedoodads\fx\stratholmefiresmokeembers.mdx",1,0.25,0.01,100),
+(3930,"Holy Form Precast","spells\holy_form_precast.mdx",1,1,0.01,100),
+(3931,"Cheat Death Impact","Spells\Cheat_Death.mdx",1,1,0.01,100),
+(3932,"Cheat Death (New)","Spells\Cheat_Death.mdx",1,1,0.01,100),
+(3933,"Cheat Death State","Spells\Cheat_Death.mdx",1,1,0.01,100),
+(3934,"Banish (Blue) (2.0)","spells\banish_chest_blue.mdx",1,2,0.01,100),
+(3935,"Shadow Missile","Spells\ShadowMissile.mdx",1,1,0.01,100),
+(3936,"Missile: Spear (Human 3.0)","World\Generic\Human\Passive Doodads\Weapons&Armor\HumanSpear01.mdx",1,3,0.01,100),
+(3937,"Shadow Missile (3.0)","spells\shadowmissile_noshadow.mdx",3,2,0.01,100),
+(3938,"Ice Cast Low Hand (10.0)","Spells\Ice_Precast_Low_Hand.mdx",1,10,0.01,100),
+(3939,"Form Shadow Precast x2","Spells\Shadow_Form_Precast.mdx",1,2,0.01,100),
+(3940,"Sonic Wave Blast Cast - 2.00","spells\sonicwave_cast.mdx",1,2,0.01,100),
+(3941,"Frost Breath - 7.00","Spells\FrostBreath.mdx",1,7,0.01,100),
+(3942,"RitualSummoning PreCast Base (x2.00)","Spells\RitualSummoning_PreCast_Base.mdx",0,2,0.01,100),
+(3943,"Snowball Impact Head (10.00)","spells\snowball_impact_chest.mdx",1,10,0.01,100),
+(3944,"Missile: Snowball (1.5x)","spells\missile_snowball.mdx",1,1.5,0.01,100),
+(3945,"Low Poly Fire","World\Generic\PVP\Fires\LowPolyFireAnim.mdx",1,0.5,0.01,100),
+(3946,"Missile: Deathbolt Missile - 2.00","spells\deathbolt_missile_low.mdx",1,2,0.01,100),
+(3947,"Missile: Snowball (2.0x)","spells\missile_snowball.mdx",1,2,0.01,100),
+(3948,"Upper Deck - Weather Machine - Rain","spells\Goblin_Weather_Machine_Rain.mdx",1,1,0.01,100),
+(3949,"Upper Deck - Weather Machine - Lightning","spells\Goblin_Weather_Machine_Lightning.mdx",1,1,0.01,100),
+(3950,"Upper Deck - Weather Machine - Snow","spells\Goblin_Weather_Machine_Snow.mdx",1,1,0.01,100),
+(3951,"Upper Deck - Weather Machine - Sunny","spells\Goblin_Weather_Machine_Sunny.mdx",1,1,0.01,100),
+(3952,"Upper Deck - Weather Machine - Cloudy","spells\Goblin_Weather_Machine_Cloudy.mdx",1,1,0.01,100),
+(3953,"Force Shield and Explosion","spells\forceshield_andxplosion.mdx",1,1,0.01,100),
+(3954,"Sunwell Beam FX","spells\sunwell_beamfx.mdx",1,1,0.01,100),
+(3955,"Curse of Elements Impact Head (2.00)","Spells\CurseElements_Impact_Head.mdx",0,2,0.01,100),
+(3956,"Ice Block State - 4.00","spells\icebarrier_state.mdx",1,4,0.01,100),
+(3957,"Sleep State (Reduced)","Spells\Sleep_State_Head.mdx",1,0.75,0.01,100),
+(3958,"Blue Power Focus","Creature\QuestObjects\Creature_PowerCrystal.mdx",1,10,0.01,100),
+(3959,"Dark Fire Shield State","Spells\FireForceShield_Red.mdx",1,1,0.01,100),
+(3960,"Quest - Entropius Body","world\goober\g_jewelblack.mdx",1,3,0.01,100),
+(3961,"Missile: Grizzly Hills Tree","World\Expansion02\Doodads\GrizzlyHills\Trees\GrizzlyHills_Tree12.mdx",1,1,0.01,100),
+(3962,"Quest - Sunwell Ignition!","spells\Sunwell_BeamFX.mdx",1,1,0.01,100),
+(3963,"Missile: Extra Giant Boulder","spells\BoulderGiant_Missile.mdx",1,2,0.01,100),
+(3964,"Firework Roman Candle Impact","Spells\Firework_RomanCandle_Impact_Chest_01.mdx",1,1,0.01,100),
+(3965,"Fireworks Roman Candle Missile","spells\firework_romancandle_missle_01.mdx",1,1,0.01,100),
+(3966,"Firework Roman Candle Impact (2.0x)","Spells\Firework_RomanCandle_Impact_Chest_01.mdx",1,2,0.01,100),
+(3967,"Flame Circle (Blue) (0.75x)","spells\FlameCircleEffect_Blue.mdx",1,0.75,0.01,100),
+(3968,"Flame Patch (0.75x)","spells\archimonde_fire.mdx",1,0.75,0.01,100),
+(3969,"Ice Block State - 8.00","spells\icebarrier_state.mdx",1,8,0.01,100),
+(3970,"Frost Bolt Missile - 6.00","Spells\Frostbolt.mdx",1,6,0.01,100),
+(3971,"Ice Lance Impact (10.0)","spells\ice_lance_impact.mdx",1,10,0.01,100),
+(3972,"Missile: Sonic Wave - 2.00","spells\sonicwave_missile.mdx",1,2,0.01,100),
+(3973,"Portal: Boss Fel Green","Spells\Sunwell_Fel_Portal.mdx",1,1,0.01,100),
+(3974,"Cold Breath (1.5)","particles\ColdBreath.mdx",1,1.5,0.01,100),
+(3975,"Missile: Shirt","World\Generic\Human\Passive Doodads\Clothing\FoldedShirtBrown.mdx",1,1.2,0.01,100),
+(3977,"Missile: Snowball (4.0x)","spells\missile_snowball.mdx",1,4,0.01,100),
+(3978,"ArcaneExplosion - 5.00","Spells\ArcaneExplosion_Base.mdx",1,5,0.01,100),
+(3979,"TreeTrunk","World\Expansion02\Doodads\GrizzlyHills\Trees\GrizzlyHills_TreeTrunk01.mdx",1,0.4,0.01,100),
+(3980,"Missile: Grizzly Hills Tree (0.5)","World\Expansion02\Doodads\GrizzlyHills\Trees\GrizzlyHills_Tree12.mdx",1,0.5,0.01,100),
+(3981,"TreeLeaf","World\Expansion02\Doodads\Scholazar\Trees\Sholazar_TreeLeafB.mdx",1,1,0.01,100),
+(3982,"Missile: Pony Keg - 0.50","world\generic\human\passive doodads\beerkegs\beerkeg01_nocollide.mdx",0.5,1,0.01,100),
+(3983,"Arcane Missile Lvl 4 (2.00)","Spells\Arcane_Missile_Lvl4.mdx",0,2,0.01,100),
+(3984,"FireForceShield_Red (Large)","spells\fireforceshield_red.mdx",1,2,0.01,100),
+(3985,"SoulFrostGlow_High (Base)","spells\enchantments\soulfrostglow_high.mdx",1,1,0.01,100),
+(3986,"Bloody Explosion Green Impact (x3.0)","Spells\BloodyExplosionGreen.mdx",1,3,0.01,100),
+(3987,"Missle: Ice Rock","World\Expansion02\Doodads\DragonBlight\DragonBlight_IceRock_02.mdx",1,1,0.01,100),
+(3988,"Missile: Ice Boulder ","World\Expansion02\Doodads\DragonBlight\DragonBlight_IceRock_02.mdx",1,1,0.01,100),
+(3990,"Quest - Turd Missile","spells\SlimeLesserExplode_Missile.mdx",1,0.2,0.01,100),
+(3991,"Bone Burst (1.5)","Spells\BoneWorm_AttackEffects.mdx",1,1.5,0.01,100),
+(3992,"Missile: Boulder (8x)","spells\boulder_missile.mdx",1,8,0.01,100),
+(3993,"CycloneWater State (3x)","Spells\CycloneWater_State.mdx",1,3,0.01,100),
+(3994,"Acid Breath (0.5x)","Spells\AcidBreath.mdx",1,0.5,0.01,100),
+(3995,"Steam Impact, Billowing (x0.5)","Spells\WaterSteam_Impact.mdx",1,0.5,0.01,100),
+(3996,"Missile: Goo Bolt (0.5x)","Spells\GooBolt_Missile_Low.mdx",1,0.5,0.01,100),
+(3997,"Keg, Dark Iron (0.3x)","World\Generic\DarkIronDwarf\Passive Doodads\Kegs\DarkIronKeg01.mdx",1,0.4,0.01,100),
+(3998,"Mug Hit (bounce) (2x)","spells\mug_missile_hitbounce.mdx",1,2,0.01,100),
+(3999,"Vengeance State Hand - 4.00","spells\vengeance_state_hand.mdx",1,4,0.01,100),
+(4000,"Water Elemental Impact Base (25x)","spells\waterelemental_impact_base.mdx",1,25,0.01,100),
+(4001,"Quest - Sniper Gun","world\generic\human\passive doodads\gunshop\gunsniperrifle.mdx",0,1,0.01,100),
+(4002,"Missile: BloodBolt","spells\bloodbolt_missile_low.mdx",0,2,0.01,100),
+(4003,"Call Lightning Impact","spells\calllightning_impact.mdx",0,1,0.01,100),
+(4004,"Form Arcane Precast - 2.00","Spells\Arcane_Form_Precast.mdx",1,2,0.01,100),
+(4005,"Frost Reflect State Chest","spells\frostreflect_state_chest.mdx",1,2,0.01,100),
+(4006,"Ice Nuke Base","spells\IceNuke_Base_Impact.mdx",1,0.15,0.01,100),
+(4007,"Shock Impact Chest - 3.00","Spells\Shock_Impact_Chest.mdx",1,3,0.01,100),
+(4008,"Shock Missile [2.0]","Spells\Shock_Missile.mdx",1,2,0.01,100),
+(4009,"Banish (Dark)","spells\Banish_Chest_Dark.mdx",1,0.5,0.01,100),
+(4010,"Aura: Red, Tall (1.00)","world\generic\passivedoodads\particleemitters\auraredtall.mdx",0,1,0.01,100),
+(4011,"Fire ImpactDD Uber Chest","spells\fire_impactdd_uber_chest.mdx",1,10,0.01,100),
+(4012,"Missile: Blinding Shot (2.00)","spells\blindingshot_missile.mdx",0,10,0.01,100),
+(4013,"Missile: Saw","spells\missile_sawblade.mdx",0,4,0.01,100),
+(4014,"Missile: Rocket (Large)","spells\missle_rocket.mdx",0,4,0.01,100),
+(4015,"Lightning Nova","spells\lightning_ring_nova.mdx",1,1,0.01,100),
+(4016,"Fireball Missile High 5.0","spells\fireball_missile_high.mdx",0,5,0.01,100),
+(4017,"Acid Burn Black (Low-Poly)","SPELLS\AcidBurn_Small_Black.mdx",1,1,0.01,100),
+(4018,"Ice Block State - 1.50","spells\icebarrier_state.mdx",1,1.5,0.01,100),
+(4019,"Form Arcane Precast - 3.00","Spells\Arcane_Form_Precast.mdx",1,3,0.01,100),
+(4020,"MoonBeamRed_Impact_Base","spells\moonbeamred_impact_base.mdx",1,0.6,0.01,100),
+(4021,"Blood Elf Power Orb (Red)","world\expansion01\doodads\generic\bloodelf\powerorb\bloodelf_powerorb_red.mdx",0,1,0.01,100),
+(4022,"Holy Missile Low (Copy)","Spells\Holy_Missile_Low.mdx",1,1,0.01,100),
+(4023,"TEST - Holy Missile Low (Copy)","Spells\Holy_Missile_Low.mdx",1,1,0.01,100),
+(4024,"TEST - Holy Missile Low","Spells\Holy_Missile_Low.mdx",1,1,0.01,100),
+(4025,"TEST - Holy Missile Low (Copy2)","Spells\Holy_Missile_Low.mdx",1,1,0.01,100),
+(4026,"TEST - Holy Missile Low (Copy3)","Spells\Holy_Missile_Low.mdx",1,1,0.01,100),
+(4027,"TEST - Holy Missile Low (Copy4)","Spells\Holy_Missile_Low.mdx",1,1,0.01,100),
+(4028,"Ward: Fire Impact Chest","Spells\FireWard_Impact_Chest.mdx",0,1.5,0.01,100),
+(4029,"Fire Cast Hand","Spells\Fire_Cast_Hand.mdx",0,5,0.01,100),
+(4030,"Meat","World\Expansion01\Doodads\Generic\BloodElf\Food\BE_Meat01.mdx",1,0.5,0.01,100),
+(4031,"Frost_Form","spells\frost_form_precast.mdx",0,1,0.01,100),
+(4032,"Crow Circling State","spells\crow_baked.mdx",0,1,0.01,100),
+(4033,"Arcane Barrage Missile","spells\mage_arcanebarrage_missile.mdx",0,0.75,0.01,100),
+(4034,"Missile: Harpoon","world\azeroth\bootybay\passivedoodad\harpoons\harpoon01.mdx",0,1,0.01,100),
+(4035,"Missile: Blight Bomb","world\expansion01\doodads\generic\bloodelf\powerorb\bloodelf_powerorb_green.mdx",0,1,0.01,100),
+(4036,"Missile: Plague Barrel (1.0)","world\expansion02\doodads\generic\forsaken\fk_plaguebarrel.mdx",0,1,0.01,100),
+(4037,"Acid Cloud Breath Smoke","spells\acidcloudbreath_groundsmoke.mdx",1,1,0.01,100),
+(4038,"Deep Freeze","spells\mage_deepfreeze.mdx",0,1,0.01,100),
+(4039,"Persistent Area: Forsaken Blight (HUGE)","spells\transport_ship_ud_fx.mdx",1,0.5,0.01,100),
+(4040,"Hot Streak Impact Chest","spells\mage_hotstreak.mdx",0,1,0.01,100),
+(4041,"Decimate State Effect","spells\decimate_state.mdx",0,3,0.01,100),
+(4042,"Decimate Impact","spells\decimate_impact_chest.mdx",0,1,0.01,100),
+(4043,"Atrocity Impact","spells\warlock_atrocity.mdx",0,1,0.01,100),
+(4044,"Demonic Circle Summon Impact Base","spells\demoniccirclesummon_base.mdx",0,1,0.01,100),
+(4045,"Demonic Circle Teleport Impact","spells\demoniccirclesummon_teleport.mdx",0,1,0.01,100),
+(4046,"Haunt Impact Chest","spells\shadow_mend_impact.mdx",0,1,0.01,100),
+(4047,"Shadowflame Cast","spells\warlock_shadowflame.mdx",0,1,0.01,100),
+(4048,"Living Bomb State","spells\mage_livingbomb_state.mdx",0,1,0.01,100),
+(4049,"Living Bomb Explosion Area","spells\mage_livingbomb_area.mdx",0,1,0.01,100),
+(4050,"Deep Freeze State","spells\mage_deepfreeze.mdx",0,1,0.01,100),
+(4051,"Incanter's Absorption Impact","spells\mage_incantersabsorbtion.mdx",0,1,0.01,100),
+(4052,"Netherwind Presence Impact","spells\mage_netherwingpresence.mdx",0,1,0.01,100),
+(4053,"Arcane Barrage Impact","spells\mage_arcanebarrage_impact.mdx",0,1,0.01,100),
+(4054,"Bloodbath Impact","spells\warrior_bloodbath.mdx",0,1,0.01,100),
+(4055,"Bloodsurge Impact","spells\warrior_bloodsurge.mdx",0,1,0.01,100),
+(4056,"Safeguard State","spells\warrior_safeguard.mdx",0,1,0.01,100),
+(4057,"Shockwave Impact","spells\warrior_shockwave_impact.mdx",0,1,0.01,100),
+(4058,"Shockwave Area","spells\warrior_shockwave_area.mdx",0,1,0.01,100),
+(4059,"Bladestorm State","spells\warrior_bladestorm.mdx",0,1,0.01,100),
+(4060,"Clayton Test","spells\DeathAndDecay_Area_Runes.m2",1,1,0.01,100),
+(4061,"Arcane Bomb - 1.50","spells\arcanebomb_missle.mdx",1,1.5,0.01,100),
+(4062,"ShadowStrike Impact Chest (3.00)","Spells\ShadowStrike_Impact_Chest.mdx",1,3,0.01,100),
+(4063,"Ballista Bow","world\generic\human\passive doodads\ballistaruins\ballistabow01.mdx",0,1,0.01,100),
+(4064,"Ballista Frame","world\generic\human\passive doodads\ballistaruins\ballistaframe01.mdx",0,1,0.01,100),
+(4065,"Ballista Missile","world\generic\human\passive doodads\ballistaruins\ballistamissle01.mdx",0,1,0.01,100),
+(4066,"Ballista Wheel","world\generic\human\passive doodads\ballistaruins\ballistawheel01.mdx",0,1,0.01,100),
+(4067,"Missile: Sonic Boom","Spells\SonicBoom_Missile_High.mdx",1,1,0.01,100),
+(4068,"Missile: Sonic Boom","Spells\SonicBoom_Missile_High.mdx",1,1.5,0.01,100),
+(4069,"Sonic Impact DD Uber Chest","spell\sonicboom_impactdd_uber_chest.mdx",0,0.15,0.01,100),
+(4070,"Summon Precast Hand","Spells\Summon_PreCast_Hand.mdx",1,5,0.01,100),
+(4071,"Banish (White)","spells\banish_chest_white.mdx",1,0.2,0.01,100),
+(4072,"White Glow","spells\enchantments\whiteglow_high.mdx",0,5,0.01,100),
+(4074,"Missile: Sonic Boom","spells\sonicboom_missile_high.mdx",1,0.25,0.01,100),
+(4094,"SunfireGlow_High","spells\enchantments\sunfireglow_high.mdx",0,1,0.01,100),
+(4095,"Explosion (New)","spells\canon_impact_dust.mdx",0,2,0.01,100),
+(4096,"Missile: Nightbane Bone (Large)","spells\nightbane_bone_missile.mdx",1,2,0.01,100),
+(4097,"Explosion (New) (Dest_Tower_Impact)","spells\dest_tower_impact_fx.mdx",0,1,0.01,100),
+(4098,"Quest - Destroyed Tower Pieces","world\expansion02\doodads\generic\destructible\guardtower\dest_tower_damaged.mdx",0,0.5,0.01,100),
+(4099,"Sinkhole","world\expansion02\doodads\generic\nerubian\pits\nb_smallsinkhole01.mdx",0,1,0.01,100),
+(4100,"Shredder Smoke","world\generic\passivedoodads\particleemitters\blacksmith_smoke.mdx",0,1,0.01,100),
+(4101,"Creature - Smoldering State Base","spells\nefarian_state_base.mdx",1,0.25,0.01,100),
+(4102,"Creature - Smoldering State Base","spells\nefarian_state_base.mdx",1,0.4,0.01,100),
+(4103,"Creature - Smoldering State Base","spells\nefarian_state_base.mdx",1,0.05,0.01,100),
+(4104,"Shot: Thori'dal","spells\starshards_impact_base.mdx",1,1,0.01,100),
+(4105,"TEST - Effect","particles\bubbles.mdx",1,1,0.01,100),
+(4106,"Bind Impact Base","Spells\Bind_Impact_Base.mdx",0,0.3,0.01,100),
+(4107,"Banish (Blue)","spells\banish_chest_blue.mdx",1,3,0.01,100),
+(4108,"Flames (Stratholme Small)","world\lordaeron\stratholme\passivedoodads\fx\stratholmefiresmokeembers.mdx",1,1.5,0.01,100),
+(4109,"Gift of the water Spirit Base imapct","spells\giftwaterspirit_impact_base.mdx",1,2,0.01,100),
+(4110,"Smoke - Smoldering Geist","spells\infernal_smoke_rec.mdx",0,0.2,0.01,100),
+(4111,"Shredder Smoke Small","world\generic\passivedoodads\particleemitters\blacksmith_smoke.mdx",0,0.25,0.01,100),
+(4112,"Earth Burrow Cast","Spells\BurrowEarth_Brown_Missile.mdx",0.5,0.5,0.01,100),
+(4113,"Flames","world\lordaeron\stratholme\passivedoodads\fx\stratholmefiresmokeembers.mdx",1,3,0.01,100),
+(4114,"Banish (Purple)","spells\banish_chest_purple.mdx",1,0.25,0.01,100),
+(4115,"Earth Burrow Cast","Spells\BurrowEarth_Brown_Missile.mdx",0.25,0.25,0.01,100),
+(4116,"Missile: Harpoon (Fire)","spells\harpoon_fire_missile.mdx",1,1,0.01,100),
+(4117,"Item - Pet Toy - Fetch Ball (red)","world\generic\human\passive doodads\clothing\clothyarnballred.mdx",1,1.5,1,1),
+(4118,"Missile: Grizzly Hills Boulder","World\Expansion02\Doodads\GrizzlyHills\Rocks\GrizzlyHills_Boulder01.mdx",1,1,0.01,100),
+(4119,"Missile: Grizzly Hills Boulder (x2)","World\Expansion02\Doodads\GrizzlyHills\Rocks\GrizzlyHills_Boulder01.mdx",1,2.25,0.01,100),
+(4120,"Dust Stomp Base","Spells\DustCloud_Land.mdx",1,2,0.01,100),
+(4121,"Faerie Fire Head State","Spells\FaerieFire.mdx",1,1,0.01,100),
+(4122,"Arcane Bomb - 4.00","spells\arcanebomb_missle.mdx",1,4,0.01,100),
+(4123,"Faerie Fire Head State No Glow","Spells\FaerieFire_NoGlow.mdx",1,1.75,0.01,100),
+(4124,"Faerie Fire Impact No Glow","Spells\FaerieFire_NoGlow_Impact.mdx",0,1.75,0.01,100),
+(4125,"Item - Offhand Rose Bouquet","item\objectcomponents\weapon\offhand_rosebouquet_a_01.mdx",0,1,0.01,100),
+(4126,"LowPolyFire","world\generic\pvp\fires\lowpolyfire.mdx",1,1,0.01,100),
+(4127,"Holy ImpactDd Uber Chest (3.00)","spells\holy_impactdd_uber_chest.mdx",0,3,0.01,100),
+(4128,"Sparkle Trail","spells\sparktrail.mdx",0,1,0.01,100),
+(4129,"Sparkle","spells\enchantments\sparkle_a.mdx",0,1,0.01,100),
+(4130,"Ember Flame State","World\Lordaeron\Stratholme\PassiveDoodads\FX\StratholmeFireSmokeEmberM.mdx",1,0.5,0.01,100),
+(4131,"LightningBolt Impact Chest","Spells\LightningBolt_Impact_Chest.mdx",1,2,0.01,100),
+(4132,"LightningBolt Impact Chest 4.00","Spells\LightningBolt_Impact_Chest.mdx",1,4,0.01,100),
+(4133,"Bomb Explosion (x8)","Spells\Bomb_ExplosionA.mdx",1,8,0.01,100),
+(4134,"MoltenBlast Impact Chest (5x)","Spells\MoltenBlast_Impact_Chest.mdx",0,5,0.01,100),
+(4135,"Blue Fire Ring","World\Expansion02\Doodads\ZulDrak\LightFX\Zuldrak_Blue_Fire.mdx",0,0.2,0.01,100),
+(4136,"Quest - Gnome Overload","spells\Goblin_Weather_Machine_Lightning.mdx",1,2,0.01,100),
+(4137,"Bomb Explosion (x8)","Spells\Bomb_ExplosionA.mdx",1,8,0.01,100),
+(4138,"Object: Fishing Pole","World\Azeroth\BootyBay\PassiveDoodad\FishingPoles\FishingPole02.mdx",0,1,0.01,100),
+(4139,"Floating Mine Pulse (5x)","spells\floatingminepulse.mdx",1,5,0.01,100),
+(4140,"Floating Mine (5x)","spells\floatingmine.mdx",1,5,0.01,100),
+(4141,"Missile: Wild Carrot","World\SkillActivated\TradeskillNodes\Bush_Sansam.mdx",0,1,0.01,100),
+(4142,"Arcane Bomb - 2.75","spells\arcanebomb_missle.mdx",1,2.75,0.01,100),
+(4143,"Goblin RC Car (Red)","world\generic\goblin\passivedoodads\goblinrocketcarts\goblinrocketcart_rc.mdx",0,1,0.01,100),
+(4144,"Stratholme Fire Smoke Ember (0.3)","World\Lordaeron\Stratholme\PassiveDoodads\FX\StratholmeFireSmokeEmberM.mdx",1,0.3,0.01,100),
+(4145,"Arcane Bomb - 3.0","spells\arcanebomb_missle.mdx",1,3,0.01,100),
+(4146,"Ruby Acorn - EntanglingRoots State","Spells\EntanglingRoots_State.mdx",1,3,0.01,100),
+(4147,"Stratholme Fire Smoke Ember (0.5)","World\Lordaeron\Stratholme\PassiveDoodads\FX\StratholmeFireSmokeEmberM.mdx",1,0.5,0.01,100),
+(4148,"Stratholme Fire Smoke Ember (0.15)","World\Lordaeron\Stratholme\PassiveDoodads\FX\StratholmeFireSmokeEmberM.mdx",1,0.15,0.01,100),
+(4149,"Bomb Explosion - (0.25)","Spells\Bomb_ExplosionA.mdx",1,0.25,0.01,100),
+(4150,"DustCloud Land (0.5)","Spells\DustCloud_Land.mdx",1,0.5,0.01,100),
+(4151,"DivineAegis Low Base","spells\arcaneforceshield_yellow.mdx",1,1,0.01,100),
+(4152,"Missile: Rocket (X-Large)","spells\missle_rocket.mdx",0,6,0.01,100),
+(4153,"Goblin Rocket Cart (0.2)","world\generic\goblin\passivedoodads\goblinrocketcarts\goblinrocketcart_rc.mdx",0,0.2,0.01,100),
+(4154,"Immolate State (4.0)","spells\immolate_state.mdx",1,4,0.01,100),
+(4155,"Flame Patch (0.20x)","spells\archimonde_fire.mdx",1,0.2,0.01,100),
+(4156,"Goblin Control Panel (0.1)","world\generic\goblin\passivedoodads\controlpanel\goblincontrolpanel.mdx",0,0.1,0.01,100),
+(4157,"Fel Seeping Gaseous Nova","spells\seepinggaseous_fel_nova.mdx",1,0.7,0.01,100),
+(4158,"Ground Rupture","spells\ground_rupture.mdx",1,0.5,0.01,100),
+(4159,"Earth Burrow Cast","Spells\BurrowEarth_Brown_Missile.mdx",1,0.5,0.01,100),
+(4160,"Object - Thel'zan's Phylactery","world\generic\passivedoodads\furniture\containers\lichcontainer01.mdx",0,1,0.01,100),
+(4161,"Canon_Impact_Dust Impact (Chest)","spells\Canon_Impact_Dust.mdx",1,3,0.01,100),
+(4162,"Tower Impact","spells\Dest_Tower_Impact_FX.mdx",1,2,0.01,100),
+(4163,"Quest - Arcane Barrage Cosmetic","spells\Mage_ArcaneBarrage_Missile.mdx",0,1,0.01,100),
+(4164,"Portal: Boss Fire","spells\Creature_SpellPortalLarge_Red.mdx",1.9,1.9,0.01,100),
+(4165,"Ghost_state (Green) (0.3)","spells\greenghost_state.mdx",1,0.3,0.01,100),
+(4166,"Death and Decay Ground Runes","Spells\DeathAndDecay_Area_Runes.mdx",1,0.1,0.01,100),
+(4167,"Missile: Shadowbolt (No Ribbon)","spells\ShadowBolt_Missile_NoRibbon.mdx",1,1,0.01,100),
+(4168,"Hellfire Raid Dust Impact Base","spells\HellfireRaid_Dust_Impact_Base.mdx",1,1.5,0.01,100),
+(4169,"Flame Breath (x0.5)","Spells\FlameBreath.mdx",1,0.5,0.01,100),
+(4170,"LightningStorm Cloud Low","Spells\LightningStorm_CloudLow_State.mdx",0,1,0.01,100),
+(4171,"Swamp Gas (White)","Creature\Cloud\CloudSwampGas_Shadowmoon_White.mdx",0,1,0.01,100),
+(4172,"Cloud: White","spells\whiteradiationfog.mdx",1,0.5,0.01,100),
+(4173,"Quest - Frostmourne Encased","spells\mage_deepfreeze.mdx",0,1,0.01,100),
+(4174,"Deep Freeze","spells\mage_deepfreeze.mdx",0,1.5,0.01,100),
+(4175,"Shadow Missile","Spells\ShadowMissile.mdx",3,8,0.01,100),
+(4176,"Magic Impact Chest","spells\magic_impact_chest.mdx",1,1,0.01,100),
+(4177,"Caltrop (0.1)","World\Outland\PassiveDoodads\Caltrop01.mdx",0.1,0.1,0.01,100),
+(4178,"Missile: Pine Cone (0.7)","world\kalimdor\mulgore\passivedoodads\pinecone\pinecone.mdx",1,0.7,0.01,100),
+(4179,"Ground Rupture","spells\ground_rupture.mdx",1,0.5,0.01,100),
+(4180,"Acid Breath (0.2x)","Spells\AcidBreath.mdx",1,0.2,0.01,100),
+(4181,"Arcane Bomb","spells\arcanebomb_missle.mdx",1,1.5,0.01,100),
+(4182,"Fire DOT State Chest","Spells\Fire_DOT_State_Chest.mdx",1,3,0.01,100),
+(4183,"Slow Impact Base","Spells\Slow_Impact_Base.mdx",1,3,0.01,100),
+(4184,"Fire Reflect State Chest","spells\firereflect_state_chest.mdx",1,0.5,0.01,100),
+(4185,"Shadowstep Cast Base (1.00)","spells\shadowsteps_fx.mdx",0,1,0.01,100),
+(4186,"RadiationRed State (x3)","Spells\RedGhost_state.mdx",1,3,0.01,100),
+(4187,"Ghost_state (Green, x0.1)","spells\greenghost_state.mdx",1,0.1,0.01,100),
+(4188,"Ghost_state (Red, x0.1)","spells\redghost_state.mdx",1,0.1,0.01,100),
+(4189,"BOTM - Honey Brew - Bee Aura","Spells\GiantInsectSwarm_State_Ground.mdx",1,0.1,0.01,100),
+(4190,"Renew Base (x 0.10)","Spells\Renew_Base.mdx",0,0.1,0.01,100),
+(4191,"Brew Bubble State","creature\waterbubblecreature\waterbubblecreature.mdx",1,0.5,0.01,100),
+(4192,"BOTM - Bubble Brew - Bubble Breath Aura","particles\bubbles.mdx",0,1,0.01,100),
+(4193,"Missile: Boulder (4x)","Spells\Boulder_Missile.mdx",0,4,0.01,100),
+(4194,"Missile: Ziggurat Spirit (0.50)","spells\zig_missile.mdx",1,0.5,0.01,100),
+(4195,"Ice Spike","Spells\IceSpike_Impact_Base.mdx",0,1,0.01,100),
+(4196,"Ice Spike","Spells\IceSpike_Impact_Base.mdx",0,1,0.01,100),
+(4197,"Penance Missile","spells\priest_pennance_missile.mdx",0,1,0.01,100),
+(4198,"Dispersion Base","spells\priest_dispersion.mdx",1,1,0.01,100),
+(4199,"Force Shield Arcane (Green)","Spells\ArcaneForceShield_Green.mdx",1,1.2,0.01,100),
+(4200,"Visual Test Cube","spells\unitcube.mdx",1,1,0.01,100),
+(4201,"MoonBeam State Base (Pat's Copyl)","Spells\MoonBeam_Impact_Base.mdx",1,1,0.01,100),
+(4202,"Ice Lance Missile - 0.50","spells\ice_lance_missile.mdx",1,0.5,0.01,100),
+(4203,"LightningStorm Cloud Low State","Spells\LightningStorm_CloudLow_State.mdx",1,0.5,0.01,100),
+(4204,"LightningStorm Cloud Low State","Spells\LightningStorm_CloudLow_State.mdx",1,0.1,0.01,100),
+(4205,"MoonBeam State Base (Small)","Spells\MoonBeam_Impact_Base.mdx",1,0.6,0.01,100),
+(4206,"Hurricane Low","Spells\LightningStorm_CloudLow_State.mdx",0,0.05,0.01,100),
+(4207,"GreenFlame_Low","spells\enchantments\greenflame_low.mdx",0,4,0.01,100),
+(4208,"GreenFlame_Low","spells\enchantments\greenflame_low.mdx",0,6,0.01,100),
+(4209,"Force Shield Fire (Red)","Spells\fireforceshield_red.mdx",1,4,0.01,100),
+(4210,"Fel FlamestrikeSmall Impact Base","spells\fel_flamestrikesmall_impact_base.mdx",1,1,0.01,100),
+(4211,"Fel Flame Patch - 0.15","spells\fel_archimonde_fire.mdx",1,0.15,0.01,100),
+(4212,"Invisibility Impact Chest","Spells\Invisibility_Impact_Chest.mdx",1,4,0.01,100),
+(4213,"Banish (Blue) - 0.5","spells\banish_chest_blue.mdx",1,0.5,0.01,100),
+(4214,"Banish (Red) 0.50","spells\bloodbolt_chest.mdx",1,0.5,0.01,100),
+(4215,"SunfireGlow_High (8.00)","spells\enchantments\sunfireglow_high.mdx",0,8,0.01,100),
+(4216,"Missile: Shadowbolt (No Ribbon) (4.00)","spells\ShadowBolt_Missile_NoRibbon.mdx",1,4,0.01,100),
+(4217,"CallLightning Impact (Red)","spells\flamestrike_impactdd_med_base.mdx",1,0.38,0.01,100),
+(4218,"Earth Burrow Cast (0.5)","Spells\BurrowEarth_Brown_Missile.mdx",1,0.5,0.01,100),
+(4219,"Throw Bone","World\Generic\PassiveDoodads\Furniture\Refuse\Bone01.mdx",0,1.5,0.01,100),
+(4220,"Divine Hymn Birth Impact Base","spells\priest_divinehymn.mdx",1,1,0.01,100),
+(4221,"GreenGlow_High","spells\enchantments\greenglow_high.mdx",1,1,0.01,100),
+(4222,"Sandworm Base","\World\Kalimdor\Silithus\ActiveDoodads\SandWorm\SandWorm_RockBase.mdx",1,1,0.01,100),
+(4223,"Earth Burrow Cast","Spells\BurrowEarth_Brown_Missile.mdx",0.35,0.35,0.01,100),
+(4224,"Smoke - Infernal","spells\infernal_smoke_rec.mdx",2,2,0.01,100),
+(4225,"LightningStorm Cloud Low State","Spells\LightningStorm_CloudLow_State.mdx",1,0.05,0.01,100),
+(4226,"Item - Polearm - C","\Item\ObjectComponents\Weapon\Polearm_2H_Bladed_C_01.mdx",1,1,0.01,100),
+(4227,"Fireball_Blue_Missile_High","spells\fireball_blue_missile_high.mdx",0,1,0.01,100),
+(4228,"Flare, Horde (Red)","world\goober\g_flarehorde.mdx",1,1,0.01,100),
+(4229,"Arcane Bomb - 6.00","spells\arcanebomb_missle.mdx",1,6,0.01,100),
+(4230,"Ice Spike","Spells\IceSpike_Impact_Base.mdx",0,2,0.01,100),
+(4231,"ProtectionFromFire Chest (Large)","Spells\ProtectionFromFire_Chest.mdx",0,3,0.01,100),
+(4232,"WaterShield State (Low)","spells\watershield_state_base_s.mdx",1,1.2,0.01,100),
+(4233,"Missile: Wave (Water)","spells\missile_wave_water.m2",1,1,0.01,100),
+(4234,"Missile: Apple","World\Generic\PassiveDoodads\Fruits\Fruit_Apple.mdx",1,0.5,0.01,100),
+(4235,"Gas Breath (0.5)","spells\acidcloudbreath.mdx",0,0.5,0.01,100),
+(4236,"Ice Precast Low Hand","Spells\Ice_Precast_Low_Hand.mdx",1,2,0.01,100),
+(4237,"Ice Cast Low Hand","Spells\Ice_Precast_Low_Hand.mdx",1,2,0.01,100),
+(4238,"Ritual Frost PreCast Base","spells\Ritual_Frost_PreCast_Base.mdx",1,1,0.01,100),
+(4239,"Ice Spike Impact","Spells\IceSpike_Impact_New.mdx",0,1,0.01,100),
+(4240,"Ice Spike Impact","Spells\IceSpike_Impact_New.mdx",0,1.5,0.01,100),
+(4241,"Shadow Fissure Base","Spells\Shadow_Fissure_Base.mdx",1,1,0.01,100),
+(4242,"Fireball Missile High (2.5)","spells\fireball_missile_high.mdx",0,2.5,0.01,100),
+(4243,"Slow Impact Base","Spells\Slow_Impact_Base.mdx",1,2,0.01,100),
+(4244,"DustCloud Land (Copy)","Spells\DustCloud_Land.mdx",1,0.3,0.01,100),
+(4245,"LightningShield State (Low)","spells\lightningshield_state_base_s.mdx",0,1.4,0.01,100),
+(4246,"Snowball Powdery State","spells\SnowballPowdery_Impact_Base.mdx",1,0.5,0.01,100),
+(4247,"Missile: DeathCoil Missile (Death Knight)","Spells\DeathKnight_DeathCoil_Missile.mdx",1,1,0.01,100),
+(4248,"Missile: Crypt Scarab","creature\cryptscarab\crypt_scarab.mdx",1,1,0.01,100),
+(4249,"Raven Bolt","Spells\Crow_Baked.mdx",0,1,0.01,100),
+(4250,"LightningStorm Cloud State","Spells\LightningStorm_Cloud_State.mdx",1,2,0.01,100),
+(4251,"Tranquility Area","spells\tranquility_area.mdx",1,0.5,0.01,100),
+(4252,"Tranquility Area","spells\tranquility_area.mdx",1,0.5,0.01,100),
+(4253,"BloodBoil_Impact_Chest (Death Knight)","SPELLS\DeathKnight_BloodBoil.mdx",1,2,0.01,100),
+(4254,"Blood Presence Impact","SPELLS\DeathKnight_BloodPresence.mdx",1,1,0.01,100),
+(4255,"Blood Strike (Slash)","SPELLS\DeathKnight_BloodStrike.mdx",1,1,0.01,100),
+(4256,"Blood Tap","SPELLS\DeathKnight_BloodTap.mdx",0,1,0.01,100),
+(4257,"Death Pact Impact (Caster)","SPELLS\DeathKnight_DeathPactCaster.mdx",1,1,0.01,100),
+(4258,"Death Pact Impact (Target)","SPELLS\DeathKnight_DeathPactTarget.mdx",1,1.3,0.01,100),
+(4259,"Frost Presence","SPELLS\DeathKnight_FrostPresence.mdx",1,1,0.01,100),
+(4260,"Corpse Explosion Impact Dest","SPELLS\DeathKnight_CorpseExplosion.mdx",1,2,0.01,100),
+(4261,"Icebound Fortitude","SPELLS\DeathKnight_IceboundFortitude.mdx",1,1,0.01,100),
+(4262,"Icy Touch Impact","SPELLS\DeathKnight_IcyTouch.mdx",1,1,0.01,100),
+(4263,"Mind Freeze","SPELLS\DeathKnight_MindFreeze.mdx",1,1,0.01,100),
+(4264,"Strangulate Impact Head","SPELLS\DeathKnight_Strangulate.mdx",1,1,0.01,100),
+(4265,"Deathcharger Impact Base","SPELLS\DeathKnight_SummonWarHorse_Impact_Base.mdx",1,1,0.01,100),
+(4266,"Unholy Presence Impact Head","SPELLS\DeathKnight_UnholyPresence.mdx",1,1,0.01,100),
+(4267,"Hungering Cold State","SPELLS\IceSpike_Impact_New.mdx",1,1,0.01,100),
+(4268,"Shockwave","SPELLS\Warrior_ShockWave_Area.mdx",1,1,0.01,100),
+(4269,"Shield: Arcane Force (Dark)","Spells\ArcaneForceShield_Dark.mdx",1,0.5,0.01,100),
+(4270,"DeathCoil Impact Chest (Death Knight)","spells\DeathCoil_Impact_Chest.mdx",1,1,0.01,100),
+(4271,"Shield: Arcane Force (Dark)","Spells\ArcaneForceShield_Dark.mdx",1,1.5,0.01,100),
+(4273,"Blue Fire Ring","World\Expansion02\Doodads\ZulDrak\LightFX\Zuldrak_Blue_Fire.mdx",0,0.3,0.01,100),
+(4274,"Arcane Reflect State Chest","spells\ArcaneReflect_State_Chest.mdx",1,4,0.01,100),
+(4275,"HolyWordShield State Chest (0.20)","Spells\HolyWordShield_State_Chest.mdx",0,0.2,0.01,100),
+(4276,"Oil Breath (Liquid)","spells\OilLiquidBreath.mdx",1,1,0.01,100),
+(4277,"LightningBolt Missile (2.00)","Spells\LightningBolt_Missile.mdx",1,2,0.01,100),
+(4278,"Lightning Nova","spells\lightning_ring_nova.mdx",1,0.75,0.01,100),
+(4279,"Missile: Orange Crystal","world\expansion01\doodads\silvermyst\crystals\silvermystcrystalsmall01_orange.mdx",1,0.5,0.01,100),
+(4280,"Sword Impale Chest","Item\ObjectComponents\Weapon\Sword_1H_Draenei_A_01.mdx",0,1,0.01,100),
+(4281,"Missile: Rocket (Medium)","spells\missle_rocket.mdx",0,2,0.01,100),
+(4282,"Ghoul Explode","SPELLS\DeathKnight_Ghoul_Explode.mdx",1,1,0.01,100),
+(4283,"Red Glow High 5.0","Spells\Enchantments\RedGlow_High.mdx",1,5,0.01,100),
+(4284,"RedGlow_High (5.0)","spells\enchantments\redglow_high.mdx",1,5,0.01,100),
+(4285,"Lightning Nova (x3)","spells\lightning_ring_nova.mdx",1,3,0.01,100),
+(4286,"Decimate Missile","spells\decimate_missile.mdx",1,1,0.01,100),
+(4287,"Arcane Missile Lvl 1 - 2.00","Spells\Arcane_Missile_Lvl1.mdx",0,2,0.01,100),
+(4288,"Magic Cast Hand","Spells\Magic_Cast_Hand.mdx",1,20,0.01,100),
+(4289,"Holy Missile Low - 2.00","Spells\Holy_Missile_Low.mdx",1,2,0.01,100),
+(4290,"BloodLust State Hand (3.0)","Spells\BloodLust_State_Hand.mdx",1,3,0.01,100),
+(4291,"BloodLust State Hand (5.0)","Spells\BloodLust_State_Hand.mdx",1,5,0.01,100),
+(4292,"RedGlow_High (3.0)","spells\enchantments\redglow_high.mdx",1,3,0.01,100),
+(4293,"Magic PreCast Hand","Spells\Magic_PreCast_Hand.mdx",1,3,0.01,100),
+(4294,"Missile: Black Shot","spells\blackshot_missile.mdx",1,20,0.01,100),
+(4295,"Banish (Dark)","spells\Banish_Chest_Dark.mdx",1,4,0.01,100),
+(4296,"Shadow Nova Cast - (3.00)","spells\shadow_nova_area.mdx",1,3,0.01,100),
+(4297,"BloodLust State Hand (2.0)","Spells\BloodLust_State_Hand.mdx",1,2,0.01,100),
+(4298,"Eradication State Hand","spells\eradication_hand.mdx",0,2,0.01,100),
+(4299,"Frost Trap Aura","spells\frosttrap_aura.mdx",1,1.2,0.01,100),
+(4300,"Form Shadow Precast","Spells\Shadow_Form_Precast.mdx",1,1.5,0.01,100),
+(4301,"Seeping Gaseous Nova","spells\seepinggaseous_nova.mdx",1,1,0.01,100),
+(4302,"BloodyExplosion (0.5)","Spells\BloodyExplosion.mdx",1,0.5,0.01,100),
+(4303,"Force Shield Fire (Red)","Spells\fireforceshield_red.mdx",1,0.75,0.01,100),
+(4304,"Spellbreaker Impact Chest","Spells\Zangarmarsh_Arcane_Impact.mdx",1,4,0.01,100),
+(4305,"Web State","Spells\Web_State.mdx",0,3,0.01,100),
+(4306,"Arcane Fire Weapon (4.00)","Spells\Arcane_Fire_Weapon_Effect.mdx",1,4,0.01,100),
+(4307,"Low Poly Blue Fire","Spells\LowPolyFireAnim_Blue.mdx",1,0.5,0.01,100),
+(4308,"Smoking Corpse State (Subtle)","world\expansion02\doodads\howlingfjord\firefx\burntstonetreesmoke_vfx.mdx",1,0.1,0.01,100),
+(4309,"Shadowflame Cast Head","spells\shadowflame_caster.mdx",0,1,0.01,100),
+(4310,"ShadowFlame PreCast","spells\shadowflame_cast_hand.mdx",0,1,0.01,100),
+(4311,"Acid Cloud Breath Smoke (0.5)","spells\acidcloudbreath_groundsmoke.mdx",1,0.5,0.01,100),
+(4312,"Nature Precast Hand","Spells\Nature_PreCast_Low_Hand.mdx",1,20,0.01,100),
+(4313,"Fire Precast Hand Med","Spells\Fire_Precast_Med_Hand.mdx",0,20,0.01,100),
+(4314,"Ghost_state (Green) (0.5)","spells\greenghost_state.mdx",1,0.5,0.01,100),
+(4315,"Magic PreCast Hand","Spells\Magic_PreCast_Hand.mdx",1,20,0.01,100),
+(4316,"Arcane Barrage Missile - 2.00","spells\mage_arcanebarrage_missile.mdx",1,2,0.01,100),
+(4317,"Magic Cast Hand","Spells\Magic_Cast_Hand.mdx",1,3,0.01,100),
+(4318,"Decimate","spells\decimate_missile.mdx",1,1,0.01,100),
+(4319,"Decimate Impact Chest","spells\decimate_impact_chest.mdx",1,1,0.01,100),
+(4320,"Zangarmarsh Arcane Impact","spells\zangarmarsh_arcane_impact.mdx",1,4,0.01,100),
+(4321,"ShadowFlame State Base","spells\shadowflame_state.mdx",1,1,0.01,100),
+(4322,"ShadowFlame Impact","spells\shadowflame_impact.mdx",0,1,0.01,100),
+(4323,"LoveStruck Chest","spells\lovestruck_state_chest.mdx",0,1.3,0.01,100),
+(4325,"Sandfern State - Base","World\Expansion02\Doodads\Scholazar\Bushes\Sholazar_Fern_QuestOnly.mdx",1,0.6,0.01,100),
+(4326,"Decimate State Effect","spells\decimate_state.mdx",0,3,0.01,100),
+(4327,"Decimate State Effect","spells\decimate_state.mdx",0,1,0.01,100),
+(4328,"Missile: Basic Bullet","Item\ObjectComponents\Ammo\BulletFlight_01.mdx",1,1,0.01,100),
+(4329,"Teleport","Spells\Teleport.mdx",1,0.5,0.01,100),
+(4330,"Object - Sled (0.25)","world\expansion02\doodads\wintertauren\wt_sled_02.mdx",0,0.25,0.01,100),
+(4331,"Wave: Nature","spells\Missile_Wave_Nature.mdx",1,1,0.01,100),
+(4332,"Bomb","spells\missile_bomb.mdx",1,1.5,0.01,100),
+(4333,"Decimate State Effect","spells\decimate_state.mdx",0,12,0.01,100),
+(4334,"Decimate Impact Chest","spells\decimate_impact_chest.mdx",1,3,0.01,100),
+(4335,"Nature Form","spells\nature_form_precast.mdx",0,1,0.01,100),
+(4336,"Nature Form (x2)","spells\nature_form_precast.mdx",0,2,0.01,100),
+(4337,"ShadowStrike Impact Chest","Spells\ShadowStrike_Impact_Chest.mdx",1,5,0.01,100),
+(4338,"EarthShock Impact Chest (x2)","Spells\EarthShock_Impact_Chest.mdx",1,2,0.01,100),
+(4339,"Sparkle","spells\enchantments\sparkle_a.mdx",0,10,0.01,100),
+(4340,"Shot: Chimera Shot","spells\chimerashot_missile.mdx",1,1,0.01,100),
+(4341,"Chimera Shot Impact","spells\chimerashot_impact.mdx",0,1,0.01,100),
+(4342,"Zangarmarsh Arcane Impact","spells\zangarmarsh_arcane_impact.mdx",1,6,0.01,100),
+(4343,"Quest - Raise Dead","spells\demoniccirclesummon_base.mdx",0,1,0.01,100),
+(4344,"Lightning Cast Hand","Spells\Lightning_Cast_Hand.mdx",0,0.5,0.01,100),
+(4345,"ThunderClap Cast Base","Spells\ThunderClap_Cast_Base.mdx",0,0.5,0.01,100),
+(4346,"ThunderClap Cast Base","Spells\ThunderClap_Cast_Base.mdx",0,0.9,0.01,100),
+(4347,"Icebound Fortitude","SPELLS\DeathKnight_IceboundFortitude.mdx",1,1.5,0.01,100),
+(4348,"Incinerate Missile (Blue)","spells\incinerateblue_low_base.mdx",1,2,0.01,100),
+(4349,"Snowball Powder Impact","spells\SnowballPowdery_Impact_Base.mdx",1,2,0.01,100),
+(4350,"Meteor Impact Base Red","spells\Meteor_Impact_Base_Red.mdx",1,0.5,0.01,100),
+(4351,"Missile: GooBolt (2.00)","Spells\GooBolt_Missile_Low.mdx",0,2,0.01,100),
+(4352,"Sap State Head","Spells\Sap_State_Head.mdx",1,1.5,0.01,100),
+(4353,"Shield: Arcane Force (Yellow)","Spells\ArcaneForceShield_Yellow.mdx",1,1.25,0.01,100),
+(4354,"Banish (Yellow)","spells\banish_chest_yellow.mdx",1,0.2,0.01,100),
+(4355,"Air Rift","world\environment\doodad\generaldoodads\elementalrifts\airrift.mdx",1,2,0.01,100),
+(4356,"UDE PVP Flag","world\generic\pvp\upperdeck\ud_pvptaunt.mdx",1,2,0.01,100),
+(4357,"Camouflage Head","spells\camouflage_head.mdx",0,1,0.01,100),
+(4358,"Camouflage Chest","spells\camouflage_impact.mdx",0,1,0.01,100),
+(4359,"Camouflage Hands","spells\camouflage_hands.mdx",0,1,0.01,100),
+(4360,"Camouflage Base","spells\camouflage_base.mdx",0,1,0.01,100),
+(4361,"Chimera Shot Missile","spells\chimerashot_missile.mdx",0,1,0.01,100),
+(4362,"Archimonde Fire","spells\archimonde_fire.mdx",1,1.5,0.01,100),
+(4363,"ThunderClap Cast Base","Spells\ThunderClap_Cast_Base.mdx",0,2,0.01,100),
+(4364,"ThunderClap Cast Base","Spells\ThunderClap_Cast_Base.mdx",0,3,0.01,100),
+(4365,"Quest - Disintegrate Base","spells\enchantments\disintigrateglow_high.mdx",0,1,0.01,100),
+(4366,"Quest - Soulfrost Base","spells\enchantments\soulfrostglow_high.mdx",0,1,0.01,100),
+(4367,"Quest - Executioner Base","spells\enchantments\executionerglow_high.mdx",0,1,0.01,100),
+(4368,"Quest - Spellsurge Base","spells\enchantments\spellsurgeglow_high.mdx",0,1,0.01,100),
+(4369,"Arcane Bomb","spells\arcanebomb_missle.mdx",1,0.75,0.01,100),
+(4370,"Item - Bottle (Green) ","spells\tankardb_spellobject.mdx",1,1,0.01,100),
+(4371,"Missile: Trap","World\Goober\G_BearTrapReverse.mdx",1,1.3,0.01,100),
+(4372,"EarthShock Impact Chest (x3)","Spells\EarthShock_Impact_Chest.mdx",1,3,0.01,100),
+(4373,"Portal: Boss Fire","spells\Creature_SpellPortalLarge_Red.mdx",3,3,0.01,100),
+(4374,"Spell Surge High","Spells\Enchantments\SpellSurgeGlow_High.mdx",1,10,0.01,100),
+(4375,"Missile: Banana Bunch","World\Generic\PassiveDoodads\Fruits\Fruit_BananaBunch.mdx",1,1.6,0.01,100),
+(4376,"Missile: Orange","World\Generic\PassiveDoodads\Fruits\Fruit_Orange.mdx",1,2,0.01,100),
+(4377,"Missile: Pear","World\Generic\PassiveDoodads\Fruits\Fruit_Pear.mdx",1,2,0.01,100),
+(4378,"Red Dust Cloud","spells\RedDustCloud.mdx",1,3,0.01,100),
+(4379,"Portal: Large Nature","Spells\Creature_SpellPortalLarge_Green.mdx",1,1,0.01,100),
+(4380,"Nature Form (x4)","spells\nature_form_precast.mdx",0,4,0.01,100),
+(4381,"Frost Slash ","Spells\FrostSlash_Base_Cast.mdx",1,0.5,0.01,100),
+(4382,"Cyclone - Wind - Blue","Spells\Cyclone_Caster_State.mdx",0,0.8,0.01,100),
+(4383,"Frost Slash","Spells\FrostSlash_Base_Cast.mdx",1,0.1,0.01,100),
+(4384,"Summon Ghouls","spells\summonghouls.mdx",0,1,0.01,100),
+(4385,"Dream Lash (Green Portal)","Spells\Creature_SpellPortal_Green.mdx",0,0.5,0.01,100),
+(4386,"BlueGreenFog Missile","Spells\LargeBlueGreenRadiationFog.mdx",0,0.5,0.01,100),
+(4387,"Blue Green Mist","Spells\LargeBlueGreenRadiationFog.mdx",0,0.3,0.01,100),
+(4388,"Cobra Strikes Impact Head","spells\cobrastrikes_impact.mdx",0,2,0.01,100),
+(4389,"Green Radiation Fog (Blue/Green - Magic)","SPELLS\LargeBlueGreenRadiationFog.mdx",1,1.3,0.01,100),
+(4390,"Hunter's Mark State Head","Spells\HuntersMark_Impact_Head.mdx",1,4,0.01,100),
+(4391,"Cripple State Base","Spells\Cripple_State_Base.mdx",1,1.5,0.01,100),
+(4392,"HARDCODED Achievement Base","spells\Achievement_OnRoot.mdx",1,1,0.01,100),
+(4393,"Hellfire Area Base (Scale 0.05)","Spells\HellFire_Area_Base.mdx",1,0.05,0.01,100),
+(4394,"RedFlame_Low","spells\enchantments\redflame_low.mdx",1,4,0.01,100),
+(4395,"Lightning Cast Uber Hands (Ingvar Missile)","Spells\LightningBoltIvus_Missile.mdx",0,0.15,0.01,100),
+(4396,"Form Fire Precast ","Spells\Fire_Form_Precast.mdx",1,2.5,0.01,100),
+(4397,"Form Fire Precast","Spells\Fire_Form_Precast.mdx",1,0.5,0.01,100),
+(4398,"WaterShield State (Low)","spells\watershield_state_base_s.mdx",0,1,0.01,100),
+(4399,"Frost Nova Area","Spells\Frost_Nova_area.mdx",1,0.3,0.01,100),
+(4400,"Missile: Assassinate","spells\assassinate_missile.mdx",0,0.7,0.01,100),
+(4401,"Scourge Summon Spell Rune","Spells\Creature_ScourgeRuneCircleCrystal.mdx",0,0.4,0.01,100),
+(4402,"Net State","Spells\Net_State.mdx",0,2,0.01,100),
+(4403,"Cannon Impact ","Spells\Canon_Impact_Dust.mdx",1,1,0.01,100),
+(4404,"Deathcharger Impact Base","spells\deathknight_summonwarhorse_impact_base.mdx",0,0.25,0.01,100),
+(4405,"Thunder Caster Impact","spells\shaman_thunder.mdx",1,1,0.01,100),
+(4406,"Earthliving Impact Base","spells\shaman_earthliving_target.mdx",1,1,0.01,100),
+(4407,"Aerie Boulder 03 (1)","World\Lordaeron\AeriePeaks\PassiveDoodads\Boulders\AerieBoulder03.mdx",1,1,0.01,100),
+(4408,"Item - Old Scroll","world\khazmodan\uldaman\passivedoodads\scrolls\uldamanscroll01.mdx",1,0.5,0.01,100),
+(4409,"Rocket Blast Down","spells\rocketblast_down.mdx",1,1,0.01,100),
+(4410,"Infected Wounds Base","spells\druid_infectedwounds.mdx",0,1,0.01,100),
+(4411,"Infected Wounds Base","spells\druid_infectedwounds.mdx",0,1.5,0.01,100),
+(4412,"Quest - Teleport Visual (Evil)","spells\shaman_astralshift.mdx",0,1,0.01,100),
+(4413,"Confetti Explosion","world\generic\upperdeck\ud_confetti_01.mdx",0,1,0.01,100),
+(4414,"RadiationGreen State (3x)","Spells\GreenGhost_state.mdx",0,3,0.01,100),
+(4415,"Banish (Dark)","spells\Banish_Chest_Dark.mdx",1,1,0.01,100),
+(4416,"Orange Radiation Fog, Small","spells\orangeradiationfog.mdx",1,0.5,0.01,100),
+(4417,"Missile: DeathCoil Missile - 2.00","Spells\DeathCoil_Missile.mdx",1,2,0.01,100),
+(4418,"Cannonball Missile (Tiny)","world\generic\human\passive doodads\catapultruins\catapultball01.mdx",1,0.1,0.01,100),
+(4419,"CallLightning Impact","Spells\CallLightning_Impact.mdx",1,3,0.01,100),
+(4420,"Gorloc Missle","creature\oracle\oracle.mdx",0,1,0.01,100),
+(4421,"Gorloc","creature\oracle\oracle.mdx",1,1,0.01,100),
+(4422,"LowPolyFire","world\generic\pvp\fires\lowpolyfire.mdx",1,0.25,0.01,100),
+(4423,"AshPeople03","world\azeroth\burningsteppes\passivedoodads\ashpeople\ashpeople03.mdx",1,1.75,0.01,100),
+(4424,"BloodyMeat01","World\Generic\Human\Passive Doodads\Meat\BloodyMeat01.mdx",1,2.5,0.01,100),
+(4425,"Icy Veins FX","spells\icyveins_fx.mdx",0,1,0.01,100),
+(4426,"Ice Block State","spells\icebarrier_state.mdx",1,0.75,0.01,100),
+(4427,"Missile: G_IceBlock (x0.5)","world\goober\g_iceblock.mdx",1,0.5,0.01,100),
+(4428,"Meatwagon Roller","world\generic\undead\passive doodads\meatwagonpieces\meatwagonroller.mdx",0,1,0.01,100),
+(4429,"Meatwagon Frame","world\generic\undead\passive doodads\meatwagonpieces\meatwagonbody.mdx",0,1,0.01,100),
+(4430,"Meatwagon Grill","world\generic\undead\passive doodads\meatwagonpieces\meatwagongrill.mdx",0,1,0.01,100),
+(4431,"Meatwagon Wheel","world\generic\undead\passive doodads\meatwagonpieces\meatwagonwheel.mdx",0,1,0.01,100),
+(4432,"Bloodbath Impact","spells\warrior_bloodbath.mdx",0,0.5,0.01,100),
+(4433,"Holy Precast Low Hand (2.0)","Spells\Holy_Precast_Low_Hand.mdx",1,2,0.01,100),
+(4434,"Renew Chest","Spells\Renew_Chest.mdx",0,5,0.01,100),
+(4435,"Renew Base","Spells\Renew_Base.mdx",0,5,0.01,100),
+(4436,"Sprint Cast Base","Spells\Sprint_Cast_Base.mdx",0,5,0.01,100),
+(4437,"Immolate Impact Chest","Spells\Immolate_Impact_Chest.mdx",1,5,0.01,100),
+(4438,"Immolate State Base","Spells\Immolate_State_Base.mdx",1,5,0.01,100),
+(4439,"Tugofwar: Missile, Red Spice (2.00)","world\generic\passivedoodads\tugofwar\tugofwar_redspicemissile.mdx",1,2,0.01,100),
+(4440,"Missile: Boulder (1.5x)","Spells\Boulder_Missile.mdx",0,1.5,0.01,100),
+(4441,"Seeping Gas (Fel)","spells\SeepingGaseous_Fel_Nova.mdx",1,1,0.01,100),
+(4442,"Rune Tap  Base","Spells\DeathKnight_RuneTap.mdx",0,1,0.01,100),
+(4443,"Mark of Blood Impact","Spells\DeathKnight_MarkofBlood.mdx",0,1,0.01,100),
+(4444,"Hysteria Base","Spells\DeathKnight_Hysteria.mdx",0,1,0.01,100),
+(4445,"Deathchill Hands High","Spells\DeathKnight_Deathchill.mdx",0,1,0.01,100),
+(4446,"Flamestrike Area","Spells\Flamestrike_Area.mdx",1,0.1,0.01,100),
+(4447,"Flamestrike Impact Base","Spells\Flamestrike_Impact_Base.mdx",1,0.5,0.01,100),
+(4448,"Stoneform State Chest","Spells\Stoneform_State_Base.mdx",1,4,0.01,100),
+(4449,"Void Zone (0.34)","creature\portalofkathune\portalofkathune.mdx",1,0.34,0.01,100),
+(4450,"Quest - Gift of the Harvester","world\goober\g_gastrap.mdx",0,1,0.01,100),
+(4451,"Ice Barrier State Chest","spells\ice_barrier_state_chest.mdx",1,2,0.01,100),
+(4452,"Bloodbath Impact (5.0)","spells\warrior_bloodbath.mdx",0,5,0.01,100),
+(4453,"Bone","world\generic\passivedoodads\furniture\refuse\bone01.mdx",0,2,0.01,100),
+(4454,"Web State","Spells\Web_State.mdx",0,0.3,0.01,100),
+(4455,"Web Spin","spells\webspin.mdx",1,0.3,0.01,100),
+(4456,"BoneArmor State Chest (Death Knight)","Spells\DeathKnight_BoneArmor.mdx",1,1,0.01,100),
+(4457,"Dismantle State Head","spells\dismantle_state.mdx",0,1,0.01,100),
+(4458,"Dwarf Bone","world\khazmodan\wetlands\passivedoodads\dwarfbones\dwarvebone01.mdx",0,2,0.01,100),
+(4459,"BloodyMeat01 (0.7)","World\Generic\Human\Passive Doodads\Meat\BloodyMeat01.mdx",1,0.7,0.01,100),
+(4460,"Dispersion Base","spells\priest_dispersion.mdx",1,2,0.01,100),
+(4461,"Quest - Ebon Hold Flamethrower","world\expansion02\doodads\generic\vrykul\fires\vr_forgefire_01.mdx",0,0.05,0.01,100),
+(4462,"Snowball Impact Chest","spells\snowball_impact_chest.mdx",1,5,0.01,100),
+(4463,"Snowball Impact Chest","spells\snowball_impact_chest.mdx",1,20,0.01,100),
+(4464,"Troll Tiki Mask 01","world\generic\troll\passive doodads\tikimasks\troll_tikimask01.mdx",0,0.4,0.01,100),
+(4465,"Troll Tiki Mask 02","world\generic\troll\passive doodads\tikimasks\troll_tikimask02.mdx",0,0.4,0.01,100),
+(4466,"Troll Tiki Mask 03","world\generic\troll\passive doodads\tikimasks\troll_tikimask03.mdx",0,0.4,0.01,100),
+(4467,"IntimidatingShout Cast Base","Spells\IntimidatingShout_Cast_Base.mdx",0,5,0.01,100),
+(4468,"Astral Shift State","spells\shaman_astralshift.mdx",1,1,0.01,100),
+(4469,"Lava Burst Missile","spells\shaman_lavaburst_missile.mdx",1,1,0.01,100),
+(4470,"Lava Burst Impact","spells\shaman_lavaburst.mdx",0,1,0.01,100),
+(4471,"Berserk State Head","spells\druid_berserk.mdx",1,1,0.01,100),
+(4472,"Eclipse Impact Base","spells\druid_eclipse.mdx",0,1,0.01,100),
+(4473,"Flourish Impact","spells\druid_flourish.mdx",1,1,0.01,100),
+(4474,"Infected Wounds Impact Base","spells\druid_infectedwounds.mdx",1,1,0.01,100),
+(4475,"Nourish Impact Base","spells\druid_nourish.mdx",0,1,0.01,100),
+(4476,"Starfall Area","spells\druid_starfallmissile.mdx",1,1.3,0.01,100),
+(4477,"Starfall State","spells\druid_starfallstate.mdx",1,1,0.01,100),
+(4478,"Flavor - Sword in Chest","world\azeroth\elwynn\passivedoodads\battlegladesword\battlegladesword.mdx",0,1.8,0.01,100),
+(4479,"Flavor - Arrow in Face","world\generic\human\passive doodads\weapons&armor\orcarrow.mdx",0,1,0.01,100),
+(4480,"Arcane Force Shield (Dark) Base","spells\arcaneforceshield_dark.mdx",0,1.5,0.01,100),
+(4481,"Ghost_state (Red)","spells\redghost_state.mdx",1,0.5,0.01,100),
+(4482,"Quest - Icebound Visage","SPELLS\IceboundFortitude_Ground.mdx",0,1,0.01,100),
+(4483,"Voodoo Doll","World\Generic\Orc\Passive Doodads\VoodooStuff\VoodooDoll02.mdx",0,1,0.01,100),
+(4484,"Seeping Gaseous Fel Nova","spells\SeepingGaseous_Fel_Nova.mdx",1,0.35,0.01,100),
+(4485,"Drink Noth's Special Brew Impact","spells\energizegain_rage.mdx",0,1,0.01,100),
+(4486,"Quest - Create Plague Cauldron","world\environment\doodad\plaguelands\activedoodads\plaguecauldronactive.mdx",0,1,0.01,100),
+(4487,"Anti-Magic Zone","Spells\DeathKnight_AntiMagicZone.mdx",0,1,0.01,100),
+(4488,"Obliterate (Slash)","Spells\DeathKnight_Obliterate.mdx",0,1,0.01,100),
+(4489,"Wandering Plague Impact","spells\DeathKnight_WanderingPlague.mdx",0,1,0.01,100),
+(4490,"Howling Blast Primary","spells\DeathKnight_HowlingBlastPrimary.mdx",0,1,0.01,100),
+(4491,"Howling Blast Impact","Spells\DeathKnight_HowlingBlastSecondary.mdx",1,1,0.01,100),
+(4492,"Plague Strike (Slash)","Spells\DeathKnight_PlagueStrikeCaster.mdx",0,1,0.01,100),
+(4493,"Plague Strike State","Spells\DeathKnight_PlagueStrikeState.mdx",0,1,0.01,100),
+(4494,"Chainlightning Impact Chest","Spells\ChainLightning_Impact_Chest.mdx",0,2,0.01,100),
+(4495,"Quest - Persuasive Strike","spells\Infernal_Smoke_Rec.mdx",0,1,0.01,100),
+(4496,"Quest - BurntStoneTreeSmoke_VFX","world\expansion02\doodads\howlingfjord\firefx\burntstonetreesmoke_vfx.mdx",0,1,0.01,100),
+(4497,"Dark Fire Shield State","Spells\FireForceShield_Red.mdx",1,0.5,0.01,100),
+(4498,"Frost Strike (Slash)","Spells\DeathKnight_FrostStrike.mdx",0,1,0.01,100),
+(4499,"Acid Burn, Orange","spells\acidburn_orange.mdx",0,1,0.01,100),
+(4500,"Blood Strike Impact","Spells\DeathKnight_BloodStrike_Impact.mdx",1,1,0.01,100),
+(4501,"Frost Strike Impact","Spells\DeathKnight_FrostStrike_Impact.mdx",0,1,0.01,100),
+(4502,"Obliterate Impact","Spells\DeathKnight_Obliterate_Impact.mdx",0,1,0.01,100),
+(4503,"Plague Strike (Impact)","Spells\DeathKnight_PlagueStrikeCaster_Impact.mdx",0,1,0.01,100),
+(4504,"Lightning Nova","spells\lightning_ring_nova.mdx",1,0.5,0.01,100),
+(4505,"Anti-Magic Zone (Small)","Spells\DeathKnight_AntiMagicZone.mdx",0,0.5,0.01,100),
+(4506,"Holy Nova (Small)","spells\holynova_impact_base.mdx",0.5,0.5,0.01,100),
+(4507,"Floating Mine Nexus","spells\floatingminenexus.mdx",1,1.5,0.01,100),
+(4508,"Floating Mine Nexus Pulse","spells\floatingminenexuspulse.mdx",1,1.5,0.01,100),
+(4509,"BloodyExplosion","Spells\BloodyExplosion.mdx",1,1.5,0.01,100),
+(4510,"Earthliving Base Flowers","Spells\Shaman_Earthliving_Ground.mdx",1,1,0.01,100),
+(4511,"Fire Force Shield Dark State","spells\fireforceshield_dark.mdx",1,1,0.01,100),
+(4512,"Earthliving Base Flowers","Spells\Shaman_Earthliving_Ground.mdx",0,1.3,0.01,100),
+(4513,"Thunder Caster Impact","spells\shaman_thunder.mdx",1,0.2,0.01,100),
+(4514,"Shockwave Area","spells\warrior_shockwave_area.mdx",0,0.4,0.01,100),
+(4515,"Bladestorm State","spells\warrior_bladestorm.mdx",0,0.7,0.01,100),
+(4516,"Lightning Nova","spells\lightning_ring_nova.mdx",1,0.35,0.01,100),
+(4517,"Lightning Nova","spells\lightning_ring_nova.mdx",1,0.2,0.01,100),
+(4518,"Rejek's Sword","World\KhazModan\Badlands\PassiveDoodads\QuestBlade\QuestBladeBadlands.mdx",1,2.5,0.01,100),
+(4519,"Canon_Impact_Dust Impact (Chest)","spells\Canon_Impact_Dust.mdx",1,0.6,0.01,100),
+(4520,"Cannon Impact","Spells\Canon_Impact_Dust.mdx",1,0.6,0.01,100),
+(4521,"Missile: Pack","world\generic\satyr\passive doodads\container\satyrcontainer02.mdx",1,1,0.01,100),
+(4522,"Clayton - Death and Decay Test","spells\deathanddecay_area_base.mdx",0,1,0.01,100),
+(4523,"Missile: Pack (x0.75)","world\generic\satyr\passive doodads\container\satyrcontainer02.mdx",1,0.75,0.01,100),
+(4524,"Web State","Spells\Web_State.mdx",0,6,0.01,100),
+(4525,"Ice Nuke Missile","spells\IceNuke_Missile.mdx",1,2,0.01,100),
+(4526,"Ice Nuke Missile (Small)","spells\IceNuke_Missile.mdx",0,1,0.01,100),
+(4527,"Ice Nuke Missile (Frostbrood)","spells\IceNuke_Missile.mdx",0.35,0.35,0.01,100),
+(4528,"Ice Nuke Base (Frostbrood)","spells\IceNuke_Base_Impact.mdx",0.5,0.5,0.01,100),
+(4529,"Unholy Blight","Spells\DeathKnight_UnholyBlight.mdx",0,1,0.01,100),
+(4530,"Lichborne","Spells\DeathKnight_Lichborne_State.mdx",0,1,0.01,100),
+(4531,"Frozen Rune Weapon Cast","Spells\DeathKnight_FrozenRuneWeapon_Impact.mdx",0,1,0.01,100),
+(4532,"Arcane Force Shield (Dark)","spells\arcaneforceshield_dark.mdx",0,2,0.01,100),
+(4533,"Hungering Cold Area","Spells\DeathKnight_HungeringCold.mdx",0,1,0.01,100),
+(4534,"Empower Runeweapon Cast","spells\deathknight_empowerruneblade.mdx",0,1,0.01,100),
+(4535,"Dancing Runeblade Area","Spells\DeathKnight_DancingRuneblade_Spawn.mdx",0,1,0.01,100),
+(4536,"Dancing Runeweapon State","Spells\DeathKnight_DancingRuneblade_State.mdx",0,1,0.01,100),
+(4537,"CycloneWater State","Spells\CycloneWater_State.mdx",0,0.5,0.01,100),
+(4538,"Runeblade Despawn","Spells\DeathKnight_DancingRuneblade_DeSpawn.mdx",0,1,0.01,100),
+(4539,"Golem Head State","World\KhazModan\Blackrock\PassiveDoodads\GolemParts\CannonGolemBust.mdx",1,1,0.01,100),
+(4540,"Thunder Caster Impact","spells\shaman_thunder.mdx",1,0.35,0.01,100),
+(4541,"Web: Vertical Stretch","World\Expansion01\Doodads\Terokkar\Webs\TerokkarWeb02.mdx",0,4,0.01,100),
+(4542,"Missile: Web (4.00)","Spells\Web_Missile.mdx",0,4,0.01,100),
+(4543,"Death Pact Impact (Large)","SPELLS\DeathKnight_DeathPactTarget.mdx",2,2,0.01,100),
+(4544,"Chimera Shot Impact Chest","spells\chimerashot_impact.mdx",0,1,0.01,100),
+(4545,"Unholy Blight State","Spells\DeathKnight_UnholyBlight_State.mdx",0,1,0.01,100),
+(4546,"Master's Call Impact Head","spells\masterscall_impact.mdx",1,1,0.01,100),
+(4547,"Water Nova","Spells\Water_Nova.mdx",0,0.5,0.01,100),
+(4548,"Skull, Chattering","spells\skull.mdx",1,0.5,0.01,100),
+(4549,"Bear Trap State","spells\beartrap_state.mdx",1,1.2,0.01,100),
+(4550,"Meat (1.5)","World\Expansion01\Doodads\Generic\BloodElf\Food\BE_Meat01.mdx",1,1.5,0.01,100),
+(4551,"Bone","world\generic\passivedoodads\furniture\refuse\bone01.mdx",0,1,0.01,100),
+(4552,"Bone Burrow Cast","Spells\BurrowEarth_BoneWaste_Missile.mdx",1,0.5,0.01,100),
+(4553,"Earth Burrow Cast","Spells\BurrowEarth_Brown_Missile.mdx",0.1,0.1,0.01,100),
+(4554,"Quest - Devour Humanoid","spells\energizegain_rage.mdx",0,1,0.01,100),
+(4555,"BoneArmor State Chest","Spells\BoneArmor_State_Chest.mdx",1,0.5,0.01,100),
+(4556,"Bone Burrow Cast","Spells\BurrowEarth_BoneWaste_Missile.mdx",1,0.1,0.01,100),
+(4557,"Bladestorm State","spells\warrior_bladestorm.mdx",0,0.5,0.01,100),
+(4558,"Bear Rug","World\Generic\Human\Passive Doodads\Rugs\GeneralBearSkinRug01.mdx",0,0.8,0.01,100),
+(4559,"Ghost_state","Spells\Ghost_state.mdx",0,0.5,0.01,100),
+(4560,"Death and Decay Ground Runes (Med)","Spells\DeathAndDecay_Area_Runes.mdx",0.5,0.5,0.01,100),
+(4561,"Death and Decay Ground Runes","Spells\DeathAndDecay_Area_Runes.mdx",0.25,0.25,0.01,100),
+(4562,"Spike Impact Base","Spells\Spike_Impact_Base.mdx",1,2,0.01,100),
+(4563,"Kill Shot Impact Chest","spells\assassinate_impact.mdx",1,2,0.01,100),
+(4564,"Shot: Kill Shot Missile","spells\assassinate_missile.mdx",1,1,0.01,100),
+(4565,"Ribbon Trail","Spells\RibbonTrail.mdx",0,0.5,0.01,100),
+(4566,"Quest - The Might of Mograine","Spells\Cripple_State_Base.mdx",0.25,0.25,0.01,100),
+(4567,"Sunwell Beam FX (Micro)","spells\sunwell_beamfx.mdx",0.05,0.05,0.01,100),
+(4568,"Quest - The Light of Dawn (Mograine State)","World\Expansion02\Doodads\Ulduar\UL_Swirl_Orb_Cloud.mdx",0.05,0.05,0.01,100),
+(4569,"Quest - The Light of Dawn (State)","spells\holybomb_missle.mdx",0.75,0.75,0.01,100),
+(4570,"Ashbringer (Corrupt)","Item\ObjectComponents\Weapon\Sword_2H_AshbringerCorrupt.mdx",1,1,0.01,100),
+(4571,"Quest - The Light of Dawn (State)","spells\holybomb_missle.mdx",1.5,1.5,0.01,100),
+(4572,"Strangulate State","SPELLS\DeathKnight_Strangulate_Chain.mdx",1,1,0.01,100),
+(4573,"Defensive Stance Impact Head","spells\defensivestance_impact_head.mdx",1,2,0.01,100),
+(4574,"Berzerker Stance Impact Head","spells\berzerkerstance_impact_head.mdx",1,2,0.01,100),
+(4575,"Battle Stance Impact Head","spells\battlestance_impact_head.mdx",1,2,0.01,100),
+(4576,"Focused Attacks Impact ","spells\focused_attacks_impact.mdx",0,1,0.01,100),
+(4577,"Cut To The Chase Impact Base","spells\cuttothechase_impact.mdx",0,1,0.01,100),
+(4578,"Hunger for Blood State","spells\hungerforblood_state.mdx",0,1,0.01,100),
+(4579,"Hunger for Blood Impact Base","spells\hungerforblood_impact.mdx",0,1,0.01,100),
+(4580,"Fire Bomb","spells\firebomb_missle.mdx",1,8,0.01,100),
+(4581,"Stay of Execution Impact Chest","spells\stayofexecution_impact.mdx",0,1,0.01,100),
+(4582,"Murder Spree Impact Chest","spells\murder_spree_impact.mdx",0,1,0.01,100),
+(4583,"Honor Among Thieves Impact Base","spells\honor_among_thieves_impact.mdx",0,1,0.01,100),
+(4584,"Ward: Fire Impact Chest","Spells\FireWard_Impact_Chest.mdx",0,3,0.01,100),
+(4585,"Shadow Dance Impact Chest","spells\shadowdance_state.mdx",0,1,0.01,100),
+(4586,"Explosive Shot Missile","spells\explosive_shot_missile.mdx",1,1,0.01,100),
+(4587,"Explosive Shot Impact Chest","spells\explosive_shot_impact.mdx",0,1,0.01,100),
+(4588,"MoonBeamRed_Impact_Base ","spells\moonbeamred_impact_base.mdx",1,0.3,0.01,100),
+(4589,"Force Shield and Explosion","spells\forceshield_andxplosion.mdx",1,3,0.01,100),
+(4590,"DustNova Cast Base","spells\dustnova_cast_base.mdx",1,0.05,0.01,100),
+(4591,"Bone Burrow Cast","Spells\BurrowEarth_BoneWaste_Missile.mdx",1,0.05,0.01,100),
+(4592,"Earth Burrow Cast","Spells\BurrowEarth_Brown_Missile.mdx",0.1,0.05,0.01,100),
+(4593,"Infectious Poisons Impact Head","spells\devious_impact.mdx",0,1,0.01,100),
+(4594,"Wrongfully Accused Impact Chest","spells\wrongfully_accused_impact.mdx",0,1,1,100),
+(4595,"Unfair Advantage Impact Chest","spells\unfairadvantage_cast.mdx",0,1,0.01,100),
+(4596,"Waylay State","spells\waylay_state.mdx",0,1,0.01,100),
+(4597,"Missile: Holy Symbol","item\objectcomponents\weapon\misc_1h_holysymbol_a_01.mdx",1,1,0.01,100),
+(4598,"Missile: Holy Symbol 2.00","item\objectcomponents\weapon\misc_1h_holysymbol_a_01.mdx",1,2,0.01,100),
+(4599,"Missile: Blight Crystal","world\expansion01\doodads\silvermyst\crystals\silvermystcrystal03_orange.mdx",0,1,0.01,100),
+(4600,"Judgement of Justice Impact Chest (1.00)","spells\judgement_impact_chest_red.mdx",0,1,0.01,100),
+(4601,"Judgement of Wisdom Impact Chest","spells\judgement_impact_chest_blue.mdx",0,1,0.01,100),
+(4602,"Acid Burn Orange (Low-Poly)","Spells\AcidBurn_Small_Orange.mdx",1,1,0.01,100),
+(4603,"DustNova Cast Base","spells\dustnova_cast_base.mdx",1,0.85,0.01,100),
+(4604,"Orange Radiation Fog","spells\orangeradiationfog.mdx",1,3,0.01,100),
+(4605,"Acid Burn Orange (Low-Poly)","Spells\AcidBurn_Small_Orange.mdx",1,3,0.01,100),
+(4606,"Portal: Boss Frost","spells\Creature_SpellPortalLarge_Blue.mdx",1,0.25,0.01,100),
+(4607,"Ritual Arcane PreCast Base","spells\Ritual_Arcane_PreCast_Base.mdx",1,2.5,0.01,100),
+(4608,"MoonBeam (Blue)","spells\MoonBeamBlue_Impact_Base.mdx",1,0.2,0.01,100),
+(4609,"Portal: Blue","spells\creature_spellportal_blue.mdx",1,0.5,0.01,100),
+(4610,"Arcane Missile 2","spells\arcaneshot_missile2.mdx",0,1,0.01,100),
+(4611,"Arcane Barrage Impact","spells\mage_arcanebarrage_impact.mdx",0,2,0.01,100),
+(4612,"Potion Red Square SpellObject","spells\potion_red03_spellobject.mdx",1,1,0.01,100),
+(4613,"Potion Red Crystal SpellObject","spells\potion_red02_spellobject.mdx",1,1,0.01,100),
+(4614,"Potion Red Normal SpellObject","spells\potion_red01_spellobject.mdx",1,1,0.01,100),
+(4615,"Potion Black Standard SpellObject","spells\potion_black01_spellobject.mdx",1,1,0.01,100),
+(4616,"Portal: Boss Fire","spells\Creature_SpellPortalLarge_Red.mdx",4,4,0.01,100),
+(4617,"Ghoul Explode (Simple)","SPELLS\DeathKnight_Ghoul_Explode_simple.mdx",1,1,0.01,100),
+(4618,"LowPolyFireNoSmoke","world\generic\pvp\fires\lowpolyfire_nosmoke.mdx",1,1,0.01,100),
+(4619,"Holy Precast Uber Base","Spells\Holy_Precast_Uber_Base.mdx",1,4,0.01,100),
+(4620,"Holy Precast High Hand","Spells\Holy_Precast_High_Hand.mdx",1,4,0.01,100),
+(4621,"Renew Chest","Spells\Renew_Chest.mdx",0,10,0.01,100),
+(4622,"Renew Base","Spells\Renew_Base.mdx",0,10,0.01,100),
+(4623,"CycloneEarth State","Spells\CycloneEarth_State.mdx",1,0.5,0.01,100),
+(4624,"Atrocity Impact","spells\warlock_atrocity.mdx",0,3,0.01,100),
+(4625,"Missile: Stone Spiral","spells\enchantments\shaman_rock.mdx",1,4,0.01,100),
+(4626,"Exploding Stone Impact","spells\exploding_stone_impact.mdx",1,0.25,0.01,100),
+(4627,"Red Crystal","world\kalimdor\silithus\passivedoodads\crystals\floatingredcrystalbroken03.mdx",0,1,0.01,100),
+(4628,"Icebound Fortitude Ground","Spells\IceboundFortitude_Ground.mdx",0,0.5,0.01,100),
+(4629,"Frost_Form","spells\frost_form_precast.mdx",0,0.4,0.01,100),
+(4630,"Frozen Rune Weapon State","Spells\DeathKnight_FrozenRuneWeapon_State.mdx",0,2.5,0.01,100),
+(4631,"Deathchill Hands High","Spells\DeathKnight_Deathchill.mdx",0,2,0.01,100),
+(4632,"Ice Barrier State","spells\iceshield_state.mdx",1,0.25,0.01,100),
+(4633,"Shield of Righteousness Cast Chest","spells\shield_of_vengeance_cast.mdx",0,1,0.01,100),
+(4634,"ChallengingShout Cast Base (Large)","Spells\ChallengingShout_Cast_Base.mdx",1,10,0.01,100),
+(4635,"Beacon of Light Impact Base","spells\beacon_of_light_impact.mdx",0,1,0.01,100),
+(4636,"Drakuru's Skull Missile","world\expansion01\doodads\ghostlands\skulls\swath_skull.mdx",0,5,0.01,100),
+(4637,"Item - Potion Iron","spells\potion_iron01_spellobject.mdx",1,1,0.01,100),
+(4638,"shield of vengeance cast chest","spells\shield_of_vengeance_cast.mdx",0,1,0.01,100),
+(4639,"Shield of Righteousness Impact Chest","spells\shield_of_vengeance_impact.mdx",0,1,0.01,100),
+(4640,"Judgements of the Wise Impact Chest","spells\judgements_of_the_wise_impact.mdx",0,1,0.01,100),
+(4641,"Banish (Purple)","spells\banish_chest_purple.mdx",1,0.5,0.01,100),
+(4642,"ShadowFlame PreCast","spells\shadowflame_cast_hand.mdx",0,5,0.01,100),
+(4643,"Missile: Deathbolt Missile","spells\deathbolt_missile_low.mdx",1,0.5,0.01,100),
+(4644,"Shadow Strikes State","spells\shadow_strikes_state_hand.mdx",1,5,0.01,100),
+(4645,"Quest - Might of Mograine Flag","spells\SC_CTFflag_spell.mdx",1,1,0.01,100),
+(4646,"Missile: Water Bolt (2.00)","Spells\WaterBolt_Missile_Low.mdx",0,2,0.01,100),
+(4647,"Missile: Hammer of the Righteous","spells\hammer_of_the_righteous_missile.mdx",1,1,0.01,100),
+(4648,"Hammer of the Righteous Impact","spells\hammer_of_the_righteous_impact.mdx",0,1,0.01,100),
+(4649,"Hammer of the Righteous Cast","spells\hammer_of_the_righteous_cast.mdx",0,1,0.01,100),
+(4651,"Guarded by the Light Impact Chest","spells\guarded_by_light_impact.mdx",0,1,0.01,100),
+(4652,"Hammer of the Righteous Cast Hand","spells\hammer_of_the_righteous_cast.mdx",0,1,0.01,100),
+(4653,"Hammer of the Righteous Impact","spells\hammer_of_the_righteous_impact.mdx",0,1,0.01,100),
+(4654,"Hammer of the Righteous Missile","spells\hammer_of_the_righteous_missile.mdx",0,1,0.01,100),
+(4655,"The Art of War Impact","spells\the_art_of_war_impact.mdx",0,1,0.01,100),
+(4656,"Banner, Argent Dawn","world\generic\human\passive doodads\banners\bannerargentdawn.mdx",0,1,0.01,100),
+(4657,"Sacred Shield Impact","spells\blessed_mending_impact.mdx",0,1,0.01,100),
+(4658,"Sacred Shield Proc State Chest","spells\blessed_mending_proc_impact.mdx",0,1,0.01,100),
+(4659,"Taunt Head (Yellow)","spells\taunt_head_yellow.mdx",1,1,0.01,100),
+(4660,"Taunt Head (Orange)","spells\taunt_head_orange.mdx",1,1,0.01,100),
+(4661,"MoonBeam State Base","Spells\MoonBeam_Impact_Base.mdx",1,2,0.01,100),
+(4662,"Ice Missile","spells\icenuke_missile.mdx",1,0.5,0.01,100),
+(4663,"Cannon Impact (x4)","Spells\Canon_Impact_Dust.mdx",1,4,0.01,100),
+(4664,"Red CTF Flag Chest","spells\redctfflag_spell.mdx",1,1,0.01,100),
+(4665,"Dancing Runeblade Area","Spells\DeathKnight_DancingRuneblade_Spawn.mdx",2,2,0.01,100),
+(4666,"Strangulate State","SPELLS\DeathKnight_Strangulate_Chain.mdx",0.5,0.5,0.01,100),
+(4667,"Shadow Mend Impact","spells\Shadow_Mend_Impact.mdx",1,2,0.01,100),
+(4668,"Banish (Yellow)","spells\banish_chest_yellow.mdx",1,2,0.01,100),
+(4669,"Master's Call Impact","spells\masterscall_impact.mdx",1,1.3,0.01,100),
+(4670,"Strangulate State on Head","SPELLS\DeathKnight_Strangulate_Chain.mdx",1,1,0.01,100),
+(4671,"Spirit Link Base Effect","spells\shaman_spiritlink.mdx",0,1,0.01,100),
+(4672,"BeastRage State Head","Spells\BeastRageState.mdx",1,2,0.01,100),
+(4673,"Charred Earth (0.1)","spells\nightbane_area_base.mdx",1,0.1,0.01,100),
+(4674,"Divine Storm Cast","spells\divine_storm_state.mdx",0,1,0.01,100),
+(4675,"Divine Storm Impact Damage","spells\divine_storm_impact_damage.mdx",0,1,0.01,100),
+(4676,"Divine Storm Heal","spells\divine_storm_impact_heal.mdx",0,1,0.01,100),
+(4677,"Infusion of Light Impact Base","spells\infusion_of_light_impact.mdx",0,1,0.01,100),
+(4678,"Ice Nuke Base (Frostbrood) (small)","spells\IceNuke_Base_Impact.mdx",0.1,0.1,0.01,100),
+(4679,"Sacred Cleansing Impact Head","spells\sacred_cleansing_impact.mdx",0,1,0.01,100),
+(4680,"Haunt Impact Heal Chest (Large)","spells\haunt_heal.mdx",1,1,0.01,100),
+(4681,"Haunt Missile","spells\haunt_missile.mdx",0,1,0.01,100),
+(4682,"Haunt Impact Damage","spells\haunt_impact.mdx",0,1,0.01,100),
+(4683,"Trueshot Aura Cast","spells\trueshot_aura_cast_base.mdx",0,1,0.01,100),
+(4684,"Cripple State Base","Spells\Cripple_State_Base.mdx",2,2,0.01,100),
+(4685,"Ancestral Awakening Impact Base","spells\shaman_ancestralawakening.mdx",0,1,0.01,100),
+(4686,"Judgement of the Pure Impact","spells\judgement_of_the_pure_impact.mdx",0,1,0.01,100),
+(4687,"Cripple State Base","Spells\Cripple_State_Base.mdx",3.5,3.5,0.01,100),
+(4688,"Explosion (New) (Dest_Tower_Impact) (small)","spells\dest_tower_impact_fx.mdx",0,0.25,0.01,100),
+(4689,"FlamestrikeSmall Impact Base","spells\flamestrikesmall_impact_base.mdx",0,0.25,0.01,100),
+(4690,"DustCloud Land","Spells\DustCloud_Land.mdx",1,3,0.01,100),
+(4691,"Demon Strike Cast Base","spells\mangle_impact.mdx",1,1,0.01,100),
+(4692,"Throw Bone Armor","Spells\DeathKnight_BoneArmor.mdx",0,0.75,0.01,100),
+(4693,"Turn the Tables Impact","spells\turnthetables_impact.mdx",0,1,0.01,100),
+(4694,"Dismantle Impact State","spells\dismantle_state.mdx",0,1,0.01,100),
+(4695,"Ice Block State - 6.00","spells\icebarrier_state.mdx",1,6,0.01,100),
+(4696,"Crashing Wave: Poison (0.5)","Spells\Missile_Wave_WaterGreen.mdx",1,0.5,0.01,100),
+(4697,"Demon Strike Impact Chest","spells\mangle_impact_demon.mdx",1,1,0.01,100),
+(4698,"Portal: Boss Shadow","Spells\Creature_SpellPortal_LargeShadow.mdx",1,1.5,0.01,100),
+(4699,"Smoke Flare, White, Very Small","spells\SmokeFlare_White.mdx",1,0.1,0.01,100),
+(4700,"Ice ImpactDD Uber Chest 4.0","Spells\Ice_ImpactDD_Uber_Chest.mdx",1,4,0.01,100),
+(4701,"Haunt Heal Missile","spells\haunt_missile_soul.mdx",0,1,0.01,100),
+(4702,"Ice Block Object","world\goober\g_iceblock.mdx",1,1,0.01,100),
+(4703,"Ribbon Trail","Spells\RibbonTrail.mdx",0,3,0.01,100),
+(4704,"Missile: Demolisher","spells\Demolisher_Missile.mdx",3,3,0.01,100),
+(4705,"Missile: Demolisher (2.50)","Spells\Demolisher_Missile.mdx",0,2.5,0.01,100),
+(4706,"Missile: Plague Barrel (2.5)","Spells\ForsakenCatapult_Missile.mdx",0,2.5,0.01,100),
+(4707,"Missile: Siege Tank (2.5)","Spells\SiegeTank_Missile.mdx",0,2.5,0.01,100),
+(4708,"Quest - Fire Extinguisher State","world\generic\dwarf\passive doodads\tavernstuff\brewerytanks01.mdx",0.15,0.15,0.01,100),
+(4709,"Blue_PotionB01 (Large)","spells\potion_blue01_spellobject.mdx",2,2,0.01,100),
+(4710,"Nature Form","spells\nature_form_precast.mdx",0,1.5,0.01,100),
+(4711,"DustCloud Land","Spells\DustCloud_Land.mdx",1,1.5,0.01,100),
+(4712,"Missile: Plague Barrel (New)","spells\ForsakenCatapult_Missile.mdx",0,1,0.01,100),
+(4713,"Eye of Acherus 02","world\expansion02\doodads\generic\scourge\sc_eyeofacherus_02.mdx",0,6,0.01,100),
+(4714,"Explosion: Fel","spells\Xplosion_Fel_Impact.mdx",1,3.5,0.01,100),
+(4715,"Explosion: Firey","spells\Xplosion_Fire_Impact.mdx",1,3.5,0.01,100),
+(4716,"Explosion: Dust","spells\Xplosion_Dust_Impact.mdx",1,2,0.01,100),
+(4717,"Bind2 Impact Base","Spells\Bind2_Impact_Base.mdx",0,3,0.01,100),
+(4718,"Ghost_state","Spells\Ghost_state.mdx",0,2,0.01,100),
+(4719,"Ghostly Strike Impact Chest","spells\ghostlystrike_impact_chest.mdx",1,2,0.01,100),
+(4720,"Explosion: Firey (small)","spells\Xplosion_Fire_Impact.mdx",1,0.75,0.01,100),
+(4721,"Explosion: Firey (very small)","spells\Xplosion_Fire_Impact.mdx",1,0.25,0.01,100),
+(4722,"Rocket Blast Down (Small)","spells\rocketblast_down.mdx",0.25,0.25,0.01,100),
+(4723,"ThunderClap Cast Base","Spells\ThunderClap_Cast_Base.mdx",0,4,0.01,100),
+(4724,"Item - Wine Glass Purple","spells\wineglass_01_spellobject.mdx",0,1,0.01,100),
+(4725,"Snowball Impact Chest","spells\snowball_impact_chest.mdx",1,10,0.01,100),
+(4726,"Guardian Spirit State Base","spells\priest_guardianspirit.mdx",0,1,0.01,100),
+(4727,"Blood Elf Power Orb","world\expansion01\doodads\generic\bloodelf\powerorb\bloodelf_powerorb_red.mdx",0,0.5,0.01,100),
+(4728,"Item - Wine Glass White","spells\wineglass_02_spellobject.mdx",0,1,0.01,100),
+(4729,"Savage Roar Impact Head","spells\endlessrage_impact_head.mdx",1,1,0.01,100),
+(4730,"Force Shield Fire (Blue)","Spells\fireforceshield_blue.mdx",1,1.5,0.01,100),
+(4731,"ForceShield Fire Blue","Spells\FireForceShield_Blue.mdx",1,1.5,0.01,100),
+(4732,"Ghost_state","Spells\Ghost_state.mdx",0,0.2,0.01,100),
+(4733,"Missile: Tuskarr Fishing Hook","world\expansion02\doodads\generic\tuskarr\ts_fishinghook_hook.mdx",1,1,0.01,100),
+(4734,"Seaforium Impact Base","Spells\Distract_Impact_Base.mdx",0,3,0.01,100),
+(4735,"Spell Object: Plague Bomb (Green)","world\expansion02\doodads\generic\scourge\sc_plaguebomb_green.mdx",1,0.15,0.01,100),
+(4736,"Haunt Missile (Large)","spells\haunt_missile.mdx",3,3,0.01,100),
+(4737,"BloodStrike Impact (Large)","spells\deathknight_bloodstrike_impact.mdx",4,4,0.01,100),
+(4738,"Thunder Hold","spells\shaman_thunder_hold.mdx",1,1,0.01,100),
+(4739,"Missile: Cyclone (Small)","Spells\Cyclone_Caster_State.mdx",0.25,0.25,0.01,100),
+(4740,"Arcane Explosion (2.0)","Spells\ArcaneExplosion_Base.mdx",1,2,0.01,100),
+(4741,"Dragon Breath: Fire","Spells\DragonBreath_Fire.mdx",0,1,0.01,100),
+(4742,"Sleep State Head","Spells\Sleep_State_Head.mdx",1,2,0.01,100),
+(4743,"Metamorphosis Impact Base","spells\metamorphosis.mdx",0,1,0.01,100),
+(4744,"Quest - Healing Winds","spells\Divine_Protector_State.mdx",0,10,0.01,100),
+(4745,"Ghost_state","Spells\Ghost_state.mdx",0,0.75,0.01,100),
+(4746,"Missile: Rocket (small)","spells\Missle_Rocket.mdx",1,0.5,0.01,100),
+(4747,"Acid Breath (Liquid)","spells\acidliquidbreath.mdx",1,0.75,0.01,100),
+(4748,"IntimidatingShout Cast Base","Spells\IntimidatingShout_Cast_Base.mdx",0,2,0.01,100),
+(4749,"Dragon Breath Fire (New)","spells\DragonBreath_Fire.mdx",1,1,0.01,100),
+(4750,"Anti-Magic Zone","Spells\DeathKnight_AntiMagicZone.mdx",0,0.45,0.01,100),
+(4751,"Earth Spike","Spells\GroundSpike_Impact.mdx",0,1,0.01,100),
+(4752,"Bone Arm","SPELLS\BoneArm_01.mdx",0,2,0.01,100),
+(4753,"Pet Toy - Pet Grooming Kit State","particles\lootfx.mdx",1.5,1.5,1,100),
+(4754,"Sparkle","spells\enchantments\sparkle_a.mdx",0,5,0.01,100),
+(4755,"Living Bomb Explosion Area (Large)","spells\mage_livingbomb_area.mdx",2,2,0.01,100),
+(4756,"Xplosion Dust","spells\Xplosion_Dust_Impact.mdx",2,2,0.01,100),
+(4757,"Quest - Air Revenant Entrance Cast","spells\cyclone_caster_state.mdx",0,2,0.01,100),
+(4758,"Water Nova","Spells\Water_Nova.mdx",1,1,0.01,100),
+(4759,"Missile: Boulder (3x)","Spells\Boulder_Missile.mdx",0,3,0.01,100),
+(4760,"Missile: Boulder (4.5x)","Spells\Boulder_Missile.mdx",0,4.5,0.01,100),
+(4761,"Acid Burn Purple (Low-Poly) - 0.75","Spells\AcidBurn_Small_Purple.mdx",1,0.75,0.01,100),
+(4762,"Cripple Impact Base","Spells\Cripple_Impact_Base.mdx",1,2,0.01,100),
+(4763,"Portal: Boss Light Fire","spells\Creature_SpellPortalLarge_LightRed.mdx",1,1,0.01,100),
+(4764,"GrayStone02","world\generic\passivedoodads\graystone\graystone02.mdx",1,0.2,0.01,100),
+(4765,"DustNova Cast Base","spells\dustnova_cast_base.mdx",1,2,0.01,100),
+(4766,"DiremaulMagicVortex","World\Kalimdor\DireMaul\PassiveDoodads\Vortex\DiremaulMagicVortex.mdx",0,0.01,0.01,100),
+(4767,"SkyVortex","World\Expansion02\Doodads\ZulDrak\SkyVortex\ZulDrak_SkyVortex.mdx",0,0.05,0.01,100),
+(4768,"Detect Magic Recursive","spells\DetectMagic_Recursive.mdx",0,30,0.01,100),
+(4769,"Magic Burst","spells\MagicBurst_Impact.mdx",0,2,0.01,100),
+(4770,"Thunder Hold","spells\shaman_thunder_hold.mdx",1,1.3,0.01,100),
+(4771,"Fire Bomb","spells\firebomb_missle.mdx",1,2.25,0.01,100),
+(4772,"CycloneWater State","Spells\CycloneWater_State.mdx",0,20,0.01,100),
+(4773,"Missile: Cyclone (Large)","Spells\Cyclone_Caster_State_Scaled.mdx",8,8,0.01,100),
+(4774,"Sack (Open at Top)","World\Azeroth\Stranglethorn\PassiveDoodads\TrollDungeonSacks\TrollDungeonSacks.mdx",1,0.6,0.01,100),
+(4775,"Sack (Closed)","world\generic\passivedoodads\furniture\containers\sack01.mdx",1,0.6,0.01,100),
+(4776,"Fire Bomb","spells\firebomb_missle.mdx",1,0.75,0.01,100),
+(4777,"MagePortal: Blank","spells\mageportal_blank.mdx",1,5,0.01,100),
+(4778,"Fire ImpactDD Uber Chest","Spells\Fire_ImpactDD_Uber_Chest.mdx",1,2,0.01,100),
+(4779,"BloodLust State Hand","Spells\BloodLust_State_Hand.mdx",1,0.5,0.01,100),
+(4780,"Instance Portal: Blue","spells\InstanceNewPortal_Blue.mdx",0,1,0.01,100),
+(4781,"Arcane Ward Impact Chest","spells\ArcaneWard_Impact_Chest.mdx",1,3,0.01,100),
+(4782,"Lightning PreCast Low Hand","Spells\Lightning_PreCast_Low_Hand.mdx",1,3,0.01,100),
+(4783,"Anti-Magic Zone","Spells\DeathKnight_AntiMagicZone.mdx",0,0.25,0.01,100),
+(4784,"Shredder Smoke 0.5","world\generic\passivedoodads\particleemitters\blacksmith_smoke.mdx",0,0.5,0.01,100),
+(4785,"Bone (Large)","world\generic\passivedoodads\furniture\refuse\bone01.mdx",0,3,0.01,100),
+(4786,"Mind Sear Target Impact Base","spells\priest_mindshear.mdx",0,1,0.01,1),
+(4787,"Mind Sear Impact","Spells\ArcaneExplosion_Impact_Chest.mdx",0,1,0.01,100),
+(4788,"Zangarmarsh Arcane Missile (2.00)","spells\zangarmarsh_arcane_missile.mdx",1,2,0.01,100),
+(4789,"Retribution Aura Red Base","Spells\RetributionAuraRed_Base.mdx",0,1.5,0.01,100),
+(4790,"Air Rift","world\environment\doodad\generaldoodads\elementalrifts\airrift.mdx",1,1,0.01,100),
+(4791,"Dragon Breath: Arcane","Spells\DragonBreath_Arcane.mdx",0,1,0.01,100),
+(4792,"LightningBoltIvus Missile","Spells\LightningBoltIvus_Missile.mdx",1,0.4,0.01,100),
+(4793,"Banner, Knights of the Ebon Blade 02","world\expansion02\doodads\generic\ebonblade\ebonblade_banner02.mdx",0,1,0.01,100),
+(4794,"Acid Burn (Low-Poly)","Spells\Acidburn_Small.mdx",1,2,0.01,100),
+(4795,"Shell Shield State","Spells\ShellShield_State_Base.mdx",1,0.75,0.01,100),
+(4796,"Dragon Breath: Fire","Spells\DragonBreath_Fire.mdx",0,2,0.01,100),
+(4797,"Arcane Barrage Impact","spells\mage_arcanebarrage_impact.mdx",0,8,0.01,100),
+(4798,"Devastate Impact Chest","spells\warrior_devastate.mdx",0,1,0.01,100),
+(4799,"Quest - Frost_Ground_Trail_HighQ","spells\Frost_Ground_Trail_HighQ.mdx",1,1,0.01,100),
+(4800,"RockyFrost Nova State (0.5)","spells\rockyfrost_nova_state.mdx",1,0.5,0.01,100),
+(4801,"Smoke - Infernal","spells\infernal_smoke_rec.mdx",1,0.5,0.01,100),
+(4802,"Dragon Breath: Arcane","Spells\DragonBreath_Arcane.mdx",0,2,0.01,100),
+(4803,"ArcaneExplosion Base","Spells\ArcaneExplosion_Base.mdx",1,0.5,0.01,100),
+(4804,"Arcane Barrage Impact","spells\mage_arcanebarrage_impact.mdx",0,6,0.01,100),
+(4805,"Arcane Barrage Impact","spells\mage_arcanebarrage_impact.mdx",0,4,0.01,100),
+(4806,"Fire_SmokeTrail","spells\fire_smoketrail.mdx",1,3,0.01,100),
+(4807,"Frost Bolt Missile","Spells\Frostbolt.mdx",1,1,0.01,100),
+(4808,"Arcane Torrent Cast","Spells\ArcaneTorrent.mdx",1,4,0.01,100),
+(4809,"Smoke Flare (Red)","spells\SmokeFlare_Red.mdx",1,3,0.01,100),
+(4810,"Fan of Knives","spells\fanofknives_missile.mdx",1,1,0.01,100),
+(4811,"Fan of Knives Missile","spells\fanofknives_missile.mdx",1,1,0.01,100),
+(4812,"Fan of Knives Impact","spells\fanofknives_impact.mdx",1,1,0.01,100),
+(4813,"Fan of Knives Cast","spells\fanofknives_precast.mdx",1,1,0.01,100),
+(4814,"Thunder Caster Impact","spells\shaman_thunder.mdx",1,13,0.01,100),
+(4815,"Lightning Cast Hand","Spells\Lightning_Cast_Hand.mdx",0,5,0.01,100),
+(4816,"Cone of Cold Hand (Small)","Spells\ConeofCold_Hand.mdx",1,0.5,0.01,100),
+(4817,"Lightning PreCast Low Hand","Spells\Lightning_PreCast_Low_Hand.mdx",1,5,0.01,100),
+(4818,"LightningBolt Missile","Spells\LightningBolt_Missile.mdx",1,10,0.01,100),
+(4819,"Cone of Cold Breath (Small)","Spells\ConeofCold_Mouth.mdx",0,0.5,0.01,100),
+(4820,"Missile: Web (2.00)","Spells\Web_Missile.mdx",0,2,0.01,100),
+(4821,"Missile: Frost Giant, Ice Spear","world\expansion02\doodads\generic\frostgiant\frostgiant_spear01.mdx",1,0.2,0.01,100),
+(4822,"Quest - Argent Champion","spells\argentcrusade_ctfflag_spell.mdx",0,0.6,0.01,100),
+(4823,"Quest - Time Snap Missile","creature\timerift\time_rift1.mdx",1,1,0.01,100),
+(4824,"LightningBolt Missile (5.00)","Spells\LightningBolt_Missile.mdx",1,5,0.01,100),
+(4825,"Thorim's Hammer","item\objectcomponents\weapon\mace_1h_ulduarraidnotskinable_d_01.mdx",1,8,0.01,100),
+(4826,"Missile: Siege Tank (1.00)","Spells\SiegeTank_Missile.mdx",0,1,0.01,100),
+(4827,"Yogg-Saron Tentacles","World\Expansion02\Doodads\IceCrown\Tentacles\IceCrown_Tentacles_01.mdx",1,1,0.01,100),
+(4828,"Arcane Breath (0.75)","Spells\ArcaneBreath.mdx",1,0.75,0.01,100),
+(4829,"Arcane Barrage Impact","spells\mage_arcanebarrage_impact.mdx",0,0.75,0.01,100),
+(4830,"Quest - Trapped Crusader Webbing","spells\webspin.mdx",1,1,0.01,100),
+(4831,"LightningBolt Missile (9.00)","Spells\LightningBolt_Missile.mdx",1,9,0.01,100),
+(4832,"DustNova Cast Base","spells\dustnova_cast_base.mdx",1,0.35,0.01,100),
+(4833,"Divine Storm State","spells\divine_storm_state.mdx",0,2,0.01,100),
+(4834,"Guardian Spirit State (Large)","spells\priest_guardianspirit.mdx",0,2,0.01,100),
+(4835,"LifeBloom State","spells\LifeBloom_State.mdx",1,2,0.01,100),
+(4836,"Nature Cast Hand (Purple)","spells\nature_cast_hand_purple.mdx",1,1,0.01,100),
+(4837,"Crashing Wave: Purple","spells\missile_wave_watepurple.mdx",1,1,0.01,100),
+(4838,"Bloody Explosion Purple Impact","spells\bloodyexplosionpurple.mdx",0,1,0.01,100),
+(4839,"Missile: GooBolt Purple","spells\goobolt_missile_low_purple.mdx",0,1,0.01,100),
+(4840,"Acid Breath Purple (Liquid)","spells\acidliquidbreath_purple.mdx",1,0.5,0.01,100),
+(4841,"Crashing Wave: Purple (0.5)","spells\missile_wave_watepurple.mdx",1,0.5,0.01,100),
+(4842,"Starfall State No Moon","spells\starfall_state_nosun.mdx",1,1,0.01,100),
+(4843,"Chieftain's Totem State","World\Expansion02\Doodads\WinterTauren\WT_Totem01Snow.mdx",0,0.06,0.01,100),
+(4844,"Whirlwind Base","Spells\Whirlwind_State_Base.mdx",0,2,0.01,100),
+(4845,"Sonic Impact DD Uber Chest","spell\sonicboom_impactdd_uber_chest.mdx",0,1,0.01,100),
+(4846,"Sonic Impact DD Uber Chest","spell\sonicboom_impactdd_uber_chest.mdx",0,0.5,0.01,100),
+(4847,"Divine Protector State","spells\Divine_Protector_State.mdx",0,2,0.01,100),
+(4848,"Acid Cloud Breath Smoke","spells\acidcloudbreath_groundsmoke.mdx",1,0.5,0.01,100),
+(4849,"Missile: Krusk Spear","world\goober\G_KruskSpear.mdx",1,1,0.01,100),
+(4850,"Acid Cloud Breath Smoke (Frost)","spells\AcidCloudBreath_GroundSmoke_Blue.mdx",1,0.5,0.01,100),
+(4851,"Missile: Horn","World\Kalimdor\Silithus\PassiveDoodads\Elven\elventowerSilithusHorn.mdx",0,0.5,0.01,100),
+(4852,"Ghost_state","Spells\Ghost_state.mdx",0,3,0.01,100),
+(4853,"Dragon Breath Frost","spells\DragonBreath_Frost.mdx",1,1,0.01,100),
+(4854,"Explosive Gas Nova","spells\explosivegaseous_nova.mdx",1,1,0.01,100),
+(4855,"Vrykul Sword 01","world\expansion02\doodads\generic\vrykul\weapons\vr_bm_ sword_01.mdx",0,1,0.01,100),
+(4856,"Holy Bomb","Spells\HolyBomb_Missle.mdx",0,0.5,0.1,10),
+(4857,"Acid Cloud Breath Blue (Fast)  - 2.00","spells\AcidCloudBreath_Fast_Blue.mdx",2,2,0.01,100),
+(4858,"Dragon Breath Frost (Small)","spells\DragonBreath_Frost.mdx",1,0.25,0.01,100),
+(4859,"Dragon Breath: Fire","spells\DragonBreath_Fire.mdx",1,1,0.01,100),
+(4860,"Dragon Breath: Fire","spells\DragonBreath_Fire.mdx",1,2,0.01,100),
+(4861,"Fire Smoke Trail","spells\Fire_SmokeTrail.mdx",1,20,0.01,100),
+(4862,"Fire Reflect State Chest","spells\firereflect_state_chest.mdx",1,4,0.01,100),
+(4863,"Dragon Breath Frost (Half)","spells\DragonBreath_Frost.mdx",1,0.5,0.01,100),
+(4864,"Shadowstep Cast Base (2.00)","spells\shadowsteps_fx.mdx",0,2,0.01,100),
+(4865,"Canon_Impact_Dust Impact (Chest)","spells\Canon_Impact_Dust.mdx",2,2,0.01,100),
+(4866,"Rejuvenation Impact Base","Spells\Rejuvenation_Impact_Base.mdx",1,4,0.01,100),
+(4867,"Seeping Gaseous Fel Nova","spells\SeepingGaseous_Fel_Nova.mdx",1,5,0.01,100),
+(4868,"Ghost_state (Green)","spells\greenghost_state.mdx",1,5,0.01,100),
+(4869,"LifeBloom Impact","spells\LifeBloom_Impact.mdx",1,5,0.01,100),
+(4870,"Fire Bomb","spells\firebomb_missle.mdx",1,17,0.01,100),
+(4871,"Immolate Impact Chest","Spells\Immolate_Impact_Chest.mdx",1,2,0.01,100),
+(4872,"Upper Deck - Weather Machine - Lightning","spells\Goblin_Weather_Machine_Lightning.mdx",1,1.5,0.01,100),
+(4873,"Force Shield Arcane (Green)","Spells\ArcaneForceShield_Green.mdx",1,3,0.01,100),
+(4874,"Explosive Shot Impact Chest (Large)","spells\explosive_shot_impact.mdx",4,4,0.01,100),
+(4875,"Expanding Force Bubble (Large)","spells\Expanding_Force_Bubble.mdx",3,3,0.1,10),
+(4876,"Holy Nova Impact Base (Large)","spells\holynova_impact_base.mdx",4,4,0.01,100),
+(4877,"Holy Missile Uber (Large)","Spells\Holy_Missile_Uber.mdx",3,3,0.01,100),
+(4878,"Arcane Power State Chest","spells\arcanepower_state_chest.mdx",1,25,0.01,100),
+(4879,"Zangarmarsh Arcane Impact","spells\zangarmarsh_arcane_impact.mdx",1,12,0.01,100),
+(4880,"Spike State (3 central)","Spells\Spike2_Impact_Base.mdx",0,0.5,0.1,10),
+(4881,"Ghoul Explode","SPELLS\DeathKnight_Ghoul_Explode.mdx",1,2,0.01,100),
+(4882,"Arcane Impact Chest","Spells\Magic_Impact_Chest.mdx",1,5,0.01,100),
+(4883,"Divine Protector Missile","spells\Divine_Protector_State.mdx",1,1,0.01,100),
+(4884,"Cone of Cold Breath (1.00)","Spells\ConeofCold_Mouth.mdx",0,1,0.01,100),
+(4885,"Crashing Wave: Fire","Spells\Missile_Wave_Fire.mdx",1,2.5,0.01,100),
+(4886,"Portal: Large Nature","Spells\Creature_SpellPortalLarge_Green.mdx",1,0.5,0.01,100),
+(4887,"Mind Sear Target Impact Base","spells\priest_mindshear.mdx",0,2,0.01,100),
+(4888,"ShadowWordSilence Breath","Spells\ShadowWordSilence_Breath.mdx",1,3,0.01,100),
+(4889,"Shadow Dance Impact Chest","spells\shadowdance_state.mdx",0,2,0.01,100),
+(4890,"Shadow ImpactDD Med Chest","Spells\Shadow_ImpactDD_Med_Chest.mdx",1,4,0.01,100),
+(4891,"Dragon Breath Shadow","spells\dragonbreath_shadow.mdx",1,1,0.01,100),
+(4892,"Xplosion Fire Impact","spells\Xplosion_Fire_Impact.mdx",2,2,0.01,100),
+(4893,"Explosion: Firey","spells\Xplosion_Fire_Impact.mdx",1,1.75,0.01,100),
+(4894,"Cannonball Missile (x1.0 scale)","world\generic\human\passive doodads\catapultruins\catapultball01.mdx",1,1,0.01,100),
+(4895,"CycloneFire State","Spells\CycloneFire_State.mdx",0,1.5,0.01,100),
+(4896,"LowPolyFire","world\generic\pvp\fires\lowpolyfire.mdx",1,0.1,0.01,100),
+(4897,"Instance Portal (Blue, Arcane)","spells\instancenewportal_blue_arcane.mdx",0,1,0.1,10),
+(4898,"Loot FX","particles\lootfx.mdx",1.5,1.5,0.01,100),
+(4899,"Blaze","Spells\Archimonde_Fire.mdx",0,0.8,0.1,10),
+(4900,"Sunwell Beam FX (Micro)","spells\sunwell_beamfx.mdx",0.2,0.2,0.01,100),
+(4901,"Dragon Breath Fire (New)","spells\DragonBreath_Fire.mdx",0.1,1,0.01,100),
+(4902,"Dragon Breath Fire (New)","spells\DragonBreath_Fire.mdx",1,0.1,0.01,100),
+(4903,"Quest - Sprinkle Holy Water","spells\potion_silver01_spellobject.mdx",0,1,0.1,10),
+(4904,"Sunwell Ground FX","spells\sunwell_groundfx.mdx",1,1,0.01,100),
+(4905,"MoonBeam State Base (SmallBlue)","Spells\MoonBeamBlue_Impact_Base.mdx",1,1,0.01,100),
+(4906,"Path of Frost","Spells\DeathKnight_PathofFrost.mdx",1,1,0.01,100),
+(4907,"Icecrown Airship - Cannon Fire","spells\Demolisher_Missile.mdx",1,2,0.01,100),
+(4908,"Thunder Hold","spells\shaman_thunder_hold.mdx",1,1.4,0.01,100),
+(4909,"Energize (Energy) Impact Base","spells\energizegain_energy.mdx",1,1,0.01,100),
+(4910,"Energize (Mana) Impact Base","spells\energizegain_mana.mdx",1,1,0.01,100),
+(4911,"Energize (Rage) Impact Base","spells\energizegain_rage.mdx",1,1,0.01,100),
+(4912,"Energize Lost (Energy) Impact Base","spells\energizelost_energy.mdx",1,1,0.01,100),
+(4913,"Energize Lost (Mana) Impact Base","spells\energizelost_mana.mdx",1,1,0.01,100),
+(4914,"Energize Lost (Rage) Impact Base","spells\energizelost_rage.mdx",1,1,0.01,100),
+(4915,"Energize (Mana) (Minor) Impact Base","spells\manainfuse_base.mdx",1,1,0.01,100),
+(4916,"Shield Wall Impact Base (x3 scale)","Spells\ShieldWall_Impact_Base.mdx",0,3,0.01,100),
+(4917,"Form Shadow Precast","Spells\Shadow_Form_Precast.mdx",1,3,0.01,100),
+(4918,"Low Poly Fire (Big)","World\Generic\PVP\Fires\LowPolyFireAnim.mdx",1,3,0.01,100),
+(4919,"LowPolyFire","world\generic\pvp\fires\lowpolyfire.mdx",1,2.25,0.01,100),
+(4920,"Arcane Power State Chest","spells\arcanepower_state_chest.mdx",1,1.5,0.01,100),
+(4921,"Portal: Instance Blue Arcane","spells\InstanceNewPortal_Blue_Arcane.mdx",1,1,0.01,100),
+(4922,"Shell Shield State","Spells\ShellShield_State_Base.mdx",1,3,0.01,100),
+(4923,"Saronite Pallet","World\Expansion02\Doodads\Generic\Scourge\SC_YoggthoriteBar_Stack_01.mdx",0,2,0.1,10),
+(4924,"Flesh Giant Boot","World\Expansion02\Doodads\Generic\Scourge\SC_Fleshgiant_Boot.mdx",0,3,0.1,10),
+(4925,"Scourge Crate","World\Expansion02\Doodads\Generic\Scourge\SC_crate_01.mdx",0,2,0.1,10),
+(4926,"Flesh Giant Torso","World\Expansion02\Doodads\Generic\Scourge\SC_Fleshgiant_Torso.mdx",0,0.5,0.1,10),
+(4927,"Holy Bomb (Large)","Spells\HolyBomb_Missle.mdx",3,3,0.1,10),
+(4928,"Divine Storm State (Huge)","spells\divine_storm_state.mdx",3,3,0.01,100),
+(4929,"HolyShield_State_Base (Large)","spells\holyshield_state.mdx",3,3,0.01,100),
+(4930,"Waylay State (Large)","spells\waylay_state.mdx",4,4,0.01,100),
+(4931,"Deterrence State","spells\deterrence_state_base.mdx",15,15,0.01,100),
+(4932,"Firestarter Impact Head","spells\Mage_Firestarter.mdx",0,1,0.1,10),
+(4933,"Green Summoning State","spells\DemonicCircleSummon_Base.mdx",1,2,0.01,100),
+(4934,"Missile Barrage Effect Impact","SPELLS\Mage_MIssilebarrage.mdx",0,1,0.1,10),
+(4935,"Missile: Boulder (0.5)","Spells\Boulder_Missile.mdx",0,0.5,0.01,100),
+(4936,"Spell Object: Rock","spells\boulder_missile.mdx",1,0.5,0.01,100),
+(4937,"Quest - Might of Mograine Flag (Freed)","world\expansion02\doodads\generic\ebonblade\ebonblade_banner01.mdx",0.5,0.5,0.01,100),
+(4938,"Portal: Purple","spells\creature_spellportal_purple.mdx",1,0.1,0.01,100),
+(4939,"Banish (Purple)","spells\banish_chest_purple.mdx",1,0.1,0.01,100),
+(4940,"Missile: Banana","World\Generic\PassiveDoodads\Fruits\Fruit_banana.mdx",1,0.5,0.01,100),
+(4941,"Water Breath (Tiny)","spells\WaterLiquidBreath.mdx",1,0.2,0.01,100),
+(4942,"ArcaneExplosion Base","Spells\ArcaneExplosion_Base.mdx",1,3,0.01,100),
+(4943,"Quest - Spit Missile","spells\SlimeLesserExplode_Missile.mdx",1,0.1,0.01,100),
+(4944,"BloodStrike Impact","spells\deathknight_bloodstrike_impact.mdx",4,2,0.01,100),
+(4945,"Dragon Breath Fire (New) (Small)","spells\DragonBreath_Fire.mdx",1,0.25,0.01,100),
+(4946,"Frost Trap Aura","spells\frosttrap_aura.mdx",1,2.25,0.01,100),
+(4947,"Flames (Small)","world\lordaeron\stratholme\passivedoodads\fx\stratholmefiresmokeembers.mdx",1,0.1,0.01,100),
+(4948,"Item - Fish (New)","world\azeroth\bootybay\passivedoodad\deadfish\fishdeadorange.mdx",1,1,0.01,100),
+(4949,"Missile: Rock Shards","World\Expansion02\Doodads\DragonBlight\DragonBlight_Shard_Grey_01.mdx",1,0.1,0.1,100),
+(4950,"Banish (Blue)","spells\banish_chest_blue.mdx",1,20,0.01,100),
+(4951,"Item - Tankard (Large)","Spells\TankardA_SpellObject.mdx",0,1.5,0.01,100),
+(4952,"Vanish Cast Base","spells\vanish_cast_base.mdx",0,2,0.01,100),
+(4953,"Xplosion Dust","spells\Xplosion_Dust_Impact.mdx",1,1,0.01,100),
+(4954,"Ground Rupture","spells\ground_rupture.mdx",1,1,0.01,100),
+(4955,"Xplosion Dust","spells\Xplosion_Dust_Impact.mdx",0.5,0.5,0.01,100),
+(4956,"Smoke?","World\Lordaeron\Stratholme\PassiveDoodads\FX\StratholmeSmokeEmitter.mdx",0,1,0.1,10),
+(4957,"LightningStorm Cloud Low State","Spells\LightningStorm_CloudLow_State.mdx",2,2,0.01,100),
+(4958,"Banish (Purple) - 10x","spells\banish_chest_purple.mdx",1,5,0.01,100),
+(4959,"LightningBolt Missile (0.2)","Spells\LightningBolt_Missile.mdx",1,0.2,0.01,100),
+(4960,"Sparkle (0.5)","spells\enchantments\sparkle_a.mdx",0,0.5,0.01,100),
+(4961,"Nexus_Raid_Floating_platform_Beam","spells\Nexus_Raid_Floating_platform_BeamFX.mdx",0,1,0.1,10),
+(4962,"Stoneform State Chest","Spells\Stoneform_State_Base.mdx",1,6,0.01,100),
+(4963,"Fire ImpactDD Med Chest","Spells\Fire_ImpactDD_Med_Chest.mdx",1,2,0.01,100),
+(4964,"Incinerate Impact","spells\incinerate_impact_base.mdx",1,2,0.01,100),
+(4965,"Incinerate Missile (2.00)","spells\incinerate_low_base.mdx",1,2,0.01,100),
+(4966,"Missile: Yellow Crystal","world\expansion01\doodads\silvermyst\crystals\silvermystcrystal01_yellow.mdx",1,0.05,0.01,100),
+(4967,"Burning Corpse State","World\Lordaeron\Stratholme\PassiveDoodads\FX\StratholmeFireSmokeEmberM.mdx",1,0.2,0.01,100),
+(4968,"Banish (Red) - 0.40","spells\bloodbolt_chest.mdx",1,0.4,0.01,100),
+(4969,"Cloud: Red","spells\redradiationfog.mdx",1,0.5,0.01,100),
+(4970,"Explosion - Fel (Plague Barrel)","spells\Xplosion_Fel_Impact.mdx",0,2.5,0.1,10),
+(4971,"Acid Cloud Breath Smoke ","spells\acidcloudbreath_groundsmoke.mdx",1,0.5,0.01,100),
+(4972,"Acid Cloud Base","spells\acidcloudbreath_groundsmoke.mdx",0,0.5,0.1,10),
+(4973,"Bomb Explosion (x12)","Spells\Bomb_ExplosionA.mdx",1,12,0.01,100),
+(4974,"Bladestorm State","spells\warrior_bladestorm.mdx",0,1.35,0.01,100),
+(4975,"MagePortal: Stormwind","world\generic\activedoodads\spellportals\MagePortal_Stormwind.mdx",0,3,0.01,100),
+(4976,"DustNova Cast Base","spells\dustnova_cast_base.mdx",1,0.1,0.01,100),
+(4977,"Plague Strike State","Spells\DeathKnight_PlagueStrikeState.mdx",0,0.5,0.01,100),
+(4978,"Banish (Yellow) ","spells\banish_chest_yellow.mdx",1,0.5,0.01,100),
+(4979,"Arrow Fire (2.0)","Item\ObjectComponents\Ammo\ArrowFireFlight_01.mdx",0,2,0.01,100),
+(4980,"Explosion: Firey","spells\Xplosion_Fire_Impact.mdx",1,1.25,0.01,100),
+(4981,"Explosion: Fel (1.5)","spells\Xplosion_Fel_Impact.mdx",1,1.5,0.01,100),
+(4982,"Explosion - Fel (Plague Barrel)","spells\Xplosion_Fel_Impact.mdx",0,1,0.1,10),
+(4983,"Dark Ritual PreCast Base","Spells\DarkRitual_PreCast_Base.mdx",1,3.5,0.01,100),
+(4984,"Cosmetic - Ship UD FX","spells\Transport_Ship_UD_FX.mdx",0,1,0.1,10),
+(4985,"Ghoul Arms","Spells\DeathKnight_Desecration.mdx",1,1,0.01,100),
+(4986,"Wave: Water (Small)","Spells\Wave_Water.mdx",1,0.5,0.01,100),
+(4987,"Banner, Battle Standard, Alliance","item\objectcomponents\battlestandards\battlestandard_alliance_a_01\battlestandard_alliance_a_01.mdx",0,3,0.01,100),
+(4988,"Banner, Battle Standard, Horde","item\objectcomponents\battlestandards\battlestandard_horde_a_01\battlestandard_horde_a_01.mdx",0,3,0.01,100),
+(4989,"Quest - Warchief's Blessing (Flag) State","spells\HordeCTFflag_spell.mdx",1,1,0.01,100),
+(4990,"B-Ball","Spells\Fireball_Blue_Missile_High.mdx",1,66,0.01,100),
+(4991,"Water Bubble Chest State (Very Big)","spells\waterbubble.mdx",1,10,0.01,100),
+(4992,"Force Shield Arcane (Purple)","spells\arcaneforceshield_purple.mdx",1,25,0.01,100),
+(4993,"Dust Nova","spells\dustnova_cast_base.mdx",1,1,0.01,100),
+(4994,"Eclipse Impact Base (Wrath)","spells\druid_eclipse_orange.mdx",0,1,0.01,100),
+(4995,"Shadow Form New","Spells\Shadow_Form_Precast.mdx",0,2,0.1,10),
+(4996,"Groundspike Impact Base","spells\groundspike_impact.mdx",1,1,0.01,100),
+(4997,"Gift of the water Spirit Base imapct","spells\giftwaterspirit_impact_base.mdx",1,4,0.01,100),
+(4998,"Metamorphosis Impact Base)","spells\metamorphosis.mdx",0,4,0.01,100),
+(4999,"Shadow Dance Impact Chest","spells\shadowdance_state.mdx",0,8,0.01,100),
+(5000,"Scourge CTF Flag","spells\SC_CTFflag_spell.mdx",1,1.25,0.01,100),
+(5001,"Bloody Explosion Green Impact (LARGE)","Spells\BloodyExplosionGreen.mdx",0,8,0.01,100),
+(5002,"Banner, Hanging, Horde","world\generic\pvp\battlefieldbanners\battlefieldbannerhordeflagonly.mdx",0,1,0.01,100),
+(5003,"Missile: Goblin Cannon Rocket","spells\goblin_cannon_missile.mdx",1,1,0.01,100),
+(5004,"Arcane Bomb - 18.00","spells\arcanebomb_missle.mdx",1,18,0.01,100),
+(5005,"ArcaneSpirit Impact Base","Spells\ArcaneSpirit_Impact_Base.mdx",0,3,0.01,100),
+(5006,"Haunt Missile Soul","Spells\Haunt_Missile_Soul.mdx",1,1,0.1,10),
+(5007,"Coilfang_Blue_Energy.mdx","World\Expansion01\Doodads\Coilfang\Passivedoodads\BlueEnergy\Coilfang_Blue_Energy.mdx",0.5,0.5,0.01,100),
+(5008,"Azjol_Platform_FX_01.mdx","World\Expansion02\Doodads\Ulduar\UL_lightning_Blue01.mdx",1,1,0.1,10),
+(5009,"WGH - New Windfury","spells\New_Windfury.mdx",0,1,0.1,10),
+(5010,"Arcane Missile Lvl 1 - 0.50","Spells\Arcane_Missile_Lvl1.mdx",0,0.5,0.01,100),
+(5011,"Banner, Side, Horde","world\generic\pvp\battlefieldbanners\battlefieldbannerhorde.mdx",0,1,0.01,100),
+(5012,"Banner, Hanging, Alliance","world\generic\pvp\battlefieldbanners\battlefieldbanneralliance_static_wall.mdx",0,1,0.01,100),
+(5013,"Banner, Standing, Alliance","world\generic\pvp\battlefieldbanners\battlefieldbanneralliance.mdx",0,1,0.01,100),
+(5014,"Strangulate Impact Head ","SPELLS\DeathKnight_Strangulate.mdx",1,1.8,0.01,100),
+(5015,"Fire Cast Hand","Spells\Fire_Cast_Hand.mdx",0,3,0.01,100),
+(5016,"Anti-Magic Zone (Big)","Spells\DeathKnight_AntiMagicZone.mdx",0,6,0.01,100),
+(5017,"ShadowFlame Impact (Large)","spells\shadowflame_impact.mdx",0,3,0.01,100),
+(5018,"Purple Wisp","world\kalimdor\blackfathom\passivedoodads\lights\bfd_wispsmallpurple.mdx",0,1,0.01,100),
+(5019,"Souls State","world\expansion02\doodads\generic\scourge\sc_spirits_01.mdx",1,0.5,0.01,100),
+(5020,"Tricks of the Trade Impact","spells\rogue_trick_of_the_trade_impact.mdx",0,1,0.1,10),
+(5021,"Metamorphosis Impact Base)","spells\metamorphosis.mdx",0,2,0.01,100),
+(5022,"Missile: Blood Elf Power Orb (Red) (x0.10)","world\expansion01\doodads\generic\bloodelf\powerorb\bloodelf_powerorb_red.mdx",1,0.1,0.01,100),
+(5023,"Shadow Dance Impact Chest","spells\shadowdance_state.mdx",0,3,0.01,100),
+(5024,"Tricks of the Trade State","spells\rogue_trick_of_the_trade_state.mdx",0,1,0.1,10),
+(5025,"Death Pact Impact (Huge)","SPELLS\DeathKnight_DeathPactTarget.mdx",5,10,0.01,100),
+(5026,"Shadow Nova Cast (10.0)","spells\shadow_nova_area.mdx",1,10,0.01,100),
+(5027,"WGH - Roll Putress Head","world\expansion02\doodads\dalaran\dalaran_helm_mail_northrend_d_01.mdx",1,1,0.01,100),
+(5028,"WGH - Strengh of Wrynn","spells\AllianceCtfflag_generic_spell.mdx",1,1,0.01,100),
+(5029,"Canon_Impact_Dust Impact (Chest)","spells\Canon_Impact_Dust.mdx",2,10,0.01,100),
+(5030,"Hellfire Area Base","Spells\HellFire_Area_Base.mdx",1,0.75,0.01,100),
+(5031,"Ice Precast Uber Hand","Spells\Ice_Precast_Uber_Hand.mdx",1,4,0.01,100),
+(5032,"DustCloud Land","Spells\DustCloud_Land.mdx",1,5,0.01,100),
+(5033,"Force Shield Arcane (Yellow)","spells\arcaneforceshield_yellow.mdx",1,8,0.01,100),
+(5034,"Frost Giant Spear","world\expansion02\doodads\generic\frostgiant\frostgiant_spear01.mdx",1,0.1,0.01,100),
+(5035,"Cripple State Chest - 2.0","Spells\Cripple_State_Chest.mdx",2,2,0.01,100),
+(5036,"ShadowGuard_State_Base","spells\shadowshield_state_base.mdx",5,5,0.01,100),
+(5037,"Explosion: Firey","spells\Xplosion_Fire_Impact.mdx",1,6,0.01,100),
+(5038,"Stratholme Fire Smoke Embe","World\Lordaeron\Stratholme\PassiveDoodads\FX\StratholmeFireSmokeEmberM.mdx",1,2,0.01,100),
+(5039,"Stratholme Fire Smoke Ember","World\Lordaeron\Stratholme\PassiveDoodads\FX\StratholmeFireSmokeEmberM.mdx",1,2,0.01,100),
+(5040,"Swipe Impact","Spells\SwipeImpact.mdx",1,2,0.01,100),
+(5041,"Dust Nova","spells\dustnova_cast_base.mdx",0.25,0.25,0.01,100),
+(5042,"Whirlwind Base","Spells\Whirlwind_State_Base.mdx",0,5,0.01,100),
+(5043,"Frozen Rune Weapon State","Spells\DeathKnight_FrozenRuneWeapon_State.mdx",0,5,0.01,100),
+(5044,"CycloneEarth State","Spells\CycloneEarth_State.mdx",1,3,0.01,100),
+(5045,"Shield Wall Impact Base Blue (large) ","spells\shieldwall_impact_base_blue.mdx",1,10,0.01,100),
+(5046,"Shield Wall Impact Base Red (large)","spells\shieldwall_impact_base_red.mdx",1,10,0.01,100),
+(5047,"Cripple State Chest","Spells\Cripple_State_Chest.mdx",0.5,0.5,0.01,100),
+(5048,"Banish (Dark)","spells\Banish_Chest_Dark.mdx",1,0.25,0.01,100),
+(5049,"Vehicle Flag - Horde (Chest)","World\Generic\PVP\CTFflags\HordeCTFflag.mdx",1,1,0.01,100),
+(5050,"Vehicle Flag - Alliance Flag (Blue)","World\Generic\PVP\CTFflags\AllianceCTFflag_Generic.mdx",1,1,0.01,100),
+(5051,"Nexus_FX_exterior_Beam.mdx","World\Expansion02\Doodads\Nexus\Nexus_FX_exterior_Beam.mdx",0.1,0.1,0.1,10),
+(5052,"Banish (Purple) - 3x","spells\banish_chest_purple.mdx",1,3,0.01,100),
+(5053,"Red Glow High","Spells\Enchantments\RedGlow_High.mdx",1,30,0.01,100),
+(5054,"Shield Wall Impact Base Red (med)","spells\shieldwall_impact_base_red.mdx",1,7,0.01,100),
+(5055,"Banish (Dark)","spells\Banish_Chest_Dark.mdx",1,2,0.01,100),
+(5056,"Shield Wall Impact Base Blue (med)","spells\shieldwall_impact_base_blue.mdx",1,7,0.01,100),
+(5057,"Fire Bomb","spells\firebomb_missle.mdx",1,1.5,0.01,100),
+(5058,"Snake Spin","spells\snakespin.mdx",1,1,0.01,100),
+(5059,"Snake Spin","spells\snakespin.mdx",1,0.3,0.01,100),
+(5060,"WGA - Blight Explosion (SPAWN)","spells\Xplosion_Fel_Impact.mdx",3,5,0.1,10),
+(5061,"Fire Bomb","spells\firebomb_missle.mdx",1,1,0.01,100),
+(5062,"FireStrike Missile Low - .5","Spells\FireStrike_Missile_Low.mdx",0,0.5,0.01,100),
+(5063,"Nefarian State Base","spells\nefarian_state_base.mdx",1,0.5,0.01,100),
+(5064,"Grobbulus Poison Cloud","Spells\Poison_Cloud_Grobbulus.mdx",1,0.25,0.01,100),
+(5065,"Chaos Bolt State Effect","spells\decimate_state.mdx",0,1,0.01,100),
+(5066,"Shield: Fire Force (Purple)","Spells\FireForceShield_Purple.mdx",1,3,0.01,100),
+(5067,"Fireball Missile Low - 2.0","Spells\Fireball_Missile_Low.mdx",2,2,0.01,100),
+(5068,"Smoke Flare (Purple) - 3.00","spells\SmokeFlare_Purple.mdx",1,3,0.01,100),
+(5069,"Arcane Bomb","spells\arcanebomb_missle.mdx",1,0.25,0.01,100),
+(5070,"Missile: Arcane Shot - 4.00","spells\ArcaneShot_Missile.mdx",4,4,1,100),
+(5071,"Lightning PreCast Low Hand","Spells\Lightning_PreCast_Low_Hand.mdx",1,2,0.01,100),
+(5072,"Dalaran Eye","world\expansion02\doodads\dalaran\dalaran_eye_01.mdx",0,0.5,0.1,10),
+(5073,"Missile: Goblin Rocket","Spells\Goblin_Cannon_Missile.mdx",0,2.5,0.01,100),
+(5074,"Sparkle - Giant","spells\enchantments\sparkle_a.mdx",0,50,0.01,100),
+(5075,"Sparkle - Extra Large","spells\enchantments\sparkle_a.mdx",0,30,0.01,100),
+(5076,"Banish (Green)","Spells\Banish_Chest.mdx",0,0.5,0.01,100),
+(5077,"GreenGlow_High","spells\enchantments\greenglow_high.mdx",1,10,0.01,100),
+(5078,"Fire_SmokeTrail","spells\fire_smoketrail.mdx",1,5,0.01,100),
+(5079,"Fel Firebolt Missile","spells\fel_firebolt_missile_low.mdx",1,3,0.01,100),
+(5080,"Fel Firebolt Missile","spells\fel_firebolt_missile_low.mdx",1,2,0.01,100),
+(5081,"Object: Book_Dwarf_01","world\generic\human\passive doodads\books\book_dwarf_01.mdx",0,1,0.1,10),
+(5082,"Retribution Aura Red Base","Spells\RetributionAuraRed_Base.mdx",0,0.5,0.01,100),
+(5083,"Ice Missile Uber 10.0x","Spells\Ice_Missile_Uber.mdx",1,10,0.01,100),
+(5084,"Object: Book_Human_01","world\generic\human\passive doodads\books\book_human_01.mdx",0,1,0.1,10),
+(5085,"Object: Book_Human_03","world\generic\human\passive doodads\books\book_human_03.mdx",0,1,0.1,10),
+(5086,"Object: Book_Human_04","world\generic\human\passive doodads\books\book_human_04.mdx",0,1,0.1,10),
+(5087,"Object: Book_Troll_02","world\generic\human\passive doodads\books\book_troll_02.mdx",0,1,0.1,10),
+(5088,"Arena Pipe Flush","World\Expansion02\Doodads\Dalaran\Sewer\DalaranSewer_Arena_Wave_01.mdx",0,1,0.1,10),
+(5089,"Corpse Explosion Impact Dest","SPELLS\DeathKnight_CorpseExplosion.mdx",1,0.5,0.01,100),
+(5090,"Desecration Area","Spells\DeathKnight_Desecration.mdx",0,1,0.1,10),
+(5091,"Desecration","Spells\DeathKnight_Desecration_Spawn.M2",0,1,0.1,10),
+(5092,"Holiday - Valentine - Flower Shower Black","spells\black_roseshower_impact_base.mdx",1,1,0.01,100),
+(5093,"Missile: Black Shot 0.5","spells\blackshot_missile.mdx",1,0.5,0.01,100),
+(5094,"Frost_Form","spells\frost_form_precast.mdx",0,20,0.01,100),
+(5095,"Corpse Explosion Impact Dest","SPELLS\DeathKnight_CorpseExplosion.mdx",1,1,0.01,100),
+(5096,"Thunder Caster Impact","spells\shaman_thunder.mdx",1,2.5,0.01,100),
+(5097,"Shockwave Area","spells\warrior_shockwave_area.mdx",0,5,0.01,10),
+(5098,"Holy Precast Uber Hand","Spells\Holy_Precast_Uber_Hand.mdx",1,2,0.01,100),
+(5099,"Holy Reflect State Chest","spells\HolyReflect_State_Chest.mdx",0,0.2,0.1,10),
+(5100,"Missile: Saw Blade (2)","spells\missile_sawblade.mdx",1,2,0.01,100),
+(5101,"Smoke Flare (Purple)","spells\SmokeFlare_Purple.mdx",1,0.25,0.01,100),
+(5102,"Shield: Fire Force (Purple)","Spells\FireForceShield_Purple.mdx",1,0.5,0.01,100),
+(5103,"Riptide Impact Base","spells\mage_riptide_impact.mdx",0,1,0.01,100),
+(5104,"Riptide State","spells\mage_riptide_state.mdx",0,1,0.01,100),
+(5105,"bunny","creature\rabbit\rabbitgold.mdx",0,1,0.01,100),
+(5106,"Sparkle Trail (0.5)","spells\sparktrail.mdx",0,0.5,0.01,100),
+(5107,"Holiday - Valentine - Heart State/Impact","spells\holidays\valentines_lookingforloveheart.mdx",1,0.5,0.01,100),
+(5108,"bunny (0.75)","creature\rabbit\rabbitgold.mdx",0,0.75,0.01,100),
+(5109,"Cyclone State (2x) ","Spells\Cyclone_State.mdx",1,2,0.01,100),
+(5110,"Stratholme Fire Smoke Ember (0.10)","World\Lordaeron\Stratholme\PassiveDoodads\FX\StratholmeFireSmokeEmberM.mdx",1,0.1,0.01,100),
+(5111,"Feather (Brown) - 1.50","World\Generic\PassiveDoodads\Feathers\FeatherBigBrown.mdx",1,1.5,0.01,100),
+(5112,"Distract Impact Chest","Spells\Distract_Impact_Chest.mdx",0,2,0.01,100),
+(5113,"Hex Impact Base","Spells\Polymorph_Impact_Base.mdx",0.01,1,0.01,1),
+(5114,"Explosion: Firey","spells\Xplosion_Fire_Impact.mdx",1,0.25,0.01,100),
+(5115,"Canon_Impact_Dust Impact (Chest)","spells\Canon_Impact_Dust.mdx",1,0.25,0.01,100),
+(5116,"Object: Roast Boar","World\Generic\Human\Passive Doodads\Food\RoastBoarPlatter_nocollision.mdx",1,1,0.01,100),
+(5117,"Object: Roast Boar","World\Generic\Human\Passive Doodads\Food\RoastBoarPlatter_nocollision.mdx",1,0.1,0.01,100),
+(5118,"Object: Red Potion","World\Expansion02\Doodads\Generic\Potions\Potion_Red04.mdx",1,0.25,0.01,100),
+(5119,"Object: Jug01","World\Azeroth\Elwynn\PassiveDoodads\jugs\jug01.mdx",1,0.25,0.01,100),
+(5121,"Object: BubblingBowl01","World\Generic\Orc\Passive Doodads\VoodooStuff\BubblingBowl01.mdx",1,0.25,0.01,100),
+(5122,"Object: SmallVials","World\Generic\Human\Passive Doodads\Vials\SmallVials.mdx",1,0.25,0.01,100),
+(5128,"Toy - Dalaran - Squirt Gun X","spells\waterliquidbreath.mdx",1,0.5,0.01,100),
+(5129,"Chainlightning Impact Chest","Spells\ChainLightning_Impact_Chest.mdx",0,0.75,0.01,100),
+(5130,"Thunderstorm","Spells\Shaman_Thunder.mdx",0,0.3,0.1,10),
+(5131,"Thunder Hold ","spells\shaman_thunder_hold.mdx",1,0.3,0.01,100),
+(5132,"Power Infusion","Spells\Priest_PowerInfusion.mdx",0,1,0.1,10),
+(5133,"Holiday - Cornucopia","World\Generic\PassiveDoodads\Thanksgiving\G_Cornucopia.mdx",1,1,0.1,100),
+(5134,"Holiday - Cornucopia","World\Generic\PassiveDoodads\Thanksgiving\G_Cornucopia.mdx",1,0.5,0.1,100),
+(5135,"G_RuneBlue2","World\Goober\g_RuneBlue02.mdx",6.5,6.5,0.01,100),
+(5136,"MoonBeam (Blue)","spells\MoonBeamBlue_Impact_Base.mdx",1.5,1.5,0.01,100),
+(5137,"Blue Glow High","Spells\Enchantments\BlueGlow_High.mdx",5,5,0.01,100),
+(5138,"Dragon Breath Frost","spells\DragonBreath_Frost.mdx",1,2,0.01,100),
+(5139,"Acid Cloud Breath Smoke (Frost)","spells\acidcloudbreath_groundsmoke_blue.mdx",0,1,0.1,10),
+(5140,"Acid Cloud Breath Blue (Fast)","spells\AcidCloudBreath_Fast_Blue.mdx",1,1,0.01,100),
+(5141,"Dragon Breath Frost","spells\DragonBreath_Frost.mdx",1,0.25,0.01,100),
+(5142,"G_RuneGroundPurple01.mdx","World\Goober\G_RuneGroundPurple01.mdx",3,3,0.1,10),
+(5143,"Egg Basket (Carried)","item\objectcomponents\weapon\offhand_easter_a_01.mdx",1,1,0.1,10),
+(5144,"Firework Roman Candle Impact (4.0x)","Spells\Firework_RomanCandle_Impact_Chest_01.mdx",1,4,0.01,100),
+(5145,"Firework Roman Candle Impact (8.0x)","Spells\Firework_RomanCandle_Impact_Chest_01.mdx",1,8,0.01,100),
+(5146,"Explosion: Firey","spells\Xplosion_Fire_Impact.mdx",1,0.75,0.01,100),
+(5147,"Dalaran - Shoe Shine State","particles\lootfx.mdx",0.45,0.45,0.01,100),
+(5148,"Holiday - Lunar Festival - Chest Firework Impact","spells\firework_romancandle_impact_chest_01.mdx",1,4,0.01,100),
+(5149,"Instance Portal, New (Purple)","spells\instancenewportal_purple.mdx",0,1,0.1,10),
+(5151,"Deep Freeze State","spells\mage_deepfreeze.mdx",0,2,0.01,100),
+(5152,"Rain Of Fire Rune Base","Spells\SummonGround_RainofFire.mdx",0,1,0.01,100),
+(5153,"Blizzard Rune Base","Spells\SummonGround_Blizzard.mdx",0,1,0.01,100),
+(5154,"Holy Bomb Small","Spells\HolyBomb_Missle.mdx",0,0.25,0.1,10),
+(5155,"Missile: Star Missile","spells\Ulduar_StarMissile.mdx",0,1,0.01,100),
+(5156,"Sunwell Beam FX","spells\sunwell_beamfx.mdx",1,0.75,0.01,100),
+(5157,"Missile: Rabbit (No Texture!)","creature\rabbit\rabbit.mdx",1,1,0.01,100),
+(5158,"Shadowmoon Rune","World\Expansion01\Doodads\Shadowmoon\rune\Shadowmoon_rune1.mdx",0,5,0.1,10),
+(5159,"Ward: Fel Fire Impact Chest (10.00)","spells\Fel_Fireward_Impact_Chest.mdx",0,10,0.1,10),
+(5160,"Magic Stone Helmet Red","Spells\MagicStoneHelmet_Red.mdx",0,5,0.01,100),
+(5161,"Anti-Magic State Base Red","spells\antimagic_state_red.mdx",2,2,0.01,100),
+(5162,"MoonBeamRed_Impact_Base","spells\moonbeamred_impact_base.mdx",1,0.1,0.01,100),
+(5163,"Eviscerate Impact Chest","Spells\Eviscerate_Impact_Chest.mdx",2,2,0.01,100),
+(5164,"Energize (Rage) Impact Base","spells\energizegain_rage.mdx",2,2,0.01,100),
+(5165,"Missile: Thorns (5x)","spells\missile_thorns.mdx",1,5,0.01,100),
+(5166,"Flames (Stratholme Small)","world\lordaeron\stratholme\passivedoodads\fx\stratholmefiresmokeembers.mdx",1,0.3,0.01,100),
+(5167,"Flames (Stratholme Medium)","World\Lordaeron\Stratholme\PassiveDoodads\FX\StratholmeFireSmokeEmberM.mdx",1,0.25,0.01,100),
+(5168,"Dragonblight Shard (Impale)","World\Expansion02\Doodads\DragonBlight\DragonBlight_Shard_03.mdx",0,0.2,0.01,10),
+(5169,"MoltenBlast Missile lvl1","Spells\MoltenBlast_Missile.mdx",1,1,0.01,100),
+(5170,"MoltenBlast Missile (3.00)","Spells\MoltenBlast_Missile.mdx",1,3,0.01,100),
+(5171,"MoltenBlast Missile (4.00)","Spells\MoltenBlast_Missile.mdx",1,4,0.01,100),
+(5172,"RockyFrost Nova State","spells\rockyfrost_nova_state.mdx",1,2,0.01,100),
+(5173,"RockyFrost Nova State","spells\rockyfrost_nova_state.mdx",1,1.5,0.01,100),
+(5174,"Exploding Stone Impact","spells\exploding_stone_impact.mdx",1,0.5,0.01,100),
+(5175,"Exploding Stone Impact","spells\exploding_stone_impact.mdx",1,2,0.01,100),
+(5176,"Ritual Arcane PreCast Base","spells\Ritual_Arcane_PreCast_Base.mdx",1,2.75,0.01,100),
+(5177,"Owlkin Frenzy State","Spells\Druid_Owlkin_Frenzy.mdx",0,1,0.1,10),
+(5178,"Owlkin Frenzy State","Spells\Druid_Owlkin_Frenzy.mdx",0,2,0.1,10),
+(5179,"Owlkin Frenzy State","Spells\Druid_Owlkin_Frenzy.mdx",0,1.5,0.1,10),
+(5180,"Might Aura State Base","Spells\MightAura_Impact_Base.mdx",0,2.5,0.01,100),
+(5181,"Aura Yellow Tall","World\Generic\PassiveDoodads\ParticleEmitters\AuraYellowVeryTall.mdx",0,2,0.1,10),
+(5182,"Holy Nova (Smaller)","spells\holynova_impact_base.mdx",0.5,0.3,0.01,100),
+(5183,"Aura Yellow Tall","World\Generic\PassiveDoodads\ParticleEmitters\AuraYellowVeryTall.mdx",0,3.5,0.1,10),
+(5184,"Sunfire_Impact_Base","Spells\Sunfire_Impact_Base.mdx",0,1,0.01,100),
+(5185,"Ulduar_Missile (3.00)","Spells\Ulduar_Missile.mdx",1,3,0.01,100),
+(5186,"Missile: Meteor (2.00)","spells\Meteor_Ball_Missile.mdx",1,2,0.01,100),
+(5187,"Frost Nova Area","Spells\Frost_Nova_area.mdx",1,1.5,0.01,100),
+(5188,"FireStrike Missile Low - 2.00","Spells\FireStrike_Missile_Low.mdx",0,2,0.01,100),
+(5189,"Nefarian Impact Base","spells\nefarian_impact_base.mdx",0.05,0.05,0.01,100),
+(5190,"Nefarian Breath Impact","spells\nefarianflamebreath_impact.mdx",5,5,0.01,100),
+(5191,"Flames","world\lordaeron\stratholme\passivedoodads\fx\stratholmefiresmokeembers.mdx",1,1,0.01,100),
+(5192,"Fan of Knives Base","spells\fanofknives.mdx",0,1,0.1,10),
+(5193,"Hodir Ground Freeze","spells\ulduar_bosssmoke.mdx",0,1,0.1,10),
+(5194,"Lava Burst Impact","spells\shaman_lavaburst.mdx",0,2,0.01,100),
+(5195,"Fire Nova Area (0.35)","Spells\FireNova_Area.mdx",1,0.35,0.01,100),
+(5196,"Missile: Alliance Bomb (0.75)","creature\AllianceBomb\AllianceBomb.mdx",0,0.75,0.01,100),
+(5197,"Creature - Extraplanar Spore Visual","World\Expansion02\Doodads\GrizzlyHills\Trees\GrizzlyHills_Mushroom03.mdx",0,2.5,0.1,10),
+(5198,"Lava Elemental Impact Base","spells\LavaElemental_Impact_Base.mdx",0,1,0.1,10),
+(5199,"Dragon Breath Fire","spells\DragonBreath_Fire.mdx",1,0.5,0.01,100),
+(5200,"BattleShout Cast Base (No Scaling)","Spells\BattleShout_Cast_Base.mdx",0,1,1,1),
+(5201,"Fire: Ground","World\Expansion02\Doodads\HowlingFjord\FireFX\BurntGround01.mdx",0,1,0.1,10),
+(5202,"Fire: Ground","World\Expansion02\Doodads\HowlingFjord\FireFX\BurntGround01.mdx",0,13,0.1,100),
+(5203,"Creature - Lifebinder's Gift Missile","Spells\InstanceNewPortal_Green.mdx",0,0.35,0,0),
+(5204,"Balance Of Nature Impact Base","Spells\BalanceOfNature_Impact_Base.mdx",1,0.5,0.01,100),
+(5205,"Creature - Lifebinder's Gift Visual","Spells\NatureBeam_State_Base.mdx",0,0.25,0.1,10),
+(5206,"Heal Low Base","Spells\Heal_Low_Base.mdx",1,0.75,0.01,100),
+(5207,"LightningStorm Cloud Low","Spells\LightningStorm_CloudLow_State.mdx",0,0.5,0.01,100),
+(5208,"LightningStorm Cloud Low Small","Spells\LightningStorm_CloudLow_State.mdx",0,0.5,0.01,100),
+(5209,"Missile: Wrath (Medium)","spells\wrath_missile.mdx",1,2.5,0.01,100),
+(5210,"Missile: Wrath (Large)","spells\wrath_missile.mdx",1,6,0.01,100),
+(5211,"Power Word: Barrier Base","Spells\Priest_PowerWardBarrier.mdx",0,3,0.01,100),
+(5212,"Sunfire Impact Base","Spells\Sunfire_Impact_Base.mdx",0,2.5,0.1,10),
+(5213,"Sunfire_Impact_base","Spells\Sunfire_Impact_Base.mdx",0,1.5,0.1,10),
+(5214,"Hurricane Low","Spells\LightningStorm_CloudLow_State.mdx",0,0.3,0.01,100),
+(5215,"Upper Deck - Weather Machine - Rain","spells\Goblin_Weather_Machine_Rain.mdx",1,0.5,0.01,100),
+(5216,"Bladestorm State","spells\warrior_bladestorm.mdx",0,0.25,0.01,100),
+(5217,"LightningStorm Cloud State","Spells\LightningStorm_Cloud_State.mdx",1,0.5,0.01,100),
+(5218,"Missile: Lightning Bolt (Ivus small)","spells\lightningboltivus_missile.mdx",1,0.5,0.01,100),
+(5219,"Bubble Drunk (No Scaling)","Spells\Bubble_Drunk.mdx",0,1,1,100),
+(5220,"Lava Elemental Impact Base","spells\LavaElemental_Impact_Base.mdx",0,2,0.1,10),
+(5221,"Lash Cast Base","spells\lash_cast_base.mdx",2,2,0.01,100),
+(5222,"Banish (White)","spells\banish_chest_white.mdx",1,3,0.01,100),
+(5223,"Banish (Green)","Spells\Banish_Chest.mdx",0,3,0.01,100),
+(5224,"Banish (Green)","Spells\Banish_Chest.mdx",0,3,0.01,100),
+(5225,"Lava Explosion","World\Kalimdor\OnyxiasLair\LavaTraps\OnyziasLairLavaSplash.mdx",0,1,0.1,10),
+(5226,"Disease Cloud","spells\diseasecloud.mdx",0,1,0.1,10),
+(5227,"Owlkin Frenzy State","Spells\Druid_Owlkin_Frenzy.mdx",0,0.1,0.1,10),
+(5229,"Lock and Load Impact","spells\hunter_lockandload.mdx",1,1.5,0.01,100),
+(5230,"Rapid Fire Hunter Impact Base","spells\hunter_rapidfire.mdx",1,1,0.01,100),
+(5231,"StunSwirl State Head - Large","Spells\StunSwirl_State_Head.mdx",2,2,0.01,100),
+(5232,"Holy Missile Low (2.0)","Spells\Holy_Missile_Low.mdx",1,2,0.01,100),
+(5233,"Banish (Green)","Spells\Banish_Chest.mdx",0,3,0.01,100),
+(5234,"Balance Of Nature Impact Base","Spells\BalanceOfNature_Impact_Base.mdx",1,0.35,0.01,100),
+(5235,"Snowball Powdery State","spells\SnowballPowdery_Impact_Base.mdx",1,2,0.01,100),
+(5236,"Skybeam, Green","Spells\NatureBeam_State_Base.mdx",1,1,0.01,100),
+(5237,"Skybeam, Red","Spells\FireBeam_State_Base.mdx",1,1,0.01,10),
+(5238,"Skybeam, Lightning","Spells\LightingBeam_State_Base.mdx",1,1,0.01,100),
+(5239,"Skybeam, Blue","Spells\FrostBeam_State_Base.mdx",1,1,0.01,100),
+(5240,"Beam Target Ground Effect","Spells\BeamTarget_OnGround.mdx",1,1,0.01,100),
+(5241,"Missile: Alliance Bomb (0.50)","creature\AllianceBomb\AllianceBomb.mdx",0,0.5,0.01,100),
+(5242,"Explosion: Frost","Spells\Xplosion_Frost_Impact.mdx",1,1,0.01,100),
+(5243,"Explosion: Lightning","Spells\Xplosion_Lightning_Impact.mdx",1,1,0.01,100),
+(5244,"Beam Target Ground Effect","Spells\BeamTarget_OnGround.mdx",1,2,0.01,100),
+(5245,"Ice Nuke Missile","spells\IceNuke_Missile.mdx",1,2,0.01,100),
+(5246,"Missile: Blood Elf Power Orb (Green) (1.00)","world\expansion01\doodads\generic\bloodelf\powerorb\bloodelf_powerorb_green.mdx",1,1,0.01,100),
+(5247,"Fire Bomb","spells\firebomb_missle.mdx",1,2,0.01,100),
+(5248,"Explosion: Lightning","Spells\Xplosion_Lightning_Impact.mdx",1,2,0.01,100),
+(5249,"Missile: Blood Elf Power Orb (Green) (5.00)","world\expansion01\doodads\generic\bloodelf\powerorb\bloodelf_powerorb_green.mdx",1,5,0.01,100),
+(5250,"LightningBolt Missile (18.00)","Spells\LightningBolt_Missile.mdx",1,18,0.01,100),
+(5251,"Disease Cloud","spells\diseasecloud.mdx",0,3,0.1,10),
+(5252,"Xplosion_Nature_Impact","Spells\Xplosion_Nature_Impact.mdx",0,1,0.1,10),
+(5253,"Xplosion_Nature_Impact (2.0)","Spells\Xplosion_Nature_Impact.mdx",0,2,0.1,10),
+(5254,"Xplosion Lightning Impact","spells\xplosion_fire_impact.mdx",1,1,0.01,100),
+(5255,"Xplosion Fire Impact","spells\Xplosion_Fire_Impact.mdx",4,4,0.01,100),
+(5256,"Bladestorm State","spells\warrior_bladestorm.mdx",0,7,0.01,100),
+(5257,"Fireball Missile High (3.00)","Spells\Fireball_Missile_High.mdx",0,3,0.01,100),
+(5258,"Fire Bomb","spells\firebomb_missle.mdx",1,0.2,0.01,100),
+(5259,"Land mine","Creature\Spells\LandMine01.mdx",1,1,0.01,100),
+(5260,"Thunder Caster Impact","spells\shaman_thunder.mdx",1,2,0.01,100),
+(5261,"Rocket - 3.00","Spells\Missle_Rocket02.mdx",1,3,0.1,100),
+(5262,"Dark Ritual PreCast Base Blue","spells\darkritual_precast_baseblue.mdx",1,3.5,0.01,100),
+(5263,"Shadow Fissure Base Blue (2.25)","Spells\Shadow_Fissure_Baseblue.mdx",1,2.25,0.01,100),
+(5264,"Flavor - Arrows in Chest","world\generic\human\passive doodads\weapons&armor\humanarrows.mdx",0,1,0.1,10),
+(5265,"Black Radiation Fog","spells\blackradiationfog.mdx",1,0.75,0.01,100),
+(5266,"Lava Burst Missile (4.00)","spells\shaman_lavaburst_missile.mdx",1,4,0.01,100),
+(5267,"Ground Spike","Spells\GroundSpike_Impact.mdx",0,2,0.1,10),
+(5268,"Frostfire Bolt Missile","spells\mage_firefrostbolt.mdx",1,1,0.01,100),
+(5269,"Green Radiation Fog (Blue/Green - Magic)","SPELLS\LargeBlueGreenRadiationFog.mdx",1,2,0.01,100),
+(5270,"Shadow Breath (0.50)","Spells\DragonBreath_Shadow.mdx",1,0.5,0.01,100),
+(5272,"Fire Beam State Base","Spells\FireBeam_State_Base.mdx",0,0.5,0.1,10),
+(5273,"Frost Beam State Base ","Spells\FrostBeam_State_Base.mdx",0,0.5,0.1,10),
+(5274,"Nature Beam State Base","Spells\NatureBeam_State_Base.mdx",0,0.5,0.1,10),
+(5275,"Lava Burst Missile (1.5)","spells\shaman_lavaburst_missile.mdx",1,1.5,0.01,100),
+(5276,"Arcane Lightning (1) - .1","Spells\arcanelightning.mdx",1,0.1,0.01,100),
+(5277,"Rocket Blast Down (Small)","spells\rocketblast_down.mdx",0.15,0.15,0.01,100),
+(5278,"Stratholme Fire Smoke Ember","World\Lordaeron\Stratholme\PassiveDoodads\FX\StratholmeFireSmokeEmberM.mdx",1,2.5,0.01,100),
+(5279,"Plague Strike State","Spells\DeathKnight_PlagueStrikeState.mdx",0,12,0.01,100),
+(5280,"Fan of Knives Impact","spells\fanofknives_impact.mdx",1,0.75,0.01,100),
+(5281,"Fire Patch - 0.025","spells\Archimonde_Fire.mdx",1,0.025,0.01,100),
+(5282,"Acid Burn Black","SPELLS\AcidBurn_Black.mdx",1,0.7,0.01,100),
+(5283,"Ground Dust State","spells\grounddust.mdx",1,0.5,0.01,100),
+(5284,"Fire Nova: Blue","Spells\FireNova_Blue_Area.mdx",1,0.25,0.01,100),
+(5285,"Fireblast Impact (Blue)","spells\FireBlast_Blue_Impact_Chest.mdx",0,1,0.1,10),
+(5286,"Missile: Stone Block","World\Expansion02\Doodads\Generic\ArgentCrusade\ArgentCrusade_Brick_02.mdx",0.35,0.35,0.01,100),
+(5287,"Force Shield Arcane (Green)","Spells\ArcaneForceShield_Green.mdx",1,1,0.01,100),
+(5288,"Tournament_Pennant_Human01","world\expansion02\doodads\generic\argentcrusade\pennants\tournament_pennant_human01.mdx",0,1,0.1,10),
+(5289,"Tournament_Pennant_Human02","world\expansion02\doodads\generic\argentcrusade\pennants\tournament_pennant_human02.mdx",0,1,0.1,10),
+(5290,"Tournament_Pennant_Human03","world\expansion02\doodads\generic\argentcrusade\pennants\tournament_pennant_human03.mdx",0,1,0.1,10),
+(5291,"New Effect","world\expansion02\doodads\generic\argentcrusade\pennants\tournament_pennant_gnome01.mdx",0,1,0.1,10),
+(5292,"Tournament_Pennant_Gnome01","world\expansion02\doodads\generic\argentcrusade\pennants\tournament_pennant_gnome01.mdx",0,1,0.1,10),
+(5293,"Tournament_Pennant_Gnome02","world\expansion02\doodads\generic\argentcrusade\pennants\tournament_pennant_gnome02.mdx",0,1,0.1,10),
+(5294,"Tournament_Pennant_Gnome03","world\expansion02\doodads\generic\argentcrusade\pennants\tournament_pennant_gnome03.mdx",0,1,0.1,10),
+(5295,"Tournament_Pennant_Troll01","world\expansion02\doodads\generic\argentcrusade\pennants\tournament_pennant_troll01.mdx",0,1,0.1,10),
+(5296,"Tournament_Pennant_Troll02","world\expansion02\doodads\generic\argentcrusade\pennants\tournament_pennant_troll02.mdx",0,1,0.1,10),
+(5297,"Tournament_Pennant_Troll03","world\expansion02\doodads\generic\argentcrusade\pennants\tournament_pennant_troll03.mdx",0,1,0.1,10),
+(5298,"Tournament_Pennant_BE01","world\expansion02\doodads\generic\argentcrusade\pennants\tournament_pennant_be01.mdx",0,1,0.1,10),
+(5299,"Tournament_Pennant_BE02","world\expansion02\doodads\generic\argentcrusade\pennants\tournament_pennant_be02.mdx",0,1,0.1,10),
+(5300,"Tournament_Pennant_BE03","world\expansion02\doodads\generic\argentcrusade\pennants\tournament_pennant_be03.mdx",0,1,0.1,10),
+(5301,"Tournament_Pennant_NELF01","world\expansion02\doodads\generic\argentcrusade\pennants\tournament_pennant_nelf01.mdx",0,1,0.1,10),
+(5302,"Tournament_Pennant_NELF02","world\expansion02\doodads\generic\argentcrusade\pennants\tournament_pennant_nelf02.mdx",0,1,0.1,10),
+(5303,"Tournament_Pennant_NELF03","world\expansion02\doodads\generic\argentcrusade\pennants\tournament_pennant_nelf03.mdx",0,1,0.1,10),
+(5304,"Tournament_Pennant_Draenei01","world\expansion02\doodads\generic\argentcrusade\pennants\tournament_pennant_draenei01.mdx",0,1,0.1,10),
+(5305,"Tournament_Pennant_Draenei02","world\expansion02\doodads\generic\argentcrusade\pennants\tournament_pennant_draenei02.mdx",0,1,0.1,10),
+(5306,"Tournament_Pennant_Draenei03","world\expansion02\doodads\generic\argentcrusade\pennants\tournament_pennant_draenei03.mdx",0,1,0.1,10),
+(5307,"Tournament_Pennant_Dwarf01","world\expansion02\doodads\generic\argentcrusade\pennants\tournament_pennant_dwarf01.mdx",0,1,0.1,10),
+(5308,"Tournament_Pennant_Dwarf02","world\expansion02\doodads\generic\argentcrusade\pennants\tournament_pennant_dwarf02.mdx",0,1,0.1,10),
+(5309,"Tournament_Pennant_Dwarf03","world\expansion02\doodads\generic\argentcrusade\pennants\tournament_pennant_dwarf03.mdx",0,1,0.1,10),
+(5310,"Tournament_Pennant_FK01","world\expansion02\doodads\generic\argentcrusade\pennants\tournament_pennant_fk01.mdx",0,1,0.1,10),
+(5311,"Tournament_Pennant_FK02","world\expansion02\doodads\generic\argentcrusade\pennants\tournament_pennant_fk02.mdx",0,1,0.1,10),
+(5312,"Tournament_Pennant_FK03","world\expansion02\doodads\generic\argentcrusade\pennants\tournament_pennant_fk03.mdx",0,1,0.1,10),
+(5313,"Tournament_Pennant_Orc01","world\expansion02\doodads\generic\argentcrusade\pennants\tournament_pennant_orc01.mdx",0,1,0.1,10),
+(5314,"Tournament_Pennant_Orc02","world\expansion02\doodads\generic\argentcrusade\pennants\tournament_pennant_orc02.mdx",0,1,0.1,10),
+(5315,"Tournament_Pennant_Orc03","world\expansion02\doodads\generic\argentcrusade\pennants\tournament_pennant_orc03.mdx",0,1,0.1,10),
+(5316,"Tournament_Pennant_Tauren01","world\expansion02\doodads\generic\argentcrusade\pennants\tournament_pennant_tauren01.mdx",0,1,0.1,10),
+(5317,"Tournament_Pennant_Tauren02","world\expansion02\doodads\generic\argentcrusade\pennants\tournament_pennant_tauren02.mdx",0,1,0.1,10),
+(5318,"Tournament_Pennant_Tauren03","world\expansion02\doodads\generic\argentcrusade\pennants\tournament_pennant_tauren03.mdx",0,1,0.1,10),
+(5319,"Power Infusion State","spells\priest_powerinfusion.mdx",1,1,0.01,100),
+(5320,"Tidal Force Impact Base","spells\shaman_tidal_force.mdx",1,1,0.01,100),
+(5321,"Demonic Empowerment Impact","spells\warlock_demonic_empathy.mdx",1,1.5,0.01,100),
+(5323,"Tournament_Pennant_AC02","world\expansion02\doodads\generic\argentcrusade\pennants\tournament_pennant_argentcru02.mdx",0,1,0.1,10),
+(5324,"Tournament_Pennant_AC03","world\expansion02\doodads\generic\argentcrusade\pennants\tournament_pennant_argentcru03.mdx",0,1,0.1,10),
+(5325,"Thunder Hold","spells\shaman_thunder_hold.mdx",1,0.2,0.01,100),
+(5326,"Lightning Nova (x2)","spells\lightning_ring_nova.mdx",1,2,0.01,100),
+(5330,"Cat Mark State Head","Spells\CatMark.mdx",1,4,0.01,100),
+(5331,"Tournament_Pennant_AC01","world\expansion02\doodads\generic\argentcrusade\pennants\tournament_pennant_argentcru01.mdx",0,1,0.1,10),
+(5332,"Tournament_Pennant_EB01","world\expansion02\doodads\generic\argentcrusade\pennants\tournament_pennant_ebonblade01.mdx",0,1,0.1,10),
+(5333,"Tournament_Pennant_EB02","world\expansion02\doodads\generic\argentcrusade\pennants\tournament_pennant_ebonblade02.mdx",0,1,0.1,10),
+(5334,"Tournament_Pennant_EB03","world\expansion02\doodads\generic\argentcrusade\pennants\tournament_pennant_ebonblade03.mdx",0,1,0.1,10),
+(5335,"Ulduar Shield Removal","spells\arcaneforceshield_purple.mdx",1,100,0.01,100),
+(5336,"Dragon Breath: Fire","Spells\DragonBreath_Fire.mdx",0,0.1,0.01,100),
+(5337,"Holy Precast Low Hand","Spells\Holy_Precast_Low_Hand.mdx",1,0.6,0.01,100),
+(5338,"Ice Precast Low Hand","Spells\Ice_Precast_Low_Hand.mdx",1,1.5,0.01,100),
+(5339,"Missile: Demolisher (Blue)","Spells\Demolisher_Missile_Blue.mdx",0,3,0.01,100),
+(5340,"Missile: Plague Barrel (Blue)","spells\ForsakenCatapult_Missile_Blue.mdx",0,1,0.01,100),
+(5341,"Lightning PreCast Low Hand","Spells\Lightning_PreCast_Low_Hand.mdx",1,30,0.01,100),
+(5342,"Explosion: Dust","spells\Xplosion_Dust_Impact.mdx",1,0.5,0.01,100),
+(5343,"Arcane Explosion Base Boss","spells\arcaneexplosion_boss_base.mdx",1,10,0.01,100),
+(5344,"Fire Nova Area (0.20)","Spells\FireNova_Area.mdx",1,0.2,0.01,100),
+(5345,"Missile: Leather Ball","spells\missile_leatherball.mdx",1,0.5,0.01,100),
+(5346,"Frost Bolt Missile","Spells\Frostbolt.mdx",1,2,0.01,100),
+(5347,"Xplosion_Frost_Impact","Spells\Xplosion_Frost_Impact.mdx",0,2,0.1,10),
+(5348,"Missile: Grizzly Hills Boulder","World\Expansion02\Doodads\GrizzlyHills\Rocks\GrizzlyHills_Boulder01.mdx",1,0.5,0.01,100),
+(5349,"Explosion Dust Impact","Spells\Xplosion_Dust_Impact.mdx",1,0.5,0.01,100),
+(5350,"Curse of Elements Impact Head","Spells\CurseElements_Impact_Head.mdx",0,4,0.01,100),
+(5351,"Shockwave Area","spells\warrior_shockwave_area.mdx",0,10,0.01,10),
+(5352,"Shockwave Area","spells\warrior_shockwave_area.mdx",0,7,0.01,10),
+(5353,"Tournament_Pennant_Hand_AC","world\expansion02\doodads\generic\argentcrusade\pennants\tournament_pennant_argentcru01.mdx",0,0.33,0.1,10),
+(5354,"Explosion: Dust","spells\Xplosion_Dust_Impact.mdx",1,0.25,0.01,100),
+(5356,"Hellfire Impact Caster Base","Spells\HellFire_Impact_Caster_Base.mdx",0,3,0.01,100),
+(5357,"Anti-Magic Zone","Spells\DeathKnight_AntiMagicZone.mdx",0,3,0.01,100),
+(5358,"Shadow Nova Cast","spells\shadow_nova_area.mdx",1,8,0.01,100),
+(5359,"Frostfire Bolt Missile","spells\mage_firefrostbolt.mdx",1,2,0.01,100),
+(5361,"Dragon Sand Breath","spells\corrosivesandbreath.mdx",1,0.25,0.01,100),
+(5362,"Shockwave Area No Pulse","spells\Warrior_ShockWave_NoPulse.mdx",0,7,0.01,10),
+(5363,"HolyWordShield State Base","Spells\HolyWordShield_State_Base.mdx",0,1,0.01,100),
+(5364,"HolyWord Shield State Base","Spells\HolyWordShield_State_Base.mdx",0,0.5,0.01,100),
+(5366,"Shot: Arcane Missile","Spells\ArcaneShot_Missile.mdx",1,1.5,0.01,100),
+(5367,"Acid Burn Base","spells\AcidBurn.mdx",1,0.35,0.01,100),
+(5368,"Flame Patch (Blue) -","spells\Archimonde_Blue_Fire.mdx",1,1.35,0.01,100),
+(5369,"shield of vengeance impact","Spells\Shield_of_Vengeance_Impact.mdx",1,1,0.01,100),
+(5370,"Missile: DeathCoil Missile","Spells\DeathCoil_Missile.mdx",1,2,0.01,100),
+(5372,"Bomb (Large)","spells\missile_bomb.mdx",1,5,0.01,100),
+(5373,"DustCloud Land","Spells\DustCloud_Land.mdx",1,2,0.01,100),
+(5375,"Explosion: Firey (Blue)","spells\Xplosion_Fire_Impact_Blue.mdx",1,3.5,0.01,100),
+(5381,"Explosion: Lightning","Spells\Xplosion_Lightning_Impact.mdx",1,4,0.01,100),
+(5382,"Dust Nova","spells\dustnova_cast_base.mdx",0.5,0.5,0.01,100),
+(5384,"Shield: Arcane Force (Green 2x)","Spells\ArcaneForceShield_Green.mdx",0,2,0.1,10),
+(5385,"Missile: Deathbolt Missile","spells\deathbolt_missile_low.mdx",1,1.5,0.01,100),
+(5386,"Fire Nova Area","Spells\FireNova_Area.mdx",1,4,0.01,20),
+(5387,"Shield Wall Impact Base Red","spells\shieldwall_impact_base_red.mdx",1,1,0.01,100),
+(5388,"Shield Wall Impact Base Red","spells\shieldwall_impact_base_red.mdx",0,2,0.1,10),
+(5389,"Shield Wall Impact Base","Spells\ShieldWall_Impact_Base.mdx",0,2,0.1,10),
+(5390,"Shield Wall impact Base Blue","spells\shieldwall_impact_base_blue.mdx",0,2,0.1,10),
+(5391,"Missile: EasterEgg01","world\generic\passivedoodads\eastereggs\easteregg01.mdx",1,0.35,0.01,100),
+(5392,"White Radiation Fog","spells\whiteradiationfog.mdx",1,2,0.01,100),
+(5393,"Banish (White)","spells\banish_chest_white.mdx",1,2,0.01,100),
+(5394,"Banish (Green)","Spells\Banish_Chest.mdx",0,2,0.01,100),
+(5395,"Banish (Purple)","spells\banish_chest_purple.mdx",1,1.25,0.01,100),
+(5396,"Flare Ground State","spells\flare_state_base.mdx",2.25,2.25,0.01,100),
+(5398,"Skybeam, Green","Spells\NatureBeam_State_Base.mdx",1,2,0.01,100),
+(5399,"Disarm Impact Chest 2x","Spells\Disarm_Impact_Chest.mdx",0,2,0.1,10),
+(5400,"Blizzard Rune Base","Spells\SummonGround_Blizzard.mdx",0,0.8,0.01,100),
+(5401,"Black Hole","spells\ulduar_blackhole.mdx",0,1,0.1,10),
+(5402,"Void Zone (Thick)","creature\portalofkathune\portalofkathunethick.mdx",1,0.08,0.01,100),
+(5403,"Acid Cloud Breath","spells\AcidCloudBreath.mdx",1,1,0.01,100),
+(5404,"Shadow Nova Cast","spells\shadow_nova_area.mdx",1,20,0.01,100),
+(5405,"Fear State Base","spells\fear_state_base.mdx",1,7,0.01,100),
+(5406,"Fear State Base","spells\fear_state_base.mdx",1,0.9,0.01,100),
+(5407,"Fear Impact Head","Spells\Fear_Impact_Chest.mdx",0,2,0.01,100),
+(5408,"Shadow Precast Med Base","Spells\Shadow_Precast_Med_Base.mdx",1,2,0.01,100),
+(5409,"Nature Beam State Base","Spells\NatureBeam_State_Base.mdx",0,1,0.1,10),
+(5410,"Nature Beam State Base","Spells\NatureBeam_State_Base.mdx",0,1.5,0.1,10),
+(5411,"Teleport","Spells\Teleport.mdx",1,2,0.01,100),
+(5412,"Acid Cloud Breath Smoke","spells\acidcloudbreath_groundsmoke.mdx",1,0.25,0.01,100),
+(5413,"Acid Cloud Breath Smoke (Frost)","spells\AcidCloudBreath_GroundSmoke_Blue.mdx",1,0.25,0.01,100),
+(5414,"Aura Yellow Tall (0.2)","World\Generic\PassiveDoodads\ParticleEmitters\AuraYellowVeryTall.mdx",0,0.2,0.1,10),
+(5415,"EntanglingRoots State (0.2)","Spells\EntanglingRoots_State.mdx",1,0.2,0.01,100),
+(5416,"Bladestorm State","spells\warrior_bladestorm.mdx",0,1.6,0.01,100),
+(5417,"LightningBolt Impact Chest","Spells\LightningBolt_Impact_Chest.mdx",1,6,0.01,100),
+(5418,"Banish (Red)","spells\bloodbolt_chest.mdx",1,3,0.01,100),
+(5419,"Banish (Red)","spells\bloodbolt_chest.mdx",1,0.1,0.01,100),
+(5421,"Arcane Impact Chest","Spells\Magic_Impact_Chest.mdx",0,2,0.01,100),
+(5422,"Magic PreCast Hand","Spells\Magic_PreCast_Hand.mdx",1,5,0.01,100),
+(5423,"Magic Cast Hand","Spells\Magic_Cast_Hand.mdx",1,5,0.01,100),
+(5424,"Void Zone (Thick)","creature\portalofkathune\portalofkathunethick.mdx",1,0.04,0.01,100),
+(5425,"Shadow Form New","Spells\Shadow_Form_Precast.mdx",0,1,0.1,10),
+(5426,"Mind Sear Cast","Spells\Priest_MindShear.mdx",0,1,0.1,10),
+(5427,"Shadow Nova Cast - (1.75)","spells\shadow_nova_area.mdx",1,3,0.01,5),
+(5428,"Skybeam, Blue","Spells\FrostBeam_State_Base.mdx",1,0.5,0.01,100),
+(5429,"Shadow Fissure Base","Spells\Shadow_Fissure_Base.mdx",1,1.5,0.01,100),
+(5430,"Cone of Fire Hand","Spells\ConeofFire_Hand.mdx",1,4,0.01,100),
+(5431,"Skybeam, Red","Spells\FireBeam_State_Base.mdx",1,0.5,0.01,10),
+(5432,"Sonic Wave Blast Down Cast","spells\sonicwave_cast_down.mdx",1,0.5,0.01,100),
+(5433,"Sonic Wave Blast Cast","spells\sonicwave_cast.mdx",1,0.5,0.01,100),
+(5434,"Sonic Wave Blast Cast - 1.5","spells\sonicwave_cast.mdx",1,1.5,0.01,100),
+(5435,"Shockwave Area","spells\warrior_shockwave_area.mdx",0,0.5,0.01,100),
+(5436,"Shadow Fissure Base","Spells\Shadow_Fissure_Base.mdx",1,0.75,0.01,100),
+(5437,"Dragon Breath Shadow","spells\dragonbreath_shadow.mdx",1,0.75,0.01,100),
+(5438,"Vampiric Embrace State Base","spells\vampiricembrace_state_base.mdx",1,2,0.01,100),
+(5439,"Darkmoon Vengeance Head State (Clamped)","Spells\DarkmoonVengeance_Impact_Head.mdx",1,3,3,3),
+(5440,"Void Zone","creature\portalofkathune\portalofkathune.mdx",1,0.18,0.01,100),
+(5441,"Dancing Runeweapon State","Spells\DeathKnight_DancingRuneblade_State.mdx",0,2,0.01,100),
+(5442,"Shadow Form New","Spells\Shadow_Form_Precast.mdx",0,0.25,0.1,10),
+(5443,"Shadow Precast Uber Hand","Spells\Shadow_Precast_Uber_Hand.mdx",1,0.5,0.01,100),
+(5444,"ShadowFlame PreCast","spells\shadowflame_cast_hand.mdx",0,0.75,0.01,100),
+(5445,"Shadow Dance State","Spells\ShadowDance_State.mdx",0,0.6,0.1,10),
+(5447,"ArcaneExplosion Base (Clamped)","Spells\ArcaneExplosion_Base.mdx",1,4,4,4),
+(5449,"Dragon Sand Breath","spells\corrosivesandbreath.mdx",1,5,0.01,100),
+(5450,"Tournament Shield Red","spells\tournament_shield_red.mdx",0,1,0.1,10),
+(5451,"Tournament Shield Yellow","spells\tournament_shield_yellow.mdx",0,1,0.1,10),
+(5452,"Tournament Shield Green","spells\tournament_shield_green.mdx",0,1,0.1,10),
+(5453,"Reply-Code Alpha","spells\sonicboom_missile_high.mdx",0,25,0.1,25),
+(5454,"Living Bomb State","spells\mage_livingbomb_state.mdx",0,2,0.01,100),
+(5455,"Lava Splash","World\Kalimdor\OnyxiasLair\LavaTraps\OnyziasLairLavaSplashStand.mdx",1,1,0.01,100),
+(5456,"Fire Bomb","spells\firebomb_missle.mdx",1,0.35,0.01,100),
+(5457,"Lava Splash","World\Kalimdor\OnyxiasLair\LavaTraps\OnyziasLairLavaSplashStand.mdx",1,0.5,0.01,100),
+(5458,"Flame Patch","spells\archimonde_fire.mdx",1,1.2,0.01,100),
+(5460,"Water Nova","Spells\Water_Nova.mdx",1,5,0.01,100),
+(5461,"Gift of the water Spirit Base impact","spells\giftwaterspirit_impact_base.mdx",1,6,0.01,100),
+(5462,"Fire ImpactDD Uber Chest","spells\fire_impactdd_uber_chest.mdx",1,7,0.01,100),
+(5463,"Lightning Nova","spells\lightning_ring_nova.mdx",1,100,0.01,100),
+(5464,"Item - Val'anyr Shield Effect Low Base","spells\valanry_proc_01.mdx",1,1.25,0.01,100),
+(5465,"Nature Bomb","World\Goober\G_PulsatingPlant.mdx",0,1,0.1,10),
+(5466,"Xplosion_Nature_Impact","Spells\Xplosion_Nature_Impact.mdx",0,1.5,0.1,10),
+(5467,"Pulsating Plant","World\Goober\G_PulsatingPlant.mdx",0,1,0.01,100),
+(5468,"Fire Bomb","spells\firebomb_missle.mdx",1,30,0.01,100),
+(5469,"Skybeam, Green","Spells\NatureBeam_State_Base.mdx",1,0.5,0.01,100),
+(5470,"White Radiation Fog","spells\whiteradiationfog.mdx",1,3,0.01,100),
+(5471,"Banish (Blue)","spells\banish_chest_blue.mdx",1,1.25,0.01,100),
+(5472,"Frost Nova Area","Spells\Frost_Nova_area.mdx",1,5,0.01,100),
+(5473,"Frost_Form","spells\frost_form_precast.mdx",0,8,0.01,100),
+(5474,"Frostbolt Missile","spells\frostbolt.mdx",1,2,0.01,100),
+(5475,"Banish (Blue)","spells\banish_chest_blue.mdx",1,4,0.01,100),
+(5476,"Water Bubble Chest State","Spells\WaterBubble.mdx",0,2.25,0.01,100),
+(5477,"Banish (Blue)","spells\banish_chest_blue.mdx",1,6,0.01,100),
+(5478,"Hellfire FirePuff Caster Base (Blue)","spells\HellFire_Blue_FirePuff_Caster_Base.mdx",1,5,0.01,100),
+(5479,"Frost Breath","Spells\FrostBreath.mdx",1,0.75,0.01,100),
+(5480,"Snowball Impact Chest","spells\snowball_impact_chest.mdx",1,4,0.01,100),
+(5481,"Shell Shield State","Spells\ShellShield_State_Base.mdx",1,4,0.01,100),
+(5482,"Unquenchable Flames State Base","spells\nefarian_state_base.mdx",1,0.5,0.01,100),
+(5483,"GGOODMANTEST","World\Generic\Human\Passive Doodads\Lights\SFX_FlashingLight_Red.mdx",0,1,0.1,10),
+(5484,"Flame Patch (Blue) -","spells\Archimonde_Blue_Fire.mdx",1,1.55,0.01,100),
+(5485,"Magic PreCast Hand","Spells\Magic_PreCast_Hand.mdx",1,2,0.01,100),
+(5486,"Arcane Reflect State Chest","spells\ArcaneReflect_State_Chest.mdx",1,0.05,0.01,100),
+(5487,"Nature Cast Hand","Spells\Nature_Cast_Hand.mdx",1,3,0.01,100),
+(5488,"CycloneFire State","Spells\CycloneFire_State.mdx",0,3,0.01,100),
+(5489,"Kologarn Arm Spawn","Spells\Kologarn_Arm_FadeIn.mdx",0,4,0.1,10),
+(5490,"Kick Impact Chest","Spells\Kick_Chest_Impact.mdx",1,3,0.01,100),
+(5491,"Missile: Assassinate","spells\assassinate_missile.mdx",0,2.5,0.01,100),
+(5492,"Shockwave Area No Pulse","spells\Warrior_ShockWave_NoPulse.mdx",0,2,0.01,10),
+(5493,"Dragon Breath Fire (New) ","spells\DragonBreath_Fire.mdx",1,0.25,0.01,100),
+(5494,"Red Runes","World\Expansion01\Doodads\Generic\Draenei\Holo\DR_Draenei_HoloRunes01_BigRed.mdx",0,0.1,0.1,10),
+(5495,"Fire_SmokeTrail","spells\fire_smoketrail.mdx",1,15,0.01,100),
+(5496,"Magic PreCast Hand","Spells\Magic_PreCast_Hand.mdx",1,7,0.01,100),
+(5497,"Fire: Ground","World\Expansion02\Doodads\HowlingFjord\FireFX\BurntGround01.mdx",0,2,0.1,10),
+(5498,"Fire: Ground","World\Expansion02\Doodads\HowlingFjord\FireFX\BurntGround01.mdx",0,8,0.1,10),
+(5499,"Missile: Night Elf Tablet","world\goober\g_netablet.mdx",1,0.075,0.01,100),
+(5500,"Missile: Titan Disc","world\expansion02\doodads\generic\titan\ti_disc_01.mdx",1,0.01,0.01,100),
+(5501,"Missile: Frost Giant Shield 03","world\expansion02\doodads\generic\frostgiant\frostgiant_shield03.mdx",1,0.06,0.01,100),
+(5502,"Missile: Plate","creature\questobjects\plate_creature.mdx",1,0.25,0.01,100),
+(5503,"Thorim's Stormhammer","Item\ObjectComponents\Weapon\Mace_1H_UlduarRaidNotSkinable_D_01.mdx",0,8,0,0),
+(5504,"Seeping Gaseous Nova","spells\seepinggaseous_nova.mdx",1,0.5,0.01,100),
+(5505,"Ice Nuke Base","spells\IceNuke_Base_Impact.mdx",1,0.05,0.01,100),
+(5506,"Icy Touch Impact","SPELLS\DeathKnight_IcyTouch.mdx",1,0.3,0.01,100),
+(5507,"Frost Trap Aura","spells\frosttrap_aura.mdx",1,0.25,0.01,100),
+(5508,"Frost Nova Area","Spells\Frost_Nova_area.mdx",1,0.5,0.01,100),
+(5509,"Icy Touch Impact","SPELLS\DeathKnight_IcyTouch.mdx",1,0.25,0.01,100),
+(5510,"Frost_Form","spells\frost_form_precast.mdx",0,0.75,0.01,100),
+(5511,"Lightning Beam (Algalon)","spells\lightingbeam_state_base.mdx",0,1,0.01,100),
+(5512,"Pet Toy - Pet Snack - Love","spells\holidays\valentines_lookingforloveheart.mdx",1,1,1,1.1),
+(5513,"Collapsing Star (Algalon)","spells\collapsingstar.mdx",1,1,0.01,100),
+(5514,"Shield: Fire Force (Green)","Spells\FireForceShield_Green.mdx",1,1.5,0.01,100),
+(5515,"Item - Sif's Remembrance (Icy Veins Analog)","spells\icyveins_fx.mdx",0,0.25,0.01,100),
+(5516,"Ghost Trap","World\Goober\G_GhostTrap.mdx",1,1.5,0.01,100),
+(5517,"Hunter's Mark Impact Chest","Spells\HuntersMark_Impact_Chest.mdx",1,2,0.01,100),
+(5518,"Hunter's Mark State Head","Spells\HuntersMark_Impact_Head.mdx",1,2,0.01,100),
+(5519,"Aura: Red","World\Generic\PassiveDoodads\ParticleEmitters\AuraRed.mdx",1,3,0.01,100),
+(5520,"Aura: Red (Short)","World\Generic\PassiveDoodads\ParticleEmitters\AuraRedShort.mdx",1,3,0.01,100),
+(5521,"Shell Shield State","Spells\ShellShield_State_Base.mdx",1,3.5,0.01,100),
+(5522,"Holy Wave","Spells\Missile_Wave_Holy.mdx",0,0.35,0.1,10),
+(5523,"Acid Cloud Breath Smoke","spells\acidcloudbreath_groundsmoke.mdx",1,0.75,0.01,100),
+(5524,"Void Zone","creature\portalofkathune\portalofkathune.mdx",1,0.2,0.01,100),
+(5525,"Dynamite Missile","Spells\DynamiteA_Missile.mdx",1,1.5,0.01,100),
+(5526,"Fire Nova Area","Spells\FireNova_Area.mdx",1,3,0.01,20),
+(5527,"Banish (Yellow)","spells\banish_chest_yellow.mdx",1,4,0.01,100),
+(5529,"Banish (Red)","spells\bloodbolt_chest.mdx",1,5,0.01,100),
+(5530,"Water Breath","spells\WaterLiquidBreath.mdx",1,1.5,0.01,100),
+(5531,"Water Nova","Spells\Water_Nova.mdx",1,2,0.01,100),
+(5532,"Ice Precast Low Hand","Spells\Ice_Precast_Low_Hand.mdx",1,0.5,0.01,100),
+(5533,"Meat (1.0)","World\Expansion01\Doodads\Generic\BloodElf\Food\BE_Meat01.mdx",1,1,0.01,100),
+(5534,"Dragon Breath Frost","spells\DragonBreath_Frost.mdx",1,0.1,0.01,100),
+(5537,"Silithid Abdomen","World\Kalimdor\Silithus\PassiveDoodads\SilithidTankHusks\SilithidTankHuskAbdomen.mdx",1,0.33,0.01,100),
+(5539,"Path of Frost","Spells\DeathKnight_PathofFrost.mdx",1,4,0.01,100),
+(5540,"Flare Ground State","spells\flare_state_base.mdx",2.4,2.4,0.01,100),
+(5543,"PBTable - On Plate - Stuffing, Plate Visual","Spells\Thanksgiving_Stuffing.mdx",1,1,0.01,100),
+(5544,"PBTable - On Plate - Yams, Plate Visual","Spells\Thanksgiving_Yams.mdx",1,1,0.01,100),
+(5545,"PBTable - On Plate - Pie, Plate Visual","Spells\Thanksgiving_Pie.mdx",1,1,0.01,100),
+(5546,"PBTable - On Plate - Turkey, Plate Visual","Spells\Thanksgiving_Turkey.mdx",1,1,0.01,100),
+(5547,"PBTable - On Plate - Cranberries, Plate Visual (3.2)","Spells\Thanksgiving_Cranberry.mdx",1,1,0.01,100),
+(5548,"Big Bang","spells\sunwell_beamfx_3s.mdx",0.2,0.2,0.01,100),
+(5553,"Blizzard Rune Base","Spells\SummonGround_Blizzard.mdx",0,0.4,0.01,100),
+(5555,"Ice Block State Selectable","spells\icebarrier_state_selectable.mdx",1,1,0.01,100),
+(5565,"Anti-Magic Zone Green","spells\yoggsaron_green.mdx",0,3,0.01,100),
+(5570,"Small Blue Ragdoll","world\generic\human\passive doodads\dolls\ragdoll_05.mdx",1,0.33,0.01,100),
+(5571,"Blue Ragdoll","world\generic\human\passive doodads\dolls\ragdoll_05.mdx",1,0.65,0.01,100),
+(5573,"Light Essence","Spells\Enchantments\WhiteGlow_High.mdx",0,15,0.1,100),
+(5574,"Banish (Dark) ","spells\Banish_Chest_Dark.mdx",1,0.75,0.01,100),
+(5575,"Banish (White)","spells\banish_chest_white.mdx",1,0.75,0.01,100),
+(5576,"Magic Unlock (4x)","Spells\MagicUnlock.mdx",1,4,0.01,100),
+(5577,"CallLightning Impact (Red) ","spells\flamestrike_impactdd_med_base.mdx",1,2,0.01,100),
+(5578,"CallLightning Impact","Spells\CallLightning_Impact.mdx",1,5,0.01,100),
+(5580,"Aura: Red, Tall","world\generic\passivedoodads\particleemitters\auraredtall.mdx",0,5,0.01,100),
+(5581,"Aura: Red, Tall","world\generic\passivedoodads\particleemitters\auraredtall.mdx",0,5,0.01,100),
+(5582,"Flame Shock Impact Chest (Blue)","Spells\FlameShock_Blue_Impact_Chest.mdx",1,5,0.01,100),
+(5583,"Flame Shock Impact Chest","Spells\FlameShock_Impact_Chest.mdx",1,4,0.01,100),
+(5584,"Portal: Boss Holy","spells\Creature_SpellPortalLarge_Yellow.mdx",1,0.2,0.01,100),
+(5585,"Portal: White","Spells\Creature_SpellPortal_White.mdx",0,0.5,0.1,10),
+(5586,"Banish (White)","spells\banish_chest_white.mdx",1,0.5,0.01,100),
+(5587,"Envenom Impact","spells\envenom_impact_chest.mdx",1,2,0.01,100),
+(5588,"Shield: Arcane Force (Yellow)","Spells\ArcaneForceShield_Yellow.mdx",1,4,0.01,100),
+(5589,"Frost Trap Aura NoMist","SPELLS\FrostTrap_Aura_noMist.M2",1,0.5,0.01,100),
+(5590,"DeathKnight Chains of Ice","Spells\DeathKnight_Chains_of_Ice.mdx",1,2,0.01,100),
+(5591,"Bubblegum, Pink","world\generic\upperdeck\ud_bubblegum_01.mdx",0,1,0.1,10),
+(5592,"Flowers (Upper Deck)","world\generic\upperdeck\ud_flowers_01.mdx",0,1,0.1,10),
+(5593,"Nature Form","spells\nature_form_precast.mdx",0,0.66,0.1,10),
+(5594,"Bubblegum, Pink (3.1.2)","world\generic\upperdeck\ud_bubblegum_01.mdx",0,1,0.1,10),
+(5595,"Flowers, Upper Deck (3.1.2)","world\generic\upperdeck\ud_flowers_01.mdx",0,1,0.1,10),
+(5596,"Nature Form (3.1.2)","spells\nature_form_precast.mdx",0,0.7,0.1,10),
+(5597,"Spell Object: Plague Bomb (New - Green)","item\objectcomponents\weapon\thrown_1h_bomb_c_01.mdx",1,1,0.01,100),
+(5599,"CallLightning Impact (Red)","spells\flamestrike_impactdd_med_base.mdx",1,1,0.01,100),
+(5601,"Spike Impact Base","Spells\Spike_Impact_Base.mdx",1,1.5,0.01,100),
+(5602,"Spike Impact Base","Spells\Spike_Impact_Base.mdx",1,2.5,0.01,100),
+(5603,"Holy Reflect State Chest ","spells\HolyReflect_State_Chest.mdx",0,1,0.1,10),
+(5604,"Earth Burrow Cast","spells\burrowearth_brown_missile.mdx",1,1.5,0.01,100),
+(5605,"Banish (Dark)","spells\Banish_Chest_Dark.mdx",1,0.5,0.01,100),
+(5606,"Beacon of Light Impact Base","spells\beacon_of_light_impact.mdx",0,0.5,0.01,100),
+(5608,"Shadow Dance State","Spells\ShadowDance_State.mdx",0,2,0.1,10),
+(5609,"Warlock Backdraft","Spells\Warlock_Backdraft.mdx",0,1,0.1,10),
+(5610,"ShadowWordFumble Head","Spells\ShadowWordFumble_Head.mdx",1,3,0.01,100),
+(5611,"Voidwalker Sacrifice Shield State Base","spells\holydivineshielddark_state_base.mdx",0,1,0.01,100),
+(5613,"Black Glow","Spells\Enchantments\BlackGlow_High.mdx",0,15,0.1,100),
+(5614,"Call Lightning Impact (Black)","Spells\FlameStrike_Black_ImpactDD_Med_Base.mdx",0,1,0.1,10),
+(5615,"Portal: White","Spells\Creature_SpellPortal_White.mdx",0,1,0.1,10),
+(5616,"Shades of Darkness Cast","spells\shadesofdarkness_cast.mdx",3,1,0.01,100),
+(5617,"Shot: Black Arrow","Spells\BlackShot_Missile.mdx",1,2,0.01,100),
+(5618,"Shot: Black Arrow","Spells\BlackShot_Missile.mdx",1,3,0.01,100),
+(5619,"Shot: Black Arrow","Spells\BlackShot_Missile.mdx",1,25,0.01,100),
+(5620,"Shadow Breath","Spells\DragonBreath_Shadow.mdx",1,0.25,0.01,100),
+(5621,"Shadow Strikes State","spells\shadow_strikes_state_hand.mdx",1,3,0.01,100),
+(5622,"ShadowStrike Impact Chest","Spells\ShadowStrike_Impact_Chest.mdx",1,2,0.01,100),
+(5623,"Holy Precast Uber Base","Spells\Holy_Precast_Uber_Base.mdx",1,0.75,0.01,100),
+(5624,"LightningBolt Impact Chest","Spells\LightningBolt_Impact_Chest.mdx",1,0.35,0.01,100),
+(5625,"LightningBolt Impact Chest","Spells\LightningBolt_Impact_Chest.mdx",1,1,0.01,100),
+(5629,"Envenom Impact","spells\envenom_impact_chest.mdx",1,3,0.01,100),
+(5631,"Ice Spike","Spells\IceSpike_Impact_Base.mdx",0,4,0.01,100),
+(5632,"Dragon Breath Fire (New)","spells\DragonBreath_Fire.mdx",1,1.5,0.01,100),
+(5634,"ShadowSnare Base","Spells\Shadow_Snare_High_base.mdx",1,2,0.01,100),
+(5637,"Fel Blaze","Spells\Fel_Archimonde_Fire.mdx",0,0.8,0.1,10),
+(5638,"Fire Cast Hand","Spells\Fire_Cast_Hand.mdx",0,15,0.01,100),
+(5640,"Fel Fire Nova Area","spells\fel_firenova_area.mdx",1,0.5,0.01,100),
+(5641,"Fel Hellfire Puff","Spells\Fel_HellFire_FirePuff_Caster_Base.mdx",1,0.5,0.01,100),
+(5642,"Fel Immolate State Base","Spells\Fel_Immolate_State_Base.mdx",0,1,0.1,10),
+(5644,"Cranberry Hit (bounce) ","spells\thanksgiving_cranberry_missile_hitbounce.mdx",1,3,0.01,100),
+(5645,"Pie Hit (bounce)","spells\thanksgiving_pie_missile_hitbounce.mdx",1,3,0.01,100),
+(5646,"Stuffing Hit (bounce)","spells\thanksgiving_stuffing_missile_hitbounce.mdx",1,3,0.01,100),
+(5647,"Turkey Hit (bounce)","spells\thanksgiving_turkey_missile_hitbounce.mdx",1,2,0.01,100),
+(5648,"Yams Hit (bounce)","spells\thanksgiving_yams_missile_hitbounce.mdx",1,3,0.01,100),
+(5649,"Demonic Empowerment Impact","spells\warlock_demonic_empathy.mdx",1,1,0.01,100),
+(5650,"Banish (Purple)","spells\banish_chest_purple.mdx",1,0.75,0.01,100),
+(5651,"Warlock Demonic Empowerment ","Spells\Warlock_Demonic_Empowerment.mdx",0,1,0.1,10),
+(5652,"Shadow Breath","Spells\DragonBreath_Shadow.mdx",1,0.05,0.01,100),
+(5653,"Shadow Shield State Base","Spells\ShadowShield_State_Base.mdx",1,0.2,0.01,100),
+(5654,"Fel Low Poly Fire","spells\Fel_LowPolyFireAnim.mdx",1,0.2,0.01,100),
+(5655,"LowPolyFire","world\generic\pvp\fires\lowpolyfire.mdx",1,0.2,0.01,100),
+(5656,"Hellfire FirePuff Caster Base","spells\HellFire_FirePuff_Caster_Base.mdx",1,5,0.01,100),
+(5657,"Hellfire FirePuff Caster Base","spells\HellFire_FirePuff_Caster_Base.mdx",1,2,0.01,100),
+(5658,"Hellfire FirePuff Caster Base","spells\HellFire_FirePuff_Caster_Base.mdx",1,3,0.01,100),
+(5659,"Hellfire FirePuff Caster Base","spells\HellFire_FirePuff_Caster_Base.mdx",1,4,0.01,100),
+(5660,"Volcano Top","World\Expansion01\Doodads\Shadowmoon\Volcano\ShadowmoonVolcanoTop.mdx",0,0.1,0.1,10),
+(5661,"Missile: Infernal Ball","spells\Infernal_Ball.mdx",1,0.5,0.01,100),
+(5662,"Force Shield Arcane (Blue)","spells\arcaneforceshield_blue.mdx",1,1,0.01,100),
+(5663,"Bomb","spells\missile_bomb.mdx",1,2.5,0.01,100),
+(5664,"Shadow Dance State","Spells\ShadowDance_State.mdx",0,3,0.1,10),
+(5665,"Missile: Glaive, Purple (Siege)","Spells\GlaiveThrowerVehicle_Glaive_Spell_Purple.mdx",0,1.5,0.1,10),
+(5666,"Frost Trap Aura No Mist, Reflective","spells\frosttrap_aura_nomist_refelctive.mdx",1,1,0.01,100),
+(5667,"Nature Form","spells\nature_form_precast.mdx",0,10,0.01,100),
+(5668,"Eclipse Impact Base","spells\druid_eclipse.mdx",0,5,0.01,100),
+(5669,"Bottle (Frothy Smoke)","World\Generic\Human\Passive Doodads\Bottles\BottleSmoke.mdx",1,1.5,0.01,100),
+(5670,"Earth Burrow Cast V2","spells\burrowearth_brown_missile_v2.mdx",1,4,0.01,100),
+(5671,"Seduction State","Spells\Seduction_State_Head.mdx",1,0.5,0.01,100),
+(5672,"Seduction State","Spells\Seduction_State_Head.mdx",1,2,0.01,100),
+(5675,"Light Bomb State","Spells\Impact_Light.mdx",1,2,0.01,100),
+(5676,"Missile: Light Bomb","Spells\Missile_Light.mdx",1,2,0.01,100),
+(5677,"Missile: Dark Bomb","spells\Missile_Dark.mdx",1,2,0.01,100),
+(5678,"Dark Bomb State","Spells\Impact_Dark.mdx",1,2,0.01,100),
+(5679,"Dark Missile","Spells\Missile_Dark.mdx",1,1,0.01,100),
+(5680,"Impact Dark","Spells\Impact_Dark.mdx",0,1,0.1,10),
+(5681,"Light Missile","Spells\Missile_Light.mdx",1,1,0.01,100),
+(5682,"Impact Light","Spells\Impact_Light.mdx",0,1,0.1,10),
+(5683,"Frost Trap Aura No Mist, Reflective","spells\frosttrap_aura_nomist_refelctive.mdx",1,1.35,0.01,100),
+(5684,"Fel Lightning Cast Hand","Spells\Lightning_Fel_Cast_Hand.mdx",1,2,0.01,100),
+(5685,"Explosive Shot Missile","spells\explosive_shot_missile.mdx",1,2,0.01,100),
+(5686,"Explosion: Dust","spells\Xplosion_Dust_Impact.mdx",1,1,0.01,100),
+(5689,"Holy Nova Impact Base","spells\holynova_impact_base.mdx",1,2,0.01,100),
+(5690,"Dragon Breath Fire","spells\DragonBreath_Fire.mdx",1,0.3,0.01,100),
+(5691,"Fire Precast Hand","Spells\Fire_Precast_Hand.mdx",0,0.5,0.01,100),
+(5692,"Bomb","spells\missile_bomb.mdx",1,4,0.01,100),
+(5693,"Frost Breath","Spells\FrostBreath.mdx",1,2.5,0.01,100),
+(5694,"Lava Elemental Impact Base","spells\LavaElemental_Impact_Base.mdx",0,1.5,0.1,10),
+(5695,"Lava Particle Splash","World\Generic\PassiveDoodads\ParticleEmitters\LavaParticleSplash.mdx",0,1,0.1,10),
+(5696,"Lava Elemental Impact Base","spells\LavaElemental_Impact_Base.mdx",0,0.25,0.1,10),
+(5697,"Ritual Of Fire Precast","spells\Ritual_Fire_PreCast_Base.mdx",1,0.1,0.01,100),
+(5698,"Lava Burst Impact","spells\shaman_lavaburst.mdx",0,0.25,0.01,100),
+(5699,"Lava Burst Missile","spells\shaman_lavaburst_missile.mdx",1,0.2,0.01,100),
+(5700,"Lava Burst Missile","spells\shaman_lavaburst_missile.mdx",1,0.3,0.01,100),
+(5701,"Ice Spike Impact Base V2","Spells\IceSpike_Impact_Base_V2.mdx",0,4,0.01,100),
+(5703,"Anti-Magic Zone Green","Spells\DeathKnight_AntiMagicZone_Green.mdx",0,1,0.01,100),
+(5704,"Bomb (Static)","spells\missile_bomb_static.mdx",1,2.5,0.01,100),
+(5705,"Bomb (Static)","spells\missile_bomb_static.mdx",1,4,0.01,100),
+(5706,"Acid Breath (Red) (Liquid)","spells\acidliquidbreathred.mdx",1,0.75,0.01,100),
+(5707,"Acid Breath (Red) (Liquid)","spells\acidliquidbreathred.mdx",1,0.1,0.01,100),
+(5708,"Tournament_Pennant_Troll00","world\expansion02\doodads\generic\argentcrusade\pennants\tournament_pennant_troll_low.mdx",0,1,0.1,10),
+(5709,"Tournament_Pennant_Tauren00","world\expansion02\doodads\generic\argentcrusade\pennants\tournament_pennant_tauren_low.mdx",0,1,0.1,10),
+(5710,"Tournament_Pennant_Orc00","world\expansion02\doodads\generic\argentcrusade\pennants\tournament_pennant_orc_low.mdx",0,1,0.1,10),
+(5711,"Tournament_Pennant_NELF00","world\expansion02\doodads\generic\argentcrusade\pennants\tournament_pennant_nelf_low.mdx",0,1,0.1,10),
+(5712,"Tournament_Pennant_Human00","world\expansion02\doodads\generic\argentcrusade\pennants\tournament_pennant_human_low.mdx",0,1,0.1,10),
+(5713,"Tournament_Pennant_Gnome00","world\expansion02\doodads\generic\argentcrusade\pennants\tournament_pennant_gnome_low.mdx",0,1,0.1,10),
+(5714,"Tournament_Pennant_FK00","world\expansion02\doodads\generic\argentcrusade\pennants\tournament_pennant_fk_low.mdx",0,1,0.1,10),
+(5715,"Tournament_Pennant_EB00","world\expansion02\doodads\generic\argentcrusade\pennants\tournament_pennant_ebonblade_low.mdx",0,1,0.1,10),
+(5716,"Tournament_Pennant_Dwarf00","world\expansion02\doodads\generic\argentcrusade\pennants\tournament_pennant_dwarf_low.mdx",0,1,0.1,10),
+(5717,"Tournament_Pennant_Draenei00","world\expansion02\doodads\generic\argentcrusade\pennants\tournament_pennant_draenei_low.mdx",0,1,0.1,10),
+(5718,"Tournament_Pennant_BE00","world\expansion02\doodads\generic\argentcrusade\pennants\tournament_pennant_be_low.mdx",0,1,0.1,10),
+(5719,"Tournament_Pennant_AC00","world\expansion02\doodads\generic\argentcrusade\pennants\Tournament_Pennant_ArgentCru_Low.mdx",0,1,0.1,10),
+(5720,"Missile: Holy Hammer","spells\holy_hammer_missile.mdx",1,2,0.01,100),
+(5721,"Blizzard Spawn","Spells\Blizzard_Spawn.mdx",1,1,0.1,10),
+(5722,"Holy ImpactDD Uber Chest","Spells\Holy_ImpactDD_Uber_Chest.mdx",1,2,0.01,100),
+(5723,"Holy ImpactDD Uber Base","Spells\Holy_ImpactDD_Uber_Base.mdx",1,2,0.01,100),
+(5724,"Silithid Egg State (Copy)","World\Kalimdor\Silithus\PassiveDoodads\Eggs\SilithidEgg.mdx",1,0.25,0.01,100),
+(5727,"Earth Burrow Cast V2","spells\burrowearth_brown_missile_v2.mdx",1,2,0.01,100),
+(5728,"Incinerate Missile","spells\incinerate_low_base.mdx",1,0.5,0.01,100),
+(5729,"Missile: Glaive, Red (Siege)","Spells\GlaiveThrowerVehicle_Glaive_Spell_Red.mdx",0,1.5,0.1,10),
+(5730,"Deterrence State Chest","spells\deterrence_state_chest.mdx",1,1,0.01,100),
+(5731,"Insect Swarm State Chest","Spells\InsectSwarm_State_Chest.mdx",1,2,0.01,100),
+(5732,"Black Hole Horizontal","Spells\Ulduar_BlackHole_H.mdx",0,1,0.1,10),
+(5733,"Black Hole Horizontal","Spells\Ulduar_BlackHole_H.mdx",0,0.5,0.1,10),
+(5734,"White Black Hole Horizontal","Spells\BlackHole_White_H.mdx",0,1,0.1,10),
+(5735,"White Black Hole Horizontal","Spells\BlackHole_White_H.mdx",0,0.5,0.1,10),
+(5736,"Missile: Glaive, Purple (Siege)","Spells\GlaiveThrowerVehicle_Glaive_Spell_Purple.mdx",0,4,0.1,10),
+(5737,"Holy Missile High","Spells\Holy_Missile_High.mdx",1,0.5,0.01,100),
+(5738,"Missile: Glaive, 4 Blades","World\ENVIRONMENT\DOODAD\GENERALDOODADS\NightElfWeapons\NE_Glaive01.mdx",0,3,0.1,10),
+(5739,"DustCloud Land (0.2)","Spells\DustCloud_Land.mdx",1,0.2,0.01,100),
+(5740,"PrayerofHealing Chest","Spells\PrayerofHealing_Chest.mdx",1,3,0.01,100),
+(5741,"Acid Spit Missile","spells\shaman_lavaburst_green_missile.mdx",1,0.2,0.01,100),
+(5742,"Acid Spit Impact","spells\shaman_lavaburst_green.mdx",0,2,0.01,100),
+(5743,"Acid Spit Missile","spells\shaman_lavaburst_green_missile.mdx",1,1,0.01,100),
+(5744,"Missile: Sword","World\Generic\Human\Passive Doodads\Weapons&Armor\HumanSword01.mdx",1,0.75,0.01,100),
+(5745,"Smoke: Tauren Colored","world\generic\tauren\passive doodads\smoke\taurencoloredsmoke01.mdx",1,3,0.01,100),
+(5746,"Smoke - Infernal","spells\infernal_smoke_rec.mdx",2,5,0.01,100),
+(5747,"Smoke: Tauren Colored","world\generic\tauren\passive doodads\smoke\taurencoloredsmoke01.mdx",1,2,0.01,100),
+(5757,"Earth Burrow Cast","spells\burrowearth_brown_missile.mdx",1,1.25,0.01,100),
+(5766,"Nature Precast Hand","Spells\Nature_PreCast_Low_Hand.mdx",1,3,0.01,100),
+(5767,"Restoration Impact Base","Spells\Restoration_Impact_Base.mdx",0,2,0.01,100),
+(5768,"Deathchill Hands High","Spells\DeathKnight_Deathchill.mdx",0,10,0.01,100),
+(5769,"Black Hole (Ground)","spells\Ulduar_BlackHole_H.mdx",0,1,0.1,10),
+(5770,"Holy Ward State Chest","spells\holyward_state_chest.mdx",0,1,0.1,10),
+(5772,"Army of the Dead Area Impact","Spells\SummonGhouls.mdx",1,1.5,0.01,100),
+(5773,"Bottle (Green)","World\Generic\Human\Passive Doodads\Bottles\GreenBottle02.mdx",1,1.5,0.01,100),
+(5774,"Vehicle Target","interface\vehicles\vehicle_target_02.mdx",1,1,0.01,100),
+(5775,"Anti-Magic Zone Green","Spells\DeathKnight_AntiMagicZone_Green.mdx",0,0.5,0.01,100),
+(5776,"Seeping Gaseous Fel Nova - 1.15","spells\SeepingGaseous_Fel_Nova.mdx",1,1.15,0.01,100),
+(5777,"Force Shield and Explosion","spells\forceshield_andxplosion.mdx",0.65,0.65,0.01,100),
+(5782,"Desecration Area (1.5)","Spells\DeathKnight_Desecration.mdx",0,1.5,0.1,10),
+(5783,"Might Aura State Base","Spells\MightAura_Impact_Base.mdx",1,1.5,0.01,100),
+(5784,"Ward: Fel Fire Impact Chest (0.50)","spells\Fel_Fireward_Impact_Chest.mdx",0,0.5,0.1,10),
+(5785,"Missile: DeathCoil Missile (Death Knight)","Spells\DeathKnight_DeathCoil_Missile.mdx",1,0.5,0.01,100),
+(5789,"Titanium Weapon Chain","Spells\Titanium_WeaponChain_01.mdx",0,1,0.1,10),
+(5790,"Earth Burrow Cast","Spells\BurrowEarth_Brown_Missile.mdx",1,0.75,0.01,100),
+(5793,"BaseFlagCapRed Impact Base","spells\baseflagcapred_impact_base.mdx",1,0.25,0.01,100),
+(5800,"Frost Breath - Tournament","Spells\FrostBreath.mdx",1,2,0.01,100),
+(5805,"Earth Burrow Cast V2 (Small)","spells\burrowearth_brown_missile_v2.mdx",1,0.5,0.01,100),
+(5806,"Shackle Undead State Base (3.00)","spells\unholyshackles_state_base.mdx",1,3,3,10),
+(5808,"Acid Spit Impact","spells\shaman_lavaburst_green.mdx",0,4,0.01,100),
+(5809,"Acid Spit Missile","spells\shaman_lavaburst_green_missile.mdx",1,2.5,0.01,100),
+(5810,"Lava Burst Missile","spells\shaman_lavaburst_missile.mdx",1,2.5,0.01,100),
+(5811,"Lava Burst Impact","spells\shaman_lavaburst.mdx",0,4,0.01,100),
+(5813,"Voidwalker Sacrifice Shield State Base","spells\holydivineshielddark_state_base.mdx",0,3.5,0.01,100),
+(5814,"HolyWord Shield State Base","Spells\HolyWordShield_State_Base.mdx",0,10,0.01,100),
+(5815,"HolyDivineShield State Base","Spells\HolyDivineShield_State_Base.mdx",0,4,0.01,100),
+(5816,"Voidwalker Sacrifice Shield State Base","spells\holydivineshielddark_state_base.mdx",0,4,0.01,100),
+(5820,"Infernal Smoke Rec","Spells\Infernal_Smoke_Rec.mdx",0,1,0.1,10),
+(5835,"Portal: Boss Shadow - 0.3","Spells\Creature_SpellPortal_LargeShadow.mdx",1,0.3,0.01,100),
+(5837,"Rocket Blast Down","spells\rocketblast_down.mdx",1,0.5,0.01,100),
+(5839,"Missile: Wave (Water)","spells\missile_wave_water.m2",1,2,0.01,100),
+(5840,"Massive Saronite Rock","world\expansion02\doodads\azjol-nerub\saronite\saronite_node_01.mdx",4,4,1,100),
+(5841,"Flame Shock Impact Chest (Blue)","Spells\FlameShock_Blue_Impact_Chest.mdx",1,1,0.01,100),
+(5842,"Dragon Breath Fire (New)","spells\DragonBreath_Fire.mdx",1,2,0.01,100),
+(5843,"Tuskarr Net 2","world\expansion02\doodads\generic\tuskarr\giantnets\ts_giantnet02.mdx",0,0.5,0.1,10),
+(5844,"Tuskarr Net 2","\World\Expansion02\Doodads\Generic\Tuskarr\GiantNets\TS_GiantNet02.mdx",1,1,0.1,10),
+(5845,"Massive Saronite Rock","world\expansion02\doodads\azjol-nerub\saronite\saronite_node_01.mdx",1.01,1,0.01,5),
+(5846,"Soulstone Resurrection Base","spells\soulstoneresurrection_base.mdx",1,3,0.01,100),
+(5847,"Acid Burn Purple (Low-Poly)","Spells\AcidBurn_Small_Purple.mdx",1,1,0.01,100),
+(5848,"Acid Burn Purple (Low-Poly)","Spells\AcidBurn_Small_Purple.mdx",1,2,0.01,100),
+(5849,"Spell Portal: Light Red","Spells\Creature_SpellPortalLarge_LightRed.mdx",0,1,0.1,10),
+(5850,"Level Up: Red","Spells\LevelUp_Red.mdx",0,1,0.1,10),
+(5851,"Level Up: Red","Spells\LevelUp_Red.mdx",0,8,0.1,100),
+(5852,"Druid Morph Impact","Spells\DruidMorph_Impact_Base.mdx",0,15,0.01,100),
+(5853,"Seeping Gaseous Nova","spells\seepinggaseous_nova.mdx",1,2.5,0.01,100),
+(5854,"Missile: Soul","spells\soulshatter_missile.mdx",1,15,0.01,100),
+(5856,"Flame Circle","spells\flamecircleeffect.mdx",1,0.5,0.01,100),
+(5857,"FlamestrikeSmall Impact Base","Spells\FlamestrikeSmall_Impact_Base.mdx",1,2.75,0.01,100),
+(5858,"Fire ImpactDD Med Chest","Spells\Fire_ImpactDD_Med_Chest.mdx",1,0.75,0.01,100),
+(5859,"Dragon Breath Fire (New)","spells\DragonBreath_Fire.mdx",1,0.1,0.01,100),
+(5860,"Red Radiation Fog","spells\redradiationfog.mdx",1,0.5,0.01,100),
+(5861,"Green Radiation Fog","spells\greenradiationfog.mdx",1,0.5,0.01,100),
+(5862,"Ice Precast Uber Base","Spells\Ice_Precast_Uber_Base.mdx",1,8,0.01,100),
+(5863,"Icecrown Gate Fog 01","World\Expansion02\Doodads\IceCrown\GateFog\IceCrownGateFog01.mdx",0,1,0.1,10),
+(5864,"Upper Deck - Weather Machine - Snow","spells\Goblin_Weather_Machine_Snow.mdx",1,7.5,0.01,100),
+(5865,"Dark Missile","Spells\Missile_Dark.mdx",1,2,0.01,100),
+(5866,"Missile: Cyclone (Large)","Spells\Cyclone_Caster_State_Scaled.mdx",1,1,0.01,100),
+(5867,"Souls State","world\expansion02\doodads\generic\scourge\sc_spirits_01.mdx",1,0.1,0.01,100),
+(5868,"Snowball Powdery State","spells\SnowballPowdery_Impact_Base.mdx",1,3,0.01,100),
+(5869,"Haunt Missile Soul","Spells\Haunt_Missile_Soul.mdx",1,2,0.1,100),
+(5871,"Weapon - Plague Rifle (Green)","spells\firearm_2h_rifle_01_spellobject.mdx",0,1,0.1,10),
+(5872,"Acid Breath Purple (Liquid)","spells\acidliquidbreath_purple.mdx",1,2,0.01,100),
+(5873,"Aura: Blue","World\Generic\PassiveDoodads\ParticleEmitters\AuraBlue.mdx",1,0.15,0.01,100),
+(5874,"Ice Precast High Base","Spells\Ice_Precast_High_Base.mdx",1,0.5,0.01,100),
+(5875,"Banish (Blue)","spells\banish_chest_blue.mdx",1,0.3,0.01,100),
+(5876,"Arcane Bomb","spells\arcanebomb_missle.mdx",1,0.5,0.01,100),
+(5877,"Missile: Arcane Shot","spells\ArcaneShot_Missile.mdx",1,1,1,100),
+(5878,"Justin B Test","spells\Destructible_Dustfall_FX01.mdx",1,1,0.01,100),
+(5879,"Shadow Lance","spells\blackshot_missile.mdx",1,5,0.01,100),
+(5881,"Soulstone Resurrection Base Horizontal","Spells\SoulStoneResurrection_Base_02.mdx",1,1,0.1,100),
+(5882,"Soulstone Resurrection Base Horizontal","Spells\SoulStoneResurrection_Base_02.mdx",0,3,0.1,100),
+(5883,"Snowball Powdery State","spells\SnowballPowdery_Impact_Base.mdx",1,8,0.01,100),
+(5884,"White Black Hole Horizontal","Spells\BlackHole_White_H.mdx",0,5.5,0.1,100),
+(5885,"Ice Precast Uber Base","Spells\Ice_Precast_Uber_Base.mdx",1,1.5,0.01,100),
+(5886,"Ice Precast Uber Hand","Spells\Ice_Precast_Uber_Hand.mdx",1,2.5,0.01,100),
+(5887,"Explosion: Frost","Spells\Xplosion_Frost_Impact.mdx",1,2.2,0.01,100),
+(5889,"Orange Radiation Fog","spells\orangeradiationfog.mdx",1,7,0.01,100),
+(5890,"Acid Breath Purple (Liquid) ","spells\acidliquidbreath_purple.mdx",1,0.1,0.01,100),
+(5891,"Creature - Spite Fire Nova (World)","Spells\FireNova_Area.mdx",0.2,0.2,0.01,100),
+(5892,"Creature - Shadowform (Soulguard)","spells\shadow_form_precast.mdx",0,1.7,0.1,10),
+(5893,"Flames (Blue)","Spells\Archimonde_Blue_Fire.mdx",1,0.5,0.01,100),
+(5894,"Alchemy Table","world\generic\undead\passive doodads\undeadalchemytable\undead_alchemy_table.mdx",0,0.5,0.01,100),
+(5895,"Ice Nuke Missile (Small)","spells\IceNuke_Missile.mdx",0,0.5,0.01,100),
+(5896,"Missile: Rocket (No Particles)","spells\Missle_Rocket_off.mdx",1,1,0.01,100),
+(5897,"Acid Breath (Red) (Liquid)","spells\acidliquidbreathred.mdx",1,1,0.01,100),
+(5898,"Acid Breath (Red) (Liquid)","spells\acidliquidbreathred.mdx",1,4,0.01,100),
+(5899,"Tranquility Area","spells\tranquility_area.mdx",1,0.05,0.01,100),
+(5900,"Shadow Fissure Base Blue","Spells\Shadow_Fissure_Baseblue.mdx",1,1,0.01,100),
+(5901,"Brilliance Aura Base","Spells\BrillianceAura.mdl",1,0.65,0.01,100),
+(5902,"Acid Breath (Red) (Liquid)","spells\acidliquidbreathred.mdx",1,6,0.01,100),
+(5903,"Missile: Soul","spells\soulshatter_missile.mdx",1,1.5,0.01,100),
+(5904,"CycloneFire State","Spells\CycloneFire_State.mdx",1,0.15,0.01,100),
+(5905,"BurningSpirit Impact Head","Spells\BurningSpirit_Impact_Head.mdx",0,3,0.01,100),
+(5906,"Ice Nuke Missile","spells\IceNuke_Missile.mdx",0,1.5,0.01,100),
+(5907,"Sonic Wave Blast Cast","spells\sonicwave_cast.mdx",1,0.25,0.01,100),
+(5908,"Frost Trap Aura","spells\frosttrap_aura.mdx",1,0.5,0.01,100),
+(5909,"Holy Nova","spells\holynova_impact_base.mdx",0.5,0.15,0.01,100),
+(5910,"Acid Breath (Red) (Liquid)","spells\acidliquidbreathred.mdx",1,0.5,0.01,100),
+(5912,"Smoke Ring (Forward)","spells\ring_of_smoke_fwd.mdx",0,0.5,0.1,10),
+(5915,"Fire Bomb","spells\firebomb_missle.mdx",1,0.1,0.01,100),
+(5916,"Ragnaros Fire Nova Area","Spells\Rag_FireNova_Area.mdx",1,2,0.01,100),
+(5922,"Pestilence Impact Chest","Spells\Pestilence_Impact_Chest.mdx",0,5,0.01,100),
+(5923,"Unholy Blight State","Spells\DeathKnight_UnholyBlight_State.mdx",0,3,0.01,100),
+(5924,"Soulstone Resurrection Base","spells\soulstoneresurrection_base.mdx",1,2.5,0.01,100),
+(5925,"Orange Gas State","Spells\Orange_Gas_01.mdx",1,8,0.1,10),
+(5926,"Taunt Head (Orange)","spells\taunt_head_orange.mdx",1,2,0.01,100),
+(5927,"Missile: Dark Bomb","spells\Missile_Dark.mdx",1,1,0.01,100),
+(5930,"Explosion: Dust","spells\Xplosion_Dust_Impact.mdx",1,1.5,0.01,100),
+(5931,"Bomb Explosion","Spells\Bomb_ExplosionA.mdx",1,6,0.01,100),
+(5932,"Living Bomb Explosion Area","spells\mage_livingbomb_area.mdx",0,3,0.01,100),
+(5934,"Force Shield Arcane (Purple)","spells\arcaneforceshield_purple.mdx",1,1.5,0.01,100),
+(5935,"Canon_Impact_Dust Impact (Chest)","spells\Canon_Impact_Dust.mdx",2,1.5,0.01,100),
+(5936,"Living Bomb Explosion Area","spells\mage_livingbomb_area.mdx",2,2.5,0.01,100),
+(5937,"Missile: Boulder","Spells\Boulder_Missile.mdx",0,2.75,0.01,100),
+(5938,"Ulduar_Missile","Spells\Ulduar_Missile.mdx",1,4,0.01,100),
+(5939,"Shadow Precast Med Base","Spells\Shadow_Precast_Med_Base.mdx",1,1.5,0.01,100),
+(5940,"Acid Ground Cloud Purple","spells\acid_ground_cloud_purple.mdx",1,1.4,0.01,100),
+(5941,"Acid Ground Cloud","spells\acid_ground_cloud.mdx",1,1.4,0.01,100),
+(5944,"Deep Freeze State (No Particles)","spells\ice_deepfreeze.mdx",0,2,0.01,100),
+(5945,"Void Zone V2.0","Spells\PortalofKathune_V2.mdx",1,1,0.1,100),
+(5946,"Blood Elf Power Orb (Red)","world\expansion01\doodads\generic\bloodelf\powerorb\bloodelf_powerorb_red.mdx",0,0.5,0.01,100),
+(5947,"Haunt Missile Soul","Spells\Haunt_Missile_Soul.mdx",1,3,0.1,100),
+(5948,"Missile: Pants","World\Generic\Orc\Passive Doodads\Tailoring\Clothes\OrcPants01.mdx",1,0.8,0.01,100),
+(5949,"Missile: Unmentionables","World\Generic\Human\Passive Doodads\Clothing\FoldedPantsGrey.mdx",1,0.6,0.01,100),
+(5951,"Army of the Dead Area Impact","Spells\SummonGhouls.mdx",1,0.5,0.01,100),
+(5953,"Bucket","World\Generic\Human\Passive Doodads\Buckets\Bucket.mdx",1,0.6,0.01,100),
+(5954,"Skull, Chattering","spells\skull.mdx",1,1.5,0.01,100),
+(5955,"Blade Barrier","spells\deathknight_bladebarrier.mdx",1,1,0.01,100),
+(5956,"Missile: Shirt (Blue)","World\Generic\Human\Passive Doodads\Clothing\FolderShirtGreen.mdx",1,1.2,0.01,100),
+(5957,"Flamestrike Area","Spells\Flamestrike_Area.mdx",1,0.5,0.01,100),
+(5958,"Water Explosion","spells\water_explosion.mdx",1,1,0.01,100),
+(5959,"Skull, Chattering","spells\skull.mdx",1,3,0.01,100),
+(5960,"Lava Burst Missile (Green)","spells\shaman_lavaburst_green_missile.mdx",1,1,0.01,100),
+(5961,"zzOLD__Ice Block State","spells\icebarrier_state.mdx",1,0.5,0.01,100),
+(5962,"Ice Block Visual State (Sindragosa)","world\expansion02\doodads\azjol-nerub\saronite\saronite_node_01.mdx",0,6.5,0.1,10),
+(5963,"Flesh Giant Torso","World\Expansion02\Doodads\Generic\Scourge\SC_Fleshgiant_Torso.mdx",0,2,0.1,10),
+(5964,"Flesh Giant Torso","World\Expansion02\Doodads\Generic\Scourge\SC_Fleshgiant_Torso.mdx",0,1,0.1,10),
+(5965,"Scourge Crate","World\Expansion02\Doodads\Generic\Scourge\SC_crate_01.mdx",0,3,0.1,10),
+(5966,"Acid Cloud Breath Smoke","spells\acidcloudbreath_groundsmoke.mdx",1,0.1,0.01,100),
+(5967,"Lava Burst Missile (Green)","spells\shaman_lavaburst_green_missile.mdx",1,0.5,0.01,100),
+(5968,"Upper Deck - Weather Machine - Snow","spells\Goblin_Weather_Machine_Snow.mdx",1,5,0.01,100),
+(5969,"Upper Deck - Weather Machine - Cloudy","spells\Goblin_Weather_Machine_Cloudy.mdx",1,5,0.01,100),
+(5970,"Ice ImpactDD Uber Chest","Spells\Ice_ImpactDD_Uber_Chest.mdx",1,1,0.01,100),
+(5971,"Snow Rain","Spells\ChristmasSnowRain.mdx",1,1.5,0.01,100),
+(5972,"Ice ImpactDD Low Chest","Spells\Ice_ImpactDD_Low_Chest.mdx",1,2,0.01,100),
+(5973,"Ice ImpactDD Uber Chest","Spells\Ice_ImpactDD_Uber_Chest.mdx",1,0.75,0.01,100),
+(5974,"Lava Burst Missile (Green)","spells\shaman_lavaburst_green_missile.mdx",1,0.3,0.01,100),
+(5975,"Explosive Shot Missile","spells\explosive_shot_missile.mdx",1,10,0.01,100),
+(5976,"Mongoose Glow High","Spells\Enchantments\MongooseGlow_High.mdx",1,1,0.1,100),
+(5977,"Mongoose Glow High","Spells\Enchantments\MongooseGlow_High.mdx",1,5,0.1,100),
+(5978,"Smoke Ring","spells\ring_of_smoke.mdx",0,0.5,0.1,10),
+(5979,"Nature Zone","Spells\NatureZone.mdx",1,0.15,0.1,100),
+(5982,"Poison Elemental Impact Base","spells\poisonelemental_impact_base.mdx",1,0.25,0.01,100),
+(5983,"Bloody Explosion Green Impact","Spells\BloodyExplosionGreen.mdx",1,4,0.01,100),
+(5984,"Bloody Explosion Green ImpacT","Spells\BloodyExplosionGreen.mdx",1,5,0.01,100),
+(5985,"Enslave Demon Impact Chest (2.0x)","Spells\EnslaveDemon_Impact_Chest.mdx",0,2,0.01,100),
+(5986,"Frost Strike Impact","Spells\DeathKnight_FrostStrike_Impact.mdx",0,5,0.01,100),
+(5987,"Xplosion_Frost_Impact","Spells\Xplosion_Frost_Impact.mdx",0,0.75,0.1,10),
+(5988,"Icebound Fortitude","SPELLS\DeathKnight_IceboundFortitude.mdx",1,10,0.01,100),
+(5989,"Bloody Explosion Green ImpacT","Spells\BloodyExplosionGreen.mdx",1,6,0.01,100),
+(5990,"White Black Hole Horizontal","Spells\BlackHole_White_H.mdx",0,3,0.1,10),
+(5991,"White Black Hole Horizontal","Spells\BlackHole_White_H.mdx",0,3.5,0.1,10),
+(5992,"Upper Deck - Weather Machine - Snow","spells\Goblin_Weather_Machine_Snow.mdx",1,5.5,0.01,100),
+(5993,"Acid Breath (Liquid)","spells\acidliquidbreath.mdx",1,4,0.01,100),
+(5994,"White Black Hole Horizontal","Spells\BlackHole_White_H.mdx",0,2,0.1,10),
+(5995,"Spell Object: Grenade (Gold)","world\generic\passivedoodads\weapons\mohawkgrenade.mdx",1,0.4,0.01,100),
+(5997,"Fel Fire Nova Area","spells\fel_firenova_area.mdx",1,0.25,0.01,100),
+(5998,"Missile: SlimeLesserExplode","spells\SlimeLesserExplode_Missile.mdx",1,0.5,0.01,100),
+(5999,"Missile: SlimeLesser","spells\SlimeLesser_Missile.mdx",1,0.5,0.01,100),
+(6000,"Ice Sphere (Glowing)","spells\snowflakecreature_var1.mdx",1,2,0.01,100),
+(6001,"Window Beam Visual","world\generic\passivedoodads\windowbeam\windowbeam01.mdx",0,1.5,0.01,100),
+(6002,"Crucible of Souls","Spells\WellOfSouls_Base.mdx",1,1,0.01,100),
+(6005,"Mohawk Explosion","spells\mohawkexplosion.mdx",1.5,1.5,0.01,100),
+(6006,"Ooze Flow","Spells\Goo_Flow_State.mdx",1,1,0.1,100),
+(6007,"Ooze Flow","Spells\Goo_Flow_State.mdx",1,2,0.1,100),
+(6008,"Quel'Delar","Spells\Sword_1H_QuelDelar_D_01_Spell.mdx",1,0.75,0.01,100),
+(6009,"Void Zone (Souls)","Spells\Well_Of_Souls_Base.mdx",1,1,0.1,100),
+(6010,"Void Zone (Souls)","Spells\Well_Of_Souls_Base.mdx",1,1.25,0.1,100),
+(6011,"Void Zone (Souls)","Spells\Well_Of_Souls_Base.mdx",1,2,0.1,100),
+(6012,"Void Zone (Souls)","Spells\Well_Of_Souls_Base.mdx",1,0.5,0.1,100),
+(6013,"Void Zone (Flame)","Spells\FlameZone.mdx",1,1,0.1,100),
+(6014,"Void Zone (Flame)","Spells\FlameZone.mdx",1,1.5,0.1,100),
+(6015,"Void Zone (Flame)","Spells\FlameZone.mdx",1,0.25,0.1,100),
+(6016,"Void Zone (Flame)","Spells\FlameZone.mdx",1,0.5,0.1,100),
+(6017,"Void Zone (Holy)","Spells\HolyZone.mdx",1,1,0.1,100),
+(6018,"Void Zone (Holy)","Spells\HolyZone.mdx",1,1.15,0.1,100),
+(6019,"Void Zone (Holy)","Spells\HolyZone.mdx",1,0.25,0.1,100),
+(6020,"Void Zone (Holy)","Spells\HolyZone.mdx",1,0.5,0.1,100),
+(6021,"Void Zone (Nature)","Spells\NatureZone.mdx",1,1,0.1,100),
+(6022,"Void Zone (Nature)","Spells\NatureZone.mdx",1,1.5,0.1,100),
+(6023,"Void Zone (Nature) ","Spells\NatureZone.mdx",1,1.25,0.1,100),
+(6024,"Void Zone (Nature)","Spells\NatureZone.mdx",1,0.5,0.1,100),
+(6025,"Ice Block State","spells\icebarrier_state.mdx",0.1,0.24,0.01,100),
+(6026,"Flame Shock Impact Chest (Blue)","Spells\FlameShock_Blue_Impact_Chest.mdx",1,1.5,0.01,100),
+(6028,"Void Zone (Holy)","Spells\HolyZone.mdx",1,2,0.1,100),
+(6029,"Mohawk Explosion","spells\mohawkexplosion.mdx",0.25,0.25,0.1,10),
+(6030,"Polymorph Impact","spells\polymorph_impact.mdx",0.25,0.25,0.1,10),
+(6031,"Soulshatter Impact Base","spells\soulshatter_impact.mdx",1,3,0.01,100),
+(6032,"Acid Liquid Breath - Purple (1.00)","spells\acidliquidbreath_purple.mdx",1,1,0.01,100),
+(6035,"Frost Breath","Spells\FrostBreath.mdx",1,2,0.01,100),
+(6036,"Fire Bomb","spells\firebomb_missle.mdx",1,10,0.01,100),
+(6037,"Fire Bomb","spells\firebomb_missle.mdx",1,25,0.01,100),
+(6038,"Green Bottle (Potion)","World\Expansion02\Doodads\Icecrown\Lab Items\Icecrown_LabBottle_01.mdx",1,1,0.1,100),
+(6039,"Orange Bottle (Potion)","World\Expansion02\Doodads\Icecrown\Lab Items\Icecrown_LabBottle_02.mdx",1,1,0.1,100),
+(6040,"Green Bottle (Potion)","World\Expansion02\Doodads\Icecrown\Lab Items\Icecrown_LabBottle_01.mdx",1,2,0.1,100),
+(6041,"Green Bottle (Potion)","World\Expansion02\Doodads\Icecrown\Lab Items\Icecrown_LabBottle_01.mdx",1,3,0.1,100),
+(6042,"Orange Bottle (Potion)","World\Expansion02\Doodads\Icecrown\Lab Items\Icecrown_LabBottle_02.mdx",1,2,0.1,100),
+(6043,"Orange Bottle (Potion)","World\Expansion02\Doodads\Icecrown\Lab Items\Icecrown_LabBottle_02.mdx",1,3,0.1,100),
+(6044,"Orange Gas State","Spells\Orange_Gas_01.mdx",1,1,0.1,10),
+(6045,"Green Bottle (Potion)","World\Expansion02\Doodads\Icecrown\Lab Items\Icecrown_LabBottle_01.mdx",1,5,0.1,100),
+(6046,"Green Bottle (Potion)","World\Expansion02\Doodads\Icecrown\Lab Items\Icecrown_LabBottle_01.mdx",1,3.5,0.1,100),
+(6047,"Orange Bottle (Potion)","World\Expansion02\Doodads\Icecrown\Lab Items\Icecrown_LabBottle_02.mdx",1,4,0.1,100),
+(6048,"Orange Bottle (Potion)","World\Expansion02\Doodads\Icecrown\Lab Items\Icecrown_LabBottle_02.mdx",1,5,0.1,100),
+(6049,"Green Bottle (Potion)","World\Expansion02\Doodads\Icecrown\Lab Items\Icecrown_LabBottle_01.mdx",1,6,0.1,100),
+(6050,"Green Bottle (Potion)","World\Expansion02\Doodads\Icecrown\Lab Items\Icecrown_LabBottle_01.mdx",1,4,0.1,100),
+(6051,"Orange Bottle (Potion)","World\Expansion02\Doodads\Icecrown\Lab Items\Icecrown_LabBottle_02.mdx",1,6,0.1,100),
+(6052,"Orange Bottle (Potion)","World\Expansion02\Doodads\Icecrown\Lab Items\Icecrown_LabBottle_02.mdx",1,9,0.1,100),
+(6053,"Orange Gas State","Spells\Orange_Gas_01.mdx",1,3,0.1,10),
+(6054,"Dustfall FX (JZB)","spells\dustfall_fx.mdx",1,7,0.1,10),
+(6055,"Archimonde Fire","spells\archimonde_fire.mdx",1,1,0.01,100),
+(6056,"Sylvanas","Creature\LadySylvanasWindrunner\LadySylvanasWindrunner.mdx",0,1.2,0.1,10),
+(6057,"Void Zone","creature\portalofkathune\portalofkathune.mdx",1,0.03,0.03,10),
+(6058,"Magic Net State","Spells\MagicNet_State.mdx",0,2,0.01,100),
+(6059,"Shadowstep Cast Base","spells\shadowsteps_fx.mdx",0,0.25,0.01,100),
+(6062,"Weapon - Plague Rifle (Purple)","spells\firearm_2h_rifle_02_spellobject.mdx",0,1,0.1,10),
+(6063,"Acid Breath Purple (Liquid)","spells\acidliquidbreath_purple.mdx",0,1,0.1,10),
+(6064,"Acid Breath (Liquid)","spells\acidliquidbreath.mdx",0,0.5,0.1,10),
+(6065,"Orange Gas State","Spells\Orange_Gas_01.mdx",1,14,0.1,100),
+(6066,"Green Bottle (Potion)","World\Expansion02\Doodads\Icecrown\Lab Items\Icecrown_LabBottle_01.mdx",1,0.5,0.1,100),
+(6067,"Poison Elemental Impact Base","spells\poisonelemental_impact_base.mdx",1,3,0.01,100),
+(6068,"Wind Shear Impact","spells\shaman_windshear.mdx",1,0.75,0.01,100),
+(6069,"Black Magic Precast Base","spells\BlackMagic_Precast_Base.mdx",1,1.5,0.01,100),
+(6070,"Poison Impact Chest","Spells\Poison_Impact_Chest.mdx",1,0.75,0.01,100),
+(6071,"Precious Ribbon","\World\Generic\PassiveDoodads\ValentinesDay\ValentinesRibbon01huge.mdx",0,1,0.1,10),
+(6072,"Holiday Ribbon","World\Generic\PassiveDoodads\ValentinesDay\ValentinesRibbon01huge.mdx",0,0.1,0.1,10),
+(6073,"Blizzard Rune Base (State)","Spells\SummonGround_Blizzard_State.mdx",0,0.8,0.01,100),
+(6076,"Lava Burst Missile (Green)","spells\shaman_lavaburst_green_missile.mdx",1,2,0.01,100),
+(6079,"Flame Breath (Blue)","Spells\FlameBreath_Blue.mdx",1,0.5,0.01,100),
+(6080,"Poison Impact Orange","Spells\Poison_ImpactDot_Orange_Med_Base.mdx",0,1,0.1,100),
+(6081,"Poison Elemental Impact (Orange)","Spells\PoisonElemental_Orange_Impact_Base.mdx",1,1,0.1,100),
+(6082,"Poison Elemental Impact (Orange)","Spells\PoisonElemental_Orange_Impact_Base.mdx",1,2,0.1,100),
+(6083,"Poison Elemental Impact (Orange)","Spells\PoisonElemental_Orange_Impact_Base.mdx",1,5,0.1,100),
+(6084,"Orange Gas Plague Cloud L3","Spells\Orange_Gas_Plague_Cloud_L3.mdx",1,1,0.1,100),
+(6085,"Orange Gas Plague Cloud L2","Spells\Orange_Gas_Plague_Cloud_L2.mdx",1,1,0.1,100),
+(6086,"Orange Gas Plague Cloud L1","Spells\Orange_Gas_Plague_Cloud_L1.mdx",1,1,0.1,100),
+(6087,"Taunt Head (Orange)","spells\taunt_head_orange.mdx",1,3,0.01,100),
+(6088,"Insects","World\Generic\PassiveDoodads\FlyingInsects\FlyingSmallInsects.mdx",1,1,0.01,100),
+(6089,"Wasp Swarm","World\Kalimdor\Silithus\PassiveDoodads\WaspSwarm\WaspSwarm.mdx",1,1,0.01,100),
+(6090,"Wasp Swarm","World\Kalimdor\Silithus\PassiveDoodads\WaspSwarm\WaspSwarm.mdx",1,2,0.01,100),
+(6091,"Cat Mark State Head","Spells\CatMark.mdx",1,2,0.01,100),
+(6092,"Cat Mark State Head","Spells\CatMark.mdx",1,3,0.01,100),
+(6095,"Missile: BloodBolt","spells\bloodbolt_missile_low.mdx",1,0.5,0.01,100),
+(6096,"Missile: BloodBolt","spells\bloodbolt_missile_low.mdx",1,0.25,0.01,100),
+(6097,"Cockroach","Creature\Cockroach\Cockroach.mdx",1,2,0.01,100),
+(6099,"Acid Cloud Breath Blue (Fast)","spells\AcidCloudBreath_Fast_Blue.mdx",1,0.65,0.01,100),
+(6101,"Explosion: Firey (Blue) (Small)","spells\Xplosion_Fire_Impact_Blue.mdx",1,1,0.01,100),
+(6103,"FlamestrikeSmall Impact Base (Blue)","spells\FlamestrikeSmall_Blue_Impact_Base.mdx",1,1,0.01,100),
+(6104,"Missile: Demolisher (Blue) (Large)","Spells\Demolisher_Missile_Blue.mdx",0,5,0.01,100),
+(6105,"Soulshatter Impact Base","spells\soulshatter_impact.mdx",1,3,0.01,100),
+(6106,"FireBlast Impact Chest Large (Blue)","spells\FireBlast_Blue_Impact_Chest.mdx",1,2,0.01,100),
+(6107,"Xplosion Fire Impact Blue","spells\xplosion_fire_impact_blue.mdx",2,2,0.01,100),
+(6108,"Xplosion Fire Impact Blue","spells\xplosion_fire_impact_blue.mdx",2,2,0.01,100),
+(6109,"Flame Shock Impact Chest (Blue)","Spells\FlameShock_Blue_Impact_Chest.mdx",1,3,0.01,100),
+(6111,"Poison Elemental Impact Base (8x)","spells\poisonelemental_impact_base.mdx",1,8,0.01,100),
+(6112,"Ghostly Strike Impact Chest","spells\ghostlystrike_impact_chest.mdx",1,4,0.01,100),
+(6114,"Ooze Flow","Spells\Goo_Flow_State.mdx",1,0.5,0.1,100),
+(6115,"Ooze Flow","Spells\Goo_Flow_State.mdx",1,0.1,0.1,100),
+(6116,"Shadow ImpactDD Uber Chest","Spells\Shadow_ImpactDD_Uber_Chest.mdx",1,4,0.01,100),
+(6117,"Holy Zone State Chest","spells\holyzone.mdx",0,1,0.1,10),
+(6118,"Shield: Fire Force (Dark) (Small)","Spells\FireForceShield_Dark.mdx",1,0.3,0.01,100),
+(6119,"Form Arcane Precast","Spells\Arcane_Form_Precast.mdx",1,5,0.01,100),
+(6120,"Shadow Precast Uber Hand","Spells\Shadow_Precast_Uber_Hand.mdx",1,10,0.01,100),
+(6121,"Light's Vengeance Missile","world\generic\passivedoodads\weapons\hammer_pvpalliance_a_01.mdx",0,2,0.01,100),
+(6122,"Dark Ritual PreCast Base Blue","spells\darkritual_precast_baseblue.mdx",1,6,0.01,100),
+(6123,"Lichborne, Large","Spells\DeathKnight_Lichborne_State.mdx",0,2,0.01,100),
+(6124,"Orange Gas Plague Cloud L3","Spells\Orange_Gas_Plague_Cloud_L3.mdx",1,1,0.1,100),
+(6125,"Orange Gas Plague Cloud L2","Spells\Orange_Gas_Plague_Cloud_L2.mdx",1,0.6,0.1,100),
+(6126,"Orange Gas Plague Cloud L1","Spells\Orange_Gas_Plague_Cloud_L1.mdx",1,0.6,0.1,100),
+(6127,"JetPack","spells\jetpack.mdx",1,1,0.01,100),
+(6128,"Orange Gas Plague Cloud L1","Spells\Orange_Gas_Plague_Cloud_L1.mdx",1,0.1,0.01,100),
+(6130,"CycloneFire State","Spells\CycloneFire_State.mdx",1,0.1,0.01,100),
+(6131,"Explosion: Fel","spells\Xplosion_Fel_Impact.mdx",1,1,0.01,100),
+(6135,"JetPack Flame Only","spells\jetpack_flame.mdx",1,1,0.01,100),
+(6137,"Soulshatter Missile","spells\soulshatter_missile.mdx",1,1,0.01,100),
+(6138,"Icecrown Snowflake","Spells\Icecrown_Snowflake.mdx",1,1,0.01,100),
+(6139,"Quel'Delar","Spells\Sword_1H_QuelDelar_D_01_Spell.mdx",1,1,0.01,100),
+(6140,"Oil Breath (Liquid)","spells\OilLiquidBreath.mdx",1,2,0.01,100),
+(6141,"Combat Blood Spurt Front Large Black","Particles\BloodSpurts\BloodSpurtBlackLarge.mdx",1,5,0.01,100),
+(6142,"Missile: Black Shot","spells\blackshot_missile.mdx",1,15,0.01,100),
+(6143,"Combat Blood Spurt Front Large Black","Particles\BloodSpurts\BloodSpurtBlackLarge.mdx",1,7,0.01,100),
+(6144,"Death Pact Impact (Target)","SPELLS\DeathKnight_DeathPactTarget.mdx",1,0.25,0.01,100),
+(6145,"Acid Breath (Red) (Liquid)","spells\acidliquidbreathred.mdx",1,0.25,0.01,100),
+(6146,"Fire Force Shield Purple State","spells\fireforceshield_purple.mdx",1,1,0.01,100),
+(6147,"Force Shield Arcane (Purple) (Copy)","spells\arcaneforceshield_purple.mdx",1,1.1,0.01,100),
+(6148,"Force Shield Arcane (Purple)","spells\arcaneforceshield_purple.mdx",1,1.1,0.01,100),
+(6149,"Force Shield Arcane (Purple)","spells\arcaneforceshield_purple.mdx",1,1.2,0.01,100),
+(6152,"Poison Elemental Impact (Orange)","Spells\PoisonElemental_Orange_Impact_Base.mdx",1,7,0.1,100),
+(6153,"Poison Elemental Impact (Orange)","Spells\PoisonElemental_Orange_Impact_Base.mdx",1,9,0.1,100),
+(6154,"Frost_Form","spells\frost_form_precast.mdx",0,3,0.01,100),
+(6155,"Ice Precast Uber Base","Spells\Ice_Precast_Uber_Base.mdx",1,2.5,0.01,100),
+(6156,"Acid Cloud Breath Blue (Fast)","spells\AcidCloudBreath_Fast_Blue.mdx",1,2,0.01,100),
+(6157,"Ice Precast Uber Base","Spells\Ice_Precast_Uber_Base.mdx",1,4,0.01,100),
+(6158,"Ice Precast Uber Base","Spells\Ice_Precast_Uber_Base.mdx",1,3.5,0.01,100),
+(6159,"Ritual Of Fire Precast","spells\Ritual_Fire_PreCast_Base.mdx",1,1,0.01,100),
+(6160,"ForceShield Fire Blue","Spells\FireForceShield_Blue.mdx",1,0.8,0.01,100),
+(6161,"Force Shield Arcane (Blue)","spells\arcaneforceshield_blue.mdx",1,1.2,0.01,100),
+(6162,"Plague Strike State","Spells\DeathKnight_PlagueStrikeState.mdx",0,4,0.01,100),
+(6163,"Fel Seeping Gaseous Nova","spells\seepinggaseous_fel_nova.mdx",1,1.75,0.01,100),
+(6164,"Nexus magic Orb blue","world\expansion02\doodads\nexus\nexus_magicorb_blue_01.mdx",0,0.5,0.01,100),
+(6165,"Nexus Magic Orb Blue","world\expansion02\doodads\nexus\nexus_magicorb_blue_01.mdx",0,1,0.1,10),
+(6166,"Fire Bomb","spells\firebomb_missle.mdx",1,0.05,0.01,100),
+(6167,"Portal: Green","spells\creature_spellportal_green.mdx",1,1,0.01,100),
+(6168,"Aura: Green","World\Generic\PassiveDoodads\ParticleEmitters\AuraGreen.mdx",1,2,0.01,100),
+(6169,"RadiationGreen State","Spells\GreenGhost_state.mdx",0,3,0.01,100),
+(6170,"Purple Glow High, large","spells\enchantments\purpleglow_high.mdx",5,5,0.01,100),
+(6171,"Shadow Dance State","Spells\ShadowDance_State.mdx",0,6,0.1,10),
+(6172,"Holy Bomb (Large)","Spells\HolyBomb_Missle.mdx",3,2,0.1,10),
+(6173,"Holy ImpactDD High Chest","Spells\Holy_ImpactDD_High_Chest.mdx",1,10,0.01,100),
+(6174,"Holy Nova Impact Base (Huge)","spells\holynova_impact_base.mdx",4,6,0.01,100),
+(6175,"Aura: Yellow, Short","world\generic\passivedoodads\particleemitters\aurayellowshort.mdx",1,2,0.01,100),
+(6176,"Yellow Flame","spells\enchantments\yellowflame_low.mdx",0,10,0.1,10),
+(6177,"Plague Gas Orange","Spells\Plague_Gas_Orange_02.mdx",1,1,0.1,100),
+(6178,"Acid Breath","Spells\AcidBreath.mdx",1,0.75,0.01,100),
+(6179,"Holy ImpactDD High Chest","Spells\Holy_ImpactDD_High_Chest.mdx",1,3,0.01,100),
+(6180,"Ghoul Explode","SPELLS\DeathKnight_Ghoul_Explode.mdx",1,3,0.01,100),
+(6181,"Missile: SlimeLesserExplode","spells\SlimeLesserExplode_Missile.mdx",1,0.25,0.01,100),
+(6182,"Holy Missile Low","Spells\Holy_Missile_Low.mdx",1,1,0.01,100),
+(6183,"Flamestrike ImpactDD Med Base - 3.00 BLACK","spells\flamestrike_black_impactdd_med_base.mdx",1,3,0.01,100),
+(6184,"Flamestrike ImpactDD Med Base - BLACK","spells\flamestrike_black_impactdd_med_base.mdx",1,0.5,0.01,100),
+(6185,"Anti-Magic Zone Green","Spells\DeathKnight_AntiMagicZone_Green.mdx",0,0.75,0.01,100),
+(6186,"GreenGlow_High","spells\enchantments\greenglow_high.mdx",1,5,0.01,100),
+(6187,"Nature Precast Chest","Spells\Nature_Precast_Chest.mdx",0,0.8,0.01,100),
+(6188,"Anti-Magic Zone (Red)","world\expansion02\doodads\icecrown\bloodprince\icecrown_bloodprince_bloodorb.mdx",1,0.1,0.01,100),
+(6189,"Bone Cyclone Impact","Spells\Bone_Cyclone_Impact.mdx",0,1,0.1,10),
+(6193,"Warlock Test visual 135131,safds","cube.mdx",0,1,0.1,10),
+(6196,"Demonic Circle Teleport Cast","spells\warlock_demoniccircle_teleport.mdx",0,0.5,0.01,100),
+(6197,"Dancing Runeweapon State","Spells\DeathKnight_DancingRuneblade_State.mdx",0,8,0.01,100),
+(6198,"Plague Strike State","Spells\DeathKnight_PlagueStrikeState.mdx",0,1.5,0.01,100),
+(6199,"Missile: SlimeLesserExplode_No Flip","Spells\SlimeLesserExplode_Missile_No_Flip.mdx",1,1,0.01,100),
+(6200,"Shadowflame Cast (World)","spells\warlock_shadowflame.mdx",0.1,0.1,0.01,100),
+(6201,"Fear Impact Head","Spells\Fear_Impact_Chest.mdx",0,0.5,0.01,100),
+(6202,"Frosty Swirl Base","spells\frostycircle.mdx",0,1,0.01,100),
+(6206,"Void Zone V2.0","Spells\PortalofKathune_V2.mdx",1,2,0.1,100),
+(6207,"Shadow Strikes State","spells\shadow_strikes_state_hand.mdx",1,10,0.01,100),
+(6208,"Anti-Magic Zone (Red)","world\expansion02\doodads\icecrown\bloodprince\icecrown_bloodprince_bloodorb.mdx",1,0.25,0.01,100),
+(6210,"Molten Core Impact Chest","spells\warlock_backdraft.mdx",0,1,0.01,100),
+(6211,"Quest - Sunwell Ignition!","spells\Sunwell_BeamFX.mdx",1,0.1,0.01,100),
+(6212,"Ice Sphere (Glowing)","spells\snowflakecreature_var1.mdx",1,0.5,0.01,100),
+(6213,"Sunwell Ground FX","spells\sunwell_groundfx.mdx",1,0.15,0.01,100),
+(6214,"Ooze Flow","Spells\Goo_Flow_State.mdx",1,1.5,0.1,100),
+(6215,"Fel Seeping Gaseous Nova","spells\seepinggaseous_fel_nova.mdx",1,2.5,0.01,100),
+(6216,"Nature Precast Chest","Spells\Nature_Precast_Chest.mdx",1,10,0.01,100),
+(6218,"Aura: Green","World\Generic\PassiveDoodads\ParticleEmitters\AuraGreen.mdx",1,8,0.01,100),
+(6219,"Nature Cast Hand","Spells\Nature_Cast_Hand.mdx",1,20,0.01,100),
+(6220,"Ghost_state (Green)","spells\greenghost_state.mdx",1,3,0.01,100),
+(6222,"Wandering Plague Impact","spells\DeathKnight_WanderingPlague.mdx",0,2,0.01,100),
+(6223,"Plague Gas Orange","Spells\Plague_Gas_Orange_02.mdx",1,0.35,0.1,100),
+(6224,"Orange Gas Plague Cloud L3 ","Spells\Orange_Gas_Plague_Cloud_L3.mdx",1,0.1,0.1,100),
+(6225,"Hellfire Impact Base (Blue)","spells\HellfIre_Blue_Impact_Base.mdx",1,1,0.01,100),
+(6226,"Aura: Green","World\Generic\PassiveDoodads\ParticleEmitters\AuraGreen.mdx",1,3,0.01,100),
+(6227,"Nature Cast Hand","Spells\Nature_Cast_Hand.mdx",1,10,0.01,100),
+(6228,"Nature Precast Chest - 5.00","Spells\Nature_Precast_Chest.mdx",1,5,0.01,100),
+(6229,"Aura: Green","World\Generic\PassiveDoodads\ParticleEmitters\AuraGreen.mdx",1,5,0.01,100),
+(6230,"Orange Gas State","Spells\Orange_Gas_01.mdx",1,4,0.1,10),
+(6231,"Poison Elemental Impact (Orange)","Spells\PoisonElemental_Orange_Impact_Base.mdx",1,12,0.1,100),
+(6232,"Ground Rune (Blue)","World\Goober\G_RuneGroundBlue01.mdx",1,2,0.01,100),
+(6233,"Aura: Green, Tall","world\generic\passivedoodads\particleemitters\auragreentall.mdx",0,1,0.01,100),
+(6234,"Test Rock","world\azeroth\duskwood\passivedoodads\fence\rockwallrubble.mdx",1,1.5,0.01,100),
+(6235,"Explosion: Fel","spells\Xplosion_Fel_Impact.mdx",1,0.5,0.01,100),
+(6236,"Xplosion Fire Impact","spells\Xplosion_Fire_Impact.mdx",2,0.5,0.01,100),
+(6238,"Plague Gas Orange","Spells\Plague_Gas_Orange_02.mdx",1,3,0.1,100),
+(6239,"Might Aura State Base","Spells\MightAura_Impact_Base.mdx",1,12,0.01,100),
+(6240,"Canon_Impact_Dust Impact (Chest)","spells\Canon_Impact_Dust.mdx",1,3.5,0.01,100),
+(6241,"Missile: Rocket (Medium)","spells\missle_rocket.mdx",0,2.5,0.01,100),
+(6243,"Hellfire Channel Base","Spells\HellFire_Channel_Base.mdx",1,1,0.01,100),
+(6245,"Acid Breath (Liquid)","spells\acidliquidbreath.mdx",1,3,0.01,100),
+(6247,"Orange Bottle v2 (Potion)","World\Expansion02\Doodads\Icecrown\Lab Items\Icecrown_LabBottle_03.mdx",1,1,0.1,100),
+(6248,"Orange Bottle v2 (Potion)","World\Expansion02\Doodads\Icecrown\Lab Items\Icecrown_LabBottle_03.mdx",1,2,0.1,100),
+(6250,"Missile: Soul","spells\soulshatter_missile.mdx",1,2,0.01,100),
+(6251,"Missile: Crate (Valentine)","world\generic\passivedoodads\valentinesday\valentinescrate.mdx",1,0.5,0.01,100),
+(6252,"Plague Gas Orange","Spells\Plague_Gas_Orange_02.mdx",1,6,0.1,100),
+(6253,"Plague Gas Orange","Spells\Plague_Gas_Orange_02.mdx",1,4,0.1,100),
+(6254,"Plague Gas Orange","Spells\Plague_Gas_Orange_02.mdx",1,0.5,0.1,100),
+(6255,"Sunder Impact Chest","Spells\Sunder_Impact_Chest.mdx",0,0.35,0.01,100),
+(6256,"Banish (Green)","Spells\Banish_Chest.mdx",0,5,0.01,100),
+(6257,"Banish (Green)","Spells\Banish_Chest.mdx",0,11,0.01,100),
+(6258,"Bloodlust Cast Hand","Spells\BloodLust_Cast_Hand.mdx",1,5,0.01,100),
+(6259,"Heroic Throw Impact","spells\warrior_heroicthrow_impact.mdx",1,1,0.01,100),
+(6260,"Xplosion_Nature_Impact","Spells\Xplosion_Nature_Impact.mdx",0,5,0.1,10),
+(6261,"Missile: Spore","Creature\SporeCreature\SporeCreature.mdx",1,0.5,0.01,100),
+(6262,"Poison Impact Orange","Spells\Poison_ImpactDot_Orange_Med_Base.mdx",0,4,0.1,100),
+(6263,"Ooze Flow","Spells\Goo_Flow_State.mdx",1,0.4,0.1,100),
+(6264,"Plaguethrower Backpack (Cosmetic)","spells\rshoulder_robe_plague_a_01_spell.mdx",0,1,0.1,10),
+(6265,"Skybeam, Red (Neutral)","Spells\FireBeam_Neutral_State_Base.mdx",1,0.25,0.01,10),
+(6266,"LowPolyFire","world\generic\pvp\fires\lowpolyfire.mdx",1,1.5,0.01,100),
+(6267,"Hodir Ground Freeze","spells\ulduar_bosssmoke.mdx",0,0.035,0.001,10),
+(6268,"ChainsofIce Low Base","Spells\ChainsofIce_Low_Base.mdx",1,0.2,0.01,100),
+(6269,"Ice Precast Uber Hand","Spells\Ice_Precast_Uber_Hand.mdx",1,0.5,0.01,100),
+(6270,"Orange Bottle v2 (Potion)","World\Expansion02\Doodads\Icecrown\Lab Items\Icecrown_LabBottle_03.mdx",1,0.5,0.1,100),
+(6271,"Death and Decay Ground Runes (Green)","spells\deathanddecay_area_runesgreen.mdx",1,1,0.01,100),
+(6272,"Blizzard Rune Base","Spells\SummonGround_Blizzard.mdx",0,0.08,0.01,100),
+(6273,"SnowFlake Missile","spells\snowflakecreature_var1_missile.mdx",0,2,0.01,100),
+(6274,"Xplosion_Frost_Impact","Spells\Xplosion_Frost_Impact.mdx",0,1,0.1,10),
+(6276,"Orange Gas Plague Cloud L1","Spells\Orange_Gas_Plague_Cloud_L1.mdx",1,0.7,0.1,100),
+(6277,"Orange Gas Plague Cloud L2","Spells\Orange_Gas_Plague_Cloud_L2.mdx",1,0.8,0.1,100),
+(6278,"Orange Gas Plague Cloud L3","Spells\Orange_Gas_Plague_Cloud_L3.mdx",1,0.8,0.1,100),
+(6282,"Fire Bomb","spells\firebomb_missle.mdx",1,0.5,0.01,100),
+(6283,"Plague Strike State (Red)","spells\deathknight_plaguestrikestatered.mdx",0,1,0.01,100),
+(6285,"LowPolyFireNoSmoke (TINY)","world\generic\pvp\fires\lowpolyfire_nosmoke.mdx",1,0.03,0.01,100),
+(6286,"ProtectionFromFire Chest (TINY)","Spells\ProtectionFromFire_Chest.mdx",0,0.05,0.01,100),
+(6287,"Frostbolt Missile","spells\frostbolt.mdx",1,0.6,0.01,100),
+(6288,"Ghoul Explode (Simple)","SPELLS\DeathKnight_Ghoul_Explode_simple.mdx",1,10,0.01,100),
+(6289,"Ghoul Explode (Simple)","SPELLS\DeathKnight_Ghoul_Explode_simple.mdx",1,3.5,0.01,100),
+(6290,"Holy ImpactDD Med Chest","Spells\Holy_ImpactDD_Med_Chest.mdx",1,0.75,0.01,100),
+(6291,"Sporeling","Spells\Sporeling_01.mdx",0,1,0.1,10),
+(6292,"Sparkle Trail","spells\sparktrail.mdx",0,2,0.01,100),
+(6293,"Sporeling","Spells\Sporeling_01.mdx",0,0.75,0.1,10),
+(6294,"Frostmourne","Item\ObjectComponents\Weapon\Sword_2H_Frostmourne_D_02.mdx",1,1,0.01,100),
+(6295,"Missile: Shadowbolt (No Ribbon)","spells\ShadowBolt_Missile_NoRibbon.mdx",1,1.5,0.01,100),
+(6296,"ShadowWordPain Chest","Spells\ShadowWordPain_Chest.mdx",1,2,0.01,100),
+(6297,"Cripple State Chest","Spells\Cripple_State_Chest.mdx",1,3,0.01,100),
+(6298,"Ice Block (New)","Creature\QuestObjects\Creature_IceBlock_Sindragosa.mdx",1,0.75,0.1,100),
+(6299,"Orange Bottle v2 (Potion)","World\Expansion02\Doodads\Icecrown\Lab Items\Icecrown_LabBottle_03.mdx",1,1.5,0.1,100),
+(6300,"Druid Morph Impact (3.0)","Spells\DruidMorph_Impact_Base.mdx",0,3,0.01,100),
+(6301,"Ghoul Explode (Simple)","SPELLS\DeathKnight_Ghoul_Explode_simple.mdx",1,2,0.01,100),
+(6302,"Void Zone (Holy)","Spells\HolyZone.mdx",1,0.15,0.1,100),
+(6303,"Ghoul Explode (Simple)","SPELLS\DeathKnight_Ghoul_Explode_simple.mdx",1,6,0.01,100),
+(6307,"Banish (Red)","spells\bloodbolt_chest.mdx",1,2,0.01,100),
+(6308,"Shaman_Red","Spells\Enchantments\Shaman_Red.mdx",1,2,0.01,100),
+(6309,"Shaman_Red","Spells\Enchantments\Shaman_Red.mdx",1,4,0.01,100),
+(6310,"RedGlow_High","spells\enchantments\redglow_high.mdx",1,10,0.01,100),
+(6311,"Anti-Magic Zone (Red)","world\expansion02\doodads\icecrown\bloodprince\icecrown_bloodprince_bloodorb.mdx",1,0.05,0.01,100),
+(6312,"Ice ImpactDD Uber Chest","Spells\Ice_ImpactDD_Uber_Chest.mdx",1,0.4,0.01,100),
+(6313,"Impact Light","Spells\Impact_Light.mdx",0,2,0.1,10),
+(6315,"Frost Bolt Missile","Spells\Frostbolt.mdx",1,1.25,0.01,100),
+(6316,"Missile: Firebolt (Blue)","Spells\FireBolt_Blue_Missile_Low.mdx",1,1.5,0.01,100),
+(6317,"Coilfang_Blue_Energy.mdx","World\Expansion01\Doodads\Coilfang\Passivedoodads\BlueEnergy\Coilfang_Blue_Energy.mdx",0.5,0.05,0.01,100),
+(6318,"Incinerate Missile (Blue) ","spells\incinerateblue_low_base.mdx",1,0.5,0.01,100),
+(6319,"Ice Nuke Missile","spells\IceNuke_Missile.mdx",1,0.01,0.01,100),
+(6320,"Plague Gas Blue","Spells\Plague_Gas_Blue_01.mdx",1,1,0.01,100),
+(6321,"Plague Gas Blue","Spells\Plague_Gas_Blue_01.mdx",1,1.5,0.01,100),
+(6323,"HolyLight Impact Head","Spells\HolyLight_Impact_Head.mdx",0,3,0.01,100),
+(6325,"Frosty Swirl Base","spells\frostycircle.mdx",0,0.5,0.01,100),
+(6326,"Plague Strike Impact (Red)","spells\deathknight_plaguestrikecaster_impactred.mdx",0,1,0.01,100),
+(6327,"Resistance Aura Base","Spells\ResistanceAura_Base.mdx",1,5,0.01,100),
+(6329,"Create Soulstone Cast","Spells\CreateSoulstone_Cast.mdx",1,3,0.01,100),
+(6330,"Haunt_State","spells\warlock_haunt_state.mdx",0,2,0.1,10),
+(6331,"Death Pact Impact (Big)","SPELLS\DeathKnight_DeathPactTarget.mdx",5,5,0.01,100),
+(6332,"Death Pact Cast (Big)","SPELLS\DeathKnight_DeathPactCaster.mdx",5,5,0.01,100),
+(6333,"HolyDivineShield State Base (Red)","Spells\HolyDivineShieldRed_State_Base.mdx",0,1,0.01,100),
+(6334,"Blood Rain Impact Chest","spells\blood_rain_impact_base.mdx",0,1,0.1,10),
+(6335,"Blood Rain Missile","spells\blood_rain.mdx",1,1,0.01,100),
+(6336,"Blood Rain Area Impact","spells\blood_rain_main_impact_base.mdx",0,1,0.1,10),
+(6337,"Bloodqueen Fire","spells\bloodqueen_fire.mdx",0,0.75,0.1,10),
+(6338,"Blue Hunter's Mark","spells\catmark_blue.mdx",1,1.5,0.01,100),
+(6339,"Hunger for Blood State","spells\hungerforblood_state.mdx",0,2,0.01,100),
+(6340,"Bloodsurge Impact","spells\warrior_bloodsurge.mdx",0,2,0.01,100),
+(6341,"Ice Precast Uber Base V2 (No Purple)","spells\ice_precast_uber_base_var2.mdx",1,1,0.01,100),
+(6343,"Warrior Devastate Axe","spells\warrior_devastate_axe.mdx",1,1,0.01,100),
+(6344,"Hunger for Blood State","spells\hungerforblood_state.mdx",0,4,0.01,100),
+(6345,"Icebound Fortitude","SPELLS\DeathKnight_IceboundFortitude.mdx",1,0.5,0.01,100),
+(6346,"Death Pact Impact (Caster)","SPELLS\DeathKnight_DeathPactCaster.mdx",1,2,0.01,100),
+(6347,"Frost_Form","spells\frost_form_precast.mdx",0,3,0.01,100),
+(6348,"Blue Fire Ring","World\Expansion02\Doodads\ZulDrak\LightFX\Zuldrak_Blue_Fire.mdx",0,1,0.01,100),
+(6349,"Xplosion_Frost_Impact","Spells\Xplosion_Frost_Impact.mdx",0,5,0.1,10),
+(6351,"Shadow Form New","Spells\Shadow_Form_Precast.mdx",0,0.75,0.1,10),
+(6352,"Impact Dark","Spells\Impact_Dark.mdx",0,0.5,0.1,10),
+(6353,"Void Zone V2.0 (0.50)","Spells\PortalofKathune_V2.mdx",1,0.5,0.1,100),
+(6354,"BloodBoil_Impact_Chest","Spells\BloodBoil_Impact_Chest.mdx",0,1.5,0.01,100),
+(6355,"Missile: Soul","spells\soulshatter_missile.mdx",1,3,0.01,100),
+(6356,"Orange Bottle v2 (Potion)","Spells\Icecrown_LabBottle_03.mdx",1,2.5,0.1,100),
+(6357,"MoonBeam (Blue)","spells\MoonBeamBlue_Impact_Base.mdx",1,0.3,0.01,100),
+(6358,"Frostmourne","Item\ObjectComponents\Weapon\Sword_2H_Frostmourne_D_02.mdx",1,2.75,0.01,100),
+(6359,"Missile: Shadowmourne","spells\shadowmourne_missile.mdx",1,1,0.01,100),
+(6361,"Plaguethrower Backpack (Cosmetic, Purple)","spells\rshoulder_robe_plague_a_01_spell_purple.mdx",0,1,0.1,10),
+(6362,"Plaguethrower Backpack (Cosmetic, Green)","spells\rshoulder_robe_plague_a_01_spell_green.mdx",0,1,0.1,10),
+(6363,"Acid Breath (Fel)","Spells\AcidBreath_SuperGreen.mdx",0,0.8,0.1,10),
+(6364,"Frostmourne (Broken)","Item\ObjectComponents\Weapon\Sword_2H_Frostmourne_D_02_Broken.mdx",1,2.75,0.01,100),
+(6365,"Frostmourne (Broken)","Item\ObjectComponents\Weapon\Sword_2H_Frostmourne_D_02_Broken.mdx",1,2.75,0.01,100),
+(6366,"Impact Dark","Spells\Impact_Dark.mdx",0,3,0.1,10),
+(6367,"Shadowmourne Visual Low","spells\shadowmourne_cast_low.mdx",0,1,0.1,10),
+(6368,"Shadowmourne Visual High","spells\shadowmourne_cast_high.mdx",0,1,0.1,10),
+(6371,"Missile: Soul (Blue)","spells\soulshatter_missileblue.mdx",1,2,0.01,100),
+(6372,"Ice Precast Uber Base V2 (No Purple)","spells\ice_precast_uber_base_var2.mdx",1,4,0.01,100),
+(6373,"Ice Precast Uber Base V2 (No Purple)","spells\ice_precast_uber_base_var2.mdx",1,3,0.01,100),
+(6374,"Frozen Rune Weapon State","Spells\DeathKnight_FrozenRuneWeapon_State.mdx",0,3,0.01,100),
+(6375,"SkyVortex","World\Expansion02\Doodads\ZulDrak\SkyVortex\ZulDrak_SkyVortex.mdx",0,0.1,0.01,100),
+(6377,"Blood Rain Impact Chest","spells\blood_rain_impact_base.mdx",0,0.3,0.1,10),
+(6378,"Soulshatter Missile","spells\soulshatter_missile.mdx",1,0.5,0.01,100),
+(6379,"Blood Rain Area Impact","spells\blood_rain_main_impact_base.mdx",0,0.3,0.1,10),
+(6380,"Skybeam, Blue","Spells\FrostBeam_State_Base.mdx",1,0.045,0.01,100),
+(6381,"Icecrown Soul Missile","world\expansion02\doodads\generic\scourge\sc_spirits_03.mdx",1,0.5,0.01,100),
+(6382,"Low Poly Blue Fire","Spells\LowPolyFireAnim_Blue.mdx",1,0.15,0.01,100),
+(6383,"Coilfang_Blue_Energy.mdx","World\Expansion01\Doodads\Coilfang\Passivedoodads\BlueEnergy\Coilfang_Blue_Energy.mdx",0.5,0.01,0.001,100),
+(6384,"Banish (Blue)","spells\banish_chest_blue.mdx",1,0.15,0.01,100),
+(6386,"Flames (Blue)","Spells\Archimonde_Blue_Fire.mdx",1,0.75,0.01,100),
+(6387,"Bone Cyclone Impact","Spells\Bone_Cyclone_Impact.mdx",1,1,0.01,100),
+(6388,"Flames (Blue)","Spells\Archimonde_Blue_Fire.mdx",1,1,0.01,100),
+(6390,"Shield: Arcane Force (Green Very Large)","Spells\ArcaneForceShield_Green.mdx",0,4,0.1,10),
+(6391,"Shadow ImpactDoT Med Head (Copy)","Spells\Shadow_ImpactDot_Med_Head.mdx",0.5,0.5,0.01,100),
+(6392,"Shadowmourne Visual High","spells\shadowmourne_cast_high.mdx",0,1.5,0.1,10),
+(6393,"Blood Rain Missile","spells\blood_rain.mdx",0.5,0.5,0.01,100),
+(6394,"Orange Bottle v2 (Potion)","Spells\Icecrown_LabBottle_03_Spell.mdx",1,3,0.1,100),
+(6395,"Dark Missile","Spells\Missile_Dark.mdx",1,5,0.01,100),
+(6396,"Black Hole Horizontal","Spells\Ulduar_BlackHole_H.mdx",0,2,0.1,10),
+(6397,"Goo Flow State (Black)","Spells\Goo_Flow_StateBlack.mdx",0,1,0.1,100),
+(6398,"Goo Flow State (Black)","Spells\Goo_Flow_StateBlack.mdx",0,0.75,0.1,100),
+(6399,"Ice Flash","spells\xplosion_frost_impact_b.mdx",0,1,0.1,10),
+(6400,"Frost Flash","spells\xplosion_frost_impact_b.mdx",1,1,0.01,100),
+(6402,"Frost Flash","spells\xplosion_frost_impact_b.mdx",1,2,0.01,100),
+(6403,"Hodir Ground Freeze","spells\ulduar_bosssmoke.mdx",0,0.15,0.1,10),
+(6404,"Frosty Swirl Base","spells\frostycircle.mdx",0,2,0.01,100),
+(6405,"Seeping Gas (Fel)","spells\SeepingGaseous_Fel_Nova.mdx",1,1.25,0.01,100),
+(6408,"SC Spirits 02","SC_Spirits_02.mdx",0,1,0.1,10),
+(6409,"SC_Spirits_02","world\expansion02\doodads\generic\scourge\sc_spirits_02.mdx",1,1,0.01,100),
+(6411,"Call of the Shoveltusk (L)","spells\lshoulder_mail_raidshaman_h_01spell.mdx",0,1,0.1,10),
+(6412,"Call of the Shoveltusk (R)","spells\rshoulder_mail_raidshaman_h_01spell.mdx",0,1,0.1,10),
+(6413,"Holiday Ribbon ","World\Generic\PassiveDoodads\ValentinesDay\ValentinesRibbon01huge.mdx",0,0.01,0.001,10),
+(6414,"Saberlash","Spells\Saberlash_Impact.mdx",1,1,0.01,100),
+(6415,"Warp Storm","creature\warpstorm\warpstorm.mdx",1,1,0.01,100),
+(6417,"Arthas Souls Attack","spells\Arthas_Souls_Attack.mdx",0,1,0.1,10),
+(6418,"Void Zone (Souls)","Spells\Well_Of_Souls_Base.mdx",1,0.25,0.1,100),
+(6420,"Orange Gas Plague Cloud L3 B","Spells\Orange_Gas_Plague_Cloud_L3_B.mdx",1,1,0.1,100),
+(6421,"Orange Gas Plague Cloud L2 B","Spells\Orange_Gas_Plague_Cloud_L2_B.mdx",1,1,0.1,100),
+(6422,"Orange Gas Plague Cloud L1 B","Spells\Orange_Gas_Plague_Cloud_L1_B.mdx",1,1,0.1,100),
+(6423,"bunny (0.01) (.01)","creature\rabbit\rabbitgold.mdx",0,0.75,0.01,100),
+(6424,"Dragon Wing (left)","World\Expansion02\Doodads\Nexus\Nexus_Dragon_Broken_LeftWing.mdx",0,0.1,0.01,10),
+(6425,"Dragon Wing (right)","World\Expansion02\Doodads\Nexus\Nexus_Dragon_Broken_RightWing.mdx",0,0.1,0.01,10),
+(6426,"Incinerate Missile (Blue)","spells\incinerateblue_low_base.mdx",1,2,0.01,100),
+(6427,"Frostmourne Shatters","Spells\Frostmourne_Shatters.mdx",0,0.6,0.01,100),
+(6428,"Wave: Ice","spells\Missile_Wave_Ice.mdx",1,0.5,0.01,100),
+(6430,"Holy Zone State Chest","spells\holyzone.mdx",0,0.2,0.1,10),
+(6431,"Quest - Healing Winds","spells\Divine_Protector_State.mdx",0,2,0.01,100),
+(6432,"Missile: Soul (Blue)","spells\SoulShatter_MissileBlue.mdx",1,1,0.01,100),
+(6435,"Shadow Nova Cast Non Projected","Spells\Shadow_Nova_area_noProjection.mdx",1,0.75,0.01,100),
+(6436,"Missile: Shadowmourne ","spells\shadowmourne_missile.mdx",1,0.3,0.01,100),
+(6440,"Massive Saronite Rock","world\expansion02\doodads\azjol-nerub\saronite\saronite_node_01.mdx",4,3,1,100),
+(6441,"Tuskarr Net 2","world\expansion02\doodads\generic\tuskarr\giantnets\ts_giantnet02.mdx",0,0.3,0.1,10),
+(6448,"Aura: Yellow, Short","world\generic\passivedoodads\particleemitters\aurayellowshort.mdx",1,1.5,0.01,100),
+(6449,"Holy ImpactDD High Chest","Spells\Holy_ImpactDD_High_Chest.mdx",1,3,0.01,100),
+(6455,"Shadow Breath","Spells\DragonBreath_Shadow.mdx",1,0.15,0.01,100),
+(6456,"Shadowbolt Chest Impact","spells\Shadowbolt_Chest_Impact.mdx",1,1,0.01,100),
+(6457,"Dark Missile","Spells\Missile_Dark.mdx",1,0.5,0.01,100),
+(6460,"Void Zone V2.0","Spells\PortalofKathune_V2.mdx",1,0.2,0.1,100),
+(6461,"Acid Burn Black","SPELLS\AcidBurn_Black.mdx",1,0.45,0.01,100),
+(6462,"ShadowWord Death Impact ","spells\shadowword_death_impact.mdx",1,15,0.01,100),
+(6463,"ShadowSnare Base","Spells\Shadow_Snare_High_base.mdx",1,5,0.01,100),
+(6464,"ShadowSnare Base","Spells\Shadow_Snare_High_base.mdx",1,0.5,0.01,100),
+(6467,"Create Soulstone Cast","Spells\CreateSoulstone_Cast.mdx",1,5,0.01,100),
+(6468,"Shadow Nova Cast","spells\shadow_nova_area.mdx",1,2,0.01,100),
+(6469,"Wave: Ice","spells\Missile_Wave_Ice.mdx",1,1,0.01,100),
+(6475,"GrayStone02","world\generic\passivedoodads\graystone\graystone02.mdx",1,0.05,0.01,100),
+(6479,"Snowstorm","spells\Snow_Tempest_State.mdx",0,0.55,0.1,100),
+(6480,"Ice Nova","spells\Ice_Nova.mdx",0,1,0.1,100),
+(6490,"Holy Precast High Hand (Copy)","Spells\Holy_Precast_High_Hand.mdx",1,5,0.01,100),
+(6491,"Holy Bomb (Copy)","Spells\HolyBomb_Missle.mdx",0,0.8,0.1,10),
+(6493,"Holy Precast High Hand (Copy)","Spells\Holy_Precast_High_Hand.mdx",1,4,0.01,100),
+(6495,"Cat Mark State (Green)","Spells\CatMark_Green.mdx",1,1,0.01,100),
+(6499,"Bestow Disease Impact Chest","Spells\BestowDisease_Impact_Chest.mdx",1,2,0.01,100),
+(6500,"Void Zone V2.0","Spells\PortalofKathune_V2.mdx",1,1.75,0.1,100),
+(6519,"Red Hunter's Mark","spells\catmark_red.mdx",1,1.5,0.01,100),
+(6520,"Posterboard Effect","world\expansion02\doodads\dalaran\dalaran_forsale_01.mdx",0,1.25,0.1,10),
+(6521,"Enervating Brand Impact","spells\devious_impact.mdx",1,1,0.01,100),
+(6522,"Shadow Dance State","Spells\ShadowDance_State.mdx",0,0.4,0.1,10),
+(6523,"GT Battle - Radiation Cloud","spells\largegreenradiationfog.mdx",1,4,0.01,100),
+(6524,"Yoggsaron Green Bubble","spells\yoggsaron_green.mdx",1,4,0.01,100),
+(6525,"GT - Battle - Tank Buster Shield","spells\yoggsaron_green.mdx",1,0.8,0.01,100),
+(6527,"Flame Zone","spells\flamezone.mdx",1,1,0.01,100),
+(6532,"Missile: Bomb (bigger)","spells\missile_bomb.mdx",0,2,0.01,100),
+(6537,"Poison Drip","spells\enchantments\poisondrip.mdx",1,1,0.1,10),
+(6538,"Poison Drip","spells\enchantments\poisondrip.mdx",1,2,0.1,10),
+(6539,"ShadowFlame Impact","spells\shadowflame_impact.mdx",0,1.5,0.01,100),
+(6540,"Bloody Explosion Green Impact","spells\bloodyexplosiongreen.mdx",1,3,0.1,10),
+(6543,"Gun Stand State","World\Generic\Dwarf\Passive Doodads\Targets\GunTargetStand.mdx",1,0.55,0.01,100),
+(6544,"Cat Mark State (Blue)","Spells\CatMark_Blue.mdx",1,1,0.01,100),
+(6549,"Anti-Magic State Base (Red, Small)","spells\antimagic_state_red.mdx",1,0.15,0.01,100),
+(6550,"Detect Invisibility State Head (small)","spells\detectstealth_state_head.mdx",1,0.5,0.01,100),
+(6551,"Detect Invisibility Impact Head (Small)","Spells\DetectInvis_Impact_Head.mdx",1,0.5,0.01,100),
+(6552,"Detect Invis State Head (Small)","spells\detectstealth_state_head.mdx",0,0.5,0.1,10),
+(6557,"Aura Red Tall","World\Generic\PassiveDoodads\ParticleEmitters\AuraRedVeryTall.mdx",0,2,0.1,10),
+(6558,"Aura Blue Tall","World\Generic\PassiveDoodads\ParticleEmitters\AuraBlueVeryTall.mdx",0,3,0.1,10),
+(6560,"Smoke Flare (White)","spells\SmokeFlare_White.mdx",1,2,0.01,100),
+(6561,"Sack (Small)","World\Azeroth\Stranglethorn\PassiveDoodads\Sack01_01\Sack01_01.mdx",1,0.45,0.01,100),
+(6563,"Plague Strike Impact (Red)","spells\deathknight_plaguestrikecaster_impactred.mdx",0,2,0.01,100),
+(6565,"Warlock Demonic Circle Summon","spells\warlock_demoniccircle_summon.mdx",0,1,0.01,100),
+(6566,"Warlock Demonic Circle Teleport","spells\warlock_demoniccircle_teleport.mdx",0,7,0.01,100),
+(6567,"SummonPet PreCast Impact Base","Spells\SummonPet_Impact_Base.mdx",1,10,0.01,100),
+(6568,"Ghost_state (Purple) ","spells\purpleghost_state.mdx",1,0.5,0.01,100),
+(6572,"Goblin RC Car (Blue)","world\generic\goblin\passivedoodads\goblinrocketcarts\goblinrocketcart_rc_blue.mdx",0,1,0.1,10),
+(6573,"Shield: Fire Force (Purple)","Spells\FireForceShield_Purple.mdx",1,2,0.01,100),
+(6574,"Ethereal Portal, On","world\expansion01\doodads\generic\ethereal\portal\et_portal01.mdx",0,0.5,0.1,10),
+(6575,"Ethereal Portal, Off","world\expansion01\doodads\generic\ethereal\portal\et_portal01off.mdx",0,0.5,0.1,10),
+(6577,"Spell Object: Potion, Green 04","spells\potion_green04_spellobject.mdx",0,1,0.1,10),
+(6585,"Missile: Crate","World\Goober\G_Crate01.mdx",1,0.4,0.01,100),
+(6608,"Missile: Harpoon (Fire)","spells\harpoon_fire_missile.mdx",1,0.3,0.01,100),
+(6613,"Warlock Decimate State Effect","spells\Warlock_Decimate_State.mdx",0,1,0.01,100),
+(6619,"Missile: Frog","Creature\Frog\ArrowFrog.mdx",1,4,0.01,100),
+(6623,"Gnome Claw Copter","creature\gnomecopter\gnomecopter.mdx",0,1,1,1),
+(6624,"Blizzard Rune Base","Spells\SummonGround_Blizzard.mdx",0,0.3,0.01,100),
+(6633,"Explosion: Fel","spells\Xplosion_Fel_Impact.mdx",1,5,0.01,100),
+(6635,"Fel Flame Patch - 3.00","spells\fel_archimonde_fire.mdx",1,3,0.01,100),
+(6637,"Fel Flame Breath 180","spells\fel_flamebreath180.mdx",1,3,0.01,100),
+(6638,"Ice Block (New, Opaque)","creature\questobjects\creature_iceblock.mdx",1,0.75,0.1,100),
+(6639,"Gaseous Form","Spells\GaseousForm.mdx",1,0.6,0.01,100),
+(6688,"Cat Mark State (Blue) ","Spells\CatMark_Blue.mdx",1,2,0.01,100),
+(6689,"Cat Mark State (Green)","Spells\CatMark_Green.mdx",1,2,0.01,100),
+(6708,"Goo Flow State (Green)","Spells\Goo_Flow_State.mdx",0,1,0.1,10),
+(6712,"Holy Zone State Chest","spells\holyzone.mdx",0,0.4,0.1,10),
+(6713,"Holy Zone State Chest","spells\holyzone.mdx",0,0.3,0.1,10),
+(6716,"HolyShield_State_Base","spells\holyshield_state.mdx",1,0.5,0.01,100),
+(6717,"HolyShield_State_Base","spells\holyshield_state.mdx",1,0.75,0.01,100),
+(6718,"HolyShield_State_Base","spells\holyshield_state.mdx",1,1.25,0.01,100),
+(6729,"Fire Beam State Base","Spells\FireBeam_State_Base.mdx",0,5,0.1,10),
+(6731,"Xplosion Fire Impact","spells\Xplosion_Fire_Impact.mdx",4,6,0.01,100),
+(6732,"Fire Nova Area","Spells\FireNova_Area.mdx",1,5,0.01,100),
+(6733,"Xplosion Fire Impact","spells\Xplosion_Fire_Impact.mdx",0,30,0.01,100),
+(6751,"Sleep State Head","Spells\Sleep_State_Head.mdx",1,10,0.01,100),
+(6758,"Missile: Light Bomb","Spells\Missile_Light.mdx",1,0.3,0.01,100),
+(6760,"Shockwave Impact","spells\warrior_shockwave_impact.mdx",0,3,0.01,100),
+(6761,"Cone of Fire Hand","Spells\ConeofFire_Hand.mdx",1,0.5,0.01,100),
+(6770,"Fire Nova Area","Spells\FireNova_Area.mdx",1,15,0.01,100),
+(7003,"Shadow Dance State","Spells\ShadowDance_State.mdx",0,4.5,0.1,10),
+(7087,"Shadow Fury Impact","spells\ShadowFury_Impact_Base.mdx",1,1.5,0.01,100); 

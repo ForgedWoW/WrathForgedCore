@@ -1,1665 +1,1665 @@
 DROP TABLE IF EXISTS `LanguageWords`; 
 CREATE TABLE `LanguageWords` ( `ID` INT NOT NULL DEFAULT '0', `LanguageID` INT NOT NULL DEFAULT '0', `Word` TEXT NULL, PRIMARY KEY (`ID`)) ENGINE=InnoDB DEFAULT CHARSET=utf8; 
-INSERT INTO `LanguageWords` VALUES (1,1,"A"); 
-INSERT INTO `LanguageWords` VALUES (2,1,"N"); 
-INSERT INTO `LanguageWords` VALUES (3,1,"G"); 
-INSERT INTO `LanguageWords` VALUES (4,1,"O"); 
-INSERT INTO `LanguageWords` VALUES (5,1,"L"); 
-INSERT INTO `LanguageWords` VALUES (6,1,"Ha"); 
-INSERT INTO `LanguageWords` VALUES (7,1,"Ko"); 
-INSERT INTO `LanguageWords` VALUES (8,1,"No"); 
-INSERT INTO `LanguageWords` VALUES (9,1,"Mu"); 
-INSERT INTO `LanguageWords` VALUES (10,1,"Ag"); 
-INSERT INTO `LanguageWords` VALUES (11,1,"Ka"); 
-INSERT INTO `LanguageWords` VALUES (12,1,"Gi"); 
-INSERT INTO `LanguageWords` VALUES (13,1,"Il"); 
-INSERT INTO `LanguageWords` VALUES (14,1,"Lok"); 
-INSERT INTO `LanguageWords` VALUES (15,1,"Tar"); 
-INSERT INTO `LanguageWords` VALUES (16,1,"Kaz"); 
-INSERT INTO `LanguageWords` VALUES (17,1,"Ruk"); 
-INSERT INTO `LanguageWords` VALUES (18,1,"Kek"); 
-INSERT INTO `LanguageWords` VALUES (19,1,"Mog"); 
-INSERT INTO `LanguageWords` VALUES (20,1,"Zug"); 
-INSERT INTO `LanguageWords` VALUES (21,1,"Gul"); 
-INSERT INTO `LanguageWords` VALUES (22,1,"Nuk"); 
-INSERT INTO `LanguageWords` VALUES (23,1,"Aaz"); 
-INSERT INTO `LanguageWords` VALUES (24,1,"Kil"); 
-INSERT INTO `LanguageWords` VALUES (25,1,"Ogg"); 
-INSERT INTO `LanguageWords` VALUES (26,1,"Rega"); 
-INSERT INTO `LanguageWords` VALUES (27,1,"Nogu"); 
-INSERT INTO `LanguageWords` VALUES (28,1,"Tago"); 
-INSERT INTO `LanguageWords` VALUES (29,1,"Uruk"); 
-INSERT INTO `LanguageWords` VALUES (30,1,"Kagg"); 
-INSERT INTO `LanguageWords` VALUES (31,1,"Zaga"); 
-INSERT INTO `LanguageWords` VALUES (32,1,"Grom"); 
-INSERT INTO `LanguageWords` VALUES (33,1,"Ogar"); 
-INSERT INTO `LanguageWords` VALUES (34,1,"Gesh"); 
-INSERT INTO `LanguageWords` VALUES (35,1,"Thok"); 
-INSERT INTO `LanguageWords` VALUES (36,1,"Dogg"); 
-INSERT INTO `LanguageWords` VALUES (37,1,"Maka"); 
-INSERT INTO `LanguageWords` VALUES (38,1,"Regas"); 
-INSERT INTO `LanguageWords` VALUES (39,1,"Nogah"); 
-INSERT INTO `LanguageWords` VALUES (40,1,"Kazum"); 
-INSERT INTO `LanguageWords` VALUES (41,1,"Magan"); 
-INSERT INTO `LanguageWords` VALUES (42,1,"No'bu"); 
-INSERT INTO `LanguageWords` VALUES (43,1,"Golar"); 
-INSERT INTO `LanguageWords` VALUES (44,1,"Throm"); 
-INSERT INTO `LanguageWords` VALUES (45,1,"Zugas"); 
-INSERT INTO `LanguageWords` VALUES (46,1,"Re'ka"); 
-INSERT INTO `LanguageWords` VALUES (47,1,"No'ku"); 
-INSERT INTO `LanguageWords` VALUES (48,1,"Maza"); 
-INSERT INTO `LanguageWords` VALUES (49,1,"Ro'th"); 
-INSERT INTO `LanguageWords` VALUES (50,1,"Thrakk"); 
-INSERT INTO `LanguageWords` VALUES (51,1,"Revash"); 
-INSERT INTO `LanguageWords` VALUES (52,1,"Nakazz"); 
-INSERT INTO `LanguageWords` VALUES (53,1,"Moguna"); 
-INSERT INTO `LanguageWords` VALUES (54,1,"No'gor"); 
-INSERT INTO `LanguageWords` VALUES (55,1,"Goth'a"); 
-INSERT INTO `LanguageWords` VALUES (56,1,"Raznos"); 
-INSERT INTO `LanguageWords` VALUES (57,1,"Ogerin"); 
-INSERT INTO `LanguageWords` VALUES (58,1,"Gezzno"); 
-INSERT INTO `LanguageWords` VALUES (59,1,"Thukad"); 
-INSERT INTO `LanguageWords` VALUES (60,1,"Makogg"); 
-INSERT INTO `LanguageWords` VALUES (61,1,"Aaz'no"); 
-INSERT INTO `LanguageWords` VALUES (62,1,"Lok'Tar"); 
-INSERT INTO `LanguageWords` VALUES (63,1,"Gul'rok"); 
-INSERT INTO `LanguageWords` VALUES (64,1,"Kazreth"); 
-INSERT INTO `LanguageWords` VALUES (65,1,"Tov'osh"); 
-INSERT INTO `LanguageWords` VALUES (66,1,"Zil'Nok"); 
-INSERT INTO `LanguageWords` VALUES (67,1,"Rath'is"); 
-INSERT INTO `LanguageWords` VALUES (68,1,"Kil'azi"); 
-INSERT INTO `LanguageWords` VALUES (69,1,"Throm'ka"); 
-INSERT INTO `LanguageWords` VALUES (70,1,"Osh'Kava"); 
-INSERT INTO `LanguageWords` VALUES (71,1,"Gul'nath"); 
-INSERT INTO `LanguageWords` VALUES (72,1,"Kog'zela"); 
-INSERT INTO `LanguageWords` VALUES (73,1,"Ragath'a"); 
-INSERT INTO `LanguageWords` VALUES (74,1,"Zuggossh"); 
-INSERT INTO `LanguageWords` VALUES (75,1,"Moth'aga"); 
-INSERT INTO `LanguageWords` VALUES (76,1,"Tov'nokaz"); 
-INSERT INTO `LanguageWords` VALUES (77,1,"Osh'kazil"); 
-INSERT INTO `LanguageWords` VALUES (78,1,"No'throma"); 
-INSERT INTO `LanguageWords` VALUES (79,1,"Gesh'nuka"); 
-INSERT INTO `LanguageWords` VALUES (80,1,"Lok'mogul"); 
-INSERT INTO `LanguageWords` VALUES (81,1,"Lok'bolar"); 
-INSERT INTO `LanguageWords` VALUES (82,1,"Ruk'ka'ha"); 
-INSERT INTO `LanguageWords` VALUES (83,1,"Regasnogah"); 
-INSERT INTO `LanguageWords` VALUES (84,1,"Kazum'nobu"); 
-INSERT INTO `LanguageWords` VALUES (85,1,"Throm'bola"); 
-INSERT INTO `LanguageWords` VALUES (86,1,"Gesh'zugas"); 
-INSERT INTO `LanguageWords` VALUES (87,1,"Maza'rotha"); 
-INSERT INTO `LanguageWords` VALUES (88,1,"Ogerin'naz"); 
-INSERT INTO `LanguageWords` VALUES (89,1,"Thrakk'reva"); 
-INSERT INTO `LanguageWords` VALUES (90,1,"Kaz'goth'no"); 
-INSERT INTO `LanguageWords` VALUES (91,1,"No'gor'goth"); 
-INSERT INTO `LanguageWords` VALUES (92,1,"Kil'azi'aga"); 
-INSERT INTO `LanguageWords` VALUES (93,1,"Zug-zug'ama"); 
-INSERT INTO `LanguageWords` VALUES (94,1,"Maza'thrakk"); 
-INSERT INTO `LanguageWords` VALUES (95,1,"Lokando'nash"); 
-INSERT INTO `LanguageWords` VALUES (96,1,"Ul'gammathar"); 
-INSERT INTO `LanguageWords` VALUES (97,1,"Khaz'rogg'ahn"); 
-INSERT INTO `LanguageWords` VALUES (98,1,"Moth'kazoroth"); 
-INSERT INTO `LanguageWords` VALUES (99,1,"Golgonnashar"); 
-INSERT INTO `LanguageWords` VALUES (100,1,"Dalggo'mazah"); 
-INSERT INTO `LanguageWords` VALUES (101,2,"A"); 
-INSERT INTO `LanguageWords` VALUES (102,2,"N"); 
-INSERT INTO `LanguageWords` VALUES (103,2,"I"); 
-INSERT INTO `LanguageWords` VALUES (104,2,"O"); 
-INSERT INTO `LanguageWords` VALUES (105,2,"E"); 
-INSERT INTO `LanguageWords` VALUES (106,2,"D"); 
-INSERT INTO `LanguageWords` VALUES (107,2,"Da"); 
-INSERT INTO `LanguageWords` VALUES (108,2,"Lo"); 
-INSERT INTO `LanguageWords` VALUES (109,2,"An"); 
-INSERT INTO `LanguageWords` VALUES (110,2,"Ni"); 
-INSERT INTO `LanguageWords` VALUES (111,2,"Al"); 
-INSERT INTO `LanguageWords` VALUES (112,2,"Do"); 
-INSERT INTO `LanguageWords` VALUES (113,2,"Ri"); 
-INSERT INTO `LanguageWords` VALUES (114,2,"Su"); 
-INSERT INTO `LanguageWords` VALUES (115,2,"No"); 
-INSERT INTO `LanguageWords` VALUES (116,2,"Ano"); 
-INSERT INTO `LanguageWords` VALUES (117,2,"Dur"); 
-INSERT INTO `LanguageWords` VALUES (118,2,"Tal"); 
-INSERT INTO `LanguageWords` VALUES (119,2,"Nei"); 
-INSERT INTO `LanguageWords` VALUES (120,2,"Ash"); 
-INSERT INTO `LanguageWords` VALUES (121,2,"Dor"); 
-INSERT INTO `LanguageWords` VALUES (122,2,"Anu"); 
-INSERT INTO `LanguageWords` VALUES (123,2,"Fal"); 
-INSERT INTO `LanguageWords` VALUES (124,2,"Tur"); 
-INSERT INTO `LanguageWords` VALUES (125,2,"Ala"); 
-INSERT INTO `LanguageWords` VALUES (126,2,"Nor"); 
-INSERT INTO `LanguageWords` VALUES (127,2,"Osa"); 
-INSERT INTO `LanguageWords` VALUES (128,2,"Alah"); 
-INSERT INTO `LanguageWords` VALUES (129,2,"Andu"); 
-INSERT INTO `LanguageWords` VALUES (130,2,"Dath"); 
-INSERT INTO `LanguageWords` VALUES (131,2,"Mush"); 
-INSERT INTO `LanguageWords` VALUES (132,2,"Shar"); 
-INSERT INTO `LanguageWords` VALUES (133,2,"Thus"); 
-INSERT INTO `LanguageWords` VALUES (134,2,"Fulo"); 
-INSERT INTO `LanguageWords` VALUES (135,2,"Aman"); 
-INSERT INTO `LanguageWords` VALUES (136,2,"Diel"); 
-INSERT INTO `LanguageWords` VALUES (137,2,"Dieb"); 
-INSERT INTO `LanguageWords` VALUES (138,2,"Rini"); 
-INSERT INTO `LanguageWords` VALUES (139,2,"Anar"); 
-INSERT INTO `LanguageWords` VALUES (140,2,"Talah"); 
-INSERT INTO `LanguageWords` VALUES (141,2,"Adore"); 
-INSERT INTO `LanguageWords` VALUES (142,2,"Ishnu"); 
-INSERT INTO `LanguageWords` VALUES (143,2,"Bandu"); 
-INSERT INTO `LanguageWords` VALUES (144,2,"Balah"); 
-INSERT INTO `LanguageWords` VALUES (145,2,"Fandu"); 
-INSERT INTO `LanguageWords` VALUES (146,2,"Thera"); 
-INSERT INTO `LanguageWords` VALUES (147,2,"Turus"); 
-INSERT INTO `LanguageWords` VALUES (148,2,"Shari"); 
-INSERT INTO `LanguageWords` VALUES (149,2,"Shano"); 
-INSERT INTO `LanguageWords` VALUES (150,2,"Terro"); 
-INSERT INTO `LanguageWords` VALUES (151,2,"Eburi"); 
-INSERT INTO `LanguageWords` VALUES (152,2,"Dorini"); 
-INSERT INTO `LanguageWords` VALUES (153,2,"Shando"); 
-INSERT INTO `LanguageWords` VALUES (154,2,"Ethala"); 
-INSERT INTO `LanguageWords` VALUES (155,2,"Falla"); 
-INSERT INTO `LanguageWords` VALUES (156,2,"Belore"); 
-INSERT INTO `LanguageWords` VALUES (157,2,"Do'rah"); 
-INSERT INTO `LanguageWords` VALUES (158,2,"Neph'o"); 
-INSERT INTO `LanguageWords` VALUES (159,2,"Asto're"); 
-INSERT INTO `LanguageWords` VALUES (160,2,"Man'ar"); 
-INSERT INTO `LanguageWords` VALUES (161,2,"Ishura"); 
-INSERT INTO `LanguageWords` VALUES (162,2,"U'phol"); 
-INSERT INTO `LanguageWords` VALUES (163,2,"T'as'e"); 
-INSERT INTO `LanguageWords` VALUES (164,2,"Anoduna"); 
-INSERT INTO `LanguageWords` VALUES (165,2,"Alah'ni"); 
-INSERT INTO `LanguageWords` VALUES (166,2,"Dor'Ano"); 
-INSERT INTO `LanguageWords` VALUES (167,2,"Al'shar"); 
-INSERT INTO `LanguageWords` VALUES (168,2,"Mush'al"); 
-INSERT INTO `LanguageWords` VALUES (169,2,"Aman'ni"); 
-INSERT INTO `LanguageWords` VALUES (170,2,"Shan're"); 
-INSERT INTO `LanguageWords` VALUES (171,2,"Mandalas"); 
-INSERT INTO `LanguageWords` VALUES (172,2,"Eraburis"); 
-INSERT INTO `LanguageWords` VALUES (173,2,"Dorithur"); 
-INSERT INTO `LanguageWords` VALUES (174,2,"Dal'dieb"); 
-INSERT INTO `LanguageWords` VALUES (175,2,"Thoribas"); 
-INSERT INTO `LanguageWords` VALUES (176,2,"D'ana'no"); 
-INSERT INTO `LanguageWords` VALUES (177,2,"Il'amare"); 
-INSERT INTO `LanguageWords` VALUES (178,2,"Neph'anis"); 
-INSERT INTO `LanguageWords` VALUES (179,2,"Dune'adah"); 
-INSERT INTO `LanguageWords` VALUES (180,2,"Banthalos"); 
-INSERT INTO `LanguageWords` VALUES (181,2,"Fala'andu"); 
-INSERT INTO `LanguageWords` VALUES (182,2,"Dath'anar"); 
-INSERT INTO `LanguageWords` VALUES (183,2,"Shari'fal"); 
-INSERT INTO `LanguageWords` VALUES (184,2,"Thori'dal"); 
-INSERT INTO `LanguageWords` VALUES (185,2,"Thero'shan"); 
-INSERT INTO `LanguageWords` VALUES (186,2,"Isera'duna"); 
-INSERT INTO `LanguageWords` VALUES (187,2,"Ash'therod"); 
-INSERT INTO `LanguageWords` VALUES (188,2,"Dorados'no"); 
-INSERT INTO `LanguageWords` VALUES (189,2,"Shar'adore"); 
-INSERT INTO `LanguageWords` VALUES (190,2,"U'phol'belore"); 
-INSERT INTO `LanguageWords` VALUES (191,2,"Fandu'talah"); 
-INSERT INTO `LanguageWords` VALUES (192,2,"Dor'ana'badu"); 
-INSERT INTO `LanguageWords` VALUES (193,2,"Thoribas'no'thera"); 
-INSERT INTO `LanguageWords` VALUES (194,2,"Turus'il'amare"); 
-INSERT INTO `LanguageWords` VALUES (195,2,"Shari'adune"); 
-INSERT INTO `LanguageWords` VALUES (196,2,"T'ase'mushal"); 
-INSERT INTO `LanguageWords` VALUES (197,2,"Shindu'falla'na"); 
-INSERT INTO `LanguageWords` VALUES (198,2,"Ando'meth'derador"); 
-INSERT INTO `LanguageWords` VALUES (199,2,"Anu'dorannador"); 
-INSERT INTO `LanguageWords` VALUES (200,2,"Anu'dorinni'talah"); 
-INSERT INTO `LanguageWords` VALUES (201,2,"Esh'thero'mannash"); 
-INSERT INTO `LanguageWords` VALUES (202,2,"Asto're'dunadah"); 
-INSERT INTO `LanguageWords` VALUES (204,6,"We"); 
-INSERT INTO `LanguageWords` VALUES (205,6,"Gar"); 
-INSERT INTO `LanguageWords` VALUES (206,6,"Gear"); 
-INSERT INTO `LanguageWords` VALUES (207,6,"Mitta"); 
-INSERT INTO `LanguageWords` VALUES (208,6,"Mogoth"); 
-INSERT INTO `LanguageWords` VALUES (209,6,"Geardum"); 
-INSERT INTO `LanguageWords` VALUES (210,6,"Gefrunon"); 
-INSERT INTO `LanguageWords` VALUES (211,6,"Mund-helm"); 
-INSERT INTO `LanguageWords` VALUES (212,6,"Nagga-roth"); 
-INSERT INTO `LanguageWords` VALUES (213,6,"Thros-am-Kha"); 
-INSERT INTO `LanguageWords` VALUES (214,6,"Scyld-modor-ok"); 
-INSERT INTO `LanguageWords` VALUES (215,6,"Lo"); 
-INSERT INTO `LanguageWords` VALUES (216,6,"Dum"); 
-INSERT INTO `LanguageWords` VALUES (217,6,"Kost"); 
-INSERT INTO `LanguageWords` VALUES (218,6,"Angor"); 
-INSERT INTO `LanguageWords` VALUES (219,6,"Modoss"); 
-INSERT INTO `LanguageWords` VALUES (220,6,"Haldren"); 
-INSERT INTO `LanguageWords` VALUES (221,6,"Misfaran"); 
-INSERT INTO `LanguageWords` VALUES (222,6,"Ke"); 
-INSERT INTO `LanguageWords` VALUES (223,6,"Kha"); 
-INSERT INTO `LanguageWords` VALUES (224,6,"Khaz"); 
-INSERT INTO `LanguageWords` VALUES (225,6,"Thros"); 
-INSERT INTO `LanguageWords` VALUES (226,6,"Haldir"); 
-INSERT INTO `LanguageWords` VALUES (227,6,"Thorneb"); 
-INSERT INTO `LanguageWords` VALUES (228,6,"Khazrega"); 
-INSERT INTO `LanguageWords` VALUES (229,6,"Angor-dum"); 
-INSERT INTO `LanguageWords` VALUES (230,6,"Thros-gare"); 
-INSERT INTO `LanguageWords` VALUES (231,6,"Azgol-haman"); 
-INSERT INTO `LanguageWords` VALUES (232,6,"Gol'gethrunon"); 
-INSERT INTO `LanguageWords` VALUES (233,6,"Zu"); 
-INSERT INTO `LanguageWords` VALUES (234,6,"Dun"); 
-INSERT INTO `LanguageWords` VALUES (235,6,"Modr"); 
-INSERT INTO `LanguageWords` VALUES (236,6,"Gimil"); 
-INSERT INTO `LanguageWords` VALUES (237,6,"Haldji"); 
-INSERT INTO `LanguageWords` VALUES (238,6,"Godkend"); 
-INSERT INTO `LanguageWords` VALUES (239,6,"Thulmane"); 
-INSERT INTO `LanguageWords` VALUES (240,6,"Ok"); 
-INSERT INTO `LanguageWords` VALUES (241,6,"Mos"); 
-INSERT INTO `LanguageWords` VALUES (242,6,"Guma"); 
-INSERT INTO `LanguageWords` VALUES (243,6,"Havar"); 
-INSERT INTO `LanguageWords` VALUES (244,6,"Rugosh"); 
-INSERT INTO `LanguageWords` VALUES (245,6,"Kost-um"); 
-INSERT INTO `LanguageWords` VALUES (246,6,"Mogodune"); 
-INSERT INTO `LanguageWords` VALUES (247,6,"Kost-Guma"); 
-INSERT INTO `LanguageWords` VALUES (248,6,"Gar-Mogoth"); 
-INSERT INTO `LanguageWords` VALUES (249,6,"Guma-syddan"); 
-INSERT INTO `LanguageWords` VALUES (250,6,"Gimil-thumane"); 
-INSERT INTO `LanguageWords` VALUES (251,6,"Um"); 
-INSERT INTO `LanguageWords` VALUES (252,6,"Eft"); 
-INSERT INTO `LanguageWords` VALUES (253,6,"Hine"); 
-INSERT INTO `LanguageWords` VALUES (254,6,"Havas"); 
-INSERT INTO `LanguageWords` VALUES (255,6,"Syddan"); 
-INSERT INTO `LanguageWords` VALUES (256,6,"Zu-Modr"); 
-INSERT INTO `LanguageWords` VALUES (257,6,"Azregahn"); 
-INSERT INTO `LanguageWords` VALUES (258,6,"Ta"); 
-INSERT INTO `LanguageWords` VALUES (259,6,"Red"); 
-INSERT INTO `LanguageWords` VALUES (260,6,"Helm"); 
-INSERT INTO `LanguageWords` VALUES (261,6,"Goten"); 
-INSERT INTO `LanguageWords` VALUES (262,6,"Drugan"); 
-INSERT INTO `LanguageWords` VALUES (263,6,"Ganrokh"); 
-INSERT INTO `LanguageWords` VALUES (264,6,"Khaz-dum"); 
-INSERT INTO `LanguageWords` VALUES (265,6,"Khaz-rand"); 
-INSERT INTO `LanguageWords` VALUES (266,6,"Angor-Magi"); 
-INSERT INTO `LanguageWords` VALUES (267,6,"Dun-haldren"); 
-INSERT INTO `LanguageWords` VALUES (268,6,"Haldren-Lo-Modoss"); 
-INSERT INTO `LanguageWords` VALUES (269,6,"A"); 
-INSERT INTO `LanguageWords` VALUES (270,6,"Am"); 
-INSERT INTO `LanguageWords` VALUES (271,6,"Hor"); 
-INSERT INTO `LanguageWords` VALUES (272,6,"Rand"); 
-INSERT INTO `LanguageWords` VALUES (273,6,"Modor"); 
-INSERT INTO `LanguageWords` VALUES (274,6,"Skolde"); 
-INSERT INTO `LanguageWords` VALUES (275,6,"Mok-kha"); 
-INSERT INTO `LanguageWords` VALUES (276,6,"Moth-tur"); 
-INSERT INTO `LanguageWords` VALUES (277,6,"Go"); 
-INSERT INTO `LanguageWords` VALUES (278,6,"Ahz"); 
-INSERT INTO `LanguageWords` VALUES (279,6,"Gosh"); 
-INSERT INTO `LanguageWords` VALUES (280,6,"Modan"); 
-INSERT INTO `LanguageWords` VALUES (281,6,"Farode"); 
-INSERT INTO `LanguageWords` VALUES (282,6,"Dun-fel"); 
-INSERT INTO `LanguageWords` VALUES (283,6,"Golganar"); 
-INSERT INTO `LanguageWords` VALUES (284,6,"Midd-Havas"); 
-INSERT INTO `LanguageWords` VALUES (285,6,"Ahz-Dagum"); 
-INSERT INTO `LanguageWords` VALUES (286,6,"Robush-mogan"); 
-INSERT INTO `LanguageWords` VALUES (287,6,"Haldji-drugan"); 
-INSERT INTO `LanguageWords` VALUES (288,6,"Ga"); 
-INSERT INTO `LanguageWords` VALUES (289,6,"Mok"); 
-INSERT INTO `LanguageWords` VALUES (290,6,"Rune"); 
-INSERT INTO `LanguageWords` VALUES (291,6,"Algaz"); 
-INSERT INTO `LanguageWords` VALUES (292,6,"Bergum"); 
-INSERT INTO `LanguageWords` VALUES (293,6,"Havagun"); 
-INSERT INTO `LanguageWords` VALUES (294,6,"Gor"); 
-INSERT INTO `LanguageWords` VALUES (295,6,"Hoga"); 
-INSERT INTO `LanguageWords` VALUES (296,6,"Dagum"); 
-INSERT INTO `LanguageWords` VALUES (297,6,"Modgud"); 
-INSERT INTO `LanguageWords` VALUES (298,6,"Ok-Hoga"); 
-INSERT INTO `LanguageWords` VALUES (299,6,"Arad-Khaz"); 
-INSERT INTO `LanguageWords` VALUES (300,6,"Hoga-Modan"); 
-INSERT INTO `LanguageWords` VALUES (301,6,"Ge'ar-anvil"); 
-INSERT INTO `LanguageWords` VALUES (302,6,"Gosh-algaz-dun"); 
-INSERT INTO `LanguageWords` VALUES (303,6,"Ruk"); 
-INSERT INTO `LanguageWords` VALUES (304,6,"Thon"); 
-INSERT INTO `LanguageWords` VALUES (305,6,"Scyld"); 
-INSERT INTO `LanguageWords` VALUES (306,6,"Robush"); 
-INSERT INTO `LanguageWords` VALUES (307,6,"Loch"); 
-INSERT INTO `LanguageWords` VALUES (308,6,"Weard"); 
-INSERT INTO `LanguageWords` VALUES (309,6,"Grum-mana"); 
-INSERT INTO `LanguageWords` VALUES (310,6,"Grum"); 
-INSERT INTO `LanguageWords` VALUES (311,6,"Frean"); 
-INSERT INTO `LanguageWords` VALUES (312,6,"Hrim"); 
-INSERT INTO `LanguageWords` VALUES (313,6,"Skalf"); 
-INSERT INTO `LanguageWords` VALUES (314,6,"Gor-skalf"); 
-INSERT INTO `LanguageWords` VALUES (315,3,"A"); 
-INSERT INTO `LanguageWords` VALUES (316,3,"Wa"); 
-INSERT INTO `LanguageWords` VALUES (317,3,"Ish"); 
-INSERT INTO `LanguageWords` VALUES (318,3,"Shne"); 
-INSERT INTO `LanguageWords` VALUES (319,3,"Porah"); 
-INSERT INTO `LanguageWords` VALUES (320,3,"Abalo"); 
-INSERT INTO `LanguageWords` VALUES (321,3,"Tatanka"); 
-INSERT INTO `LanguageWords` VALUES (322,3,"Kichalo"); 
-INSERT INTO `LanguageWords` VALUES (323,3,"Awaihilo"); 
-INSERT INTO `LanguageWords` VALUES (324,3,"N"); 
-INSERT INTO `LanguageWords` VALUES (325,3,"Tu"); 
-INSERT INTO `LanguageWords` VALUES (326,3,"Zhi"); 
-INSERT INTO `LanguageWords` VALUES (327,3,"A'ke"); 
-INSERT INTO `LanguageWords` VALUES (328,3,"A'iah"); 
-INSERT INTO `LanguageWords` VALUES (329,3,"Washte"); 
-INSERT INTO `LanguageWords` VALUES (330,3,"Hetawa"); 
-INSERT INTO `LanguageWords` VALUES (331,3,"Pikialo"); 
-INSERT INTO `LanguageWords` VALUES (332,3,"Ovaktalo"); 
-INSERT INTO `LanguageWords` VALUES (333,3,"I"); 
-INSERT INTO `LanguageWords` VALUES (334,3,"Te"); 
-INSERT INTO `LanguageWords` VALUES (335,3,"Uku"); 
-INSERT INTO `LanguageWords` VALUES (336,3,"Hale"); 
-INSERT INTO `LanguageWords` VALUES (337,3,"Yakee"); 
-INSERT INTO `LanguageWords` VALUES (338,3,"Lakota"); 
-INSERT INTO `LanguageWords` VALUES (339,3,"Ichnee"); 
-INSERT INTO `LanguageWords` VALUES (340,3,"Towateke"); 
-INSERT INTO `LanguageWords` VALUES (341,3,"Akiticha"); 
-INSERT INTO `LanguageWords` VALUES (342,3,"O"); 
-INSERT INTO `LanguageWords` VALUES (343,3,"Ni"); 
-INSERT INTO `LanguageWords` VALUES (344,3,"Awa"); 
-INSERT INTO `LanguageWords` VALUES (345,3,"Mani"); 
-INSERT INTO `LanguageWords` VALUES (346,3,"Tanka"); 
-INSERT INTO `LanguageWords` VALUES (347,3,"Pawene"); 
-INSERT INTO `LanguageWords` VALUES (348,3,"Owakeri"); 
-INSERT INTO `LanguageWords` VALUES (349,3,"Tihikea"); 
-INSERT INTO `LanguageWords` VALUES (350,3,"Ishnelo"); 
-INSERT INTO `LanguageWords` VALUES (351,3,"E"); 
-INSERT INTO `LanguageWords` VALUES (352,3,"Po"); 
-INSERT INTO `LanguageWords` VALUES (353,3,"Kee"); 
-INSERT INTO `LanguageWords` VALUES (354,3,"Eche"); 
-INSERT INTO `LanguageWords` VALUES (355,3,"Ti'ha"); 
-INSERT INTO `LanguageWords` VALUES (356,3,"Washte"); 
-INSERT INTO `LanguageWords` VALUES (357,3,"Sechalo"); 
-INSERT INTO `LanguageWords` VALUES (358,3,"Shtumani"); 
-INSERT INTO `LanguageWords` VALUES (359,3,"Shteawa"); 
-INSERT INTO `LanguageWords` VALUES (360,3,"Ta"); 
-INSERT INTO `LanguageWords` VALUES (361,3,"Alo"); 
-INSERT INTO `LanguageWords` VALUES (362,3,"Shte"); 
-INSERT INTO `LanguageWords` VALUES (363,3,"Towa"); 
-INSERT INTO `LanguageWords` VALUES (364,3,"Pawni"); 
-INSERT INTO `LanguageWords` VALUES (365,3,"Owachi"); 
-INSERT INTO `LanguageWords` VALUES (366,3,"Owatanka"); 
-INSERT INTO `LanguageWords` VALUES (367,3,"Porahalo"); 
-INSERT INTO `LanguageWords` VALUES (368,3,"Ne"); 
-INSERT INTO `LanguageWords` VALUES (369,3,"Rah"); 
-INSERT INTO `LanguageWords` VALUES (370,3,"Halo"); 
-INSERT INTO `LanguageWords` VALUES (371,3,"Shush"); 
-INSERT INTO `LanguageWords` VALUES (372,3,"Sho'wa"); 
-INSERT INTO `LanguageWords` VALUES (373,3,"O'ba'chi"); 
-INSERT INTO `LanguageWords` VALUES (374,3,"Shtealo"); 
-INSERT INTO `LanguageWords` VALUES (375,3,"Orahpajo"); 
-INSERT INTO `LanguageWords` VALUES (376,3,"Ki"); 
-INSERT INTO `LanguageWords` VALUES (377,3,"Owa"); 
-INSERT INTO `LanguageWords` VALUES (378,3,"Isha"); 
-INSERT INTO `LanguageWords` VALUES (379,3,"Ahmen"); 
-INSERT INTO `LanguageWords` VALUES (380,3,"Aloaki"); 
-INSERT INTO `LanguageWords` VALUES (381,3,"Neahok"); 
-INSERT INTO `LanguageWords` VALUES (382,3,"Ba"); 
-INSERT INTO `LanguageWords` VALUES (383,3,"Aki"); 
-INSERT INTO `LanguageWords` VALUES (384,3,"Awak"); 
-INSERT INTO `LanguageWords` VALUES (385,3,"Anohe"); 
-INSERT INTO `LanguageWords` VALUES (386,3,"Nokee"); 
-INSERT INTO `LanguageWords` VALUES (387,3,"Taisha"); 
-INSERT INTO `LanguageWords` VALUES (388,3,"Lo"); 
-INSERT INTO `LanguageWords` VALUES (389,3,"Paw"); 
-INSERT INTO `LanguageWords` VALUES (390,3,"Nahe"); 
-INSERT INTO `LanguageWords` VALUES (391,3,"Kashu"); 
-INSERT INTO `LanguageWords` VALUES (392,3,"Poalo"); 
-INSERT INTO `LanguageWords` VALUES (393,3,"Lomani"); 
-INSERT INTO `LanguageWords` VALUES (394,3,"No"); 
-INSERT INTO `LanguageWords` VALUES (395,3,"Ich"); 
-INSERT INTO `LanguageWords` VALUES (396,3,"Tawa"); 
-INSERT INTO `LanguageWords` VALUES (397,3,"Awak"); 
-INSERT INTO `LanguageWords` VALUES (398,3,"Ishte"); 
-INSERT INTO `LanguageWords` VALUES (399,3,"Nitawa"); 
-INSERT INTO `LanguageWords` VALUES (400,3,"Chi"); 
-INSERT INTO `LanguageWords` VALUES (401,3,"Balo"); 
-INSERT INTO `LanguageWords` VALUES (402,3,"A'hok"); 
-INSERT INTO `LanguageWords` VALUES (403,3,"Nechi"); 
-INSERT INTO `LanguageWords` VALUES (404,3,"Washte"); 
-INSERT INTO `LanguageWords` VALUES (405,3,"Ishne'alo"); 
-INSERT INTO `LanguageWords` VALUES (406,3,"Awakeekielo"); 
-INSERT INTO `LanguageWords` VALUES (407,3,"Ishne'awahalo"); 
-INSERT INTO `LanguageWords` VALUES (408,3,"Echeyakee"); 
-INSERT INTO `LanguageWords` VALUES (409,3,"Lakota'mani"); 
-INSERT INTO `LanguageWords` VALUES (410,3,"Ishamuhale"); 
-INSERT INTO `LanguageWords` VALUES (411,3,"Ishnialo"); 
-INSERT INTO `LanguageWords` VALUES (412,3,"Ichnee'awa"); 
-INSERT INTO `LanguageWords` VALUES (413,3,"Neashushahmen"); 
-INSERT INTO `LanguageWords` VALUES (414,3,"Tatahalo"); 
-INSERT INTO `LanguageWords` VALUES (415,3,"Aloaki'shne"); 
-INSERT INTO `LanguageWords` VALUES (416,3,"Awaka'nahe"); 
-INSERT INTO `LanguageWords` VALUES (417,3,"Haloyakee"); 
-INSERT INTO `LanguageWords` VALUES (418,3,"Shteowachi"); 
-INSERT INTO `LanguageWords` VALUES (419,3,"Ishne'alo'porah"); 
-INSERT INTO `LanguageWords` VALUES (420,3,"Tawaporah"); 
-INSERT INTO `LanguageWords` VALUES (421,3,"Shtumanialo"); 
-INSERT INTO `LanguageWords` VALUES (422,3,"Awakeeahmenalo"); 
-INSERT INTO `LanguageWords` VALUES (423,7,"A"); 
-INSERT INTO `LanguageWords` VALUES (424,7,"Lo"); 
-INSERT INTO `LanguageWords` VALUES (425,7,"Vil"); 
-INSERT INTO `LanguageWords` VALUES (426,7,"Nuff"); 
-INSERT INTO `LanguageWords` VALUES (427,7,"Wirsh"); 
-INSERT INTO `LanguageWords` VALUES (428,7,"Ruftos"); 
-INSERT INTO `LanguageWords` VALUES (429,7,"Novaedi"); 
-INSERT INTO `LanguageWords` VALUES (430,7,"Thorniss"); 
-INSERT INTO `LanguageWords` VALUES (431,7,"Gloinador"); 
-INSERT INTO `LanguageWords` VALUES (432,7,"Vastrungen"); 
-INSERT INTO `LanguageWords` VALUES (433,7,"Wershaesire"); 
-INSERT INTO `LanguageWords` VALUES (434,7,"Nevrenrothas"); 
-INSERT INTO `LanguageWords` VALUES (435,7,"E"); 
-INSERT INTO `LanguageWords` VALUES (436,7,"Ne"); 
-INSERT INTO `LanguageWords` VALUES (437,7,"Bor"); 
-INSERT INTO `LanguageWords` VALUES (438,7,"Thor"); 
-INSERT INTO `LanguageWords` VALUES (439,7,"Novas"); 
-INSERT INTO `LanguageWords` VALUES (440,7,"Aesire"); 
-INSERT INTO `LanguageWords` VALUES (441,7,"Lithtos"); 
-INSERT INTO `LanguageWords` VALUES (442,7,"Ruftvess"); 
-INSERT INTO `LanguageWords` VALUES (443,7,"Veldbarad"); 
-INSERT INTO `LanguageWords` VALUES (444,7,"I"); 
-INSERT INTO `LanguageWords` VALUES (445,7,"Ve"); 
-INSERT INTO `LanguageWords` VALUES (446,7,"Ras"); 
-INSERT INTO `LanguageWords` VALUES (447,7,"Ruff"); 
-INSERT INTO `LanguageWords` VALUES (448,7,"Regen"); 
-INSERT INTO `LanguageWords` VALUES (449,7,"Rothas"); 
-INSERT INTO `LanguageWords` VALUES (450,7,"Ewiddan"); 
-INSERT INTO `LanguageWords` VALUES (451,7,"Aldonoth"); 
-INSERT INTO `LanguageWords` VALUES (452,7,"Gothalgos"); 
-INSERT INTO `LanguageWords` VALUES (453,7,"Falhedring"); 
-INSERT INTO `LanguageWords` VALUES (454,7,"Thorlithtos"); 
-INSERT INTO `LanguageWords` VALUES (455,7,"Forthasador"); 
-INSERT INTO `LanguageWords` VALUES (456,7,"O"); 
-INSERT INTO `LanguageWords` VALUES (457,7,"Ru"); 
-INSERT INTO `LanguageWords` VALUES (458,7,"Gol"); 
-INSERT INTO `LanguageWords` VALUES (459,7,"Odes"); 
-INSERT INTO `LanguageWords` VALUES (460,7,"Gloin"); 
-INSERT INTO `LanguageWords` VALUES (461,7,"Nevren"); 
-INSERT INTO `LanguageWords` VALUES (462,7,"Forthis"); 
-INSERT INTO `LanguageWords` VALUES (463,7,"Endirvis"); 
-INSERT INTO `LanguageWords` VALUES (464,7,"Udenmajis"); 
-INSERT INTO `LanguageWords` VALUES (465,7,"U"); 
-INSERT INTO `LanguageWords` VALUES (466,7,"An"); 
-INSERT INTO `LanguageWords` VALUES (467,7,"Nud"); 
-INSERT INTO `LanguageWords` VALUES (468,7,"Noth"); 
-INSERT INTO `LanguageWords` VALUES (469,7,"Tiras"); 
-INSERT INTO `LanguageWords` VALUES (470,7,"Rogesh"); 
-INSERT INTO `LanguageWords` VALUES (471,7,"Faergas"); 
-INSERT INTO `LanguageWords` VALUES (472,7,"Landowar"); 
-INSERT INTO `LanguageWords` VALUES (473,7,"Danagarde"); 
-INSERT INTO `LanguageWords` VALUES (474,7,"Cynewalden"); 
-INSERT INTO `LanguageWords` VALUES (475,7,"Vassildador"); 
-INSERT INTO `LanguageWords` VALUES (476,7,"Mandosdaegil"); 
-INSERT INTO `LanguageWords` VALUES (477,7,"Y"); 
-INSERT INTO `LanguageWords` VALUES (478,7,"Ti"); 
-INSERT INTO `LanguageWords` VALUES (479,7,"Far"); 
-INSERT INTO `LanguageWords` VALUES (480,7,"Ador"); 
-INSERT INTO `LanguageWords` VALUES (481,7,"Barad"); 
-INSERT INTO `LanguageWords` VALUES (482,7,"Skilde"); 
-INSERT INTO `LanguageWords` VALUES (483,7,"Sturume"); 
-INSERT INTO `LanguageWords` VALUES (484,7,"Hamerung"); 
-INSERT INTO `LanguageWords` VALUES (485,7,"Vandarwos"); 
-INSERT INTO `LanguageWords` VALUES (486,7,"Me"); 
-INSERT INTO `LanguageWords` VALUES (487,7,"Wos"); 
-INSERT INTO `LanguageWords` VALUES (488,7,"Dana"); 
-INSERT INTO `LanguageWords` VALUES (489,7,"Garde"); 
-INSERT INTO `LanguageWords` VALUES (490,7,"Vandar"); 
-INSERT INTO `LanguageWords` VALUES (491,7,"Vassild"); 
-INSERT INTO `LanguageWords` VALUES (492,7,"Cynegold"); 
-INSERT INTO `LanguageWords` VALUES (493,7,"Firalaine"); 
-INSERT INTO `LanguageWords` VALUES (494,7,"Dyrstigost"); 
-INSERT INTO `LanguageWords` VALUES (495,7,"Agolandovis"); 
-INSERT INTO `LanguageWords` VALUES (496,7,"Waldirskilde"); 
-INSERT INTO `LanguageWords` VALUES (497,7,"Lu"); 
-INSERT INTO `LanguageWords` VALUES (498,7,"Mod"); 
-INSERT INTO `LanguageWords` VALUES (499,7,"Vrum"); 
-INSERT INTO `LanguageWords` VALUES (500,7,"Majis"); 
-INSERT INTO `LanguageWords` VALUES (501,7,"Valesh"); 
-INSERT INTO `LanguageWords` VALUES (502,7,"Nostyec"); 
-INSERT INTO `LanguageWords` VALUES (503,7,"Methrine"); 
-INSERT INTO `LanguageWords` VALUES (504,7,"Aetwinter"); 
-INSERT INTO `LanguageWords` VALUES (505,7,"Re"); 
-INSERT INTO `LanguageWords` VALUES (506,7,"Ver"); 
-INSERT INTO `LanguageWords` VALUES (507,7,"Veld"); 
-INSERT INTO `LanguageWords` VALUES (508,7,"Ergin"); 
-INSERT INTO `LanguageWords` VALUES (509,7,"Engoth"); 
-INSERT INTO `LanguageWords` VALUES (510,7,"Andovis"); 
-INSERT INTO `LanguageWords` VALUES (511,7,"Lordaere"); 
-INSERT INTO `LanguageWords` VALUES (512,7,"Eloderung"); 
-INSERT INTO `LanguageWords` VALUES (513,7,"Aelgestron"); 
-INSERT INTO `LanguageWords` VALUES (514,7,"Bornevalesh"); 
-INSERT INTO `LanguageWords` VALUES (515,7,"Adorstaerume"); 
-INSERT INTO `LanguageWords` VALUES (516,7,"Se"); 
-INSERT INTO `LanguageWords` VALUES (517,7,"Ash"); 
-INSERT INTO `LanguageWords` VALUES (518,7,"Vohl"); 
-INSERT INTO `LanguageWords` VALUES (519,7,"Nagan"); 
-INSERT INTO `LanguageWords` VALUES (520,7,"Aziris"); 
-INSERT INTO `LanguageWords` VALUES (521,7,"Koshvel"); 
-INSERT INTO `LanguageWords` VALUES (522,7,"Regenthor"); 
-INSERT INTO `LanguageWords` VALUES (523,7,"Va"); 
-INSERT INTO `LanguageWords` VALUES (524,7,"Lon"); 
-INSERT INTO `LanguageWords` VALUES (525,7,"Lars"); 
-INSERT INTO `LanguageWords` VALUES (526,7,"Algos"); 
-INSERT INTO `LanguageWords` VALUES (527,7,"Mandos"); 
-INSERT INTO `LanguageWords` VALUES (528,7,"Nandige"); 
-INSERT INTO `LanguageWords` VALUES (529,7,"Danavandar"); 
-INSERT INTO `LanguageWords` VALUES (530,7,"Farlandowar"); 
-INSERT INTO `LanguageWords` VALUES (531,7,"Golveldbarad"); 
-INSERT INTO `LanguageWords` VALUES (532,7,"Ko"); 
-INSERT INTO `LanguageWords` VALUES (533,7,"Bur"); 
-INSERT INTO `LanguageWords` VALUES (534,7,"Goth"); 
-INSERT INTO `LanguageWords` VALUES (535,7,"Eynes"); 
-INSERT INTO `LanguageWords` VALUES (536,7,"Goibon"); 
-INSERT INTO `LanguageWords` VALUES (537,7,"Kaelsig"); 
-INSERT INTO `LanguageWords` VALUES (538,7,"Hir"); 
-INSERT INTO `LanguageWords` VALUES (539,7,"Agol"); 
-INSERT INTO `LanguageWords` VALUES (540,7,"Borne"); 
-INSERT INTO `LanguageWords` VALUES (541,7,"Danieb"); 
-INSERT INTO `LanguageWords` VALUES (542,7,"Uden"); 
-INSERT INTO `LanguageWords` VALUES (543,7,"Melka"); 
-INSERT INTO `LanguageWords` VALUES (544,7,"Daegil"); 
-INSERT INTO `LanguageWords` VALUES (545,7,"Waldir"); 
-INSERT INTO `LanguageWords` VALUES (546,7,"Ealdor"); 
-INSERT INTO `LanguageWords` VALUES (547,8,"A"); 
-INSERT INTO `LanguageWords` VALUES (548,8,"E"); 
-INSERT INTO `LanguageWords` VALUES (549,8,"I"); 
-INSERT INTO `LanguageWords` VALUES (550,8,"O"); 
-INSERT INTO `LanguageWords` VALUES (551,8,"U"); 
-INSERT INTO `LanguageWords` VALUES (552,8,"Y"); 
-INSERT INTO `LanguageWords` VALUES (553,8,"G"); 
-INSERT INTO `LanguageWords` VALUES (554,8,"X"); 
-INSERT INTO `LanguageWords` VALUES (555,8,"Il"); 
-INSERT INTO `LanguageWords` VALUES (556,8,"No"); 
-INSERT INTO `LanguageWords` VALUES (557,8,"Az"); 
-INSERT INTO `LanguageWords` VALUES (558,8,"Te"); 
-INSERT INTO `LanguageWords` VALUES (559,8,"Ur"); 
-INSERT INTO `LanguageWords` VALUES (560,8,"Za"); 
-INSERT INTO `LanguageWords` VALUES (561,8,"Ze"); 
-INSERT INTO `LanguageWords` VALUES (562,8,"Re"); 
-INSERT INTO `LanguageWords` VALUES (563,8,"Ul"); 
-INSERT INTO `LanguageWords` VALUES (564,8,"Me"); 
-INSERT INTO `LanguageWords` VALUES (565,8,"Xi"); 
-INSERT INTO `LanguageWords` VALUES (566,8,"Tor"); 
-INSERT INTO `LanguageWords` VALUES (567,8,"Gul"); 
-INSERT INTO `LanguageWords` VALUES (568,8,"Lok"); 
-INSERT INTO `LanguageWords` VALUES (569,8,"Asj"); 
-INSERT INTO `LanguageWords` VALUES (570,8,"Kar"); 
-INSERT INTO `LanguageWords` VALUES (571,8,"Lek"); 
-INSERT INTO `LanguageWords` VALUES (572,8,"Daz"); 
-INSERT INTO `LanguageWords` VALUES (573,8,"Maz"); 
-INSERT INTO `LanguageWords` VALUES (574,8,"Ril"); 
-INSERT INTO `LanguageWords` VALUES (575,8,"Ruk"); 
-INSERT INTO `LanguageWords` VALUES (576,8,"Laz"); 
-INSERT INTO `LanguageWords` VALUES (577,8,"Shi"); 
-INSERT INTO `LanguageWords` VALUES (578,8,"Zar"); 
-INSERT INTO `LanguageWords` VALUES (579,8,"Ashj"); 
-INSERT INTO `LanguageWords` VALUES (580,8,"Alar"); 
-INSERT INTO `LanguageWords` VALUES (581,8,"Orah"); 
-INSERT INTO `LanguageWords` VALUES (582,8,"Amir"); 
-INSERT INTO `LanguageWords` VALUES (583,8,"Aman"); 
-INSERT INTO `LanguageWords` VALUES (584,8,"Ante"); 
-INSERT INTO `LanguageWords` VALUES (585,8,"Kiel"); 
-INSERT INTO `LanguageWords` VALUES (586,8,"Maez"); 
-INSERT INTO `LanguageWords` VALUES (587,8,"Maev"); 
-INSERT INTO `LanguageWords` VALUES (588,8,"Veni"); 
-INSERT INTO `LanguageWords` VALUES (589,8,"Raka"); 
-INSERT INTO `LanguageWords` VALUES (590,8,"Zila"); 
-INSERT INTO `LanguageWords` VALUES (591,8,"Zenn"); 
-INSERT INTO `LanguageWords` VALUES (592,8,"Parn"); 
-INSERT INTO `LanguageWords` VALUES (593,8,"Rikk"); 
-INSERT INTO `LanguageWords` VALUES (594,8,"Melar"); 
-INSERT INTO `LanguageWords` VALUES (595,8,"Rakir"); 
-INSERT INTO `LanguageWords` VALUES (596,8,"Tiros"); 
-INSERT INTO `LanguageWords` VALUES (597,8,"Modas"); 
-INSERT INTO `LanguageWords` VALUES (598,8,"Belan"); 
-INSERT INTO `LanguageWords` VALUES (599,8,"Zekul"); 
-INSERT INTO `LanguageWords` VALUES (600,8,"Soran"); 
-INSERT INTO `LanguageWords` VALUES (601,8,"Gular"); 
-INSERT INTO `LanguageWords` VALUES (602,8,"Enkil"); 
-INSERT INTO `LanguageWords` VALUES (603,8,"Adare"); 
-INSERT INTO `LanguageWords` VALUES (604,8,"Golad"); 
-INSERT INTO `LanguageWords` VALUES (605,8,"Buras"); 
-INSERT INTO `LanguageWords` VALUES (606,8,"Nagas"); 
-INSERT INTO `LanguageWords` VALUES (607,8,"Revos"); 
-INSERT INTO `LanguageWords` VALUES (608,8,"Refir"); 
-INSERT INTO `LanguageWords` VALUES (609,8,"Kamil"); 
-INSERT INTO `LanguageWords` VALUES (610,8,"Rethul"); 
-INSERT INTO `LanguageWords` VALUES (611,8,"Rakkan"); 
-INSERT INTO `LanguageWords` VALUES (612,8,"Rakkas"); 
-INSERT INTO `LanguageWords` VALUES (613,8,"Tichar"); 
-INSERT INTO `LanguageWords` VALUES (614,8,"Mannor"); 
-INSERT INTO `LanguageWords` VALUES (615,8,"Archim"); 
-INSERT INTO `LanguageWords` VALUES (616,8,"Azgala"); 
-INSERT INTO `LanguageWords` VALUES (617,8,"Karkun"); 
-INSERT INTO `LanguageWords` VALUES (618,8,"Revola"); 
-INSERT INTO `LanguageWords` VALUES (619,8,"Mishun"); 
-INSERT INTO `LanguageWords` VALUES (620,8,"Arakal"); 
-INSERT INTO `LanguageWords` VALUES (621,8,"Kazile"); 
-INSERT INTO `LanguageWords` VALUES (622,8,"Thorje"); 
-INSERT INTO `LanguageWords` VALUES (623,8,"Belaros"); 
-INSERT INTO `LanguageWords` VALUES (624,8,"Tiriosh"); 
-INSERT INTO `LanguageWords` VALUES (625,8,"Faramos"); 
-INSERT INTO `LanguageWords` VALUES (626,8,"Danashj"); 
-INSERT INTO `LanguageWords` VALUES (627,8,"Amanare"); 
-INSERT INTO `LanguageWords` VALUES (628,8,"Kieldaz"); 
-INSERT INTO `LanguageWords` VALUES (629,8,"Karaman"); 
-INSERT INTO `LanguageWords` VALUES (630,8,"Gulamir"); 
-INSERT INTO `LanguageWords` VALUES (631,8,"Toralar"); 
-INSERT INTO `LanguageWords` VALUES (632,8,"Rethule"); 
-INSERT INTO `LanguageWords` VALUES (633,8,"Zennshi"); 
-INSERT INTO `LanguageWords` VALUES (634,8,"Maladath"); 
-INSERT INTO `LanguageWords` VALUES (635,8,"Kirasath"); 
-INSERT INTO `LanguageWords` VALUES (636,8,"Romathis"); 
-INSERT INTO `LanguageWords` VALUES (637,8,"Amanare"); 
-INSERT INTO `LanguageWords` VALUES (638,8,"Theramas"); 
-INSERT INTO `LanguageWords` VALUES (639,8,"Azrathud"); 
-INSERT INTO `LanguageWords` VALUES (640,8,"Mordanas"); 
-INSERT INTO `LanguageWords` VALUES (641,8,"Amanalar"); 
-INSERT INTO `LanguageWords` VALUES (642,8,"Ashjraka"); 
-INSERT INTO `LanguageWords` VALUES (643,8,"Azgalada"); 
-INSERT INTO `LanguageWords` VALUES (644,8,"Rukadare"); 
-INSERT INTO `LanguageWords` VALUES (645,8,"Sorankar"); 
-INSERT INTO `LanguageWords` VALUES (646,8,"Enkilzar"); 
-INSERT INTO `LanguageWords` VALUES (647,8,"Naztheros"); 
-INSERT INTO `LanguageWords` VALUES (648,8,"Zilthuras"); 
-INSERT INTO `LanguageWords` VALUES (649,8,"Kanrethad"); 
-INSERT INTO `LanguageWords` VALUES (650,8,"Matheredor"); 
-INSERT INTO `LanguageWords` VALUES (651,8,"Ticharamir"); 
-INSERT INTO `LanguageWords` VALUES (652,8,"Melarorah"); 
-INSERT INTO `LanguageWords` VALUES (653,8,"Arakalada"); 
-INSERT INTO `LanguageWords` VALUES (654,8,"Soranaman"); 
-INSERT INTO `LanguageWords` VALUES (655,8,"Nagasraka"); 
-INSERT INTO `LanguageWords` VALUES (656,8,"Belankar"); 
-INSERT INTO `LanguageWords` VALUES (657,8,"Pathrebosh"); 
-INSERT INTO `LanguageWords` VALUES (658,8,"Benthadoom"); 
-INSERT INTO `LanguageWords` VALUES (659,8,"Amanemodas"); 
-INSERT INTO `LanguageWords` VALUES (660,8,"Teamanare"); 
-INSERT INTO `LanguageWords` VALUES (661,8,"Enkilgular"); 
-INSERT INTO `LanguageWords` VALUES (662,8,"Burasadare"); 
-INSERT INTO `LanguageWords` VALUES (663,8,"Melarnagas"); 
-INSERT INTO `LanguageWords` VALUES (664,8,"Zennrakkan"); 
-INSERT INTO `LanguageWords` VALUES (665,8,"Ashjrethul"); 
-INSERT INTO `LanguageWords` VALUES (666,8,"Zekulrakkas"); 
-INSERT INTO `LanguageWords` VALUES (667,8,"Archimtiros"); 
-INSERT INTO `LanguageWords` VALUES (668,8,"Mannorgulan"); 
-INSERT INTO `LanguageWords` VALUES (669,8,"Mishunadare"); 
-INSERT INTO `LanguageWords` VALUES (670,8,"Zennshinagas"); 
-INSERT INTO `LanguageWords` VALUES (671,8,"Ashjrakamas"); 
-INSERT INTO `LanguageWords` VALUES (672,8,"Kamilgolad"); 
-INSERT INTO `LanguageWords` VALUES (673,9,"A"); 
-INSERT INTO `LanguageWords` VALUES (674,9,"E"); 
-INSERT INTO `LanguageWords` VALUES (675,9,"I"); 
-INSERT INTO `LanguageWords` VALUES (676,9,"O"); 
-INSERT INTO `LanguageWords` VALUES (677,9,"U"); 
-INSERT INTO `LanguageWords` VALUES (678,9,"Y"); 
-INSERT INTO `LanguageWords` VALUES (679,9,"G"); 
-INSERT INTO `LanguageWords` VALUES (680,9,"X"); 
-INSERT INTO `LanguageWords` VALUES (681,9,"IL"); 
-INSERT INTO `LanguageWords` VALUES (682,9,"No"); 
-INSERT INTO `LanguageWords` VALUES (683,9,"Az"); 
-INSERT INTO `LanguageWords` VALUES (684,9,"Te"); 
-INSERT INTO `LanguageWords` VALUES (685,9,"Ur"); 
-INSERT INTO `LanguageWords` VALUES (686,9,"Za"); 
-INSERT INTO `LanguageWords` VALUES (687,9,"Ze"); 
-INSERT INTO `LanguageWords` VALUES (688,9,"Re"); 
-INSERT INTO `LanguageWords` VALUES (689,9,"Ul"); 
-INSERT INTO `LanguageWords` VALUES (690,9,"Me"); 
-INSERT INTO `LanguageWords` VALUES (691,9,"Xi"); 
-INSERT INTO `LanguageWords` VALUES (692,9,"Tor"); 
-INSERT INTO `LanguageWords` VALUES (693,9,"Gul"); 
-INSERT INTO `LanguageWords` VALUES (694,9,"Lok"); 
-INSERT INTO `LanguageWords` VALUES (695,9,"Asj"); 
-INSERT INTO `LanguageWords` VALUES (696,9,"Kar"); 
-INSERT INTO `LanguageWords` VALUES (697,9,"Lek"); 
-INSERT INTO `LanguageWords` VALUES (698,9,"Daz"); 
-INSERT INTO `LanguageWords` VALUES (699,9,"Maz"); 
-INSERT INTO `LanguageWords` VALUES (700,9,"Ril"); 
-INSERT INTO `LanguageWords` VALUES (701,9,"Ruk"); 
-INSERT INTO `LanguageWords` VALUES (702,9,"Laz"); 
-INSERT INTO `LanguageWords` VALUES (703,9,"Shi"); 
-INSERT INTO `LanguageWords` VALUES (704,9,"Zar"); 
-INSERT INTO `LanguageWords` VALUES (705,9,"Ashj"); 
-INSERT INTO `LanguageWords` VALUES (706,9,"Alar"); 
-INSERT INTO `LanguageWords` VALUES (707,9,"Orah"); 
-INSERT INTO `LanguageWords` VALUES (708,9,"Amir"); 
-INSERT INTO `LanguageWords` VALUES (709,9,"Aman"); 
-INSERT INTO `LanguageWords` VALUES (710,9,"Ante"); 
-INSERT INTO `LanguageWords` VALUES (711,9,"Kiel"); 
-INSERT INTO `LanguageWords` VALUES (712,9,"Maez"); 
-INSERT INTO `LanguageWords` VALUES (713,9,"Maev"); 
-INSERT INTO `LanguageWords` VALUES (714,9,"Veni"); 
-INSERT INTO `LanguageWords` VALUES (715,9,"Raka"); 
-INSERT INTO `LanguageWords` VALUES (716,9,"Zila"); 
-INSERT INTO `LanguageWords` VALUES (717,9,"Zenn"); 
-INSERT INTO `LanguageWords` VALUES (718,9,"Parn"); 
-INSERT INTO `LanguageWords` VALUES (719,9,"Rikk"); 
-INSERT INTO `LanguageWords` VALUES (720,9,"Melar"); 
-INSERT INTO `LanguageWords` VALUES (721,9,"Rakir"); 
-INSERT INTO `LanguageWords` VALUES (722,9,"Tiros"); 
-INSERT INTO `LanguageWords` VALUES (723,9,"Modas"); 
-INSERT INTO `LanguageWords` VALUES (724,9,"Belan"); 
-INSERT INTO `LanguageWords` VALUES (725,9,"Zekul"); 
-INSERT INTO `LanguageWords` VALUES (726,9,"Soran"); 
-INSERT INTO `LanguageWords` VALUES (727,9,"Gular"); 
-INSERT INTO `LanguageWords` VALUES (728,9,"Enkil"); 
-INSERT INTO `LanguageWords` VALUES (729,9,"Adare"); 
-INSERT INTO `LanguageWords` VALUES (730,9,"Golad"); 
-INSERT INTO `LanguageWords` VALUES (731,9,"Buras"); 
-INSERT INTO `LanguageWords` VALUES (732,9,"Nagas"); 
-INSERT INTO `LanguageWords` VALUES (733,9,"Revos"); 
-INSERT INTO `LanguageWords` VALUES (734,9,"Refir"); 
-INSERT INTO `LanguageWords` VALUES (735,9,"Kamil"); 
-INSERT INTO `LanguageWords` VALUES (736,9,"Rethul"); 
-INSERT INTO `LanguageWords` VALUES (737,9,"Rakkan"); 
-INSERT INTO `LanguageWords` VALUES (738,9,"Rakkas"); 
-INSERT INTO `LanguageWords` VALUES (739,9,"Tichar"); 
-INSERT INTO `LanguageWords` VALUES (740,9,"Mannor"); 
-INSERT INTO `LanguageWords` VALUES (741,9,"Archim"); 
-INSERT INTO `LanguageWords` VALUES (742,9,"Azgala"); 
-INSERT INTO `LanguageWords` VALUES (743,9,"Karkun"); 
-INSERT INTO `LanguageWords` VALUES (744,9,"Revola"); 
-INSERT INTO `LanguageWords` VALUES (745,9,"Mishun"); 
-INSERT INTO `LanguageWords` VALUES (746,9,"Arakal"); 
-INSERT INTO `LanguageWords` VALUES (747,9,"Kazile"); 
-INSERT INTO `LanguageWords` VALUES (748,9,"Thorje"); 
-INSERT INTO `LanguageWords` VALUES (749,9,"Belaros"); 
-INSERT INTO `LanguageWords` VALUES (750,9,"Tiriosh"); 
-INSERT INTO `LanguageWords` VALUES (751,9,"Faramos"); 
-INSERT INTO `LanguageWords` VALUES (752,9,"Danashj"); 
-INSERT INTO `LanguageWords` VALUES (753,9,"Amanare"); 
-INSERT INTO `LanguageWords` VALUES (754,9,"Faralos"); 
-INSERT INTO `LanguageWords` VALUES (755,9,"Kieldaz"); 
-INSERT INTO `LanguageWords` VALUES (756,9,"Karaman"); 
-INSERT INTO `LanguageWords` VALUES (757,9,"Gulamir"); 
-INSERT INTO `LanguageWords` VALUES (758,9,"Toralar"); 
-INSERT INTO `LanguageWords` VALUES (759,9,"Rethule"); 
-INSERT INTO `LanguageWords` VALUES (760,9,"Zennshi"); 
-INSERT INTO `LanguageWords` VALUES (761,9,"Maladath"); 
-INSERT INTO `LanguageWords` VALUES (762,9,"Kirasath"); 
-INSERT INTO `LanguageWords` VALUES (763,9,"Romathis"); 
-INSERT INTO `LanguageWords` VALUES (764,9,"Amanare"); 
-INSERT INTO `LanguageWords` VALUES (765,9,"Theramas"); 
-INSERT INTO `LanguageWords` VALUES (766,9,"Azrathud"); 
-INSERT INTO `LanguageWords` VALUES (767,9,"Mordanas"); 
-INSERT INTO `LanguageWords` VALUES (768,9,"Amanalar"); 
-INSERT INTO `LanguageWords` VALUES (769,9,"Ashjraka"); 
-INSERT INTO `LanguageWords` VALUES (770,9,"Azgalada"); 
-INSERT INTO `LanguageWords` VALUES (771,9,"Rukadare"); 
-INSERT INTO `LanguageWords` VALUES (772,9,"Sorankar"); 
-INSERT INTO `LanguageWords` VALUES (773,9,"Enkilzar"); 
-INSERT INTO `LanguageWords` VALUES (774,9,"Naztheros"); 
-INSERT INTO `LanguageWords` VALUES (775,9,"Zilthuras"); 
-INSERT INTO `LanguageWords` VALUES (776,9,"Kanrethad"); 
-INSERT INTO `LanguageWords` VALUES (777,9,"Matheredor"); 
-INSERT INTO `LanguageWords` VALUES (778,9,"Ticharamir"); 
-INSERT INTO `LanguageWords` VALUES (779,9,"Melarorah"); 
-INSERT INTO `LanguageWords` VALUES (780,9,"Arakalada"); 
-INSERT INTO `LanguageWords` VALUES (781,9,"Soranaman"); 
-INSERT INTO `LanguageWords` VALUES (782,9,"Nagasraka"); 
-INSERT INTO `LanguageWords` VALUES (783,9,"Belankar"); 
-INSERT INTO `LanguageWords` VALUES (784,9,"Pathrebosh"); 
-INSERT INTO `LanguageWords` VALUES (785,9,"Benthadoom"); 
-INSERT INTO `LanguageWords` VALUES (786,9,"Amanemodas"); 
-INSERT INTO `LanguageWords` VALUES (787,9,"Teamanare"); 
-INSERT INTO `LanguageWords` VALUES (788,9,"Enkilgular"); 
-INSERT INTO `LanguageWords` VALUES (789,9,"Burasadare"); 
-INSERT INTO `LanguageWords` VALUES (790,9,"Melarnagas"); 
-INSERT INTO `LanguageWords` VALUES (791,9,"Zennrakkan"); 
-INSERT INTO `LanguageWords` VALUES (792,9,"Kamilgolad"); 
-INSERT INTO `LanguageWords` VALUES (793,9,"Ashjrakamas"); 
-INSERT INTO `LanguageWords` VALUES (794,9,"Zennshinagas"); 
-INSERT INTO `LanguageWords` VALUES (795,9,"Mishunadare"); 
-INSERT INTO `LanguageWords` VALUES (796,9,"Mannorgulan"); 
-INSERT INTO `LanguageWords` VALUES (797,9,"Archimtiros"); 
-INSERT INTO `LanguageWords` VALUES (798,9,"Zekulrakkas"); 
-INSERT INTO `LanguageWords` VALUES (799,9,"Ashjrethul"); 
-INSERT INTO `LanguageWords` VALUES (800,10,"A"); 
-INSERT INTO `LanguageWords` VALUES (801,10,"N"); 
-INSERT INTO `LanguageWords` VALUES (802,10,"I"); 
-INSERT INTO `LanguageWords` VALUES (803,10,"O"); 
-INSERT INTO `LanguageWords` VALUES (804,10,"E"); 
-INSERT INTO `LanguageWords` VALUES (805,10,"D"); 
-INSERT INTO `LanguageWords` VALUES (806,10,"Da"); 
-INSERT INTO `LanguageWords` VALUES (807,10,"Lo"); 
-INSERT INTO `LanguageWords` VALUES (808,10,"An"); 
-INSERT INTO `LanguageWords` VALUES (809,10,"Ni"); 
-INSERT INTO `LanguageWords` VALUES (810,10,"Al"); 
-INSERT INTO `LanguageWords` VALUES (811,10,"Do"); 
-INSERT INTO `LanguageWords` VALUES (812,10,"Ri"); 
-INSERT INTO `LanguageWords` VALUES (813,10,"Su"); 
-INSERT INTO `LanguageWords` VALUES (814,10,"No"); 
-INSERT INTO `LanguageWords` VALUES (815,10,"Ano"); 
-INSERT INTO `LanguageWords` VALUES (816,10,"Dur"); 
-INSERT INTO `LanguageWords` VALUES (817,10,"Tal"); 
-INSERT INTO `LanguageWords` VALUES (818,10,"Nei"); 
-INSERT INTO `LanguageWords` VALUES (819,10,"Ash"); 
-INSERT INTO `LanguageWords` VALUES (820,10,"Dor"); 
-INSERT INTO `LanguageWords` VALUES (821,10,"Anu"); 
-INSERT INTO `LanguageWords` VALUES (822,10,"Fal"); 
-INSERT INTO `LanguageWords` VALUES (823,10,"Tur"); 
-INSERT INTO `LanguageWords` VALUES (824,10,"Ala"); 
-INSERT INTO `LanguageWords` VALUES (825,10,"Nor"); 
-INSERT INTO `LanguageWords` VALUES (826,10,"Osa"); 
-INSERT INTO `LanguageWords` VALUES (827,10,"Alah"); 
-INSERT INTO `LanguageWords` VALUES (828,10,"Andu"); 
-INSERT INTO `LanguageWords` VALUES (829,10,"Dath"); 
-INSERT INTO `LanguageWords` VALUES (830,10,"Mush"); 
-INSERT INTO `LanguageWords` VALUES (831,10,"Shar"); 
-INSERT INTO `LanguageWords` VALUES (832,10,"Thus"); 
-INSERT INTO `LanguageWords` VALUES (833,10,"Fulo"); 
-INSERT INTO `LanguageWords` VALUES (834,10,"Aman"); 
-INSERT INTO `LanguageWords` VALUES (835,10,"Diel"); 
-INSERT INTO `LanguageWords` VALUES (836,10,"Dieb"); 
-INSERT INTO `LanguageWords` VALUES (837,10,"Rini"); 
-INSERT INTO `LanguageWords` VALUES (838,10,"Anar"); 
-INSERT INTO `LanguageWords` VALUES (839,10,"Talah"); 
-INSERT INTO `LanguageWords` VALUES (840,10,"Adore"); 
-INSERT INTO `LanguageWords` VALUES (841,10,"Ishnu"); 
-INSERT INTO `LanguageWords` VALUES (842,10,"Bandu"); 
-INSERT INTO `LanguageWords` VALUES (843,10,"Balah"); 
-INSERT INTO `LanguageWords` VALUES (844,10,"Fandu"); 
-INSERT INTO `LanguageWords` VALUES (845,10,"Thera"); 
-INSERT INTO `LanguageWords` VALUES (846,10,"Turus"); 
-INSERT INTO `LanguageWords` VALUES (847,10,"Shari"); 
-INSERT INTO `LanguageWords` VALUES (848,10,"Shano"); 
-INSERT INTO `LanguageWords` VALUES (849,10,"Terro"); 
-INSERT INTO `LanguageWords` VALUES (850,10,"Eburi"); 
-INSERT INTO `LanguageWords` VALUES (851,10,"Dorini"); 
-INSERT INTO `LanguageWords` VALUES (852,10,"Shando"); 
-INSERT INTO `LanguageWords` VALUES (853,10,"Ethala"); 
-INSERT INTO `LanguageWords` VALUES (854,10,"Fallah"); 
-INSERT INTO `LanguageWords` VALUES (855,10,"Belore"); 
-INSERT INTO `LanguageWords` VALUES (856,10,"Do'rah"); 
-INSERT INTO `LanguageWords` VALUES (857,10,"Neph'o"); 
-INSERT INTO `LanguageWords` VALUES (858,10,"Asto're"); 
-INSERT INTO `LanguageWords` VALUES (859,10,"Man'ar"); 
-INSERT INTO `LanguageWords` VALUES (860,10,"Ishura"); 
-INSERT INTO `LanguageWords` VALUES (861,10,"U'phol"); 
-INSERT INTO `LanguageWords` VALUES (862,10,"T'as'e"); 
-INSERT INTO `LanguageWords` VALUES (863,10,"Anoduna"); 
-INSERT INTO `LanguageWords` VALUES (864,10,"Alah'ni"); 
-INSERT INTO `LanguageWords` VALUES (865,10,"Dor'Ano"); 
-INSERT INTO `LanguageWords` VALUES (866,10,"Al'shar"); 
-INSERT INTO `LanguageWords` VALUES (867,10,"Mush'al"); 
-INSERT INTO `LanguageWords` VALUES (868,10,"Aman'ni"); 
-INSERT INTO `LanguageWords` VALUES (869,10,"Shan're"); 
-INSERT INTO `LanguageWords` VALUES (870,10,"Mandalas"); 
-INSERT INTO `LanguageWords` VALUES (871,10,"Eraburis"); 
-INSERT INTO `LanguageWords` VALUES (872,10,"Dorithur"); 
-INSERT INTO `LanguageWords` VALUES (873,10,"Dal'dieb"); 
-INSERT INTO `LanguageWords` VALUES (874,10,"Thoribas"); 
-INSERT INTO `LanguageWords` VALUES (875,10,"D'ana'no"); 
-INSERT INTO `LanguageWords` VALUES (876,10,"Il'amare"); 
-INSERT INTO `LanguageWords` VALUES (877,10,"Neph'anis"); 
-INSERT INTO `LanguageWords` VALUES (878,10,"Dune'adah"); 
-INSERT INTO `LanguageWords` VALUES (879,10,"Banthalos"); 
-INSERT INTO `LanguageWords` VALUES (880,10,"Fala'andu"); 
-INSERT INTO `LanguageWords` VALUES (881,10,"Dath'anar"); 
-INSERT INTO `LanguageWords` VALUES (882,10,"Shari'fal"); 
-INSERT INTO `LanguageWords` VALUES (883,10,"Thori'dal"); 
-INSERT INTO `LanguageWords` VALUES (884,10,"Thero'shan"); 
-INSERT INTO `LanguageWords` VALUES (885,10,"Isera'duna"); 
-INSERT INTO `LanguageWords` VALUES (886,10,"Ash'therod"); 
-INSERT INTO `LanguageWords` VALUES (887,10,"Dorados'no"); 
-INSERT INTO `LanguageWords` VALUES (888,10,"Shar'adore"); 
-INSERT INTO `LanguageWords` VALUES (889,10,"U'phol'belore"); 
-INSERT INTO `LanguageWords` VALUES (890,10,"Fandu'talah"); 
-INSERT INTO `LanguageWords` VALUES (891,10,"Dor'ana'badu"); 
-INSERT INTO `LanguageWords` VALUES (892,10,"Thoribas'no'thera"); 
-INSERT INTO `LanguageWords` VALUES (893,10,"Turus'il'amare"); 
-INSERT INTO `LanguageWords` VALUES (894,10,"Shari'adune"); 
-INSERT INTO `LanguageWords` VALUES (895,10,"T'ase'mushal"); 
-INSERT INTO `LanguageWords` VALUES (896,10,"Shindu'fallah'na"); 
-INSERT INTO `LanguageWords` VALUES (897,10,"Ando'meth'derador"); 
-INSERT INTO `LanguageWords` VALUES (898,10,"Anu'dorannador"); 
-INSERT INTO `LanguageWords` VALUES (899,10,"Anu'dorinni'talah"); 
-INSERT INTO `LanguageWords` VALUES (900,10,"Esh'thero'mannash"); 
-INSERT INTO `LanguageWords` VALUES (901,10,"Asto're'dunadah"); 
-INSERT INTO `LanguageWords` VALUES (902,11,"A"); 
-INSERT INTO `LanguageWords` VALUES (903,11,"E"); 
-INSERT INTO `LanguageWords` VALUES (904,11,"I"); 
-INSERT INTO `LanguageWords` VALUES (905,11,"O"); 
-INSERT INTO `LanguageWords` VALUES (906,11,"U"); 
-INSERT INTO `LanguageWords` VALUES (907,11,"Y"); 
-INSERT INTO `LanguageWords` VALUES (908,11,"G"); 
-INSERT INTO `LanguageWords` VALUES (909,11,"X"); 
-INSERT INTO `LanguageWords` VALUES (910,11,"Il"); 
-INSERT INTO `LanguageWords` VALUES (911,11,"No"); 
-INSERT INTO `LanguageWords` VALUES (912,11,"Az"); 
-INSERT INTO `LanguageWords` VALUES (913,11,"Te"); 
-INSERT INTO `LanguageWords` VALUES (914,11,"Ur"); 
-INSERT INTO `LanguageWords` VALUES (915,11,"Za"); 
-INSERT INTO `LanguageWords` VALUES (916,11,"Ze"); 
-INSERT INTO `LanguageWords` VALUES (917,11,"Re"); 
-INSERT INTO `LanguageWords` VALUES (918,11,"Ul"); 
-INSERT INTO `LanguageWords` VALUES (919,11,"Me"); 
-INSERT INTO `LanguageWords` VALUES (920,11,"Xi"); 
-INSERT INTO `LanguageWords` VALUES (921,11,"Tor"); 
-INSERT INTO `LanguageWords` VALUES (922,11,"Gul"); 
-INSERT INTO `LanguageWords` VALUES (923,11,"Lok"); 
-INSERT INTO `LanguageWords` VALUES (924,11,"Asj"); 
-INSERT INTO `LanguageWords` VALUES (925,11,"Kar"); 
-INSERT INTO `LanguageWords` VALUES (926,11,"Lek"); 
-INSERT INTO `LanguageWords` VALUES (927,11,"Daz"); 
-INSERT INTO `LanguageWords` VALUES (928,11,"Maz"); 
-INSERT INTO `LanguageWords` VALUES (929,11,"Ril"); 
-INSERT INTO `LanguageWords` VALUES (930,11,"Ruk"); 
-INSERT INTO `LanguageWords` VALUES (931,11,"Laz"); 
-INSERT INTO `LanguageWords` VALUES (932,11,"Shi"); 
-INSERT INTO `LanguageWords` VALUES (933,11,"Zar"); 
-INSERT INTO `LanguageWords` VALUES (934,11,"Ashj"); 
-INSERT INTO `LanguageWords` VALUES (935,11,"Alar"); 
-INSERT INTO `LanguageWords` VALUES (936,11,"Orah"); 
-INSERT INTO `LanguageWords` VALUES (937,11,"Amir"); 
-INSERT INTO `LanguageWords` VALUES (938,11,"Aman"); 
-INSERT INTO `LanguageWords` VALUES (939,11,"Ante"); 
-INSERT INTO `LanguageWords` VALUES (940,11,"Kiel"); 
-INSERT INTO `LanguageWords` VALUES (941,11,"Maez"); 
-INSERT INTO `LanguageWords` VALUES (942,11,"Maev"); 
-INSERT INTO `LanguageWords` VALUES (943,11,"Veni"); 
-INSERT INTO `LanguageWords` VALUES (944,11,"Raka"); 
-INSERT INTO `LanguageWords` VALUES (945,11,"Zila"); 
-INSERT INTO `LanguageWords` VALUES (946,11,"Zenn"); 
-INSERT INTO `LanguageWords` VALUES (947,11,"Parn"); 
-INSERT INTO `LanguageWords` VALUES (948,11,"Rikk"); 
-INSERT INTO `LanguageWords` VALUES (949,11,"Melar"); 
-INSERT INTO `LanguageWords` VALUES (950,11,"Rakir"); 
-INSERT INTO `LanguageWords` VALUES (951,11,"Tiros"); 
-INSERT INTO `LanguageWords` VALUES (952,11,"Modas"); 
-INSERT INTO `LanguageWords` VALUES (953,11,"Belan"); 
-INSERT INTO `LanguageWords` VALUES (954,11,"Zekul"); 
-INSERT INTO `LanguageWords` VALUES (955,11,"Soran"); 
-INSERT INTO `LanguageWords` VALUES (956,11,"Gular"); 
-INSERT INTO `LanguageWords` VALUES (957,11,"Enkil"); 
-INSERT INTO `LanguageWords` VALUES (958,11,"Adare"); 
-INSERT INTO `LanguageWords` VALUES (959,11,"Golad"); 
-INSERT INTO `LanguageWords` VALUES (960,11,"Buras"); 
-INSERT INTO `LanguageWords` VALUES (961,11,"Nagas"); 
-INSERT INTO `LanguageWords` VALUES (962,11,"Revos"); 
-INSERT INTO `LanguageWords` VALUES (963,11,"Refir"); 
-INSERT INTO `LanguageWords` VALUES (964,11,"Kamil"); 
-INSERT INTO `LanguageWords` VALUES (965,11,"Rethul"); 
-INSERT INTO `LanguageWords` VALUES (966,11,"Rakkan"); 
-INSERT INTO `LanguageWords` VALUES (967,11,"Rakkas"); 
-INSERT INTO `LanguageWords` VALUES (968,11,"Tichar"); 
-INSERT INTO `LanguageWords` VALUES (969,11,"Mannor"); 
-INSERT INTO `LanguageWords` VALUES (970,11,"Archim"); 
-INSERT INTO `LanguageWords` VALUES (971,11,"Azgala"); 
-INSERT INTO `LanguageWords` VALUES (972,11,"Karkun"); 
-INSERT INTO `LanguageWords` VALUES (973,11,"Revola"); 
-INSERT INTO `LanguageWords` VALUES (974,11,"Mishun"); 
-INSERT INTO `LanguageWords` VALUES (975,11,"Arakal"); 
-INSERT INTO `LanguageWords` VALUES (976,11,"Kazile"); 
-INSERT INTO `LanguageWords` VALUES (977,11,"Thorje"); 
-INSERT INTO `LanguageWords` VALUES (978,11,"Belaros"); 
-INSERT INTO `LanguageWords` VALUES (979,11,"Tiriosh"); 
-INSERT INTO `LanguageWords` VALUES (980,11,"Faramos"); 
-INSERT INTO `LanguageWords` VALUES (981,11,"Danashj"); 
-INSERT INTO `LanguageWords` VALUES (982,11,"Amanare"); 
-INSERT INTO `LanguageWords` VALUES (983,11,"Faralos"); 
-INSERT INTO `LanguageWords` VALUES (984,11,"Kieldaz"); 
-INSERT INTO `LanguageWords` VALUES (985,11,"Karaman"); 
-INSERT INTO `LanguageWords` VALUES (986,11,"Gulamir"); 
-INSERT INTO `LanguageWords` VALUES (987,11,"Toralar"); 
-INSERT INTO `LanguageWords` VALUES (988,11,"Rethule"); 
-INSERT INTO `LanguageWords` VALUES (989,11,"Zennshi"); 
-INSERT INTO `LanguageWords` VALUES (990,11,"Maladath"); 
-INSERT INTO `LanguageWords` VALUES (991,11,"Kirasath"); 
-INSERT INTO `LanguageWords` VALUES (992,11,"Romathis"); 
-INSERT INTO `LanguageWords` VALUES (993,11,"Amanare"); 
-INSERT INTO `LanguageWords` VALUES (994,11,"Theramas"); 
-INSERT INTO `LanguageWords` VALUES (995,11,"Azrathud"); 
-INSERT INTO `LanguageWords` VALUES (996,11,"Mordanas"); 
-INSERT INTO `LanguageWords` VALUES (997,11,"Amanalar"); 
-INSERT INTO `LanguageWords` VALUES (998,11,"Ashjraka"); 
-INSERT INTO `LanguageWords` VALUES (999,11,"Azgalada"); 
-INSERT INTO `LanguageWords` VALUES (1000,11,"Rukadare"); 
-INSERT INTO `LanguageWords` VALUES (1001,11,"Sorankar"); 
-INSERT INTO `LanguageWords` VALUES (1002,11,"Enkilzar"); 
-INSERT INTO `LanguageWords` VALUES (1003,11,"Naztheros"); 
-INSERT INTO `LanguageWords` VALUES (1004,11,"Zilthuras"); 
-INSERT INTO `LanguageWords` VALUES (1005,11,"Kanrethad"); 
-INSERT INTO `LanguageWords` VALUES (1006,11,"Matheredor"); 
-INSERT INTO `LanguageWords` VALUES (1007,11,"Ticharamir"); 
-INSERT INTO `LanguageWords` VALUES (1008,11,"Melarorah"); 
-INSERT INTO `LanguageWords` VALUES (1009,11,"Arakalada"); 
-INSERT INTO `LanguageWords` VALUES (1010,11,"Soranaman"); 
-INSERT INTO `LanguageWords` VALUES (1011,11,"Nagasraka"); 
-INSERT INTO `LanguageWords` VALUES (1012,11,"Belankar"); 
-INSERT INTO `LanguageWords` VALUES (1013,11,"Pathrebosh"); 
-INSERT INTO `LanguageWords` VALUES (1014,11,"Benthadoom"); 
-INSERT INTO `LanguageWords` VALUES (1015,11,"Amanemodas"); 
-INSERT INTO `LanguageWords` VALUES (1016,11,"Teamanare"); 
-INSERT INTO `LanguageWords` VALUES (1017,11,"Enkilgular"); 
-INSERT INTO `LanguageWords` VALUES (1018,11,"Burasadare"); 
-INSERT INTO `LanguageWords` VALUES (1019,11,"Melarnagas"); 
-INSERT INTO `LanguageWords` VALUES (1020,11,"Zennrakkan"); 
-INSERT INTO `LanguageWords` VALUES (1021,11,"Ashjrethul"); 
-INSERT INTO `LanguageWords` VALUES (1022,11,"Zekulrakkas"); 
-INSERT INTO `LanguageWords` VALUES (1023,11,"Archimtiros"); 
-INSERT INTO `LanguageWords` VALUES (1024,11,"Mannorgulan"); 
-INSERT INTO `LanguageWords` VALUES (1025,11,"Mishunadare"); 
-INSERT INTO `LanguageWords` VALUES (1026,11,"Zennshinagas"); 
-INSERT INTO `LanguageWords` VALUES (1027,11,"Ashjrakamas"); 
-INSERT INTO `LanguageWords` VALUES (1028,11,"Kamilgolad"); 
-INSERT INTO `LanguageWords` VALUES (1029,12,"A"); 
-INSERT INTO `LanguageWords` VALUES (1030,12,"O"); 
-INSERT INTO `LanguageWords` VALUES (1031,12,"K"); 
-INSERT INTO `LanguageWords` VALUES (1032,12,"T"); 
-INSERT INTO `LanguageWords` VALUES (1033,12,"G"); 
-INSERT INTO `LanguageWords` VALUES (1034,12,"U"); 
-INSERT INTO `LanguageWords` VALUES (1035,12,"Ko"); 
-INSERT INTO `LanguageWords` VALUES (1036,12,"Ta"); 
-INSERT INTO `LanguageWords` VALUES (1037,12,"Gi"); 
-INSERT INTO `LanguageWords` VALUES (1038,12,"Ka"); 
-INSERT INTO `LanguageWords` VALUES (1039,12,"Tu"); 
-INSERT INTO `LanguageWords` VALUES (1040,12,"Os"); 
-INSERT INTO `LanguageWords` VALUES (1041,12,"Ma"); 
-INSERT INTO `LanguageWords` VALUES (1042,12,"Ra"); 
-INSERT INTO `LanguageWords` VALUES (1043,12,"Fel"); 
-INSERT INTO `LanguageWords` VALUES (1044,12,"Rok"); 
-INSERT INTO `LanguageWords` VALUES (1045,12,"Kir"); 
-INSERT INTO `LanguageWords` VALUES (1046,12,"Dor"); 
-INSERT INTO `LanguageWords` VALUES (1047,12,"Von"); 
-INSERT INTO `LanguageWords` VALUES (1048,12,"Nuk"); 
-INSERT INTO `LanguageWords` VALUES (1049,12,"Tor"); 
-INSERT INTO `LanguageWords` VALUES (1050,12,"Kan"); 
-INSERT INTO `LanguageWords` VALUES (1051,12,"Tas"); 
-INSERT INTO `LanguageWords` VALUES (1052,12,"Gun"); 
-INSERT INTO `LanguageWords` VALUES (1053,12,"Dra"); 
-INSERT INTO `LanguageWords` VALUES (1054,12,"Sto"); 
-INSERT INTO `LanguageWords` VALUES (1055,12,"Brom"); 
-INSERT INTO `LanguageWords` VALUES (1056,12,"Kras"); 
-INSERT INTO `LanguageWords` VALUES (1057,12,"Toro"); 
-INSERT INTO `LanguageWords` VALUES (1058,12,"Drae"); 
-INSERT INTO `LanguageWords` VALUES (1059,12,"Krin"); 
-INSERT INTO `LanguageWords` VALUES (1060,12,"Zoln"); 
-INSERT INTO `LanguageWords` VALUES (1061,12,"Fmer"); 
-INSERT INTO `LanguageWords` VALUES (1062,12,"Guto"); 
-INSERT INTO `LanguageWords` VALUES (1063,12,"Reth"); 
-INSERT INTO `LanguageWords` VALUES (1064,12,"Shin"); 
-INSERT INTO `LanguageWords` VALUES (1065,12,"Tols"); 
-INSERT INTO `LanguageWords` VALUES (1066,12,"Mahn"); 
-INSERT INTO `LanguageWords` VALUES (1067,12,"Bromo"); 
-INSERT INTO `LanguageWords` VALUES (1068,12,"Krast"); 
-INSERT INTO `LanguageWords` VALUES (1069,12,"Torin"); 
-INSERT INTO `LanguageWords` VALUES (1070,12,"Draek"); 
-INSERT INTO `LanguageWords` VALUES (1071,12,"Kranu"); 
-INSERT INTO `LanguageWords` VALUES (1072,12,"Zoern"); 
-INSERT INTO `LanguageWords` VALUES (1073,12,"Fmerk"); 
-INSERT INTO `LanguageWords` VALUES (1074,12,"Gatin"); 
-INSERT INTO `LanguageWords` VALUES (1075,12,"Roath"); 
-INSERT INTO `LanguageWords` VALUES (1076,12,"Shone"); 
-INSERT INTO `LanguageWords` VALUES (1077,12,"Talsa"); 
-INSERT INTO `LanguageWords` VALUES (1078,12,"Fraht"); 
-INSERT INTO `LanguageWords` VALUES (1079,12,"Ben'nig"); 
-INSERT INTO `LanguageWords` VALUES (1080,12,"Korsul"); 
-INSERT INTO `LanguageWords` VALUES (1081,12,"Ter'ran"); 
-INSERT INTO `LanguageWords` VALUES (1082,12,"For'kin"); 
-INSERT INTO `LanguageWords` VALUES (1083,12,"Suz'ahn"); 
-INSERT INTO `LanguageWords` VALUES (1084,12,"Dratir"); 
-INSERT INTO `LanguageWords` VALUES (1085,12,"Fel'tes"); 
-INSERT INTO `LanguageWords` VALUES (1086,12,"Toka'an"); 
-INSERT INTO `LanguageWords` VALUES (1087,12,"Drinor"); 
-INSERT INTO `LanguageWords` VALUES (1088,12,"Tadrom"); 
-INSERT INTO `LanguageWords` VALUES (1089,12,"Kel'shae"); 
-INSERT INTO `LanguageWords` VALUES (1090,12,"Dak'kaun"); 
-INSERT INTO `LanguageWords` VALUES (1091,12,"Tchor'ah"); 
-INSERT INTO `LanguageWords` VALUES (1092,12,"Zela'von"); 
-INSERT INTO `LanguageWords` VALUES (1093,12,"Telsrah"); 
-INSERT INTO `LanguageWords` VALUES (1094,12,"Kis'tean"); 
-INSERT INTO `LanguageWords` VALUES (1095,12,"Dorvrem"); 
-INSERT INTO `LanguageWords` VALUES (1096,12,"Koaresh"); 
-INSERT INTO `LanguageWords` VALUES (1097,12,"Fiilrok"); 
-INSERT INTO `LanguageWords` VALUES (1098,12,"Ven'tiro"); 
-INSERT INTO `LanguageWords` VALUES (1099,12,"Gi'frazsh"); 
-INSERT INTO `LanguageWords` VALUES (1100,12,"Chokgan"); 
-INSERT INTO `LanguageWords` VALUES (1101,12,"Fanroke"); 
-INSERT INTO `LanguageWords` VALUES (1102,12,"Taegoson"); 
-INSERT INTO `LanguageWords` VALUES (1103,12,"Kilagrin"); 
-INSERT INTO `LanguageWords` VALUES (1104,12,"Roc'grare"); 
-INSERT INTO `LanguageWords` VALUES (1105,12,"Gi'azol'em"); 
-INSERT INTO `LanguageWords` VALUES (1106,12,"Nuk'tra'te"); 
-INSERT INTO `LanguageWords` VALUES (1107,12,"Quin'mahk"); 
-INSERT INTO `LanguageWords` VALUES (1108,12,"Ties'alla"); 
-INSERT INTO `LanguageWords` VALUES (1109,12,"Shodru'ga"); 
-INSERT INTO `LanguageWords` VALUES (1110,12,"Os'retiak"); 
-INSERT INTO `LanguageWords` VALUES (1111,12,"Desh'noka"); 
-INSERT INTO `LanguageWords` VALUES (1112,12,"Rohh'krah"); 
-INSERT INTO `LanguageWords` VALUES (1113,12,"Krast'ven"); 
-INSERT INTO `LanguageWords` VALUES (1114,12,"Aasrugel"); 
-INSERT INTO `LanguageWords` VALUES (1115,12,"Mok'tavaler"); 
-INSERT INTO `LanguageWords` VALUES (1116,12,"Tae'gel'kir"); 
-INSERT INTO `LanguageWords` VALUES (1117,12,"Draemierr"); 
-INSERT INTO `LanguageWords` VALUES (1118,12,"Dor'dra'tor"); 
-INSERT INTO `LanguageWords` VALUES (1119,12,"Zoln'nakaz"); 
-INSERT INTO `LanguageWords` VALUES (1120,12,"Mastrosum"); 
-INSERT INTO `LanguageWords` VALUES (1121,12,"Gatin'roth"); 
-INSERT INTO `LanguageWords` VALUES (1122,12,"Ahn'torunt"); 
-INSERT INTO `LanguageWords` VALUES (1123,12,"Thukad'aaz"); 
-INSERT INTO `LanguageWords` VALUES (1124,12,"Gesh'throm"); 
-INSERT INTO `LanguageWords` VALUES (1125,12,"Aer'rohgmar"); 
-INSERT INTO `LanguageWords` VALUES (1126,12,"Brud'remek"); 
-INSERT INTO `LanguageWords` VALUES (1127,12,"Torrath'unt"); 
-INSERT INTO `LanguageWords` VALUES (1128,12,"Ignan'kitch"); 
-INSERT INTO `LanguageWords` VALUES (1129,12,"Caus'tearic"); 
-INSERT INTO `LanguageWords` VALUES (1130,12,"Moth'keretch"); 
-INSERT INTO `LanguageWords` VALUES (1131,12,"Borg'helmak"); 
-INSERT INTO `LanguageWords` VALUES (1132,12,"Golgo'nishver"); 
-INSERT INTO `LanguageWords` VALUES (1133,12,"Huut'vactah"); 
-INSERT INTO `LanguageWords` VALUES (1134,12,"Jolpat'krim"); 
-INSERT INTO `LanguageWords` VALUES (1135,12,"Tzench'drah"); 
-INSERT INTO `LanguageWords` VALUES (1136,12,"Vendo're'mik"); 
-INSERT INTO `LanguageWords` VALUES (1137,12,"Kraus'ghosa"); 
-INSERT INTO `LanguageWords` VALUES (1138,12,"Dalgo'nizha"); 
-INSERT INTO `LanguageWords` VALUES (1139,12,"Thloy'martok"); 
-INSERT INTO `LanguageWords` VALUES (1140,12,"Danal'korang"); 
-INSERT INTO `LanguageWords` VALUES (1141,12,"Kawee'fe'more"); 
-INSERT INTO `LanguageWords` VALUES (1142,12,"Tagha'senchal"); 
-INSERT INTO `LanguageWords` VALUES (1143,12,"Sunep'kosach"); 
-INSERT INTO `LanguageWords` VALUES (1144,12,"Peng'yaas'ahn"); 
-INSERT INTO `LanguageWords` VALUES (1145,12,"Nash'lokan'ar"); 
-INSERT INTO `LanguageWords` VALUES (1146,12,"Derr'moran'ki"); 
-INSERT INTO `LanguageWords` VALUES (1147,12,"Moor'tosav'ak"); 
-INSERT INTO `LanguageWords` VALUES (1148,12,"Kis'an'tadrom"); 
-INSERT INTO `LanguageWords` VALUES (1149,12,"Korsukgrare"); 
-INSERT INTO `LanguageWords` VALUES (1150,12,"Bach'usiv'hal"); 
-INSERT INTO `LanguageWords` VALUES (1151,13,"A"); 
-INSERT INTO `LanguageWords` VALUES (1152,13,"E"); 
-INSERT INTO `LanguageWords` VALUES (1153,13,"I"); 
-INSERT INTO `LanguageWords` VALUES (1154,13,"O"); 
-INSERT INTO `LanguageWords` VALUES (1155,13,"D"); 
-INSERT INTO `LanguageWords` VALUES (1156,13,"C"); 
-INSERT INTO `LanguageWords` VALUES (1157,13,"G"); 
-INSERT INTO `LanguageWords` VALUES (1158,13,"T"); 
-INSERT INTO `LanguageWords` VALUES (1159,13,"F"); 
-INSERT INTO `LanguageWords` VALUES (1160,13,"We"); 
-INSERT INTO `LanguageWords` VALUES (1161,13,"Lo"); 
-INSERT INTO `LanguageWords` VALUES (1162,13,"Ke"); 
-INSERT INTO `LanguageWords` VALUES (1163,13,"So"); 
-INSERT INTO `LanguageWords` VALUES (1164,13,"Ok"); 
-INSERT INTO `LanguageWords` VALUES (1165,13,"Um"); 
-INSERT INTO `LanguageWords` VALUES (1166,13,"Ti"); 
-INSERT INTO `LanguageWords` VALUES (1167,13,"Am"); 
-INSERT INTO `LanguageWords` VALUES (1168,13,"Ga"); 
-INSERT INTO `LanguageWords` VALUES (1169,13,"Va"); 
-INSERT INTO `LanguageWords` VALUES (1170,13,"Mor"); 
-INSERT INTO `LanguageWords` VALUES (1171,13,"Fez"); 
-INSERT INTO `LanguageWords` VALUES (1172,13,"Zah"); 
-INSERT INTO `LanguageWords` VALUES (1173,13,"Dun"); 
-INSERT INTO `LanguageWords` VALUES (1174,13,"Mos"); 
-INSERT INTO `LanguageWords` VALUES (1175,13,"Nid"); 
-INSERT INTO `LanguageWords` VALUES (1176,13,"Rod"); 
-INSERT INTO `LanguageWords` VALUES (1177,13,"Her"); 
-INSERT INTO `LanguageWords` VALUES (1178,13,"Bur"); 
-INSERT INTO `LanguageWords` VALUES (1179,13,"Gar"); 
-INSERT INTO `LanguageWords` VALUES (1180,13,"Mik"); 
-INSERT INTO `LanguageWords` VALUES (1181,13,"Giz"); 
-INSERT INTO `LanguageWords` VALUES (1182,13,"Gal"); 
-INSERT INTO `LanguageWords` VALUES (1183,13,"Gear"); 
-INSERT INTO `LanguageWords` VALUES (1184,13,"Cost"); 
-INSERT INTO `LanguageWords` VALUES (1185,13,"Kahs"); 
-INSERT INTO `LanguageWords` VALUES (1186,13,"Riff"); 
-INSERT INTO `LanguageWords` VALUES (1187,13,"Buma"); 
-INSERT INTO `LanguageWords` VALUES (1188,13,"Hine"); 
-INSERT INTO `LanguageWords` VALUES (1189,13,"Helm"); 
-INSERT INTO `LanguageWords` VALUES (1190,13,"Rand"); 
-INSERT INTO `LanguageWords` VALUES (1191,13,"Gosh"); 
-INSERT INTO `LanguageWords` VALUES (1192,13,"Rune"); 
-INSERT INTO `LanguageWords` VALUES (1193,13,"Huge"); 
-INSERT INTO `LanguageWords` VALUES (1194,13,"Dani"); 
-INSERT INTO `LanguageWords` VALUES (1195,13,"Lock"); 
-INSERT INTO `LanguageWords` VALUES (1196,13,"Grum"); 
-INSERT INTO `LanguageWords` VALUES (1197,13,"Mitta"); 
-INSERT INTO `LanguageWords` VALUES (1198,13,"Angor"); 
-INSERT INTO `LanguageWords` VALUES (1199,13,"Thros"); 
-INSERT INTO `LanguageWords` VALUES (1200,13,"Nagin"); 
-INSERT INTO `LanguageWords` VALUES (1201,13,"Haven"); 
-INSERT INTO `LanguageWords` VALUES (1202,13,"Havis"); 
-INSERT INTO `LanguageWords` VALUES (1203,13,"Goten"); 
-INSERT INTO `LanguageWords` VALUES (1204,13,"Modor"); 
-INSERT INTO `LanguageWords` VALUES (1205,13,"Modan"); 
-INSERT INTO `LanguageWords` VALUES (1206,13,"Algos"); 
-INSERT INTO `LanguageWords` VALUES (1207,13,"Dagem"); 
-INSERT INTO `LanguageWords` VALUES (1208,13,"Tiras"); 
-INSERT INTO `LanguageWords` VALUES (1209,13,"Weird"); 
-INSERT INTO `LanguageWords` VALUES (1210,13,"Frend"); 
-INSERT INTO `LanguageWords` VALUES (1211,13,"Gizber"); 
-INSERT INTO `LanguageWords` VALUES (1212,13,"Protos"); 
-INSERT INTO `LanguageWords` VALUES (1213,13,"Haldir"); 
-INSERT INTO `LanguageWords` VALUES (1214,13,"Shermt"); 
-INSERT INTO `LanguageWords` VALUES (1215,13,"Rugosh"); 
-INSERT INTO `LanguageWords` VALUES (1216,13,"Helmok"); 
-INSERT INTO `LanguageWords` VALUES (1217,13,"Drugan"); 
-INSERT INTO `LanguageWords` VALUES (1218,13,"Dumssi"); 
-INSERT INTO `LanguageWords` VALUES (1219,13,"Ferdosr"); 
-INSERT INTO `LanguageWords` VALUES (1220,13,"Bergrim"); 
-INSERT INTO `LanguageWords` VALUES (1221,13,"Mergud"); 
-INSERT INTO `LanguageWords` VALUES (1222,13,"Revosh"); 
-INSERT INTO `LanguageWords` VALUES (1223,13,"Danieb"); 
-INSERT INTO `LanguageWords` VALUES (1224,13,"Waldor"); 
-INSERT INTO `LanguageWords` VALUES (1225,13,"Geardum"); 
-INSERT INTO `LanguageWords` VALUES (1226,13,"Haidren"); 
-INSERT INTO `LanguageWords` VALUES (1227,13,"Thorneb"); 
-INSERT INTO `LanguageWords` VALUES (1228,13,"Godling"); 
-INSERT INTO `LanguageWords` VALUES (1229,13,"Costirm"); 
-INSERT INTO `LanguageWords` VALUES (1230,13,"Botlikin"); 
-INSERT INTO `LanguageWords` VALUES (1231,13,"Ganrokh"); 
-INSERT INTO `LanguageWords` VALUES (1232,13,"Sturome"); 
-INSERT INTO `LanguageWords` VALUES (1233,13,"Noxtyec"); 
-INSERT INTO `LanguageWords` VALUES (1234,13,"Havagun"); 
-INSERT INTO `LanguageWords` VALUES (1235,13,"Bolthelm"); 
-INSERT INTO `LanguageWords` VALUES (1236,6,"Kaelsag"); 
-INSERT INTO `LanguageWords` VALUES (1237,13,"Scrutin"); 
-INSERT INTO `LanguageWords` VALUES (1238,13,"Gefrunon"); 
-INSERT INTO `LanguageWords` VALUES (1239,13,"Misfaran"); 
-INSERT INTO `LanguageWords` VALUES (1240,13,"Kahzregi"); 
-INSERT INTO `LanguageWords` VALUES (1241,13,"Thulmane"); 
-INSERT INTO `LanguageWords` VALUES (1242,13,"Godunmug"); 
-INSERT INTO `LanguageWords` VALUES (1243,13,"Azregorn"); 
-INSERT INTO `LanguageWords` VALUES (1244,13,"Kahsgear"); 
-INSERT INTO `LanguageWords` VALUES (1245,13,"Aldanoth"); 
-INSERT INTO `LanguageWords` VALUES (1246,13,"Dimligar"); 
-INSERT INTO `LanguageWords` VALUES (1247,13,"Elodergim"); 
-INSERT INTO `LanguageWords` VALUES (1248,13,"Nandiger"); 
-INSERT INTO `LanguageWords` VALUES (1249,13,"Landivar"); 
-INSERT INTO `LanguageWords` VALUES (1250,13,"Methrine"); 
-INSERT INTO `LanguageWords` VALUES (1251,13,"Vustrangin"); 
-INSERT INTO `LanguageWords` VALUES (1252,13,"Naggirath"); 
-INSERT INTO `LanguageWords` VALUES (1253,13,"Falhadrink"); 
-INSERT INTO `LanguageWords` VALUES (1254,13,"Throsigear"); 
-INSERT INTO `LanguageWords` VALUES (1255,13,"Sihnvulden"); 
-INSERT INTO `LanguageWords` VALUES (1256,13,"Nockhavis"); 
-INSERT INTO `LanguageWords` VALUES (1257,13,"Dyrstagist"); 
-INSERT INTO `LanguageWords` VALUES (1258,13,"Elodmodor"); 
-INSERT INTO `LanguageWords` VALUES (1259,13,"Alegaskron"); 
-INSERT INTO `LanguageWords` VALUES (1260,13,"Grumgizr"); 
-INSERT INTO `LanguageWords` VALUES (1261,13,"Danavandar"); 
-INSERT INTO `LanguageWords` VALUES (1262,13,"Mikthros"); 
-INSERT INTO `LanguageWords` VALUES (1263,13,"Mundgizber"); 
-INSERT INTO `LanguageWords` VALUES (1264,13,"Angordame"); 
-INSERT INTO `LanguageWords` VALUES (1265,13,"Ferdosmodan"); 
-INSERT INTO `LanguageWords` VALUES (1266,13,"Mosgodunan"); 
-INSERT INTO `LanguageWords` VALUES (1267,13,"Ahzodaugum"); 
-INSERT INTO `LanguageWords` VALUES (1268,13,"Algosgoten"); 
-INSERT INTO `LanguageWords` VALUES (1269,13,"Haldjinagin"); 
-INSERT INTO `LanguageWords` VALUES (1270,13,"Frendgalva"); 
-INSERT INTO `LanguageWords` VALUES (1271,13,"Gizbarlodun"); 
-INSERT INTO `LanguageWords` VALUES (1272,13,"Thrunon'gol"); 
-INSERT INTO `LanguageWords` VALUES (1273,13,"Lockrevoshi"); 
-INSERT INTO `LanguageWords` VALUES (1274,13,"Naginbumat"); 
-INSERT INTO `LanguageWords` VALUES (1275,13,"Helmokheram"); 
-INSERT INTO `LanguageWords` VALUES (1276,13,"Robuswaldir"); 
-INSERT INTO `LanguageWords` VALUES (1277,13,"Kahzhaldren"); 
-INSERT INTO `LanguageWords` VALUES (1278,13,"Thumanerand"); 
-INSERT INTO `LanguageWords` VALUES (1279,13,"Skalfgizgar"); 
-INSERT INTO `LanguageWords` VALUES (1280,14,"A"); 
-INSERT INTO `LanguageWords` VALUES (1281,14,"O"); 
-INSERT INTO `LanguageWords` VALUES (1282,14,"H"); 
-INSERT INTO `LanguageWords` VALUES (1283,14,"J"); 
-INSERT INTO `LanguageWords` VALUES (1284,14,"U"); 
-INSERT INTO `LanguageWords` VALUES (1285,14,"E"); 
-INSERT INTO `LanguageWords` VALUES (1286,14,"M"); 
-INSERT INTO `LanguageWords` VALUES (1287,14,"N"); 
-INSERT INTO `LanguageWords` VALUES (1288,14,"S"); 
-INSERT INTO `LanguageWords` VALUES (1289,14,"Fi"); 
-INSERT INTO `LanguageWords` VALUES (1290,14,"Im"); 
-INSERT INTO `LanguageWords` VALUES (1291,14,"Yu"); 
-INSERT INTO `LanguageWords` VALUES (1292,14,"Wi"); 
-INSERT INTO `LanguageWords` VALUES (1293,14,"Ju"); 
-INSERT INTO `LanguageWords` VALUES (1294,14,"Di"); 
-INSERT INTO `LanguageWords` VALUES (1295,14,"Fu"); 
-INSERT INTO `LanguageWords` VALUES (1296,14,"Ir"); 
-INSERT INTO `LanguageWords` VALUES (1297,14,"So"); 
-INSERT INTO `LanguageWords` VALUES (1298,14,"Is"); 
-INSERT INTO `LanguageWords` VALUES (1299,14,"Noh"); 
-INSERT INTO `LanguageWords` VALUES (1300,14,"Mek"); 
-INSERT INTO `LanguageWords` VALUES (1301,14,"Weh"); 
-INSERT INTO `LanguageWords` VALUES (1302,14,"Wha"); 
-INSERT INTO `LanguageWords` VALUES (1303,14,"Deh"); 
-INSERT INTO `LanguageWords` VALUES (1304,14,"Han"); 
-INSERT INTO `LanguageWords` VALUES (1305,14,"Dim"); 
-INSERT INTO `LanguageWords` VALUES (1306,14,"Fus"); 
-INSERT INTO `LanguageWords` VALUES (1307,14,"Sca"); 
-INSERT INTO `LanguageWords` VALUES (1308,14,"Tor"); 
-INSERT INTO `LanguageWords` VALUES (1309,14,"Yudo"); 
-INSERT INTO `LanguageWords` VALUES (1310,14,"Cyaa"); 
-INSERT INTO `LanguageWords` VALUES (1311,14,"Worl"); 
-INSERT INTO `LanguageWords` VALUES (1312,14,"Riva"); 
-INSERT INTO `LanguageWords` VALUES (1313,14,"Iyaz"); 
-INSERT INTO `LanguageWords` VALUES (1314,14,"Ting"); 
-INSERT INTO `LanguageWords` VALUES (1315,14,"T'ief"); 
-INSERT INTO `LanguageWords` VALUES (1316,14,"Duti"); 
-INSERT INTO `LanguageWords` VALUES (1317,14,"Skam"); 
-INSERT INTO `LanguageWords` VALUES (1318,14,"Wi'mek"); 
-INSERT INTO `LanguageWords` VALUES (1319,14,"Fidong"); 
-INSERT INTO `LanguageWords` VALUES (1320,14,"Siame"); 
-INSERT INTO `LanguageWords` VALUES (1321,14,"Wassa"); 
-INSERT INTO `LanguageWords` VALUES (1322,14,"Difus"); 
-INSERT INTO `LanguageWords` VALUES (1323,14,"Caang"); 
-INSERT INTO `LanguageWords` VALUES (1324,14,"Deh'yo"); 
-INSERT INTO `LanguageWords` VALUES (1325,14,"Nehjo"); 
-INSERT INTO `LanguageWords` VALUES (1326,14,"Ackee"); 
-INSERT INTO `LanguageWords` VALUES (1327,14,"Atuad"); 
-INSERT INTO `LanguageWords` VALUES (1328,14,"Iman"); 
-INSERT INTO `LanguageWords` VALUES (1329,14,"Saakes"); 
-INSERT INTO `LanguageWords` VALUES (1330,14,"Icense"); 
-INSERT INTO `LanguageWords` VALUES (1331,14,"Lok'dim"); 
-INSERT INTO `LanguageWords` VALUES (1332,14,"Smadda"); 
-INSERT INTO `LanguageWords` VALUES (1333,14,"Honnah"); 
-INSERT INTO `LanguageWords` VALUES (1334,14,"Italaf"); 
-INSERT INTO `LanguageWords` VALUES (1335,14,"Quashi"); 
-INSERT INTO `LanguageWords` VALUES (1336,14,"Bwoyar"); 
-INSERT INTO `LanguageWords` VALUES (1337,14,"Reespek"); 
-INSERT INTO `LanguageWords` VALUES (1338,14,"Stoosh"); 
-INSERT INTO `LanguageWords` VALUES (1339,14,"Tanponi"); 
-INSERT INTO `LanguageWords` VALUES (1340,14,"Craaweh"); 
-INSERT INTO `LanguageWords` VALUES (1341,14,"Whutless"); 
-INSERT INTO `LanguageWords` VALUES (1342,14,"Uptfeel"); 
-INSERT INTO `LanguageWords` VALUES (1343,14,"Rivasuf"); 
-INSERT INTO `LanguageWords` VALUES (1344,14,"Chakari"); 
-INSERT INTO `LanguageWords` VALUES (1345,14,"Yahsoda"); 
-INSERT INTO `LanguageWords` VALUES (1346,14,"Ziondeh"); 
-INSERT INTO `LanguageWords` VALUES (1347,14,"Flimeff"); 
-INSERT INTO `LanguageWords` VALUES (1348,14,"Yuutee"); 
-INSERT INTO `LanguageWords` VALUES (1349,14,"Ginnalka"); 
-INSERT INTO `LanguageWords` VALUES (1350,14,"Zutopong"); 
-INSERT INTO `LanguageWords` VALUES (1351,14,"Godehsi"); 
-INSERT INTO `LanguageWords` VALUES (1352,14,"Wehnehjo"); 
-INSERT INTO `LanguageWords` VALUES (1353,14,"Oondasta"); 
-INSERT INTO `LanguageWords` VALUES (1354,14,"Yeyewata"); 
-INSERT INTO `LanguageWords` VALUES (1355,14,"Or'manley"); 
-INSERT INTO `LanguageWords` VALUES (1356,14,"Machette"); 
-INSERT INTO `LanguageWords` VALUES (1357,14,"Fus'obeah"); 
-INSERT INTO `LanguageWords` VALUES (1358,14,"Nyamanpo"); 
-INSERT INTO `LanguageWords` VALUES (1371,33,"A"); 
-INSERT INTO `LanguageWords` VALUES (1372,33,"E"); 
-INSERT INTO `LanguageWords` VALUES (1373,33,"I"); 
-INSERT INTO `LanguageWords` VALUES (1374,33,"O"); 
-INSERT INTO `LanguageWords` VALUES (1375,33,"U"); 
-INSERT INTO `LanguageWords` VALUES (1376,33,"Y"); 
-INSERT INTO `LanguageWords` VALUES (1377,33,"Lo"); 
-INSERT INTO `LanguageWords` VALUES (1378,33,"Ne"); 
-INSERT INTO `LanguageWords` VALUES (1379,33,"Ve"); 
-INSERT INTO `LanguageWords` VALUES (1380,33,"Ru"); 
-INSERT INTO `LanguageWords` VALUES (1381,33,"An"); 
-INSERT INTO `LanguageWords` VALUES (1382,33,"Ti"); 
-INSERT INTO `LanguageWords` VALUES (1383,33,"Me"); 
-INSERT INTO `LanguageWords` VALUES (1384,33,"Lu"); 
-INSERT INTO `LanguageWords` VALUES (1385,33,"Re"); 
-INSERT INTO `LanguageWords` VALUES (1386,33,"Se"); 
-INSERT INTO `LanguageWords` VALUES (1387,33,"Va"); 
-INSERT INTO `LanguageWords` VALUES (1388,33,"Ko"); 
-INSERT INTO `LanguageWords` VALUES (1389,33,"Vil"); 
-INSERT INTO `LanguageWords` VALUES (1390,33,"Bor"); 
-INSERT INTO `LanguageWords` VALUES (1391,33,"Ras"); 
-INSERT INTO `LanguageWords` VALUES (1392,33,"Gol"); 
-INSERT INTO `LanguageWords` VALUES (1393,33,"Nud"); 
-INSERT INTO `LanguageWords` VALUES (1394,33,"Far"); 
-INSERT INTO `LanguageWords` VALUES (1395,33,"Wos"); 
-INSERT INTO `LanguageWords` VALUES (1396,33,"Mod"); 
-INSERT INTO `LanguageWords` VALUES (1397,33,"Ver"); 
-INSERT INTO `LanguageWords` VALUES (1398,33,"Ash"); 
-INSERT INTO `LanguageWords` VALUES (1399,33,"Lon"); 
-INSERT INTO `LanguageWords` VALUES (1400,33,"Bur"); 
-INSERT INTO `LanguageWords` VALUES (1401,33,"Hir"); 
-INSERT INTO `LanguageWords` VALUES (1402,33,"Nuff"); 
-INSERT INTO `LanguageWords` VALUES (1403,33,"Thor"); 
-INSERT INTO `LanguageWords` VALUES (1404,33,"Ruff"); 
-INSERT INTO `LanguageWords` VALUES (1405,33,"Odes"); 
-INSERT INTO `LanguageWords` VALUES (1406,33,"Noth"); 
-INSERT INTO `LanguageWords` VALUES (1407,33,"Ador"); 
-INSERT INTO `LanguageWords` VALUES (1408,33,"Dana"); 
-INSERT INTO `LanguageWords` VALUES (1409,33,"Vrum"); 
-INSERT INTO `LanguageWords` VALUES (1410,33,"Veld"); 
-INSERT INTO `LanguageWords` VALUES (1411,33,"Vohl"); 
-INSERT INTO `LanguageWords` VALUES (1412,33,"Lars"); 
-INSERT INTO `LanguageWords` VALUES (1413,33,"Goth"); 
-INSERT INTO `LanguageWords` VALUES (1414,33,"Agol"); 
-INSERT INTO `LanguageWords` VALUES (1415,33,"Uden"); 
-INSERT INTO `LanguageWords` VALUES (1416,33,"Wirsh"); 
-INSERT INTO `LanguageWords` VALUES (1417,33,"Novas"); 
-INSERT INTO `LanguageWords` VALUES (1418,33,"Regen"); 
-INSERT INTO `LanguageWords` VALUES (1419,33,"Gloin"); 
-INSERT INTO `LanguageWords` VALUES (1420,33,"Tiras"); 
-INSERT INTO `LanguageWords` VALUES (1421,33,"Barad"); 
-INSERT INTO `LanguageWords` VALUES (1422,33,"Garde"); 
-INSERT INTO `LanguageWords` VALUES (1423,33,"Majis"); 
-INSERT INTO `LanguageWords` VALUES (1424,33,"Ergin"); 
-INSERT INTO `LanguageWords` VALUES (1425,33,"Nagan"); 
-INSERT INTO `LanguageWords` VALUES (1426,33,"Algos"); 
-INSERT INTO `LanguageWords` VALUES (1427,33,"Eynes"); 
-INSERT INTO `LanguageWords` VALUES (1428,33,"Borne"); 
-INSERT INTO `LanguageWords` VALUES (1429,33,"Melka"); 
-INSERT INTO `LanguageWords` VALUES (1430,33,"Ruftos"); 
-INSERT INTO `LanguageWords` VALUES (1431,33,"Aesire"); 
-INSERT INTO `LanguageWords` VALUES (1432,33,"Rothas"); 
-INSERT INTO `LanguageWords` VALUES (1433,33,"Nevren"); 
-INSERT INTO `LanguageWords` VALUES (1434,33,"Rogesh"); 
-INSERT INTO `LanguageWords` VALUES (1435,33,"Skilde"); 
-INSERT INTO `LanguageWords` VALUES (1436,33,"Vandar"); 
-INSERT INTO `LanguageWords` VALUES (1437,33,"Valesh"); 
-INSERT INTO `LanguageWords` VALUES (1438,33,"Engoth"); 
-INSERT INTO `LanguageWords` VALUES (1439,33,"Aziris"); 
-INSERT INTO `LanguageWords` VALUES (1440,33,"Mandos"); 
-INSERT INTO `LanguageWords` VALUES (1441,33,"Goibon"); 
-INSERT INTO `LanguageWords` VALUES (1442,33,"Danieb"); 
-INSERT INTO `LanguageWords` VALUES (1443,33,"Daegil"); 
-INSERT INTO `LanguageWords` VALUES (1444,33,"Waldir"); 
-INSERT INTO `LanguageWords` VALUES (1445,33,"Ealdor"); 
-INSERT INTO `LanguageWords` VALUES (1446,33,"Novaedi"); 
-INSERT INTO `LanguageWords` VALUES (1447,33,"Lithtos"); 
-INSERT INTO `LanguageWords` VALUES (1448,33,"Ewiddan"); 
-INSERT INTO `LanguageWords` VALUES (1449,33,"Forthis"); 
-INSERT INTO `LanguageWords` VALUES (1450,33,"Faergas"); 
-INSERT INTO `LanguageWords` VALUES (1451,33,"Sturume"); 
-INSERT INTO `LanguageWords` VALUES (1452,33,"Vassild"); 
-INSERT INTO `LanguageWords` VALUES (1453,33,"Nostyec"); 
-INSERT INTO `LanguageWords` VALUES (1454,33,"Andovis"); 
-INSERT INTO `LanguageWords` VALUES (1455,33,"Koshvel"); 
-INSERT INTO `LanguageWords` VALUES (1456,33,"Nandige"); 
-INSERT INTO `LanguageWords` VALUES (1457,33,"Kaelsig"); 
-INSERT INTO `LanguageWords` VALUES (1458,33,"Thorniss"); 
-INSERT INTO `LanguageWords` VALUES (1459,33,"Ruftvess"); 
-INSERT INTO `LanguageWords` VALUES (1460,33,"Aldonoth"); 
-INSERT INTO `LanguageWords` VALUES (1461,33,"Endirvis"); 
-INSERT INTO `LanguageWords` VALUES (1462,33,"Landowar"); 
-INSERT INTO `LanguageWords` VALUES (1463,33,"Hamerung"); 
-INSERT INTO `LanguageWords` VALUES (1464,33,"Cynegold"); 
-INSERT INTO `LanguageWords` VALUES (1465,33,"Methrine"); 
-INSERT INTO `LanguageWords` VALUES (1466,33,"Lordaere"); 
-INSERT INTO `LanguageWords` VALUES (1467,33,"Gloinador"); 
-INSERT INTO `LanguageWords` VALUES (1468,33,"Veldbarad"); 
-INSERT INTO `LanguageWords` VALUES (1469,33,"Gothalgos"); 
-INSERT INTO `LanguageWords` VALUES (1470,33,"Udenmajis"); 
-INSERT INTO `LanguageWords` VALUES (1471,33,"Danagarde"); 
-INSERT INTO `LanguageWords` VALUES (1472,33,"Vandarwos"); 
-INSERT INTO `LanguageWords` VALUES (1473,33,"Firalaine"); 
-INSERT INTO `LanguageWords` VALUES (1474,33,"Aetwinter"); 
-INSERT INTO `LanguageWords` VALUES (1475,33,"Eloderung"); 
-INSERT INTO `LanguageWords` VALUES (1476,33,"Regenthor"); 
-INSERT INTO `LanguageWords` VALUES (1477,33,"Vastrungen"); 
-INSERT INTO `LanguageWords` VALUES (1478,33,"Falhedring"); 
-INSERT INTO `LanguageWords` VALUES (1479,33,"Cynewalden"); 
-INSERT INTO `LanguageWords` VALUES (1480,33,"Dyrstigost"); 
-INSERT INTO `LanguageWords` VALUES (1481,33,"Aelgestron"); 
-INSERT INTO `LanguageWords` VALUES (1482,33,"Danavandar"); 
-INSERT INTO `LanguageWords` VALUES (1483,33,"Wershaesire"); 
-INSERT INTO `LanguageWords` VALUES (1484,33,"Thorlithtos"); 
-INSERT INTO `LanguageWords` VALUES (1485,33,"Vassildador"); 
-INSERT INTO `LanguageWords` VALUES (1486,33,"Agolandovis"); 
-INSERT INTO `LanguageWords` VALUES (1487,33,"Bornevalesh"); 
-INSERT INTO `LanguageWords` VALUES (1488,33,"Farlandowar"); 
-INSERT INTO `LanguageWords` VALUES (1489,33,"Nevrenrothas"); 
-INSERT INTO `LanguageWords` VALUES (1490,33,"Forthasador"); 
-INSERT INTO `LanguageWords` VALUES (1491,33,"Mandosdaegil"); 
-INSERT INTO `LanguageWords` VALUES (1492,33,"Waldirskilde"); 
-INSERT INTO `LanguageWords` VALUES (1493,33,"Adorstaerume"); 
-INSERT INTO `LanguageWords` VALUES (1494,33,"Golveldbarad"); 
-INSERT INTO `LanguageWords` VALUES (1495,35,"A"); 
-INSERT INTO `LanguageWords` VALUES (1496,35,"E"); 
-INSERT INTO `LanguageWords` VALUES (1497,35,"I"); 
-INSERT INTO `LanguageWords` VALUES (1498,35,"O"); 
-INSERT INTO `LanguageWords` VALUES (1499,35,"U"); 
-INSERT INTO `LanguageWords` VALUES (1500,35,"Y"); 
-INSERT INTO `LanguageWords` VALUES (1501,35,"G"); 
-INSERT INTO `LanguageWords` VALUES (1502,35,"X"); 
-INSERT INTO `LanguageWords` VALUES (1503,35,"Il"); 
-INSERT INTO `LanguageWords` VALUES (1504,35,"No"); 
-INSERT INTO `LanguageWords` VALUES (1505,35,"Az"); 
-INSERT INTO `LanguageWords` VALUES (1506,35,"Te"); 
-INSERT INTO `LanguageWords` VALUES (1507,35,"Ur"); 
-INSERT INTO `LanguageWords` VALUES (1508,35,"Za"); 
-INSERT INTO `LanguageWords` VALUES (1509,35,"Ze"); 
-INSERT INTO `LanguageWords` VALUES (1510,35,"Re"); 
-INSERT INTO `LanguageWords` VALUES (1511,35,"Ul"); 
-INSERT INTO `LanguageWords` VALUES (1512,35,"Me"); 
-INSERT INTO `LanguageWords` VALUES (1513,35,"Xi"); 
-INSERT INTO `LanguageWords` VALUES (1514,35,"Tor"); 
-INSERT INTO `LanguageWords` VALUES (1515,35,"Gul"); 
-INSERT INTO `LanguageWords` VALUES (1516,35,"Lok"); 
-INSERT INTO `LanguageWords` VALUES (1517,35,"Asj"); 
-INSERT INTO `LanguageWords` VALUES (1518,35,"Kar"); 
-INSERT INTO `LanguageWords` VALUES (1519,35,"Lek"); 
-INSERT INTO `LanguageWords` VALUES (1520,35,"Daz"); 
-INSERT INTO `LanguageWords` VALUES (1521,35,"Maz"); 
-INSERT INTO `LanguageWords` VALUES (1522,35,"Ril"); 
-INSERT INTO `LanguageWords` VALUES (1523,35,"Ruk"); 
-INSERT INTO `LanguageWords` VALUES (1524,35,"Laz"); 
-INSERT INTO `LanguageWords` VALUES (1525,35,"Shi"); 
-INSERT INTO `LanguageWords` VALUES (1526,35,"Zar"); 
-INSERT INTO `LanguageWords` VALUES (1527,35,"Ashj"); 
-INSERT INTO `LanguageWords` VALUES (1528,35,"Alar"); 
-INSERT INTO `LanguageWords` VALUES (1529,35,"Orah"); 
-INSERT INTO `LanguageWords` VALUES (1530,35,"Amir"); 
-INSERT INTO `LanguageWords` VALUES (1531,35,"Aman"); 
-INSERT INTO `LanguageWords` VALUES (1532,35,"Ante"); 
-INSERT INTO `LanguageWords` VALUES (1533,35,"Kiel"); 
-INSERT INTO `LanguageWords` VALUES (1534,35,"Maez"); 
-INSERT INTO `LanguageWords` VALUES (1535,35,"Maev"); 
-INSERT INTO `LanguageWords` VALUES (1536,35,"Veni"); 
-INSERT INTO `LanguageWords` VALUES (1537,35,"Raka"); 
-INSERT INTO `LanguageWords` VALUES (1538,35,"Zila"); 
-INSERT INTO `LanguageWords` VALUES (1539,35,"Zenn"); 
-INSERT INTO `LanguageWords` VALUES (1540,35,"Parn"); 
-INSERT INTO `LanguageWords` VALUES (1541,35,"Rikk"); 
-INSERT INTO `LanguageWords` VALUES (1542,35,"Melar"); 
-INSERT INTO `LanguageWords` VALUES (1543,35,"Rakir"); 
-INSERT INTO `LanguageWords` VALUES (1544,35,"Tiros"); 
-INSERT INTO `LanguageWords` VALUES (1545,35,"Modas"); 
-INSERT INTO `LanguageWords` VALUES (1546,35,"Belan"); 
-INSERT INTO `LanguageWords` VALUES (1547,35,"Zekul"); 
-INSERT INTO `LanguageWords` VALUES (1548,35,"Soran"); 
-INSERT INTO `LanguageWords` VALUES (1549,35,"Gular"); 
-INSERT INTO `LanguageWords` VALUES (1550,35,"Enkil"); 
-INSERT INTO `LanguageWords` VALUES (1551,35,"Adare"); 
-INSERT INTO `LanguageWords` VALUES (1552,35,"Golad"); 
-INSERT INTO `LanguageWords` VALUES (1553,35,"Buras"); 
-INSERT INTO `LanguageWords` VALUES (1554,35,"Nagas"); 
-INSERT INTO `LanguageWords` VALUES (1555,35,"Revos"); 
-INSERT INTO `LanguageWords` VALUES (1556,35,"Refir"); 
-INSERT INTO `LanguageWords` VALUES (1557,35,"Kamil"); 
-INSERT INTO `LanguageWords` VALUES (1558,35,"Rethul"); 
-INSERT INTO `LanguageWords` VALUES (1559,35,"Rakkan"); 
-INSERT INTO `LanguageWords` VALUES (1560,35,"Rakkas"); 
-INSERT INTO `LanguageWords` VALUES (1561,35,"Tichar"); 
-INSERT INTO `LanguageWords` VALUES (1562,35,"Mannor"); 
-INSERT INTO `LanguageWords` VALUES (1563,35,"Archim"); 
-INSERT INTO `LanguageWords` VALUES (1564,35,"Azgala"); 
-INSERT INTO `LanguageWords` VALUES (1565,35,"Karkun"); 
-INSERT INTO `LanguageWords` VALUES (1566,35,"Revola"); 
-INSERT INTO `LanguageWords` VALUES (1567,35,"Mishun"); 
-INSERT INTO `LanguageWords` VALUES (1568,35,"Arakal"); 
-INSERT INTO `LanguageWords` VALUES (1569,35,"Kazile"); 
-INSERT INTO `LanguageWords` VALUES (1570,35,"Thorje"); 
-INSERT INTO `LanguageWords` VALUES (1571,35,"Belaros"); 
-INSERT INTO `LanguageWords` VALUES (1572,35,"Tiriosh"); 
-INSERT INTO `LanguageWords` VALUES (1573,35,"Faramos"); 
-INSERT INTO `LanguageWords` VALUES (1574,35,"Danashj"); 
-INSERT INTO `LanguageWords` VALUES (1575,35,"Amanare"); 
-INSERT INTO `LanguageWords` VALUES (1576,35,"Faralos"); 
-INSERT INTO `LanguageWords` VALUES (1577,35,"Kieldaz"); 
-INSERT INTO `LanguageWords` VALUES (1578,35,"Karaman"); 
-INSERT INTO `LanguageWords` VALUES (1579,35,"Gulamir"); 
-INSERT INTO `LanguageWords` VALUES (1580,35,"Toralar"); 
-INSERT INTO `LanguageWords` VALUES (1581,35,"Rethule"); 
-INSERT INTO `LanguageWords` VALUES (1582,35,"Zennshi"); 
-INSERT INTO `LanguageWords` VALUES (1583,35,"Maladath"); 
-INSERT INTO `LanguageWords` VALUES (1584,35,"Kirasath"); 
-INSERT INTO `LanguageWords` VALUES (1585,35,"Romathis"); 
-INSERT INTO `LanguageWords` VALUES (1586,35,"Theramas"); 
-INSERT INTO `LanguageWords` VALUES (1587,35,"Azrathud"); 
-INSERT INTO `LanguageWords` VALUES (1588,35,"Mordanas"); 
-INSERT INTO `LanguageWords` VALUES (1589,35,"Amanalar"); 
-INSERT INTO `LanguageWords` VALUES (1590,35,"Ashjraka"); 
-INSERT INTO `LanguageWords` VALUES (1591,35,"Azgalada"); 
-INSERT INTO `LanguageWords` VALUES (1592,35,"Rukadare"); 
-INSERT INTO `LanguageWords` VALUES (1593,35,"Sorankar"); 
-INSERT INTO `LanguageWords` VALUES (1594,35,"Enkilzar"); 
-INSERT INTO `LanguageWords` VALUES (1595,35,"Naztheros"); 
-INSERT INTO `LanguageWords` VALUES (1596,35,"Zilthuras"); 
-INSERT INTO `LanguageWords` VALUES (1597,35,"Kanrethad"); 
-INSERT INTO `LanguageWords` VALUES (1598,35,"Matheredor"); 
-INSERT INTO `LanguageWords` VALUES (1599,35,"Ticharamir"); 
-INSERT INTO `LanguageWords` VALUES (1600,35,"Melarorah"); 
-INSERT INTO `LanguageWords` VALUES (1601,35,"Arakalada"); 
-INSERT INTO `LanguageWords` VALUES (1602,35,"Soranaman"); 
-INSERT INTO `LanguageWords` VALUES (1603,35,"Nagasraka"); 
-INSERT INTO `LanguageWords` VALUES (1604,35,"Belankar"); 
-INSERT INTO `LanguageWords` VALUES (1605,35,"Pathrebosh"); 
-INSERT INTO `LanguageWords` VALUES (1606,35,"Benthadoom"); 
-INSERT INTO `LanguageWords` VALUES (1607,35,"Amanemodas"); 
-INSERT INTO `LanguageWords` VALUES (1608,35,"Teamanare"); 
-INSERT INTO `LanguageWords` VALUES (1609,35,"Enkilgular"); 
-INSERT INTO `LanguageWords` VALUES (1610,35,"Burasadare"); 
-INSERT INTO `LanguageWords` VALUES (1611,35,"Melamagas"); 
-INSERT INTO `LanguageWords` VALUES (1612,35,"Zennrakkan"); 
-INSERT INTO `LanguageWords` VALUES (1613,35,"Ashjrethul"); 
-INSERT INTO `LanguageWords` VALUES (1614,35,"Zekulrakkas"); 
-INSERT INTO `LanguageWords` VALUES (1615,35,"Archimtiros"); 
-INSERT INTO `LanguageWords` VALUES (1616,35,"Mannorgulan"); 
-INSERT INTO `LanguageWords` VALUES (1617,35,"Mishunadare"); 
-INSERT INTO `LanguageWords` VALUES (1618,35,"Zennshinagas"); 
-INSERT INTO `LanguageWords` VALUES (1619,35,"Ashjrakamas"); 
-INSERT INTO `LanguageWords` VALUES (1620,35,"Kamilgolad"); 
-INSERT INTO `LanguageWords` VALUES (1621,36,"..."); 
-INSERT INTO `LanguageWords` VALUES (1623,36,".."); 
-INSERT INTO `LanguageWords` VALUES (1624,36,"."); 
-INSERT INTO `LanguageWords` VALUES (1625,36,".."); 
-INSERT INTO `LanguageWords` VALUES (1626,36,"..."); 
-INSERT INTO `LanguageWords` VALUES (1627,36,"...."); 
-INSERT INTO `LanguageWords` VALUES (1628,36,"....."); 
-INSERT INTO `LanguageWords` VALUES (1629,36,"......."); 
-INSERT INTO `LanguageWords` VALUES (1630,36,"........."); 
-INSERT INTO `LanguageWords` VALUES (1631,37,"1"); 
-INSERT INTO `LanguageWords` VALUES (1632,37,"1"); 
-INSERT INTO `LanguageWords` VALUES (1633,37,"11"); 
-INSERT INTO `LanguageWords` VALUES (1634,37,"10"); 
-INSERT INTO `LanguageWords` VALUES (1635,37,"11"); 
-INSERT INTO `LanguageWords` VALUES (1636,37,"101"); 
-INSERT INTO `LanguageWords` VALUES (1637,37,"1010"); 
-INSERT INTO `LanguageWords` VALUES (1638,37,"10101"); 
-INSERT INTO `LanguageWords` VALUES (1639,37,"101010"); 
-INSERT INTO `LanguageWords` VALUES (1640,37,"1010101"); 
-INSERT INTO `LanguageWords` VALUES (1641,37,"10101010"); 
-INSERT INTO `LanguageWords` VALUES (1642,37,"111"); 
-INSERT INTO `LanguageWords` VALUES (1643,37,"110"); 
-INSERT INTO `LanguageWords` VALUES (1644,37,"1100"); 
-INSERT INTO `LanguageWords` VALUES (1645,37,"1101"); 
-INSERT INTO `LanguageWords` VALUES (1646,37,"11001"); 
-INSERT INTO `LanguageWords` VALUES (1647,37,"10110"); 
-INSERT INTO `LanguageWords` VALUES (1648,37,"10010"); 
-INSERT INTO `LanguageWords` VALUES (1649,37,"110011"); 
-INSERT INTO `LanguageWords` VALUES (1650,37,"110110"); 
-INSERT INTO `LanguageWords` VALUES (1651,37,"1001100"); 
-INSERT INTO `LanguageWords` VALUES (1652,37,"1000111"); 
-INSERT INTO `LanguageWords` VALUES (1653,37,"11110110"); 
-INSERT INTO `LanguageWords` VALUES (1654,37,"10011010"); 
-INSERT INTO `LanguageWords` VALUES (1655,37,"11101101"); 
-INSERT INTO `LanguageWords` VALUES (1656,38,"0"); 
-INSERT INTO `LanguageWords` VALUES (1657,38,"01"); 
-INSERT INTO `LanguageWords` VALUES (1658,38,"010"); 
-INSERT INTO `LanguageWords` VALUES (1659,38,"011"); 
-INSERT INTO `LanguageWords` VALUES (1660,38,"0100"); 
-INSERT INTO `LanguageWords` VALUES (1661,38,"0110"); 
-INSERT INTO `LanguageWords` VALUES (1662,38,"0101"); 
-INSERT INTO `LanguageWords` VALUES (1663,38,"0111"); 
-INSERT INTO `LanguageWords` VALUES (1664,38,"01110"); 
-INSERT INTO `LanguageWords` VALUES (1665,38,"01010"); 
-INSERT INTO `LanguageWords` VALUES (1666,38,"01101"); 
-INSERT INTO `LanguageWords` VALUES (1667,38,"01001"); 
-INSERT INTO `LanguageWords` VALUES (1668,38,"011001"); 
-INSERT INTO `LanguageWords` VALUES (1669,38,"010111"); 
-INSERT INTO `LanguageWords` VALUES (1670,38,"011011"); 
-INSERT INTO `LanguageWords` VALUES (1671,38,"010010"); 
-INSERT INTO `LanguageWords` VALUES (1672,38,"0110101"); 
-INSERT INTO `LanguageWords` VALUES (1673,38,"0111011"); 
-INSERT INTO `LanguageWords` VALUES (1674,38,"0100101"); 
-INSERT INTO `LanguageWords` VALUES (1675,38,"0101110"); 
-INSERT INTO `LanguageWords` VALUES (1676,38,"01101011"); 
-INSERT INTO `LanguageWords` VALUES (1677,38,"01001100"); 
+INSERT INTO `LanguageWords` VALUES (1,1,"A"),
+(2,1,"N"),
+(3,1,"G"),
+(4,1,"O"),
+(5,1,"L"),
+(6,1,"Ha"),
+(7,1,"Ko"),
+(8,1,"No"),
+(9,1,"Mu"),
+(10,1,"Ag"),
+(11,1,"Ka"),
+(12,1,"Gi"),
+(13,1,"Il"),
+(14,1,"Lok"),
+(15,1,"Tar"),
+(16,1,"Kaz"),
+(17,1,"Ruk"),
+(18,1,"Kek"),
+(19,1,"Mog"),
+(20,1,"Zug"),
+(21,1,"Gul"),
+(22,1,"Nuk"),
+(23,1,"Aaz"),
+(24,1,"Kil"),
+(25,1,"Ogg"),
+(26,1,"Rega"),
+(27,1,"Nogu"),
+(28,1,"Tago"),
+(29,1,"Uruk"),
+(30,1,"Kagg"),
+(31,1,"Zaga"),
+(32,1,"Grom"),
+(33,1,"Ogar"),
+(34,1,"Gesh"),
+(35,1,"Thok"),
+(36,1,"Dogg"),
+(37,1,"Maka"),
+(38,1,"Regas"),
+(39,1,"Nogah"),
+(40,1,"Kazum"),
+(41,1,"Magan"),
+(42,1,"No'bu"),
+(43,1,"Golar"),
+(44,1,"Throm"),
+(45,1,"Zugas"),
+(46,1,"Re'ka"),
+(47,1,"No'ku"),
+(48,1,"Maza"),
+(49,1,"Ro'th"),
+(50,1,"Thrakk"),
+(51,1,"Revash"),
+(52,1,"Nakazz"),
+(53,1,"Moguna"),
+(54,1,"No'gor"),
+(55,1,"Goth'a"),
+(56,1,"Raznos"),
+(57,1,"Ogerin"),
+(58,1,"Gezzno"),
+(59,1,"Thukad"),
+(60,1,"Makogg"),
+(61,1,"Aaz'no"),
+(62,1,"Lok'Tar"),
+(63,1,"Gul'rok"),
+(64,1,"Kazreth"),
+(65,1,"Tov'osh"),
+(66,1,"Zil'Nok"),
+(67,1,"Rath'is"),
+(68,1,"Kil'azi"),
+(69,1,"Throm'ka"),
+(70,1,"Osh'Kava"),
+(71,1,"Gul'nath"),
+(72,1,"Kog'zela"),
+(73,1,"Ragath'a"),
+(74,1,"Zuggossh"),
+(75,1,"Moth'aga"),
+(76,1,"Tov'nokaz"),
+(77,1,"Osh'kazil"),
+(78,1,"No'throma"),
+(79,1,"Gesh'nuka"),
+(80,1,"Lok'mogul"),
+(81,1,"Lok'bolar"),
+(82,1,"Ruk'ka'ha"),
+(83,1,"Regasnogah"),
+(84,1,"Kazum'nobu"),
+(85,1,"Throm'bola"),
+(86,1,"Gesh'zugas"),
+(87,1,"Maza'rotha"),
+(88,1,"Ogerin'naz"),
+(89,1,"Thrakk'reva"),
+(90,1,"Kaz'goth'no"),
+(91,1,"No'gor'goth"),
+(92,1,"Kil'azi'aga"),
+(93,1,"Zug-zug'ama"),
+(94,1,"Maza'thrakk"),
+(95,1,"Lokando'nash"),
+(96,1,"Ul'gammathar"),
+(97,1,"Khaz'rogg'ahn"),
+(98,1,"Moth'kazoroth"),
+(99,1,"Golgonnashar"),
+(100,1,"Dalggo'mazah"),
+(101,2,"A"),
+(102,2,"N"),
+(103,2,"I"),
+(104,2,"O"),
+(105,2,"E"),
+(106,2,"D"),
+(107,2,"Da"),
+(108,2,"Lo"),
+(109,2,"An"),
+(110,2,"Ni"),
+(111,2,"Al"),
+(112,2,"Do"),
+(113,2,"Ri"),
+(114,2,"Su"),
+(115,2,"No"),
+(116,2,"Ano"),
+(117,2,"Dur"),
+(118,2,"Tal"),
+(119,2,"Nei"),
+(120,2,"Ash"),
+(121,2,"Dor"),
+(122,2,"Anu"),
+(123,2,"Fal"),
+(124,2,"Tur"),
+(125,2,"Ala"),
+(126,2,"Nor"),
+(127,2,"Osa"),
+(128,2,"Alah"),
+(129,2,"Andu"),
+(130,2,"Dath"),
+(131,2,"Mush"),
+(132,2,"Shar"),
+(133,2,"Thus"),
+(134,2,"Fulo"),
+(135,2,"Aman"),
+(136,2,"Diel"),
+(137,2,"Dieb"),
+(138,2,"Rini"),
+(139,2,"Anar"),
+(140,2,"Talah"),
+(141,2,"Adore"),
+(142,2,"Ishnu"),
+(143,2,"Bandu"),
+(144,2,"Balah"),
+(145,2,"Fandu"),
+(146,2,"Thera"),
+(147,2,"Turus"),
+(148,2,"Shari"),
+(149,2,"Shano"),
+(150,2,"Terro"),
+(151,2,"Eburi"),
+(152,2,"Dorini"),
+(153,2,"Shando"),
+(154,2,"Ethala"),
+(155,2,"Falla"),
+(156,2,"Belore"),
+(157,2,"Do'rah"),
+(158,2,"Neph'o"),
+(159,2,"Asto're"),
+(160,2,"Man'ar"),
+(161,2,"Ishura"),
+(162,2,"U'phol"),
+(163,2,"T'as'e"),
+(164,2,"Anoduna"),
+(165,2,"Alah'ni"),
+(166,2,"Dor'Ano"),
+(167,2,"Al'shar"),
+(168,2,"Mush'al"),
+(169,2,"Aman'ni"),
+(170,2,"Shan're"),
+(171,2,"Mandalas"),
+(172,2,"Eraburis"),
+(173,2,"Dorithur"),
+(174,2,"Dal'dieb"),
+(175,2,"Thoribas"),
+(176,2,"D'ana'no"),
+(177,2,"Il'amare"),
+(178,2,"Neph'anis"),
+(179,2,"Dune'adah"),
+(180,2,"Banthalos"),
+(181,2,"Fala'andu"),
+(182,2,"Dath'anar"),
+(183,2,"Shari'fal"),
+(184,2,"Thori'dal"),
+(185,2,"Thero'shan"),
+(186,2,"Isera'duna"),
+(187,2,"Ash'therod"),
+(188,2,"Dorados'no"),
+(189,2,"Shar'adore"),
+(190,2,"U'phol'belore"),
+(191,2,"Fandu'talah"),
+(192,2,"Dor'ana'badu"),
+(193,2,"Thoribas'no'thera"),
+(194,2,"Turus'il'amare"),
+(195,2,"Shari'adune"),
+(196,2,"T'ase'mushal"),
+(197,2,"Shindu'falla'na"),
+(198,2,"Ando'meth'derador"),
+(199,2,"Anu'dorannador"),
+(200,2,"Anu'dorinni'talah"),
+(201,2,"Esh'thero'mannash"),
+(202,2,"Asto're'dunadah"),
+(204,6,"We"),
+(205,6,"Gar"),
+(206,6,"Gear"),
+(207,6,"Mitta"),
+(208,6,"Mogoth"),
+(209,6,"Geardum"),
+(210,6,"Gefrunon"),
+(211,6,"Mund-helm"),
+(212,6,"Nagga-roth"),
+(213,6,"Thros-am-Kha"),
+(214,6,"Scyld-modor-ok"),
+(215,6,"Lo"),
+(216,6,"Dum"),
+(217,6,"Kost"),
+(218,6,"Angor"),
+(219,6,"Modoss"),
+(220,6,"Haldren"),
+(221,6,"Misfaran"),
+(222,6,"Ke"),
+(223,6,"Kha"),
+(224,6,"Khaz"),
+(225,6,"Thros"),
+(226,6,"Haldir"),
+(227,6,"Thorneb"),
+(228,6,"Khazrega"),
+(229,6,"Angor-dum"),
+(230,6,"Thros-gare"),
+(231,6,"Azgol-haman"),
+(232,6,"Gol'gethrunon"),
+(233,6,"Zu"),
+(234,6,"Dun"),
+(235,6,"Modr"),
+(236,6,"Gimil"),
+(237,6,"Haldji"),
+(238,6,"Godkend"),
+(239,6,"Thulmane"),
+(240,6,"Ok"),
+(241,6,"Mos"),
+(242,6,"Guma"),
+(243,6,"Havar"),
+(244,6,"Rugosh"),
+(245,6,"Kost-um"),
+(246,6,"Mogodune"),
+(247,6,"Kost-Guma"),
+(248,6,"Gar-Mogoth"),
+(249,6,"Guma-syddan"),
+(250,6,"Gimil-thumane"),
+(251,6,"Um"),
+(252,6,"Eft"),
+(253,6,"Hine"),
+(254,6,"Havas"),
+(255,6,"Syddan"),
+(256,6,"Zu-Modr"),
+(257,6,"Azregahn"),
+(258,6,"Ta"),
+(259,6,"Red"),
+(260,6,"Helm"),
+(261,6,"Goten"),
+(262,6,"Drugan"),
+(263,6,"Ganrokh"),
+(264,6,"Khaz-dum"),
+(265,6,"Khaz-rand"),
+(266,6,"Angor-Magi"),
+(267,6,"Dun-haldren"),
+(268,6,"Haldren-Lo-Modoss"),
+(269,6,"A"),
+(270,6,"Am"),
+(271,6,"Hor"),
+(272,6,"Rand"),
+(273,6,"Modor"),
+(274,6,"Skolde"),
+(275,6,"Mok-kha"),
+(276,6,"Moth-tur"),
+(277,6,"Go"),
+(278,6,"Ahz"),
+(279,6,"Gosh"),
+(280,6,"Modan"),
+(281,6,"Farode"),
+(282,6,"Dun-fel"),
+(283,6,"Golganar"),
+(284,6,"Midd-Havas"),
+(285,6,"Ahz-Dagum"),
+(286,6,"Robush-mogan"),
+(287,6,"Haldji-drugan"),
+(288,6,"Ga"),
+(289,6,"Mok"),
+(290,6,"Rune"),
+(291,6,"Algaz"),
+(292,6,"Bergum"),
+(293,6,"Havagun"),
+(294,6,"Gor"),
+(295,6,"Hoga"),
+(296,6,"Dagum"),
+(297,6,"Modgud"),
+(298,6,"Ok-Hoga"),
+(299,6,"Arad-Khaz"),
+(300,6,"Hoga-Modan"),
+(301,6,"Ge'ar-anvil"),
+(302,6,"Gosh-algaz-dun"),
+(303,6,"Ruk"),
+(304,6,"Thon"),
+(305,6,"Scyld"),
+(306,6,"Robush"),
+(307,6,"Loch"),
+(308,6,"Weard"),
+(309,6,"Grum-mana"),
+(310,6,"Grum"),
+(311,6,"Frean"),
+(312,6,"Hrim"),
+(313,6,"Skalf"),
+(314,6,"Gor-skalf"),
+(315,3,"A"),
+(316,3,"Wa"),
+(317,3,"Ish"),
+(318,3,"Shne"),
+(319,3,"Porah"),
+(320,3,"Abalo"),
+(321,3,"Tatanka"),
+(322,3,"Kichalo"),
+(323,3,"Awaihilo"),
+(324,3,"N"),
+(325,3,"Tu"),
+(326,3,"Zhi"),
+(327,3,"A'ke"),
+(328,3,"A'iah"),
+(329,3,"Washte"),
+(330,3,"Hetawa"),
+(331,3,"Pikialo"),
+(332,3,"Ovaktalo"),
+(333,3,"I"),
+(334,3,"Te"),
+(335,3,"Uku"),
+(336,3,"Hale"),
+(337,3,"Yakee"),
+(338,3,"Lakota"),
+(339,3,"Ichnee"),
+(340,3,"Towateke"),
+(341,3,"Akiticha"),
+(342,3,"O"),
+(343,3,"Ni"),
+(344,3,"Awa"),
+(345,3,"Mani"),
+(346,3,"Tanka"),
+(347,3,"Pawene"),
+(348,3,"Owakeri"),
+(349,3,"Tihikea"),
+(350,3,"Ishnelo"),
+(351,3,"E"),
+(352,3,"Po"),
+(353,3,"Kee"),
+(354,3,"Eche"),
+(355,3,"Ti'ha"),
+(356,3,"Washte"),
+(357,3,"Sechalo"),
+(358,3,"Shtumani"),
+(359,3,"Shteawa"),
+(360,3,"Ta"),
+(361,3,"Alo"),
+(362,3,"Shte"),
+(363,3,"Towa"),
+(364,3,"Pawni"),
+(365,3,"Owachi"),
+(366,3,"Owatanka"),
+(367,3,"Porahalo"),
+(368,3,"Ne"),
+(369,3,"Rah"),
+(370,3,"Halo"),
+(371,3,"Shush"),
+(372,3,"Sho'wa"),
+(373,3,"O'ba'chi"),
+(374,3,"Shtealo"),
+(375,3,"Orahpajo"),
+(376,3,"Ki"),
+(377,3,"Owa"),
+(378,3,"Isha"),
+(379,3,"Ahmen"),
+(380,3,"Aloaki"),
+(381,3,"Neahok"),
+(382,3,"Ba"),
+(383,3,"Aki"),
+(384,3,"Awak"),
+(385,3,"Anohe"),
+(386,3,"Nokee"),
+(387,3,"Taisha"),
+(388,3,"Lo"),
+(389,3,"Paw"),
+(390,3,"Nahe"),
+(391,3,"Kashu"),
+(392,3,"Poalo"),
+(393,3,"Lomani"),
+(394,3,"No"),
+(395,3,"Ich"),
+(396,3,"Tawa"),
+(397,3,"Awak"),
+(398,3,"Ishte"),
+(399,3,"Nitawa"),
+(400,3,"Chi"),
+(401,3,"Balo"),
+(402,3,"A'hok"),
+(403,3,"Nechi"),
+(404,3,"Washte"),
+(405,3,"Ishne'alo"),
+(406,3,"Awakeekielo"),
+(407,3,"Ishne'awahalo"),
+(408,3,"Echeyakee"),
+(409,3,"Lakota'mani"),
+(410,3,"Ishamuhale"),
+(411,3,"Ishnialo"),
+(412,3,"Ichnee'awa"),
+(413,3,"Neashushahmen"),
+(414,3,"Tatahalo"),
+(415,3,"Aloaki'shne"),
+(416,3,"Awaka'nahe"),
+(417,3,"Haloyakee"),
+(418,3,"Shteowachi"),
+(419,3,"Ishne'alo'porah"),
+(420,3,"Tawaporah"),
+(421,3,"Shtumanialo"),
+(422,3,"Awakeeahmenalo"),
+(423,7,"A"),
+(424,7,"Lo"),
+(425,7,"Vil"),
+(426,7,"Nuff"),
+(427,7,"Wirsh"),
+(428,7,"Ruftos"),
+(429,7,"Novaedi"),
+(430,7,"Thorniss"),
+(431,7,"Gloinador"),
+(432,7,"Vastrungen"),
+(433,7,"Wershaesire"),
+(434,7,"Nevrenrothas"),
+(435,7,"E"),
+(436,7,"Ne"),
+(437,7,"Bor"),
+(438,7,"Thor"),
+(439,7,"Novas"),
+(440,7,"Aesire"),
+(441,7,"Lithtos"),
+(442,7,"Ruftvess"),
+(443,7,"Veldbarad"),
+(444,7,"I"),
+(445,7,"Ve"),
+(446,7,"Ras"),
+(447,7,"Ruff"),
+(448,7,"Regen"),
+(449,7,"Rothas"),
+(450,7,"Ewiddan"),
+(451,7,"Aldonoth"),
+(452,7,"Gothalgos"),
+(453,7,"Falhedring"),
+(454,7,"Thorlithtos"),
+(455,7,"Forthasador"),
+(456,7,"O"),
+(457,7,"Ru"),
+(458,7,"Gol"),
+(459,7,"Odes"),
+(460,7,"Gloin"),
+(461,7,"Nevren"),
+(462,7,"Forthis"),
+(463,7,"Endirvis"),
+(464,7,"Udenmajis"),
+(465,7,"U"),
+(466,7,"An"),
+(467,7,"Nud"),
+(468,7,"Noth"),
+(469,7,"Tiras"),
+(470,7,"Rogesh"),
+(471,7,"Faergas"),
+(472,7,"Landowar"),
+(473,7,"Danagarde"),
+(474,7,"Cynewalden"),
+(475,7,"Vassildador"),
+(476,7,"Mandosdaegil"),
+(477,7,"Y"),
+(478,7,"Ti"),
+(479,7,"Far"),
+(480,7,"Ador"),
+(481,7,"Barad"),
+(482,7,"Skilde"),
+(483,7,"Sturume"),
+(484,7,"Hamerung"),
+(485,7,"Vandarwos"),
+(486,7,"Me"),
+(487,7,"Wos"),
+(488,7,"Dana"),
+(489,7,"Garde"),
+(490,7,"Vandar"),
+(491,7,"Vassild"),
+(492,7,"Cynegold"),
+(493,7,"Firalaine"),
+(494,7,"Dyrstigost"),
+(495,7,"Agolandovis"),
+(496,7,"Waldirskilde"),
+(497,7,"Lu"),
+(498,7,"Mod"),
+(499,7,"Vrum"),
+(500,7,"Majis"),
+(501,7,"Valesh"),
+(502,7,"Nostyec"),
+(503,7,"Methrine"),
+(504,7,"Aetwinter"),
+(505,7,"Re"),
+(506,7,"Ver"),
+(507,7,"Veld"),
+(508,7,"Ergin"),
+(509,7,"Engoth"),
+(510,7,"Andovis"),
+(511,7,"Lordaere"),
+(512,7,"Eloderung"),
+(513,7,"Aelgestron"),
+(514,7,"Bornevalesh"),
+(515,7,"Adorstaerume"),
+(516,7,"Se"),
+(517,7,"Ash"),
+(518,7,"Vohl"),
+(519,7,"Nagan"),
+(520,7,"Aziris"),
+(521,7,"Koshvel"),
+(522,7,"Regenthor"),
+(523,7,"Va"),
+(524,7,"Lon"),
+(525,7,"Lars"),
+(526,7,"Algos"),
+(527,7,"Mandos"),
+(528,7,"Nandige"),
+(529,7,"Danavandar"),
+(530,7,"Farlandowar"),
+(531,7,"Golveldbarad"),
+(532,7,"Ko"),
+(533,7,"Bur"),
+(534,7,"Goth"),
+(535,7,"Eynes"),
+(536,7,"Goibon"),
+(537,7,"Kaelsig"),
+(538,7,"Hir"),
+(539,7,"Agol"),
+(540,7,"Borne"),
+(541,7,"Danieb"),
+(542,7,"Uden"),
+(543,7,"Melka"),
+(544,7,"Daegil"),
+(545,7,"Waldir"),
+(546,7,"Ealdor"),
+(547,8,"A"),
+(548,8,"E"),
+(549,8,"I"),
+(550,8,"O"),
+(551,8,"U"),
+(552,8,"Y"),
+(553,8,"G"),
+(554,8,"X"),
+(555,8,"Il"),
+(556,8,"No"),
+(557,8,"Az"),
+(558,8,"Te"),
+(559,8,"Ur"),
+(560,8,"Za"),
+(561,8,"Ze"),
+(562,8,"Re"),
+(563,8,"Ul"),
+(564,8,"Me"),
+(565,8,"Xi"),
+(566,8,"Tor"),
+(567,8,"Gul"),
+(568,8,"Lok"),
+(569,8,"Asj"),
+(570,8,"Kar"),
+(571,8,"Lek"),
+(572,8,"Daz"),
+(573,8,"Maz"),
+(574,8,"Ril"),
+(575,8,"Ruk"),
+(576,8,"Laz"),
+(577,8,"Shi"),
+(578,8,"Zar"),
+(579,8,"Ashj"),
+(580,8,"Alar"),
+(581,8,"Orah"),
+(582,8,"Amir"),
+(583,8,"Aman"),
+(584,8,"Ante"),
+(585,8,"Kiel"),
+(586,8,"Maez"),
+(587,8,"Maev"),
+(588,8,"Veni"),
+(589,8,"Raka"),
+(590,8,"Zila"),
+(591,8,"Zenn"),
+(592,8,"Parn"),
+(593,8,"Rikk"),
+(594,8,"Melar"),
+(595,8,"Rakir"),
+(596,8,"Tiros"),
+(597,8,"Modas"),
+(598,8,"Belan"),
+(599,8,"Zekul"),
+(600,8,"Soran"),
+(601,8,"Gular"),
+(602,8,"Enkil"),
+(603,8,"Adare"),
+(604,8,"Golad"),
+(605,8,"Buras"),
+(606,8,"Nagas"),
+(607,8,"Revos"),
+(608,8,"Refir"),
+(609,8,"Kamil"),
+(610,8,"Rethul"),
+(611,8,"Rakkan"),
+(612,8,"Rakkas"),
+(613,8,"Tichar"),
+(614,8,"Mannor"),
+(615,8,"Archim"),
+(616,8,"Azgala"),
+(617,8,"Karkun"),
+(618,8,"Revola"),
+(619,8,"Mishun"),
+(620,8,"Arakal"),
+(621,8,"Kazile"),
+(622,8,"Thorje"),
+(623,8,"Belaros"),
+(624,8,"Tiriosh"),
+(625,8,"Faramos"),
+(626,8,"Danashj"),
+(627,8,"Amanare"),
+(628,8,"Kieldaz"),
+(629,8,"Karaman"),
+(630,8,"Gulamir"),
+(631,8,"Toralar"),
+(632,8,"Rethule"),
+(633,8,"Zennshi"),
+(634,8,"Maladath"),
+(635,8,"Kirasath"),
+(636,8,"Romathis"),
+(637,8,"Amanare"),
+(638,8,"Theramas"),
+(639,8,"Azrathud"),
+(640,8,"Mordanas"),
+(641,8,"Amanalar"),
+(642,8,"Ashjraka"),
+(643,8,"Azgalada"),
+(644,8,"Rukadare"),
+(645,8,"Sorankar"),
+(646,8,"Enkilzar"),
+(647,8,"Naztheros"),
+(648,8,"Zilthuras"),
+(649,8,"Kanrethad"),
+(650,8,"Matheredor"),
+(651,8,"Ticharamir"),
+(652,8,"Melarorah"),
+(653,8,"Arakalada"),
+(654,8,"Soranaman"),
+(655,8,"Nagasraka"),
+(656,8,"Belankar"),
+(657,8,"Pathrebosh"),
+(658,8,"Benthadoom"),
+(659,8,"Amanemodas"),
+(660,8,"Teamanare"),
+(661,8,"Enkilgular"),
+(662,8,"Burasadare"),
+(663,8,"Melarnagas"),
+(664,8,"Zennrakkan"),
+(665,8,"Ashjrethul"),
+(666,8,"Zekulrakkas"),
+(667,8,"Archimtiros"),
+(668,8,"Mannorgulan"),
+(669,8,"Mishunadare"),
+(670,8,"Zennshinagas"),
+(671,8,"Ashjrakamas"),
+(672,8,"Kamilgolad"),
+(673,9,"A"),
+(674,9,"E"),
+(675,9,"I"),
+(676,9,"O"),
+(677,9,"U"),
+(678,9,"Y"),
+(679,9,"G"),
+(680,9,"X"),
+(681,9,"IL"),
+(682,9,"No"),
+(683,9,"Az"),
+(684,9,"Te"),
+(685,9,"Ur"),
+(686,9,"Za"),
+(687,9,"Ze"),
+(688,9,"Re"),
+(689,9,"Ul"),
+(690,9,"Me"),
+(691,9,"Xi"),
+(692,9,"Tor"),
+(693,9,"Gul"),
+(694,9,"Lok"),
+(695,9,"Asj"),
+(696,9,"Kar"),
+(697,9,"Lek"),
+(698,9,"Daz"),
+(699,9,"Maz"),
+(700,9,"Ril"),
+(701,9,"Ruk"),
+(702,9,"Laz"),
+(703,9,"Shi"),
+(704,9,"Zar"),
+(705,9,"Ashj"),
+(706,9,"Alar"),
+(707,9,"Orah"),
+(708,9,"Amir"),
+(709,9,"Aman"),
+(710,9,"Ante"),
+(711,9,"Kiel"),
+(712,9,"Maez"),
+(713,9,"Maev"),
+(714,9,"Veni"),
+(715,9,"Raka"),
+(716,9,"Zila"),
+(717,9,"Zenn"),
+(718,9,"Parn"),
+(719,9,"Rikk"),
+(720,9,"Melar"),
+(721,9,"Rakir"),
+(722,9,"Tiros"),
+(723,9,"Modas"),
+(724,9,"Belan"),
+(725,9,"Zekul"),
+(726,9,"Soran"),
+(727,9,"Gular"),
+(728,9,"Enkil"),
+(729,9,"Adare"),
+(730,9,"Golad"),
+(731,9,"Buras"),
+(732,9,"Nagas"),
+(733,9,"Revos"),
+(734,9,"Refir"),
+(735,9,"Kamil"),
+(736,9,"Rethul"),
+(737,9,"Rakkan"),
+(738,9,"Rakkas"),
+(739,9,"Tichar"),
+(740,9,"Mannor"),
+(741,9,"Archim"),
+(742,9,"Azgala"),
+(743,9,"Karkun"),
+(744,9,"Revola"),
+(745,9,"Mishun"),
+(746,9,"Arakal"),
+(747,9,"Kazile"),
+(748,9,"Thorje"),
+(749,9,"Belaros"),
+(750,9,"Tiriosh"),
+(751,9,"Faramos"),
+(752,9,"Danashj"),
+(753,9,"Amanare"),
+(754,9,"Faralos"),
+(755,9,"Kieldaz"),
+(756,9,"Karaman"),
+(757,9,"Gulamir"),
+(758,9,"Toralar"),
+(759,9,"Rethule"),
+(760,9,"Zennshi"),
+(761,9,"Maladath"),
+(762,9,"Kirasath"),
+(763,9,"Romathis"),
+(764,9,"Amanare"),
+(765,9,"Theramas"),
+(766,9,"Azrathud"),
+(767,9,"Mordanas"),
+(768,9,"Amanalar"),
+(769,9,"Ashjraka"),
+(770,9,"Azgalada"),
+(771,9,"Rukadare"),
+(772,9,"Sorankar"),
+(773,9,"Enkilzar"),
+(774,9,"Naztheros"),
+(775,9,"Zilthuras"),
+(776,9,"Kanrethad"),
+(777,9,"Matheredor"),
+(778,9,"Ticharamir"),
+(779,9,"Melarorah"),
+(780,9,"Arakalada"),
+(781,9,"Soranaman"),
+(782,9,"Nagasraka"),
+(783,9,"Belankar"),
+(784,9,"Pathrebosh"),
+(785,9,"Benthadoom"),
+(786,9,"Amanemodas"),
+(787,9,"Teamanare"),
+(788,9,"Enkilgular"),
+(789,9,"Burasadare"),
+(790,9,"Melarnagas"),
+(791,9,"Zennrakkan"),
+(792,9,"Kamilgolad"),
+(793,9,"Ashjrakamas"),
+(794,9,"Zennshinagas"),
+(795,9,"Mishunadare"),
+(796,9,"Mannorgulan"),
+(797,9,"Archimtiros"),
+(798,9,"Zekulrakkas"),
+(799,9,"Ashjrethul"),
+(800,10,"A"),
+(801,10,"N"),
+(802,10,"I"),
+(803,10,"O"),
+(804,10,"E"),
+(805,10,"D"),
+(806,10,"Da"),
+(807,10,"Lo"),
+(808,10,"An"),
+(809,10,"Ni"),
+(810,10,"Al"),
+(811,10,"Do"),
+(812,10,"Ri"),
+(813,10,"Su"),
+(814,10,"No"),
+(815,10,"Ano"),
+(816,10,"Dur"),
+(817,10,"Tal"),
+(818,10,"Nei"),
+(819,10,"Ash"),
+(820,10,"Dor"),
+(821,10,"Anu"),
+(822,10,"Fal"),
+(823,10,"Tur"),
+(824,10,"Ala"),
+(825,10,"Nor"),
+(826,10,"Osa"),
+(827,10,"Alah"),
+(828,10,"Andu"),
+(829,10,"Dath"),
+(830,10,"Mush"),
+(831,10,"Shar"),
+(832,10,"Thus"),
+(833,10,"Fulo"),
+(834,10,"Aman"),
+(835,10,"Diel"),
+(836,10,"Dieb"),
+(837,10,"Rini"),
+(838,10,"Anar"),
+(839,10,"Talah"),
+(840,10,"Adore"),
+(841,10,"Ishnu"),
+(842,10,"Bandu"),
+(843,10,"Balah"),
+(844,10,"Fandu"),
+(845,10,"Thera"),
+(846,10,"Turus"),
+(847,10,"Shari"),
+(848,10,"Shano"),
+(849,10,"Terro"),
+(850,10,"Eburi"),
+(851,10,"Dorini"),
+(852,10,"Shando"),
+(853,10,"Ethala"),
+(854,10,"Fallah"),
+(855,10,"Belore"),
+(856,10,"Do'rah"),
+(857,10,"Neph'o"),
+(858,10,"Asto're"),
+(859,10,"Man'ar"),
+(860,10,"Ishura"),
+(861,10,"U'phol"),
+(862,10,"T'as'e"),
+(863,10,"Anoduna"),
+(864,10,"Alah'ni"),
+(865,10,"Dor'Ano"),
+(866,10,"Al'shar"),
+(867,10,"Mush'al"),
+(868,10,"Aman'ni"),
+(869,10,"Shan're"),
+(870,10,"Mandalas"),
+(871,10,"Eraburis"),
+(872,10,"Dorithur"),
+(873,10,"Dal'dieb"),
+(874,10,"Thoribas"),
+(875,10,"D'ana'no"),
+(876,10,"Il'amare"),
+(877,10,"Neph'anis"),
+(878,10,"Dune'adah"),
+(879,10,"Banthalos"),
+(880,10,"Fala'andu"),
+(881,10,"Dath'anar"),
+(882,10,"Shari'fal"),
+(883,10,"Thori'dal"),
+(884,10,"Thero'shan"),
+(885,10,"Isera'duna"),
+(886,10,"Ash'therod"),
+(887,10,"Dorados'no"),
+(888,10,"Shar'adore"),
+(889,10,"U'phol'belore"),
+(890,10,"Fandu'talah"),
+(891,10,"Dor'ana'badu"),
+(892,10,"Thoribas'no'thera"),
+(893,10,"Turus'il'amare"),
+(894,10,"Shari'adune"),
+(895,10,"T'ase'mushal"),
+(896,10,"Shindu'fallah'na"),
+(897,10,"Ando'meth'derador"),
+(898,10,"Anu'dorannador"),
+(899,10,"Anu'dorinni'talah"),
+(900,10,"Esh'thero'mannash"),
+(901,10,"Asto're'dunadah"),
+(902,11,"A"),
+(903,11,"E"),
+(904,11,"I"),
+(905,11,"O"),
+(906,11,"U"),
+(907,11,"Y"),
+(908,11,"G"),
+(909,11,"X"),
+(910,11,"Il"),
+(911,11,"No"),
+(912,11,"Az"),
+(913,11,"Te"),
+(914,11,"Ur"),
+(915,11,"Za"),
+(916,11,"Ze"),
+(917,11,"Re"),
+(918,11,"Ul"),
+(919,11,"Me"),
+(920,11,"Xi"),
+(921,11,"Tor"),
+(922,11,"Gul"),
+(923,11,"Lok"),
+(924,11,"Asj"),
+(925,11,"Kar"),
+(926,11,"Lek"),
+(927,11,"Daz"),
+(928,11,"Maz"),
+(929,11,"Ril"),
+(930,11,"Ruk"),
+(931,11,"Laz"),
+(932,11,"Shi"),
+(933,11,"Zar"),
+(934,11,"Ashj"),
+(935,11,"Alar"),
+(936,11,"Orah"),
+(937,11,"Amir"),
+(938,11,"Aman"),
+(939,11,"Ante"),
+(940,11,"Kiel"),
+(941,11,"Maez"),
+(942,11,"Maev"),
+(943,11,"Veni"),
+(944,11,"Raka"),
+(945,11,"Zila"),
+(946,11,"Zenn"),
+(947,11,"Parn"),
+(948,11,"Rikk"),
+(949,11,"Melar"),
+(950,11,"Rakir"),
+(951,11,"Tiros"),
+(952,11,"Modas"),
+(953,11,"Belan"),
+(954,11,"Zekul"),
+(955,11,"Soran"),
+(956,11,"Gular"),
+(957,11,"Enkil"),
+(958,11,"Adare"),
+(959,11,"Golad"),
+(960,11,"Buras"),
+(961,11,"Nagas"),
+(962,11,"Revos"),
+(963,11,"Refir"),
+(964,11,"Kamil"),
+(965,11,"Rethul"),
+(966,11,"Rakkan"),
+(967,11,"Rakkas"),
+(968,11,"Tichar"),
+(969,11,"Mannor"),
+(970,11,"Archim"),
+(971,11,"Azgala"),
+(972,11,"Karkun"),
+(973,11,"Revola"),
+(974,11,"Mishun"),
+(975,11,"Arakal"),
+(976,11,"Kazile"),
+(977,11,"Thorje"),
+(978,11,"Belaros"),
+(979,11,"Tiriosh"),
+(980,11,"Faramos"),
+(981,11,"Danashj"),
+(982,11,"Amanare"),
+(983,11,"Faralos"),
+(984,11,"Kieldaz"),
+(985,11,"Karaman"),
+(986,11,"Gulamir"),
+(987,11,"Toralar"),
+(988,11,"Rethule"),
+(989,11,"Zennshi"),
+(990,11,"Maladath"),
+(991,11,"Kirasath"),
+(992,11,"Romathis"),
+(993,11,"Amanare"),
+(994,11,"Theramas"),
+(995,11,"Azrathud"),
+(996,11,"Mordanas"),
+(997,11,"Amanalar"),
+(998,11,"Ashjraka"),
+(999,11,"Azgalada"),
+(1000,11,"Rukadare"),
+(1001,11,"Sorankar"),
+(1002,11,"Enkilzar"),
+(1003,11,"Naztheros"),
+(1004,11,"Zilthuras"),
+(1005,11,"Kanrethad"),
+(1006,11,"Matheredor"),
+(1007,11,"Ticharamir"),
+(1008,11,"Melarorah"),
+(1009,11,"Arakalada"),
+(1010,11,"Soranaman"),
+(1011,11,"Nagasraka"),
+(1012,11,"Belankar"),
+(1013,11,"Pathrebosh"),
+(1014,11,"Benthadoom"),
+(1015,11,"Amanemodas"),
+(1016,11,"Teamanare"),
+(1017,11,"Enkilgular"),
+(1018,11,"Burasadare"),
+(1019,11,"Melarnagas"),
+(1020,11,"Zennrakkan"),
+(1021,11,"Ashjrethul"),
+(1022,11,"Zekulrakkas"),
+(1023,11,"Archimtiros"),
+(1024,11,"Mannorgulan"),
+(1025,11,"Mishunadare"),
+(1026,11,"Zennshinagas"),
+(1027,11,"Ashjrakamas"),
+(1028,11,"Kamilgolad"),
+(1029,12,"A"),
+(1030,12,"O"),
+(1031,12,"K"),
+(1032,12,"T"),
+(1033,12,"G"),
+(1034,12,"U"),
+(1035,12,"Ko"),
+(1036,12,"Ta"),
+(1037,12,"Gi"),
+(1038,12,"Ka"),
+(1039,12,"Tu"),
+(1040,12,"Os"),
+(1041,12,"Ma"),
+(1042,12,"Ra"),
+(1043,12,"Fel"),
+(1044,12,"Rok"),
+(1045,12,"Kir"),
+(1046,12,"Dor"),
+(1047,12,"Von"),
+(1048,12,"Nuk"),
+(1049,12,"Tor"),
+(1050,12,"Kan"),
+(1051,12,"Tas"),
+(1052,12,"Gun"),
+(1053,12,"Dra"),
+(1054,12,"Sto"),
+(1055,12,"Brom"),
+(1056,12,"Kras"),
+(1057,12,"Toro"),
+(1058,12,"Drae"),
+(1059,12,"Krin"),
+(1060,12,"Zoln"),
+(1061,12,"Fmer"),
+(1062,12,"Guto"),
+(1063,12,"Reth"),
+(1064,12,"Shin"),
+(1065,12,"Tols"),
+(1066,12,"Mahn"),
+(1067,12,"Bromo"),
+(1068,12,"Krast"),
+(1069,12,"Torin"),
+(1070,12,"Draek"),
+(1071,12,"Kranu"),
+(1072,12,"Zoern"),
+(1073,12,"Fmerk"),
+(1074,12,"Gatin"),
+(1075,12,"Roath"),
+(1076,12,"Shone"),
+(1077,12,"Talsa"),
+(1078,12,"Fraht"),
+(1079,12,"Ben'nig"),
+(1080,12,"Korsul"),
+(1081,12,"Ter'ran"),
+(1082,12,"For'kin"),
+(1083,12,"Suz'ahn"),
+(1084,12,"Dratir"),
+(1085,12,"Fel'tes"),
+(1086,12,"Toka'an"),
+(1087,12,"Drinor"),
+(1088,12,"Tadrom"),
+(1089,12,"Kel'shae"),
+(1090,12,"Dak'kaun"),
+(1091,12,"Tchor'ah"),
+(1092,12,"Zela'von"),
+(1093,12,"Telsrah"),
+(1094,12,"Kis'tean"),
+(1095,12,"Dorvrem"),
+(1096,12,"Koaresh"),
+(1097,12,"Fiilrok"),
+(1098,12,"Ven'tiro"),
+(1099,12,"Gi'frazsh"),
+(1100,12,"Chokgan"),
+(1101,12,"Fanroke"),
+(1102,12,"Taegoson"),
+(1103,12,"Kilagrin"),
+(1104,12,"Roc'grare"),
+(1105,12,"Gi'azol'em"),
+(1106,12,"Nuk'tra'te"),
+(1107,12,"Quin'mahk"),
+(1108,12,"Ties'alla"),
+(1109,12,"Shodru'ga"),
+(1110,12,"Os'retiak"),
+(1111,12,"Desh'noka"),
+(1112,12,"Rohh'krah"),
+(1113,12,"Krast'ven"),
+(1114,12,"Aasrugel"),
+(1115,12,"Mok'tavaler"),
+(1116,12,"Tae'gel'kir"),
+(1117,12,"Draemierr"),
+(1118,12,"Dor'dra'tor"),
+(1119,12,"Zoln'nakaz"),
+(1120,12,"Mastrosum"),
+(1121,12,"Gatin'roth"),
+(1122,12,"Ahn'torunt"),
+(1123,12,"Thukad'aaz"),
+(1124,12,"Gesh'throm"),
+(1125,12,"Aer'rohgmar"),
+(1126,12,"Brud'remek"),
+(1127,12,"Torrath'unt"),
+(1128,12,"Ignan'kitch"),
+(1129,12,"Caus'tearic"),
+(1130,12,"Moth'keretch"),
+(1131,12,"Borg'helmak"),
+(1132,12,"Golgo'nishver"),
+(1133,12,"Huut'vactah"),
+(1134,12,"Jolpat'krim"),
+(1135,12,"Tzench'drah"),
+(1136,12,"Vendo're'mik"),
+(1137,12,"Kraus'ghosa"),
+(1138,12,"Dalgo'nizha"),
+(1139,12,"Thloy'martok"),
+(1140,12,"Danal'korang"),
+(1141,12,"Kawee'fe'more"),
+(1142,12,"Tagha'senchal"),
+(1143,12,"Sunep'kosach"),
+(1144,12,"Peng'yaas'ahn"),
+(1145,12,"Nash'lokan'ar"),
+(1146,12,"Derr'moran'ki"),
+(1147,12,"Moor'tosav'ak"),
+(1148,12,"Kis'an'tadrom"),
+(1149,12,"Korsukgrare"),
+(1150,12,"Bach'usiv'hal"),
+(1151,13,"A"),
+(1152,13,"E"),
+(1153,13,"I"),
+(1154,13,"O"),
+(1155,13,"D"),
+(1156,13,"C"),
+(1157,13,"G"),
+(1158,13,"T"),
+(1159,13,"F"),
+(1160,13,"We"),
+(1161,13,"Lo"),
+(1162,13,"Ke"),
+(1163,13,"So"),
+(1164,13,"Ok"),
+(1165,13,"Um"),
+(1166,13,"Ti"),
+(1167,13,"Am"),
+(1168,13,"Ga"),
+(1169,13,"Va"),
+(1170,13,"Mor"),
+(1171,13,"Fez"),
+(1172,13,"Zah"),
+(1173,13,"Dun"),
+(1174,13,"Mos"),
+(1175,13,"Nid"),
+(1176,13,"Rod"),
+(1177,13,"Her"),
+(1178,13,"Bur"),
+(1179,13,"Gar"),
+(1180,13,"Mik"),
+(1181,13,"Giz"),
+(1182,13,"Gal"),
+(1183,13,"Gear"),
+(1184,13,"Cost"),
+(1185,13,"Kahs"),
+(1186,13,"Riff"),
+(1187,13,"Buma"),
+(1188,13,"Hine"),
+(1189,13,"Helm"),
+(1190,13,"Rand"),
+(1191,13,"Gosh"),
+(1192,13,"Rune"),
+(1193,13,"Huge"),
+(1194,13,"Dani"),
+(1195,13,"Lock"),
+(1196,13,"Grum"),
+(1197,13,"Mitta"),
+(1198,13,"Angor"),
+(1199,13,"Thros"),
+(1200,13,"Nagin"),
+(1201,13,"Haven"),
+(1202,13,"Havis"),
+(1203,13,"Goten"),
+(1204,13,"Modor"),
+(1205,13,"Modan"),
+(1206,13,"Algos"),
+(1207,13,"Dagem"),
+(1208,13,"Tiras"),
+(1209,13,"Weird"),
+(1210,13,"Frend"),
+(1211,13,"Gizber"),
+(1212,13,"Protos"),
+(1213,13,"Haldir"),
+(1214,13,"Shermt"),
+(1215,13,"Rugosh"),
+(1216,13,"Helmok"),
+(1217,13,"Drugan"),
+(1218,13,"Dumssi"),
+(1219,13,"Ferdosr"),
+(1220,13,"Bergrim"),
+(1221,13,"Mergud"),
+(1222,13,"Revosh"),
+(1223,13,"Danieb"),
+(1224,13,"Waldor"),
+(1225,13,"Geardum"),
+(1226,13,"Haidren"),
+(1227,13,"Thorneb"),
+(1228,13,"Godling"),
+(1229,13,"Costirm"),
+(1230,13,"Botlikin"),
+(1231,13,"Ganrokh"),
+(1232,13,"Sturome"),
+(1233,13,"Noxtyec"),
+(1234,13,"Havagun"),
+(1235,13,"Bolthelm"),
+(1236,6,"Kaelsag"),
+(1237,13,"Scrutin"),
+(1238,13,"Gefrunon"),
+(1239,13,"Misfaran"),
+(1240,13,"Kahzregi"),
+(1241,13,"Thulmane"),
+(1242,13,"Godunmug"),
+(1243,13,"Azregorn"),
+(1244,13,"Kahsgear"),
+(1245,13,"Aldanoth"),
+(1246,13,"Dimligar"),
+(1247,13,"Elodergim"),
+(1248,13,"Nandiger"),
+(1249,13,"Landivar"),
+(1250,13,"Methrine"),
+(1251,13,"Vustrangin"),
+(1252,13,"Naggirath"),
+(1253,13,"Falhadrink"),
+(1254,13,"Throsigear"),
+(1255,13,"Sihnvulden"),
+(1256,13,"Nockhavis"),
+(1257,13,"Dyrstagist"),
+(1258,13,"Elodmodor"),
+(1259,13,"Alegaskron"),
+(1260,13,"Grumgizr"),
+(1261,13,"Danavandar"),
+(1262,13,"Mikthros"),
+(1263,13,"Mundgizber"),
+(1264,13,"Angordame"),
+(1265,13,"Ferdosmodan"),
+(1266,13,"Mosgodunan"),
+(1267,13,"Ahzodaugum"),
+(1268,13,"Algosgoten"),
+(1269,13,"Haldjinagin"),
+(1270,13,"Frendgalva"),
+(1271,13,"Gizbarlodun"),
+(1272,13,"Thrunon'gol"),
+(1273,13,"Lockrevoshi"),
+(1274,13,"Naginbumat"),
+(1275,13,"Helmokheram"),
+(1276,13,"Robuswaldir"),
+(1277,13,"Kahzhaldren"),
+(1278,13,"Thumanerand"),
+(1279,13,"Skalfgizgar"),
+(1280,14,"A"),
+(1281,14,"O"),
+(1282,14,"H"),
+(1283,14,"J"),
+(1284,14,"U"),
+(1285,14,"E"),
+(1286,14,"M"),
+(1287,14,"N"),
+(1288,14,"S"),
+(1289,14,"Fi"),
+(1290,14,"Im"),
+(1291,14,"Yu"),
+(1292,14,"Wi"),
+(1293,14,"Ju"),
+(1294,14,"Di"),
+(1295,14,"Fu"),
+(1296,14,"Ir"),
+(1297,14,"So"),
+(1298,14,"Is"),
+(1299,14,"Noh"),
+(1300,14,"Mek"),
+(1301,14,"Weh"),
+(1302,14,"Wha"),
+(1303,14,"Deh"),
+(1304,14,"Han"),
+(1305,14,"Dim"),
+(1306,14,"Fus"),
+(1307,14,"Sca"),
+(1308,14,"Tor"),
+(1309,14,"Yudo"),
+(1310,14,"Cyaa"),
+(1311,14,"Worl"),
+(1312,14,"Riva"),
+(1313,14,"Iyaz"),
+(1314,14,"Ting"),
+(1315,14,"T'ief"),
+(1316,14,"Duti"),
+(1317,14,"Skam"),
+(1318,14,"Wi'mek"),
+(1319,14,"Fidong"),
+(1320,14,"Siame"),
+(1321,14,"Wassa"),
+(1322,14,"Difus"),
+(1323,14,"Caang"),
+(1324,14,"Deh'yo"),
+(1325,14,"Nehjo"),
+(1326,14,"Ackee"),
+(1327,14,"Atuad"),
+(1328,14,"Iman"),
+(1329,14,"Saakes"),
+(1330,14,"Icense"),
+(1331,14,"Lok'dim"),
+(1332,14,"Smadda"),
+(1333,14,"Honnah"),
+(1334,14,"Italaf"),
+(1335,14,"Quashi"),
+(1336,14,"Bwoyar"),
+(1337,14,"Reespek"),
+(1338,14,"Stoosh"),
+(1339,14,"Tanponi"),
+(1340,14,"Craaweh"),
+(1341,14,"Whutless"),
+(1342,14,"Uptfeel"),
+(1343,14,"Rivasuf"),
+(1344,14,"Chakari"),
+(1345,14,"Yahsoda"),
+(1346,14,"Ziondeh"),
+(1347,14,"Flimeff"),
+(1348,14,"Yuutee"),
+(1349,14,"Ginnalka"),
+(1350,14,"Zutopong"),
+(1351,14,"Godehsi"),
+(1352,14,"Wehnehjo"),
+(1353,14,"Oondasta"),
+(1354,14,"Yeyewata"),
+(1355,14,"Or'manley"),
+(1356,14,"Machette"),
+(1357,14,"Fus'obeah"),
+(1358,14,"Nyamanpo"),
+(1371,33,"A"),
+(1372,33,"E"),
+(1373,33,"I"),
+(1374,33,"O"),
+(1375,33,"U"),
+(1376,33,"Y"),
+(1377,33,"Lo"),
+(1378,33,"Ne"),
+(1379,33,"Ve"),
+(1380,33,"Ru"),
+(1381,33,"An"),
+(1382,33,"Ti"),
+(1383,33,"Me"),
+(1384,33,"Lu"),
+(1385,33,"Re"),
+(1386,33,"Se"),
+(1387,33,"Va"),
+(1388,33,"Ko"),
+(1389,33,"Vil"),
+(1390,33,"Bor"),
+(1391,33,"Ras"),
+(1392,33,"Gol"),
+(1393,33,"Nud"),
+(1394,33,"Far"),
+(1395,33,"Wos"),
+(1396,33,"Mod"),
+(1397,33,"Ver"),
+(1398,33,"Ash"),
+(1399,33,"Lon"),
+(1400,33,"Bur"),
+(1401,33,"Hir"),
+(1402,33,"Nuff"),
+(1403,33,"Thor"),
+(1404,33,"Ruff"),
+(1405,33,"Odes"),
+(1406,33,"Noth"),
+(1407,33,"Ador"),
+(1408,33,"Dana"),
+(1409,33,"Vrum"),
+(1410,33,"Veld"),
+(1411,33,"Vohl"),
+(1412,33,"Lars"),
+(1413,33,"Goth"),
+(1414,33,"Agol"),
+(1415,33,"Uden"),
+(1416,33,"Wirsh"),
+(1417,33,"Novas"),
+(1418,33,"Regen"),
+(1419,33,"Gloin"),
+(1420,33,"Tiras"),
+(1421,33,"Barad"),
+(1422,33,"Garde"),
+(1423,33,"Majis"),
+(1424,33,"Ergin"),
+(1425,33,"Nagan"),
+(1426,33,"Algos"),
+(1427,33,"Eynes"),
+(1428,33,"Borne"),
+(1429,33,"Melka"),
+(1430,33,"Ruftos"),
+(1431,33,"Aesire"),
+(1432,33,"Rothas"),
+(1433,33,"Nevren"),
+(1434,33,"Rogesh"),
+(1435,33,"Skilde"),
+(1436,33,"Vandar"),
+(1437,33,"Valesh"),
+(1438,33,"Engoth"),
+(1439,33,"Aziris"),
+(1440,33,"Mandos"),
+(1441,33,"Goibon"),
+(1442,33,"Danieb"),
+(1443,33,"Daegil"),
+(1444,33,"Waldir"),
+(1445,33,"Ealdor"),
+(1446,33,"Novaedi"),
+(1447,33,"Lithtos"),
+(1448,33,"Ewiddan"),
+(1449,33,"Forthis"),
+(1450,33,"Faergas"),
+(1451,33,"Sturume"),
+(1452,33,"Vassild"),
+(1453,33,"Nostyec"),
+(1454,33,"Andovis"),
+(1455,33,"Koshvel"),
+(1456,33,"Nandige"),
+(1457,33,"Kaelsig"),
+(1458,33,"Thorniss"),
+(1459,33,"Ruftvess"),
+(1460,33,"Aldonoth"),
+(1461,33,"Endirvis"),
+(1462,33,"Landowar"),
+(1463,33,"Hamerung"),
+(1464,33,"Cynegold"),
+(1465,33,"Methrine"),
+(1466,33,"Lordaere"),
+(1467,33,"Gloinador"),
+(1468,33,"Veldbarad"),
+(1469,33,"Gothalgos"),
+(1470,33,"Udenmajis"),
+(1471,33,"Danagarde"),
+(1472,33,"Vandarwos"),
+(1473,33,"Firalaine"),
+(1474,33,"Aetwinter"),
+(1475,33,"Eloderung"),
+(1476,33,"Regenthor"),
+(1477,33,"Vastrungen"),
+(1478,33,"Falhedring"),
+(1479,33,"Cynewalden"),
+(1480,33,"Dyrstigost"),
+(1481,33,"Aelgestron"),
+(1482,33,"Danavandar"),
+(1483,33,"Wershaesire"),
+(1484,33,"Thorlithtos"),
+(1485,33,"Vassildador"),
+(1486,33,"Agolandovis"),
+(1487,33,"Bornevalesh"),
+(1488,33,"Farlandowar"),
+(1489,33,"Nevrenrothas"),
+(1490,33,"Forthasador"),
+(1491,33,"Mandosdaegil"),
+(1492,33,"Waldirskilde"),
+(1493,33,"Adorstaerume"),
+(1494,33,"Golveldbarad"),
+(1495,35,"A"),
+(1496,35,"E"),
+(1497,35,"I"),
+(1498,35,"O"),
+(1499,35,"U"),
+(1500,35,"Y"),
+(1501,35,"G"),
+(1502,35,"X"),
+(1503,35,"Il"),
+(1504,35,"No"),
+(1505,35,"Az"),
+(1506,35,"Te"),
+(1507,35,"Ur"),
+(1508,35,"Za"),
+(1509,35,"Ze"),
+(1510,35,"Re"),
+(1511,35,"Ul"),
+(1512,35,"Me"),
+(1513,35,"Xi"),
+(1514,35,"Tor"),
+(1515,35,"Gul"),
+(1516,35,"Lok"),
+(1517,35,"Asj"),
+(1518,35,"Kar"),
+(1519,35,"Lek"),
+(1520,35,"Daz"),
+(1521,35,"Maz"),
+(1522,35,"Ril"),
+(1523,35,"Ruk"),
+(1524,35,"Laz"),
+(1525,35,"Shi"),
+(1526,35,"Zar"),
+(1527,35,"Ashj"),
+(1528,35,"Alar"),
+(1529,35,"Orah"),
+(1530,35,"Amir"),
+(1531,35,"Aman"),
+(1532,35,"Ante"),
+(1533,35,"Kiel"),
+(1534,35,"Maez"),
+(1535,35,"Maev"),
+(1536,35,"Veni"),
+(1537,35,"Raka"),
+(1538,35,"Zila"),
+(1539,35,"Zenn"),
+(1540,35,"Parn"),
+(1541,35,"Rikk"),
+(1542,35,"Melar"),
+(1543,35,"Rakir"),
+(1544,35,"Tiros"),
+(1545,35,"Modas"),
+(1546,35,"Belan"),
+(1547,35,"Zekul"),
+(1548,35,"Soran"),
+(1549,35,"Gular"),
+(1550,35,"Enkil"),
+(1551,35,"Adare"),
+(1552,35,"Golad"),
+(1553,35,"Buras"),
+(1554,35,"Nagas"),
+(1555,35,"Revos"),
+(1556,35,"Refir"),
+(1557,35,"Kamil"),
+(1558,35,"Rethul"),
+(1559,35,"Rakkan"),
+(1560,35,"Rakkas"),
+(1561,35,"Tichar"),
+(1562,35,"Mannor"),
+(1563,35,"Archim"),
+(1564,35,"Azgala"),
+(1565,35,"Karkun"),
+(1566,35,"Revola"),
+(1567,35,"Mishun"),
+(1568,35,"Arakal"),
+(1569,35,"Kazile"),
+(1570,35,"Thorje"),
+(1571,35,"Belaros"),
+(1572,35,"Tiriosh"),
+(1573,35,"Faramos"),
+(1574,35,"Danashj"),
+(1575,35,"Amanare"),
+(1576,35,"Faralos"),
+(1577,35,"Kieldaz"),
+(1578,35,"Karaman"),
+(1579,35,"Gulamir"),
+(1580,35,"Toralar"),
+(1581,35,"Rethule"),
+(1582,35,"Zennshi"),
+(1583,35,"Maladath"),
+(1584,35,"Kirasath"),
+(1585,35,"Romathis"),
+(1586,35,"Theramas"),
+(1587,35,"Azrathud"),
+(1588,35,"Mordanas"),
+(1589,35,"Amanalar"),
+(1590,35,"Ashjraka"),
+(1591,35,"Azgalada"),
+(1592,35,"Rukadare"),
+(1593,35,"Sorankar"),
+(1594,35,"Enkilzar"),
+(1595,35,"Naztheros"),
+(1596,35,"Zilthuras"),
+(1597,35,"Kanrethad"),
+(1598,35,"Matheredor"),
+(1599,35,"Ticharamir"),
+(1600,35,"Melarorah"),
+(1601,35,"Arakalada"),
+(1602,35,"Soranaman"),
+(1603,35,"Nagasraka"),
+(1604,35,"Belankar"),
+(1605,35,"Pathrebosh"),
+(1606,35,"Benthadoom"),
+(1607,35,"Amanemodas"),
+(1608,35,"Teamanare"),
+(1609,35,"Enkilgular"),
+(1610,35,"Burasadare"),
+(1611,35,"Melamagas"),
+(1612,35,"Zennrakkan"),
+(1613,35,"Ashjrethul"),
+(1614,35,"Zekulrakkas"),
+(1615,35,"Archimtiros"),
+(1616,35,"Mannorgulan"),
+(1617,35,"Mishunadare"),
+(1618,35,"Zennshinagas"),
+(1619,35,"Ashjrakamas"),
+(1620,35,"Kamilgolad"),
+(1621,36,"..."),
+(1623,36,".."),
+(1624,36,"."),
+(1625,36,".."),
+(1626,36,"..."),
+(1627,36,"...."),
+(1628,36,"....."),
+(1629,36,"......."),
+(1630,36,"........."),
+(1631,37,"1"),
+(1632,37,"1"),
+(1633,37,"11"),
+(1634,37,"10"),
+(1635,37,"11"),
+(1636,37,"101"),
+(1637,37,"1010"),
+(1638,37,"10101"),
+(1639,37,"101010"),
+(1640,37,"1010101"),
+(1641,37,"10101010"),
+(1642,37,"111"),
+(1643,37,"110"),
+(1644,37,"1100"),
+(1645,37,"1101"),
+(1646,37,"11001"),
+(1647,37,"10110"),
+(1648,37,"10010"),
+(1649,37,"110011"),
+(1650,37,"110110"),
+(1651,37,"1001100"),
+(1652,37,"1000111"),
+(1653,37,"11110110"),
+(1654,37,"10011010"),
+(1655,37,"11101101"),
+(1656,38,"0"),
+(1657,38,"01"),
+(1658,38,"010"),
+(1659,38,"011"),
+(1660,38,"0100"),
+(1661,38,"0110"),
+(1662,38,"0101"),
+(1663,38,"0111"),
+(1664,38,"01110"),
+(1665,38,"01010"),
+(1666,38,"01101"),
+(1667,38,"01001"),
+(1668,38,"011001"),
+(1669,38,"010111"),
+(1670,38,"011011"),
+(1671,38,"010010"),
+(1672,38,"0110101"),
+(1673,38,"0111011"),
+(1674,38,"0100101"),
+(1675,38,"0101110"),
+(1676,38,"01101011"),
+(1677,38,"01001100"); 

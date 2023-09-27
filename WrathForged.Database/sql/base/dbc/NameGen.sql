@@ -1,6234 +1,6234 @@
 DROP TABLE IF EXISTS `NameGen`; 
 CREATE TABLE `NameGen` ( `ID` INT NOT NULL DEFAULT '0', `Name` TEXT NULL, `RaceID` INT NOT NULL DEFAULT '0', `Sex` INT NOT NULL DEFAULT '0', PRIMARY KEY (`ID`)) ENGINE=InnoDB DEFAULT CHARSET=utf8; 
-INSERT INTO `NameGen` VALUES (195,"Agamand",1,0); 
-INSERT INTO `NameGen` VALUES (196,"Andromath",1,0); 
-INSERT INTO `NameGen` VALUES (197,"Antonidas",1,0); 
-INSERT INTO `NameGen` VALUES (198,"Fordred",1,0); 
-INSERT INTO `NameGen` VALUES (199,"Nielas",1,0); 
-INSERT INTO `NameGen` VALUES (200,"Nielas",1,0); 
-INSERT INTO `NameGen` VALUES (201,"Arius",1,0); 
-INSERT INTO `NameGen` VALUES (202,"Arugal",1,0); 
-INSERT INTO `NameGen` VALUES (203,"Sten",1,0); 
-INSERT INTO `NameGen` VALUES (204,"Ballador",1,0); 
-INSERT INTO `NameGen` VALUES (205,"Barthilas",1,0); 
-INSERT INTO `NameGen` VALUES (206,"Aedelas",1,0); 
-INSERT INTO `NameGen` VALUES (207,"Conjurus",1,0); 
-INSERT INTO `NameGen` VALUES (208,"Rex",1,0); 
-INSERT INTO `NameGen` VALUES (209,"Danath",1,0); 
-INSERT INTO `NameGen` VALUES (210,"Saidin",1,0); 
-INSERT INTO `NameGen` VALUES (211,"Dalar",1,0); 
-INSERT INTO `NameGen` VALUES (212,"Alonsus",1,0); 
-INSERT INTO `NameGen` VALUES (213,"Tenn",1,0); 
-INSERT INTO `NameGen` VALUES (214,"Tirion",1,0); 
-INSERT INTO `NameGen` VALUES (215,"Taelan",1,0); 
-INSERT INTO `NameGen` VALUES (216,"Gavinrad",1,0); 
-INSERT INTO `NameGen` VALUES (217,"Granis",1,0); 
-INSERT INTO `NameGen` VALUES (218,"Genn",1,0); 
-INSERT INTO `NameGen` VALUES (219,"Nandis",1,0); 
-INSERT INTO `NameGen` VALUES (220,"Geros",1,0); 
-INSERT INTO `NameGen` VALUES (221,"Jorn",1,0); 
-INSERT INTO `NameGen` VALUES (222,"Khadgar",1,0); 
-INSERT INTO `NameGen` VALUES (223,"Landazar",1,0); 
-INSERT INTO `NameGen` VALUES (224,"Shal",1,0); 
-INSERT INTO `NameGen` VALUES (225,"Anduin",1,0); 
-INSERT INTO `NameGen` VALUES (226,"Doril",1,0); 
-INSERT INTO `NameGen` VALUES (227,"Marn",1,0); 
-INSERT INTO `NameGen` VALUES (228,"Malak",1,0); 
-INSERT INTO `NameGen` VALUES (229,"Manadar",1,0); 
-INSERT INTO `NameGen` VALUES (230,"Medivh",1,0); 
-INSERT INTO `NameGen` VALUES (231,"Arthas",1,0); 
-INSERT INTO `NameGen` VALUES (232,"Terenas",1,0); 
-INSERT INTO `NameGen` VALUES (233,"Morlune",1,0); 
-INSERT INTO `NameGen` VALUES (234,"Moroes",1,0); 
-INSERT INTO `NameGen` VALUES (235,"Daelin",1,0); 
-INSERT INTO `NameGen` VALUES (236,"Rhonin",1,0); 
-INSERT INTO `NameGen` VALUES (237,"Sage",1,0); 
-INSERT INTO `NameGen` VALUES (238,"Duncan",1,0); 
-INSERT INTO `NameGen` VALUES (239,"Manos",1,0); 
-INSERT INTO `NameGen` VALUES (240,"Peril",1,0); 
-INSERT INTO `NameGen` VALUES (241,"Aran",1,0); 
-INSERT INTO `NameGen` VALUES (242,"Thoras",1,0); 
-INSERT INTO `NameGen` VALUES (243,"Turalyon",1,0); 
-INSERT INTO `NameGen` VALUES (244,"Uther",1,0); 
-INSERT INTO `NameGen` VALUES (245,"Varien",1,0); 
-INSERT INTO `NameGen` VALUES (246,"Llane",1,0); 
-INSERT INTO `NameGen` VALUES (247,"Zann",1,0); 
-INSERT INTO `NameGen` VALUES (1327,"Aimery",1,0); 
-INSERT INTO `NameGen` VALUES (1328,"Alex",1,0); 
-INSERT INTO `NameGen` VALUES (1329,"Alonso",1,0); 
-INSERT INTO `NameGen` VALUES (1330,"Ander",1,0); 
-INSERT INTO `NameGen` VALUES (1331,"Anselm",1,0); 
-INSERT INTO `NameGen` VALUES (1332,"Apollo",1,0); 
-INSERT INTO `NameGen` VALUES (1333,"Arlan",1,0); 
-INSERT INTO `NameGen` VALUES (1334,"Benedict",1,0); 
-INSERT INTO `NameGen` VALUES (1335,"Berenger",1,0); 
-INSERT INTO `NameGen` VALUES (1336,"Bertren",1,0); 
-INSERT INTO `NameGen` VALUES (1337,"Bruce",1,0); 
-INSERT INTO `NameGen` VALUES (1338,"Carl",1,0); 
-INSERT INTO `NameGen` VALUES (1339,"Carlin",1,0); 
-INSERT INTO `NameGen` VALUES (1340,"Carter",1,0); 
-INSERT INTO `NameGen` VALUES (1341,"Cedric",1,0); 
-INSERT INTO `NameGen` VALUES (1342,"Clement",1,0); 
-INSERT INTO `NameGen` VALUES (1343,"Clinton",1,0); 
-INSERT INTO `NameGen` VALUES (1344,"Daniel",1,0); 
-INSERT INTO `NameGen` VALUES (1345,"Darren",1,0); 
-INSERT INTO `NameGen` VALUES (1346,"Derek",1,0); 
-INSERT INTO `NameGen` VALUES (1347,"Eric",1,0); 
-INSERT INTO `NameGen` VALUES (1348,"Errol",1,0); 
-INSERT INTO `NameGen` VALUES (1349,"Everard",1,0); 
-INSERT INTO `NameGen` VALUES (1350,"Garth",1,0); 
-INSERT INTO `NameGen` VALUES (1351,"Geoff",1,0); 
-INSERT INTO `NameGen` VALUES (1352,"Graham",1,0); 
-INSERT INTO `NameGen` VALUES (1353,"Gregory",1,0); 
-INSERT INTO `NameGen` VALUES (1354,"Guillaume",1,0); 
-INSERT INTO `NameGen` VALUES (1355,"Hadrian",1,0); 
-INSERT INTO `NameGen` VALUES (1356,"Halian",1,0); 
-INSERT INTO `NameGen` VALUES (1357,"Harold",1,0); 
-INSERT INTO `NameGen` VALUES (1358,"Isaac",1,0); 
-INSERT INTO `NameGen` VALUES (1359,"Jack",1,0); 
-INSERT INTO `NameGen` VALUES (1360,"Jacob",1,0); 
-INSERT INTO `NameGen` VALUES (1361,"Jed",1,0); 
-INSERT INTO `NameGen` VALUES (1362,"Jeff",1,0); 
-INSERT INTO `NameGen` VALUES (1363,"Jeremiah",1,0); 
-INSERT INTO `NameGen` VALUES (1364,"Jessie",1,0); 
-INSERT INTO `NameGen` VALUES (1365,"Jethro",1,0); 
-INSERT INTO `NameGen` VALUES (1366,"Johan",1,0); 
-INSERT INTO `NameGen` VALUES (1367,"Judd",1,0); 
-INSERT INTO `NameGen` VALUES (1368,"Leroy",1,0); 
-INSERT INTO `NameGen` VALUES (1369,"Mitchell",1,0); 
-INSERT INTO `NameGen` VALUES (1370,"Paul",1,0); 
-INSERT INTO `NameGen` VALUES (1371,"Raiford",1,0); 
-INSERT INTO `NameGen` VALUES (1372,"Reese",1,0); 
-INSERT INTO `NameGen` VALUES (1373,"Regis",1,0); 
-INSERT INTO `NameGen` VALUES (1374,"Reid",1,0); 
-INSERT INTO `NameGen` VALUES (1375,"Robert",1,0); 
-INSERT INTO `NameGen` VALUES (1376,"Rodney",1,0); 
-INSERT INTO `NameGen` VALUES (1377,"Taylor",1,0); 
-INSERT INTO `NameGen` VALUES (1378,"Thibault",1,0); 
-INSERT INTO `NameGen` VALUES (1379,"Todd",1,0); 
-INSERT INTO `NameGen` VALUES (1380,"Walter",1,0); 
-INSERT INTO `NameGen` VALUES (1381,"Warin",1,0); 
-INSERT INTO `NameGen` VALUES (1382,"Warren",1,0); 
-INSERT INTO `NameGen` VALUES (1383,"Wayne",1,0); 
-INSERT INTO `NameGen` VALUES (1384,"Wymon",1,0); 
-INSERT INTO `NameGen` VALUES (1385,"Xander",1,0); 
-INSERT INTO `NameGen` VALUES (1386,"Yves",1,0); 
-INSERT INTO `NameGen` VALUES (2493,"Abelard",1,0); 
-INSERT INTO `NameGen` VALUES (2494,"Adin",1,0); 
-INSERT INTO `NameGen` VALUES (2495,"Adorian",1,0); 
-INSERT INTO `NameGen` VALUES (2496,"Aiden",1,0); 
-INSERT INTO `NameGen` VALUES (2497,"Aironus",1,0); 
-INSERT INTO `NameGen` VALUES (2498,"Alden",1,0); 
-INSERT INTO `NameGen` VALUES (2499,"Alexios",1,0); 
-INSERT INTO `NameGen` VALUES (2500,"Anders",1,0); 
-INSERT INTO `NameGen` VALUES (2501,"Anson",1,0); 
-INSERT INTO `NameGen` VALUES (2502,"Artim",1,0); 
-INSERT INTO `NameGen` VALUES (2503,"Ashton",1,0); 
-INSERT INTO `NameGen` VALUES (2504,"Austen",1,0); 
-INSERT INTO `NameGen` VALUES (2505,"Bailby",1,0); 
-INSERT INTO `NameGen` VALUES (2506,"Barraud",1,0); 
-INSERT INTO `NameGen` VALUES (2507,"Benes",1,0); 
-INSERT INTO `NameGen` VALUES (2508,"Brayden",1,0); 
-INSERT INTO `NameGen` VALUES (2509,"Caleb",1,0); 
-INSERT INTO `NameGen` VALUES (2510,"Cayden",1,0); 
-INSERT INTO `NameGen` VALUES (2511,"Cayne",1,0); 
-INSERT INTO `NameGen` VALUES (2512,"Cedrick",1,0); 
-INSERT INTO `NameGen` VALUES (2513,"Clark",1,0); 
-INSERT INTO `NameGen` VALUES (2514,"Clayton",1,0); 
-INSERT INTO `NameGen` VALUES (2515,"Corey",1,0); 
-INSERT INTO `NameGen` VALUES (2516,"Curtis",1,0); 
-INSERT INTO `NameGen` VALUES (2517,"Daician",1,0); 
-INSERT INTO `NameGen` VALUES (2518,"Dallin",1,0); 
-INSERT INTO `NameGen` VALUES (2519,"Damone",1,0); 
-INSERT INTO `NameGen` VALUES (2520,"Davin",1,0); 
-INSERT INTO `NameGen` VALUES (2521,"Devon",1,0); 
-INSERT INTO `NameGen` VALUES (2522,"Dewey",1,0); 
-INSERT INTO `NameGen` VALUES (2523,"Draven",1,0); 
-INSERT INTO `NameGen` VALUES (2524,"Dyrius",1,0); 
-INSERT INTO `NameGen` VALUES (2525,"Eames",1,0); 
-INSERT INTO `NameGen` VALUES (2526,"Edward",1,0); 
-INSERT INTO `NameGen` VALUES (2527,"Elgar",1,0); 
-INSERT INTO `NameGen` VALUES (2528,"Elroy",1,0); 
-INSERT INTO `NameGen` VALUES (2529,"Ethon",1,0); 
-INSERT INTO `NameGen` VALUES (2530,"Fanley",1,0); 
-INSERT INTO `NameGen` VALUES (2531,"Filmore",1,0); 
-INSERT INTO `NameGen` VALUES (2532,"Fletcher",1,0); 
-INSERT INTO `NameGen` VALUES (2533,"Franklin",1,0); 
-INSERT INTO `NameGen` VALUES (2534,"Gage",1,0); 
-INSERT INTO `NameGen` VALUES (2535,"Galan",1,0); 
-INSERT INTO `NameGen` VALUES (2536,"Gannet",1,0); 
-INSERT INTO `NameGen` VALUES (2537,"Gerrick",1,0); 
-INSERT INTO `NameGen` VALUES (2538,"Gunnar",1,0); 
-INSERT INTO `NameGen` VALUES (2539,"Haiden",1,0); 
-INSERT INTO `NameGen` VALUES (2540,"Haldane",1,0); 
-INSERT INTO `NameGen` VALUES (2541,"Halsey",1,0); 
-INSERT INTO `NameGen` VALUES (2542,"Holden",1,0); 
-INSERT INTO `NameGen` VALUES (2543,"Hudson",1,0); 
-INSERT INTO `NameGen` VALUES (2544,"Iridian",1,0); 
-INSERT INTO `NameGen` VALUES (2545,"Jaaron",1,0); 
-INSERT INTO `NameGen` VALUES (2546,"Jairund",1,0); 
-INSERT INTO `NameGen` VALUES (2547,"Jarek",1,0); 
-INSERT INTO `NameGen` VALUES (2548,"Jayson",1,0); 
-INSERT INTO `NameGen` VALUES (2549,"Jesse",1,0); 
-INSERT INTO `NameGen` VALUES (2550,"Joel",1,0); 
-INSERT INTO `NameGen` VALUES (2551,"Jonah",1,0); 
-INSERT INTO `NameGen` VALUES (2552,"Jonathan",1,0); 
-INSERT INTO `NameGen` VALUES (2553,"Justus",1,0); 
-INSERT INTO `NameGen` VALUES (2554,"Kai",1,0); 
-INSERT INTO `NameGen` VALUES (2555,"Kalvin",1,0); 
-INSERT INTO `NameGen` VALUES (2556,"Karsh",1,0); 
-INSERT INTO `NameGen` VALUES (2557,"Kashel",1,0); 
-INSERT INTO `NameGen` VALUES (2558,"Kaylan",1,0); 
-INSERT INTO `NameGen` VALUES (2559,"Keifer",1,0); 
-INSERT INTO `NameGen` VALUES (2560,"Keion",1,0); 
-INSERT INTO `NameGen` VALUES (2561,"Kenton",1,0); 
-INSERT INTO `NameGen` VALUES (2562,"Kevyn",1,0); 
-INSERT INTO `NameGen` VALUES (2563,"Koby",1,0); 
-INSERT INTO `NameGen` VALUES (2564,"Korban",1,0); 
-INSERT INTO `NameGen` VALUES (2565,"Kuthbert",1,0); 
-INSERT INTO `NameGen` VALUES (2566,"Lamarre",1,0); 
-INSERT INTO `NameGen` VALUES (2567,"Lars",1,0); 
-INSERT INTO `NameGen` VALUES (2568,"Lashan",1,0); 
-INSERT INTO `NameGen` VALUES (2569,"Layton",1,0); 
-INSERT INTO `NameGen` VALUES (2570,"Leland",1,0); 
-INSERT INTO `NameGen` VALUES (2571,"Maddox",1,0); 
-INSERT INTO `NameGen` VALUES (2572,"Marius",1,0); 
-INSERT INTO `NameGen` VALUES (2573,"Marlon",1,0); 
-INSERT INTO `NameGen` VALUES (2574,"Miccah",1,0); 
-INSERT INTO `NameGen` VALUES (2575,"Nathan",1,0); 
-INSERT INTO `NameGen` VALUES (2576,"Nelson",1,0); 
-INSERT INTO `NameGen` VALUES (2577,"Nolen",1,0); 
-INSERT INTO `NameGen` VALUES (2578,"Oren",1,0); 
-INSERT INTO `NameGen` VALUES (2579,"Padrik",1,0); 
-INSERT INTO `NameGen` VALUES (2580,"Parker",1,0); 
-INSERT INTO `NameGen` VALUES (2581,"Patrick",1,0); 
-INSERT INTO `NameGen` VALUES (2582,"Payton",1,0); 
-INSERT INTO `NameGen` VALUES (2583,"Phillip",1,0); 
-INSERT INTO `NameGen` VALUES (2584,"Piotyr",1,0); 
-INSERT INTO `NameGen` VALUES (2585,"Quin",1,0); 
-INSERT INTO `NameGen` VALUES (2586,"Quincey",1,0); 
-INSERT INTO `NameGen` VALUES (2587,"Sebastian",1,0); 
-INSERT INTO `NameGen` VALUES (2588,"Silas",1,0); 
-INSERT INTO `NameGen` VALUES (2589,"Symon",1,0); 
-INSERT INTO `NameGen` VALUES (2590,"Tanner",1,0); 
-INSERT INTO `NameGen` VALUES (2591,"Tavish",1,0); 
-INSERT INTO `NameGen` VALUES (2592,"Theodore",1,0); 
-INSERT INTO `NameGen` VALUES (2593,"Vale",1,0); 
-INSERT INTO `NameGen` VALUES (2594,"Walton",1,0); 
-INSERT INTO `NameGen` VALUES (2595,"Waylen",1,0); 
-INSERT INTO `NameGen` VALUES (2596,"Willifred",1,0); 
-INSERT INTO `NameGen` VALUES (2597,"Yancy",1,0); 
-INSERT INTO `NameGen` VALUES (2598,"Yani",1,0); 
-INSERT INTO `NameGen` VALUES (450,"Aegwynn",1,1); 
-INSERT INTO `NameGen` VALUES (451,"Taretha",1,1); 
-INSERT INTO `NameGen` VALUES (452,"Calia",1,1); 
-INSERT INTO `NameGen` VALUES (454,"Maevis",1,1); 
-INSERT INTO `NameGen` VALUES (455,"Alexis",1,1); 
-INSERT INTO `NameGen` VALUES (456,"Ariandra",1,1); 
-INSERT INTO `NameGen` VALUES (457,"Kassandra",1,1); 
-INSERT INTO `NameGen` VALUES (458,"Wilhelmina",1,1); 
-INSERT INTO `NameGen` VALUES (459,"Gloriana",1,1); 
-INSERT INTO `NameGen` VALUES (460,"Sarah",1,1); 
-INSERT INTO `NameGen` VALUES (461,"Samantha",1,1); 
-INSERT INTO `NameGen` VALUES (462,"Kitiara",1,1); 
-INSERT INTO `NameGen` VALUES (463,"April",1,1); 
-INSERT INTO `NameGen` VALUES (464,"Jorune",1,1); 
-INSERT INTO `NameGen` VALUES (465,"Brunhilde",1,1); 
-INSERT INTO `NameGen` VALUES (466,"Sithaya",1,1); 
-INSERT INTO `NameGen` VALUES (467,"Andra",1,1); 
-INSERT INTO `NameGen` VALUES (468,"Amora",1,1); 
-INSERT INTO `NameGen` VALUES (469,"Dierdre",1,1); 
-INSERT INTO `NameGen` VALUES (470,"Sandris",1,1); 
-INSERT INTO `NameGen` VALUES (1267,"Adelaide",1,1); 
-INSERT INTO `NameGen` VALUES (1268,"Alice",1,1); 
-INSERT INTO `NameGen` VALUES (1269,"Amaria",1,1); 
-INSERT INTO `NameGen` VALUES (1270,"Amelia",1,1); 
-INSERT INTO `NameGen` VALUES (1271,"Avelina",1,1); 
-INSERT INTO `NameGen` VALUES (1272,"Barbara",1,1); 
-INSERT INTO `NameGen` VALUES (1273,"Beatrix",1,1); 
-INSERT INTO `NameGen` VALUES (1274,"Betta",1,1); 
-INSERT INTO `NameGen` VALUES (1275,"Brigit",1,1); 
-INSERT INTO `NameGen` VALUES (1276,"Calli",1,1); 
-INSERT INTO `NameGen` VALUES (1277,"Candis",1,1); 
-INSERT INTO `NameGen` VALUES (1278,"Carolyn",1,1); 
-INSERT INTO `NameGen` VALUES (1279,"Catherine",1,1); 
-INSERT INTO `NameGen` VALUES (1280,"Catin",1,1); 
-INSERT INTO `NameGen` VALUES (1281,"Christiana",1,1); 
-INSERT INTO `NameGen` VALUES (1282,"Christine",1,1); 
-INSERT INTO `NameGen` VALUES (1283,"Cicely",1,1); 
-INSERT INTO `NameGen` VALUES (1284,"Constance",1,1); 
-INSERT INTO `NameGen` VALUES (1285,"Cristina",1,1); 
-INSERT INTO `NameGen` VALUES (1286,"Dagny",1,1); 
-INSERT INTO `NameGen` VALUES (1287,"Danielle",1,1); 
-INSERT INTO `NameGen` VALUES (1288,"Darcy",1,1); 
-INSERT INTO `NameGen` VALUES (1289,"Desiree",1,1); 
-INSERT INTO `NameGen` VALUES (1290,"Felicity",1,1); 
-INSERT INTO `NameGen` VALUES (1291,"Florencia",1,1); 
-INSERT INTO `NameGen` VALUES (1292,"Giliana",1,1); 
-INSERT INTO `NameGen` VALUES (1293,"Gladys",1,1); 
-INSERT INTO `NameGen` VALUES (1294,"Grace",1,1); 
-INSERT INTO `NameGen` VALUES (1295,"Heloise",1,1); 
-INSERT INTO `NameGen` VALUES (1296,"Honor",1,1); 
-INSERT INTO `NameGen` VALUES (1297,"Hope",1,1); 
-INSERT INTO `NameGen` VALUES (1298,"Jane",1,1); 
-INSERT INTO `NameGen` VALUES (1299,"Joy",1,1); 
-INSERT INTO `NameGen` VALUES (1300,"Kaisa",1,1); 
-INSERT INTO `NameGen` VALUES (1301,"Kamilla",1,1); 
-INSERT INTO `NameGen` VALUES (1302,"Kimberly",1,1); 
-INSERT INTO `NameGen` VALUES (1303,"Lia",1,1); 
-INSERT INTO `NameGen` VALUES (1304,"Lois",1,1); 
-INSERT INTO `NameGen` VALUES (1305,"Lola",1,1); 
-INSERT INTO `NameGen` VALUES (1306,"Lucille",1,1); 
-INSERT INTO `NameGen` VALUES (1307,"Margery",1,1); 
-INSERT INTO `NameGen` VALUES (1308,"Marilyn",1,1); 
-INSERT INTO `NameGen` VALUES (1309,"Marlena",1,1); 
-INSERT INTO `NameGen` VALUES (1310,"Meghan",1,1); 
-INSERT INTO `NameGen` VALUES (1311,"Mercy",1,1); 
-INSERT INTO `NameGen` VALUES (1312,"Mirabell",1,1); 
-INSERT INTO `NameGen` VALUES (1313,"Naomi",1,1); 
-INSERT INTO `NameGen` VALUES (1314,"Pamela",1,1); 
-INSERT INTO `NameGen` VALUES (1315,"Peggy",1,1); 
-INSERT INTO `NameGen` VALUES (1316,"Prudence",1,1); 
-INSERT INTO `NameGen` VALUES (1317,"Reyna",1,1); 
-INSERT INTO `NameGen` VALUES (1318,"Rhoda",1,1); 
-INSERT INTO `NameGen` VALUES (1319,"Sabeline",1,1); 
-INSERT INTO `NameGen` VALUES (1320,"Theda",1,1); 
-INSERT INTO `NameGen` VALUES (1321,"Thelma",1,1); 
-INSERT INTO `NameGen` VALUES (1322,"Theresa",1,1); 
-INSERT INTO `NameGen` VALUES (1323,"Tiffany",1,1); 
-INSERT INTO `NameGen` VALUES (1324,"Tina",1,1); 
-INSERT INTO `NameGen` VALUES (1325,"Tracy",1,1); 
-INSERT INTO `NameGen` VALUES (1326,"Verity",1,1); 
-INSERT INTO `NameGen` VALUES (2599,"Acacia",1,1); 
-INSERT INTO `NameGen` VALUES (2600,"Alessandra",1,1); 
-INSERT INTO `NameGen` VALUES (2601,"Amadria",1,1); 
-INSERT INTO `NameGen` VALUES (2602,"Andraia",1,1); 
-INSERT INTO `NameGen` VALUES (2603,"Annalea",1,1); 
-INSERT INTO `NameGen` VALUES (2604,"Ardyth",1,1); 
-INSERT INTO `NameGen` VALUES (2605,"Astradyn",1,1); 
-INSERT INTO `NameGen` VALUES (2606,"Autumn",1,1); 
-INSERT INTO `NameGen` VALUES (2607,"Becky",1,1); 
-INSERT INTO `NameGen` VALUES (2608,"Blythe",1,1); 
-INSERT INTO `NameGen` VALUES (2609,"Briar",1,1); 
-INSERT INTO `NameGen` VALUES (2610,"Brylee",1,1); 
-INSERT INTO `NameGen` VALUES (2611,"Callista",1,1); 
-INSERT INTO `NameGen` VALUES (2612,"Cassandra",1,1); 
-INSERT INTO `NameGen` VALUES (2613,"Cassima",1,1); 
-INSERT INTO `NameGen` VALUES (2614,"Challie",1,1); 
-INSERT INTO `NameGen` VALUES (2615,"Chana",1,1); 
-INSERT INTO `NameGen` VALUES (2616,"Chelsea",1,1); 
-INSERT INTO `NameGen` VALUES (2617,"Chiara",1,1); 
-INSERT INTO `NameGen` VALUES (2618,"Dannison",1,1); 
-INSERT INTO `NameGen` VALUES (2619,"Daphne",1,1); 
-INSERT INTO `NameGen` VALUES (2620,"Darla",1,1); 
-INSERT INTO `NameGen` VALUES (2621,"Deandra",1,1); 
-INSERT INTO `NameGen` VALUES (2622,"Dellah",1,1); 
-INSERT INTO `NameGen` VALUES (2623,"Dominique",1,1); 
-INSERT INTO `NameGen` VALUES (2624,"Doriah",1,1); 
-INSERT INTO `NameGen` VALUES (2625,"Dorothy",1,1); 
-INSERT INTO `NameGen` VALUES (2626,"Edith",1,1); 
-INSERT INTO `NameGen` VALUES (2627,"Elaina",1,1); 
-INSERT INTO `NameGen` VALUES (2628,"Elenore",1,1); 
-INSERT INTO `NameGen` VALUES (2629,"Emilee",1,1); 
-INSERT INTO `NameGen` VALUES (2630,"Emma",1,1); 
-INSERT INTO `NameGen` VALUES (2631,"Everette",1,1); 
-INSERT INTO `NameGen` VALUES (2632,"Evie",1,1); 
-INSERT INTO `NameGen` VALUES (2633,"Farrah",1,1); 
-INSERT INTO `NameGen` VALUES (2634,"Fiorella",1,1); 
-INSERT INTO `NameGen` VALUES (2635,"Galiya",1,1); 
-INSERT INTO `NameGen` VALUES (2636,"Gillian",1,1); 
-INSERT INTO `NameGen` VALUES (2637,"Gizela",1,1); 
-INSERT INTO `NameGen` VALUES (2638,"Gracelyn",1,1); 
-INSERT INTO `NameGen` VALUES (2639,"Heidie",1,1); 
-INSERT INTO `NameGen` VALUES (2640,"Ilana",1,1); 
-INSERT INTO `NameGen` VALUES (2641,"Ione",1,1); 
-INSERT INTO `NameGen` VALUES (2642,"Jaimie",1,1); 
-INSERT INTO `NameGen` VALUES (2643,"Jalissa",1,1); 
-INSERT INTO `NameGen` VALUES (2644,"Janessa",1,1); 
-INSERT INTO `NameGen` VALUES (2645,"Jinnea",1,1); 
-INSERT INTO `NameGen` VALUES (2646,"Johanna",1,1); 
-INSERT INTO `NameGen` VALUES (2647,"Jolanda",1,1); 
-INSERT INTO `NameGen` VALUES (2648,"Jolene",1,1); 
-INSERT INTO `NameGen` VALUES (2649,"Kaiah",1,1); 
-INSERT INTO `NameGen` VALUES (2650,"Kaiya",1,1); 
-INSERT INTO `NameGen` VALUES (2651,"Karleigh",1,1); 
-INSERT INTO `NameGen` VALUES (2652,"Kelsea",1,1); 
-INSERT INTO `NameGen` VALUES (2653,"Kirsten",1,1); 
-INSERT INTO `NameGen` VALUES (2654,"Korla",1,1); 
-INSERT INTO `NameGen` VALUES (2655,"Kyara",1,1); 
-INSERT INTO `NameGen` VALUES (2656,"Leiah",1,1); 
-INSERT INTO `NameGen` VALUES (2657,"Leliani",1,1); 
-INSERT INTO `NameGen` VALUES (2658,"Lennith",1,1); 
-INSERT INTO `NameGen` VALUES (2659,"Lisbeth",1,1); 
-INSERT INTO `NameGen` VALUES (2660,"Lisette",1,1); 
-INSERT INTO `NameGen` VALUES (2661,"Lynn",1,1); 
-INSERT INTO `NameGen` VALUES (2662,"Magdelyn",1,1); 
-INSERT INTO `NameGen` VALUES (2663,"Maira",1,1); 
-INSERT INTO `NameGen` VALUES (2664,"Manja",1,1); 
-INSERT INTO `NameGen` VALUES (2665,"Marguerite",1,1); 
-INSERT INTO `NameGen` VALUES (2666,"Marisol",1,1); 
-INSERT INTO `NameGen` VALUES (2667,"Marit",1,1); 
-INSERT INTO `NameGen` VALUES (2668,"Meadow",1,1); 
-INSERT INTO `NameGen` VALUES (2669,"Melodie",1,1); 
-INSERT INTO `NameGen` VALUES (2670,"Millicent",1,1); 
-INSERT INTO `NameGen` VALUES (2671,"Mistiana",1,1); 
-INSERT INTO `NameGen` VALUES (2672,"Myrtha",1,1); 
-INSERT INTO `NameGen` VALUES (2673,"Naima",1,1); 
-INSERT INTO `NameGen` VALUES (2674,"Neranna",1,1); 
-INSERT INTO `NameGen` VALUES (2675,"Odelle",1,1); 
-INSERT INTO `NameGen` VALUES (2676,"Ophelia",1,1); 
-INSERT INTO `NameGen` VALUES (2677,"Pacey",1,1); 
-INSERT INTO `NameGen` VALUES (2678,"Rachael",1,1); 
-INSERT INTO `NameGen` VALUES (2679,"Radmila",1,1); 
-INSERT INTO `NameGen` VALUES (2680,"Rayna",1,1); 
-INSERT INTO `NameGen` VALUES (2681,"Rebekka",1,1); 
-INSERT INTO `NameGen` VALUES (2682,"Roberta",1,1); 
-INSERT INTO `NameGen` VALUES (2683,"Roselle",1,1); 
-INSERT INTO `NameGen` VALUES (2684,"Saige",1,1); 
-INSERT INTO `NameGen` VALUES (2685,"Scarlet",1,1); 
-INSERT INTO `NameGen` VALUES (2686,"Shancai",1,1); 
-INSERT INTO `NameGen` VALUES (2687,"Shanna",1,1); 
-INSERT INTO `NameGen` VALUES (2688,"Talia",1,1); 
-INSERT INTO `NameGen` VALUES (2689,"Tasha",1,1); 
-INSERT INTO `NameGen` VALUES (2690,"Valanese",1,1); 
-INSERT INTO `NameGen` VALUES (2691,"Valeska",1,1); 
-INSERT INTO `NameGen` VALUES (2692,"Vannah",1,1); 
-INSERT INTO `NameGen` VALUES (2693,"Viridiana",1,1); 
-INSERT INTO `NameGen` VALUES (2694,"Whittany",1,1); 
-INSERT INTO `NameGen` VALUES (2695,"Wynna",1,1); 
-INSERT INTO `NameGen` VALUES (2696,"Xara",1,1); 
-INSERT INTO `NameGen` VALUES (2697,"Yarina",1,1); 
-INSERT INTO `NameGen` VALUES (2698,"Zivanka",1,1); 
-INSERT INTO `NameGen` VALUES (2699,"Zoe",1,1); 
-INSERT INTO `NameGen` VALUES (268,"Akinos",2,0); 
-INSERT INTO `NameGen` VALUES (269,"Arashicage",2,0); 
-INSERT INTO `NameGen` VALUES (270,"Baelgun",2,0); 
-INSERT INTO `NameGen` VALUES (271,"Bale",2,0); 
-INSERT INTO `NameGen` VALUES (272,"Blackhand",2,0); 
-INSERT INTO `NameGen` VALUES (273,"Kargath",2,0); 
-INSERT INTO `NameGen` VALUES (274,"Broxxigar",2,0); 
-INSERT INTO `NameGen` VALUES (275,"Chogall",2,0); 
-INSERT INTO `NameGen` VALUES (276,"Clawhand",2,0); 
-INSERT INTO `NameGen` VALUES (277,"Magis",2,0); 
-INSERT INTO `NameGen` VALUES (278,"Kazil",2,0); 
-INSERT INTO `NameGen` VALUES (279,"Daisho",2,0); 
-INSERT INTO `NameGen` VALUES (280,"Kilrogg",2,0); 
-INSERT INTO `NameGen` VALUES (281,"Dentarg",2,0); 
-INSERT INTO `NameGen` VALUES (282,"Orgrim",2,0); 
-INSERT INTO `NameGen` VALUES (283,"Doomroar",2,0); 
-INSERT INTO `NameGen` VALUES (284,"Naz",2,0); 
-INSERT INTO `NameGen` VALUES (285,"Drekthar",2,0); 
-INSERT INTO `NameGen` VALUES (286,"Durotan",2,0); 
-INSERT INTO `NameGen` VALUES (287,"Eitrigg",2,0); 
-INSERT INTO `NameGen` VALUES (288,"Fenrisar",2,0); 
-INSERT INTO `NameGen` VALUES (289,"Fenris",2,0); 
-INSERT INTO `NameGen` VALUES (290,"Foerend",2,0); 
-INSERT INTO `NameGen` VALUES (291,"Gathras",2,0); 
-INSERT INTO `NameGen` VALUES (292,"Gardal",2,0); 
-INSERT INTO `NameGen` VALUES (293,"Gorr",2,0); 
-INSERT INTO `NameGen` VALUES (294,"Guldan",2,0); 
-INSERT INTO `NameGen` VALUES (295,"Negal",2,0); 
-INSERT INTO `NameGen` VALUES (296,"Grom",2,0); 
-INSERT INTO `NameGen` VALUES (297,"Irontusk",2,0); 
-INSERT INTO `NameGen` VALUES (298,"Kajind",2,0); 
-INSERT INTO `NameGen` VALUES (299,"Kalthar",2,0); 
-INSERT INTO `NameGen` VALUES (300,"Kazragore",2,0); 
-INSERT INTO `NameGen` VALUES (301,"Kigami",2,0); 
-INSERT INTO `NameGen` VALUES (302,"Maim",2,0); 
-INSERT INTO `NameGen` VALUES (303,"Mazuru",2,0); 
-INSERT INTO `NameGen` VALUES (304,"Mikasa",2,0); 
-INSERT INTO `NameGen` VALUES (305,"Nazgrel",2,0); 
-INSERT INTO `NameGen` VALUES (306,"Nikoro",2,0); 
-INSERT INTO `NameGen` VALUES (307,"Zess",2,0); 
-INSERT INTO `NameGen` VALUES (308,"Rend",2,0); 
-INSERT INTO `NameGen` VALUES (309,"Rexxar",2,0); 
-INSERT INTO `NameGen` VALUES (310,"Samuro",2,0); 
-INSERT INTO `NameGen` VALUES (311,"Nekros",2,0); 
-INSERT INTO `NameGen` VALUES (312,"Tagar",2,0); 
-INSERT INTO `NameGen` VALUES (313,"Thrall",2,0); 
-INSERT INTO `NameGen` VALUES (314,"Thundrax",2,0); 
-INSERT INTO `NameGen` VALUES (315,"Tojara",2,0); 
-INSERT INTO `NameGen` VALUES (316,"Uglaz",2,0); 
-INSERT INTO `NameGen` VALUES (317,"Kag",2,0); 
-INSERT INTO `NameGen` VALUES (318,"Warmaul",2,0); 
-INSERT INTO `NameGen` VALUES (319,"Borr",2,0); 
-INSERT INTO `NameGen` VALUES (320,"Pand",2,0); 
-INSERT INTO `NameGen` VALUES (321,"Kagar",2,0); 
-INSERT INTO `NameGen` VALUES (322,"Wolfsong",2,0); 
-INSERT INTO `NameGen` VALUES (323,"Morg",2,0); 
-INSERT INTO `NameGen` VALUES (324,"Yozshura",2,0); 
-INSERT INTO `NameGen` VALUES (325,"Zuluhed",2,0); 
-INSERT INTO `NameGen` VALUES (326,"Zargil",2,0); 
-INSERT INTO `NameGen` VALUES (1563,"Asato",2,0); 
-INSERT INTO `NameGen` VALUES (1564,"Asuya",2,0); 
-INSERT INTO `NameGen` VALUES (1565,"Azuma",2,0); 
-INSERT INTO `NameGen` VALUES (1566,"Baku",2,0); 
-INSERT INTO `NameGen` VALUES (1567,"Chuugo",2,0); 
-INSERT INTO `NameGen` VALUES (1568,"Dahr",2,0); 
-INSERT INTO `NameGen` VALUES (1569,"Dai",2,0); 
-INSERT INTO `NameGen` VALUES (1570,"Daichi",2,0); 
-INSERT INTO `NameGen` VALUES (1571,"Dugan",2,0); 
-INSERT INTO `NameGen` VALUES (1572,"Dugrum",2,0); 
-INSERT INTO `NameGen` VALUES (1573,"Emok",2,0); 
-INSERT INTO `NameGen` VALUES (1574,"Engo",2,0); 
-INSERT INTO `NameGen` VALUES (1575,"Fukashi",2,0); 
-INSERT INTO `NameGen` VALUES (1576,"Fusao",2,0); 
-INSERT INTO `NameGen` VALUES (1577,"Goragon",2,0); 
-INSERT INTO `NameGen` VALUES (1578,"Gor-Ka",2,0); 
-INSERT INTO `NameGen` VALUES (1579,"Gulmore",2,0); 
-INSERT INTO `NameGen` VALUES (1580,"Gunga",2,0); 
-INSERT INTO `NameGen` VALUES (1581,"Gyousei",2,0); 
-INSERT INTO `NameGen` VALUES (1582,"Hakuba",2,0); 
-INSERT INTO `NameGen` VALUES (1583,"Iku",2,0); 
-INSERT INTO `NameGen` VALUES (1584,"Ishin",2,0); 
-INSERT INTO `NameGen` VALUES (1585,"Jungo",2,0); 
-INSERT INTO `NameGen` VALUES (1586,"Kagha",2,0); 
-INSERT INTO `NameGen` VALUES (1587,"Koichi",2,0); 
-INSERT INTO `NameGen` VALUES (1588,"Kotorr",2,0); 
-INSERT INTO `NameGen` VALUES (1589,"Lurp",2,0); 
-INSERT INTO `NameGen` VALUES (1590,"Makh",2,0); 
-INSERT INTO `NameGen` VALUES (1591,"Mogramar",2,0); 
-INSERT INTO `NameGen` VALUES (1592,"Molin",2,0); 
-INSERT INTO `NameGen` VALUES (1593,"Monga",2,0); 
-INSERT INTO `NameGen` VALUES (1594,"Murtrin",2,0); 
-INSERT INTO `NameGen` VALUES (1595,"Nakaghul",2,0); 
-INSERT INTO `NameGen` VALUES (1596,"Narghon",2,0); 
-INSERT INTO `NameGen` VALUES (1597,"Nariaki",2,0); 
-INSERT INTO `NameGen` VALUES (1598,"Natsuo",2,0); 
-INSERT INTO `NameGen` VALUES (1599,"Nobuya",2,0); 
-INSERT INTO `NameGen` VALUES (1600,"Nozomi",2,0); 
-INSERT INTO `NameGen` VALUES (1601,"Okrim",2,0); 
-INSERT INTO `NameGen` VALUES (1602,"Oogresh",2,0); 
-INSERT INTO `NameGen` VALUES (1603,"Osamu",2,0); 
-INSERT INTO `NameGen` VALUES (1604,"Ren",2,0); 
-INSERT INTO `NameGen` VALUES (1605,"Rogrim",2,0); 
-INSERT INTO `NameGen` VALUES (1606,"Skoresh",2,0); 
-INSERT INTO `NameGen` VALUES (1607,"Soktar",2,0); 
-INSERT INTO `NameGen` VALUES (1608,"Sora",2,0); 
-INSERT INTO `NameGen` VALUES (1609,"Tonga",2,0); 
-INSERT INTO `NameGen` VALUES (1610,"Tul",2,0); 
-INSERT INTO `NameGen` VALUES (1611,"Ugramesh",2,0); 
-INSERT INTO `NameGen` VALUES (1612,"Umok",2,0); 
-INSERT INTO `NameGen` VALUES (2700,"Agarn",2,0); 
-INSERT INTO `NameGen` VALUES (2701,"Agrim",2,0); 
-INSERT INTO `NameGen` VALUES (2702,"Agtan",2,0); 
-INSERT INTO `NameGen` VALUES (2703,"Aksho",2,0); 
-INSERT INTO `NameGen` VALUES (2704,"Ansik",2,0); 
-INSERT INTO `NameGen` VALUES (2705,"Antsu",2,0); 
-INSERT INTO `NameGen` VALUES (2706,"Arduk",2,0); 
-INSERT INTO `NameGen` VALUES (2707,"Armac",2,0); 
-INSERT INTO `NameGen` VALUES (2708,"Bargon",2,0); 
-INSERT INTO `NameGen` VALUES (2709,"Bekil",2,0); 
-INSERT INTO `NameGen` VALUES (2710,"Bherg",2,0); 
-INSERT INTO `NameGen` VALUES (2711,"Bish",2,0); 
-INSERT INTO `NameGen` VALUES (2712,"Bosao",2,0); 
-INSERT INTO `NameGen` VALUES (2713,"Burik",2,0); 
-INSERT INTO `NameGen` VALUES (2714,"Calnar",2,0); 
-INSERT INTO `NameGen` VALUES (2715,"Charn",2,0); 
-INSERT INTO `NameGen` VALUES (2716,"Chegh",2,0); 
-INSERT INTO `NameGen` VALUES (2717,"Chomdai",2,0); 
-INSERT INTO `NameGen` VALUES (2718,"Chugar",2,0); 
-INSERT INTO `NameGen` VALUES (2719,"Cron",2,0); 
-INSERT INTO `NameGen` VALUES (2720,"Crunk",2,0); 
-INSERT INTO `NameGen` VALUES (2721,"Damwogh",2,0); 
-INSERT INTO `NameGen` VALUES (2722,"Datku",2,0); 
-INSERT INTO `NameGen` VALUES (2723,"Derm",2,0); 
-INSERT INTO `NameGen` VALUES (2724,"Domgak",2,0); 
-INSERT INTO `NameGen` VALUES (2725,"Dragar",2,0); 
-INSERT INTO `NameGen` VALUES (2726,"Dragga",2,0); 
-INSERT INTO `NameGen` VALUES (2727,"Drahn",2,0); 
-INSERT INTO `NameGen` VALUES (2728,"Drash",2,0); 
-INSERT INTO `NameGen` VALUES (2729,"Drengar",2,0); 
-INSERT INTO `NameGen` VALUES (2730,"Drukar",2,0); 
-INSERT INTO `NameGen` VALUES (2731,"Druknar",2,0); 
-INSERT INTO `NameGen` VALUES (2732,"Duntarg",2,0); 
-INSERT INTO `NameGen` VALUES (2733,"Ecks",2,0); 
-INSERT INTO `NameGen` VALUES (2734,"Ehngar",2,0); 
-INSERT INTO `NameGen` VALUES (2735,"Elcoz",2,0); 
-INSERT INTO `NameGen` VALUES (2736,"Emulk",2,0); 
-INSERT INTO `NameGen` VALUES (2737,"Eruk",2,0); 
-INSERT INTO `NameGen` VALUES (2738,"Etramm",2,0); 
-INSERT INTO `NameGen` VALUES (2739,"Fashtar",2,0); 
-INSERT INTO `NameGen` VALUES (2740,"Fenrar",2,0); 
-INSERT INTO `NameGen` VALUES (2741,"Festuk",2,0); 
-INSERT INTO `NameGen` VALUES (2742,"Figgam",2,0); 
-INSERT INTO `NameGen` VALUES (2743,"Fugg",2,0); 
-INSERT INTO `NameGen` VALUES (2744,"Fulnn",2,0); 
-INSERT INTO `NameGen` VALUES (2745,"Garusk",2,0); 
-INSERT INTO `NameGen` VALUES (2746,"Ghrog",2,0); 
-INSERT INTO `NameGen` VALUES (2747,"Gigoa",2,0); 
-INSERT INTO `NameGen` VALUES (2748,"Glok",2,0); 
-INSERT INTO `NameGen` VALUES (2749,"Goon",2,0); 
-INSERT INTO `NameGen` VALUES (2750,"Goshog",2,0); 
-INSERT INTO `NameGen` VALUES (2751,"Gredan",2,0); 
-INSERT INTO `NameGen` VALUES (2752,"Grundar",2,0); 
-INSERT INTO `NameGen` VALUES (2753,"Havik",2,0); 
-INSERT INTO `NameGen` VALUES (2754,"Hewnok",2,0); 
-INSERT INTO `NameGen` VALUES (2755,"Homdag",2,0); 
-INSERT INTO `NameGen` VALUES (2756,"Hondai",2,0); 
-INSERT INTO `NameGen` VALUES (2757,"Hujon",2,0); 
-INSERT INTO `NameGen` VALUES (2758,"Hunk",2,0); 
-INSERT INTO `NameGen` VALUES (2759,"Igg",2,0); 
-INSERT INTO `NameGen` VALUES (2760,"Kafga",2,0); 
-INSERT INTO `NameGen` VALUES (2761,"Kaibo",2,0); 
-INSERT INTO `NameGen` VALUES (2762,"Kirik",2,0); 
-INSERT INTO `NameGen` VALUES (2763,"Knaak",2,0); 
-INSERT INTO `NameGen` VALUES (2764,"Koon",2,0); 
-INSERT INTO `NameGen` VALUES (2765,"Kuugai",2,0); 
-INSERT INTO `NameGen` VALUES (2766,"Larg",2,0); 
-INSERT INTO `NameGen` VALUES (2767,"Lekk",2,0); 
-INSERT INTO `NameGen` VALUES (2768,"Lhark",2,0); 
-INSERT INTO `NameGen` VALUES (2769,"Luubu",2,0); 
-INSERT INTO `NameGen` VALUES (2770,"Maaj",2,0); 
-INSERT INTO `NameGen` VALUES (2771,"Magom",2,0); 
-INSERT INTO `NameGen` VALUES (2772,"Mahkarn",2,0); 
-INSERT INTO `NameGen` VALUES (2773,"Makkar",2,0); 
-INSERT INTO `NameGen` VALUES (2774,"Makuso",2,0); 
-INSERT INTO `NameGen` VALUES (2775,"Margor",2,0); 
-INSERT INTO `NameGen` VALUES (2776,"Meshtak",2,0); 
-INSERT INTO `NameGen` VALUES (2777,"Moktal",2,0); 
-INSERT INTO `NameGen` VALUES (2778,"Morn",2,0); 
-INSERT INTO `NameGen` VALUES (2779,"Mrag",2,0); 
-INSERT INTO `NameGen` VALUES (2780,"Mragar",2,0); 
-INSERT INTO `NameGen` VALUES (2781,"Myrm",2,0); 
-INSERT INTO `NameGen` VALUES (2782,"Naggam",2,0); 
-INSERT INTO `NameGen` VALUES (2783,"Nailz",2,0); 
-INSERT INTO `NameGen` VALUES (2784,"Nantook",2,0); 
-INSERT INTO `NameGen` VALUES (2785,"Nark",2,0); 
-INSERT INTO `NameGen` VALUES (2786,"Nillik",2,0); 
-INSERT INTO `NameGen` VALUES (2787,"Nozit",2,0); 
-INSERT INTO `NameGen` VALUES (2788,"Ogg",2,0); 
-INSERT INTO `NameGen` VALUES (2789,"Ojak",2,0); 
-INSERT INTO `NameGen` VALUES (2790,"Olug",2,0); 
-INSERT INTO `NameGen` VALUES (2791,"Ontsu",2,0); 
-INSERT INTO `NameGen` VALUES (2792,"Oog",2,0); 
-INSERT INTO `NameGen` VALUES (2793,"Ork",2,0); 
-INSERT INTO `NameGen` VALUES (2794,"Phanx",2,0); 
-INSERT INTO `NameGen` VALUES (2795,"Pikk",2,0); 
-INSERT INTO `NameGen` VALUES (2796,"Porg",2,0); 
-INSERT INTO `NameGen` VALUES (2797,"Prak",2,0); 
-INSERT INTO `NameGen` VALUES (2798,"Pyag",2,0); 
-INSERT INTO `NameGen` VALUES (2799,"Raido",2,0); 
-INSERT INTO `NameGen` VALUES (2800,"Rekk",2,0); 
-INSERT INTO `NameGen` VALUES (2801,"Relg",2,0); 
-INSERT INTO `NameGen` VALUES (2802,"Rettsu",2,0); 
-INSERT INTO `NameGen` VALUES (2803,"Rhaten",2,0); 
-INSERT INTO `NameGen` VALUES (2804,"Rhog",2,0); 
-INSERT INTO `NameGen` VALUES (2805,"Ritgar",2,0); 
-INSERT INTO `NameGen` VALUES (2806,"Roxx",2,0); 
-INSERT INTO `NameGen` VALUES (2807,"Ruugar",2,0); 
-INSERT INTO `NameGen` VALUES (2808,"Rwag",2,0); 
-INSERT INTO `NameGen` VALUES (2809,"Sandoso",2,0); 
-INSERT INTO `NameGen` VALUES (2810,"Selig",2,0); 
-INSERT INTO `NameGen` VALUES (2811,"Sitar",2,0); 
-INSERT INTO `NameGen` VALUES (2812,"Skrash",2,0); 
-INSERT INTO `NameGen` VALUES (2813,"Sokolo",2,0); 
-INSERT INTO `NameGen` VALUES (2814,"Songo",2,0); 
-INSERT INTO `NameGen` VALUES (2815,"Tatsu",2,0); 
-INSERT INTO `NameGen` VALUES (2816,"Tersk",2,0); 
-INSERT INTO `NameGen` VALUES (2817,"Tragg",2,0); 
-INSERT INTO `NameGen` VALUES (2818,"Tsubai",2,0); 
-INSERT INTO `NameGen` VALUES (2819,"Tuul",2,0); 
-INSERT INTO `NameGen` VALUES (2820,"Tyrar",2,0); 
-INSERT INTO `NameGen` VALUES (2821,"Uggol",2,0); 
-INSERT INTO `NameGen` VALUES (2822,"Urst",2,0); 
-INSERT INTO `NameGen` VALUES (2823,"Volk",2,0); 
-INSERT INTO `NameGen` VALUES (2824,"Watsu",2,0); 
-INSERT INTO `NameGen` VALUES (2825,"Welsk",2,0); 
-INSERT INTO `NameGen` VALUES (2826,"Wiigo",2,0); 
-INSERT INTO `NameGen` VALUES (2827,"Witao",2,0); 
-INSERT INTO `NameGen` VALUES (2828,"Wolv",2,0); 
-INSERT INTO `NameGen` VALUES (2829,"Worg",2,0); 
-INSERT INTO `NameGen` VALUES (2830,"Zakk",2,0); 
-INSERT INTO `NameGen` VALUES (2831,"Zed",2,0); 
-INSERT INTO `NameGen` VALUES (2832,"Zugo",2,0); 
-INSERT INTO `NameGen` VALUES (248,"Draka",2,1); 
-INSERT INTO `NameGen` VALUES (249,"Garona",2,1); 
-INSERT INTO `NameGen` VALUES (250,"Nekra",2,1); 
-INSERT INTO `NameGen` VALUES (251,"Gara",2,1); 
-INSERT INTO `NameGen` VALUES (252,"Theg",2,1); 
-INSERT INTO `NameGen` VALUES (253,"Markas",2,1); 
-INSERT INTO `NameGen` VALUES (254,"Sendra",2,1); 
-INSERT INTO `NameGen` VALUES (255,"Sergra",2,1); 
-INSERT INTO `NameGen` VALUES (256,"Gaine",2,1); 
-INSERT INTO `NameGen` VALUES (257,"Dala",2,1); 
-INSERT INTO `NameGen` VALUES (258,"Morisha",2,1); 
-INSERT INTO `NameGen` VALUES (259,"Galvania",2,1); 
-INSERT INTO `NameGen` VALUES (260,"Titania",2,1); 
-INSERT INTO `NameGen` VALUES (261,"Jenka",2,1); 
-INSERT INTO `NameGen` VALUES (262,"Ragos",2,1); 
-INSERT INTO `NameGen` VALUES (263,"Mirsha",2,1); 
-INSERT INTO `NameGen` VALUES (264,"Misha",2,1); 
-INSERT INTO `NameGen` VALUES (265,"Korvis",2,1); 
-INSERT INTO `NameGen` VALUES (266,"Mandiss",2,1); 
-INSERT INTO `NameGen` VALUES (267,"Germana",2,1); 
-INSERT INTO `NameGen` VALUES (1504,"Agata",2,1); 
-INSERT INTO `NameGen` VALUES (1505,"Agna",2,1); 
-INSERT INTO `NameGen` VALUES (1506,"Akana",2,1); 
-INSERT INTO `NameGen` VALUES (1507,"Akheena",2,1); 
-INSERT INTO `NameGen` VALUES (1508,"Anga",2,1); 
-INSERT INTO `NameGen` VALUES (1509,"Asako",2,1); 
-INSERT INTO `NameGen` VALUES (1510,"Atsuko",2,1); 
-INSERT INTO `NameGen` VALUES (1511,"Aya",2,1); 
-INSERT INTO `NameGen` VALUES (1512,"Boka",2,1); 
-INSERT INTO `NameGen` VALUES (1513,"Chantu",2,1); 
-INSERT INTO `NameGen` VALUES (1514,"Cora",2,1); 
-INSERT INTO `NameGen` VALUES (1515,"Damah",2,1); 
-INSERT INTO `NameGen` VALUES (1516,"Doba",2,1); 
-INSERT INTO `NameGen` VALUES (1517,"Doska",2,1); 
-INSERT INTO `NameGen` VALUES (1518,"Duka",2,1); 
-INSERT INTO `NameGen` VALUES (1519,"Eghala",2,1); 
-INSERT INTO `NameGen` VALUES (1520,"Elka",2,1); 
-INSERT INTO `NameGen` VALUES (1521,"Eta",2,1); 
-INSERT INTO `NameGen` VALUES (1522,"Garuka",2,1); 
-INSERT INTO `NameGen` VALUES (1523,"Ghana",2,1); 
-INSERT INTO `NameGen` VALUES (1524,"Gisa",2,1); 
-INSERT INTO `NameGen` VALUES (1525,"Gruta",2,1); 
-INSERT INTO `NameGen` VALUES (1526,"Hedda",2,1); 
-INSERT INTO `NameGen` VALUES (1527,"Hilar",2,1); 
-INSERT INTO `NameGen` VALUES (1528,"Iria",2,1); 
-INSERT INTO `NameGen` VALUES (1529,"Junna",2,1); 
-INSERT INTO `NameGen` VALUES (1530,"Kaia",2,1); 
-INSERT INTO `NameGen` VALUES (1531,"Kama",2,1); 
-INSERT INTO `NameGen` VALUES (1532,"Kasa",2,1); 
-INSERT INTO `NameGen` VALUES (1533,"Kaya",2,1); 
-INSERT INTO `NameGen` VALUES (1534,"Loka",2,1); 
-INSERT INTO `NameGen` VALUES (1535,"Luka",2,1); 
-INSERT INTO `NameGen` VALUES (1536,"Machiko",2,1); 
-INSERT INTO `NameGen` VALUES (1537,"Magda",2,1); 
-INSERT INTO `NameGen` VALUES (1538,"Maiko",2,1); 
-INSERT INTO `NameGen` VALUES (1539,"Maja",2,1); 
-INSERT INTO `NameGen` VALUES (1540,"Makha",2,1); 
-INSERT INTO `NameGen` VALUES (1541,"Moka",2,1); 
-INSERT INTO `NameGen` VALUES (1542,"Mugallah",2,1); 
-INSERT INTO `NameGen` VALUES (1543,"Nagisa",2,1); 
-INSERT INTO `NameGen` VALUES (1544,"Nanaka",2,1); 
-INSERT INTO `NameGen` VALUES (1545,"Nayu",2,1); 
-INSERT INTO `NameGen` VALUES (1546,"Nodoka",2,1); 
-INSERT INTO `NameGen` VALUES (1547,"Onela",2,1); 
-INSERT INTO `NameGen` VALUES (1548,"Palka",2,1); 
-INSERT INTO `NameGen` VALUES (1549,"Rana",2,1); 
-INSERT INTO `NameGen` VALUES (1550,"Rela",2,1); 
-INSERT INTO `NameGen` VALUES (1551,"Roka",2,1); 
-INSERT INTO `NameGen` VALUES (1552,"Saaya",2,1); 
-INSERT INTO `NameGen` VALUES (1553,"Sana",2,1); 
-INSERT INTO `NameGen` VALUES (1554,"Tabitha",2,1); 
-INSERT INTO `NameGen` VALUES (1555,"Tamao",2,1); 
-INSERT INTO `NameGen` VALUES (1556,"Tamsin",2,1); 
-INSERT INTO `NameGen` VALUES (1557,"Tanya",2,1); 
-INSERT INTO `NameGen` VALUES (1558,"Teruna",2,1); 
-INSERT INTO `NameGen` VALUES (1559,"Tetsumi",2,1); 
-INSERT INTO `NameGen` VALUES (1560,"Tokimi",2,1); 
-INSERT INTO `NameGen` VALUES (1561,"Yatsumi",2,1); 
-INSERT INTO `NameGen` VALUES (1562,"Yukari",2,1); 
-INSERT INTO `NameGen` VALUES (2833,"Agasa",2,1); 
-INSERT INTO `NameGen` VALUES (2834,"Aki",2,1); 
-INSERT INTO `NameGen` VALUES (2835,"Annda",2,1); 
-INSERT INTO `NameGen` VALUES (2836,"Arai",2,1); 
-INSERT INTO `NameGen` VALUES (2837,"Arita",2,1); 
-INSERT INTO `NameGen` VALUES (2838,"Askka",2,1); 
-INSERT INTO `NameGen` VALUES (2839,"Atsua",2,1); 
-INSERT INTO `NameGen` VALUES (2840,"Balle",2,1); 
-INSERT INTO `NameGen` VALUES (2841,"Barti",2,1); 
-INSERT INTO `NameGen` VALUES (2842,"Bellag",2,1); 
-INSERT INTO `NameGen` VALUES (2843,"Bitsu",2,1); 
-INSERT INTO `NameGen` VALUES (2844,"Boya",2,1); 
-INSERT INTO `NameGen` VALUES (2845,"Braia",2,1); 
-INSERT INTO `NameGen` VALUES (2846,"Cerah",2,1); 
-INSERT INTO `NameGen` VALUES (2847,"Clemi",2,1); 
-INSERT INTO `NameGen` VALUES (2848,"Coga",2,1); 
-INSERT INTO `NameGen` VALUES (2849,"Cohh",2,1); 
-INSERT INTO `NameGen` VALUES (2850,"Cutasu",2,1); 
-INSERT INTO `NameGen` VALUES (2851,"Dalla",2,1); 
-INSERT INTO `NameGen` VALUES (2852,"Daqi",2,1); 
-INSERT INTO `NameGen` VALUES (2853,"Dikaga",2,1); 
-INSERT INTO `NameGen` VALUES (2854,"Doosa",2,1); 
-INSERT INTO `NameGen` VALUES (2855,"Dous",2,1); 
-INSERT INTO `NameGen` VALUES (2856,"Drakna",2,1); 
-INSERT INTO `NameGen` VALUES (2857,"Druna",2,1); 
-INSERT INTO `NameGen` VALUES (2858,"Druu",2,1); 
-INSERT INTO `NameGen` VALUES (2859,"Ehg",2,1); 
-INSERT INTO `NameGen` VALUES (2860,"Elloa",2,1); 
-INSERT INTO `NameGen` VALUES (2861,"Emda",2,1); 
-INSERT INTO `NameGen` VALUES (2862,"Eoni",2,1); 
-INSERT INTO `NameGen` VALUES (2863,"Erai",2,1); 
-INSERT INTO `NameGen` VALUES (2864,"Erita",2,1); 
-INSERT INTO `NameGen` VALUES (2865,"Ezara",2,1); 
-INSERT INTO `NameGen` VALUES (2866,"Ferra",2,1); 
-INSERT INTO `NameGen` VALUES (2867,"Fiatsu",2,1); 
-INSERT INTO `NameGen` VALUES (2868,"Fliri",2,1); 
-INSERT INTO `NameGen` VALUES (2869,"Frii",2,1); 
-INSERT INTO `NameGen` VALUES (2870,"Fryta",2,1); 
-INSERT INTO `NameGen` VALUES (2871,"Fuda",2,1); 
-INSERT INTO `NameGen` VALUES (2872,"Futara",2,1); 
-INSERT INTO `NameGen` VALUES (2873,"Fyrna",2,1); 
-INSERT INTO `NameGen` VALUES (2874,"Gaeldi",2,1); 
-INSERT INTO `NameGen` VALUES (2875,"Gai",2,1); 
-INSERT INTO `NameGen` VALUES (2876,"Geera",2,1); 
-INSERT INTO `NameGen` VALUES (2877,"Gelsi",2,1); 
-INSERT INTO `NameGen` VALUES (2878,"Gharta",2,1); 
-INSERT INTO `NameGen` VALUES (2879,"Ghem",2,1); 
-INSERT INTO `NameGen` VALUES (2880,"Gora",2,1); 
-INSERT INTO `NameGen` VALUES (2881,"Greka",2,1); 
-INSERT INTO `NameGen` VALUES (2882,"Grita",2,1); 
-INSERT INTO `NameGen` VALUES (2883,"Gronna",2,1); 
-INSERT INTO `NameGen` VALUES (2884,"Grynna",2,1); 
-INSERT INTO `NameGen` VALUES (2885,"Haki",2,1); 
-INSERT INTO `NameGen` VALUES (2886,"Hakua",2,1); 
-INSERT INTO `NameGen` VALUES (2887,"Haqa",2,1); 
-INSERT INTO `NameGen` VALUES (2888,"Hatko",2,1); 
-INSERT INTO `NameGen` VALUES (2889,"Henn",2,1); 
-INSERT INTO `NameGen` VALUES (2890,"Ingra",2,1); 
-INSERT INTO `NameGen` VALUES (2891,"Kagda",2,1); 
-INSERT INTO `NameGen` VALUES (2892,"Karga",2,1); 
-INSERT INTO `NameGen` VALUES (2893,"Keia",2,1); 
-INSERT INTO `NameGen` VALUES (2894,"Khami",2,1); 
-INSERT INTO `NameGen` VALUES (2895,"Kii",2,1); 
-INSERT INTO `NameGen` VALUES (2896,"Kilnah",2,1); 
-INSERT INTO `NameGen` VALUES (2897,"Kintarg",2,1); 
-INSERT INTO `NameGen` VALUES (2898,"Kirga",2,1); 
-INSERT INTO `NameGen` VALUES (2899,"Kitra",2,1); 
-INSERT INTO `NameGen` VALUES (2900,"Kona",2,1); 
-INSERT INTO `NameGen` VALUES (2901,"Krau",2,1); 
-INSERT INTO `NameGen` VALUES (2902,"Kretah",2,1); 
-INSERT INTO `NameGen` VALUES (2903,"Kritah",2,1); 
-INSERT INTO `NameGen` VALUES (2904,"Laaj",2,1); 
-INSERT INTO `NameGen` VALUES (2905,"Lark",2,1); 
-INSERT INTO `NameGen` VALUES (2906,"Liki",2,1); 
-INSERT INTO `NameGen` VALUES (2907,"Lopia",2,1); 
-INSERT INTO `NameGen` VALUES (2908,"Madaba",2,1); 
-INSERT INTO `NameGen` VALUES (2909,"Mecks",2,1); 
-INSERT INTO `NameGen` VALUES (2910,"Merga",2,1); 
-INSERT INTO `NameGen` VALUES (2911,"Meshta",2,1); 
-INSERT INTO `NameGen` VALUES (2912,"Miki",2,1); 
-INSERT INTO `NameGen` VALUES (2913,"Moosha",2,1); 
-INSERT INTO `NameGen` VALUES (2914,"Namga",2,1); 
-INSERT INTO `NameGen` VALUES (2915,"Nani",2,1); 
-INSERT INTO `NameGen` VALUES (2916,"Narn",2,1); 
-INSERT INTO `NameGen` VALUES (2917,"Neko",2,1); 
-INSERT INTO `NameGen` VALUES (2918,"Noora",2,1); 
-INSERT INTO `NameGen` VALUES (2919,"Nya",2,1); 
-INSERT INTO `NameGen` VALUES (2920,"Okra",2,1); 
-INSERT INTO `NameGen` VALUES (2921,"Ola",2,1); 
-INSERT INTO `NameGen` VALUES (2922,"Opai",2,1); 
-INSERT INTO `NameGen` VALUES (2923,"Orteka",2,1); 
-INSERT INTO `NameGen` VALUES (2924,"Osoh",2,1); 
-INSERT INTO `NameGen` VALUES (2925,"Ougi",2,1); 
-INSERT INTO `NameGen` VALUES (2926,"Paku",2,1); 
-INSERT INTO `NameGen` VALUES (2927,"Peraga",2,1); 
-INSERT INTO `NameGen` VALUES (2928,"Phan",2,1); 
-INSERT INTO `NameGen` VALUES (2929,"Plai",2,1); 
-INSERT INTO `NameGen` VALUES (2930,"Pupp",2,1); 
-INSERT INTO `NameGen` VALUES (2931,"Rakkah",2,1); 
-INSERT INTO `NameGen` VALUES (2932,"Reki",2,1); 
-INSERT INTO `NameGen` VALUES (2933,"Remig",2,1); 
-INSERT INTO `NameGen` VALUES (2934,"Rexai",2,1); 
-INSERT INTO `NameGen` VALUES (2935,"Rie",2,1); 
-INSERT INTO `NameGen` VALUES (2936,"Rinka",2,1); 
-INSERT INTO `NameGen` VALUES (2937,"Rolda",2,1); 
-INSERT INTO `NameGen` VALUES (2938,"Roog",2,1); 
-INSERT INTO `NameGen` VALUES (2939,"Saki",2,1); 
-INSERT INTO `NameGen` VALUES (2940,"Seeth",2,1); 
-INSERT INTO `NameGen` VALUES (2941,"Siyeg",2,1); 
-INSERT INTO `NameGen` VALUES (2942,"Skara",2,1); 
-INSERT INTO `NameGen` VALUES (2943,"Sosara",2,1); 
-INSERT INTO `NameGen` VALUES (2944,"Sukasa",2,1); 
-INSERT INTO `NameGen` VALUES (2945,"Talki",2,1); 
-INSERT INTO `NameGen` VALUES (2946,"Tari",2,1); 
-INSERT INTO `NameGen` VALUES (2947,"Tash",2,1); 
-INSERT INTO `NameGen` VALUES (2948,"Tikta",2,1); 
-INSERT INTO `NameGen` VALUES (2949,"Tinago",2,1); 
-INSERT INTO `NameGen` VALUES (2950,"Tisk",2,1); 
-INSERT INTO `NameGen` VALUES (2951,"Togra",2,1); 
-INSERT INTO `NameGen` VALUES (2952,"Uraka",2,1); 
-INSERT INTO `NameGen` VALUES (2953,"Vegla",2,1); 
-INSERT INTO `NameGen` VALUES (2954,"Wao",2,1); 
-INSERT INTO `NameGen` VALUES (2955,"Wegg",2,1); 
-INSERT INTO `NameGen` VALUES (2956,"Wiima",2,1); 
-INSERT INTO `NameGen` VALUES (2957,"Womda",2,1); 
-INSERT INTO `NameGen` VALUES (2958,"Wuchi",2,1); 
-INSERT INTO `NameGen` VALUES (2959,"Wyega",2,1); 
-INSERT INTO `NameGen` VALUES (2960,"Zan",2,1); 
-INSERT INTO `NameGen` VALUES (2961,"Zila",2,1); 
-INSERT INTO `NameGen` VALUES (30,"Thorgas",3,0); 
-INSERT INTO `NameGen` VALUES (31,"Muradin",3,0); 
-INSERT INTO `NameGen` VALUES (32,"Brann",3,0); 
-INSERT INTO `NameGen` VALUES (33,"Magni",3,0); 
-INSERT INTO `NameGen` VALUES (34,"Gar",3,0); 
-INSERT INTO `NameGen` VALUES (35,"Bandis",3,0); 
-INSERT INTO `NameGen` VALUES (36,"Buri",3,0); 
-INSERT INTO `NameGen` VALUES (37,"Huginn",3,0); 
-INSERT INTO `NameGen` VALUES (38,"Muninn",3,0); 
-INSERT INTO `NameGen` VALUES (39,"Kelvar",3,0); 
-INSERT INTO `NameGen` VALUES (40,"Thordin",3,0); 
-INSERT INTO `NameGen` VALUES (41,"Bor",3,0); 
-INSERT INTO `NameGen` VALUES (42,"Falstad",3,0); 
-INSERT INTO `NameGen` VALUES (43,"Grimbooze",3,0); 
-INSERT INTO `NameGen` VALUES (44,"Modi",3,0); 
-INSERT INTO `NameGen` VALUES (45,"Dagath",3,0); 
-INSERT INTO `NameGen` VALUES (46,"Kurdran",3,0); 
-INSERT INTO `NameGen` VALUES (47,"Bruenor",3,0); 
-INSERT INTO `NameGen` VALUES (48,"Gimli",3,0); 
-INSERT INTO `NameGen` VALUES (49,"Thorin",3,0); 
-INSERT INTO `NameGen` VALUES (1086,"Adair",3,0); 
-INSERT INTO `NameGen` VALUES (1087,"Ahearn",3,0); 
-INSERT INTO `NameGen` VALUES (1088,"Alroy",3,0); 
-INSERT INTO `NameGen` VALUES (1089,"Angus",3,0); 
-INSERT INTO `NameGen` VALUES (1090,"Argyll",3,0); 
-INSERT INTO `NameGen` VALUES (1091,"Arlen",3,0); 
-INSERT INTO `NameGen` VALUES (1092,"Baird",3,0); 
-INSERT INTO `NameGen` VALUES (1093,"Balfour",3,0); 
-INSERT INTO `NameGen` VALUES (1094,"Beagan",3,0); 
-INSERT INTO `NameGen` VALUES (1095,"Brae",3,0); 
-INSERT INTO `NameGen` VALUES (1096,"Brom",3,0); 
-INSERT INTO `NameGen` VALUES (1097,"Cailen",3,0); 
-INSERT INTO `NameGen` VALUES (1098,"Camden",3,0); 
-INSERT INTO `NameGen` VALUES (1099,"Cathal",3,0); 
-INSERT INTO `NameGen` VALUES (1100,"Colm",3,0); 
-INSERT INTO `NameGen` VALUES (1101,"Cormac",3,0); 
-INSERT INTO `NameGen` VALUES (1102,"Damian",3,0); 
-INSERT INTO `NameGen` VALUES (1103,"Darragh",3,0); 
-INSERT INTO `NameGen` VALUES (1104,"Dempsey",3,0); 
-INSERT INTO `NameGen` VALUES (1105,"Dermot",3,0); 
-INSERT INTO `NameGen` VALUES (1106,"Donagh",3,0); 
-INSERT INTO `NameGen` VALUES (1107,"Donoghue",3,0); 
-INSERT INTO `NameGen` VALUES (1108,"Dunstan",3,0); 
-INSERT INTO `NameGen` VALUES (1109,"Eamonn",3,0); 
-INSERT INTO `NameGen` VALUES (1110,"Edan",3,0); 
-INSERT INTO `NameGen` VALUES (1111,"Eoghan",3,0); 
-INSERT INTO `NameGen` VALUES (1112,"Ewan",3,0); 
-INSERT INTO `NameGen` VALUES (1113,"Fagin",3,0); 
-INSERT INTO `NameGen` VALUES (1114,"Finbar",3,0); 
-INSERT INTO `NameGen` VALUES (1115,"Fionn",3,0); 
-INSERT INTO `NameGen` VALUES (1116,"Flann",3,0); 
-INSERT INTO `NameGen` VALUES (1117,"Flannan",3,0); 
-INSERT INTO `NameGen` VALUES (1118,"Galloway",3,0); 
-INSERT INTO `NameGen` VALUES (1119,"Glyndon",3,0); 
-INSERT INTO `NameGen` VALUES (1120,"Hagen",3,0); 
-INSERT INTO `NameGen` VALUES (1121,"Jarlath",3,0); 
-INSERT INTO `NameGen` VALUES (1122,"Jaryn",3,0); 
-INSERT INTO `NameGen` VALUES (1123,"Keefe",3,0); 
-INSERT INTO `NameGen` VALUES (1124,"Keenan",3,0); 
-INSERT INTO `NameGen` VALUES (1125,"Kieran",3,0); 
-INSERT INTO `NameGen` VALUES (1126,"Kincaid",3,0); 
-INSERT INTO `NameGen` VALUES (1127,"Lochlainn",3,0); 
-INSERT INTO `NameGen` VALUES (1128,"Lorcan",3,0); 
-INSERT INTO `NameGen` VALUES (1129,"Loughlin",3,0); 
-INSERT INTO `NameGen` VALUES (1130,"Mackay",3,0); 
-INSERT INTO `NameGen` VALUES (1131,"Mannix",3,0); 
-INSERT INTO `NameGen` VALUES (1132,"Milo",3,0); 
-INSERT INTO `NameGen` VALUES (1133,"Moray",3,0); 
-INSERT INTO `NameGen` VALUES (1134,"Nessan",3,0); 
-INSERT INTO `NameGen` VALUES (1135,"Nolan",3,0); 
-INSERT INTO `NameGen` VALUES (1136,"Oran",3,0); 
-INSERT INTO `NameGen` VALUES (1137,"Padraic",3,0); 
-INSERT INTO `NameGen` VALUES (1138,"Rafferty",3,0); 
-INSERT INTO `NameGen` VALUES (1139,"Rory",3,0); 
-INSERT INTO `NameGen` VALUES (1140,"Ross",3,0); 
-INSERT INTO `NameGen` VALUES (1141,"Ruairc",3,0); 
-INSERT INTO `NameGen` VALUES (1142,"Tadhg",3,0); 
-INSERT INTO `NameGen` VALUES (1143,"Tiernan",3,0); 
-INSERT INTO `NameGen` VALUES (1144,"Turlough",3,0); 
-INSERT INTO `NameGen` VALUES (1145,"Ultan",3,0); 
-INSERT INTO `NameGen` VALUES (2962,"Acharn",3,0); 
-INSERT INTO `NameGen` VALUES (2963,"Agdem",3,0); 
-INSERT INTO `NameGen` VALUES (2964,"Ardal",3,0); 
-INSERT INTO `NameGen` VALUES (2965,"Argoe",3,0); 
-INSERT INTO `NameGen` VALUES (2966,"Arno",3,0); 
-INSERT INTO `NameGen` VALUES (2967,"Avem",3,0); 
-INSERT INTO `NameGen` VALUES (2968,"Basch",3,0); 
-INSERT INTO `NameGen` VALUES (2969,"Belfas",3,0); 
-INSERT INTO `NameGen` VALUES (2970,"Berniy",3,0); 
-INSERT INTO `NameGen` VALUES (2971,"Bjorn",3,0); 
-INSERT INTO `NameGen` VALUES (2972,"Boris",3,0); 
-INSERT INTO `NameGen` VALUES (2973,"Buu",3,0); 
-INSERT INTO `NameGen` VALUES (2974,"Caeme",3,0); 
-INSERT INTO `NameGen` VALUES (2975,"Cain",3,0); 
-INSERT INTO `NameGen` VALUES (2976,"Capp",3,0); 
-INSERT INTO `NameGen` VALUES (2977,"Carth",3,0); 
-INSERT INTO `NameGen` VALUES (2978,"Chom",3,0); 
-INSERT INTO `NameGen` VALUES (2979,"Cojul",3,0); 
-INSERT INTO `NameGen` VALUES (2980,"Daamis",3,0); 
-INSERT INTO `NameGen` VALUES (2981,"Dabim",3,0); 
-INSERT INTO `NameGen` VALUES (2982,"Damagh",3,0); 
-INSERT INTO `NameGen` VALUES (2983,"Derk",3,0); 
-INSERT INTO `NameGen` VALUES (2984,"Dorn",3,0); 
-INSERT INTO `NameGen` VALUES (2985,"Durus",3,0); 
-INSERT INTO `NameGen` VALUES (2986,"Falstir",3,0); 
-INSERT INTO `NameGen` VALUES (2987,"Finn",3,0); 
-INSERT INTO `NameGen` VALUES (2988,"Flanagan",3,0); 
-INSERT INTO `NameGen` VALUES (2989,"Flup",3,0); 
-INSERT INTO `NameGen` VALUES (2990,"Fogie",3,0); 
-INSERT INTO `NameGen` VALUES (2991,"Fornir",3,0); 
-INSERT INTO `NameGen` VALUES (2992,"Gadim",3,0); 
-INSERT INTO `NameGen` VALUES (2993,"Ghass",3,0); 
-INSERT INTO `NameGen` VALUES (2994,"Ghom",3,0); 
-INSERT INTO `NameGen` VALUES (2995,"Glym",3,0); 
-INSERT INTO `NameGen` VALUES (2996,"Goane",3,0); 
-INSERT INTO `NameGen` VALUES (2997,"Griggs",3,0); 
-INSERT INTO `NameGen` VALUES (2998,"Hagar",3,0); 
-INSERT INTO `NameGen` VALUES (2999,"Halbit",3,0); 
-INSERT INTO `NameGen` VALUES (3000,"Halfast",3,0); 
-INSERT INTO `NameGen` VALUES (3001,"Heeg",3,0); 
-INSERT INTO `NameGen` VALUES (3002,"Hogan",3,0); 
-INSERT INTO `NameGen` VALUES (3003,"Hume",3,0); 
-INSERT INTO `NameGen` VALUES (3004,"Jobe",3,0); 
-INSERT INTO `NameGen` VALUES (3005,"Kabe",3,0); 
-INSERT INTO `NameGen` VALUES (3006,"Kaloo",3,0); 
-INSERT INTO `NameGen` VALUES (3007,"Kelov",3,0); 
-INSERT INTO `NameGen` VALUES (3008,"Khrogan",3,0); 
-INSERT INTO `NameGen` VALUES (3009,"Koom",3,0); 
-INSERT INTO `NameGen` VALUES (3010,"Kurim",3,0); 
-INSERT INTO `NameGen` VALUES (3011,"Looch",3,0); 
-INSERT INTO `NameGen` VALUES (3012,"Louh",3,0); 
-INSERT INTO `NameGen` VALUES (3013,"Maem",3,0); 
-INSERT INTO `NameGen` VALUES (3014,"Maxim",3,0); 
-INSERT INTO `NameGen` VALUES (3015,"Mogh",3,0); 
-INSERT INTO `NameGen` VALUES (3016,"Moleb",3,0); 
-INSERT INTO `NameGen` VALUES (3017,"Munden",3,0); 
-INSERT INTO `NameGen` VALUES (3018,"Muramas",3,0); 
-INSERT INTO `NameGen` VALUES (3019,"Ogden",3,0); 
-INSERT INTO `NameGen` VALUES (3020,"Olaf",3,0); 
-INSERT INTO `NameGen` VALUES (3021,"Paps",3,0); 
-INSERT INTO `NameGen` VALUES (3022,"Rags",3,0); 
-INSERT INTO `NameGen` VALUES (3023,"Rakum",3,0); 
-INSERT INTO `NameGen` VALUES (3024,"Rawm",3,0); 
-INSERT INTO `NameGen` VALUES (3025,"Risx",3,0); 
-INSERT INTO `NameGen` VALUES (3026,"Roone",3,0); 
-INSERT INTO `NameGen` VALUES (3027,"Roxas",3,0); 
-INSERT INTO `NameGen` VALUES (3028,"Serge",3,0); 
-INSERT INTO `NameGen` VALUES (3029,"Shiggy",3,0); 
-INSERT INTO `NameGen` VALUES (3030,"Sjardin",3,0); 
-INSERT INTO `NameGen` VALUES (3031,"Sonn",3,0); 
-INSERT INTO `NameGen` VALUES (3032,"Sorn",3,0); 
-INSERT INTO `NameGen` VALUES (3033,"Sulfis",3,0); 
-INSERT INTO `NameGen` VALUES (3034,"Tegh",3,0); 
-INSERT INTO `NameGen` VALUES (3035,"Tharidin",3,0); 
-INSERT INTO `NameGen` VALUES (3036,"Thor",3,0); 
-INSERT INTO `NameGen` VALUES (3037,"Tir",3,0); 
-INSERT INTO `NameGen` VALUES (3038,"Took",3,0); 
-INSERT INTO `NameGen` VALUES (3039,"Tron",3,0); 
-INSERT INTO `NameGen` VALUES (3040,"Urogh",3,0); 
-INSERT INTO `NameGen` VALUES (3041,"Valnar",3,0); 
-INSERT INTO `NameGen` VALUES (4,"Mogra",3,1); 
-INSERT INTO `NameGen` VALUES (5,"Brunhilde",3,1); 
-INSERT INTO `NameGen` VALUES (6,"Valkrist",3,1); 
-INSERT INTO `NameGen` VALUES (7,"Aisha",3,1); 
-INSERT INTO `NameGen` VALUES (8,"Sif",3,1); 
-INSERT INTO `NameGen` VALUES (9,"Eden",3,1); 
-INSERT INTO `NameGen` VALUES (10,"Mathra",3,1); 
-INSERT INTO `NameGen` VALUES (11,"Omora",3,1); 
-INSERT INTO `NameGen` VALUES (12,"Drenn",3,1); 
-INSERT INTO `NameGen` VALUES (13,"Kathra",3,1); 
-INSERT INTO `NameGen` VALUES (14,"Jann",3,1); 
-INSERT INTO `NameGen` VALUES (15,"Maybel",3,1); 
-INSERT INTO `NameGen` VALUES (16,"Brushah",3,1); 
-INSERT INTO `NameGen` VALUES (17,"Moira",3,1); 
-INSERT INTO `NameGen` VALUES (18,"Kate",3,1); 
-INSERT INTO `NameGen` VALUES (19,"Kasha",3,1); 
-INSERT INTO `NameGen` VALUES (20,"Olga",3,1); 
-INSERT INTO `NameGen` VALUES (21,"Helga",3,1); 
-INSERT INTO `NameGen` VALUES (22,"Gertrune",3,1); 
-INSERT INTO `NameGen` VALUES (23,"Gudrune",3,1); 
-INSERT INTO `NameGen` VALUES (24,"Frigga",3,1); 
-INSERT INTO `NameGen` VALUES (25,"Angerboda",3,1); 
-INSERT INTO `NameGen` VALUES (26,"Einherjar",3,1); 
-INSERT INTO `NameGen` VALUES (27,"Freya",3,1); 
-INSERT INTO `NameGen` VALUES (28,"Leia",3,1); 
-INSERT INTO `NameGen` VALUES (29,"Padme",3,1); 
-INSERT INTO `NameGen` VALUES (1026,"Aibhlin",3,1); 
-INSERT INTO `NameGen` VALUES (1027,"Aideen",3,1); 
-INSERT INTO `NameGen` VALUES (1028,"Aigneis",3,1); 
-INSERT INTO `NameGen` VALUES (1029,"Ailbhe",3,1); 
-INSERT INTO `NameGen` VALUES (1030,"Ailis",3,1); 
-INSERT INTO `NameGen` VALUES (1031,"Aimil",3,1); 
-INSERT INTO `NameGen` VALUES (1032,"Aine",3,1); 
-INSERT INTO `NameGen` VALUES (1033,"Airleas",3,1); 
-INSERT INTO `NameGen` VALUES (1034,"Aislinn",3,1); 
-INSERT INTO `NameGen` VALUES (1035,"Aoibheann",3,1); 
-INSERT INTO `NameGen` VALUES (1036,"Aoife",3,1); 
-INSERT INTO `NameGen` VALUES (1037,"Aselman",3,1); 
-INSERT INTO `NameGen` VALUES (1038,"Barabell",3,1); 
-INSERT INTO `NameGen` VALUES (1039,"Bebhinn",3,1); 
-INSERT INTO `NameGen` VALUES (1040,"Beitris",3,1); 
-INSERT INTO `NameGen` VALUES (1041,"Bevin",3,1); 
-INSERT INTO `NameGen` VALUES (1042,"Brenna",3,1); 
-INSERT INTO `NameGen` VALUES (1043,"Bridie",3,1); 
-INSERT INTO `NameGen` VALUES (1044,"Bronagh",3,1); 
-INSERT INTO `NameGen` VALUES (1045,"Carling",3,1); 
-INSERT INTO `NameGen` VALUES (1046,"Casidhe",3,1); 
-INSERT INTO `NameGen` VALUES (1047,"Catriona",3,1); 
-INSERT INTO `NameGen` VALUES (1048,"Ciara",3,1); 
-INSERT INTO `NameGen` VALUES (1049,"Cliodhna",3,1); 
-INSERT INTO `NameGen` VALUES (1050,"Danann",3,1); 
-INSERT INTO `NameGen` VALUES (1051,"Doireann",3,1); 
-INSERT INTO `NameGen` VALUES (1052,"Doreen",3,1); 
-INSERT INTO `NameGen` VALUES (1053,"Eanna",3,1); 
-INSERT INTO `NameGen` VALUES (1054,"Eithne",3,1); 
-INSERT INTO `NameGen` VALUES (1055,"Erlina",3,1); 
-INSERT INTO `NameGen` VALUES (1056,"Fidelma",3,1); 
-INSERT INTO `NameGen` VALUES (1057,"Franna",3,1); 
-INSERT INTO `NameGen` VALUES (1058,"Ghleanna",3,1); 
-INSERT INTO `NameGen` VALUES (1059,"Glennis",3,1); 
-INSERT INTO `NameGen` VALUES (1060,"Glynis",3,1); 
-INSERT INTO `NameGen` VALUES (1061,"Ita",3,1); 
-INSERT INTO `NameGen` VALUES (1062,"Keely",3,1); 
-INSERT INTO `NameGen` VALUES (1063,"Leitis",3,1); 
-INSERT INTO `NameGen` VALUES (1064,"Lesley",3,1); 
-INSERT INTO `NameGen` VALUES (1065,"Maeve",3,1); 
-INSERT INTO `NameGen` VALUES (1066,"Mairi",3,1); 
-INSERT INTO `NameGen` VALUES (1067,"Morag",3,1); 
-INSERT INTO `NameGen` VALUES (1068,"Muirinn",3,1); 
-INSERT INTO `NameGen` VALUES (1069,"Niamh",3,1); 
-INSERT INTO `NameGen` VALUES (1070,"Nuala",3,1); 
-INSERT INTO `NameGen` VALUES (1071,"Nuallan",3,1); 
-INSERT INTO `NameGen` VALUES (1072,"Onora",3,1); 
-INSERT INTO `NameGen` VALUES (1073,"Orla",3,1); 
-INSERT INTO `NameGen` VALUES (1074,"Peigi",3,1); 
-INSERT INTO `NameGen` VALUES (1075,"Rathnait",3,1); 
-INSERT INTO `NameGen` VALUES (1076,"Ros",3,1); 
-INSERT INTO `NameGen` VALUES (1077,"Saibh",3,1); 
-INSERT INTO `NameGen` VALUES (1078,"Saoirse",3,1); 
-INSERT INTO `NameGen` VALUES (1079,"Seana",3,1); 
-INSERT INTO `NameGen` VALUES (1080,"Sheila",3,1); 
-INSERT INTO `NameGen` VALUES (1081,"Siofra",3,1); 
-INSERT INTO `NameGen` VALUES (1082,"Siusan",3,1); 
-INSERT INTO `NameGen` VALUES (1083,"Sive",3,1); 
-INSERT INTO `NameGen` VALUES (1084,"Sorcha",3,1); 
-INSERT INTO `NameGen` VALUES (1085,"Treasa",3,1); 
-INSERT INTO `NameGen` VALUES (3042,"Aeona",3,1); 
-INSERT INTO `NameGen` VALUES (3043,"Aeowyn",3,1); 
-INSERT INTO `NameGen` VALUES (3044,"Aggi",3,1); 
-INSERT INTO `NameGen` VALUES (3045,"Alna",3,1); 
-INSERT INTO `NameGen` VALUES (3046,"Amelle",3,1); 
-INSERT INTO `NameGen` VALUES (3047,"Appela",3,1); 
-INSERT INTO `NameGen` VALUES (3048,"Bassba",3,1); 
-INSERT INTO `NameGen` VALUES (3049,"Beppi",3,1); 
-INSERT INTO `NameGen` VALUES (3050,"Bhoona",3,1); 
-INSERT INTO `NameGen` VALUES (3051,"Blaise",3,1); 
-INSERT INTO `NameGen` VALUES (3052,"Brianne",3,1); 
-INSERT INTO `NameGen` VALUES (3053,"Bufu",3,1); 
-INSERT INTO `NameGen` VALUES (3054,"Caide",3,1); 
-INSERT INTO `NameGen` VALUES (3055,"Caska",3,1); 
-INSERT INTO `NameGen` VALUES (3056,"Chaim",3,1); 
-INSERT INTO `NameGen` VALUES (3057,"Chari",3,1); 
-INSERT INTO `NameGen` VALUES (3058,"Ciali",3,1); 
-INSERT INTO `NameGen` VALUES (3059,"Cici",3,1); 
-INSERT INTO `NameGen` VALUES (3060,"Dalew",3,1); 
-INSERT INTO `NameGen` VALUES (3061,"Daria",3,1); 
-INSERT INTO `NameGen` VALUES (3062,"Deb",3,1); 
-INSERT INTO `NameGen` VALUES (3063,"Donda",3,1); 
-INSERT INTO `NameGen` VALUES (3064,"Dru",3,1); 
-INSERT INTO `NameGen` VALUES (3065,"Durga",3,1); 
-INSERT INTO `NameGen` VALUES (3066,"Fawn",3,1); 
-INSERT INTO `NameGen` VALUES (3067,"Fern",3,1); 
-INSERT INTO `NameGen` VALUES (3068,"Fhanta",3,1); 
-INSERT INTO `NameGen` VALUES (3069,"Finne",3,1); 
-INSERT INTO `NameGen` VALUES (3070,"Fisna",3,1); 
-INSERT INTO `NameGen` VALUES (3071,"Frea",3,1); 
-INSERT INTO `NameGen` VALUES (3072,"Gam",3,1); 
-INSERT INTO `NameGen` VALUES (3073,"Genny",3,1); 
-INSERT INTO `NameGen` VALUES (3074,"Geritrude",3,1); 
-INSERT INTO `NameGen` VALUES (3075,"Ghanna",3,1); 
-INSERT INTO `NameGen` VALUES (3076,"Giga",3,1); 
-INSERT INTO `NameGen` VALUES (3077,"Goola",3,1); 
-INSERT INTO `NameGen` VALUES (3078,"Haige",3,1); 
-INSERT INTO `NameGen` VALUES (3079,"Hehm",3,1); 
-INSERT INTO `NameGen` VALUES (3080,"Helena",3,1); 
-INSERT INTO `NameGen` VALUES (3081,"Hester",3,1); 
-INSERT INTO `NameGen` VALUES (3082,"Hola",3,1); 
-INSERT INTO `NameGen` VALUES (3083,"Hoppe",3,1); 
-INSERT INTO `NameGen` VALUES (3084,"Ingrid",3,1); 
-INSERT INTO `NameGen` VALUES (3085,"Jaine",3,1); 
-INSERT INTO `NameGen` VALUES (3086,"Kathryn",3,1); 
-INSERT INTO `NameGen` VALUES (3087,"Kemmi",3,1); 
-INSERT INTO `NameGen` VALUES (3088,"Keshta",3,1); 
-INSERT INTO `NameGen` VALUES (3089,"Kess",3,1); 
-INSERT INTO `NameGen` VALUES (3090,"Khea",3,1); 
-INSERT INTO `NameGen` VALUES (3091,"Kika",3,1); 
-INSERT INTO `NameGen` VALUES (3092,"Leela",3,1); 
-INSERT INTO `NameGen` VALUES (3093,"Lonlon",3,1); 
-INSERT INTO `NameGen` VALUES (3094,"Maii",3,1); 
-INSERT INTO `NameGen` VALUES (3095,"Maybelle",3,1); 
-INSERT INTO `NameGen` VALUES (3096,"Mekena",3,1); 
-INSERT INTO `NameGen` VALUES (3097,"Mina",3,1); 
-INSERT INTO `NameGen` VALUES (3098,"Misty",3,1); 
-INSERT INTO `NameGen` VALUES (3099,"Nefh",3,1); 
-INSERT INTO `NameGen` VALUES (3100,"Olli",3,1); 
-INSERT INTO `NameGen` VALUES (3101,"Ooma",3,1); 
-INSERT INTO `NameGen` VALUES (3102,"Remmy",3,1); 
-INSERT INTO `NameGen` VALUES (3103,"Rena",3,1); 
-INSERT INTO `NameGen` VALUES (3104,"Riya",3,1); 
-INSERT INTO `NameGen` VALUES (3105,"Roe",3,1); 
-INSERT INTO `NameGen` VALUES (3106,"Ronara",3,1); 
-INSERT INTO `NameGen` VALUES (3107,"Sascha",3,1); 
-INSERT INTO `NameGen` VALUES (3108,"Seiry",3,1); 
-INSERT INTO `NameGen` VALUES (3109,"Sparkle",3,1); 
-INSERT INTO `NameGen` VALUES (3110,"Stephie",3,1); 
-INSERT INTO `NameGen` VALUES (3111,"Susarka",3,1); 
-INSERT INTO `NameGen` VALUES (3112,"Tamm",3,1); 
-INSERT INTO `NameGen` VALUES (3113,"Taraebi",3,1); 
-INSERT INTO `NameGen` VALUES (3114,"Tesla",3,1); 
-INSERT INTO `NameGen` VALUES (3115,"Tess",3,1); 
-INSERT INTO `NameGen` VALUES (3116,"Tetra",3,1); 
-INSERT INTO `NameGen` VALUES (3117,"Toffy",3,1); 
-INSERT INTO `NameGen` VALUES (3118,"Umi",3,1); 
-INSERT INTO `NameGen` VALUES (3119,"Vicki",3,1); 
-INSERT INTO `NameGen` VALUES (98,"KaelThas",4,0); 
-INSERT INTO `NameGen` VALUES (99,"DathRemar",4,0); 
-INSERT INTO `NameGen` VALUES (100,"Legolas",4,0); 
-INSERT INTO `NameGen` VALUES (101,"Elrond",4,0); 
-INSERT INTO `NameGen` VALUES (102,"Gilthanas",4,0); 
-INSERT INTO `NameGen` VALUES (103,"Porthios",4,0); 
-INSERT INTO `NameGen` VALUES (104,"Solastaran",4,0); 
-INSERT INTO `NameGen` VALUES (105,"Lorac",4,0); 
-INSERT INTO `NameGen` VALUES (106,"Gilthaniel",4,0); 
-INSERT INTO `NameGen` VALUES (107,"Arondas",4,0); 
-INSERT INTO `NameGen` VALUES (108,"Pathorias",4,0); 
-INSERT INTO `NameGen` VALUES (109,"Glorfindel",4,0); 
-INSERT INTO `NameGen` VALUES (110,"Aethoras",4,0); 
-INSERT INTO `NameGen` VALUES (111,"Gilgaden",4,0); 
-INSERT INTO `NameGen` VALUES (112,"Alfruend",4,0); 
-INSERT INTO `NameGen` VALUES (113,"Kurt",4,0); 
-INSERT INTO `NameGen` VALUES (114,"Galadrim",4,0); 
-INSERT INTO `NameGen` VALUES (115,"Celeborn",4,0); 
-INSERT INTO `NameGen` VALUES (116,"Soferedas",4,0); 
-INSERT INTO `NameGen` VALUES (117,"Andenar",4,0); 
-INSERT INTO `NameGen` VALUES (118,"Firebrand",4,0); 
-INSERT INTO `NameGen` VALUES (119,"Flameseeker",4,0); 
-INSERT INTO `NameGen` VALUES (120,"Gholbine",4,0); 
-INSERT INTO `NameGen` VALUES (121,"Hellbourne",4,0); 
-INSERT INTO `NameGen` VALUES (122,"Larodar",4,0); 
-INSERT INTO `NameGen` VALUES (123,"Malorne",4,0); 
-INSERT INTO `NameGen` VALUES (124,"Dagda",4,0); 
-INSERT INTO `NameGen` VALUES (125,"Darkweaver",4,0); 
-INSERT INTO `NameGen` VALUES (126,"Bandalar",4,0); 
-INSERT INTO `NameGen` VALUES (127,"Bloodwrath",4,0); 
-INSERT INTO `NameGen` VALUES (128,"Califax",4,0); 
-INSERT INTO `NameGen` VALUES (129,"Centrius",4,0); 
-INSERT INTO `NameGen` VALUES (130,"Anubris",4,0); 
-INSERT INTO `NameGen` VALUES (131,"Ashroot",4,0); 
-INSERT INTO `NameGen` VALUES (132,"Dazlith",4,0); 
-INSERT INTO `NameGen` VALUES (133,"Nandieb",4,0); 
-INSERT INTO `NameGen` VALUES (134,"Stormrage",4,0); 
-INSERT INTO `NameGen` VALUES (135,"Malfurion",4,0); 
-INSERT INTO `NameGen` VALUES (136,"Illidan",4,0); 
-INSERT INTO `NameGen` VALUES (137,"Terrorblade",4,0); 
-INSERT INTO `NameGen` VALUES (138,"Thornhand",4,0); 
-INSERT INTO `NameGen` VALUES (139,"Kardol",4,0); 
-INSERT INTO `NameGen` VALUES (140,"Treeguard",4,0); 
-INSERT INTO `NameGen` VALUES (141,"Dezarden",4,0); 
-INSERT INTO `NameGen` VALUES (142,"Stareye",4,0); 
-INSERT INTO `NameGen` VALUES (143,"Desdel",4,0); 
-INSERT INTO `NameGen` VALUES (144,"Staghelm",4,0); 
-INSERT INTO `NameGen` VALUES (145,"Ferun",4,0); 
-INSERT INTO `NameGen` VALUES (146,"Ravencrest",4,0); 
-INSERT INTO `NameGen` VALUES (147,"Oakshield",4,0); 
-INSERT INTO `NameGen` VALUES (148,"Marden",4,0); 
-INSERT INTO `NameGen` VALUES (149,"Oghma",4,0); 
-INSERT INTO `NameGen` VALUES (150,"Ragerunner",4,0); 
-INSERT INTO `NameGen` VALUES (151,"Wrathbringer",4,0); 
-INSERT INTO `NameGen` VALUES (152,"Shadowsong",4,0); 
-INSERT INTO `NameGen` VALUES (153,"Sindweller",4,0); 
-INSERT INTO `NameGen` VALUES (1447,"Alaric",4,0); 
-INSERT INTO `NameGen` VALUES (1448,"Alu-manor",4,0); 
-INSERT INTO `NameGen` VALUES (1449,"Andelarian",4,0); 
-INSERT INTO `NameGen` VALUES (1450,"Andonis",4,0); 
-INSERT INTO `NameGen` VALUES (1451,"Andreas",4,0); 
-INSERT INTO `NameGen` VALUES (1452,"Aren",4,0); 
-INSERT INTO `NameGen` VALUES (1453,"Bastian",4,0); 
-INSERT INTO `NameGen` VALUES (1454,"Berend",4,0); 
-INSERT INTO `NameGen` VALUES (1455,"Bohemil",4,0); 
-INSERT INTO `NameGen` VALUES (1456,"Bren",4,0); 
-INSERT INTO `NameGen` VALUES (1457,"Bynis",4,0); 
-INSERT INTO `NameGen` VALUES (1458,"Cailian",4,0); 
-INSERT INTO `NameGen` VALUES (1459,"Cassian",4,0); 
-INSERT INTO `NameGen` VALUES (1460,"Ciaran",4,0); 
-INSERT INTO `NameGen` VALUES (1461,"Darannar",4,0); 
-INSERT INTO `NameGen` VALUES (1462,"Dorian",4,0); 
-INSERT INTO `NameGen` VALUES (1463,"Ecthis",4,0); 
-INSERT INTO `NameGen` VALUES (1464,"Edanis",4,0); 
-INSERT INTO `NameGen` VALUES (1465,"Erimm",4,0); 
-INSERT INTO `NameGen` VALUES (1466,"Erroman",4,0); 
-INSERT INTO `NameGen` VALUES (1467,"Evan",4,0); 
-INSERT INTO `NameGen` VALUES (1468,"Fabian",4,0); 
-INSERT INTO `NameGen` VALUES (1469,"Falar",4,0); 
-INSERT INTO `NameGen` VALUES (1470,"Fanathor",4,0); 
-INSERT INTO `NameGen` VALUES (1471,"Fedor",4,0); 
-INSERT INTO `NameGen` VALUES (1472,"Felan-Anor",4,0); 
-INSERT INTO `NameGen` VALUES (1473,"Feoras",4,0); 
-INSERT INTO `NameGen` VALUES (1474,"Flavienn",4,0); 
-INSERT INTO `NameGen` VALUES (1475,"Flinn",4,0); 
-INSERT INTO `NameGen` VALUES (1476,"Galen",4,0); 
-INSERT INTO `NameGen` VALUES (1477,"Galkuris",4,0); 
-INSERT INTO `NameGen` VALUES (1478,"Galthis",4,0); 
-INSERT INTO `NameGen` VALUES (1479,"Halador",4,0); 
-INSERT INTO `NameGen` VALUES (1480,"Halcyon",4,0); 
-INSERT INTO `NameGen` VALUES (1481,"Imlys",4,0); 
-INSERT INTO `NameGen` VALUES (1482,"Imrahil",4,0); 
-INSERT INTO `NameGen` VALUES (1483,"Jalidor",4,0); 
-INSERT INTO `NameGen` VALUES (1484,"Jaspion",4,0); 
-INSERT INTO `NameGen` VALUES (1485,"Keltis",4,0); 
-INSERT INTO `NameGen` VALUES (1486,"Kuranor",4,0); 
-INSERT INTO `NameGen` VALUES (1487,"Lumiar",4,0); 
-INSERT INTO `NameGen` VALUES (1488,"Lumin",4,0); 
-INSERT INTO `NameGen` VALUES (1489,"Manarian",4,0); 
-INSERT INTO `NameGen` VALUES (1490,"Mavellian",4,0); 
-INSERT INTO `NameGen` VALUES (1491,"Melanir",4,0); 
-INSERT INTO `NameGen` VALUES (1492,"Myrlidd",4,0); 
-INSERT INTO `NameGen` VALUES (1493,"Nevian",4,0); 
-INSERT INTO `NameGen` VALUES (1494,"Noctris",4,0); 
-INSERT INTO `NameGen` VALUES (1495,"Odion",4,0); 
-INSERT INTO `NameGen` VALUES (1496,"Pashiran",4,0); 
-INSERT INTO `NameGen` VALUES (1497,"Pirugan",4,0); 
-INSERT INTO `NameGen` VALUES (1498,"Rishladir",4,0); 
-INSERT INTO `NameGen` VALUES (1499,"Sylvane",4,0); 
-INSERT INTO `NameGen` VALUES (1500,"Tular",4,0); 
-INSERT INTO `NameGen` VALUES (1501,"Ullric",4,0); 
-INSERT INTO `NameGen` VALUES (1502,"Voldis",4,0); 
-INSERT INTO `NameGen` VALUES (1503,"Wrann",4,0); 
-INSERT INTO `NameGen` VALUES (3120,"Baridan",4,0); 
-INSERT INTO `NameGen` VALUES (3121,"Baridiir",4,0); 
-INSERT INTO `NameGen` VALUES (3122,"Baridor",4,0); 
-INSERT INTO `NameGen` VALUES (3123,"Barielor",4,0); 
-INSERT INTO `NameGen` VALUES (3124,"Bariian",4,0); 
-INSERT INTO `NameGen` VALUES (3125,"Bariirn",4,0); 
-INSERT INTO `NameGen` VALUES (3126,"Bariran",4,0); 
-INSERT INTO `NameGen` VALUES (3127,"Barirus",4,0); 
-INSERT INTO `NameGen` VALUES (3128,"Barisam",4,0); 
-INSERT INTO `NameGen` VALUES (3129,"Bariyeth",4,0); 
-INSERT INTO `NameGen` VALUES (3130,"Ceredan",4,0); 
-INSERT INTO `NameGen` VALUES (3131,"Cerediir",4,0); 
-INSERT INTO `NameGen` VALUES (3132,"Ceredor",4,0); 
-INSERT INTO `NameGen` VALUES (3133,"Cereelor",4,0); 
-INSERT INTO `NameGen` VALUES (3134,"Cereian",4,0); 
-INSERT INTO `NameGen` VALUES (3135,"Cereirn",4,0); 
-INSERT INTO `NameGen` VALUES (3136,"Cereran",4,0); 
-INSERT INTO `NameGen` VALUES (3137,"Cererus",4,0); 
-INSERT INTO `NameGen` VALUES (3138,"Ceresam",4,0); 
-INSERT INTO `NameGen` VALUES (3139,"Cereyeth",4,0); 
-INSERT INTO `NameGen` VALUES (3140,"Daldan",4,0); 
-INSERT INTO `NameGen` VALUES (3141,"Daldiir",4,0); 
-INSERT INTO `NameGen` VALUES (3142,"Daldor",4,0); 
-INSERT INTO `NameGen` VALUES (3143,"Dalelor",4,0); 
-INSERT INTO `NameGen` VALUES (3144,"Dalian",4,0); 
-INSERT INTO `NameGen` VALUES (3145,"Dalirn",4,0); 
-INSERT INTO `NameGen` VALUES (3146,"Dalran",4,0); 
-INSERT INTO `NameGen` VALUES (3147,"Dalrus",4,0); 
-INSERT INTO `NameGen` VALUES (3148,"Dalsam",4,0); 
-INSERT INTO `NameGen` VALUES (3149,"Dalyeth",4,0); 
-INSERT INTO `NameGen` VALUES (3150,"Denadan",4,0); 
-INSERT INTO `NameGen` VALUES (3151,"Denadiir",4,0); 
-INSERT INTO `NameGen` VALUES (3152,"Denador",4,0); 
-INSERT INTO `NameGen` VALUES (3153,"Denaelor",4,0); 
-INSERT INTO `NameGen` VALUES (3154,"Denaian",4,0); 
-INSERT INTO `NameGen` VALUES (3155,"Denairn",4,0); 
-INSERT INTO `NameGen` VALUES (3156,"Denaran",4,0); 
-INSERT INTO `NameGen` VALUES (3157,"Denarus",4,0); 
-INSERT INTO `NameGen` VALUES (3158,"Denasam",4,0); 
-INSERT INTO `NameGen` VALUES (3159,"Denayeth",4,0); 
-INSERT INTO `NameGen` VALUES (3160,"Mythdan",4,0); 
-INSERT INTO `NameGen` VALUES (3161,"Mythdiir",4,0); 
-INSERT INTO `NameGen` VALUES (3162,"Mythdor",4,0); 
-INSERT INTO `NameGen` VALUES (3163,"Mythelor",4,0); 
-INSERT INTO `NameGen` VALUES (3164,"Mythian",4,0); 
-INSERT INTO `NameGen` VALUES (3165,"Mythirn",4,0); 
-INSERT INTO `NameGen` VALUES (3166,"Mythran",4,0); 
-INSERT INTO `NameGen` VALUES (3167,"Mythrus",4,0); 
-INSERT INTO `NameGen` VALUES (3168,"Mythsam",4,0); 
-INSERT INTO `NameGen` VALUES (3169,"Mythyeth",4,0); 
-INSERT INTO `NameGen` VALUES (3170,"Nardan",4,0); 
-INSERT INTO `NameGen` VALUES (3171,"Nardiir",4,0); 
-INSERT INTO `NameGen` VALUES (3172,"Nardor",4,0); 
-INSERT INTO `NameGen` VALUES (3173,"Narelor",4,0); 
-INSERT INTO `NameGen` VALUES (3174,"Narian",4,0); 
-INSERT INTO `NameGen` VALUES (3175,"Narirn",4,0); 
-INSERT INTO `NameGen` VALUES (3176,"Narran",4,0); 
-INSERT INTO `NameGen` VALUES (3177,"Narrus",4,0); 
-INSERT INTO `NameGen` VALUES (3178,"Narsam",4,0); 
-INSERT INTO `NameGen` VALUES (3179,"Naryeth",4,0); 
-INSERT INTO `NameGen` VALUES (3180,"Sardan",4,0); 
-INSERT INTO `NameGen` VALUES (3181,"Sardiir",4,0); 
-INSERT INTO `NameGen` VALUES (3182,"Sardor",4,0); 
-INSERT INTO `NameGen` VALUES (3183,"Sarelor",4,0); 
-INSERT INTO `NameGen` VALUES (3184,"Sarian",4,0); 
-INSERT INTO `NameGen` VALUES (3185,"Sarirn",4,0); 
-INSERT INTO `NameGen` VALUES (3186,"Sarran",4,0); 
-INSERT INTO `NameGen` VALUES (3187,"Sarrus",4,0); 
-INSERT INTO `NameGen` VALUES (3188,"Sarsam",4,0); 
-INSERT INTO `NameGen` VALUES (3189,"Saryeth",4,0); 
-INSERT INTO `NameGen` VALUES (3190,"Taladan",4,0); 
-INSERT INTO `NameGen` VALUES (3191,"Taladiir",4,0); 
-INSERT INTO `NameGen` VALUES (3192,"Talador",4,0); 
-INSERT INTO `NameGen` VALUES (3193,"Talaelor",4,0); 
-INSERT INTO `NameGen` VALUES (3194,"Talaian",4,0); 
-INSERT INTO `NameGen` VALUES (3195,"Talairn",4,0); 
-INSERT INTO `NameGen` VALUES (3196,"Talaran",4,0); 
-INSERT INTO `NameGen` VALUES (3197,"Talarus",4,0); 
-INSERT INTO `NameGen` VALUES (3198,"Talasam",4,0); 
-INSERT INTO `NameGen` VALUES (3199,"Talayeth",4,0); 
-INSERT INTO `NameGen` VALUES (3200,"Thundan",4,0); 
-INSERT INTO `NameGen` VALUES (3201,"Thundiir",4,0); 
-INSERT INTO `NameGen` VALUES (3202,"Thundor",4,0); 
-INSERT INTO `NameGen` VALUES (3203,"Thunelor",4,0); 
-INSERT INTO `NameGen` VALUES (3204,"Thunian",4,0); 
-INSERT INTO `NameGen` VALUES (3205,"Thunirn",4,0); 
-INSERT INTO `NameGen` VALUES (3206,"Thunran",4,0); 
-INSERT INTO `NameGen` VALUES (3207,"Thunrus",4,0); 
-INSERT INTO `NameGen` VALUES (3208,"Thunsam",4,0); 
-INSERT INTO `NameGen` VALUES (3209,"Thunyeth",4,0); 
-INSERT INTO `NameGen` VALUES (3210,"Vaedan",4,0); 
-INSERT INTO `NameGen` VALUES (3211,"Vaediir",4,0); 
-INSERT INTO `NameGen` VALUES (3212,"Vaedor",4,0); 
-INSERT INTO `NameGen` VALUES (3213,"Vaeelor",4,0); 
-INSERT INTO `NameGen` VALUES (3214,"Vaeian",4,0); 
-INSERT INTO `NameGen` VALUES (3215,"Vaeirn",4,0); 
-INSERT INTO `NameGen` VALUES (3216,"Vaeran",4,0); 
-INSERT INTO `NameGen` VALUES (3217,"Vaerus",4,0); 
-INSERT INTO `NameGen` VALUES (3218,"Vaesam",4,0); 
-INSERT INTO `NameGen` VALUES (3219,"Vaeyeth",4,0); 
-INSERT INTO `NameGen` VALUES (50,"Sylvanas",4,1); 
-INSERT INTO `NameGen` VALUES (51,"Vereesa",4,1); 
-INSERT INTO `NameGen` VALUES (52,"Alleria",4,1); 
-INSERT INTO `NameGen` VALUES (53,"Somand",4,1); 
-INSERT INTO `NameGen` VALUES (54,"Anthis",4,1); 
-INSERT INTO `NameGen` VALUES (55,"Nara",4,1); 
-INSERT INTO `NameGen` VALUES (56,"Cyndia",4,1); 
-INSERT INTO `NameGen` VALUES (57,"Amora",4,1); 
-INSERT INTO `NameGen` VALUES (58,"Keldindra",4,1); 
-INSERT INTO `NameGen` VALUES (59,"Sarassar",4,1); 
-INSERT INTO `NameGen` VALUES (60,"Velathis",4,1); 
-INSERT INTO `NameGen` VALUES (61,"Lauranthalassa",4,1); 
-INSERT INTO `NameGen` VALUES (62,"Laurana",4,1); 
-INSERT INTO `NameGen` VALUES (63,"Galadriel",4,1); 
-INSERT INTO `NameGen` VALUES (64,"Andariel",4,1); 
-INSERT INTO `NameGen` VALUES (65,"Laranassa",4,1); 
-INSERT INTO `NameGen` VALUES (66,"Clarindrela",4,1); 
-INSERT INTO `NameGen` VALUES (67,"Tarindrella",4,1); 
-INSERT INTO `NameGen` VALUES (68,"Theredris",4,1); 
-INSERT INTO `NameGen` VALUES (69,"Azshara",4,1); 
-INSERT INTO `NameGen` VALUES (70,"Aszune",4,1); 
-INSERT INTO `NameGen` VALUES (71,"Chillwind",4,1); 
-INSERT INTO `NameGen` VALUES (72,"Anara",4,1); 
-INSERT INTO `NameGen` VALUES (73,"Feathermoon",4,1); 
-INSERT INTO `NameGen` VALUES (74,"Shandris",4,1); 
-INSERT INTO `NameGen` VALUES (75,"Moonfang",4,1); 
-INSERT INTO `NameGen` VALUES (76,"Delas",4,1); 
-INSERT INTO `NameGen` VALUES (77,"Moonray",4,1); 
-INSERT INTO `NameGen` VALUES (78,"Felore",4,1); 
-INSERT INTO `NameGen` VALUES (79,"Moonsinger",4,1); 
-INSERT INTO `NameGen` VALUES (80,"Mora",4,1); 
-INSERT INTO `NameGen` VALUES (81,"Nightshade",4,1); 
-INSERT INTO `NameGen` VALUES (82,"Adora",4,1); 
-INSERT INTO `NameGen` VALUES (83,"Nuada",4,1); 
-INSERT INTO `NameGen` VALUES (84,"Saberfang",4,1); 
-INSERT INTO `NameGen` VALUES (85,"Theta",4,1); 
-INSERT INTO `NameGen` VALUES (86,"Snowscar",4,1); 
-INSERT INTO `NameGen` VALUES (87,"Tygra",4,1); 
-INSERT INTO `NameGen` VALUES (88,"Stardragon",4,1); 
-INSERT INTO `NameGen` VALUES (89,"Kera",4,1); 
-INSERT INTO `NameGen` VALUES (90,"Starsong",4,1); 
-INSERT INTO `NameGen` VALUES (91,"Kathris",4,1); 
-INSERT INTO `NameGen` VALUES (92,"Whisperwind",4,1); 
-INSERT INTO `NameGen` VALUES (93,"Mave",4,1); 
-INSERT INTO `NameGen` VALUES (94,"Whisperwind",4,1); 
-INSERT INTO `NameGen` VALUES (95,"Tyrande",4,1); 
-INSERT INTO `NameGen` VALUES (96,"Whitemane",4,1); 
-INSERT INTO `NameGen` VALUES (97,"Mira",4,1); 
-INSERT INTO `NameGen` VALUES (1387,"Adelle",4,1); 
-INSERT INTO `NameGen` VALUES (1388,"Adila",4,1); 
-INSERT INTO `NameGen` VALUES (1389,"Adonia",4,1); 
-INSERT INTO `NameGen` VALUES (1390,"Ailin",4,1); 
-INSERT INTO `NameGen` VALUES (1391,"Alissandre",4,1); 
-INSERT INTO `NameGen` VALUES (1392,"Amaluria",4,1); 
-INSERT INTO `NameGen` VALUES (1393,"Amynta",4,1); 
-INSERT INTO `NameGen` VALUES (1394,"Annalore",4,1); 
-INSERT INTO `NameGen` VALUES (1395,"Aria",4,1); 
-INSERT INTO `NameGen` VALUES (1396,"Arlana",4,1); 
-INSERT INTO `NameGen` VALUES (1397,"Aurora",4,1); 
-INSERT INTO `NameGen` VALUES (1398,"Ava",4,1); 
-INSERT INTO `NameGen` VALUES (1399,"Belinna",4,1); 
-INSERT INTO `NameGen` VALUES (1400,"Brinna",4,1); 
-INSERT INTO `NameGen` VALUES (1401,"Carina",4,1); 
-INSERT INTO `NameGen` VALUES (1402,"Catalin",4,1); 
-INSERT INTO `NameGen` VALUES (1403,"Celeste",4,1); 
-INSERT INTO `NameGen` VALUES (1404,"Celeyna",4,1); 
-INSERT INTO `NameGen` VALUES (1405,"Chantal",4,1); 
-INSERT INTO `NameGen` VALUES (1406,"Cybelle",4,1); 
-INSERT INTO `NameGen` VALUES (1407,"Dahlia",4,1); 
-INSERT INTO `NameGen` VALUES (1408,"Dara",4,1); 
-INSERT INTO `NameGen` VALUES (1409,"Deana",4,1); 
-INSERT INTO `NameGen` VALUES (1410,"Deiene",4,1); 
-INSERT INTO `NameGen` VALUES (1411,"Dinah",4,1); 
-INSERT INTO `NameGen` VALUES (1412,"Edelinn",4,1); 
-INSERT INTO `NameGen` VALUES (1413,"Eilise",4,1); 
-INSERT INTO `NameGen` VALUES (1414,"Eily",4,1); 
-INSERT INTO `NameGen` VALUES (1415,"Elessaria",4,1); 
-INSERT INTO `NameGen` VALUES (1416,"Eliaine",4,1); 
-INSERT INTO `NameGen` VALUES (1417,"Elyse",4,1); 
-INSERT INTO `NameGen` VALUES (1418,"Erlina",4,1); 
-INSERT INTO `NameGen` VALUES (1419,"Erramun",4,1); 
-INSERT INTO `NameGen` VALUES (1420,"Esther",4,1); 
-INSERT INTO `NameGen` VALUES (1421,"Fala",4,1); 
-INSERT INTO `NameGen` VALUES (1422,"Feorin",4,1); 
-INSERT INTO `NameGen` VALUES (1423,"Finola",4,1); 
-INSERT INTO `NameGen` VALUES (1424,"Florianne",4,1); 
-INSERT INTO `NameGen` VALUES (1425,"Floris",4,1); 
-INSERT INTO `NameGen` VALUES (1426,"Ivy",4,1); 
-INSERT INTO `NameGen` VALUES (1427,"Janna",4,1); 
-INSERT INTO `NameGen` VALUES (1428,"Jasmine",4,1); 
-INSERT INTO `NameGen` VALUES (1429,"Kayla",4,1); 
-INSERT INTO `NameGen` VALUES (1430,"Laurel",4,1); 
-INSERT INTO `NameGen` VALUES (1431,"Leta",4,1); 
-INSERT INTO `NameGen` VALUES (1432,"Lillianore",4,1); 
-INSERT INTO `NameGen` VALUES (1433,"Lirria",4,1); 
-INSERT INTO `NameGen` VALUES (1434,"Luciellen",4,1); 
-INSERT INTO `NameGen` VALUES (1435,"Melody",4,1); 
-INSERT INTO `NameGen` VALUES (1436,"Nycteris",4,1); 
-INSERT INTO `NameGen` VALUES (1437,"Opal",4,1); 
-INSERT INTO `NameGen` VALUES (1438,"Phoebe",4,1); 
-INSERT INTO `NameGen` VALUES (1439,"Rae",4,1); 
-INSERT INTO `NameGen` VALUES (1440,"Rochelle",4,1); 
-INSERT INTO `NameGen` VALUES (1441,"Rosamond",4,1); 
-INSERT INTO `NameGen` VALUES (1442,"Rowena",4,1); 
-INSERT INTO `NameGen` VALUES (1443,"Selwynn",4,1); 
-INSERT INTO `NameGen` VALUES (1444,"Sylennia",4,1); 
-INSERT INTO `NameGen` VALUES (1445,"Tamar",4,1); 
-INSERT INTO `NameGen` VALUES (1446,"Vesta",4,1); 
-INSERT INTO `NameGen` VALUES (3220,"Ailea",4,1); 
-INSERT INTO `NameGen` VALUES (3221,"Alaana",4,1); 
-INSERT INTO `NameGen` VALUES (3222,"Alabrook",4,1); 
-INSERT INTO `NameGen` VALUES (3223,"Alaida",4,1); 
-INSERT INTO `NameGen` VALUES (3224,"Alalais",4,1); 
-INSERT INTO `NameGen` VALUES (3225,"Alareith",4,1); 
-INSERT INTO `NameGen` VALUES (3226,"Alaria",4,1); 
-INSERT INTO `NameGen` VALUES (3227,"Alasia",4,1); 
-INSERT INTO `NameGen` VALUES (3228,"Alayia",4,1); 
-INSERT INTO `NameGen` VALUES (3229,"Alayssa",4,1); 
-INSERT INTO `NameGen` VALUES (3230,"Aquana",4,1); 
-INSERT INTO `NameGen` VALUES (3231,"Aquda",4,1); 
-INSERT INTO `NameGen` VALUES (3232,"Aquina",4,1); 
-INSERT INTO `NameGen` VALUES (3233,"Aqulais",4,1); 
-INSERT INTO `NameGen` VALUES (3234,"Aqulea",4,1); 
-INSERT INTO `NameGen` VALUES (3235,"Aquria",4,1); 
-INSERT INTO `NameGen` VALUES (3236,"Aqusia",4,1); 
-INSERT INTO `NameGen` VALUES (3237,"Aquyia",4,1); 
-INSERT INTO `NameGen` VALUES (3238,"Aquyssa",4,1); 
-INSERT INTO `NameGen` VALUES (3239,"Caylana",4,1); 
-INSERT INTO `NameGen` VALUES (3240,"Caylbrooke",4,1); 
-INSERT INTO `NameGen` VALUES (3241,"Caylda",4,1); 
-INSERT INTO `NameGen` VALUES (3242,"Cayllais",4,1); 
-INSERT INTO `NameGen` VALUES (3243,"Cayllea",4,1); 
-INSERT INTO `NameGen` VALUES (3244,"Caylreith",4,1); 
-INSERT INTO `NameGen` VALUES (3245,"Caylria",4,1); 
-INSERT INTO `NameGen` VALUES (3246,"Elyana",4,1); 
-INSERT INTO `NameGen` VALUES (3247,"Elybrook",4,1); 
-INSERT INTO `NameGen` VALUES (3248,"Elyda",4,1); 
-INSERT INTO `NameGen` VALUES (3249,"Elylea",4,1); 
-INSERT INTO `NameGen` VALUES (3250,"Elyreith",4,1); 
-INSERT INTO `NameGen` VALUES (3251,"Elyria",4,1); 
-INSERT INTO `NameGen` VALUES (3252,"Elyyia",4,1); 
-INSERT INTO `NameGen` VALUES (3253,"Kynana",4,1); 
-INSERT INTO `NameGen` VALUES (3254,"Kynbrooke",4,1); 
-INSERT INTO `NameGen` VALUES (3255,"Kynda",4,1); 
-INSERT INTO `NameGen` VALUES (3256,"Kynlais",4,1); 
-INSERT INTO `NameGen` VALUES (3257,"Kynlea",4,1); 
-INSERT INTO `NameGen` VALUES (3258,"Kynreith",4,1); 
-INSERT INTO `NameGen` VALUES (3259,"Kynria",4,1); 
-INSERT INTO `NameGen` VALUES (3260,"Kynsia",4,1); 
-INSERT INTO `NameGen` VALUES (3261,"Kynyia",4,1); 
-INSERT INTO `NameGen` VALUES (3262,"Kynyssa",4,1); 
-INSERT INTO `NameGen` VALUES (3263,"Laana",4,1); 
-INSERT INTO `NameGen` VALUES (3264,"Lada",4,1); 
-INSERT INTO `NameGen` VALUES (3265,"Lalais",4,1); 
-INSERT INTO `NameGen` VALUES (3266,"Lalea",4,1); 
-INSERT INTO `NameGen` VALUES (3267,"Lareith",4,1); 
-INSERT INTO `NameGen` VALUES (3268,"Laria",4,1); 
-INSERT INTO `NameGen` VALUES (3269,"Layia",4,1); 
-INSERT INTO `NameGen` VALUES (3270,"Layssa",4,1); 
-INSERT INTO `NameGen` VALUES (3271,"Lyina",4,1); 
-INSERT INTO `NameGen` VALUES (3272,"Marasia",4,1); 
-INSERT INTO `NameGen` VALUES (3273,"Mavrada",4,1); 
-INSERT INTO `NameGen` VALUES (3274,"Mavraena",4,1); 
-INSERT INTO `NameGen` VALUES (3275,"Mavralais",4,1); 
-INSERT INTO `NameGen` VALUES (3276,"Mavralea",4,1); 
-INSERT INTO `NameGen` VALUES (3277,"Mavrareith",4,1); 
-INSERT INTO `NameGen` VALUES (3278,"Mavraria",4,1); 
-INSERT INTO `NameGen` VALUES (3279,"Mavrayia",4,1); 
-INSERT INTO `NameGen` VALUES (3280,"Mayssa",4,1); 
-INSERT INTO `NameGen` VALUES (3281,"Saebrooke",4,1); 
-INSERT INTO `NameGen` VALUES (3282,"Saelana",4,1); 
-INSERT INTO `NameGen` VALUES (3283,"Saelbrooke",4,1); 
-INSERT INTO `NameGen` VALUES (3284,"Saelda",4,1); 
-INSERT INTO `NameGen` VALUES (3285,"Saeliia",4,1); 
-INSERT INTO `NameGen` VALUES (3286,"Saellea",4,1); 
-INSERT INTO `NameGen` VALUES (3287,"Saelrythe",4,1); 
-INSERT INTO `NameGen` VALUES (3288,"Saelsia",4,1); 
-INSERT INTO `NameGen` VALUES (3289,"Saelyia",4,1); 
-INSERT INTO `NameGen` VALUES (3290,"Saelyssa",4,1); 
-INSERT INTO `NameGen` VALUES (3291,"Shauana",4,1); 
-INSERT INTO `NameGen` VALUES (3292,"Shauda",4,1); 
-INSERT INTO `NameGen` VALUES (3293,"Shaulais",4,1); 
-INSERT INTO `NameGen` VALUES (3294,"Shaulea",4,1); 
-INSERT INTO `NameGen` VALUES (3295,"Shaureith",4,1); 
-INSERT INTO `NameGen` VALUES (3296,"Shauria",4,1); 
-INSERT INTO `NameGen` VALUES (3297,"Shausia",4,1); 
-INSERT INTO `NameGen` VALUES (3298,"Shauyia",4,1); 
-INSERT INTO `NameGen` VALUES (3299,"Shauyssa",4,1); 
-INSERT INTO `NameGen` VALUES (3300,"Syana",4,1); 
-INSERT INTO `NameGen` VALUES (3301,"Sybrook",4,1); 
-INSERT INTO `NameGen` VALUES (3302,"Syda",4,1); 
-INSERT INTO `NameGen` VALUES (3303,"Sylais",4,1); 
-INSERT INTO `NameGen` VALUES (3304,"Sylea",4,1); 
-INSERT INTO `NameGen` VALUES (3305,"Syreith",4,1); 
-INSERT INTO `NameGen` VALUES (3306,"Syria",4,1); 
-INSERT INTO `NameGen` VALUES (3307,"Sysia",4,1); 
-INSERT INTO `NameGen` VALUES (3308,"Syyia",4,1); 
-INSERT INTO `NameGen` VALUES (430,"Calis",5,0); 
-INSERT INTO `NameGen` VALUES (431,"ChoNammoth",5,0); 
-INSERT INTO `NameGen` VALUES (432,"Coldreaver",5,0); 
-INSERT INTO `NameGen` VALUES (433,"Corpsemonger",5,0); 
-INSERT INTO `NameGen` VALUES (434,"Defacarr",5,0); 
-INSERT INTO `NameGen` VALUES (435,"Din",5,0); 
-INSERT INTO `NameGen` VALUES (436,"Kalinaj",5,0); 
-INSERT INTO `NameGen` VALUES (437,"KelThuzad",5,0); 
-INSERT INTO `NameGen` VALUES (438,"Miasmus",5,0); 
-INSERT INTO `NameGen` VALUES (439,"Morbent",5,0); 
-INSERT INTO `NameGen` VALUES (440,"Nerzhul",5,0); 
-INSERT INTO `NameGen` VALUES (441,"Ordin",5,0); 
-INSERT INTO `NameGen` VALUES (442,"Putridius",5,0); 
-INSERT INTO `NameGen` VALUES (443,"Rage",5,0); 
-INSERT INTO `NameGen` VALUES (444,"Rak",5,0); 
-INSERT INTO `NameGen` VALUES (445,"Ras",5,0); 
-INSERT INTO `NameGen` VALUES (446,"Ras",5,0); 
-INSERT INTO `NameGen` VALUES (447,"Rotgut",5,0); 
-INSERT INTO `NameGen` VALUES (448,"Teron",5,0); 
-INSERT INTO `NameGen` VALUES (449,"Venim",5,0); 
-INSERT INTO `NameGen` VALUES (1906,"Abernethy",5,0); 
-INSERT INTO `NameGen` VALUES (1907,"Adannis",5,0); 
-INSERT INTO `NameGen` VALUES (1908,"Adolphus",5,0); 
-INSERT INTO `NameGen` VALUES (1909,"Alexander",5,0); 
-INSERT INTO `NameGen` VALUES (1910,"Alister",5,0); 
-INSERT INTO `NameGen` VALUES (1911,"Augustus",5,0); 
-INSERT INTO `NameGen` VALUES (1912,"Banning",5,0); 
-INSERT INTO `NameGen` VALUES (1913,"Barclay",5,0); 
-INSERT INTO `NameGen` VALUES (1914,"Barnabas",5,0); 
-INSERT INTO `NameGen` VALUES (1915,"Bartholomew",5,0); 
-INSERT INTO `NameGen` VALUES (1916,"Beachamp",5,0); 
-INSERT INTO `NameGen` VALUES (1917,"Bertram",5,0); 
-INSERT INTO `NameGen` VALUES (1918,"Bishop",5,0); 
-INSERT INTO `NameGen` VALUES (1919,"Brommius",5,0); 
-INSERT INTO `NameGen` VALUES (1920,"Burt",5,0); 
-INSERT INTO `NameGen` VALUES (1921,"Cailan",5,0); 
-INSERT INTO `NameGen` VALUES (1922,"Camdon",5,0); 
-INSERT INTO `NameGen` VALUES (1923,"Carlton",5,0); 
-INSERT INTO `NameGen` VALUES (1924,"Cavan",5,0); 
-INSERT INTO `NameGen` VALUES (1925,"Chandler",5,0); 
-INSERT INTO `NameGen` VALUES (1926,"Clifford",5,0); 
-INSERT INTO `NameGen` VALUES (1927,"Clifton",5,0); 
-INSERT INTO `NameGen` VALUES (1928,"Clive",5,0); 
-INSERT INTO `NameGen` VALUES (1929,"Cronan",5,0); 
-INSERT INTO `NameGen` VALUES (1930,"Declan",5,0); 
-INSERT INTO `NameGen` VALUES (1931,"Desmond",5,0); 
-INSERT INTO `NameGen` VALUES (1932,"Dominic",5,0); 
-INSERT INTO `NameGen` VALUES (1933,"Doyle",5,0); 
-INSERT INTO `NameGen` VALUES (1934,"Dunbar",5,0); 
-INSERT INTO `NameGen` VALUES (1935,"Eamnonn",5,0); 
-INSERT INTO `NameGen` VALUES (1936,"Emil",5,0); 
-INSERT INTO `NameGen` VALUES (1937,"Fergal",5,0); 
-INSERT INTO `NameGen` VALUES (1938,"Gabriel",5,0); 
-INSERT INTO `NameGen` VALUES (1939,"Galloch",5,0); 
-INSERT INTO `NameGen` VALUES (1940,"Geoffrey",5,0); 
-INSERT INTO `NameGen` VALUES (1941,"Giles",5,0); 
-INSERT INTO `NameGen` VALUES (1942,"Glendon",5,0); 
-INSERT INTO `NameGen` VALUES (1943,"Grigori",5,0); 
-INSERT INTO `NameGen` VALUES (1944,"Gustavus",5,0); 
-INSERT INTO `NameGen` VALUES (1945,"Horace",5,0); 
-INSERT INTO `NameGen` VALUES (1946,"Ikthius",5,0); 
-INSERT INTO `NameGen` VALUES (1947,"Jareth",5,0); 
-INSERT INTO `NameGen` VALUES (1948,"Julian",5,0); 
-INSERT INTO `NameGen` VALUES (1949,"Kendrick",5,0); 
-INSERT INTO `NameGen` VALUES (1950,"Lawler",5,0); 
-INSERT INTO `NameGen` VALUES (1951,"Leighton",5,0); 
-INSERT INTO `NameGen` VALUES (1952,"Logan",5,0); 
-INSERT INTO `NameGen` VALUES (1953,"Mannik",5,0); 
-INSERT INTO `NameGen` VALUES (1954,"Maurice",5,0); 
-INSERT INTO `NameGen` VALUES (1955,"Michael",5,0); 
-INSERT INTO `NameGen` VALUES (1956,"Milton",5,0); 
-INSERT INTO `NameGen` VALUES (1957,"Murdoch",5,0); 
-INSERT INTO `NameGen` VALUES (1958,"Nicholas",5,0); 
-INSERT INTO `NameGen` VALUES (1959,"Norman",5,0); 
-INSERT INTO `NameGen` VALUES (1960,"Raymond",5,0); 
-INSERT INTO `NameGen` VALUES (1961,"Roarke",5,0); 
-INSERT INTO `NameGen` VALUES (1962,"Travis",5,0); 
-INSERT INTO `NameGen` VALUES (1963,"Victor",5,0); 
-INSERT INTO `NameGen` VALUES (1964,"William",5,0); 
-INSERT INTO `NameGen` VALUES (1965,"Yurick",5,0); 
-INSERT INTO `NameGen` VALUES (3309,"Aaron",5,0); 
-INSERT INTO `NameGen` VALUES (3310,"Afton",5,0); 
-INSERT INTO `NameGen` VALUES (3311,"Agustin",5,0); 
-INSERT INTO `NameGen` VALUES (3312,"Aldrick",5,0); 
-INSERT INTO `NameGen` VALUES (3313,"Alfred",5,0); 
-INSERT INTO `NameGen` VALUES (3314,"Alphonse",5,0); 
-INSERT INTO `NameGen` VALUES (3315,"Alvaro",5,0); 
-INSERT INTO `NameGen` VALUES (3316,"Arthur",5,0); 
-INSERT INTO `NameGen` VALUES (3317,"Atticus",5,0); 
-INSERT INTO `NameGen` VALUES (3318,"Barnaby",5,0); 
-INSERT INTO `NameGen` VALUES (3319,"Barrett",5,0); 
-INSERT INTO `NameGen` VALUES (3320,"Benjamin",5,0); 
-INSERT INTO `NameGen` VALUES (3321,"Benson",5,0); 
-INSERT INTO `NameGen` VALUES (3322,"Bjorne",5,0); 
-INSERT INTO `NameGen` VALUES (3323,"Blake",5,0); 
-INSERT INTO `NameGen` VALUES (3324,"Bosley",5,0); 
-INSERT INTO `NameGen` VALUES (3325,"Brahm",5,0); 
-INSERT INTO `NameGen` VALUES (3326,"Branyt",5,0); 
-INSERT INTO `NameGen` VALUES (3327,"Broderick",5,0); 
-INSERT INTO `NameGen` VALUES (3328,"Byron",5,0); 
-INSERT INTO `NameGen` VALUES (3329,"Calvin",5,0); 
-INSERT INTO `NameGen` VALUES (3330,"Carmine",5,0); 
-INSERT INTO `NameGen` VALUES (3331,"Cecil",5,0); 
-INSERT INTO `NameGen` VALUES (3332,"Cedd",5,0); 
-INSERT INTO `NameGen` VALUES (3333,"Chase",5,0); 
-INSERT INTO `NameGen` VALUES (3334,"Chauncey",5,0); 
-INSERT INTO `NameGen` VALUES (3335,"Clarence",5,0); 
-INSERT INTO `NameGen` VALUES (3336,"Claude",5,0); 
-INSERT INTO `NameGen` VALUES (3337,"Cohen",5,0); 
-INSERT INTO `NameGen` VALUES (3338,"Courtland",5,0); 
-INSERT INTO `NameGen` VALUES (3339,"Crispian",5,0); 
-INSERT INTO `NameGen` VALUES (3340,"Damarcus",5,0); 
-INSERT INTO `NameGen` VALUES (3341,"Darby",5,0); 
-INSERT INTO `NameGen` VALUES (3342,"Deacon",5,0); 
-INSERT INTO `NameGen` VALUES (3343,"Dedrick",5,0); 
-INSERT INTO `NameGen` VALUES (3344,"Devonte",5,0); 
-INSERT INTO `NameGen` VALUES (3345,"Dimitri",5,0); 
-INSERT INTO `NameGen` VALUES (3346,"Dylan",5,0); 
-INSERT INTO `NameGen` VALUES (3347,"Edgar",5,0); 
-INSERT INTO `NameGen` VALUES (3348,"Edmund",5,0); 
-INSERT INTO `NameGen` VALUES (3349,"Elmer",5,0); 
-INSERT INTO `NameGen` VALUES (3350,"Emerson",5,0); 
-INSERT INTO `NameGen` VALUES (3351,"Ernest",5,0); 
-INSERT INTO `NameGen` VALUES (3352,"Eugene",5,0); 
-INSERT INTO `NameGen` VALUES (3353,"Ezra",5,0); 
-INSERT INTO `NameGen` VALUES (3354,"Finius",5,0); 
-INSERT INTO `NameGen` VALUES (3355,"Fischer",5,0); 
-INSERT INTO `NameGen` VALUES (3356,"Floyd",5,0); 
-INSERT INTO `NameGen` VALUES (3357,"Frederick",5,0); 
-INSERT INTO `NameGen` VALUES (3358,"Gareth",5,0); 
-INSERT INTO `NameGen` VALUES (3359,"Garrek",5,0); 
-INSERT INTO `NameGen` VALUES (3360,"Garrett",5,0); 
-INSERT INTO `NameGen` VALUES (3361,"Geoffry",5,0); 
-INSERT INTO `NameGen` VALUES (3362,"Gerald",5,0); 
-INSERT INTO `NameGen` VALUES (3363,"Gideon",5,0); 
-INSERT INTO `NameGen` VALUES (3364,"Gilley",5,0); 
-INSERT INTO `NameGen` VALUES (3365,"Gordon",5,0); 
-INSERT INTO `NameGen` VALUES (3366,"Grant",5,0); 
-INSERT INTO `NameGen` VALUES (3367,"Gulliver",5,0); 
-INSERT INTO `NameGen` VALUES (3368,"Gustav",5,0); 
-INSERT INTO `NameGen` VALUES (3369,"Guthrie",5,0); 
-INSERT INTO `NameGen` VALUES (3370,"Harlan",5,0); 
-INSERT INTO `NameGen` VALUES (3371,"Harvey",5,0); 
-INSERT INTO `NameGen` VALUES (3372,"Heath",5,0); 
-INSERT INTO `NameGen` VALUES (3373,"Hektor",5,0); 
-INSERT INTO `NameGen` VALUES (3374,"Hugh",5,0); 
-INSERT INTO `NameGen` VALUES (3375,"Humphrey",5,0); 
-INSERT INTO `NameGen` VALUES (3376,"Ignatius",5,0); 
-INSERT INTO `NameGen` VALUES (3377,"Jaques",5,0); 
-INSERT INTO `NameGen` VALUES (3378,"Jasper",5,0); 
-INSERT INTO `NameGen` VALUES (3379,"Kasier",5,0); 
-INSERT INTO `NameGen` VALUES (3380,"Kenneth",5,0); 
-INSERT INTO `NameGen` VALUES (3381,"Kiran",5,0); 
-INSERT INTO `NameGen` VALUES (3382,"Linus",5,0); 
-INSERT INTO `NameGen` VALUES (3383,"Lionel",5,0); 
-INSERT INTO `NameGen` VALUES (3384,"Magnus",5,0); 
-INSERT INTO `NameGen` VALUES (3385,"Malcolm",5,0); 
-INSERT INTO `NameGen` VALUES (3386,"Marcel",5,0); 
-INSERT INTO `NameGen` VALUES (3387,"Maximilian",5,0); 
-INSERT INTO `NameGen` VALUES (3388,"Montegomery",5,0); 
-INSERT INTO `NameGen` VALUES (3389,"Mordack",5,0); 
-INSERT INTO `NameGen` VALUES (3390,"Mosley",5,0); 
-INSERT INTO `NameGen` VALUES (3391,"Nehemiah",5,0); 
-INSERT INTO `NameGen` VALUES (3392,"Nicodemus",5,0); 
-INSERT INTO `NameGen` VALUES (3393,"Olliver",5,0); 
-INSERT INTO `NameGen` VALUES (3394,"Oswald",5,0); 
-INSERT INTO `NameGen` VALUES (3395,"Quincy",5,0); 
-INSERT INTO `NameGen` VALUES (3396,"Roger",5,0); 
-INSERT INTO `NameGen` VALUES (3397,"Samuel",5,0); 
-INSERT INTO `NameGen` VALUES (3398,"Schylar",5,0); 
-INSERT INTO `NameGen` VALUES (3399,"Shane",5,0); 
-INSERT INTO `NameGen` VALUES (3400,"Simon",5,0); 
-INSERT INTO `NameGen` VALUES (3401,"Sydney",5,0); 
-INSERT INTO `NameGen` VALUES (3402,"Tevish",5,0); 
-INSERT INTO `NameGen` VALUES (3403,"Tobias",5,0); 
-INSERT INTO `NameGen` VALUES (3404,"Warrick",5,0); 
-INSERT INTO `NameGen` VALUES (3405,"Wendell",5,0); 
-INSERT INTO `NameGen` VALUES (3406,"Willem",5,0); 
-INSERT INTO `NameGen` VALUES (408,"Janice",5,1); 
-INSERT INTO `NameGen` VALUES (409,"Morganna",5,1); 
-INSERT INTO `NameGen` VALUES (410,"Melanie",5,1); 
-INSERT INTO `NameGen` VALUES (411,"Janice",5,1); 
-INSERT INTO `NameGen` VALUES (412,"Gertrude",5,1); 
-INSERT INTO `NameGen` VALUES (413,"Scylla",5,1); 
-INSERT INTO `NameGen` VALUES (414,"Maleficent",5,1); 
-INSERT INTO `NameGen` VALUES (415,"Andora",5,1); 
-INSERT INTO `NameGen` VALUES (416,"Selevis",5,1); 
-INSERT INTO `NameGen` VALUES (417,"Alexandra",5,1); 
-INSERT INTO `NameGen` VALUES (418,"Katherine",5,1); 
-INSERT INTO `NameGen` VALUES (419,"Mary",5,1); 
-INSERT INTO `NameGen` VALUES (420,"Joan",5,1); 
-INSERT INTO `NameGen` VALUES (421,"Sersi",5,1); 
-INSERT INTO `NameGen` VALUES (422,"Valeria",5,1); 
-INSERT INTO `NameGen` VALUES (423,"Sanguinia",5,1); 
-INSERT INTO `NameGen` VALUES (424,"Serena",5,1); 
-INSERT INTO `NameGen` VALUES (425,"Kathris",5,1); 
-INSERT INTO `NameGen` VALUES (426,"Jada",5,1); 
-INSERT INTO `NameGen` VALUES (427,"Jamalah",5,1); 
-INSERT INTO `NameGen` VALUES (428,"Nord",5,1); 
-INSERT INTO `NameGen` VALUES (429,"Thalissia",5,1); 
-INSERT INTO `NameGen` VALUES (1846,"Adele",5,1); 
-INSERT INTO `NameGen` VALUES (1847,"Amaryllis",5,1); 
-INSERT INTO `NameGen` VALUES (1848,"Beverly",5,1); 
-INSERT INTO `NameGen` VALUES (1849,"Blaine",5,1); 
-INSERT INTO `NameGen` VALUES (1850,"Blair",5,1); 
-INSERT INTO `NameGen` VALUES (1851,"Caroline",5,1); 
-INSERT INTO `NameGen` VALUES (1852,"Cinder",5,1); 
-INSERT INTO `NameGen` VALUES (1853,"Claudette",5,1); 
-INSERT INTO `NameGen` VALUES (1854,"Clio",5,1); 
-INSERT INTO `NameGen` VALUES (1855,"Clovis",5,1); 
-INSERT INTO `NameGen` VALUES (1856,"Crystal",5,1); 
-INSERT INTO `NameGen` VALUES (1857,"Cynthia",5,1); 
-INSERT INTO `NameGen` VALUES (1858,"Dagny",5,1); 
-INSERT INTO `NameGen` VALUES (1859,"Darra",5,1); 
-INSERT INTO `NameGen` VALUES (1860,"Della",5,1); 
-INSERT INTO `NameGen` VALUES (1861,"Diane",5,1); 
-INSERT INTO `NameGen` VALUES (1862,"Dora",5,1); 
-INSERT INTO `NameGen` VALUES (1863,"Dorothea",5,1); 
-INSERT INTO `NameGen` VALUES (1864,"Elaine",5,1); 
-INSERT INTO `NameGen` VALUES (1865,"Erica",5,1); 
-INSERT INTO `NameGen` VALUES (1866,"Euphemia",5,1); 
-INSERT INTO `NameGen` VALUES (1867,"Evelyn",5,1); 
-INSERT INTO `NameGen` VALUES (1868,"Griselda",5,1); 
-INSERT INTO `NameGen` VALUES (1869,"Helga",5,1); 
-INSERT INTO `NameGen` VALUES (1870,"Hyacinthe",5,1); 
-INSERT INTO `NameGen` VALUES (1871,"Irene",5,1); 
-INSERT INTO `NameGen` VALUES (1872,"Jessica",5,1); 
-INSERT INTO `NameGen` VALUES (1873,"Judith",5,1); 
-INSERT INTO `NameGen` VALUES (1874,"Julia",5,1); 
-INSERT INTO `NameGen` VALUES (1875,"Kayley",5,1); 
-INSERT INTO `NameGen` VALUES (1876,"Leonora",5,1); 
-INSERT INTO `NameGen` VALUES (1877,"Lizzy",5,1); 
-INSERT INTO `NameGen` VALUES (1878,"Luciana",5,1); 
-INSERT INTO `NameGen` VALUES (1879,"Lucretia",5,1); 
-INSERT INTO `NameGen` VALUES (1880,"Mairin",5,1); 
-INSERT INTO `NameGen` VALUES (1881,"Martina",5,1); 
-INSERT INTO `NameGen` VALUES (1882,"Matilde",5,1); 
-INSERT INTO `NameGen` VALUES (1883,"Melisende",5,1); 
-INSERT INTO `NameGen` VALUES (1884,"Melva",5,1); 
-INSERT INTO `NameGen` VALUES (1885,"Miranda",5,1); 
-INSERT INTO `NameGen` VALUES (1886,"Moira",5,1); 
-INSERT INTO `NameGen` VALUES (1887,"Morven",5,1); 
-INSERT INTO `NameGen` VALUES (1888,"Narcissa",5,1); 
-INSERT INTO `NameGen` VALUES (1889,"Octavia",5,1); 
-INSERT INTO `NameGen` VALUES (1890,"Olivia",5,1); 
-INSERT INTO `NameGen` VALUES (1891,"Onora",5,1); 
-INSERT INTO `NameGen` VALUES (1892,"Paula",5,1); 
-INSERT INTO `NameGen` VALUES (1893,"Pauline",5,1); 
-INSERT INTO `NameGen` VALUES (1894,"Phyllis",5,1); 
-INSERT INTO `NameGen` VALUES (1895,"Rose",5,1); 
-INSERT INTO `NameGen` VALUES (1896,"Roswen",5,1); 
-INSERT INTO `NameGen` VALUES (1897,"Rowen",5,1); 
-INSERT INTO `NameGen` VALUES (1898,"Ruby",5,1); 
-INSERT INTO `NameGen` VALUES (1899,"Sabrina",5,1); 
-INSERT INTO `NameGen` VALUES (1900,"Stephanie",5,1); 
-INSERT INTO `NameGen` VALUES (1901,"Tully",5,1); 
-INSERT INTO `NameGen` VALUES (1902,"Valerie",5,1); 
-INSERT INTO `NameGen` VALUES (1903,"Veronica",5,1); 
-INSERT INTO `NameGen` VALUES (1904,"Vevila",5,1); 
-INSERT INTO `NameGen` VALUES (1905,"Victoria",5,1); 
-INSERT INTO `NameGen` VALUES (3407,"Abigail",5,1); 
-INSERT INTO `NameGen` VALUES (3408,"Adrian",5,1); 
-INSERT INTO `NameGen` VALUES (3409,"Agnes",5,1); 
-INSERT INTO `NameGen` VALUES (3410,"Aida",5,1); 
-INSERT INTO `NameGen` VALUES (3411,"Alicia",5,1); 
-INSERT INTO `NameGen` VALUES (3412,"Aneska",5,1); 
-INSERT INTO `NameGen` VALUES (3413,"Aracely",5,1); 
-INSERT INTO `NameGen` VALUES (3414,"Arlene",5,1); 
-INSERT INTO `NameGen` VALUES (3415,"Augustine",5,1); 
-INSERT INTO `NameGen` VALUES (3416,"Beatrice",5,1); 
-INSERT INTO `NameGen` VALUES (3417,"Bernadette",5,1); 
-INSERT INTO `NameGen` VALUES (3418,"Bethanie",5,1); 
-INSERT INTO `NameGen` VALUES (3419,"Bianca",5,1); 
-INSERT INTO `NameGen` VALUES (3420,"Brennah",5,1); 
-INSERT INTO `NameGen` VALUES (3421,"Brittney",5,1); 
-INSERT INTO `NameGen` VALUES (3422,"Cecila",5,1); 
-INSERT INTO `NameGen` VALUES (3423,"Celene",5,1); 
-INSERT INTO `NameGen` VALUES (3424,"Charlotte",5,1); 
-INSERT INTO `NameGen` VALUES (3425,"Citlalli",5,1); 
-INSERT INTO `NameGen` VALUES (3426,"Courtney",5,1); 
-INSERT INTO `NameGen` VALUES (3427,"Dalenna",5,1); 
-INSERT INTO `NameGen` VALUES (3428,"Dasia",5,1); 
-INSERT INTO `NameGen` VALUES (3429,"Dayanara",5,1); 
-INSERT INTO `NameGen` VALUES (3430,"Delilah",5,1); 
-INSERT INTO `NameGen` VALUES (3431,"Eiline",5,1); 
-INSERT INTO `NameGen` VALUES (3432,"Estefania",5,1); 
-INSERT INTO `NameGen` VALUES (3433,"Ethel",5,1); 
-INSERT INTO `NameGen` VALUES (3434,"Eugenia",5,1); 
-INSERT INTO `NameGen` VALUES (3435,"Francesca",5,1); 
-INSERT INTO `NameGen` VALUES (3436,"Gabrielle",5,1); 
-INSERT INTO `NameGen` VALUES (3437,"Galena",5,1); 
-INSERT INTO `NameGen` VALUES (3438,"Gemma",5,1); 
-INSERT INTO `NameGen` VALUES (3439,"Georgina",5,1); 
-INSERT INTO `NameGen` VALUES (3440,"Geraldine",5,1); 
-INSERT INTO `NameGen` VALUES (3441,"Geri",5,1); 
-INSERT INTO `NameGen` VALUES (3442,"Gisella",5,1); 
-INSERT INTO `NameGen` VALUES (3443,"Gloriela",5,1); 
-INSERT INTO `NameGen` VALUES (3444,"Goldie",5,1); 
-INSERT INTO `NameGen` VALUES (3445,"Haliegh",5,1); 
-INSERT INTO `NameGen` VALUES (3446,"Helgatha",5,1); 
-INSERT INTO `NameGen` VALUES (3447,"Hillary",5,1); 
-INSERT INTO `NameGen` VALUES (3448,"Ida",5,1); 
-INSERT INTO `NameGen` VALUES (3449,"Isabelle",5,1); 
-INSERT INTO `NameGen` VALUES (3450,"Iyanna",5,1); 
-INSERT INTO `NameGen` VALUES (3451,"Jameson",5,1); 
-INSERT INTO `NameGen` VALUES (3452,"Jeanette",5,1); 
-INSERT INTO `NameGen` VALUES (3453,"Jeanie",5,1); 
-INSERT INTO `NameGen` VALUES (3454,"Josefina",5,1); 
-INSERT INTO `NameGen` VALUES (3455,"Julianna",5,1); 
-INSERT INTO `NameGen` VALUES (3456,"Julissa",5,1); 
-INSERT INTO `NameGen` VALUES (3457,"Ladonna",5,1); 
-INSERT INTO `NameGen` VALUES (3458,"Laetitia",5,1); 
-INSERT INTO `NameGen` VALUES (3459,"Latrice",5,1); 
-INSERT INTO `NameGen` VALUES (3460,"Leylah",5,1); 
-INSERT INTO `NameGen` VALUES (3461,"Liliana",5,1); 
-INSERT INTO `NameGen` VALUES (3462,"Lorelei",5,1); 
-INSERT INTO `NameGen` VALUES (3463,"Lorraine",5,1); 
-INSERT INTO `NameGen` VALUES (3464,"Lydia",5,1); 
-INSERT INTO `NameGen` VALUES (3465,"Lynda",5,1); 
-INSERT INTO `NameGen` VALUES (3466,"Madeline",5,1); 
-INSERT INTO `NameGen` VALUES (3467,"Malorie",5,1); 
-INSERT INTO `NameGen` VALUES (3468,"Mariah",5,1); 
-INSERT INTO `NameGen` VALUES (3469,"Marie",5,1); 
-INSERT INTO `NameGen` VALUES (3470,"Mariska",5,1); 
-INSERT INTO `NameGen` VALUES (3471,"Marlene",5,1); 
-INSERT INTO `NameGen` VALUES (3472,"Melissa",5,1); 
-INSERT INTO `NameGen` VALUES (3473,"Miriam",5,1); 
-INSERT INTO `NameGen` VALUES (3474,"Mischa",5,1); 
-INSERT INTO `NameGen` VALUES (3475,"Myrtle",5,1); 
-INSERT INTO `NameGen` VALUES (3476,"Natalia",5,1); 
-INSERT INTO `NameGen` VALUES (3477,"Odette",5,1); 
-INSERT INTO `NameGen` VALUES (3478,"Petunia",5,1); 
-INSERT INTO `NameGen` VALUES (3479,"Porscha",5,1); 
-INSERT INTO `NameGen` VALUES (3480,"Riley",5,1); 
-INSERT INTO `NameGen` VALUES (3481,"Rosalinda",5,1); 
-INSERT INTO `NameGen` VALUES (3482,"Ruth",5,1); 
-INSERT INTO `NameGen` VALUES (3483,"Sabine",5,1); 
-INSERT INTO `NameGen` VALUES (3484,"Sadie",5,1); 
-INSERT INTO `NameGen` VALUES (3485,"Sariah",5,1); 
-INSERT INTO `NameGen` VALUES (3486,"Schelby",5,1); 
-INSERT INTO `NameGen` VALUES (3487,"Shay",5,1); 
-INSERT INTO `NameGen` VALUES (3488,"Shivani",5,1); 
-INSERT INTO `NameGen` VALUES (3489,"Sibella",5,1); 
-INSERT INTO `NameGen` VALUES (3490,"Sienna",5,1); 
-INSERT INTO `NameGen` VALUES (3491,"Silvia",5,1); 
-INSERT INTO `NameGen` VALUES (3492,"Simone",5,1); 
-INSERT INTO `NameGen` VALUES (3493,"Sylvie",5,1); 
-INSERT INTO `NameGen` VALUES (3494,"Tatiana",5,1); 
-INSERT INTO `NameGen` VALUES (3495,"Ulyssa",5,1); 
-INSERT INTO `NameGen` VALUES (3496,"Ursala",5,1); 
-INSERT INTO `NameGen` VALUES (3497,"Valarie",5,1); 
-INSERT INTO `NameGen` VALUES (3498,"Valencia",5,1); 
-INSERT INTO `NameGen` VALUES (3499,"Vivianne",5,1); 
-INSERT INTO `NameGen` VALUES (3500,"Willemina",5,1); 
-INSERT INTO `NameGen` VALUES (3501,"Yasha",5,1); 
-INSERT INTO `NameGen` VALUES (3502,"Yavette",5,1); 
-INSERT INTO `NameGen` VALUES (3503,"Yesenia",5,1); 
-INSERT INTO `NameGen` VALUES (3504,"Zanah",5,1); 
-INSERT INTO `NameGen` VALUES (3505,"Zellah",5,1); 
-INSERT INTO `NameGen` VALUES (347,"Cairne",6,0); 
-INSERT INTO `NameGen` VALUES (348,"Grok",6,0); 
-INSERT INTO `NameGen` VALUES (349,"Tigor",6,0); 
-INSERT INTO `NameGen` VALUES (350,"Kam",6,0); 
-INSERT INTO `NameGen` VALUES (351,"Durn",6,0); 
-INSERT INTO `NameGen` VALUES (352,"Malar",6,0); 
-INSERT INTO `NameGen` VALUES (353,"Taur",6,0); 
-INSERT INTO `NameGen` VALUES (354,"Kel",6,0); 
-INSERT INTO `NameGen` VALUES (355,"Mull",6,0); 
-INSERT INTO `NameGen` VALUES (356,"Marn",6,0); 
-INSERT INTO `NameGen` VALUES (357,"Tam",6,0); 
-INSERT INTO `NameGen` VALUES (358,"Mokos",6,0); 
-INSERT INTO `NameGen` VALUES (359,"Apach",6,0); 
-INSERT INTO `NameGen` VALUES (360,"Grumm",6,0); 
-INSERT INTO `NameGen` VALUES (361,"Forgren",6,0); 
-INSERT INTO `NameGen` VALUES (362,"Malgren",6,0); 
-INSERT INTO `NameGen` VALUES (363,"Dornek",6,0); 
-INSERT INTO `NameGen` VALUES (364,"Bandal",6,0); 
-INSERT INTO `NameGen` VALUES (365,"Karass",6,0); 
-INSERT INTO `NameGen` VALUES (366,"Mesha",6,0); 
-INSERT INTO `NameGen` VALUES (367,"Baine",6,0); 
-INSERT INTO `NameGen` VALUES (1672,"Ahanu",6,0); 
-INSERT INTO `NameGen` VALUES (1673,"Ahiliya",6,0); 
-INSERT INTO `NameGen` VALUES (1674,"Ahote",6,0); 
-INSERT INTO `NameGen` VALUES (1675,"Alo",6,0); 
-INSERT INTO `NameGen` VALUES (1676,"Arlis",6,0); 
-INSERT INTO `NameGen` VALUES (1677,"Awani",6,0); 
-INSERT INTO `NameGen` VALUES (1678,"Ayli",6,0); 
-INSERT INTO `NameGen` VALUES (1679,"Basil",6,0); 
-INSERT INTO `NameGen` VALUES (1680,"Breg",6,0); 
-INSERT INTO `NameGen` VALUES (1681,"Chakar",6,0); 
-INSERT INTO `NameGen` VALUES (1682,"Chuchip",6,0); 
-INSERT INTO `NameGen` VALUES (1683,"Corran",6,0); 
-INSERT INTO `NameGen` VALUES (1684,"Cyran",6,0); 
-INSERT INTO `NameGen` VALUES (1685,"Del",6,0); 
-INSERT INTO `NameGen` VALUES (1686,"Dern",6,0); 
-INSERT INTO `NameGen` VALUES (1687,"Dular",6,0); 
-INSERT INTO `NameGen` VALUES (1688,"Dustu",6,0); 
-INSERT INTO `NameGen` VALUES (1689,"Dyami",6,0); 
-INSERT INTO `NameGen` VALUES (1690,"Enyeto",6,0); 
-INSERT INTO `NameGen` VALUES (1691,"Etu",6,0); 
-INSERT INTO `NameGen` VALUES (1692,"Ferk",6,0); 
-INSERT INTO `NameGen` VALUES (1693,"Frin",6,0); 
-INSERT INTO `NameGen` VALUES (1694,"Garan",6,0); 
-INSERT INTO `NameGen` VALUES (1695,"Garm",6,0); 
-INSERT INTO `NameGen` VALUES (1696,"Girn",6,0); 
-INSERT INTO `NameGen` VALUES (1697,"Hania",6,0); 
-INSERT INTO `NameGen` VALUES (1698,"Harthan",6,0); 
-INSERT INTO `NameGen` VALUES (1699,"Helushka",6,0); 
-INSERT INTO `NameGen` VALUES (1700,"Hinto",6,0); 
-INSERT INTO `NameGen` VALUES (1701,"Hirran",6,0); 
-INSERT INTO `NameGen` VALUES (1702,"Honani",6,0); 
-INSERT INTO `NameGen` VALUES (1703,"Hurm",6,0); 
-INSERT INTO `NameGen` VALUES (1704,"Jik",6,0); 
-INSERT INTO `NameGen` VALUES (1705,"Jodan",6,0); 
-INSERT INTO `NameGen` VALUES (1706,"Kaga",6,0); 
-INSERT INTO `NameGen` VALUES (1707,"Kele",6,0); 
-INSERT INTO `NameGen` VALUES (1708,"Kwahu",6,0); 
-INSERT INTO `NameGen` VALUES (1709,"Kwatoko",6,0); 
-INSERT INTO `NameGen` VALUES (1710,"Lenno",6,0); 
-INSERT INTO `NameGen` VALUES (1711,"Limtar",6,0); 
-INSERT INTO `NameGen` VALUES (1712,"Lokni",6,0); 
-INSERT INTO `NameGen` VALUES (1713,"Lonato",6,0); 
-INSERT INTO `NameGen` VALUES (1714,"Lootah",6,0); 
-INSERT INTO `NameGen` VALUES (1715,"Lurs",6,0); 
-INSERT INTO `NameGen` VALUES (1716,"Lyshin",6,0); 
-INSERT INTO `NameGen` VALUES (1717,"Masou",6,0); 
-INSERT INTO `NameGen` VALUES (1718,"Misu",6,0); 
-INSERT INTO `NameGen` VALUES (1719,"Moki",6,0); 
-INSERT INTO `NameGen` VALUES (1720,"Muata",6,0); 
-INSERT INTO `NameGen` VALUES (1721,"Nara",6,0); 
-INSERT INTO `NameGen` VALUES (1722,"Nawkaw",6,0); 
-INSERT INTO `NameGen` VALUES (1723,"Pahana",6,0); 
-INSERT INTO `NameGen` VALUES (1724,"Porl",6,0); 
-INSERT INTO `NameGen` VALUES (1725,"Slorn",6,0); 
-INSERT INTO `NameGen` VALUES (1726,"Solis",6,0); 
-INSERT INTO `NameGen` VALUES (1727,"Turgan",6,0); 
-INSERT INTO `NameGen` VALUES (1728,"Ulan",6,0); 
-INSERT INTO `NameGen` VALUES (1729,"Varn",6,0); 
-INSERT INTO `NameGen` VALUES (1730,"Velan",6,0); 
-INSERT INTO `NameGen` VALUES (1731,"Wanikiya",6,0); 
-INSERT INTO `NameGen` VALUES (3506,"Abanu",6,0); 
-INSERT INTO `NameGen` VALUES (3507,"Abddon",6,0); 
-INSERT INTO `NameGen` VALUES (3508,"Abdek",6,0); 
-INSERT INTO `NameGen` VALUES (3509,"Abega",6,0); 
-INSERT INTO `NameGen` VALUES (3510,"Abfal",6,0); 
-INSERT INTO `NameGen` VALUES (3511,"Abfnar",6,0); 
-INSERT INTO `NameGen` VALUES (3512,"Abhai",6,0); 
-INSERT INTO `NameGen` VALUES (3513,"Abhan",6,0); 
-INSERT INTO `NameGen` VALUES (3514,"Abhwa",6,0); 
-INSERT INTO `NameGen` VALUES (3515,"Abine",6,0); 
-INSERT INTO `NameGen` VALUES (3516,"Abirn",6,0); 
-INSERT INTO `NameGen` VALUES (3517,"Abith",6,0); 
-INSERT INTO `NameGen` VALUES (3518,"Abken",6,0); 
-INSERT INTO `NameGen` VALUES (3519,"Ablem",6,0); 
-INSERT INTO `NameGen` VALUES (3520,"Abmin",6,0); 
-INSERT INTO `NameGen` VALUES (3521,"Abnah",6,0); 
-INSERT INTO `NameGen` VALUES (3522,"Abnd",6,0); 
-INSERT INTO `NameGen` VALUES (3523,"Abof",6,0); 
-INSERT INTO `NameGen` VALUES (3524,"Abot",6,0); 
-INSERT INTO `NameGen` VALUES (3525,"Aboth",6,0); 
-INSERT INTO `NameGen` VALUES (3526,"Abqwa",6,0); 
-INSERT INTO `NameGen` VALUES (3527,"Abraga",6,0); 
-INSERT INTO `NameGen` VALUES (3528,"Abrak",6,0); 
-INSERT INTO `NameGen` VALUES (3529,"Abron",6,0); 
-INSERT INTO `NameGen` VALUES (3530,"Abruk",6,0); 
-INSERT INTO `NameGen` VALUES (3531,"Abtah",6,0); 
-INSERT INTO `NameGen` VALUES (3532,"Abtou",6,0); 
-INSERT INTO `NameGen` VALUES (3533,"Abumn",6,0); 
-INSERT INTO `NameGen` VALUES (3534,"Abuon",6,0); 
-INSERT INTO `NameGen` VALUES (3535,"Abuul",6,0); 
-INSERT INTO `NameGen` VALUES (3536,"Abwas",6,0); 
-INSERT INTO `NameGen` VALUES (3537,"Aggor",6,0); 
-INSERT INTO `NameGen` VALUES (3538,"Aitanu",6,0); 
-INSERT INTO `NameGen` VALUES (3539,"Aitas",6,0); 
-INSERT INTO `NameGen` VALUES (3540,"Aitddon",6,0); 
-INSERT INTO `NameGen` VALUES (3541,"Aitdek",6,0); 
-INSERT INTO `NameGen` VALUES (3542,"Aitega",6,0); 
-INSERT INTO `NameGen` VALUES (3543,"Aitfal",6,0); 
-INSERT INTO `NameGen` VALUES (3544,"Aitfnar",6,0); 
-INSERT INTO `NameGen` VALUES (3545,"Aithai",6,0); 
-INSERT INTO `NameGen` VALUES (3546,"Aithan",6,0); 
-INSERT INTO `NameGen` VALUES (3547,"Aithwa",6,0); 
-INSERT INTO `NameGen` VALUES (3548,"Aitine",6,0); 
-INSERT INTO `NameGen` VALUES (3549,"Aitirn",6,0); 
-INSERT INTO `NameGen` VALUES (3550,"Aitith",6,0); 
-INSERT INTO `NameGen` VALUES (3551,"Aitken",6,0); 
-INSERT INTO `NameGen` VALUES (3552,"Aitlem",6,0); 
-INSERT INTO `NameGen` VALUES (3553,"Aitmin",6,0); 
-INSERT INTO `NameGen` VALUES (3554,"Aitnah",6,0); 
-INSERT INTO `NameGen` VALUES (3555,"Aitnd",6,0); 
-INSERT INTO `NameGen` VALUES (3556,"Aitof",6,0); 
-INSERT INTO `NameGen` VALUES (3557,"Aitot",6,0); 
-INSERT INTO `NameGen` VALUES (3558,"Aitoth",6,0); 
-INSERT INTO `NameGen` VALUES (3559,"Aitqwa",6,0); 
-INSERT INTO `NameGen` VALUES (3560,"Aitrak",6,0); 
-INSERT INTO `NameGen` VALUES (3561,"Aitron",6,0); 
-INSERT INTO `NameGen` VALUES (3562,"Aitruk",6,0); 
-INSERT INTO `NameGen` VALUES (3563,"Aittah",6,0); 
-INSERT INTO `NameGen` VALUES (3564,"Aittou",6,0); 
-INSERT INTO `NameGen` VALUES (3565,"Aitumn",6,0); 
-INSERT INTO `NameGen` VALUES (3566,"Aituon",6,0); 
-INSERT INTO `NameGen` VALUES (3567,"Aituul",6,0); 
-INSERT INTO `NameGen` VALUES (3568,"Aitwas",6,0); 
-INSERT INTO `NameGen` VALUES (3569,"Akpor",6,0); 
-INSERT INTO `NameGen` VALUES (3570,"Ananu",6,0); 
-INSERT INTO `NameGen` VALUES (3571,"Anddon",6,0); 
-INSERT INTO `NameGen` VALUES (3572,"Andek",6,0); 
-INSERT INTO `NameGen` VALUES (3573,"Anega",6,0); 
-INSERT INTO `NameGen` VALUES (3574,"Anfal",6,0); 
-INSERT INTO `NameGen` VALUES (3575,"Anfnar",6,0); 
-INSERT INTO `NameGen` VALUES (3576,"Anhai",6,0); 
-INSERT INTO `NameGen` VALUES (3577,"Anhan",6,0); 
-INSERT INTO `NameGen` VALUES (3578,"Anhwa",6,0); 
-INSERT INTO `NameGen` VALUES (3579,"Anine",6,0); 
-INSERT INTO `NameGen` VALUES (3580,"Anirn",6,0); 
-INSERT INTO `NameGen` VALUES (3581,"Anith",6,0); 
-INSERT INTO `NameGen` VALUES (3582,"Anken",6,0); 
-INSERT INTO `NameGen` VALUES (3583,"Anlem",6,0); 
-INSERT INTO `NameGen` VALUES (3584,"Anmin",6,0); 
-INSERT INTO `NameGen` VALUES (3585,"Annah",6,0); 
-INSERT INTO `NameGen` VALUES (3586,"Annd",6,0); 
-INSERT INTO `NameGen` VALUES (3587,"Anof",6,0); 
-INSERT INTO `NameGen` VALUES (3588,"Anot",6,0); 
-INSERT INTO `NameGen` VALUES (3589,"Anoth",6,0); 
-INSERT INTO `NameGen` VALUES (3590,"Anqwa",6,0); 
-INSERT INTO `NameGen` VALUES (3591,"Anrak",6,0); 
-INSERT INTO `NameGen` VALUES (3592,"Anron",6,0); 
-INSERT INTO `NameGen` VALUES (3593,"Anruk",6,0); 
-INSERT INTO `NameGen` VALUES (3594,"Antah",6,0); 
-INSERT INTO `NameGen` VALUES (3595,"Antou",6,0); 
-INSERT INTO `NameGen` VALUES (3596,"Anumn",6,0); 
-INSERT INTO `NameGen` VALUES (3597,"Anuon",6,0); 
-INSERT INTO `NameGen` VALUES (3598,"Anuul",6,0); 
-INSERT INTO `NameGen` VALUES (3599,"Anwas",6,0); 
-INSERT INTO `NameGen` VALUES (3600,"Aootou",6,0); 
-INSERT INTO `NameGen` VALUES (3601,"Arguum",6,0); 
-INSERT INTO `NameGen` VALUES (3602,"Auttun",6,0); 
-INSERT INTO `NameGen` VALUES (3603,"Auufnah",6,0); 
-INSERT INTO `NameGen` VALUES (3604,"Bak",6,0); 
-INSERT INTO `NameGen` VALUES (3605,"Barandu",6,0); 
-INSERT INTO `NameGen` VALUES (3606,"Bronnt",6,0); 
-INSERT INTO `NameGen` VALUES (3607,"Bruk",6,0); 
-INSERT INTO `NameGen` VALUES (3608,"Caanu",6,0); 
-INSERT INTO `NameGen` VALUES (3609,"Caddon",6,0); 
-INSERT INTO `NameGen` VALUES (3610,"Cadek",6,0); 
-INSERT INTO `NameGen` VALUES (3611,"Caega",6,0); 
-INSERT INTO `NameGen` VALUES (3612,"Cafal",6,0); 
-INSERT INTO `NameGen` VALUES (3613,"Cafnar",6,0); 
-INSERT INTO `NameGen` VALUES (3614,"Cahai",6,0); 
-INSERT INTO `NameGen` VALUES (3615,"Cahan",6,0); 
-INSERT INTO `NameGen` VALUES (3616,"Cahwa",6,0); 
-INSERT INTO `NameGen` VALUES (3617,"Caine",6,0); 
-INSERT INTO `NameGen` VALUES (3618,"Cairn",6,0); 
-INSERT INTO `NameGen` VALUES (3619,"Caith",6,0); 
-INSERT INTO `NameGen` VALUES (3620,"Caken",6,0); 
-INSERT INTO `NameGen` VALUES (3621,"Calem",6,0); 
-INSERT INTO `NameGen` VALUES (3622,"Camin",6,0); 
-INSERT INTO `NameGen` VALUES (3623,"Canah",6,0); 
-INSERT INTO `NameGen` VALUES (3624,"Cand",6,0); 
-INSERT INTO `NameGen` VALUES (3625,"Caof",6,0); 
-INSERT INTO `NameGen` VALUES (3626,"Caot",6,0); 
-INSERT INTO `NameGen` VALUES (3627,"Caoth",6,0); 
-INSERT INTO `NameGen` VALUES (3628,"Caqwa",6,0); 
-INSERT INTO `NameGen` VALUES (3629,"Carak",6,0); 
-INSERT INTO `NameGen` VALUES (3630,"Caron",6,0); 
-INSERT INTO `NameGen` VALUES (3631,"Caruk",6,0); 
-INSERT INTO `NameGen` VALUES (3632,"Catah",6,0); 
-INSERT INTO `NameGen` VALUES (3633,"Catou",6,0); 
-INSERT INTO `NameGen` VALUES (3634,"Caumn",6,0); 
-INSERT INTO `NameGen` VALUES (3635,"Cauon",6,0); 
-INSERT INTO `NameGen` VALUES (3636,"Cauul",6,0); 
-INSERT INTO `NameGen` VALUES (3637,"Cawas",6,0); 
-INSERT INTO `NameGen` VALUES (3638,"Chag",6,0); 
-INSERT INTO `NameGen` VALUES (3639,"Churr",6,0); 
-INSERT INTO `NameGen` VALUES (3640,"Cluug",6,0); 
-INSERT INTO `NameGen` VALUES (3641,"Comog",6,0); 
-INSERT INTO `NameGen` VALUES (3642,"Dokot",6,0); 
-INSERT INTO `NameGen` VALUES (3643,"Domur",6,0); 
-INSERT INTO `NameGen` VALUES (3644,"Druun",6,0); 
-INSERT INTO `NameGen` VALUES (3645,"Farhuk",6,0); 
-INSERT INTO `NameGen` VALUES (3646,"Gampuuk",6,0); 
-INSERT INTO `NameGen` VALUES (3647,"Garanu",6,0); 
-INSERT INTO `NameGen` VALUES (3648,"Garddon",6,0); 
-INSERT INTO `NameGen` VALUES (3649,"Gardek",6,0); 
-INSERT INTO `NameGen` VALUES (3650,"Garega",6,0); 
-INSERT INTO `NameGen` VALUES (3651,"Garfal",6,0); 
-INSERT INTO `NameGen` VALUES (3652,"Garfnar",6,0); 
-INSERT INTO `NameGen` VALUES (3653,"Garhai",6,0); 
-INSERT INTO `NameGen` VALUES (3654,"Garhan",6,0); 
-INSERT INTO `NameGen` VALUES (3655,"Garhwa",6,0); 
-INSERT INTO `NameGen` VALUES (3656,"Garine",6,0); 
-INSERT INTO `NameGen` VALUES (3657,"Garirn",6,0); 
-INSERT INTO `NameGen` VALUES (3658,"Garith",6,0); 
-INSERT INTO `NameGen` VALUES (3659,"Garken",6,0); 
-INSERT INTO `NameGen` VALUES (3660,"Garlem",6,0); 
-INSERT INTO `NameGen` VALUES (3661,"Garmin",6,0); 
-INSERT INTO `NameGen` VALUES (3662,"Garnah",6,0); 
-INSERT INTO `NameGen` VALUES (3663,"Garnd",6,0); 
-INSERT INTO `NameGen` VALUES (3664,"Garof",6,0); 
-INSERT INTO `NameGen` VALUES (3665,"Garot",6,0); 
-INSERT INTO `NameGen` VALUES (3666,"Garoth",6,0); 
-INSERT INTO `NameGen` VALUES (3667,"Garqwa",6,0); 
-INSERT INTO `NameGen` VALUES (3668,"Garrak",6,0); 
-INSERT INTO `NameGen` VALUES (3669,"Garron",6,0); 
-INSERT INTO `NameGen` VALUES (3670,"Garruk",6,0); 
-INSERT INTO `NameGen` VALUES (3671,"Gartah",6,0); 
-INSERT INTO `NameGen` VALUES (3672,"Gartou",6,0); 
-INSERT INTO `NameGen` VALUES (3673,"Garumn",6,0); 
-INSERT INTO `NameGen` VALUES (3674,"Garuon",6,0); 
-INSERT INTO `NameGen` VALUES (3675,"Garurol",6,0); 
-INSERT INTO `NameGen` VALUES (3676,"Garuul",6,0); 
-INSERT INTO `NameGen` VALUES (3677,"Garwas",6,0); 
-INSERT INTO `NameGen` VALUES (3678,"Grup",6,0); 
-INSERT INTO `NameGen` VALUES (3679,"Gruud",6,0); 
-INSERT INTO `NameGen` VALUES (3680,"Gulanu",6,0); 
-INSERT INTO `NameGen` VALUES (3681,"Gulddon",6,0); 
-INSERT INTO `NameGen` VALUES (3682,"Guldek",6,0); 
-INSERT INTO `NameGen` VALUES (3683,"Gulega",6,0); 
-INSERT INTO `NameGen` VALUES (3684,"Gulfal",6,0); 
-INSERT INTO `NameGen` VALUES (3685,"Gulfnar",6,0); 
-INSERT INTO `NameGen` VALUES (3686,"Gulhai",6,0); 
-INSERT INTO `NameGen` VALUES (3687,"Gulhan",6,0); 
-INSERT INTO `NameGen` VALUES (3688,"Gulhwa",6,0); 
-INSERT INTO `NameGen` VALUES (3689,"Guline",6,0); 
-INSERT INTO `NameGen` VALUES (3690,"Gulirn",6,0); 
-INSERT INTO `NameGen` VALUES (3691,"Gulith",6,0); 
-INSERT INTO `NameGen` VALUES (3692,"Gulken",6,0); 
-INSERT INTO `NameGen` VALUES (3693,"Gullem",6,0); 
-INSERT INTO `NameGen` VALUES (3694,"Gulmin",6,0); 
-INSERT INTO `NameGen` VALUES (3695,"Gulnah",6,0); 
-INSERT INTO `NameGen` VALUES (3696,"Gulnd",6,0); 
-INSERT INTO `NameGen` VALUES (3697,"Gulof",6,0); 
-INSERT INTO `NameGen` VALUES (3698,"Gulot",6,0); 
-INSERT INTO `NameGen` VALUES (3699,"Guloth",6,0); 
-INSERT INTO `NameGen` VALUES (3700,"Gulprug",6,0); 
-INSERT INTO `NameGen` VALUES (3701,"Gulqwa",6,0); 
-INSERT INTO `NameGen` VALUES (3702,"Gulrak",6,0); 
-INSERT INTO `NameGen` VALUES (3703,"Gulron",6,0); 
-INSERT INTO `NameGen` VALUES (3704,"Gulruk",6,0); 
-INSERT INTO `NameGen` VALUES (3705,"Gultah",6,0); 
-INSERT INTO `NameGen` VALUES (3706,"Gultou",6,0); 
-INSERT INTO `NameGen` VALUES (3707,"Gulumn",6,0); 
-INSERT INTO `NameGen` VALUES (3708,"Guluon",6,0); 
-INSERT INTO `NameGen` VALUES (3709,"Guluul",6,0); 
-INSERT INTO `NameGen` VALUES (3710,"Gulwas",6,0); 
-INSERT INTO `NameGen` VALUES (3711,"Guung",6,0); 
-INSERT INTO `NameGen` VALUES (3712,"Habraa",6,0); 
-INSERT INTO `NameGen` VALUES (3713,"Hafal",6,0); 
-INSERT INTO `NameGen` VALUES (3714,"Haggu",6,0); 
-INSERT INTO `NameGen` VALUES (3715,"Haranu",6,0); 
-INSERT INTO `NameGen` VALUES (3716,"Harddon",6,0); 
-INSERT INTO `NameGen` VALUES (3717,"Hardek",6,0); 
-INSERT INTO `NameGen` VALUES (3718,"Harega",6,0); 
-INSERT INTO `NameGen` VALUES (3719,"Harfal",6,0); 
-INSERT INTO `NameGen` VALUES (3720,"Harfnar",6,0); 
-INSERT INTO `NameGen` VALUES (3721,"Harhai",6,0); 
-INSERT INTO `NameGen` VALUES (3722,"Harhan",6,0); 
-INSERT INTO `NameGen` VALUES (3723,"Harhwa",6,0); 
-INSERT INTO `NameGen` VALUES (3724,"Harine",6,0); 
-INSERT INTO `NameGen` VALUES (3725,"Harirn",6,0); 
-INSERT INTO `NameGen` VALUES (3726,"Harith",6,0); 
-INSERT INTO `NameGen` VALUES (3727,"Harken",6,0); 
-INSERT INTO `NameGen` VALUES (3728,"Harlem",6,0); 
-INSERT INTO `NameGen` VALUES (3729,"Harmin",6,0); 
-INSERT INTO `NameGen` VALUES (3730,"Harnah",6,0); 
-INSERT INTO `NameGen` VALUES (3731,"Harnd",6,0); 
-INSERT INTO `NameGen` VALUES (3732,"Harof",6,0); 
-INSERT INTO `NameGen` VALUES (3733,"Harot",6,0); 
-INSERT INTO `NameGen` VALUES (3734,"Haroth",6,0); 
-INSERT INTO `NameGen` VALUES (3735,"Harqwa",6,0); 
-INSERT INTO `NameGen` VALUES (3736,"Harrak",6,0); 
-INSERT INTO `NameGen` VALUES (3737,"Harron",6,0); 
-INSERT INTO `NameGen` VALUES (3738,"Harruk",6,0); 
-INSERT INTO `NameGen` VALUES (3739,"Hartah",6,0); 
-INSERT INTO `NameGen` VALUES (3740,"Hartou",6,0); 
-INSERT INTO `NameGen` VALUES (3741,"Harumn",6,0); 
-INSERT INTO `NameGen` VALUES (3742,"Haruon",6,0); 
-INSERT INTO `NameGen` VALUES (3743,"Haruul",6,0); 
-INSERT INTO `NameGen` VALUES (3744,"Harwas",6,0); 
-INSERT INTO `NameGen` VALUES (3745,"Hruanu",6,0); 
-INSERT INTO `NameGen` VALUES (3746,"Hruddon",6,0); 
-INSERT INTO `NameGen` VALUES (3747,"Hrudek",6,0); 
-INSERT INTO `NameGen` VALUES (3748,"Hruega",6,0); 
-INSERT INTO `NameGen` VALUES (3749,"Hrufal",6,0); 
-INSERT INTO `NameGen` VALUES (3750,"Hrufnar",6,0); 
-INSERT INTO `NameGen` VALUES (3751,"Hruhai",6,0); 
-INSERT INTO `NameGen` VALUES (3752,"Hruhan",6,0); 
-INSERT INTO `NameGen` VALUES (3753,"Hruhwa",6,0); 
-INSERT INTO `NameGen` VALUES (3754,"Hruine",6,0); 
-INSERT INTO `NameGen` VALUES (3755,"Hruirn",6,0); 
-INSERT INTO `NameGen` VALUES (3756,"Hruith",6,0); 
-INSERT INTO `NameGen` VALUES (3757,"Hruken",6,0); 
-INSERT INTO `NameGen` VALUES (3758,"Hrulem",6,0); 
-INSERT INTO `NameGen` VALUES (3759,"Hrumin",6,0); 
-INSERT INTO `NameGen` VALUES (3760,"Hrunah",6,0); 
-INSERT INTO `NameGen` VALUES (3761,"Hrund",6,0); 
-INSERT INTO `NameGen` VALUES (3762,"Hruof",6,0); 
-INSERT INTO `NameGen` VALUES (3763,"Hruot",6,0); 
-INSERT INTO `NameGen` VALUES (3764,"Hruoth",6,0); 
-INSERT INTO `NameGen` VALUES (3765,"Hruqwa",6,0); 
-INSERT INTO `NameGen` VALUES (3766,"Hrurak",6,0); 
-INSERT INTO `NameGen` VALUES (3767,"Hruron",6,0); 
-INSERT INTO `NameGen` VALUES (3768,"Hruruk",6,0); 
-INSERT INTO `NameGen` VALUES (3769,"Hrutah",6,0); 
-INSERT INTO `NameGen` VALUES (3770,"Hrutou",6,0); 
-INSERT INTO `NameGen` VALUES (3771,"Hruumn",6,0); 
-INSERT INTO `NameGen` VALUES (3772,"Hruuon",6,0); 
-INSERT INTO `NameGen` VALUES (3773,"Hruuul",6,0); 
-INSERT INTO `NameGen` VALUES (3774,"Hruwas",6,0); 
-INSERT INTO `NameGen` VALUES (3775,"Huuanu",6,0); 
-INSERT INTO `NameGen` VALUES (3776,"Huuarn",6,0); 
-INSERT INTO `NameGen` VALUES (3777,"Huuddon",6,0); 
-INSERT INTO `NameGen` VALUES (3778,"Huudek",6,0); 
-INSERT INTO `NameGen` VALUES (3779,"Huuega",6,0); 
-INSERT INTO `NameGen` VALUES (3780,"Huufal",6,0); 
-INSERT INTO `NameGen` VALUES (3781,"Huufnar",6,0); 
-INSERT INTO `NameGen` VALUES (3782,"Huuhai",6,0); 
-INSERT INTO `NameGen` VALUES (3783,"Huuhan",6,0); 
-INSERT INTO `NameGen` VALUES (3784,"Huuhwa",6,0); 
-INSERT INTO `NameGen` VALUES (3785,"Huuine",6,0); 
-INSERT INTO `NameGen` VALUES (3786,"Huuirn",6,0); 
-INSERT INTO `NameGen` VALUES (3787,"Huuith",6,0); 
-INSERT INTO `NameGen` VALUES (3788,"Huuken",6,0); 
-INSERT INTO `NameGen` VALUES (3789,"Huulem",6,0); 
-INSERT INTO `NameGen` VALUES (3790,"Huumin",6,0); 
-INSERT INTO `NameGen` VALUES (3791,"Huunah",6,0); 
-INSERT INTO `NameGen` VALUES (3792,"Huund",6,0); 
-INSERT INTO `NameGen` VALUES (3793,"Huuof",6,0); 
-INSERT INTO `NameGen` VALUES (3794,"Huuot",6,0); 
-INSERT INTO `NameGen` VALUES (3795,"Huuoth",6,0); 
-INSERT INTO `NameGen` VALUES (3796,"Huuqwa",6,0); 
-INSERT INTO `NameGen` VALUES (3797,"Huurak",6,0); 
-INSERT INTO `NameGen` VALUES (3798,"Huuron",6,0); 
-INSERT INTO `NameGen` VALUES (3799,"Huuruk",6,0); 
-INSERT INTO `NameGen` VALUES (3800,"Huutah",6,0); 
-INSERT INTO `NameGen` VALUES (3801,"Huutou",6,0); 
-INSERT INTO `NameGen` VALUES (3802,"Huuumn",6,0); 
-INSERT INTO `NameGen` VALUES (3803,"Huuuon",6,0); 
-INSERT INTO `NameGen` VALUES (3804,"Huuuul",6,0); 
-INSERT INTO `NameGen` VALUES (3805,"Huuwas",6,0); 
-INSERT INTO `NameGen` VALUES (3806,"Jaag",6,0); 
-INSERT INTO `NameGen` VALUES (3807,"Jagru",6,0); 
-INSERT INTO `NameGen` VALUES (3808,"Jopp",6,0); 
-INSERT INTO `NameGen` VALUES (3809,"Kaapkun",6,0); 
-INSERT INTO `NameGen` VALUES (3810,"Klaagur",6,0); 
-INSERT INTO `NameGen` VALUES (3811,"Kogona",6,0); 
-INSERT INTO `NameGen` VALUES (3812,"Krallum",6,0); 
-INSERT INTO `NameGen` VALUES (3813,"Kropp",6,0); 
-INSERT INTO `NameGen` VALUES (3814,"Krun",6,0); 
-INSERT INTO `NameGen` VALUES (3815,"Kuappa",6,0); 
-INSERT INTO `NameGen` VALUES (3816,"Lakrug",6,0); 
-INSERT INTO `NameGen` VALUES (3817,"Lohanu",6,0); 
-INSERT INTO `NameGen` VALUES (3818,"Lohddon",6,0); 
-INSERT INTO `NameGen` VALUES (3819,"Lohdek",6,0); 
-INSERT INTO `NameGen` VALUES (3820,"Lohega",6,0); 
-INSERT INTO `NameGen` VALUES (3821,"Lohfal",6,0); 
-INSERT INTO `NameGen` VALUES (3822,"Lohfnar",6,0); 
-INSERT INTO `NameGen` VALUES (3823,"Lohhai",6,0); 
-INSERT INTO `NameGen` VALUES (3824,"Lohhan",6,0); 
-INSERT INTO `NameGen` VALUES (3825,"Lohhwa",6,0); 
-INSERT INTO `NameGen` VALUES (3826,"Lohine",6,0); 
-INSERT INTO `NameGen` VALUES (3827,"Lohirn",6,0); 
-INSERT INTO `NameGen` VALUES (3828,"Lohith",6,0); 
-INSERT INTO `NameGen` VALUES (3829,"Lohken",6,0); 
-INSERT INTO `NameGen` VALUES (3830,"Lohlem",6,0); 
-INSERT INTO `NameGen` VALUES (3831,"Lohmin",6,0); 
-INSERT INTO `NameGen` VALUES (3832,"Lohnah",6,0); 
-INSERT INTO `NameGen` VALUES (3833,"Lohnd",6,0); 
-INSERT INTO `NameGen` VALUES (3834,"Lohof",6,0); 
-INSERT INTO `NameGen` VALUES (3835,"Lohot",6,0); 
-INSERT INTO `NameGen` VALUES (3836,"Lohoth",6,0); 
-INSERT INTO `NameGen` VALUES (3837,"Lohqwa",6,0); 
-INSERT INTO `NameGen` VALUES (3838,"Lohrak",6,0); 
-INSERT INTO `NameGen` VALUES (3839,"Lohron",6,0); 
-INSERT INTO `NameGen` VALUES (3840,"Lohruk",6,0); 
-INSERT INTO `NameGen` VALUES (3841,"Lohtah",6,0); 
-INSERT INTO `NameGen` VALUES (3842,"Lohtou",6,0); 
-INSERT INTO `NameGen` VALUES (3843,"Lohumn",6,0); 
-INSERT INTO `NameGen` VALUES (3844,"Lohuon",6,0); 
-INSERT INTO `NameGen` VALUES (3845,"Lohuul",6,0); 
-INSERT INTO `NameGen` VALUES (3846,"Lohwas",6,0); 
-INSERT INTO `NameGen` VALUES (3847,"Lomm",6,0); 
-INSERT INTO `NameGen` VALUES (3848,"Lugrum",6,0); 
-INSERT INTO `NameGen` VALUES (3849,"Luo",6,0); 
-INSERT INTO `NameGen` VALUES (3850,"Luum",6,0); 
-INSERT INTO `NameGen` VALUES (3851,"Magol",6,0); 
-INSERT INTO `NameGen` VALUES (3852,"Mahai",6,0); 
-INSERT INTO `NameGen` VALUES (3853,"Mordai",6,0); 
-INSERT INTO `NameGen` VALUES (3854,"Mukail",6,0); 
-INSERT INTO `NameGen` VALUES (3855,"Munnu",6,0); 
-INSERT INTO `NameGen` VALUES (3856,"Naalog",6,0); 
-INSERT INTO `NameGen` VALUES (3857,"Nugok",6,0); 
-INSERT INTO `NameGen` VALUES (3858,"Oranu",6,0); 
-INSERT INTO `NameGen` VALUES (3859,"Orddon",6,0); 
-INSERT INTO `NameGen` VALUES (3860,"Ordek",6,0); 
-INSERT INTO `NameGen` VALUES (3861,"Orega",6,0); 
-INSERT INTO `NameGen` VALUES (3862,"Orfal",6,0); 
-INSERT INTO `NameGen` VALUES (3863,"Orfnar",6,0); 
-INSERT INTO `NameGen` VALUES (3864,"Orhai",6,0); 
-INSERT INTO `NameGen` VALUES (3865,"Orhan",6,0); 
-INSERT INTO `NameGen` VALUES (3866,"Orhwa",6,0); 
-INSERT INTO `NameGen` VALUES (3867,"Orine",6,0); 
-INSERT INTO `NameGen` VALUES (3868,"Orirn",6,0); 
-INSERT INTO `NameGen` VALUES (3869,"Orith",6,0); 
-INSERT INTO `NameGen` VALUES (3870,"Orken",6,0); 
-INSERT INTO `NameGen` VALUES (3871,"Orlem",6,0); 
-INSERT INTO `NameGen` VALUES (3872,"Ormin",6,0); 
-INSERT INTO `NameGen` VALUES (3873,"Ornah",6,0); 
-INSERT INTO `NameGen` VALUES (3874,"Ornd",6,0); 
-INSERT INTO `NameGen` VALUES (3875,"Orof",6,0); 
-INSERT INTO `NameGen` VALUES (3876,"Orot",6,0); 
-INSERT INTO `NameGen` VALUES (3877,"Oroth",6,0); 
-INSERT INTO `NameGen` VALUES (3878,"Orqwa",6,0); 
-INSERT INTO `NameGen` VALUES (3879,"Orrak",6,0); 
-INSERT INTO `NameGen` VALUES (3880,"Orron",6,0); 
-INSERT INTO `NameGen` VALUES (3881,"Orruk",6,0); 
-INSERT INTO `NameGen` VALUES (3882,"Ortah",6,0); 
-INSERT INTO `NameGen` VALUES (3883,"Ortou",6,0); 
-INSERT INTO `NameGen` VALUES (3884,"Orumn",6,0); 
-INSERT INTO `NameGen` VALUES (3885,"Oruon",6,0); 
-INSERT INTO `NameGen` VALUES (3886,"Oruul",6,0); 
-INSERT INTO `NameGen` VALUES (3887,"Orwas",6,0); 
-INSERT INTO `NameGen` VALUES (3888,"Paakug",6,0); 
-INSERT INTO `NameGen` VALUES (3889,"Paugg",6,0); 
-INSERT INTO `NameGen` VALUES (3890,"Quagmu",6,0); 
-INSERT INTO `NameGen` VALUES (3891,"Quongru",6,0); 
-INSERT INTO `NameGen` VALUES (3892,"Rahanu",6,0); 
-INSERT INTO `NameGen` VALUES (3893,"Rahddon",6,0); 
-INSERT INTO `NameGen` VALUES (3894,"Rahdek",6,0); 
-INSERT INTO `NameGen` VALUES (3895,"Rahega",6,0); 
-INSERT INTO `NameGen` VALUES (3896,"Rahfal",6,0); 
-INSERT INTO `NameGen` VALUES (3897,"Rahfnar",6,0); 
-INSERT INTO `NameGen` VALUES (3898,"Rahhai",6,0); 
-INSERT INTO `NameGen` VALUES (3899,"Rahhan",6,0); 
-INSERT INTO `NameGen` VALUES (3900,"Rahhwa",6,0); 
-INSERT INTO `NameGen` VALUES (3901,"Rahine",6,0); 
-INSERT INTO `NameGen` VALUES (3902,"Rahirn",6,0); 
-INSERT INTO `NameGen` VALUES (3903,"Rahith",6,0); 
-INSERT INTO `NameGen` VALUES (3904,"Rahken",6,0); 
-INSERT INTO `NameGen` VALUES (3905,"Rahlem",6,0); 
-INSERT INTO `NameGen` VALUES (3906,"Rahmin",6,0); 
-INSERT INTO `NameGen` VALUES (3907,"Rahnah",6,0); 
-INSERT INTO `NameGen` VALUES (3908,"Rahnd",6,0); 
-INSERT INTO `NameGen` VALUES (3909,"Rahof",6,0); 
-INSERT INTO `NameGen` VALUES (3910,"Rahot",6,0); 
-INSERT INTO `NameGen` VALUES (3911,"Rahoth",6,0); 
-INSERT INTO `NameGen` VALUES (3912,"Rahqwa",6,0); 
-INSERT INTO `NameGen` VALUES (3913,"Rahrak",6,0); 
-INSERT INTO `NameGen` VALUES (3914,"Rahron",6,0); 
-INSERT INTO `NameGen` VALUES (3915,"Rahruk",6,0); 
-INSERT INTO `NameGen` VALUES (3916,"Rahtah",6,0); 
-INSERT INTO `NameGen` VALUES (3917,"Rahtou",6,0); 
-INSERT INTO `NameGen` VALUES (3918,"Rahumn",6,0); 
-INSERT INTO `NameGen` VALUES (3919,"Rahuon",6,0); 
-INSERT INTO `NameGen` VALUES (3920,"Rahuul",6,0); 
-INSERT INTO `NameGen` VALUES (3921,"Rahwas",6,0); 
-INSERT INTO `NameGen` VALUES (3922,"Rakanu",6,0); 
-INSERT INTO `NameGen` VALUES (3923,"Rakddon",6,0); 
-INSERT INTO `NameGen` VALUES (3924,"Rakdek",6,0); 
-INSERT INTO `NameGen` VALUES (3925,"Rakega",6,0); 
-INSERT INTO `NameGen` VALUES (3926,"Rakfal",6,0); 
-INSERT INTO `NameGen` VALUES (3927,"Rakfnar",6,0); 
-INSERT INTO `NameGen` VALUES (3928,"Rakhai",6,0); 
-INSERT INTO `NameGen` VALUES (3929,"Rakhan",6,0); 
-INSERT INTO `NameGen` VALUES (3930,"Rakhwa",6,0); 
-INSERT INTO `NameGen` VALUES (3931,"Rakine",6,0); 
-INSERT INTO `NameGen` VALUES (3932,"Rakirn",6,0); 
-INSERT INTO `NameGen` VALUES (3933,"Rakith",6,0); 
-INSERT INTO `NameGen` VALUES (3934,"Rakken",6,0); 
-INSERT INTO `NameGen` VALUES (3935,"Raklem",6,0); 
-INSERT INTO `NameGen` VALUES (3936,"Rakmin",6,0); 
-INSERT INTO `NameGen` VALUES (3937,"Raknah",6,0); 
-INSERT INTO `NameGen` VALUES (3938,"Raknd",6,0); 
-INSERT INTO `NameGen` VALUES (3939,"Rakof",6,0); 
-INSERT INTO `NameGen` VALUES (3940,"Rakot",6,0); 
-INSERT INTO `NameGen` VALUES (3941,"Rakoth",6,0); 
-INSERT INTO `NameGen` VALUES (3942,"Rakqwa",6,0); 
-INSERT INTO `NameGen` VALUES (3943,"Rakrak",6,0); 
-INSERT INTO `NameGen` VALUES (3944,"Rakron",6,0); 
-INSERT INTO `NameGen` VALUES (3945,"Rakruk",6,0); 
-INSERT INTO `NameGen` VALUES (3946,"Raktah",6,0); 
-INSERT INTO `NameGen` VALUES (3947,"Raktou",6,0); 
-INSERT INTO `NameGen` VALUES (3948,"Rakumn",6,0); 
-INSERT INTO `NameGen` VALUES (3949,"Rakuon",6,0); 
-INSERT INTO `NameGen` VALUES (3950,"Rakuul",6,0); 
-INSERT INTO `NameGen` VALUES (3951,"Rakwas",6,0); 
-INSERT INTO `NameGen` VALUES (3952,"Rathnah",6,0); 
-INSERT INTO `NameGen` VALUES (3953,"Rurg",6,0); 
-INSERT INTO `NameGen` VALUES (3954,"Slaar",6,0); 
-INSERT INTO `NameGen` VALUES (3955,"Spronn",6,0); 
-INSERT INTO `NameGen` VALUES (3956,"Stygg",6,0); 
-INSERT INTO `NameGen` VALUES (3957,"Suurd",6,0); 
-INSERT INTO `NameGen` VALUES (3958,"Tadonn",6,0); 
-INSERT INTO `NameGen` VALUES (3959,"Togg",6,0); 
-INSERT INTO `NameGen` VALUES (3960,"Trondd",6,0); 
-INSERT INTO `NameGen` VALUES (3961,"Udrom",6,0); 
-INSERT INTO `NameGen` VALUES (3962,"Urgruu",6,0); 
-INSERT INTO `NameGen` VALUES (3963,"Yokk",6,0); 
-INSERT INTO `NameGen` VALUES (327,"Moga",6,1); 
-INSERT INTO `NameGen` VALUES (328,"Misha",6,1); 
-INSERT INTO `NameGen` VALUES (329,"Barada",6,1); 
-INSERT INTO `NameGen` VALUES (330,"Braga",6,1); 
-INSERT INTO `NameGen` VALUES (331,"Paila",6,1); 
-INSERT INTO `NameGen` VALUES (332,"Rosha",6,1); 
-INSERT INTO `NameGen` VALUES (333,"Buldress",6,1); 
-INSERT INTO `NameGen` VALUES (334,"Amaya",6,1); 
-INSERT INTO `NameGen` VALUES (335,"Amber",6,1); 
-INSERT INTO `NameGen` VALUES (336,"Steress",6,1); 
-INSERT INTO `NameGen` VALUES (337,"Jinga",6,1); 
-INSERT INTO `NameGen` VALUES (338,"Bandwe",6,1); 
-INSERT INTO `NameGen` VALUES (339,"Porash",6,1); 
-INSERT INTO `NameGen` VALUES (340,"Ishne",6,1); 
-INSERT INTO `NameGen` VALUES (341,"Daldieb",6,1); 
-INSERT INTO `NameGen` VALUES (342,"Bogorah",6,1); 
-INSERT INTO `NameGen` VALUES (343,"Padwar",6,1); 
-INSERT INTO `NameGen` VALUES (344,"Loraine",6,1); 
-INSERT INTO `NameGen` VALUES (345,"Fawnee",6,1); 
-INSERT INTO `NameGen` VALUES (346,"Mara",6,1); 
-INSERT INTO `NameGen` VALUES (1613,"Abeytu",6,1); 
-INSERT INTO `NameGen` VALUES (1614,"Alameda",6,1); 
-INSERT INTO `NameGen` VALUES (1615,"Amayeta",6,1); 
-INSERT INTO `NameGen` VALUES (1616,"Amitola",6,1); 
-INSERT INTO `NameGen` VALUES (1617,"Aquene",6,1); 
-INSERT INTO `NameGen` VALUES (1618,"Awanata",6,1); 
-INSERT INTO `NameGen` VALUES (1619,"Awendela",6,1); 
-INSERT INTO `NameGen` VALUES (1620,"Bea",6,1); 
-INSERT INTO `NameGen` VALUES (1621,"Belinda",6,1); 
-INSERT INTO `NameGen` VALUES (1622,"Bev",6,1); 
-INSERT INTO `NameGen` VALUES (1623,"Bithiah",6,1); 
-INSERT INTO `NameGen` VALUES (1624,"Brenda",6,1); 
-INSERT INTO `NameGen` VALUES (1625,"Callie",6,1); 
-INSERT INTO `NameGen` VALUES (1626,"Candyn",6,1); 
-INSERT INTO `NameGen` VALUES (1627,"Chapa",6,1); 
-INSERT INTO `NameGen` VALUES (1628,"Cocheta",6,1); 
-INSERT INTO `NameGen` VALUES (1629,"Cora",6,1); 
-INSERT INTO `NameGen` VALUES (1630,"Dana",6,1); 
-INSERT INTO `NameGen` VALUES (1631,"Donoma",6,1); 
-INSERT INTO `NameGen` VALUES (1632,"Edina",6,1); 
-INSERT INTO `NameGen` VALUES (1633,"Edna",6,1); 
-INSERT INTO `NameGen` VALUES (1634,"Ehawee",6,1); 
-INSERT INTO `NameGen` VALUES (1635,"Elsa",6,1); 
-INSERT INTO `NameGen` VALUES (1636,"Fariba",6,1); 
-INSERT INTO `NameGen` VALUES (1637,"Harriet",6,1); 
-INSERT INTO `NameGen` VALUES (1638,"Hattie",6,1); 
-INSERT INTO `NameGen` VALUES (1639,"Honey",6,1); 
-INSERT INTO `NameGen` VALUES (1640,"Huata",6,1); 
-INSERT INTO `NameGen` VALUES (1641,"Imala",6,1); 
-INSERT INTO `NameGen` VALUES (1642,"Ina",6,1); 
-INSERT INTO `NameGen` VALUES (1643,"Ituha",6,1); 
-INSERT INTO `NameGen` VALUES (1644,"Jo",6,1); 
-INSERT INTO `NameGen` VALUES (1645,"June",6,1); 
-INSERT INTO `NameGen` VALUES (1646,"Karen",6,1); 
-INSERT INTO `NameGen` VALUES (1647,"Koko",6,1); 
-INSERT INTO `NameGen` VALUES (1648,"Leyota",6,1); 
-INSERT INTO `NameGen` VALUES (1649,"Mahala",6,1); 
-INSERT INTO `NameGen` VALUES (1650,"Mahu",6,1); 
-INSERT INTO `NameGen` VALUES (1651,"Mirubel",6,1); 
-INSERT INTO `NameGen` VALUES (1652,"Mona",6,1); 
-INSERT INTO `NameGen` VALUES (1653,"Mya",6,1); 
-INSERT INTO `NameGen` VALUES (1654,"Nahimana",6,1); 
-INSERT INTO `NameGen` VALUES (1655,"Nashota",6,1); 
-INSERT INTO `NameGen` VALUES (1656,"Nicola",6,1); 
-INSERT INTO `NameGen` VALUES (1657,"Nokomis",6,1); 
-INSERT INTO `NameGen` VALUES (1658,"Onatah",6,1); 
-INSERT INTO `NameGen` VALUES (1659,"Onawa",6,1); 
-INSERT INTO `NameGen` VALUES (1660,"Onida",6,1); 
-INSERT INTO `NameGen` VALUES (1661,"Pakuna",6,1); 
-INSERT INTO `NameGen` VALUES (1662,"Pamuya",6,1); 
-INSERT INTO `NameGen` VALUES (1663,"Rain",6,1); 
-INSERT INTO `NameGen` VALUES (1664,"Regina",6,1); 
-INSERT INTO `NameGen` VALUES (1665,"Roda",6,1); 
-INSERT INTO `NameGen` VALUES (1666,"Shuman",6,1); 
-INSERT INTO `NameGen` VALUES (1667,"Tala",6,1); 
-INSERT INTO `NameGen` VALUES (1668,"Tami",6,1); 
-INSERT INTO `NameGen` VALUES (1669,"Thursey",6,1); 
-INSERT INTO `NameGen` VALUES (1670,"Wakanda",6,1); 
-INSERT INTO `NameGen` VALUES (1671,"Yepa",6,1); 
-INSERT INTO `NameGen` VALUES (3964,"Aaguru",6,1); 
-INSERT INTO `NameGen` VALUES (3965,"Auada",6,1); 
-INSERT INTO `NameGen` VALUES (3966,"Auadi",6,1); 
-INSERT INTO `NameGen` VALUES (3967,"Auael",6,1); 
-INSERT INTO `NameGen` VALUES (3968,"Auaga",6,1); 
-INSERT INTO `NameGen` VALUES (3969,"Auahu",6,1); 
-INSERT INTO `NameGen` VALUES (3970,"Auain",6,1); 
-INSERT INTO `NameGen` VALUES (3971,"Aualen",6,1); 
-INSERT INTO `NameGen` VALUES (3972,"Auani",6,1); 
-INSERT INTO `NameGen` VALUES (3973,"Auepa",6,1); 
-INSERT INTO `NameGen` VALUES (3974,"Auewa",6,1); 
-INSERT INTO `NameGen` VALUES (3975,"Auga",6,1); 
-INSERT INTO `NameGen` VALUES (3976,"Augo",6,1); 
-INSERT INTO `NameGen` VALUES (3977,"Auida",6,1); 
-INSERT INTO `NameGen` VALUES (3978,"Auiga",6,1); 
-INSERT INTO `NameGen` VALUES (3979,"Auija",6,1); 
-INSERT INTO `NameGen` VALUES (3980,"Auka",6,1); 
-INSERT INTO `NameGen` VALUES (3981,"Aukwa",6,1); 
-INSERT INTO `NameGen` VALUES (3982,"Aula",6,1); 
-INSERT INTO `NameGen` VALUES (3983,"Aulfa",6,1); 
-INSERT INTO `NameGen` VALUES (3984,"Auna",6,1); 
-INSERT INTO `NameGen` VALUES (3985,"Aunen",6,1); 
-INSERT INTO `NameGen` VALUES (3986,"Aunko",6,1); 
-INSERT INTO `NameGen` VALUES (3987,"Aunta",6,1); 
-INSERT INTO `NameGen` VALUES (3988,"Auska",6,1); 
-INSERT INTO `NameGen` VALUES (3989,"Auta",6,1); 
-INSERT INTO `NameGen` VALUES (3990,"Autha",6,1); 
-INSERT INTO `NameGen` VALUES (3991,"Auuna",6,1); 
-INSERT INTO `NameGen` VALUES (3992,"Auunn",6,1); 
-INSERT INTO `NameGen` VALUES (3993,"Auura",6,1); 
-INSERT INTO `NameGen` VALUES (3994,"Auyn",6,1); 
-INSERT INTO `NameGen` VALUES (3995,"Auyr",6,1); 
-INSERT INTO `NameGen` VALUES (3996,"Bahada",6,1); 
-INSERT INTO `NameGen` VALUES (3997,"Bahadi",6,1); 
-INSERT INTO `NameGen` VALUES (3998,"Bahael",6,1); 
-INSERT INTO `NameGen` VALUES (3999,"Bahaga",6,1); 
-INSERT INTO `NameGen` VALUES (4000,"Bahahu",6,1); 
-INSERT INTO `NameGen` VALUES (4001,"Bahain",6,1); 
-INSERT INTO `NameGen` VALUES (4002,"Bahalen",6,1); 
-INSERT INTO `NameGen` VALUES (4003,"Bahani",6,1); 
-INSERT INTO `NameGen` VALUES (4004,"Bahepa",6,1); 
-INSERT INTO `NameGen` VALUES (4005,"Bahewa",6,1); 
-INSERT INTO `NameGen` VALUES (4006,"Bahga",6,1); 
-INSERT INTO `NameGen` VALUES (4007,"Bahgo",6,1); 
-INSERT INTO `NameGen` VALUES (4008,"Bahida",6,1); 
-INSERT INTO `NameGen` VALUES (4009,"Bahiga",6,1); 
-INSERT INTO `NameGen` VALUES (4010,"Bahija",6,1); 
-INSERT INTO `NameGen` VALUES (4011,"Bahka",6,1); 
-INSERT INTO `NameGen` VALUES (4012,"Bahkwa",6,1); 
-INSERT INTO `NameGen` VALUES (4013,"Bahla",6,1); 
-INSERT INTO `NameGen` VALUES (4014,"Bahlfa",6,1); 
-INSERT INTO `NameGen` VALUES (4015,"Bahna",6,1); 
-INSERT INTO `NameGen` VALUES (4016,"Bahnen",6,1); 
-INSERT INTO `NameGen` VALUES (4017,"Bahnko",6,1); 
-INSERT INTO `NameGen` VALUES (4018,"Bahnta",6,1); 
-INSERT INTO `NameGen` VALUES (4019,"Bahska",6,1); 
-INSERT INTO `NameGen` VALUES (4020,"Bahta",6,1); 
-INSERT INTO `NameGen` VALUES (4021,"Bahtha",6,1); 
-INSERT INTO `NameGen` VALUES (4022,"Bahuna",6,1); 
-INSERT INTO `NameGen` VALUES (4023,"Bahunn",6,1); 
-INSERT INTO `NameGen` VALUES (4024,"Bahura",6,1); 
-INSERT INTO `NameGen` VALUES (4025,"Bahyn",6,1); 
-INSERT INTO `NameGen` VALUES (4026,"Bahyr",6,1); 
-INSERT INTO `NameGen` VALUES (4027,"Bataga",6,1); 
-INSERT INTO `NameGen` VALUES (4028,"Berada",6,1); 
-INSERT INTO `NameGen` VALUES (4029,"Beradi",6,1); 
-INSERT INTO `NameGen` VALUES (4030,"Berael",6,1); 
-INSERT INTO `NameGen` VALUES (4031,"Beraga",6,1); 
-INSERT INTO `NameGen` VALUES (4032,"Berahu",6,1); 
-INSERT INTO `NameGen` VALUES (4033,"Berain",6,1); 
-INSERT INTO `NameGen` VALUES (4034,"Beralen",6,1); 
-INSERT INTO `NameGen` VALUES (4035,"Berani",6,1); 
-INSERT INTO `NameGen` VALUES (4036,"Berepa",6,1); 
-INSERT INTO `NameGen` VALUES (4037,"Berewa",6,1); 
-INSERT INTO `NameGen` VALUES (4038,"Berga",6,1); 
-INSERT INTO `NameGen` VALUES (4039,"Bergo",6,1); 
-INSERT INTO `NameGen` VALUES (4040,"Berida",6,1); 
-INSERT INTO `NameGen` VALUES (4041,"Beriga",6,1); 
-INSERT INTO `NameGen` VALUES (4042,"Berija",6,1); 
-INSERT INTO `NameGen` VALUES (4043,"Berka",6,1); 
-INSERT INTO `NameGen` VALUES (4044,"Berkwa",6,1); 
-INSERT INTO `NameGen` VALUES (4045,"Berla",6,1); 
-INSERT INTO `NameGen` VALUES (4046,"Berlfa",6,1); 
-INSERT INTO `NameGen` VALUES (4047,"Berna",6,1); 
-INSERT INTO `NameGen` VALUES (4048,"Bernen",6,1); 
-INSERT INTO `NameGen` VALUES (4049,"Bernko",6,1); 
-INSERT INTO `NameGen` VALUES (4050,"Bernta",6,1); 
-INSERT INTO `NameGen` VALUES (4051,"Berska",6,1); 
-INSERT INTO `NameGen` VALUES (4052,"Berta",6,1); 
-INSERT INTO `NameGen` VALUES (4053,"Bertha",6,1); 
-INSERT INTO `NameGen` VALUES (4054,"Beruna",6,1); 
-INSERT INTO `NameGen` VALUES (4055,"Berunn",6,1); 
-INSERT INTO `NameGen` VALUES (4056,"Berura",6,1); 
-INSERT INTO `NameGen` VALUES (4057,"Beryn",6,1); 
-INSERT INTO `NameGen` VALUES (4058,"Beryr",6,1); 
-INSERT INTO `NameGen` VALUES (4059,"Byluu",6,1); 
-INSERT INTO `NameGen` VALUES (4060,"Cahuu",6,1); 
-INSERT INTO `NameGen` VALUES (4061,"Caramuga",6,1); 
-INSERT INTO `NameGen` VALUES (4062,"Choona",6,1); 
-INSERT INTO `NameGen` VALUES (4063,"Daga",6,1); 
-INSERT INTO `NameGen` VALUES (4064,"Drunaa",6,1); 
-INSERT INTO `NameGen` VALUES (4065,"Eiada",6,1); 
-INSERT INTO `NameGen` VALUES (4066,"Eiadi",6,1); 
-INSERT INTO `NameGen` VALUES (4067,"Eiael",6,1); 
-INSERT INTO `NameGen` VALUES (4068,"Eiaga",6,1); 
-INSERT INTO `NameGen` VALUES (4069,"Eiahu",6,1); 
-INSERT INTO `NameGen` VALUES (4070,"Eiain",6,1); 
-INSERT INTO `NameGen` VALUES (4071,"Eialen",6,1); 
-INSERT INTO `NameGen` VALUES (4072,"Eiani",6,1); 
-INSERT INTO `NameGen` VALUES (4073,"Eiepa",6,1); 
-INSERT INTO `NameGen` VALUES (4074,"Eiewa",6,1); 
-INSERT INTO `NameGen` VALUES (4075,"Eiga",6,1); 
-INSERT INTO `NameGen` VALUES (4076,"Eigo",6,1); 
-INSERT INTO `NameGen` VALUES (4077,"Eiida",6,1); 
-INSERT INTO `NameGen` VALUES (4078,"Eiiga",6,1); 
-INSERT INTO `NameGen` VALUES (4079,"Eiija",6,1); 
-INSERT INTO `NameGen` VALUES (4080,"Eika",6,1); 
-INSERT INTO `NameGen` VALUES (4081,"Eikwa",6,1); 
-INSERT INTO `NameGen` VALUES (4082,"Eila",6,1); 
-INSERT INTO `NameGen` VALUES (4083,"Eilfa",6,1); 
-INSERT INTO `NameGen` VALUES (4084,"Eina",6,1); 
-INSERT INTO `NameGen` VALUES (4085,"Einen",6,1); 
-INSERT INTO `NameGen` VALUES (4086,"Einko",6,1); 
-INSERT INTO `NameGen` VALUES (4087,"Einta",6,1); 
-INSERT INTO `NameGen` VALUES (4088,"Eiska",6,1); 
-INSERT INTO `NameGen` VALUES (4089,"Eita",6,1); 
-INSERT INTO `NameGen` VALUES (4090,"Eitha",6,1); 
-INSERT INTO `NameGen` VALUES (4091,"Eiuna",6,1); 
-INSERT INTO `NameGen` VALUES (4092,"Eiunn",6,1); 
-INSERT INTO `NameGen` VALUES (4093,"Eiura",6,1); 
-INSERT INTO `NameGen` VALUES (4094,"Eiyn",6,1); 
-INSERT INTO `NameGen` VALUES (4095,"Eiyr",6,1); 
-INSERT INTO `NameGen` VALUES (4096,"Faruu",6,1); 
-INSERT INTO `NameGen` VALUES (4097,"Fuugal",6,1); 
-INSERT INTO `NameGen` VALUES (4098,"Fyada",6,1); 
-INSERT INTO `NameGen` VALUES (4099,"Fyadi",6,1); 
-INSERT INTO `NameGen` VALUES (4100,"Fyael",6,1); 
-INSERT INTO `NameGen` VALUES (4101,"Fyaga",6,1); 
-INSERT INTO `NameGen` VALUES (4102,"Fyahu",6,1); 
-INSERT INTO `NameGen` VALUES (4103,"Fyain",6,1); 
-INSERT INTO `NameGen` VALUES (4104,"Fyalen",6,1); 
-INSERT INTO `NameGen` VALUES (4105,"Fyani",6,1); 
-INSERT INTO `NameGen` VALUES (4106,"Fyepa",6,1); 
-INSERT INTO `NameGen` VALUES (4107,"Fyewa",6,1); 
-INSERT INTO `NameGen` VALUES (4108,"Fyga",6,1); 
-INSERT INTO `NameGen` VALUES (4109,"Fygo",6,1); 
-INSERT INTO `NameGen` VALUES (4110,"Fyida",6,1); 
-INSERT INTO `NameGen` VALUES (4111,"Fyiga",6,1); 
-INSERT INTO `NameGen` VALUES (4112,"Fyija",6,1); 
-INSERT INTO `NameGen` VALUES (4113,"Fyka",6,1); 
-INSERT INTO `NameGen` VALUES (4114,"Fykwa",6,1); 
-INSERT INTO `NameGen` VALUES (4115,"Fyla",6,1); 
-INSERT INTO `NameGen` VALUES (4116,"Fylfa",6,1); 
-INSERT INTO `NameGen` VALUES (4117,"Fyna",6,1); 
-INSERT INTO `NameGen` VALUES (4118,"Fynen",6,1); 
-INSERT INTO `NameGen` VALUES (4119,"Fynko",6,1); 
-INSERT INTO `NameGen` VALUES (4120,"Fynta",6,1); 
-INSERT INTO `NameGen` VALUES (4121,"Fyska",6,1); 
-INSERT INTO `NameGen` VALUES (4122,"Fyta",6,1); 
-INSERT INTO `NameGen` VALUES (4123,"Fytha",6,1); 
-INSERT INTO `NameGen` VALUES (4124,"Fyuna",6,1); 
-INSERT INTO `NameGen` VALUES (4125,"Fyunn",6,1); 
-INSERT INTO `NameGen` VALUES (4126,"Fyura",6,1); 
-INSERT INTO `NameGen` VALUES (4127,"Fyyn",6,1); 
-INSERT INTO `NameGen` VALUES (4128,"Fyyr",6,1); 
-INSERT INTO `NameGen` VALUES (4129,"Halada",6,1); 
-INSERT INTO `NameGen` VALUES (4130,"Haladi",6,1); 
-INSERT INTO `NameGen` VALUES (4131,"Halael",6,1); 
-INSERT INTO `NameGen` VALUES (4132,"Halaga",6,1); 
-INSERT INTO `NameGen` VALUES (4133,"Halahu",6,1); 
-INSERT INTO `NameGen` VALUES (4134,"Halain",6,1); 
-INSERT INTO `NameGen` VALUES (4135,"Halalen",6,1); 
-INSERT INTO `NameGen` VALUES (4136,"Halani",6,1); 
-INSERT INTO `NameGen` VALUES (4137,"Halepa",6,1); 
-INSERT INTO `NameGen` VALUES (4138,"Halewa",6,1); 
-INSERT INTO `NameGen` VALUES (4139,"Halga",6,1); 
-INSERT INTO `NameGen` VALUES (4140,"Halgo",6,1); 
-INSERT INTO `NameGen` VALUES (4141,"Halida",6,1); 
-INSERT INTO `NameGen` VALUES (4142,"Haliga",6,1); 
-INSERT INTO `NameGen` VALUES (4143,"Halija",6,1); 
-INSERT INTO `NameGen` VALUES (4144,"Halka",6,1); 
-INSERT INTO `NameGen` VALUES (4145,"Halkwa",6,1); 
-INSERT INTO `NameGen` VALUES (4146,"Halla",6,1); 
-INSERT INTO `NameGen` VALUES (4147,"Hallfa",6,1); 
-INSERT INTO `NameGen` VALUES (4148,"Halna",6,1); 
-INSERT INTO `NameGen` VALUES (4149,"Halnen",6,1); 
-INSERT INTO `NameGen` VALUES (4150,"Halnko",6,1); 
-INSERT INTO `NameGen` VALUES (4151,"Halnta",6,1); 
-INSERT INTO `NameGen` VALUES (4152,"Halska",6,1); 
-INSERT INTO `NameGen` VALUES (4153,"Halta",6,1); 
-INSERT INTO `NameGen` VALUES (4154,"Haltha",6,1); 
-INSERT INTO `NameGen` VALUES (4155,"Haluna",6,1); 
-INSERT INTO `NameGen` VALUES (4156,"Halunn",6,1); 
-INSERT INTO `NameGen` VALUES (4157,"Halura",6,1); 
-INSERT INTO `NameGen` VALUES (4158,"Halyn",6,1); 
-INSERT INTO `NameGen` VALUES (4159,"Halyr",6,1); 
-INSERT INTO `NameGen` VALUES (4160,"Harana",6,1); 
-INSERT INTO `NameGen` VALUES (4161,"Homuda",6,1); 
-INSERT INTO `NameGen` VALUES (4162,"Huguur",6,1); 
-INSERT INTO `NameGen` VALUES (4163,"Huukwa",6,1); 
-INSERT INTO `NameGen` VALUES (4164,"Jaid",6,1); 
-INSERT INTO `NameGen` VALUES (4165,"Jaraa",6,1); 
-INSERT INTO `NameGen` VALUES (4166,"Jumadu",6,1); 
-INSERT INTO `NameGen` VALUES (4167,"Jurguun",6,1); 
-INSERT INTO `NameGen` VALUES (4168,"Juunu",6,1); 
-INSERT INTO `NameGen` VALUES (4169,"Kraal",6,1); 
-INSERT INTO `NameGen` VALUES (4170,"Kuada",6,1); 
-INSERT INTO `NameGen` VALUES (4171,"Kuadi",6,1); 
-INSERT INTO `NameGen` VALUES (4172,"Kuael",6,1); 
-INSERT INTO `NameGen` VALUES (4173,"Kuaga",6,1); 
-INSERT INTO `NameGen` VALUES (4174,"Kuahu",6,1); 
-INSERT INTO `NameGen` VALUES (4175,"Kuain",6,1); 
-INSERT INTO `NameGen` VALUES (4176,"Kualen",6,1); 
-INSERT INTO `NameGen` VALUES (4177,"Kuani",6,1); 
-INSERT INTO `NameGen` VALUES (4178,"Kuepa",6,1); 
-INSERT INTO `NameGen` VALUES (4179,"Kuewa",6,1); 
-INSERT INTO `NameGen` VALUES (4180,"Kuga",6,1); 
-INSERT INTO `NameGen` VALUES (4181,"Kugo",6,1); 
-INSERT INTO `NameGen` VALUES (4182,"Kuida",6,1); 
-INSERT INTO `NameGen` VALUES (4183,"Kuiga",6,1); 
-INSERT INTO `NameGen` VALUES (4184,"Kuija",6,1); 
-INSERT INTO `NameGen` VALUES (4185,"Kuka",6,1); 
-INSERT INTO `NameGen` VALUES (4186,"Kukwa",6,1); 
-INSERT INTO `NameGen` VALUES (4187,"Kula",6,1); 
-INSERT INTO `NameGen` VALUES (4188,"Kulfa",6,1); 
-INSERT INTO `NameGen` VALUES (4189,"Kuna",6,1); 
-INSERT INTO `NameGen` VALUES (4190,"Kunen",6,1); 
-INSERT INTO `NameGen` VALUES (4191,"Kunko",6,1); 
-INSERT INTO `NameGen` VALUES (4192,"Kunta",6,1); 
-INSERT INTO `NameGen` VALUES (4193,"Kuska",6,1); 
-INSERT INTO `NameGen` VALUES (4194,"Kuta",6,1); 
-INSERT INTO `NameGen` VALUES (4195,"Kutha",6,1); 
-INSERT INTO `NameGen` VALUES (4196,"Kuuna",6,1); 
-INSERT INTO `NameGen` VALUES (4197,"Kuunn",6,1); 
-INSERT INTO `NameGen` VALUES (4198,"Kuura",6,1); 
-INSERT INTO `NameGen` VALUES (4199,"Kuural",6,1); 
-INSERT INTO `NameGen` VALUES (4200,"Kuyn",6,1); 
-INSERT INTO `NameGen` VALUES (4201,"Kuyr",6,1); 
-INSERT INTO `NameGen` VALUES (4202,"Lanag",6,1); 
-INSERT INTO `NameGen` VALUES (4203,"Lornal",6,1); 
-INSERT INTO `NameGen` VALUES (4204,"Luugud",6,1); 
-INSERT INTO `NameGen` VALUES (4205,"Maag",6,1); 
-INSERT INTO `NameGen` VALUES (4206,"Mahada",6,1); 
-INSERT INTO `NameGen` VALUES (4207,"Mahadi",6,1); 
-INSERT INTO `NameGen` VALUES (4208,"Mahael",6,1); 
-INSERT INTO `NameGen` VALUES (4209,"Mahaga",6,1); 
-INSERT INTO `NameGen` VALUES (4210,"Mahahu",6,1); 
-INSERT INTO `NameGen` VALUES (4211,"Mahain",6,1); 
-INSERT INTO `NameGen` VALUES (4212,"Mahalen",6,1); 
-INSERT INTO `NameGen` VALUES (4213,"Mahani",6,1); 
-INSERT INTO `NameGen` VALUES (4214,"Mahepa",6,1); 
-INSERT INTO `NameGen` VALUES (4215,"Mahewa",6,1); 
-INSERT INTO `NameGen` VALUES (4216,"Mahga",6,1); 
-INSERT INTO `NameGen` VALUES (4217,"Mahgo",6,1); 
-INSERT INTO `NameGen` VALUES (4218,"Mahida",6,1); 
-INSERT INTO `NameGen` VALUES (4219,"Mahiga",6,1); 
-INSERT INTO `NameGen` VALUES (4220,"Mahija",6,1); 
-INSERT INTO `NameGen` VALUES (4221,"Mahka",6,1); 
-INSERT INTO `NameGen` VALUES (4222,"Mahkwa",6,1); 
-INSERT INTO `NameGen` VALUES (4223,"Mahlfa",6,1); 
-INSERT INTO `NameGen` VALUES (4224,"Mahna",6,1); 
-INSERT INTO `NameGen` VALUES (4225,"Mahnen",6,1); 
-INSERT INTO `NameGen` VALUES (4226,"Mahnko",6,1); 
-INSERT INTO `NameGen` VALUES (4227,"Mahnta",6,1); 
-INSERT INTO `NameGen` VALUES (4228,"Mahska",6,1); 
-INSERT INTO `NameGen` VALUES (4229,"Mahta",6,1); 
-INSERT INTO `NameGen` VALUES (4230,"Mahtha",6,1); 
-INSERT INTO `NameGen` VALUES (4231,"Mahuna",6,1); 
-INSERT INTO `NameGen` VALUES (4232,"Mahunn",6,1); 
-INSERT INTO `NameGen` VALUES (4233,"Mahura",6,1); 
-INSERT INTO `NameGen` VALUES (4234,"Mahyn",6,1); 
-INSERT INTO `NameGen` VALUES (4235,"Mahyr",6,1); 
-INSERT INTO `NameGen` VALUES (4236,"Mugra",6,1); 
-INSERT INTO `NameGen` VALUES (4237,"Muurga",6,1); 
-INSERT INTO `NameGen` VALUES (4238,"Naal",6,1); 
-INSERT INTO `NameGen` VALUES (4239,"Nada",6,1); 
-INSERT INTO `NameGen` VALUES (4240,"Nadi",6,1); 
-INSERT INTO `NameGen` VALUES (4241,"Nael",6,1); 
-INSERT INTO `NameGen` VALUES (4242,"Naga",6,1); 
-INSERT INTO `NameGen` VALUES (4243,"Nahu",6,1); 
-INSERT INTO `NameGen` VALUES (4244,"Nain",6,1); 
-INSERT INTO `NameGen` VALUES (4245,"Nalen",6,1); 
-INSERT INTO `NameGen` VALUES (4246,"Nepa",6,1); 
-INSERT INTO `NameGen` VALUES (4247,"Newa",6,1); 
-INSERT INTO `NameGen` VALUES (4248,"Nga",6,1); 
-INSERT INTO `NameGen` VALUES (4249,"Ngo",6,1); 
-INSERT INTO `NameGen` VALUES (4250,"Nida",6,1); 
-INSERT INTO `NameGen` VALUES (4251,"Niga",6,1); 
-INSERT INTO `NameGen` VALUES (4252,"Nija",6,1); 
-INSERT INTO `NameGen` VALUES (4253,"Nka",6,1); 
-INSERT INTO `NameGen` VALUES (4254,"Nkwa",6,1); 
-INSERT INTO `NameGen` VALUES (4255,"Nla",6,1); 
-INSERT INTO `NameGen` VALUES (4256,"Nlfa",6,1); 
-INSERT INTO `NameGen` VALUES (4257,"Nna",6,1); 
-INSERT INTO `NameGen` VALUES (4258,"Nnen",6,1); 
-INSERT INTO `NameGen` VALUES (4259,"Nnko",6,1); 
-INSERT INTO `NameGen` VALUES (4260,"Nnta",6,1); 
-INSERT INTO `NameGen` VALUES (4261,"Noga",6,1); 
-INSERT INTO `NameGen` VALUES (4262,"Nska",6,1); 
-INSERT INTO `NameGen` VALUES (4263,"Nta",6,1); 
-INSERT INTO `NameGen` VALUES (4264,"Ntha",6,1); 
-INSERT INTO `NameGen` VALUES (4265,"Nuamu",6,1); 
-INSERT INTO `NameGen` VALUES (4266,"Nuna",6,1); 
-INSERT INTO `NameGen` VALUES (4267,"Nunn",6,1); 
-INSERT INTO `NameGen` VALUES (4268,"Nura",6,1); 
-INSERT INTO `NameGen` VALUES (4269,"Nuuru",6,1); 
-INSERT INTO `NameGen` VALUES (4270,"Nyn",6,1); 
-INSERT INTO `NameGen` VALUES (4271,"Nyr",6,1); 
-INSERT INTO `NameGen` VALUES (4272,"Ocoga",6,1); 
-INSERT INTO `NameGen` VALUES (4273,"Ollomu",6,1); 
-INSERT INTO `NameGen` VALUES (4274,"Omalugo",6,1); 
-INSERT INTO `NameGen` VALUES (4275,"Oordu",6,1); 
-INSERT INTO `NameGen` VALUES (4276,"Oxauna",6,1); 
-INSERT INTO `NameGen` VALUES (4277,"Paoada",6,1); 
-INSERT INTO `NameGen` VALUES (4278,"Paoadi",6,1); 
-INSERT INTO `NameGen` VALUES (4279,"Paoael",6,1); 
-INSERT INTO `NameGen` VALUES (4280,"Paoaga",6,1); 
-INSERT INTO `NameGen` VALUES (4281,"Paoahu",6,1); 
-INSERT INTO `NameGen` VALUES (4282,"Paoain",6,1); 
-INSERT INTO `NameGen` VALUES (4283,"Paoalen",6,1); 
-INSERT INTO `NameGen` VALUES (4284,"Paoani",6,1); 
-INSERT INTO `NameGen` VALUES (4285,"Paoepa",6,1); 
-INSERT INTO `NameGen` VALUES (4286,"Paoewa",6,1); 
-INSERT INTO `NameGen` VALUES (4287,"Paoga",6,1); 
-INSERT INTO `NameGen` VALUES (4288,"Paogo",6,1); 
-INSERT INTO `NameGen` VALUES (4289,"Paoida",6,1); 
-INSERT INTO `NameGen` VALUES (4290,"Paoiga",6,1); 
-INSERT INTO `NameGen` VALUES (4291,"Paoija",6,1); 
-INSERT INTO `NameGen` VALUES (4292,"Paoka",6,1); 
-INSERT INTO `NameGen` VALUES (4293,"Paokwa",6,1); 
-INSERT INTO `NameGen` VALUES (4294,"Paola",6,1); 
-INSERT INTO `NameGen` VALUES (4295,"Paolfa",6,1); 
-INSERT INTO `NameGen` VALUES (4296,"Paona",6,1); 
-INSERT INTO `NameGen` VALUES (4297,"Paonen",6,1); 
-INSERT INTO `NameGen` VALUES (4298,"Paonko",6,1); 
-INSERT INTO `NameGen` VALUES (4299,"Paonta",6,1); 
-INSERT INTO `NameGen` VALUES (4300,"Paoska",6,1); 
-INSERT INTO `NameGen` VALUES (4301,"Paota",6,1); 
-INSERT INTO `NameGen` VALUES (4302,"Paotha",6,1); 
-INSERT INTO `NameGen` VALUES (4303,"Paouna",6,1); 
-INSERT INTO `NameGen` VALUES (4304,"Paounn",6,1); 
-INSERT INTO `NameGen` VALUES (4305,"Paoura",6,1); 
-INSERT INTO `NameGen` VALUES (4306,"Paoyn",6,1); 
-INSERT INTO `NameGen` VALUES (4307,"Paoyr",6,1); 
-INSERT INTO `NameGen` VALUES (4308,"Pokuga",6,1); 
-INSERT INTO `NameGen` VALUES (4309,"Praan",6,1); 
-INSERT INTO `NameGen` VALUES (4310,"Pugraa",6,1); 
-INSERT INTO `NameGen` VALUES (4311,"Quuda",6,1); 
-INSERT INTO `NameGen` VALUES (4312,"Ralga",6,1); 
-INSERT INTO `NameGen` VALUES (4313,"Rondaa",6,1); 
-INSERT INTO `NameGen` VALUES (4314,"Saeada",6,1); 
-INSERT INTO `NameGen` VALUES (4315,"Saeadi",6,1); 
-INSERT INTO `NameGen` VALUES (4316,"Saeael",6,1); 
-INSERT INTO `NameGen` VALUES (4317,"Saeaga",6,1); 
-INSERT INTO `NameGen` VALUES (4318,"Saeahu",6,1); 
-INSERT INTO `NameGen` VALUES (4319,"Saeain",6,1); 
-INSERT INTO `NameGen` VALUES (4320,"Saealen",6,1); 
-INSERT INTO `NameGen` VALUES (4321,"Saeani",6,1); 
-INSERT INTO `NameGen` VALUES (4322,"Saeepa",6,1); 
-INSERT INTO `NameGen` VALUES (4323,"Saeewa",6,1); 
-INSERT INTO `NameGen` VALUES (4324,"Saega",6,1); 
-INSERT INTO `NameGen` VALUES (4325,"Saego",6,1); 
-INSERT INTO `NameGen` VALUES (4326,"Saeida",6,1); 
-INSERT INTO `NameGen` VALUES (4327,"Saeiga",6,1); 
-INSERT INTO `NameGen` VALUES (4328,"Saeija",6,1); 
-INSERT INTO `NameGen` VALUES (4329,"Saeka",6,1); 
-INSERT INTO `NameGen` VALUES (4330,"Saekwa",6,1); 
-INSERT INTO `NameGen` VALUES (4331,"Saela",6,1); 
-INSERT INTO `NameGen` VALUES (4332,"Saelfa",6,1); 
-INSERT INTO `NameGen` VALUES (4333,"Saena",6,1); 
-INSERT INTO `NameGen` VALUES (4334,"Saenen",6,1); 
-INSERT INTO `NameGen` VALUES (4335,"Saenko",6,1); 
-INSERT INTO `NameGen` VALUES (4336,"Saenta",6,1); 
-INSERT INTO `NameGen` VALUES (4337,"Saeska",6,1); 
-INSERT INTO `NameGen` VALUES (4338,"Saeta",6,1); 
-INSERT INTO `NameGen` VALUES (4339,"Saetha",6,1); 
-INSERT INTO `NameGen` VALUES (4340,"Saeuna",6,1); 
-INSERT INTO `NameGen` VALUES (4341,"Saeunn",6,1); 
-INSERT INTO `NameGen` VALUES (4342,"Saeura",6,1); 
-INSERT INTO `NameGen` VALUES (4343,"Saeyn",6,1); 
-INSERT INTO `NameGen` VALUES (4344,"Saeyr",6,1); 
-INSERT INTO `NameGen` VALUES (4345,"Serada",6,1); 
-INSERT INTO `NameGen` VALUES (4346,"Seradi",6,1); 
-INSERT INTO `NameGen` VALUES (4347,"Serael",6,1); 
-INSERT INTO `NameGen` VALUES (4348,"Seraga",6,1); 
-INSERT INTO `NameGen` VALUES (4349,"Serahu",6,1); 
-INSERT INTO `NameGen` VALUES (4350,"Serain",6,1); 
-INSERT INTO `NameGen` VALUES (4351,"Seralen",6,1); 
-INSERT INTO `NameGen` VALUES (4352,"Serani",6,1); 
-INSERT INTO `NameGen` VALUES (4353,"Serepa",6,1); 
-INSERT INTO `NameGen` VALUES (4354,"Serewa",6,1); 
-INSERT INTO `NameGen` VALUES (4355,"Serga",6,1); 
-INSERT INTO `NameGen` VALUES (4356,"Sergo",6,1); 
-INSERT INTO `NameGen` VALUES (4357,"Serida",6,1); 
-INSERT INTO `NameGen` VALUES (4358,"Seriga",6,1); 
-INSERT INTO `NameGen` VALUES (4359,"Serija",6,1); 
-INSERT INTO `NameGen` VALUES (4360,"Serka",6,1); 
-INSERT INTO `NameGen` VALUES (4361,"Serkwa",6,1); 
-INSERT INTO `NameGen` VALUES (4362,"Serla",6,1); 
-INSERT INTO `NameGen` VALUES (4363,"Serlfa",6,1); 
-INSERT INTO `NameGen` VALUES (4364,"Serna",6,1); 
-INSERT INTO `NameGen` VALUES (4365,"Sernen",6,1); 
-INSERT INTO `NameGen` VALUES (4366,"Sernko",6,1); 
-INSERT INTO `NameGen` VALUES (4367,"Sernta",6,1); 
-INSERT INTO `NameGen` VALUES (4368,"Serska",6,1); 
-INSERT INTO `NameGen` VALUES (4369,"Serta",6,1); 
-INSERT INTO `NameGen` VALUES (4370,"Sertha",6,1); 
-INSERT INTO `NameGen` VALUES (4371,"Seruna",6,1); 
-INSERT INTO `NameGen` VALUES (4372,"Serunn",6,1); 
-INSERT INTO `NameGen` VALUES (4373,"Serura",6,1); 
-INSERT INTO `NameGen` VALUES (4374,"Seryn",6,1); 
-INSERT INTO `NameGen` VALUES (4375,"Seryr",6,1); 
-INSERT INTO `NameGen` VALUES (4376,"Sorgaa",6,1); 
-INSERT INTO `NameGen` VALUES (4377,"Taiada",6,1); 
-INSERT INTO `NameGen` VALUES (4378,"Taiadi",6,1); 
-INSERT INTO `NameGen` VALUES (4379,"Taiael",6,1); 
-INSERT INTO `NameGen` VALUES (4380,"Taiaga",6,1); 
-INSERT INTO `NameGen` VALUES (4381,"Taiahu",6,1); 
-INSERT INTO `NameGen` VALUES (4382,"Taiain",6,1); 
-INSERT INTO `NameGen` VALUES (4383,"Taialen",6,1); 
-INSERT INTO `NameGen` VALUES (4384,"Taiani",6,1); 
-INSERT INTO `NameGen` VALUES (4385,"Taiepa",6,1); 
-INSERT INTO `NameGen` VALUES (4386,"Taiewa",6,1); 
-INSERT INTO `NameGen` VALUES (4387,"Taiga",6,1); 
-INSERT INTO `NameGen` VALUES (4388,"Taigo",6,1); 
-INSERT INTO `NameGen` VALUES (4389,"Taiida",6,1); 
-INSERT INTO `NameGen` VALUES (4390,"Taiiga",6,1); 
-INSERT INTO `NameGen` VALUES (4391,"Taiija",6,1); 
-INSERT INTO `NameGen` VALUES (4392,"Taika",6,1); 
-INSERT INTO `NameGen` VALUES (4393,"Taikwa",6,1); 
-INSERT INTO `NameGen` VALUES (4394,"Taila",6,1); 
-INSERT INTO `NameGen` VALUES (4395,"Tailfa",6,1); 
-INSERT INTO `NameGen` VALUES (4396,"Tainen",6,1); 
-INSERT INTO `NameGen` VALUES (4397,"Tainko",6,1); 
-INSERT INTO `NameGen` VALUES (4398,"Tainta",6,1); 
-INSERT INTO `NameGen` VALUES (4399,"Taiska",6,1); 
-INSERT INTO `NameGen` VALUES (4400,"Taita",6,1); 
-INSERT INTO `NameGen` VALUES (4401,"Taitha",6,1); 
-INSERT INTO `NameGen` VALUES (4402,"Taiuna",6,1); 
-INSERT INTO `NameGen` VALUES (4403,"Taiunn",6,1); 
-INSERT INTO `NameGen` VALUES (4404,"Taiura",6,1); 
-INSERT INTO `NameGen` VALUES (4405,"Taiyn",6,1); 
-INSERT INTO `NameGen` VALUES (4406,"Taiyr",6,1); 
-INSERT INTO `NameGen` VALUES (4407,"Taukk",6,1); 
-INSERT INTO `NameGen` VALUES (4408,"Thakk",6,1); 
-INSERT INTO `NameGen` VALUES (4409,"Toraga",6,1); 
-INSERT INTO `NameGen` VALUES (4410,"Trumuun",6,1); 
-INSERT INTO `NameGen` VALUES (4411,"Turguun",6,1); 
-INSERT INTO `NameGen` VALUES (4412,"Udura",6,1); 
-INSERT INTO `NameGen` VALUES (4413,"Uguda",6,1); 
-INSERT INTO `NameGen` VALUES (4414,"Ullala",6,1); 
-INSERT INTO `NameGen` VALUES (4415,"Urballa",6,1); 
-INSERT INTO `NameGen` VALUES (4416,"Urdaa",6,1); 
-INSERT INTO `NameGen` VALUES (4417,"Uuraza",6,1); 
-INSERT INTO `NameGen` VALUES (4418,"Uurmaa",6,1); 
-INSERT INTO `NameGen` VALUES (4419,"Waagda",6,1); 
-INSERT INTO `NameGen` VALUES (4420,"Walama",6,1); 
-INSERT INTO `NameGen` VALUES (4421,"Wolda",6,1); 
-INSERT INTO `NameGen` VALUES (4422,"Wuroda",6,1); 
-INSERT INTO `NameGen` VALUES (4423,"Yaagma",6,1); 
-INSERT INTO `NameGen` VALUES (4424,"Yugda",6,1); 
-INSERT INTO `NameGen` VALUES (175,"Ben",7,0); 
-INSERT INTO `NameGen` VALUES (176,"Lor",7,0); 
-INSERT INTO `NameGen` VALUES (177,"Kevin",7,0); 
-INSERT INTO `NameGen` VALUES (178,"Andy",7,0); 
-INSERT INTO `NameGen` VALUES (179,"Parg",7,0); 
-INSERT INTO `NameGen` VALUES (180,"Blayne",7,0); 
-INSERT INTO `NameGen` VALUES (181,"Fred",7,0); 
-INSERT INTO `NameGen` VALUES (182,"Phil",7,0); 
-INSERT INTO `NameGen` VALUES (183,"Tink",7,0); 
-INSERT INTO `NameGen` VALUES (184,"Grubber",7,0); 
-INSERT INTO `NameGen` VALUES (185,"Flange",7,0); 
-INSERT INTO `NameGen` VALUES (186,"Rocket",7,0); 
-INSERT INTO `NameGen` VALUES (187,"Driver",7,0); 
-INSERT INTO `NameGen` VALUES (188,"Torque",7,0); 
-INSERT INTO `NameGen` VALUES (189,"Wrench",7,0); 
-INSERT INTO `NameGen` VALUES (190,"Gasket",7,0); 
-INSERT INTO `NameGen` VALUES (191,"Screwdinger",7,0); 
-INSERT INTO `NameGen` VALUES (192,"Socket",7,0); 
-INSERT INTO `NameGen` VALUES (193,"Flathead",7,0); 
-INSERT INTO `NameGen` VALUES (194,"Hammer",7,0); 
-INSERT INTO `NameGen` VALUES (1207,"Abner",7,0); 
-INSERT INTO `NameGen` VALUES (1208,"Addison",7,0); 
-INSERT INTO `NameGen` VALUES (1209,"Addle",7,0); 
-INSERT INTO `NameGen` VALUES (1210,"Ado",7,0); 
-INSERT INTO `NameGen` VALUES (1211,"Albert",7,0); 
-INSERT INTO `NameGen` VALUES (1212,"Alfie",7,0); 
-INSERT INTO `NameGen` VALUES (1213,"Bart",7,0); 
-INSERT INTO `NameGen` VALUES (1214,"Basillus",7,0); 
-INSERT INTO `NameGen` VALUES (1215,"Boetius",7,0); 
-INSERT INTO `NameGen` VALUES (1216,"Cal",7,0); 
-INSERT INTO `NameGen` VALUES (1217,"Chester",7,0); 
-INSERT INTO `NameGen` VALUES (1218,"Chet",7,0); 
-INSERT INTO `NameGen` VALUES (1219,"Cleatus",7,0); 
-INSERT INTO `NameGen` VALUES (1220,"Corky",7,0); 
-INSERT INTO `NameGen` VALUES (1221,"Delbert",7,0); 
-INSERT INTO `NameGen` VALUES (1222,"Denzil",7,0); 
-INSERT INTO `NameGen` VALUES (1223,"Donald",7,0); 
-INSERT INTO `NameGen` VALUES (1224,"Dunk",7,0); 
-INSERT INTO `NameGen` VALUES (1225,"Edwin",7,0); 
-INSERT INTO `NameGen` VALUES (1226,"Gimix",7,0); 
-INSERT INTO `NameGen` VALUES (1227,"Gus",7,0); 
-INSERT INTO `NameGen` VALUES (1228,"Hamilton",7,0); 
-INSERT INTO `NameGen` VALUES (1229,"Henry",7,0); 
-INSERT INTO `NameGen` VALUES (1230,"Herbert",7,0); 
-INSERT INTO `NameGen` VALUES (1231,"Iggy",7,0); 
-INSERT INTO `NameGen` VALUES (1232,"Ike",7,0); 
-INSERT INTO `NameGen` VALUES (1233,"Jarvis",7,0); 
-INSERT INTO `NameGen` VALUES (1234,"Jatsz",7,0); 
-INSERT INTO `NameGen` VALUES (1235,"Jayhugh",7,0); 
-INSERT INTO `NameGen` VALUES (1236,"Kelly",7,0); 
-INSERT INTO `NameGen` VALUES (1237,"Lem",7,0); 
-INSERT INTO `NameGen` VALUES (1238,"Leon",7,0); 
-INSERT INTO `NameGen` VALUES (1239,"Leonard",7,0); 
-INSERT INTO `NameGen` VALUES (1240,"Levi",7,0); 
-INSERT INTO `NameGen` VALUES (1241,"Lonzo",7,0); 
-INSERT INTO `NameGen` VALUES (1242,"Lum",7,0); 
-INSERT INTO `NameGen` VALUES (1243,"Manny",7,0); 
-INSERT INTO `NameGen` VALUES (1244,"Marvin",7,0); 
-INSERT INTO `NameGen` VALUES (1245,"Mickle",7,0); 
-INSERT INTO `NameGen` VALUES (1246,"Monty",7,0); 
-INSERT INTO `NameGen` VALUES (1247,"Mortimer",7,0); 
-INSERT INTO `NameGen` VALUES (1248,"Neville",7,0); 
-INSERT INTO `NameGen` VALUES (1249,"Norbert",7,0); 
-INSERT INTO `NameGen` VALUES (1250,"Oscar",7,0); 
-INSERT INTO `NameGen` VALUES (1251,"Pierce",7,0); 
-INSERT INTO `NameGen` VALUES (1252,"Ronald",7,0); 
-INSERT INTO `NameGen` VALUES (1253,"Rudy",7,0); 
-INSERT INTO `NameGen` VALUES (1254,"Scooter",7,0); 
-INSERT INTO `NameGen` VALUES (1255,"Seymour",7,0); 
-INSERT INTO `NameGen` VALUES (1256,"Sheldon",7,0); 
-INSERT INTO `NameGen` VALUES (1257,"Sprong",7,0); 
-INSERT INTO `NameGen` VALUES (1258,"Sylvester",7,0); 
-INSERT INTO `NameGen` VALUES (1259,"Tick",7,0); 
-INSERT INTO `NameGen` VALUES (1260,"Tock",7,0); 
-INSERT INTO `NameGen` VALUES (1261,"Twiddle",7,0); 
-INSERT INTO `NameGen` VALUES (1262,"Waldo",7,0); 
-INSERT INTO `NameGen` VALUES (1263,"Wesley",7,0); 
-INSERT INTO `NameGen` VALUES (1264,"Wilbur",7,0); 
-INSERT INTO `NameGen` VALUES (1265,"Winston",7,0); 
-INSERT INTO `NameGen` VALUES (1266,"Yap",7,0); 
-INSERT INTO `NameGen` VALUES (4425,"Adze",7,0); 
-INSERT INTO `NameGen` VALUES (4426,"Airor",7,0); 
-INSERT INTO `NameGen` VALUES (4427,"Allen",7,0); 
-INSERT INTO `NameGen` VALUES (4428,"Brack",7,0); 
-INSERT INTO `NameGen` VALUES (4429,"Braket",7,0); 
-INSERT INTO `NameGen` VALUES (4430,"Brazen",7,0); 
-INSERT INTO `NameGen` VALUES (4431,"Broach",7,0); 
-INSERT INTO `NameGen` VALUES (4432,"Cappy",7,0); 
-INSERT INTO `NameGen` VALUES (4433,"Clamp",7,0); 
-INSERT INTO `NameGen` VALUES (4434,"Cogger",7,0); 
-INSERT INTO `NameGen` VALUES (4435,"Coggle",7,0); 
-INSERT INTO `NameGen` VALUES (4436,"Cognus",7,0); 
-INSERT INTO `NameGen` VALUES (4437,"Copper",7,0); 
-INSERT INTO `NameGen` VALUES (4438,"Craggle",7,0); 
-INSERT INTO `NameGen` VALUES (4439,"Drillo",7,0); 
-INSERT INTO `NameGen` VALUES (4440,"Dusty",7,0); 
-INSERT INTO `NameGen` VALUES (4441,"Frazle",7,0); 
-INSERT INTO `NameGen` VALUES (4442,"Froe",7,0); 
-INSERT INTO `NameGen` VALUES (4443,"Fuse",7,0); 
-INSERT INTO `NameGen` VALUES (4444,"Fynn",7,0); 
-INSERT INTO `NameGen` VALUES (4445,"Gaffer",7,0); 
-INSERT INTO `NameGen` VALUES (4446,"Galvan",7,0); 
-INSERT INTO `NameGen` VALUES (4447,"Glazlo",7,0); 
-INSERT INTO `NameGen` VALUES (4448,"Glugun",7,0); 
-INSERT INTO `NameGen` VALUES (4449,"Grazel",7,0); 
-INSERT INTO `NameGen` VALUES (4450,"Grommet",7,0); 
-INSERT INTO `NameGen` VALUES (4451,"Handy",7,0); 
-INSERT INTO `NameGen` VALUES (4452,"Hedge",7,0); 
-INSERT INTO `NameGen` VALUES (4453,"Hinge",7,0); 
-INSERT INTO `NameGen` VALUES (4454,"Hoist",7,0); 
-INSERT INTO `NameGen` VALUES (4455,"Hydro",7,0); 
-INSERT INTO `NameGen` VALUES (4456,"Jaque",7,0); 
-INSERT INTO `NameGen` VALUES (4457,"Kore",7,0); 
-INSERT INTO `NameGen` VALUES (4458,"Lopper",7,0); 
-INSERT INTO `NameGen` VALUES (4459,"Lucky",7,0); 
-INSERT INTO `NameGen` VALUES (4460,"Mach",7,0); 
-INSERT INTO `NameGen` VALUES (4461,"Manuel",7,0); 
-INSERT INTO `NameGen` VALUES (4462,"Mathe",7,0); 
-INSERT INTO `NameGen` VALUES (4463,"Mattock",7,0); 
-INSERT INTO `NameGen` VALUES (4464,"Max",7,0); 
-INSERT INTO `NameGen` VALUES (4465,"Metric",7,0); 
-INSERT INTO `NameGen` VALUES (4466,"Miltin",7,0); 
-INSERT INTO `NameGen` VALUES (4467,"Monte",7,0); 
-INSERT INTO `NameGen` VALUES (4468,"Mort",7,0); 
-INSERT INTO `NameGen` VALUES (4469,"Mould",7,0); 
-INSERT INTO `NameGen` VALUES (4470,"Orbital",7,0); 
-INSERT INTO `NameGen` VALUES (4471,"Philipe",7,0); 
-INSERT INTO `NameGen` VALUES (4472,"Plahow",7,0); 
-INSERT INTO `NameGen` VALUES (4473,"Poss",7,0); 
-INSERT INTO `NameGen` VALUES (4474,"Raullie",7,0); 
-INSERT INTO `NameGen` VALUES (4475,"Rivett",7,0); 
-INSERT INTO `NameGen` VALUES (4476,"Sauder",7,0); 
-INSERT INTO `NameGen` VALUES (4477,"Scrape",7,0); 
-INSERT INTO `NameGen` VALUES (4478,"Servo",7,0); 
-INSERT INTO `NameGen` VALUES (4479,"Slanks",7,0); 
-INSERT INTO `NameGen` VALUES (4480,"Sneek",7,0); 
-INSERT INTO `NameGen` VALUES (4481,"Snipp",7,0); 
-INSERT INTO `NameGen` VALUES (4482,"Spheed",7,0); 
-INSERT INTO `NameGen` VALUES (4483,"Spike",7,0); 
-INSERT INTO `NameGen` VALUES (4484,"Spindle",7,0); 
-INSERT INTO `NameGen` VALUES (4485,"Spork",7,0); 
-INSERT INTO `NameGen` VALUES (4486,"Squeegee",7,0); 
-INSERT INTO `NameGen` VALUES (4487,"Tach",7,0); 
-INSERT INTO `NameGen` VALUES (4488,"Thermo",7,0); 
-INSERT INTO `NameGen` VALUES (4489,"Tomis",7,0); 
-INSERT INTO `NameGen` VALUES (4490,"Trowel",7,0); 
-INSERT INTO `NameGen` VALUES (4491,"Twine",7,0); 
-INSERT INTO `NameGen` VALUES (4492,"Tyne",7,0); 
-INSERT INTO `NameGen` VALUES (4493,"Tynsion",7,0); 
-INSERT INTO `NameGen` VALUES (4494,"Wobblu",7,0); 
-INSERT INTO `NameGen` VALUES (154,"Lara",7,1); 
-INSERT INTO `NameGen` VALUES (155,"Ped",7,1); 
-INSERT INTO `NameGen` VALUES (156,"Midge",7,1); 
-INSERT INTO `NameGen` VALUES (157,"Gidget",7,1); 
-INSERT INTO `NameGen` VALUES (158,"Sandy",7,1); 
-INSERT INTO `NameGen` VALUES (159,"Selma",7,1); 
-INSERT INTO `NameGen` VALUES (160,"Faye",7,1); 
-INSERT INTO `NameGen` VALUES (161,"Donna",7,1); 
-INSERT INTO `NameGen` VALUES (162,"Nellie",7,1); 
-INSERT INTO `NameGen` VALUES (163,"Sandra",7,1); 
-INSERT INTO `NameGen` VALUES (164,"Margie",7,1); 
-INSERT INTO `NameGen` VALUES (165,"Penelope",7,1); 
-INSERT INTO `NameGen` VALUES (166,"Dora",7,1); 
-INSERT INTO `NameGen` VALUES (167,"Jenny",7,1); 
-INSERT INTO `NameGen` VALUES (168,"Squeak",7,1); 
-INSERT INTO `NameGen` VALUES (169,"Pip",7,1); 
-INSERT INTO `NameGen` VALUES (170,"Buns",7,1); 
-INSERT INTO `NameGen` VALUES (171,"Happy",7,1); 
-INSERT INTO `NameGen` VALUES (172,"Pepper",7,1); 
-INSERT INTO `NameGen` VALUES (174,"Madge",7,1); 
-INSERT INTO `NameGen` VALUES (1146,"Abby",7,1); 
-INSERT INTO `NameGen` VALUES (1147,"Ada",7,1); 
-INSERT INTO `NameGen` VALUES (1148,"Aggy",7,1); 
-INSERT INTO `NameGen` VALUES (1149,"Ali",7,1); 
-INSERT INTO `NameGen` VALUES (1150,"Amy",7,1); 
-INSERT INTO `NameGen` VALUES (1151,"Ashley",7,1); 
-INSERT INTO `NameGen` VALUES (1152,"Augie",7,1); 
-INSERT INTO `NameGen` VALUES (1153,"Babs",7,1); 
-INSERT INTO `NameGen` VALUES (1154,"Beb",7,1); 
-INSERT INTO `NameGen` VALUES (1155,"Bell",7,1); 
-INSERT INTO `NameGen` VALUES (1156,"Bree",7,1); 
-INSERT INTO `NameGen` VALUES (1157,"Carol",7,1); 
-INSERT INTO `NameGen` VALUES (1158,"Cathy",7,1); 
-INSERT INTO `NameGen` VALUES (1159,"Cindy",7,1); 
-INSERT INTO `NameGen` VALUES (1160,"Clem",7,1); 
-INSERT INTO `NameGen` VALUES (1161,"Clo",7,1); 
-INSERT INTO `NameGen` VALUES (1162,"Connie",7,1); 
-INSERT INTO `NameGen` VALUES (1163,"Cordy",7,1); 
-INSERT INTO `NameGen` VALUES (1164,"Cris",7,1); 
-INSERT INTO `NameGen` VALUES (1165,"Daph",7,1); 
-INSERT INTO `NameGen` VALUES (1166,"Denise",7,1); 
-INSERT INTO `NameGen` VALUES (1167,"Dicey",7,1); 
-INSERT INTO `NameGen` VALUES (1168,"Dodie",7,1); 
-INSERT INTO `NameGen` VALUES (1169,"Ellen",7,1); 
-INSERT INTO `NameGen` VALUES (1170,"Emily",7,1); 
-INSERT INTO `NameGen` VALUES (1171,"Erin",7,1); 
-INSERT INTO `NameGen` VALUES (1172,"Etty",7,1); 
-INSERT INTO `NameGen` VALUES (1173,"Eva",7,1); 
-INSERT INTO `NameGen` VALUES (1174,"Frances",7,1); 
-INSERT INTO `NameGen` VALUES (1175,"Gail",7,1); 
-INSERT INTO `NameGen` VALUES (1176,"Ibby",7,1); 
-INSERT INTO `NameGen` VALUES (1177,"Janet",7,1); 
-INSERT INTO `NameGen` VALUES (1178,"Jean",7,1); 
-INSERT INTO `NameGen` VALUES (1179,"Jill",7,1); 
-INSERT INTO `NameGen` VALUES (1180,"Judy",7,1); 
-INSERT INTO `NameGen` VALUES (1181,"Kimmy",7,1); 
-INSERT INTO `NameGen` VALUES (1182,"Kip",7,1); 
-INSERT INTO `NameGen` VALUES (1183,"Kit",7,1); 
-INSERT INTO `NameGen` VALUES (1184,"Lexi",7,1); 
-INSERT INTO `NameGen` VALUES (1185,"Lori",7,1); 
-INSERT INTO `NameGen` VALUES (1186,"Lottie",7,1); 
-INSERT INTO `NameGen` VALUES (1187,"Lucy",7,1); 
-INSERT INTO `NameGen` VALUES (1188,"Maria",7,1); 
-INSERT INTO `NameGen` VALUES (1189,"Meg",7,1); 
-INSERT INTO `NameGen` VALUES (1190,"Milly",7,1); 
-INSERT INTO `NameGen` VALUES (1191,"Nancy",7,1); 
-INSERT INTO `NameGen` VALUES (1192,"Nettie",7,1); 
-INSERT INTO `NameGen` VALUES (1193,"Polly",7,1); 
-INSERT INTO `NameGen` VALUES (1194,"Rilly",7,1); 
-INSERT INTO `NameGen` VALUES (1195,"Rita",7,1); 
-INSERT INTO `NameGen` VALUES (1196,"Sally",7,1); 
-INSERT INTO `NameGen` VALUES (1197,"Sherry",7,1); 
-INSERT INTO `NameGen` VALUES (1198,"Shirley",7,1); 
-INSERT INTO `NameGen` VALUES (1199,"Silla",7,1); 
-INSERT INTO `NameGen` VALUES (1200,"Tibby",7,1); 
-INSERT INTO `NameGen` VALUES (1201,"Tick",7,1); 
-INSERT INTO `NameGen` VALUES (1202,"Trina",7,1); 
-INSERT INTO `NameGen` VALUES (1203,"Trixie",7,1); 
-INSERT INTO `NameGen` VALUES (1204,"Trudy",7,1); 
-INSERT INTO `NameGen` VALUES (1205,"Wanda",7,1); 
-INSERT INTO `NameGen` VALUES (1206,"Wendy",7,1); 
-INSERT INTO `NameGen` VALUES (4495,"Aimee",7,1); 
-INSERT INTO `NameGen` VALUES (4496,"Alfet",7,1); 
-INSERT INTO `NameGen` VALUES (4497,"Alloy",7,1); 
-INSERT INTO `NameGen` VALUES (4498,"Angie",7,1); 
-INSERT INTO `NameGen` VALUES (4499,"Aqua",7,1); 
-INSERT INTO `NameGen` VALUES (4500,"Beryl",7,1); 
-INSERT INTO `NameGen` VALUES (4501,"Blastie",7,1); 
-INSERT INTO `NameGen` VALUES (4502,"Brindy",7,1); 
-INSERT INTO `NameGen` VALUES (4503,"Carrie",7,1); 
-INSERT INTO `NameGen` VALUES (4504,"Creel",7,1); 
-INSERT INTO `NameGen` VALUES (4505,"Cryo",7,1); 
-INSERT INTO `NameGen` VALUES (4506,"Dosi",7,1); 
-INSERT INTO `NameGen` VALUES (4507,"Electra",7,1); 
-INSERT INTO `NameGen` VALUES (4508,"Elly",7,1); 
-INSERT INTO `NameGen` VALUES (4509,"Esky",7,1); 
-INSERT INTO `NameGen` VALUES (4510,"Fidget",7,1); 
-INSERT INTO `NameGen` VALUES (4511,"Finjal",7,1); 
-INSERT INTO `NameGen` VALUES (4512,"Flavie",7,1); 
-INSERT INTO `NameGen` VALUES (4513,"Flo",7,1); 
-INSERT INTO `NameGen` VALUES (4514,"Foci",7,1); 
-INSERT INTO `NameGen` VALUES (4515,"Frazzle",7,1); 
-INSERT INTO `NameGen` VALUES (4516,"Froude",7,1); 
-INSERT INTO `NameGen` VALUES (4517,"Ginnea",7,1); 
-INSERT INTO `NameGen` VALUES (4518,"Gnowai",7,1); 
-INSERT INTO `NameGen` VALUES (4519,"Gourda",7,1); 
-INSERT INTO `NameGen` VALUES (4520,"Grendel",7,1); 
-INSERT INTO `NameGen` VALUES (4521,"Gwenda",7,1); 
-INSERT INTO `NameGen` VALUES (4522,"Inersha",7,1); 
-INSERT INTO `NameGen` VALUES (4523,"Jelissa",7,1); 
-INSERT INTO `NameGen` VALUES (4524,"Jinnah",7,1); 
-INSERT INTO `NameGen` VALUES (4525,"Kathy",7,1); 
-INSERT INTO `NameGen` VALUES (4526,"Katy",7,1); 
-INSERT INTO `NameGen` VALUES (4527,"Kitt",7,1); 
-INSERT INTO `NameGen` VALUES (4528,"Kylie",7,1); 
-INSERT INTO `NameGen` VALUES (4529,"Lapis",7,1); 
-INSERT INTO `NameGen` VALUES (4530,"Lathe",7,1); 
-INSERT INTO `NameGen` VALUES (4531,"Lidi",7,1); 
-INSERT INTO `NameGen` VALUES (4532,"Luster",7,1); 
-INSERT INTO `NameGen` VALUES (4533,"Lyndsey",7,1); 
-INSERT INTO `NameGen` VALUES (4534,"Martika",7,1); 
-INSERT INTO `NameGen` VALUES (4535,"Mindie",7,1); 
-INSERT INTO `NameGen` VALUES (4536,"Nikel",7,1); 
-INSERT INTO `NameGen` VALUES (4537,"Parvinke",7,1); 
-INSERT INTO `NameGen` VALUES (4538,"Penny",7,1); 
-INSERT INTO `NameGen` VALUES (4539,"Pheebs",7,1); 
-INSERT INTO `NameGen` VALUES (4540,"Pinkah",7,1); 
-INSERT INTO `NameGen` VALUES (4541,"Piper",7,1); 
-INSERT INTO `NameGen` VALUES (4542,"Punnet",7,1); 
-INSERT INTO `NameGen` VALUES (4543,"Rainy",7,1); 
-INSERT INTO `NameGen` VALUES (4544,"Rota",7,1); 
-INSERT INTO `NameGen` VALUES (4545,"Rubie",7,1); 
-INSERT INTO `NameGen` VALUES (4546,"Sheara",7,1); 
-INSERT INTO `NameGen` VALUES (4547,"Starr",7,1); 
-INSERT INTO `NameGen` VALUES (4548,"Sympie",7,1); 
-INSERT INTO `NameGen` VALUES (4549,"Taliegh",7,1); 
-INSERT INTO `NameGen` VALUES (4550,"Teyi",7,1); 
-INSERT INTO `NameGen` VALUES (4551,"Throttle",7,1); 
-INSERT INTO `NameGen` VALUES (4552,"Tinah",7,1); 
-INSERT INTO `NameGen` VALUES (4553,"Tinka",7,1); 
-INSERT INTO `NameGen` VALUES (4554,"Tinney",7,1); 
-INSERT INTO `NameGen` VALUES (4555,"Triggs",7,1); 
-INSERT INTO `NameGen` VALUES (4556,"Triselle",7,1); 
-INSERT INTO `NameGen` VALUES (4557,"Tumi",7,1); 
-INSERT INTO `NameGen` VALUES (4558,"Vickie",7,1); 
-INSERT INTO `NameGen` VALUES (4559,"Whina",7,1); 
-INSERT INTO `NameGen` VALUES (4560,"Widge",7,1); 
-INSERT INTO `NameGen` VALUES (387,"Alar",8,0); 
-INSERT INTO `NameGen` VALUES (388,"Heartkiller",8,0); 
-INSERT INTO `NameGen` VALUES (389,"MalJin",8,0); 
-INSERT INTO `NameGen` VALUES (390,"ZulAraj",8,0); 
-INSERT INTO `NameGen` VALUES (391,"ZebGoro",8,0); 
-INSERT INTO `NameGen` VALUES (392,"Zuljin",8,0); 
-INSERT INTO `NameGen` VALUES (393,"ZulSorah",8,0); 
-INSERT INTO `NameGen` VALUES (394,"Zul",8,0); 
-INSERT INTO `NameGen` VALUES (395,"Tazzdingo",8,0); 
-INSERT INTO `NameGen` VALUES (396,"Rathalas",8,0); 
-INSERT INTO `NameGen` VALUES (397,"Zing",8,0); 
-INSERT INTO `NameGen` VALUES (398,"Tazz",8,0); 
-INSERT INTO `NameGen` VALUES (399,"Zingiss",8,0); 
-INSERT INTO `NameGen` VALUES (400,"Tobah",8,0); 
-INSERT INTO `NameGen` VALUES (401,"Dessak",8,0); 
-INSERT INTO `NameGen` VALUES (402,"Gishah",8,0); 
-INSERT INTO `NameGen` VALUES (403,"Zebrah",8,0); 
-INSERT INTO `NameGen` VALUES (404,"Nezzak",8,0); 
-INSERT INTO `NameGen` VALUES (405,"Zero",8,0); 
-INSERT INTO `NameGen` VALUES (406,"Bishina",8,0); 
-INSERT INTO `NameGen` VALUES (407,"Reave",8,0); 
-INSERT INTO `NameGen` VALUES (1792,"Aitan",8,0); 
-INSERT INTO `NameGen` VALUES (1793,"Ajit",8,0); 
-INSERT INTO `NameGen` VALUES (1794,"Akaash",8,0); 
-INSERT INTO `NameGen` VALUES (1795,"Balaji",8,0); 
-INSERT INTO `NameGen` VALUES (1796,"Bitabuta",8,0); 
-INSERT INTO `NameGen` VALUES (1797,"Bokanu",8,0); 
-INSERT INTO `NameGen` VALUES (1798,"Bulizza",8,0); 
-INSERT INTO `NameGen` VALUES (1799,"Chata",8,0); 
-INSERT INTO `NameGen` VALUES (1800,"Dakarai",8,0); 
-INSERT INTO `NameGen` VALUES (1801,"Dasmidu",8,0); 
-INSERT INTO `NameGen` VALUES (1802,"Deeda",8,0); 
-INSERT INTO `NameGen` VALUES (1803,"Dutinka",8,0); 
-INSERT INTO `NameGen` VALUES (1804,"Faraji",8,0); 
-INSERT INTO `NameGen` VALUES (1805,"Gaja",8,0); 
-INSERT INTO `NameGen` VALUES (1806,"Gamba",8,0); 
-INSERT INTO `NameGen` VALUES (1807,"Gulimu",8,0); 
-INSERT INTO `NameGen` VALUES (1808,"Hari",8,0); 
-INSERT INTO `NameGen` VALUES (1809,"Huzzabi",8,0); 
-INSERT INTO `NameGen` VALUES (1810,"Jabari",8,0); 
-INSERT INTO `NameGen` VALUES (1811,"Jastinnu",8,0); 
-INSERT INTO `NameGen` VALUES (1812,"Javyn",8,0); 
-INSERT INTO `NameGen` VALUES (1813,"Jayanti",8,0); 
-INSERT INTO `NameGen` VALUES (1814,"Jelani",8,0); 
-INSERT INTO `NameGen` VALUES (1815,"Kutak",8,0); 
-INSERT INTO `NameGen` VALUES (1816,"Lazibar",8,0); 
-INSERT INTO `NameGen` VALUES (1817,"Lulikdu",8,0); 
-INSERT INTO `NameGen` VALUES (1818,"Murali",8,0); 
-INSERT INTO `NameGen` VALUES (1819,"Naeem",8,0); 
-INSERT INTO `NameGen` VALUES (1820,"Natooka",8,0); 
-INSERT INTO `NameGen` VALUES (1821,"Neeraj",8,0); 
-INSERT INTO `NameGen` VALUES (1822,"Nokninoo",8,0); 
-INSERT INTO `NameGen` VALUES (1823,"Omaja",8,0); 
-INSERT INTO `NameGen` VALUES (1824,"Pakluzzi",8,0); 
-INSERT INTO `NameGen` VALUES (1825,"Polayim",8,0); 
-INSERT INTO `NameGen` VALUES (1826,"Pulani",8,0); 
-INSERT INTO `NameGen` VALUES (1827,"Raj",8,0); 
-INSERT INTO `NameGen` VALUES (1828,"Razi",8,0); 
-INSERT INTO `NameGen` VALUES (1829,"Rishi",8,0); 
-INSERT INTO `NameGen` VALUES (1830,"Runako",8,0); 
-INSERT INTO `NameGen` VALUES (1831,"Sambosa",8,0); 
-INSERT INTO `NameGen` VALUES (1832,"Shezza",8,0); 
-INSERT INTO `NameGen` VALUES (1833,"Supadoo",8,0); 
-INSERT INTO `NameGen` VALUES (1834,"Tabansi",8,0); 
-INSERT INTO `NameGen` VALUES (1835,"Taksa",8,0); 
-INSERT INTO `NameGen` VALUES (1836,"Tuka",8,0); 
-INSERT INTO `NameGen` VALUES (1837,"Uba",8,0); 
-INSERT INTO `NameGen` VALUES (1838,"Ujai",8,0); 
-INSERT INTO `NameGen` VALUES (1839,"Ulaluli",8,0); 
-INSERT INTO `NameGen` VALUES (1840,"Urimba",8,0); 
-INSERT INTO `NameGen` VALUES (1841,"Valoo",8,0); 
-INSERT INTO `NameGen` VALUES (1842,"Wanilu",8,0); 
-INSERT INTO `NameGen` VALUES (1843,"Weshmilu",8,0); 
-INSERT INTO `NameGen` VALUES (1844,"Yobachi",8,0); 
-INSERT INTO `NameGen` VALUES (1845,"Zaja",8,0); 
-INSERT INTO `NameGen` VALUES (4561,"Alkbek",8,0); 
-INSERT INTO `NameGen` VALUES (4562,"Alkbirt",8,0); 
-INSERT INTO `NameGen` VALUES (4563,"Alkbrez",8,0); 
-INSERT INTO `NameGen` VALUES (4564,"Alkdor",8,0); 
-INSERT INTO `NameGen` VALUES (4565,"Alkkal",8,0); 
-INSERT INTO `NameGen` VALUES (4566,"Alklek",8,0); 
-INSERT INTO `NameGen` VALUES (4567,"Alklok",8,0); 
-INSERT INTO `NameGen` VALUES (4568,"Alkluz",8,0); 
-INSERT INTO `NameGen` VALUES (4569,"Alkroz",8,0); 
-INSERT INTO `NameGen` VALUES (4570,"Alktok",8,0); 
-INSERT INTO `NameGen` VALUES (4571,"Alktraz",8,0); 
-INSERT INTO `NameGen` VALUES (4572,"Alkwaz",8,0); 
-INSERT INTO `NameGen` VALUES (4573,"Alkzak",8,0); 
-INSERT INTO `NameGen` VALUES (4574,"Alkzarn",8,0); 
-INSERT INTO `NameGen` VALUES (4575,"Alkzert",8,0); 
-INSERT INTO `NameGen` VALUES (4576,"Alkzul",8,0); 
-INSERT INTO `NameGen` VALUES (4577,"Arnbek",8,0); 
-INSERT INTO `NameGen` VALUES (4578,"Arnbirt",8,0); 
-INSERT INTO `NameGen` VALUES (4579,"Arnbrez",8,0); 
-INSERT INTO `NameGen` VALUES (4580,"Arndor",8,0); 
-INSERT INTO `NameGen` VALUES (4581,"Arnkal",8,0); 
-INSERT INTO `NameGen` VALUES (4582,"Arnlek",8,0); 
-INSERT INTO `NameGen` VALUES (4583,"Arnlok",8,0); 
-INSERT INTO `NameGen` VALUES (4584,"Arnluz",8,0); 
-INSERT INTO `NameGen` VALUES (4585,"Arnroz",8,0); 
-INSERT INTO `NameGen` VALUES (4586,"Arntok",8,0); 
-INSERT INTO `NameGen` VALUES (4587,"Arntraz",8,0); 
-INSERT INTO `NameGen` VALUES (4588,"Arnwaz",8,0); 
-INSERT INTO `NameGen` VALUES (4589,"Arnzak",8,0); 
-INSERT INTO `NameGen` VALUES (4590,"Arnzarn",8,0); 
-INSERT INTO `NameGen` VALUES (4591,"Arnzert",8,0); 
-INSERT INTO `NameGen` VALUES (4592,"Arnzul",8,0); 
-INSERT INTO `NameGen` VALUES (4593,"Barbek",8,0); 
-INSERT INTO `NameGen` VALUES (4594,"Barbirt",8,0); 
-INSERT INTO `NameGen` VALUES (4595,"Barbrez",8,0); 
-INSERT INTO `NameGen` VALUES (4596,"Bardor",8,0); 
-INSERT INTO `NameGen` VALUES (4597,"Barkal",8,0); 
-INSERT INTO `NameGen` VALUES (4598,"Barlek",8,0); 
-INSERT INTO `NameGen` VALUES (4599,"Barlok",8,0); 
-INSERT INTO `NameGen` VALUES (4600,"Barluz",8,0); 
-INSERT INTO `NameGen` VALUES (4601,"Barroz",8,0); 
-INSERT INTO `NameGen` VALUES (4602,"Bartok",8,0); 
-INSERT INTO `NameGen` VALUES (4603,"Bartraz",8,0); 
-INSERT INTO `NameGen` VALUES (4604,"Barwaz",8,0); 
-INSERT INTO `NameGen` VALUES (4605,"Barzak",8,0); 
-INSERT INTO `NameGen` VALUES (4606,"Barzarn",8,0); 
-INSERT INTO `NameGen` VALUES (4607,"Barzert",8,0); 
-INSERT INTO `NameGen` VALUES (4608,"Barzul",8,0); 
-INSERT INTO `NameGen` VALUES (4609,"Batbek",8,0); 
-INSERT INTO `NameGen` VALUES (4610,"Batbirt",8,0); 
-INSERT INTO `NameGen` VALUES (4611,"Batbrez",8,0); 
-INSERT INTO `NameGen` VALUES (4612,"Batdor",8,0); 
-INSERT INTO `NameGen` VALUES (4613,"Batkal",8,0); 
-INSERT INTO `NameGen` VALUES (4614,"Batlek",8,0); 
-INSERT INTO `NameGen` VALUES (4615,"Batlok",8,0); 
-INSERT INTO `NameGen` VALUES (4616,"Batluz",8,0); 
-INSERT INTO `NameGen` VALUES (4617,"Batroz",8,0); 
-INSERT INTO `NameGen` VALUES (4618,"Battok",8,0); 
-INSERT INTO `NameGen` VALUES (4619,"Battraz",8,0); 
-INSERT INTO `NameGen` VALUES (4620,"Batwaz",8,0); 
-INSERT INTO `NameGen` VALUES (4621,"Batzak",8,0); 
-INSERT INTO `NameGen` VALUES (4622,"Batzarn",8,0); 
-INSERT INTO `NameGen` VALUES (4623,"Batzert",8,0); 
-INSERT INTO `NameGen` VALUES (4624,"Batzul",8,0); 
-INSERT INTO `NameGen` VALUES (4625,"Bazbek",8,0); 
-INSERT INTO `NameGen` VALUES (4626,"Bazbirt",8,0); 
-INSERT INTO `NameGen` VALUES (4627,"Bazbrez",8,0); 
-INSERT INTO `NameGen` VALUES (4628,"Bazdor",8,0); 
-INSERT INTO `NameGen` VALUES (4629,"Bazkal",8,0); 
-INSERT INTO `NameGen` VALUES (4630,"Bazlek",8,0); 
-INSERT INTO `NameGen` VALUES (4631,"Bazlok",8,0); 
-INSERT INTO `NameGen` VALUES (4632,"Bazluz",8,0); 
-INSERT INTO `NameGen` VALUES (4633,"Bazroz",8,0); 
-INSERT INTO `NameGen` VALUES (4634,"Baztok",8,0); 
-INSERT INTO `NameGen` VALUES (4635,"Baztraz",8,0); 
-INSERT INTO `NameGen` VALUES (4636,"Bazwaz",8,0); 
-INSERT INTO `NameGen` VALUES (4637,"Bazzak",8,0); 
-INSERT INTO `NameGen` VALUES (4638,"Bazzarn",8,0); 
-INSERT INTO `NameGen` VALUES (4639,"Bazzert",8,0); 
-INSERT INTO `NameGen` VALUES (4640,"Bazzul",8,0); 
-INSERT INTO `NameGen` VALUES (4641,"Bezbek",8,0); 
-INSERT INTO `NameGen` VALUES (4642,"Bezbirt",8,0); 
-INSERT INTO `NameGen` VALUES (4643,"Bezbrez",8,0); 
-INSERT INTO `NameGen` VALUES (4644,"Bezdor",8,0); 
-INSERT INTO `NameGen` VALUES (4645,"Bezkal",8,0); 
-INSERT INTO `NameGen` VALUES (4646,"Bezlek",8,0); 
-INSERT INTO `NameGen` VALUES (4647,"Bezlok",8,0); 
-INSERT INTO `NameGen` VALUES (4648,"Bezluz",8,0); 
-INSERT INTO `NameGen` VALUES (4649,"Bezroz",8,0); 
-INSERT INTO `NameGen` VALUES (4650,"Beztok",8,0); 
-INSERT INTO `NameGen` VALUES (4651,"Beztraz",8,0); 
-INSERT INTO `NameGen` VALUES (4652,"Bezwaz",8,0); 
-INSERT INTO `NameGen` VALUES (4653,"Bezzak",8,0); 
-INSERT INTO `NameGen` VALUES (4654,"Bezzarn",8,0); 
-INSERT INTO `NameGen` VALUES (4655,"Bezzert",8,0); 
-INSERT INTO `NameGen` VALUES (4656,"Bezzul",8,0); 
-INSERT INTO `NameGen` VALUES (4657,"Cazbek",8,0); 
-INSERT INTO `NameGen` VALUES (4658,"Cazbirt",8,0); 
-INSERT INTO `NameGen` VALUES (4659,"Cazbrez",8,0); 
-INSERT INTO `NameGen` VALUES (4660,"Cazdor",8,0); 
-INSERT INTO `NameGen` VALUES (4661,"Cazkal",8,0); 
-INSERT INTO `NameGen` VALUES (4662,"Cazlek",8,0); 
-INSERT INTO `NameGen` VALUES (4663,"Cazlok",8,0); 
-INSERT INTO `NameGen` VALUES (4664,"Cazluz",8,0); 
-INSERT INTO `NameGen` VALUES (4665,"Cazroz",8,0); 
-INSERT INTO `NameGen` VALUES (4666,"Caztok",8,0); 
-INSERT INTO `NameGen` VALUES (4667,"Caztraz",8,0); 
-INSERT INTO `NameGen` VALUES (4668,"Cazwaz",8,0); 
-INSERT INTO `NameGen` VALUES (4669,"Cazzak",8,0); 
-INSERT INTO `NameGen` VALUES (4670,"Cazzarn",8,0); 
-INSERT INTO `NameGen` VALUES (4671,"Cazzert",8,0); 
-INSERT INTO `NameGen` VALUES (4672,"Cazzul",8,0); 
-INSERT INTO `NameGen` VALUES (4673,"Crazbek",8,0); 
-INSERT INTO `NameGen` VALUES (4674,"Crazbirt",8,0); 
-INSERT INTO `NameGen` VALUES (4675,"Crazbrez",8,0); 
-INSERT INTO `NameGen` VALUES (4676,"Crazdor",8,0); 
-INSERT INTO `NameGen` VALUES (4677,"Crazkal",8,0); 
-INSERT INTO `NameGen` VALUES (4678,"Crazlek",8,0); 
-INSERT INTO `NameGen` VALUES (4679,"Crazlok",8,0); 
-INSERT INTO `NameGen` VALUES (4680,"Crazluz",8,0); 
-INSERT INTO `NameGen` VALUES (4681,"Crazroz",8,0); 
-INSERT INTO `NameGen` VALUES (4682,"Craztok",8,0); 
-INSERT INTO `NameGen` VALUES (4683,"Craztraz",8,0); 
-INSERT INTO `NameGen` VALUES (4684,"Crazwaz",8,0); 
-INSERT INTO `NameGen` VALUES (4685,"Crazzak",8,0); 
-INSERT INTO `NameGen` VALUES (4686,"Crazzarn",8,0); 
-INSERT INTO `NameGen` VALUES (4687,"Crazzert",8,0); 
-INSERT INTO `NameGen` VALUES (4688,"Crazzul",8,0); 
-INSERT INTO `NameGen` VALUES (4689,"Dazbek",8,0); 
-INSERT INTO `NameGen` VALUES (4690,"Dazbirt",8,0); 
-INSERT INTO `NameGen` VALUES (4691,"Dazbrez",8,0); 
-INSERT INTO `NameGen` VALUES (4692,"Dazdor",8,0); 
-INSERT INTO `NameGen` VALUES (4693,"Dazkal",8,0); 
-INSERT INTO `NameGen` VALUES (4694,"Dazlek",8,0); 
-INSERT INTO `NameGen` VALUES (4695,"Dazlok",8,0); 
-INSERT INTO `NameGen` VALUES (4696,"Dazluz",8,0); 
-INSERT INTO `NameGen` VALUES (4697,"Dazroz",8,0); 
-INSERT INTO `NameGen` VALUES (4698,"Daztok",8,0); 
-INSERT INTO `NameGen` VALUES (4699,"Daztraz",8,0); 
-INSERT INTO `NameGen` VALUES (4700,"Dazwaz",8,0); 
-INSERT INTO `NameGen` VALUES (4701,"Dazzak",8,0); 
-INSERT INTO `NameGen` VALUES (4702,"Dazzarn",8,0); 
-INSERT INTO `NameGen` VALUES (4703,"Dazzert",8,0); 
-INSERT INTO `NameGen` VALUES (4704,"Dazzul",8,0); 
-INSERT INTO `NameGen` VALUES (4705,"Derfbek",8,0); 
-INSERT INTO `NameGen` VALUES (4706,"Derfbirt",8,0); 
-INSERT INTO `NameGen` VALUES (4707,"Derfbrez",8,0); 
-INSERT INTO `NameGen` VALUES (4708,"Derfdor",8,0); 
-INSERT INTO `NameGen` VALUES (4709,"Derfkal",8,0); 
-INSERT INTO `NameGen` VALUES (4710,"Derflek",8,0); 
-INSERT INTO `NameGen` VALUES (4711,"Derflok",8,0); 
-INSERT INTO `NameGen` VALUES (4712,"Derfluz",8,0); 
-INSERT INTO `NameGen` VALUES (4713,"Derfroz",8,0); 
-INSERT INTO `NameGen` VALUES (4714,"Derftok",8,0); 
-INSERT INTO `NameGen` VALUES (4715,"Derftraz",8,0); 
-INSERT INTO `NameGen` VALUES (4716,"Derfwaz",8,0); 
-INSERT INTO `NameGen` VALUES (4717,"Derfzak",8,0); 
-INSERT INTO `NameGen` VALUES (4718,"Derfzarn",8,0); 
-INSERT INTO `NameGen` VALUES (4719,"Derfzert",8,0); 
-INSERT INTO `NameGen` VALUES (4720,"Derfzul",8,0); 
-INSERT INTO `NameGen` VALUES (4721,"Ditbek",8,0); 
-INSERT INTO `NameGen` VALUES (4722,"Ditbirt",8,0); 
-INSERT INTO `NameGen` VALUES (4723,"Ditbrez",8,0); 
-INSERT INTO `NameGen` VALUES (4724,"Ditdor",8,0); 
-INSERT INTO `NameGen` VALUES (4725,"Ditkal",8,0); 
-INSERT INTO `NameGen` VALUES (4726,"Ditlek",8,0); 
-INSERT INTO `NameGen` VALUES (4727,"Ditlok",8,0); 
-INSERT INTO `NameGen` VALUES (4728,"Ditluz",8,0); 
-INSERT INTO `NameGen` VALUES (4729,"Ditroz",8,0); 
-INSERT INTO `NameGen` VALUES (4730,"Dittok",8,0); 
-INSERT INTO `NameGen` VALUES (4731,"Dittraz",8,0); 
-INSERT INTO `NameGen` VALUES (4732,"Ditwaz",8,0); 
-INSERT INTO `NameGen` VALUES (4733,"Ditzak",8,0); 
-INSERT INTO `NameGen` VALUES (4734,"Ditzarn",8,0); 
-INSERT INTO `NameGen` VALUES (4735,"Ditzert",8,0); 
-INSERT INTO `NameGen` VALUES (4736,"Ditzul",8,0); 
-INSERT INTO `NameGen` VALUES (4737,"Donbek",8,0); 
-INSERT INTO `NameGen` VALUES (4738,"Donbirt",8,0); 
-INSERT INTO `NameGen` VALUES (4739,"Donbrez",8,0); 
-INSERT INTO `NameGen` VALUES (4740,"Dondor",8,0); 
-INSERT INTO `NameGen` VALUES (4741,"Donkal",8,0); 
-INSERT INTO `NameGen` VALUES (4742,"Donlek",8,0); 
-INSERT INTO `NameGen` VALUES (4743,"Donlok",8,0); 
-INSERT INTO `NameGen` VALUES (4744,"Donluz",8,0); 
-INSERT INTO `NameGen` VALUES (4745,"Donroz",8,0); 
-INSERT INTO `NameGen` VALUES (4746,"Dontok",8,0); 
-INSERT INTO `NameGen` VALUES (4747,"Dontraz",8,0); 
-INSERT INTO `NameGen` VALUES (4748,"Donwaz",8,0); 
-INSERT INTO `NameGen` VALUES (4749,"Donzak",8,0); 
-INSERT INTO `NameGen` VALUES (4750,"Donzarn",8,0); 
-INSERT INTO `NameGen` VALUES (4751,"Donzert",8,0); 
-INSERT INTO `NameGen` VALUES (4752,"Donzul",8,0); 
-INSERT INTO `NameGen` VALUES (4753,"Dortbek",8,0); 
-INSERT INTO `NameGen` VALUES (4754,"Dortbirt",8,0); 
-INSERT INTO `NameGen` VALUES (4755,"Dortbrez",8,0); 
-INSERT INTO `NameGen` VALUES (4756,"Dortdor",8,0); 
-INSERT INTO `NameGen` VALUES (4757,"Dortkal",8,0); 
-INSERT INTO `NameGen` VALUES (4758,"Dortlek",8,0); 
-INSERT INTO `NameGen` VALUES (4759,"Dortlok",8,0); 
-INSERT INTO `NameGen` VALUES (4760,"Dortluz",8,0); 
-INSERT INTO `NameGen` VALUES (4761,"Dortroz",8,0); 
-INSERT INTO `NameGen` VALUES (4762,"Dorttok",8,0); 
-INSERT INTO `NameGen` VALUES (4763,"Dorttraz",8,0); 
-INSERT INTO `NameGen` VALUES (4764,"Dortwaz",8,0); 
-INSERT INTO `NameGen` VALUES (4765,"Dortzak",8,0); 
-INSERT INTO `NameGen` VALUES (4766,"Dortzarn",8,0); 
-INSERT INTO `NameGen` VALUES (4767,"Dortzert",8,0); 
-INSERT INTO `NameGen` VALUES (4768,"Dortzul",8,0); 
-INSERT INTO `NameGen` VALUES (4769,"Drakbek",8,0); 
-INSERT INTO `NameGen` VALUES (4770,"Drakbirt",8,0); 
-INSERT INTO `NameGen` VALUES (4771,"Drakbrez",8,0); 
-INSERT INTO `NameGen` VALUES (4772,"Drakdor",8,0); 
-INSERT INTO `NameGen` VALUES (4773,"Drakkal",8,0); 
-INSERT INTO `NameGen` VALUES (4774,"Draklek",8,0); 
-INSERT INTO `NameGen` VALUES (4775,"Draklok",8,0); 
-INSERT INTO `NameGen` VALUES (4776,"Drakluz",8,0); 
-INSERT INTO `NameGen` VALUES (4777,"Drakroz",8,0); 
-INSERT INTO `NameGen` VALUES (4778,"Draktok",8,0); 
-INSERT INTO `NameGen` VALUES (4779,"Draktraz",8,0); 
-INSERT INTO `NameGen` VALUES (4780,"Drakwaz",8,0); 
-INSERT INTO `NameGen` VALUES (4781,"Drakzak",8,0); 
-INSERT INTO `NameGen` VALUES (4782,"Drakzarn",8,0); 
-INSERT INTO `NameGen` VALUES (4783,"Drakzert",8,0); 
-INSERT INTO `NameGen` VALUES (4784,"Drakzul",8,0); 
-INSERT INTO `NameGen` VALUES (4785,"Drelbek",8,0); 
-INSERT INTO `NameGen` VALUES (4786,"Drelbirt",8,0); 
-INSERT INTO `NameGen` VALUES (4787,"Drelbrez",8,0); 
-INSERT INTO `NameGen` VALUES (4788,"Dreldor",8,0); 
-INSERT INTO `NameGen` VALUES (4789,"Drelkal",8,0); 
-INSERT INTO `NameGen` VALUES (4790,"Drellek",8,0); 
-INSERT INTO `NameGen` VALUES (4791,"Drellok",8,0); 
-INSERT INTO `NameGen` VALUES (4792,"Drelluz",8,0); 
-INSERT INTO `NameGen` VALUES (4793,"Drelroz",8,0); 
-INSERT INTO `NameGen` VALUES (4794,"Dreltok",8,0); 
-INSERT INTO `NameGen` VALUES (4795,"Dreltraz",8,0); 
-INSERT INTO `NameGen` VALUES (4796,"Drelwaz",8,0); 
-INSERT INTO `NameGen` VALUES (4797,"Drelzak",8,0); 
-INSERT INTO `NameGen` VALUES (4798,"Drelzarn",8,0); 
-INSERT INTO `NameGen` VALUES (4799,"Drelzert",8,0); 
-INSERT INTO `NameGen` VALUES (4800,"Drelzul",8,0); 
-INSERT INTO `NameGen` VALUES (4801,"Drezbek",8,0); 
-INSERT INTO `NameGen` VALUES (4802,"Drezbirt",8,0); 
-INSERT INTO `NameGen` VALUES (4803,"Drezbrez",8,0); 
-INSERT INTO `NameGen` VALUES (4804,"Drezdor",8,0); 
-INSERT INTO `NameGen` VALUES (4805,"Drezkal",8,0); 
-INSERT INTO `NameGen` VALUES (4806,"Drezlek",8,0); 
-INSERT INTO `NameGen` VALUES (4807,"Drezlok",8,0); 
-INSERT INTO `NameGen` VALUES (4808,"Drezluz",8,0); 
-INSERT INTO `NameGen` VALUES (4809,"Drezroz",8,0); 
-INSERT INTO `NameGen` VALUES (4810,"Dreztok",8,0); 
-INSERT INTO `NameGen` VALUES (4811,"Dreztraz",8,0); 
-INSERT INTO `NameGen` VALUES (4812,"Drezwaz",8,0); 
-INSERT INTO `NameGen` VALUES (4813,"Drezzak",8,0); 
-INSERT INTO `NameGen` VALUES (4814,"Drezzarn",8,0); 
-INSERT INTO `NameGen` VALUES (4815,"Drezzert",8,0); 
-INSERT INTO `NameGen` VALUES (4816,"Drezzul",8,0); 
-INSERT INTO `NameGen` VALUES (4817,"Drimbek",8,0); 
-INSERT INTO `NameGen` VALUES (4818,"Drimbirt",8,0); 
-INSERT INTO `NameGen` VALUES (4819,"Drimbrez",8,0); 
-INSERT INTO `NameGen` VALUES (4820,"Drimdor",8,0); 
-INSERT INTO `NameGen` VALUES (4821,"Drimkal",8,0); 
-INSERT INTO `NameGen` VALUES (4822,"Drimlek",8,0); 
-INSERT INTO `NameGen` VALUES (4823,"Drimlok",8,0); 
-INSERT INTO `NameGen` VALUES (4824,"Drimluz",8,0); 
-INSERT INTO `NameGen` VALUES (4825,"Drimroz",8,0); 
-INSERT INTO `NameGen` VALUES (4826,"Drimtok",8,0); 
-INSERT INTO `NameGen` VALUES (4827,"Drimtraz",8,0); 
-INSERT INTO `NameGen` VALUES (4828,"Drimwaz",8,0); 
-INSERT INTO `NameGen` VALUES (4829,"Drimzak",8,0); 
-INSERT INTO `NameGen` VALUES (4830,"Drimzarn",8,0); 
-INSERT INTO `NameGen` VALUES (4831,"Drimzert",8,0); 
-INSERT INTO `NameGen` VALUES (4832,"Drimzul",8,0); 
-INSERT INTO `NameGen` VALUES (4833,"Druzbek",8,0); 
-INSERT INTO `NameGen` VALUES (4834,"Druzbirt",8,0); 
-INSERT INTO `NameGen` VALUES (4835,"Druzbrez",8,0); 
-INSERT INTO `NameGen` VALUES (4836,"Druzdor",8,0); 
-INSERT INTO `NameGen` VALUES (4837,"Druzkal",8,0); 
-INSERT INTO `NameGen` VALUES (4838,"Druzlek",8,0); 
-INSERT INTO `NameGen` VALUES (4839,"Druzlok",8,0); 
-INSERT INTO `NameGen` VALUES (4840,"Druzluz",8,0); 
-INSERT INTO `NameGen` VALUES (4841,"Druzroz",8,0); 
-INSERT INTO `NameGen` VALUES (4842,"Druztok",8,0); 
-INSERT INTO `NameGen` VALUES (4843,"Druztraz",8,0); 
-INSERT INTO `NameGen` VALUES (4844,"Druzwaz",8,0); 
-INSERT INTO `NameGen` VALUES (4845,"Druzzak",8,0); 
-INSERT INTO `NameGen` VALUES (4846,"Druzzarn",8,0); 
-INSERT INTO `NameGen` VALUES (4847,"Druzzert",8,0); 
-INSERT INTO `NameGen` VALUES (4848,"Druzzul",8,0); 
-INSERT INTO `NameGen` VALUES (4849,"Durbek",8,0); 
-INSERT INTO `NameGen` VALUES (4850,"Durbirt",8,0); 
-INSERT INTO `NameGen` VALUES (4851,"Durbrez",8,0); 
-INSERT INTO `NameGen` VALUES (4852,"Durdor",8,0); 
-INSERT INTO `NameGen` VALUES (4853,"Durkal",8,0); 
-INSERT INTO `NameGen` VALUES (4854,"Durlek",8,0); 
-INSERT INTO `NameGen` VALUES (4855,"Durlok",8,0); 
-INSERT INTO `NameGen` VALUES (4856,"Durluz",8,0); 
-INSERT INTO `NameGen` VALUES (4857,"Durroz",8,0); 
-INSERT INTO `NameGen` VALUES (4858,"Durtok",8,0); 
-INSERT INTO `NameGen` VALUES (4859,"Durtraz",8,0); 
-INSERT INTO `NameGen` VALUES (4860,"Durwaz",8,0); 
-INSERT INTO `NameGen` VALUES (4861,"Durzak",8,0); 
-INSERT INTO `NameGen` VALUES (4862,"Durzarn",8,0); 
-INSERT INTO `NameGen` VALUES (4863,"Durzert",8,0); 
-INSERT INTO `NameGen` VALUES (4864,"Durzul",8,0); 
-INSERT INTO `NameGen` VALUES (4865,"Ertbek",8,0); 
-INSERT INTO `NameGen` VALUES (4866,"Ertbirt",8,0); 
-INSERT INTO `NameGen` VALUES (4867,"Ertbrez",8,0); 
-INSERT INTO `NameGen` VALUES (4868,"Ertdor",8,0); 
-INSERT INTO `NameGen` VALUES (4869,"Ertkal",8,0); 
-INSERT INTO `NameGen` VALUES (4870,"Ertlek",8,0); 
-INSERT INTO `NameGen` VALUES (4871,"Ertlok",8,0); 
-INSERT INTO `NameGen` VALUES (4872,"Ertluz",8,0); 
-INSERT INTO `NameGen` VALUES (4873,"Ertroz",8,0); 
-INSERT INTO `NameGen` VALUES (4874,"Erttok",8,0); 
-INSERT INTO `NameGen` VALUES (4875,"Erttraz",8,0); 
-INSERT INTO `NameGen` VALUES (4876,"Ertwaz",8,0); 
-INSERT INTO `NameGen` VALUES (4877,"Ertzak",8,0); 
-INSERT INTO `NameGen` VALUES (4878,"Ertzarn",8,0); 
-INSERT INTO `NameGen` VALUES (4879,"Ertzert",8,0); 
-INSERT INTO `NameGen` VALUES (4880,"Ertzul",8,0); 
-INSERT INTO `NameGen` VALUES (4881,"Erzbek",8,0); 
-INSERT INTO `NameGen` VALUES (4882,"Erzbirt",8,0); 
-INSERT INTO `NameGen` VALUES (4883,"Erzbrez",8,0); 
-INSERT INTO `NameGen` VALUES (4884,"Erzdor",8,0); 
-INSERT INTO `NameGen` VALUES (4885,"Erzkal",8,0); 
-INSERT INTO `NameGen` VALUES (4886,"Erzlek",8,0); 
-INSERT INTO `NameGen` VALUES (4887,"Erzlok",8,0); 
-INSERT INTO `NameGen` VALUES (4888,"Erzluz",8,0); 
-INSERT INTO `NameGen` VALUES (4889,"Erzroz",8,0); 
-INSERT INTO `NameGen` VALUES (4890,"Erztok",8,0); 
-INSERT INTO `NameGen` VALUES (4891,"Erztraz",8,0); 
-INSERT INTO `NameGen` VALUES (4892,"Erzwaz",8,0); 
-INSERT INTO `NameGen` VALUES (4893,"Erzzak",8,0); 
-INSERT INTO `NameGen` VALUES (4894,"Erzzarn",8,0); 
-INSERT INTO `NameGen` VALUES (4895,"Erzzert",8,0); 
-INSERT INTO `NameGen` VALUES (4896,"Erzzul",8,0); 
-INSERT INTO `NameGen` VALUES (4897,"Ezzbek",8,0); 
-INSERT INTO `NameGen` VALUES (4898,"Ezzbirt",8,0); 
-INSERT INTO `NameGen` VALUES (4899,"Ezzbrez",8,0); 
-INSERT INTO `NameGen` VALUES (4900,"Ezzdor",8,0); 
-INSERT INTO `NameGen` VALUES (4901,"Ezzkal",8,0); 
-INSERT INTO `NameGen` VALUES (4902,"Ezzlek",8,0); 
-INSERT INTO `NameGen` VALUES (4903,"Ezzlok",8,0); 
-INSERT INTO `NameGen` VALUES (4904,"Ezzluz",8,0); 
-INSERT INTO `NameGen` VALUES (4905,"Ezzroz",8,0); 
-INSERT INTO `NameGen` VALUES (4906,"Ezztok",8,0); 
-INSERT INTO `NameGen` VALUES (4907,"Ezztraz",8,0); 
-INSERT INTO `NameGen` VALUES (4908,"Ezzwaz",8,0); 
-INSERT INTO `NameGen` VALUES (4909,"Fekbek",8,0); 
-INSERT INTO `NameGen` VALUES (4910,"Fekbirt",8,0); 
-INSERT INTO `NameGen` VALUES (4911,"Fekbrez",8,0); 
-INSERT INTO `NameGen` VALUES (4912,"Fekdor",8,0); 
-INSERT INTO `NameGen` VALUES (4913,"Fekkal",8,0); 
-INSERT INTO `NameGen` VALUES (4914,"Feklek",8,0); 
-INSERT INTO `NameGen` VALUES (4915,"Feklok",8,0); 
-INSERT INTO `NameGen` VALUES (4916,"Fekluz",8,0); 
-INSERT INTO `NameGen` VALUES (4917,"Fekroz",8,0); 
-INSERT INTO `NameGen` VALUES (4918,"Fektok",8,0); 
-INSERT INTO `NameGen` VALUES (4919,"Fektraz",8,0); 
-INSERT INTO `NameGen` VALUES (4920,"Fekwaz",8,0); 
-INSERT INTO `NameGen` VALUES (4921,"Fekzak",8,0); 
-INSERT INTO `NameGen` VALUES (4922,"Fekzarn",8,0); 
-INSERT INTO `NameGen` VALUES (4923,"Fekzert",8,0); 
-INSERT INTO `NameGen` VALUES (4924,"Fekzul",8,0); 
-INSERT INTO `NameGen` VALUES (4925,"Felkbek",8,0); 
-INSERT INTO `NameGen` VALUES (4926,"Felkbirt",8,0); 
-INSERT INTO `NameGen` VALUES (4927,"Felkbrez",8,0); 
-INSERT INTO `NameGen` VALUES (4928,"Felkdor",8,0); 
-INSERT INTO `NameGen` VALUES (4929,"Felkkal",8,0); 
-INSERT INTO `NameGen` VALUES (4930,"Felklek",8,0); 
-INSERT INTO `NameGen` VALUES (4931,"Felklok",8,0); 
-INSERT INTO `NameGen` VALUES (4932,"Felkluz",8,0); 
-INSERT INTO `NameGen` VALUES (4933,"Felkroz",8,0); 
-INSERT INTO `NameGen` VALUES (4934,"Felktok",8,0); 
-INSERT INTO `NameGen` VALUES (4935,"Felktraz",8,0); 
-INSERT INTO `NameGen` VALUES (4936,"Felkwaz",8,0); 
-INSERT INTO `NameGen` VALUES (4937,"Felkzak",8,0); 
-INSERT INTO `NameGen` VALUES (4938,"Felkzarn",8,0); 
-INSERT INTO `NameGen` VALUES (4939,"Felkzert",8,0); 
-INSERT INTO `NameGen` VALUES (4940,"Felkzul",8,0); 
-INSERT INTO `NameGen` VALUES (4941,"Filnbek",8,0); 
-INSERT INTO `NameGen` VALUES (4942,"Filnbirt",8,0); 
-INSERT INTO `NameGen` VALUES (4943,"Filnbrez",8,0); 
-INSERT INTO `NameGen` VALUES (4944,"Filndor",8,0); 
-INSERT INTO `NameGen` VALUES (4945,"Filnkal",8,0); 
-INSERT INTO `NameGen` VALUES (4946,"Filnlek",8,0); 
-INSERT INTO `NameGen` VALUES (4947,"Filnlok",8,0); 
-INSERT INTO `NameGen` VALUES (4948,"Filnluz",8,0); 
-INSERT INTO `NameGen` VALUES (4949,"Filnroz",8,0); 
-INSERT INTO `NameGen` VALUES (4950,"Filntok",8,0); 
-INSERT INTO `NameGen` VALUES (4951,"Filntraz",8,0); 
-INSERT INTO `NameGen` VALUES (4952,"Filnwaz",8,0); 
-INSERT INTO `NameGen` VALUES (4953,"Filnzak",8,0); 
-INSERT INTO `NameGen` VALUES (4954,"Filnzarn",8,0); 
-INSERT INTO `NameGen` VALUES (4955,"Filnzert",8,0); 
-INSERT INTO `NameGen` VALUES (4956,"Filnzul",8,0); 
-INSERT INTO `NameGen` VALUES (4957,"Finbek",8,0); 
-INSERT INTO `NameGen` VALUES (4958,"Finbirt",8,0); 
-INSERT INTO `NameGen` VALUES (4959,"Finbrez",8,0); 
-INSERT INTO `NameGen` VALUES (4960,"Findor",8,0); 
-INSERT INTO `NameGen` VALUES (4961,"Finkal",8,0); 
-INSERT INTO `NameGen` VALUES (4962,"Finlek",8,0); 
-INSERT INTO `NameGen` VALUES (4963,"Finlok",8,0); 
-INSERT INTO `NameGen` VALUES (4964,"Finluz",8,0); 
-INSERT INTO `NameGen` VALUES (4965,"Finroz",8,0); 
-INSERT INTO `NameGen` VALUES (4966,"Fintok",8,0); 
-INSERT INTO `NameGen` VALUES (4967,"Fintraz",8,0); 
-INSERT INTO `NameGen` VALUES (4968,"Finwaz",8,0); 
-INSERT INTO `NameGen` VALUES (4969,"Finzak",8,0); 
-INSERT INTO `NameGen` VALUES (4970,"Finzarn",8,0); 
-INSERT INTO `NameGen` VALUES (4971,"Finzert",8,0); 
-INSERT INTO `NameGen` VALUES (4972,"Finzul",8,0); 
-INSERT INTO `NameGen` VALUES (4973,"Fistbek",8,0); 
-INSERT INTO `NameGen` VALUES (4974,"Fistbirt",8,0); 
-INSERT INTO `NameGen` VALUES (4975,"Fistbrez",8,0); 
-INSERT INTO `NameGen` VALUES (4976,"Fistdor",8,0); 
-INSERT INTO `NameGen` VALUES (4977,"Fistkal",8,0); 
-INSERT INTO `NameGen` VALUES (4978,"Fistlek",8,0); 
-INSERT INTO `NameGen` VALUES (4979,"Fistlok",8,0); 
-INSERT INTO `NameGen` VALUES (4980,"Fistluz",8,0); 
-INSERT INTO `NameGen` VALUES (4981,"Fistroz",8,0); 
-INSERT INTO `NameGen` VALUES (4982,"Fisttok",8,0); 
-INSERT INTO `NameGen` VALUES (4983,"Fisttraz",8,0); 
-INSERT INTO `NameGen` VALUES (4984,"Fistwaz",8,0); 
-INSERT INTO `NameGen` VALUES (4985,"Fistzak",8,0); 
-INSERT INTO `NameGen` VALUES (4986,"Fistzarn",8,0); 
-INSERT INTO `NameGen` VALUES (4987,"Fistzert",8,0); 
-INSERT INTO `NameGen` VALUES (4988,"Fistzul",8,0); 
-INSERT INTO `NameGen` VALUES (4989,"Flakbek",8,0); 
-INSERT INTO `NameGen` VALUES (4990,"Flakbirt",8,0); 
-INSERT INTO `NameGen` VALUES (4991,"Flakbrez",8,0); 
-INSERT INTO `NameGen` VALUES (4992,"Flakdor",8,0); 
-INSERT INTO `NameGen` VALUES (4993,"Flakkal",8,0); 
-INSERT INTO `NameGen` VALUES (4994,"Flaklek",8,0); 
-INSERT INTO `NameGen` VALUES (4995,"Flaklok",8,0); 
-INSERT INTO `NameGen` VALUES (4996,"Flakluz",8,0); 
-INSERT INTO `NameGen` VALUES (4997,"Flakroz",8,0); 
-INSERT INTO `NameGen` VALUES (4998,"Flaktok",8,0); 
-INSERT INTO `NameGen` VALUES (4999,"Flaktraz",8,0); 
-INSERT INTO `NameGen` VALUES (5000,"Flakwaz",8,0); 
-INSERT INTO `NameGen` VALUES (5001,"Flakzak",8,0); 
-INSERT INTO `NameGen` VALUES (5002,"Flakzarn",8,0); 
-INSERT INTO `NameGen` VALUES (5003,"Flakzert",8,0); 
-INSERT INTO `NameGen` VALUES (5004,"Flakzul",8,0); 
-INSERT INTO `NameGen` VALUES (5005,"Flinbek",8,0); 
-INSERT INTO `NameGen` VALUES (5006,"Flinbirt",8,0); 
-INSERT INTO `NameGen` VALUES (5007,"Flinbrez",8,0); 
-INSERT INTO `NameGen` VALUES (5008,"Flindor",8,0); 
-INSERT INTO `NameGen` VALUES (5009,"Flinkal",8,0); 
-INSERT INTO `NameGen` VALUES (5010,"Flinlek",8,0); 
-INSERT INTO `NameGen` VALUES (5011,"Flinlok",8,0); 
-INSERT INTO `NameGen` VALUES (5012,"Flinluz",8,0); 
-INSERT INTO `NameGen` VALUES (5013,"Flinroz",8,0); 
-INSERT INTO `NameGen` VALUES (5014,"Flintok",8,0); 
-INSERT INTO `NameGen` VALUES (5015,"Flintraz",8,0); 
-INSERT INTO `NameGen` VALUES (5016,"Flinwaz",8,0); 
-INSERT INTO `NameGen` VALUES (5017,"Flinzak",8,0); 
-INSERT INTO `NameGen` VALUES (5018,"Flinzarn",8,0); 
-INSERT INTO `NameGen` VALUES (5019,"Flinzert",8,0); 
-INSERT INTO `NameGen` VALUES (5020,"Flinzul",8,0); 
-INSERT INTO `NameGen` VALUES (5021,"Fornbek",8,0); 
-INSERT INTO `NameGen` VALUES (5022,"Fornbirt",8,0); 
-INSERT INTO `NameGen` VALUES (5023,"Fornbrez",8,0); 
-INSERT INTO `NameGen` VALUES (5024,"Forndor",8,0); 
-INSERT INTO `NameGen` VALUES (5025,"Fornkal",8,0); 
-INSERT INTO `NameGen` VALUES (5026,"Fornlek",8,0); 
-INSERT INTO `NameGen` VALUES (5027,"Fornlok",8,0); 
-INSERT INTO `NameGen` VALUES (5028,"Fornluz",8,0); 
-INSERT INTO `NameGen` VALUES (5029,"Fornroz",8,0); 
-INSERT INTO `NameGen` VALUES (5030,"Forntok",8,0); 
-INSERT INTO `NameGen` VALUES (5031,"Forntraz",8,0); 
-INSERT INTO `NameGen` VALUES (5032,"Fornwaz",8,0); 
-INSERT INTO `NameGen` VALUES (5033,"Fornzak",8,0); 
-INSERT INTO `NameGen` VALUES (5034,"Fornzarn",8,0); 
-INSERT INTO `NameGen` VALUES (5035,"Fornzert",8,0); 
-INSERT INTO `NameGen` VALUES (5036,"Fornzul",8,0); 
-INSERT INTO `NameGen` VALUES (5037,"Gartbek",8,0); 
-INSERT INTO `NameGen` VALUES (5038,"Gartbirt",8,0); 
-INSERT INTO `NameGen` VALUES (5039,"Gartbrez",8,0); 
-INSERT INTO `NameGen` VALUES (5040,"Gartdor",8,0); 
-INSERT INTO `NameGen` VALUES (5041,"Gartkal",8,0); 
-INSERT INTO `NameGen` VALUES (5042,"Gartlek",8,0); 
-INSERT INTO `NameGen` VALUES (5043,"Gartlok",8,0); 
-INSERT INTO `NameGen` VALUES (5044,"Gartluz",8,0); 
-INSERT INTO `NameGen` VALUES (5045,"Gartroz",8,0); 
-INSERT INTO `NameGen` VALUES (5046,"Garttok",8,0); 
-INSERT INTO `NameGen` VALUES (5047,"Garttraz",8,0); 
-INSERT INTO `NameGen` VALUES (5048,"Gartwaz",8,0); 
-INSERT INTO `NameGen` VALUES (5049,"Gartzak",8,0); 
-INSERT INTO `NameGen` VALUES (5050,"Gartzarn",8,0); 
-INSERT INTO `NameGen` VALUES (5051,"Gartzert",8,0); 
-INSERT INTO `NameGen` VALUES (5052,"Gartzul",8,0); 
-INSERT INTO `NameGen` VALUES (5053,"Gatbek",8,0); 
-INSERT INTO `NameGen` VALUES (5054,"Gatbirt",8,0); 
-INSERT INTO `NameGen` VALUES (5055,"Gatbrez",8,0); 
-INSERT INTO `NameGen` VALUES (5056,"Gatdor",8,0); 
-INSERT INTO `NameGen` VALUES (5057,"Gatkal",8,0); 
-INSERT INTO `NameGen` VALUES (5058,"Gatlek",8,0); 
-INSERT INTO `NameGen` VALUES (5059,"Gatlok",8,0); 
-INSERT INTO `NameGen` VALUES (5060,"Gatluz",8,0); 
-INSERT INTO `NameGen` VALUES (5061,"Gatroz",8,0); 
-INSERT INTO `NameGen` VALUES (5062,"Gattok",8,0); 
-INSERT INTO `NameGen` VALUES (5063,"Gattraz",8,0); 
-INSERT INTO `NameGen` VALUES (5064,"Gatwaz",8,0); 
-INSERT INTO `NameGen` VALUES (5065,"Gatzak",8,0); 
-INSERT INTO `NameGen` VALUES (5066,"Gatzarn",8,0); 
-INSERT INTO `NameGen` VALUES (5067,"Gatzert",8,0); 
-INSERT INTO `NameGen` VALUES (5068,"Gatzul",8,0); 
-INSERT INTO `NameGen` VALUES (5069,"Gazbek",8,0); 
-INSERT INTO `NameGen` VALUES (5070,"Gazbirt",8,0); 
-INSERT INTO `NameGen` VALUES (5071,"Gazbrez",8,0); 
-INSERT INTO `NameGen` VALUES (5072,"Gazdor",8,0); 
-INSERT INTO `NameGen` VALUES (5073,"Gazkal",8,0); 
-INSERT INTO `NameGen` VALUES (5074,"Gazlek",8,0); 
-INSERT INTO `NameGen` VALUES (5075,"Gazlok",8,0); 
-INSERT INTO `NameGen` VALUES (5076,"Gazluz",8,0); 
-INSERT INTO `NameGen` VALUES (5077,"Gazroz",8,0); 
-INSERT INTO `NameGen` VALUES (5078,"Gaztok",8,0); 
-INSERT INTO `NameGen` VALUES (5079,"Gaztraz",8,0); 
-INSERT INTO `NameGen` VALUES (5080,"Gazwaz",8,0); 
-INSERT INTO `NameGen` VALUES (5081,"Gazzak",8,0); 
-INSERT INTO `NameGen` VALUES (5082,"Gazzarn",8,0); 
-INSERT INTO `NameGen` VALUES (5083,"Gazzert",8,0); 
-INSERT INTO `NameGen` VALUES (5084,"Gazzul",8,0); 
-INSERT INTO `NameGen` VALUES (5085,"Gertbek",8,0); 
-INSERT INTO `NameGen` VALUES (5086,"Gertbirt",8,0); 
-INSERT INTO `NameGen` VALUES (5087,"Gertbrez",8,0); 
-INSERT INTO `NameGen` VALUES (5088,"Gertdor",8,0); 
-INSERT INTO `NameGen` VALUES (5089,"Gertkal",8,0); 
-INSERT INTO `NameGen` VALUES (5090,"Gertlek",8,0); 
-INSERT INTO `NameGen` VALUES (5091,"Gertlok",8,0); 
-INSERT INTO `NameGen` VALUES (5092,"Gertluz",8,0); 
-INSERT INTO `NameGen` VALUES (5093,"Gertroz",8,0); 
-INSERT INTO `NameGen` VALUES (5094,"Gerttok",8,0); 
-INSERT INTO `NameGen` VALUES (5095,"Gerttraz",8,0); 
-INSERT INTO `NameGen` VALUES (5096,"Gertwaz",8,0); 
-INSERT INTO `NameGen` VALUES (5097,"Gertzak",8,0); 
-INSERT INTO `NameGen` VALUES (5098,"Gertzarn",8,0); 
-INSERT INTO `NameGen` VALUES (5099,"Gertzert",8,0); 
-INSERT INTO `NameGen` VALUES (5100,"Gertzul",8,0); 
-INSERT INTO `NameGen` VALUES (5101,"Gortbek",8,0); 
-INSERT INTO `NameGen` VALUES (5102,"Gortbirt",8,0); 
-INSERT INTO `NameGen` VALUES (5103,"Gortbrez",8,0); 
-INSERT INTO `NameGen` VALUES (5104,"Gortdor",8,0); 
-INSERT INTO `NameGen` VALUES (5105,"Gortkal",8,0); 
-INSERT INTO `NameGen` VALUES (5106,"Gortlek",8,0); 
-INSERT INTO `NameGen` VALUES (5107,"Gortlok",8,0); 
-INSERT INTO `NameGen` VALUES (5108,"Gortluz",8,0); 
-INSERT INTO `NameGen` VALUES (5109,"Gortroz",8,0); 
-INSERT INTO `NameGen` VALUES (5110,"Gorttok",8,0); 
-INSERT INTO `NameGen` VALUES (5111,"Gorttraz",8,0); 
-INSERT INTO `NameGen` VALUES (5112,"Gortwaz",8,0); 
-INSERT INTO `NameGen` VALUES (5113,"Gortzak",8,0); 
-INSERT INTO `NameGen` VALUES (5114,"Gortzarn",8,0); 
-INSERT INTO `NameGen` VALUES (5115,"Gortzert",8,0); 
-INSERT INTO `NameGen` VALUES (5116,"Gortzul",8,0); 
-INSERT INTO `NameGen` VALUES (5117,"Grazbek",8,0); 
-INSERT INTO `NameGen` VALUES (5118,"Grazbirt",8,0); 
-INSERT INTO `NameGen` VALUES (5119,"Grazbrez",8,0); 
-INSERT INTO `NameGen` VALUES (5120,"Grazdor",8,0); 
-INSERT INTO `NameGen` VALUES (5121,"Grazkal",8,0); 
-INSERT INTO `NameGen` VALUES (5122,"Grazlek",8,0); 
-INSERT INTO `NameGen` VALUES (5123,"Grazlok",8,0); 
-INSERT INTO `NameGen` VALUES (5124,"Grazluz",8,0); 
-INSERT INTO `NameGen` VALUES (5125,"Grazroz",8,0); 
-INSERT INTO `NameGen` VALUES (5126,"Graztok",8,0); 
-INSERT INTO `NameGen` VALUES (5127,"Graztraz",8,0); 
-INSERT INTO `NameGen` VALUES (5128,"Grazwaz",8,0); 
-INSERT INTO `NameGen` VALUES (5129,"Grazzak",8,0); 
-INSERT INTO `NameGen` VALUES (5130,"Grazzarn",8,0); 
-INSERT INTO `NameGen` VALUES (5131,"Grazzert",8,0); 
-INSERT INTO `NameGen` VALUES (5132,"Grazzul",8,0); 
-INSERT INTO `NameGen` VALUES (5133,"Gretbek",8,0); 
-INSERT INTO `NameGen` VALUES (5134,"Gretbirt",8,0); 
-INSERT INTO `NameGen` VALUES (5135,"Gretbrez",8,0); 
-INSERT INTO `NameGen` VALUES (5136,"Gretdor",8,0); 
-INSERT INTO `NameGen` VALUES (5137,"Gretkal",8,0); 
-INSERT INTO `NameGen` VALUES (5138,"Gretlek",8,0); 
-INSERT INTO `NameGen` VALUES (5139,"Gretlok",8,0); 
-INSERT INTO `NameGen` VALUES (5140,"Gretluz",8,0); 
-INSERT INTO `NameGen` VALUES (5141,"Gretroz",8,0); 
-INSERT INTO `NameGen` VALUES (5142,"Grettok",8,0); 
-INSERT INTO `NameGen` VALUES (5143,"Grettraz",8,0); 
-INSERT INTO `NameGen` VALUES (5144,"Gretwaz",8,0); 
-INSERT INTO `NameGen` VALUES (5145,"Gretzak",8,0); 
-INSERT INTO `NameGen` VALUES (5146,"Gretzarn",8,0); 
-INSERT INTO `NameGen` VALUES (5147,"Gretzert",8,0); 
-INSERT INTO `NameGen` VALUES (5148,"Gretzul",8,0); 
-INSERT INTO `NameGen` VALUES (5149,"Grotbek",8,0); 
-INSERT INTO `NameGen` VALUES (5150,"Grotbirt",8,0); 
-INSERT INTO `NameGen` VALUES (5151,"Grotbrez",8,0); 
-INSERT INTO `NameGen` VALUES (5152,"Grotdor",8,0); 
-INSERT INTO `NameGen` VALUES (5153,"Grotkal",8,0); 
-INSERT INTO `NameGen` VALUES (5154,"Grotlek",8,0); 
-INSERT INTO `NameGen` VALUES (5155,"Grotlok",8,0); 
-INSERT INTO `NameGen` VALUES (5156,"Grotluz",8,0); 
-INSERT INTO `NameGen` VALUES (5157,"Grotroz",8,0); 
-INSERT INTO `NameGen` VALUES (5158,"Grottok",8,0); 
-INSERT INTO `NameGen` VALUES (5159,"Grottraz",8,0); 
-INSERT INTO `NameGen` VALUES (5160,"Grotwaz",8,0); 
-INSERT INTO `NameGen` VALUES (5161,"Grotzak",8,0); 
-INSERT INTO `NameGen` VALUES (5162,"Grotzarn",8,0); 
-INSERT INTO `NameGen` VALUES (5163,"Grotzert",8,0); 
-INSERT INTO `NameGen` VALUES (5164,"Grotzul",8,0); 
-INSERT INTO `NameGen` VALUES (5165,"Grozbek",8,0); 
-INSERT INTO `NameGen` VALUES (5166,"Grozbirt",8,0); 
-INSERT INTO `NameGen` VALUES (5167,"Grozbrez",8,0); 
-INSERT INTO `NameGen` VALUES (5168,"Grozdor",8,0); 
-INSERT INTO `NameGen` VALUES (5169,"Grozkal",8,0); 
-INSERT INTO `NameGen` VALUES (5170,"Grozlek",8,0); 
-INSERT INTO `NameGen` VALUES (5171,"Grozlok",8,0); 
-INSERT INTO `NameGen` VALUES (5172,"Grozluz",8,0); 
-INSERT INTO `NameGen` VALUES (5173,"Grozroz",8,0); 
-INSERT INTO `NameGen` VALUES (5174,"Groztok",8,0); 
-INSERT INTO `NameGen` VALUES (5175,"Groztraz",8,0); 
-INSERT INTO `NameGen` VALUES (5176,"Grozwaz",8,0); 
-INSERT INTO `NameGen` VALUES (5177,"Grozzak",8,0); 
-INSERT INTO `NameGen` VALUES (5178,"Grozzarn",8,0); 
-INSERT INTO `NameGen` VALUES (5179,"Grozzert",8,0); 
-INSERT INTO `NameGen` VALUES (5180,"Grozzul",8,0); 
-INSERT INTO `NameGen` VALUES (5181,"Hakbek",8,0); 
-INSERT INTO `NameGen` VALUES (5182,"Hakbirt",8,0); 
-INSERT INTO `NameGen` VALUES (5183,"Hakbrez",8,0); 
-INSERT INTO `NameGen` VALUES (5184,"Hakdor",8,0); 
-INSERT INTO `NameGen` VALUES (5185,"Hakkal",8,0); 
-INSERT INTO `NameGen` VALUES (5186,"Haklek",8,0); 
-INSERT INTO `NameGen` VALUES (5187,"Haklok",8,0); 
-INSERT INTO `NameGen` VALUES (5188,"Hakluz",8,0); 
-INSERT INTO `NameGen` VALUES (5189,"Hakroz",8,0); 
-INSERT INTO `NameGen` VALUES (5190,"Haktok",8,0); 
-INSERT INTO `NameGen` VALUES (5191,"Haktraz",8,0); 
-INSERT INTO `NameGen` VALUES (5192,"Hakwaz",8,0); 
-INSERT INTO `NameGen` VALUES (5193,"Hakzak",8,0); 
-INSERT INTO `NameGen` VALUES (5194,"Hakzarn",8,0); 
-INSERT INTO `NameGen` VALUES (5195,"Hakzert",8,0); 
-INSERT INTO `NameGen` VALUES (5196,"Hakzul",8,0); 
-INSERT INTO `NameGen` VALUES (5197,"Halzbek",8,0); 
-INSERT INTO `NameGen` VALUES (5198,"Halzbirt",8,0); 
-INSERT INTO `NameGen` VALUES (5199,"Halzbrez",8,0); 
-INSERT INTO `NameGen` VALUES (5200,"Halzdor",8,0); 
-INSERT INTO `NameGen` VALUES (5201,"Halzkal",8,0); 
-INSERT INTO `NameGen` VALUES (5202,"Halzlek",8,0); 
-INSERT INTO `NameGen` VALUES (5203,"Halzlok",8,0); 
-INSERT INTO `NameGen` VALUES (5204,"Halzluz",8,0); 
-INSERT INTO `NameGen` VALUES (5205,"Halzroz",8,0); 
-INSERT INTO `NameGen` VALUES (5206,"Halztok",8,0); 
-INSERT INTO `NameGen` VALUES (5207,"Halztraz",8,0); 
-INSERT INTO `NameGen` VALUES (5208,"Halzwaz",8,0); 
-INSERT INTO `NameGen` VALUES (5209,"Halzzak",8,0); 
-INSERT INTO `NameGen` VALUES (5210,"Halzzarn",8,0); 
-INSERT INTO `NameGen` VALUES (5211,"Halzzert",8,0); 
-INSERT INTO `NameGen` VALUES (5212,"Halzzul",8,0); 
-INSERT INTO `NameGen` VALUES (5213,"Harnbek",8,0); 
-INSERT INTO `NameGen` VALUES (5214,"Harnbirt",8,0); 
-INSERT INTO `NameGen` VALUES (5215,"Harnbrez",8,0); 
-INSERT INTO `NameGen` VALUES (5216,"Harndor",8,0); 
-INSERT INTO `NameGen` VALUES (5217,"Harnkal",8,0); 
-INSERT INTO `NameGen` VALUES (5218,"Harnlek",8,0); 
-INSERT INTO `NameGen` VALUES (5219,"Harnlok",8,0); 
-INSERT INTO `NameGen` VALUES (5220,"Harnluz",8,0); 
-INSERT INTO `NameGen` VALUES (5221,"Harnroz",8,0); 
-INSERT INTO `NameGen` VALUES (5222,"Harntok",8,0); 
-INSERT INTO `NameGen` VALUES (5223,"Harntraz",8,0); 
-INSERT INTO `NameGen` VALUES (5224,"Harnwaz",8,0); 
-INSERT INTO `NameGen` VALUES (5225,"Harnzak",8,0); 
-INSERT INTO `NameGen` VALUES (5226,"Harnzarn",8,0); 
-INSERT INTO `NameGen` VALUES (5227,"Harnzert",8,0); 
-INSERT INTO `NameGen` VALUES (5228,"Harnzul",8,0); 
-INSERT INTO `NameGen` VALUES (5229,"Hazbek",8,0); 
-INSERT INTO `NameGen` VALUES (5230,"Hazbirt",8,0); 
-INSERT INTO `NameGen` VALUES (5231,"Hazbrez",8,0); 
-INSERT INTO `NameGen` VALUES (5232,"Hazdor",8,0); 
-INSERT INTO `NameGen` VALUES (5233,"Hazkal",8,0); 
-INSERT INTO `NameGen` VALUES (5234,"Hazlek",8,0); 
-INSERT INTO `NameGen` VALUES (5235,"Hazlok",8,0); 
-INSERT INTO `NameGen` VALUES (5236,"Hazluz",8,0); 
-INSERT INTO `NameGen` VALUES (5237,"Hazroz",8,0); 
-INSERT INTO `NameGen` VALUES (5238,"Haztok",8,0); 
-INSERT INTO `NameGen` VALUES (5239,"Haztraz",8,0); 
-INSERT INTO `NameGen` VALUES (5240,"Hazwaz",8,0); 
-INSERT INTO `NameGen` VALUES (5241,"Hazzak",8,0); 
-INSERT INTO `NameGen` VALUES (5242,"Hazzarn",8,0); 
-INSERT INTO `NameGen` VALUES (5243,"Hazzert",8,0); 
-INSERT INTO `NameGen` VALUES (5244,"Hazzul",8,0); 
-INSERT INTO `NameGen` VALUES (5245,"Hetbek",8,0); 
-INSERT INTO `NameGen` VALUES (5246,"Hetbirt",8,0); 
-INSERT INTO `NameGen` VALUES (5247,"Hetbrez",8,0); 
-INSERT INTO `NameGen` VALUES (5248,"Hetdor",8,0); 
-INSERT INTO `NameGen` VALUES (5249,"Hetkal",8,0); 
-INSERT INTO `NameGen` VALUES (5250,"Hetlek",8,0); 
-INSERT INTO `NameGen` VALUES (5251,"Hetlok",8,0); 
-INSERT INTO `NameGen` VALUES (5252,"Hetluz",8,0); 
-INSERT INTO `NameGen` VALUES (5253,"Hetroz",8,0); 
-INSERT INTO `NameGen` VALUES (5254,"Hettok",8,0); 
-INSERT INTO `NameGen` VALUES (5255,"Hettraz",8,0); 
-INSERT INTO `NameGen` VALUES (5256,"Hetwaz",8,0); 
-INSERT INTO `NameGen` VALUES (5257,"Hetzak",8,0); 
-INSERT INTO `NameGen` VALUES (5258,"Hetzarn",8,0); 
-INSERT INTO `NameGen` VALUES (5259,"Hetzert",8,0); 
-INSERT INTO `NameGen` VALUES (5260,"Hetzul",8,0); 
-INSERT INTO `NameGen` VALUES (5261,"Hortbek",8,0); 
-INSERT INTO `NameGen` VALUES (5262,"Hortbirt",8,0); 
-INSERT INTO `NameGen` VALUES (5263,"Hortbrez",8,0); 
-INSERT INTO `NameGen` VALUES (5264,"Hortdor",8,0); 
-INSERT INTO `NameGen` VALUES (5265,"Hortkal",8,0); 
-INSERT INTO `NameGen` VALUES (5266,"Hortlek",8,0); 
-INSERT INTO `NameGen` VALUES (5267,"Hortlok",8,0); 
-INSERT INTO `NameGen` VALUES (5268,"Hortluz",8,0); 
-INSERT INTO `NameGen` VALUES (5269,"Hortroz",8,0); 
-INSERT INTO `NameGen` VALUES (5270,"Horttok",8,0); 
-INSERT INTO `NameGen` VALUES (5271,"Horttraz",8,0); 
-INSERT INTO `NameGen` VALUES (5272,"Hortwaz",8,0); 
-INSERT INTO `NameGen` VALUES (5273,"Hortzak",8,0); 
-INSERT INTO `NameGen` VALUES (5274,"Hortzarn",8,0); 
-INSERT INTO `NameGen` VALUES (5275,"Hortzert",8,0); 
-INSERT INTO `NameGen` VALUES (5276,"Hortzul",8,0); 
-INSERT INTO `NameGen` VALUES (5277,"Hozbek",8,0); 
-INSERT INTO `NameGen` VALUES (5278,"Hozbirt",8,0); 
-INSERT INTO `NameGen` VALUES (5279,"Hozbrez",8,0); 
-INSERT INTO `NameGen` VALUES (5280,"Hozdor",8,0); 
-INSERT INTO `NameGen` VALUES (5281,"Hozkal",8,0); 
-INSERT INTO `NameGen` VALUES (5282,"Hozlek",8,0); 
-INSERT INTO `NameGen` VALUES (5283,"Hozlok",8,0); 
-INSERT INTO `NameGen` VALUES (5284,"Hozluz",8,0); 
-INSERT INTO `NameGen` VALUES (5285,"Hozroz",8,0); 
-INSERT INTO `NameGen` VALUES (5286,"Hoztok",8,0); 
-INSERT INTO `NameGen` VALUES (5287,"Hoztraz",8,0); 
-INSERT INTO `NameGen` VALUES (5288,"Hozwaz",8,0); 
-INSERT INTO `NameGen` VALUES (5289,"Hozzak",8,0); 
-INSERT INTO `NameGen` VALUES (5290,"Hozzarn",8,0); 
-INSERT INTO `NameGen` VALUES (5291,"Hozzert",8,0); 
-INSERT INTO `NameGen` VALUES (5292,"Hozzul",8,0); 
-INSERT INTO `NameGen` VALUES (5293,"Irkbek",8,0); 
-INSERT INTO `NameGen` VALUES (5294,"Irkbirt",8,0); 
-INSERT INTO `NameGen` VALUES (5295,"Irkbrez",8,0); 
-INSERT INTO `NameGen` VALUES (5296,"Irkdor",8,0); 
-INSERT INTO `NameGen` VALUES (5297,"Irkkal",8,0); 
-INSERT INTO `NameGen` VALUES (5298,"Irklek",8,0); 
-INSERT INTO `NameGen` VALUES (5299,"Irklok",8,0); 
-INSERT INTO `NameGen` VALUES (5300,"Irkluz",8,0); 
-INSERT INTO `NameGen` VALUES (5301,"Irkroz",8,0); 
-INSERT INTO `NameGen` VALUES (5302,"Irktok",8,0); 
-INSERT INTO `NameGen` VALUES (5303,"Irktraz",8,0); 
-INSERT INTO `NameGen` VALUES (5304,"Irkwaz",8,0); 
-INSERT INTO `NameGen` VALUES (5305,"Irkzak",8,0); 
-INSERT INTO `NameGen` VALUES (5306,"Irkzarn",8,0); 
-INSERT INTO `NameGen` VALUES (5307,"Irkzert",8,0); 
-INSERT INTO `NameGen` VALUES (5308,"Irkzul",8,0); 
-INSERT INTO `NameGen` VALUES (5309,"Jabbek",8,0); 
-INSERT INTO `NameGen` VALUES (5310,"Jabbirt",8,0); 
-INSERT INTO `NameGen` VALUES (5311,"Jabbrez",8,0); 
-INSERT INTO `NameGen` VALUES (5312,"Jabdor",8,0); 
-INSERT INTO `NameGen` VALUES (5313,"Jabkal",8,0); 
-INSERT INTO `NameGen` VALUES (5314,"Jablek",8,0); 
-INSERT INTO `NameGen` VALUES (5315,"Jablok",8,0); 
-INSERT INTO `NameGen` VALUES (5316,"Jabluz",8,0); 
-INSERT INTO `NameGen` VALUES (5317,"Jabroz",8,0); 
-INSERT INTO `NameGen` VALUES (5318,"Jabtok",8,0); 
-INSERT INTO `NameGen` VALUES (5319,"Jabtraz",8,0); 
-INSERT INTO `NameGen` VALUES (5320,"Jabwaz",8,0); 
-INSERT INTO `NameGen` VALUES (5321,"Jabzak",8,0); 
-INSERT INTO `NameGen` VALUES (5322,"Jabzarn",8,0); 
-INSERT INTO `NameGen` VALUES (5323,"Jabzert",8,0); 
-INSERT INTO `NameGen` VALUES (5324,"Jabzul",8,0); 
-INSERT INTO `NameGen` VALUES (5325,"Jaddor",8,0); 
-INSERT INTO `NameGen` VALUES (5326,"Jarlbek",8,0); 
-INSERT INTO `NameGen` VALUES (5327,"Jarlbirt",8,0); 
-INSERT INTO `NameGen` VALUES (5328,"Jarlbrez",8,0); 
-INSERT INTO `NameGen` VALUES (5329,"Jarldor",8,0); 
-INSERT INTO `NameGen` VALUES (5330,"Jarlkal",8,0); 
-INSERT INTO `NameGen` VALUES (5331,"Jarllek",8,0); 
-INSERT INTO `NameGen` VALUES (5332,"Jarllok",8,0); 
-INSERT INTO `NameGen` VALUES (5333,"Jarlluz",8,0); 
-INSERT INTO `NameGen` VALUES (5334,"Jarlroz",8,0); 
-INSERT INTO `NameGen` VALUES (5335,"Jarltok",8,0); 
-INSERT INTO `NameGen` VALUES (5336,"Jarltraz",8,0); 
-INSERT INTO `NameGen` VALUES (5337,"Jarlwaz",8,0); 
-INSERT INTO `NameGen` VALUES (5338,"Jarlzak",8,0); 
-INSERT INTO `NameGen` VALUES (5339,"Jarlzarn",8,0); 
-INSERT INTO `NameGen` VALUES (5340,"Jarlzert",8,0); 
-INSERT INTO `NameGen` VALUES (5341,"Jarlzul",8,0); 
-INSERT INTO `NameGen` VALUES (5342,"Jatbek",8,0); 
-INSERT INTO `NameGen` VALUES (5343,"Jatbirt",8,0); 
-INSERT INTO `NameGen` VALUES (5344,"Jatbrez",8,0); 
-INSERT INTO `NameGen` VALUES (5345,"Jatdor",8,0); 
-INSERT INTO `NameGen` VALUES (5346,"Jatkal",8,0); 
-INSERT INTO `NameGen` VALUES (5347,"Jatlek",8,0); 
-INSERT INTO `NameGen` VALUES (5348,"Jatlok",8,0); 
-INSERT INTO `NameGen` VALUES (5349,"Jatluz",8,0); 
-INSERT INTO `NameGen` VALUES (5350,"Jatroz",8,0); 
-INSERT INTO `NameGen` VALUES (5351,"Jattok",8,0); 
-INSERT INTO `NameGen` VALUES (5352,"Jattraz",8,0); 
-INSERT INTO `NameGen` VALUES (5353,"Jatwaz",8,0); 
-INSERT INTO `NameGen` VALUES (5354,"Jatzak",8,0); 
-INSERT INTO `NameGen` VALUES (5355,"Jatzarn",8,0); 
-INSERT INTO `NameGen` VALUES (5356,"Jatzert",8,0); 
-INSERT INTO `NameGen` VALUES (5357,"Jatzul",8,0); 
-INSERT INTO `NameGen` VALUES (5358,"Jelbek",8,0); 
-INSERT INTO `NameGen` VALUES (5359,"Jelbirt",8,0); 
-INSERT INTO `NameGen` VALUES (5360,"Jelbrez",8,0); 
-INSERT INTO `NameGen` VALUES (5361,"Jelkal",8,0); 
-INSERT INTO `NameGen` VALUES (5362,"Jellek",8,0); 
-INSERT INTO `NameGen` VALUES (5363,"Jellok",8,0); 
-INSERT INTO `NameGen` VALUES (5364,"Jelluz",8,0); 
-INSERT INTO `NameGen` VALUES (5365,"Jelroz",8,0); 
-INSERT INTO `NameGen` VALUES (5366,"Jeltok",8,0); 
-INSERT INTO `NameGen` VALUES (5367,"Jeltraz",8,0); 
-INSERT INTO `NameGen` VALUES (5368,"Jelwaz",8,0); 
-INSERT INTO `NameGen` VALUES (5369,"Jelzak",8,0); 
-INSERT INTO `NameGen` VALUES (5370,"Jelzarn",8,0); 
-INSERT INTO `NameGen` VALUES (5371,"Jelzert",8,0); 
-INSERT INTO `NameGen` VALUES (5372,"Jelzul",8,0); 
-INSERT INTO `NameGen` VALUES (5373,"Jentbek",8,0); 
-INSERT INTO `NameGen` VALUES (5374,"Jentbirt",8,0); 
-INSERT INTO `NameGen` VALUES (5375,"Jentdor",8,0); 
-INSERT INTO `NameGen` VALUES (5376,"Jentlek",8,0); 
-INSERT INTO `NameGen` VALUES (5377,"Jentluz",8,0); 
-INSERT INTO `NameGen` VALUES (5378,"Jentzak",8,0); 
-INSERT INTO `NameGen` VALUES (5379,"Jentzarn",8,0); 
-INSERT INTO `NameGen` VALUES (5380,"Jentzert",8,0); 
-INSERT INTO `NameGen` VALUES (5381,"Jerbek",8,0); 
-INSERT INTO `NameGen` VALUES (5382,"Jerbirt",8,0); 
-INSERT INTO `NameGen` VALUES (5383,"Jerbrez",8,0); 
-INSERT INTO `NameGen` VALUES (5384,"Jerdor",8,0); 
-INSERT INTO `NameGen` VALUES (5385,"Jerkal",8,0); 
-INSERT INTO `NameGen` VALUES (5386,"Jerlek",8,0); 
-INSERT INTO `NameGen` VALUES (5387,"Jerlok",8,0); 
-INSERT INTO `NameGen` VALUES (5388,"Jerluz",8,0); 
-INSERT INTO `NameGen` VALUES (5389,"Jerroz",8,0); 
-INSERT INTO `NameGen` VALUES (5390,"Jertok",8,0); 
-INSERT INTO `NameGen` VALUES (5391,"Jertraz",8,0); 
-INSERT INTO `NameGen` VALUES (5392,"Jerwaz",8,0); 
-INSERT INTO `NameGen` VALUES (5393,"Jerzak",8,0); 
-INSERT INTO `NameGen` VALUES (5394,"Jerzarn",8,0); 
-INSERT INTO `NameGen` VALUES (5395,"Jerzert",8,0); 
-INSERT INTO `NameGen` VALUES (5396,"Jerzul",8,0); 
-INSERT INTO `NameGen` VALUES (5397,"Jitbek",8,0); 
-INSERT INTO `NameGen` VALUES (5398,"Jitbirt",8,0); 
-INSERT INTO `NameGen` VALUES (5399,"Jitbrez",8,0); 
-INSERT INTO `NameGen` VALUES (5400,"Jitdor",8,0); 
-INSERT INTO `NameGen` VALUES (5401,"Jitkal",8,0); 
-INSERT INTO `NameGen` VALUES (5402,"Jitlek",8,0); 
-INSERT INTO `NameGen` VALUES (5403,"Jitlok",8,0); 
-INSERT INTO `NameGen` VALUES (5404,"Jitluz",8,0); 
-INSERT INTO `NameGen` VALUES (5405,"Jitroz",8,0); 
-INSERT INTO `NameGen` VALUES (5406,"Jittok",8,0); 
-INSERT INTO `NameGen` VALUES (5407,"Jittraz",8,0); 
-INSERT INTO `NameGen` VALUES (5408,"Jitwaz",8,0); 
-INSERT INTO `NameGen` VALUES (5409,"Jitzak",8,0); 
-INSERT INTO `NameGen` VALUES (5410,"Jitzarn",8,0); 
-INSERT INTO `NameGen` VALUES (5411,"Jitzert",8,0); 
-INSERT INTO `NameGen` VALUES (5412,"Jitzul",8,0); 
-INSERT INTO `NameGen` VALUES (5413,"Jofbek",8,0); 
-INSERT INTO `NameGen` VALUES (5414,"Jofbirt",8,0); 
-INSERT INTO `NameGen` VALUES (5415,"Jofbrez",8,0); 
-INSERT INTO `NameGen` VALUES (5416,"Jofdor",8,0); 
-INSERT INTO `NameGen` VALUES (5417,"Jofkal",8,0); 
-INSERT INTO `NameGen` VALUES (5418,"Joflek",8,0); 
-INSERT INTO `NameGen` VALUES (5419,"Joflok",8,0); 
-INSERT INTO `NameGen` VALUES (5420,"Jofluz",8,0); 
-INSERT INTO `NameGen` VALUES (5421,"Jofroz",8,0); 
-INSERT INTO `NameGen` VALUES (5422,"Joftok",8,0); 
-INSERT INTO `NameGen` VALUES (5423,"Joftraz",8,0); 
-INSERT INTO `NameGen` VALUES (5424,"Jofwaz",8,0); 
-INSERT INTO `NameGen` VALUES (5425,"Jofzak",8,0); 
-INSERT INTO `NameGen` VALUES (5426,"Jofzarn",8,0); 
-INSERT INTO `NameGen` VALUES (5427,"Jofzert",8,0); 
-INSERT INTO `NameGen` VALUES (5428,"Jofzul",8,0); 
-INSERT INTO `NameGen` VALUES (5429,"Jozbek",8,0); 
-INSERT INTO `NameGen` VALUES (5430,"Jozbirt",8,0); 
-INSERT INTO `NameGen` VALUES (5431,"Jozbrez",8,0); 
-INSERT INTO `NameGen` VALUES (5432,"Jozdor",8,0); 
-INSERT INTO `NameGen` VALUES (5433,"Jozkal",8,0); 
-INSERT INTO `NameGen` VALUES (5434,"Jozlek",8,0); 
-INSERT INTO `NameGen` VALUES (5435,"Jozlok",8,0); 
-INSERT INTO `NameGen` VALUES (5436,"Jozluz",8,0); 
-INSERT INTO `NameGen` VALUES (5437,"Jozroz",8,0); 
-INSERT INTO `NameGen` VALUES (5438,"Joztok",8,0); 
-INSERT INTO `NameGen` VALUES (5439,"Joztraz",8,0); 
-INSERT INTO `NameGen` VALUES (5440,"Jozwaz",8,0); 
-INSERT INTO `NameGen` VALUES (5441,"Jozzak",8,0); 
-INSERT INTO `NameGen` VALUES (5442,"Jozzarn",8,0); 
-INSERT INTO `NameGen` VALUES (5443,"Jozzert",8,0); 
-INSERT INTO `NameGen` VALUES (5444,"Jozzul",8,0); 
-INSERT INTO `NameGen` VALUES (5445,"Quinbek",8,0); 
-INSERT INTO `NameGen` VALUES (5446,"Quinbirt",8,0); 
-INSERT INTO `NameGen` VALUES (5447,"Quinbrez",8,0); 
-INSERT INTO `NameGen` VALUES (5448,"Quindor",8,0); 
-INSERT INTO `NameGen` VALUES (5449,"Quinkal",8,0); 
-INSERT INTO `NameGen` VALUES (5450,"Quinlek",8,0); 
-INSERT INTO `NameGen` VALUES (5451,"Quinlok",8,0); 
-INSERT INTO `NameGen` VALUES (5452,"Quinluz",8,0); 
-INSERT INTO `NameGen` VALUES (5453,"Quinroz",8,0); 
-INSERT INTO `NameGen` VALUES (5454,"Quintok",8,0); 
-INSERT INTO `NameGen` VALUES (5455,"Quintraz",8,0); 
-INSERT INTO `NameGen` VALUES (5456,"Quinwaz",8,0); 
-INSERT INTO `NameGen` VALUES (5457,"Quinzak",8,0); 
-INSERT INTO `NameGen` VALUES (5458,"Quinzarn",8,0); 
-INSERT INTO `NameGen` VALUES (5459,"Quinzert",8,0); 
-INSERT INTO `NameGen` VALUES (5460,"Quinzul",8,0); 
-INSERT INTO `NameGen` VALUES (368,"Zora",8,1); 
-INSERT INTO `NameGen` VALUES (369,"Zuel",8,1); 
-INSERT INTO `NameGen` VALUES (370,"Malia",8,1); 
-INSERT INTO `NameGen` VALUES (371,"Rainda",8,1); 
-INSERT INTO `NameGen` VALUES (372,"Parax",8,1); 
-INSERT INTO `NameGen` VALUES (373,"Mandi",8,1); 
-INSERT INTO `NameGen` VALUES (374,"Clypsa",8,1); 
-INSERT INTO `NameGen` VALUES (375,"Cassiopea",8,1); 
-INSERT INTO `NameGen` VALUES (376,"Hectae",8,1); 
-INSERT INTO `NameGen` VALUES (377,"Zurah",8,1); 
-INSERT INTO `NameGen` VALUES (378,"Debria",8,1); 
-INSERT INTO `NameGen` VALUES (379,"Jezpala",8,1); 
-INSERT INTO `NameGen` VALUES (380,"Mariz",8,1); 
-INSERT INTO `NameGen` VALUES (381,"Khandia",8,1); 
-INSERT INTO `NameGen` VALUES (382,"Branda",8,1); 
-INSERT INTO `NameGen` VALUES (383,"Lortunda",8,1); 
-INSERT INTO `NameGen` VALUES (384,"Zumwa",8,1); 
-INSERT INTO `NameGen` VALUES (385,"Zeeria",8,1); 
-INSERT INTO `NameGen` VALUES (386,"Daylis",8,1); 
-INSERT INTO `NameGen` VALUES (1732,"Abeni",8,1); 
-INSERT INTO `NameGen` VALUES (1733,"Abiba",8,1); 
-INSERT INTO `NameGen` VALUES (1734,"Akuti",8,1); 
-INSERT INTO `NameGen` VALUES (1735,"Bari",8,1); 
-INSERT INTO `NameGen` VALUES (1736,"Biku",8,1); 
-INSERT INTO `NameGen` VALUES (1737,"Bindiya",8,1); 
-INSERT INTO `NameGen` VALUES (1738,"Bula",8,1); 
-INSERT INTO `NameGen` VALUES (1739,"Chavi",8,1); 
-INSERT INTO `NameGen` VALUES (1740,"Dani",8,1); 
-INSERT INTO `NameGen` VALUES (1741,"Divya",8,1); 
-INSERT INTO `NameGen` VALUES (1742,"Faiza",8,1); 
-INSERT INTO `NameGen` VALUES (1743,"Faviola",8,1); 
-INSERT INTO `NameGen` VALUES (1744,"Fola",8,1); 
-INSERT INTO `NameGen` VALUES (1745,"Gopi",8,1); 
-INSERT INTO `NameGen` VALUES (1746,"Gupla",8,1); 
-INSERT INTO `NameGen` VALUES (1747,"Habiji",8,1); 
-INSERT INTO `NameGen` VALUES (1748,"Hilda",8,1); 
-INSERT INTO `NameGen` VALUES (1749,"Ikula",8,1); 
-INSERT INTO `NameGen` VALUES (1750,"Isoke",8,1); 
-INSERT INTO `NameGen` VALUES (1751,"Jayanti",8,1); 
-INSERT INTO `NameGen` VALUES (1752,"Jemma",8,1); 
-INSERT INTO `NameGen` VALUES (1753,"Jenja",8,1); 
-INSERT INTO `NameGen` VALUES (1754,"Juana",8,1); 
-INSERT INTO `NameGen` VALUES (1755,"Junazee",8,1); 
-INSERT INTO `NameGen` VALUES (1756,"Jyoti",8,1); 
-INSERT INTO `NameGen` VALUES (1757,"Kadiya",8,1); 
-INSERT INTO `NameGen` VALUES (1758,"Kanini",8,1); 
-INSERT INTO `NameGen` VALUES (1759,"Kaviji",8,1); 
-INSERT INTO `NameGen` VALUES (1760,"Keisha",8,1); 
-INSERT INTO `NameGen` VALUES (1761,"Keva",8,1); 
-INSERT INTO `NameGen` VALUES (1762,"Lakisha",8,1); 
-INSERT INTO `NameGen` VALUES (1763,"Lata",8,1); 
-INSERT INTO `NameGen` VALUES (1764,"Leelu",8,1); 
-INSERT INTO `NameGen` VALUES (1765,"Mammou",8,1); 
-INSERT INTO `NameGen` VALUES (1766,"Marjani",8,1); 
-INSERT INTO `NameGen` VALUES (1767,"Meena",8,1); 
-INSERT INTO `NameGen` VALUES (1768,"Merti",8,1); 
-INSERT INTO `NameGen` VALUES (1769,"Pemba",8,1); 
-INSERT INTO `NameGen` VALUES (1770,"Raja",8,1); 
-INSERT INTO `NameGen` VALUES (1771,"Rashida",8,1); 
-INSERT INTO `NameGen` VALUES (1772,"Rimuna",8,1); 
-INSERT INTO `NameGen` VALUES (1773,"Safiya",8,1); 
-INSERT INTO `NameGen` VALUES (1774,"Shandi",8,1); 
-INSERT INTO `NameGen` VALUES (1775,"Sharti",8,1); 
-INSERT INTO `NameGen` VALUES (1776,"Sillazee",8,1); 
-INSERT INTO `NameGen` VALUES (1777,"Sinda",8,1); 
-INSERT INTO `NameGen` VALUES (1778,"Sukutai",8,1); 
-INSERT INTO `NameGen` VALUES (1779,"Suweela",8,1); 
-INSERT INTO `NameGen` VALUES (1780,"Takiyah",8,1); 
-INSERT INTO `NameGen` VALUES (1781,"Tali",8,1); 
-INSERT INTO `NameGen` VALUES (1782,"Tamorica",8,1); 
-INSERT INTO `NameGen` VALUES (1783,"Tanisha",8,1); 
-INSERT INTO `NameGen` VALUES (1784,"Vashuni",8,1); 
-INSERT INTO `NameGen` VALUES (1785,"Walmi",8,1); 
-INSERT INTO `NameGen` VALUES (1786,"Zania",8,1); 
-INSERT INTO `NameGen` VALUES (1787,"Zarah",8,1); 
-INSERT INTO `NameGen` VALUES (1788,"Zarinda",8,1); 
-INSERT INTO `NameGen` VALUES (1789,"Zillah",8,1); 
-INSERT INTO `NameGen` VALUES (1790,"Zina",8,1); 
-INSERT INTO `NameGen` VALUES (1791,"Zulah",8,1); 
-INSERT INTO `NameGen` VALUES (5461,"Jazbek",8,1); 
-INSERT INTO `NameGen` VALUES (5462,"Jazbirt",8,1); 
-INSERT INTO `NameGen` VALUES (5463,"Jazbrez",8,1); 
-INSERT INTO `NameGen` VALUES (5464,"Jazdor",8,1); 
-INSERT INTO `NameGen` VALUES (5465,"Jazkal",8,1); 
-INSERT INTO `NameGen` VALUES (5466,"Jazlek",8,1); 
-INSERT INTO `NameGen` VALUES (5467,"Jazlok",8,1); 
-INSERT INTO `NameGen` VALUES (5468,"Jazluz",8,1); 
-INSERT INTO `NameGen` VALUES (5469,"Jazroz",8,1); 
-INSERT INTO `NameGen` VALUES (5470,"Jaztok",8,1); 
-INSERT INTO `NameGen` VALUES (5471,"Jaztraz",8,1); 
-INSERT INTO `NameGen` VALUES (5472,"Jazwaz",8,1); 
-INSERT INTO `NameGen` VALUES (5473,"Jazzak",8,1); 
-INSERT INTO `NameGen` VALUES (5474,"Jazzarn",8,1); 
-INSERT INTO `NameGen` VALUES (5475,"Jazzert",8,1); 
-INSERT INTO `NameGen` VALUES (5476,"Jazzul",8,1); 
-INSERT INTO `NameGen` VALUES (5477,"Jentbrez",8,1); 
-INSERT INTO `NameGen` VALUES (5478,"Jentkal",8,1); 
-INSERT INTO `NameGen` VALUES (5479,"Jentlok",8,1); 
-INSERT INTO `NameGen` VALUES (5480,"Jentroz",8,1); 
-INSERT INTO `NameGen` VALUES (5481,"Jenttok",8,1); 
-INSERT INTO `NameGen` VALUES (5482,"Jenttraz",8,1); 
-INSERT INTO `NameGen` VALUES (5483,"Jentwaz",8,1); 
-INSERT INTO `NameGen` VALUES (5484,"Jentzul",8,1); 
-INSERT INTO `NameGen` VALUES (5485,"Jezbek",8,1); 
-INSERT INTO `NameGen` VALUES (5486,"Jezbirt",8,1); 
-INSERT INTO `NameGen` VALUES (5487,"Jezbrez",8,1); 
-INSERT INTO `NameGen` VALUES (5488,"Jezdor",8,1); 
-INSERT INTO `NameGen` VALUES (5489,"Jezkal",8,1); 
-INSERT INTO `NameGen` VALUES (5490,"Jezlek",8,1); 
-INSERT INTO `NameGen` VALUES (5491,"Jezlok",8,1); 
-INSERT INTO `NameGen` VALUES (5492,"Jezluz",8,1); 
-INSERT INTO `NameGen` VALUES (5493,"Jezroz",8,1); 
-INSERT INTO `NameGen` VALUES (5494,"Jeztok",8,1); 
-INSERT INTO `NameGen` VALUES (5495,"Jeztraz",8,1); 
-INSERT INTO `NameGen` VALUES (5496,"Jezwaz",8,1); 
-INSERT INTO `NameGen` VALUES (5497,"Jezzak",8,1); 
-INSERT INTO `NameGen` VALUES (5498,"Jezzarn",8,1); 
-INSERT INTO `NameGen` VALUES (5499,"Jezzert",8,1); 
-INSERT INTO `NameGen` VALUES (5500,"Jezzul",8,1); 
-INSERT INTO `NameGen` VALUES (5501,"Jirnbek",8,1); 
-INSERT INTO `NameGen` VALUES (5502,"Jirnbirt",8,1); 
-INSERT INTO `NameGen` VALUES (5503,"Jirnbrez",8,1); 
-INSERT INTO `NameGen` VALUES (5504,"Jirndor",8,1); 
-INSERT INTO `NameGen` VALUES (5505,"Jirnkal",8,1); 
-INSERT INTO `NameGen` VALUES (5506,"Jirnlek",8,1); 
-INSERT INTO `NameGen` VALUES (5507,"Jirnlok",8,1); 
-INSERT INTO `NameGen` VALUES (5508,"Jirnluz",8,1); 
-INSERT INTO `NameGen` VALUES (5509,"Jirnroz",8,1); 
-INSERT INTO `NameGen` VALUES (5510,"Jirntok",8,1); 
-INSERT INTO `NameGen` VALUES (5511,"Jirntraz",8,1); 
-INSERT INTO `NameGen` VALUES (5512,"Jirnwaz",8,1); 
-INSERT INTO `NameGen` VALUES (5513,"Jirnzak",8,1); 
-INSERT INTO `NameGen` VALUES (5514,"Jirnzarn",8,1); 
-INSERT INTO `NameGen` VALUES (5515,"Jirnzert",8,1); 
-INSERT INTO `NameGen` VALUES (5516,"Jirnzul",8,1); 
-INSERT INTO `NameGen` VALUES (5517,"Jorbek",8,1); 
-INSERT INTO `NameGen` VALUES (5518,"Jorbirt",8,1); 
-INSERT INTO `NameGen` VALUES (5519,"Jorbrez",8,1); 
-INSERT INTO `NameGen` VALUES (5520,"Jordor",8,1); 
-INSERT INTO `NameGen` VALUES (5521,"Jorkal",8,1); 
-INSERT INTO `NameGen` VALUES (5522,"Jorlek",8,1); 
-INSERT INTO `NameGen` VALUES (5523,"Jorlok",8,1); 
-INSERT INTO `NameGen` VALUES (5524,"Jorluz",8,1); 
-INSERT INTO `NameGen` VALUES (5525,"Jorroz",8,1); 
-INSERT INTO `NameGen` VALUES (5526,"Jortok",8,1); 
-INSERT INTO `NameGen` VALUES (5527,"Jortraz",8,1); 
-INSERT INTO `NameGen` VALUES (5528,"Jorwaz",8,1); 
-INSERT INTO `NameGen` VALUES (5529,"Jorzak",8,1); 
-INSERT INTO `NameGen` VALUES (5530,"Jorzarn",8,1); 
-INSERT INTO `NameGen` VALUES (5531,"Jorzert",8,1); 
-INSERT INTO `NameGen` VALUES (5532,"Jorzul",8,1); 
-INSERT INTO `NameGen` VALUES (5533,"Jurtbek",8,1); 
-INSERT INTO `NameGen` VALUES (5534,"Jurtbirt",8,1); 
-INSERT INTO `NameGen` VALUES (5535,"Jurtbrez",8,1); 
-INSERT INTO `NameGen` VALUES (5536,"Jurtdor",8,1); 
-INSERT INTO `NameGen` VALUES (5537,"Jurtkal",8,1); 
-INSERT INTO `NameGen` VALUES (5538,"Jurtlek",8,1); 
-INSERT INTO `NameGen` VALUES (5539,"Jurtlok",8,1); 
-INSERT INTO `NameGen` VALUES (5540,"Jurtluz",8,1); 
-INSERT INTO `NameGen` VALUES (5541,"Jurtroz",8,1); 
-INSERT INTO `NameGen` VALUES (5542,"Jurttok",8,1); 
-INSERT INTO `NameGen` VALUES (5543,"Jurttraz",8,1); 
-INSERT INTO `NameGen` VALUES (5544,"Jurtwaz",8,1); 
-INSERT INTO `NameGen` VALUES (5545,"Jurtzak",8,1); 
-INSERT INTO `NameGen` VALUES (5546,"Jurtzarn",8,1); 
-INSERT INTO `NameGen` VALUES (5547,"Jurtzert",8,1); 
-INSERT INTO `NameGen` VALUES (5548,"Jurtzul",8,1); 
-INSERT INTO `NameGen` VALUES (5549,"Kazbek",8,1); 
-INSERT INTO `NameGen` VALUES (5550,"Kazbirt",8,1); 
-INSERT INTO `NameGen` VALUES (5551,"Kazbrez",8,1); 
-INSERT INTO `NameGen` VALUES (5552,"Kazdor",8,1); 
-INSERT INTO `NameGen` VALUES (5553,"Kazkal",8,1); 
-INSERT INTO `NameGen` VALUES (5554,"Kazlek",8,1); 
-INSERT INTO `NameGen` VALUES (5555,"Kazlok",8,1); 
-INSERT INTO `NameGen` VALUES (5556,"Kazluz",8,1); 
-INSERT INTO `NameGen` VALUES (5557,"Kazroz",8,1); 
-INSERT INTO `NameGen` VALUES (5558,"Kaztok",8,1); 
-INSERT INTO `NameGen` VALUES (5559,"Kaztraz",8,1); 
-INSERT INTO `NameGen` VALUES (5560,"Kazwaz",8,1); 
-INSERT INTO `NameGen` VALUES (5561,"Kazzak",8,1); 
-INSERT INTO `NameGen` VALUES (5562,"Kazzarn",8,1); 
-INSERT INTO `NameGen` VALUES (5563,"Kazzert",8,1); 
-INSERT INTO `NameGen` VALUES (5564,"Kazzul",8,1); 
-INSERT INTO `NameGen` VALUES (5565,"Kirtbek",8,1); 
-INSERT INTO `NameGen` VALUES (5566,"Kirtbirt",8,1); 
-INSERT INTO `NameGen` VALUES (5567,"Kirtbrez",8,1); 
-INSERT INTO `NameGen` VALUES (5568,"Kirtdor",8,1); 
-INSERT INTO `NameGen` VALUES (5569,"Kirtkal",8,1); 
-INSERT INTO `NameGen` VALUES (5570,"Kirtlek",8,1); 
-INSERT INTO `NameGen` VALUES (5571,"Kirtlok",8,1); 
-INSERT INTO `NameGen` VALUES (5572,"Kirtluz",8,1); 
-INSERT INTO `NameGen` VALUES (5573,"Kirtroz",8,1); 
-INSERT INTO `NameGen` VALUES (5574,"Kirttok",8,1); 
-INSERT INTO `NameGen` VALUES (5575,"Kirttraz",8,1); 
-INSERT INTO `NameGen` VALUES (5576,"Kirtwaz",8,1); 
-INSERT INTO `NameGen` VALUES (5577,"Kirtzak",8,1); 
-INSERT INTO `NameGen` VALUES (5578,"Kirtzarn",8,1); 
-INSERT INTO `NameGen` VALUES (5579,"Kirtzert",8,1); 
-INSERT INTO `NameGen` VALUES (5580,"Kirtzul",8,1); 
-INSERT INTO `NameGen` VALUES (5581,"Kurnbek",8,1); 
-INSERT INTO `NameGen` VALUES (5582,"Kurnbirt",8,1); 
-INSERT INTO `NameGen` VALUES (5583,"Kurnbrez",8,1); 
-INSERT INTO `NameGen` VALUES (5584,"Kurndor",8,1); 
-INSERT INTO `NameGen` VALUES (5585,"Kurnkal",8,1); 
-INSERT INTO `NameGen` VALUES (5586,"Kurnlek",8,1); 
-INSERT INTO `NameGen` VALUES (5587,"Kurnlok",8,1); 
-INSERT INTO `NameGen` VALUES (5588,"Kurnluz",8,1); 
-INSERT INTO `NameGen` VALUES (5589,"Kurnroz",8,1); 
-INSERT INTO `NameGen` VALUES (5590,"Kurntok",8,1); 
-INSERT INTO `NameGen` VALUES (5591,"Kurntraz",8,1); 
-INSERT INTO `NameGen` VALUES (5592,"Kurnwaz",8,1); 
-INSERT INTO `NameGen` VALUES (5593,"Kurnzak",8,1); 
-INSERT INTO `NameGen` VALUES (5594,"Kurnzarn",8,1); 
-INSERT INTO `NameGen` VALUES (5595,"Kurnzert",8,1); 
-INSERT INTO `NameGen` VALUES (5596,"Kurnzul",8,1); 
-INSERT INTO `NameGen` VALUES (5597,"Kutbek",8,1); 
-INSERT INTO `NameGen` VALUES (5598,"Kutbirt",8,1); 
-INSERT INTO `NameGen` VALUES (5599,"Kutbrez",8,1); 
-INSERT INTO `NameGen` VALUES (5600,"Kutdor",8,1); 
-INSERT INTO `NameGen` VALUES (5601,"Kutkal",8,1); 
-INSERT INTO `NameGen` VALUES (5602,"Kutlek",8,1); 
-INSERT INTO `NameGen` VALUES (5603,"Kutlok",8,1); 
-INSERT INTO `NameGen` VALUES (5604,"Kutluz",8,1); 
-INSERT INTO `NameGen` VALUES (5605,"Kutroz",8,1); 
-INSERT INTO `NameGen` VALUES (5606,"Kuttok",8,1); 
-INSERT INTO `NameGen` VALUES (5607,"Kuttraz",8,1); 
-INSERT INTO `NameGen` VALUES (5608,"Kutwaz",8,1); 
-INSERT INTO `NameGen` VALUES (5609,"Kutzak",8,1); 
-INSERT INTO `NameGen` VALUES (5610,"Kutzarn",8,1); 
-INSERT INTO `NameGen` VALUES (5611,"Kutzert",8,1); 
-INSERT INTO `NameGen` VALUES (5612,"Kutzul",8,1); 
-INSERT INTO `NameGen` VALUES (5613,"Larnbek",8,1); 
-INSERT INTO `NameGen` VALUES (5614,"Larnbirt",8,1); 
-INSERT INTO `NameGen` VALUES (5615,"Larnbrez",8,1); 
-INSERT INTO `NameGen` VALUES (5616,"Larndor",8,1); 
-INSERT INTO `NameGen` VALUES (5617,"Larnkal",8,1); 
-INSERT INTO `NameGen` VALUES (5618,"Larnlek",8,1); 
-INSERT INTO `NameGen` VALUES (5619,"Larnlok",8,1); 
-INSERT INTO `NameGen` VALUES (5620,"Larnluz",8,1); 
-INSERT INTO `NameGen` VALUES (5621,"Larnroz",8,1); 
-INSERT INTO `NameGen` VALUES (5622,"Larntok",8,1); 
-INSERT INTO `NameGen` VALUES (5623,"Larntraz",8,1); 
-INSERT INTO `NameGen` VALUES (5624,"Larnwaz",8,1); 
-INSERT INTO `NameGen` VALUES (5625,"Larnzak",8,1); 
-INSERT INTO `NameGen` VALUES (5626,"Larnzarn",8,1); 
-INSERT INTO `NameGen` VALUES (5627,"Larnzert",8,1); 
-INSERT INTO `NameGen` VALUES (5628,"Larnzul",8,1); 
-INSERT INTO `NameGen` VALUES (5629,"Lazbek",8,1); 
-INSERT INTO `NameGen` VALUES (5630,"Lazbirt",8,1); 
-INSERT INTO `NameGen` VALUES (5631,"Lazbrez",8,1); 
-INSERT INTO `NameGen` VALUES (5632,"Lazdor",8,1); 
-INSERT INTO `NameGen` VALUES (5633,"Lazkal",8,1); 
-INSERT INTO `NameGen` VALUES (5634,"Lazlek",8,1); 
-INSERT INTO `NameGen` VALUES (5635,"Lazlok",8,1); 
-INSERT INTO `NameGen` VALUES (5636,"Lazluz",8,1); 
-INSERT INTO `NameGen` VALUES (5637,"Lazroz",8,1); 
-INSERT INTO `NameGen` VALUES (5638,"Laztok",8,1); 
-INSERT INTO `NameGen` VALUES (5639,"Laztraz",8,1); 
-INSERT INTO `NameGen` VALUES (5640,"Lazwaz",8,1); 
-INSERT INTO `NameGen` VALUES (5641,"Lazzak",8,1); 
-INSERT INTO `NameGen` VALUES (5642,"Lazzarn",8,1); 
-INSERT INTO `NameGen` VALUES (5643,"Lazzert",8,1); 
-INSERT INTO `NameGen` VALUES (5644,"Lazzul",8,1); 
-INSERT INTO `NameGen` VALUES (5645,"Lerzbek",8,1); 
-INSERT INTO `NameGen` VALUES (5646,"Lerzbirt",8,1); 
-INSERT INTO `NameGen` VALUES (5647,"Lerzbrez",8,1); 
-INSERT INTO `NameGen` VALUES (5648,"Lerzdor",8,1); 
-INSERT INTO `NameGen` VALUES (5649,"Lerzkal",8,1); 
-INSERT INTO `NameGen` VALUES (5650,"Lerzlek",8,1); 
-INSERT INTO `NameGen` VALUES (5651,"Lerzlok",8,1); 
-INSERT INTO `NameGen` VALUES (5652,"Lerzluz",8,1); 
-INSERT INTO `NameGen` VALUES (5653,"Lerzroz",8,1); 
-INSERT INTO `NameGen` VALUES (5654,"Lerztok",8,1); 
-INSERT INTO `NameGen` VALUES (5655,"Lerztraz",8,1); 
-INSERT INTO `NameGen` VALUES (5656,"Lerzwaz",8,1); 
-INSERT INTO `NameGen` VALUES (5657,"Lerzzak",8,1); 
-INSERT INTO `NameGen` VALUES (5658,"Lerzzarn",8,1); 
-INSERT INTO `NameGen` VALUES (5659,"Lerzzert",8,1); 
-INSERT INTO `NameGen` VALUES (5660,"Lerzzul",8,1); 
-INSERT INTO `NameGen` VALUES (5661,"Linzbek",8,1); 
-INSERT INTO `NameGen` VALUES (5662,"Linzbirt",8,1); 
-INSERT INTO `NameGen` VALUES (5663,"Linzbrez",8,1); 
-INSERT INTO `NameGen` VALUES (5664,"Linzdor",8,1); 
-INSERT INTO `NameGen` VALUES (5665,"Linzkal",8,1); 
-INSERT INTO `NameGen` VALUES (5666,"Linzlek",8,1); 
-INSERT INTO `NameGen` VALUES (5667,"Linzlok",8,1); 
-INSERT INTO `NameGen` VALUES (5668,"Linzluz",8,1); 
-INSERT INTO `NameGen` VALUES (5669,"Linzroz",8,1); 
-INSERT INTO `NameGen` VALUES (5670,"Linztok",8,1); 
-INSERT INTO `NameGen` VALUES (5671,"Linztraz",8,1); 
-INSERT INTO `NameGen` VALUES (5672,"Linzwaz",8,1); 
-INSERT INTO `NameGen` VALUES (5673,"Linzzak",8,1); 
-INSERT INTO `NameGen` VALUES (5674,"Linzzarn",8,1); 
-INSERT INTO `NameGen` VALUES (5675,"Linzzert",8,1); 
-INSERT INTO `NameGen` VALUES (5676,"Linzzul",8,1); 
-INSERT INTO `NameGen` VALUES (5677,"Lirkbek",8,1); 
-INSERT INTO `NameGen` VALUES (5678,"Lirkbirt",8,1); 
-INSERT INTO `NameGen` VALUES (5679,"Lirkbrez",8,1); 
-INSERT INTO `NameGen` VALUES (5680,"Lirkdor",8,1); 
-INSERT INTO `NameGen` VALUES (5681,"Lirkkal",8,1); 
-INSERT INTO `NameGen` VALUES (5682,"Lirklek",8,1); 
-INSERT INTO `NameGen` VALUES (5683,"Lirklok",8,1); 
-INSERT INTO `NameGen` VALUES (5684,"Lirkluz",8,1); 
-INSERT INTO `NameGen` VALUES (5685,"Lirkroz",8,1); 
-INSERT INTO `NameGen` VALUES (5686,"Lirktok",8,1); 
-INSERT INTO `NameGen` VALUES (5687,"Lirktraz",8,1); 
-INSERT INTO `NameGen` VALUES (5688,"Lirkwaz",8,1); 
-INSERT INTO `NameGen` VALUES (5689,"Lirkzak",8,1); 
-INSERT INTO `NameGen` VALUES (5690,"Lirkzarn",8,1); 
-INSERT INTO `NameGen` VALUES (5691,"Lirkzert",8,1); 
-INSERT INTO `NameGen` VALUES (5692,"Lirkzul",8,1); 
-INSERT INTO `NameGen` VALUES (5693,"Luntbek",8,1); 
-INSERT INTO `NameGen` VALUES (5694,"Luntbirt",8,1); 
-INSERT INTO `NameGen` VALUES (5695,"Luntbrez",8,1); 
-INSERT INTO `NameGen` VALUES (5696,"Luntdor",8,1); 
-INSERT INTO `NameGen` VALUES (5697,"Luntkal",8,1); 
-INSERT INTO `NameGen` VALUES (5698,"Luntlek",8,1); 
-INSERT INTO `NameGen` VALUES (5699,"Luntlok",8,1); 
-INSERT INTO `NameGen` VALUES (5700,"Luntluz",8,1); 
-INSERT INTO `NameGen` VALUES (5701,"Luntroz",8,1); 
-INSERT INTO `NameGen` VALUES (5702,"Lunttok",8,1); 
-INSERT INTO `NameGen` VALUES (5703,"Lunttraz",8,1); 
-INSERT INTO `NameGen` VALUES (5704,"Luntwaz",8,1); 
-INSERT INTO `NameGen` VALUES (5705,"Luntzak",8,1); 
-INSERT INTO `NameGen` VALUES (5706,"Luntzarn",8,1); 
-INSERT INTO `NameGen` VALUES (5707,"Luntzert",8,1); 
-INSERT INTO `NameGen` VALUES (5708,"Luntzul",8,1); 
-INSERT INTO `NameGen` VALUES (5709,"Marnbek",8,1); 
-INSERT INTO `NameGen` VALUES (5710,"Marnbirt",8,1); 
-INSERT INTO `NameGen` VALUES (5711,"Marnbrez",8,1); 
-INSERT INTO `NameGen` VALUES (5712,"Marndor",8,1); 
-INSERT INTO `NameGen` VALUES (5713,"Marnkal",8,1); 
-INSERT INTO `NameGen` VALUES (5714,"Marnlek",8,1); 
-INSERT INTO `NameGen` VALUES (5715,"Marnlok",8,1); 
-INSERT INTO `NameGen` VALUES (5716,"Marnluz",8,1); 
-INSERT INTO `NameGen` VALUES (5717,"Marnroz",8,1); 
-INSERT INTO `NameGen` VALUES (5718,"Marntok",8,1); 
-INSERT INTO `NameGen` VALUES (5719,"Marntraz",8,1); 
-INSERT INTO `NameGen` VALUES (5720,"Marnwaz",8,1); 
-INSERT INTO `NameGen` VALUES (5721,"Marnzak",8,1); 
-INSERT INTO `NameGen` VALUES (5722,"Marnzarn",8,1); 
-INSERT INTO `NameGen` VALUES (5723,"Marnzert",8,1); 
-INSERT INTO `NameGen` VALUES (5724,"Marnzul",8,1); 
-INSERT INTO `NameGen` VALUES (5725,"Mazbek",8,1); 
-INSERT INTO `NameGen` VALUES (5726,"Mazbirt",8,1); 
-INSERT INTO `NameGen` VALUES (5727,"Mazbrez",8,1); 
-INSERT INTO `NameGen` VALUES (5728,"Mazdor",8,1); 
-INSERT INTO `NameGen` VALUES (5729,"Mazkal",8,1); 
-INSERT INTO `NameGen` VALUES (5730,"Mazlek",8,1); 
-INSERT INTO `NameGen` VALUES (5731,"Mazlok",8,1); 
-INSERT INTO `NameGen` VALUES (5732,"Mazluz",8,1); 
-INSERT INTO `NameGen` VALUES (5733,"Mazroz",8,1); 
-INSERT INTO `NameGen` VALUES (5734,"Maztok",8,1); 
-INSERT INTO `NameGen` VALUES (5735,"Maztraz",8,1); 
-INSERT INTO `NameGen` VALUES (5736,"Mazwaz",8,1); 
-INSERT INTO `NameGen` VALUES (5737,"Mazzak",8,1); 
-INSERT INTO `NameGen` VALUES (5738,"Mazzarn",8,1); 
-INSERT INTO `NameGen` VALUES (5739,"Mazzert",8,1); 
-INSERT INTO `NameGen` VALUES (5740,"Mazzul",8,1); 
-INSERT INTO `NameGen` VALUES (5741,"Narzbek",8,1); 
-INSERT INTO `NameGen` VALUES (5742,"Narzbirt",8,1); 
-INSERT INTO `NameGen` VALUES (5743,"Narzbrez",8,1); 
-INSERT INTO `NameGen` VALUES (5744,"Narzdor",8,1); 
-INSERT INTO `NameGen` VALUES (5745,"Narzkal",8,1); 
-INSERT INTO `NameGen` VALUES (5746,"Narzlek",8,1); 
-INSERT INTO `NameGen` VALUES (5747,"Narzlok",8,1); 
-INSERT INTO `NameGen` VALUES (5748,"Narzluz",8,1); 
-INSERT INTO `NameGen` VALUES (5749,"Narzroz",8,1); 
-INSERT INTO `NameGen` VALUES (5750,"Narztok",8,1); 
-INSERT INTO `NameGen` VALUES (5751,"Narztraz",8,1); 
-INSERT INTO `NameGen` VALUES (5752,"Narzwaz",8,1); 
-INSERT INTO `NameGen` VALUES (5753,"Narzzak",8,1); 
-INSERT INTO `NameGen` VALUES (5754,"Narzzarn",8,1); 
-INSERT INTO `NameGen` VALUES (5755,"Narzzert",8,1); 
-INSERT INTO `NameGen` VALUES (5756,"Narzzul",8,1); 
-INSERT INTO `NameGen` VALUES (5757,"Nezbek",8,1); 
-INSERT INTO `NameGen` VALUES (5758,"Nezbirt",8,1); 
-INSERT INTO `NameGen` VALUES (5759,"Nezbrez",8,1); 
-INSERT INTO `NameGen` VALUES (5760,"Nezdor",8,1); 
-INSERT INTO `NameGen` VALUES (5761,"Nezkal",8,1); 
-INSERT INTO `NameGen` VALUES (5762,"Nezlek",8,1); 
-INSERT INTO `NameGen` VALUES (5763,"Nezlok",8,1); 
-INSERT INTO `NameGen` VALUES (5764,"Nezluz",8,1); 
-INSERT INTO `NameGen` VALUES (5765,"Nezroz",8,1); 
-INSERT INTO `NameGen` VALUES (5766,"Neztok",8,1); 
-INSERT INTO `NameGen` VALUES (5767,"Neztraz",8,1); 
-INSERT INTO `NameGen` VALUES (5768,"Nezwaz",8,1); 
-INSERT INTO `NameGen` VALUES (5769,"Nezzarn",8,1); 
-INSERT INTO `NameGen` VALUES (5770,"Nezzert",8,1); 
-INSERT INTO `NameGen` VALUES (5771,"Nezzul",8,1); 
-INSERT INTO `NameGen` VALUES (5772,"Nortbek",8,1); 
-INSERT INTO `NameGen` VALUES (5773,"Nortbirt",8,1); 
-INSERT INTO `NameGen` VALUES (5774,"Nortbrez",8,1); 
-INSERT INTO `NameGen` VALUES (5775,"Nortdor",8,1); 
-INSERT INTO `NameGen` VALUES (5776,"Nortkal",8,1); 
-INSERT INTO `NameGen` VALUES (5777,"Nortlek",8,1); 
-INSERT INTO `NameGen` VALUES (5778,"Nortlok",8,1); 
-INSERT INTO `NameGen` VALUES (5779,"Nortluz",8,1); 
-INSERT INTO `NameGen` VALUES (5780,"Nortroz",8,1); 
-INSERT INTO `NameGen` VALUES (5781,"Norttok",8,1); 
-INSERT INTO `NameGen` VALUES (5782,"Norttraz",8,1); 
-INSERT INTO `NameGen` VALUES (5783,"Nortwaz",8,1); 
-INSERT INTO `NameGen` VALUES (5784,"Nortzak",8,1); 
-INSERT INTO `NameGen` VALUES (5785,"Nortzarn",8,1); 
-INSERT INTO `NameGen` VALUES (5786,"Nortzert",8,1); 
-INSERT INTO `NameGen` VALUES (5787,"Nortzul",8,1); 
-INSERT INTO `NameGen` VALUES (5788,"Ortbek",8,1); 
-INSERT INTO `NameGen` VALUES (5789,"Ortbirt",8,1); 
-INSERT INTO `NameGen` VALUES (5790,"Ortbrez",8,1); 
-INSERT INTO `NameGen` VALUES (5791,"Ortdor",8,1); 
-INSERT INTO `NameGen` VALUES (5792,"Ortkal",8,1); 
-INSERT INTO `NameGen` VALUES (5793,"Ortlek",8,1); 
-INSERT INTO `NameGen` VALUES (5794,"Ortlok",8,1); 
-INSERT INTO `NameGen` VALUES (5795,"Ortluz",8,1); 
-INSERT INTO `NameGen` VALUES (5796,"Ortroz",8,1); 
-INSERT INTO `NameGen` VALUES (5797,"Orttok",8,1); 
-INSERT INTO `NameGen` VALUES (5798,"Orttraz",8,1); 
-INSERT INTO `NameGen` VALUES (5799,"Ortwaz",8,1); 
-INSERT INTO `NameGen` VALUES (5800,"Ortzak",8,1); 
-INSERT INTO `NameGen` VALUES (5801,"Ortzarn",8,1); 
-INSERT INTO `NameGen` VALUES (5802,"Ortzert",8,1); 
-INSERT INTO `NameGen` VALUES (5803,"Ortzul",8,1); 
-INSERT INTO `NameGen` VALUES (5804,"Ozzbek",8,1); 
-INSERT INTO `NameGen` VALUES (5805,"Ozzbirt",8,1); 
-INSERT INTO `NameGen` VALUES (5806,"Ozzbrez",8,1); 
-INSERT INTO `NameGen` VALUES (5807,"Ozzdor",8,1); 
-INSERT INTO `NameGen` VALUES (5808,"Ozzkal",8,1); 
-INSERT INTO `NameGen` VALUES (5809,"Ozzlek",8,1); 
-INSERT INTO `NameGen` VALUES (5810,"Ozzlok",8,1); 
-INSERT INTO `NameGen` VALUES (5811,"Ozzluz",8,1); 
-INSERT INTO `NameGen` VALUES (5812,"Ozzroz",8,1); 
-INSERT INTO `NameGen` VALUES (5813,"Ozztok",8,1); 
-INSERT INTO `NameGen` VALUES (5814,"Ozztraz",8,1); 
-INSERT INTO `NameGen` VALUES (5815,"Ozzwaz",8,1); 
-INSERT INTO `NameGen` VALUES (5816,"Parbek",8,1); 
-INSERT INTO `NameGen` VALUES (5817,"Parbirt",8,1); 
-INSERT INTO `NameGen` VALUES (5818,"Parbrez",8,1); 
-INSERT INTO `NameGen` VALUES (5819,"Pardor",8,1); 
-INSERT INTO `NameGen` VALUES (5820,"Parkal",8,1); 
-INSERT INTO `NameGen` VALUES (5821,"Parlek",8,1); 
-INSERT INTO `NameGen` VALUES (5822,"Parlok",8,1); 
-INSERT INTO `NameGen` VALUES (5823,"Parluz",8,1); 
-INSERT INTO `NameGen` VALUES (5824,"Parnbek",8,1); 
-INSERT INTO `NameGen` VALUES (5825,"Parnbirt",8,1); 
-INSERT INTO `NameGen` VALUES (5826,"Parnbrez",8,1); 
-INSERT INTO `NameGen` VALUES (5827,"Parndor",8,1); 
-INSERT INTO `NameGen` VALUES (5828,"Parnkal",8,1); 
-INSERT INTO `NameGen` VALUES (5829,"Parnlek",8,1); 
-INSERT INTO `NameGen` VALUES (5830,"Parnlok",8,1); 
-INSERT INTO `NameGen` VALUES (5831,"Parnluz",8,1); 
-INSERT INTO `NameGen` VALUES (5832,"Parnroz",8,1); 
-INSERT INTO `NameGen` VALUES (5833,"Parntok",8,1); 
-INSERT INTO `NameGen` VALUES (5834,"Parntraz",8,1); 
-INSERT INTO `NameGen` VALUES (5835,"Parnwaz",8,1); 
-INSERT INTO `NameGen` VALUES (5836,"Parnzak",8,1); 
-INSERT INTO `NameGen` VALUES (5837,"Parnzarn",8,1); 
-INSERT INTO `NameGen` VALUES (5838,"Parnzert",8,1); 
-INSERT INTO `NameGen` VALUES (5839,"Parnzul",8,1); 
-INSERT INTO `NameGen` VALUES (5840,"Parroz",8,1); 
-INSERT INTO `NameGen` VALUES (5841,"Partok",8,1); 
-INSERT INTO `NameGen` VALUES (5842,"Partraz",8,1); 
-INSERT INTO `NameGen` VALUES (5843,"Parwaz",8,1); 
-INSERT INTO `NameGen` VALUES (5844,"Parzak",8,1); 
-INSERT INTO `NameGen` VALUES (5845,"Parzarn",8,1); 
-INSERT INTO `NameGen` VALUES (5846,"Parzert",8,1); 
-INSERT INTO `NameGen` VALUES (5847,"Parzul",8,1); 
-INSERT INTO `NameGen` VALUES (5848,"Poctbek",8,1); 
-INSERT INTO `NameGen` VALUES (5849,"Poctbirt",8,1); 
-INSERT INTO `NameGen` VALUES (5850,"Poctbrez",8,1); 
-INSERT INTO `NameGen` VALUES (5851,"Poctdor",8,1); 
-INSERT INTO `NameGen` VALUES (5852,"Poctkal",8,1); 
-INSERT INTO `NameGen` VALUES (5853,"Poctlek",8,1); 
-INSERT INTO `NameGen` VALUES (5854,"Poctlok",8,1); 
-INSERT INTO `NameGen` VALUES (5855,"Poctluz",8,1); 
-INSERT INTO `NameGen` VALUES (5856,"Poctroz",8,1); 
-INSERT INTO `NameGen` VALUES (5857,"Pocttok",8,1); 
-INSERT INTO `NameGen` VALUES (5858,"Pocttraz",8,1); 
-INSERT INTO `NameGen` VALUES (5859,"Poctwaz",8,1); 
-INSERT INTO `NameGen` VALUES (5860,"Poctzak",8,1); 
-INSERT INTO `NameGen` VALUES (5861,"Poctzarn",8,1); 
-INSERT INTO `NameGen` VALUES (5862,"Poctzert",8,1); 
-INSERT INTO `NameGen` VALUES (5863,"Poctzul",8,1); 
-INSERT INTO `NameGen` VALUES (5864,"Porlbek",8,1); 
-INSERT INTO `NameGen` VALUES (5865,"Porlbirt",8,1); 
-INSERT INTO `NameGen` VALUES (5866,"Porlbrez",8,1); 
-INSERT INTO `NameGen` VALUES (5867,"Porldor",8,1); 
-INSERT INTO `NameGen` VALUES (5868,"Porlkal",8,1); 
-INSERT INTO `NameGen` VALUES (5869,"Porllek",8,1); 
-INSERT INTO `NameGen` VALUES (5870,"Porllok",8,1); 
-INSERT INTO `NameGen` VALUES (5871,"Porlluz",8,1); 
-INSERT INTO `NameGen` VALUES (5872,"Porlroz",8,1); 
-INSERT INTO `NameGen` VALUES (5873,"Porltok",8,1); 
-INSERT INTO `NameGen` VALUES (5874,"Porltraz",8,1); 
-INSERT INTO `NameGen` VALUES (5875,"Porlwaz",8,1); 
-INSERT INTO `NameGen` VALUES (5876,"Porlzak",8,1); 
-INSERT INTO `NameGen` VALUES (5877,"Porlzarn",8,1); 
-INSERT INTO `NameGen` VALUES (5878,"Porlzert",8,1); 
-INSERT INTO `NameGen` VALUES (5879,"Porlzul",8,1); 
-INSERT INTO `NameGen` VALUES (5880,"Rapbek",8,1); 
-INSERT INTO `NameGen` VALUES (5881,"Rapbirt",8,1); 
-INSERT INTO `NameGen` VALUES (5882,"Rapbrez",8,1); 
-INSERT INTO `NameGen` VALUES (5883,"Rapdor",8,1); 
-INSERT INTO `NameGen` VALUES (5884,"Rapkal",8,1); 
-INSERT INTO `NameGen` VALUES (5885,"Raplek",8,1); 
-INSERT INTO `NameGen` VALUES (5886,"Raplok",8,1); 
-INSERT INTO `NameGen` VALUES (5887,"Rapluz",8,1); 
-INSERT INTO `NameGen` VALUES (5888,"Raproz",8,1); 
-INSERT INTO `NameGen` VALUES (5889,"Raptok",8,1); 
-INSERT INTO `NameGen` VALUES (5890,"Raptraz",8,1); 
-INSERT INTO `NameGen` VALUES (5891,"Rapwaz",8,1); 
-INSERT INTO `NameGen` VALUES (5892,"Rapzak",8,1); 
-INSERT INTO `NameGen` VALUES (5893,"Rapzarn",8,1); 
-INSERT INTO `NameGen` VALUES (5894,"Rapzert",8,1); 
-INSERT INTO `NameGen` VALUES (5895,"Rapzul",8,1); 
-INSERT INTO `NameGen` VALUES (5896,"Renzbek",8,1); 
-INSERT INTO `NameGen` VALUES (5897,"Renzbirt",8,1); 
-INSERT INTO `NameGen` VALUES (5898,"Renzbrez",8,1); 
-INSERT INTO `NameGen` VALUES (5899,"Renzdor",8,1); 
-INSERT INTO `NameGen` VALUES (5900,"Renzkal",8,1); 
-INSERT INTO `NameGen` VALUES (5901,"Renzlek",8,1); 
-INSERT INTO `NameGen` VALUES (5902,"Renzlok",8,1); 
-INSERT INTO `NameGen` VALUES (5903,"Renzluz",8,1); 
-INSERT INTO `NameGen` VALUES (5904,"Renzroz",8,1); 
-INSERT INTO `NameGen` VALUES (5905,"Renztok",8,1); 
-INSERT INTO `NameGen` VALUES (5906,"Renztraz",8,1); 
-INSERT INTO `NameGen` VALUES (5907,"Renzwaz",8,1); 
-INSERT INTO `NameGen` VALUES (5908,"Renzzak",8,1); 
-INSERT INTO `NameGen` VALUES (5909,"Renzzarn",8,1); 
-INSERT INTO `NameGen` VALUES (5910,"Renzzert",8,1); 
-INSERT INTO `NameGen` VALUES (5911,"Renzzul",8,1); 
-INSERT INTO `NameGen` VALUES (5912,"Rinbek",8,1); 
-INSERT INTO `NameGen` VALUES (5913,"Rinbirt",8,1); 
-INSERT INTO `NameGen` VALUES (5914,"Rinbrez",8,1); 
-INSERT INTO `NameGen` VALUES (5915,"Rindor",8,1); 
-INSERT INTO `NameGen` VALUES (5916,"Rinkal",8,1); 
-INSERT INTO `NameGen` VALUES (5917,"Rinlek",8,1); 
-INSERT INTO `NameGen` VALUES (5918,"Rinlok",8,1); 
-INSERT INTO `NameGen` VALUES (5919,"Rinluz",8,1); 
-INSERT INTO `NameGen` VALUES (5920,"Rinroz",8,1); 
-INSERT INTO `NameGen` VALUES (5921,"Rintok",8,1); 
-INSERT INTO `NameGen` VALUES (5922,"Rintraz",8,1); 
-INSERT INTO `NameGen` VALUES (5923,"Rinwaz",8,1); 
-INSERT INTO `NameGen` VALUES (5924,"Rinzak",8,1); 
-INSERT INTO `NameGen` VALUES (5925,"Rinzarn",8,1); 
-INSERT INTO `NameGen` VALUES (5926,"Rinzert",8,1); 
-INSERT INTO `NameGen` VALUES (5927,"Rinzul",8,1); 
-INSERT INTO `NameGen` VALUES (5928,"Rortbek",8,1); 
-INSERT INTO `NameGen` VALUES (5929,"Rortbirt",8,1); 
-INSERT INTO `NameGen` VALUES (5930,"Rortbrez",8,1); 
-INSERT INTO `NameGen` VALUES (5931,"Rortdor",8,1); 
-INSERT INTO `NameGen` VALUES (5932,"Rortkal",8,1); 
-INSERT INTO `NameGen` VALUES (5933,"Rortlek",8,1); 
-INSERT INTO `NameGen` VALUES (5934,"Rortlok",8,1); 
-INSERT INTO `NameGen` VALUES (5935,"Rortluz",8,1); 
-INSERT INTO `NameGen` VALUES (5936,"Rortroz",8,1); 
-INSERT INTO `NameGen` VALUES (5937,"Rorttok",8,1); 
-INSERT INTO `NameGen` VALUES (5938,"Rorttraz",8,1); 
-INSERT INTO `NameGen` VALUES (5939,"Rortwaz",8,1); 
-INSERT INTO `NameGen` VALUES (5940,"Rortzak",8,1); 
-INSERT INTO `NameGen` VALUES (5941,"Rortzarn",8,1); 
-INSERT INTO `NameGen` VALUES (5942,"Rortzert",8,1); 
-INSERT INTO `NameGen` VALUES (5943,"Rortzul",8,1); 
-INSERT INTO `NameGen` VALUES (5944,"Sartbek",8,1); 
-INSERT INTO `NameGen` VALUES (5945,"Sartbirt",8,1); 
-INSERT INTO `NameGen` VALUES (5946,"Sartbrez",8,1); 
-INSERT INTO `NameGen` VALUES (5947,"Sartdor",8,1); 
-INSERT INTO `NameGen` VALUES (5948,"Sartkal",8,1); 
-INSERT INTO `NameGen` VALUES (5949,"Sartlek",8,1); 
-INSERT INTO `NameGen` VALUES (5950,"Sartlok",8,1); 
-INSERT INTO `NameGen` VALUES (5951,"Sartluz",8,1); 
-INSERT INTO `NameGen` VALUES (5952,"Sartroz",8,1); 
-INSERT INTO `NameGen` VALUES (5953,"Sarttok",8,1); 
-INSERT INTO `NameGen` VALUES (5954,"Sarttraz",8,1); 
-INSERT INTO `NameGen` VALUES (5955,"Sartwaz",8,1); 
-INSERT INTO `NameGen` VALUES (5956,"Sartzak",8,1); 
-INSERT INTO `NameGen` VALUES (5957,"Sartzarn",8,1); 
-INSERT INTO `NameGen` VALUES (5958,"Sartzert",8,1); 
-INSERT INTO `NameGen` VALUES (5959,"Sartzul",8,1); 
-INSERT INTO `NameGen` VALUES (5960,"Sazbek",8,1); 
-INSERT INTO `NameGen` VALUES (5961,"Sazbirt",8,1); 
-INSERT INTO `NameGen` VALUES (5962,"Sazbrez",8,1); 
-INSERT INTO `NameGen` VALUES (5963,"Sazdor",8,1); 
-INSERT INTO `NameGen` VALUES (5964,"Sazkal",8,1); 
-INSERT INTO `NameGen` VALUES (5965,"Sazlek",8,1); 
-INSERT INTO `NameGen` VALUES (5966,"Sazlok",8,1); 
-INSERT INTO `NameGen` VALUES (5967,"Sazluz",8,1); 
-INSERT INTO `NameGen` VALUES (5968,"Sazroz",8,1); 
-INSERT INTO `NameGen` VALUES (5969,"Saztok",8,1); 
-INSERT INTO `NameGen` VALUES (5970,"Saztraz",8,1); 
-INSERT INTO `NameGen` VALUES (5971,"Sazwaz",8,1); 
-INSERT INTO `NameGen` VALUES (5972,"Sazzak",8,1); 
-INSERT INTO `NameGen` VALUES (5973,"Sazzarn",8,1); 
-INSERT INTO `NameGen` VALUES (5974,"Sazzert",8,1); 
-INSERT INTO `NameGen` VALUES (5975,"Sazzul",8,1); 
-INSERT INTO `NameGen` VALUES (5976,"Sernbek",8,1); 
-INSERT INTO `NameGen` VALUES (5977,"Sernbirt",8,1); 
-INSERT INTO `NameGen` VALUES (5978,"Sernbrez",8,1); 
-INSERT INTO `NameGen` VALUES (5979,"Serndor",8,1); 
-INSERT INTO `NameGen` VALUES (5980,"Sernkal",8,1); 
-INSERT INTO `NameGen` VALUES (5981,"Sernlek",8,1); 
-INSERT INTO `NameGen` VALUES (5982,"Sernlok",8,1); 
-INSERT INTO `NameGen` VALUES (5983,"Sernluz",8,1); 
-INSERT INTO `NameGen` VALUES (5984,"Sernroz",8,1); 
-INSERT INTO `NameGen` VALUES (5985,"Serntok",8,1); 
-INSERT INTO `NameGen` VALUES (5986,"Serntraz",8,1); 
-INSERT INTO `NameGen` VALUES (5987,"Sernwaz",8,1); 
-INSERT INTO `NameGen` VALUES (5988,"Sernzak",8,1); 
-INSERT INTO `NameGen` VALUES (5989,"Sernzarn",8,1); 
-INSERT INTO `NameGen` VALUES (5990,"Sernzert",8,1); 
-INSERT INTO `NameGen` VALUES (5991,"Sernzul",8,1); 
-INSERT INTO `NameGen` VALUES (5992,"Sirtbek",8,1); 
-INSERT INTO `NameGen` VALUES (5993,"Sirtbirt",8,1); 
-INSERT INTO `NameGen` VALUES (5994,"Sirtbrez",8,1); 
-INSERT INTO `NameGen` VALUES (5995,"Sirtdor",8,1); 
-INSERT INTO `NameGen` VALUES (5996,"Sirtkal",8,1); 
-INSERT INTO `NameGen` VALUES (5997,"Sirtlek",8,1); 
-INSERT INTO `NameGen` VALUES (5998,"Sirtlok",8,1); 
-INSERT INTO `NameGen` VALUES (5999,"Sirtluz",8,1); 
-INSERT INTO `NameGen` VALUES (6000,"Sirtroz",8,1); 
-INSERT INTO `NameGen` VALUES (6001,"Sirttok",8,1); 
-INSERT INTO `NameGen` VALUES (6002,"Sirttraz",8,1); 
-INSERT INTO `NameGen` VALUES (6003,"Sirtwaz",8,1); 
-INSERT INTO `NameGen` VALUES (6004,"Sirtzak",8,1); 
-INSERT INTO `NameGen` VALUES (6005,"Sirtzarn",8,1); 
-INSERT INTO `NameGen` VALUES (6006,"Sirtzert",8,1); 
-INSERT INTO `NameGen` VALUES (6007,"Sirtzul",8,1); 
-INSERT INTO `NameGen` VALUES (6008,"Sokbek",8,1); 
-INSERT INTO `NameGen` VALUES (6009,"Sokbirt",8,1); 
-INSERT INTO `NameGen` VALUES (6010,"Sokbrez",8,1); 
-INSERT INTO `NameGen` VALUES (6011,"Sokdor",8,1); 
-INSERT INTO `NameGen` VALUES (6012,"Sokkal",8,1); 
-INSERT INTO `NameGen` VALUES (6013,"Soklek",8,1); 
-INSERT INTO `NameGen` VALUES (6014,"Soklok",8,1); 
-INSERT INTO `NameGen` VALUES (6015,"Sokluz",8,1); 
-INSERT INTO `NameGen` VALUES (6016,"Sokroz",8,1); 
-INSERT INTO `NameGen` VALUES (6017,"Soktok",8,1); 
-INSERT INTO `NameGen` VALUES (6018,"Soktraz",8,1); 
-INSERT INTO `NameGen` VALUES (6019,"Sokwaz",8,1); 
-INSERT INTO `NameGen` VALUES (6020,"Sokzak",8,1); 
-INSERT INTO `NameGen` VALUES (6021,"Sokzarn",8,1); 
-INSERT INTO `NameGen` VALUES (6022,"Sokzert",8,1); 
-INSERT INTO `NameGen` VALUES (6023,"Sokzul",8,1); 
-INSERT INTO `NameGen` VALUES (6024,"Sornbek",8,1); 
-INSERT INTO `NameGen` VALUES (6025,"Sornbirt",8,1); 
-INSERT INTO `NameGen` VALUES (6026,"Sornbrez",8,1); 
-INSERT INTO `NameGen` VALUES (6027,"Sorndor",8,1); 
-INSERT INTO `NameGen` VALUES (6028,"Sornkal",8,1); 
-INSERT INTO `NameGen` VALUES (6029,"Sornlek",8,1); 
-INSERT INTO `NameGen` VALUES (6030,"Sornlok",8,1); 
-INSERT INTO `NameGen` VALUES (6031,"Sornluz",8,1); 
-INSERT INTO `NameGen` VALUES (6032,"Sornroz",8,1); 
-INSERT INTO `NameGen` VALUES (6033,"Sorntok",8,1); 
-INSERT INTO `NameGen` VALUES (6034,"Sorntraz",8,1); 
-INSERT INTO `NameGen` VALUES (6035,"Sornwaz",8,1); 
-INSERT INTO `NameGen` VALUES (6036,"Sornzak",8,1); 
-INSERT INTO `NameGen` VALUES (6037,"Sornzarn",8,1); 
-INSERT INTO `NameGen` VALUES (6038,"Sornzert",8,1); 
-INSERT INTO `NameGen` VALUES (6039,"Sornzul",8,1); 
-INSERT INTO `NameGen` VALUES (6040,"Tasebek",8,1); 
-INSERT INTO `NameGen` VALUES (6041,"Tasebirt",8,1); 
-INSERT INTO `NameGen` VALUES (6042,"Tasebrez",8,1); 
-INSERT INTO `NameGen` VALUES (6043,"Tasedor",8,1); 
-INSERT INTO `NameGen` VALUES (6044,"Tasekal",8,1); 
-INSERT INTO `NameGen` VALUES (6045,"Taselek",8,1); 
-INSERT INTO `NameGen` VALUES (6046,"Taselok",8,1); 
-INSERT INTO `NameGen` VALUES (6047,"Taseluz",8,1); 
-INSERT INTO `NameGen` VALUES (6048,"Taseroz",8,1); 
-INSERT INTO `NameGen` VALUES (6049,"Tasetok",8,1); 
-INSERT INTO `NameGen` VALUES (6050,"Tasetraz",8,1); 
-INSERT INTO `NameGen` VALUES (6051,"Tasewaz",8,1); 
-INSERT INTO `NameGen` VALUES (6052,"Tasezak",8,1); 
-INSERT INTO `NameGen` VALUES (6053,"Tasezarn",8,1); 
-INSERT INTO `NameGen` VALUES (6054,"Tasezert",8,1); 
-INSERT INTO `NameGen` VALUES (6055,"Tasezul",8,1); 
-INSERT INTO `NameGen` VALUES (6056,"Tazbek",8,1); 
-INSERT INTO `NameGen` VALUES (6057,"Tazbirt",8,1); 
-INSERT INTO `NameGen` VALUES (6058,"Tazbrez",8,1); 
-INSERT INTO `NameGen` VALUES (6059,"Tazdor",8,1); 
-INSERT INTO `NameGen` VALUES (6060,"Tazkal",8,1); 
-INSERT INTO `NameGen` VALUES (6061,"Tazlek",8,1); 
-INSERT INTO `NameGen` VALUES (6062,"Tazlok",8,1); 
-INSERT INTO `NameGen` VALUES (6063,"Tazluz",8,1); 
-INSERT INTO `NameGen` VALUES (6064,"Tazroz",8,1); 
-INSERT INTO `NameGen` VALUES (6065,"Taztok",8,1); 
-INSERT INTO `NameGen` VALUES (6066,"Taztraz",8,1); 
-INSERT INTO `NameGen` VALUES (6067,"Tazwaz",8,1); 
-INSERT INTO `NameGen` VALUES (6068,"Tazzak",8,1); 
-INSERT INTO `NameGen` VALUES (6069,"Tazzarn",8,1); 
-INSERT INTO `NameGen` VALUES (6070,"Tazzert",8,1); 
-INSERT INTO `NameGen` VALUES (6071,"Tazzul",8,1); 
-INSERT INTO `NameGen` VALUES (6072,"Tirnbek",8,1); 
-INSERT INTO `NameGen` VALUES (6073,"Tirnbirt",8,1); 
-INSERT INTO `NameGen` VALUES (6074,"Tirnbrez",8,1); 
-INSERT INTO `NameGen` VALUES (6075,"Tirndor",8,1); 
-INSERT INTO `NameGen` VALUES (6076,"Tirnkal",8,1); 
-INSERT INTO `NameGen` VALUES (6077,"Tirnlek",8,1); 
-INSERT INTO `NameGen` VALUES (6078,"Tirnlok",8,1); 
-INSERT INTO `NameGen` VALUES (6079,"Tirnluz",8,1); 
-INSERT INTO `NameGen` VALUES (6080,"Tirnroz",8,1); 
-INSERT INTO `NameGen` VALUES (6081,"Tirntok",8,1); 
-INSERT INTO `NameGen` VALUES (6082,"Tirntraz",8,1); 
-INSERT INTO `NameGen` VALUES (6083,"Tirnwaz",8,1); 
-INSERT INTO `NameGen` VALUES (6084,"Tirnzak",8,1); 
-INSERT INTO `NameGen` VALUES (6085,"Tirnzarn",8,1); 
-INSERT INTO `NameGen` VALUES (6086,"Tirnzert",8,1); 
-INSERT INTO `NameGen` VALUES (6087,"Tirnzul",8,1); 
-INSERT INTO `NameGen` VALUES (6088,"Topbek",8,1); 
-INSERT INTO `NameGen` VALUES (6089,"Topbirt",8,1); 
-INSERT INTO `NameGen` VALUES (6090,"Topbrez",8,1); 
-INSERT INTO `NameGen` VALUES (6091,"Topdor",8,1); 
-INSERT INTO `NameGen` VALUES (6092,"Topkal",8,1); 
-INSERT INTO `NameGen` VALUES (6093,"Toplek",8,1); 
-INSERT INTO `NameGen` VALUES (6094,"Toplok",8,1); 
-INSERT INTO `NameGen` VALUES (6095,"Topluz",8,1); 
-INSERT INTO `NameGen` VALUES (6096,"Toproz",8,1); 
-INSERT INTO `NameGen` VALUES (6097,"Toptok",8,1); 
-INSERT INTO `NameGen` VALUES (6098,"Toptraz",8,1); 
-INSERT INTO `NameGen` VALUES (6099,"Topwaz",8,1); 
-INSERT INTO `NameGen` VALUES (6100,"Topzak",8,1); 
-INSERT INTO `NameGen` VALUES (6101,"Topzarn",8,1); 
-INSERT INTO `NameGen` VALUES (6102,"Topzert",8,1); 
-INSERT INTO `NameGen` VALUES (6103,"Topzul",8,1); 
-INSERT INTO `NameGen` VALUES (6104,"Urkbek",8,1); 
-INSERT INTO `NameGen` VALUES (6105,"Urkbirt",8,1); 
-INSERT INTO `NameGen` VALUES (6106,"Urkbrez",8,1); 
-INSERT INTO `NameGen` VALUES (6107,"Urkdor",8,1); 
-INSERT INTO `NameGen` VALUES (6108,"Urkkal",8,1); 
-INSERT INTO `NameGen` VALUES (6109,"Urklek",8,1); 
-INSERT INTO `NameGen` VALUES (6110,"Urklok",8,1); 
-INSERT INTO `NameGen` VALUES (6111,"Urkluz",8,1); 
-INSERT INTO `NameGen` VALUES (6112,"Urkroz",8,1); 
-INSERT INTO `NameGen` VALUES (6113,"Urktok",8,1); 
-INSERT INTO `NameGen` VALUES (6114,"Urktraz",8,1); 
-INSERT INTO `NameGen` VALUES (6115,"Urkwaz",8,1); 
-INSERT INTO `NameGen` VALUES (6116,"Urkzak",8,1); 
-INSERT INTO `NameGen` VALUES (6117,"Urkzarn",8,1); 
-INSERT INTO `NameGen` VALUES (6118,"Urkzert",8,1); 
-INSERT INTO `NameGen` VALUES (6119,"Urkzul",8,1); 
-INSERT INTO `NameGen` VALUES (6120,"Varbek",8,1); 
-INSERT INTO `NameGen` VALUES (6121,"Varbirt",8,1); 
-INSERT INTO `NameGen` VALUES (6122,"Varbrez",8,1); 
-INSERT INTO `NameGen` VALUES (6123,"Vardor",8,1); 
-INSERT INTO `NameGen` VALUES (6124,"Varkal",8,1); 
-INSERT INTO `NameGen` VALUES (6125,"Varlek",8,1); 
-INSERT INTO `NameGen` VALUES (6126,"Varlok",8,1); 
-INSERT INTO `NameGen` VALUES (6127,"Varluz",8,1); 
-INSERT INTO `NameGen` VALUES (6128,"Varroz",8,1); 
-INSERT INTO `NameGen` VALUES (6129,"Vartok",8,1); 
-INSERT INTO `NameGen` VALUES (6130,"Vartraz",8,1); 
-INSERT INTO `NameGen` VALUES (6131,"Varwaz",8,1); 
-INSERT INTO `NameGen` VALUES (6132,"Varzak",8,1); 
-INSERT INTO `NameGen` VALUES (6133,"Varzarn",8,1); 
-INSERT INTO `NameGen` VALUES (6134,"Varzert",8,1); 
-INSERT INTO `NameGen` VALUES (6135,"Varzul",8,1); 
-INSERT INTO `NameGen` VALUES (6136,"Vikbek",8,1); 
-INSERT INTO `NameGen` VALUES (6137,"Vikbirt",8,1); 
-INSERT INTO `NameGen` VALUES (6138,"Vikbrez",8,1); 
-INSERT INTO `NameGen` VALUES (6139,"Vikdor",8,1); 
-INSERT INTO `NameGen` VALUES (6140,"Vikkal",8,1); 
-INSERT INTO `NameGen` VALUES (6141,"Viklek",8,1); 
-INSERT INTO `NameGen` VALUES (6142,"Viklok",8,1); 
-INSERT INTO `NameGen` VALUES (6143,"Vikluz",8,1); 
-INSERT INTO `NameGen` VALUES (6144,"Vikroz",8,1); 
-INSERT INTO `NameGen` VALUES (6145,"Viktok",8,1); 
-INSERT INTO `NameGen` VALUES (6146,"Viktraz",8,1); 
-INSERT INTO `NameGen` VALUES (6147,"Vikwaz",8,1); 
-INSERT INTO `NameGen` VALUES (6148,"Vikzak",8,1); 
-INSERT INTO `NameGen` VALUES (6149,"Vikzarn",8,1); 
-INSERT INTO `NameGen` VALUES (6150,"Vikzert",8,1); 
-INSERT INTO `NameGen` VALUES (6151,"Vikzul",8,1); 
-INSERT INTO `NameGen` VALUES (6152,"Vortbek",8,1); 
-INSERT INTO `NameGen` VALUES (6153,"Vortbirt",8,1); 
-INSERT INTO `NameGen` VALUES (6154,"Vortbrez",8,1); 
-INSERT INTO `NameGen` VALUES (6155,"Vortdor",8,1); 
-INSERT INTO `NameGen` VALUES (6156,"Vortkal",8,1); 
-INSERT INTO `NameGen` VALUES (6157,"Vortlek",8,1); 
-INSERT INTO `NameGen` VALUES (6158,"Vortlok",8,1); 
-INSERT INTO `NameGen` VALUES (6159,"Vortluz",8,1); 
-INSERT INTO `NameGen` VALUES (6160,"Vortroz",8,1); 
-INSERT INTO `NameGen` VALUES (6161,"Vorttok",8,1); 
-INSERT INTO `NameGen` VALUES (6162,"Vorttraz",8,1); 
-INSERT INTO `NameGen` VALUES (6163,"Vortwaz",8,1); 
-INSERT INTO `NameGen` VALUES (6164,"Vortzak",8,1); 
-INSERT INTO `NameGen` VALUES (6165,"Vortzarn",8,1); 
-INSERT INTO `NameGen` VALUES (6166,"Vortzert",8,1); 
-INSERT INTO `NameGen` VALUES (6167,"Vortzul",8,1); 
-INSERT INTO `NameGen` VALUES (6168,"Vozbek",8,1); 
-INSERT INTO `NameGen` VALUES (6169,"Vozbirt",8,1); 
-INSERT INTO `NameGen` VALUES (6170,"Vozbrez",8,1); 
-INSERT INTO `NameGen` VALUES (6171,"Vozdor",8,1); 
-INSERT INTO `NameGen` VALUES (6172,"Vozkal",8,1); 
-INSERT INTO `NameGen` VALUES (6173,"Vozlek",8,1); 
-INSERT INTO `NameGen` VALUES (6174,"Vozlok",8,1); 
-INSERT INTO `NameGen` VALUES (6175,"Vozluz",8,1); 
-INSERT INTO `NameGen` VALUES (6176,"Vozroz",8,1); 
-INSERT INTO `NameGen` VALUES (6177,"Voztok",8,1); 
-INSERT INTO `NameGen` VALUES (6178,"Voztraz",8,1); 
-INSERT INTO `NameGen` VALUES (6179,"Vozwaz",8,1); 
-INSERT INTO `NameGen` VALUES (6180,"Vozzak",8,1); 
-INSERT INTO `NameGen` VALUES (6181,"Vozzarn",8,1); 
-INSERT INTO `NameGen` VALUES (6182,"Vozzert",8,1); 
-INSERT INTO `NameGen` VALUES (6183,"Vozzul",8,1); 
-INSERT INTO `NameGen` VALUES (6184,"Wazbek",8,1); 
-INSERT INTO `NameGen` VALUES (6185,"Wazbirt",8,1); 
-INSERT INTO `NameGen` VALUES (6186,"Wazbrez",8,1); 
-INSERT INTO `NameGen` VALUES (6187,"Wazdor",8,1); 
-INSERT INTO `NameGen` VALUES (6188,"Wazkal",8,1); 
-INSERT INTO `NameGen` VALUES (6189,"Wazlek",8,1); 
-INSERT INTO `NameGen` VALUES (6190,"Wazlok",8,1); 
-INSERT INTO `NameGen` VALUES (6191,"Wazluz",8,1); 
-INSERT INTO `NameGen` VALUES (6192,"Wazroz",8,1); 
-INSERT INTO `NameGen` VALUES (6193,"Waztok",8,1); 
-INSERT INTO `NameGen` VALUES (6194,"Waztraz",8,1); 
-INSERT INTO `NameGen` VALUES (6195,"Wazwaz",8,1); 
-INSERT INTO `NameGen` VALUES (6196,"Wazzak",8,1); 
-INSERT INTO `NameGen` VALUES (6197,"Wazzarn",8,1); 
-INSERT INTO `NameGen` VALUES (6198,"Wazzert",8,1); 
-INSERT INTO `NameGen` VALUES (6199,"Wazzul",8,1); 
-INSERT INTO `NameGen` VALUES (6200,"Wertbek",8,1); 
-INSERT INTO `NameGen` VALUES (6201,"Wertbirt",8,1); 
-INSERT INTO `NameGen` VALUES (6202,"Wertbrez",8,1); 
-INSERT INTO `NameGen` VALUES (6203,"Wertdor",8,1); 
-INSERT INTO `NameGen` VALUES (6204,"Wertkal",8,1); 
-INSERT INTO `NameGen` VALUES (6205,"Wertlek",8,1); 
-INSERT INTO `NameGen` VALUES (6206,"Wertlok",8,1); 
-INSERT INTO `NameGen` VALUES (6207,"Wertluz",8,1); 
-INSERT INTO `NameGen` VALUES (6208,"Wertroz",8,1); 
-INSERT INTO `NameGen` VALUES (6209,"Werttok",8,1); 
-INSERT INTO `NameGen` VALUES (6210,"Werttraz",8,1); 
-INSERT INTO `NameGen` VALUES (6211,"Wertwaz",8,1); 
-INSERT INTO `NameGen` VALUES (6212,"Wertzak",8,1); 
-INSERT INTO `NameGen` VALUES (6213,"Wertzarn",8,1); 
-INSERT INTO `NameGen` VALUES (6214,"Wertzert",8,1); 
-INSERT INTO `NameGen` VALUES (6215,"Wertzul",8,1); 
-INSERT INTO `NameGen` VALUES (6216,"Woxbek",8,1); 
-INSERT INTO `NameGen` VALUES (6217,"Woxbirt",8,1); 
-INSERT INTO `NameGen` VALUES (6218,"Woxbrez",8,1); 
-INSERT INTO `NameGen` VALUES (6219,"Woxdor",8,1); 
-INSERT INTO `NameGen` VALUES (6220,"Woxkal",8,1); 
-INSERT INTO `NameGen` VALUES (6221,"Woxlek",8,1); 
-INSERT INTO `NameGen` VALUES (6222,"Woxlok",8,1); 
-INSERT INTO `NameGen` VALUES (6223,"Woxluz",8,1); 
-INSERT INTO `NameGen` VALUES (6224,"Woxroz",8,1); 
-INSERT INTO `NameGen` VALUES (6225,"Woxtok",8,1); 
-INSERT INTO `NameGen` VALUES (6226,"Woxtraz",8,1); 
-INSERT INTO `NameGen` VALUES (6227,"Woxwaz",8,1); 
-INSERT INTO `NameGen` VALUES (6228,"Woxzak",8,1); 
-INSERT INTO `NameGen` VALUES (6229,"Woxzarn",8,1); 
-INSERT INTO `NameGen` VALUES (6230,"Woxzert",8,1); 
-INSERT INTO `NameGen` VALUES (6231,"Woxzul",8,1); 
-INSERT INTO `NameGen` VALUES (6232,"Xarbek",8,1); 
-INSERT INTO `NameGen` VALUES (6233,"Xarbirt",8,1); 
-INSERT INTO `NameGen` VALUES (6234,"Xarbrez",8,1); 
-INSERT INTO `NameGen` VALUES (6235,"Xardor",8,1); 
-INSERT INTO `NameGen` VALUES (6236,"Xarkal",8,1); 
-INSERT INTO `NameGen` VALUES (6237,"Xarlek",8,1); 
-INSERT INTO `NameGen` VALUES (6238,"Xarlok",8,1); 
-INSERT INTO `NameGen` VALUES (6239,"Xarluz",8,1); 
-INSERT INTO `NameGen` VALUES (6240,"Xarroz",8,1); 
-INSERT INTO `NameGen` VALUES (6241,"Xartok",8,1); 
-INSERT INTO `NameGen` VALUES (6242,"Xartraz",8,1); 
-INSERT INTO `NameGen` VALUES (6243,"Xarwaz",8,1); 
-INSERT INTO `NameGen` VALUES (6244,"Xarzak",8,1); 
-INSERT INTO `NameGen` VALUES (6245,"Xarzarn",8,1); 
-INSERT INTO `NameGen` VALUES (6246,"Xarzert",8,1); 
-INSERT INTO `NameGen` VALUES (6247,"Xarzul",8,1); 
-INSERT INTO `NameGen` VALUES (6248,"Xenbek",8,1); 
-INSERT INTO `NameGen` VALUES (6249,"Xenbirt",8,1); 
-INSERT INTO `NameGen` VALUES (6250,"Xenbrez",8,1); 
-INSERT INTO `NameGen` VALUES (6251,"Xendor",8,1); 
-INSERT INTO `NameGen` VALUES (6252,"Xenkal",8,1); 
-INSERT INTO `NameGen` VALUES (6253,"Xenlek",8,1); 
-INSERT INTO `NameGen` VALUES (6254,"Xenlok",8,1); 
-INSERT INTO `NameGen` VALUES (6255,"Xenluz",8,1); 
-INSERT INTO `NameGen` VALUES (6256,"Xenroz",8,1); 
-INSERT INTO `NameGen` VALUES (6257,"Xentok",8,1); 
-INSERT INTO `NameGen` VALUES (6258,"Xentraz",8,1); 
-INSERT INTO `NameGen` VALUES (6259,"Xenwaz",8,1); 
-INSERT INTO `NameGen` VALUES (6260,"Xenzak",8,1); 
-INSERT INTO `NameGen` VALUES (6261,"Xenzarn",8,1); 
-INSERT INTO `NameGen` VALUES (6262,"Xenzert",8,1); 
-INSERT INTO `NameGen` VALUES (6263,"Xenzul",8,1); 
-INSERT INTO `NameGen` VALUES (6264,"Xertbek",8,1); 
-INSERT INTO `NameGen` VALUES (6265,"Xertbirt",8,1); 
-INSERT INTO `NameGen` VALUES (6266,"Xertbrez",8,1); 
-INSERT INTO `NameGen` VALUES (6267,"Xertdor",8,1); 
-INSERT INTO `NameGen` VALUES (6268,"Xertkal",8,1); 
-INSERT INTO `NameGen` VALUES (6269,"Xertlek",8,1); 
-INSERT INTO `NameGen` VALUES (6270,"Xertlok",8,1); 
-INSERT INTO `NameGen` VALUES (6271,"Xertluz",8,1); 
-INSERT INTO `NameGen` VALUES (6272,"Xertroz",8,1); 
-INSERT INTO `NameGen` VALUES (6273,"Xerttok",8,1); 
-INSERT INTO `NameGen` VALUES (6274,"Xerttraz",8,1); 
-INSERT INTO `NameGen` VALUES (6275,"Xertwaz",8,1); 
-INSERT INTO `NameGen` VALUES (6276,"Xertzak",8,1); 
-INSERT INTO `NameGen` VALUES (6277,"Xertzarn",8,1); 
-INSERT INTO `NameGen` VALUES (6278,"Xertzert",8,1); 
-INSERT INTO `NameGen` VALUES (6279,"Xertzul",8,1); 
-INSERT INTO `NameGen` VALUES (6280,"Yazbek",8,1); 
-INSERT INTO `NameGen` VALUES (6281,"Yazbirt",8,1); 
-INSERT INTO `NameGen` VALUES (6282,"Yazbrez",8,1); 
-INSERT INTO `NameGen` VALUES (6283,"Yazdor",8,1); 
-INSERT INTO `NameGen` VALUES (6284,"Yazkal",8,1); 
-INSERT INTO `NameGen` VALUES (6285,"Yazlek",8,1); 
-INSERT INTO `NameGen` VALUES (6286,"Yazlok",8,1); 
-INSERT INTO `NameGen` VALUES (6287,"Yazluz",8,1); 
-INSERT INTO `NameGen` VALUES (6288,"Yazroz",8,1); 
-INSERT INTO `NameGen` VALUES (6289,"Yaztok",8,1); 
-INSERT INTO `NameGen` VALUES (6290,"Yaztraz",8,1); 
-INSERT INTO `NameGen` VALUES (6291,"Yazwaz",8,1); 
-INSERT INTO `NameGen` VALUES (6292,"Yazzak",8,1); 
-INSERT INTO `NameGen` VALUES (6293,"Yazzarn",8,1); 
-INSERT INTO `NameGen` VALUES (6294,"Yazzert",8,1); 
-INSERT INTO `NameGen` VALUES (6295,"Yazzul",8,1); 
-INSERT INTO `NameGen` VALUES (6296,"Yirtbek",8,1); 
-INSERT INTO `NameGen` VALUES (6297,"Yirtbirt",8,1); 
-INSERT INTO `NameGen` VALUES (6298,"Yirtbrez",8,1); 
-INSERT INTO `NameGen` VALUES (6299,"Yirtdor",8,1); 
-INSERT INTO `NameGen` VALUES (6300,"Yirtkal",8,1); 
-INSERT INTO `NameGen` VALUES (6301,"Yirtlek",8,1); 
-INSERT INTO `NameGen` VALUES (6302,"Yirtlok",8,1); 
-INSERT INTO `NameGen` VALUES (6303,"Yirtluz",8,1); 
-INSERT INTO `NameGen` VALUES (6304,"Yirtroz",8,1); 
-INSERT INTO `NameGen` VALUES (6305,"Yirttok",8,1); 
-INSERT INTO `NameGen` VALUES (6306,"Yirttraz",8,1); 
-INSERT INTO `NameGen` VALUES (6307,"Yirtwaz",8,1); 
-INSERT INTO `NameGen` VALUES (6308,"Yirtzak",8,1); 
-INSERT INTO `NameGen` VALUES (6309,"Yirtzarn",8,1); 
-INSERT INTO `NameGen` VALUES (6310,"Yirtzert",8,1); 
-INSERT INTO `NameGen` VALUES (6311,"Yirtzul",8,1); 
-INSERT INTO `NameGen` VALUES (6312,"Yunbek",8,1); 
-INSERT INTO `NameGen` VALUES (6313,"Yunbirt",8,1); 
-INSERT INTO `NameGen` VALUES (6314,"Yunbrez",8,1); 
-INSERT INTO `NameGen` VALUES (6315,"Yundor",8,1); 
-INSERT INTO `NameGen` VALUES (6316,"Yunkal",8,1); 
-INSERT INTO `NameGen` VALUES (6317,"Yunlek",8,1); 
-INSERT INTO `NameGen` VALUES (6318,"Yunlok",8,1); 
-INSERT INTO `NameGen` VALUES (6319,"Yunluz",8,1); 
-INSERT INTO `NameGen` VALUES (6320,"Yunroz",8,1); 
-INSERT INTO `NameGen` VALUES (6321,"Yuntok",8,1); 
-INSERT INTO `NameGen` VALUES (6322,"Yuntraz",8,1); 
-INSERT INTO `NameGen` VALUES (6323,"Yunwaz",8,1); 
-INSERT INTO `NameGen` VALUES (6324,"Yunzak",8,1); 
-INSERT INTO `NameGen` VALUES (6325,"Yunzarn",8,1); 
-INSERT INTO `NameGen` VALUES (6326,"Yunzert",8,1); 
-INSERT INTO `NameGen` VALUES (6327,"Yunzul",8,1); 
-INSERT INTO `NameGen` VALUES (6328,"Zakbek",8,1); 
-INSERT INTO `NameGen` VALUES (6329,"Zakbirt",8,1); 
-INSERT INTO `NameGen` VALUES (6330,"Zakbrez",8,1); 
-INSERT INTO `NameGen` VALUES (6331,"Zakdor",8,1); 
-INSERT INTO `NameGen` VALUES (6332,"Zakkal",8,1); 
-INSERT INTO `NameGen` VALUES (6333,"Zaklek",8,1); 
-INSERT INTO `NameGen` VALUES (6334,"Zaklok",8,1); 
-INSERT INTO `NameGen` VALUES (6335,"Zakluz",8,1); 
-INSERT INTO `NameGen` VALUES (6336,"Zakroz",8,1); 
-INSERT INTO `NameGen` VALUES (6337,"Zaktok",8,1); 
-INSERT INTO `NameGen` VALUES (6338,"Zaktraz",8,1); 
-INSERT INTO `NameGen` VALUES (6339,"Zakwaz",8,1); 
-INSERT INTO `NameGen` VALUES (6340,"Zakzak",8,1); 
-INSERT INTO `NameGen` VALUES (6341,"Zakzarn",8,1); 
-INSERT INTO `NameGen` VALUES (6342,"Zakzert",8,1); 
-INSERT INTO `NameGen` VALUES (6343,"Zakzul",8,1); 
-INSERT INTO `NameGen` VALUES (6344,"Zernbek",8,1); 
-INSERT INTO `NameGen` VALUES (6345,"Zernbirt",8,1); 
-INSERT INTO `NameGen` VALUES (6346,"Zernbrez",8,1); 
-INSERT INTO `NameGen` VALUES (6347,"Zerndor",8,1); 
-INSERT INTO `NameGen` VALUES (6348,"Zernkal",8,1); 
-INSERT INTO `NameGen` VALUES (6349,"Zernlek",8,1); 
-INSERT INTO `NameGen` VALUES (6350,"Zernlok",8,1); 
-INSERT INTO `NameGen` VALUES (6351,"Zernluz",8,1); 
-INSERT INTO `NameGen` VALUES (6352,"Zernroz",8,1); 
-INSERT INTO `NameGen` VALUES (6353,"Zerntok",8,1); 
-INSERT INTO `NameGen` VALUES (6354,"Zerntraz",8,1); 
-INSERT INTO `NameGen` VALUES (6355,"Zernwaz",8,1); 
-INSERT INTO `NameGen` VALUES (6356,"Zernzak",8,1); 
-INSERT INTO `NameGen` VALUES (6357,"Zernzarn",8,1); 
-INSERT INTO `NameGen` VALUES (6358,"Zernzert",8,1); 
-INSERT INTO `NameGen` VALUES (6359,"Zernzul",8,1); 
-INSERT INTO `NameGen` VALUES (2285,"Acheroth",10,0); 
-INSERT INTO `NameGen` VALUES (2286,"Adonys",10,0); 
-INSERT INTO `NameGen` VALUES (2287,"Alastor",10,0); 
-INSERT INTO `NameGen` VALUES (2288,"Alendel",10,0); 
-INSERT INTO `NameGen` VALUES (2289,"Alindian",10,0); 
-INSERT INTO `NameGen` VALUES (2290,"Ammath",10,0); 
-INSERT INTO `NameGen` VALUES (2291,"Anastalin",10,0); 
-INSERT INTO `NameGen` VALUES (2292,"Andor",10,0); 
-INSERT INTO `NameGen` VALUES (2293,"Ardeyn",10,0); 
-INSERT INTO `NameGen` VALUES (2294,"Astaron",10,0); 
-INSERT INTO `NameGen` VALUES (2295,"Basriel",10,0); 
-INSERT INTO `NameGen` VALUES (2296,"Bironys",10,0); 
-INSERT INTO `NameGen` VALUES (2297,"Borill",10,0); 
-INSERT INTO `NameGen` VALUES (2298,"Bulinard",10,0); 
-INSERT INTO `NameGen` VALUES (2299,"Capziel",10,0); 
-INSERT INTO `NameGen` VALUES (2300,"Celoenus",10,0); 
-INSERT INTO `NameGen` VALUES (2301,"Cerunath",10,0); 
-INSERT INTO `NameGen` VALUES (2302,"Coridan",10,0); 
-INSERT INTO `NameGen` VALUES (2303,"Daenil",10,0); 
-INSERT INTO `NameGen` VALUES (2304,"Dakian",10,0); 
-INSERT INTO `NameGen` VALUES (2305,"Danash",10,0); 
-INSERT INTO `NameGen` VALUES (2306,"Denastrian",10,0); 
-INSERT INTO `NameGen` VALUES (2307,"Dorann",10,0); 
-INSERT INTO `NameGen` VALUES (2308,"Dorillian",10,0); 
-INSERT INTO `NameGen` VALUES (2309,"Ellimast",10,0); 
-INSERT INTO `NameGen` VALUES (2310,"Falin",10,0); 
-INSERT INTO `NameGen` VALUES (2311,"Fastalor",10,0); 
-INSERT INTO `NameGen` VALUES (2312,"Felendren",10,0); 
-INSERT INTO `NameGen` VALUES (2313,"Fennidaul",10,0); 
-INSERT INTO `NameGen` VALUES (2314,"Gabrial",10,0); 
-INSERT INTO `NameGen` VALUES (2315,"Geranis",10,0); 
-INSERT INTO `NameGen` VALUES (2316,"Geron",10,0); 
-INSERT INTO `NameGen` VALUES (2317,"Gordring",10,0); 
-INSERT INTO `NameGen` VALUES (2318,"Gullivan",10,0); 
-INSERT INTO `NameGen` VALUES (2319,"Hacinth",10,0); 
-INSERT INTO `NameGen` VALUES (2320,"Halis",10,0); 
-INSERT INTO `NameGen` VALUES (2321,"Hathvelion",10,0); 
-INSERT INTO `NameGen` VALUES (2322,"Hynalan",10,0); 
-INSERT INTO `NameGen` VALUES (2323,"Iavis",10,0); 
-INSERT INTO `NameGen` VALUES (2324,"Indorian",10,0); 
-INSERT INTO `NameGen` VALUES (2325,"Istolus",10,0); 
-INSERT INTO `NameGen` VALUES (2326,"Ithanas",10,0); 
-INSERT INTO `NameGen` VALUES (2327,"Jesthenis",10,0); 
-INSERT INTO `NameGen` VALUES (2328,"Jonovath",10,0); 
-INSERT INTO `NameGen` VALUES (2329,"Kaladrin",10,0); 
-INSERT INTO `NameGen` VALUES (2330,"Kuularin",10,0); 
-INSERT INTO `NameGen` VALUES (2331,"Kelivard",10,0); 
-INSERT INTO `NameGen` VALUES (2332,"Knastus",10,0); 
-INSERT INTO `NameGen` VALUES (2333,"Kordril",10,0); 
-INSERT INTO `NameGen` VALUES (2334,"Lammash",10,0); 
-INSERT INTO `NameGen` VALUES (2335,"Landalor",10,0); 
-INSERT INTO `NameGen` VALUES (2336,"Landorian",10,0); 
-INSERT INTO `NameGen` VALUES (2337,"Lanthan",10,0); 
-INSERT INTO `NameGen` VALUES (2338,"Lazuriel",10,0); 
-INSERT INTO `NameGen` VALUES (2339,"Lennivan",10,0); 
-INSERT INTO `NameGen` VALUES (2340,"Lorastian",10,0); 
-INSERT INTO `NameGen` VALUES (2341,"Lothos",10,0); 
-INSERT INTO `NameGen` VALUES (2342,"Luminorian",10,0); 
-INSERT INTO `NameGen` VALUES (2343,"Mandarian",10,0); 
-INSERT INTO `NameGen` VALUES (2344,"Martik",10,0); 
-INSERT INTO `NameGen` VALUES (2345,"Mastinicus",10,0); 
-INSERT INTO `NameGen` VALUES (2346,"Mathreyn",10,0); 
-INSERT INTO `NameGen` VALUES (2347,"Myrokos",10,0); 
-INSERT INTO `NameGen` VALUES (2348,"Narinicus",10,0); 
-INSERT INTO `NameGen` VALUES (2349,"Nelluth",10,0); 
-INSERT INTO `NameGen` VALUES (2350,"Nerendil",10,0); 
-INSERT INTO `NameGen` VALUES (2351,"Nirael",10,0); 
-INSERT INTO `NameGen` VALUES (2352,"Ophion",10,0); 
-INSERT INTO `NameGen` VALUES (2353,"Orastian",10,0); 
-INSERT INTO `NameGen` VALUES (2354,"Orthin",10,0); 
-INSERT INTO `NameGen` VALUES (2355,"Perimath",10,0); 
-INSERT INTO `NameGen` VALUES (2356,"Kiril",10,0); 
-INSERT INTO `NameGen` VALUES (2357,"Rallin",10,0); 
-INSERT INTO `NameGen` VALUES (2358,"Rameth",10,0); 
-INSERT INTO `NameGen` VALUES (2359,"Regethon",10,0); 
-INSERT INTO `NameGen` VALUES (2360,"Relivanth",10,0); 
-INSERT INTO `NameGen` VALUES (2361,"Rindorell",10,0); 
-INSERT INTO `NameGen` VALUES (2362,"Ruibar",10,0); 
-INSERT INTO `NameGen` VALUES (2363,"Salindorian",10,0); 
-INSERT INTO `NameGen` VALUES (2364,"Salovanth",10,0); 
-INSERT INTO `NameGen` VALUES (2365,"Sarcyon",10,0); 
-INSERT INTO `NameGen` VALUES (2366,"Sathein",10,0); 
-INSERT INTO `NameGen` VALUES (2367,"Sathranis",10,0); 
-INSERT INTO `NameGen` VALUES (2368,"Sennistan",10,0); 
-INSERT INTO `NameGen` VALUES (2369,"Shalibar",10,0); 
-INSERT INTO `NameGen` VALUES (2370,"Solastus",10,0); 
-INSERT INTO `NameGen` VALUES (2371,"Symmael",10,0); 
-INSERT INTO `NameGen` VALUES (2372,"Tarrath",10,0); 
-INSERT INTO `NameGen` VALUES (2373,"Taumas",10,0); 
-INSERT INTO `NameGen` VALUES (2374,"Telenus",10,0); 
-INSERT INTO `NameGen` VALUES (2375,"Tennish",10,0); 
-INSERT INTO `NameGen` VALUES (2376,"Thaelas",10,0); 
-INSERT INTO `NameGen` VALUES (2377,"Theirean",10,0); 
-INSERT INTO `NameGen` VALUES (2378,"Thorian",10,0); 
-INSERT INTO `NameGen` VALUES (2379,"Ticonash",10,0); 
-INSERT INTO `NameGen` VALUES (2380,"Vasyleios",10,0); 
-INSERT INTO `NameGen` VALUES (2381,"Vedoran",10,0); 
-INSERT INTO `NameGen` VALUES (2382,"Velendris",10,0); 
-INSERT INTO `NameGen` VALUES (2383,"Westinar",10,0); 
-INSERT INTO `NameGen` VALUES (2384,"Xanthus",10,0); 
-INSERT INTO `NameGen` VALUES (6360,"Aendis",10,0); 
-INSERT INTO `NameGen` VALUES (6361,"Aendron",10,0); 
-INSERT INTO `NameGen` VALUES (6362,"Aenesh",10,0); 
-INSERT INTO `NameGen` VALUES (6363,"Aeniel",10,0); 
-INSERT INTO `NameGen` VALUES (6364,"Aenin",10,0); 
-INSERT INTO `NameGen` VALUES (6365,"Aenlan",10,0); 
-INSERT INTO `NameGen` VALUES (6366,"Aenleron",10,0); 
-INSERT INTO `NameGen` VALUES (6367,"Aenllan",10,0); 
-INSERT INTO `NameGen` VALUES (6368,"Aenlor",10,0); 
-INSERT INTO `NameGen` VALUES (6369,"Aenstus",10,0); 
-INSERT INTO `NameGen` VALUES (6370,"Amordis",10,0); 
-INSERT INTO `NameGen` VALUES (6371,"Amordron",10,0); 
-INSERT INTO `NameGen` VALUES (6372,"Amoresh",10,0); 
-INSERT INTO `NameGen` VALUES (6373,"Amoriel",10,0); 
-INSERT INTO `NameGen` VALUES (6374,"Amorin",10,0); 
-INSERT INTO `NameGen` VALUES (6375,"Amorlan",10,0); 
-INSERT INTO `NameGen` VALUES (6376,"Amorleron",10,0); 
-INSERT INTO `NameGen` VALUES (6377,"Amorllan",10,0); 
-INSERT INTO `NameGen` VALUES (6378,"Amorlor",10,0); 
-INSERT INTO `NameGen` VALUES (6379,"Amorstus",10,0); 
-INSERT INTO `NameGen` VALUES (6380,"Keedis",10,0); 
-INSERT INTO `NameGen` VALUES (6381,"Keeiel",10,0); 
-INSERT INTO `NameGen` VALUES (6382,"Keein",10,0); 
-INSERT INTO `NameGen` VALUES (6383,"Keelan",10,0); 
-INSERT INTO `NameGen` VALUES (6384,"Keelor",10,0); 
-INSERT INTO `NameGen` VALUES (6385,"Keleron",10,0); 
-INSERT INTO `NameGen` VALUES (6386,"Kellan",10,0); 
-INSERT INTO `NameGen` VALUES (6387,"Keyadis",10,0); 
-INSERT INTO `NameGen` VALUES (6388,"Keyadron",10,0); 
-INSERT INTO `NameGen` VALUES (6389,"Keyaesh",10,0); 
-INSERT INTO `NameGen` VALUES (6390,"Keyaiel",10,0); 
-INSERT INTO `NameGen` VALUES (6391,"Keyain",10,0); 
-INSERT INTO `NameGen` VALUES (6392,"Keyalan",10,0); 
-INSERT INTO `NameGen` VALUES (6393,"Keyaleron",10,0); 
-INSERT INTO `NameGen` VALUES (6394,"Keyallan",10,0); 
-INSERT INTO `NameGen` VALUES (6395,"Keyalor",10,0); 
-INSERT INTO `NameGen` VALUES (6396,"Keyastus",10,0); 
-INSERT INTO `NameGen` VALUES (6397,"Kiedron",10,0); 
-INSERT INTO `NameGen` VALUES (6398,"Kiestus",10,0); 
-INSERT INTO `NameGen` VALUES (6399,"Kredis",10,0); 
-INSERT INTO `NameGen` VALUES (6400,"Kredron",10,0); 
-INSERT INTO `NameGen` VALUES (6401,"Kreiel",10,0); 
-INSERT INTO `NameGen` VALUES (6402,"Krein",10,0); 
-INSERT INTO `NameGen` VALUES (6403,"Krelan",10,0); 
-INSERT INTO `NameGen` VALUES (6404,"Kreleron",10,0); 
-INSERT INTO `NameGen` VALUES (6405,"Krellan",10,0); 
-INSERT INTO `NameGen` VALUES (6406,"Krelor",10,0); 
-INSERT INTO `NameGen` VALUES (6407,"Krestus",10,0); 
-INSERT INTO `NameGen` VALUES (6408,"Kriesh",10,0); 
-INSERT INTO `NameGen` VALUES (6409,"Myrodis",10,0); 
-INSERT INTO `NameGen` VALUES (6410,"Myrodron",10,0); 
-INSERT INTO `NameGen` VALUES (6411,"Myroesh",10,0); 
-INSERT INTO `NameGen` VALUES (6412,"Myroiel",10,0); 
-INSERT INTO `NameGen` VALUES (6413,"Myroin",10,0); 
-INSERT INTO `NameGen` VALUES (6414,"Myrolan",10,0); 
-INSERT INTO `NameGen` VALUES (6415,"Myroleron",10,0); 
-INSERT INTO `NameGen` VALUES (6416,"Myrollan",10,0); 
-INSERT INTO `NameGen` VALUES (6417,"Myrolor",10,0); 
-INSERT INTO `NameGen` VALUES (6418,"Myrostus",10,0); 
-INSERT INTO `NameGen` VALUES (6419,"Sandis",10,0); 
-INSERT INTO `NameGen` VALUES (6420,"Sandron",10,0); 
-INSERT INTO `NameGen` VALUES (6421,"Sanesh",10,0); 
-INSERT INTO `NameGen` VALUES (6422,"Saniel",10,0); 
-INSERT INTO `NameGen` VALUES (6423,"Sanin",10,0); 
-INSERT INTO `NameGen` VALUES (6424,"Sanlan",10,0); 
-INSERT INTO `NameGen` VALUES (6425,"Sanleron",10,0); 
-INSERT INTO `NameGen` VALUES (6426,"Sanllan",10,0); 
-INSERT INTO `NameGen` VALUES (6427,"Sanlor",10,0); 
-INSERT INTO `NameGen` VALUES (6428,"Sanstus",10,0); 
-INSERT INTO `NameGen` VALUES (6429,"Tydis",10,0); 
-INSERT INTO `NameGen` VALUES (6430,"Tydron",10,0); 
-INSERT INTO `NameGen` VALUES (6431,"Tyesh",10,0); 
-INSERT INTO `NameGen` VALUES (6432,"Tyiel",10,0); 
-INSERT INTO `NameGen` VALUES (6433,"Tyin",10,0); 
-INSERT INTO `NameGen` VALUES (6434,"Tylan",10,0); 
-INSERT INTO `NameGen` VALUES (6435,"Tyleron",10,0); 
-INSERT INTO `NameGen` VALUES (6436,"Tyllan",10,0); 
-INSERT INTO `NameGen` VALUES (6437,"Tylor",10,0); 
-INSERT INTO `NameGen` VALUES (6438,"Tystus",10,0); 
-INSERT INTO `NameGen` VALUES (6439,"Vyndis",10,0); 
-INSERT INTO `NameGen` VALUES (6440,"Vyndron",10,0); 
-INSERT INTO `NameGen` VALUES (6441,"Vynesh",10,0); 
-INSERT INTO `NameGen` VALUES (6442,"Vyniel",10,0); 
-INSERT INTO `NameGen` VALUES (6443,"Vynin",10,0); 
-INSERT INTO `NameGen` VALUES (6444,"Vynlan",10,0); 
-INSERT INTO `NameGen` VALUES (6445,"Vynleron",10,0); 
-INSERT INTO `NameGen` VALUES (6446,"Vynllan",10,0); 
-INSERT INTO `NameGen` VALUES (6447,"Vynlor",10,0); 
-INSERT INTO `NameGen` VALUES (6448,"Vynstus",10,0); 
-INSERT INTO `NameGen` VALUES (6449,"Weledis",10,0); 
-INSERT INTO `NameGen` VALUES (6450,"Weledron",10,0); 
-INSERT INTO `NameGen` VALUES (6451,"Weleiel",10,0); 
-INSERT INTO `NameGen` VALUES (6452,"Welein",10,0); 
-INSERT INTO `NameGen` VALUES (6453,"Welelan",10,0); 
-INSERT INTO `NameGen` VALUES (6454,"Welelor",10,0); 
-INSERT INTO `NameGen` VALUES (6455,"Welish",10,0); 
-INSERT INTO `NameGen` VALUES (2385,"Acantha",10,1); 
-INSERT INTO `NameGen` VALUES (2386,"Aelyste",10,1); 
-INSERT INTO `NameGen` VALUES (2387,"Aerin",10,1); 
-INSERT INTO `NameGen` VALUES (2388,"Alectria",10,1); 
-INSERT INTO `NameGen` VALUES (2389,"Aleinia",10,1); 
-INSERT INTO `NameGen` VALUES (2390,"Alinderial",10,1); 
-INSERT INTO `NameGen` VALUES (2391,"Anadarindia",10,1); 
-INSERT INTO `NameGen` VALUES (2392,"Areyn",10,1); 
-INSERT INTO `NameGen` VALUES (2393,"Astella",10,1); 
-INSERT INTO `NameGen` VALUES (2394,"Avalina",10,1); 
-INSERT INTO `NameGen` VALUES (2395,"Belamun",10,1); 
-INSERT INTO `NameGen` VALUES (2396,"Belleria",10,1); 
-INSERT INTO `NameGen` VALUES (2397,"Braelyn",10,1); 
-INSERT INTO `NameGen` VALUES (2398,"Brisalyna",10,1); 
-INSERT INTO `NameGen` VALUES (2399,"Cala",10,1); 
-INSERT INTO `NameGen` VALUES (2400,"Callysta",10,1); 
-INSERT INTO `NameGen` VALUES (2401,"Celina",10,1); 
-INSERT INTO `NameGen` VALUES (2402,"Celosia",10,1); 
-INSERT INTO `NameGen` VALUES (2403,"Charisse",10,1); 
-INSERT INTO `NameGen` VALUES (2404,"Cyndala",10,1); 
-INSERT INTO `NameGen` VALUES (2405,"Daestra",10,1); 
-INSERT INTO `NameGen` VALUES (2406,"Delindis",10,1); 
-INSERT INTO `NameGen` VALUES (2407,"Desdemina",10,1); 
-INSERT INTO `NameGen` VALUES (2408,"Dorala",10,1); 
-INSERT INTO `NameGen` VALUES (2409,"Dyonissa",10,1); 
-INSERT INTO `NameGen` VALUES (2410,"Elianne",10,1); 
-INSERT INTO `NameGen` VALUES (2411,"Elisara",10,1); 
-INSERT INTO `NameGen` VALUES (2412,"Evelyne",10,1); 
-INSERT INTO `NameGen` VALUES (2413,"Faelina",10,1); 
-INSERT INTO `NameGen` VALUES (2414,"Faeraline",10,1); 
-INSERT INTO `NameGen` VALUES (2415,"Felinis",10,1); 
-INSERT INTO `NameGen` VALUES (2416,"Garridel",10,1); 
-INSERT INTO `NameGen` VALUES (2417,"Gelindril",10,1); 
-INSERT INTO `NameGen` VALUES (2418,"Genistina",10,1); 
-INSERT INTO `NameGen` VALUES (2419,"Hycintha",10,1); 
-INSERT INTO `NameGen` VALUES (2420,"Ilektra",10,1); 
-INSERT INTO `NameGen` VALUES (2421,"Ionae",10,1); 
-INSERT INTO `NameGen` VALUES (2422,"Irissa",10,1); 
-INSERT INTO `NameGen` VALUES (2423,"Janeda",10,1); 
-INSERT INTO `NameGen` VALUES (2424,"Jasmintha",10,1); 
-INSERT INTO `NameGen` VALUES (2425,"Kaelynitha",10,1); 
-INSERT INTO `NameGen` VALUES (2426,"Kanaria",10,1); 
-INSERT INTO `NameGen` VALUES (2427,"Kelisendra",10,1); 
-INSERT INTO `NameGen` VALUES (2428,"Larianna",10,1); 
-INSERT INTO `NameGen` VALUES (2429,"Larissa",10,1); 
-INSERT INTO `NameGen` VALUES (2430,"Lilatha",10,1); 
-INSERT INTO `NameGen` VALUES (2431,"Lilithelys",10,1); 
-INSERT INTO `NameGen` VALUES (2432,"Lindrys",10,1); 
-INSERT INTO `NameGen` VALUES (2433,"Lionna",10,1); 
-INSERT INTO `NameGen` VALUES (2434,"Liralei",10,1); 
-INSERT INTO `NameGen` VALUES (2435,"Lithilia",10,1); 
-INSERT INTO `NameGen` VALUES (2436,"Luminil",10,1); 
-INSERT INTO `NameGen` VALUES (2437,"Medea",10,1); 
-INSERT INTO `NameGen` VALUES (2438,"Melanthe",10,1); 
-INSERT INTO `NameGen` VALUES (2439,"Mellindra",10,1); 
-INSERT INTO `NameGen` VALUES (2440,"Meniara",10,1); 
-INSERT INTO `NameGen` VALUES (2441,"Morgana",10,1); 
-INSERT INTO `NameGen` VALUES (2442,"Nadina",10,1); 
-INSERT INTO `NameGen` VALUES (2443,"Narcisse",10,1); 
-INSERT INTO `NameGen` VALUES (2444,"Narina",10,1); 
-INSERT INTO `NameGen` VALUES (2445,"Nesseline",10,1); 
-INSERT INTO `NameGen` VALUES (2446,"Nymue",10,1); 
-INSERT INTO `NameGen` VALUES (2447,"Nyssa",10,1); 
-INSERT INTO `NameGen` VALUES (2448,"Oleanda",10,1); 
-INSERT INTO `NameGen` VALUES (2449,"Ophira",10,1); 
-INSERT INTO `NameGen` VALUES (2450,"Oriana",10,1); 
-INSERT INTO `NameGen` VALUES (2451,"Pyranda",10,1); 
-INSERT INTO `NameGen` VALUES (2452,"Pyrena",10,1); 
-INSERT INTO `NameGen` VALUES (2453,"Keirra",10,1); 
-INSERT INTO `NameGen` VALUES (2454,"Quelastia",10,1); 
-INSERT INTO `NameGen` VALUES (2455,"Raelaria",10,1); 
-INSERT INTO `NameGen` VALUES (2456,"Raelis",10,1); 
-INSERT INTO `NameGen` VALUES (2457,"Rashelle",10,1); 
-INSERT INTO `NameGen` VALUES (2458,"Reanna",10,1); 
-INSERT INTO `NameGen` VALUES (2459,"Reladriel",10,1); 
-INSERT INTO `NameGen` VALUES (2460,"Rinna",10,1); 
-INSERT INTO `NameGen` VALUES (2461,"Sanossa",10,1); 
-INSERT INTO `NameGen` VALUES (2462,"Sareyn",10,1); 
-INSERT INTO `NameGen` VALUES (2463,"Sathiel",10,1); 
-INSERT INTO `NameGen` VALUES (2464,"Savalyne",10,1); 
-INSERT INTO `NameGen` VALUES (2465,"Sedina",10,1); 
-INSERT INTO `NameGen` VALUES (2466,"Selestia",10,1); 
-INSERT INTO `NameGen` VALUES (2467,"Selinasta",10,1); 
-INSERT INTO `NameGen` VALUES (2468,"Selindia",10,1); 
-INSERT INTO `NameGen` VALUES (2469,"Sharra",10,1); 
-INSERT INTO `NameGen` VALUES (2470,"Shatharia",10,1); 
-INSERT INTO `NameGen` VALUES (2471,"Sinaris",10,1); 
-INSERT INTO `NameGen` VALUES (2472,"Solanna",10,1); 
-INSERT INTO `NameGen` VALUES (2473,"Sunamun",10,1); 
-INSERT INTO `NameGen` VALUES (2474,"Syrenni",10,1); 
-INSERT INTO `NameGen` VALUES (2475,"Taina",10,1); 
-INSERT INTO `NameGen` VALUES (2476,"Tannaria",10,1); 
-INSERT INTO `NameGen` VALUES (2477,"Tannis",10,1); 
-INSERT INTO `NameGen` VALUES (2478,"Teestina",10,1); 
-INSERT INTO `NameGen` VALUES (2479,"Tyria",10,1); 
-INSERT INTO `NameGen` VALUES (2480,"Thela",10,1); 
-INSERT INTO `NameGen` VALUES (2481,"Thelindaria",10,1); 
-INSERT INTO `NameGen` VALUES (2482,"Tirilliae",10,1); 
-INSERT INTO `NameGen` VALUES (2483,"Tirivana",10,1); 
-INSERT INTO `NameGen` VALUES (2484,"Vania",10,1); 
-INSERT INTO `NameGen` VALUES (2485,"Vara",10,1); 
-INSERT INTO `NameGen` VALUES (2486,"Varallia",10,1); 
-INSERT INTO `NameGen` VALUES (2487,"Velaena",10,1); 
-INSERT INTO `NameGen` VALUES (2488,"Velirra",10,1); 
-INSERT INTO `NameGen` VALUES (2489,"Vynna",10,1); 
-INSERT INTO `NameGen` VALUES (2490,"Wylethia",10,1); 
-INSERT INTO `NameGen` VALUES (2491,"Xanthia",10,1); 
-INSERT INTO `NameGen` VALUES (2492,"Zaliene",10,1); 
-INSERT INTO `NameGen` VALUES (6456,"Braeda",10,1); 
-INSERT INTO `NameGen` VALUES (6457,"Braedori",10,1); 
-INSERT INTO `NameGen` VALUES (6458,"Braedra",10,1); 
-INSERT INTO `NameGen` VALUES (6459,"Braedrel",10,1); 
-INSERT INTO `NameGen` VALUES (6460,"Braeice",10,1); 
-INSERT INTO `NameGen` VALUES (6461,"Braeline",10,1); 
-INSERT INTO `NameGen` VALUES (6462,"Braendra",10,1); 
-INSERT INTO `NameGen` VALUES (6463,"Braesong",10,1); 
-INSERT INTO `NameGen` VALUES (6464,"Braevia",10,1); 
-INSERT INTO `NameGen` VALUES (6465,"Deydori",10,1); 
-INSERT INTO `NameGen` VALUES (6466,"Deydra",10,1); 
-INSERT INTO `NameGen` VALUES (6467,"Deydrel",10,1); 
-INSERT INTO `NameGen` VALUES (6468,"Deyeda",10,1); 
-INSERT INTO `NameGen` VALUES (6469,"Deyice",10,1); 
-INSERT INTO `NameGen` VALUES (6470,"Deyline",10,1); 
-INSERT INTO `NameGen` VALUES (6471,"Deyndra",10,1); 
-INSERT INTO `NameGen` VALUES (6472,"Deysong",10,1); 
-INSERT INTO `NameGen` VALUES (6473,"Deyvia",10,1); 
-INSERT INTO `NameGen` VALUES (6474,"Erodori",10,1); 
-INSERT INTO `NameGen` VALUES (6475,"Erodra",10,1); 
-INSERT INTO `NameGen` VALUES (6476,"Erodrel",10,1); 
-INSERT INTO `NameGen` VALUES (6477,"Eroeda",10,1); 
-INSERT INTO `NameGen` VALUES (6478,"Eroice",10,1); 
-INSERT INTO `NameGen` VALUES (6479,"Eroline",10,1); 
-INSERT INTO `NameGen` VALUES (6480,"Erondra",10,1); 
-INSERT INTO `NameGen` VALUES (6481,"Erosong",10,1); 
-INSERT INTO `NameGen` VALUES (6482,"Erovia",10,1); 
-INSERT INTO `NameGen` VALUES (6483,"Galdori",10,1); 
-INSERT INTO `NameGen` VALUES (6484,"Galdra",10,1); 
-INSERT INTO `NameGen` VALUES (6485,"Galdrel",10,1); 
-INSERT INTO `NameGen` VALUES (6486,"Galeda",10,1); 
-INSERT INTO `NameGen` VALUES (6487,"Galice",10,1); 
-INSERT INTO `NameGen` VALUES (6488,"Galline",10,1); 
-INSERT INTO `NameGen` VALUES (6489,"Galndra",10,1); 
-INSERT INTO `NameGen` VALUES (6490,"Galsong",10,1); 
-INSERT INTO `NameGen` VALUES (6491,"Galvia",10,1); 
-INSERT INTO `NameGen` VALUES (6492,"Lithdori",10,1); 
-INSERT INTO `NameGen` VALUES (6493,"Lithdra",10,1); 
-INSERT INTO `NameGen` VALUES (6494,"Lithdrel",10,1); 
-INSERT INTO `NameGen` VALUES (6495,"Litheda",10,1); 
-INSERT INTO `NameGen` VALUES (6496,"Lithice",10,1); 
-INSERT INTO `NameGen` VALUES (6497,"Lithline",10,1); 
-INSERT INTO `NameGen` VALUES (6498,"Lithndra",10,1); 
-INSERT INTO `NameGen` VALUES (6499,"Lithsong",10,1); 
-INSERT INTO `NameGen` VALUES (6500,"Lithvia",10,1); 
-INSERT INTO `NameGen` VALUES (6501,"Noradori",10,1); 
-INSERT INTO `NameGen` VALUES (6502,"Noradra",10,1); 
-INSERT INTO `NameGen` VALUES (6503,"Noradrel",10,1); 
-INSERT INTO `NameGen` VALUES (6504,"Noraeda",10,1); 
-INSERT INTO `NameGen` VALUES (6505,"Noraice",10,1); 
-INSERT INTO `NameGen` VALUES (6506,"Noraline",10,1); 
-INSERT INTO `NameGen` VALUES (6507,"Norandra",10,1); 
-INSERT INTO `NameGen` VALUES (6508,"Norasong",10,1); 
-INSERT INTO `NameGen` VALUES (6509,"Noravia",10,1); 
-INSERT INTO `NameGen` VALUES (6510,"Tanddori",10,1); 
-INSERT INTO `NameGen` VALUES (6511,"Tanddra",10,1); 
-INSERT INTO `NameGen` VALUES (6512,"Tanddrel",10,1); 
-INSERT INTO `NameGen` VALUES (6513,"Tandeda",10,1); 
-INSERT INTO `NameGen` VALUES (6514,"Tandice",10,1); 
-INSERT INTO `NameGen` VALUES (6515,"Tandline",10,1); 
-INSERT INTO `NameGen` VALUES (6516,"Tandndra",10,1); 
-INSERT INTO `NameGen` VALUES (6517,"Tandsong",10,1); 
-INSERT INTO `NameGen` VALUES (6518,"Tandvia",10,1); 
-INSERT INTO `NameGen` VALUES (6519,"Traydori",10,1); 
-INSERT INTO `NameGen` VALUES (6520,"Traydra",10,1); 
-INSERT INTO `NameGen` VALUES (6521,"Traydrel",10,1); 
-INSERT INTO `NameGen` VALUES (6522,"Trayeda",10,1); 
-INSERT INTO `NameGen` VALUES (6523,"Trayice",10,1); 
-INSERT INTO `NameGen` VALUES (6524,"Trayline",10,1); 
-INSERT INTO `NameGen` VALUES (6525,"Trayndra",10,1); 
-INSERT INTO `NameGen` VALUES (6526,"Traysong",10,1); 
-INSERT INTO `NameGen` VALUES (6527,"Trayvia",10,1); 
-INSERT INTO `NameGen` VALUES (6528,"Velidori",10,1); 
-INSERT INTO `NameGen` VALUES (6529,"Velidra",10,1); 
-INSERT INTO `NameGen` VALUES (6530,"Velidrel",10,1); 
-INSERT INTO `NameGen` VALUES (6531,"Velieda",10,1); 
-INSERT INTO `NameGen` VALUES (6532,"Veliice",10,1); 
-INSERT INTO `NameGen` VALUES (6533,"Veliline",10,1); 
-INSERT INTO `NameGen` VALUES (6534,"Velindra",10,1); 
-INSERT INTO `NameGen` VALUES (6535,"Velisong",10,1); 
-INSERT INTO `NameGen` VALUES (6536,"Velivia",10,1); 
-INSERT INTO `NameGen` VALUES (6537,"Zaradori",10,1); 
-INSERT INTO `NameGen` VALUES (6538,"Zaradra",10,1); 
-INSERT INTO `NameGen` VALUES (6539,"Zaradrel",10,1); 
-INSERT INTO `NameGen` VALUES (6540,"Zaraeda",10,1); 
-INSERT INTO `NameGen` VALUES (6541,"Zaraice",10,1); 
-INSERT INTO `NameGen` VALUES (6542,"Zaraline",10,1); 
-INSERT INTO `NameGen` VALUES (6543,"Zarandra",10,1); 
-INSERT INTO `NameGen` VALUES (6544,"Zarasong",10,1); 
-INSERT INTO `NameGen` VALUES (6545,"Zaravia",10,1); 
-INSERT INTO `NameGen` VALUES (1967,"Abderuus",11,0); 
-INSERT INTO `NameGen` VALUES (1968,"Achelus",11,0); 
-INSERT INTO `NameGen` VALUES (1969,"Achiele",11,0); 
-INSERT INTO `NameGen` VALUES (1970,"Admetius",11,0); 
-INSERT INTO `NameGen` VALUES (1971,"Aeolos",11,0); 
-INSERT INTO `NameGen` VALUES (1972,"Aeun",11,0); 
-INSERT INTO `NameGen` VALUES (1973,"Ahonan",11,0); 
-INSERT INTO `NameGen` VALUES (1974,"Akhan",11,0); 
-INSERT INTO `NameGen` VALUES (1975,"Alcandir",11,0); 
-INSERT INTO `NameGen` VALUES (1976,"Aldar",11,0); 
-INSERT INTO `NameGen` VALUES (1977,"Alistuur",11,0); 
-INSERT INTO `NameGen` VALUES (1978,"Anteus",11,0); 
-INSERT INTO `NameGen` VALUES (1979,"Apolus",11,0); 
-INSERT INTO `NameGen` VALUES (1980,"Aramaion",11,0); 
-INSERT INTO `NameGen` VALUES (1981,"Archaelius",11,0); 
-INSERT INTO `NameGen` VALUES (1982,"Arras",11,0); 
-INSERT INTO `NameGen` VALUES (1983,"Arred",11,0); 
-INSERT INTO `NameGen` VALUES (1984,"Arthaid",11,0); 
-INSERT INTO `NameGen` VALUES (1985,"Ascuulpius",11,0); 
-INSERT INTO `NameGen` VALUES (1986,"Astraeus",11,0); 
-INSERT INTO `NameGen` VALUES (1987,"Astur",11,0); 
-INSERT INTO `NameGen` VALUES (1988,"Aurelon",11,0); 
-INSERT INTO `NameGen` VALUES (1989,"Baatun",11,0); 
-INSERT INTO `NameGen` VALUES (1990,"Baluraan",11,0); 
-INSERT INTO `NameGen` VALUES (1991,"Bastiaan",11,0); 
-INSERT INTO `NameGen` VALUES (1992,"Berem",11,0); 
-INSERT INTO `NameGen` VALUES (1993,"Berillio",11,0); 
-INSERT INTO `NameGen` VALUES (1994,"Berimus",11,0); 
-INSERT INTO `NameGen` VALUES (1995,"Boros",11,0); 
-INSERT INTO `NameGen` VALUES (1996,"Breel",11,0); 
-INSERT INTO `NameGen` VALUES (1997,"Bruuth",11,0); 
-INSERT INTO `NameGen` VALUES (1998,"Caedmos",11,0); 
-INSERT INTO `NameGen` VALUES (1999,"Calchaas",11,0); 
-INSERT INTO `NameGen` VALUES (2000,"Carren",11,0); 
-INSERT INTO `NameGen` VALUES (2001,"Cassadorian",11,0); 
-INSERT INTO `NameGen` VALUES (2002,"Cemmorhan",11,0); 
-INSERT INTO `NameGen` VALUES (2003,"Cosmaas",11,0); 
-INSERT INTO `NameGen` VALUES (2004,"Cragorior",11,0); 
-INSERT INTO `NameGen` VALUES (2005,"Cristole",11,0); 
-INSERT INTO `NameGen` VALUES (2006,"Cronastus",11,0); 
-INSERT INTO `NameGen` VALUES (2007,"Damasko",11,0); 
-INSERT INTO `NameGen` VALUES (2008,"Damodocus",11,0); 
-INSERT INTO `NameGen` VALUES (2009,"Darianus",11,0); 
-INSERT INTO `NameGen` VALUES (2010,"Deriz",11,0); 
-INSERT INTO `NameGen` VALUES (2011,"Driaan",11,0); 
-INSERT INTO `NameGen` VALUES (2012,"Dronor",11,0); 
-INSERT INTO `NameGen` VALUES (2013,"Edrem",11,0); 
-INSERT INTO `NameGen` VALUES (2014,"Egomis",11,0); 
-INSERT INTO `NameGen` VALUES (2015,"Ellomin",11,0); 
-INSERT INTO `NameGen` VALUES (2016,"Elumandian",11,0); 
-INSERT INTO `NameGen` VALUES (2017,"Eoch",11,0); 
-INSERT INTO `NameGen` VALUES (2018,"Epirithus",11,0); 
-INSERT INTO `NameGen` VALUES (2019,"Erett",11,0); 
-INSERT INTO `NameGen` VALUES (2020,"Eross",11,0); 
-INSERT INTO `NameGen` VALUES (2021,"Etuur",11,0); 
-INSERT INTO `NameGen` VALUES (2022,"Feruul",11,0); 
-INSERT INTO `NameGen` VALUES (2023,"Foluun",11,0); 
-INSERT INTO `NameGen` VALUES (2024,"Funaam",11,0); 
-INSERT INTO `NameGen` VALUES (2025,"Gaant",11,0); 
-INSERT INTO `NameGen` VALUES (2026,"Ganaar",11,0); 
-INSERT INTO `NameGen` VALUES (2027,"Ghermas",11,0); 
-INSERT INTO `NameGen` VALUES (2028,"Gornii",11,0); 
-INSERT INTO `NameGen` VALUES (2029,"Gotaan",11,0); 
-INSERT INTO `NameGen` VALUES (2030,"Handiir",11,0); 
-INSERT INTO `NameGen` VALUES (2031,"Haqi",11,0); 
-INSERT INTO `NameGen` VALUES (2032,"Hephtas",11,0); 
-INSERT INTO `NameGen` VALUES (2033,"Heronomus",11,0); 
-INSERT INTO `NameGen` VALUES (2034,"Iasun",11,0); 
-INSERT INTO `NameGen` VALUES (2035,"Icarian",11,0); 
-INSERT INTO `NameGen` VALUES (2036,"Irnuss",11,0); 
-INSERT INTO `NameGen` VALUES (2037,"Jaakon",11,0); 
-INSERT INTO `NameGen` VALUES (2038,"Jasuun",11,0); 
-INSERT INTO `NameGen` VALUES (2039,"Jayru",11,0); 
-INSERT INTO `NameGen` VALUES (2040,"Jovan",11,0); 
-INSERT INTO `NameGen` VALUES (2041,"Jovinian",11,0); 
-INSERT INTO `NameGen` VALUES (2042,"Kadithuul",11,0); 
-INSERT INTO `NameGen` VALUES (2043,"Kajad",11,0); 
-INSERT INTO `NameGen` VALUES (2044,"Kavaan",11,0); 
-INSERT INTO `NameGen` VALUES (2045,"Kellag",11,0); 
-INSERT INTO `NameGen` VALUES (2046,"Kessel",11,0); 
-INSERT INTO `NameGen` VALUES (2047,"Kor",11,0); 
-INSERT INTO `NameGen` VALUES (2048,"Kraan",11,0); 
-INSERT INTO `NameGen` VALUES (2049,"Kuros",11,0); 
-INSERT INTO `NameGen` VALUES (2050,"Leraam",11,0); 
-INSERT INTO `NameGen` VALUES (2051,"Lexander",11,0); 
-INSERT INTO `NameGen` VALUES (2052,"Lorthuu",11,0); 
-INSERT INTO `NameGen` VALUES (2053,"Lucc",11,0); 
-INSERT INTO `NameGen` VALUES (2054,"Lyceon",11,0); 
-INSERT INTO `NameGen` VALUES (2055,"Makaara",11,0); 
-INSERT INTO `NameGen` VALUES (2056,"Margon",11,0); 
-INSERT INTO `NameGen` VALUES (2057,"Megelon",11,0); 
-INSERT INTO `NameGen` VALUES (2058,"Merculon",11,0); 
-INSERT INTO `NameGen` VALUES (2059,"Mikalaas",11,0); 
-INSERT INTO `NameGen` VALUES (2060,"Muaat",11,0); 
-INSERT INTO `NameGen` VALUES (2061,"Muhaar",11,0); 
-INSERT INTO `NameGen` VALUES (2062,"Mumman",11,0); 
-INSERT INTO `NameGen` VALUES (2063,"Nabrus",11,0); 
-INSERT INTO `NameGen` VALUES (2064,"Nahogg",11,0); 
-INSERT INTO `NameGen` VALUES (2065,"Nestuur",11,0); 
-INSERT INTO `NameGen` VALUES (2066,"Nicolandrius",11,0); 
-INSERT INTO `NameGen` VALUES (2067,"Nus",11,0); 
-INSERT INTO `NameGen` VALUES (2068,"Nuur",11,0); 
-INSERT INTO `NameGen` VALUES (2069,"Ockil",11,0); 
-INSERT INTO `NameGen` VALUES (2070,"Ogdas",11,0); 
-INSERT INTO `NameGen` VALUES (2071,"Onnis",11,0); 
-INSERT INTO `NameGen` VALUES (2072,"Orinnion",11,0); 
-INSERT INTO `NameGen` VALUES (2073,"Oscco",11,0); 
-INSERT INTO `NameGen` VALUES (2074,"Paanos",11,0); 
-INSERT INTO `NameGen` VALUES (2075,"Padaar",11,0); 
-INSERT INTO `NameGen` VALUES (2076,"Paetheus",11,0); 
-INSERT INTO `NameGen` VALUES (2077,"Paladius",11,0); 
-INSERT INTO `NameGen` VALUES (2078,"Parthenion",11,0); 
-INSERT INTO `NameGen` VALUES (2079,"Pedaar",11,0); 
-INSERT INTO `NameGen` VALUES (2080,"Petraalis",11,0); 
-INSERT INTO `NameGen` VALUES (2081,"Phobuus",11,0); 
-INSERT INTO `NameGen` VALUES (2082,"Phyrios",11,0); 
-INSERT INTO `NameGen` VALUES (2083,"Praabun",11,0); 
-INSERT INTO `NameGen` VALUES (2084,"Proenitus",11,0); 
-INSERT INTO `NameGen` VALUES (2085,"Promethu",11,0); 
-INSERT INTO `NameGen` VALUES (2086,"Radimaanth",11,0); 
-INSERT INTO `NameGen` VALUES (2087,"Rastulo",11,0); 
-INSERT INTO `NameGen` VALUES (2088,"Refiik",11,0); 
-INSERT INTO `NameGen` VALUES (2089,"Remulon",11,0); 
-INSERT INTO `NameGen` VALUES (2090,"Reul",11,0); 
-INSERT INTO `NameGen` VALUES (2091,"Rormu",11,0); 
-INSERT INTO `NameGen` VALUES (2092,"Saandur",11,0); 
-INSERT INTO `NameGen` VALUES (2093,"Sabuutal",11,0); 
-INSERT INTO `NameGen` VALUES (2094,"Sarnub",11,0); 
-INSERT INTO `NameGen` VALUES (2095,"Selur",11,0); 
-INSERT INTO `NameGen` VALUES (2096,"Silvinian",11,0); 
-INSERT INTO `NameGen` VALUES (2097,"Smortu",11,0); 
-INSERT INTO `NameGen` VALUES (2098,"Staamitos",11,0); 
-INSERT INTO `NameGen` VALUES (2099,"Teleimon",11,0); 
-INSERT INTO `NameGen` VALUES (2100,"Thaalides",11,0); 
-INSERT INTO `NameGen` VALUES (2101,"Theodian",11,0); 
-INSERT INTO `NameGen` VALUES (2102,"Tolaan",11,0); 
-INSERT INTO `NameGen` VALUES (2103,"Tolven",11,0); 
-INSERT INTO `NameGen` VALUES (2104,"Tritus",11,0); 
-INSERT INTO `NameGen` VALUES (2105,"Vandelo",11,0); 
-INSERT INTO `NameGen` VALUES (2106,"Varubu",11,0); 
-INSERT INTO `NameGen` VALUES (2107,"Vord",11,0); 
-INSERT INTO `NameGen` VALUES (2108,"Vorkhan",11,0); 
-INSERT INTO `NameGen` VALUES (2109,"Wertan",11,0); 
-INSERT INTO `NameGen` VALUES (2110,"Xandian",11,0); 
-INSERT INTO `NameGen` VALUES (2111,"Zaibach",11,0); 
-INSERT INTO `NameGen` VALUES (2112,"Zakiuus",11,0); 
-INSERT INTO `NameGen` VALUES (2113,"Zalduun",11,0); 
-INSERT INTO `NameGen` VALUES (2114,"Zenastus",11,0); 
-INSERT INTO `NameGen` VALUES (2115,"Zenorian",11,0); 
-INSERT INTO `NameGen` VALUES (6546,"Aafer",11,0); 
-INSERT INTO `NameGen` VALUES (6547,"Aagalian",11,0); 
-INSERT INTO `NameGen` VALUES (6548,"Abaato",11,0); 
-INSERT INTO `NameGen` VALUES (6549,"Adros",11,0); 
-INSERT INTO `NameGen` VALUES (6550,"Ahruk",11,0); 
-INSERT INTO `NameGen` VALUES (6551,"Akhtus",11,0); 
-INSERT INTO `NameGen` VALUES (6552,"Akordn",11,0); 
-INSERT INTO `NameGen` VALUES (6553,"Anyr",11,0); 
-INSERT INTO `NameGen` VALUES (6554,"Atikas",11,0); 
-INSERT INTO `NameGen` VALUES (6555,"Belaquin",11,0); 
-INSERT INTO `NameGen` VALUES (6556,"Bravik",11,0); 
-INSERT INTO `NameGen` VALUES (6557,"Britolo",11,0); 
-INSERT INTO `NameGen` VALUES (6558,"Burquarius",11,0); 
-INSERT INTO `NameGen` VALUES (6559,"Caepicon",11,0); 
-INSERT INTO `NameGen` VALUES (6560,"Colundiin",11,0); 
-INSERT INTO `NameGen` VALUES (6561,"Cretos",11,0); 
-INSERT INTO `NameGen` VALUES (6562,"Daval",11,0); 
-INSERT INTO `NameGen` VALUES (6563,"Diochritis",11,0); 
-INSERT INTO `NameGen` VALUES (6564,"Dravak",11,0); 
-INSERT INTO `NameGen` VALUES (6565,"Dyristis",11,0); 
-INSERT INTO `NameGen` VALUES (6566,"Edraanas",11,0); 
-INSERT INTO `NameGen` VALUES (6567,"Eenach",11,0); 
-INSERT INTO `NameGen` VALUES (6568,"Eksos",11,0); 
-INSERT INTO `NameGen` VALUES (6569,"Evaandan",11,0); 
-INSERT INTO `NameGen` VALUES (6570,"Fhemdial",11,0); 
-INSERT INTO `NameGen` VALUES (6571,"Frencaalis",11,0); 
-INSERT INTO `NameGen` VALUES (6572,"Gaarilan",11,0); 
-INSERT INTO `NameGen` VALUES (6573,"Gememdon",11,0); 
-INSERT INTO `NameGen` VALUES (6574,"Gerrn",11,0); 
-INSERT INTO `NameGen` VALUES (6575,"Gistillian",11,0); 
-INSERT INTO `NameGen` VALUES (6576,"Govrin",11,0); 
-INSERT INTO `NameGen` VALUES (6577,"Haanelan",11,0); 
-INSERT INTO `NameGen` VALUES (6578,"Halvyk",11,0); 
-INSERT INTO `NameGen` VALUES (6579,"Hamir",11,0); 
-INSERT INTO `NameGen` VALUES (6580,"Hexn",11,0); 
-INSERT INTO `NameGen` VALUES (6581,"Homuulus",11,0); 
-INSERT INTO `NameGen` VALUES (6582,"Hrach",11,0); 
-INSERT INTO `NameGen` VALUES (6583,"Iaanix",11,0); 
-INSERT INTO `NameGen` VALUES (6584,"Iktos",11,0); 
-INSERT INTO `NameGen` VALUES (6585,"Iorimar",11,0); 
-INSERT INTO `NameGen` VALUES (6586,"Jamyzn",11,0); 
-INSERT INTO `NameGen` VALUES (6587,"Javinius",11,0); 
-INSERT INTO `NameGen` VALUES (6588,"Jhann",11,0); 
-INSERT INTO `NameGen` VALUES (6589,"Jocon",11,0); 
-INSERT INTO `NameGen` VALUES (6590,"Kaevincien",11,0); 
-INSERT INTO `NameGen` VALUES (6591,"Keryakos",11,0); 
-INSERT INTO `NameGen` VALUES (6592,"Khalis",11,0); 
-INSERT INTO `NameGen` VALUES (6593,"Khasel",11,0); 
-INSERT INTO `NameGen` VALUES (6594,"Khator",11,0); 
-INSERT INTO `NameGen` VALUES (6595,"Kolos",11,0); 
-INSERT INTO `NameGen` VALUES (6596,"Korik",11,0); 
-INSERT INTO `NameGen` VALUES (6597,"Kresk",11,0); 
-INSERT INTO `NameGen` VALUES (6598,"Krevyln",11,0); 
-INSERT INTO `NameGen` VALUES (6599,"Kriikellus",11,0); 
-INSERT INTO `NameGen` VALUES (6600,"Krisula",11,0); 
-INSERT INTO `NameGen` VALUES (6601,"Kyfestyr",11,0); 
-INSERT INTO `NameGen` VALUES (6602,"Kyrgaryn",11,0); 
-INSERT INTO `NameGen` VALUES (6603,"Laequerran",11,0); 
-INSERT INTO `NameGen` VALUES (6604,"Libiirius",11,0); 
-INSERT INTO `NameGen` VALUES (6605,"Mequonistis",11,0); 
-INSERT INTO `NameGen` VALUES (6606,"Minyok",11,0); 
-INSERT INTO `NameGen` VALUES (6607,"Mirvynnix",11,0); 
-INSERT INTO `NameGen` VALUES (6608,"Nautellus",11,0); 
-INSERT INTO `NameGen` VALUES (6609,"Niapilo",11,0); 
-INSERT INTO `NameGen` VALUES (6610,"Octagellen",11,0); 
-INSERT INTO `NameGen` VALUES (6611,"Olomm",11,0); 
-INSERT INTO `NameGen` VALUES (6612,"Orocian",11,0); 
-INSERT INTO `NameGen` VALUES (6613,"Ovynn",11,0); 
-INSERT INTO `NameGen` VALUES (6614,"Phriix",11,0); 
-INSERT INTO `NameGen` VALUES (6615,"Praerov",11,0); 
-INSERT INTO `NameGen` VALUES (6616,"Praetistis",11,0); 
-INSERT INTO `NameGen` VALUES (6617,"Puulincis",11,0); 
-INSERT INTO `NameGen` VALUES (6618,"Quaarilian",11,0); 
-INSERT INTO `NameGen` VALUES (6619,"Quontius",11,0); 
-INSERT INTO `NameGen` VALUES (6620,"Raedilaen",11,0); 
-INSERT INTO `NameGen` VALUES (6621,"Ragn",11,0); 
-INSERT INTO `NameGen` VALUES (6622,"Ravach",11,0); 
-INSERT INTO `NameGen` VALUES (6623,"Reglesteren",11,0); 
-INSERT INTO `NameGen` VALUES (6624,"Revelyn",11,0); 
-INSERT INTO `NameGen` VALUES (6625,"Revlyk",11,0); 
-INSERT INTO `NameGen` VALUES (6626,"Rhoymas",11,0); 
-INSERT INTO `NameGen` VALUES (6627,"Roahm",11,0); 
-INSERT INTO `NameGen` VALUES (6628,"Rolav",11,0); 
-INSERT INTO `NameGen` VALUES (6629,"Rovolt",11,0); 
-INSERT INTO `NameGen` VALUES (6630,"Ryzn",11,0); 
-INSERT INTO `NameGen` VALUES (6631,"Sechor",11,0); 
-INSERT INTO `NameGen` VALUES (6632,"Sequillian",11,0); 
-INSERT INTO `NameGen` VALUES (6633,"Spenjanius",11,0); 
-INSERT INTO `NameGen` VALUES (6634,"Tarelaen",11,0); 
-INSERT INTO `NameGen` VALUES (6635,"Tarenz",11,0); 
-INSERT INTO `NameGen` VALUES (6636,"Teowyll",11,0); 
-INSERT INTO `NameGen` VALUES (6637,"Thononias",11,0); 
-INSERT INTO `NameGen` VALUES (6638,"Torqellon",11,0); 
-INSERT INTO `NameGen` VALUES (6639,"Tynaerus",11,0); 
-INSERT INTO `NameGen` VALUES (6640,"Ujimminus",11,0); 
-INSERT INTO `NameGen` VALUES (6641,"Uray",11,0); 
-INSERT INTO `NameGen` VALUES (6642,"Uuyllian",11,0); 
-INSERT INTO `NameGen` VALUES (6643,"Uzhka",11,0); 
-INSERT INTO `NameGen` VALUES (6644,"Vaalcren",11,0); 
-INSERT INTO `NameGen` VALUES (6645,"Verom",11,0); 
-INSERT INTO `NameGen` VALUES (6646,"Vezim",11,0); 
-INSERT INTO `NameGen` VALUES (6647,"Vizul",11,0); 
-INSERT INTO `NameGen` VALUES (6648,"Vodmor",11,0); 
-INSERT INTO `NameGen` VALUES (6649,"Volgm",11,0); 
-INSERT INTO `NameGen` VALUES (6650,"Volik",11,0); 
-INSERT INTO `NameGen` VALUES (6651,"Volkorr",11,0); 
-INSERT INTO `NameGen` VALUES (6652,"Vqshok",11,0); 
-INSERT INTO `NameGen` VALUES (6653,"Vyncynidus",11,0); 
-INSERT INTO `NameGen` VALUES (6654,"Vyuri",11,0); 
-INSERT INTO `NameGen` VALUES (6655,"Waaldrunias",11,0); 
-INSERT INTO `NameGen` VALUES (6656,"Warach",11,0); 
-INSERT INTO `NameGen` VALUES (6657,"Warvyn",11,0); 
-INSERT INTO `NameGen` VALUES (6658,"Wixilaan",11,0); 
-INSERT INTO `NameGen` VALUES (6659,"Xaquildar",11,0); 
-INSERT INTO `NameGen` VALUES (6660,"Xavik",11,0); 
-INSERT INTO `NameGen` VALUES (6661,"Xerquanis",11,0); 
-INSERT INTO `NameGen` VALUES (6662,"Yaelon",11,0); 
-INSERT INTO `NameGen` VALUES (6663,"Yiiminon",11,0); 
-INSERT INTO `NameGen` VALUES (6664,"Zavyr",11,0); 
-INSERT INTO `NameGen` VALUES (6665,"Zerald",11,0); 
-INSERT INTO `NameGen` VALUES (6666,"Ziindelicus",11,0); 
-INSERT INTO `NameGen` VALUES (6667,"Zolioncis",11,0); 
-INSERT INTO `NameGen` VALUES (6668,"Zonov",11,0); 
-INSERT INTO `NameGen` VALUES (2116,"Aalesia",11,1); 
-INSERT INTO `NameGen` VALUES (2117,"Admete",11,1); 
-INSERT INTO `NameGen` VALUES (2118,"Adoria",11,1); 
-INSERT INTO `NameGen` VALUES (2119,"Adrastea",11,1); 
-INSERT INTO `NameGen` VALUES (2120,"Aegina",11,1); 
-INSERT INTO `NameGen` VALUES (2121,"Aelea",11,1); 
-INSERT INTO `NameGen` VALUES (2122,"Aeos",11,1); 
-INSERT INTO `NameGen` VALUES (2123,"Akaloiis",11,1); 
-INSERT INTO `NameGen` VALUES (2124,"Alathia",11,1); 
-INSERT INTO `NameGen` VALUES (2125,"Alethaa",11,1); 
-INSERT INTO `NameGen` VALUES (2126,"Aliina",11,1); 
-INSERT INTO `NameGen` VALUES (2127,"Aliisha",11,1); 
-INSERT INTO `NameGen` VALUES (2128,"Altaa",11,1); 
-INSERT INTO `NameGen` VALUES (2129,"Alysstas",11,1); 
-INSERT INTO `NameGen` VALUES (2130,"Amarillian",11,1); 
-INSERT INTO `NameGen` VALUES (2131,"Anastassia",11,1); 
-INSERT INTO `NameGen` VALUES (2132,"Areia",11,1); 
-INSERT INTO `NameGen` VALUES (2133,"Arianthia",11,1); 
-INSERT INTO `NameGen` VALUES (2134,"Arimiri",11,1); 
-INSERT INTO `NameGen` VALUES (2135,"Ashoon",11,1); 
-INSERT INTO `NameGen` VALUES (2136,"Astraea",11,1); 
-INSERT INTO `NameGen` VALUES (2137,"Aurana",11,1); 
-INSERT INTO `NameGen` VALUES (2138,"Avelii",11,1); 
-INSERT INTO `NameGen` VALUES (2139,"Basyl",11,1); 
-INSERT INTO `NameGen` VALUES (2140,"Behomat",11,1); 
-INSERT INTO `NameGen` VALUES (2141,"Bellama",11,1); 
-INSERT INTO `NameGen` VALUES (2142,"Belphine",11,1); 
-INSERT INTO `NameGen` VALUES (2143,"Bildine",11,1); 
-INSERT INTO `NameGen` VALUES (2144,"Brialla",11,1); 
-INSERT INTO `NameGen` VALUES (2145,"Caalindre",11,1); 
-INSERT INTO `NameGen` VALUES (2146,"Caatylun",11,1); 
-INSERT INTO `NameGen` VALUES (2147,"Calaandia",11,1); 
-INSERT INTO `NameGen` VALUES (2148,"Calliopia",11,1); 
-INSERT INTO `NameGen` VALUES (2149,"Caluantha",11,1); 
-INSERT INTO `NameGen` VALUES (2150,"Castaa",11,1); 
-INSERT INTO `NameGen` VALUES (2151,"Catiaa",11,1); 
-INSERT INTO `NameGen` VALUES (2152,"Catrionna",11,1); 
-INSERT INTO `NameGen` VALUES (2153,"Celenian",11,1); 
-INSERT INTO `NameGen` VALUES (2154,"Channa",11,1); 
-INSERT INTO `NameGen` VALUES (2155,"Chlorista",11,1); 
-INSERT INTO `NameGen` VALUES (2156,"Corisalle",11,1); 
-INSERT INTO `NameGen` VALUES (2157,"Cristalline",11,1); 
-INSERT INTO `NameGen` VALUES (2158,"Cyrothea",11,1); 
-INSERT INTO `NameGen` VALUES (2159,"Daametre",11,1); 
-INSERT INTO `NameGen` VALUES (2160,"Damaara",11,1); 
-INSERT INTO `NameGen` VALUES (2161,"Dariala",11,1); 
-INSERT INTO `NameGen` VALUES (2162,"Demitix",11,1); 
-INSERT INTO `NameGen` VALUES (2163,"Deremiis",11,1); 
-INSERT INTO `NameGen` VALUES (2164,"Desaar",11,1); 
-INSERT INTO `NameGen` VALUES (2165,"Desda",11,1); 
-INSERT INTO `NameGen` VALUES (2166,"Dimetraa",11,1); 
-INSERT INTO `NameGen` VALUES (2167,"Dorianalla",11,1); 
-INSERT INTO `NameGen` VALUES (2168,"Edirah",11,1); 
-INSERT INTO `NameGen` VALUES (2169,"Elaadora",11,1); 
-INSERT INTO `NameGen` VALUES (2170,"Eleannora",11,1); 
-INSERT INTO `NameGen` VALUES (2171,"Elissia",11,1); 
-INSERT INTO `NameGen` VALUES (2172,"Ellaniisa",11,1); 
-INSERT INTO `NameGen` VALUES (2173,"Elpidia",11,1); 
-INSERT INTO `NameGen` VALUES (2174,"Elysia",11,1); 
-INSERT INTO `NameGen` VALUES (2175,"Epidii",11,1); 
-INSERT INTO `NameGen` VALUES (2176,"Eraael",11,1); 
-INSERT INTO `NameGen` VALUES (2177,"Eraanthe",11,1); 
-INSERT INTO `NameGen` VALUES (2178,"Erinthae",11,1); 
-INSERT INTO `NameGen` VALUES (2179,"Euraan",11,1); 
-INSERT INTO `NameGen` VALUES (2180,"Feera",11,1); 
-INSERT INTO `NameGen` VALUES (2181,"Felaanu",11,1); 
-INSERT INTO `NameGen` VALUES (2182,"Galacia",11,1); 
-INSERT INTO `NameGen` VALUES (2183,"Nomau",11,1); 
-INSERT INTO `NameGen` VALUES (2184,"Haemeria",11,1); 
-INSERT INTO `NameGen` VALUES (2185,"Haliia",11,1); 
-INSERT INTO `NameGen` VALUES (2186,"Harmoni",11,1); 
-INSERT INTO `NameGen` VALUES (2187,"Helainne",11,1); 
-INSERT INTO `NameGen` VALUES (2188,"Helekaa",11,1); 
-INSERT INTO `NameGen` VALUES (2189,"Huuna",11,1); 
-INSERT INTO `NameGen` VALUES (2190,"Iciaa",11,1); 
-INSERT INTO `NameGen` VALUES (2191,"Iilke",11,1); 
-INSERT INTO `NameGen` VALUES (2192,"Ilanuaa",11,1); 
-INSERT INTO `NameGen` VALUES (2193,"Ilcyonne",11,1); 
-INSERT INTO `NameGen` VALUES (2194,"Iluulika",11,1); 
-INSERT INTO `NameGen` VALUES (2195,"Iluuni",11,1); 
-INSERT INTO `NameGen` VALUES (2196,"Iraana",11,1); 
-INSERT INTO `NameGen` VALUES (2197,"Iriiani",11,1); 
-INSERT INTO `NameGen` VALUES (2198,"Ivranii",11,1); 
-INSERT INTO `NameGen` VALUES (2199,"Jaeleil",11,1); 
-INSERT INTO `NameGen` VALUES (2200,"Jelna",11,1); 
-INSERT INTO `NameGen` VALUES (2201,"Kaandaki",11,1); 
-INSERT INTO `NameGen` VALUES (2202,"Kaatayli",11,1); 
-INSERT INTO `NameGen` VALUES (2203,"Kaitlan",11,1); 
-INSERT INTO `NameGen` VALUES (2204,"Kaluundre",11,1); 
-INSERT INTO `NameGen` VALUES (2205,"Kassia",11,1); 
-INSERT INTO `NameGen` VALUES (2206,"Kataakin",11,1); 
-INSERT INTO `NameGen` VALUES (2207,"Kataalona",11,1); 
-INSERT INTO `NameGen` VALUES (2208,"Katariin",11,1); 
-INSERT INTO `NameGen` VALUES (2209,"Kayaart",11,1); 
-INSERT INTO `NameGen` VALUES (2210,"Kayonei",11,1); 
-INSERT INTO `NameGen` VALUES (2211,"Keilnei",11,1); 
-INSERT INTO `NameGen` VALUES (2212,"Koliinae",11,1); 
-INSERT INTO `NameGen` VALUES (2213,"Koore",11,1); 
-INSERT INTO `NameGen` VALUES (2214,"Kudrii",11,1); 
-INSERT INTO `NameGen` VALUES (2215,"Laniira",11,1); 
-INSERT INTO `NameGen` VALUES (2216,"Larixa",11,1); 
-INSERT INTO `NameGen` VALUES (2217,"Levara",11,1); 
-INSERT INTO `NameGen` VALUES (2218,"Lexi",11,1); 
-INSERT INTO `NameGen` VALUES (2219,"Liora",11,1); 
-INSERT INTO `NameGen` VALUES (2220,"Lyrallis",11,1); 
-INSERT INTO `NameGen` VALUES (2221,"Madgaa",11,1); 
-INSERT INTO `NameGen` VALUES (2222,"Magdalin",11,1); 
-INSERT INTO `NameGen` VALUES (2223,"Maniika",11,1); 
-INSERT INTO `NameGen` VALUES (2224,"Margarii",11,1); 
-INSERT INTO `NameGen` VALUES (2225,"Miall",11,1); 
-INSERT INTO `NameGen` VALUES (2226,"Minirra",11,1); 
-INSERT INTO `NameGen` VALUES (2227,"Mirliaa",11,1); 
-INSERT INTO `NameGen` VALUES (2228,"Morae",11,1); 
-INSERT INTO `NameGen` VALUES (2229,"Myrandela",11,1); 
-INSERT INTO `NameGen` VALUES (2230,"Mysta",11,1); 
-INSERT INTO `NameGen` VALUES (2231,"Naamia",11,1); 
-INSERT INTO `NameGen` VALUES (2232,"Namaalia",11,1); 
-INSERT INTO `NameGen` VALUES (2233,"Narya",11,1); 
-INSERT INTO `NameGen` VALUES (2234,"Neii",11,1); 
-INSERT INTO `NameGen` VALUES (2235,"Nelli",11,1); 
-INSERT INTO `NameGen` VALUES (2236,"Nieysa",11,1); 
-INSERT INTO `NameGen` VALUES (2237,"Nillaani",11,1); 
-INSERT INTO `NameGen` VALUES (2238,"Norii",11,1); 
-INSERT INTO `NameGen` VALUES (2239,"Oliina",11,1); 
-INSERT INTO `NameGen` VALUES (2240,"Omeanau",11,1); 
-INSERT INTO `NameGen` VALUES (2241,"Palandora",11,1); 
-INSERT INTO `NameGen` VALUES (2242,"Patris",11,1); 
-INSERT INTO `NameGen` VALUES (2243,"Peitha",11,1); 
-INSERT INTO `NameGen` VALUES (2244,"Phaeda",11,1); 
-INSERT INTO `NameGen` VALUES (2245,"Phea",11,1); 
-INSERT INTO `NameGen` VALUES (2246,"Phiidra",11,1); 
-INSERT INTO `NameGen` VALUES (2247,"Phillypia",11,1); 
-INSERT INTO `NameGen` VALUES (2248,"Raania",11,1); 
-INSERT INTO `NameGen` VALUES (2249,"Ralaantu",11,1); 
-INSERT INTO `NameGen` VALUES (2250,"Remere",11,1); 
-INSERT INTO `NameGen` VALUES (2251,"Reulna",11,1); 
-INSERT INTO `NameGen` VALUES (2252,"Rhodalia",11,1); 
-INSERT INTO `NameGen` VALUES (2253,"Rienaa",11,1); 
-INSERT INTO `NameGen` VALUES (2254,"Roryn",11,1); 
-INSERT INTO `NameGen` VALUES (2255,"Saanri",11,1); 
-INSERT INTO `NameGen` VALUES (2256,"Salaan",11,1); 
-INSERT INTO `NameGen` VALUES (2257,"Saphraania",11,1); 
-INSERT INTO `NameGen` VALUES (2258,"Selaandi",11,1); 
-INSERT INTO `NameGen` VALUES (2259,"Selani",11,1); 
-INSERT INTO `NameGen` VALUES (2260,"Sevillia",11,1); 
-INSERT INTO `NameGen` VALUES (2261,"Sheluu",11,1); 
-INSERT INTO `NameGen` VALUES (2262,"Siiri",11,1); 
-INSERT INTO `NameGen` VALUES (2263,"Sofii",11,1); 
-INSERT INTO `NameGen` VALUES (2264,"Solonne",11,1); 
-INSERT INTO `NameGen` VALUES (2265,"Sophiaa",11,1); 
-INSERT INTO `NameGen` VALUES (2266,"Taerix",11,1); 
-INSERT INTO `NameGen` VALUES (2267,"Tariaan",11,1); 
-INSERT INTO `NameGen` VALUES (2268,"Terna",11,1); 
-INSERT INTO `NameGen` VALUES (2269,"Terressa",11,1); 
-INSERT INTO `NameGen` VALUES (2270,"Thaadea",11,1); 
-INSERT INTO `NameGen` VALUES (2271,"Theaa",11,1); 
-INSERT INTO `NameGen` VALUES (2272,"Themis",11,1); 
-INSERT INTO `NameGen` VALUES (2273,"Triina",11,1); 
-INSERT INTO `NameGen` VALUES (2274,"Trynne",11,1); 
-INSERT INTO `NameGen` VALUES (2275,"Tycha",11,1); 
-INSERT INTO `NameGen` VALUES (2276,"Valaatu",11,1); 
-INSERT INTO `NameGen` VALUES (2277,"Velnai",11,1); 
-INSERT INTO `NameGen` VALUES (2278,"Xaandra",11,1); 
-INSERT INTO `NameGen` VALUES (2279,"Xunaide",11,1); 
-INSERT INTO `NameGen` VALUES (2280,"Yaalene",11,1); 
-INSERT INTO `NameGen` VALUES (2281,"Zaraliis",11,1); 
-INSERT INTO `NameGen` VALUES (2282,"Zephua",11,1); 
-INSERT INTO `NameGen` VALUES (2283,"Ziliaa",11,1); 
-INSERT INTO `NameGen` VALUES (2284,"Zuulinia",11,1); 
-INSERT INTO `NameGen` VALUES (6669,"Aadelia",11,1); 
-INSERT INTO `NameGen` VALUES (6670,"Aahala",11,1); 
-INSERT INTO `NameGen` VALUES (6671,"Aamuria",11,1); 
-INSERT INTO `NameGen` VALUES (6672,"Aellana",11,1); 
-INSERT INTO `NameGen` VALUES (6673,"Agra",11,1); 
-INSERT INTO `NameGen` VALUES (6674,"Ahra",11,1); 
-INSERT INTO `NameGen` VALUES (6675,"Akhara",11,1); 
-INSERT INTO `NameGen` VALUES (6676,"Akhta",11,1); 
-INSERT INTO `NameGen` VALUES (6677,"Aktta",11,1); 
-INSERT INTO `NameGen` VALUES (6678,"Alara",11,1); 
-INSERT INTO `NameGen` VALUES (6679,"Amyntaa",11,1); 
-INSERT INTO `NameGen` VALUES (6680,"Andraa",11,1); 
-INSERT INTO `NameGen` VALUES (6681,"Andrynn",11,1); 
-INSERT INTO `NameGen` VALUES (6682,"Anvera",11,1); 
-INSERT INTO `NameGen` VALUES (6683,"Asuusha",11,1); 
-INSERT INTO `NameGen` VALUES (6684,"Batilde",11,1); 
-INSERT INTO `NameGen` VALUES (6685,"Becintia",11,1); 
-INSERT INTO `NameGen` VALUES (6686,"Brigt",11,1); 
-INSERT INTO `NameGen` VALUES (6687,"Bryllian",11,1); 
-INSERT INTO `NameGen` VALUES (6688,"Chriphia",11,1); 
-INSERT INTO `NameGen` VALUES (6689,"Clythemma",11,1); 
-INSERT INTO `NameGen` VALUES (6690,"Cyalle",11,1); 
-INSERT INTO `NameGen` VALUES (6691,"Cyracia",11,1); 
-INSERT INTO `NameGen` VALUES (6692,"Dephylia",11,1); 
-INSERT INTO `NameGen` VALUES (6693,"Dkala",11,1); 
-INSERT INTO `NameGen` VALUES (6694,"Donaella",11,1); 
-INSERT INTO `NameGen` VALUES (6695,"Druaella",11,1); 
-INSERT INTO `NameGen` VALUES (6696,"Dyorcia",11,1); 
-INSERT INTO `NameGen` VALUES (6697,"Eaorix",11,1); 
-INSERT INTO `NameGen` VALUES (6698,"Emaelia",11,1); 
-INSERT INTO `NameGen` VALUES (6699,"Enera",11,1); 
-INSERT INTO `NameGen` VALUES (6700,"Estaella",11,1); 
-INSERT INTO `NameGen` VALUES (6701,"Eychaalra",11,1); 
-INSERT INTO `NameGen` VALUES (6702,"Fallinix",11,1); 
-INSERT INTO `NameGen` VALUES (6703,"Fhaalia",11,1); 
-INSERT INTO `NameGen` VALUES (6704,"Fiornu",11,1); 
-INSERT INTO `NameGen` VALUES (6705,"Glara",11,1); 
-INSERT INTO `NameGen` VALUES (6706,"Gordaela",11,1); 
-INSERT INTO `NameGen` VALUES (6707,"Gwael",11,1); 
-INSERT INTO `NameGen` VALUES (6708,"Gyllinia",11,1); 
-INSERT INTO `NameGen` VALUES (6709,"Hilynn",11,1); 
-INSERT INTO `NameGen` VALUES (6710,"Honlei",11,1); 
-INSERT INTO `NameGen` VALUES (6711,"Hyphystia",11,1); 
-INSERT INTO `NameGen` VALUES (6712,"Iocylantha",11,1); 
-INSERT INTO `NameGen` VALUES (6713,"Iraecia",11,1); 
-INSERT INTO `NameGen` VALUES (6714,"Isaelda",11,1); 
-INSERT INTO `NameGen` VALUES (6715,"Iutaerna",11,1); 
-INSERT INTO `NameGen` VALUES (6716,"Izhyssu",11,1); 
-INSERT INTO `NameGen` VALUES (6717,"Jatarna",11,1); 
-INSERT INTO `NameGen` VALUES (6718,"Jemaerrix",11,1); 
-INSERT INTO `NameGen` VALUES (6719,"Jeres",11,1); 
-INSERT INTO `NameGen` VALUES (6720,"Jhara",11,1); 
-INSERT INTO `NameGen` VALUES (6721,"Juul",11,1); 
-INSERT INTO `NameGen` VALUES (6722,"Jynthu",11,1); 
-INSERT INTO `NameGen` VALUES (6723,"Karael",11,1); 
-INSERT INTO `NameGen` VALUES (6724,"Karha",11,1); 
-INSERT INTO `NameGen` VALUES (6725,"Karynn",11,1); 
-INSERT INTO `NameGen` VALUES (6726,"Khara",11,1); 
-INSERT INTO `NameGen` VALUES (6727,"Khasha",11,1); 
-INSERT INTO `NameGen` VALUES (6728,"Khris",11,1); 
-INSERT INTO `NameGen` VALUES (6729,"Kira",11,1); 
-INSERT INTO `NameGen` VALUES (6730,"Korrva",11,1); 
-INSERT INTO `NameGen` VALUES (6731,"Krisenzr",11,1); 
-INSERT INTO `NameGen` VALUES (6732,"Krista",11,1); 
-INSERT INTO `NameGen` VALUES (6733,"Krizar",11,1); 
-INSERT INTO `NameGen` VALUES (6734,"Kylah",11,1); 
-INSERT INTO `NameGen` VALUES (6735,"Kymei",11,1); 
-INSERT INTO `NameGen` VALUES (6736,"Kyrionaa",11,1); 
-INSERT INTO `NameGen` VALUES (6737,"Laev",11,1); 
-INSERT INTO `NameGen` VALUES (6738,"Lexya",11,1); 
-INSERT INTO `NameGen` VALUES (6739,"Luurinia",11,1); 
-INSERT INTO `NameGen` VALUES (6740,"Lynaesix",11,1); 
-INSERT INTO `NameGen` VALUES (6741,"Maemuu",11,1); 
-INSERT INTO `NameGen` VALUES (6742,"Mahla",11,1); 
-INSERT INTO `NameGen` VALUES (6743,"Marsiiha",11,1); 
-INSERT INTO `NameGen` VALUES (6744,"Maxlyn",11,1); 
-INSERT INTO `NameGen` VALUES (6745,"Morvah",11,1); 
-INSERT INTO `NameGen` VALUES (6746,"Mylinam",11,1); 
-INSERT INTO `NameGen` VALUES (6747,"Naarollu",11,1); 
-INSERT INTO `NameGen` VALUES (6748,"Narelvka",11,1); 
-INSERT INTO `NameGen` VALUES (6749,"Nevorra",11,1); 
-INSERT INTO `NameGen` VALUES (6750,"Norela",11,1); 
-INSERT INTO `NameGen` VALUES (6751,"Novura",11,1); 
-INSERT INTO `NameGen` VALUES (6752,"Nycha",11,1); 
-INSERT INTO `NameGen` VALUES (6753,"Ocyngiaa",11,1); 
-INSERT INTO `NameGen` VALUES (6754,"Oenii",11,1); 
-INSERT INTO `NameGen` VALUES (6755,"Ophymmu",11,1); 
-INSERT INTO `NameGen` VALUES (6756,"Oqua",11,1); 
-INSERT INTO `NameGen` VALUES (6757,"Otta",11,1); 
-INSERT INTO `NameGen` VALUES (6758,"Ovella",11,1); 
-INSERT INTO `NameGen` VALUES (6759,"Phaea",11,1); 
-INSERT INTO `NameGen` VALUES (6760,"Phylia",11,1); 
-INSERT INTO `NameGen` VALUES (6761,"Pira",11,1); 
-INSERT INTO `NameGen` VALUES (6762,"Pursa",11,1); 
-INSERT INTO `NameGen` VALUES (6763,"Pymuutu",11,1); 
-INSERT INTO `NameGen` VALUES (6764,"Ralaen",11,1); 
-INSERT INTO `NameGen` VALUES (6765,"Razlyn",11,1); 
-INSERT INTO `NameGen` VALUES (6766,"Renala",11,1); 
-INSERT INTO `NameGen` VALUES (6767,"Revella",11,1); 
-INSERT INTO `NameGen` VALUES (6768,"Rhylle",11,1); 
-INSERT INTO `NameGen` VALUES (6769,"Rochya",11,1); 
-INSERT INTO `NameGen` VALUES (6770,"Ryg",11,1); 
-INSERT INTO `NameGen` VALUES (6771,"Ryxinnu",11,1); 
-INSERT INTO `NameGen` VALUES (6772,"Sachka",11,1); 
-INSERT INTO `NameGen` VALUES (6773,"Safyce",11,1); 
-INSERT INTO `NameGen` VALUES (6774,"Salavva",11,1); 
-INSERT INTO `NameGen` VALUES (6775,"Seelha",11,1); 
-INSERT INTO `NameGen` VALUES (6776,"Shara",11,1); 
-INSERT INTO `NameGen` VALUES (6777,"Sherha",11,1); 
-INSERT INTO `NameGen` VALUES (6778,"Svelka",11,1); 
-INSERT INTO `NameGen` VALUES (6779,"Svelta",11,1); 
-INSERT INTO `NameGen` VALUES (6780,"Tatiara",11,1); 
-INSERT INTO `NameGen` VALUES (6781,"Tazha",11,1); 
-INSERT INTO `NameGen` VALUES (6782,"Ursuva",11,1); 
-INSERT INTO `NameGen` VALUES (6783,"Uvora",11,1); 
-INSERT INTO `NameGen` VALUES (6784,"Variza",11,1); 
-INSERT INTO `NameGen` VALUES (6785,"Veena",11,1); 
-INSERT INTO `NameGen` VALUES (6786,"Verra",11,1); 
-INSERT INTO `NameGen` VALUES (6787,"Vivik",11,1); 
-INSERT INTO `NameGen` VALUES (6788,"Vyera",11,1); 
-INSERT INTO `NameGen` VALUES (6789,"Wendra",11,1); 
-INSERT INTO `NameGen` VALUES (6790,"Xera",11,1); 
-INSERT INTO `NameGen` VALUES (6791,"Zara",11,1); 
-INSERT INTO `NameGen` VALUES (6792,"Zevorra",11,1); 
-INSERT INTO `NameGen` VALUES (6793,"Zmorra",11,1); 
+INSERT INTO `NameGen` VALUES (195,"Agamand",1,0),
+(196,"Andromath",1,0),
+(197,"Antonidas",1,0),
+(198,"Fordred",1,0),
+(199,"Nielas",1,0),
+(200,"Nielas",1,0),
+(201,"Arius",1,0),
+(202,"Arugal",1,0),
+(203,"Sten",1,0),
+(204,"Ballador",1,0),
+(205,"Barthilas",1,0),
+(206,"Aedelas",1,0),
+(207,"Conjurus",1,0),
+(208,"Rex",1,0),
+(209,"Danath",1,0),
+(210,"Saidin",1,0),
+(211,"Dalar",1,0),
+(212,"Alonsus",1,0),
+(213,"Tenn",1,0),
+(214,"Tirion",1,0),
+(215,"Taelan",1,0),
+(216,"Gavinrad",1,0),
+(217,"Granis",1,0),
+(218,"Genn",1,0),
+(219,"Nandis",1,0),
+(220,"Geros",1,0),
+(221,"Jorn",1,0),
+(222,"Khadgar",1,0),
+(223,"Landazar",1,0),
+(224,"Shal",1,0),
+(225,"Anduin",1,0),
+(226,"Doril",1,0),
+(227,"Marn",1,0),
+(228,"Malak",1,0),
+(229,"Manadar",1,0),
+(230,"Medivh",1,0),
+(231,"Arthas",1,0),
+(232,"Terenas",1,0),
+(233,"Morlune",1,0),
+(234,"Moroes",1,0),
+(235,"Daelin",1,0),
+(236,"Rhonin",1,0),
+(237,"Sage",1,0),
+(238,"Duncan",1,0),
+(239,"Manos",1,0),
+(240,"Peril",1,0),
+(241,"Aran",1,0),
+(242,"Thoras",1,0),
+(243,"Turalyon",1,0),
+(244,"Uther",1,0),
+(245,"Varien",1,0),
+(246,"Llane",1,0),
+(247,"Zann",1,0),
+(1327,"Aimery",1,0),
+(1328,"Alex",1,0),
+(1329,"Alonso",1,0),
+(1330,"Ander",1,0),
+(1331,"Anselm",1,0),
+(1332,"Apollo",1,0),
+(1333,"Arlan",1,0),
+(1334,"Benedict",1,0),
+(1335,"Berenger",1,0),
+(1336,"Bertren",1,0),
+(1337,"Bruce",1,0),
+(1338,"Carl",1,0),
+(1339,"Carlin",1,0),
+(1340,"Carter",1,0),
+(1341,"Cedric",1,0),
+(1342,"Clement",1,0),
+(1343,"Clinton",1,0),
+(1344,"Daniel",1,0),
+(1345,"Darren",1,0),
+(1346,"Derek",1,0),
+(1347,"Eric",1,0),
+(1348,"Errol",1,0),
+(1349,"Everard",1,0),
+(1350,"Garth",1,0),
+(1351,"Geoff",1,0),
+(1352,"Graham",1,0),
+(1353,"Gregory",1,0),
+(1354,"Guillaume",1,0),
+(1355,"Hadrian",1,0),
+(1356,"Halian",1,0),
+(1357,"Harold",1,0),
+(1358,"Isaac",1,0),
+(1359,"Jack",1,0),
+(1360,"Jacob",1,0),
+(1361,"Jed",1,0),
+(1362,"Jeff",1,0),
+(1363,"Jeremiah",1,0),
+(1364,"Jessie",1,0),
+(1365,"Jethro",1,0),
+(1366,"Johan",1,0),
+(1367,"Judd",1,0),
+(1368,"Leroy",1,0),
+(1369,"Mitchell",1,0),
+(1370,"Paul",1,0),
+(1371,"Raiford",1,0),
+(1372,"Reese",1,0),
+(1373,"Regis",1,0),
+(1374,"Reid",1,0),
+(1375,"Robert",1,0),
+(1376,"Rodney",1,0),
+(1377,"Taylor",1,0),
+(1378,"Thibault",1,0),
+(1379,"Todd",1,0),
+(1380,"Walter",1,0),
+(1381,"Warin",1,0),
+(1382,"Warren",1,0),
+(1383,"Wayne",1,0),
+(1384,"Wymon",1,0),
+(1385,"Xander",1,0),
+(1386,"Yves",1,0),
+(2493,"Abelard",1,0),
+(2494,"Adin",1,0),
+(2495,"Adorian",1,0),
+(2496,"Aiden",1,0),
+(2497,"Aironus",1,0),
+(2498,"Alden",1,0),
+(2499,"Alexios",1,0),
+(2500,"Anders",1,0),
+(2501,"Anson",1,0),
+(2502,"Artim",1,0),
+(2503,"Ashton",1,0),
+(2504,"Austen",1,0),
+(2505,"Bailby",1,0),
+(2506,"Barraud",1,0),
+(2507,"Benes",1,0),
+(2508,"Brayden",1,0),
+(2509,"Caleb",1,0),
+(2510,"Cayden",1,0),
+(2511,"Cayne",1,0),
+(2512,"Cedrick",1,0),
+(2513,"Clark",1,0),
+(2514,"Clayton",1,0),
+(2515,"Corey",1,0),
+(2516,"Curtis",1,0),
+(2517,"Daician",1,0),
+(2518,"Dallin",1,0),
+(2519,"Damone",1,0),
+(2520,"Davin",1,0),
+(2521,"Devon",1,0),
+(2522,"Dewey",1,0),
+(2523,"Draven",1,0),
+(2524,"Dyrius",1,0),
+(2525,"Eames",1,0),
+(2526,"Edward",1,0),
+(2527,"Elgar",1,0),
+(2528,"Elroy",1,0),
+(2529,"Ethon",1,0),
+(2530,"Fanley",1,0),
+(2531,"Filmore",1,0),
+(2532,"Fletcher",1,0),
+(2533,"Franklin",1,0),
+(2534,"Gage",1,0),
+(2535,"Galan",1,0),
+(2536,"Gannet",1,0),
+(2537,"Gerrick",1,0),
+(2538,"Gunnar",1,0),
+(2539,"Haiden",1,0),
+(2540,"Haldane",1,0),
+(2541,"Halsey",1,0),
+(2542,"Holden",1,0),
+(2543,"Hudson",1,0),
+(2544,"Iridian",1,0),
+(2545,"Jaaron",1,0),
+(2546,"Jairund",1,0),
+(2547,"Jarek",1,0),
+(2548,"Jayson",1,0),
+(2549,"Jesse",1,0),
+(2550,"Joel",1,0),
+(2551,"Jonah",1,0),
+(2552,"Jonathan",1,0),
+(2553,"Justus",1,0),
+(2554,"Kai",1,0),
+(2555,"Kalvin",1,0),
+(2556,"Karsh",1,0),
+(2557,"Kashel",1,0),
+(2558,"Kaylan",1,0),
+(2559,"Keifer",1,0),
+(2560,"Keion",1,0),
+(2561,"Kenton",1,0),
+(2562,"Kevyn",1,0),
+(2563,"Koby",1,0),
+(2564,"Korban",1,0),
+(2565,"Kuthbert",1,0),
+(2566,"Lamarre",1,0),
+(2567,"Lars",1,0),
+(2568,"Lashan",1,0),
+(2569,"Layton",1,0),
+(2570,"Leland",1,0),
+(2571,"Maddox",1,0),
+(2572,"Marius",1,0),
+(2573,"Marlon",1,0),
+(2574,"Miccah",1,0),
+(2575,"Nathan",1,0),
+(2576,"Nelson",1,0),
+(2577,"Nolen",1,0),
+(2578,"Oren",1,0),
+(2579,"Padrik",1,0),
+(2580,"Parker",1,0),
+(2581,"Patrick",1,0),
+(2582,"Payton",1,0),
+(2583,"Phillip",1,0),
+(2584,"Piotyr",1,0),
+(2585,"Quin",1,0),
+(2586,"Quincey",1,0),
+(2587,"Sebastian",1,0),
+(2588,"Silas",1,0),
+(2589,"Symon",1,0),
+(2590,"Tanner",1,0),
+(2591,"Tavish",1,0),
+(2592,"Theodore",1,0),
+(2593,"Vale",1,0),
+(2594,"Walton",1,0),
+(2595,"Waylen",1,0),
+(2596,"Willifred",1,0),
+(2597,"Yancy",1,0),
+(2598,"Yani",1,0),
+(450,"Aegwynn",1,1),
+(451,"Taretha",1,1),
+(452,"Calia",1,1),
+(454,"Maevis",1,1),
+(455,"Alexis",1,1),
+(456,"Ariandra",1,1),
+(457,"Kassandra",1,1),
+(458,"Wilhelmina",1,1),
+(459,"Gloriana",1,1),
+(460,"Sarah",1,1),
+(461,"Samantha",1,1),
+(462,"Kitiara",1,1),
+(463,"April",1,1),
+(464,"Jorune",1,1),
+(465,"Brunhilde",1,1),
+(466,"Sithaya",1,1),
+(467,"Andra",1,1),
+(468,"Amora",1,1),
+(469,"Dierdre",1,1),
+(470,"Sandris",1,1),
+(1267,"Adelaide",1,1),
+(1268,"Alice",1,1),
+(1269,"Amaria",1,1),
+(1270,"Amelia",1,1),
+(1271,"Avelina",1,1),
+(1272,"Barbara",1,1),
+(1273,"Beatrix",1,1),
+(1274,"Betta",1,1),
+(1275,"Brigit",1,1),
+(1276,"Calli",1,1),
+(1277,"Candis",1,1),
+(1278,"Carolyn",1,1),
+(1279,"Catherine",1,1),
+(1280,"Catin",1,1),
+(1281,"Christiana",1,1),
+(1282,"Christine",1,1),
+(1283,"Cicely",1,1),
+(1284,"Constance",1,1),
+(1285,"Cristina",1,1),
+(1286,"Dagny",1,1),
+(1287,"Danielle",1,1),
+(1288,"Darcy",1,1),
+(1289,"Desiree",1,1),
+(1290,"Felicity",1,1),
+(1291,"Florencia",1,1),
+(1292,"Giliana",1,1),
+(1293,"Gladys",1,1),
+(1294,"Grace",1,1),
+(1295,"Heloise",1,1),
+(1296,"Honor",1,1),
+(1297,"Hope",1,1),
+(1298,"Jane",1,1),
+(1299,"Joy",1,1),
+(1300,"Kaisa",1,1),
+(1301,"Kamilla",1,1),
+(1302,"Kimberly",1,1),
+(1303,"Lia",1,1),
+(1304,"Lois",1,1),
+(1305,"Lola",1,1),
+(1306,"Lucille",1,1),
+(1307,"Margery",1,1),
+(1308,"Marilyn",1,1),
+(1309,"Marlena",1,1),
+(1310,"Meghan",1,1),
+(1311,"Mercy",1,1),
+(1312,"Mirabell",1,1),
+(1313,"Naomi",1,1),
+(1314,"Pamela",1,1),
+(1315,"Peggy",1,1),
+(1316,"Prudence",1,1),
+(1317,"Reyna",1,1),
+(1318,"Rhoda",1,1),
+(1319,"Sabeline",1,1),
+(1320,"Theda",1,1),
+(1321,"Thelma",1,1),
+(1322,"Theresa",1,1),
+(1323,"Tiffany",1,1),
+(1324,"Tina",1,1),
+(1325,"Tracy",1,1),
+(1326,"Verity",1,1),
+(2599,"Acacia",1,1),
+(2600,"Alessandra",1,1),
+(2601,"Amadria",1,1),
+(2602,"Andraia",1,1),
+(2603,"Annalea",1,1),
+(2604,"Ardyth",1,1),
+(2605,"Astradyn",1,1),
+(2606,"Autumn",1,1),
+(2607,"Becky",1,1),
+(2608,"Blythe",1,1),
+(2609,"Briar",1,1),
+(2610,"Brylee",1,1),
+(2611,"Callista",1,1),
+(2612,"Cassandra",1,1),
+(2613,"Cassima",1,1),
+(2614,"Challie",1,1),
+(2615,"Chana",1,1),
+(2616,"Chelsea",1,1),
+(2617,"Chiara",1,1),
+(2618,"Dannison",1,1),
+(2619,"Daphne",1,1),
+(2620,"Darla",1,1),
+(2621,"Deandra",1,1),
+(2622,"Dellah",1,1),
+(2623,"Dominique",1,1),
+(2624,"Doriah",1,1),
+(2625,"Dorothy",1,1),
+(2626,"Edith",1,1),
+(2627,"Elaina",1,1),
+(2628,"Elenore",1,1),
+(2629,"Emilee",1,1),
+(2630,"Emma",1,1),
+(2631,"Everette",1,1),
+(2632,"Evie",1,1),
+(2633,"Farrah",1,1),
+(2634,"Fiorella",1,1),
+(2635,"Galiya",1,1),
+(2636,"Gillian",1,1),
+(2637,"Gizela",1,1),
+(2638,"Gracelyn",1,1),
+(2639,"Heidie",1,1),
+(2640,"Ilana",1,1),
+(2641,"Ione",1,1),
+(2642,"Jaimie",1,1),
+(2643,"Jalissa",1,1),
+(2644,"Janessa",1,1),
+(2645,"Jinnea",1,1),
+(2646,"Johanna",1,1),
+(2647,"Jolanda",1,1),
+(2648,"Jolene",1,1),
+(2649,"Kaiah",1,1),
+(2650,"Kaiya",1,1),
+(2651,"Karleigh",1,1),
+(2652,"Kelsea",1,1),
+(2653,"Kirsten",1,1),
+(2654,"Korla",1,1),
+(2655,"Kyara",1,1),
+(2656,"Leiah",1,1),
+(2657,"Leliani",1,1),
+(2658,"Lennith",1,1),
+(2659,"Lisbeth",1,1),
+(2660,"Lisette",1,1),
+(2661,"Lynn",1,1),
+(2662,"Magdelyn",1,1),
+(2663,"Maira",1,1),
+(2664,"Manja",1,1),
+(2665,"Marguerite",1,1),
+(2666,"Marisol",1,1),
+(2667,"Marit",1,1),
+(2668,"Meadow",1,1),
+(2669,"Melodie",1,1),
+(2670,"Millicent",1,1),
+(2671,"Mistiana",1,1),
+(2672,"Myrtha",1,1),
+(2673,"Naima",1,1),
+(2674,"Neranna",1,1),
+(2675,"Odelle",1,1),
+(2676,"Ophelia",1,1),
+(2677,"Pacey",1,1),
+(2678,"Rachael",1,1),
+(2679,"Radmila",1,1),
+(2680,"Rayna",1,1),
+(2681,"Rebekka",1,1),
+(2682,"Roberta",1,1),
+(2683,"Roselle",1,1),
+(2684,"Saige",1,1),
+(2685,"Scarlet",1,1),
+(2686,"Shancai",1,1),
+(2687,"Shanna",1,1),
+(2688,"Talia",1,1),
+(2689,"Tasha",1,1),
+(2690,"Valanese",1,1),
+(2691,"Valeska",1,1),
+(2692,"Vannah",1,1),
+(2693,"Viridiana",1,1),
+(2694,"Whittany",1,1),
+(2695,"Wynna",1,1),
+(2696,"Xara",1,1),
+(2697,"Yarina",1,1),
+(2698,"Zivanka",1,1),
+(2699,"Zoe",1,1),
+(268,"Akinos",2,0),
+(269,"Arashicage",2,0),
+(270,"Baelgun",2,0),
+(271,"Bale",2,0),
+(272,"Blackhand",2,0),
+(273,"Kargath",2,0),
+(274,"Broxxigar",2,0),
+(275,"Chogall",2,0),
+(276,"Clawhand",2,0),
+(277,"Magis",2,0),
+(278,"Kazil",2,0),
+(279,"Daisho",2,0),
+(280,"Kilrogg",2,0),
+(281,"Dentarg",2,0),
+(282,"Orgrim",2,0),
+(283,"Doomroar",2,0),
+(284,"Naz",2,0),
+(285,"Drekthar",2,0),
+(286,"Durotan",2,0),
+(287,"Eitrigg",2,0),
+(288,"Fenrisar",2,0),
+(289,"Fenris",2,0),
+(290,"Foerend",2,0),
+(291,"Gathras",2,0),
+(292,"Gardal",2,0),
+(293,"Gorr",2,0),
+(294,"Guldan",2,0),
+(295,"Negal",2,0),
+(296,"Grom",2,0),
+(297,"Irontusk",2,0),
+(298,"Kajind",2,0),
+(299,"Kalthar",2,0),
+(300,"Kazragore",2,0),
+(301,"Kigami",2,0),
+(302,"Maim",2,0),
+(303,"Mazuru",2,0),
+(304,"Mikasa",2,0),
+(305,"Nazgrel",2,0),
+(306,"Nikoro",2,0),
+(307,"Zess",2,0),
+(308,"Rend",2,0),
+(309,"Rexxar",2,0),
+(310,"Samuro",2,0),
+(311,"Nekros",2,0),
+(312,"Tagar",2,0),
+(313,"Thrall",2,0),
+(314,"Thundrax",2,0),
+(315,"Tojara",2,0),
+(316,"Uglaz",2,0),
+(317,"Kag",2,0),
+(318,"Warmaul",2,0),
+(319,"Borr",2,0),
+(320,"Pand",2,0),
+(321,"Kagar",2,0),
+(322,"Wolfsong",2,0),
+(323,"Morg",2,0),
+(324,"Yozshura",2,0),
+(325,"Zuluhed",2,0),
+(326,"Zargil",2,0),
+(1563,"Asato",2,0),
+(1564,"Asuya",2,0),
+(1565,"Azuma",2,0),
+(1566,"Baku",2,0),
+(1567,"Chuugo",2,0),
+(1568,"Dahr",2,0),
+(1569,"Dai",2,0),
+(1570,"Daichi",2,0),
+(1571,"Dugan",2,0),
+(1572,"Dugrum",2,0),
+(1573,"Emok",2,0),
+(1574,"Engo",2,0),
+(1575,"Fukashi",2,0),
+(1576,"Fusao",2,0),
+(1577,"Goragon",2,0),
+(1578,"Gor-Ka",2,0),
+(1579,"Gulmore",2,0),
+(1580,"Gunga",2,0),
+(1581,"Gyousei",2,0),
+(1582,"Hakuba",2,0),
+(1583,"Iku",2,0),
+(1584,"Ishin",2,0),
+(1585,"Jungo",2,0),
+(1586,"Kagha",2,0),
+(1587,"Koichi",2,0),
+(1588,"Kotorr",2,0),
+(1589,"Lurp",2,0),
+(1590,"Makh",2,0),
+(1591,"Mogramar",2,0),
+(1592,"Molin",2,0),
+(1593,"Monga",2,0),
+(1594,"Murtrin",2,0),
+(1595,"Nakaghul",2,0),
+(1596,"Narghon",2,0),
+(1597,"Nariaki",2,0),
+(1598,"Natsuo",2,0),
+(1599,"Nobuya",2,0),
+(1600,"Nozomi",2,0),
+(1601,"Okrim",2,0),
+(1602,"Oogresh",2,0),
+(1603,"Osamu",2,0),
+(1604,"Ren",2,0),
+(1605,"Rogrim",2,0),
+(1606,"Skoresh",2,0),
+(1607,"Soktar",2,0),
+(1608,"Sora",2,0),
+(1609,"Tonga",2,0),
+(1610,"Tul",2,0),
+(1611,"Ugramesh",2,0),
+(1612,"Umok",2,0),
+(2700,"Agarn",2,0),
+(2701,"Agrim",2,0),
+(2702,"Agtan",2,0),
+(2703,"Aksho",2,0),
+(2704,"Ansik",2,0),
+(2705,"Antsu",2,0),
+(2706,"Arduk",2,0),
+(2707,"Armac",2,0),
+(2708,"Bargon",2,0),
+(2709,"Bekil",2,0),
+(2710,"Bherg",2,0),
+(2711,"Bish",2,0),
+(2712,"Bosao",2,0),
+(2713,"Burik",2,0),
+(2714,"Calnar",2,0),
+(2715,"Charn",2,0),
+(2716,"Chegh",2,0),
+(2717,"Chomdai",2,0),
+(2718,"Chugar",2,0),
+(2719,"Cron",2,0),
+(2720,"Crunk",2,0),
+(2721,"Damwogh",2,0),
+(2722,"Datku",2,0),
+(2723,"Derm",2,0),
+(2724,"Domgak",2,0),
+(2725,"Dragar",2,0),
+(2726,"Dragga",2,0),
+(2727,"Drahn",2,0),
+(2728,"Drash",2,0),
+(2729,"Drengar",2,0),
+(2730,"Drukar",2,0),
+(2731,"Druknar",2,0),
+(2732,"Duntarg",2,0),
+(2733,"Ecks",2,0),
+(2734,"Ehngar",2,0),
+(2735,"Elcoz",2,0),
+(2736,"Emulk",2,0),
+(2737,"Eruk",2,0),
+(2738,"Etramm",2,0),
+(2739,"Fashtar",2,0),
+(2740,"Fenrar",2,0),
+(2741,"Festuk",2,0),
+(2742,"Figgam",2,0),
+(2743,"Fugg",2,0),
+(2744,"Fulnn",2,0),
+(2745,"Garusk",2,0),
+(2746,"Ghrog",2,0),
+(2747,"Gigoa",2,0),
+(2748,"Glok",2,0),
+(2749,"Goon",2,0),
+(2750,"Goshog",2,0),
+(2751,"Gredan",2,0),
+(2752,"Grundar",2,0),
+(2753,"Havik",2,0),
+(2754,"Hewnok",2,0),
+(2755,"Homdag",2,0),
+(2756,"Hondai",2,0),
+(2757,"Hujon",2,0),
+(2758,"Hunk",2,0),
+(2759,"Igg",2,0),
+(2760,"Kafga",2,0),
+(2761,"Kaibo",2,0),
+(2762,"Kirik",2,0),
+(2763,"Knaak",2,0),
+(2764,"Koon",2,0),
+(2765,"Kuugai",2,0),
+(2766,"Larg",2,0),
+(2767,"Lekk",2,0),
+(2768,"Lhark",2,0),
+(2769,"Luubu",2,0),
+(2770,"Maaj",2,0),
+(2771,"Magom",2,0),
+(2772,"Mahkarn",2,0),
+(2773,"Makkar",2,0),
+(2774,"Makuso",2,0),
+(2775,"Margor",2,0),
+(2776,"Meshtak",2,0),
+(2777,"Moktal",2,0),
+(2778,"Morn",2,0),
+(2779,"Mrag",2,0),
+(2780,"Mragar",2,0),
+(2781,"Myrm",2,0),
+(2782,"Naggam",2,0),
+(2783,"Nailz",2,0),
+(2784,"Nantook",2,0),
+(2785,"Nark",2,0),
+(2786,"Nillik",2,0),
+(2787,"Nozit",2,0),
+(2788,"Ogg",2,0),
+(2789,"Ojak",2,0),
+(2790,"Olug",2,0),
+(2791,"Ontsu",2,0),
+(2792,"Oog",2,0),
+(2793,"Ork",2,0),
+(2794,"Phanx",2,0),
+(2795,"Pikk",2,0),
+(2796,"Porg",2,0),
+(2797,"Prak",2,0),
+(2798,"Pyag",2,0),
+(2799,"Raido",2,0),
+(2800,"Rekk",2,0),
+(2801,"Relg",2,0),
+(2802,"Rettsu",2,0),
+(2803,"Rhaten",2,0),
+(2804,"Rhog",2,0),
+(2805,"Ritgar",2,0),
+(2806,"Roxx",2,0),
+(2807,"Ruugar",2,0),
+(2808,"Rwag",2,0),
+(2809,"Sandoso",2,0),
+(2810,"Selig",2,0),
+(2811,"Sitar",2,0),
+(2812,"Skrash",2,0),
+(2813,"Sokolo",2,0),
+(2814,"Songo",2,0),
+(2815,"Tatsu",2,0),
+(2816,"Tersk",2,0),
+(2817,"Tragg",2,0),
+(2818,"Tsubai",2,0),
+(2819,"Tuul",2,0),
+(2820,"Tyrar",2,0),
+(2821,"Uggol",2,0),
+(2822,"Urst",2,0),
+(2823,"Volk",2,0),
+(2824,"Watsu",2,0),
+(2825,"Welsk",2,0),
+(2826,"Wiigo",2,0),
+(2827,"Witao",2,0),
+(2828,"Wolv",2,0),
+(2829,"Worg",2,0),
+(2830,"Zakk",2,0),
+(2831,"Zed",2,0),
+(2832,"Zugo",2,0),
+(248,"Draka",2,1),
+(249,"Garona",2,1),
+(250,"Nekra",2,1),
+(251,"Gara",2,1),
+(252,"Theg",2,1),
+(253,"Markas",2,1),
+(254,"Sendra",2,1),
+(255,"Sergra",2,1),
+(256,"Gaine",2,1),
+(257,"Dala",2,1),
+(258,"Morisha",2,1),
+(259,"Galvania",2,1),
+(260,"Titania",2,1),
+(261,"Jenka",2,1),
+(262,"Ragos",2,1),
+(263,"Mirsha",2,1),
+(264,"Misha",2,1),
+(265,"Korvis",2,1),
+(266,"Mandiss",2,1),
+(267,"Germana",2,1),
+(1504,"Agata",2,1),
+(1505,"Agna",2,1),
+(1506,"Akana",2,1),
+(1507,"Akheena",2,1),
+(1508,"Anga",2,1),
+(1509,"Asako",2,1),
+(1510,"Atsuko",2,1),
+(1511,"Aya",2,1),
+(1512,"Boka",2,1),
+(1513,"Chantu",2,1),
+(1514,"Cora",2,1),
+(1515,"Damah",2,1),
+(1516,"Doba",2,1),
+(1517,"Doska",2,1),
+(1518,"Duka",2,1),
+(1519,"Eghala",2,1),
+(1520,"Elka",2,1),
+(1521,"Eta",2,1),
+(1522,"Garuka",2,1),
+(1523,"Ghana",2,1),
+(1524,"Gisa",2,1),
+(1525,"Gruta",2,1),
+(1526,"Hedda",2,1),
+(1527,"Hilar",2,1),
+(1528,"Iria",2,1),
+(1529,"Junna",2,1),
+(1530,"Kaia",2,1),
+(1531,"Kama",2,1),
+(1532,"Kasa",2,1),
+(1533,"Kaya",2,1),
+(1534,"Loka",2,1),
+(1535,"Luka",2,1),
+(1536,"Machiko",2,1),
+(1537,"Magda",2,1),
+(1538,"Maiko",2,1),
+(1539,"Maja",2,1),
+(1540,"Makha",2,1),
+(1541,"Moka",2,1),
+(1542,"Mugallah",2,1),
+(1543,"Nagisa",2,1),
+(1544,"Nanaka",2,1),
+(1545,"Nayu",2,1),
+(1546,"Nodoka",2,1),
+(1547,"Onela",2,1),
+(1548,"Palka",2,1),
+(1549,"Rana",2,1),
+(1550,"Rela",2,1),
+(1551,"Roka",2,1),
+(1552,"Saaya",2,1),
+(1553,"Sana",2,1),
+(1554,"Tabitha",2,1),
+(1555,"Tamao",2,1),
+(1556,"Tamsin",2,1),
+(1557,"Tanya",2,1),
+(1558,"Teruna",2,1),
+(1559,"Tetsumi",2,1),
+(1560,"Tokimi",2,1),
+(1561,"Yatsumi",2,1),
+(1562,"Yukari",2,1),
+(2833,"Agasa",2,1),
+(2834,"Aki",2,1),
+(2835,"Annda",2,1),
+(2836,"Arai",2,1),
+(2837,"Arita",2,1),
+(2838,"Askka",2,1),
+(2839,"Atsua",2,1),
+(2840,"Balle",2,1),
+(2841,"Barti",2,1),
+(2842,"Bellag",2,1),
+(2843,"Bitsu",2,1),
+(2844,"Boya",2,1),
+(2845,"Braia",2,1),
+(2846,"Cerah",2,1),
+(2847,"Clemi",2,1),
+(2848,"Coga",2,1),
+(2849,"Cohh",2,1),
+(2850,"Cutasu",2,1),
+(2851,"Dalla",2,1),
+(2852,"Daqi",2,1),
+(2853,"Dikaga",2,1),
+(2854,"Doosa",2,1),
+(2855,"Dous",2,1),
+(2856,"Drakna",2,1),
+(2857,"Druna",2,1),
+(2858,"Druu",2,1),
+(2859,"Ehg",2,1),
+(2860,"Elloa",2,1),
+(2861,"Emda",2,1),
+(2862,"Eoni",2,1),
+(2863,"Erai",2,1),
+(2864,"Erita",2,1),
+(2865,"Ezara",2,1),
+(2866,"Ferra",2,1),
+(2867,"Fiatsu",2,1),
+(2868,"Fliri",2,1),
+(2869,"Frii",2,1),
+(2870,"Fryta",2,1),
+(2871,"Fuda",2,1),
+(2872,"Futara",2,1),
+(2873,"Fyrna",2,1),
+(2874,"Gaeldi",2,1),
+(2875,"Gai",2,1),
+(2876,"Geera",2,1),
+(2877,"Gelsi",2,1),
+(2878,"Gharta",2,1),
+(2879,"Ghem",2,1),
+(2880,"Gora",2,1),
+(2881,"Greka",2,1),
+(2882,"Grita",2,1),
+(2883,"Gronna",2,1),
+(2884,"Grynna",2,1),
+(2885,"Haki",2,1),
+(2886,"Hakua",2,1),
+(2887,"Haqa",2,1),
+(2888,"Hatko",2,1),
+(2889,"Henn",2,1),
+(2890,"Ingra",2,1),
+(2891,"Kagda",2,1),
+(2892,"Karga",2,1),
+(2893,"Keia",2,1),
+(2894,"Khami",2,1),
+(2895,"Kii",2,1),
+(2896,"Kilnah",2,1),
+(2897,"Kintarg",2,1),
+(2898,"Kirga",2,1),
+(2899,"Kitra",2,1),
+(2900,"Kona",2,1),
+(2901,"Krau",2,1),
+(2902,"Kretah",2,1),
+(2903,"Kritah",2,1),
+(2904,"Laaj",2,1),
+(2905,"Lark",2,1),
+(2906,"Liki",2,1),
+(2907,"Lopia",2,1),
+(2908,"Madaba",2,1),
+(2909,"Mecks",2,1),
+(2910,"Merga",2,1),
+(2911,"Meshta",2,1),
+(2912,"Miki",2,1),
+(2913,"Moosha",2,1),
+(2914,"Namga",2,1),
+(2915,"Nani",2,1),
+(2916,"Narn",2,1),
+(2917,"Neko",2,1),
+(2918,"Noora",2,1),
+(2919,"Nya",2,1),
+(2920,"Okra",2,1),
+(2921,"Ola",2,1),
+(2922,"Opai",2,1),
+(2923,"Orteka",2,1),
+(2924,"Osoh",2,1),
+(2925,"Ougi",2,1),
+(2926,"Paku",2,1),
+(2927,"Peraga",2,1),
+(2928,"Phan",2,1),
+(2929,"Plai",2,1),
+(2930,"Pupp",2,1),
+(2931,"Rakkah",2,1),
+(2932,"Reki",2,1),
+(2933,"Remig",2,1),
+(2934,"Rexai",2,1),
+(2935,"Rie",2,1),
+(2936,"Rinka",2,1),
+(2937,"Rolda",2,1),
+(2938,"Roog",2,1),
+(2939,"Saki",2,1),
+(2940,"Seeth",2,1),
+(2941,"Siyeg",2,1),
+(2942,"Skara",2,1),
+(2943,"Sosara",2,1),
+(2944,"Sukasa",2,1),
+(2945,"Talki",2,1),
+(2946,"Tari",2,1),
+(2947,"Tash",2,1),
+(2948,"Tikta",2,1),
+(2949,"Tinago",2,1),
+(2950,"Tisk",2,1),
+(2951,"Togra",2,1),
+(2952,"Uraka",2,1),
+(2953,"Vegla",2,1),
+(2954,"Wao",2,1),
+(2955,"Wegg",2,1),
+(2956,"Wiima",2,1),
+(2957,"Womda",2,1),
+(2958,"Wuchi",2,1),
+(2959,"Wyega",2,1),
+(2960,"Zan",2,1),
+(2961,"Zila",2,1),
+(30,"Thorgas",3,0),
+(31,"Muradin",3,0),
+(32,"Brann",3,0),
+(33,"Magni",3,0),
+(34,"Gar",3,0),
+(35,"Bandis",3,0),
+(36,"Buri",3,0),
+(37,"Huginn",3,0),
+(38,"Muninn",3,0),
+(39,"Kelvar",3,0),
+(40,"Thordin",3,0),
+(41,"Bor",3,0),
+(42,"Falstad",3,0),
+(43,"Grimbooze",3,0),
+(44,"Modi",3,0),
+(45,"Dagath",3,0),
+(46,"Kurdran",3,0),
+(47,"Bruenor",3,0),
+(48,"Gimli",3,0),
+(49,"Thorin",3,0),
+(1086,"Adair",3,0),
+(1087,"Ahearn",3,0),
+(1088,"Alroy",3,0),
+(1089,"Angus",3,0),
+(1090,"Argyll",3,0),
+(1091,"Arlen",3,0),
+(1092,"Baird",3,0),
+(1093,"Balfour",3,0),
+(1094,"Beagan",3,0),
+(1095,"Brae",3,0),
+(1096,"Brom",3,0),
+(1097,"Cailen",3,0),
+(1098,"Camden",3,0),
+(1099,"Cathal",3,0),
+(1100,"Colm",3,0),
+(1101,"Cormac",3,0),
+(1102,"Damian",3,0),
+(1103,"Darragh",3,0),
+(1104,"Dempsey",3,0),
+(1105,"Dermot",3,0),
+(1106,"Donagh",3,0),
+(1107,"Donoghue",3,0),
+(1108,"Dunstan",3,0),
+(1109,"Eamonn",3,0),
+(1110,"Edan",3,0),
+(1111,"Eoghan",3,0),
+(1112,"Ewan",3,0),
+(1113,"Fagin",3,0),
+(1114,"Finbar",3,0),
+(1115,"Fionn",3,0),
+(1116,"Flann",3,0),
+(1117,"Flannan",3,0),
+(1118,"Galloway",3,0),
+(1119,"Glyndon",3,0),
+(1120,"Hagen",3,0),
+(1121,"Jarlath",3,0),
+(1122,"Jaryn",3,0),
+(1123,"Keefe",3,0),
+(1124,"Keenan",3,0),
+(1125,"Kieran",3,0),
+(1126,"Kincaid",3,0),
+(1127,"Lochlainn",3,0),
+(1128,"Lorcan",3,0),
+(1129,"Loughlin",3,0),
+(1130,"Mackay",3,0),
+(1131,"Mannix",3,0),
+(1132,"Milo",3,0),
+(1133,"Moray",3,0),
+(1134,"Nessan",3,0),
+(1135,"Nolan",3,0),
+(1136,"Oran",3,0),
+(1137,"Padraic",3,0),
+(1138,"Rafferty",3,0),
+(1139,"Rory",3,0),
+(1140,"Ross",3,0),
+(1141,"Ruairc",3,0),
+(1142,"Tadhg",3,0),
+(1143,"Tiernan",3,0),
+(1144,"Turlough",3,0),
+(1145,"Ultan",3,0),
+(2962,"Acharn",3,0),
+(2963,"Agdem",3,0),
+(2964,"Ardal",3,0),
+(2965,"Argoe",3,0),
+(2966,"Arno",3,0),
+(2967,"Avem",3,0),
+(2968,"Basch",3,0),
+(2969,"Belfas",3,0),
+(2970,"Berniy",3,0),
+(2971,"Bjorn",3,0),
+(2972,"Boris",3,0),
+(2973,"Buu",3,0),
+(2974,"Caeme",3,0),
+(2975,"Cain",3,0),
+(2976,"Capp",3,0),
+(2977,"Carth",3,0),
+(2978,"Chom",3,0),
+(2979,"Cojul",3,0),
+(2980,"Daamis",3,0),
+(2981,"Dabim",3,0),
+(2982,"Damagh",3,0),
+(2983,"Derk",3,0),
+(2984,"Dorn",3,0),
+(2985,"Durus",3,0),
+(2986,"Falstir",3,0),
+(2987,"Finn",3,0),
+(2988,"Flanagan",3,0),
+(2989,"Flup",3,0),
+(2990,"Fogie",3,0),
+(2991,"Fornir",3,0),
+(2992,"Gadim",3,0),
+(2993,"Ghass",3,0),
+(2994,"Ghom",3,0),
+(2995,"Glym",3,0),
+(2996,"Goane",3,0),
+(2997,"Griggs",3,0),
+(2998,"Hagar",3,0),
+(2999,"Halbit",3,0),
+(3000,"Halfast",3,0),
+(3001,"Heeg",3,0),
+(3002,"Hogan",3,0),
+(3003,"Hume",3,0),
+(3004,"Jobe",3,0),
+(3005,"Kabe",3,0),
+(3006,"Kaloo",3,0),
+(3007,"Kelov",3,0),
+(3008,"Khrogan",3,0),
+(3009,"Koom",3,0),
+(3010,"Kurim",3,0),
+(3011,"Looch",3,0),
+(3012,"Louh",3,0),
+(3013,"Maem",3,0),
+(3014,"Maxim",3,0),
+(3015,"Mogh",3,0),
+(3016,"Moleb",3,0),
+(3017,"Munden",3,0),
+(3018,"Muramas",3,0),
+(3019,"Ogden",3,0),
+(3020,"Olaf",3,0),
+(3021,"Paps",3,0),
+(3022,"Rags",3,0),
+(3023,"Rakum",3,0),
+(3024,"Rawm",3,0),
+(3025,"Risx",3,0),
+(3026,"Roone",3,0),
+(3027,"Roxas",3,0),
+(3028,"Serge",3,0),
+(3029,"Shiggy",3,0),
+(3030,"Sjardin",3,0),
+(3031,"Sonn",3,0),
+(3032,"Sorn",3,0),
+(3033,"Sulfis",3,0),
+(3034,"Tegh",3,0),
+(3035,"Tharidin",3,0),
+(3036,"Thor",3,0),
+(3037,"Tir",3,0),
+(3038,"Took",3,0),
+(3039,"Tron",3,0),
+(3040,"Urogh",3,0),
+(3041,"Valnar",3,0),
+(4,"Mogra",3,1),
+(5,"Brunhilde",3,1),
+(6,"Valkrist",3,1),
+(7,"Aisha",3,1),
+(8,"Sif",3,1),
+(9,"Eden",3,1),
+(10,"Mathra",3,1),
+(11,"Omora",3,1),
+(12,"Drenn",3,1),
+(13,"Kathra",3,1),
+(14,"Jann",3,1),
+(15,"Maybel",3,1),
+(16,"Brushah",3,1),
+(17,"Moira",3,1),
+(18,"Kate",3,1),
+(19,"Kasha",3,1),
+(20,"Olga",3,1),
+(21,"Helga",3,1),
+(22,"Gertrune",3,1),
+(23,"Gudrune",3,1),
+(24,"Frigga",3,1),
+(25,"Angerboda",3,1),
+(26,"Einherjar",3,1),
+(27,"Freya",3,1),
+(28,"Leia",3,1),
+(29,"Padme",3,1),
+(1026,"Aibhlin",3,1),
+(1027,"Aideen",3,1),
+(1028,"Aigneis",3,1),
+(1029,"Ailbhe",3,1),
+(1030,"Ailis",3,1),
+(1031,"Aimil",3,1),
+(1032,"Aine",3,1),
+(1033,"Airleas",3,1),
+(1034,"Aislinn",3,1),
+(1035,"Aoibheann",3,1),
+(1036,"Aoife",3,1),
+(1037,"Aselman",3,1),
+(1038,"Barabell",3,1),
+(1039,"Bebhinn",3,1),
+(1040,"Beitris",3,1),
+(1041,"Bevin",3,1),
+(1042,"Brenna",3,1),
+(1043,"Bridie",3,1),
+(1044,"Bronagh",3,1),
+(1045,"Carling",3,1),
+(1046,"Casidhe",3,1),
+(1047,"Catriona",3,1),
+(1048,"Ciara",3,1),
+(1049,"Cliodhna",3,1),
+(1050,"Danann",3,1),
+(1051,"Doireann",3,1),
+(1052,"Doreen",3,1),
+(1053,"Eanna",3,1),
+(1054,"Eithne",3,1),
+(1055,"Erlina",3,1),
+(1056,"Fidelma",3,1),
+(1057,"Franna",3,1),
+(1058,"Ghleanna",3,1),
+(1059,"Glennis",3,1),
+(1060,"Glynis",3,1),
+(1061,"Ita",3,1),
+(1062,"Keely",3,1),
+(1063,"Leitis",3,1),
+(1064,"Lesley",3,1),
+(1065,"Maeve",3,1),
+(1066,"Mairi",3,1),
+(1067,"Morag",3,1),
+(1068,"Muirinn",3,1),
+(1069,"Niamh",3,1),
+(1070,"Nuala",3,1),
+(1071,"Nuallan",3,1),
+(1072,"Onora",3,1),
+(1073,"Orla",3,1),
+(1074,"Peigi",3,1),
+(1075,"Rathnait",3,1),
+(1076,"Ros",3,1),
+(1077,"Saibh",3,1),
+(1078,"Saoirse",3,1),
+(1079,"Seana",3,1),
+(1080,"Sheila",3,1),
+(1081,"Siofra",3,1),
+(1082,"Siusan",3,1),
+(1083,"Sive",3,1),
+(1084,"Sorcha",3,1),
+(1085,"Treasa",3,1),
+(3042,"Aeona",3,1),
+(3043,"Aeowyn",3,1),
+(3044,"Aggi",3,1),
+(3045,"Alna",3,1),
+(3046,"Amelle",3,1),
+(3047,"Appela",3,1),
+(3048,"Bassba",3,1),
+(3049,"Beppi",3,1),
+(3050,"Bhoona",3,1),
+(3051,"Blaise",3,1),
+(3052,"Brianne",3,1),
+(3053,"Bufu",3,1),
+(3054,"Caide",3,1),
+(3055,"Caska",3,1),
+(3056,"Chaim",3,1),
+(3057,"Chari",3,1),
+(3058,"Ciali",3,1),
+(3059,"Cici",3,1),
+(3060,"Dalew",3,1),
+(3061,"Daria",3,1),
+(3062,"Deb",3,1),
+(3063,"Donda",3,1),
+(3064,"Dru",3,1),
+(3065,"Durga",3,1),
+(3066,"Fawn",3,1),
+(3067,"Fern",3,1),
+(3068,"Fhanta",3,1),
+(3069,"Finne",3,1),
+(3070,"Fisna",3,1),
+(3071,"Frea",3,1),
+(3072,"Gam",3,1),
+(3073,"Genny",3,1),
+(3074,"Geritrude",3,1),
+(3075,"Ghanna",3,1),
+(3076,"Giga",3,1),
+(3077,"Goola",3,1),
+(3078,"Haige",3,1),
+(3079,"Hehm",3,1),
+(3080,"Helena",3,1),
+(3081,"Hester",3,1),
+(3082,"Hola",3,1),
+(3083,"Hoppe",3,1),
+(3084,"Ingrid",3,1),
+(3085,"Jaine",3,1),
+(3086,"Kathryn",3,1),
+(3087,"Kemmi",3,1),
+(3088,"Keshta",3,1),
+(3089,"Kess",3,1),
+(3090,"Khea",3,1),
+(3091,"Kika",3,1),
+(3092,"Leela",3,1),
+(3093,"Lonlon",3,1),
+(3094,"Maii",3,1),
+(3095,"Maybelle",3,1),
+(3096,"Mekena",3,1),
+(3097,"Mina",3,1),
+(3098,"Misty",3,1),
+(3099,"Nefh",3,1),
+(3100,"Olli",3,1),
+(3101,"Ooma",3,1),
+(3102,"Remmy",3,1),
+(3103,"Rena",3,1),
+(3104,"Riya",3,1),
+(3105,"Roe",3,1),
+(3106,"Ronara",3,1),
+(3107,"Sascha",3,1),
+(3108,"Seiry",3,1),
+(3109,"Sparkle",3,1),
+(3110,"Stephie",3,1),
+(3111,"Susarka",3,1),
+(3112,"Tamm",3,1),
+(3113,"Taraebi",3,1),
+(3114,"Tesla",3,1),
+(3115,"Tess",3,1),
+(3116,"Tetra",3,1),
+(3117,"Toffy",3,1),
+(3118,"Umi",3,1),
+(3119,"Vicki",3,1),
+(98,"KaelThas",4,0),
+(99,"DathRemar",4,0),
+(100,"Legolas",4,0),
+(101,"Elrond",4,0),
+(102,"Gilthanas",4,0),
+(103,"Porthios",4,0),
+(104,"Solastaran",4,0),
+(105,"Lorac",4,0),
+(106,"Gilthaniel",4,0),
+(107,"Arondas",4,0),
+(108,"Pathorias",4,0),
+(109,"Glorfindel",4,0),
+(110,"Aethoras",4,0),
+(111,"Gilgaden",4,0),
+(112,"Alfruend",4,0),
+(113,"Kurt",4,0),
+(114,"Galadrim",4,0),
+(115,"Celeborn",4,0),
+(116,"Soferedas",4,0),
+(117,"Andenar",4,0),
+(118,"Firebrand",4,0),
+(119,"Flameseeker",4,0),
+(120,"Gholbine",4,0),
+(121,"Hellbourne",4,0),
+(122,"Larodar",4,0),
+(123,"Malorne",4,0),
+(124,"Dagda",4,0),
+(125,"Darkweaver",4,0),
+(126,"Bandalar",4,0),
+(127,"Bloodwrath",4,0),
+(128,"Califax",4,0),
+(129,"Centrius",4,0),
+(130,"Anubris",4,0),
+(131,"Ashroot",4,0),
+(132,"Dazlith",4,0),
+(133,"Nandieb",4,0),
+(134,"Stormrage",4,0),
+(135,"Malfurion",4,0),
+(136,"Illidan",4,0),
+(137,"Terrorblade",4,0),
+(138,"Thornhand",4,0),
+(139,"Kardol",4,0),
+(140,"Treeguard",4,0),
+(141,"Dezarden",4,0),
+(142,"Stareye",4,0),
+(143,"Desdel",4,0),
+(144,"Staghelm",4,0),
+(145,"Ferun",4,0),
+(146,"Ravencrest",4,0),
+(147,"Oakshield",4,0),
+(148,"Marden",4,0),
+(149,"Oghma",4,0),
+(150,"Ragerunner",4,0),
+(151,"Wrathbringer",4,0),
+(152,"Shadowsong",4,0),
+(153,"Sindweller",4,0),
+(1447,"Alaric",4,0),
+(1448,"Alu-manor",4,0),
+(1449,"Andelarian",4,0),
+(1450,"Andonis",4,0),
+(1451,"Andreas",4,0),
+(1452,"Aren",4,0),
+(1453,"Bastian",4,0),
+(1454,"Berend",4,0),
+(1455,"Bohemil",4,0),
+(1456,"Bren",4,0),
+(1457,"Bynis",4,0),
+(1458,"Cailian",4,0),
+(1459,"Cassian",4,0),
+(1460,"Ciaran",4,0),
+(1461,"Darannar",4,0),
+(1462,"Dorian",4,0),
+(1463,"Ecthis",4,0),
+(1464,"Edanis",4,0),
+(1465,"Erimm",4,0),
+(1466,"Erroman",4,0),
+(1467,"Evan",4,0),
+(1468,"Fabian",4,0),
+(1469,"Falar",4,0),
+(1470,"Fanathor",4,0),
+(1471,"Fedor",4,0),
+(1472,"Felan-Anor",4,0),
+(1473,"Feoras",4,0),
+(1474,"Flavienn",4,0),
+(1475,"Flinn",4,0),
+(1476,"Galen",4,0),
+(1477,"Galkuris",4,0),
+(1478,"Galthis",4,0),
+(1479,"Halador",4,0),
+(1480,"Halcyon",4,0),
+(1481,"Imlys",4,0),
+(1482,"Imrahil",4,0),
+(1483,"Jalidor",4,0),
+(1484,"Jaspion",4,0),
+(1485,"Keltis",4,0),
+(1486,"Kuranor",4,0),
+(1487,"Lumiar",4,0),
+(1488,"Lumin",4,0),
+(1489,"Manarian",4,0),
+(1490,"Mavellian",4,0),
+(1491,"Melanir",4,0),
+(1492,"Myrlidd",4,0),
+(1493,"Nevian",4,0),
+(1494,"Noctris",4,0),
+(1495,"Odion",4,0),
+(1496,"Pashiran",4,0),
+(1497,"Pirugan",4,0),
+(1498,"Rishladir",4,0),
+(1499,"Sylvane",4,0),
+(1500,"Tular",4,0),
+(1501,"Ullric",4,0),
+(1502,"Voldis",4,0),
+(1503,"Wrann",4,0),
+(3120,"Baridan",4,0),
+(3121,"Baridiir",4,0),
+(3122,"Baridor",4,0),
+(3123,"Barielor",4,0),
+(3124,"Bariian",4,0),
+(3125,"Bariirn",4,0),
+(3126,"Bariran",4,0),
+(3127,"Barirus",4,0),
+(3128,"Barisam",4,0),
+(3129,"Bariyeth",4,0),
+(3130,"Ceredan",4,0),
+(3131,"Cerediir",4,0),
+(3132,"Ceredor",4,0),
+(3133,"Cereelor",4,0),
+(3134,"Cereian",4,0),
+(3135,"Cereirn",4,0),
+(3136,"Cereran",4,0),
+(3137,"Cererus",4,0),
+(3138,"Ceresam",4,0),
+(3139,"Cereyeth",4,0),
+(3140,"Daldan",4,0),
+(3141,"Daldiir",4,0),
+(3142,"Daldor",4,0),
+(3143,"Dalelor",4,0),
+(3144,"Dalian",4,0),
+(3145,"Dalirn",4,0),
+(3146,"Dalran",4,0),
+(3147,"Dalrus",4,0),
+(3148,"Dalsam",4,0),
+(3149,"Dalyeth",4,0),
+(3150,"Denadan",4,0),
+(3151,"Denadiir",4,0),
+(3152,"Denador",4,0),
+(3153,"Denaelor",4,0),
+(3154,"Denaian",4,0),
+(3155,"Denairn",4,0),
+(3156,"Denaran",4,0),
+(3157,"Denarus",4,0),
+(3158,"Denasam",4,0),
+(3159,"Denayeth",4,0),
+(3160,"Mythdan",4,0),
+(3161,"Mythdiir",4,0),
+(3162,"Mythdor",4,0),
+(3163,"Mythelor",4,0),
+(3164,"Mythian",4,0),
+(3165,"Mythirn",4,0),
+(3166,"Mythran",4,0),
+(3167,"Mythrus",4,0),
+(3168,"Mythsam",4,0),
+(3169,"Mythyeth",4,0),
+(3170,"Nardan",4,0),
+(3171,"Nardiir",4,0),
+(3172,"Nardor",4,0),
+(3173,"Narelor",4,0),
+(3174,"Narian",4,0),
+(3175,"Narirn",4,0),
+(3176,"Narran",4,0),
+(3177,"Narrus",4,0),
+(3178,"Narsam",4,0),
+(3179,"Naryeth",4,0),
+(3180,"Sardan",4,0),
+(3181,"Sardiir",4,0),
+(3182,"Sardor",4,0),
+(3183,"Sarelor",4,0),
+(3184,"Sarian",4,0),
+(3185,"Sarirn",4,0),
+(3186,"Sarran",4,0),
+(3187,"Sarrus",4,0),
+(3188,"Sarsam",4,0),
+(3189,"Saryeth",4,0),
+(3190,"Taladan",4,0),
+(3191,"Taladiir",4,0),
+(3192,"Talador",4,0),
+(3193,"Talaelor",4,0),
+(3194,"Talaian",4,0),
+(3195,"Talairn",4,0),
+(3196,"Talaran",4,0),
+(3197,"Talarus",4,0),
+(3198,"Talasam",4,0),
+(3199,"Talayeth",4,0),
+(3200,"Thundan",4,0),
+(3201,"Thundiir",4,0),
+(3202,"Thundor",4,0),
+(3203,"Thunelor",4,0),
+(3204,"Thunian",4,0),
+(3205,"Thunirn",4,0),
+(3206,"Thunran",4,0),
+(3207,"Thunrus",4,0),
+(3208,"Thunsam",4,0),
+(3209,"Thunyeth",4,0),
+(3210,"Vaedan",4,0),
+(3211,"Vaediir",4,0),
+(3212,"Vaedor",4,0),
+(3213,"Vaeelor",4,0),
+(3214,"Vaeian",4,0),
+(3215,"Vaeirn",4,0),
+(3216,"Vaeran",4,0),
+(3217,"Vaerus",4,0),
+(3218,"Vaesam",4,0),
+(3219,"Vaeyeth",4,0),
+(50,"Sylvanas",4,1),
+(51,"Vereesa",4,1),
+(52,"Alleria",4,1),
+(53,"Somand",4,1),
+(54,"Anthis",4,1),
+(55,"Nara",4,1),
+(56,"Cyndia",4,1),
+(57,"Amora",4,1),
+(58,"Keldindra",4,1),
+(59,"Sarassar",4,1),
+(60,"Velathis",4,1),
+(61,"Lauranthalassa",4,1),
+(62,"Laurana",4,1),
+(63,"Galadriel",4,1),
+(64,"Andariel",4,1),
+(65,"Laranassa",4,1),
+(66,"Clarindrela",4,1),
+(67,"Tarindrella",4,1),
+(68,"Theredris",4,1),
+(69,"Azshara",4,1),
+(70,"Aszune",4,1),
+(71,"Chillwind",4,1),
+(72,"Anara",4,1),
+(73,"Feathermoon",4,1),
+(74,"Shandris",4,1),
+(75,"Moonfang",4,1),
+(76,"Delas",4,1),
+(77,"Moonray",4,1),
+(78,"Felore",4,1),
+(79,"Moonsinger",4,1),
+(80,"Mora",4,1),
+(81,"Nightshade",4,1),
+(82,"Adora",4,1),
+(83,"Nuada",4,1),
+(84,"Saberfang",4,1),
+(85,"Theta",4,1),
+(86,"Snowscar",4,1),
+(87,"Tygra",4,1),
+(88,"Stardragon",4,1),
+(89,"Kera",4,1),
+(90,"Starsong",4,1),
+(91,"Kathris",4,1),
+(92,"Whisperwind",4,1),
+(93,"Mave",4,1),
+(94,"Whisperwind",4,1),
+(95,"Tyrande",4,1),
+(96,"Whitemane",4,1),
+(97,"Mira",4,1),
+(1387,"Adelle",4,1),
+(1388,"Adila",4,1),
+(1389,"Adonia",4,1),
+(1390,"Ailin",4,1),
+(1391,"Alissandre",4,1),
+(1392,"Amaluria",4,1),
+(1393,"Amynta",4,1),
+(1394,"Annalore",4,1),
+(1395,"Aria",4,1),
+(1396,"Arlana",4,1),
+(1397,"Aurora",4,1),
+(1398,"Ava",4,1),
+(1399,"Belinna",4,1),
+(1400,"Brinna",4,1),
+(1401,"Carina",4,1),
+(1402,"Catalin",4,1),
+(1403,"Celeste",4,1),
+(1404,"Celeyna",4,1),
+(1405,"Chantal",4,1),
+(1406,"Cybelle",4,1),
+(1407,"Dahlia",4,1),
+(1408,"Dara",4,1),
+(1409,"Deana",4,1),
+(1410,"Deiene",4,1),
+(1411,"Dinah",4,1),
+(1412,"Edelinn",4,1),
+(1413,"Eilise",4,1),
+(1414,"Eily",4,1),
+(1415,"Elessaria",4,1),
+(1416,"Eliaine",4,1),
+(1417,"Elyse",4,1),
+(1418,"Erlina",4,1),
+(1419,"Erramun",4,1),
+(1420,"Esther",4,1),
+(1421,"Fala",4,1),
+(1422,"Feorin",4,1),
+(1423,"Finola",4,1),
+(1424,"Florianne",4,1),
+(1425,"Floris",4,1),
+(1426,"Ivy",4,1),
+(1427,"Janna",4,1),
+(1428,"Jasmine",4,1),
+(1429,"Kayla",4,1),
+(1430,"Laurel",4,1),
+(1431,"Leta",4,1),
+(1432,"Lillianore",4,1),
+(1433,"Lirria",4,1),
+(1434,"Luciellen",4,1),
+(1435,"Melody",4,1),
+(1436,"Nycteris",4,1),
+(1437,"Opal",4,1),
+(1438,"Phoebe",4,1),
+(1439,"Rae",4,1),
+(1440,"Rochelle",4,1),
+(1441,"Rosamond",4,1),
+(1442,"Rowena",4,1),
+(1443,"Selwynn",4,1),
+(1444,"Sylennia",4,1),
+(1445,"Tamar",4,1),
+(1446,"Vesta",4,1),
+(3220,"Ailea",4,1),
+(3221,"Alaana",4,1),
+(3222,"Alabrook",4,1),
+(3223,"Alaida",4,1),
+(3224,"Alalais",4,1),
+(3225,"Alareith",4,1),
+(3226,"Alaria",4,1),
+(3227,"Alasia",4,1),
+(3228,"Alayia",4,1),
+(3229,"Alayssa",4,1),
+(3230,"Aquana",4,1),
+(3231,"Aquda",4,1),
+(3232,"Aquina",4,1),
+(3233,"Aqulais",4,1),
+(3234,"Aqulea",4,1),
+(3235,"Aquria",4,1),
+(3236,"Aqusia",4,1),
+(3237,"Aquyia",4,1),
+(3238,"Aquyssa",4,1),
+(3239,"Caylana",4,1),
+(3240,"Caylbrooke",4,1),
+(3241,"Caylda",4,1),
+(3242,"Cayllais",4,1),
+(3243,"Cayllea",4,1),
+(3244,"Caylreith",4,1),
+(3245,"Caylria",4,1),
+(3246,"Elyana",4,1),
+(3247,"Elybrook",4,1),
+(3248,"Elyda",4,1),
+(3249,"Elylea",4,1),
+(3250,"Elyreith",4,1),
+(3251,"Elyria",4,1),
+(3252,"Elyyia",4,1),
+(3253,"Kynana",4,1),
+(3254,"Kynbrooke",4,1),
+(3255,"Kynda",4,1),
+(3256,"Kynlais",4,1),
+(3257,"Kynlea",4,1),
+(3258,"Kynreith",4,1),
+(3259,"Kynria",4,1),
+(3260,"Kynsia",4,1),
+(3261,"Kynyia",4,1),
+(3262,"Kynyssa",4,1),
+(3263,"Laana",4,1),
+(3264,"Lada",4,1),
+(3265,"Lalais",4,1),
+(3266,"Lalea",4,1),
+(3267,"Lareith",4,1),
+(3268,"Laria",4,1),
+(3269,"Layia",4,1),
+(3270,"Layssa",4,1),
+(3271,"Lyina",4,1),
+(3272,"Marasia",4,1),
+(3273,"Mavrada",4,1),
+(3274,"Mavraena",4,1),
+(3275,"Mavralais",4,1),
+(3276,"Mavralea",4,1),
+(3277,"Mavrareith",4,1),
+(3278,"Mavraria",4,1),
+(3279,"Mavrayia",4,1),
+(3280,"Mayssa",4,1),
+(3281,"Saebrooke",4,1),
+(3282,"Saelana",4,1),
+(3283,"Saelbrooke",4,1),
+(3284,"Saelda",4,1),
+(3285,"Saeliia",4,1),
+(3286,"Saellea",4,1),
+(3287,"Saelrythe",4,1),
+(3288,"Saelsia",4,1),
+(3289,"Saelyia",4,1),
+(3290,"Saelyssa",4,1),
+(3291,"Shauana",4,1),
+(3292,"Shauda",4,1),
+(3293,"Shaulais",4,1),
+(3294,"Shaulea",4,1),
+(3295,"Shaureith",4,1),
+(3296,"Shauria",4,1),
+(3297,"Shausia",4,1),
+(3298,"Shauyia",4,1),
+(3299,"Shauyssa",4,1),
+(3300,"Syana",4,1),
+(3301,"Sybrook",4,1),
+(3302,"Syda",4,1),
+(3303,"Sylais",4,1),
+(3304,"Sylea",4,1),
+(3305,"Syreith",4,1),
+(3306,"Syria",4,1),
+(3307,"Sysia",4,1),
+(3308,"Syyia",4,1),
+(430,"Calis",5,0),
+(431,"ChoNammoth",5,0),
+(432,"Coldreaver",5,0),
+(433,"Corpsemonger",5,0),
+(434,"Defacarr",5,0),
+(435,"Din",5,0),
+(436,"Kalinaj",5,0),
+(437,"KelThuzad",5,0),
+(438,"Miasmus",5,0),
+(439,"Morbent",5,0),
+(440,"Nerzhul",5,0),
+(441,"Ordin",5,0),
+(442,"Putridius",5,0),
+(443,"Rage",5,0),
+(444,"Rak",5,0),
+(445,"Ras",5,0),
+(446,"Ras",5,0),
+(447,"Rotgut",5,0),
+(448,"Teron",5,0),
+(449,"Venim",5,0),
+(1906,"Abernethy",5,0),
+(1907,"Adannis",5,0),
+(1908,"Adolphus",5,0),
+(1909,"Alexander",5,0),
+(1910,"Alister",5,0),
+(1911,"Augustus",5,0),
+(1912,"Banning",5,0),
+(1913,"Barclay",5,0),
+(1914,"Barnabas",5,0),
+(1915,"Bartholomew",5,0),
+(1916,"Beachamp",5,0),
+(1917,"Bertram",5,0),
+(1918,"Bishop",5,0),
+(1919,"Brommius",5,0),
+(1920,"Burt",5,0),
+(1921,"Cailan",5,0),
+(1922,"Camdon",5,0),
+(1923,"Carlton",5,0),
+(1924,"Cavan",5,0),
+(1925,"Chandler",5,0),
+(1926,"Clifford",5,0),
+(1927,"Clifton",5,0),
+(1928,"Clive",5,0),
+(1929,"Cronan",5,0),
+(1930,"Declan",5,0),
+(1931,"Desmond",5,0),
+(1932,"Dominic",5,0),
+(1933,"Doyle",5,0),
+(1934,"Dunbar",5,0),
+(1935,"Eamnonn",5,0),
+(1936,"Emil",5,0),
+(1937,"Fergal",5,0),
+(1938,"Gabriel",5,0),
+(1939,"Galloch",5,0),
+(1940,"Geoffrey",5,0),
+(1941,"Giles",5,0),
+(1942,"Glendon",5,0),
+(1943,"Grigori",5,0),
+(1944,"Gustavus",5,0),
+(1945,"Horace",5,0),
+(1946,"Ikthius",5,0),
+(1947,"Jareth",5,0),
+(1948,"Julian",5,0),
+(1949,"Kendrick",5,0),
+(1950,"Lawler",5,0),
+(1951,"Leighton",5,0),
+(1952,"Logan",5,0),
+(1953,"Mannik",5,0),
+(1954,"Maurice",5,0),
+(1955,"Michael",5,0),
+(1956,"Milton",5,0),
+(1957,"Murdoch",5,0),
+(1958,"Nicholas",5,0),
+(1959,"Norman",5,0),
+(1960,"Raymond",5,0),
+(1961,"Roarke",5,0),
+(1962,"Travis",5,0),
+(1963,"Victor",5,0),
+(1964,"William",5,0),
+(1965,"Yurick",5,0),
+(3309,"Aaron",5,0),
+(3310,"Afton",5,0),
+(3311,"Agustin",5,0),
+(3312,"Aldrick",5,0),
+(3313,"Alfred",5,0),
+(3314,"Alphonse",5,0),
+(3315,"Alvaro",5,0),
+(3316,"Arthur",5,0),
+(3317,"Atticus",5,0),
+(3318,"Barnaby",5,0),
+(3319,"Barrett",5,0),
+(3320,"Benjamin",5,0),
+(3321,"Benson",5,0),
+(3322,"Bjorne",5,0),
+(3323,"Blake",5,0),
+(3324,"Bosley",5,0),
+(3325,"Brahm",5,0),
+(3326,"Branyt",5,0),
+(3327,"Broderick",5,0),
+(3328,"Byron",5,0),
+(3329,"Calvin",5,0),
+(3330,"Carmine",5,0),
+(3331,"Cecil",5,0),
+(3332,"Cedd",5,0),
+(3333,"Chase",5,0),
+(3334,"Chauncey",5,0),
+(3335,"Clarence",5,0),
+(3336,"Claude",5,0),
+(3337,"Cohen",5,0),
+(3338,"Courtland",5,0),
+(3339,"Crispian",5,0),
+(3340,"Damarcus",5,0),
+(3341,"Darby",5,0),
+(3342,"Deacon",5,0),
+(3343,"Dedrick",5,0),
+(3344,"Devonte",5,0),
+(3345,"Dimitri",5,0),
+(3346,"Dylan",5,0),
+(3347,"Edgar",5,0),
+(3348,"Edmund",5,0),
+(3349,"Elmer",5,0),
+(3350,"Emerson",5,0),
+(3351,"Ernest",5,0),
+(3352,"Eugene",5,0),
+(3353,"Ezra",5,0),
+(3354,"Finius",5,0),
+(3355,"Fischer",5,0),
+(3356,"Floyd",5,0),
+(3357,"Frederick",5,0),
+(3358,"Gareth",5,0),
+(3359,"Garrek",5,0),
+(3360,"Garrett",5,0),
+(3361,"Geoffry",5,0),
+(3362,"Gerald",5,0),
+(3363,"Gideon",5,0),
+(3364,"Gilley",5,0),
+(3365,"Gordon",5,0),
+(3366,"Grant",5,0),
+(3367,"Gulliver",5,0),
+(3368,"Gustav",5,0),
+(3369,"Guthrie",5,0),
+(3370,"Harlan",5,0),
+(3371,"Harvey",5,0),
+(3372,"Heath",5,0),
+(3373,"Hektor",5,0),
+(3374,"Hugh",5,0),
+(3375,"Humphrey",5,0),
+(3376,"Ignatius",5,0),
+(3377,"Jaques",5,0),
+(3378,"Jasper",5,0),
+(3379,"Kasier",5,0),
+(3380,"Kenneth",5,0),
+(3381,"Kiran",5,0),
+(3382,"Linus",5,0),
+(3383,"Lionel",5,0),
+(3384,"Magnus",5,0),
+(3385,"Malcolm",5,0),
+(3386,"Marcel",5,0),
+(3387,"Maximilian",5,0),
+(3388,"Montegomery",5,0),
+(3389,"Mordack",5,0),
+(3390,"Mosley",5,0),
+(3391,"Nehemiah",5,0),
+(3392,"Nicodemus",5,0),
+(3393,"Olliver",5,0),
+(3394,"Oswald",5,0),
+(3395,"Quincy",5,0),
+(3396,"Roger",5,0),
+(3397,"Samuel",5,0),
+(3398,"Schylar",5,0),
+(3399,"Shane",5,0),
+(3400,"Simon",5,0),
+(3401,"Sydney",5,0),
+(3402,"Tevish",5,0),
+(3403,"Tobias",5,0),
+(3404,"Warrick",5,0),
+(3405,"Wendell",5,0),
+(3406,"Willem",5,0),
+(408,"Janice",5,1),
+(409,"Morganna",5,1),
+(410,"Melanie",5,1),
+(411,"Janice",5,1),
+(412,"Gertrude",5,1),
+(413,"Scylla",5,1),
+(414,"Maleficent",5,1),
+(415,"Andora",5,1),
+(416,"Selevis",5,1),
+(417,"Alexandra",5,1),
+(418,"Katherine",5,1),
+(419,"Mary",5,1),
+(420,"Joan",5,1),
+(421,"Sersi",5,1),
+(422,"Valeria",5,1),
+(423,"Sanguinia",5,1),
+(424,"Serena",5,1),
+(425,"Kathris",5,1),
+(426,"Jada",5,1),
+(427,"Jamalah",5,1),
+(428,"Nord",5,1),
+(429,"Thalissia",5,1),
+(1846,"Adele",5,1),
+(1847,"Amaryllis",5,1),
+(1848,"Beverly",5,1),
+(1849,"Blaine",5,1),
+(1850,"Blair",5,1),
+(1851,"Caroline",5,1),
+(1852,"Cinder",5,1),
+(1853,"Claudette",5,1),
+(1854,"Clio",5,1),
+(1855,"Clovis",5,1),
+(1856,"Crystal",5,1),
+(1857,"Cynthia",5,1),
+(1858,"Dagny",5,1),
+(1859,"Darra",5,1),
+(1860,"Della",5,1),
+(1861,"Diane",5,1),
+(1862,"Dora",5,1),
+(1863,"Dorothea",5,1),
+(1864,"Elaine",5,1),
+(1865,"Erica",5,1),
+(1866,"Euphemia",5,1),
+(1867,"Evelyn",5,1),
+(1868,"Griselda",5,1),
+(1869,"Helga",5,1),
+(1870,"Hyacinthe",5,1),
+(1871,"Irene",5,1),
+(1872,"Jessica",5,1),
+(1873,"Judith",5,1),
+(1874,"Julia",5,1),
+(1875,"Kayley",5,1),
+(1876,"Leonora",5,1),
+(1877,"Lizzy",5,1),
+(1878,"Luciana",5,1),
+(1879,"Lucretia",5,1),
+(1880,"Mairin",5,1),
+(1881,"Martina",5,1),
+(1882,"Matilde",5,1),
+(1883,"Melisende",5,1),
+(1884,"Melva",5,1),
+(1885,"Miranda",5,1),
+(1886,"Moira",5,1),
+(1887,"Morven",5,1),
+(1888,"Narcissa",5,1),
+(1889,"Octavia",5,1),
+(1890,"Olivia",5,1),
+(1891,"Onora",5,1),
+(1892,"Paula",5,1),
+(1893,"Pauline",5,1),
+(1894,"Phyllis",5,1),
+(1895,"Rose",5,1),
+(1896,"Roswen",5,1),
+(1897,"Rowen",5,1),
+(1898,"Ruby",5,1),
+(1899,"Sabrina",5,1),
+(1900,"Stephanie",5,1),
+(1901,"Tully",5,1),
+(1902,"Valerie",5,1),
+(1903,"Veronica",5,1),
+(1904,"Vevila",5,1),
+(1905,"Victoria",5,1),
+(3407,"Abigail",5,1),
+(3408,"Adrian",5,1),
+(3409,"Agnes",5,1),
+(3410,"Aida",5,1),
+(3411,"Alicia",5,1),
+(3412,"Aneska",5,1),
+(3413,"Aracely",5,1),
+(3414,"Arlene",5,1),
+(3415,"Augustine",5,1),
+(3416,"Beatrice",5,1),
+(3417,"Bernadette",5,1),
+(3418,"Bethanie",5,1),
+(3419,"Bianca",5,1),
+(3420,"Brennah",5,1),
+(3421,"Brittney",5,1),
+(3422,"Cecila",5,1),
+(3423,"Celene",5,1),
+(3424,"Charlotte",5,1),
+(3425,"Citlalli",5,1),
+(3426,"Courtney",5,1),
+(3427,"Dalenna",5,1),
+(3428,"Dasia",5,1),
+(3429,"Dayanara",5,1),
+(3430,"Delilah",5,1),
+(3431,"Eiline",5,1),
+(3432,"Estefania",5,1),
+(3433,"Ethel",5,1),
+(3434,"Eugenia",5,1),
+(3435,"Francesca",5,1),
+(3436,"Gabrielle",5,1),
+(3437,"Galena",5,1),
+(3438,"Gemma",5,1),
+(3439,"Georgina",5,1),
+(3440,"Geraldine",5,1),
+(3441,"Geri",5,1),
+(3442,"Gisella",5,1),
+(3443,"Gloriela",5,1),
+(3444,"Goldie",5,1),
+(3445,"Haliegh",5,1),
+(3446,"Helgatha",5,1),
+(3447,"Hillary",5,1),
+(3448,"Ida",5,1),
+(3449,"Isabelle",5,1),
+(3450,"Iyanna",5,1),
+(3451,"Jameson",5,1),
+(3452,"Jeanette",5,1),
+(3453,"Jeanie",5,1),
+(3454,"Josefina",5,1),
+(3455,"Julianna",5,1),
+(3456,"Julissa",5,1),
+(3457,"Ladonna",5,1),
+(3458,"Laetitia",5,1),
+(3459,"Latrice",5,1),
+(3460,"Leylah",5,1),
+(3461,"Liliana",5,1),
+(3462,"Lorelei",5,1),
+(3463,"Lorraine",5,1),
+(3464,"Lydia",5,1),
+(3465,"Lynda",5,1),
+(3466,"Madeline",5,1),
+(3467,"Malorie",5,1),
+(3468,"Mariah",5,1),
+(3469,"Marie",5,1),
+(3470,"Mariska",5,1),
+(3471,"Marlene",5,1),
+(3472,"Melissa",5,1),
+(3473,"Miriam",5,1),
+(3474,"Mischa",5,1),
+(3475,"Myrtle",5,1),
+(3476,"Natalia",5,1),
+(3477,"Odette",5,1),
+(3478,"Petunia",5,1),
+(3479,"Porscha",5,1),
+(3480,"Riley",5,1),
+(3481,"Rosalinda",5,1),
+(3482,"Ruth",5,1),
+(3483,"Sabine",5,1),
+(3484,"Sadie",5,1),
+(3485,"Sariah",5,1),
+(3486,"Schelby",5,1),
+(3487,"Shay",5,1),
+(3488,"Shivani",5,1),
+(3489,"Sibella",5,1),
+(3490,"Sienna",5,1),
+(3491,"Silvia",5,1),
+(3492,"Simone",5,1),
+(3493,"Sylvie",5,1),
+(3494,"Tatiana",5,1),
+(3495,"Ulyssa",5,1),
+(3496,"Ursala",5,1),
+(3497,"Valarie",5,1),
+(3498,"Valencia",5,1),
+(3499,"Vivianne",5,1),
+(3500,"Willemina",5,1),
+(3501,"Yasha",5,1),
+(3502,"Yavette",5,1),
+(3503,"Yesenia",5,1),
+(3504,"Zanah",5,1),
+(3505,"Zellah",5,1),
+(347,"Cairne",6,0),
+(348,"Grok",6,0),
+(349,"Tigor",6,0),
+(350,"Kam",6,0),
+(351,"Durn",6,0),
+(352,"Malar",6,0),
+(353,"Taur",6,0),
+(354,"Kel",6,0),
+(355,"Mull",6,0),
+(356,"Marn",6,0),
+(357,"Tam",6,0),
+(358,"Mokos",6,0),
+(359,"Apach",6,0),
+(360,"Grumm",6,0),
+(361,"Forgren",6,0),
+(362,"Malgren",6,0),
+(363,"Dornek",6,0),
+(364,"Bandal",6,0),
+(365,"Karass",6,0),
+(366,"Mesha",6,0),
+(367,"Baine",6,0),
+(1672,"Ahanu",6,0),
+(1673,"Ahiliya",6,0),
+(1674,"Ahote",6,0),
+(1675,"Alo",6,0),
+(1676,"Arlis",6,0),
+(1677,"Awani",6,0),
+(1678,"Ayli",6,0),
+(1679,"Basil",6,0),
+(1680,"Breg",6,0),
+(1681,"Chakar",6,0),
+(1682,"Chuchip",6,0),
+(1683,"Corran",6,0),
+(1684,"Cyran",6,0),
+(1685,"Del",6,0),
+(1686,"Dern",6,0),
+(1687,"Dular",6,0),
+(1688,"Dustu",6,0),
+(1689,"Dyami",6,0),
+(1690,"Enyeto",6,0),
+(1691,"Etu",6,0),
+(1692,"Ferk",6,0),
+(1693,"Frin",6,0),
+(1694,"Garan",6,0),
+(1695,"Garm",6,0),
+(1696,"Girn",6,0),
+(1697,"Hania",6,0),
+(1698,"Harthan",6,0),
+(1699,"Helushka",6,0),
+(1700,"Hinto",6,0),
+(1701,"Hirran",6,0),
+(1702,"Honani",6,0),
+(1703,"Hurm",6,0),
+(1704,"Jik",6,0),
+(1705,"Jodan",6,0),
+(1706,"Kaga",6,0),
+(1707,"Kele",6,0),
+(1708,"Kwahu",6,0),
+(1709,"Kwatoko",6,0),
+(1710,"Lenno",6,0),
+(1711,"Limtar",6,0),
+(1712,"Lokni",6,0),
+(1713,"Lonato",6,0),
+(1714,"Lootah",6,0),
+(1715,"Lurs",6,0),
+(1716,"Lyshin",6,0),
+(1717,"Masou",6,0),
+(1718,"Misu",6,0),
+(1719,"Moki",6,0),
+(1720,"Muata",6,0),
+(1721,"Nara",6,0),
+(1722,"Nawkaw",6,0),
+(1723,"Pahana",6,0),
+(1724,"Porl",6,0),
+(1725,"Slorn",6,0),
+(1726,"Solis",6,0),
+(1727,"Turgan",6,0),
+(1728,"Ulan",6,0),
+(1729,"Varn",6,0),
+(1730,"Velan",6,0),
+(1731,"Wanikiya",6,0),
+(3506,"Abanu",6,0),
+(3507,"Abddon",6,0),
+(3508,"Abdek",6,0),
+(3509,"Abega",6,0),
+(3510,"Abfal",6,0),
+(3511,"Abfnar",6,0),
+(3512,"Abhai",6,0),
+(3513,"Abhan",6,0),
+(3514,"Abhwa",6,0),
+(3515,"Abine",6,0),
+(3516,"Abirn",6,0),
+(3517,"Abith",6,0),
+(3518,"Abken",6,0),
+(3519,"Ablem",6,0),
+(3520,"Abmin",6,0),
+(3521,"Abnah",6,0),
+(3522,"Abnd",6,0),
+(3523,"Abof",6,0),
+(3524,"Abot",6,0),
+(3525,"Aboth",6,0),
+(3526,"Abqwa",6,0),
+(3527,"Abraga",6,0),
+(3528,"Abrak",6,0),
+(3529,"Abron",6,0),
+(3530,"Abruk",6,0),
+(3531,"Abtah",6,0),
+(3532,"Abtou",6,0),
+(3533,"Abumn",6,0),
+(3534,"Abuon",6,0),
+(3535,"Abuul",6,0),
+(3536,"Abwas",6,0),
+(3537,"Aggor",6,0),
+(3538,"Aitanu",6,0),
+(3539,"Aitas",6,0),
+(3540,"Aitddon",6,0),
+(3541,"Aitdek",6,0),
+(3542,"Aitega",6,0),
+(3543,"Aitfal",6,0),
+(3544,"Aitfnar",6,0),
+(3545,"Aithai",6,0),
+(3546,"Aithan",6,0),
+(3547,"Aithwa",6,0),
+(3548,"Aitine",6,0),
+(3549,"Aitirn",6,0),
+(3550,"Aitith",6,0),
+(3551,"Aitken",6,0),
+(3552,"Aitlem",6,0),
+(3553,"Aitmin",6,0),
+(3554,"Aitnah",6,0),
+(3555,"Aitnd",6,0),
+(3556,"Aitof",6,0),
+(3557,"Aitot",6,0),
+(3558,"Aitoth",6,0),
+(3559,"Aitqwa",6,0),
+(3560,"Aitrak",6,0),
+(3561,"Aitron",6,0),
+(3562,"Aitruk",6,0),
+(3563,"Aittah",6,0),
+(3564,"Aittou",6,0),
+(3565,"Aitumn",6,0),
+(3566,"Aituon",6,0),
+(3567,"Aituul",6,0),
+(3568,"Aitwas",6,0),
+(3569,"Akpor",6,0),
+(3570,"Ananu",6,0),
+(3571,"Anddon",6,0),
+(3572,"Andek",6,0),
+(3573,"Anega",6,0),
+(3574,"Anfal",6,0),
+(3575,"Anfnar",6,0),
+(3576,"Anhai",6,0),
+(3577,"Anhan",6,0),
+(3578,"Anhwa",6,0),
+(3579,"Anine",6,0),
+(3580,"Anirn",6,0),
+(3581,"Anith",6,0),
+(3582,"Anken",6,0),
+(3583,"Anlem",6,0),
+(3584,"Anmin",6,0),
+(3585,"Annah",6,0),
+(3586,"Annd",6,0),
+(3587,"Anof",6,0),
+(3588,"Anot",6,0),
+(3589,"Anoth",6,0),
+(3590,"Anqwa",6,0),
+(3591,"Anrak",6,0),
+(3592,"Anron",6,0),
+(3593,"Anruk",6,0),
+(3594,"Antah",6,0),
+(3595,"Antou",6,0),
+(3596,"Anumn",6,0),
+(3597,"Anuon",6,0),
+(3598,"Anuul",6,0),
+(3599,"Anwas",6,0),
+(3600,"Aootou",6,0),
+(3601,"Arguum",6,0),
+(3602,"Auttun",6,0),
+(3603,"Auufnah",6,0),
+(3604,"Bak",6,0),
+(3605,"Barandu",6,0),
+(3606,"Bronnt",6,0),
+(3607,"Bruk",6,0),
+(3608,"Caanu",6,0),
+(3609,"Caddon",6,0),
+(3610,"Cadek",6,0),
+(3611,"Caega",6,0),
+(3612,"Cafal",6,0),
+(3613,"Cafnar",6,0),
+(3614,"Cahai",6,0),
+(3615,"Cahan",6,0),
+(3616,"Cahwa",6,0),
+(3617,"Caine",6,0),
+(3618,"Cairn",6,0),
+(3619,"Caith",6,0),
+(3620,"Caken",6,0),
+(3621,"Calem",6,0),
+(3622,"Camin",6,0),
+(3623,"Canah",6,0),
+(3624,"Cand",6,0),
+(3625,"Caof",6,0),
+(3626,"Caot",6,0),
+(3627,"Caoth",6,0),
+(3628,"Caqwa",6,0),
+(3629,"Carak",6,0),
+(3630,"Caron",6,0),
+(3631,"Caruk",6,0),
+(3632,"Catah",6,0),
+(3633,"Catou",6,0),
+(3634,"Caumn",6,0),
+(3635,"Cauon",6,0),
+(3636,"Cauul",6,0),
+(3637,"Cawas",6,0),
+(3638,"Chag",6,0),
+(3639,"Churr",6,0),
+(3640,"Cluug",6,0),
+(3641,"Comog",6,0),
+(3642,"Dokot",6,0),
+(3643,"Domur",6,0),
+(3644,"Druun",6,0),
+(3645,"Farhuk",6,0),
+(3646,"Gampuuk",6,0),
+(3647,"Garanu",6,0),
+(3648,"Garddon",6,0),
+(3649,"Gardek",6,0),
+(3650,"Garega",6,0),
+(3651,"Garfal",6,0),
+(3652,"Garfnar",6,0),
+(3653,"Garhai",6,0),
+(3654,"Garhan",6,0),
+(3655,"Garhwa",6,0),
+(3656,"Garine",6,0),
+(3657,"Garirn",6,0),
+(3658,"Garith",6,0),
+(3659,"Garken",6,0),
+(3660,"Garlem",6,0),
+(3661,"Garmin",6,0),
+(3662,"Garnah",6,0),
+(3663,"Garnd",6,0),
+(3664,"Garof",6,0),
+(3665,"Garot",6,0),
+(3666,"Garoth",6,0),
+(3667,"Garqwa",6,0),
+(3668,"Garrak",6,0),
+(3669,"Garron",6,0),
+(3670,"Garruk",6,0),
+(3671,"Gartah",6,0),
+(3672,"Gartou",6,0),
+(3673,"Garumn",6,0),
+(3674,"Garuon",6,0),
+(3675,"Garurol",6,0),
+(3676,"Garuul",6,0),
+(3677,"Garwas",6,0),
+(3678,"Grup",6,0),
+(3679,"Gruud",6,0),
+(3680,"Gulanu",6,0),
+(3681,"Gulddon",6,0),
+(3682,"Guldek",6,0),
+(3683,"Gulega",6,0),
+(3684,"Gulfal",6,0),
+(3685,"Gulfnar",6,0),
+(3686,"Gulhai",6,0),
+(3687,"Gulhan",6,0),
+(3688,"Gulhwa",6,0),
+(3689,"Guline",6,0),
+(3690,"Gulirn",6,0),
+(3691,"Gulith",6,0),
+(3692,"Gulken",6,0),
+(3693,"Gullem",6,0),
+(3694,"Gulmin",6,0),
+(3695,"Gulnah",6,0),
+(3696,"Gulnd",6,0),
+(3697,"Gulof",6,0),
+(3698,"Gulot",6,0),
+(3699,"Guloth",6,0),
+(3700,"Gulprug",6,0),
+(3701,"Gulqwa",6,0),
+(3702,"Gulrak",6,0),
+(3703,"Gulron",6,0),
+(3704,"Gulruk",6,0),
+(3705,"Gultah",6,0),
+(3706,"Gultou",6,0),
+(3707,"Gulumn",6,0),
+(3708,"Guluon",6,0),
+(3709,"Guluul",6,0),
+(3710,"Gulwas",6,0),
+(3711,"Guung",6,0),
+(3712,"Habraa",6,0),
+(3713,"Hafal",6,0),
+(3714,"Haggu",6,0),
+(3715,"Haranu",6,0),
+(3716,"Harddon",6,0),
+(3717,"Hardek",6,0),
+(3718,"Harega",6,0),
+(3719,"Harfal",6,0),
+(3720,"Harfnar",6,0),
+(3721,"Harhai",6,0),
+(3722,"Harhan",6,0),
+(3723,"Harhwa",6,0),
+(3724,"Harine",6,0),
+(3725,"Harirn",6,0),
+(3726,"Harith",6,0),
+(3727,"Harken",6,0),
+(3728,"Harlem",6,0),
+(3729,"Harmin",6,0),
+(3730,"Harnah",6,0),
+(3731,"Harnd",6,0),
+(3732,"Harof",6,0),
+(3733,"Harot",6,0),
+(3734,"Haroth",6,0),
+(3735,"Harqwa",6,0),
+(3736,"Harrak",6,0),
+(3737,"Harron",6,0),
+(3738,"Harruk",6,0),
+(3739,"Hartah",6,0),
+(3740,"Hartou",6,0),
+(3741,"Harumn",6,0),
+(3742,"Haruon",6,0),
+(3743,"Haruul",6,0),
+(3744,"Harwas",6,0),
+(3745,"Hruanu",6,0),
+(3746,"Hruddon",6,0),
+(3747,"Hrudek",6,0),
+(3748,"Hruega",6,0),
+(3749,"Hrufal",6,0),
+(3750,"Hrufnar",6,0),
+(3751,"Hruhai",6,0),
+(3752,"Hruhan",6,0),
+(3753,"Hruhwa",6,0),
+(3754,"Hruine",6,0),
+(3755,"Hruirn",6,0),
+(3756,"Hruith",6,0),
+(3757,"Hruken",6,0),
+(3758,"Hrulem",6,0),
+(3759,"Hrumin",6,0),
+(3760,"Hrunah",6,0),
+(3761,"Hrund",6,0),
+(3762,"Hruof",6,0),
+(3763,"Hruot",6,0),
+(3764,"Hruoth",6,0),
+(3765,"Hruqwa",6,0),
+(3766,"Hrurak",6,0),
+(3767,"Hruron",6,0),
+(3768,"Hruruk",6,0),
+(3769,"Hrutah",6,0),
+(3770,"Hrutou",6,0),
+(3771,"Hruumn",6,0),
+(3772,"Hruuon",6,0),
+(3773,"Hruuul",6,0),
+(3774,"Hruwas",6,0),
+(3775,"Huuanu",6,0),
+(3776,"Huuarn",6,0),
+(3777,"Huuddon",6,0),
+(3778,"Huudek",6,0),
+(3779,"Huuega",6,0),
+(3780,"Huufal",6,0),
+(3781,"Huufnar",6,0),
+(3782,"Huuhai",6,0),
+(3783,"Huuhan",6,0),
+(3784,"Huuhwa",6,0),
+(3785,"Huuine",6,0),
+(3786,"Huuirn",6,0),
+(3787,"Huuith",6,0),
+(3788,"Huuken",6,0),
+(3789,"Huulem",6,0),
+(3790,"Huumin",6,0),
+(3791,"Huunah",6,0),
+(3792,"Huund",6,0),
+(3793,"Huuof",6,0),
+(3794,"Huuot",6,0),
+(3795,"Huuoth",6,0),
+(3796,"Huuqwa",6,0),
+(3797,"Huurak",6,0),
+(3798,"Huuron",6,0),
+(3799,"Huuruk",6,0),
+(3800,"Huutah",6,0),
+(3801,"Huutou",6,0),
+(3802,"Huuumn",6,0),
+(3803,"Huuuon",6,0),
+(3804,"Huuuul",6,0),
+(3805,"Huuwas",6,0),
+(3806,"Jaag",6,0),
+(3807,"Jagru",6,0),
+(3808,"Jopp",6,0),
+(3809,"Kaapkun",6,0),
+(3810,"Klaagur",6,0),
+(3811,"Kogona",6,0),
+(3812,"Krallum",6,0),
+(3813,"Kropp",6,0),
+(3814,"Krun",6,0),
+(3815,"Kuappa",6,0),
+(3816,"Lakrug",6,0),
+(3817,"Lohanu",6,0),
+(3818,"Lohddon",6,0),
+(3819,"Lohdek",6,0),
+(3820,"Lohega",6,0),
+(3821,"Lohfal",6,0),
+(3822,"Lohfnar",6,0),
+(3823,"Lohhai",6,0),
+(3824,"Lohhan",6,0),
+(3825,"Lohhwa",6,0),
+(3826,"Lohine",6,0),
+(3827,"Lohirn",6,0),
+(3828,"Lohith",6,0),
+(3829,"Lohken",6,0),
+(3830,"Lohlem",6,0),
+(3831,"Lohmin",6,0),
+(3832,"Lohnah",6,0),
+(3833,"Lohnd",6,0),
+(3834,"Lohof",6,0),
+(3835,"Lohot",6,0),
+(3836,"Lohoth",6,0),
+(3837,"Lohqwa",6,0),
+(3838,"Lohrak",6,0),
+(3839,"Lohron",6,0),
+(3840,"Lohruk",6,0),
+(3841,"Lohtah",6,0),
+(3842,"Lohtou",6,0),
+(3843,"Lohumn",6,0),
+(3844,"Lohuon",6,0),
+(3845,"Lohuul",6,0),
+(3846,"Lohwas",6,0),
+(3847,"Lomm",6,0),
+(3848,"Lugrum",6,0),
+(3849,"Luo",6,0),
+(3850,"Luum",6,0),
+(3851,"Magol",6,0),
+(3852,"Mahai",6,0),
+(3853,"Mordai",6,0),
+(3854,"Mukail",6,0),
+(3855,"Munnu",6,0),
+(3856,"Naalog",6,0),
+(3857,"Nugok",6,0),
+(3858,"Oranu",6,0),
+(3859,"Orddon",6,0),
+(3860,"Ordek",6,0),
+(3861,"Orega",6,0),
+(3862,"Orfal",6,0),
+(3863,"Orfnar",6,0),
+(3864,"Orhai",6,0),
+(3865,"Orhan",6,0),
+(3866,"Orhwa",6,0),
+(3867,"Orine",6,0),
+(3868,"Orirn",6,0),
+(3869,"Orith",6,0),
+(3870,"Orken",6,0),
+(3871,"Orlem",6,0),
+(3872,"Ormin",6,0),
+(3873,"Ornah",6,0),
+(3874,"Ornd",6,0),
+(3875,"Orof",6,0),
+(3876,"Orot",6,0),
+(3877,"Oroth",6,0),
+(3878,"Orqwa",6,0),
+(3879,"Orrak",6,0),
+(3880,"Orron",6,0),
+(3881,"Orruk",6,0),
+(3882,"Ortah",6,0),
+(3883,"Ortou",6,0),
+(3884,"Orumn",6,0),
+(3885,"Oruon",6,0),
+(3886,"Oruul",6,0),
+(3887,"Orwas",6,0),
+(3888,"Paakug",6,0),
+(3889,"Paugg",6,0),
+(3890,"Quagmu",6,0),
+(3891,"Quongru",6,0),
+(3892,"Rahanu",6,0),
+(3893,"Rahddon",6,0),
+(3894,"Rahdek",6,0),
+(3895,"Rahega",6,0),
+(3896,"Rahfal",6,0),
+(3897,"Rahfnar",6,0),
+(3898,"Rahhai",6,0),
+(3899,"Rahhan",6,0),
+(3900,"Rahhwa",6,0),
+(3901,"Rahine",6,0),
+(3902,"Rahirn",6,0),
+(3903,"Rahith",6,0),
+(3904,"Rahken",6,0),
+(3905,"Rahlem",6,0),
+(3906,"Rahmin",6,0),
+(3907,"Rahnah",6,0),
+(3908,"Rahnd",6,0),
+(3909,"Rahof",6,0),
+(3910,"Rahot",6,0),
+(3911,"Rahoth",6,0),
+(3912,"Rahqwa",6,0),
+(3913,"Rahrak",6,0),
+(3914,"Rahron",6,0),
+(3915,"Rahruk",6,0),
+(3916,"Rahtah",6,0),
+(3917,"Rahtou",6,0),
+(3918,"Rahumn",6,0),
+(3919,"Rahuon",6,0),
+(3920,"Rahuul",6,0),
+(3921,"Rahwas",6,0),
+(3922,"Rakanu",6,0),
+(3923,"Rakddon",6,0),
+(3924,"Rakdek",6,0),
+(3925,"Rakega",6,0),
+(3926,"Rakfal",6,0),
+(3927,"Rakfnar",6,0),
+(3928,"Rakhai",6,0),
+(3929,"Rakhan",6,0),
+(3930,"Rakhwa",6,0),
+(3931,"Rakine",6,0),
+(3932,"Rakirn",6,0),
+(3933,"Rakith",6,0),
+(3934,"Rakken",6,0),
+(3935,"Raklem",6,0),
+(3936,"Rakmin",6,0),
+(3937,"Raknah",6,0),
+(3938,"Raknd",6,0),
+(3939,"Rakof",6,0),
+(3940,"Rakot",6,0),
+(3941,"Rakoth",6,0),
+(3942,"Rakqwa",6,0),
+(3943,"Rakrak",6,0),
+(3944,"Rakron",6,0),
+(3945,"Rakruk",6,0),
+(3946,"Raktah",6,0),
+(3947,"Raktou",6,0),
+(3948,"Rakumn",6,0),
+(3949,"Rakuon",6,0),
+(3950,"Rakuul",6,0),
+(3951,"Rakwas",6,0),
+(3952,"Rathnah",6,0),
+(3953,"Rurg",6,0),
+(3954,"Slaar",6,0),
+(3955,"Spronn",6,0),
+(3956,"Stygg",6,0),
+(3957,"Suurd",6,0),
+(3958,"Tadonn",6,0),
+(3959,"Togg",6,0),
+(3960,"Trondd",6,0),
+(3961,"Udrom",6,0),
+(3962,"Urgruu",6,0),
+(3963,"Yokk",6,0),
+(327,"Moga",6,1),
+(328,"Misha",6,1),
+(329,"Barada",6,1),
+(330,"Braga",6,1),
+(331,"Paila",6,1),
+(332,"Rosha",6,1),
+(333,"Buldress",6,1),
+(334,"Amaya",6,1),
+(335,"Amber",6,1),
+(336,"Steress",6,1),
+(337,"Jinga",6,1),
+(338,"Bandwe",6,1),
+(339,"Porash",6,1),
+(340,"Ishne",6,1),
+(341,"Daldieb",6,1),
+(342,"Bogorah",6,1),
+(343,"Padwar",6,1),
+(344,"Loraine",6,1),
+(345,"Fawnee",6,1),
+(346,"Mara",6,1),
+(1613,"Abeytu",6,1),
+(1614,"Alameda",6,1),
+(1615,"Amayeta",6,1),
+(1616,"Amitola",6,1),
+(1617,"Aquene",6,1),
+(1618,"Awanata",6,1),
+(1619,"Awendela",6,1),
+(1620,"Bea",6,1),
+(1621,"Belinda",6,1),
+(1622,"Bev",6,1),
+(1623,"Bithiah",6,1),
+(1624,"Brenda",6,1),
+(1625,"Callie",6,1),
+(1626,"Candyn",6,1),
+(1627,"Chapa",6,1),
+(1628,"Cocheta",6,1),
+(1629,"Cora",6,1),
+(1630,"Dana",6,1),
+(1631,"Donoma",6,1),
+(1632,"Edina",6,1),
+(1633,"Edna",6,1),
+(1634,"Ehawee",6,1),
+(1635,"Elsa",6,1),
+(1636,"Fariba",6,1),
+(1637,"Harriet",6,1),
+(1638,"Hattie",6,1),
+(1639,"Honey",6,1),
+(1640,"Huata",6,1),
+(1641,"Imala",6,1),
+(1642,"Ina",6,1),
+(1643,"Ituha",6,1),
+(1644,"Jo",6,1),
+(1645,"June",6,1),
+(1646,"Karen",6,1),
+(1647,"Koko",6,1),
+(1648,"Leyota",6,1),
+(1649,"Mahala",6,1),
+(1650,"Mahu",6,1),
+(1651,"Mirubel",6,1),
+(1652,"Mona",6,1),
+(1653,"Mya",6,1),
+(1654,"Nahimana",6,1),
+(1655,"Nashota",6,1),
+(1656,"Nicola",6,1),
+(1657,"Nokomis",6,1),
+(1658,"Onatah",6,1),
+(1659,"Onawa",6,1),
+(1660,"Onida",6,1),
+(1661,"Pakuna",6,1),
+(1662,"Pamuya",6,1),
+(1663,"Rain",6,1),
+(1664,"Regina",6,1),
+(1665,"Roda",6,1),
+(1666,"Shuman",6,1),
+(1667,"Tala",6,1),
+(1668,"Tami",6,1),
+(1669,"Thursey",6,1),
+(1670,"Wakanda",6,1),
+(1671,"Yepa",6,1),
+(3964,"Aaguru",6,1),
+(3965,"Auada",6,1),
+(3966,"Auadi",6,1),
+(3967,"Auael",6,1),
+(3968,"Auaga",6,1),
+(3969,"Auahu",6,1),
+(3970,"Auain",6,1),
+(3971,"Aualen",6,1),
+(3972,"Auani",6,1),
+(3973,"Auepa",6,1),
+(3974,"Auewa",6,1),
+(3975,"Auga",6,1),
+(3976,"Augo",6,1),
+(3977,"Auida",6,1),
+(3978,"Auiga",6,1),
+(3979,"Auija",6,1),
+(3980,"Auka",6,1),
+(3981,"Aukwa",6,1),
+(3982,"Aula",6,1),
+(3983,"Aulfa",6,1),
+(3984,"Auna",6,1),
+(3985,"Aunen",6,1),
+(3986,"Aunko",6,1),
+(3987,"Aunta",6,1),
+(3988,"Auska",6,1),
+(3989,"Auta",6,1),
+(3990,"Autha",6,1),
+(3991,"Auuna",6,1),
+(3992,"Auunn",6,1),
+(3993,"Auura",6,1),
+(3994,"Auyn",6,1),
+(3995,"Auyr",6,1),
+(3996,"Bahada",6,1),
+(3997,"Bahadi",6,1),
+(3998,"Bahael",6,1),
+(3999,"Bahaga",6,1),
+(4000,"Bahahu",6,1),
+(4001,"Bahain",6,1),
+(4002,"Bahalen",6,1),
+(4003,"Bahani",6,1),
+(4004,"Bahepa",6,1),
+(4005,"Bahewa",6,1),
+(4006,"Bahga",6,1),
+(4007,"Bahgo",6,1),
+(4008,"Bahida",6,1),
+(4009,"Bahiga",6,1),
+(4010,"Bahija",6,1),
+(4011,"Bahka",6,1),
+(4012,"Bahkwa",6,1),
+(4013,"Bahla",6,1),
+(4014,"Bahlfa",6,1),
+(4015,"Bahna",6,1),
+(4016,"Bahnen",6,1),
+(4017,"Bahnko",6,1),
+(4018,"Bahnta",6,1),
+(4019,"Bahska",6,1),
+(4020,"Bahta",6,1),
+(4021,"Bahtha",6,1),
+(4022,"Bahuna",6,1),
+(4023,"Bahunn",6,1),
+(4024,"Bahura",6,1),
+(4025,"Bahyn",6,1),
+(4026,"Bahyr",6,1),
+(4027,"Bataga",6,1),
+(4028,"Berada",6,1),
+(4029,"Beradi",6,1),
+(4030,"Berael",6,1),
+(4031,"Beraga",6,1),
+(4032,"Berahu",6,1),
+(4033,"Berain",6,1),
+(4034,"Beralen",6,1),
+(4035,"Berani",6,1),
+(4036,"Berepa",6,1),
+(4037,"Berewa",6,1),
+(4038,"Berga",6,1),
+(4039,"Bergo",6,1),
+(4040,"Berida",6,1),
+(4041,"Beriga",6,1),
+(4042,"Berija",6,1),
+(4043,"Berka",6,1),
+(4044,"Berkwa",6,1),
+(4045,"Berla",6,1),
+(4046,"Berlfa",6,1),
+(4047,"Berna",6,1),
+(4048,"Bernen",6,1),
+(4049,"Bernko",6,1),
+(4050,"Bernta",6,1),
+(4051,"Berska",6,1),
+(4052,"Berta",6,1),
+(4053,"Bertha",6,1),
+(4054,"Beruna",6,1),
+(4055,"Berunn",6,1),
+(4056,"Berura",6,1),
+(4057,"Beryn",6,1),
+(4058,"Beryr",6,1),
+(4059,"Byluu",6,1),
+(4060,"Cahuu",6,1),
+(4061,"Caramuga",6,1),
+(4062,"Choona",6,1),
+(4063,"Daga",6,1),
+(4064,"Drunaa",6,1),
+(4065,"Eiada",6,1),
+(4066,"Eiadi",6,1),
+(4067,"Eiael",6,1),
+(4068,"Eiaga",6,1),
+(4069,"Eiahu",6,1),
+(4070,"Eiain",6,1),
+(4071,"Eialen",6,1),
+(4072,"Eiani",6,1),
+(4073,"Eiepa",6,1),
+(4074,"Eiewa",6,1),
+(4075,"Eiga",6,1),
+(4076,"Eigo",6,1),
+(4077,"Eiida",6,1),
+(4078,"Eiiga",6,1),
+(4079,"Eiija",6,1),
+(4080,"Eika",6,1),
+(4081,"Eikwa",6,1),
+(4082,"Eila",6,1),
+(4083,"Eilfa",6,1),
+(4084,"Eina",6,1),
+(4085,"Einen",6,1),
+(4086,"Einko",6,1),
+(4087,"Einta",6,1),
+(4088,"Eiska",6,1),
+(4089,"Eita",6,1),
+(4090,"Eitha",6,1),
+(4091,"Eiuna",6,1),
+(4092,"Eiunn",6,1),
+(4093,"Eiura",6,1),
+(4094,"Eiyn",6,1),
+(4095,"Eiyr",6,1),
+(4096,"Faruu",6,1),
+(4097,"Fuugal",6,1),
+(4098,"Fyada",6,1),
+(4099,"Fyadi",6,1),
+(4100,"Fyael",6,1),
+(4101,"Fyaga",6,1),
+(4102,"Fyahu",6,1),
+(4103,"Fyain",6,1),
+(4104,"Fyalen",6,1),
+(4105,"Fyani",6,1),
+(4106,"Fyepa",6,1),
+(4107,"Fyewa",6,1),
+(4108,"Fyga",6,1),
+(4109,"Fygo",6,1),
+(4110,"Fyida",6,1),
+(4111,"Fyiga",6,1),
+(4112,"Fyija",6,1),
+(4113,"Fyka",6,1),
+(4114,"Fykwa",6,1),
+(4115,"Fyla",6,1),
+(4116,"Fylfa",6,1),
+(4117,"Fyna",6,1),
+(4118,"Fynen",6,1),
+(4119,"Fynko",6,1),
+(4120,"Fynta",6,1),
+(4121,"Fyska",6,1),
+(4122,"Fyta",6,1),
+(4123,"Fytha",6,1),
+(4124,"Fyuna",6,1),
+(4125,"Fyunn",6,1),
+(4126,"Fyura",6,1),
+(4127,"Fyyn",6,1),
+(4128,"Fyyr",6,1),
+(4129,"Halada",6,1),
+(4130,"Haladi",6,1),
+(4131,"Halael",6,1),
+(4132,"Halaga",6,1),
+(4133,"Halahu",6,1),
+(4134,"Halain",6,1),
+(4135,"Halalen",6,1),
+(4136,"Halani",6,1),
+(4137,"Halepa",6,1),
+(4138,"Halewa",6,1),
+(4139,"Halga",6,1),
+(4140,"Halgo",6,1),
+(4141,"Halida",6,1),
+(4142,"Haliga",6,1),
+(4143,"Halija",6,1),
+(4144,"Halka",6,1),
+(4145,"Halkwa",6,1),
+(4146,"Halla",6,1),
+(4147,"Hallfa",6,1),
+(4148,"Halna",6,1),
+(4149,"Halnen",6,1),
+(4150,"Halnko",6,1),
+(4151,"Halnta",6,1),
+(4152,"Halska",6,1),
+(4153,"Halta",6,1),
+(4154,"Haltha",6,1),
+(4155,"Haluna",6,1),
+(4156,"Halunn",6,1),
+(4157,"Halura",6,1),
+(4158,"Halyn",6,1),
+(4159,"Halyr",6,1),
+(4160,"Harana",6,1),
+(4161,"Homuda",6,1),
+(4162,"Huguur",6,1),
+(4163,"Huukwa",6,1),
+(4164,"Jaid",6,1),
+(4165,"Jaraa",6,1),
+(4166,"Jumadu",6,1),
+(4167,"Jurguun",6,1),
+(4168,"Juunu",6,1),
+(4169,"Kraal",6,1),
+(4170,"Kuada",6,1),
+(4171,"Kuadi",6,1),
+(4172,"Kuael",6,1),
+(4173,"Kuaga",6,1),
+(4174,"Kuahu",6,1),
+(4175,"Kuain",6,1),
+(4176,"Kualen",6,1),
+(4177,"Kuani",6,1),
+(4178,"Kuepa",6,1),
+(4179,"Kuewa",6,1),
+(4180,"Kuga",6,1),
+(4181,"Kugo",6,1),
+(4182,"Kuida",6,1),
+(4183,"Kuiga",6,1),
+(4184,"Kuija",6,1),
+(4185,"Kuka",6,1),
+(4186,"Kukwa",6,1),
+(4187,"Kula",6,1),
+(4188,"Kulfa",6,1),
+(4189,"Kuna",6,1),
+(4190,"Kunen",6,1),
+(4191,"Kunko",6,1),
+(4192,"Kunta",6,1),
+(4193,"Kuska",6,1),
+(4194,"Kuta",6,1),
+(4195,"Kutha",6,1),
+(4196,"Kuuna",6,1),
+(4197,"Kuunn",6,1),
+(4198,"Kuura",6,1),
+(4199,"Kuural",6,1),
+(4200,"Kuyn",6,1),
+(4201,"Kuyr",6,1),
+(4202,"Lanag",6,1),
+(4203,"Lornal",6,1),
+(4204,"Luugud",6,1),
+(4205,"Maag",6,1),
+(4206,"Mahada",6,1),
+(4207,"Mahadi",6,1),
+(4208,"Mahael",6,1),
+(4209,"Mahaga",6,1),
+(4210,"Mahahu",6,1),
+(4211,"Mahain",6,1),
+(4212,"Mahalen",6,1),
+(4213,"Mahani",6,1),
+(4214,"Mahepa",6,1),
+(4215,"Mahewa",6,1),
+(4216,"Mahga",6,1),
+(4217,"Mahgo",6,1),
+(4218,"Mahida",6,1),
+(4219,"Mahiga",6,1),
+(4220,"Mahija",6,1),
+(4221,"Mahka",6,1),
+(4222,"Mahkwa",6,1),
+(4223,"Mahlfa",6,1),
+(4224,"Mahna",6,1),
+(4225,"Mahnen",6,1),
+(4226,"Mahnko",6,1),
+(4227,"Mahnta",6,1),
+(4228,"Mahska",6,1),
+(4229,"Mahta",6,1),
+(4230,"Mahtha",6,1),
+(4231,"Mahuna",6,1),
+(4232,"Mahunn",6,1),
+(4233,"Mahura",6,1),
+(4234,"Mahyn",6,1),
+(4235,"Mahyr",6,1),
+(4236,"Mugra",6,1),
+(4237,"Muurga",6,1),
+(4238,"Naal",6,1),
+(4239,"Nada",6,1),
+(4240,"Nadi",6,1),
+(4241,"Nael",6,1),
+(4242,"Naga",6,1),
+(4243,"Nahu",6,1),
+(4244,"Nain",6,1),
+(4245,"Nalen",6,1),
+(4246,"Nepa",6,1),
+(4247,"Newa",6,1),
+(4248,"Nga",6,1),
+(4249,"Ngo",6,1),
+(4250,"Nida",6,1),
+(4251,"Niga",6,1),
+(4252,"Nija",6,1),
+(4253,"Nka",6,1),
+(4254,"Nkwa",6,1),
+(4255,"Nla",6,1),
+(4256,"Nlfa",6,1),
+(4257,"Nna",6,1),
+(4258,"Nnen",6,1),
+(4259,"Nnko",6,1),
+(4260,"Nnta",6,1),
+(4261,"Noga",6,1),
+(4262,"Nska",6,1),
+(4263,"Nta",6,1),
+(4264,"Ntha",6,1),
+(4265,"Nuamu",6,1),
+(4266,"Nuna",6,1),
+(4267,"Nunn",6,1),
+(4268,"Nura",6,1),
+(4269,"Nuuru",6,1),
+(4270,"Nyn",6,1),
+(4271,"Nyr",6,1),
+(4272,"Ocoga",6,1),
+(4273,"Ollomu",6,1),
+(4274,"Omalugo",6,1),
+(4275,"Oordu",6,1),
+(4276,"Oxauna",6,1),
+(4277,"Paoada",6,1),
+(4278,"Paoadi",6,1),
+(4279,"Paoael",6,1),
+(4280,"Paoaga",6,1),
+(4281,"Paoahu",6,1),
+(4282,"Paoain",6,1),
+(4283,"Paoalen",6,1),
+(4284,"Paoani",6,1),
+(4285,"Paoepa",6,1),
+(4286,"Paoewa",6,1),
+(4287,"Paoga",6,1),
+(4288,"Paogo",6,1),
+(4289,"Paoida",6,1),
+(4290,"Paoiga",6,1),
+(4291,"Paoija",6,1),
+(4292,"Paoka",6,1),
+(4293,"Paokwa",6,1),
+(4294,"Paola",6,1),
+(4295,"Paolfa",6,1),
+(4296,"Paona",6,1),
+(4297,"Paonen",6,1),
+(4298,"Paonko",6,1),
+(4299,"Paonta",6,1),
+(4300,"Paoska",6,1),
+(4301,"Paota",6,1),
+(4302,"Paotha",6,1),
+(4303,"Paouna",6,1),
+(4304,"Paounn",6,1),
+(4305,"Paoura",6,1),
+(4306,"Paoyn",6,1),
+(4307,"Paoyr",6,1),
+(4308,"Pokuga",6,1),
+(4309,"Praan",6,1),
+(4310,"Pugraa",6,1),
+(4311,"Quuda",6,1),
+(4312,"Ralga",6,1),
+(4313,"Rondaa",6,1),
+(4314,"Saeada",6,1),
+(4315,"Saeadi",6,1),
+(4316,"Saeael",6,1),
+(4317,"Saeaga",6,1),
+(4318,"Saeahu",6,1),
+(4319,"Saeain",6,1),
+(4320,"Saealen",6,1),
+(4321,"Saeani",6,1),
+(4322,"Saeepa",6,1),
+(4323,"Saeewa",6,1),
+(4324,"Saega",6,1),
+(4325,"Saego",6,1),
+(4326,"Saeida",6,1),
+(4327,"Saeiga",6,1),
+(4328,"Saeija",6,1),
+(4329,"Saeka",6,1),
+(4330,"Saekwa",6,1),
+(4331,"Saela",6,1),
+(4332,"Saelfa",6,1),
+(4333,"Saena",6,1),
+(4334,"Saenen",6,1),
+(4335,"Saenko",6,1),
+(4336,"Saenta",6,1),
+(4337,"Saeska",6,1),
+(4338,"Saeta",6,1),
+(4339,"Saetha",6,1),
+(4340,"Saeuna",6,1),
+(4341,"Saeunn",6,1),
+(4342,"Saeura",6,1),
+(4343,"Saeyn",6,1),
+(4344,"Saeyr",6,1),
+(4345,"Serada",6,1),
+(4346,"Seradi",6,1),
+(4347,"Serael",6,1),
+(4348,"Seraga",6,1),
+(4349,"Serahu",6,1),
+(4350,"Serain",6,1),
+(4351,"Seralen",6,1),
+(4352,"Serani",6,1),
+(4353,"Serepa",6,1),
+(4354,"Serewa",6,1),
+(4355,"Serga",6,1),
+(4356,"Sergo",6,1),
+(4357,"Serida",6,1),
+(4358,"Seriga",6,1),
+(4359,"Serija",6,1),
+(4360,"Serka",6,1),
+(4361,"Serkwa",6,1),
+(4362,"Serla",6,1),
+(4363,"Serlfa",6,1),
+(4364,"Serna",6,1),
+(4365,"Sernen",6,1),
+(4366,"Sernko",6,1),
+(4367,"Sernta",6,1),
+(4368,"Serska",6,1),
+(4369,"Serta",6,1),
+(4370,"Sertha",6,1),
+(4371,"Seruna",6,1),
+(4372,"Serunn",6,1),
+(4373,"Serura",6,1),
+(4374,"Seryn",6,1),
+(4375,"Seryr",6,1),
+(4376,"Sorgaa",6,1),
+(4377,"Taiada",6,1),
+(4378,"Taiadi",6,1),
+(4379,"Taiael",6,1),
+(4380,"Taiaga",6,1),
+(4381,"Taiahu",6,1),
+(4382,"Taiain",6,1),
+(4383,"Taialen",6,1),
+(4384,"Taiani",6,1),
+(4385,"Taiepa",6,1),
+(4386,"Taiewa",6,1),
+(4387,"Taiga",6,1),
+(4388,"Taigo",6,1),
+(4389,"Taiida",6,1),
+(4390,"Taiiga",6,1),
+(4391,"Taiija",6,1),
+(4392,"Taika",6,1),
+(4393,"Taikwa",6,1),
+(4394,"Taila",6,1),
+(4395,"Tailfa",6,1),
+(4396,"Tainen",6,1),
+(4397,"Tainko",6,1),
+(4398,"Tainta",6,1),
+(4399,"Taiska",6,1),
+(4400,"Taita",6,1),
+(4401,"Taitha",6,1),
+(4402,"Taiuna",6,1),
+(4403,"Taiunn",6,1),
+(4404,"Taiura",6,1),
+(4405,"Taiyn",6,1),
+(4406,"Taiyr",6,1),
+(4407,"Taukk",6,1),
+(4408,"Thakk",6,1),
+(4409,"Toraga",6,1),
+(4410,"Trumuun",6,1),
+(4411,"Turguun",6,1),
+(4412,"Udura",6,1),
+(4413,"Uguda",6,1),
+(4414,"Ullala",6,1),
+(4415,"Urballa",6,1),
+(4416,"Urdaa",6,1),
+(4417,"Uuraza",6,1),
+(4418,"Uurmaa",6,1),
+(4419,"Waagda",6,1),
+(4420,"Walama",6,1),
+(4421,"Wolda",6,1),
+(4422,"Wuroda",6,1),
+(4423,"Yaagma",6,1),
+(4424,"Yugda",6,1),
+(175,"Ben",7,0),
+(176,"Lor",7,0),
+(177,"Kevin",7,0),
+(178,"Andy",7,0),
+(179,"Parg",7,0),
+(180,"Blayne",7,0),
+(181,"Fred",7,0),
+(182,"Phil",7,0),
+(183,"Tink",7,0),
+(184,"Grubber",7,0),
+(185,"Flange",7,0),
+(186,"Rocket",7,0),
+(187,"Driver",7,0),
+(188,"Torque",7,0),
+(189,"Wrench",7,0),
+(190,"Gasket",7,0),
+(191,"Screwdinger",7,0),
+(192,"Socket",7,0),
+(193,"Flathead",7,0),
+(194,"Hammer",7,0),
+(1207,"Abner",7,0),
+(1208,"Addison",7,0),
+(1209,"Addle",7,0),
+(1210,"Ado",7,0),
+(1211,"Albert",7,0),
+(1212,"Alfie",7,0),
+(1213,"Bart",7,0),
+(1214,"Basillus",7,0),
+(1215,"Boetius",7,0),
+(1216,"Cal",7,0),
+(1217,"Chester",7,0),
+(1218,"Chet",7,0),
+(1219,"Cleatus",7,0),
+(1220,"Corky",7,0),
+(1221,"Delbert",7,0),
+(1222,"Denzil",7,0),
+(1223,"Donald",7,0),
+(1224,"Dunk",7,0),
+(1225,"Edwin",7,0),
+(1226,"Gimix",7,0),
+(1227,"Gus",7,0),
+(1228,"Hamilton",7,0),
+(1229,"Henry",7,0),
+(1230,"Herbert",7,0),
+(1231,"Iggy",7,0),
+(1232,"Ike",7,0),
+(1233,"Jarvis",7,0),
+(1234,"Jatsz",7,0),
+(1235,"Jayhugh",7,0),
+(1236,"Kelly",7,0),
+(1237,"Lem",7,0),
+(1238,"Leon",7,0),
+(1239,"Leonard",7,0),
+(1240,"Levi",7,0),
+(1241,"Lonzo",7,0),
+(1242,"Lum",7,0),
+(1243,"Manny",7,0),
+(1244,"Marvin",7,0),
+(1245,"Mickle",7,0),
+(1246,"Monty",7,0),
+(1247,"Mortimer",7,0),
+(1248,"Neville",7,0),
+(1249,"Norbert",7,0),
+(1250,"Oscar",7,0),
+(1251,"Pierce",7,0),
+(1252,"Ronald",7,0),
+(1253,"Rudy",7,0),
+(1254,"Scooter",7,0),
+(1255,"Seymour",7,0),
+(1256,"Sheldon",7,0),
+(1257,"Sprong",7,0),
+(1258,"Sylvester",7,0),
+(1259,"Tick",7,0),
+(1260,"Tock",7,0),
+(1261,"Twiddle",7,0),
+(1262,"Waldo",7,0),
+(1263,"Wesley",7,0),
+(1264,"Wilbur",7,0),
+(1265,"Winston",7,0),
+(1266,"Yap",7,0),
+(4425,"Adze",7,0),
+(4426,"Airor",7,0),
+(4427,"Allen",7,0),
+(4428,"Brack",7,0),
+(4429,"Braket",7,0),
+(4430,"Brazen",7,0),
+(4431,"Broach",7,0),
+(4432,"Cappy",7,0),
+(4433,"Clamp",7,0),
+(4434,"Cogger",7,0),
+(4435,"Coggle",7,0),
+(4436,"Cognus",7,0),
+(4437,"Copper",7,0),
+(4438,"Craggle",7,0),
+(4439,"Drillo",7,0),
+(4440,"Dusty",7,0),
+(4441,"Frazle",7,0),
+(4442,"Froe",7,0),
+(4443,"Fuse",7,0),
+(4444,"Fynn",7,0),
+(4445,"Gaffer",7,0),
+(4446,"Galvan",7,0),
+(4447,"Glazlo",7,0),
+(4448,"Glugun",7,0),
+(4449,"Grazel",7,0),
+(4450,"Grommet",7,0),
+(4451,"Handy",7,0),
+(4452,"Hedge",7,0),
+(4453,"Hinge",7,0),
+(4454,"Hoist",7,0),
+(4455,"Hydro",7,0),
+(4456,"Jaque",7,0),
+(4457,"Kore",7,0),
+(4458,"Lopper",7,0),
+(4459,"Lucky",7,0),
+(4460,"Mach",7,0),
+(4461,"Manuel",7,0),
+(4462,"Mathe",7,0),
+(4463,"Mattock",7,0),
+(4464,"Max",7,0),
+(4465,"Metric",7,0),
+(4466,"Miltin",7,0),
+(4467,"Monte",7,0),
+(4468,"Mort",7,0),
+(4469,"Mould",7,0),
+(4470,"Orbital",7,0),
+(4471,"Philipe",7,0),
+(4472,"Plahow",7,0),
+(4473,"Poss",7,0),
+(4474,"Raullie",7,0),
+(4475,"Rivett",7,0),
+(4476,"Sauder",7,0),
+(4477,"Scrape",7,0),
+(4478,"Servo",7,0),
+(4479,"Slanks",7,0),
+(4480,"Sneek",7,0),
+(4481,"Snipp",7,0),
+(4482,"Spheed",7,0),
+(4483,"Spike",7,0),
+(4484,"Spindle",7,0),
+(4485,"Spork",7,0),
+(4486,"Squeegee",7,0),
+(4487,"Tach",7,0),
+(4488,"Thermo",7,0),
+(4489,"Tomis",7,0),
+(4490,"Trowel",7,0),
+(4491,"Twine",7,0),
+(4492,"Tyne",7,0),
+(4493,"Tynsion",7,0),
+(4494,"Wobblu",7,0),
+(154,"Lara",7,1),
+(155,"Ped",7,1),
+(156,"Midge",7,1),
+(157,"Gidget",7,1),
+(158,"Sandy",7,1),
+(159,"Selma",7,1),
+(160,"Faye",7,1),
+(161,"Donna",7,1),
+(162,"Nellie",7,1),
+(163,"Sandra",7,1),
+(164,"Margie",7,1),
+(165,"Penelope",7,1),
+(166,"Dora",7,1),
+(167,"Jenny",7,1),
+(168,"Squeak",7,1),
+(169,"Pip",7,1),
+(170,"Buns",7,1),
+(171,"Happy",7,1),
+(172,"Pepper",7,1),
+(174,"Madge",7,1),
+(1146,"Abby",7,1),
+(1147,"Ada",7,1),
+(1148,"Aggy",7,1),
+(1149,"Ali",7,1),
+(1150,"Amy",7,1),
+(1151,"Ashley",7,1),
+(1152,"Augie",7,1),
+(1153,"Babs",7,1),
+(1154,"Beb",7,1),
+(1155,"Bell",7,1),
+(1156,"Bree",7,1),
+(1157,"Carol",7,1),
+(1158,"Cathy",7,1),
+(1159,"Cindy",7,1),
+(1160,"Clem",7,1),
+(1161,"Clo",7,1),
+(1162,"Connie",7,1),
+(1163,"Cordy",7,1),
+(1164,"Cris",7,1),
+(1165,"Daph",7,1),
+(1166,"Denise",7,1),
+(1167,"Dicey",7,1),
+(1168,"Dodie",7,1),
+(1169,"Ellen",7,1),
+(1170,"Emily",7,1),
+(1171,"Erin",7,1),
+(1172,"Etty",7,1),
+(1173,"Eva",7,1),
+(1174,"Frances",7,1),
+(1175,"Gail",7,1),
+(1176,"Ibby",7,1),
+(1177,"Janet",7,1),
+(1178,"Jean",7,1),
+(1179,"Jill",7,1),
+(1180,"Judy",7,1),
+(1181,"Kimmy",7,1),
+(1182,"Kip",7,1),
+(1183,"Kit",7,1),
+(1184,"Lexi",7,1),
+(1185,"Lori",7,1),
+(1186,"Lottie",7,1),
+(1187,"Lucy",7,1),
+(1188,"Maria",7,1),
+(1189,"Meg",7,1),
+(1190,"Milly",7,1),
+(1191,"Nancy",7,1),
+(1192,"Nettie",7,1),
+(1193,"Polly",7,1),
+(1194,"Rilly",7,1),
+(1195,"Rita",7,1),
+(1196,"Sally",7,1),
+(1197,"Sherry",7,1),
+(1198,"Shirley",7,1),
+(1199,"Silla",7,1),
+(1200,"Tibby",7,1),
+(1201,"Tick",7,1),
+(1202,"Trina",7,1),
+(1203,"Trixie",7,1),
+(1204,"Trudy",7,1),
+(1205,"Wanda",7,1),
+(1206,"Wendy",7,1),
+(4495,"Aimee",7,1),
+(4496,"Alfet",7,1),
+(4497,"Alloy",7,1),
+(4498,"Angie",7,1),
+(4499,"Aqua",7,1),
+(4500,"Beryl",7,1),
+(4501,"Blastie",7,1),
+(4502,"Brindy",7,1),
+(4503,"Carrie",7,1),
+(4504,"Creel",7,1),
+(4505,"Cryo",7,1),
+(4506,"Dosi",7,1),
+(4507,"Electra",7,1),
+(4508,"Elly",7,1),
+(4509,"Esky",7,1),
+(4510,"Fidget",7,1),
+(4511,"Finjal",7,1),
+(4512,"Flavie",7,1),
+(4513,"Flo",7,1),
+(4514,"Foci",7,1),
+(4515,"Frazzle",7,1),
+(4516,"Froude",7,1),
+(4517,"Ginnea",7,1),
+(4518,"Gnowai",7,1),
+(4519,"Gourda",7,1),
+(4520,"Grendel",7,1),
+(4521,"Gwenda",7,1),
+(4522,"Inersha",7,1),
+(4523,"Jelissa",7,1),
+(4524,"Jinnah",7,1),
+(4525,"Kathy",7,1),
+(4526,"Katy",7,1),
+(4527,"Kitt",7,1),
+(4528,"Kylie",7,1),
+(4529,"Lapis",7,1),
+(4530,"Lathe",7,1),
+(4531,"Lidi",7,1),
+(4532,"Luster",7,1),
+(4533,"Lyndsey",7,1),
+(4534,"Martika",7,1),
+(4535,"Mindie",7,1),
+(4536,"Nikel",7,1),
+(4537,"Parvinke",7,1),
+(4538,"Penny",7,1),
+(4539,"Pheebs",7,1),
+(4540,"Pinkah",7,1),
+(4541,"Piper",7,1),
+(4542,"Punnet",7,1),
+(4543,"Rainy",7,1),
+(4544,"Rota",7,1),
+(4545,"Rubie",7,1),
+(4546,"Sheara",7,1),
+(4547,"Starr",7,1),
+(4548,"Sympie",7,1),
+(4549,"Taliegh",7,1),
+(4550,"Teyi",7,1),
+(4551,"Throttle",7,1),
+(4552,"Tinah",7,1),
+(4553,"Tinka",7,1),
+(4554,"Tinney",7,1),
+(4555,"Triggs",7,1),
+(4556,"Triselle",7,1),
+(4557,"Tumi",7,1),
+(4558,"Vickie",7,1),
+(4559,"Whina",7,1),
+(4560,"Widge",7,1),
+(387,"Alar",8,0),
+(388,"Heartkiller",8,0),
+(389,"MalJin",8,0),
+(390,"ZulAraj",8,0),
+(391,"ZebGoro",8,0),
+(392,"Zuljin",8,0),
+(393,"ZulSorah",8,0),
+(394,"Zul",8,0),
+(395,"Tazzdingo",8,0),
+(396,"Rathalas",8,0),
+(397,"Zing",8,0),
+(398,"Tazz",8,0),
+(399,"Zingiss",8,0),
+(400,"Tobah",8,0),
+(401,"Dessak",8,0),
+(402,"Gishah",8,0),
+(403,"Zebrah",8,0),
+(404,"Nezzak",8,0),
+(405,"Zero",8,0),
+(406,"Bishina",8,0),
+(407,"Reave",8,0),
+(1792,"Aitan",8,0),
+(1793,"Ajit",8,0),
+(1794,"Akaash",8,0),
+(1795,"Balaji",8,0),
+(1796,"Bitabuta",8,0),
+(1797,"Bokanu",8,0),
+(1798,"Bulizza",8,0),
+(1799,"Chata",8,0),
+(1800,"Dakarai",8,0),
+(1801,"Dasmidu",8,0),
+(1802,"Deeda",8,0),
+(1803,"Dutinka",8,0),
+(1804,"Faraji",8,0),
+(1805,"Gaja",8,0),
+(1806,"Gamba",8,0),
+(1807,"Gulimu",8,0),
+(1808,"Hari",8,0),
+(1809,"Huzzabi",8,0),
+(1810,"Jabari",8,0),
+(1811,"Jastinnu",8,0),
+(1812,"Javyn",8,0),
+(1813,"Jayanti",8,0),
+(1814,"Jelani",8,0),
+(1815,"Kutak",8,0),
+(1816,"Lazibar",8,0),
+(1817,"Lulikdu",8,0),
+(1818,"Murali",8,0),
+(1819,"Naeem",8,0),
+(1820,"Natooka",8,0),
+(1821,"Neeraj",8,0),
+(1822,"Nokninoo",8,0),
+(1823,"Omaja",8,0),
+(1824,"Pakluzzi",8,0),
+(1825,"Polayim",8,0),
+(1826,"Pulani",8,0),
+(1827,"Raj",8,0),
+(1828,"Razi",8,0),
+(1829,"Rishi",8,0),
+(1830,"Runako",8,0),
+(1831,"Sambosa",8,0),
+(1832,"Shezza",8,0),
+(1833,"Supadoo",8,0),
+(1834,"Tabansi",8,0),
+(1835,"Taksa",8,0),
+(1836,"Tuka",8,0),
+(1837,"Uba",8,0),
+(1838,"Ujai",8,0),
+(1839,"Ulaluli",8,0),
+(1840,"Urimba",8,0),
+(1841,"Valoo",8,0),
+(1842,"Wanilu",8,0),
+(1843,"Weshmilu",8,0),
+(1844,"Yobachi",8,0),
+(1845,"Zaja",8,0),
+(4561,"Alkbek",8,0),
+(4562,"Alkbirt",8,0),
+(4563,"Alkbrez",8,0),
+(4564,"Alkdor",8,0),
+(4565,"Alkkal",8,0),
+(4566,"Alklek",8,0),
+(4567,"Alklok",8,0),
+(4568,"Alkluz",8,0),
+(4569,"Alkroz",8,0),
+(4570,"Alktok",8,0),
+(4571,"Alktraz",8,0),
+(4572,"Alkwaz",8,0),
+(4573,"Alkzak",8,0),
+(4574,"Alkzarn",8,0),
+(4575,"Alkzert",8,0),
+(4576,"Alkzul",8,0),
+(4577,"Arnbek",8,0),
+(4578,"Arnbirt",8,0),
+(4579,"Arnbrez",8,0),
+(4580,"Arndor",8,0),
+(4581,"Arnkal",8,0),
+(4582,"Arnlek",8,0),
+(4583,"Arnlok",8,0),
+(4584,"Arnluz",8,0),
+(4585,"Arnroz",8,0),
+(4586,"Arntok",8,0),
+(4587,"Arntraz",8,0),
+(4588,"Arnwaz",8,0),
+(4589,"Arnzak",8,0),
+(4590,"Arnzarn",8,0),
+(4591,"Arnzert",8,0),
+(4592,"Arnzul",8,0),
+(4593,"Barbek",8,0),
+(4594,"Barbirt",8,0),
+(4595,"Barbrez",8,0),
+(4596,"Bardor",8,0),
+(4597,"Barkal",8,0),
+(4598,"Barlek",8,0),
+(4599,"Barlok",8,0),
+(4600,"Barluz",8,0),
+(4601,"Barroz",8,0),
+(4602,"Bartok",8,0),
+(4603,"Bartraz",8,0),
+(4604,"Barwaz",8,0),
+(4605,"Barzak",8,0),
+(4606,"Barzarn",8,0),
+(4607,"Barzert",8,0),
+(4608,"Barzul",8,0),
+(4609,"Batbek",8,0),
+(4610,"Batbirt",8,0),
+(4611,"Batbrez",8,0),
+(4612,"Batdor",8,0),
+(4613,"Batkal",8,0),
+(4614,"Batlek",8,0),
+(4615,"Batlok",8,0),
+(4616,"Batluz",8,0),
+(4617,"Batroz",8,0),
+(4618,"Battok",8,0),
+(4619,"Battraz",8,0),
+(4620,"Batwaz",8,0),
+(4621,"Batzak",8,0),
+(4622,"Batzarn",8,0),
+(4623,"Batzert",8,0),
+(4624,"Batzul",8,0),
+(4625,"Bazbek",8,0),
+(4626,"Bazbirt",8,0),
+(4627,"Bazbrez",8,0),
+(4628,"Bazdor",8,0),
+(4629,"Bazkal",8,0),
+(4630,"Bazlek",8,0),
+(4631,"Bazlok",8,0),
+(4632,"Bazluz",8,0),
+(4633,"Bazroz",8,0),
+(4634,"Baztok",8,0),
+(4635,"Baztraz",8,0),
+(4636,"Bazwaz",8,0),
+(4637,"Bazzak",8,0),
+(4638,"Bazzarn",8,0),
+(4639,"Bazzert",8,0),
+(4640,"Bazzul",8,0),
+(4641,"Bezbek",8,0),
+(4642,"Bezbirt",8,0),
+(4643,"Bezbrez",8,0),
+(4644,"Bezdor",8,0),
+(4645,"Bezkal",8,0),
+(4646,"Bezlek",8,0),
+(4647,"Bezlok",8,0),
+(4648,"Bezluz",8,0),
+(4649,"Bezroz",8,0),
+(4650,"Beztok",8,0),
+(4651,"Beztraz",8,0),
+(4652,"Bezwaz",8,0),
+(4653,"Bezzak",8,0),
+(4654,"Bezzarn",8,0),
+(4655,"Bezzert",8,0),
+(4656,"Bezzul",8,0),
+(4657,"Cazbek",8,0),
+(4658,"Cazbirt",8,0),
+(4659,"Cazbrez",8,0),
+(4660,"Cazdor",8,0),
+(4661,"Cazkal",8,0),
+(4662,"Cazlek",8,0),
+(4663,"Cazlok",8,0),
+(4664,"Cazluz",8,0),
+(4665,"Cazroz",8,0),
+(4666,"Caztok",8,0),
+(4667,"Caztraz",8,0),
+(4668,"Cazwaz",8,0),
+(4669,"Cazzak",8,0),
+(4670,"Cazzarn",8,0),
+(4671,"Cazzert",8,0),
+(4672,"Cazzul",8,0),
+(4673,"Crazbek",8,0),
+(4674,"Crazbirt",8,0),
+(4675,"Crazbrez",8,0),
+(4676,"Crazdor",8,0),
+(4677,"Crazkal",8,0),
+(4678,"Crazlek",8,0),
+(4679,"Crazlok",8,0),
+(4680,"Crazluz",8,0),
+(4681,"Crazroz",8,0),
+(4682,"Craztok",8,0),
+(4683,"Craztraz",8,0),
+(4684,"Crazwaz",8,0),
+(4685,"Crazzak",8,0),
+(4686,"Crazzarn",8,0),
+(4687,"Crazzert",8,0),
+(4688,"Crazzul",8,0),
+(4689,"Dazbek",8,0),
+(4690,"Dazbirt",8,0),
+(4691,"Dazbrez",8,0),
+(4692,"Dazdor",8,0),
+(4693,"Dazkal",8,0),
+(4694,"Dazlek",8,0),
+(4695,"Dazlok",8,0),
+(4696,"Dazluz",8,0),
+(4697,"Dazroz",8,0),
+(4698,"Daztok",8,0),
+(4699,"Daztraz",8,0),
+(4700,"Dazwaz",8,0),
+(4701,"Dazzak",8,0),
+(4702,"Dazzarn",8,0),
+(4703,"Dazzert",8,0),
+(4704,"Dazzul",8,0),
+(4705,"Derfbek",8,0),
+(4706,"Derfbirt",8,0),
+(4707,"Derfbrez",8,0),
+(4708,"Derfdor",8,0),
+(4709,"Derfkal",8,0),
+(4710,"Derflek",8,0),
+(4711,"Derflok",8,0),
+(4712,"Derfluz",8,0),
+(4713,"Derfroz",8,0),
+(4714,"Derftok",8,0),
+(4715,"Derftraz",8,0),
+(4716,"Derfwaz",8,0),
+(4717,"Derfzak",8,0),
+(4718,"Derfzarn",8,0),
+(4719,"Derfzert",8,0),
+(4720,"Derfzul",8,0),
+(4721,"Ditbek",8,0),
+(4722,"Ditbirt",8,0),
+(4723,"Ditbrez",8,0),
+(4724,"Ditdor",8,0),
+(4725,"Ditkal",8,0),
+(4726,"Ditlek",8,0),
+(4727,"Ditlok",8,0),
+(4728,"Ditluz",8,0),
+(4729,"Ditroz",8,0),
+(4730,"Dittok",8,0),
+(4731,"Dittraz",8,0),
+(4732,"Ditwaz",8,0),
+(4733,"Ditzak",8,0),
+(4734,"Ditzarn",8,0),
+(4735,"Ditzert",8,0),
+(4736,"Ditzul",8,0),
+(4737,"Donbek",8,0),
+(4738,"Donbirt",8,0),
+(4739,"Donbrez",8,0),
+(4740,"Dondor",8,0),
+(4741,"Donkal",8,0),
+(4742,"Donlek",8,0),
+(4743,"Donlok",8,0),
+(4744,"Donluz",8,0),
+(4745,"Donroz",8,0),
+(4746,"Dontok",8,0),
+(4747,"Dontraz",8,0),
+(4748,"Donwaz",8,0),
+(4749,"Donzak",8,0),
+(4750,"Donzarn",8,0),
+(4751,"Donzert",8,0),
+(4752,"Donzul",8,0),
+(4753,"Dortbek",8,0),
+(4754,"Dortbirt",8,0),
+(4755,"Dortbrez",8,0),
+(4756,"Dortdor",8,0),
+(4757,"Dortkal",8,0),
+(4758,"Dortlek",8,0),
+(4759,"Dortlok",8,0),
+(4760,"Dortluz",8,0),
+(4761,"Dortroz",8,0),
+(4762,"Dorttok",8,0),
+(4763,"Dorttraz",8,0),
+(4764,"Dortwaz",8,0),
+(4765,"Dortzak",8,0),
+(4766,"Dortzarn",8,0),
+(4767,"Dortzert",8,0),
+(4768,"Dortzul",8,0),
+(4769,"Drakbek",8,0),
+(4770,"Drakbirt",8,0),
+(4771,"Drakbrez",8,0),
+(4772,"Drakdor",8,0),
+(4773,"Drakkal",8,0),
+(4774,"Draklek",8,0),
+(4775,"Draklok",8,0),
+(4776,"Drakluz",8,0),
+(4777,"Drakroz",8,0),
+(4778,"Draktok",8,0),
+(4779,"Draktraz",8,0),
+(4780,"Drakwaz",8,0),
+(4781,"Drakzak",8,0),
+(4782,"Drakzarn",8,0),
+(4783,"Drakzert",8,0),
+(4784,"Drakzul",8,0),
+(4785,"Drelbek",8,0),
+(4786,"Drelbirt",8,0),
+(4787,"Drelbrez",8,0),
+(4788,"Dreldor",8,0),
+(4789,"Drelkal",8,0),
+(4790,"Drellek",8,0),
+(4791,"Drellok",8,0),
+(4792,"Drelluz",8,0),
+(4793,"Drelroz",8,0),
+(4794,"Dreltok",8,0),
+(4795,"Dreltraz",8,0),
+(4796,"Drelwaz",8,0),
+(4797,"Drelzak",8,0),
+(4798,"Drelzarn",8,0),
+(4799,"Drelzert",8,0),
+(4800,"Drelzul",8,0),
+(4801,"Drezbek",8,0),
+(4802,"Drezbirt",8,0),
+(4803,"Drezbrez",8,0),
+(4804,"Drezdor",8,0),
+(4805,"Drezkal",8,0),
+(4806,"Drezlek",8,0),
+(4807,"Drezlok",8,0),
+(4808,"Drezluz",8,0),
+(4809,"Drezroz",8,0),
+(4810,"Dreztok",8,0),
+(4811,"Dreztraz",8,0),
+(4812,"Drezwaz",8,0),
+(4813,"Drezzak",8,0),
+(4814,"Drezzarn",8,0),
+(4815,"Drezzert",8,0),
+(4816,"Drezzul",8,0),
+(4817,"Drimbek",8,0),
+(4818,"Drimbirt",8,0),
+(4819,"Drimbrez",8,0),
+(4820,"Drimdor",8,0),
+(4821,"Drimkal",8,0),
+(4822,"Drimlek",8,0),
+(4823,"Drimlok",8,0),
+(4824,"Drimluz",8,0),
+(4825,"Drimroz",8,0),
+(4826,"Drimtok",8,0),
+(4827,"Drimtraz",8,0),
+(4828,"Drimwaz",8,0),
+(4829,"Drimzak",8,0),
+(4830,"Drimzarn",8,0),
+(4831,"Drimzert",8,0),
+(4832,"Drimzul",8,0),
+(4833,"Druzbek",8,0),
+(4834,"Druzbirt",8,0),
+(4835,"Druzbrez",8,0),
+(4836,"Druzdor",8,0),
+(4837,"Druzkal",8,0),
+(4838,"Druzlek",8,0),
+(4839,"Druzlok",8,0),
+(4840,"Druzluz",8,0),
+(4841,"Druzroz",8,0),
+(4842,"Druztok",8,0),
+(4843,"Druztraz",8,0),
+(4844,"Druzwaz",8,0),
+(4845,"Druzzak",8,0),
+(4846,"Druzzarn",8,0),
+(4847,"Druzzert",8,0),
+(4848,"Druzzul",8,0),
+(4849,"Durbek",8,0),
+(4850,"Durbirt",8,0),
+(4851,"Durbrez",8,0),
+(4852,"Durdor",8,0),
+(4853,"Durkal",8,0),
+(4854,"Durlek",8,0),
+(4855,"Durlok",8,0),
+(4856,"Durluz",8,0),
+(4857,"Durroz",8,0),
+(4858,"Durtok",8,0),
+(4859,"Durtraz",8,0),
+(4860,"Durwaz",8,0),
+(4861,"Durzak",8,0),
+(4862,"Durzarn",8,0),
+(4863,"Durzert",8,0),
+(4864,"Durzul",8,0),
+(4865,"Ertbek",8,0),
+(4866,"Ertbirt",8,0),
+(4867,"Ertbrez",8,0),
+(4868,"Ertdor",8,0),
+(4869,"Ertkal",8,0),
+(4870,"Ertlek",8,0),
+(4871,"Ertlok",8,0),
+(4872,"Ertluz",8,0),
+(4873,"Ertroz",8,0),
+(4874,"Erttok",8,0),
+(4875,"Erttraz",8,0),
+(4876,"Ertwaz",8,0),
+(4877,"Ertzak",8,0),
+(4878,"Ertzarn",8,0),
+(4879,"Ertzert",8,0),
+(4880,"Ertzul",8,0),
+(4881,"Erzbek",8,0),
+(4882,"Erzbirt",8,0),
+(4883,"Erzbrez",8,0),
+(4884,"Erzdor",8,0),
+(4885,"Erzkal",8,0),
+(4886,"Erzlek",8,0),
+(4887,"Erzlok",8,0),
+(4888,"Erzluz",8,0),
+(4889,"Erzroz",8,0),
+(4890,"Erztok",8,0),
+(4891,"Erztraz",8,0),
+(4892,"Erzwaz",8,0),
+(4893,"Erzzak",8,0),
+(4894,"Erzzarn",8,0),
+(4895,"Erzzert",8,0),
+(4896,"Erzzul",8,0),
+(4897,"Ezzbek",8,0),
+(4898,"Ezzbirt",8,0),
+(4899,"Ezzbrez",8,0),
+(4900,"Ezzdor",8,0),
+(4901,"Ezzkal",8,0),
+(4902,"Ezzlek",8,0),
+(4903,"Ezzlok",8,0),
+(4904,"Ezzluz",8,0),
+(4905,"Ezzroz",8,0),
+(4906,"Ezztok",8,0),
+(4907,"Ezztraz",8,0),
+(4908,"Ezzwaz",8,0),
+(4909,"Fekbek",8,0),
+(4910,"Fekbirt",8,0),
+(4911,"Fekbrez",8,0),
+(4912,"Fekdor",8,0),
+(4913,"Fekkal",8,0),
+(4914,"Feklek",8,0),
+(4915,"Feklok",8,0),
+(4916,"Fekluz",8,0),
+(4917,"Fekroz",8,0),
+(4918,"Fektok",8,0),
+(4919,"Fektraz",8,0),
+(4920,"Fekwaz",8,0),
+(4921,"Fekzak",8,0),
+(4922,"Fekzarn",8,0),
+(4923,"Fekzert",8,0),
+(4924,"Fekzul",8,0),
+(4925,"Felkbek",8,0),
+(4926,"Felkbirt",8,0),
+(4927,"Felkbrez",8,0),
+(4928,"Felkdor",8,0),
+(4929,"Felkkal",8,0),
+(4930,"Felklek",8,0),
+(4931,"Felklok",8,0),
+(4932,"Felkluz",8,0),
+(4933,"Felkroz",8,0),
+(4934,"Felktok",8,0),
+(4935,"Felktraz",8,0),
+(4936,"Felkwaz",8,0),
+(4937,"Felkzak",8,0),
+(4938,"Felkzarn",8,0),
+(4939,"Felkzert",8,0),
+(4940,"Felkzul",8,0),
+(4941,"Filnbek",8,0),
+(4942,"Filnbirt",8,0),
+(4943,"Filnbrez",8,0),
+(4944,"Filndor",8,0),
+(4945,"Filnkal",8,0),
+(4946,"Filnlek",8,0),
+(4947,"Filnlok",8,0),
+(4948,"Filnluz",8,0),
+(4949,"Filnroz",8,0),
+(4950,"Filntok",8,0),
+(4951,"Filntraz",8,0),
+(4952,"Filnwaz",8,0),
+(4953,"Filnzak",8,0),
+(4954,"Filnzarn",8,0),
+(4955,"Filnzert",8,0),
+(4956,"Filnzul",8,0),
+(4957,"Finbek",8,0),
+(4958,"Finbirt",8,0),
+(4959,"Finbrez",8,0),
+(4960,"Findor",8,0),
+(4961,"Finkal",8,0),
+(4962,"Finlek",8,0),
+(4963,"Finlok",8,0),
+(4964,"Finluz",8,0),
+(4965,"Finroz",8,0),
+(4966,"Fintok",8,0),
+(4967,"Fintraz",8,0),
+(4968,"Finwaz",8,0),
+(4969,"Finzak",8,0),
+(4970,"Finzarn",8,0),
+(4971,"Finzert",8,0),
+(4972,"Finzul",8,0),
+(4973,"Fistbek",8,0),
+(4974,"Fistbirt",8,0),
+(4975,"Fistbrez",8,0),
+(4976,"Fistdor",8,0),
+(4977,"Fistkal",8,0),
+(4978,"Fistlek",8,0),
+(4979,"Fistlok",8,0),
+(4980,"Fistluz",8,0),
+(4981,"Fistroz",8,0),
+(4982,"Fisttok",8,0),
+(4983,"Fisttraz",8,0),
+(4984,"Fistwaz",8,0),
+(4985,"Fistzak",8,0),
+(4986,"Fistzarn",8,0),
+(4987,"Fistzert",8,0),
+(4988,"Fistzul",8,0),
+(4989,"Flakbek",8,0),
+(4990,"Flakbirt",8,0),
+(4991,"Flakbrez",8,0),
+(4992,"Flakdor",8,0),
+(4993,"Flakkal",8,0),
+(4994,"Flaklek",8,0),
+(4995,"Flaklok",8,0),
+(4996,"Flakluz",8,0),
+(4997,"Flakroz",8,0),
+(4998,"Flaktok",8,0),
+(4999,"Flaktraz",8,0),
+(5000,"Flakwaz",8,0),
+(5001,"Flakzak",8,0),
+(5002,"Flakzarn",8,0),
+(5003,"Flakzert",8,0),
+(5004,"Flakzul",8,0),
+(5005,"Flinbek",8,0),
+(5006,"Flinbirt",8,0),
+(5007,"Flinbrez",8,0),
+(5008,"Flindor",8,0),
+(5009,"Flinkal",8,0),
+(5010,"Flinlek",8,0),
+(5011,"Flinlok",8,0),
+(5012,"Flinluz",8,0),
+(5013,"Flinroz",8,0),
+(5014,"Flintok",8,0),
+(5015,"Flintraz",8,0),
+(5016,"Flinwaz",8,0),
+(5017,"Flinzak",8,0),
+(5018,"Flinzarn",8,0),
+(5019,"Flinzert",8,0),
+(5020,"Flinzul",8,0),
+(5021,"Fornbek",8,0),
+(5022,"Fornbirt",8,0),
+(5023,"Fornbrez",8,0),
+(5024,"Forndor",8,0),
+(5025,"Fornkal",8,0),
+(5026,"Fornlek",8,0),
+(5027,"Fornlok",8,0),
+(5028,"Fornluz",8,0),
+(5029,"Fornroz",8,0),
+(5030,"Forntok",8,0),
+(5031,"Forntraz",8,0),
+(5032,"Fornwaz",8,0),
+(5033,"Fornzak",8,0),
+(5034,"Fornzarn",8,0),
+(5035,"Fornzert",8,0),
+(5036,"Fornzul",8,0),
+(5037,"Gartbek",8,0),
+(5038,"Gartbirt",8,0),
+(5039,"Gartbrez",8,0),
+(5040,"Gartdor",8,0),
+(5041,"Gartkal",8,0),
+(5042,"Gartlek",8,0),
+(5043,"Gartlok",8,0),
+(5044,"Gartluz",8,0),
+(5045,"Gartroz",8,0),
+(5046,"Garttok",8,0),
+(5047,"Garttraz",8,0),
+(5048,"Gartwaz",8,0),
+(5049,"Gartzak",8,0),
+(5050,"Gartzarn",8,0),
+(5051,"Gartzert",8,0),
+(5052,"Gartzul",8,0),
+(5053,"Gatbek",8,0),
+(5054,"Gatbirt",8,0),
+(5055,"Gatbrez",8,0),
+(5056,"Gatdor",8,0),
+(5057,"Gatkal",8,0),
+(5058,"Gatlek",8,0),
+(5059,"Gatlok",8,0),
+(5060,"Gatluz",8,0),
+(5061,"Gatroz",8,0),
+(5062,"Gattok",8,0),
+(5063,"Gattraz",8,0),
+(5064,"Gatwaz",8,0),
+(5065,"Gatzak",8,0),
+(5066,"Gatzarn",8,0),
+(5067,"Gatzert",8,0),
+(5068,"Gatzul",8,0),
+(5069,"Gazbek",8,0),
+(5070,"Gazbirt",8,0),
+(5071,"Gazbrez",8,0),
+(5072,"Gazdor",8,0),
+(5073,"Gazkal",8,0),
+(5074,"Gazlek",8,0),
+(5075,"Gazlok",8,0),
+(5076,"Gazluz",8,0),
+(5077,"Gazroz",8,0),
+(5078,"Gaztok",8,0),
+(5079,"Gaztraz",8,0),
+(5080,"Gazwaz",8,0),
+(5081,"Gazzak",8,0),
+(5082,"Gazzarn",8,0),
+(5083,"Gazzert",8,0),
+(5084,"Gazzul",8,0),
+(5085,"Gertbek",8,0),
+(5086,"Gertbirt",8,0),
+(5087,"Gertbrez",8,0),
+(5088,"Gertdor",8,0),
+(5089,"Gertkal",8,0),
+(5090,"Gertlek",8,0),
+(5091,"Gertlok",8,0),
+(5092,"Gertluz",8,0),
+(5093,"Gertroz",8,0),
+(5094,"Gerttok",8,0),
+(5095,"Gerttraz",8,0),
+(5096,"Gertwaz",8,0),
+(5097,"Gertzak",8,0),
+(5098,"Gertzarn",8,0),
+(5099,"Gertzert",8,0),
+(5100,"Gertzul",8,0),
+(5101,"Gortbek",8,0),
+(5102,"Gortbirt",8,0),
+(5103,"Gortbrez",8,0),
+(5104,"Gortdor",8,0),
+(5105,"Gortkal",8,0),
+(5106,"Gortlek",8,0),
+(5107,"Gortlok",8,0),
+(5108,"Gortluz",8,0),
+(5109,"Gortroz",8,0),
+(5110,"Gorttok",8,0),
+(5111,"Gorttraz",8,0),
+(5112,"Gortwaz",8,0),
+(5113,"Gortzak",8,0),
+(5114,"Gortzarn",8,0),
+(5115,"Gortzert",8,0),
+(5116,"Gortzul",8,0),
+(5117,"Grazbek",8,0),
+(5118,"Grazbirt",8,0),
+(5119,"Grazbrez",8,0),
+(5120,"Grazdor",8,0),
+(5121,"Grazkal",8,0),
+(5122,"Grazlek",8,0),
+(5123,"Grazlok",8,0),
+(5124,"Grazluz",8,0),
+(5125,"Grazroz",8,0),
+(5126,"Graztok",8,0),
+(5127,"Graztraz",8,0),
+(5128,"Grazwaz",8,0),
+(5129,"Grazzak",8,0),
+(5130,"Grazzarn",8,0),
+(5131,"Grazzert",8,0),
+(5132,"Grazzul",8,0),
+(5133,"Gretbek",8,0),
+(5134,"Gretbirt",8,0),
+(5135,"Gretbrez",8,0),
+(5136,"Gretdor",8,0),
+(5137,"Gretkal",8,0),
+(5138,"Gretlek",8,0),
+(5139,"Gretlok",8,0),
+(5140,"Gretluz",8,0),
+(5141,"Gretroz",8,0),
+(5142,"Grettok",8,0),
+(5143,"Grettraz",8,0),
+(5144,"Gretwaz",8,0),
+(5145,"Gretzak",8,0),
+(5146,"Gretzarn",8,0),
+(5147,"Gretzert",8,0),
+(5148,"Gretzul",8,0),
+(5149,"Grotbek",8,0),
+(5150,"Grotbirt",8,0),
+(5151,"Grotbrez",8,0),
+(5152,"Grotdor",8,0),
+(5153,"Grotkal",8,0),
+(5154,"Grotlek",8,0),
+(5155,"Grotlok",8,0),
+(5156,"Grotluz",8,0),
+(5157,"Grotroz",8,0),
+(5158,"Grottok",8,0),
+(5159,"Grottraz",8,0),
+(5160,"Grotwaz",8,0),
+(5161,"Grotzak",8,0),
+(5162,"Grotzarn",8,0),
+(5163,"Grotzert",8,0),
+(5164,"Grotzul",8,0),
+(5165,"Grozbek",8,0),
+(5166,"Grozbirt",8,0),
+(5167,"Grozbrez",8,0),
+(5168,"Grozdor",8,0),
+(5169,"Grozkal",8,0),
+(5170,"Grozlek",8,0),
+(5171,"Grozlok",8,0),
+(5172,"Grozluz",8,0),
+(5173,"Grozroz",8,0),
+(5174,"Groztok",8,0),
+(5175,"Groztraz",8,0),
+(5176,"Grozwaz",8,0),
+(5177,"Grozzak",8,0),
+(5178,"Grozzarn",8,0),
+(5179,"Grozzert",8,0),
+(5180,"Grozzul",8,0),
+(5181,"Hakbek",8,0),
+(5182,"Hakbirt",8,0),
+(5183,"Hakbrez",8,0),
+(5184,"Hakdor",8,0),
+(5185,"Hakkal",8,0),
+(5186,"Haklek",8,0),
+(5187,"Haklok",8,0),
+(5188,"Hakluz",8,0),
+(5189,"Hakroz",8,0),
+(5190,"Haktok",8,0),
+(5191,"Haktraz",8,0),
+(5192,"Hakwaz",8,0),
+(5193,"Hakzak",8,0),
+(5194,"Hakzarn",8,0),
+(5195,"Hakzert",8,0),
+(5196,"Hakzul",8,0),
+(5197,"Halzbek",8,0),
+(5198,"Halzbirt",8,0),
+(5199,"Halzbrez",8,0),
+(5200,"Halzdor",8,0),
+(5201,"Halzkal",8,0),
+(5202,"Halzlek",8,0),
+(5203,"Halzlok",8,0),
+(5204,"Halzluz",8,0),
+(5205,"Halzroz",8,0),
+(5206,"Halztok",8,0),
+(5207,"Halztraz",8,0),
+(5208,"Halzwaz",8,0),
+(5209,"Halzzak",8,0),
+(5210,"Halzzarn",8,0),
+(5211,"Halzzert",8,0),
+(5212,"Halzzul",8,0),
+(5213,"Harnbek",8,0),
+(5214,"Harnbirt",8,0),
+(5215,"Harnbrez",8,0),
+(5216,"Harndor",8,0),
+(5217,"Harnkal",8,0),
+(5218,"Harnlek",8,0),
+(5219,"Harnlok",8,0),
+(5220,"Harnluz",8,0),
+(5221,"Harnroz",8,0),
+(5222,"Harntok",8,0),
+(5223,"Harntraz",8,0),
+(5224,"Harnwaz",8,0),
+(5225,"Harnzak",8,0),
+(5226,"Harnzarn",8,0),
+(5227,"Harnzert",8,0),
+(5228,"Harnzul",8,0),
+(5229,"Hazbek",8,0),
+(5230,"Hazbirt",8,0),
+(5231,"Hazbrez",8,0),
+(5232,"Hazdor",8,0),
+(5233,"Hazkal",8,0),
+(5234,"Hazlek",8,0),
+(5235,"Hazlok",8,0),
+(5236,"Hazluz",8,0),
+(5237,"Hazroz",8,0),
+(5238,"Haztok",8,0),
+(5239,"Haztraz",8,0),
+(5240,"Hazwaz",8,0),
+(5241,"Hazzak",8,0),
+(5242,"Hazzarn",8,0),
+(5243,"Hazzert",8,0),
+(5244,"Hazzul",8,0),
+(5245,"Hetbek",8,0),
+(5246,"Hetbirt",8,0),
+(5247,"Hetbrez",8,0),
+(5248,"Hetdor",8,0),
+(5249,"Hetkal",8,0),
+(5250,"Hetlek",8,0),
+(5251,"Hetlok",8,0),
+(5252,"Hetluz",8,0),
+(5253,"Hetroz",8,0),
+(5254,"Hettok",8,0),
+(5255,"Hettraz",8,0),
+(5256,"Hetwaz",8,0),
+(5257,"Hetzak",8,0),
+(5258,"Hetzarn",8,0),
+(5259,"Hetzert",8,0),
+(5260,"Hetzul",8,0),
+(5261,"Hortbek",8,0),
+(5262,"Hortbirt",8,0),
+(5263,"Hortbrez",8,0),
+(5264,"Hortdor",8,0),
+(5265,"Hortkal",8,0),
+(5266,"Hortlek",8,0),
+(5267,"Hortlok",8,0),
+(5268,"Hortluz",8,0),
+(5269,"Hortroz",8,0),
+(5270,"Horttok",8,0),
+(5271,"Horttraz",8,0),
+(5272,"Hortwaz",8,0),
+(5273,"Hortzak",8,0),
+(5274,"Hortzarn",8,0),
+(5275,"Hortzert",8,0),
+(5276,"Hortzul",8,0),
+(5277,"Hozbek",8,0),
+(5278,"Hozbirt",8,0),
+(5279,"Hozbrez",8,0),
+(5280,"Hozdor",8,0),
+(5281,"Hozkal",8,0),
+(5282,"Hozlek",8,0),
+(5283,"Hozlok",8,0),
+(5284,"Hozluz",8,0),
+(5285,"Hozroz",8,0),
+(5286,"Hoztok",8,0),
+(5287,"Hoztraz",8,0),
+(5288,"Hozwaz",8,0),
+(5289,"Hozzak",8,0),
+(5290,"Hozzarn",8,0),
+(5291,"Hozzert",8,0),
+(5292,"Hozzul",8,0),
+(5293,"Irkbek",8,0),
+(5294,"Irkbirt",8,0),
+(5295,"Irkbrez",8,0),
+(5296,"Irkdor",8,0),
+(5297,"Irkkal",8,0),
+(5298,"Irklek",8,0),
+(5299,"Irklok",8,0),
+(5300,"Irkluz",8,0),
+(5301,"Irkroz",8,0),
+(5302,"Irktok",8,0),
+(5303,"Irktraz",8,0),
+(5304,"Irkwaz",8,0),
+(5305,"Irkzak",8,0),
+(5306,"Irkzarn",8,0),
+(5307,"Irkzert",8,0),
+(5308,"Irkzul",8,0),
+(5309,"Jabbek",8,0),
+(5310,"Jabbirt",8,0),
+(5311,"Jabbrez",8,0),
+(5312,"Jabdor",8,0),
+(5313,"Jabkal",8,0),
+(5314,"Jablek",8,0),
+(5315,"Jablok",8,0),
+(5316,"Jabluz",8,0),
+(5317,"Jabroz",8,0),
+(5318,"Jabtok",8,0),
+(5319,"Jabtraz",8,0),
+(5320,"Jabwaz",8,0),
+(5321,"Jabzak",8,0),
+(5322,"Jabzarn",8,0),
+(5323,"Jabzert",8,0),
+(5324,"Jabzul",8,0),
+(5325,"Jaddor",8,0),
+(5326,"Jarlbek",8,0),
+(5327,"Jarlbirt",8,0),
+(5328,"Jarlbrez",8,0),
+(5329,"Jarldor",8,0),
+(5330,"Jarlkal",8,0),
+(5331,"Jarllek",8,0),
+(5332,"Jarllok",8,0),
+(5333,"Jarlluz",8,0),
+(5334,"Jarlroz",8,0),
+(5335,"Jarltok",8,0),
+(5336,"Jarltraz",8,0),
+(5337,"Jarlwaz",8,0),
+(5338,"Jarlzak",8,0),
+(5339,"Jarlzarn",8,0),
+(5340,"Jarlzert",8,0),
+(5341,"Jarlzul",8,0),
+(5342,"Jatbek",8,0),
+(5343,"Jatbirt",8,0),
+(5344,"Jatbrez",8,0),
+(5345,"Jatdor",8,0),
+(5346,"Jatkal",8,0),
+(5347,"Jatlek",8,0),
+(5348,"Jatlok",8,0),
+(5349,"Jatluz",8,0),
+(5350,"Jatroz",8,0),
+(5351,"Jattok",8,0),
+(5352,"Jattraz",8,0),
+(5353,"Jatwaz",8,0),
+(5354,"Jatzak",8,0),
+(5355,"Jatzarn",8,0),
+(5356,"Jatzert",8,0),
+(5357,"Jatzul",8,0),
+(5358,"Jelbek",8,0),
+(5359,"Jelbirt",8,0),
+(5360,"Jelbrez",8,0),
+(5361,"Jelkal",8,0),
+(5362,"Jellek",8,0),
+(5363,"Jellok",8,0),
+(5364,"Jelluz",8,0),
+(5365,"Jelroz",8,0),
+(5366,"Jeltok",8,0),
+(5367,"Jeltraz",8,0),
+(5368,"Jelwaz",8,0),
+(5369,"Jelzak",8,0),
+(5370,"Jelzarn",8,0),
+(5371,"Jelzert",8,0),
+(5372,"Jelzul",8,0),
+(5373,"Jentbek",8,0),
+(5374,"Jentbirt",8,0),
+(5375,"Jentdor",8,0),
+(5376,"Jentlek",8,0),
+(5377,"Jentluz",8,0),
+(5378,"Jentzak",8,0),
+(5379,"Jentzarn",8,0),
+(5380,"Jentzert",8,0),
+(5381,"Jerbek",8,0),
+(5382,"Jerbirt",8,0),
+(5383,"Jerbrez",8,0),
+(5384,"Jerdor",8,0),
+(5385,"Jerkal",8,0),
+(5386,"Jerlek",8,0),
+(5387,"Jerlok",8,0),
+(5388,"Jerluz",8,0),
+(5389,"Jerroz",8,0),
+(5390,"Jertok",8,0),
+(5391,"Jertraz",8,0),
+(5392,"Jerwaz",8,0),
+(5393,"Jerzak",8,0),
+(5394,"Jerzarn",8,0),
+(5395,"Jerzert",8,0),
+(5396,"Jerzul",8,0),
+(5397,"Jitbek",8,0),
+(5398,"Jitbirt",8,0),
+(5399,"Jitbrez",8,0),
+(5400,"Jitdor",8,0),
+(5401,"Jitkal",8,0),
+(5402,"Jitlek",8,0),
+(5403,"Jitlok",8,0),
+(5404,"Jitluz",8,0),
+(5405,"Jitroz",8,0),
+(5406,"Jittok",8,0),
+(5407,"Jittraz",8,0),
+(5408,"Jitwaz",8,0),
+(5409,"Jitzak",8,0),
+(5410,"Jitzarn",8,0),
+(5411,"Jitzert",8,0),
+(5412,"Jitzul",8,0),
+(5413,"Jofbek",8,0),
+(5414,"Jofbirt",8,0),
+(5415,"Jofbrez",8,0),
+(5416,"Jofdor",8,0),
+(5417,"Jofkal",8,0),
+(5418,"Joflek",8,0),
+(5419,"Joflok",8,0),
+(5420,"Jofluz",8,0),
+(5421,"Jofroz",8,0),
+(5422,"Joftok",8,0),
+(5423,"Joftraz",8,0),
+(5424,"Jofwaz",8,0),
+(5425,"Jofzak",8,0),
+(5426,"Jofzarn",8,0),
+(5427,"Jofzert",8,0),
+(5428,"Jofzul",8,0),
+(5429,"Jozbek",8,0),
+(5430,"Jozbirt",8,0),
+(5431,"Jozbrez",8,0),
+(5432,"Jozdor",8,0),
+(5433,"Jozkal",8,0),
+(5434,"Jozlek",8,0),
+(5435,"Jozlok",8,0),
+(5436,"Jozluz",8,0),
+(5437,"Jozroz",8,0),
+(5438,"Joztok",8,0),
+(5439,"Joztraz",8,0),
+(5440,"Jozwaz",8,0),
+(5441,"Jozzak",8,0),
+(5442,"Jozzarn",8,0),
+(5443,"Jozzert",8,0),
+(5444,"Jozzul",8,0),
+(5445,"Quinbek",8,0),
+(5446,"Quinbirt",8,0),
+(5447,"Quinbrez",8,0),
+(5448,"Quindor",8,0),
+(5449,"Quinkal",8,0),
+(5450,"Quinlek",8,0),
+(5451,"Quinlok",8,0),
+(5452,"Quinluz",8,0),
+(5453,"Quinroz",8,0),
+(5454,"Quintok",8,0),
+(5455,"Quintraz",8,0),
+(5456,"Quinwaz",8,0),
+(5457,"Quinzak",8,0),
+(5458,"Quinzarn",8,0),
+(5459,"Quinzert",8,0),
+(5460,"Quinzul",8,0),
+(368,"Zora",8,1),
+(369,"Zuel",8,1),
+(370,"Malia",8,1),
+(371,"Rainda",8,1),
+(372,"Parax",8,1),
+(373,"Mandi",8,1),
+(374,"Clypsa",8,1),
+(375,"Cassiopea",8,1),
+(376,"Hectae",8,1),
+(377,"Zurah",8,1),
+(378,"Debria",8,1),
+(379,"Jezpala",8,1),
+(380,"Mariz",8,1),
+(381,"Khandia",8,1),
+(382,"Branda",8,1),
+(383,"Lortunda",8,1),
+(384,"Zumwa",8,1),
+(385,"Zeeria",8,1),
+(386,"Daylis",8,1),
+(1732,"Abeni",8,1),
+(1733,"Abiba",8,1),
+(1734,"Akuti",8,1),
+(1735,"Bari",8,1),
+(1736,"Biku",8,1),
+(1737,"Bindiya",8,1),
+(1738,"Bula",8,1),
+(1739,"Chavi",8,1),
+(1740,"Dani",8,1),
+(1741,"Divya",8,1),
+(1742,"Faiza",8,1),
+(1743,"Faviola",8,1),
+(1744,"Fola",8,1),
+(1745,"Gopi",8,1),
+(1746,"Gupla",8,1),
+(1747,"Habiji",8,1),
+(1748,"Hilda",8,1),
+(1749,"Ikula",8,1),
+(1750,"Isoke",8,1),
+(1751,"Jayanti",8,1),
+(1752,"Jemma",8,1),
+(1753,"Jenja",8,1),
+(1754,"Juana",8,1),
+(1755,"Junazee",8,1),
+(1756,"Jyoti",8,1),
+(1757,"Kadiya",8,1),
+(1758,"Kanini",8,1),
+(1759,"Kaviji",8,1),
+(1760,"Keisha",8,1),
+(1761,"Keva",8,1),
+(1762,"Lakisha",8,1),
+(1763,"Lata",8,1),
+(1764,"Leelu",8,1),
+(1765,"Mammou",8,1),
+(1766,"Marjani",8,1),
+(1767,"Meena",8,1),
+(1768,"Merti",8,1),
+(1769,"Pemba",8,1),
+(1770,"Raja",8,1),
+(1771,"Rashida",8,1),
+(1772,"Rimuna",8,1),
+(1773,"Safiya",8,1),
+(1774,"Shandi",8,1),
+(1775,"Sharti",8,1),
+(1776,"Sillazee",8,1),
+(1777,"Sinda",8,1),
+(1778,"Sukutai",8,1),
+(1779,"Suweela",8,1),
+(1780,"Takiyah",8,1),
+(1781,"Tali",8,1),
+(1782,"Tamorica",8,1),
+(1783,"Tanisha",8,1),
+(1784,"Vashuni",8,1),
+(1785,"Walmi",8,1),
+(1786,"Zania",8,1),
+(1787,"Zarah",8,1),
+(1788,"Zarinda",8,1),
+(1789,"Zillah",8,1),
+(1790,"Zina",8,1),
+(1791,"Zulah",8,1),
+(5461,"Jazbek",8,1),
+(5462,"Jazbirt",8,1),
+(5463,"Jazbrez",8,1),
+(5464,"Jazdor",8,1),
+(5465,"Jazkal",8,1),
+(5466,"Jazlek",8,1),
+(5467,"Jazlok",8,1),
+(5468,"Jazluz",8,1),
+(5469,"Jazroz",8,1),
+(5470,"Jaztok",8,1),
+(5471,"Jaztraz",8,1),
+(5472,"Jazwaz",8,1),
+(5473,"Jazzak",8,1),
+(5474,"Jazzarn",8,1),
+(5475,"Jazzert",8,1),
+(5476,"Jazzul",8,1),
+(5477,"Jentbrez",8,1),
+(5478,"Jentkal",8,1),
+(5479,"Jentlok",8,1),
+(5480,"Jentroz",8,1),
+(5481,"Jenttok",8,1),
+(5482,"Jenttraz",8,1),
+(5483,"Jentwaz",8,1),
+(5484,"Jentzul",8,1),
+(5485,"Jezbek",8,1),
+(5486,"Jezbirt",8,1),
+(5487,"Jezbrez",8,1),
+(5488,"Jezdor",8,1),
+(5489,"Jezkal",8,1),
+(5490,"Jezlek",8,1),
+(5491,"Jezlok",8,1),
+(5492,"Jezluz",8,1),
+(5493,"Jezroz",8,1),
+(5494,"Jeztok",8,1),
+(5495,"Jeztraz",8,1),
+(5496,"Jezwaz",8,1),
+(5497,"Jezzak",8,1),
+(5498,"Jezzarn",8,1),
+(5499,"Jezzert",8,1),
+(5500,"Jezzul",8,1),
+(5501,"Jirnbek",8,1),
+(5502,"Jirnbirt",8,1),
+(5503,"Jirnbrez",8,1),
+(5504,"Jirndor",8,1),
+(5505,"Jirnkal",8,1),
+(5506,"Jirnlek",8,1),
+(5507,"Jirnlok",8,1),
+(5508,"Jirnluz",8,1),
+(5509,"Jirnroz",8,1),
+(5510,"Jirntok",8,1),
+(5511,"Jirntraz",8,1),
+(5512,"Jirnwaz",8,1),
+(5513,"Jirnzak",8,1),
+(5514,"Jirnzarn",8,1),
+(5515,"Jirnzert",8,1),
+(5516,"Jirnzul",8,1),
+(5517,"Jorbek",8,1),
+(5518,"Jorbirt",8,1),
+(5519,"Jorbrez",8,1),
+(5520,"Jordor",8,1),
+(5521,"Jorkal",8,1),
+(5522,"Jorlek",8,1),
+(5523,"Jorlok",8,1),
+(5524,"Jorluz",8,1),
+(5525,"Jorroz",8,1),
+(5526,"Jortok",8,1),
+(5527,"Jortraz",8,1),
+(5528,"Jorwaz",8,1),
+(5529,"Jorzak",8,1),
+(5530,"Jorzarn",8,1),
+(5531,"Jorzert",8,1),
+(5532,"Jorzul",8,1),
+(5533,"Jurtbek",8,1),
+(5534,"Jurtbirt",8,1),
+(5535,"Jurtbrez",8,1),
+(5536,"Jurtdor",8,1),
+(5537,"Jurtkal",8,1),
+(5538,"Jurtlek",8,1),
+(5539,"Jurtlok",8,1),
+(5540,"Jurtluz",8,1),
+(5541,"Jurtroz",8,1),
+(5542,"Jurttok",8,1),
+(5543,"Jurttraz",8,1),
+(5544,"Jurtwaz",8,1),
+(5545,"Jurtzak",8,1),
+(5546,"Jurtzarn",8,1),
+(5547,"Jurtzert",8,1),
+(5548,"Jurtzul",8,1),
+(5549,"Kazbek",8,1),
+(5550,"Kazbirt",8,1),
+(5551,"Kazbrez",8,1),
+(5552,"Kazdor",8,1),
+(5553,"Kazkal",8,1),
+(5554,"Kazlek",8,1),
+(5555,"Kazlok",8,1),
+(5556,"Kazluz",8,1),
+(5557,"Kazroz",8,1),
+(5558,"Kaztok",8,1),
+(5559,"Kaztraz",8,1),
+(5560,"Kazwaz",8,1),
+(5561,"Kazzak",8,1),
+(5562,"Kazzarn",8,1),
+(5563,"Kazzert",8,1),
+(5564,"Kazzul",8,1),
+(5565,"Kirtbek",8,1),
+(5566,"Kirtbirt",8,1),
+(5567,"Kirtbrez",8,1),
+(5568,"Kirtdor",8,1),
+(5569,"Kirtkal",8,1),
+(5570,"Kirtlek",8,1),
+(5571,"Kirtlok",8,1),
+(5572,"Kirtluz",8,1),
+(5573,"Kirtroz",8,1),
+(5574,"Kirttok",8,1),
+(5575,"Kirttraz",8,1),
+(5576,"Kirtwaz",8,1),
+(5577,"Kirtzak",8,1),
+(5578,"Kirtzarn",8,1),
+(5579,"Kirtzert",8,1),
+(5580,"Kirtzul",8,1),
+(5581,"Kurnbek",8,1),
+(5582,"Kurnbirt",8,1),
+(5583,"Kurnbrez",8,1),
+(5584,"Kurndor",8,1),
+(5585,"Kurnkal",8,1),
+(5586,"Kurnlek",8,1),
+(5587,"Kurnlok",8,1),
+(5588,"Kurnluz",8,1),
+(5589,"Kurnroz",8,1),
+(5590,"Kurntok",8,1),
+(5591,"Kurntraz",8,1),
+(5592,"Kurnwaz",8,1),
+(5593,"Kurnzak",8,1),
+(5594,"Kurnzarn",8,1),
+(5595,"Kurnzert",8,1),
+(5596,"Kurnzul",8,1),
+(5597,"Kutbek",8,1),
+(5598,"Kutbirt",8,1),
+(5599,"Kutbrez",8,1),
+(5600,"Kutdor",8,1),
+(5601,"Kutkal",8,1),
+(5602,"Kutlek",8,1),
+(5603,"Kutlok",8,1),
+(5604,"Kutluz",8,1),
+(5605,"Kutroz",8,1),
+(5606,"Kuttok",8,1),
+(5607,"Kuttraz",8,1),
+(5608,"Kutwaz",8,1),
+(5609,"Kutzak",8,1),
+(5610,"Kutzarn",8,1),
+(5611,"Kutzert",8,1),
+(5612,"Kutzul",8,1),
+(5613,"Larnbek",8,1),
+(5614,"Larnbirt",8,1),
+(5615,"Larnbrez",8,1),
+(5616,"Larndor",8,1),
+(5617,"Larnkal",8,1),
+(5618,"Larnlek",8,1),
+(5619,"Larnlok",8,1),
+(5620,"Larnluz",8,1),
+(5621,"Larnroz",8,1),
+(5622,"Larntok",8,1),
+(5623,"Larntraz",8,1),
+(5624,"Larnwaz",8,1),
+(5625,"Larnzak",8,1),
+(5626,"Larnzarn",8,1),
+(5627,"Larnzert",8,1),
+(5628,"Larnzul",8,1),
+(5629,"Lazbek",8,1),
+(5630,"Lazbirt",8,1),
+(5631,"Lazbrez",8,1),
+(5632,"Lazdor",8,1),
+(5633,"Lazkal",8,1),
+(5634,"Lazlek",8,1),
+(5635,"Lazlok",8,1),
+(5636,"Lazluz",8,1),
+(5637,"Lazroz",8,1),
+(5638,"Laztok",8,1),
+(5639,"Laztraz",8,1),
+(5640,"Lazwaz",8,1),
+(5641,"Lazzak",8,1),
+(5642,"Lazzarn",8,1),
+(5643,"Lazzert",8,1),
+(5644,"Lazzul",8,1),
+(5645,"Lerzbek",8,1),
+(5646,"Lerzbirt",8,1),
+(5647,"Lerzbrez",8,1),
+(5648,"Lerzdor",8,1),
+(5649,"Lerzkal",8,1),
+(5650,"Lerzlek",8,1),
+(5651,"Lerzlok",8,1),
+(5652,"Lerzluz",8,1),
+(5653,"Lerzroz",8,1),
+(5654,"Lerztok",8,1),
+(5655,"Lerztraz",8,1),
+(5656,"Lerzwaz",8,1),
+(5657,"Lerzzak",8,1),
+(5658,"Lerzzarn",8,1),
+(5659,"Lerzzert",8,1),
+(5660,"Lerzzul",8,1),
+(5661,"Linzbek",8,1),
+(5662,"Linzbirt",8,1),
+(5663,"Linzbrez",8,1),
+(5664,"Linzdor",8,1),
+(5665,"Linzkal",8,1),
+(5666,"Linzlek",8,1),
+(5667,"Linzlok",8,1),
+(5668,"Linzluz",8,1),
+(5669,"Linzroz",8,1),
+(5670,"Linztok",8,1),
+(5671,"Linztraz",8,1),
+(5672,"Linzwaz",8,1),
+(5673,"Linzzak",8,1),
+(5674,"Linzzarn",8,1),
+(5675,"Linzzert",8,1),
+(5676,"Linzzul",8,1),
+(5677,"Lirkbek",8,1),
+(5678,"Lirkbirt",8,1),
+(5679,"Lirkbrez",8,1),
+(5680,"Lirkdor",8,1),
+(5681,"Lirkkal",8,1),
+(5682,"Lirklek",8,1),
+(5683,"Lirklok",8,1),
+(5684,"Lirkluz",8,1),
+(5685,"Lirkroz",8,1),
+(5686,"Lirktok",8,1),
+(5687,"Lirktraz",8,1),
+(5688,"Lirkwaz",8,1),
+(5689,"Lirkzak",8,1),
+(5690,"Lirkzarn",8,1),
+(5691,"Lirkzert",8,1),
+(5692,"Lirkzul",8,1),
+(5693,"Luntbek",8,1),
+(5694,"Luntbirt",8,1),
+(5695,"Luntbrez",8,1),
+(5696,"Luntdor",8,1),
+(5697,"Luntkal",8,1),
+(5698,"Luntlek",8,1),
+(5699,"Luntlok",8,1),
+(5700,"Luntluz",8,1),
+(5701,"Luntroz",8,1),
+(5702,"Lunttok",8,1),
+(5703,"Lunttraz",8,1),
+(5704,"Luntwaz",8,1),
+(5705,"Luntzak",8,1),
+(5706,"Luntzarn",8,1),
+(5707,"Luntzert",8,1),
+(5708,"Luntzul",8,1),
+(5709,"Marnbek",8,1),
+(5710,"Marnbirt",8,1),
+(5711,"Marnbrez",8,1),
+(5712,"Marndor",8,1),
+(5713,"Marnkal",8,1),
+(5714,"Marnlek",8,1),
+(5715,"Marnlok",8,1),
+(5716,"Marnluz",8,1),
+(5717,"Marnroz",8,1),
+(5718,"Marntok",8,1),
+(5719,"Marntraz",8,1),
+(5720,"Marnwaz",8,1),
+(5721,"Marnzak",8,1),
+(5722,"Marnzarn",8,1),
+(5723,"Marnzert",8,1),
+(5724,"Marnzul",8,1),
+(5725,"Mazbek",8,1),
+(5726,"Mazbirt",8,1),
+(5727,"Mazbrez",8,1),
+(5728,"Mazdor",8,1),
+(5729,"Mazkal",8,1),
+(5730,"Mazlek",8,1),
+(5731,"Mazlok",8,1),
+(5732,"Mazluz",8,1),
+(5733,"Mazroz",8,1),
+(5734,"Maztok",8,1),
+(5735,"Maztraz",8,1),
+(5736,"Mazwaz",8,1),
+(5737,"Mazzak",8,1),
+(5738,"Mazzarn",8,1),
+(5739,"Mazzert",8,1),
+(5740,"Mazzul",8,1),
+(5741,"Narzbek",8,1),
+(5742,"Narzbirt",8,1),
+(5743,"Narzbrez",8,1),
+(5744,"Narzdor",8,1),
+(5745,"Narzkal",8,1),
+(5746,"Narzlek",8,1),
+(5747,"Narzlok",8,1),
+(5748,"Narzluz",8,1),
+(5749,"Narzroz",8,1),
+(5750,"Narztok",8,1),
+(5751,"Narztraz",8,1),
+(5752,"Narzwaz",8,1),
+(5753,"Narzzak",8,1),
+(5754,"Narzzarn",8,1),
+(5755,"Narzzert",8,1),
+(5756,"Narzzul",8,1),
+(5757,"Nezbek",8,1),
+(5758,"Nezbirt",8,1),
+(5759,"Nezbrez",8,1),
+(5760,"Nezdor",8,1),
+(5761,"Nezkal",8,1),
+(5762,"Nezlek",8,1),
+(5763,"Nezlok",8,1),
+(5764,"Nezluz",8,1),
+(5765,"Nezroz",8,1),
+(5766,"Neztok",8,1),
+(5767,"Neztraz",8,1),
+(5768,"Nezwaz",8,1),
+(5769,"Nezzarn",8,1),
+(5770,"Nezzert",8,1),
+(5771,"Nezzul",8,1),
+(5772,"Nortbek",8,1),
+(5773,"Nortbirt",8,1),
+(5774,"Nortbrez",8,1),
+(5775,"Nortdor",8,1),
+(5776,"Nortkal",8,1),
+(5777,"Nortlek",8,1),
+(5778,"Nortlok",8,1),
+(5779,"Nortluz",8,1),
+(5780,"Nortroz",8,1),
+(5781,"Norttok",8,1),
+(5782,"Norttraz",8,1),
+(5783,"Nortwaz",8,1),
+(5784,"Nortzak",8,1),
+(5785,"Nortzarn",8,1),
+(5786,"Nortzert",8,1),
+(5787,"Nortzul",8,1),
+(5788,"Ortbek",8,1),
+(5789,"Ortbirt",8,1),
+(5790,"Ortbrez",8,1),
+(5791,"Ortdor",8,1),
+(5792,"Ortkal",8,1),
+(5793,"Ortlek",8,1),
+(5794,"Ortlok",8,1),
+(5795,"Ortluz",8,1),
+(5796,"Ortroz",8,1),
+(5797,"Orttok",8,1),
+(5798,"Orttraz",8,1),
+(5799,"Ortwaz",8,1),
+(5800,"Ortzak",8,1),
+(5801,"Ortzarn",8,1),
+(5802,"Ortzert",8,1),
+(5803,"Ortzul",8,1),
+(5804,"Ozzbek",8,1),
+(5805,"Ozzbirt",8,1),
+(5806,"Ozzbrez",8,1),
+(5807,"Ozzdor",8,1),
+(5808,"Ozzkal",8,1),
+(5809,"Ozzlek",8,1),
+(5810,"Ozzlok",8,1),
+(5811,"Ozzluz",8,1),
+(5812,"Ozzroz",8,1),
+(5813,"Ozztok",8,1),
+(5814,"Ozztraz",8,1),
+(5815,"Ozzwaz",8,1),
+(5816,"Parbek",8,1),
+(5817,"Parbirt",8,1),
+(5818,"Parbrez",8,1),
+(5819,"Pardor",8,1),
+(5820,"Parkal",8,1),
+(5821,"Parlek",8,1),
+(5822,"Parlok",8,1),
+(5823,"Parluz",8,1),
+(5824,"Parnbek",8,1),
+(5825,"Parnbirt",8,1),
+(5826,"Parnbrez",8,1),
+(5827,"Parndor",8,1),
+(5828,"Parnkal",8,1),
+(5829,"Parnlek",8,1),
+(5830,"Parnlok",8,1),
+(5831,"Parnluz",8,1),
+(5832,"Parnroz",8,1),
+(5833,"Parntok",8,1),
+(5834,"Parntraz",8,1),
+(5835,"Parnwaz",8,1),
+(5836,"Parnzak",8,1),
+(5837,"Parnzarn",8,1),
+(5838,"Parnzert",8,1),
+(5839,"Parnzul",8,1),
+(5840,"Parroz",8,1),
+(5841,"Partok",8,1),
+(5842,"Partraz",8,1),
+(5843,"Parwaz",8,1),
+(5844,"Parzak",8,1),
+(5845,"Parzarn",8,1),
+(5846,"Parzert",8,1),
+(5847,"Parzul",8,1),
+(5848,"Poctbek",8,1),
+(5849,"Poctbirt",8,1),
+(5850,"Poctbrez",8,1),
+(5851,"Poctdor",8,1),
+(5852,"Poctkal",8,1),
+(5853,"Poctlek",8,1),
+(5854,"Poctlok",8,1),
+(5855,"Poctluz",8,1),
+(5856,"Poctroz",8,1),
+(5857,"Pocttok",8,1),
+(5858,"Pocttraz",8,1),
+(5859,"Poctwaz",8,1),
+(5860,"Poctzak",8,1),
+(5861,"Poctzarn",8,1),
+(5862,"Poctzert",8,1),
+(5863,"Poctzul",8,1),
+(5864,"Porlbek",8,1),
+(5865,"Porlbirt",8,1),
+(5866,"Porlbrez",8,1),
+(5867,"Porldor",8,1),
+(5868,"Porlkal",8,1),
+(5869,"Porllek",8,1),
+(5870,"Porllok",8,1),
+(5871,"Porlluz",8,1),
+(5872,"Porlroz",8,1),
+(5873,"Porltok",8,1),
+(5874,"Porltraz",8,1),
+(5875,"Porlwaz",8,1),
+(5876,"Porlzak",8,1),
+(5877,"Porlzarn",8,1),
+(5878,"Porlzert",8,1),
+(5879,"Porlzul",8,1),
+(5880,"Rapbek",8,1),
+(5881,"Rapbirt",8,1),
+(5882,"Rapbrez",8,1),
+(5883,"Rapdor",8,1),
+(5884,"Rapkal",8,1),
+(5885,"Raplek",8,1),
+(5886,"Raplok",8,1),
+(5887,"Rapluz",8,1),
+(5888,"Raproz",8,1),
+(5889,"Raptok",8,1),
+(5890,"Raptraz",8,1),
+(5891,"Rapwaz",8,1),
+(5892,"Rapzak",8,1),
+(5893,"Rapzarn",8,1),
+(5894,"Rapzert",8,1),
+(5895,"Rapzul",8,1),
+(5896,"Renzbek",8,1),
+(5897,"Renzbirt",8,1),
+(5898,"Renzbrez",8,1),
+(5899,"Renzdor",8,1),
+(5900,"Renzkal",8,1),
+(5901,"Renzlek",8,1),
+(5902,"Renzlok",8,1),
+(5903,"Renzluz",8,1),
+(5904,"Renzroz",8,1),
+(5905,"Renztok",8,1),
+(5906,"Renztraz",8,1),
+(5907,"Renzwaz",8,1),
+(5908,"Renzzak",8,1),
+(5909,"Renzzarn",8,1),
+(5910,"Renzzert",8,1),
+(5911,"Renzzul",8,1),
+(5912,"Rinbek",8,1),
+(5913,"Rinbirt",8,1),
+(5914,"Rinbrez",8,1),
+(5915,"Rindor",8,1),
+(5916,"Rinkal",8,1),
+(5917,"Rinlek",8,1),
+(5918,"Rinlok",8,1),
+(5919,"Rinluz",8,1),
+(5920,"Rinroz",8,1),
+(5921,"Rintok",8,1),
+(5922,"Rintraz",8,1),
+(5923,"Rinwaz",8,1),
+(5924,"Rinzak",8,1),
+(5925,"Rinzarn",8,1),
+(5926,"Rinzert",8,1),
+(5927,"Rinzul",8,1),
+(5928,"Rortbek",8,1),
+(5929,"Rortbirt",8,1),
+(5930,"Rortbrez",8,1),
+(5931,"Rortdor",8,1),
+(5932,"Rortkal",8,1),
+(5933,"Rortlek",8,1),
+(5934,"Rortlok",8,1),
+(5935,"Rortluz",8,1),
+(5936,"Rortroz",8,1),
+(5937,"Rorttok",8,1),
+(5938,"Rorttraz",8,1),
+(5939,"Rortwaz",8,1),
+(5940,"Rortzak",8,1),
+(5941,"Rortzarn",8,1),
+(5942,"Rortzert",8,1),
+(5943,"Rortzul",8,1),
+(5944,"Sartbek",8,1),
+(5945,"Sartbirt",8,1),
+(5946,"Sartbrez",8,1),
+(5947,"Sartdor",8,1),
+(5948,"Sartkal",8,1),
+(5949,"Sartlek",8,1),
+(5950,"Sartlok",8,1),
+(5951,"Sartluz",8,1),
+(5952,"Sartroz",8,1),
+(5953,"Sarttok",8,1),
+(5954,"Sarttraz",8,1),
+(5955,"Sartwaz",8,1),
+(5956,"Sartzak",8,1),
+(5957,"Sartzarn",8,1),
+(5958,"Sartzert",8,1),
+(5959,"Sartzul",8,1),
+(5960,"Sazbek",8,1),
+(5961,"Sazbirt",8,1),
+(5962,"Sazbrez",8,1),
+(5963,"Sazdor",8,1),
+(5964,"Sazkal",8,1),
+(5965,"Sazlek",8,1),
+(5966,"Sazlok",8,1),
+(5967,"Sazluz",8,1),
+(5968,"Sazroz",8,1),
+(5969,"Saztok",8,1),
+(5970,"Saztraz",8,1),
+(5971,"Sazwaz",8,1),
+(5972,"Sazzak",8,1),
+(5973,"Sazzarn",8,1),
+(5974,"Sazzert",8,1),
+(5975,"Sazzul",8,1),
+(5976,"Sernbek",8,1),
+(5977,"Sernbirt",8,1),
+(5978,"Sernbrez",8,1),
+(5979,"Serndor",8,1),
+(5980,"Sernkal",8,1),
+(5981,"Sernlek",8,1),
+(5982,"Sernlok",8,1),
+(5983,"Sernluz",8,1),
+(5984,"Sernroz",8,1),
+(5985,"Serntok",8,1),
+(5986,"Serntraz",8,1),
+(5987,"Sernwaz",8,1),
+(5988,"Sernzak",8,1),
+(5989,"Sernzarn",8,1),
+(5990,"Sernzert",8,1),
+(5991,"Sernzul",8,1),
+(5992,"Sirtbek",8,1),
+(5993,"Sirtbirt",8,1),
+(5994,"Sirtbrez",8,1),
+(5995,"Sirtdor",8,1),
+(5996,"Sirtkal",8,1),
+(5997,"Sirtlek",8,1),
+(5998,"Sirtlok",8,1),
+(5999,"Sirtluz",8,1),
+(6000,"Sirtroz",8,1),
+(6001,"Sirttok",8,1),
+(6002,"Sirttraz",8,1),
+(6003,"Sirtwaz",8,1),
+(6004,"Sirtzak",8,1),
+(6005,"Sirtzarn",8,1),
+(6006,"Sirtzert",8,1),
+(6007,"Sirtzul",8,1),
+(6008,"Sokbek",8,1),
+(6009,"Sokbirt",8,1),
+(6010,"Sokbrez",8,1),
+(6011,"Sokdor",8,1),
+(6012,"Sokkal",8,1),
+(6013,"Soklek",8,1),
+(6014,"Soklok",8,1),
+(6015,"Sokluz",8,1),
+(6016,"Sokroz",8,1),
+(6017,"Soktok",8,1),
+(6018,"Soktraz",8,1),
+(6019,"Sokwaz",8,1),
+(6020,"Sokzak",8,1),
+(6021,"Sokzarn",8,1),
+(6022,"Sokzert",8,1),
+(6023,"Sokzul",8,1),
+(6024,"Sornbek",8,1),
+(6025,"Sornbirt",8,1),
+(6026,"Sornbrez",8,1),
+(6027,"Sorndor",8,1),
+(6028,"Sornkal",8,1),
+(6029,"Sornlek",8,1),
+(6030,"Sornlok",8,1),
+(6031,"Sornluz",8,1),
+(6032,"Sornroz",8,1),
+(6033,"Sorntok",8,1),
+(6034,"Sorntraz",8,1),
+(6035,"Sornwaz",8,1),
+(6036,"Sornzak",8,1),
+(6037,"Sornzarn",8,1),
+(6038,"Sornzert",8,1),
+(6039,"Sornzul",8,1),
+(6040,"Tasebek",8,1),
+(6041,"Tasebirt",8,1),
+(6042,"Tasebrez",8,1),
+(6043,"Tasedor",8,1),
+(6044,"Tasekal",8,1),
+(6045,"Taselek",8,1),
+(6046,"Taselok",8,1),
+(6047,"Taseluz",8,1),
+(6048,"Taseroz",8,1),
+(6049,"Tasetok",8,1),
+(6050,"Tasetraz",8,1),
+(6051,"Tasewaz",8,1),
+(6052,"Tasezak",8,1),
+(6053,"Tasezarn",8,1),
+(6054,"Tasezert",8,1),
+(6055,"Tasezul",8,1),
+(6056,"Tazbek",8,1),
+(6057,"Tazbirt",8,1),
+(6058,"Tazbrez",8,1),
+(6059,"Tazdor",8,1),
+(6060,"Tazkal",8,1),
+(6061,"Tazlek",8,1),
+(6062,"Tazlok",8,1),
+(6063,"Tazluz",8,1),
+(6064,"Tazroz",8,1),
+(6065,"Taztok",8,1),
+(6066,"Taztraz",8,1),
+(6067,"Tazwaz",8,1),
+(6068,"Tazzak",8,1),
+(6069,"Tazzarn",8,1),
+(6070,"Tazzert",8,1),
+(6071,"Tazzul",8,1),
+(6072,"Tirnbek",8,1),
+(6073,"Tirnbirt",8,1),
+(6074,"Tirnbrez",8,1),
+(6075,"Tirndor",8,1),
+(6076,"Tirnkal",8,1),
+(6077,"Tirnlek",8,1),
+(6078,"Tirnlok",8,1),
+(6079,"Tirnluz",8,1),
+(6080,"Tirnroz",8,1),
+(6081,"Tirntok",8,1),
+(6082,"Tirntraz",8,1),
+(6083,"Tirnwaz",8,1),
+(6084,"Tirnzak",8,1),
+(6085,"Tirnzarn",8,1),
+(6086,"Tirnzert",8,1),
+(6087,"Tirnzul",8,1),
+(6088,"Topbek",8,1),
+(6089,"Topbirt",8,1),
+(6090,"Topbrez",8,1),
+(6091,"Topdor",8,1),
+(6092,"Topkal",8,1),
+(6093,"Toplek",8,1),
+(6094,"Toplok",8,1),
+(6095,"Topluz",8,1),
+(6096,"Toproz",8,1),
+(6097,"Toptok",8,1),
+(6098,"Toptraz",8,1),
+(6099,"Topwaz",8,1),
+(6100,"Topzak",8,1),
+(6101,"Topzarn",8,1),
+(6102,"Topzert",8,1),
+(6103,"Topzul",8,1),
+(6104,"Urkbek",8,1),
+(6105,"Urkbirt",8,1),
+(6106,"Urkbrez",8,1),
+(6107,"Urkdor",8,1),
+(6108,"Urkkal",8,1),
+(6109,"Urklek",8,1),
+(6110,"Urklok",8,1),
+(6111,"Urkluz",8,1),
+(6112,"Urkroz",8,1),
+(6113,"Urktok",8,1),
+(6114,"Urktraz",8,1),
+(6115,"Urkwaz",8,1),
+(6116,"Urkzak",8,1),
+(6117,"Urkzarn",8,1),
+(6118,"Urkzert",8,1),
+(6119,"Urkzul",8,1),
+(6120,"Varbek",8,1),
+(6121,"Varbirt",8,1),
+(6122,"Varbrez",8,1),
+(6123,"Vardor",8,1),
+(6124,"Varkal",8,1),
+(6125,"Varlek",8,1),
+(6126,"Varlok",8,1),
+(6127,"Varluz",8,1),
+(6128,"Varroz",8,1),
+(6129,"Vartok",8,1),
+(6130,"Vartraz",8,1),
+(6131,"Varwaz",8,1),
+(6132,"Varzak",8,1),
+(6133,"Varzarn",8,1),
+(6134,"Varzert",8,1),
+(6135,"Varzul",8,1),
+(6136,"Vikbek",8,1),
+(6137,"Vikbirt",8,1),
+(6138,"Vikbrez",8,1),
+(6139,"Vikdor",8,1),
+(6140,"Vikkal",8,1),
+(6141,"Viklek",8,1),
+(6142,"Viklok",8,1),
+(6143,"Vikluz",8,1),
+(6144,"Vikroz",8,1),
+(6145,"Viktok",8,1),
+(6146,"Viktraz",8,1),
+(6147,"Vikwaz",8,1),
+(6148,"Vikzak",8,1),
+(6149,"Vikzarn",8,1),
+(6150,"Vikzert",8,1),
+(6151,"Vikzul",8,1),
+(6152,"Vortbek",8,1),
+(6153,"Vortbirt",8,1),
+(6154,"Vortbrez",8,1),
+(6155,"Vortdor",8,1),
+(6156,"Vortkal",8,1),
+(6157,"Vortlek",8,1),
+(6158,"Vortlok",8,1),
+(6159,"Vortluz",8,1),
+(6160,"Vortroz",8,1),
+(6161,"Vorttok",8,1),
+(6162,"Vorttraz",8,1),
+(6163,"Vortwaz",8,1),
+(6164,"Vortzak",8,1),
+(6165,"Vortzarn",8,1),
+(6166,"Vortzert",8,1),
+(6167,"Vortzul",8,1),
+(6168,"Vozbek",8,1),
+(6169,"Vozbirt",8,1),
+(6170,"Vozbrez",8,1),
+(6171,"Vozdor",8,1),
+(6172,"Vozkal",8,1),
+(6173,"Vozlek",8,1),
+(6174,"Vozlok",8,1),
+(6175,"Vozluz",8,1),
+(6176,"Vozroz",8,1),
+(6177,"Voztok",8,1),
+(6178,"Voztraz",8,1),
+(6179,"Vozwaz",8,1),
+(6180,"Vozzak",8,1),
+(6181,"Vozzarn",8,1),
+(6182,"Vozzert",8,1),
+(6183,"Vozzul",8,1),
+(6184,"Wazbek",8,1),
+(6185,"Wazbirt",8,1),
+(6186,"Wazbrez",8,1),
+(6187,"Wazdor",8,1),
+(6188,"Wazkal",8,1),
+(6189,"Wazlek",8,1),
+(6190,"Wazlok",8,1),
+(6191,"Wazluz",8,1),
+(6192,"Wazroz",8,1),
+(6193,"Waztok",8,1),
+(6194,"Waztraz",8,1),
+(6195,"Wazwaz",8,1),
+(6196,"Wazzak",8,1),
+(6197,"Wazzarn",8,1),
+(6198,"Wazzert",8,1),
+(6199,"Wazzul",8,1),
+(6200,"Wertbek",8,1),
+(6201,"Wertbirt",8,1),
+(6202,"Wertbrez",8,1),
+(6203,"Wertdor",8,1),
+(6204,"Wertkal",8,1),
+(6205,"Wertlek",8,1),
+(6206,"Wertlok",8,1),
+(6207,"Wertluz",8,1),
+(6208,"Wertroz",8,1),
+(6209,"Werttok",8,1),
+(6210,"Werttraz",8,1),
+(6211,"Wertwaz",8,1),
+(6212,"Wertzak",8,1),
+(6213,"Wertzarn",8,1),
+(6214,"Wertzert",8,1),
+(6215,"Wertzul",8,1),
+(6216,"Woxbek",8,1),
+(6217,"Woxbirt",8,1),
+(6218,"Woxbrez",8,1),
+(6219,"Woxdor",8,1),
+(6220,"Woxkal",8,1),
+(6221,"Woxlek",8,1),
+(6222,"Woxlok",8,1),
+(6223,"Woxluz",8,1),
+(6224,"Woxroz",8,1),
+(6225,"Woxtok",8,1),
+(6226,"Woxtraz",8,1),
+(6227,"Woxwaz",8,1),
+(6228,"Woxzak",8,1),
+(6229,"Woxzarn",8,1),
+(6230,"Woxzert",8,1),
+(6231,"Woxzul",8,1),
+(6232,"Xarbek",8,1),
+(6233,"Xarbirt",8,1),
+(6234,"Xarbrez",8,1),
+(6235,"Xardor",8,1),
+(6236,"Xarkal",8,1),
+(6237,"Xarlek",8,1),
+(6238,"Xarlok",8,1),
+(6239,"Xarluz",8,1),
+(6240,"Xarroz",8,1),
+(6241,"Xartok",8,1),
+(6242,"Xartraz",8,1),
+(6243,"Xarwaz",8,1),
+(6244,"Xarzak",8,1),
+(6245,"Xarzarn",8,1),
+(6246,"Xarzert",8,1),
+(6247,"Xarzul",8,1),
+(6248,"Xenbek",8,1),
+(6249,"Xenbirt",8,1),
+(6250,"Xenbrez",8,1),
+(6251,"Xendor",8,1),
+(6252,"Xenkal",8,1),
+(6253,"Xenlek",8,1),
+(6254,"Xenlok",8,1),
+(6255,"Xenluz",8,1),
+(6256,"Xenroz",8,1),
+(6257,"Xentok",8,1),
+(6258,"Xentraz",8,1),
+(6259,"Xenwaz",8,1),
+(6260,"Xenzak",8,1),
+(6261,"Xenzarn",8,1),
+(6262,"Xenzert",8,1),
+(6263,"Xenzul",8,1),
+(6264,"Xertbek",8,1),
+(6265,"Xertbirt",8,1),
+(6266,"Xertbrez",8,1),
+(6267,"Xertdor",8,1),
+(6268,"Xertkal",8,1),
+(6269,"Xertlek",8,1),
+(6270,"Xertlok",8,1),
+(6271,"Xertluz",8,1),
+(6272,"Xertroz",8,1),
+(6273,"Xerttok",8,1),
+(6274,"Xerttraz",8,1),
+(6275,"Xertwaz",8,1),
+(6276,"Xertzak",8,1),
+(6277,"Xertzarn",8,1),
+(6278,"Xertzert",8,1),
+(6279,"Xertzul",8,1),
+(6280,"Yazbek",8,1),
+(6281,"Yazbirt",8,1),
+(6282,"Yazbrez",8,1),
+(6283,"Yazdor",8,1),
+(6284,"Yazkal",8,1),
+(6285,"Yazlek",8,1),
+(6286,"Yazlok",8,1),
+(6287,"Yazluz",8,1),
+(6288,"Yazroz",8,1),
+(6289,"Yaztok",8,1),
+(6290,"Yaztraz",8,1),
+(6291,"Yazwaz",8,1),
+(6292,"Yazzak",8,1),
+(6293,"Yazzarn",8,1),
+(6294,"Yazzert",8,1),
+(6295,"Yazzul",8,1),
+(6296,"Yirtbek",8,1),
+(6297,"Yirtbirt",8,1),
+(6298,"Yirtbrez",8,1),
+(6299,"Yirtdor",8,1),
+(6300,"Yirtkal",8,1),
+(6301,"Yirtlek",8,1),
+(6302,"Yirtlok",8,1),
+(6303,"Yirtluz",8,1),
+(6304,"Yirtroz",8,1),
+(6305,"Yirttok",8,1),
+(6306,"Yirttraz",8,1),
+(6307,"Yirtwaz",8,1),
+(6308,"Yirtzak",8,1),
+(6309,"Yirtzarn",8,1),
+(6310,"Yirtzert",8,1),
+(6311,"Yirtzul",8,1),
+(6312,"Yunbek",8,1),
+(6313,"Yunbirt",8,1),
+(6314,"Yunbrez",8,1),
+(6315,"Yundor",8,1),
+(6316,"Yunkal",8,1),
+(6317,"Yunlek",8,1),
+(6318,"Yunlok",8,1),
+(6319,"Yunluz",8,1),
+(6320,"Yunroz",8,1),
+(6321,"Yuntok",8,1),
+(6322,"Yuntraz",8,1),
+(6323,"Yunwaz",8,1),
+(6324,"Yunzak",8,1),
+(6325,"Yunzarn",8,1),
+(6326,"Yunzert",8,1),
+(6327,"Yunzul",8,1),
+(6328,"Zakbek",8,1),
+(6329,"Zakbirt",8,1),
+(6330,"Zakbrez",8,1),
+(6331,"Zakdor",8,1),
+(6332,"Zakkal",8,1),
+(6333,"Zaklek",8,1),
+(6334,"Zaklok",8,1),
+(6335,"Zakluz",8,1),
+(6336,"Zakroz",8,1),
+(6337,"Zaktok",8,1),
+(6338,"Zaktraz",8,1),
+(6339,"Zakwaz",8,1),
+(6340,"Zakzak",8,1),
+(6341,"Zakzarn",8,1),
+(6342,"Zakzert",8,1),
+(6343,"Zakzul",8,1),
+(6344,"Zernbek",8,1),
+(6345,"Zernbirt",8,1),
+(6346,"Zernbrez",8,1),
+(6347,"Zerndor",8,1),
+(6348,"Zernkal",8,1),
+(6349,"Zernlek",8,1),
+(6350,"Zernlok",8,1),
+(6351,"Zernluz",8,1),
+(6352,"Zernroz",8,1),
+(6353,"Zerntok",8,1),
+(6354,"Zerntraz",8,1),
+(6355,"Zernwaz",8,1),
+(6356,"Zernzak",8,1),
+(6357,"Zernzarn",8,1),
+(6358,"Zernzert",8,1),
+(6359,"Zernzul",8,1),
+(2285,"Acheroth",10,0),
+(2286,"Adonys",10,0),
+(2287,"Alastor",10,0),
+(2288,"Alendel",10,0),
+(2289,"Alindian",10,0),
+(2290,"Ammath",10,0),
+(2291,"Anastalin",10,0),
+(2292,"Andor",10,0),
+(2293,"Ardeyn",10,0),
+(2294,"Astaron",10,0),
+(2295,"Basriel",10,0),
+(2296,"Bironys",10,0),
+(2297,"Borill",10,0),
+(2298,"Bulinard",10,0),
+(2299,"Capziel",10,0),
+(2300,"Celoenus",10,0),
+(2301,"Cerunath",10,0),
+(2302,"Coridan",10,0),
+(2303,"Daenil",10,0),
+(2304,"Dakian",10,0),
+(2305,"Danash",10,0),
+(2306,"Denastrian",10,0),
+(2307,"Dorann",10,0),
+(2308,"Dorillian",10,0),
+(2309,"Ellimast",10,0),
+(2310,"Falin",10,0),
+(2311,"Fastalor",10,0),
+(2312,"Felendren",10,0),
+(2313,"Fennidaul",10,0),
+(2314,"Gabrial",10,0),
+(2315,"Geranis",10,0),
+(2316,"Geron",10,0),
+(2317,"Gordring",10,0),
+(2318,"Gullivan",10,0),
+(2319,"Hacinth",10,0),
+(2320,"Halis",10,0),
+(2321,"Hathvelion",10,0),
+(2322,"Hynalan",10,0),
+(2323,"Iavis",10,0),
+(2324,"Indorian",10,0),
+(2325,"Istolus",10,0),
+(2326,"Ithanas",10,0),
+(2327,"Jesthenis",10,0),
+(2328,"Jonovath",10,0),
+(2329,"Kaladrin",10,0),
+(2330,"Kuularin",10,0),
+(2331,"Kelivard",10,0),
+(2332,"Knastus",10,0),
+(2333,"Kordril",10,0),
+(2334,"Lammash",10,0),
+(2335,"Landalor",10,0),
+(2336,"Landorian",10,0),
+(2337,"Lanthan",10,0),
+(2338,"Lazuriel",10,0),
+(2339,"Lennivan",10,0),
+(2340,"Lorastian",10,0),
+(2341,"Lothos",10,0),
+(2342,"Luminorian",10,0),
+(2343,"Mandarian",10,0),
+(2344,"Martik",10,0),
+(2345,"Mastinicus",10,0),
+(2346,"Mathreyn",10,0),
+(2347,"Myrokos",10,0),
+(2348,"Narinicus",10,0),
+(2349,"Nelluth",10,0),
+(2350,"Nerendil",10,0),
+(2351,"Nirael",10,0),
+(2352,"Ophion",10,0),
+(2353,"Orastian",10,0),
+(2354,"Orthin",10,0),
+(2355,"Perimath",10,0),
+(2356,"Kiril",10,0),
+(2357,"Rallin",10,0),
+(2358,"Rameth",10,0),
+(2359,"Regethon",10,0),
+(2360,"Relivanth",10,0),
+(2361,"Rindorell",10,0),
+(2362,"Ruibar",10,0),
+(2363,"Salindorian",10,0),
+(2364,"Salovanth",10,0),
+(2365,"Sarcyon",10,0),
+(2366,"Sathein",10,0),
+(2367,"Sathranis",10,0),
+(2368,"Sennistan",10,0),
+(2369,"Shalibar",10,0),
+(2370,"Solastus",10,0),
+(2371,"Symmael",10,0),
+(2372,"Tarrath",10,0),
+(2373,"Taumas",10,0),
+(2374,"Telenus",10,0),
+(2375,"Tennish",10,0),
+(2376,"Thaelas",10,0),
+(2377,"Theirean",10,0),
+(2378,"Thorian",10,0),
+(2379,"Ticonash",10,0),
+(2380,"Vasyleios",10,0),
+(2381,"Vedoran",10,0),
+(2382,"Velendris",10,0),
+(2383,"Westinar",10,0),
+(2384,"Xanthus",10,0),
+(6360,"Aendis",10,0),
+(6361,"Aendron",10,0),
+(6362,"Aenesh",10,0),
+(6363,"Aeniel",10,0),
+(6364,"Aenin",10,0),
+(6365,"Aenlan",10,0),
+(6366,"Aenleron",10,0),
+(6367,"Aenllan",10,0),
+(6368,"Aenlor",10,0),
+(6369,"Aenstus",10,0),
+(6370,"Amordis",10,0),
+(6371,"Amordron",10,0),
+(6372,"Amoresh",10,0),
+(6373,"Amoriel",10,0),
+(6374,"Amorin",10,0),
+(6375,"Amorlan",10,0),
+(6376,"Amorleron",10,0),
+(6377,"Amorllan",10,0),
+(6378,"Amorlor",10,0),
+(6379,"Amorstus",10,0),
+(6380,"Keedis",10,0),
+(6381,"Keeiel",10,0),
+(6382,"Keein",10,0),
+(6383,"Keelan",10,0),
+(6384,"Keelor",10,0),
+(6385,"Keleron",10,0),
+(6386,"Kellan",10,0),
+(6387,"Keyadis",10,0),
+(6388,"Keyadron",10,0),
+(6389,"Keyaesh",10,0),
+(6390,"Keyaiel",10,0),
+(6391,"Keyain",10,0),
+(6392,"Keyalan",10,0),
+(6393,"Keyaleron",10,0),
+(6394,"Keyallan",10,0),
+(6395,"Keyalor",10,0),
+(6396,"Keyastus",10,0),
+(6397,"Kiedron",10,0),
+(6398,"Kiestus",10,0),
+(6399,"Kredis",10,0),
+(6400,"Kredron",10,0),
+(6401,"Kreiel",10,0),
+(6402,"Krein",10,0),
+(6403,"Krelan",10,0),
+(6404,"Kreleron",10,0),
+(6405,"Krellan",10,0),
+(6406,"Krelor",10,0),
+(6407,"Krestus",10,0),
+(6408,"Kriesh",10,0),
+(6409,"Myrodis",10,0),
+(6410,"Myrodron",10,0),
+(6411,"Myroesh",10,0),
+(6412,"Myroiel",10,0),
+(6413,"Myroin",10,0),
+(6414,"Myrolan",10,0),
+(6415,"Myroleron",10,0),
+(6416,"Myrollan",10,0),
+(6417,"Myrolor",10,0),
+(6418,"Myrostus",10,0),
+(6419,"Sandis",10,0),
+(6420,"Sandron",10,0),
+(6421,"Sanesh",10,0),
+(6422,"Saniel",10,0),
+(6423,"Sanin",10,0),
+(6424,"Sanlan",10,0),
+(6425,"Sanleron",10,0),
+(6426,"Sanllan",10,0),
+(6427,"Sanlor",10,0),
+(6428,"Sanstus",10,0),
+(6429,"Tydis",10,0),
+(6430,"Tydron",10,0),
+(6431,"Tyesh",10,0),
+(6432,"Tyiel",10,0),
+(6433,"Tyin",10,0),
+(6434,"Tylan",10,0),
+(6435,"Tyleron",10,0),
+(6436,"Tyllan",10,0),
+(6437,"Tylor",10,0),
+(6438,"Tystus",10,0),
+(6439,"Vyndis",10,0),
+(6440,"Vyndron",10,0),
+(6441,"Vynesh",10,0),
+(6442,"Vyniel",10,0),
+(6443,"Vynin",10,0),
+(6444,"Vynlan",10,0),
+(6445,"Vynleron",10,0),
+(6446,"Vynllan",10,0),
+(6447,"Vynlor",10,0),
+(6448,"Vynstus",10,0),
+(6449,"Weledis",10,0),
+(6450,"Weledron",10,0),
+(6451,"Weleiel",10,0),
+(6452,"Welein",10,0),
+(6453,"Welelan",10,0),
+(6454,"Welelor",10,0),
+(6455,"Welish",10,0),
+(2385,"Acantha",10,1),
+(2386,"Aelyste",10,1),
+(2387,"Aerin",10,1),
+(2388,"Alectria",10,1),
+(2389,"Aleinia",10,1),
+(2390,"Alinderial",10,1),
+(2391,"Anadarindia",10,1),
+(2392,"Areyn",10,1),
+(2393,"Astella",10,1),
+(2394,"Avalina",10,1),
+(2395,"Belamun",10,1),
+(2396,"Belleria",10,1),
+(2397,"Braelyn",10,1),
+(2398,"Brisalyna",10,1),
+(2399,"Cala",10,1),
+(2400,"Callysta",10,1),
+(2401,"Celina",10,1),
+(2402,"Celosia",10,1),
+(2403,"Charisse",10,1),
+(2404,"Cyndala",10,1),
+(2405,"Daestra",10,1),
+(2406,"Delindis",10,1),
+(2407,"Desdemina",10,1),
+(2408,"Dorala",10,1),
+(2409,"Dyonissa",10,1),
+(2410,"Elianne",10,1),
+(2411,"Elisara",10,1),
+(2412,"Evelyne",10,1),
+(2413,"Faelina",10,1),
+(2414,"Faeraline",10,1),
+(2415,"Felinis",10,1),
+(2416,"Garridel",10,1),
+(2417,"Gelindril",10,1),
+(2418,"Genistina",10,1),
+(2419,"Hycintha",10,1),
+(2420,"Ilektra",10,1),
+(2421,"Ionae",10,1),
+(2422,"Irissa",10,1),
+(2423,"Janeda",10,1),
+(2424,"Jasmintha",10,1),
+(2425,"Kaelynitha",10,1),
+(2426,"Kanaria",10,1),
+(2427,"Kelisendra",10,1),
+(2428,"Larianna",10,1),
+(2429,"Larissa",10,1),
+(2430,"Lilatha",10,1),
+(2431,"Lilithelys",10,1),
+(2432,"Lindrys",10,1),
+(2433,"Lionna",10,1),
+(2434,"Liralei",10,1),
+(2435,"Lithilia",10,1),
+(2436,"Luminil",10,1),
+(2437,"Medea",10,1),
+(2438,"Melanthe",10,1),
+(2439,"Mellindra",10,1),
+(2440,"Meniara",10,1),
+(2441,"Morgana",10,1),
+(2442,"Nadina",10,1),
+(2443,"Narcisse",10,1),
+(2444,"Narina",10,1),
+(2445,"Nesseline",10,1),
+(2446,"Nymue",10,1),
+(2447,"Nyssa",10,1),
+(2448,"Oleanda",10,1),
+(2449,"Ophira",10,1),
+(2450,"Oriana",10,1),
+(2451,"Pyranda",10,1),
+(2452,"Pyrena",10,1),
+(2453,"Keirra",10,1),
+(2454,"Quelastia",10,1),
+(2455,"Raelaria",10,1),
+(2456,"Raelis",10,1),
+(2457,"Rashelle",10,1),
+(2458,"Reanna",10,1),
+(2459,"Reladriel",10,1),
+(2460,"Rinna",10,1),
+(2461,"Sanossa",10,1),
+(2462,"Sareyn",10,1),
+(2463,"Sathiel",10,1),
+(2464,"Savalyne",10,1),
+(2465,"Sedina",10,1),
+(2466,"Selestia",10,1),
+(2467,"Selinasta",10,1),
+(2468,"Selindia",10,1),
+(2469,"Sharra",10,1),
+(2470,"Shatharia",10,1),
+(2471,"Sinaris",10,1),
+(2472,"Solanna",10,1),
+(2473,"Sunamun",10,1),
+(2474,"Syrenni",10,1),
+(2475,"Taina",10,1),
+(2476,"Tannaria",10,1),
+(2477,"Tannis",10,1),
+(2478,"Teestina",10,1),
+(2479,"Tyria",10,1),
+(2480,"Thela",10,1),
+(2481,"Thelindaria",10,1),
+(2482,"Tirilliae",10,1),
+(2483,"Tirivana",10,1),
+(2484,"Vania",10,1),
+(2485,"Vara",10,1),
+(2486,"Varallia",10,1),
+(2487,"Velaena",10,1),
+(2488,"Velirra",10,1),
+(2489,"Vynna",10,1),
+(2490,"Wylethia",10,1),
+(2491,"Xanthia",10,1),
+(2492,"Zaliene",10,1),
+(6456,"Braeda",10,1),
+(6457,"Braedori",10,1),
+(6458,"Braedra",10,1),
+(6459,"Braedrel",10,1),
+(6460,"Braeice",10,1),
+(6461,"Braeline",10,1),
+(6462,"Braendra",10,1),
+(6463,"Braesong",10,1),
+(6464,"Braevia",10,1),
+(6465,"Deydori",10,1),
+(6466,"Deydra",10,1),
+(6467,"Deydrel",10,1),
+(6468,"Deyeda",10,1),
+(6469,"Deyice",10,1),
+(6470,"Deyline",10,1),
+(6471,"Deyndra",10,1),
+(6472,"Deysong",10,1),
+(6473,"Deyvia",10,1),
+(6474,"Erodori",10,1),
+(6475,"Erodra",10,1),
+(6476,"Erodrel",10,1),
+(6477,"Eroeda",10,1),
+(6478,"Eroice",10,1),
+(6479,"Eroline",10,1),
+(6480,"Erondra",10,1),
+(6481,"Erosong",10,1),
+(6482,"Erovia",10,1),
+(6483,"Galdori",10,1),
+(6484,"Galdra",10,1),
+(6485,"Galdrel",10,1),
+(6486,"Galeda",10,1),
+(6487,"Galice",10,1),
+(6488,"Galline",10,1),
+(6489,"Galndra",10,1),
+(6490,"Galsong",10,1),
+(6491,"Galvia",10,1),
+(6492,"Lithdori",10,1),
+(6493,"Lithdra",10,1),
+(6494,"Lithdrel",10,1),
+(6495,"Litheda",10,1),
+(6496,"Lithice",10,1),
+(6497,"Lithline",10,1),
+(6498,"Lithndra",10,1),
+(6499,"Lithsong",10,1),
+(6500,"Lithvia",10,1),
+(6501,"Noradori",10,1),
+(6502,"Noradra",10,1),
+(6503,"Noradrel",10,1),
+(6504,"Noraeda",10,1),
+(6505,"Noraice",10,1),
+(6506,"Noraline",10,1),
+(6507,"Norandra",10,1),
+(6508,"Norasong",10,1),
+(6509,"Noravia",10,1),
+(6510,"Tanddori",10,1),
+(6511,"Tanddra",10,1),
+(6512,"Tanddrel",10,1),
+(6513,"Tandeda",10,1),
+(6514,"Tandice",10,1),
+(6515,"Tandline",10,1),
+(6516,"Tandndra",10,1),
+(6517,"Tandsong",10,1),
+(6518,"Tandvia",10,1),
+(6519,"Traydori",10,1),
+(6520,"Traydra",10,1),
+(6521,"Traydrel",10,1),
+(6522,"Trayeda",10,1),
+(6523,"Trayice",10,1),
+(6524,"Trayline",10,1),
+(6525,"Trayndra",10,1),
+(6526,"Traysong",10,1),
+(6527,"Trayvia",10,1),
+(6528,"Velidori",10,1),
+(6529,"Velidra",10,1),
+(6530,"Velidrel",10,1),
+(6531,"Velieda",10,1),
+(6532,"Veliice",10,1),
+(6533,"Veliline",10,1),
+(6534,"Velindra",10,1),
+(6535,"Velisong",10,1),
+(6536,"Velivia",10,1),
+(6537,"Zaradori",10,1),
+(6538,"Zaradra",10,1),
+(6539,"Zaradrel",10,1),
+(6540,"Zaraeda",10,1),
+(6541,"Zaraice",10,1),
+(6542,"Zaraline",10,1),
+(6543,"Zarandra",10,1),
+(6544,"Zarasong",10,1),
+(6545,"Zaravia",10,1),
+(1967,"Abderuus",11,0),
+(1968,"Achelus",11,0),
+(1969,"Achiele",11,0),
+(1970,"Admetius",11,0),
+(1971,"Aeolos",11,0),
+(1972,"Aeun",11,0),
+(1973,"Ahonan",11,0),
+(1974,"Akhan",11,0),
+(1975,"Alcandir",11,0),
+(1976,"Aldar",11,0),
+(1977,"Alistuur",11,0),
+(1978,"Anteus",11,0),
+(1979,"Apolus",11,0),
+(1980,"Aramaion",11,0),
+(1981,"Archaelius",11,0),
+(1982,"Arras",11,0),
+(1983,"Arred",11,0),
+(1984,"Arthaid",11,0),
+(1985,"Ascuulpius",11,0),
+(1986,"Astraeus",11,0),
+(1987,"Astur",11,0),
+(1988,"Aurelon",11,0),
+(1989,"Baatun",11,0),
+(1990,"Baluraan",11,0),
+(1991,"Bastiaan",11,0),
+(1992,"Berem",11,0),
+(1993,"Berillio",11,0),
+(1994,"Berimus",11,0),
+(1995,"Boros",11,0),
+(1996,"Breel",11,0),
+(1997,"Bruuth",11,0),
+(1998,"Caedmos",11,0),
+(1999,"Calchaas",11,0),
+(2000,"Carren",11,0),
+(2001,"Cassadorian",11,0),
+(2002,"Cemmorhan",11,0),
+(2003,"Cosmaas",11,0),
+(2004,"Cragorior",11,0),
+(2005,"Cristole",11,0),
+(2006,"Cronastus",11,0),
+(2007,"Damasko",11,0),
+(2008,"Damodocus",11,0),
+(2009,"Darianus",11,0),
+(2010,"Deriz",11,0),
+(2011,"Driaan",11,0),
+(2012,"Dronor",11,0),
+(2013,"Edrem",11,0),
+(2014,"Egomis",11,0),
+(2015,"Ellomin",11,0),
+(2016,"Elumandian",11,0),
+(2017,"Eoch",11,0),
+(2018,"Epirithus",11,0),
+(2019,"Erett",11,0),
+(2020,"Eross",11,0),
+(2021,"Etuur",11,0),
+(2022,"Feruul",11,0),
+(2023,"Foluun",11,0),
+(2024,"Funaam",11,0),
+(2025,"Gaant",11,0),
+(2026,"Ganaar",11,0),
+(2027,"Ghermas",11,0),
+(2028,"Gornii",11,0),
+(2029,"Gotaan",11,0),
+(2030,"Handiir",11,0),
+(2031,"Haqi",11,0),
+(2032,"Hephtas",11,0),
+(2033,"Heronomus",11,0),
+(2034,"Iasun",11,0),
+(2035,"Icarian",11,0),
+(2036,"Irnuss",11,0),
+(2037,"Jaakon",11,0),
+(2038,"Jasuun",11,0),
+(2039,"Jayru",11,0),
+(2040,"Jovan",11,0),
+(2041,"Jovinian",11,0),
+(2042,"Kadithuul",11,0),
+(2043,"Kajad",11,0),
+(2044,"Kavaan",11,0),
+(2045,"Kellag",11,0),
+(2046,"Kessel",11,0),
+(2047,"Kor",11,0),
+(2048,"Kraan",11,0),
+(2049,"Kuros",11,0),
+(2050,"Leraam",11,0),
+(2051,"Lexander",11,0),
+(2052,"Lorthuu",11,0),
+(2053,"Lucc",11,0),
+(2054,"Lyceon",11,0),
+(2055,"Makaara",11,0),
+(2056,"Margon",11,0),
+(2057,"Megelon",11,0),
+(2058,"Merculon",11,0),
+(2059,"Mikalaas",11,0),
+(2060,"Muaat",11,0),
+(2061,"Muhaar",11,0),
+(2062,"Mumman",11,0),
+(2063,"Nabrus",11,0),
+(2064,"Nahogg",11,0),
+(2065,"Nestuur",11,0),
+(2066,"Nicolandrius",11,0),
+(2067,"Nus",11,0),
+(2068,"Nuur",11,0),
+(2069,"Ockil",11,0),
+(2070,"Ogdas",11,0),
+(2071,"Onnis",11,0),
+(2072,"Orinnion",11,0),
+(2073,"Oscco",11,0),
+(2074,"Paanos",11,0),
+(2075,"Padaar",11,0),
+(2076,"Paetheus",11,0),
+(2077,"Paladius",11,0),
+(2078,"Parthenion",11,0),
+(2079,"Pedaar",11,0),
+(2080,"Petraalis",11,0),
+(2081,"Phobuus",11,0),
+(2082,"Phyrios",11,0),
+(2083,"Praabun",11,0),
+(2084,"Proenitus",11,0),
+(2085,"Promethu",11,0),
+(2086,"Radimaanth",11,0),
+(2087,"Rastulo",11,0),
+(2088,"Refiik",11,0),
+(2089,"Remulon",11,0),
+(2090,"Reul",11,0),
+(2091,"Rormu",11,0),
+(2092,"Saandur",11,0),
+(2093,"Sabuutal",11,0),
+(2094,"Sarnub",11,0),
+(2095,"Selur",11,0),
+(2096,"Silvinian",11,0),
+(2097,"Smortu",11,0),
+(2098,"Staamitos",11,0),
+(2099,"Teleimon",11,0),
+(2100,"Thaalides",11,0),
+(2101,"Theodian",11,0),
+(2102,"Tolaan",11,0),
+(2103,"Tolven",11,0),
+(2104,"Tritus",11,0),
+(2105,"Vandelo",11,0),
+(2106,"Varubu",11,0),
+(2107,"Vord",11,0),
+(2108,"Vorkhan",11,0),
+(2109,"Wertan",11,0),
+(2110,"Xandian",11,0),
+(2111,"Zaibach",11,0),
+(2112,"Zakiuus",11,0),
+(2113,"Zalduun",11,0),
+(2114,"Zenastus",11,0),
+(2115,"Zenorian",11,0),
+(6546,"Aafer",11,0),
+(6547,"Aagalian",11,0),
+(6548,"Abaato",11,0),
+(6549,"Adros",11,0),
+(6550,"Ahruk",11,0),
+(6551,"Akhtus",11,0),
+(6552,"Akordn",11,0),
+(6553,"Anyr",11,0),
+(6554,"Atikas",11,0),
+(6555,"Belaquin",11,0),
+(6556,"Bravik",11,0),
+(6557,"Britolo",11,0),
+(6558,"Burquarius",11,0),
+(6559,"Caepicon",11,0),
+(6560,"Colundiin",11,0),
+(6561,"Cretos",11,0),
+(6562,"Daval",11,0),
+(6563,"Diochritis",11,0),
+(6564,"Dravak",11,0),
+(6565,"Dyristis",11,0),
+(6566,"Edraanas",11,0),
+(6567,"Eenach",11,0),
+(6568,"Eksos",11,0),
+(6569,"Evaandan",11,0),
+(6570,"Fhemdial",11,0),
+(6571,"Frencaalis",11,0),
+(6572,"Gaarilan",11,0),
+(6573,"Gememdon",11,0),
+(6574,"Gerrn",11,0),
+(6575,"Gistillian",11,0),
+(6576,"Govrin",11,0),
+(6577,"Haanelan",11,0),
+(6578,"Halvyk",11,0),
+(6579,"Hamir",11,0),
+(6580,"Hexn",11,0),
+(6581,"Homuulus",11,0),
+(6582,"Hrach",11,0),
+(6583,"Iaanix",11,0),
+(6584,"Iktos",11,0),
+(6585,"Iorimar",11,0),
+(6586,"Jamyzn",11,0),
+(6587,"Javinius",11,0),
+(6588,"Jhann",11,0),
+(6589,"Jocon",11,0),
+(6590,"Kaevincien",11,0),
+(6591,"Keryakos",11,0),
+(6592,"Khalis",11,0),
+(6593,"Khasel",11,0),
+(6594,"Khator",11,0),
+(6595,"Kolos",11,0),
+(6596,"Korik",11,0),
+(6597,"Kresk",11,0),
+(6598,"Krevyln",11,0),
+(6599,"Kriikellus",11,0),
+(6600,"Krisula",11,0),
+(6601,"Kyfestyr",11,0),
+(6602,"Kyrgaryn",11,0),
+(6603,"Laequerran",11,0),
+(6604,"Libiirius",11,0),
+(6605,"Mequonistis",11,0),
+(6606,"Minyok",11,0),
+(6607,"Mirvynnix",11,0),
+(6608,"Nautellus",11,0),
+(6609,"Niapilo",11,0),
+(6610,"Octagellen",11,0),
+(6611,"Olomm",11,0),
+(6612,"Orocian",11,0),
+(6613,"Ovynn",11,0),
+(6614,"Phriix",11,0),
+(6615,"Praerov",11,0),
+(6616,"Praetistis",11,0),
+(6617,"Puulincis",11,0),
+(6618,"Quaarilian",11,0),
+(6619,"Quontius",11,0),
+(6620,"Raedilaen",11,0),
+(6621,"Ragn",11,0),
+(6622,"Ravach",11,0),
+(6623,"Reglesteren",11,0),
+(6624,"Revelyn",11,0),
+(6625,"Revlyk",11,0),
+(6626,"Rhoymas",11,0),
+(6627,"Roahm",11,0),
+(6628,"Rolav",11,0),
+(6629,"Rovolt",11,0),
+(6630,"Ryzn",11,0),
+(6631,"Sechor",11,0),
+(6632,"Sequillian",11,0),
+(6633,"Spenjanius",11,0),
+(6634,"Tarelaen",11,0),
+(6635,"Tarenz",11,0),
+(6636,"Teowyll",11,0),
+(6637,"Thononias",11,0),
+(6638,"Torqellon",11,0),
+(6639,"Tynaerus",11,0),
+(6640,"Ujimminus",11,0),
+(6641,"Uray",11,0),
+(6642,"Uuyllian",11,0),
+(6643,"Uzhka",11,0),
+(6644,"Vaalcren",11,0),
+(6645,"Verom",11,0),
+(6646,"Vezim",11,0),
+(6647,"Vizul",11,0),
+(6648,"Vodmor",11,0),
+(6649,"Volgm",11,0),
+(6650,"Volik",11,0),
+(6651,"Volkorr",11,0),
+(6652,"Vqshok",11,0),
+(6653,"Vyncynidus",11,0),
+(6654,"Vyuri",11,0),
+(6655,"Waaldrunias",11,0),
+(6656,"Warach",11,0),
+(6657,"Warvyn",11,0),
+(6658,"Wixilaan",11,0),
+(6659,"Xaquildar",11,0),
+(6660,"Xavik",11,0),
+(6661,"Xerquanis",11,0),
+(6662,"Yaelon",11,0),
+(6663,"Yiiminon",11,0),
+(6664,"Zavyr",11,0),
+(6665,"Zerald",11,0),
+(6666,"Ziindelicus",11,0),
+(6667,"Zolioncis",11,0),
+(6668,"Zonov",11,0),
+(2116,"Aalesia",11,1),
+(2117,"Admete",11,1),
+(2118,"Adoria",11,1),
+(2119,"Adrastea",11,1),
+(2120,"Aegina",11,1),
+(2121,"Aelea",11,1),
+(2122,"Aeos",11,1),
+(2123,"Akaloiis",11,1),
+(2124,"Alathia",11,1),
+(2125,"Alethaa",11,1),
+(2126,"Aliina",11,1),
+(2127,"Aliisha",11,1),
+(2128,"Altaa",11,1),
+(2129,"Alysstas",11,1),
+(2130,"Amarillian",11,1),
+(2131,"Anastassia",11,1),
+(2132,"Areia",11,1),
+(2133,"Arianthia",11,1),
+(2134,"Arimiri",11,1),
+(2135,"Ashoon",11,1),
+(2136,"Astraea",11,1),
+(2137,"Aurana",11,1),
+(2138,"Avelii",11,1),
+(2139,"Basyl",11,1),
+(2140,"Behomat",11,1),
+(2141,"Bellama",11,1),
+(2142,"Belphine",11,1),
+(2143,"Bildine",11,1),
+(2144,"Brialla",11,1),
+(2145,"Caalindre",11,1),
+(2146,"Caatylun",11,1),
+(2147,"Calaandia",11,1),
+(2148,"Calliopia",11,1),
+(2149,"Caluantha",11,1),
+(2150,"Castaa",11,1),
+(2151,"Catiaa",11,1),
+(2152,"Catrionna",11,1),
+(2153,"Celenian",11,1),
+(2154,"Channa",11,1),
+(2155,"Chlorista",11,1),
+(2156,"Corisalle",11,1),
+(2157,"Cristalline",11,1),
+(2158,"Cyrothea",11,1),
+(2159,"Daametre",11,1),
+(2160,"Damaara",11,1),
+(2161,"Dariala",11,1),
+(2162,"Demitix",11,1),
+(2163,"Deremiis",11,1),
+(2164,"Desaar",11,1),
+(2165,"Desda",11,1),
+(2166,"Dimetraa",11,1),
+(2167,"Dorianalla",11,1),
+(2168,"Edirah",11,1),
+(2169,"Elaadora",11,1),
+(2170,"Eleannora",11,1),
+(2171,"Elissia",11,1),
+(2172,"Ellaniisa",11,1),
+(2173,"Elpidia",11,1),
+(2174,"Elysia",11,1),
+(2175,"Epidii",11,1),
+(2176,"Eraael",11,1),
+(2177,"Eraanthe",11,1),
+(2178,"Erinthae",11,1),
+(2179,"Euraan",11,1),
+(2180,"Feera",11,1),
+(2181,"Felaanu",11,1),
+(2182,"Galacia",11,1),
+(2183,"Nomau",11,1),
+(2184,"Haemeria",11,1),
+(2185,"Haliia",11,1),
+(2186,"Harmoni",11,1),
+(2187,"Helainne",11,1),
+(2188,"Helekaa",11,1),
+(2189,"Huuna",11,1),
+(2190,"Iciaa",11,1),
+(2191,"Iilke",11,1),
+(2192,"Ilanuaa",11,1),
+(2193,"Ilcyonne",11,1),
+(2194,"Iluulika",11,1),
+(2195,"Iluuni",11,1),
+(2196,"Iraana",11,1),
+(2197,"Iriiani",11,1),
+(2198,"Ivranii",11,1),
+(2199,"Jaeleil",11,1),
+(2200,"Jelna",11,1),
+(2201,"Kaandaki",11,1),
+(2202,"Kaatayli",11,1),
+(2203,"Kaitlan",11,1),
+(2204,"Kaluundre",11,1),
+(2205,"Kassia",11,1),
+(2206,"Kataakin",11,1),
+(2207,"Kataalona",11,1),
+(2208,"Katariin",11,1),
+(2209,"Kayaart",11,1),
+(2210,"Kayonei",11,1),
+(2211,"Keilnei",11,1),
+(2212,"Koliinae",11,1),
+(2213,"Koore",11,1),
+(2214,"Kudrii",11,1),
+(2215,"Laniira",11,1),
+(2216,"Larixa",11,1),
+(2217,"Levara",11,1),
+(2218,"Lexi",11,1),
+(2219,"Liora",11,1),
+(2220,"Lyrallis",11,1),
+(2221,"Madgaa",11,1),
+(2222,"Magdalin",11,1),
+(2223,"Maniika",11,1),
+(2224,"Margarii",11,1),
+(2225,"Miall",11,1),
+(2226,"Minirra",11,1),
+(2227,"Mirliaa",11,1),
+(2228,"Morae",11,1),
+(2229,"Myrandela",11,1),
+(2230,"Mysta",11,1),
+(2231,"Naamia",11,1),
+(2232,"Namaalia",11,1),
+(2233,"Narya",11,1),
+(2234,"Neii",11,1),
+(2235,"Nelli",11,1),
+(2236,"Nieysa",11,1),
+(2237,"Nillaani",11,1),
+(2238,"Norii",11,1),
+(2239,"Oliina",11,1),
+(2240,"Omeanau",11,1),
+(2241,"Palandora",11,1),
+(2242,"Patris",11,1),
+(2243,"Peitha",11,1),
+(2244,"Phaeda",11,1),
+(2245,"Phea",11,1),
+(2246,"Phiidra",11,1),
+(2247,"Phillypia",11,1),
+(2248,"Raania",11,1),
+(2249,"Ralaantu",11,1),
+(2250,"Remere",11,1),
+(2251,"Reulna",11,1),
+(2252,"Rhodalia",11,1),
+(2253,"Rienaa",11,1),
+(2254,"Roryn",11,1),
+(2255,"Saanri",11,1),
+(2256,"Salaan",11,1),
+(2257,"Saphraania",11,1),
+(2258,"Selaandi",11,1),
+(2259,"Selani",11,1),
+(2260,"Sevillia",11,1),
+(2261,"Sheluu",11,1),
+(2262,"Siiri",11,1),
+(2263,"Sofii",11,1),
+(2264,"Solonne",11,1),
+(2265,"Sophiaa",11,1),
+(2266,"Taerix",11,1),
+(2267,"Tariaan",11,1),
+(2268,"Terna",11,1),
+(2269,"Terressa",11,1),
+(2270,"Thaadea",11,1),
+(2271,"Theaa",11,1),
+(2272,"Themis",11,1),
+(2273,"Triina",11,1),
+(2274,"Trynne",11,1),
+(2275,"Tycha",11,1),
+(2276,"Valaatu",11,1),
+(2277,"Velnai",11,1),
+(2278,"Xaandra",11,1),
+(2279,"Xunaide",11,1),
+(2280,"Yaalene",11,1),
+(2281,"Zaraliis",11,1),
+(2282,"Zephua",11,1),
+(2283,"Ziliaa",11,1),
+(2284,"Zuulinia",11,1),
+(6669,"Aadelia",11,1),
+(6670,"Aahala",11,1),
+(6671,"Aamuria",11,1),
+(6672,"Aellana",11,1),
+(6673,"Agra",11,1),
+(6674,"Ahra",11,1),
+(6675,"Akhara",11,1),
+(6676,"Akhta",11,1),
+(6677,"Aktta",11,1),
+(6678,"Alara",11,1),
+(6679,"Amyntaa",11,1),
+(6680,"Andraa",11,1),
+(6681,"Andrynn",11,1),
+(6682,"Anvera",11,1),
+(6683,"Asuusha",11,1),
+(6684,"Batilde",11,1),
+(6685,"Becintia",11,1),
+(6686,"Brigt",11,1),
+(6687,"Bryllian",11,1),
+(6688,"Chriphia",11,1),
+(6689,"Clythemma",11,1),
+(6690,"Cyalle",11,1),
+(6691,"Cyracia",11,1),
+(6692,"Dephylia",11,1),
+(6693,"Dkala",11,1),
+(6694,"Donaella",11,1),
+(6695,"Druaella",11,1),
+(6696,"Dyorcia",11,1),
+(6697,"Eaorix",11,1),
+(6698,"Emaelia",11,1),
+(6699,"Enera",11,1),
+(6700,"Estaella",11,1),
+(6701,"Eychaalra",11,1),
+(6702,"Fallinix",11,1),
+(6703,"Fhaalia",11,1),
+(6704,"Fiornu",11,1),
+(6705,"Glara",11,1),
+(6706,"Gordaela",11,1),
+(6707,"Gwael",11,1),
+(6708,"Gyllinia",11,1),
+(6709,"Hilynn",11,1),
+(6710,"Honlei",11,1),
+(6711,"Hyphystia",11,1),
+(6712,"Iocylantha",11,1),
+(6713,"Iraecia",11,1),
+(6714,"Isaelda",11,1),
+(6715,"Iutaerna",11,1),
+(6716,"Izhyssu",11,1),
+(6717,"Jatarna",11,1),
+(6718,"Jemaerrix",11,1),
+(6719,"Jeres",11,1),
+(6720,"Jhara",11,1),
+(6721,"Juul",11,1),
+(6722,"Jynthu",11,1),
+(6723,"Karael",11,1),
+(6724,"Karha",11,1),
+(6725,"Karynn",11,1),
+(6726,"Khara",11,1),
+(6727,"Khasha",11,1),
+(6728,"Khris",11,1),
+(6729,"Kira",11,1),
+(6730,"Korrva",11,1),
+(6731,"Krisenzr",11,1),
+(6732,"Krista",11,1),
+(6733,"Krizar",11,1),
+(6734,"Kylah",11,1),
+(6735,"Kymei",11,1),
+(6736,"Kyrionaa",11,1),
+(6737,"Laev",11,1),
+(6738,"Lexya",11,1),
+(6739,"Luurinia",11,1),
+(6740,"Lynaesix",11,1),
+(6741,"Maemuu",11,1),
+(6742,"Mahla",11,1),
+(6743,"Marsiiha",11,1),
+(6744,"Maxlyn",11,1),
+(6745,"Morvah",11,1),
+(6746,"Mylinam",11,1),
+(6747,"Naarollu",11,1),
+(6748,"Narelvka",11,1),
+(6749,"Nevorra",11,1),
+(6750,"Norela",11,1),
+(6751,"Novura",11,1),
+(6752,"Nycha",11,1),
+(6753,"Ocyngiaa",11,1),
+(6754,"Oenii",11,1),
+(6755,"Ophymmu",11,1),
+(6756,"Oqua",11,1),
+(6757,"Otta",11,1),
+(6758,"Ovella",11,1),
+(6759,"Phaea",11,1),
+(6760,"Phylia",11,1),
+(6761,"Pira",11,1),
+(6762,"Pursa",11,1),
+(6763,"Pymuutu",11,1),
+(6764,"Ralaen",11,1),
+(6765,"Razlyn",11,1),
+(6766,"Renala",11,1),
+(6767,"Revella",11,1),
+(6768,"Rhylle",11,1),
+(6769,"Rochya",11,1),
+(6770,"Ryg",11,1),
+(6771,"Ryxinnu",11,1),
+(6772,"Sachka",11,1),
+(6773,"Safyce",11,1),
+(6774,"Salavva",11,1),
+(6775,"Seelha",11,1),
+(6776,"Shara",11,1),
+(6777,"Sherha",11,1),
+(6778,"Svelka",11,1),
+(6779,"Svelta",11,1),
+(6780,"Tatiara",11,1),
+(6781,"Tazha",11,1),
+(6782,"Ursuva",11,1),
+(6783,"Uvora",11,1),
+(6784,"Variza",11,1),
+(6785,"Veena",11,1),
+(6786,"Verra",11,1),
+(6787,"Vivik",11,1),
+(6788,"Vyera",11,1),
+(6789,"Wendra",11,1),
+(6790,"Xera",11,1),
+(6791,"Zara",11,1),
+(6792,"Zevorra",11,1),
+(6793,"Zmorra",11,1); 

@@ -1,354 +1,354 @@
 DROP TABLE IF EXISTS `GtOCTClassCombatRatingScalar`; 
 CREATE TABLE `GtOCTClassCombatRatingScalar` ( `ID` INT NOT NULL DEFAULT '0', `Data` FLOAT NOT NULL DEFAULT '0', PRIMARY KEY (`ID`)) ENGINE=InnoDB DEFAULT CHARSET=utf8; 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (1,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (2,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (3,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (4,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (5,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (6,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (7,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (8,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (9,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (10,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (11,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (12,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (13,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (14,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (15,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (16,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (17,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (18,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (19,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (20,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (21,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (22,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (23,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (24,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (25,1.1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (26,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (27,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (28,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (29,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (30,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (31,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (32,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (33,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (34,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (35,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (36,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (37,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (38,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (39,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (40,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (41,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (42,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (43,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (44,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (45,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (46,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (47,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (48,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (49,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (50,1.3); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (51,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (52,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (53,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (54,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (55,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (56,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (57,1.1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (58,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (59,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (60,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (61,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (62,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (63,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (64,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (65,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (66,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (67,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (68,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (69,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (70,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (71,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (72,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (73,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (74,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (75,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (76,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (77,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (78,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (79,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (80,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (81,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (82,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (83,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (84,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (85,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (86,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (87,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (88,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (89,1.1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (90,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (91,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (92,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (93,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (94,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (95,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (96,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (97,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (98,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (99,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (100,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (101,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (102,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (103,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (104,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (105,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (106,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (107,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (108,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (109,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (110,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (111,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (112,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (113,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (114,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (115,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (116,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (117,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (118,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (119,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (120,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (121,1.1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (122,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (123,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (124,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (125,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (126,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (127,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (128,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (129,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (130,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (131,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (132,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (133,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (134,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (135,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (136,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (137,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (138,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (139,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (140,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (141,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (142,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (143,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (144,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (145,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (146,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (147,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (148,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (149,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (150,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (151,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (152,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (153,1.1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (154,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (155,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (156,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (157,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (158,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (159,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (160,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (161,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (162,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (163,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (164,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (165,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (166,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (167,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (168,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (169,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (170,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (171,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (172,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (173,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (174,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (175,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (176,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (177,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (178,1.3); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (179,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (180,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (181,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (182,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (183,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (184,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (185,1.1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (186,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (187,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (188,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (189,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (190,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (191,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (192,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (193,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (194,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (195,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (196,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (197,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (198,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (199,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (200,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (201,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (202,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (203,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (204,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (205,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (206,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (207,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (208,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (209,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (210,1.3); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (211,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (212,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (213,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (214,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (215,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (216,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (217,1.1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (218,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (219,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (220,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (221,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (222,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (223,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (224,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (225,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (226,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (227,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (228,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (229,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (230,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (231,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (232,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (233,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (234,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (235,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (236,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (237,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (238,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (239,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (240,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (241,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (242,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (243,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (244,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (245,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (246,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (247,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (248,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (249,1.1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (250,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (251,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (252,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (253,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (254,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (255,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (256,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (257,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (258,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (259,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (260,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (261,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (262,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (263,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (264,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (265,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (266,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (267,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (268,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (269,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (270,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (271,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (272,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (273,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (274,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (275,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (276,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (277,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (278,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (279,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (280,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (281,1.1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (282,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (283,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (284,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (285,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (286,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (287,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (288,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (289,0); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (290,0); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (291,0); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (292,0); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (293,0); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (294,0); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (295,0); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (296,0); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (297,0); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (298,0); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (299,0); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (300,0); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (301,0); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (302,0); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (303,0); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (304,0); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (305,0); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (306,0); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (307,0); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (308,0); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (309,0); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (310,0); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (311,0); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (312,0); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (313,0); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (314,0); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (315,0); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (316,0); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (317,0); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (318,0); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (319,0); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (320,0); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (321,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (322,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (323,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (324,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (325,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (326,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (327,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (328,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (329,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (330,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (331,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (332,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (333,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (334,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (335,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (336,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (337,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (338,1.3); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (339,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (340,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (341,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (342,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (343,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (344,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (345,1.1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (346,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (347,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (348,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (349,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (350,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (351,1); 
-INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (352,1); 
+INSERT INTO `GtOCTClassCombatRatingScalar` VALUES (1,1),
+(2,1),
+(3,1),
+(4,1),
+(5,1),
+(6,1),
+(7,1),
+(8,1),
+(9,1),
+(10,1),
+(11,1),
+(12,1),
+(13,1),
+(14,1),
+(15,1),
+(16,1),
+(17,1),
+(18,1),
+(19,1),
+(20,1),
+(21,1),
+(22,1),
+(23,1),
+(24,1),
+(25,1.1),
+(26,1),
+(27,1),
+(28,1),
+(29,1),
+(30,1),
+(31,1),
+(32,1),
+(33,1),
+(34,1),
+(35,1),
+(36,1),
+(37,1),
+(38,1),
+(39,1),
+(40,1),
+(41,1),
+(42,1),
+(43,1),
+(44,1),
+(45,1),
+(46,1),
+(47,1),
+(48,1),
+(49,1),
+(50,1.3),
+(51,1),
+(52,1),
+(53,1),
+(54,1),
+(55,1),
+(56,1),
+(57,1.1),
+(58,1),
+(59,1),
+(60,1),
+(61,1),
+(62,1),
+(63,1),
+(64,1),
+(65,1),
+(66,1),
+(67,1),
+(68,1),
+(69,1),
+(70,1),
+(71,1),
+(72,1),
+(73,1),
+(74,1),
+(75,1),
+(76,1),
+(77,1),
+(78,1),
+(79,1),
+(80,1),
+(81,1),
+(82,1),
+(83,1),
+(84,1),
+(85,1),
+(86,1),
+(87,1),
+(88,1),
+(89,1.1),
+(90,1),
+(91,1),
+(92,1),
+(93,1),
+(94,1),
+(95,1),
+(96,1),
+(97,1),
+(98,1),
+(99,1),
+(100,1),
+(101,1),
+(102,1),
+(103,1),
+(104,1),
+(105,1),
+(106,1),
+(107,1),
+(108,1),
+(109,1),
+(110,1),
+(111,1),
+(112,1),
+(113,1),
+(114,1),
+(115,1),
+(116,1),
+(117,1),
+(118,1),
+(119,1),
+(120,1),
+(121,1.1),
+(122,1),
+(123,1),
+(124,1),
+(125,1),
+(126,1),
+(127,1),
+(128,1),
+(129,1),
+(130,1),
+(131,1),
+(132,1),
+(133,1),
+(134,1),
+(135,1),
+(136,1),
+(137,1),
+(138,1),
+(139,1),
+(140,1),
+(141,1),
+(142,1),
+(143,1),
+(144,1),
+(145,1),
+(146,1),
+(147,1),
+(148,1),
+(149,1),
+(150,1),
+(151,1),
+(152,1),
+(153,1.1),
+(154,1),
+(155,1),
+(156,1),
+(157,1),
+(158,1),
+(159,1),
+(160,1),
+(161,1),
+(162,1),
+(163,1),
+(164,1),
+(165,1),
+(166,1),
+(167,1),
+(168,1),
+(169,1),
+(170,1),
+(171,1),
+(172,1),
+(173,1),
+(174,1),
+(175,1),
+(176,1),
+(177,1),
+(178,1.3),
+(179,1),
+(180,1),
+(181,1),
+(182,1),
+(183,1),
+(184,1),
+(185,1.1),
+(186,1),
+(187,1),
+(188,1),
+(189,1),
+(190,1),
+(191,1),
+(192,1),
+(193,1),
+(194,1),
+(195,1),
+(196,1),
+(197,1),
+(198,1),
+(199,1),
+(200,1),
+(201,1),
+(202,1),
+(203,1),
+(204,1),
+(205,1),
+(206,1),
+(207,1),
+(208,1),
+(209,1),
+(210,1.3),
+(211,1),
+(212,1),
+(213,1),
+(214,1),
+(215,1),
+(216,1),
+(217,1.1),
+(218,1),
+(219,1),
+(220,1),
+(221,1),
+(222,1),
+(223,1),
+(224,1),
+(225,1),
+(226,1),
+(227,1),
+(228,1),
+(229,1),
+(230,1),
+(231,1),
+(232,1),
+(233,1),
+(234,1),
+(235,1),
+(236,1),
+(237,1),
+(238,1),
+(239,1),
+(240,1),
+(241,1),
+(242,1),
+(243,1),
+(244,1),
+(245,1),
+(246,1),
+(247,1),
+(248,1),
+(249,1.1),
+(250,1),
+(251,1),
+(252,1),
+(253,1),
+(254,1),
+(255,1),
+(256,1),
+(257,1),
+(258,1),
+(259,1),
+(260,1),
+(261,1),
+(262,1),
+(263,1),
+(264,1),
+(265,1),
+(266,1),
+(267,1),
+(268,1),
+(269,1),
+(270,1),
+(271,1),
+(272,1),
+(273,1),
+(274,1),
+(275,1),
+(276,1),
+(277,1),
+(278,1),
+(279,1),
+(280,1),
+(281,1.1),
+(282,1),
+(283,1),
+(284,1),
+(285,1),
+(286,1),
+(287,1),
+(288,1),
+(289,0),
+(290,0),
+(291,0),
+(292,0),
+(293,0),
+(294,0),
+(295,0),
+(296,0),
+(297,0),
+(298,0),
+(299,0),
+(300,0),
+(301,0),
+(302,0),
+(303,0),
+(304,0),
+(305,0),
+(306,0),
+(307,0),
+(308,0),
+(309,0),
+(310,0),
+(311,0),
+(312,0),
+(313,0),
+(314,0),
+(315,0),
+(316,0),
+(317,0),
+(318,0),
+(319,0),
+(320,0),
+(321,1),
+(322,1),
+(323,1),
+(324,1),
+(325,1),
+(326,1),
+(327,1),
+(328,1),
+(329,1),
+(330,1),
+(331,1),
+(332,1),
+(333,1),
+(334,1),
+(335,1),
+(336,1),
+(337,1),
+(338,1.3),
+(339,1),
+(340,1),
+(341,1),
+(342,1),
+(343,1),
+(344,1),
+(345,1.1),
+(346,1),
+(347,1),
+(348,1),
+(349,1),
+(350,1),
+(351,1),
+(352,1); 

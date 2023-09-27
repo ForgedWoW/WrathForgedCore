@@ -1,1643 +1,1643 @@
 DROP TABLE IF EXISTS `SoundEntriesAdvanced`; 
 CREATE TABLE `SoundEntriesAdvanced` ( `ID` INT NOT NULL DEFAULT '0', `SoundEntryID` INT NOT NULL DEFAULT '0', `InnerRadius2D` FLOAT NOT NULL DEFAULT '0', `TimeA` INT NOT NULL DEFAULT '0', `TimeB` INT NOT NULL DEFAULT '0', `TimeC` INT NOT NULL DEFAULT '0', `TimeD` INT NOT NULL DEFAULT '0', `RandomOffsetRange` INT NOT NULL DEFAULT '0', `Usage` INT NOT NULL DEFAULT '0', `TimeintervalMin` INT NOT NULL DEFAULT '0', `TimeintervalMax` INT NOT NULL DEFAULT '0', `VolumeSliderCategory` INT NOT NULL DEFAULT '0', `DuckToSFX` FLOAT NOT NULL DEFAULT '0', `DuckToMusic` FLOAT NOT NULL DEFAULT '0', `DuckToAmbience` FLOAT NOT NULL DEFAULT '0', `InnerRadiusOfInfluence` FLOAT NOT NULL DEFAULT '0', `OuterRadiusOfInfluence` FLOAT NOT NULL DEFAULT '0', `TimeToDuck` INT NOT NULL DEFAULT '0', `TimeToUnduck` INT NOT NULL DEFAULT '0', `InsideAngle` FLOAT NOT NULL DEFAULT '0', `OutsideAngle` FLOAT NOT NULL DEFAULT '0', `OutsideVolume` FLOAT NOT NULL DEFAULT '0', `OuterRadius2D` FLOAT NOT NULL DEFAULT '0', `Name` TEXT NULL, PRIMARY KEY (`ID`)) ENGINE=InnoDB DEFAULT CHARSET=utf8; 
-INSERT INTO `SoundEntriesAdvanced` VALUES (61,12938,0,0,0,0,0,0,2,0,0,2,1,1,1,0,0,0,0,180,270,0,0,"DeathKnightFlybyNarration"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (62,13354,0,0,0,0,0,0,1,5000,10000,1,1,0,1,42,50,4000,4000,47,156,0,0,"Dark Moon Test"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (114,13807,8,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,20,"ForsakenCatapultAttackThrown"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (115,13809,8,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,20,"ForsakenCatapultLoadThrown"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (116,13812,8,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,20,"ForsakenCatapultStand"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (117,13810,8,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,20,"ForsakenCatapultRunWalk"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (134,12194,10,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,20,"GyrocopterFlyUp"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (135,12172,10,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,20,"GyrocopterFlyIdle"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (136,12174,10,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,20,"GyrocopterJumpEnd"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (137,12171,10,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,20,"GyrocopterFly"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (138,12173,10,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,20,"GyrocopterGearShift"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (139,12175,10,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,20,"GyrocopterJumpStart"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (140,12181,10,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,20,"GyrocopterWalk"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (141,12177,10,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,20,"GyrocopterShuffleLeftRight"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (143,12176,10,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,20,"GyrocopterRun"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (144,12301,10,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,20,"RocketMountStand"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (145,12302,10,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,20,"RocketMountWalk"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (146,12303,10,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,20,"RocketMountRun"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (147,12304,10,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,20,"RocketMountWalkBackwards"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (148,12308,10,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,20,"RocketMountSwimIdle"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (149,12315,10,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,20,"RocketMountFly"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (150,12310,10,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,20,"RocketMountSwimLeft"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (151,12311,10,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,20,"RocketMountSwimRight"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (152,12312,10,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,20,"RocketMountSwimBackwards"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (153,12314,10,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,20,"RocketMountRunLeft"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (154,12313,10,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,20,"RocketMountRunRight"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (174,13880,8,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,20,"DemolisherAttackThrown"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (175,13881,8,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,20,"DemolisherAttackUnarmed"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (176,13882,8,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,20,"DemolisherDeath"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (177,13883,8,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,20,"DemolisherIdle"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (178,13884,8,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,20,"DemolisherLoadThrown"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (179,13885,8,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,20,"DemolisherRunWalk"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (180,13886,8,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,20,"DemolisherWounds"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (195,13887,8,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,20,"FlyingBomberBackwards"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (196,13888,8,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,20,"FlyingBomberSitGroundDown"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (197,13889,8,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,20,"FlyingBomberSitGroundUp"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (198,13890,8,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,20,"FlyingBomberWalkRun"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (199,13814,8,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,20,"FlyingMachineCreature_VehicleRun"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (200,13815,8,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,20,"FlyingMachineCreature_VehicleSGroundDown"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (201,13816,8,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,20,"FlyingMachineCreature_VehicleSitGroundUp"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (202,13817,8,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,20,"FlyingMachineCreature_VehicleWalk"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (203,13818,8,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,20,"FlyingMachineCreature_VehicleWalkBackwards"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (204,13808,8,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,20,"ForsakenCatapultDeath"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (205,13811,8,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,20,"ForsakenCatapultSpellcastDirected"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (206,13813,8,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,20,"ForsakenCatapultWounds"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (207,13897,8,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,20,"MotorcycleVehicleAttackThrown"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (208,13898,8,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,20,"MotorcycleVehicleJumpEnd"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (209,13899,8,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,20,"MotorcycleVehicleJumpStart"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (210,13900,8,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,20,"MotorcycleVehicleLoadThrown"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (211,13901,8,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,20,"MotorcycleVehicleStand"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (212,13902,8,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,20,"MotorcycleVehicleWalkRun"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (213,13891,8,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,20,"SiegeVehicleattackThrown"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (214,13892,8,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,20,"SiegeVehicleattackUnarmed"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (215,13893,8,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,20,"SiegeVehicleDeath"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (216,13894,8,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,20,"SiegeVehicleIdle"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (217,13895,8,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,20,"SiegeVehicleSlow_Fast"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (218,13896,8,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,20,"SiegeVehicleWounds"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (219,14719,0,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,0,"Vehicle_ground_Gearshift"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (220,14720,0,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,0,"Vehicle_Airplane_Gearshift"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (221,14900,0,0,0,0,0,0,0,10000,15000,2,1,1,1,0,0,0,0,180,270,0,0,"Waterfall_RegularSmall"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (222,14899,20,0,0,0,0,0,0,20000,60000,2,1,1,1,0,0,0,0,180,270,0,35,"Waterfall_RegularMedium"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (223,14895,30,0,0,0,0,0,0,20000,60000,2,1,1,1,0,0,0,0,180,270,0,65,"Waterfall_RegularLarge"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (224,14901,10,0,0,0,0,0,0,20000,60000,2,1,1,1,0,0,0,0,180,270,0,15,"Waterfall_SewerMedium"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (234,14915,30,0,0,0,0,0,0,20000,60000,2,1,1,1,0,0,0,0,180,270,0,50,"Emitter_WaterfallTurbulenceMed"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (235,14968,20,0,0,0,0,0,0,20000,60000,2,1,1,1,0,0,0,0,180,270,0,35,"Emitter_WaterfallTurbulenceSml"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (237,14924,0,0,0,0,0,0,0,20000,60000,2,1,1,1,0,0,0,0,200,250,0.05,0,"Emitter_WaterfallTurbulanceLrg"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (238,12938,0,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,20,71,0,0,"Test - Direction"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (239,14935,0,0,0,0,0,0,0,0,0,2,1,1,1,0,0,0,0,180,270,0,0,"TestAdvKit"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (254,14924,0,0,0,0,0,0,0,0,0,2,1,1,1,0,0,0,0,30,180,0.05,0,"Waterfall_TurbulanceLrgNarrowDir"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (255,14950,0,0,0,0,0,0,0,20000,60000,2,1,1,1,0,0,0,0,200,250,0.05,0,"Emitter_WaterfallTurbulanceHuge"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (274,14915,40,0,0,0,0,0,0,0,0,2,1,1,1,0,0,0,0,180,270,0,65,"Waterfall_TurbulenceMed"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (294,14924,80,0,0,0,0,0,0,0,0,2,1,1,1,0,0,0,0,180,270,0,130,"Waterfall_TurbulenceLrg"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (314,15008,20,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,60,"AGS_PropellersLarge"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (315,15009,20,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,60,"AGS_PropellersSmall"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (316,15008,150,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,300,"AGS_LargePropellers"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (317,15013,150,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,300,"HordeGunShip (IceCrown)"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (334,14901,0,0,0,0,0,0,0,20000,60000,2,1,1,1,0,0,0,0,180,250,0.05,0,"Waterfall_SewerMediumDir"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (335,15072,5,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,13,"Waterfall_SewerSmall"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (354,15102,10,0,0,0,0,0,0,20000,60000,2,1,1,1,0,0,0,0,180,270,0,55,"Emitter_WaterfallQuietLarge"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (374,14950,0,0,0,0,0,0,0,0,0,2,1,1,1,0,0,0,0,90,100,0,0,"Waterfall_TurbulanceHugeNarrowDir"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (394,14968,0,0,0,0,0,0,0,0,0,2,1,1,1,0,0,0,0,110,180,0,0,"Waterfall_TurbulenceSmallDir"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (414,15125,8,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,25,"FlyingMacineMountStallInAir"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (415,15126,8,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,25,"FlyingMacineMountStallOnGround"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (475,15313,0,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,0,"UL_Chest_Cosmic_Open"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (476,15312,0,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,0,"UL_Chest_Cosmic_Close"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (477,15311,0,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,0,"UL_Chest_Close_General"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (478,15314,0,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,0,"UL_Chest_Gears_Open"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (479,15315,0,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,0,"UL_Chest_Ice_open"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (480,15316,0,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,0,"Ul_Chest_Leaf_Open"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (481,15317,0,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,0,"UL_Chest_Lightning_Open"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (482,15318,0,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,0,"UL_Chest_plain_Open"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (494,15319,0,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,0,"Test_01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (540,14915,30,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,65,"Emitter_WaterfallTurbulenceMed"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (541,14915,0,0,0,0,0,0,0,0,0,0,0.72,0.66,0.68,0,0,0,0,180,270,0,0,"Emitter_WaterfallTurbulenceMed"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (542,14915,0,14400000,10800000,7200000,3600000,7000,0,0,0,0,1,1,1,0,0,0,0,180,270,0,0,"Emitter_WaterfallTurbulenceMed"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (544,15344,30,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,60,"zzz_RussTestKit"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (574,13929,8,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,20,"UL_Statue_02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (614,15354,0,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,149,237,0.07,0,"Ulduar_Waterfall"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (615,15356,30,0,0,0,0,0,0,2000,10000,0,1,1,1,0,0,0,0,180,270,0,60,"zzzRussTest_Vol"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (638,15358,30,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,40,"ClockworkGiantAttack_Hands"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (639,15367,5,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,10,"zzzRussTest_ScriptTest"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (654,13929,20,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,55,"UL_Statue_02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (674,15348,30,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,50,"Emitter_UL_SaronitePool_01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (694,15368,60,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,115,"Emitter_UlduarRaid_Lightning"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (714,15370,19,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,45,"Emitter_Titan_Circle"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (715,15371,0,0,0,0,0,0,2,0,0,0,0.1,0.1,0.1,50,100,2000,5000,180,270,0,0,"zzzRussTest_BossVO"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (734,15372,0,0,0,0,0,0,0,20000,60000,0,1,1,1,0,0,0,0,180,270,0,0,"Ulduar_WaterFallSewer"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (735,15373,12,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,45,"Emitter_UlduarFirePitLarge"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (754,8506,0,0,0,0,0,0,2,0,0,0,0.3,1,1,8,45,1000,3000,180,270,0,0,"A_FelendrenTakeHeart"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (755,8508,0,0,0,0,0,0,2,0,0,0,0.3,1,1,8,45,1000,3000,180,270,0,0,"A_FelendrenIMustfeed"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (756,8507,0,0,0,0,0,0,2,0,0,0,0.3,1,1,0,0,8000,45000,180,270,0,0,"A_FelendrenFoolishWhelp"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (757,12071,0,0,0,0,0,0,2,0,0,0,0.3,1,1,70,120,1000,3000,180,270,0,0,"A_ZulAman_NalorakkSurge"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (758,12073,0,0,0,0,0,0,2,0,0,0,0.3,1,1,0,0,1000,3000,180,270,0,0,"A_ZulAman_NalorakkToTroll"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (759,12075,0,0,0,0,0,0,2,0,0,0,0.3,1,1,0,0,1000,3000,180,270,0,0,"A_ZulAman_NalorakkSlay01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (760,12077,0,0,0,0,0,0,2,0,0,0,0.3,1,1,0,0,1000,3000,180,270,0,0,"A_ZulAman_NalorakkDeath"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (762,15355,150,0,0,0,0,0,2,0,0,0,0.3,1,1,0,0,1000,3000,180,270,0,175,"Event_DalaranArena_WaterIncoming"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (763,15374,100,0,0,0,0,0,2,0,0,0,0.3,1,1,0,0,1000,3000,180,270,0,200,"UL_LightningDoor_Destroy_All"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (774,12070,0,0,0,0,0,0,2,0,0,0,0.3,1,1,0,0,1000,3000,180,270,0,0,"A_ZulAman_NalorakkAggro"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (775,12074,0,0,0,0,0,0,2,0,0,0,0.3,1,1,0,0,1000,3000,180,270,0,0,"A_ZulAman_NalorakkBerserk"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (776,12078,0,0,0,0,0,0,2,0,0,0,0.3,1,1,0,0,1000,3000,180,270,0,0,"A_ZulAman_NalorakkEvent01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (777,12079,0,0,0,0,0,0,2,0,0,0,0.3,1,1,0,0,1000,3000,180,270,0,0,"A_ZulAman_NalorakkEvent02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (778,12076,0,0,0,0,0,0,2,0,0,0,0.3,1,1,0,0,1000,3000,180,270,0,0,"A_ZulAman_NalorakkSlay02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (779,12072,0,0,0,0,0,0,2,0,0,0,0.3,1,1,0,0,1000,3000,180,270,0,0,"A_ZulAman_NalorakkToBear"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (780,12066,0,0,0,0,0,0,2,0,0,0,0.3,1,1,0,0,1000,3000,180,270,0,0,"A_ZulAman_NalorakkWave01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (781,12067,0,0,0,0,0,0,2,0,0,0,0.3,1,1,0,0,1000,3000,180,270,0,0,"A_ZulAman_NalorakkWave02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (782,12068,0,0,0,0,0,0,2,0,0,0,0.3,1,1,0,0,1000,3000,180,270,0,0,"A_ZulAman_NalorakkWave03"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (783,12069,0,0,0,0,0,0,2,0,0,0,0.3,1,1,0,0,1000,3000,180,270,0,0,"A_ZulAman_NalorakkWave04"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (784,15375,12,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,24,"Snobold_alter01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (785,15376,8,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,15,"Emitter_SmallWaterFall"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (786,15377,0,0,0,0,0,0,0,12000,25000,0,1,1,1,0,0,0,0,180,270,0,0,"Emitter_RiverTiny"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (794,15254,75,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,150,"Ulduar_Building01Dfx_Custom0"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (814,15378,25,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,60,"SiegeVehicleWounds (Flame Leviathan)"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (815,15379,25,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,60,"SiegeVehicleSlow_Fast (Flame Leviathan)"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (816,15380,25,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,60,"SiegeVehicleIdle (Flame Leviathan)"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (817,15381,25,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,60,"SiegeVehicleDeath (Flame Leviathan)"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (818,15382,25,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,60,"SiegeVehicleattackUnarmed (Flame Leviathan)"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (819,15383,25,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,60,"SiegeVehicleattackThrown (Flame Leviathan)"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (820,15384,20,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,40,"Ulduar_Freya_SunfireImpactBase"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (821,15385,20,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,70,"Ulduar_Freya_GroundTremor"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (822,15386,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Algalon_Aggro01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (823,15387,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Algalon_Slay01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (824,15388,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Algalon_Slay02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (825,15389,20,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,70,"Ulduar_Kologarn_GroundTremor"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (826,15390,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Algalon_Space01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (827,15391,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Algalon_BHole01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (828,15392,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Algalon_Adds01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (829,15393,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Algalon_Death01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (830,15394,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Algalon_Berserk01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (831,15396,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Algalon_Special01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (832,15397,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Algalon_Special02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (833,15398,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Algalon_Timer01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (834,15399,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Algalon_Timer02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (835,15400,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Algalon_Timer03"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (836,15401,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Algalon_Death02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (837,15402,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Algalon_Death03"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (838,15403,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Algalon_Adds02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (839,15404,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Algalon_Berserk02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (840,15405,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Algalon_Summon01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (841,15406,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Algalon_Summon02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (842,15407,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Algalon_Summon03"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (843,15408,40,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,90,"Ulduar_Kologarn_Shockwave"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (844,15412,20,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,80,"Ulduar_FlameLeviathan_FlameJets"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (845,15413,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Archivum_MimironSDStart01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (846,15414,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Archivum_MimironSDEnd01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (847,15415,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Archivum_MimironSD10"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (848,15416,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Archivum_MimironSD09"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (849,15417,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Archivum_MimironSD08"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (850,15418,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Archivum_MimironSD07"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (851,15419,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Archivum_MimironSD06"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (852,15420,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Archivum_MimironSD05"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (853,15421,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Archivum_MimironSD04"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (854,15422,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Archivum_MimironSD03"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (855,15423,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Archivum_MimironSD02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (856,15424,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Archivum_MimironSD01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (857,15425,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Archivum_MimironSD00"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (858,15426,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Archivum_System01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (859,15427,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Archivum_System02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (860,15428,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Archivum_System03"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (861,15429,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Archivum_System04"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (862,15430,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Archivum_System05"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (863,15431,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Archivum_System06"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (864,15432,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Archivum_System07"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (865,15433,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Archivum_System08"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (866,15434,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Archivum_System09"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (867,15435,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Archivum_System10"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (868,15436,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Archivum_Planetarium01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (869,15437,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Archivum_Planetarium02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (870,15438,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Archivum_Planetarium03"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (871,15439,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Archivum_Planetarium04"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (872,15440,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Archivum_Planetarium05"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (873,15441,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Archivum_Planetarium06"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (874,15442,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Archivum_FreyaAnalysis01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (875,15443,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Archivum_FreyaAnalysis02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (876,15444,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Archivum_FreyaAnalysis03"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (877,15445,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Archivum_FreyaAnalysis04"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (878,15446,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Archivum_FreyaAnalysis05"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (879,15447,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Archivum_FreyaAnalysis06"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (880,15448,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Archivum_FreyaAnalysis07"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (881,15449,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Archivum_ThorimAnalysis01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (882,15450,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Archivum_ThorimAnalysis02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (883,15451,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Archivum_ThorimAnalysis03"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (884,15452,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Archivum_ThorimAnalysis04"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (885,15453,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Archivum_HodirAnalysis01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (886,15454,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Archivum_HodirAnalysis02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (887,15455,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Archivum_HodirAnalysis03"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (888,15456,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Archivum_HodirAnalysis04"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (889,15457,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Archivum_HodirAnalysis05"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (890,15458,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Archivum_MimironAnalysis01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (891,15459,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Archivum_MimironAnalysis02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (892,15460,20,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,65,"Ulduar_FlameLeviathan_GatheringSpeed"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (893,15461,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Archivum_MimironAnalysis03"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (894,15462,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Archivum_MimironAnalysis04"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (895,15463,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Archivum_ValanyrAnalysis01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (896,15464,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Archivum_ValanyrAnalysis02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (897,15465,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Archivum_ValanyrAnalysis03"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (898,15466,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Archivum_ValanyrAnalysis04"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (899,15467,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Archivum_ValanyrAnalysis05"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (900,15468,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Archivum_ValanyrAnalysis06"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (901,15470,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_ArthasPrisoner_YSVisThree01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (902,15471,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_ArthasPrisoner_YSVisThree02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (903,15473,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Auriaya_Aggro01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (904,15474,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Auriaya_Slay01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (905,15475,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Auriaya_Slay02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (906,15476,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Auriaya_Death01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (907,15477,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Auriaya_Berserk01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (908,15483,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Brightleaf_Aggro01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (909,15485,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Brightleaf_Slay01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (910,15486,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Brightleaf_Slay02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (911,15487,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Brightleaf_Death01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (912,15493,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Ironbranch_Aggro01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (913,15494,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Ironbranch_Slay01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (914,15495,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Ironbranch_Slay02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (915,15496,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Ironbranch_Death01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (916,15500,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Stonebark_Aggro01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (917,15501,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Stonebark_Slay01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (918,15502,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Stonebark_Slay02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (919,15503,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Stonebark_Death01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (920,15506,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Leviathan_Aggro01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (921,15507,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Leviathan_Target01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (922,15508,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Leviathan_Target02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (923,15509,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Leviathan_Target03"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (924,15510,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Leviathan_HardmodeOn"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (925,15511,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Leviathan_TowerNone"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (926,15512,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Leviathan_TowerFrost"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (927,15513,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Leviathan_TowerFire"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (928,15514,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Leviathan_TowerNature"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (929,15515,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Leviathan_TowerEnergy"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (930,15516,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Leviathan_PlayerRiding"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (931,15517,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Leviathan_Overload01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (932,15518,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Leviathan_Overload02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (933,15519,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Leviathan_Overload03"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (934,15520,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Leviathan_Death01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (935,15521,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Leviathan_Slay01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (936,15523,50,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,70,"Ulduar_Hodir_FlashFreeze"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (937,15526,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Freya_Aggro01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (938,15527,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Freya_AggroElder01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (939,15528,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Freya_Adds01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (940,15529,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Freya_Slay01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (941,15530,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Freya_Slay02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (942,15531,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Freya_Death01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (943,15532,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Freya_Berserk01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (944,15533,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Freya_Adds02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (945,15534,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Freya_Adds03"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (946,15535,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Freya_YSHelp01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (947,15538,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Garona_YSVisOne01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (948,15539,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Garona_YSVisOne02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (949,15540,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Garona_YSVisOne03"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (950,15541,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Garona_YSVisOne04"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (951,15542,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Vezax_Aggro01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (952,15543,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Vezax_Slay01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (953,15544,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Vezax_Slay02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (954,15545,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Vezax_Kite01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (955,15546,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Vezax_Death01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (956,15547,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Vezax_Berserk01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (957,15548,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Vezax_HardMode01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (958,15552,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Hodir_Aggro01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (959,15553,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Hodir_Slay01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (960,15554,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Hodir_Slay02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (961,15555,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Hodir_FlashFreeze01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (962,15556,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Hodir_Stalactite01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (963,15557,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Hodir_Death01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (964,15558,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Hodir_Berserk01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (965,15559,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Hodir_YSHelp01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (967,15563,30,0,0,0,0,0,2,0,0,0,0.7,1,1,8,8,1000,3000,180,270,0,70,"Ulduar_XT-002_LightBomb"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (968,15564,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Ignis_Aggro01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (969,15565,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Ignis_CreateAdds01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (970,15566,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Ignis_PourMetal01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (971,15567,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Ignis_FireSpec01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (972,15568,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Ignis_FireSpec02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (973,15569,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Ignis_Slay01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (974,15570,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Ignis_Slay02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (975,15571,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Ignis_Berserk01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (976,15572,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Ignis_Death01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (994,15577,20,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,50,"Ulduar_Ignis_Scorch"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (995,15578,20,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,50,"Ulduar_Ignis_ScrochGroundEffect"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (996,15582,8,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,25,"Lightning_Fel_Precast_Low_Hand (IronCouncil)"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1014,15583,20,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,40,"Ulduar_IronConcil_OverloadEffect"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1015,15584,20,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,40,"Ulduar_IronCouncil_OverwhelmingPower"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1016,11335,0,0,0,0,0,0,2,0,0,0,0.3,1,1,0,0,1000,3000,180,270,0,0,"A_GRULLAIR_Kazzak_Supreme01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1017,11336,0,0,0,0,0,0,2,0,0,0,0.3,1,1,0,0,1000,3000,180,270,0,0,"A_GRULLAIR_Kazzak_Supreme02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1037,11333,0,0,0,0,0,0,2,0,0,0,0.3,1,1,0,0,1000,3000,180,270,0,0,"A_GRULLAIR_Kazzak_Aggro01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1038,11334,0,0,0,0,0,0,2,0,0,0,0.3,1,1,0,0,1000,3000,180,270,0,0,"A_GRULLAIR_Kazzak_Aggro02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1039,11340,0,0,0,0,0,0,2,0,0,0,0.3,1,1,0,0,1000,3000,180,270,0,0,"A_GRULLAIR_Kazzak_Death01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1040,11332,0,0,0,0,0,0,2,0,0,0,0.3,1,1,0,0,1000,3000,180,270,0,0,"A_GRULLAIR_Kazzak_Intro01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1041,11337,0,0,0,0,0,0,2,0,0,0,0.3,1,1,0,0,1000,3000,180,270,0,0,"A_GRULLAIR_Kazzak_Slay01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1042,11338,0,0,0,0,0,0,2,0,0,0,0.3,1,1,0,0,1000,3000,180,270,0,0,"A_GRULLAIR_Kazzak_Slay02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1043,11339,0,0,0,0,0,0,2,0,0,0,0.3,1,1,0,0,1000,3000,180,270,0,0,"A_GRULLAIR_Kazzak_Slay03"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1044,15585,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Llane_YSVisOne01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1045,15586,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Kologarn_Aggro01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1046,15587,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Kologarn_Slay01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1047,15588,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Kologarn_Slay02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1048,15589,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Kologarn_LArmGone01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1049,15590,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Kologarn_RArmGone01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1050,15591,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Kologarn_Special01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1051,15592,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Kologarn_Special02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1052,15593,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Kologarn_Death01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1053,15594,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Kologarn_Berserk01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1054,15598,0,0,0,0,0,0,2,0,0,0,0.2,1,1,200,200,1000,3000,180,270,0,0,"UR_Lich King_YSVisThree01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1055,15599,0,0,0,0,0,0,2,0,0,0,0.2,1,1,200,200,1000,3000,180,270,0,0,"UR_Lich King_YSVisThree02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1056,15600,0,0,0,0,0,0,2,0,0,0,0.3,1,1,0,0,1000,3000,180,270,0,0,"SF_Lich King_Event01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1057,15601,0,0,0,0,0,0,2,0,0,0,0.3,1,1,0,0,1000,3000,180,270,0,0,"SF_Lich King_Event02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1058,15602,0,0,0,0,0,0,2,0,0,0,0.3,1,1,0,0,1000,3000,180,270,0,0,"SF_Lich King_Event03"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1059,15603,0,0,0,0,0,0,2,0,0,0,0.3,1,1,0,0,1000,3000,180,270,0,0,"SF_Lich King_Event04"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1060,15604,0,0,0,0,0,0,2,0,0,0,0.3,1,1,0,0,1000,3000,180,270,0,0,"SF_Lich King_Event05"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1061,15605,0,0,0,0,0,0,2,0,0,0,0.3,1,1,0,0,1000,3000,180,270,0,0,"SF_Lich King_Event06"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1062,15606,0,0,0,0,0,0,2,0,0,0,0.3,1,1,0,0,1000,3000,180,270,0,0,"SF_Lich King_Event07"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1064,15610,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Malygos_YSVisTwo01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1065,15611,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Mimiron_TankIntro01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1066,15612,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Mimiron_TankActive01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1067,15613,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Mimiron_TankSlay01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1068,15614,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Mimiron_TankSlay02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1069,15615,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Mimiron_TankDeath01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1070,15616,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Mimiron_TorsoActive01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1071,15617,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Mimiron_TorsoSlay01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1072,15618,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Mimiron_TorsoSlay02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1073,15619,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Mimiron_TorsoDeath01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1074,15620,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Mimiron_HeadActive01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1075,15621,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Mimiron_HeadSlay01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1076,15622,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Mimiron_HeadSlay02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1077,15623,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Mimiron_HeadDeath01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1078,15624,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Mimiron_Voltron01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1079,15625,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Mimiron_VoltronSlay01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1080,15626,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Mimiron_VoltronSlay02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1081,15627,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Mimiron_VoltronDeath01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1082,15628,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Mimiron_Berserk01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1083,15629,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Mimiron_TankHardIntro01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1084,15630,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Mimiron_YSHelp01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1085,15631,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_NeltharionYS_YSVisTwo01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1086,15632,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_NeltharionYS_YSVisTwo02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1087,15633,0,0,0,0,0,0,2,0,0,0,0.3,1,1,0,0,1000,3000,180,270,0,0,"SF_Balargarde_Event01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1088,15634,0,0,0,0,0,0,2,0,0,0,0.3,1,1,0,0,1000,3000,180,270,0,0,"SF_Balargarde_Event02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1089,15635,0,0,0,0,0,0,2,0,0,0,0.3,1,1,0,0,1000,3000,180,270,0,0,"SF_Balargarde_Event03"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1090,15636,0,0,0,0,0,0,2,0,0,0,0.3,1,1,0,0,1000,3000,180,270,0,0,"SF_Balargarde_Event04"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1091,15637,0,0,0,0,0,0,2,0,0,0,0.3,1,1,0,0,1000,3000,180,270,0,0,"SF_Balargarde_Event05"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1092,15638,0,0,0,0,0,0,2,0,0,0,0.3,1,1,0,0,1000,3000,180,270,0,0,"SF_Balargarde_Event06"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1093,15639,0,0,0,0,0,0,2,0,0,0,0.3,1,1,0,0,1000,3000,180,270,0,0,"SF_Balargarde_Event07"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1095,15643,0,0,0,0,0,0,2,0,0,0,0.3,1,1,0,0,1000,3000,180,270,0,0,"SF_Vardmadra_Event01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1096,15644,0,0,0,0,0,0,2,0,0,0,0.3,1,1,0,0,1000,3000,180,270,0,0,"SF_Vardmadra_Event02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1097,15645,0,0,0,0,0,0,2,0,0,0,0.3,1,1,0,0,1000,3000,180,270,0,0,"SF_Vardmadra_Event03"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1098,15646,0,0,0,0,0,0,2,0,0,0,0.3,1,1,0,0,1000,3000,180,270,0,0,"SF_Vardmadra_Event04"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1099,15647,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_RazorscaleNPC_Intro01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1100,15648,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_RazorscaleNPC_Ground01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1101,15649,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Rhonin_Event01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1102,15650,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Rhonin_Event02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1103,15651,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Rhonin_Event03"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1104,15652,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Rhonin_Event04"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1105,15653,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Rhonin_Event05"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1106,15654,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Rhonin_Event06"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1107,15655,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Rhonin_Event07"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1108,15656,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Rhonin_Event08"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1109,15657,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Molgeim_Aggro01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1110,15658,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Molgeim_Slay01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1111,15659,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Molgeim_Slay02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1112,15660,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Molgeim_Power01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1113,15661,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Molgeim_Summon01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1114,15662,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Molgeim_Death01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1115,15663,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Molgeim_Death02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1116,15664,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Molgeim_Berserk01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1117,15668,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Sif_Start03"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1118,15669,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Sif_Despawn01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1119,15670,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Sif_Event01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1121,15674,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Steelbreaker_Aggro01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1122,15675,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Steelbreaker_Slay01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1123,15676,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Steelbreaker_Slay02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1124,15677,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Steelbreaker_Power01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1125,15678,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Steelbreaker_Death01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1126,15679,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Steelbreaker_Death02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1127,15680,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Steelbreaker_Berserk01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1128,15684,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Brundir_Aggro01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1129,15685,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Brundir_Slay01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1130,15686,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Brundir_Slay02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1131,15687,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Brundir_Power01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1132,15688,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Brundir_Flight01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1133,15689,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Brundir_Death01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1134,15690,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Brundir_Death02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1135,15691,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Brundir_Berserk01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1155,15696,0,0,0,0,0,0,1,30000,60000,0,1,1,1,0,0,0,0,180,270,0,0,"Emitter_IceCracking_Oneshots"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1156,13594,0,0,0,0,0,0,2,0,0,0,0.3,1,1,0,0,1000,3000,180,270,0,0,"A_DRAKOSAGGRO"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1157,13605,0,0,0,0,0,0,2,0,0,0,0.3,1,1,0,0,1000,3000,180,270,0,0,"A_DRAKOSDEATH"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1158,13602,0,0,0,0,0,0,2,0,0,0,0.3,1,1,0,0,1000,3000,180,270,0,0,"A_DRAKOSKILL01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1159,13603,0,0,0,0,0,0,2,0,0,0,0.3,1,1,0,0,1000,3000,180,270,0,0,"A_DRAKOSKILL02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1160,13604,0,0,0,0,0,0,2,0,0,0,0.3,1,1,0,0,1000,3000,180,270,0,0,"A_DRAKOSKILL03"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1161,13598,0,0,0,0,0,0,2,0,0,0,0.3,1,1,0,0,1000,3000,180,270,0,0,"A_DRAKOSPULL01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1162,13599,0,0,0,0,0,0,2,0,0,0,0.3,1,1,0,0,1000,3000,180,270,0,0,"A_DRAKOSPULL02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1163,13600,0,0,0,0,0,0,2,0,0,0,0.3,1,1,0,0,1000,3000,180,270,0,0,"A_DRAKOSPULL03"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1164,13601,0,0,0,0,0,0,2,0,0,0,0.3,1,1,0,0,1000,3000,180,270,0,0,"A_DRAKOSPULL04"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1165,13595,0,0,0,0,0,0,2,0,0,0,0.3,1,1,0,0,1000,3000,180,270,0,0,"A_DRAKOSSTOMP01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1166,13596,0,0,0,0,0,0,2,0,0,0,0.3,1,1,0,0,1000,3000,180,270,0,0,"A_DRAKOSSTOMP02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1167,13597,0,0,0,0,0,0,2,0,0,0,0.3,1,1,0,0,1000,3000,180,270,0,0,"A_DRAKOSSTOMP03"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1174,14931,0,0,0,0,0,0,0,20000,60000,0,1,1,1,0,0,0,0,180,270,0,0,"Emitter_WaterfallTurbulanceXL"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1194,15699,8,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,20,"UL_Gnomewing_LightBeam"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1195,15702,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Ysera_YSVisTwo01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1216,15706,0,0,0,0,0,0,1,5000,15000,0,1,1,1,0,0,0,0,14,135,0,0,"Dalaran - Pet Store - Dog Panting"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1217,15707,0,0,0,0,0,0,1,3000,5000,0,1,1,1,0,0,0,0,54,88,0,0,"Dalaran - Pet Store - Frog One shots"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1218,15708,0,0,0,0,0,0,1,5000,15000,0,1,1,1,0,0,0,0,88,115,0,0,"Dalaran - Pet Store - Pig One shots"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1219,15705,0,0,0,0,0,0,1,5000,15000,0,1,1,1,0,0,0,0,180,270,0,0,"Dalaran - Pet Store - Cat one shots"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1220,15704,0,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,190,220,0.25,0,"Dalaran - Pet Store - Aquarium"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1221,15710,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Kologarn_Aggro01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1222,15711,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Kologarn_Slay01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1223,15712,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Kologarn_Slay02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1224,15713,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Kologarn_LArmGone01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1225,15715,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Kologarn_RArmGone01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1226,15717,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Kologarn_Special01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1227,15718,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Kologarn_Special02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1228,15719,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Kologarn_Death01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1229,15720,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Kologarn_Berserk01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1230,15724,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_XT002_Aggro01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1231,15725,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_XT002_HeartOpen01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1232,15726,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_XT002_HeartClose01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1233,15727,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_XT002_Special01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1234,15728,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_XT002_Slay01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1235,15729,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_XT002_Slay02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1236,15730,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_XT002_Berserk01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1237,15731,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_XT002_Death01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1238,15732,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_XT002_Adds01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1239,15733,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Thorim_Start01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1240,15734,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Thorim_Start02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1241,15735,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Thorim_Misc01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1242,15736,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Thorim_Misc02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1243,15737,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Thorim_Misc03"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1244,15738,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Thorim_JumpDown01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1245,15739,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Thorim_Slay01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1246,15740,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Thorim_Slay02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1247,15741,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Thorim_Berserk01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1248,15742,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Thorim_P1Wipe01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1249,15743,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Thorim_Defeated01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1250,15744,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Thorim_NormEpi01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1251,15745,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Thorim_NormEpi02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1252,15746,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Thorim_NormEpi03"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1253,15747,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Thorim_HardEpi01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1254,15748,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Thorim_HardEpi02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1255,15749,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Thorim_HardEpi03"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1256,15750,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Thorim_YSHelp01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1257,15754,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_YoggSaron_PhaseTwo01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1258,15755,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_YoggSaron_PhaseThree01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1259,15756,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_YoggSaron_Tentacle01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1260,15757,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_YoggSaron_Slay01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1261,15758,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_YoggSaron_Slay02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1262,15759,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_YoggSaron_Insanity01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1263,15760,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_YoggSaron_Insanity02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1264,15761,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_YoggSaron_Death01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1265,15762,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_YoggSaron_YSVisOne01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1266,15763,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_YoggSaron_YSVisOne02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1267,15764,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_YoggSaron_YSVisOne03"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1268,15765,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_YoggSaron_YSVisTwo03"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1269,15766,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_YoggSaron_YSVisThree01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1270,15767,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_YoggSaron_YSVisThree02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1271,15771,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_FemaleYogg_Prefight01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1272,15772,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_FemaleYogg_Prefight02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1273,15773,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_FemaleYogg_Help01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1274,15774,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_FemaleYogg_Help02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1275,15775,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_FemaleYogg_Aggro01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1276,15776,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_FemaleYogg_Special01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1277,15777,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_FemaleYogg_Special02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1278,15778,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_FemaleYogg_Slay01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1279,15779,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_FemaleYogg_Slay02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1280,15780,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_FemaleYogg_Insanity01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1281,15784,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Ysera_YSVisTwo01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1282,15785,30,0,0,0,0,0,1,60000,180000,0,1,1,1,0,0,0,0,180,270,0,90,"Stormwind - BuildingBehindTheGate"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1283,15789,0,0,0,0,0,0,1,120000,300000,0,1,1,1,0,0,0,0,180,270,0,0,"LightHouseFogHorn (Stormwind Harbor)"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1295,15791,10,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,30,"Ulduar_Mimoron_P3WX2_PlasmablstLoop_STE"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1314,15794,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Brann_Radio01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1315,15795,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Brann_Radio02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1316,15796,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Brann_Radio03"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1317,15797,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Brann_Radio04"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1318,15798,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Brann_Radio05"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1319,15799,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Brann_Radio06"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1320,15801,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Brann_Radio07"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1321,15802,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Brann_Radio08"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1322,15803,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Brann_Radio09"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1323,15804,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Brann_Radio10"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1324,15805,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Brann_Radio11"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1325,15806,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Brann_Radio12"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1326,15807,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Brann_RadioStart01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1327,15808,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Brann_Archivum01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1328,15809,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Brann_Archivum02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1329,15810,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Brann_Archivum03"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1330,15811,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Brann_Archivum04"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1331,15812,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Brann_Archivum05"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1332,15813,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Brann_Archivum06"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1333,15814,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Brann_Archivum07"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1334,15815,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Brann_Archivum08"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1335,15816,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Brann_Archivum09"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1336,15817,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Brann_Archivum10"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1337,15818,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Brann_Planetarium01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1338,15819,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Brann_Planetarium02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1339,15820,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Brann_Planetarium03"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1340,15821,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Brann_Planetarium04"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1341,15822,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Brann_Planetarium05"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1342,15823,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Brann_Algalon01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1343,15824,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Brann_AlgalonSummoned01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1344,15825,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Brann_AlgalonSummoned02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1345,15826,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Brann_Dalaran01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1346,15827,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Brann_ICDefeat"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1374,15830,8,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,20,"MimironHeadMount_Run"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1375,15831,8,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,20,"MimironHeadMount_Walk"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1376,15832,8,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,20,"MimironHeadMount_JumpStart"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1377,15833,8,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,20,"MimironHeadMount_JumpEnd"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1394,15277,8,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,20,"Orc_Fortress_elevator01_Loop"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1395,15859,50,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,100,"UL_Train_Turnaround_Open"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1414,15287,8,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,20,"VR_Elevator_Lift_Looped"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1415,15286,8,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,20,"VR_Elevator_Lift_Decellerate"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1416,15285,8,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,20,"VR_Elevator_Lift_Accelerate"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1417,15879,8,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,20,"VR_Elevator_Lift_Looped 2"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1434,15883,50,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,80,"UL_Stalagtit_01_Spawn"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1435,15884,50,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,80,"UL_Stalagtit_01_Custom0"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1454,15887,100,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,150,"UL_Destructible_Gate01_Open"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1455,15888,100,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,150,"UL_Destructible_Gate01_Close"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1456,15889,100,0,0,0,0,0,2,100000,200000,0,1,1,1,0,0,0,0,180,270,0,150,"UL_Destructible_Gate01_Destroy"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1457,15322,100,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,150,"UL_Destructible_Gate_01_Close"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1458,15891,50,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,75,"YoggSaron_Birth"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1459,15892,50,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,75,"YoggSaron_Drown_Death"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1460,15893,50,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,75,"YoggSaron_Submerge"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1461,15894,50,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,75,"Kologarn_Death"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1462,15895,50,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,75,"MimironTorso_Birth"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1463,15896,50,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,75,"MimironTorso_Death"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1464,15897,30,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,55,"Mimiron_Weapon_Cannon"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1494,12351,0,0,0,0,0,0,0,0,0,0,0.2,1,1,0,0,1000,5000,180,270,0,0,"SunwellIgnition"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1495,15898,0,0,0,0,0,0,2,0,0,0,0.2,1,1,0,0,1000,3000,180,270,0,0,"Algalon Intro"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1514,15899,14,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,25,"Emitter_zuldrak_archpost_05"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1515,15900,8,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,20,"Emitter_PurplePortal"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1534,15902,30,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,60,"Ulduar_Tram_InMotion"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1594,15325,30,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,100,"UL_SigilDoor_01_open"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1614,15235,8,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,40,"UL_Floating_Glass02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1615,15234,23,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,60,"UL_Floating_Glass01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1634,15916,10,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,45,"ul_train_rocketblast"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1654,15214,30,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,60,"UL_Machine_TramRing_02_Stand"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1674,15298,30,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,50,"DragonBlight_Fires_ALL"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1814,15281,70,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,100,"Transport_Vrykul_Medium_Doodad_Looped"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1834,15969,8,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,25,"OilRigStack01_Broken"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1854,15973,4,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,15,"TanarisWaterTower_Steel"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1874,15977,50,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,100,"BF2_OilTower_02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1914,16003,10,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,25,"GyrocopterStallInAirVar1_A"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1915,16004,10,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,25,"GyrocopterStallInAirVar1_B"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1934,12178,10,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,20,"GyrocopterStand"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1954,16008,400,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,400,"ND_ArgentColiseum_floorpieces_Custom0"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1974,1738,50,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,100,"StoneTalonWaterWheel"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1994,16009,50,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,100,"ND_Human_gate_ClosedFX_Door_Close"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1995,16010,50,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,100,"ND_Human_gate_ClosedFX_Door_Open"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1996,16011,50,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,100,"ArgentCrusade_MonsterDoor_Close.wav"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (1997,16012,50,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,100,"ArgentCrusade_MonsterDoor_Open"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2014,16017,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"CR_Garrosh_KillA01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2015,16018,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"CR_Garrosh_KillA02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2016,16019,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"CR_Garrosh_KillA03"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2017,16020,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"CR_Garrosh_KillA04"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2018,16021,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"CR_Garrosh_JaraxxusExit01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2019,16022,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"CR_Garrosh_PVPHIntro01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2020,16023,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"CR_Garrosh_PVPAIntro01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2021,16024,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"CR_Garrosh_PVPHWins01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2022,16025,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"CR_Garrosh_TwinsHComplete01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2023,16026,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"CR_Garrosh_BeastHFight01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2024,16027,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"CR_Garrosh_HArrival01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2025,16028,0,0,0,0,0,0,2,0,0,0,0.3,0.74,1,200,200,1000,3000,180,270,0,0,"CR_Garrosh_HArrival02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2026,16029,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"CR_Garrosh_HArrival03"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2027,16030,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"CR_Garrosh_HArrival04"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2028,16031,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"CR_Garrosh_HArrival05"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2034,16036,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"CR_TirionFordring_RaidIntroLong01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2035,16037,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"CR_TirionFordring_RaidIntroShort01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2036,16038,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"CR_TirionFordring_MagnataurIntro01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2037,16039,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"CR_TirionFordring_JormungarIntro01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2038,16040,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"CR_TirionFordring_YetiIntro01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2039,16041,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"CR_TirionFordring_YetiSlain01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2040,16042,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"CR_TirionFordring_YetiLose01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2041,16043,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"CR_TirionFordring_WilfredIntro01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2042,16044,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"CR_TirionFordring_JaraxxusIntro01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2043,16045,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"CR_TirionFordring_JaraxxusSlain01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2044,16046,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"CR_TirionFordring_JaraxxusCalm01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2045,16047,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"CR_TirionFordring_PVPIntro01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2046,16048,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"CR_TirionFordring_PVPAgree01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2047,16049,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"CR_TirionFordring_PVPWin01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2048,16050,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"CR_TirionFordring_TwinsIntro01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2049,16051,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"CR_TirionFordring_TwinsDead01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2050,16052,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"CR_TirionFordring_ArthasIntro01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2051,16053,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"CR_TirionFordring_RaidTrialsIntro01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2052,16054,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"CR_TirionFordring_AArrival01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2053,16055,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"CR_TirionFordring_AArrival02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2054,16056,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"CR_TirionFordring_HArrival01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2055,16057,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"CR_TirionFordring_HArrival02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2056,16058,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"CR_TirionFordring_HArrival03"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2057,16059,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"CR_TirionFordring_HArrival04"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2058,16060,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"CR_Varian_KillH01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2059,16061,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"CR_Varian_KillH02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2060,16062,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"CR_Varian_KillH03"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2061,16063,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"CR_Varian_KillH04"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2062,16064,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"CR_Varian_JaraxxusExit01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2063,16065,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"CR_Varian_PVPAIntro01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2064,16066,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"CR_Varian_PVPHIntro01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2065,16067,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"CR_Varian_PVPAWins01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2066,16068,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"CR_Varian_TwinsAComplete01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2067,16069,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"CR_Varian_BeastAFight01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2068,16070,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"CR_Varian_AArrival01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2069,16071,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"CR_Varian_AArrival02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2070,16072,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"CR_Varian_AArrival03"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2071,16073,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Varian_HOR01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2072,16074,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Varian_HOR02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2073,16075,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Varian_HOR03"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2074,16076,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Varian_HOR04"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2075,16077,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Varian_HOR05"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2076,16078,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Varian_ALL01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2077,16079,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Varian_ALL02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2078,16080,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Varian_ALL03"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2079,16081,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Varian_ALL04"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2080,16082,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Varian_ALL05"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2081,16083,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Varian_ALL06"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2082,16084,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Varian_ALL07"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2083,16085,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Varian_ALL08"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2084,16086,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Varian_ALL09"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2085,16087,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Varian_ALL10"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2086,16088,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Varian_ALL11"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2087,16089,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Varian_ALL12"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2088,16090,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Varian_ALL13"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2089,16091,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Varian_ALL14"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2090,16092,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Varian_ALL15"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2091,16093,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Varian_ALL16"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2092,16094,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Varian_ALL17"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2094,16095,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Varian_ALL18"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2095,16096,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Varian_ALL19"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2096,16097,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Varian_ALL20"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2097,16098,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Varian_ALL21"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2098,16099,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Varian_ALL22"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2099,16100,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Varian_ALLIntro01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2100,16101,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Varian_ALLIntro02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2101,16102,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Varian_ALLIntro03"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2102,16103,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Varian_ALLIntro04"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2103,16104,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Varian_ALLIntro05"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2114,16120,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"CR_Jaina_AArival01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2115,16121,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"CR_Jaina_AArival02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2116,16122,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Jaina_HOR01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2117,16123,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Jaina_HOR02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2118,16124,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Jaina_ALL01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2119,16125,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Jaina_ALL02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2120,16126,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Jaina_ALL03"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2121,16127,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Jaina_ALL04"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2122,16128,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Jaina_ALL05"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2123,16129,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Jaina_HORIntro01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2124,16130,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Jaina_HORIntro02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2125,16131,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Jaina_HORIntro03"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2126,16132,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Jaina_HORIntro04"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2127,16133,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Jaina_HORIntro05"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2134,16134,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"AC_Eadric_Intro01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2135,16135,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"AC_Eadric_Aggro01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2136,16136,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"AC_Eadric_Hammer01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2137,16137,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"AC_Eadric_Slay01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2138,16138,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"AC_Eadric_Slay02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2139,16139,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"AC_Eadric_Death01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2140,16143,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"CR_Jaraxxus_KillGnome01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2141,16144,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"CR_Jaraxxus_Aggro01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2142,16145,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"CR_Jaraxxus_Slay01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2143,16146,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"CR_Jaraxxus_Slay02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2144,16147,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"CR_Jaraxxus_Death01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2145,16148,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"CR_Jaraxxus_Berserk01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2146,16149,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"CR_Jaraxxus_Special01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2147,16150,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"CR_Jaraxxus_Special02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2148,16151,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"CR_Jaraxxus_Special03"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2154,16156,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Varimathras_HOR01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2155,16157,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Varimathras_HOR02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2156,16158,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Varimathras_HOR03"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2157,16159,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Varimathras_HOR04"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2158,16160,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Varimathras_HOR05"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2159,16161,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Varimathras_HOR06"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2160,16162,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Varimathras_HOR07"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2161,16163,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Varimathras_HOR08"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2162,16164,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Varimathras_HOR09"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2163,16165,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Varimathras_HOR10"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2164,16166,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Varimathras_HOR11"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2165,16167,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Varimathras_HOR12"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2166,16168,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Varimathras_HOR13"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2167,16169,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Varimathras_HOR14"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2168,16170,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Varimathras_Aggro01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2173,16180,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Sargeras_HOR01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2174,16181,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"CR_Thrall_HArrival01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2175,16182,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"CR_Thrall_HArrival02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2176,16183,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"CR_Thrall_HArrival03"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2177,16184,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"CR_Thrall_HArrival04"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2178,16185,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"CR_Thrall_HArrival05"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2179,16186,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"CR_Thrall_HArrival06"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2180,16187,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Thrall_HOR01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2181,16188,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Thrall_HOR02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2182,16189,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Thrall_HOR03"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2183,16190,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Thrall_HOR04"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2184,16191,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Thrall_HOR05"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2185,16192,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Thrall_HOR06"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2186,16193,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Thrall_HOR07"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2187,16194,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Thrall_HOR11"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2194,16195,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Thrall_HOR08"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2195,16196,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Thrall_HOR09"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2196,16197,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Thrall_HOR10"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2197,16198,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Thrall_HOR12"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2198,16199,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Thrall_HOR13"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2199,16200,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Thrall_HOR14"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2200,16201,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Thrall_HOR15"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2201,16202,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Thrall_HOR16"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2202,16203,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Thrall_HOR17"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2203,16204,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Thrall_HOR18"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2204,16205,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Thrall_HOR19"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2205,16206,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Thrall_HOR20"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2206,16207,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Thrall_HOR21"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2207,16208,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Thrall_HOR22"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2208,16210,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Thrall_HOR23"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2209,16211,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Thrall_HOR24"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2210,16212,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Thrall_HOR25"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2211,16214,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Thrall_HOR26"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2212,16215,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Thrall_HOR27"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2213,16216,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Thrall_HOR28"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2214,16217,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Thrall_HOR29"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2215,16218,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Thrall_HOR30"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2216,16219,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Thrall_HOR31"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2217,16220,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Thrall_HOR32"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2218,16221,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Thrall_HOR33"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2219,16222,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Thrall_HORIntro01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2220,16223,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Thrall_HORIntro02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2221,16224,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Thrall_HORIntro03"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2222,16225,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Thrall_HORIntro04"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2223,16226,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Thrall_HORIntro05"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2224,16227,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Thrall_HORIntro06"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2225,16228,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Thrall_HORIntro07"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2226,16229,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Thrall_HORIntro08"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2227,16233,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"CR_Eydis_Aggro01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2228,16234,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"CR_Anubarak_Aggro01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2229,16235,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"CR_Anubarak_Intro"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2230,16236,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"CR_Anubarak_Slay01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2231,16237,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"CR_Anubarak_Slay02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2232,16238,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"CR_Anubarak_Death01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2233,16239,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"CR_Anubarak_Berserk01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2234,16240,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"CR_Anubarak_Submerge01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2235,16241,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"CR_Anubarak_30Percent01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2236,16245,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"AC_Paletress_Intro01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2237,16246,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"AC_Paletress_Intro02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2238,16247,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"AC_Paletress_Aggro01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2239,16248,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"AC_Paletress_MemorySummon01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2254,16249,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"AC_Paletress_MemoryDefeat01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2255,16250,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"AC_Paletress_Slay01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2256,16251,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"AC_Paletress_Slay02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2257,16252,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"AC_Paletress_Death01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2258,16256,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"AC_BlackKnight_Intro01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2259,16257,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"AC_BlackKnight_Intro02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2260,16258,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"AC_BlackKnight_Intro03"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2261,16259,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"AC_BlackKnight_Aggro01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2262,16260,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"AC_BlackKnight_Slay01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2263,16261,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"AC_BlackKnight_Slay02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2264,16262,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"AC_BlackKnight_SkeletonRes01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2265,16263,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"AC_BlackKnight_GhostRes01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2266,16264,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"AC_BlackKnight_Death01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2267,16268,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"CR_Wilfred_Intro01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2268,16269,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"CR_Wilfred_Summoning01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2269,16270,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"CR_Wilfred_Eredar01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2270,16271,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"CR_Wilfred_Death01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2274,16272,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"CR_Sisters_Aggro01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2275,16273,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"CR_Sisters_Beserk01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2276,16274,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"CR_Sisters_Colorswitch01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2277,16275,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"CR_Sisters_Death01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2278,16276,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"CR_Sisters_Slay01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2279,16277,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"CR_Sisters_Slay02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2280,16278,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"CR_Sisters_ToBlack01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2281,16279,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"CR_Sisters_ToWhite01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2282,16286,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Saurfang_HOR01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2283,16287,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Saurfang_HOR02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2284,16288,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Saurfang_HOR03"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2285,16289,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Putress_ALL01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2286,16290,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Putress_ALL02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2287,16291,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Putress_ALL03"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2288,16292,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Putress_ALL04"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2289,16293,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Putress_ALL05"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2290,16294,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Putress_ALL06"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2291,16295,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Putress_ALL07"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2292,16296,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Putress_ALL08"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2294,16300,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Sylvanas_HOR01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2295,16301,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Sylvanas_HOR02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2296,16302,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Sylvanas_HOR03"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2297,16303,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Sylvanas_HOR04"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2298,16304,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Sylvanas_HOR05"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2299,16305,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Sylvanas_HOR06"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2300,16306,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Sylvanas_HOR07"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2301,16307,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Sylvanas_HOR08"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2302,16308,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Sylvanas_HOR09"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2303,16309,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Sylvanas_HOR10"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2304,16310,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Sylvanas_HOR11"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2305,16311,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Sylvanas_HOR12"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2306,16312,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Sylvanas_HOR13"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2307,16313,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Sylvanas_HOR14"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2308,16314,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Sylvanas_HOR15"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2309,16315,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Sylvanas_HORIntro01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2310,16316,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Sylvanas_HORIntro02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2311,16321,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"CR_LichKing_Event01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2312,16322,0,0,0,0,0,0,2,0,0,0,0.3,0.8,1,200,200,1000,3000,180,270,0,0,"CR_LichKing_Event02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2313,16323,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"CR_LichKing_Event03"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2314,16331,0,0,0,0,0,0,1,1000,2000,0,1,1,1,0,0,0,0,180,270,0,0,"Emitter_Drips"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2334,13061,20,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,40,"OilRigStack01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2354,15274,15,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,35,"hf_elevator_lift_Looped"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2454,16400,50,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,90,"IceCrown_Door_01_Close"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2455,16401,50,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,90,"IceCrown_Door_01_Open"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2456,16402,50,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,90,"IceCrown_Door_02_Main_Close"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2457,16403,50,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,90,"IceCrown_Door_02_Main_Open"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2474,16405,50,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,80,"IceCrown_Door_03_Open"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2475,16406,50,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,80,"IceCrown_Door_03_Close"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2476,16408,50,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,80,"IceCrown_Portcullis_01_Open"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2477,16409,50,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,80,"IceCrown_Portcullis_01_Close"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2614,1114,20,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,40,"Ocean"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2615,1112,3,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,15,"RiverSlow"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2616,1113,8,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,20,"RiverFast"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2617,1111,8,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,20,"RiverStill"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2618,3072,35,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,60,"LavaPoolLoop"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2619,3880,15,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,30,"SlimeLoop"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2620,3052,35,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,50,"LavaFlowLoop"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2634,16465,8,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,20,"IceCrown_grate_01_Open"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2635,16466,8,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,20,"IceCrown_grate_01_Close"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2654,16477,8,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,20,"Icecrown_Grinder_MainLoop"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2655,16478,80,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,130,"Icecrown_Grinder_StandVar1"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2674,16509,8,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,20,"SC_EyeofAcherus_03"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2694,16510,8,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,20,"SC_TeleportPad_Open"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2695,16511,8,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,20,"SC_TeleportPadOpened"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2715,16525,7,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,20,"SC_TeleportPad.mdx"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2716,16530,24,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,30,"Emitter_IcecrownRaidTowers"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2717,16531,31,0,0,0,0,0,1,40000,80000,0,1,1,1,0,0,0,0,180,270,0,55,"Emitter_IcecrownColdErrieWind"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2734,16534,20,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,60,"AGS_LargePropellers (IceCrown)"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2735,16535,150,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,300,"HordeGunShip"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2754,16539,0,0,0,0,0,0,2,0,0,0,0.79,0.79,0.79,0,0,0,0,180,270,0,0,"Holy_Explosion"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2755,16541,0,0,0,0,0,0,2,0,0,0,0.68,0.69,0.68,0,0,0,0,180,270,0,0,"Explosion - Loud"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2774,16544,30,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,40,"Emitter_TheForgeOfSouls"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2794,16548,60,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,80,"Emitter_IcecrownRaidTowers (Large Radius)"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2814,16564,20,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,35,"Rotface_Goo_state_Loop"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2815,16571,8,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,20,"Festergut_PlagueCloudLoop"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2816,16584,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"VO Template (Do Not Change)"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2817,16585,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Arnath_Event01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2818,16586,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Arnath_Event02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2819,16587,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Arnath_Event03"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2820,16588,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Arnath_Event04"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2821,16589,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Arnath_Event05"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2822,16590,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Arnath_Survived01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2823,16595,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"FS_Bronjahm_Aggro01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2824,16596,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"FS_Bronjahm_Slay01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2825,16597,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"FS_Bronjahm_Slay02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2826,16598,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"FS_Bronjahm_Death01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2827,16599,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"FS_Bronjahm_Soulstorm01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2828,16600,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"FS_Bronjahm_CorruptSoul01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2829,16604,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"FS_Caladis_QuelDelar01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2830,16605,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"FS_Caladis_QuelDelar02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2831,16606,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Jaina_Hold01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2832,16607,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Jaina_Wall01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2833,16608,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Jaina_Wall02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2834,16609,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Jaina_Wall03"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2835,16610,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Jaina_Wall04"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2836,16611,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"PS_Jaina_Krick01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2837,16612,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"PS_Jaina_Krick02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2838,16613,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"PS_Jaina_Krick03"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2839,16614,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"PS_Jaina_Tyrannus01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2840,16615,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"PS_Jaina_Tyrannus02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2841,16616,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"PS_Jaina_Tyrannus03"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2842,16617,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"FS_Jaina_FS01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2843,16618,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"FS_Jaina_FS02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2844,16619,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"FS_Jaina_FS03"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2845,16620,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"FS_Jaina_FS04"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2846,16621,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"FS_Jaina_FS05"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2847,16622,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"FS_Jaina_FS06"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2848,16623,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"FS_Jaina_FS07"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2849,16624,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"FS_Jaina_FS08"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2850,16625,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"FS_Jaina_FS09"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2851,16626,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"PS_Jaina_PS01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2852,16627,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"PS_Jaina_PS02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2853,16628,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"PS_Jaina_PS03"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2854,16629,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"PS_Jaina_PS04"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2855,16630,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"PS_Jaina_PS05"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2856,16631,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Jaina_HR01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2857,16632,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Jaina_HR02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2858,16633,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Jaina_HR03"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2859,16634,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Jaina_HR04"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2860,16635,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Jaina_HR05"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2861,16636,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Jaina_HR06"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2862,16637,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Jaina_HR07"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2863,16638,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Jaina_HR08"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2864,16639,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Jaina_HR09"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2865,16640,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Jaina_HR10"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2866,16641,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Jaina_HR11"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2867,16642,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Jaina_HR12"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2868,16643,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Jaina_HR13"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2869,16644,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Jaina_HR14"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2870,16645,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Jaina_HR15"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2871,16646,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Jaina_HR16"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2872,16647,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Jaina_HR17"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2873,16648,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Jaina_HR18"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2874,16649,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Jaina_HR19"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2875,16650,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Jaina_HR20"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2876,16651,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Jaina_Event01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2877,16652,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Jaina_Event02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2878,16653,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Tirion_Intro01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2879,16654,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Tirion_Intro02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2880,16655,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Tirion_Intro03"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2881,16656,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Tirion_Intro04"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2882,16657,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Tirion_Intro05"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2883,16658,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Tirion_Intro06"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2884,16659,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Uther_Horde01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2885,16660,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Uther_Horde02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2886,16661,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Uther_Horde03"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2887,16662,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Uther_Horde04"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2888,16663,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Uther_Horde05"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2889,16664,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Uther_Horde06"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2890,16665,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Uther_Horde07"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2891,16666,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Uther_Alliance01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2892,16667,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Uther_Alliance02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2893,16668,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Uther_Alliance03"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2894,16669,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Uther_Alliance04"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2895,16670,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Uther_Alliance05"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2896,16671,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Uther_Alliance06"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2897,16672,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Uther_Alliance07"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2898,16673,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Uther_Alliance08"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2899,16674,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Uther_Alliance09"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2900,16675,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Uther_QuelDelar01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2901,16676,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Uther_QuelDelar02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2902,16677,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Uther_QuelDelar03"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2903,16678,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Uther_QuelDelar04"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2904,16679,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Uther_QuelDelar05"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2905,16680,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Uther_QuelDelar06"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2906,16681,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Valanar_Slay01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2907,16682,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Valanar_Slay02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2909,16684,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Valanar_Berserk01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2910,16685,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Valanar_Empower01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2911,16686,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Valanar_Special01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2912,16690,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Varian Wrynn_DBA01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2913,16691,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Varian Wrynn_DBA02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2914,16692,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Varian Wrynn_DBA03"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2915,16693,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Varian Wrynn_DBA04"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2916,16694,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Dsaurfang_Aggro01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2917,16695,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Dsaurfang_Slay01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2918,16696,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Dsaurfang_Slay02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2919,16697,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Dsaurfang_Death01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2920,16698,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Dsaurfang_Berserk01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2921,16699,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Dsaurfang_Blood01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2922,16700,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Dsaurfang_Summon01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2923,16701,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Dsaurfang_IntroAll01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2924,16702,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Dsaurfang_IntroAll02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2925,16703,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Dsaurfang_IntroAll03"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2926,16704,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Dsaurfang_IntroHor01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2927,16705,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Dsaurfang_IntroHor02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2928,16706,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Dsaurfang_IntroHor03"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2929,16710,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Falric_Aggro01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2930,16711,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Falric_Slay01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2931,16712,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Falric_Slay02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2932,16713,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Falric_Death01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2933,16714,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Falric_Intro01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2934,16715,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Falric_SP01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2935,16716,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Falric_SP02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2936,16717,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Falric_Intro02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2937,16721,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_JustinBartlett_Alliance 01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2938,16722,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_JustinBartlett_Alliance 02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2939,16723,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Keleseth_Slay01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2940,16724,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Keleseth_Slay02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2941,16725,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Keleseth_Death01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2942,16726,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Keleseth_Berserk01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2943,16727,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Keleseth_Empower01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2944,16728,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Keleseth_Special01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2945,16732,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Korm_Horde01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2946,16733,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Korm_Horde02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2947,16734,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Marwyn_Aggro01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2948,16735,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Marwyn_Slay01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2949,16736,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Marwyn_Slay02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2950,16737,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Marwyn_Death01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2951,16738,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Marwyn_Intro01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2952,16739,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Marwyn_SP01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2953,16740,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Marwyn_SP02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2954,16741,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Marwyn_Intro02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2955,16745,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"FS_Myralion_QuelDelar"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2956,16746,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"FS_Myralion_QuelDelar02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2957,16747,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"PS_Tyrannus_Openning01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2958,16748,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"PS_Tyrannus_Openning02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2959,16749,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"PS_Tyrannus_Openning03"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2960,16750,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"PS_Tyrannus_Openning04"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2961,16751,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"PS_Tyrannus_Openning05"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2962,16752,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"PS_Tyrannus_Forgemaster01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2963,16753,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"PS_Tyrannus_Krick01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2964,16754,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"PS_Tyrannus_Krick02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2965,16755,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"PS_Tyrannus_Ambush01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2966,16756,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"PS_Tyrannus_Ambush02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2967,16757,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"PS_Tyrannus_GauntletStart01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2968,16758,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"PS_Tyrannus_Prefight01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2969,16759,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"PS_Tyrannus_Prefight02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2970,16760,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"PS_Tyrannus_Aggro01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2971,16761,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"PS_Tyrannus_Slay01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2972,16762,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"PS_Tyrannus_Slay02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2973,16763,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"PS_Tyrannus_Death01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2974,16764,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"PS_Tyrannus_Mark01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2975,16765,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"PS_Tyrannus_Kite01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2976,16769,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"FS_Thalorien_Intro01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2977,16770,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"FS_Thalorien_Intro02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2978,16771,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"FS_Thalorien_Intro03"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2979,16772,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"FS_Thalorien_Intro04"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2980,16773,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"FS_Thalorien_Spawn01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2981,16774,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"FS_Thalorien_Spawn02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2982,16775,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"FS_Thalorien_Wave01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2983,16776,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"FS_Thalorien_Wave02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2984,16777,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"FS_Thalorien_Wave03"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2985,16778,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"FS_Thalorien_Wave04"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2986,16782,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Lanathel_Aggro01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2987,16783,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Lanathel_Bite01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2988,16784,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Lanathel_Bite02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2989,16785,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Lanathel_Add01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2990,16786,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Lanathel_Special01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2991,16787,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Lanathel_Special02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2992,16788,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Lanathel_Special03"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2993,16789,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Lanathel_Reset01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2994,16790,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Lanathel_Mindcontrol01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2995,16791,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Lanathel_Slay01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2996,16792,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Lanathel_Slay02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2997,16793,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Lanathel_Berserk01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2998,16794,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Lanathel_Death01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (2999,16795,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Lanathel_IntroPrince01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3000,16796,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Lanathel_Empower01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3001,16800,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"FS_Lanathel_QuelDelar01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3002,16801,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"FS_Lanathel_QuelDelar02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3003,16802,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"FS_Lanathel_QuelDelar03"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3004,16803,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"FS_Lanathel_QuelDelar04"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3005,16804,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"FS_Lanathel_QuelDelar05"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3006,16805,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"FS_Lanathel_QuelDelar06"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3007,16806,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"FS_Lanathel_QuelDelar07"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3008,16807,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"FS_Lanathel_QuelDelar08"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3009,16808,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"FS_Lanathel_QuelDelar09"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3010,16809,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"FS_Lanathel_QuelDelar10"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3011,16810,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Captain Brandon_Event01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3012,16811,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Captain Brandon_Event02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3013,16812,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Captain Brandon_Event03"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3014,16813,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Captain Brandon_Event04"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3015,16814,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Captain Brandon_Teleport01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3016,16815,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Captain Brandon_Survived01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3017,16819,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Crok_Event01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3018,16820,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Crok_Event02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3019,16821,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Crok_Event03"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3020,16822,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Crok_Event04"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3021,16823,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Crok_Event05"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3022,16824,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Crok_Event06"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3023,16825,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Crok_Event07"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3024,16826,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Crok_LowHealth01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3025,16827,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Crok_LowHealthBoss01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3026,16828,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Crok_Wipe01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3027,16829,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Crok_Trap01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3028,16830,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Crok_Warn01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3029,16834,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Darion_Comp101"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3030,16835,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Darion_Comp102"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3031,16836,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Darion_Comp103"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3032,16837,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Darion_Comp104"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3033,16838,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Darion_Comp201"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3034,16839,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Darion_Comp202"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3035,16840,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Darion_Comp203"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3036,16841,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Darion_Comp204"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3037,16842,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Darion_Comp205"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3038,16843,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Darion_Comp206"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3039,16844,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Captain Grondel_Event01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3040,16845,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Captain Grondel_Event02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3041,16846,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Captain Grondel_Event03"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3042,16847,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Captain Grondel_Event04"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3043,16848,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Captain Grondel_Teleport01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3044,16849,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Captain Grondel_Survived01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3045,16853,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Taldaram_Slay01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3046,16854,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Taldaram_Slay02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3047,16855,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Taldaram_Death01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3048,16856,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Taldaram_Berserk01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3049,16857,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Taldaram_Empower01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3050,16858,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Taldaram_Special01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3051,16865,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_BoneGolem_Event01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3052,16866,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_BoneGolem_Event02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3053,16867,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_BoneGolem_Event03"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3054,16868,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Deathwhisper_Aggro01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3055,16869,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Deathwhisper_Slay01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3056,16870,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Deathwhisper_Slay02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3057,16871,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Deathwhisper_Death01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3058,16872,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Deathwhisper_Berserk01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3059,16873,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Deathwhisper_SP01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3060,16874,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Deathwhisper_SP02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3061,16875,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Deathwhisper_SP03"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3062,16876,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Deathwhisper_SP04"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3063,16877,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Deathwhisper_P2"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3064,16878,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Deathwhisper_Event01A"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3065,16879,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Deathwhisper_Event02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3066,16880,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Deathwhisper_Event03"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3067,16884,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"FS_DevourerMale01_Aggro01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3068,16885,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"FS_DevourerMale01_Slay01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3069,16886,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"FS_DevourerMale01_Slay02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3070,16887,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"FS_DevourerMale01_Death01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3071,16888,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"FS_DevourerMale01_SoulAttack01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3072,16889,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"FS_DevourerMale01_DarkGlare01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3073,16890,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"FS_DevourerFemale01_Aggro01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3074,16891,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"FS_DevourerFemale01_Slay01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3075,16892,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"FS_DevourerFemale01_Slay02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3076,16893,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"FS_DevourerFemale01_Death01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3077,16894,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"FS_DevourerFemale01_SoulAttack01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3078,16895,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"FS_DevourerFemale01_DarkGlare01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3079,16896,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"FS_DevourerMale02_Slay01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3080,16897,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"FS_DevourerMale02_Slay02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3081,16898,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"FS_DevourerMale02_Death01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3082,16899,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"FS_DevourerMale02_SoulAttack01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3083,16901,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Festergut_Aggro01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3084,16902,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Festergut_Slay01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3085,16903,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Festergut_Slay02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3086,16904,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Festergut_Death01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3087,16905,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Festergut_Beserk01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3088,16906,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Festergut_ExpungeBlight01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3089,16907,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Festergut_RotfaceDies01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3090,16911,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Festergut_GasSpore01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3091,16912,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"PS_Garfrost_Aggro01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3092,16913,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"PS_Garfrost_Slay01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3093,16914,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"PS_Garfrost_Slay02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3094,16915,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"PS_Garfrost_Death01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3095,16916,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"PS_Garfrost_SP01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3096,16917,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"PS_Garfrost_SP02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3097,16921,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_FrostswornGeneral_Event01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3098,16922,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_FrostswornGeneral_Event02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3099,16923,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Geist_Event01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3100,16924,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Geist_Event02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3101,16925,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Geist_Event03"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3102,16926,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"PS_Krick_Aggro01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3103,16927,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"PS_Krick_Slay01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3104,16928,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"PS_Krick_Slay02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3105,16929,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"PS_Krick_OrderStop01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3106,16930,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"PS_Krick_OrderBlowup01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3107,16931,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"PS_Krick_Target01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3108,16932,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"PS_Krick_Target02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3109,16933,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"PS_Krick_Target03"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3110,16934,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"PS_Krick_Event01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3111,16935,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"PS_Krick_Event02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3112,16936,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"PS_Krick_Event03"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3113,16937,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"PS_Krick_Event04"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3114,16941,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Marrowgar_Aggro01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3115,16942,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Marrowgar_Slay01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3116,16943,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Marrowgar_Slay02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3117,16944,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Marrowgar_Death01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3118,16945,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Marrowgar_Berserk01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3119,16946,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Marrowgar_WW01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3120,16947,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Marrowgar_BS01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3121,16948,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Marrowgar_BS02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3122,16949,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Marrowgar_BS03"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3123,16950,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Marrowgar_AreaEntry01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3124,16954,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Muradin_Order01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3125,16955,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Muradin_Order02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3126,16956,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Muradin_Order03"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3127,16957,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Muradin_Freeze01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3128,16958,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Muradin_Board01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3129,16959,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Muradin_VictoryAll01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3130,16960,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Muradin_VictoryHor01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3131,16961,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Muradin_Wipe01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3132,16962,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Muradin_Ship01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3133,16963,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Muradin_Ship02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3134,16964,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Muradin_Ship03"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3135,16965,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Muradin_Ship04"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3136,16966,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Muradin_Ship05"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3137,16967,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Muradin_Ship06"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3138,16968,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Muradin_Ship07"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3139,16969,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Muradin_Ship08"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3140,16970,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Muradin_Saurfang01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3141,16971,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Muradin_Saurfang02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3142,16972,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Muradin_Saurfang03"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3143,16973,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Muradin_Saurfang04"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3144,16974,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Muradin_Saurfang05"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3145,16975,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Muradin_Saurfang06"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3146,16976,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Muradin_Saurfang07"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3147,16977,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Muradin_Saurfang08"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3148,16978,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Muradin_Saurfang09"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3149,16979,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Muradin_Saurfang10"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3150,16980,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Muradin_Intro01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3151,16981,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Muradin_Intro02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3152,16982,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Muradin_Intro03"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3153,16986,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Rotface_Aggro01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3154,16987,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Rotface_Slay01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3155,16988,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Rotface_Slay02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3156,16989,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Rotface_Death01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3157,16990,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Rotface_Berserk01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3158,16991,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Rotface_Infection01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3159,16992,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Rotface_UnstableOoze01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3160,16993,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Rotface_Precious01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3161,16997,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Captain Rupert_Event01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3162,16998,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Captain Rupert_Event02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3163,16999,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Captain Rupert_Event03"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3164,17000,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Captain Rupert_Event04"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3165,17001,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Captain Rupert_Event05"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3166,17002,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Captain Rupert_Teleport01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3167,17003,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Captain Rupert_Survived01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3168,17007,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Sindragosa_Aggro01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3169,17008,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Sindragosa_Slay01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3170,17009,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Sindragosa_Slay02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3171,17010,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Sindragosa_Death01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3172,17011,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Sindragosa_Berserk01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3173,17012,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Sindragosa_Takeoff01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3174,17013,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Sindragosa_Freeze01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3175,17014,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Sindragosa_Arcane01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3176,17015,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Sindragosa_Special01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3177,17016,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Sindragosa_LowHP01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3178,17017,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Svalna_Event01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3179,17018,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Svalna_Event02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3180,17019,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Svalna_Event03"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3181,17020,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Svalna_Aggro01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3182,17021,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Svalna_Slay01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3183,17022,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Svalna_CPTSlain01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3184,17023,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Svalna_Death01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3185,17024,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Svalna_Death02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3186,17028,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Sylvanas_Hold01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3187,17029,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Sylvanas_Wall01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3188,17030,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Sylvanas_Wall02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3189,17031,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Sylvanas_Wall03"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3190,17032,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Sylvanas_Wall04"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3191,17033,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"PS_Sylvanas_Krick01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3192,17034,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"PS_Sylvanas_Krick02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3193,17035,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"PS_Sylvanas_Krick03"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3194,17036,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"PS_Sylvanas_Tyrannus02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3195,17037,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"PS_Sylvanas_Tyrannus01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3196,17038,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"FS_Sylvanas_FS01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3197,17039,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"FS_Sylvanas_FS02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3198,17040,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"FS_Sylvanas_FS03"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3199,17041,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"FS_Sylvanas_FS04"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3200,17042,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"FS_Sylvanas_FS05"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3201,17043,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"FS_Sylvanas_FS06"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3202,17044,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"FS_Sylvanas_FS07"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3203,17045,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"PS_Sylvanas_PS01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3204,17046,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"PS_Sylvanas_PS02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3205,17047,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"PS_Sylvanas_PS03"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3206,17048,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"PS_Sylvanas_PS04"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3207,17049,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Sylvanas_HR01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3208,17050,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Sylvanas_HR02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3209,17051,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Sylvanas_HR03"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3210,17052,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Sylvanas_HR04"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3211,17053,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Sylvanas_HR05"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3212,17054,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Sylvanas_HR06"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3213,17055,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Sylvanas_HR07"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3214,17056,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Sylvanas_HR08"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3215,17057,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Sylvanas_HR09"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3216,17058,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Sylvanas_HR10"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3217,17059,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Sylvanas_HR11"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3218,17060,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Sylvanas_HR12"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3219,17061,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Sylvanas_HR13"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3220,17062,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Sylvanas_HR14"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3221,17063,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Sylvanas_HR15"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3222,17064,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Valithria_Aggro01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3223,17065,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Valithria_SlayBad01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3224,17066,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Valithria_SlayGood01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3225,17067,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Valithria_Berserk01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3226,17068,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Valithria_DWOpen01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3227,17069,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Valithria_HealthLow01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3228,17070,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Valithria_HealthHigh01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3229,17071,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Valithria_Win01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3230,17072,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Valithria_Lose01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3231,17073,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Vegard_Event01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3232,17074,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Vegard_Event02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3233,17075,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Vegard_Event03"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3234,17076,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Vegard_Event04"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3235,17077,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Vegard_Event05"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3236,17078,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Bolvar_Intro01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3237,17079,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Saurfang_Order01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3238,17080,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Saurfang_Order02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3239,17081,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Saurfang_Order03"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3240,17082,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Saurfang_Freeze01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3241,17083,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Saurfang_Board01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3242,17084,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Saurfang_VictoryHor01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3243,17085,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Saurfang_VictoryAll01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3244,17086,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Saurfang_Wipe01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3245,17087,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Saurfang_Ship01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3246,17088,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Saurfang_Ship02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3247,17089,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Saurfang_Ship03"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3248,17090,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Saurfang_Ship04"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3249,17091,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Saurfang_Ship05"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3250,17092,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Saurfang_Ship06"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3251,17093,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Saurfang_Ship07"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3252,17094,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Saurfang_EndAll01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3253,17095,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Saurfang_EndAll02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3254,17096,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Saurfang_EndAll03"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3255,17097,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Saurfang_EndHor01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3256,17098,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Saurfang_EndHor02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3257,17099,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Saurfang_EndHor03"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3258,17100,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Saurfang_EndHor04"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3259,17101,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Saurfang_EndHor05"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3260,17102,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Saurfang_EndHor06"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3261,17103,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Saurfang_EndHor07"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3262,17104,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Saurfang_EndHor08"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3263,17105,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Saurfang_EndHor09"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3264,17106,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Saurfang_EndHor10"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3265,17107,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Saurfang_Intro01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3266,17108,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Saurfang_Intro02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3267,17109,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Saurfang_Intro03"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3268,17110,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Saurfang_Intro04"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3269,17114,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Putricide_Aggro01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3270,17115,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Putricide_Slay01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3271,17116,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Putricide_Slay02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3272,17117,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Putricide_Death01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3273,17118,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Putricide_Berserk01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3274,17119,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Putricide_GasExp01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3275,17120,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Putricide_Transform01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3276,17121,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Putricide_Transform02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3277,17122,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Putricide_SummonOoze01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3278,17123,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Putricide_Valve01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3279,17124,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Putricide_FestergutDead01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3280,17125,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Putricide_Airlock01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3281,17126,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Putricide_SlimeFlow01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3282,17130,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Hputricide_Aggro01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3283,17131,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Hputricide_Slay01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3284,17132,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Hputricide_Slay02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3285,17133,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Hputricide_Death01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3286,17134,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Hputricide_Berserk01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3287,17135,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Hputricide_GasExp01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3288,17136,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Hputricide_Transform01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3289,17137,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Hputricide_Transform02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3290,17138,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Hputricide_SummonOoze01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3291,17139,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Hputricide_Valve01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3292,17140,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Hputricide_FestergutDead01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3293,17141,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Hputricide_Airlock01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3294,17142,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Hputricide_SlimeFlow01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3295,17146,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Putricide_RotfaceDead01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3296,17147,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Hputricide_RotfaceDead01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3297,17148,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_AllianceSlaveLeader_Event01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3298,17149,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_AllianceSlaveLeader_Event02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3299,17150,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_HordeSlaveLeader_Event01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3300,17151,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_HordeSlaveLeader_Event02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3301,17152,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Slave_Event01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3302,17153,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Slave_Event02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3303,17154,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_HumanMale_Event01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3304,17155,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_GnomeFemale_Event01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3305,17156,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Colosos_Event01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3306,17157,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_DraeneiMale_Event01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3307,17158,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_DwarfFemale_Event01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3308,17159,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_DraeneiFemale_Event01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3309,17160,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_GnomeMale_Event01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3310,17161,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_TaurenMale_Event01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3311,17162,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Mokra_Event01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3312,17163,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_OrcMale_Event01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3313,17164,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_UndeadMale_Event01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3314,17165,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_BloodElfFemale_Event01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3315,17166,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_OrcFemale_Event01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3316,17167,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Nerubian_Event01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3317,17180,20,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,40,"wingsigil_blue"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3318,17181,20,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,40,"wingsigil_red"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3319,17182,20,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,40,"wingsigil_green"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3320,17187,20,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,60,"AGS_LargePropellers (SmallDistance)"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3321,17188,30,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,80,"HordeGunShip (Small)"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3322,17190,15,0,0,0,0,0,1,40000,80000,0,1,1,1,0,0,0,0,180,270,0,30,"Emitter_IceCrown_FrostMourne_Souls_01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3323,17191,15,0,0,0,0,0,1,40000,80000,0,1,1,1,0,0,0,0,180,270,0,30,"Emitter_IceCrown_FrostMourne_Souls_02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3324,17192,15,0,0,0,0,0,1,40000,80000,0,1,1,1,0,0,0,0,180,270,0,30,"Emitter_IceCrown_FrostMourne_Souls_03"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3325,17193,15,0,0,0,0,0,1,40000,80000,0,1,1,1,0,0,0,0,180,270,0,30,"Emitter_IceCrown_FrostMourne_Souls_04"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3326,17194,30,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,50,"IceCrownRaid_Frostmourne_Part_1"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3327,17195,30,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,50,"IceCrownRaid_Frostmourne_Part_2"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3328,17196,8,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,20,"IceCrown_PlagueWorks_Pipes_Slime"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3329,17197,8,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,20,"IceCrown_PlagueWorks_Pipes_Gas"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3330,17200,20,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,40,"Ulduar_Freya_SunfireImpactBase (Blood Mirror)"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3331,17207,20,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,50,"IceCrown_Elevator02_Start"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3332,17208,20,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,50,"IceCrown_Elevator02_Stop"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3333,17209,20,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,50,"IceCrown_Elevator02_Moving"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3334,17212,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Lich King_AggroAlliance01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3335,17213,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Lich King_AggroHorde01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3336,17214,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Lich King_Slay01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3337,17215,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Lich King_Slay02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3338,17216,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Lich King_RasieDead01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3339,17217,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Lich King_Icewall01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3340,17218,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Lich King_Icewall02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3341,17219,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Lich King_Icewall03"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3342,17220,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Lich King_Icewall04"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3343,17221,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Lich King_EndlessCold01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3344,17222,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Lich King_SummonAbom01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3345,17223,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Lich King_DungFin01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3346,17224,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Lich King_EndAll"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3347,17225,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Lich King_Event01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3348,17226,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Lich King_Event02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3349,17227,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Lich King_Event03"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3350,17228,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Lich King_EventHor04"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3351,17229,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Lich King_EventAll04"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3352,17230,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Lich King_Intro01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3353,17231,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Lich King_Intro02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3354,17232,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Lich King_Intro03"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3355,17233,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Lich King_Intro04"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3356,17234,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Lich King_Intro05"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3357,17235,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Lich King_SM01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3358,17236,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Lich King_SM02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3359,17237,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Lich King_SM03"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3360,17238,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Lich King_SM04"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3361,17239,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Lich King_SM05"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3362,17240,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Lich King_SM06"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3363,17241,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Lich King_SM07"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3364,17242,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Lich King_SM08"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3365,17243,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Lich King_SM09"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3366,17244,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Lich King_SM10"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3367,17245,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Lich King_SM11"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3368,17246,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Lich King_SM12"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3369,17247,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Lich King_SM13"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3370,17248,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Lich King_SM14"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3371,17249,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Lich King_SM15"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3372,17250,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Lich King_SM16"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3373,17251,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Lich King_GreenDragon01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3374,17252,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Lich King_FMC01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3375,17253,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Lich King_FMC02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3376,17254,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Lich King_FMC03"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3377,17255,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Lich King_FMC04"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3378,17256,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Lich King_FMC05"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3379,17260,50,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,80,"IceCrownRaid_Frostmourne_Part_3"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3380,17264,6,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,15,"Rotface_Goo_state_Loop (Copy)"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3381,17268,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Deathwhisper_Event01B"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3382,17269,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Deathwhisper_Event01C"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3383,17270,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Deathwhisper_Event02A"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3384,17271,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Deathwhisper_Event02B"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3385,17272,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Deathwhisper_Event03A"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3386,17273,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Deathwhisper_Event03B"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3387,17315,20,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,40,"IceCrown_BugSwarm"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3388,16545,5,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,10,"SC_teleportPad2_Stand"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3389,16546,5,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,10,"SC_teleportPad2_Close"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3390,16547,5,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,10,"SC_teleportPad2_Open"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3391,17324,50,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,80,"UL_Stalagtit_01_Custom0 (Copy)"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3392,17334,8,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,20,"FrostTrapAura"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3393,17337,8,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,20,"Icecrown_ColdDoor_01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3394,17338,8,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,20,"Icecrown_bloodDoor_01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3395,17332,8,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,20,"Icecrown_BloodDoor_01 Closed "); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3396,17330,8,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,20,"Icecrown_ColdDoor_01 Closed"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3397,17183,4,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,10,"SC_TeleportPad3_opened"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3399,17339,0,0,0,0,0,0,2,0,0,0,0.99,1,1,0,0,0,0,180,270,0,0,"Epic_Fart"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3400,17349,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Lich King_Fin01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3401,17350,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Lich King_Fin02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3402,17351,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Lich King_Fin03"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3403,17352,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Lich King_Fin04"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3404,17353,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Lich King_Fin05"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3405,17354,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Lich King_Fin06"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3406,17355,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Lich King_Fin07"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3407,17356,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Lich King_Fin08"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3408,17357,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Lich King_Fin09"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3409,17358,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Lich King_Fin10"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3410,17359,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Lich King_Fin11"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3411,17360,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Lich King_Fin12"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3412,17361,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Lich King_Fin13"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3413,17362,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Lich King_Fin14"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3414,17363,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Lich King_Slay01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3415,17364,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Lich King_Slay02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3416,17365,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Lich King_Berserk01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3417,17366,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Lich King_FMAttack01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3418,17367,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Lich King_FMWin01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3419,17368,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Lich King_FMLose01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3420,17369,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Lich King_WinterStar01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3421,17370,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Lich King_WinterEnd01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3422,17371,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Lich King_Special01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3423,17372,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Lich King_Special02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3424,17373,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Lich King_CallValkyr01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3425,17374,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Lich King_Death01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3426,17376,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Sylvanas_TurnIn01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3427,17377,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Sylvanas_TurnIn02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3428,17378,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Sylvanas_TurnIn03"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3429,17379,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Sylvanas_TurnIn04"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3430,17380,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Sylvanas_TurnIn05"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3431,17381,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Sylvanas_TurnIn06"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3432,17382,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Sylvanas_TurnIn07"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3433,17383,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Jaina_TurnIn01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3434,17384,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Jaina_TurnIn02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3435,17385,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Jaina_TurnIn03"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3436,17386,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Jaina_TurnIn04"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3437,17387,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Jaina_TurnIn05"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3438,17388,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Jaina_TurnIn06"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3439,17389,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Tirion_Fin05"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3440,17390,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Tirion_Fin01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3441,17391,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Tirion_Fin02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3442,17392,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Tirion_Fin03"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3443,17393,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Tirion_Fin04"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3444,17394,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Terenas_Event01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3445,17395,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Terenas_Event02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3446,17396,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Terenas_Event03"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3447,17397,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Terenas_Event04"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3448,17398,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Terenas_Event05"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3449,17402,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Uther_TurnIn01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3450,17403,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Uther_TurnIn02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3451,17404,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Uther_TurnIn03"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3452,17405,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Uther_TurnIn04"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3453,17406,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Uther_TurnIn05"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3454,17407,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Uther_TurnIn06"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3455,17408,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Uther_TurnIn07"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3456,17409,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Uther_TurnIn08"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3457,17410,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Uther_TurnIn09"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3458,17411,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Darion_Comp301"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3459,17412,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Darion_Comp302"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3460,17413,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Darion_Comp303"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3461,17414,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Alexandros_Comp301"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3462,17415,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Alexandros_Comp302"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3463,17416,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Alexandros_Comp303"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3464,17417,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Alexandros_Comp304"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3465,17418,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Alexandros_Comp305"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3466,17419,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Alexandros_Comp306"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3467,17420,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Alexandros_Comp307"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3468,17421,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Muradin_TurnIn01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3469,17422,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Muradin_TurnIn02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3470,17423,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Muradin_TurnIn03"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3471,17424,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Muradin_TurnIn04"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3472,17425,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Muradin_TurnIn05"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3473,17426,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Muradin_TurnIn06"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3474,17427,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Muradin_TurnIn07"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3475,17428,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Muradin_TurnIn08"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3478,17432,15,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,38,"ICR_FrozenThroneLoop"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3479,17433,100,0,0,0,0,0,1,10000,30000,0,1,1,1,0,0,0,0,180,270,0,120,"ICR_FrozenThrone_OneShots"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3480,17435,0,0,0,0,0,0,1,10000,30000,0,1,1,1,0,0,0,0,180,270,0,0,"Emitter_IceCrown_FrostMourne_Souls_01 (mono)"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3481,17436,0,0,0,0,0,0,1,10000,30000,0,1,1,1,0,0,0,0,180,270,0,0,"Emitter_IceCrown_FrostMourne_Souls_02 (mono)"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3482,17437,0,0,0,0,0,0,1,10000,30000,0,1,1,1,0,0,0,0,180,270,0,0,"Emitter_IceCrown_FrostMourne_Souls_03 (mono)"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3483,17438,0,0,0,0,0,0,1,10000,30000,0,1,1,1,0,0,0,0,180,270,0,0,"Emitter_IceCrown_FrostMourne_Souls_04 (mono)"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3484,17443,8,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,20,"Goo_Flow_StateBlack"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3485,17449,60,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,90,"FrostMourne_Shatters"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3487,17469,8,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,15,"SubwayLoopB"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3488,13753,8,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,15,"ProtoDragonRoar"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3489,17470,8,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,15,"NetherRay_MountSpecial"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3490,17471,8,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,15,"Riding_Turtle_MountSpecial"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3491,17472,8,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,15,"DrakeMount_Special"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3492,17474,12,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,25,"SubwayStopB"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3493,17473,12,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,25,"SubwayStartB"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3494,15344,4,0,0,0,0,0,1,0,10000,0,1,1,1,0,0,0,0,180,270,0,8,"zzz_RussTestKit"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3495,17475,10,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,20,"GnomeHutMachinery"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3496,17476,8,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,20,"Event_Operation_Gnomergan_Explosion"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3497,17477,8,0,0,0,0,0,1,1000,2000,0,1,1,1,0,0,0,0,180,270,0,20,"FlyingCarpetMount_Flap_Periodic"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3498,17478,8,0,0,0,0,0,0,4000,6000,0,1,1,1,0,0,0,0,180,270,0,20,"FlyingCarpetMount_Fly"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3499,17479,8,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,20,"Flaming_Hippogryph_MountSpecial"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3500,17481,8,0,0,0,0,0,1,1000,2000,0,1,1,1,0,0,0,0,180,270,0,20,"FlyingCarpetMount_Flap_Periodic B"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3501,17483,0,0,0,0,0,0,0,4000,8000,0,1,1,1,0,0,0,0,180,270,0,0,"Zalanzanes_Shield_Loop"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3510,17490,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"RS_Xerestrasza_Yell01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3511,17491,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"RS_Xerestrasza_Yell02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3512,17492,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"RS_Xerestrasza_Say01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3513,17493,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"RS_Xerestrasza_Say02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3514,17494,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"RS_Xerestrasza_Say03"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3515,17495,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"RS_Xerestrasza_Say04"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3516,17496,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"RS_Xerestrasza_Say05"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3517,17497,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"RS_Xerestrasza_Say06"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3518,17498,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"RS_Xerestrasza_Say07"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3519,17499,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"RS_Halion_Spawn01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3520,17500,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"RS_Halion_Aggro01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3521,17501,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"RS_Halion_Slay01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3522,17502,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"RS_Halion_Slay02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3523,17503,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"RS_Halion_Death01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3524,17504,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"RS_Halion_Beserk01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3525,17505,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"RS_Halion_Special01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3526,17506,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"RS_Halion_Special02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3527,17507,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"RS_Halion_Phase2"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3528,17508,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"RS_Halion_Phase3"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3529,17512,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"RS_Zarithrian_Aggro01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3530,17513,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"RS_Zarithrian_Slay01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3531,17514,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"RS_Zarithrian_Slay02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3532,17515,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"RS_Zarithrian_Death01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3533,17516,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"RS_Zarithrian_Special01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3534,17520,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"RS_Baltharus_Aggro01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3535,17521,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"RS_Baltharus_Slay01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3536,17522,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"RS_Baltharus_Slay02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3537,17523,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"RS_Baltharus_Death01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3538,17524,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"RS_Baltharus_Special01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3539,17525,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"RS_Baltharus_Yell01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3540,17528,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"RS_Saviana_Aggro01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3541,17529,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"RS_Saviana_Slay01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3542,17530,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"RS_Saviana_Slay02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3543,17531,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"RS_Saviana_Death01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3544,17532,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"RS_Saviana_Special01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3545,17535,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"OG_Mekkatorque_Event01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3546,17536,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"OG_Mekkatorque_Event02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3547,17537,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"OG_Mekkatorque_Event03"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3548,17538,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"OG_Mekkatorque_Event04"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3549,17539,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"OG_Mekkatorque_Event05"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3550,17541,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"OG_Mekkatorque_Event06"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3551,17542,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"OG_Mekkatorque_Event07"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3552,17543,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"OG_Mekkatorque_Event08"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3553,17544,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"OG_Mekkatorque_Event09"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3554,17546,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"OG_Mekkatorque_Event10"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3555,17547,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"OG_Mekkatorque_Event11"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3556,17548,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"OG_Mekkatorque_Event12"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3557,17549,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"OG_Mekkatorque_Event13"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3558,17550,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"OG_Mekkatorque_Event14"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3559,17551,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"OG_Mekkatorque_Event15"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3560,17552,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"OG_Mekkatorque_Event16"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3561,17553,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"OG_Mekkatorque_Event17"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3562,17554,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"OG_Mekkatorque_Event18"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3563,17556,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"OG_Mekkatorque_Event19"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3564,17557,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"OG_Mekkatorque_Event20"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3565,17558,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"OG_Mekkatorque_Event21"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3566,17559,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"OG_Mekkatorque_Event22"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3567,17560,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"OG_Mekkatorque_Event23"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3568,17561,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"OG_Mekkatorque_Event24"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3569,17562,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"OG_Mekkatorque_Event25"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3570,17563,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"OG_Mekkatorque_Event26"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3571,17568,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"OG_Mekkatorque_Death01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3572,17569,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"OG_Thermaplugg_Event01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3573,17570,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"OG_Thermaplugg_Event02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3574,17571,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"OG_Thermaplugg_Event03"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3575,17572,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"OG_Thermaplugg_Event04"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3576,17573,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"ZF_Voljin_Event01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3577,17574,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"ZF_Voljin_Event02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3578,17575,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"ZF_Voljin_Event03"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3579,17576,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"ZF_Voljin_Event04"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3580,17577,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"ZF_Voljin_Event05"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3581,17578,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"ZF_Voljin_Event06"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3582,17579,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"ZF_Voljin_Event07"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3583,17580,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"ZF_Voljin_Event08"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3584,17581,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"ZF_Voljin_Event09"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3585,17582,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"ZF_Voljin_Event10"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3586,17583,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"ZF_Voljin_Event11"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3587,17584,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"ZF_Voljin_Event12"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3588,17585,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"ZF_Voljin_Event13"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3589,17586,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"ZF_Voljin_Event14"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3590,17587,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"ZF_Voljin_Event15"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3591,17588,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"ZF_Voljin_Event16"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3592,17589,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"ZF_Voljin_Event17"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3593,17590,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"ZF_Voljin_Event18"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3594,17591,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"ZF_Voljin_Event19"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3595,17592,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"ZF_Voljin_Event20"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3596,17596,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"ZF_Zalazane_Event01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3597,17597,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"ZF_Zalazane_Event02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3598,17598,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"ZF_Zalazane_Event03"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3599,17599,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"ZF_Zalazane_Event04"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3600,17600,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"ZF_Zalazane_Event05"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3601,17601,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"ZF_Zalazane_Event06"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3602,17602,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"ZF_Zalazane_Event07"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3603,17606,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"ZF_Bwonsamdi_Event01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3604,17607,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"ZF_Bwonsamdi_Event02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3605,17608,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"ZF_Bwonsamdi_Event03"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3606,17609,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"ZF_Bwonsamdi_Event04"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3607,17610,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"ZF_Bwonsamdi_Event05"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3608,17611,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"ZF_Bwonsamdi_Event06"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3609,17612,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"ZF_Bwonsamdi_Event07"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3610,17613,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"ZF_Bwonsamdi_Event08"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3611,17614,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"ZF_Bwonsamdi_Event09"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3612,17615,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"ZF_Bwonsamdi_Event10"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3613,17616,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"ZF_Bwonsamdi_Event11"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3614,17617,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"ZF_Bwonsamdi_Event12"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3615,17618,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"ZF_Bwonsamdi_Event13"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3616,17621,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"ZF_Zentabra_Event01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3617,17622,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"ZF_Zentabra_Event02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3618,17623,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"ZF_Zentabra_Event03"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3619,17624,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"ZF_Zentabra_Event04"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3620,17625,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"ZF_Zentabra_Event05"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3621,17630,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"ZF_Vanira_Event01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3622,17633,30,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,40,"FrostOrb_BeamFX (Copy)"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3623,17635,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"OG_Computer_Event01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3624,17636,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"OG_Computer_Event02"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3625,17665,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"OG_Boltcog_Event01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3626,17666,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"OG_Boltcog_Slay01"); 
-INSERT INTO `SoundEntriesAdvanced` VALUES (3627,17667,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"OG_Boltcog_Slay02"); 
+INSERT INTO `SoundEntriesAdvanced` VALUES (61,12938,0,0,0,0,0,0,2,0,0,2,1,1,1,0,0,0,0,180,270,0,0,"DeathKnightFlybyNarration"),
+(62,13354,0,0,0,0,0,0,1,5000,10000,1,1,0,1,42,50,4000,4000,47,156,0,0,"Dark Moon Test"),
+(114,13807,8,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,20,"ForsakenCatapultAttackThrown"),
+(115,13809,8,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,20,"ForsakenCatapultLoadThrown"),
+(116,13812,8,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,20,"ForsakenCatapultStand"),
+(117,13810,8,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,20,"ForsakenCatapultRunWalk"),
+(134,12194,10,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,20,"GyrocopterFlyUp"),
+(135,12172,10,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,20,"GyrocopterFlyIdle"),
+(136,12174,10,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,20,"GyrocopterJumpEnd"),
+(137,12171,10,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,20,"GyrocopterFly"),
+(138,12173,10,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,20,"GyrocopterGearShift"),
+(139,12175,10,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,20,"GyrocopterJumpStart"),
+(140,12181,10,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,20,"GyrocopterWalk"),
+(141,12177,10,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,20,"GyrocopterShuffleLeftRight"),
+(143,12176,10,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,20,"GyrocopterRun"),
+(144,12301,10,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,20,"RocketMountStand"),
+(145,12302,10,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,20,"RocketMountWalk"),
+(146,12303,10,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,20,"RocketMountRun"),
+(147,12304,10,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,20,"RocketMountWalkBackwards"),
+(148,12308,10,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,20,"RocketMountSwimIdle"),
+(149,12315,10,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,20,"RocketMountFly"),
+(150,12310,10,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,20,"RocketMountSwimLeft"),
+(151,12311,10,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,20,"RocketMountSwimRight"),
+(152,12312,10,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,20,"RocketMountSwimBackwards"),
+(153,12314,10,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,20,"RocketMountRunLeft"),
+(154,12313,10,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,20,"RocketMountRunRight"),
+(174,13880,8,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,20,"DemolisherAttackThrown"),
+(175,13881,8,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,20,"DemolisherAttackUnarmed"),
+(176,13882,8,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,20,"DemolisherDeath"),
+(177,13883,8,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,20,"DemolisherIdle"),
+(178,13884,8,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,20,"DemolisherLoadThrown"),
+(179,13885,8,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,20,"DemolisherRunWalk"),
+(180,13886,8,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,20,"DemolisherWounds"),
+(195,13887,8,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,20,"FlyingBomberBackwards"),
+(196,13888,8,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,20,"FlyingBomberSitGroundDown"),
+(197,13889,8,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,20,"FlyingBomberSitGroundUp"),
+(198,13890,8,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,20,"FlyingBomberWalkRun"),
+(199,13814,8,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,20,"FlyingMachineCreature_VehicleRun"),
+(200,13815,8,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,20,"FlyingMachineCreature_VehicleSGroundDown"),
+(201,13816,8,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,20,"FlyingMachineCreature_VehicleSitGroundUp"),
+(202,13817,8,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,20,"FlyingMachineCreature_VehicleWalk"),
+(203,13818,8,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,20,"FlyingMachineCreature_VehicleWalkBackwards"),
+(204,13808,8,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,20,"ForsakenCatapultDeath"),
+(205,13811,8,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,20,"ForsakenCatapultSpellcastDirected"),
+(206,13813,8,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,20,"ForsakenCatapultWounds"),
+(207,13897,8,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,20,"MotorcycleVehicleAttackThrown"),
+(208,13898,8,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,20,"MotorcycleVehicleJumpEnd"),
+(209,13899,8,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,20,"MotorcycleVehicleJumpStart"),
+(210,13900,8,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,20,"MotorcycleVehicleLoadThrown"),
+(211,13901,8,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,20,"MotorcycleVehicleStand"),
+(212,13902,8,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,20,"MotorcycleVehicleWalkRun"),
+(213,13891,8,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,20,"SiegeVehicleattackThrown"),
+(214,13892,8,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,20,"SiegeVehicleattackUnarmed"),
+(215,13893,8,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,20,"SiegeVehicleDeath"),
+(216,13894,8,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,20,"SiegeVehicleIdle"),
+(217,13895,8,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,20,"SiegeVehicleSlow_Fast"),
+(218,13896,8,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,20,"SiegeVehicleWounds"),
+(219,14719,0,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,0,"Vehicle_ground_Gearshift"),
+(220,14720,0,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,0,"Vehicle_Airplane_Gearshift"),
+(221,14900,0,0,0,0,0,0,0,10000,15000,2,1,1,1,0,0,0,0,180,270,0,0,"Waterfall_RegularSmall"),
+(222,14899,20,0,0,0,0,0,0,20000,60000,2,1,1,1,0,0,0,0,180,270,0,35,"Waterfall_RegularMedium"),
+(223,14895,30,0,0,0,0,0,0,20000,60000,2,1,1,1,0,0,0,0,180,270,0,65,"Waterfall_RegularLarge"),
+(224,14901,10,0,0,0,0,0,0,20000,60000,2,1,1,1,0,0,0,0,180,270,0,15,"Waterfall_SewerMedium"),
+(234,14915,30,0,0,0,0,0,0,20000,60000,2,1,1,1,0,0,0,0,180,270,0,50,"Emitter_WaterfallTurbulenceMed"),
+(235,14968,20,0,0,0,0,0,0,20000,60000,2,1,1,1,0,0,0,0,180,270,0,35,"Emitter_WaterfallTurbulenceSml"),
+(237,14924,0,0,0,0,0,0,0,20000,60000,2,1,1,1,0,0,0,0,200,250,0.05,0,"Emitter_WaterfallTurbulanceLrg"),
+(238,12938,0,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,20,71,0,0,"Test - Direction"),
+(239,14935,0,0,0,0,0,0,0,0,0,2,1,1,1,0,0,0,0,180,270,0,0,"TestAdvKit"),
+(254,14924,0,0,0,0,0,0,0,0,0,2,1,1,1,0,0,0,0,30,180,0.05,0,"Waterfall_TurbulanceLrgNarrowDir"),
+(255,14950,0,0,0,0,0,0,0,20000,60000,2,1,1,1,0,0,0,0,200,250,0.05,0,"Emitter_WaterfallTurbulanceHuge"),
+(274,14915,40,0,0,0,0,0,0,0,0,2,1,1,1,0,0,0,0,180,270,0,65,"Waterfall_TurbulenceMed"),
+(294,14924,80,0,0,0,0,0,0,0,0,2,1,1,1,0,0,0,0,180,270,0,130,"Waterfall_TurbulenceLrg"),
+(314,15008,20,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,60,"AGS_PropellersLarge"),
+(315,15009,20,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,60,"AGS_PropellersSmall"),
+(316,15008,150,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,300,"AGS_LargePropellers"),
+(317,15013,150,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,300,"HordeGunShip (IceCrown)"),
+(334,14901,0,0,0,0,0,0,0,20000,60000,2,1,1,1,0,0,0,0,180,250,0.05,0,"Waterfall_SewerMediumDir"),
+(335,15072,5,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,13,"Waterfall_SewerSmall"),
+(354,15102,10,0,0,0,0,0,0,20000,60000,2,1,1,1,0,0,0,0,180,270,0,55,"Emitter_WaterfallQuietLarge"),
+(374,14950,0,0,0,0,0,0,0,0,0,2,1,1,1,0,0,0,0,90,100,0,0,"Waterfall_TurbulanceHugeNarrowDir"),
+(394,14968,0,0,0,0,0,0,0,0,0,2,1,1,1,0,0,0,0,110,180,0,0,"Waterfall_TurbulenceSmallDir"),
+(414,15125,8,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,25,"FlyingMacineMountStallInAir"),
+(415,15126,8,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,25,"FlyingMacineMountStallOnGround"),
+(475,15313,0,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,0,"UL_Chest_Cosmic_Open"),
+(476,15312,0,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,0,"UL_Chest_Cosmic_Close"),
+(477,15311,0,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,0,"UL_Chest_Close_General"),
+(478,15314,0,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,0,"UL_Chest_Gears_Open"),
+(479,15315,0,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,0,"UL_Chest_Ice_open"),
+(480,15316,0,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,0,"Ul_Chest_Leaf_Open"),
+(481,15317,0,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,0,"UL_Chest_Lightning_Open"),
+(482,15318,0,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,0,"UL_Chest_plain_Open"),
+(494,15319,0,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,0,"Test_01"),
+(540,14915,30,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,65,"Emitter_WaterfallTurbulenceMed"),
+(541,14915,0,0,0,0,0,0,0,0,0,0,0.72,0.66,0.68,0,0,0,0,180,270,0,0,"Emitter_WaterfallTurbulenceMed"),
+(542,14915,0,14400000,10800000,7200000,3600000,7000,0,0,0,0,1,1,1,0,0,0,0,180,270,0,0,"Emitter_WaterfallTurbulenceMed"),
+(544,15344,30,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,60,"zzz_RussTestKit"),
+(574,13929,8,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,20,"UL_Statue_02"),
+(614,15354,0,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,149,237,0.07,0,"Ulduar_Waterfall"),
+(615,15356,30,0,0,0,0,0,0,2000,10000,0,1,1,1,0,0,0,0,180,270,0,60,"zzzRussTest_Vol"),
+(638,15358,30,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,40,"ClockworkGiantAttack_Hands"),
+(639,15367,5,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,10,"zzzRussTest_ScriptTest"),
+(654,13929,20,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,55,"UL_Statue_02"),
+(674,15348,30,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,50,"Emitter_UL_SaronitePool_01"),
+(694,15368,60,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,115,"Emitter_UlduarRaid_Lightning"),
+(714,15370,19,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,45,"Emitter_Titan_Circle"),
+(715,15371,0,0,0,0,0,0,2,0,0,0,0.1,0.1,0.1,50,100,2000,5000,180,270,0,0,"zzzRussTest_BossVO"),
+(734,15372,0,0,0,0,0,0,0,20000,60000,0,1,1,1,0,0,0,0,180,270,0,0,"Ulduar_WaterFallSewer"),
+(735,15373,12,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,45,"Emitter_UlduarFirePitLarge"),
+(754,8506,0,0,0,0,0,0,2,0,0,0,0.3,1,1,8,45,1000,3000,180,270,0,0,"A_FelendrenTakeHeart"),
+(755,8508,0,0,0,0,0,0,2,0,0,0,0.3,1,1,8,45,1000,3000,180,270,0,0,"A_FelendrenIMustfeed"),
+(756,8507,0,0,0,0,0,0,2,0,0,0,0.3,1,1,0,0,8000,45000,180,270,0,0,"A_FelendrenFoolishWhelp"),
+(757,12071,0,0,0,0,0,0,2,0,0,0,0.3,1,1,70,120,1000,3000,180,270,0,0,"A_ZulAman_NalorakkSurge"),
+(758,12073,0,0,0,0,0,0,2,0,0,0,0.3,1,1,0,0,1000,3000,180,270,0,0,"A_ZulAman_NalorakkToTroll"),
+(759,12075,0,0,0,0,0,0,2,0,0,0,0.3,1,1,0,0,1000,3000,180,270,0,0,"A_ZulAman_NalorakkSlay01"),
+(760,12077,0,0,0,0,0,0,2,0,0,0,0.3,1,1,0,0,1000,3000,180,270,0,0,"A_ZulAman_NalorakkDeath"),
+(762,15355,150,0,0,0,0,0,2,0,0,0,0.3,1,1,0,0,1000,3000,180,270,0,175,"Event_DalaranArena_WaterIncoming"),
+(763,15374,100,0,0,0,0,0,2,0,0,0,0.3,1,1,0,0,1000,3000,180,270,0,200,"UL_LightningDoor_Destroy_All"),
+(774,12070,0,0,0,0,0,0,2,0,0,0,0.3,1,1,0,0,1000,3000,180,270,0,0,"A_ZulAman_NalorakkAggro"),
+(775,12074,0,0,0,0,0,0,2,0,0,0,0.3,1,1,0,0,1000,3000,180,270,0,0,"A_ZulAman_NalorakkBerserk"),
+(776,12078,0,0,0,0,0,0,2,0,0,0,0.3,1,1,0,0,1000,3000,180,270,0,0,"A_ZulAman_NalorakkEvent01"),
+(777,12079,0,0,0,0,0,0,2,0,0,0,0.3,1,1,0,0,1000,3000,180,270,0,0,"A_ZulAman_NalorakkEvent02"),
+(778,12076,0,0,0,0,0,0,2,0,0,0,0.3,1,1,0,0,1000,3000,180,270,0,0,"A_ZulAman_NalorakkSlay02"),
+(779,12072,0,0,0,0,0,0,2,0,0,0,0.3,1,1,0,0,1000,3000,180,270,0,0,"A_ZulAman_NalorakkToBear"),
+(780,12066,0,0,0,0,0,0,2,0,0,0,0.3,1,1,0,0,1000,3000,180,270,0,0,"A_ZulAman_NalorakkWave01"),
+(781,12067,0,0,0,0,0,0,2,0,0,0,0.3,1,1,0,0,1000,3000,180,270,0,0,"A_ZulAman_NalorakkWave02"),
+(782,12068,0,0,0,0,0,0,2,0,0,0,0.3,1,1,0,0,1000,3000,180,270,0,0,"A_ZulAman_NalorakkWave03"),
+(783,12069,0,0,0,0,0,0,2,0,0,0,0.3,1,1,0,0,1000,3000,180,270,0,0,"A_ZulAman_NalorakkWave04"),
+(784,15375,12,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,24,"Snobold_alter01"),
+(785,15376,8,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,15,"Emitter_SmallWaterFall"),
+(786,15377,0,0,0,0,0,0,0,12000,25000,0,1,1,1,0,0,0,0,180,270,0,0,"Emitter_RiverTiny"),
+(794,15254,75,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,150,"Ulduar_Building01Dfx_Custom0"),
+(814,15378,25,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,60,"SiegeVehicleWounds (Flame Leviathan)"),
+(815,15379,25,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,60,"SiegeVehicleSlow_Fast (Flame Leviathan)"),
+(816,15380,25,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,60,"SiegeVehicleIdle (Flame Leviathan)"),
+(817,15381,25,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,60,"SiegeVehicleDeath (Flame Leviathan)"),
+(818,15382,25,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,60,"SiegeVehicleattackUnarmed (Flame Leviathan)"),
+(819,15383,25,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,60,"SiegeVehicleattackThrown (Flame Leviathan)"),
+(820,15384,20,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,40,"Ulduar_Freya_SunfireImpactBase"),
+(821,15385,20,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,70,"Ulduar_Freya_GroundTremor"),
+(822,15386,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Algalon_Aggro01"),
+(823,15387,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Algalon_Slay01"),
+(824,15388,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Algalon_Slay02"),
+(825,15389,20,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,70,"Ulduar_Kologarn_GroundTremor"),
+(826,15390,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Algalon_Space01"),
+(827,15391,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Algalon_BHole01"),
+(828,15392,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Algalon_Adds01"),
+(829,15393,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Algalon_Death01"),
+(830,15394,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Algalon_Berserk01"),
+(831,15396,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Algalon_Special01"),
+(832,15397,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Algalon_Special02"),
+(833,15398,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Algalon_Timer01"),
+(834,15399,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Algalon_Timer02"),
+(835,15400,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Algalon_Timer03"),
+(836,15401,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Algalon_Death02"),
+(837,15402,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Algalon_Death03"),
+(838,15403,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Algalon_Adds02"),
+(839,15404,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Algalon_Berserk02"),
+(840,15405,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Algalon_Summon01"),
+(841,15406,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Algalon_Summon02"),
+(842,15407,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Algalon_Summon03"),
+(843,15408,40,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,90,"Ulduar_Kologarn_Shockwave"),
+(844,15412,20,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,80,"Ulduar_FlameLeviathan_FlameJets"),
+(845,15413,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Archivum_MimironSDStart01"),
+(846,15414,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Archivum_MimironSDEnd01"),
+(847,15415,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Archivum_MimironSD10"),
+(848,15416,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Archivum_MimironSD09"),
+(849,15417,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Archivum_MimironSD08"),
+(850,15418,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Archivum_MimironSD07"),
+(851,15419,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Archivum_MimironSD06"),
+(852,15420,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Archivum_MimironSD05"),
+(853,15421,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Archivum_MimironSD04"),
+(854,15422,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Archivum_MimironSD03"),
+(855,15423,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Archivum_MimironSD02"),
+(856,15424,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Archivum_MimironSD01"),
+(857,15425,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Archivum_MimironSD00"),
+(858,15426,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Archivum_System01"),
+(859,15427,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Archivum_System02"),
+(860,15428,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Archivum_System03"),
+(861,15429,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Archivum_System04"),
+(862,15430,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Archivum_System05"),
+(863,15431,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Archivum_System06"),
+(864,15432,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Archivum_System07"),
+(865,15433,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Archivum_System08"),
+(866,15434,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Archivum_System09"),
+(867,15435,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Archivum_System10"),
+(868,15436,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Archivum_Planetarium01"),
+(869,15437,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Archivum_Planetarium02"),
+(870,15438,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Archivum_Planetarium03"),
+(871,15439,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Archivum_Planetarium04"),
+(872,15440,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Archivum_Planetarium05"),
+(873,15441,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Archivum_Planetarium06"),
+(874,15442,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Archivum_FreyaAnalysis01"),
+(875,15443,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Archivum_FreyaAnalysis02"),
+(876,15444,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Archivum_FreyaAnalysis03"),
+(877,15445,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Archivum_FreyaAnalysis04"),
+(878,15446,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Archivum_FreyaAnalysis05"),
+(879,15447,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Archivum_FreyaAnalysis06"),
+(880,15448,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Archivum_FreyaAnalysis07"),
+(881,15449,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Archivum_ThorimAnalysis01"),
+(882,15450,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Archivum_ThorimAnalysis02"),
+(883,15451,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Archivum_ThorimAnalysis03"),
+(884,15452,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Archivum_ThorimAnalysis04"),
+(885,15453,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Archivum_HodirAnalysis01"),
+(886,15454,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Archivum_HodirAnalysis02"),
+(887,15455,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Archivum_HodirAnalysis03"),
+(888,15456,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Archivum_HodirAnalysis04"),
+(889,15457,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Archivum_HodirAnalysis05"),
+(890,15458,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Archivum_MimironAnalysis01"),
+(891,15459,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Archivum_MimironAnalysis02"),
+(892,15460,20,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,65,"Ulduar_FlameLeviathan_GatheringSpeed"),
+(893,15461,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Archivum_MimironAnalysis03"),
+(894,15462,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Archivum_MimironAnalysis04"),
+(895,15463,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Archivum_ValanyrAnalysis01"),
+(896,15464,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Archivum_ValanyrAnalysis02"),
+(897,15465,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Archivum_ValanyrAnalysis03"),
+(898,15466,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Archivum_ValanyrAnalysis04"),
+(899,15467,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Archivum_ValanyrAnalysis05"),
+(900,15468,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Archivum_ValanyrAnalysis06"),
+(901,15470,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_ArthasPrisoner_YSVisThree01"),
+(902,15471,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_ArthasPrisoner_YSVisThree02"),
+(903,15473,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Auriaya_Aggro01"),
+(904,15474,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Auriaya_Slay01"),
+(905,15475,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Auriaya_Slay02"),
+(906,15476,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Auriaya_Death01"),
+(907,15477,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Auriaya_Berserk01"),
+(908,15483,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Brightleaf_Aggro01"),
+(909,15485,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Brightleaf_Slay01"),
+(910,15486,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Brightleaf_Slay02"),
+(911,15487,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Brightleaf_Death01"),
+(912,15493,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Ironbranch_Aggro01"),
+(913,15494,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Ironbranch_Slay01"),
+(914,15495,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Ironbranch_Slay02"),
+(915,15496,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Ironbranch_Death01"),
+(916,15500,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Stonebark_Aggro01"),
+(917,15501,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Stonebark_Slay01"),
+(918,15502,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Stonebark_Slay02"),
+(919,15503,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Stonebark_Death01"),
+(920,15506,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Leviathan_Aggro01"),
+(921,15507,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Leviathan_Target01"),
+(922,15508,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Leviathan_Target02"),
+(923,15509,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Leviathan_Target03"),
+(924,15510,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Leviathan_HardmodeOn"),
+(925,15511,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Leviathan_TowerNone"),
+(926,15512,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Leviathan_TowerFrost"),
+(927,15513,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Leviathan_TowerFire"),
+(928,15514,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Leviathan_TowerNature"),
+(929,15515,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Leviathan_TowerEnergy"),
+(930,15516,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Leviathan_PlayerRiding"),
+(931,15517,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Leviathan_Overload01"),
+(932,15518,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Leviathan_Overload02"),
+(933,15519,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Leviathan_Overload03"),
+(934,15520,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Leviathan_Death01"),
+(935,15521,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Leviathan_Slay01"),
+(936,15523,50,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,70,"Ulduar_Hodir_FlashFreeze"),
+(937,15526,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Freya_Aggro01"),
+(938,15527,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Freya_AggroElder01"),
+(939,15528,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Freya_Adds01"),
+(940,15529,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Freya_Slay01"),
+(941,15530,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Freya_Slay02"),
+(942,15531,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Freya_Death01"),
+(943,15532,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Freya_Berserk01"),
+(944,15533,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Freya_Adds02"),
+(945,15534,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Freya_Adds03"),
+(946,15535,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Freya_YSHelp01"),
+(947,15538,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Garona_YSVisOne01"),
+(948,15539,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Garona_YSVisOne02"),
+(949,15540,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Garona_YSVisOne03"),
+(950,15541,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Garona_YSVisOne04"),
+(951,15542,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Vezax_Aggro01"),
+(952,15543,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Vezax_Slay01"),
+(953,15544,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Vezax_Slay02"),
+(954,15545,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Vezax_Kite01"),
+(955,15546,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Vezax_Death01"),
+(956,15547,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Vezax_Berserk01"),
+(957,15548,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Vezax_HardMode01"),
+(958,15552,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Hodir_Aggro01"),
+(959,15553,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Hodir_Slay01"),
+(960,15554,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Hodir_Slay02"),
+(961,15555,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Hodir_FlashFreeze01"),
+(962,15556,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Hodir_Stalactite01"),
+(963,15557,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Hodir_Death01"),
+(964,15558,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Hodir_Berserk01"),
+(965,15559,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Hodir_YSHelp01"),
+(967,15563,30,0,0,0,0,0,2,0,0,0,0.7,1,1,8,8,1000,3000,180,270,0,70,"Ulduar_XT-002_LightBomb"),
+(968,15564,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Ignis_Aggro01"),
+(969,15565,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Ignis_CreateAdds01"),
+(970,15566,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Ignis_PourMetal01"),
+(971,15567,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Ignis_FireSpec01"),
+(972,15568,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Ignis_FireSpec02"),
+(973,15569,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Ignis_Slay01"),
+(974,15570,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Ignis_Slay02"),
+(975,15571,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Ignis_Berserk01"),
+(976,15572,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Ignis_Death01"),
+(994,15577,20,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,50,"Ulduar_Ignis_Scorch"),
+(995,15578,20,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,50,"Ulduar_Ignis_ScrochGroundEffect"),
+(996,15582,8,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,25,"Lightning_Fel_Precast_Low_Hand (IronCouncil)"),
+(1014,15583,20,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,40,"Ulduar_IronConcil_OverloadEffect"),
+(1015,15584,20,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,40,"Ulduar_IronCouncil_OverwhelmingPower"),
+(1016,11335,0,0,0,0,0,0,2,0,0,0,0.3,1,1,0,0,1000,3000,180,270,0,0,"A_GRULLAIR_Kazzak_Supreme01"),
+(1017,11336,0,0,0,0,0,0,2,0,0,0,0.3,1,1,0,0,1000,3000,180,270,0,0,"A_GRULLAIR_Kazzak_Supreme02"),
+(1037,11333,0,0,0,0,0,0,2,0,0,0,0.3,1,1,0,0,1000,3000,180,270,0,0,"A_GRULLAIR_Kazzak_Aggro01"),
+(1038,11334,0,0,0,0,0,0,2,0,0,0,0.3,1,1,0,0,1000,3000,180,270,0,0,"A_GRULLAIR_Kazzak_Aggro02"),
+(1039,11340,0,0,0,0,0,0,2,0,0,0,0.3,1,1,0,0,1000,3000,180,270,0,0,"A_GRULLAIR_Kazzak_Death01"),
+(1040,11332,0,0,0,0,0,0,2,0,0,0,0.3,1,1,0,0,1000,3000,180,270,0,0,"A_GRULLAIR_Kazzak_Intro01"),
+(1041,11337,0,0,0,0,0,0,2,0,0,0,0.3,1,1,0,0,1000,3000,180,270,0,0,"A_GRULLAIR_Kazzak_Slay01"),
+(1042,11338,0,0,0,0,0,0,2,0,0,0,0.3,1,1,0,0,1000,3000,180,270,0,0,"A_GRULLAIR_Kazzak_Slay02"),
+(1043,11339,0,0,0,0,0,0,2,0,0,0,0.3,1,1,0,0,1000,3000,180,270,0,0,"A_GRULLAIR_Kazzak_Slay03"),
+(1044,15585,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Llane_YSVisOne01"),
+(1045,15586,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Kologarn_Aggro01"),
+(1046,15587,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Kologarn_Slay01"),
+(1047,15588,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Kologarn_Slay02"),
+(1048,15589,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Kologarn_LArmGone01"),
+(1049,15590,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Kologarn_RArmGone01"),
+(1050,15591,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Kologarn_Special01"),
+(1051,15592,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Kologarn_Special02"),
+(1052,15593,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Kologarn_Death01"),
+(1053,15594,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Kologarn_Berserk01"),
+(1054,15598,0,0,0,0,0,0,2,0,0,0,0.2,1,1,200,200,1000,3000,180,270,0,0,"UR_Lich King_YSVisThree01"),
+(1055,15599,0,0,0,0,0,0,2,0,0,0,0.2,1,1,200,200,1000,3000,180,270,0,0,"UR_Lich King_YSVisThree02"),
+(1056,15600,0,0,0,0,0,0,2,0,0,0,0.3,1,1,0,0,1000,3000,180,270,0,0,"SF_Lich King_Event01"),
+(1057,15601,0,0,0,0,0,0,2,0,0,0,0.3,1,1,0,0,1000,3000,180,270,0,0,"SF_Lich King_Event02"),
+(1058,15602,0,0,0,0,0,0,2,0,0,0,0.3,1,1,0,0,1000,3000,180,270,0,0,"SF_Lich King_Event03"),
+(1059,15603,0,0,0,0,0,0,2,0,0,0,0.3,1,1,0,0,1000,3000,180,270,0,0,"SF_Lich King_Event04"),
+(1060,15604,0,0,0,0,0,0,2,0,0,0,0.3,1,1,0,0,1000,3000,180,270,0,0,"SF_Lich King_Event05"),
+(1061,15605,0,0,0,0,0,0,2,0,0,0,0.3,1,1,0,0,1000,3000,180,270,0,0,"SF_Lich King_Event06"),
+(1062,15606,0,0,0,0,0,0,2,0,0,0,0.3,1,1,0,0,1000,3000,180,270,0,0,"SF_Lich King_Event07"),
+(1064,15610,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Malygos_YSVisTwo01"),
+(1065,15611,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Mimiron_TankIntro01"),
+(1066,15612,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Mimiron_TankActive01"),
+(1067,15613,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Mimiron_TankSlay01"),
+(1068,15614,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Mimiron_TankSlay02"),
+(1069,15615,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Mimiron_TankDeath01"),
+(1070,15616,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Mimiron_TorsoActive01"),
+(1071,15617,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Mimiron_TorsoSlay01"),
+(1072,15618,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Mimiron_TorsoSlay02"),
+(1073,15619,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Mimiron_TorsoDeath01"),
+(1074,15620,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Mimiron_HeadActive01"),
+(1075,15621,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Mimiron_HeadSlay01"),
+(1076,15622,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Mimiron_HeadSlay02"),
+(1077,15623,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Mimiron_HeadDeath01"),
+(1078,15624,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Mimiron_Voltron01"),
+(1079,15625,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Mimiron_VoltronSlay01"),
+(1080,15626,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Mimiron_VoltronSlay02"),
+(1081,15627,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Mimiron_VoltronDeath01"),
+(1082,15628,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Mimiron_Berserk01"),
+(1083,15629,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Mimiron_TankHardIntro01"),
+(1084,15630,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Mimiron_YSHelp01"),
+(1085,15631,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_NeltharionYS_YSVisTwo01"),
+(1086,15632,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_NeltharionYS_YSVisTwo02"),
+(1087,15633,0,0,0,0,0,0,2,0,0,0,0.3,1,1,0,0,1000,3000,180,270,0,0,"SF_Balargarde_Event01"),
+(1088,15634,0,0,0,0,0,0,2,0,0,0,0.3,1,1,0,0,1000,3000,180,270,0,0,"SF_Balargarde_Event02"),
+(1089,15635,0,0,0,0,0,0,2,0,0,0,0.3,1,1,0,0,1000,3000,180,270,0,0,"SF_Balargarde_Event03"),
+(1090,15636,0,0,0,0,0,0,2,0,0,0,0.3,1,1,0,0,1000,3000,180,270,0,0,"SF_Balargarde_Event04"),
+(1091,15637,0,0,0,0,0,0,2,0,0,0,0.3,1,1,0,0,1000,3000,180,270,0,0,"SF_Balargarde_Event05"),
+(1092,15638,0,0,0,0,0,0,2,0,0,0,0.3,1,1,0,0,1000,3000,180,270,0,0,"SF_Balargarde_Event06"),
+(1093,15639,0,0,0,0,0,0,2,0,0,0,0.3,1,1,0,0,1000,3000,180,270,0,0,"SF_Balargarde_Event07"),
+(1095,15643,0,0,0,0,0,0,2,0,0,0,0.3,1,1,0,0,1000,3000,180,270,0,0,"SF_Vardmadra_Event01"),
+(1096,15644,0,0,0,0,0,0,2,0,0,0,0.3,1,1,0,0,1000,3000,180,270,0,0,"SF_Vardmadra_Event02"),
+(1097,15645,0,0,0,0,0,0,2,0,0,0,0.3,1,1,0,0,1000,3000,180,270,0,0,"SF_Vardmadra_Event03"),
+(1098,15646,0,0,0,0,0,0,2,0,0,0,0.3,1,1,0,0,1000,3000,180,270,0,0,"SF_Vardmadra_Event04"),
+(1099,15647,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_RazorscaleNPC_Intro01"),
+(1100,15648,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_RazorscaleNPC_Ground01"),
+(1101,15649,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Rhonin_Event01"),
+(1102,15650,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Rhonin_Event02"),
+(1103,15651,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Rhonin_Event03"),
+(1104,15652,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Rhonin_Event04"),
+(1105,15653,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Rhonin_Event05"),
+(1106,15654,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Rhonin_Event06"),
+(1107,15655,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Rhonin_Event07"),
+(1108,15656,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Rhonin_Event08"),
+(1109,15657,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Molgeim_Aggro01"),
+(1110,15658,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Molgeim_Slay01"),
+(1111,15659,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Molgeim_Slay02"),
+(1112,15660,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Molgeim_Power01"),
+(1113,15661,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Molgeim_Summon01"),
+(1114,15662,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Molgeim_Death01"),
+(1115,15663,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Molgeim_Death02"),
+(1116,15664,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Molgeim_Berserk01"),
+(1117,15668,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Sif_Start03"),
+(1118,15669,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Sif_Despawn01"),
+(1119,15670,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Sif_Event01"),
+(1121,15674,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Steelbreaker_Aggro01"),
+(1122,15675,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Steelbreaker_Slay01"),
+(1123,15676,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Steelbreaker_Slay02"),
+(1124,15677,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Steelbreaker_Power01"),
+(1125,15678,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Steelbreaker_Death01"),
+(1126,15679,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Steelbreaker_Death02"),
+(1127,15680,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Steelbreaker_Berserk01"),
+(1128,15684,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Brundir_Aggro01"),
+(1129,15685,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Brundir_Slay01"),
+(1130,15686,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Brundir_Slay02"),
+(1131,15687,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Brundir_Power01"),
+(1132,15688,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Brundir_Flight01"),
+(1133,15689,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Brundir_Death01"),
+(1134,15690,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Brundir_Death02"),
+(1135,15691,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Brundir_Berserk01"),
+(1155,15696,0,0,0,0,0,0,1,30000,60000,0,1,1,1,0,0,0,0,180,270,0,0,"Emitter_IceCracking_Oneshots"),
+(1156,13594,0,0,0,0,0,0,2,0,0,0,0.3,1,1,0,0,1000,3000,180,270,0,0,"A_DRAKOSAGGRO"),
+(1157,13605,0,0,0,0,0,0,2,0,0,0,0.3,1,1,0,0,1000,3000,180,270,0,0,"A_DRAKOSDEATH"),
+(1158,13602,0,0,0,0,0,0,2,0,0,0,0.3,1,1,0,0,1000,3000,180,270,0,0,"A_DRAKOSKILL01"),
+(1159,13603,0,0,0,0,0,0,2,0,0,0,0.3,1,1,0,0,1000,3000,180,270,0,0,"A_DRAKOSKILL02"),
+(1160,13604,0,0,0,0,0,0,2,0,0,0,0.3,1,1,0,0,1000,3000,180,270,0,0,"A_DRAKOSKILL03"),
+(1161,13598,0,0,0,0,0,0,2,0,0,0,0.3,1,1,0,0,1000,3000,180,270,0,0,"A_DRAKOSPULL01"),
+(1162,13599,0,0,0,0,0,0,2,0,0,0,0.3,1,1,0,0,1000,3000,180,270,0,0,"A_DRAKOSPULL02"),
+(1163,13600,0,0,0,0,0,0,2,0,0,0,0.3,1,1,0,0,1000,3000,180,270,0,0,"A_DRAKOSPULL03"),
+(1164,13601,0,0,0,0,0,0,2,0,0,0,0.3,1,1,0,0,1000,3000,180,270,0,0,"A_DRAKOSPULL04"),
+(1165,13595,0,0,0,0,0,0,2,0,0,0,0.3,1,1,0,0,1000,3000,180,270,0,0,"A_DRAKOSSTOMP01"),
+(1166,13596,0,0,0,0,0,0,2,0,0,0,0.3,1,1,0,0,1000,3000,180,270,0,0,"A_DRAKOSSTOMP02"),
+(1167,13597,0,0,0,0,0,0,2,0,0,0,0.3,1,1,0,0,1000,3000,180,270,0,0,"A_DRAKOSSTOMP03"),
+(1174,14931,0,0,0,0,0,0,0,20000,60000,0,1,1,1,0,0,0,0,180,270,0,0,"Emitter_WaterfallTurbulanceXL"),
+(1194,15699,8,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,20,"UL_Gnomewing_LightBeam"),
+(1195,15702,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Ysera_YSVisTwo01"),
+(1216,15706,0,0,0,0,0,0,1,5000,15000,0,1,1,1,0,0,0,0,14,135,0,0,"Dalaran - Pet Store - Dog Panting"),
+(1217,15707,0,0,0,0,0,0,1,3000,5000,0,1,1,1,0,0,0,0,54,88,0,0,"Dalaran - Pet Store - Frog One shots"),
+(1218,15708,0,0,0,0,0,0,1,5000,15000,0,1,1,1,0,0,0,0,88,115,0,0,"Dalaran - Pet Store - Pig One shots"),
+(1219,15705,0,0,0,0,0,0,1,5000,15000,0,1,1,1,0,0,0,0,180,270,0,0,"Dalaran - Pet Store - Cat one shots"),
+(1220,15704,0,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,190,220,0.25,0,"Dalaran - Pet Store - Aquarium"),
+(1221,15710,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Kologarn_Aggro01"),
+(1222,15711,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Kologarn_Slay01"),
+(1223,15712,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Kologarn_Slay02"),
+(1224,15713,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Kologarn_LArmGone01"),
+(1225,15715,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Kologarn_RArmGone01"),
+(1226,15717,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Kologarn_Special01"),
+(1227,15718,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Kologarn_Special02"),
+(1228,15719,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Kologarn_Death01"),
+(1229,15720,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Kologarn_Berserk01"),
+(1230,15724,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_XT002_Aggro01"),
+(1231,15725,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_XT002_HeartOpen01"),
+(1232,15726,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_XT002_HeartClose01"),
+(1233,15727,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_XT002_Special01"),
+(1234,15728,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_XT002_Slay01"),
+(1235,15729,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_XT002_Slay02"),
+(1236,15730,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_XT002_Berserk01"),
+(1237,15731,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_XT002_Death01"),
+(1238,15732,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_XT002_Adds01"),
+(1239,15733,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Thorim_Start01"),
+(1240,15734,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Thorim_Start02"),
+(1241,15735,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Thorim_Misc01"),
+(1242,15736,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Thorim_Misc02"),
+(1243,15737,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Thorim_Misc03"),
+(1244,15738,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Thorim_JumpDown01"),
+(1245,15739,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Thorim_Slay01"),
+(1246,15740,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Thorim_Slay02"),
+(1247,15741,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Thorim_Berserk01"),
+(1248,15742,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Thorim_P1Wipe01"),
+(1249,15743,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Thorim_Defeated01"),
+(1250,15744,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Thorim_NormEpi01"),
+(1251,15745,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Thorim_NormEpi02"),
+(1252,15746,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Thorim_NormEpi03"),
+(1253,15747,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Thorim_HardEpi01"),
+(1254,15748,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Thorim_HardEpi02"),
+(1255,15749,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Thorim_HardEpi03"),
+(1256,15750,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Thorim_YSHelp01"),
+(1257,15754,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_YoggSaron_PhaseTwo01"),
+(1258,15755,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_YoggSaron_PhaseThree01"),
+(1259,15756,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_YoggSaron_Tentacle01"),
+(1260,15757,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_YoggSaron_Slay01"),
+(1261,15758,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_YoggSaron_Slay02"),
+(1262,15759,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_YoggSaron_Insanity01"),
+(1263,15760,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_YoggSaron_Insanity02"),
+(1264,15761,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_YoggSaron_Death01"),
+(1265,15762,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_YoggSaron_YSVisOne01"),
+(1266,15763,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_YoggSaron_YSVisOne02"),
+(1267,15764,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_YoggSaron_YSVisOne03"),
+(1268,15765,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_YoggSaron_YSVisTwo03"),
+(1269,15766,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_YoggSaron_YSVisThree01"),
+(1270,15767,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_YoggSaron_YSVisThree02"),
+(1271,15771,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_FemaleYogg_Prefight01"),
+(1272,15772,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_FemaleYogg_Prefight02"),
+(1273,15773,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_FemaleYogg_Help01"),
+(1274,15774,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_FemaleYogg_Help02"),
+(1275,15775,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_FemaleYogg_Aggro01"),
+(1276,15776,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_FemaleYogg_Special01"),
+(1277,15777,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_FemaleYogg_Special02"),
+(1278,15778,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_FemaleYogg_Slay01"),
+(1279,15779,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_FemaleYogg_Slay02"),
+(1280,15780,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_FemaleYogg_Insanity01"),
+(1281,15784,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Ysera_YSVisTwo01"),
+(1282,15785,30,0,0,0,0,0,1,60000,180000,0,1,1,1,0,0,0,0,180,270,0,90,"Stormwind - BuildingBehindTheGate"),
+(1283,15789,0,0,0,0,0,0,1,120000,300000,0,1,1,1,0,0,0,0,180,270,0,0,"LightHouseFogHorn (Stormwind Harbor)"),
+(1295,15791,10,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,30,"Ulduar_Mimoron_P3WX2_PlasmablstLoop_STE"),
+(1314,15794,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Brann_Radio01"),
+(1315,15795,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Brann_Radio02"),
+(1316,15796,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Brann_Radio03"),
+(1317,15797,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Brann_Radio04"),
+(1318,15798,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Brann_Radio05"),
+(1319,15799,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Brann_Radio06"),
+(1320,15801,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Brann_Radio07"),
+(1321,15802,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Brann_Radio08"),
+(1322,15803,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Brann_Radio09"),
+(1323,15804,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Brann_Radio10"),
+(1324,15805,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Brann_Radio11"),
+(1325,15806,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Brann_Radio12"),
+(1326,15807,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Brann_RadioStart01"),
+(1327,15808,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Brann_Archivum01"),
+(1328,15809,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Brann_Archivum02"),
+(1329,15810,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Brann_Archivum03"),
+(1330,15811,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Brann_Archivum04"),
+(1331,15812,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Brann_Archivum05"),
+(1332,15813,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Brann_Archivum06"),
+(1333,15814,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Brann_Archivum07"),
+(1334,15815,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Brann_Archivum08"),
+(1335,15816,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Brann_Archivum09"),
+(1336,15817,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Brann_Archivum10"),
+(1337,15818,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Brann_Planetarium01"),
+(1338,15819,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Brann_Planetarium02"),
+(1339,15820,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Brann_Planetarium03"),
+(1340,15821,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Brann_Planetarium04"),
+(1341,15822,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Brann_Planetarium05"),
+(1342,15823,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Brann_Algalon01"),
+(1343,15824,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Brann_AlgalonSummoned01"),
+(1344,15825,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Brann_AlgalonSummoned02"),
+(1345,15826,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Brann_Dalaran01"),
+(1346,15827,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"UR_Brann_ICDefeat"),
+(1374,15830,8,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,20,"MimironHeadMount_Run"),
+(1375,15831,8,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,20,"MimironHeadMount_Walk"),
+(1376,15832,8,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,20,"MimironHeadMount_JumpStart"),
+(1377,15833,8,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,20,"MimironHeadMount_JumpEnd"),
+(1394,15277,8,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,20,"Orc_Fortress_elevator01_Loop"),
+(1395,15859,50,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,100,"UL_Train_Turnaround_Open"),
+(1414,15287,8,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,20,"VR_Elevator_Lift_Looped"),
+(1415,15286,8,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,20,"VR_Elevator_Lift_Decellerate"),
+(1416,15285,8,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,20,"VR_Elevator_Lift_Accelerate"),
+(1417,15879,8,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,20,"VR_Elevator_Lift_Looped 2"),
+(1434,15883,50,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,80,"UL_Stalagtit_01_Spawn"),
+(1435,15884,50,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,80,"UL_Stalagtit_01_Custom0"),
+(1454,15887,100,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,150,"UL_Destructible_Gate01_Open"),
+(1455,15888,100,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,150,"UL_Destructible_Gate01_Close"),
+(1456,15889,100,0,0,0,0,0,2,100000,200000,0,1,1,1,0,0,0,0,180,270,0,150,"UL_Destructible_Gate01_Destroy"),
+(1457,15322,100,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,150,"UL_Destructible_Gate_01_Close"),
+(1458,15891,50,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,75,"YoggSaron_Birth"),
+(1459,15892,50,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,75,"YoggSaron_Drown_Death"),
+(1460,15893,50,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,75,"YoggSaron_Submerge"),
+(1461,15894,50,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,75,"Kologarn_Death"),
+(1462,15895,50,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,75,"MimironTorso_Birth"),
+(1463,15896,50,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,75,"MimironTorso_Death"),
+(1464,15897,30,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,55,"Mimiron_Weapon_Cannon"),
+(1494,12351,0,0,0,0,0,0,0,0,0,0,0.2,1,1,0,0,1000,5000,180,270,0,0,"SunwellIgnition"),
+(1495,15898,0,0,0,0,0,0,2,0,0,0,0.2,1,1,0,0,1000,3000,180,270,0,0,"Algalon Intro"),
+(1514,15899,14,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,25,"Emitter_zuldrak_archpost_05"),
+(1515,15900,8,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,20,"Emitter_PurplePortal"),
+(1534,15902,30,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,60,"Ulduar_Tram_InMotion"),
+(1594,15325,30,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,100,"UL_SigilDoor_01_open"),
+(1614,15235,8,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,40,"UL_Floating_Glass02"),
+(1615,15234,23,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,60,"UL_Floating_Glass01"),
+(1634,15916,10,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,45,"ul_train_rocketblast"),
+(1654,15214,30,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,60,"UL_Machine_TramRing_02_Stand"),
+(1674,15298,30,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,50,"DragonBlight_Fires_ALL"),
+(1814,15281,70,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,100,"Transport_Vrykul_Medium_Doodad_Looped"),
+(1834,15969,8,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,25,"OilRigStack01_Broken"),
+(1854,15973,4,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,15,"TanarisWaterTower_Steel"),
+(1874,15977,50,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,100,"BF2_OilTower_02"),
+(1914,16003,10,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,25,"GyrocopterStallInAirVar1_A"),
+(1915,16004,10,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,25,"GyrocopterStallInAirVar1_B"),
+(1934,12178,10,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,20,"GyrocopterStand"),
+(1954,16008,400,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,400,"ND_ArgentColiseum_floorpieces_Custom0"),
+(1974,1738,50,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,100,"StoneTalonWaterWheel"),
+(1994,16009,50,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,100,"ND_Human_gate_ClosedFX_Door_Close"),
+(1995,16010,50,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,100,"ND_Human_gate_ClosedFX_Door_Open"),
+(1996,16011,50,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,100,"ArgentCrusade_MonsterDoor_Close.wav"),
+(1997,16012,50,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,100,"ArgentCrusade_MonsterDoor_Open"),
+(2014,16017,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"CR_Garrosh_KillA01"),
+(2015,16018,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"CR_Garrosh_KillA02"),
+(2016,16019,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"CR_Garrosh_KillA03"),
+(2017,16020,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"CR_Garrosh_KillA04"),
+(2018,16021,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"CR_Garrosh_JaraxxusExit01"),
+(2019,16022,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"CR_Garrosh_PVPHIntro01"),
+(2020,16023,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"CR_Garrosh_PVPAIntro01"),
+(2021,16024,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"CR_Garrosh_PVPHWins01"),
+(2022,16025,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"CR_Garrosh_TwinsHComplete01"),
+(2023,16026,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"CR_Garrosh_BeastHFight01"),
+(2024,16027,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"CR_Garrosh_HArrival01"),
+(2025,16028,0,0,0,0,0,0,2,0,0,0,0.3,0.74,1,200,200,1000,3000,180,270,0,0,"CR_Garrosh_HArrival02"),
+(2026,16029,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"CR_Garrosh_HArrival03"),
+(2027,16030,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"CR_Garrosh_HArrival04"),
+(2028,16031,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"CR_Garrosh_HArrival05"),
+(2034,16036,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"CR_TirionFordring_RaidIntroLong01"),
+(2035,16037,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"CR_TirionFordring_RaidIntroShort01"),
+(2036,16038,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"CR_TirionFordring_MagnataurIntro01"),
+(2037,16039,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"CR_TirionFordring_JormungarIntro01"),
+(2038,16040,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"CR_TirionFordring_YetiIntro01"),
+(2039,16041,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"CR_TirionFordring_YetiSlain01"),
+(2040,16042,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"CR_TirionFordring_YetiLose01"),
+(2041,16043,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"CR_TirionFordring_WilfredIntro01"),
+(2042,16044,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"CR_TirionFordring_JaraxxusIntro01"),
+(2043,16045,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"CR_TirionFordring_JaraxxusSlain01"),
+(2044,16046,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"CR_TirionFordring_JaraxxusCalm01"),
+(2045,16047,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"CR_TirionFordring_PVPIntro01"),
+(2046,16048,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"CR_TirionFordring_PVPAgree01"),
+(2047,16049,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"CR_TirionFordring_PVPWin01"),
+(2048,16050,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"CR_TirionFordring_TwinsIntro01"),
+(2049,16051,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"CR_TirionFordring_TwinsDead01"),
+(2050,16052,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"CR_TirionFordring_ArthasIntro01"),
+(2051,16053,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"CR_TirionFordring_RaidTrialsIntro01"),
+(2052,16054,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"CR_TirionFordring_AArrival01"),
+(2053,16055,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"CR_TirionFordring_AArrival02"),
+(2054,16056,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"CR_TirionFordring_HArrival01"),
+(2055,16057,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"CR_TirionFordring_HArrival02"),
+(2056,16058,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"CR_TirionFordring_HArrival03"),
+(2057,16059,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"CR_TirionFordring_HArrival04"),
+(2058,16060,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"CR_Varian_KillH01"),
+(2059,16061,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"CR_Varian_KillH02"),
+(2060,16062,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"CR_Varian_KillH03"),
+(2061,16063,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"CR_Varian_KillH04"),
+(2062,16064,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"CR_Varian_JaraxxusExit01"),
+(2063,16065,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"CR_Varian_PVPAIntro01"),
+(2064,16066,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"CR_Varian_PVPHIntro01"),
+(2065,16067,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"CR_Varian_PVPAWins01"),
+(2066,16068,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"CR_Varian_TwinsAComplete01"),
+(2067,16069,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"CR_Varian_BeastAFight01"),
+(2068,16070,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"CR_Varian_AArrival01"),
+(2069,16071,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"CR_Varian_AArrival02"),
+(2070,16072,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"CR_Varian_AArrival03"),
+(2071,16073,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Varian_HOR01"),
+(2072,16074,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Varian_HOR02"),
+(2073,16075,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Varian_HOR03"),
+(2074,16076,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Varian_HOR04"),
+(2075,16077,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Varian_HOR05"),
+(2076,16078,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Varian_ALL01"),
+(2077,16079,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Varian_ALL02"),
+(2078,16080,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Varian_ALL03"),
+(2079,16081,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Varian_ALL04"),
+(2080,16082,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Varian_ALL05"),
+(2081,16083,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Varian_ALL06"),
+(2082,16084,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Varian_ALL07"),
+(2083,16085,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Varian_ALL08"),
+(2084,16086,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Varian_ALL09"),
+(2085,16087,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Varian_ALL10"),
+(2086,16088,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Varian_ALL11"),
+(2087,16089,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Varian_ALL12"),
+(2088,16090,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Varian_ALL13"),
+(2089,16091,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Varian_ALL14"),
+(2090,16092,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Varian_ALL15"),
+(2091,16093,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Varian_ALL16"),
+(2092,16094,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Varian_ALL17"),
+(2094,16095,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Varian_ALL18"),
+(2095,16096,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Varian_ALL19"),
+(2096,16097,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Varian_ALL20"),
+(2097,16098,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Varian_ALL21"),
+(2098,16099,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Varian_ALL22"),
+(2099,16100,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Varian_ALLIntro01"),
+(2100,16101,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Varian_ALLIntro02"),
+(2101,16102,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Varian_ALLIntro03"),
+(2102,16103,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Varian_ALLIntro04"),
+(2103,16104,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Varian_ALLIntro05"),
+(2114,16120,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"CR_Jaina_AArival01"),
+(2115,16121,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"CR_Jaina_AArival02"),
+(2116,16122,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Jaina_HOR01"),
+(2117,16123,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Jaina_HOR02"),
+(2118,16124,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Jaina_ALL01"),
+(2119,16125,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Jaina_ALL02"),
+(2120,16126,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Jaina_ALL03"),
+(2121,16127,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Jaina_ALL04"),
+(2122,16128,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Jaina_ALL05"),
+(2123,16129,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Jaina_HORIntro01"),
+(2124,16130,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Jaina_HORIntro02"),
+(2125,16131,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Jaina_HORIntro03"),
+(2126,16132,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Jaina_HORIntro04"),
+(2127,16133,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Jaina_HORIntro05"),
+(2134,16134,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"AC_Eadric_Intro01"),
+(2135,16135,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"AC_Eadric_Aggro01"),
+(2136,16136,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"AC_Eadric_Hammer01"),
+(2137,16137,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"AC_Eadric_Slay01"),
+(2138,16138,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"AC_Eadric_Slay02"),
+(2139,16139,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"AC_Eadric_Death01"),
+(2140,16143,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"CR_Jaraxxus_KillGnome01"),
+(2141,16144,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"CR_Jaraxxus_Aggro01"),
+(2142,16145,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"CR_Jaraxxus_Slay01"),
+(2143,16146,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"CR_Jaraxxus_Slay02"),
+(2144,16147,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"CR_Jaraxxus_Death01"),
+(2145,16148,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"CR_Jaraxxus_Berserk01"),
+(2146,16149,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"CR_Jaraxxus_Special01"),
+(2147,16150,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"CR_Jaraxxus_Special02"),
+(2148,16151,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"CR_Jaraxxus_Special03"),
+(2154,16156,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Varimathras_HOR01"),
+(2155,16157,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Varimathras_HOR02"),
+(2156,16158,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Varimathras_HOR03"),
+(2157,16159,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Varimathras_HOR04"),
+(2158,16160,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Varimathras_HOR05"),
+(2159,16161,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Varimathras_HOR06"),
+(2160,16162,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Varimathras_HOR07"),
+(2161,16163,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Varimathras_HOR08"),
+(2162,16164,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Varimathras_HOR09"),
+(2163,16165,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Varimathras_HOR10"),
+(2164,16166,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Varimathras_HOR11"),
+(2165,16167,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Varimathras_HOR12"),
+(2166,16168,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Varimathras_HOR13"),
+(2167,16169,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Varimathras_HOR14"),
+(2168,16170,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Varimathras_Aggro01"),
+(2173,16180,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Sargeras_HOR01"),
+(2174,16181,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"CR_Thrall_HArrival01"),
+(2175,16182,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"CR_Thrall_HArrival02"),
+(2176,16183,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"CR_Thrall_HArrival03"),
+(2177,16184,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"CR_Thrall_HArrival04"),
+(2178,16185,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"CR_Thrall_HArrival05"),
+(2179,16186,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"CR_Thrall_HArrival06"),
+(2180,16187,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Thrall_HOR01"),
+(2181,16188,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Thrall_HOR02"),
+(2182,16189,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Thrall_HOR03"),
+(2183,16190,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Thrall_HOR04"),
+(2184,16191,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Thrall_HOR05"),
+(2185,16192,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Thrall_HOR06"),
+(2186,16193,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Thrall_HOR07"),
+(2187,16194,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Thrall_HOR11"),
+(2194,16195,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Thrall_HOR08"),
+(2195,16196,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Thrall_HOR09"),
+(2196,16197,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Thrall_HOR10"),
+(2197,16198,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Thrall_HOR12"),
+(2198,16199,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Thrall_HOR13"),
+(2199,16200,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Thrall_HOR14"),
+(2200,16201,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Thrall_HOR15"),
+(2201,16202,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Thrall_HOR16"),
+(2202,16203,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Thrall_HOR17"),
+(2203,16204,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Thrall_HOR18"),
+(2204,16205,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Thrall_HOR19"),
+(2205,16206,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Thrall_HOR20"),
+(2206,16207,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Thrall_HOR21"),
+(2207,16208,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Thrall_HOR22"),
+(2208,16210,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Thrall_HOR23"),
+(2209,16211,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Thrall_HOR24"),
+(2210,16212,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Thrall_HOR25"),
+(2211,16214,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Thrall_HOR26"),
+(2212,16215,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Thrall_HOR27"),
+(2213,16216,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Thrall_HOR28"),
+(2214,16217,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Thrall_HOR29"),
+(2215,16218,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Thrall_HOR30"),
+(2216,16219,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Thrall_HOR31"),
+(2217,16220,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Thrall_HOR32"),
+(2218,16221,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Thrall_HOR33"),
+(2219,16222,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Thrall_HORIntro01"),
+(2220,16223,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Thrall_HORIntro02"),
+(2221,16224,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Thrall_HORIntro03"),
+(2222,16225,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Thrall_HORIntro04"),
+(2223,16226,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Thrall_HORIntro05"),
+(2224,16227,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Thrall_HORIntro06"),
+(2225,16228,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Thrall_HORIntro07"),
+(2226,16229,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Thrall_HORIntro08"),
+(2227,16233,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"CR_Eydis_Aggro01"),
+(2228,16234,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"CR_Anubarak_Aggro01"),
+(2229,16235,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"CR_Anubarak_Intro"),
+(2230,16236,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"CR_Anubarak_Slay01"),
+(2231,16237,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"CR_Anubarak_Slay02"),
+(2232,16238,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"CR_Anubarak_Death01"),
+(2233,16239,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"CR_Anubarak_Berserk01"),
+(2234,16240,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"CR_Anubarak_Submerge01"),
+(2235,16241,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"CR_Anubarak_30Percent01"),
+(2236,16245,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"AC_Paletress_Intro01"),
+(2237,16246,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"AC_Paletress_Intro02"),
+(2238,16247,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"AC_Paletress_Aggro01"),
+(2239,16248,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"AC_Paletress_MemorySummon01"),
+(2254,16249,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"AC_Paletress_MemoryDefeat01"),
+(2255,16250,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"AC_Paletress_Slay01"),
+(2256,16251,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"AC_Paletress_Slay02"),
+(2257,16252,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"AC_Paletress_Death01"),
+(2258,16256,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"AC_BlackKnight_Intro01"),
+(2259,16257,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"AC_BlackKnight_Intro02"),
+(2260,16258,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"AC_BlackKnight_Intro03"),
+(2261,16259,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"AC_BlackKnight_Aggro01"),
+(2262,16260,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"AC_BlackKnight_Slay01"),
+(2263,16261,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"AC_BlackKnight_Slay02"),
+(2264,16262,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"AC_BlackKnight_SkeletonRes01"),
+(2265,16263,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"AC_BlackKnight_GhostRes01"),
+(2266,16264,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"AC_BlackKnight_Death01"),
+(2267,16268,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"CR_Wilfred_Intro01"),
+(2268,16269,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"CR_Wilfred_Summoning01"),
+(2269,16270,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"CR_Wilfred_Eredar01"),
+(2270,16271,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"CR_Wilfred_Death01"),
+(2274,16272,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"CR_Sisters_Aggro01"),
+(2275,16273,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"CR_Sisters_Beserk01"),
+(2276,16274,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"CR_Sisters_Colorswitch01"),
+(2277,16275,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"CR_Sisters_Death01"),
+(2278,16276,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"CR_Sisters_Slay01"),
+(2279,16277,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"CR_Sisters_Slay02"),
+(2280,16278,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"CR_Sisters_ToBlack01"),
+(2281,16279,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"CR_Sisters_ToWhite01"),
+(2282,16286,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Saurfang_HOR01"),
+(2283,16287,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Saurfang_HOR02"),
+(2284,16288,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Saurfang_HOR03"),
+(2285,16289,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Putress_ALL01"),
+(2286,16290,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Putress_ALL02"),
+(2287,16291,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Putress_ALL03"),
+(2288,16292,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Putress_ALL04"),
+(2289,16293,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Putress_ALL05"),
+(2290,16294,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Putress_ALL06"),
+(2291,16295,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Putress_ALL07"),
+(2292,16296,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Putress_ALL08"),
+(2294,16300,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Sylvanas_HOR01"),
+(2295,16301,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Sylvanas_HOR02"),
+(2296,16302,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Sylvanas_HOR03"),
+(2297,16303,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Sylvanas_HOR04"),
+(2298,16304,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Sylvanas_HOR05"),
+(2299,16305,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Sylvanas_HOR06"),
+(2300,16306,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Sylvanas_HOR07"),
+(2301,16307,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Sylvanas_HOR08"),
+(2302,16308,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Sylvanas_HOR09"),
+(2303,16309,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Sylvanas_HOR10"),
+(2304,16310,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Sylvanas_HOR11"),
+(2305,16311,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Sylvanas_HOR12"),
+(2306,16312,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Sylvanas_HOR13"),
+(2307,16313,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Sylvanas_HOR14"),
+(2308,16314,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Sylvanas_HOR15"),
+(2309,16315,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Sylvanas_HORIntro01"),
+(2310,16316,0,0,0,0,0,0,2,0,0,0,0.3,1,1,200,200,1000,3000,180,270,0,0,"WG_Sylvanas_HORIntro02"),
+(2311,16321,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"CR_LichKing_Event01"),
+(2312,16322,0,0,0,0,0,0,2,0,0,0,0.3,0.8,1,200,200,1000,3000,180,270,0,0,"CR_LichKing_Event02"),
+(2313,16323,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"CR_LichKing_Event03"),
+(2314,16331,0,0,0,0,0,0,1,1000,2000,0,1,1,1,0,0,0,0,180,270,0,0,"Emitter_Drips"),
+(2334,13061,20,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,40,"OilRigStack01"),
+(2354,15274,15,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,35,"hf_elevator_lift_Looped"),
+(2454,16400,50,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,90,"IceCrown_Door_01_Close"),
+(2455,16401,50,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,90,"IceCrown_Door_01_Open"),
+(2456,16402,50,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,90,"IceCrown_Door_02_Main_Close"),
+(2457,16403,50,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,90,"IceCrown_Door_02_Main_Open"),
+(2474,16405,50,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,80,"IceCrown_Door_03_Open"),
+(2475,16406,50,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,80,"IceCrown_Door_03_Close"),
+(2476,16408,50,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,80,"IceCrown_Portcullis_01_Open"),
+(2477,16409,50,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,80,"IceCrown_Portcullis_01_Close"),
+(2614,1114,20,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,40,"Ocean"),
+(2615,1112,3,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,15,"RiverSlow"),
+(2616,1113,8,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,20,"RiverFast"),
+(2617,1111,8,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,20,"RiverStill"),
+(2618,3072,35,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,60,"LavaPoolLoop"),
+(2619,3880,15,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,30,"SlimeLoop"),
+(2620,3052,35,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,50,"LavaFlowLoop"),
+(2634,16465,8,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,20,"IceCrown_grate_01_Open"),
+(2635,16466,8,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,20,"IceCrown_grate_01_Close"),
+(2654,16477,8,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,20,"Icecrown_Grinder_MainLoop"),
+(2655,16478,80,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,130,"Icecrown_Grinder_StandVar1"),
+(2674,16509,8,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,20,"SC_EyeofAcherus_03"),
+(2694,16510,8,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,20,"SC_TeleportPad_Open"),
+(2695,16511,8,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,20,"SC_TeleportPadOpened"),
+(2715,16525,7,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,20,"SC_TeleportPad.mdx"),
+(2716,16530,24,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,30,"Emitter_IcecrownRaidTowers"),
+(2717,16531,31,0,0,0,0,0,1,40000,80000,0,1,1,1,0,0,0,0,180,270,0,55,"Emitter_IcecrownColdErrieWind"),
+(2734,16534,20,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,60,"AGS_LargePropellers (IceCrown)"),
+(2735,16535,150,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,300,"HordeGunShip"),
+(2754,16539,0,0,0,0,0,0,2,0,0,0,0.79,0.79,0.79,0,0,0,0,180,270,0,0,"Holy_Explosion"),
+(2755,16541,0,0,0,0,0,0,2,0,0,0,0.68,0.69,0.68,0,0,0,0,180,270,0,0,"Explosion - Loud"),
+(2774,16544,30,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,40,"Emitter_TheForgeOfSouls"),
+(2794,16548,60,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,80,"Emitter_IcecrownRaidTowers (Large Radius)"),
+(2814,16564,20,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,35,"Rotface_Goo_state_Loop"),
+(2815,16571,8,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,20,"Festergut_PlagueCloudLoop"),
+(2816,16584,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"VO Template (Do Not Change)"),
+(2817,16585,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Arnath_Event01"),
+(2818,16586,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Arnath_Event02"),
+(2819,16587,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Arnath_Event03"),
+(2820,16588,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Arnath_Event04"),
+(2821,16589,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Arnath_Event05"),
+(2822,16590,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Arnath_Survived01"),
+(2823,16595,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"FS_Bronjahm_Aggro01"),
+(2824,16596,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"FS_Bronjahm_Slay01"),
+(2825,16597,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"FS_Bronjahm_Slay02"),
+(2826,16598,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"FS_Bronjahm_Death01"),
+(2827,16599,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"FS_Bronjahm_Soulstorm01"),
+(2828,16600,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"FS_Bronjahm_CorruptSoul01"),
+(2829,16604,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"FS_Caladis_QuelDelar01"),
+(2830,16605,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"FS_Caladis_QuelDelar02"),
+(2831,16606,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Jaina_Hold01"),
+(2832,16607,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Jaina_Wall01"),
+(2833,16608,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Jaina_Wall02"),
+(2834,16609,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Jaina_Wall03"),
+(2835,16610,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Jaina_Wall04"),
+(2836,16611,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"PS_Jaina_Krick01"),
+(2837,16612,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"PS_Jaina_Krick02"),
+(2838,16613,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"PS_Jaina_Krick03"),
+(2839,16614,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"PS_Jaina_Tyrannus01"),
+(2840,16615,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"PS_Jaina_Tyrannus02"),
+(2841,16616,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"PS_Jaina_Tyrannus03"),
+(2842,16617,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"FS_Jaina_FS01"),
+(2843,16618,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"FS_Jaina_FS02"),
+(2844,16619,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"FS_Jaina_FS03"),
+(2845,16620,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"FS_Jaina_FS04"),
+(2846,16621,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"FS_Jaina_FS05"),
+(2847,16622,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"FS_Jaina_FS06"),
+(2848,16623,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"FS_Jaina_FS07"),
+(2849,16624,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"FS_Jaina_FS08"),
+(2850,16625,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"FS_Jaina_FS09"),
+(2851,16626,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"PS_Jaina_PS01"),
+(2852,16627,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"PS_Jaina_PS02"),
+(2853,16628,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"PS_Jaina_PS03"),
+(2854,16629,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"PS_Jaina_PS04"),
+(2855,16630,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"PS_Jaina_PS05"),
+(2856,16631,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Jaina_HR01"),
+(2857,16632,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Jaina_HR02"),
+(2858,16633,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Jaina_HR03"),
+(2859,16634,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Jaina_HR04"),
+(2860,16635,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Jaina_HR05"),
+(2861,16636,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Jaina_HR06"),
+(2862,16637,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Jaina_HR07"),
+(2863,16638,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Jaina_HR08"),
+(2864,16639,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Jaina_HR09"),
+(2865,16640,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Jaina_HR10"),
+(2866,16641,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Jaina_HR11"),
+(2867,16642,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Jaina_HR12"),
+(2868,16643,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Jaina_HR13"),
+(2869,16644,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Jaina_HR14"),
+(2870,16645,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Jaina_HR15"),
+(2871,16646,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Jaina_HR16"),
+(2872,16647,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Jaina_HR17"),
+(2873,16648,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Jaina_HR18"),
+(2874,16649,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Jaina_HR19"),
+(2875,16650,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Jaina_HR20"),
+(2876,16651,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Jaina_Event01"),
+(2877,16652,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Jaina_Event02"),
+(2878,16653,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Tirion_Intro01"),
+(2879,16654,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Tirion_Intro02"),
+(2880,16655,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Tirion_Intro03"),
+(2881,16656,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Tirion_Intro04"),
+(2882,16657,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Tirion_Intro05"),
+(2883,16658,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Tirion_Intro06"),
+(2884,16659,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Uther_Horde01"),
+(2885,16660,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Uther_Horde02"),
+(2886,16661,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Uther_Horde03"),
+(2887,16662,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Uther_Horde04"),
+(2888,16663,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Uther_Horde05"),
+(2889,16664,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Uther_Horde06"),
+(2890,16665,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Uther_Horde07"),
+(2891,16666,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Uther_Alliance01"),
+(2892,16667,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Uther_Alliance02"),
+(2893,16668,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Uther_Alliance03"),
+(2894,16669,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Uther_Alliance04"),
+(2895,16670,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Uther_Alliance05"),
+(2896,16671,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Uther_Alliance06"),
+(2897,16672,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Uther_Alliance07"),
+(2898,16673,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Uther_Alliance08"),
+(2899,16674,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Uther_Alliance09"),
+(2900,16675,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Uther_QuelDelar01"),
+(2901,16676,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Uther_QuelDelar02"),
+(2902,16677,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Uther_QuelDelar03"),
+(2903,16678,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Uther_QuelDelar04"),
+(2904,16679,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Uther_QuelDelar05"),
+(2905,16680,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Uther_QuelDelar06"),
+(2906,16681,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Valanar_Slay01"),
+(2907,16682,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Valanar_Slay02"),
+(2909,16684,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Valanar_Berserk01"),
+(2910,16685,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Valanar_Empower01"),
+(2911,16686,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Valanar_Special01"),
+(2912,16690,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Varian Wrynn_DBA01"),
+(2913,16691,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Varian Wrynn_DBA02"),
+(2914,16692,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Varian Wrynn_DBA03"),
+(2915,16693,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Varian Wrynn_DBA04"),
+(2916,16694,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Dsaurfang_Aggro01"),
+(2917,16695,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Dsaurfang_Slay01"),
+(2918,16696,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Dsaurfang_Slay02"),
+(2919,16697,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Dsaurfang_Death01"),
+(2920,16698,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Dsaurfang_Berserk01"),
+(2921,16699,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Dsaurfang_Blood01"),
+(2922,16700,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Dsaurfang_Summon01"),
+(2923,16701,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Dsaurfang_IntroAll01"),
+(2924,16702,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Dsaurfang_IntroAll02"),
+(2925,16703,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Dsaurfang_IntroAll03"),
+(2926,16704,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Dsaurfang_IntroHor01"),
+(2927,16705,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Dsaurfang_IntroHor02"),
+(2928,16706,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Dsaurfang_IntroHor03"),
+(2929,16710,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Falric_Aggro01"),
+(2930,16711,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Falric_Slay01"),
+(2931,16712,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Falric_Slay02"),
+(2932,16713,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Falric_Death01"),
+(2933,16714,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Falric_Intro01"),
+(2934,16715,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Falric_SP01"),
+(2935,16716,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Falric_SP02"),
+(2936,16717,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Falric_Intro02"),
+(2937,16721,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_JustinBartlett_Alliance 01"),
+(2938,16722,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_JustinBartlett_Alliance 02"),
+(2939,16723,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Keleseth_Slay01"),
+(2940,16724,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Keleseth_Slay02"),
+(2941,16725,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Keleseth_Death01"),
+(2942,16726,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Keleseth_Berserk01"),
+(2943,16727,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Keleseth_Empower01"),
+(2944,16728,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Keleseth_Special01"),
+(2945,16732,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Korm_Horde01"),
+(2946,16733,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Korm_Horde02"),
+(2947,16734,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Marwyn_Aggro01"),
+(2948,16735,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Marwyn_Slay01"),
+(2949,16736,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Marwyn_Slay02"),
+(2950,16737,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Marwyn_Death01"),
+(2951,16738,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Marwyn_Intro01"),
+(2952,16739,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Marwyn_SP01"),
+(2953,16740,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Marwyn_SP02"),
+(2954,16741,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Marwyn_Intro02"),
+(2955,16745,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"FS_Myralion_QuelDelar"),
+(2956,16746,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"FS_Myralion_QuelDelar02"),
+(2957,16747,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"PS_Tyrannus_Openning01"),
+(2958,16748,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"PS_Tyrannus_Openning02"),
+(2959,16749,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"PS_Tyrannus_Openning03"),
+(2960,16750,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"PS_Tyrannus_Openning04"),
+(2961,16751,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"PS_Tyrannus_Openning05"),
+(2962,16752,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"PS_Tyrannus_Forgemaster01"),
+(2963,16753,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"PS_Tyrannus_Krick01"),
+(2964,16754,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"PS_Tyrannus_Krick02"),
+(2965,16755,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"PS_Tyrannus_Ambush01"),
+(2966,16756,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"PS_Tyrannus_Ambush02"),
+(2967,16757,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"PS_Tyrannus_GauntletStart01"),
+(2968,16758,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"PS_Tyrannus_Prefight01"),
+(2969,16759,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"PS_Tyrannus_Prefight02"),
+(2970,16760,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"PS_Tyrannus_Aggro01"),
+(2971,16761,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"PS_Tyrannus_Slay01"),
+(2972,16762,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"PS_Tyrannus_Slay02"),
+(2973,16763,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"PS_Tyrannus_Death01"),
+(2974,16764,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"PS_Tyrannus_Mark01"),
+(2975,16765,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"PS_Tyrannus_Kite01"),
+(2976,16769,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"FS_Thalorien_Intro01"),
+(2977,16770,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"FS_Thalorien_Intro02"),
+(2978,16771,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"FS_Thalorien_Intro03"),
+(2979,16772,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"FS_Thalorien_Intro04"),
+(2980,16773,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"FS_Thalorien_Spawn01"),
+(2981,16774,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"FS_Thalorien_Spawn02"),
+(2982,16775,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"FS_Thalorien_Wave01"),
+(2983,16776,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"FS_Thalorien_Wave02"),
+(2984,16777,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"FS_Thalorien_Wave03"),
+(2985,16778,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"FS_Thalorien_Wave04"),
+(2986,16782,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Lanathel_Aggro01"),
+(2987,16783,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Lanathel_Bite01"),
+(2988,16784,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Lanathel_Bite02"),
+(2989,16785,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Lanathel_Add01"),
+(2990,16786,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Lanathel_Special01"),
+(2991,16787,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Lanathel_Special02"),
+(2992,16788,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Lanathel_Special03"),
+(2993,16789,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Lanathel_Reset01"),
+(2994,16790,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Lanathel_Mindcontrol01"),
+(2995,16791,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Lanathel_Slay01"),
+(2996,16792,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Lanathel_Slay02"),
+(2997,16793,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Lanathel_Berserk01"),
+(2998,16794,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Lanathel_Death01"),
+(2999,16795,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Lanathel_IntroPrince01"),
+(3000,16796,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Lanathel_Empower01"),
+(3001,16800,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"FS_Lanathel_QuelDelar01"),
+(3002,16801,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"FS_Lanathel_QuelDelar02"),
+(3003,16802,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"FS_Lanathel_QuelDelar03"),
+(3004,16803,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"FS_Lanathel_QuelDelar04"),
+(3005,16804,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"FS_Lanathel_QuelDelar05"),
+(3006,16805,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"FS_Lanathel_QuelDelar06"),
+(3007,16806,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"FS_Lanathel_QuelDelar07"),
+(3008,16807,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"FS_Lanathel_QuelDelar08"),
+(3009,16808,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"FS_Lanathel_QuelDelar09"),
+(3010,16809,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"FS_Lanathel_QuelDelar10"),
+(3011,16810,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Captain Brandon_Event01"),
+(3012,16811,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Captain Brandon_Event02"),
+(3013,16812,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Captain Brandon_Event03"),
+(3014,16813,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Captain Brandon_Event04"),
+(3015,16814,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Captain Brandon_Teleport01"),
+(3016,16815,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Captain Brandon_Survived01"),
+(3017,16819,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Crok_Event01"),
+(3018,16820,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Crok_Event02"),
+(3019,16821,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Crok_Event03"),
+(3020,16822,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Crok_Event04"),
+(3021,16823,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Crok_Event05"),
+(3022,16824,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Crok_Event06"),
+(3023,16825,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Crok_Event07"),
+(3024,16826,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Crok_LowHealth01"),
+(3025,16827,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Crok_LowHealthBoss01"),
+(3026,16828,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Crok_Wipe01"),
+(3027,16829,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Crok_Trap01"),
+(3028,16830,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Crok_Warn01"),
+(3029,16834,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Darion_Comp101"),
+(3030,16835,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Darion_Comp102"),
+(3031,16836,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Darion_Comp103"),
+(3032,16837,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Darion_Comp104"),
+(3033,16838,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Darion_Comp201"),
+(3034,16839,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Darion_Comp202"),
+(3035,16840,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Darion_Comp203"),
+(3036,16841,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Darion_Comp204"),
+(3037,16842,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Darion_Comp205"),
+(3038,16843,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Darion_Comp206"),
+(3039,16844,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Captain Grondel_Event01"),
+(3040,16845,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Captain Grondel_Event02"),
+(3041,16846,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Captain Grondel_Event03"),
+(3042,16847,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Captain Grondel_Event04"),
+(3043,16848,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Captain Grondel_Teleport01"),
+(3044,16849,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Captain Grondel_Survived01"),
+(3045,16853,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Taldaram_Slay01"),
+(3046,16854,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Taldaram_Slay02"),
+(3047,16855,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Taldaram_Death01"),
+(3048,16856,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Taldaram_Berserk01"),
+(3049,16857,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Taldaram_Empower01"),
+(3050,16858,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Taldaram_Special01"),
+(3051,16865,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_BoneGolem_Event01"),
+(3052,16866,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_BoneGolem_Event02"),
+(3053,16867,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_BoneGolem_Event03"),
+(3054,16868,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Deathwhisper_Aggro01"),
+(3055,16869,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Deathwhisper_Slay01"),
+(3056,16870,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Deathwhisper_Slay02"),
+(3057,16871,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Deathwhisper_Death01"),
+(3058,16872,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Deathwhisper_Berserk01"),
+(3059,16873,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Deathwhisper_SP01"),
+(3060,16874,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Deathwhisper_SP02"),
+(3061,16875,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Deathwhisper_SP03"),
+(3062,16876,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Deathwhisper_SP04"),
+(3063,16877,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Deathwhisper_P2"),
+(3064,16878,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Deathwhisper_Event01A"),
+(3065,16879,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Deathwhisper_Event02"),
+(3066,16880,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Deathwhisper_Event03"),
+(3067,16884,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"FS_DevourerMale01_Aggro01"),
+(3068,16885,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"FS_DevourerMale01_Slay01"),
+(3069,16886,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"FS_DevourerMale01_Slay02"),
+(3070,16887,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"FS_DevourerMale01_Death01"),
+(3071,16888,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"FS_DevourerMale01_SoulAttack01"),
+(3072,16889,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"FS_DevourerMale01_DarkGlare01"),
+(3073,16890,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"FS_DevourerFemale01_Aggro01"),
+(3074,16891,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"FS_DevourerFemale01_Slay01"),
+(3075,16892,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"FS_DevourerFemale01_Slay02"),
+(3076,16893,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"FS_DevourerFemale01_Death01"),
+(3077,16894,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"FS_DevourerFemale01_SoulAttack01"),
+(3078,16895,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"FS_DevourerFemale01_DarkGlare01"),
+(3079,16896,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"FS_DevourerMale02_Slay01"),
+(3080,16897,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"FS_DevourerMale02_Slay02"),
+(3081,16898,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"FS_DevourerMale02_Death01"),
+(3082,16899,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"FS_DevourerMale02_SoulAttack01"),
+(3083,16901,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Festergut_Aggro01"),
+(3084,16902,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Festergut_Slay01"),
+(3085,16903,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Festergut_Slay02"),
+(3086,16904,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Festergut_Death01"),
+(3087,16905,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Festergut_Beserk01"),
+(3088,16906,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Festergut_ExpungeBlight01"),
+(3089,16907,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Festergut_RotfaceDies01"),
+(3090,16911,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Festergut_GasSpore01"),
+(3091,16912,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"PS_Garfrost_Aggro01"),
+(3092,16913,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"PS_Garfrost_Slay01"),
+(3093,16914,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"PS_Garfrost_Slay02"),
+(3094,16915,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"PS_Garfrost_Death01"),
+(3095,16916,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"PS_Garfrost_SP01"),
+(3096,16917,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"PS_Garfrost_SP02"),
+(3097,16921,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_FrostswornGeneral_Event01"),
+(3098,16922,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_FrostswornGeneral_Event02"),
+(3099,16923,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Geist_Event01"),
+(3100,16924,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Geist_Event02"),
+(3101,16925,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Geist_Event03"),
+(3102,16926,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"PS_Krick_Aggro01"),
+(3103,16927,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"PS_Krick_Slay01"),
+(3104,16928,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"PS_Krick_Slay02"),
+(3105,16929,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"PS_Krick_OrderStop01"),
+(3106,16930,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"PS_Krick_OrderBlowup01"),
+(3107,16931,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"PS_Krick_Target01"),
+(3108,16932,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"PS_Krick_Target02"),
+(3109,16933,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"PS_Krick_Target03"),
+(3110,16934,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"PS_Krick_Event01"),
+(3111,16935,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"PS_Krick_Event02"),
+(3112,16936,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"PS_Krick_Event03"),
+(3113,16937,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"PS_Krick_Event04"),
+(3114,16941,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Marrowgar_Aggro01"),
+(3115,16942,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Marrowgar_Slay01"),
+(3116,16943,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Marrowgar_Slay02"),
+(3117,16944,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Marrowgar_Death01"),
+(3118,16945,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Marrowgar_Berserk01"),
+(3119,16946,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Marrowgar_WW01"),
+(3120,16947,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Marrowgar_BS01"),
+(3121,16948,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Marrowgar_BS02"),
+(3122,16949,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Marrowgar_BS03"),
+(3123,16950,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Marrowgar_AreaEntry01"),
+(3124,16954,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Muradin_Order01"),
+(3125,16955,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Muradin_Order02"),
+(3126,16956,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Muradin_Order03"),
+(3127,16957,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Muradin_Freeze01"),
+(3128,16958,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Muradin_Board01"),
+(3129,16959,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Muradin_VictoryAll01"),
+(3130,16960,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Muradin_VictoryHor01"),
+(3131,16961,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Muradin_Wipe01"),
+(3132,16962,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Muradin_Ship01"),
+(3133,16963,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Muradin_Ship02"),
+(3134,16964,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Muradin_Ship03"),
+(3135,16965,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Muradin_Ship04"),
+(3136,16966,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Muradin_Ship05"),
+(3137,16967,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Muradin_Ship06"),
+(3138,16968,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Muradin_Ship07"),
+(3139,16969,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Muradin_Ship08"),
+(3140,16970,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Muradin_Saurfang01"),
+(3141,16971,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Muradin_Saurfang02"),
+(3142,16972,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Muradin_Saurfang03"),
+(3143,16973,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Muradin_Saurfang04"),
+(3144,16974,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Muradin_Saurfang05"),
+(3145,16975,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Muradin_Saurfang06"),
+(3146,16976,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Muradin_Saurfang07"),
+(3147,16977,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Muradin_Saurfang08"),
+(3148,16978,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Muradin_Saurfang09"),
+(3149,16979,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Muradin_Saurfang10"),
+(3150,16980,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Muradin_Intro01"),
+(3151,16981,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Muradin_Intro02"),
+(3152,16982,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Muradin_Intro03"),
+(3153,16986,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Rotface_Aggro01"),
+(3154,16987,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Rotface_Slay01"),
+(3155,16988,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Rotface_Slay02"),
+(3156,16989,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Rotface_Death01"),
+(3157,16990,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Rotface_Berserk01"),
+(3158,16991,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Rotface_Infection01"),
+(3159,16992,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Rotface_UnstableOoze01"),
+(3160,16993,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Rotface_Precious01"),
+(3161,16997,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Captain Rupert_Event01"),
+(3162,16998,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Captain Rupert_Event02"),
+(3163,16999,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Captain Rupert_Event03"),
+(3164,17000,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Captain Rupert_Event04"),
+(3165,17001,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Captain Rupert_Event05"),
+(3166,17002,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Captain Rupert_Teleport01"),
+(3167,17003,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Captain Rupert_Survived01"),
+(3168,17007,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Sindragosa_Aggro01"),
+(3169,17008,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Sindragosa_Slay01"),
+(3170,17009,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Sindragosa_Slay02"),
+(3171,17010,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Sindragosa_Death01"),
+(3172,17011,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Sindragosa_Berserk01"),
+(3173,17012,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Sindragosa_Takeoff01"),
+(3174,17013,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Sindragosa_Freeze01"),
+(3175,17014,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Sindragosa_Arcane01"),
+(3176,17015,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Sindragosa_Special01"),
+(3177,17016,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Sindragosa_LowHP01"),
+(3178,17017,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Svalna_Event01"),
+(3179,17018,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Svalna_Event02"),
+(3180,17019,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Svalna_Event03"),
+(3181,17020,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Svalna_Aggro01"),
+(3182,17021,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Svalna_Slay01"),
+(3183,17022,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Svalna_CPTSlain01"),
+(3184,17023,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Svalna_Death01"),
+(3185,17024,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Svalna_Death02"),
+(3186,17028,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Sylvanas_Hold01"),
+(3187,17029,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Sylvanas_Wall01"),
+(3188,17030,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Sylvanas_Wall02"),
+(3189,17031,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Sylvanas_Wall03"),
+(3190,17032,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Sylvanas_Wall04"),
+(3191,17033,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"PS_Sylvanas_Krick01"),
+(3192,17034,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"PS_Sylvanas_Krick02"),
+(3193,17035,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"PS_Sylvanas_Krick03"),
+(3194,17036,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"PS_Sylvanas_Tyrannus02"),
+(3195,17037,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"PS_Sylvanas_Tyrannus01"),
+(3196,17038,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"FS_Sylvanas_FS01"),
+(3197,17039,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"FS_Sylvanas_FS02"),
+(3198,17040,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"FS_Sylvanas_FS03"),
+(3199,17041,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"FS_Sylvanas_FS04"),
+(3200,17042,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"FS_Sylvanas_FS05"),
+(3201,17043,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"FS_Sylvanas_FS06"),
+(3202,17044,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"FS_Sylvanas_FS07"),
+(3203,17045,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"PS_Sylvanas_PS01"),
+(3204,17046,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"PS_Sylvanas_PS02"),
+(3205,17047,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"PS_Sylvanas_PS03"),
+(3206,17048,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"PS_Sylvanas_PS04"),
+(3207,17049,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Sylvanas_HR01"),
+(3208,17050,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Sylvanas_HR02"),
+(3209,17051,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Sylvanas_HR03"),
+(3210,17052,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Sylvanas_HR04"),
+(3211,17053,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Sylvanas_HR05"),
+(3212,17054,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Sylvanas_HR06"),
+(3213,17055,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Sylvanas_HR07"),
+(3214,17056,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Sylvanas_HR08"),
+(3215,17057,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Sylvanas_HR09"),
+(3216,17058,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Sylvanas_HR10"),
+(3217,17059,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Sylvanas_HR11"),
+(3218,17060,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Sylvanas_HR12"),
+(3219,17061,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Sylvanas_HR13"),
+(3220,17062,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Sylvanas_HR14"),
+(3221,17063,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Sylvanas_HR15"),
+(3222,17064,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Valithria_Aggro01"),
+(3223,17065,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Valithria_SlayBad01"),
+(3224,17066,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Valithria_SlayGood01"),
+(3225,17067,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Valithria_Berserk01"),
+(3226,17068,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Valithria_DWOpen01"),
+(3227,17069,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Valithria_HealthLow01"),
+(3228,17070,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Valithria_HealthHigh01"),
+(3229,17071,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Valithria_Win01"),
+(3230,17072,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Valithria_Lose01"),
+(3231,17073,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Vegard_Event01"),
+(3232,17074,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Vegard_Event02"),
+(3233,17075,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Vegard_Event03"),
+(3234,17076,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Vegard_Event04"),
+(3235,17077,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Vegard_Event05"),
+(3236,17078,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Bolvar_Intro01"),
+(3237,17079,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Saurfang_Order01"),
+(3238,17080,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Saurfang_Order02"),
+(3239,17081,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Saurfang_Order03"),
+(3240,17082,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Saurfang_Freeze01"),
+(3241,17083,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Saurfang_Board01"),
+(3242,17084,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Saurfang_VictoryHor01"),
+(3243,17085,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Saurfang_VictoryAll01"),
+(3244,17086,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Saurfang_Wipe01"),
+(3245,17087,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Saurfang_Ship01"),
+(3246,17088,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Saurfang_Ship02"),
+(3247,17089,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Saurfang_Ship03"),
+(3248,17090,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Saurfang_Ship04"),
+(3249,17091,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Saurfang_Ship05"),
+(3250,17092,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Saurfang_Ship06"),
+(3251,17093,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Saurfang_Ship07"),
+(3252,17094,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Saurfang_EndAll01"),
+(3253,17095,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Saurfang_EndAll02"),
+(3254,17096,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Saurfang_EndAll03"),
+(3255,17097,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Saurfang_EndHor01"),
+(3256,17098,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Saurfang_EndHor02"),
+(3257,17099,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Saurfang_EndHor03"),
+(3258,17100,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Saurfang_EndHor04"),
+(3259,17101,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Saurfang_EndHor05"),
+(3260,17102,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Saurfang_EndHor06"),
+(3261,17103,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Saurfang_EndHor07"),
+(3262,17104,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Saurfang_EndHor08"),
+(3263,17105,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Saurfang_EndHor09"),
+(3264,17106,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Saurfang_EndHor10"),
+(3265,17107,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Saurfang_Intro01"),
+(3266,17108,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Saurfang_Intro02"),
+(3267,17109,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Saurfang_Intro03"),
+(3268,17110,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Saurfang_Intro04"),
+(3269,17114,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Putricide_Aggro01"),
+(3270,17115,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Putricide_Slay01"),
+(3271,17116,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Putricide_Slay02"),
+(3272,17117,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Putricide_Death01"),
+(3273,17118,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Putricide_Berserk01"),
+(3274,17119,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Putricide_GasExp01"),
+(3275,17120,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Putricide_Transform01"),
+(3276,17121,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Putricide_Transform02"),
+(3277,17122,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Putricide_SummonOoze01"),
+(3278,17123,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Putricide_Valve01"),
+(3279,17124,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Putricide_FestergutDead01"),
+(3280,17125,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Putricide_Airlock01"),
+(3281,17126,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Putricide_SlimeFlow01"),
+(3282,17130,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Hputricide_Aggro01"),
+(3283,17131,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Hputricide_Slay01"),
+(3284,17132,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Hputricide_Slay02"),
+(3285,17133,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Hputricide_Death01"),
+(3286,17134,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Hputricide_Berserk01"),
+(3287,17135,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Hputricide_GasExp01"),
+(3288,17136,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Hputricide_Transform01"),
+(3289,17137,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Hputricide_Transform02"),
+(3290,17138,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Hputricide_SummonOoze01"),
+(3291,17139,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Hputricide_Valve01"),
+(3292,17140,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Hputricide_FestergutDead01"),
+(3293,17141,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Hputricide_Airlock01"),
+(3294,17142,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Hputricide_SlimeFlow01"),
+(3295,17146,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Putricide_RotfaceDead01"),
+(3296,17147,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Hputricide_RotfaceDead01"),
+(3297,17148,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_AllianceSlaveLeader_Event01"),
+(3298,17149,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_AllianceSlaveLeader_Event02"),
+(3299,17150,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_HordeSlaveLeader_Event01"),
+(3300,17151,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_HordeSlaveLeader_Event02"),
+(3301,17152,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Slave_Event01"),
+(3302,17153,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Slave_Event02"),
+(3303,17154,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_HumanMale_Event01"),
+(3304,17155,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_GnomeFemale_Event01"),
+(3305,17156,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Colosos_Event01"),
+(3306,17157,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_DraeneiMale_Event01"),
+(3307,17158,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_DwarfFemale_Event01"),
+(3308,17159,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_DraeneiFemale_Event01"),
+(3309,17160,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_GnomeMale_Event01"),
+(3310,17161,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_TaurenMale_Event01"),
+(3311,17162,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Mokra_Event01"),
+(3312,17163,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_OrcMale_Event01"),
+(3313,17164,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_UndeadMale_Event01"),
+(3314,17165,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_BloodElfFemale_Event01"),
+(3315,17166,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_OrcFemale_Event01"),
+(3316,17167,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Nerubian_Event01"),
+(3317,17180,20,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,40,"wingsigil_blue"),
+(3318,17181,20,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,40,"wingsigil_red"),
+(3319,17182,20,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,40,"wingsigil_green"),
+(3320,17187,20,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,60,"AGS_LargePropellers (SmallDistance)"),
+(3321,17188,30,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,80,"HordeGunShip (Small)"),
+(3322,17190,15,0,0,0,0,0,1,40000,80000,0,1,1,1,0,0,0,0,180,270,0,30,"Emitter_IceCrown_FrostMourne_Souls_01"),
+(3323,17191,15,0,0,0,0,0,1,40000,80000,0,1,1,1,0,0,0,0,180,270,0,30,"Emitter_IceCrown_FrostMourne_Souls_02"),
+(3324,17192,15,0,0,0,0,0,1,40000,80000,0,1,1,1,0,0,0,0,180,270,0,30,"Emitter_IceCrown_FrostMourne_Souls_03"),
+(3325,17193,15,0,0,0,0,0,1,40000,80000,0,1,1,1,0,0,0,0,180,270,0,30,"Emitter_IceCrown_FrostMourne_Souls_04"),
+(3326,17194,30,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,50,"IceCrownRaid_Frostmourne_Part_1"),
+(3327,17195,30,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,50,"IceCrownRaid_Frostmourne_Part_2"),
+(3328,17196,8,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,20,"IceCrown_PlagueWorks_Pipes_Slime"),
+(3329,17197,8,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,20,"IceCrown_PlagueWorks_Pipes_Gas"),
+(3330,17200,20,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,40,"Ulduar_Freya_SunfireImpactBase (Blood Mirror)"),
+(3331,17207,20,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,50,"IceCrown_Elevator02_Start"),
+(3332,17208,20,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,50,"IceCrown_Elevator02_Stop"),
+(3333,17209,20,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,50,"IceCrown_Elevator02_Moving"),
+(3334,17212,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Lich King_AggroAlliance01"),
+(3335,17213,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Lich King_AggroHorde01"),
+(3336,17214,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Lich King_Slay01"),
+(3337,17215,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Lich King_Slay02"),
+(3338,17216,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Lich King_RasieDead01"),
+(3339,17217,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Lich King_Icewall01"),
+(3340,17218,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Lich King_Icewall02"),
+(3341,17219,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Lich King_Icewall03"),
+(3342,17220,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Lich King_Icewall04"),
+(3343,17221,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Lich King_EndlessCold01"),
+(3344,17222,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Lich King_SummonAbom01"),
+(3345,17223,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Lich King_DungFin01"),
+(3346,17224,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Lich King_EndAll"),
+(3347,17225,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Lich King_Event01"),
+(3348,17226,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Lich King_Event02"),
+(3349,17227,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Lich King_Event03"),
+(3350,17228,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Lich King_EventHor04"),
+(3351,17229,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Lich King_EventAll04"),
+(3352,17230,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Lich King_Intro01"),
+(3353,17231,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Lich King_Intro02"),
+(3354,17232,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Lich King_Intro03"),
+(3355,17233,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Lich King_Intro04"),
+(3356,17234,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Lich King_Intro05"),
+(3357,17235,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Lich King_SM01"),
+(3358,17236,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Lich King_SM02"),
+(3359,17237,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Lich King_SM03"),
+(3360,17238,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Lich King_SM04"),
+(3361,17239,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Lich King_SM05"),
+(3362,17240,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Lich King_SM06"),
+(3363,17241,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Lich King_SM07"),
+(3364,17242,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Lich King_SM08"),
+(3365,17243,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Lich King_SM09"),
+(3366,17244,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Lich King_SM10"),
+(3367,17245,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Lich King_SM11"),
+(3368,17246,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Lich King_SM12"),
+(3369,17247,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Lich King_SM13"),
+(3370,17248,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Lich King_SM14"),
+(3371,17249,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Lich King_SM15"),
+(3372,17250,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Lich King_SM16"),
+(3373,17251,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Lich King_GreenDragon01"),
+(3374,17252,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Lich King_FMC01"),
+(3375,17253,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Lich King_FMC02"),
+(3376,17254,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Lich King_FMC03"),
+(3377,17255,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Lich King_FMC04"),
+(3378,17256,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Lich King_FMC05"),
+(3379,17260,50,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,80,"IceCrownRaid_Frostmourne_Part_3"),
+(3380,17264,6,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,15,"Rotface_Goo_state_Loop (Copy)"),
+(3381,17268,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Deathwhisper_Event01B"),
+(3382,17269,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Deathwhisper_Event01C"),
+(3383,17270,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Deathwhisper_Event02A"),
+(3384,17271,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Deathwhisper_Event02B"),
+(3385,17272,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Deathwhisper_Event03A"),
+(3386,17273,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Deathwhisper_Event03B"),
+(3387,17315,20,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,40,"IceCrown_BugSwarm"),
+(3388,16545,5,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,10,"SC_teleportPad2_Stand"),
+(3389,16546,5,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,10,"SC_teleportPad2_Close"),
+(3390,16547,5,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,10,"SC_teleportPad2_Open"),
+(3391,17324,50,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,80,"UL_Stalagtit_01_Custom0 (Copy)"),
+(3392,17334,8,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,20,"FrostTrapAura"),
+(3393,17337,8,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,20,"Icecrown_ColdDoor_01"),
+(3394,17338,8,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,20,"Icecrown_bloodDoor_01"),
+(3395,17332,8,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,20,"Icecrown_BloodDoor_01 Closed "),
+(3396,17330,8,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,20,"Icecrown_ColdDoor_01 Closed"),
+(3397,17183,4,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,10,"SC_TeleportPad3_opened"),
+(3399,17339,0,0,0,0,0,0,2,0,0,0,0.99,1,1,0,0,0,0,180,270,0,0,"Epic_Fart"),
+(3400,17349,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Lich King_Fin01"),
+(3401,17350,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Lich King_Fin02"),
+(3402,17351,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Lich King_Fin03"),
+(3403,17352,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Lich King_Fin04"),
+(3404,17353,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Lich King_Fin05"),
+(3405,17354,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Lich King_Fin06"),
+(3406,17355,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Lich King_Fin07"),
+(3407,17356,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Lich King_Fin08"),
+(3408,17357,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Lich King_Fin09"),
+(3409,17358,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Lich King_Fin10"),
+(3410,17359,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Lich King_Fin11"),
+(3411,17360,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Lich King_Fin12"),
+(3412,17361,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Lich King_Fin13"),
+(3413,17362,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Lich King_Fin14"),
+(3414,17363,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Lich King_Slay01"),
+(3415,17364,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Lich King_Slay02"),
+(3416,17365,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Lich King_Berserk01"),
+(3417,17366,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Lich King_FMAttack01"),
+(3418,17367,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Lich King_FMWin01"),
+(3419,17368,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Lich King_FMLose01"),
+(3420,17369,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Lich King_WinterStar01"),
+(3421,17370,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Lich King_WinterEnd01"),
+(3422,17371,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Lich King_Special01"),
+(3423,17372,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Lich King_Special02"),
+(3424,17373,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Lich King_CallValkyr01"),
+(3425,17374,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Lich King_Death01"),
+(3426,17376,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Sylvanas_TurnIn01"),
+(3427,17377,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Sylvanas_TurnIn02"),
+(3428,17378,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Sylvanas_TurnIn03"),
+(3429,17379,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Sylvanas_TurnIn04"),
+(3430,17380,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Sylvanas_TurnIn05"),
+(3431,17381,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Sylvanas_TurnIn06"),
+(3432,17382,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Sylvanas_TurnIn07"),
+(3433,17383,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Jaina_TurnIn01"),
+(3434,17384,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Jaina_TurnIn02"),
+(3435,17385,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Jaina_TurnIn03"),
+(3436,17386,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Jaina_TurnIn04"),
+(3437,17387,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Jaina_TurnIn05"),
+(3438,17388,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Jaina_TurnIn06"),
+(3439,17389,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Tirion_Fin05"),
+(3440,17390,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Tirion_Fin01"),
+(3441,17391,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Tirion_Fin02"),
+(3442,17392,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Tirion_Fin03"),
+(3443,17393,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Tirion_Fin04"),
+(3444,17394,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Terenas_Event01"),
+(3445,17395,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Terenas_Event02"),
+(3446,17396,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Terenas_Event03"),
+(3447,17397,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Terenas_Event04"),
+(3448,17398,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Terenas_Event05"),
+(3449,17402,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Uther_TurnIn01"),
+(3450,17403,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Uther_TurnIn02"),
+(3451,17404,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Uther_TurnIn03"),
+(3452,17405,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Uther_TurnIn04"),
+(3453,17406,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Uther_TurnIn05"),
+(3454,17407,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Uther_TurnIn06"),
+(3455,17408,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Uther_TurnIn07"),
+(3456,17409,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Uther_TurnIn08"),
+(3457,17410,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"HR_Uther_TurnIn09"),
+(3458,17411,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Darion_Comp301"),
+(3459,17412,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Darion_Comp302"),
+(3460,17413,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Darion_Comp303"),
+(3461,17414,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Alexandros_Comp301"),
+(3462,17415,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Alexandros_Comp302"),
+(3463,17416,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Alexandros_Comp303"),
+(3464,17417,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Alexandros_Comp304"),
+(3465,17418,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Alexandros_Comp305"),
+(3466,17419,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Alexandros_Comp306"),
+(3467,17420,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Alexandros_Comp307"),
+(3468,17421,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Muradin_TurnIn01"),
+(3469,17422,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Muradin_TurnIn02"),
+(3470,17423,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Muradin_TurnIn03"),
+(3471,17424,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Muradin_TurnIn04"),
+(3472,17425,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Muradin_TurnIn05"),
+(3473,17426,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Muradin_TurnIn06"),
+(3474,17427,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Muradin_TurnIn07"),
+(3475,17428,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"IC_Muradin_TurnIn08"),
+(3478,17432,15,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,38,"ICR_FrozenThroneLoop"),
+(3479,17433,100,0,0,0,0,0,1,10000,30000,0,1,1,1,0,0,0,0,180,270,0,120,"ICR_FrozenThrone_OneShots"),
+(3480,17435,0,0,0,0,0,0,1,10000,30000,0,1,1,1,0,0,0,0,180,270,0,0,"Emitter_IceCrown_FrostMourne_Souls_01 (mono)"),
+(3481,17436,0,0,0,0,0,0,1,10000,30000,0,1,1,1,0,0,0,0,180,270,0,0,"Emitter_IceCrown_FrostMourne_Souls_02 (mono)"),
+(3482,17437,0,0,0,0,0,0,1,10000,30000,0,1,1,1,0,0,0,0,180,270,0,0,"Emitter_IceCrown_FrostMourne_Souls_03 (mono)"),
+(3483,17438,0,0,0,0,0,0,1,10000,30000,0,1,1,1,0,0,0,0,180,270,0,0,"Emitter_IceCrown_FrostMourne_Souls_04 (mono)"),
+(3484,17443,8,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,20,"Goo_Flow_StateBlack"),
+(3485,17449,60,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,90,"FrostMourne_Shatters"),
+(3487,17469,8,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,15,"SubwayLoopB"),
+(3488,13753,8,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,15,"ProtoDragonRoar"),
+(3489,17470,8,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,15,"NetherRay_MountSpecial"),
+(3490,17471,8,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,15,"Riding_Turtle_MountSpecial"),
+(3491,17472,8,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,15,"DrakeMount_Special"),
+(3492,17474,12,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,25,"SubwayStopB"),
+(3493,17473,12,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,25,"SubwayStartB"),
+(3494,15344,4,0,0,0,0,0,1,0,10000,0,1,1,1,0,0,0,0,180,270,0,8,"zzz_RussTestKit"),
+(3495,17475,10,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,20,"GnomeHutMachinery"),
+(3496,17476,8,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,20,"Event_Operation_Gnomergan_Explosion"),
+(3497,17477,8,0,0,0,0,0,1,1000,2000,0,1,1,1,0,0,0,0,180,270,0,20,"FlyingCarpetMount_Flap_Periodic"),
+(3498,17478,8,0,0,0,0,0,0,4000,6000,0,1,1,1,0,0,0,0,180,270,0,20,"FlyingCarpetMount_Fly"),
+(3499,17479,8,0,0,0,0,0,2,0,0,0,1,1,1,0,0,0,0,180,270,0,20,"Flaming_Hippogryph_MountSpecial"),
+(3500,17481,8,0,0,0,0,0,1,1000,2000,0,1,1,1,0,0,0,0,180,270,0,20,"FlyingCarpetMount_Flap_Periodic B"),
+(3501,17483,0,0,0,0,0,0,0,4000,8000,0,1,1,1,0,0,0,0,180,270,0,0,"Zalanzanes_Shield_Loop"),
+(3510,17490,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"RS_Xerestrasza_Yell01"),
+(3511,17491,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"RS_Xerestrasza_Yell02"),
+(3512,17492,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"RS_Xerestrasza_Say01"),
+(3513,17493,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"RS_Xerestrasza_Say02"),
+(3514,17494,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"RS_Xerestrasza_Say03"),
+(3515,17495,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"RS_Xerestrasza_Say04"),
+(3516,17496,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"RS_Xerestrasza_Say05"),
+(3517,17497,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"RS_Xerestrasza_Say06"),
+(3518,17498,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"RS_Xerestrasza_Say07"),
+(3519,17499,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"RS_Halion_Spawn01"),
+(3520,17500,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"RS_Halion_Aggro01"),
+(3521,17501,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"RS_Halion_Slay01"),
+(3522,17502,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"RS_Halion_Slay02"),
+(3523,17503,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"RS_Halion_Death01"),
+(3524,17504,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"RS_Halion_Beserk01"),
+(3525,17505,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"RS_Halion_Special01"),
+(3526,17506,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"RS_Halion_Special02"),
+(3527,17507,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"RS_Halion_Phase2"),
+(3528,17508,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"RS_Halion_Phase3"),
+(3529,17512,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"RS_Zarithrian_Aggro01"),
+(3530,17513,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"RS_Zarithrian_Slay01"),
+(3531,17514,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"RS_Zarithrian_Slay02"),
+(3532,17515,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"RS_Zarithrian_Death01"),
+(3533,17516,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"RS_Zarithrian_Special01"),
+(3534,17520,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"RS_Baltharus_Aggro01"),
+(3535,17521,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"RS_Baltharus_Slay01"),
+(3536,17522,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"RS_Baltharus_Slay02"),
+(3537,17523,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"RS_Baltharus_Death01"),
+(3538,17524,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"RS_Baltharus_Special01"),
+(3539,17525,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"RS_Baltharus_Yell01"),
+(3540,17528,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"RS_Saviana_Aggro01"),
+(3541,17529,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"RS_Saviana_Slay01"),
+(3542,17530,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"RS_Saviana_Slay02"),
+(3543,17531,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"RS_Saviana_Death01"),
+(3544,17532,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"RS_Saviana_Special01"),
+(3545,17535,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"OG_Mekkatorque_Event01"),
+(3546,17536,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"OG_Mekkatorque_Event02"),
+(3547,17537,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"OG_Mekkatorque_Event03"),
+(3548,17538,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"OG_Mekkatorque_Event04"),
+(3549,17539,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"OG_Mekkatorque_Event05"),
+(3550,17541,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"OG_Mekkatorque_Event06"),
+(3551,17542,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"OG_Mekkatorque_Event07"),
+(3552,17543,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"OG_Mekkatorque_Event08"),
+(3553,17544,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"OG_Mekkatorque_Event09"),
+(3554,17546,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"OG_Mekkatorque_Event10"),
+(3555,17547,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"OG_Mekkatorque_Event11"),
+(3556,17548,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"OG_Mekkatorque_Event12"),
+(3557,17549,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"OG_Mekkatorque_Event13"),
+(3558,17550,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"OG_Mekkatorque_Event14"),
+(3559,17551,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"OG_Mekkatorque_Event15"),
+(3560,17552,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"OG_Mekkatorque_Event16"),
+(3561,17553,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"OG_Mekkatorque_Event17"),
+(3562,17554,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"OG_Mekkatorque_Event18"),
+(3563,17556,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"OG_Mekkatorque_Event19"),
+(3564,17557,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"OG_Mekkatorque_Event20"),
+(3565,17558,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"OG_Mekkatorque_Event21"),
+(3566,17559,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"OG_Mekkatorque_Event22"),
+(3567,17560,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"OG_Mekkatorque_Event23"),
+(3568,17561,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"OG_Mekkatorque_Event24"),
+(3569,17562,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"OG_Mekkatorque_Event25"),
+(3570,17563,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"OG_Mekkatorque_Event26"),
+(3571,17568,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"OG_Mekkatorque_Death01"),
+(3572,17569,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"OG_Thermaplugg_Event01"),
+(3573,17570,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"OG_Thermaplugg_Event02"),
+(3574,17571,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"OG_Thermaplugg_Event03"),
+(3575,17572,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"OG_Thermaplugg_Event04"),
+(3576,17573,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"ZF_Voljin_Event01"),
+(3577,17574,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"ZF_Voljin_Event02"),
+(3578,17575,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"ZF_Voljin_Event03"),
+(3579,17576,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"ZF_Voljin_Event04"),
+(3580,17577,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"ZF_Voljin_Event05"),
+(3581,17578,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"ZF_Voljin_Event06"),
+(3582,17579,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"ZF_Voljin_Event07"),
+(3583,17580,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"ZF_Voljin_Event08"),
+(3584,17581,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"ZF_Voljin_Event09"),
+(3585,17582,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"ZF_Voljin_Event10"),
+(3586,17583,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"ZF_Voljin_Event11"),
+(3587,17584,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"ZF_Voljin_Event12"),
+(3588,17585,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"ZF_Voljin_Event13"),
+(3589,17586,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"ZF_Voljin_Event14"),
+(3590,17587,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"ZF_Voljin_Event15"),
+(3591,17588,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"ZF_Voljin_Event16"),
+(3592,17589,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"ZF_Voljin_Event17"),
+(3593,17590,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"ZF_Voljin_Event18"),
+(3594,17591,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"ZF_Voljin_Event19"),
+(3595,17592,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"ZF_Voljin_Event20"),
+(3596,17596,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"ZF_Zalazane_Event01"),
+(3597,17597,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"ZF_Zalazane_Event02"),
+(3598,17598,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"ZF_Zalazane_Event03"),
+(3599,17599,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"ZF_Zalazane_Event04"),
+(3600,17600,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"ZF_Zalazane_Event05"),
+(3601,17601,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"ZF_Zalazane_Event06"),
+(3602,17602,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"ZF_Zalazane_Event07"),
+(3603,17606,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"ZF_Bwonsamdi_Event01"),
+(3604,17607,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"ZF_Bwonsamdi_Event02"),
+(3605,17608,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"ZF_Bwonsamdi_Event03"),
+(3606,17609,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"ZF_Bwonsamdi_Event04"),
+(3607,17610,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"ZF_Bwonsamdi_Event05"),
+(3608,17611,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"ZF_Bwonsamdi_Event06"),
+(3609,17612,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"ZF_Bwonsamdi_Event07"),
+(3610,17613,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"ZF_Bwonsamdi_Event08"),
+(3611,17614,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"ZF_Bwonsamdi_Event09"),
+(3612,17615,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"ZF_Bwonsamdi_Event10"),
+(3613,17616,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"ZF_Bwonsamdi_Event11"),
+(3614,17617,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"ZF_Bwonsamdi_Event12"),
+(3615,17618,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"ZF_Bwonsamdi_Event13"),
+(3616,17621,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"ZF_Zentabra_Event01"),
+(3617,17622,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"ZF_Zentabra_Event02"),
+(3618,17623,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"ZF_Zentabra_Event03"),
+(3619,17624,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"ZF_Zentabra_Event04"),
+(3620,17625,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"ZF_Zentabra_Event05"),
+(3621,17630,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"ZF_Vanira_Event01"),
+(3622,17633,30,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,180,270,0,40,"FrostOrb_BeamFX (Copy)"),
+(3623,17635,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"OG_Computer_Event01"),
+(3624,17636,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"OG_Computer_Event02"),
+(3625,17665,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"OG_Boltcog_Event01"),
+(3626,17666,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"OG_Boltcog_Slay01"),
+(3627,17667,0,0,0,0,0,0,2,0,0,0,0.3,0.75,1,200,200,1000,3000,180,270,0,0,"OG_Boltcog_Slay02"); 

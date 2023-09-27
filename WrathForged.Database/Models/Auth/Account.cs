@@ -59,4 +59,5 @@ public partial class Account
     public uint Recruiter { get; set; }
 
     public virtual ICollection<RbacAccountPermission> RbacAccountPermissions { get; set; } = new List<RbacAccountPermission>();
+    public virtual ICollection<InstanceCharacters> InstanceCharacters { get; set; } = new List<InstanceCharacters>();
 }

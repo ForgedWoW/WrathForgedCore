@@ -1,153 +1,153 @@
 DROP TABLE IF EXISTS `ObjectEffectPackageElem`; 
 CREATE TABLE `ObjectEffectPackageElem` ( `ID` INT NOT NULL DEFAULT '0', `ObjectEffectPackageID` INT NOT NULL DEFAULT '0', `ObjectEffectGroupID` INT NOT NULL DEFAULT '0', `StateType` INT NOT NULL DEFAULT '0', PRIMARY KEY (`ID`)) ENGINE=InnoDB DEFAULT CHARSET=utf8; 
-INSERT INTO `ObjectEffectPackageElem` VALUES (138,61,157,34); 
-INSERT INTO `ObjectEffectPackageElem` VALUES (141,61,169,27); 
-INSERT INTO `ObjectEffectPackageElem` VALUES (142,61,166,24); 
-INSERT INTO `ObjectEffectPackageElem` VALUES (143,61,165,23); 
-INSERT INTO `ObjectEffectPackageElem` VALUES (146,61,162,20); 
-INSERT INTO `ObjectEffectPackageElem` VALUES (147,61,163,21); 
-INSERT INTO `ObjectEffectPackageElem` VALUES (148,61,160,19); 
-INSERT INTO `ObjectEffectPackageElem` VALUES (149,61,161,13); 
-INSERT INTO `ObjectEffectPackageElem` VALUES (150,61,164,22); 
-INSERT INTO `ObjectEffectPackageElem` VALUES (151,61,170,30); 
-INSERT INTO `ObjectEffectPackageElem` VALUES (152,61,171,26); 
-INSERT INTO `ObjectEffectPackageElem` VALUES (153,61,172,35); 
-INSERT INTO `ObjectEffectPackageElem` VALUES (154,12,34,3); 
-INSERT INTO `ObjectEffectPackageElem` VALUES (158,61,173,6); 
-INSERT INTO `ObjectEffectPackageElem` VALUES (166,81,176,8); 
-INSERT INTO `ObjectEffectPackageElem` VALUES (169,101,181,19); 
-INSERT INTO `ObjectEffectPackageElem` VALUES (170,101,182,13); 
-INSERT INTO `ObjectEffectPackageElem` VALUES (171,101,183,12); 
-INSERT INTO `ObjectEffectPackageElem` VALUES (172,101,184,22); 
-INSERT INTO `ObjectEffectPackageElem` VALUES (173,101,185,26); 
-INSERT INTO `ObjectEffectPackageElem` VALUES (174,101,186,27); 
-INSERT INTO `ObjectEffectPackageElem` VALUES (175,101,187,28); 
-INSERT INTO `ObjectEffectPackageElem` VALUES (176,101,188,29); 
-INSERT INTO `ObjectEffectPackageElem` VALUES (177,101,189,30); 
-INSERT INTO `ObjectEffectPackageElem` VALUES (178,101,190,31); 
-INSERT INTO `ObjectEffectPackageElem` VALUES (179,101,191,32); 
-INSERT INTO `ObjectEffectPackageElem` VALUES (180,101,192,33); 
-INSERT INTO `ObjectEffectPackageElem` VALUES (181,101,195,6); 
-INSERT INTO `ObjectEffectPackageElem` VALUES (182,101,196,7); 
-INSERT INTO `ObjectEffectPackageElem` VALUES (183,102,197,8); 
-INSERT INTO `ObjectEffectPackageElem` VALUES (184,102,198,40); 
-INSERT INTO `ObjectEffectPackageElem` VALUES (185,102,199,38); 
-INSERT INTO `ObjectEffectPackageElem` VALUES (186,102,200,37); 
-INSERT INTO `ObjectEffectPackageElem` VALUES (192,81,175,10); 
-INSERT INTO `ObjectEffectPackageElem` VALUES (194,122,202,38); 
-INSERT INTO `ObjectEffectPackageElem` VALUES (195,122,203,40); 
-INSERT INTO `ObjectEffectPackageElem` VALUES (196,122,204,37); 
-INSERT INTO `ObjectEffectPackageElem` VALUES (197,122,205,8); 
-INSERT INTO `ObjectEffectPackageElem` VALUES (198,122,206,10); 
-INSERT INTO `ObjectEffectPackageElem` VALUES (201,81,159,38); 
-INSERT INTO `ObjectEffectPackageElem` VALUES (202,81,158,37); 
-INSERT INTO `ObjectEffectPackageElem` VALUES (221,122,241,15); 
-INSERT INTO `ObjectEffectPackageElem` VALUES (222,122,242,14); 
-INSERT INTO `ObjectEffectPackageElem` VALUES (223,141,247,22); 
-INSERT INTO `ObjectEffectPackageElem` VALUES (224,141,243,27); 
-INSERT INTO `ObjectEffectPackageElem` VALUES (225,141,244,41); 
-INSERT INTO `ObjectEffectPackageElem` VALUES (226,141,245,41); 
-INSERT INTO `ObjectEffectPackageElem` VALUES (227,141,246,13); 
-INSERT INTO `ObjectEffectPackageElem` VALUES (228,141,246,20); 
-INSERT INTO `ObjectEffectPackageElem` VALUES (229,141,246,21); 
-INSERT INTO `ObjectEffectPackageElem` VALUES (241,141,246,19); 
-INSERT INTO `ObjectEffectPackageElem` VALUES (242,102,261,15); 
-INSERT INTO `ObjectEffectPackageElem` VALUES (243,102,262,17); 
-INSERT INTO `ObjectEffectPackageElem` VALUES (244,81,263,15); 
-INSERT INTO `ObjectEffectPackageElem` VALUES (245,81,264,14); 
-INSERT INTO `ObjectEffectPackageElem` VALUES (246,161,265,8); 
-INSERT INTO `ObjectEffectPackageElem` VALUES (247,161,266,24); 
-INSERT INTO `ObjectEffectPackageElem` VALUES (248,161,267,23); 
-INSERT INTO `ObjectEffectPackageElem` VALUES (249,161,268,10); 
-INSERT INTO `ObjectEffectPackageElem` VALUES (250,161,269,19); 
-INSERT INTO `ObjectEffectPackageElem` VALUES (251,161,270,13); 
-INSERT INTO `ObjectEffectPackageElem` VALUES (252,161,270,12); 
-INSERT INTO `ObjectEffectPackageElem` VALUES (253,161,270,21); 
-INSERT INTO `ObjectEffectPackageElem` VALUES (254,161,270,20); 
-INSERT INTO `ObjectEffectPackageElem` VALUES (255,161,267,36); 
-INSERT INTO `ObjectEffectPackageElem` VALUES (256,161,269,22); 
-INSERT INTO `ObjectEffectPackageElem` VALUES (257,161,266,35); 
-INSERT INTO `ObjectEffectPackageElem` VALUES (281,141,243,28); 
-INSERT INTO `ObjectEffectPackageElem` VALUES (282,141,243,29); 
-INSERT INTO `ObjectEffectPackageElem` VALUES (283,141,243,12); 
-INSERT INTO `ObjectEffectPackageElem` VALUES (284,141,245,23); 
-INSERT INTO `ObjectEffectPackageElem` VALUES (321,201,281,33); 
-INSERT INTO `ObjectEffectPackageElem` VALUES (322,61,169,33); 
-INSERT INTO `ObjectEffectPackageElem` VALUES (365,61,169,29); 
-INSERT INTO `ObjectEffectPackageElem` VALUES (366,61,169,28); 
-INSERT INTO `ObjectEffectPackageElem` VALUES (367,61,169,29); 
-INSERT INTO `ObjectEffectPackageElem` VALUES (368,61,169,28); 
-INSERT INTO `ObjectEffectPackageElem` VALUES (381,141,160,46); 
-INSERT INTO `ObjectEffectPackageElem` VALUES (382,141,160,46); 
-INSERT INTO `ObjectEffectPackageElem` VALUES (421,122,321,1); 
-INSERT INTO `ObjectEffectPackageElem` VALUES (441,221,341,17); 
-INSERT INTO `ObjectEffectPackageElem` VALUES (442,221,342,15); 
-INSERT INTO `ObjectEffectPackageElem` VALUES (443,221,346,13); 
-INSERT INTO `ObjectEffectPackageElem` VALUES (444,221,346,12); 
-INSERT INTO `ObjectEffectPackageElem` VALUES (445,221,343,18); 
-INSERT INTO `ObjectEffectPackageElem` VALUES (446,221,343,19); 
-INSERT INTO `ObjectEffectPackageElem` VALUES (447,221,344,40); 
-INSERT INTO `ObjectEffectPackageElem` VALUES (448,221,345,8); 
-INSERT INTO `ObjectEffectPackageElem` VALUES (461,241,361,12); 
-INSERT INTO `ObjectEffectPackageElem` VALUES (462,241,362,13); 
-INSERT INTO `ObjectEffectPackageElem` VALUES (463,241,363,23); 
-INSERT INTO `ObjectEffectPackageElem` VALUES (464,241,364,24); 
-INSERT INTO `ObjectEffectPackageElem` VALUES (465,241,364,35); 
-INSERT INTO `ObjectEffectPackageElem` VALUES (466,241,361,32); 
-INSERT INTO `ObjectEffectPackageElem` VALUES (467,241,361,31); 
-INSERT INTO `ObjectEffectPackageElem` VALUES (468,241,361,20); 
-INSERT INTO `ObjectEffectPackageElem` VALUES (469,241,361,21); 
-INSERT INTO `ObjectEffectPackageElem` VALUES (470,241,362,46); 
-INSERT INTO `ObjectEffectPackageElem` VALUES (471,241,362,33); 
-INSERT INTO `ObjectEffectPackageElem` VALUES (472,241,362,22); 
-INSERT INTO `ObjectEffectPackageElem` VALUES (473,241,362,19); 
-INSERT INTO `ObjectEffectPackageElem` VALUES (481,261,381,69); 
-INSERT INTO `ObjectEffectPackageElem` VALUES (501,261,401,70); 
-INSERT INTO `ObjectEffectPackageElem` VALUES (502,261,402,68); 
-INSERT INTO `ObjectEffectPackageElem` VALUES (503,12,403,5); 
-INSERT INTO `ObjectEffectPackageElem` VALUES (504,12,404,4); 
-INSERT INTO `ObjectEffectPackageElem` VALUES (505,281,405,68); 
-INSERT INTO `ObjectEffectPackageElem` VALUES (521,301,421,71); 
-INSERT INTO `ObjectEffectPackageElem` VALUES (541,321,441,71); 
-INSERT INTO `ObjectEffectPackageElem` VALUES (561,341,461,73); 
-INSERT INTO `ObjectEffectPackageElem` VALUES (562,341,461,71); 
-INSERT INTO `ObjectEffectPackageElem` VALUES (563,342,462,71); 
-INSERT INTO `ObjectEffectPackageElem` VALUES (564,342,463,73); 
-INSERT INTO `ObjectEffectPackageElem` VALUES (565,342,464,72); 
-INSERT INTO `ObjectEffectPackageElem` VALUES (581,342,464,71); 
-INSERT INTO `ObjectEffectPackageElem` VALUES (582,342,464,73); 
-INSERT INTO `ObjectEffectPackageElem` VALUES (601,361,481,71); 
-INSERT INTO `ObjectEffectPackageElem` VALUES (621,381,501,71); 
-INSERT INTO `ObjectEffectPackageElem` VALUES (641,301,421,72); 
-INSERT INTO `ObjectEffectPackageElem` VALUES (661,161,269,26); 
-INSERT INTO `ObjectEffectPackageElem` VALUES (662,161,269,30); 
-INSERT INTO `ObjectEffectPackageElem` VALUES (663,161,270,27); 
-INSERT INTO `ObjectEffectPackageElem` VALUES (664,161,270,28); 
-INSERT INTO `ObjectEffectPackageElem` VALUES (665,161,270,29); 
-INSERT INTO `ObjectEffectPackageElem` VALUES (681,161,270,25); 
-INSERT INTO `ObjectEffectPackageElem` VALUES (682,241,361,27); 
-INSERT INTO `ObjectEffectPackageElem` VALUES (683,241,361,29); 
-INSERT INTO `ObjectEffectPackageElem` VALUES (684,241,361,28); 
-INSERT INTO `ObjectEffectPackageElem` VALUES (685,241,362,30); 
-INSERT INTO `ObjectEffectPackageElem` VALUES (686,241,361,6); 
-INSERT INTO `ObjectEffectPackageElem` VALUES (701,401,521,27); 
-INSERT INTO `ObjectEffectPackageElem` VALUES (721,61,221,42); 
-INSERT INTO `ObjectEffectPackageElem` VALUES (722,61,222,41); 
-INSERT INTO `ObjectEffectPackageElem` VALUES (741,421,541,19); 
-INSERT INTO `ObjectEffectPackageElem` VALUES (761,241,361,26); 
-INSERT INTO `ObjectEffectPackageElem` VALUES (802,462,282,1); 
-INSERT INTO `ObjectEffectPackageElem` VALUES (803,461,281,1); 
-INSERT INTO `ObjectEffectPackageElem` VALUES (804,182,581,1); 
-INSERT INTO `ObjectEffectPackageElem` VALUES (805,181,582,1); 
-INSERT INTO `ObjectEffectPackageElem` VALUES (821,481,581,1); 
-INSERT INTO `ObjectEffectPackageElem` VALUES (822,482,601,68); 
-INSERT INTO `ObjectEffectPackageElem` VALUES (823,482,602,69); 
-INSERT INTO `ObjectEffectPackageElem` VALUES (824,482,603,70); 
-INSERT INTO `ObjectEffectPackageElem` VALUES (825,482,602,73); 
-INSERT INTO `ObjectEffectPackageElem` VALUES (826,482,602,71); 
-INSERT INTO `ObjectEffectPackageElem` VALUES (834,488,608,68); 
-INSERT INTO `ObjectEffectPackageElem` VALUES (840,491,610,1); 
-INSERT INTO `ObjectEffectPackageElem` VALUES (841,491,611,61); 
-INSERT INTO `ObjectEffectPackageElem` VALUES (842,491,611,66); 
-INSERT INTO `ObjectEffectPackageElem` VALUES (843,491,611,12); 
-INSERT INTO `ObjectEffectPackageElem` VALUES (844,491,611,22); 
+INSERT INTO `ObjectEffectPackageElem` VALUES (138,61,157,34),
+(141,61,169,27),
+(142,61,166,24),
+(143,61,165,23),
+(146,61,162,20),
+(147,61,163,21),
+(148,61,160,19),
+(149,61,161,13),
+(150,61,164,22),
+(151,61,170,30),
+(152,61,171,26),
+(153,61,172,35),
+(154,12,34,3),
+(158,61,173,6),
+(166,81,176,8),
+(169,101,181,19),
+(170,101,182,13),
+(171,101,183,12),
+(172,101,184,22),
+(173,101,185,26),
+(174,101,186,27),
+(175,101,187,28),
+(176,101,188,29),
+(177,101,189,30),
+(178,101,190,31),
+(179,101,191,32),
+(180,101,192,33),
+(181,101,195,6),
+(182,101,196,7),
+(183,102,197,8),
+(184,102,198,40),
+(185,102,199,38),
+(186,102,200,37),
+(192,81,175,10),
+(194,122,202,38),
+(195,122,203,40),
+(196,122,204,37),
+(197,122,205,8),
+(198,122,206,10),
+(201,81,159,38),
+(202,81,158,37),
+(221,122,241,15),
+(222,122,242,14),
+(223,141,247,22),
+(224,141,243,27),
+(225,141,244,41),
+(226,141,245,41),
+(227,141,246,13),
+(228,141,246,20),
+(229,141,246,21),
+(241,141,246,19),
+(242,102,261,15),
+(243,102,262,17),
+(244,81,263,15),
+(245,81,264,14),
+(246,161,265,8),
+(247,161,266,24),
+(248,161,267,23),
+(249,161,268,10),
+(250,161,269,19),
+(251,161,270,13),
+(252,161,270,12),
+(253,161,270,21),
+(254,161,270,20),
+(255,161,267,36),
+(256,161,269,22),
+(257,161,266,35),
+(281,141,243,28),
+(282,141,243,29),
+(283,141,243,12),
+(284,141,245,23),
+(321,201,281,33),
+(322,61,169,33),
+(365,61,169,29),
+(366,61,169,28),
+(367,61,169,29),
+(368,61,169,28),
+(381,141,160,46),
+(382,141,160,46),
+(421,122,321,1),
+(441,221,341,17),
+(442,221,342,15),
+(443,221,346,13),
+(444,221,346,12),
+(445,221,343,18),
+(446,221,343,19),
+(447,221,344,40),
+(448,221,345,8),
+(461,241,361,12),
+(462,241,362,13),
+(463,241,363,23),
+(464,241,364,24),
+(465,241,364,35),
+(466,241,361,32),
+(467,241,361,31),
+(468,241,361,20),
+(469,241,361,21),
+(470,241,362,46),
+(471,241,362,33),
+(472,241,362,22),
+(473,241,362,19),
+(481,261,381,69),
+(501,261,401,70),
+(502,261,402,68),
+(503,12,403,5),
+(504,12,404,4),
+(505,281,405,68),
+(521,301,421,71),
+(541,321,441,71),
+(561,341,461,73),
+(562,341,461,71),
+(563,342,462,71),
+(564,342,463,73),
+(565,342,464,72),
+(581,342,464,71),
+(582,342,464,73),
+(601,361,481,71),
+(621,381,501,71),
+(641,301,421,72),
+(661,161,269,26),
+(662,161,269,30),
+(663,161,270,27),
+(664,161,270,28),
+(665,161,270,29),
+(681,161,270,25),
+(682,241,361,27),
+(683,241,361,29),
+(684,241,361,28),
+(685,241,362,30),
+(686,241,361,6),
+(701,401,521,27),
+(721,61,221,42),
+(722,61,222,41),
+(741,421,541,19),
+(761,241,361,26),
+(802,462,282,1),
+(803,461,281,1),
+(804,182,581,1),
+(805,181,582,1),
+(821,481,581,1),
+(822,482,601,68),
+(823,482,602,69),
+(824,482,603,70),
+(825,482,602,73),
+(826,482,602,71),
+(834,488,608,68),
+(840,491,610,1),
+(841,491,611,61),
+(842,491,611,66),
+(843,491,611,12),
+(844,491,611,22); 

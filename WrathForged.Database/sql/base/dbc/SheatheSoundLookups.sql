@@ -1,35 +1,35 @@
 DROP TABLE IF EXISTS `SheatheSoundLookups`; 
 CREATE TABLE `SheatheSoundLookups` ( `ID` INT NOT NULL DEFAULT '0', `ItemClass` INT NOT NULL DEFAULT '0', `ItemSubclass` INT NOT NULL DEFAULT '0', `ItemEnvTypes` INT NOT NULL DEFAULT '0', `IsShield` INT NOT NULL DEFAULT '0', `SheathSoundID` INT NOT NULL DEFAULT '0', `UnsheathSoundID` INT NOT NULL DEFAULT '0', PRIMARY KEY (`ID`)) ENGINE=InnoDB DEFAULT CHARSET=utf8; 
-INSERT INTO `SheatheSoundLookups` VALUES (1,4,5,0,0,696,701); 
-INSERT INTO `SheatheSoundLookups` VALUES (2,4,6,0,0,696,701); 
-INSERT INTO `SheatheSoundLookups` VALUES (3,2,0,1,1,698,700); 
-INSERT INTO `SheatheSoundLookups` VALUES (4,2,1,1,1,698,700); 
-INSERT INTO `SheatheSoundLookups` VALUES (5,2,2,1,1,698,700); 
-INSERT INTO `SheatheSoundLookups` VALUES (6,2,3,1,1,698,700); 
-INSERT INTO `SheatheSoundLookups` VALUES (7,2,4,1,1,698,700); 
-INSERT INTO `SheatheSoundLookups` VALUES (8,2,5,1,1,698,700); 
-INSERT INTO `SheatheSoundLookups` VALUES (9,2,6,1,1,698,700); 
-INSERT INTO `SheatheSoundLookups` VALUES (10,2,7,1,1,698,700); 
-INSERT INTO `SheatheSoundLookups` VALUES (11,2,8,1,1,698,700); 
-INSERT INTO `SheatheSoundLookups` VALUES (12,2,9,1,1,698,700); 
-INSERT INTO `SheatheSoundLookups` VALUES (13,2,10,1,1,698,700); 
-INSERT INTO `SheatheSoundLookups` VALUES (14,2,11,1,1,698,700); 
-INSERT INTO `SheatheSoundLookups` VALUES (15,2,12,1,1,698,700); 
-INSERT INTO `SheatheSoundLookups` VALUES (16,2,13,1,1,698,700); 
-INSERT INTO `SheatheSoundLookups` VALUES (17,2,14,1,1,698,700); 
-INSERT INTO `SheatheSoundLookups` VALUES (18,2,0,2,1,697,699); 
-INSERT INTO `SheatheSoundLookups` VALUES (19,2,1,2,1,697,699); 
-INSERT INTO `SheatheSoundLookups` VALUES (20,2,2,2,1,697,699); 
-INSERT INTO `SheatheSoundLookups` VALUES (21,2,3,2,1,697,699); 
-INSERT INTO `SheatheSoundLookups` VALUES (22,2,4,2,1,697,699); 
-INSERT INTO `SheatheSoundLookups` VALUES (23,2,5,2,1,697,699); 
-INSERT INTO `SheatheSoundLookups` VALUES (24,2,6,2,1,697,699); 
-INSERT INTO `SheatheSoundLookups` VALUES (25,2,7,2,1,697,699); 
-INSERT INTO `SheatheSoundLookups` VALUES (26,2,8,2,1,697,699); 
-INSERT INTO `SheatheSoundLookups` VALUES (27,2,9,2,1,697,699); 
-INSERT INTO `SheatheSoundLookups` VALUES (28,2,10,2,1,697,699); 
-INSERT INTO `SheatheSoundLookups` VALUES (29,2,11,2,1,697,699); 
-INSERT INTO `SheatheSoundLookups` VALUES (30,2,12,2,1,697,699); 
-INSERT INTO `SheatheSoundLookups` VALUES (31,2,13,2,1,697,699); 
-INSERT INTO `SheatheSoundLookups` VALUES (32,2,14,2,1,697,699); 
-INSERT INTO `SheatheSoundLookups` VALUES (33,2,0,0,1,697,699); 
+INSERT INTO `SheatheSoundLookups` VALUES (1,4,5,0,0,696,701),
+(2,4,6,0,0,696,701),
+(3,2,0,1,1,698,700),
+(4,2,1,1,1,698,700),
+(5,2,2,1,1,698,700),
+(6,2,3,1,1,698,700),
+(7,2,4,1,1,698,700),
+(8,2,5,1,1,698,700),
+(9,2,6,1,1,698,700),
+(10,2,7,1,1,698,700),
+(11,2,8,1,1,698,700),
+(12,2,9,1,1,698,700),
+(13,2,10,1,1,698,700),
+(14,2,11,1,1,698,700),
+(15,2,12,1,1,698,700),
+(16,2,13,1,1,698,700),
+(17,2,14,1,1,698,700),
+(18,2,0,2,1,697,699),
+(19,2,1,2,1,697,699),
+(20,2,2,2,1,697,699),
+(21,2,3,2,1,697,699),
+(22,2,4,2,1,697,699),
+(23,2,5,2,1,697,699),
+(24,2,6,2,1,697,699),
+(25,2,7,2,1,697,699),
+(26,2,8,2,1,697,699),
+(27,2,9,2,1,697,699),
+(28,2,10,2,1,697,699),
+(29,2,11,2,1,697,699),
+(30,2,12,2,1,697,699),
+(31,2,13,2,1,697,699),
+(32,2,14,2,1,697,699),
+(33,2,0,0,1,697,699); 

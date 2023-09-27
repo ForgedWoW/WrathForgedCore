@@ -43,9 +43,32 @@ namespace WrathForged.Common.Networking
 
         public TCPServer TCPServer { get; }
 
+        /// <summary>
+        ///     Starts the server on the configured port "ClientTCPServer:Port" or default port of 8085 if not configured.
+        /// </summary>
+        /// <param name="defaultPort"></param>
         public void Start(int defaultPort = 8085)
         {
-            var bindIpString = _configuration.GetDefaultValue("ClientTCPServer:BindIP", "*");
+            var bindIp = GertBindIP();
+
+            TCPServer.Start(_configuration.GetDefaultValue("ClientTCPServer:Port", defaultPort), bindIp);
+        }
+
+        /// <summary>
+        ///     Starts the server on the specified port.
+        /// </summary>
+        /// <param name="ipAddress"></param>
+        /// <param name="port"></param>
+        public void StartOnPort(string ipAddress, int port)
+        {
+            var bindIp = GertBindIP(ipAddress);
+
+            TCPServer.Start(port, bindIp);
+        }
+
+        private IPAddress GertBindIP(string? bindIpString = null)
+        {
+            bindIpString ??= _configuration.GetDefaultValue("ClientTCPServer:BindIP", "*");
             var bindIp = IPAddress.Any;
 
             if (bindIpString != "*")
@@ -60,7 +83,7 @@ namespace WrathForged.Common.Networking
                 }
             }
 
-            TCPServer.Start(_configuration.GetDefaultValue("ClientTCPServer:Port", defaultPort), bindIp);
+            return bindIp;
         }
 
         private void TCPServer_OnClientConnected(object? sender, ClientSocket e)

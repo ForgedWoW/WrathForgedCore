@@ -25,6 +25,12 @@ public partial class AuthDatabase : DbContext
 
     public virtual DbSet<BuildInfo> BuildInfos { get; set; }
 
+    public virtual DbSet<InstanceList> InstanceLists { get; set; }
+
+    public virtual DbSet<InstanceMaps> InstanceMaps { get; set; }
+
+    public virtual DbSet<InstanceCharacters> InstanceCharacters { get; set; }
+
     public virtual DbSet<IpBanned> IpBanneds { get; set; }
 
     public virtual DbSet<Log> Logs { get; set; }
@@ -271,6 +277,28 @@ public partial class AuthDatabase : DbContext
             _ = entity.Property(e => e.WinChecksumSeed)
                 .HasMaxLength(40)
                 .HasColumnName("winChecksumSeed");
+        });
+
+        _ = modelBuilder.Entity<InstanceList>(entity =>
+        {
+            _ = entity.HasKey(e => e.Id);
+            _ = entity.HasIndex(e => e.Realm).HasDatabaseName("FK_instancelist_realmlist");
+            _ = entity.HasOne(d => d.RealmList).WithMany(p => p.InstanceLists).HasForeignKey(d => d.Realm).HasConstraintName("FK_instancelist_realmlist");
+            _ = entity.HasMany(d => d.InstanceMaps).WithOne(p => p.InstanceList).HasForeignKey(d => d.InstanceId);
+            _ = entity.HasMany(d => d.InstanceCharacters).WithOne(p => p.InstanceList).HasForeignKey(d => d.InstanceId);
+        });
+
+        _ = modelBuilder.Entity<InstanceMaps>(entity =>
+        {
+            _ = entity.HasKey(e => new { e.InstanceId, e.MapId });
+            _ = entity.HasOne(d => d.InstanceList).WithMany(p => p.InstanceMaps).HasForeignKey(d => d.InstanceId);
+        });
+
+        _ = modelBuilder.Entity<InstanceCharacters>(entity =>
+        {
+            _ = entity.HasKey(e => new { e.InstanceId, e.AccountId, e.CharacterId });
+            _ = entity.HasOne(d => d.Account).WithMany(p => p.InstanceCharacters).HasForeignKey(d => d.AccountId);
+            _ = entity.HasOne(d => d.InstanceList).WithMany(p => p.InstanceCharacters).HasForeignKey(d => d.InstanceId);
         });
 
         _ = modelBuilder.Entity<IpBanned>(entity =>

@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace WrathForged.Database.Models.Auth;
+﻿namespace WrathForged.Database.Models.Auth;
 
 /// <summary>
 /// Realm System
@@ -31,4 +28,6 @@ public partial class Realmlist
     public float Population { get; set; }
 
     public uint Gamebuild { get; set; }
+
+    public virtual ICollection<InstanceList> InstanceLists { get; set; } = new List<InstanceList>();
 }

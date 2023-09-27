@@ -1,11 +1,11 @@
 DROP TABLE IF EXISTS `Startup_strings`; 
 CREATE TABLE `Startup_strings` ( `ID` INT NOT NULL DEFAULT '0', `Name` TEXT NULL, `Message_Lang_enUS` TEXT NULL, `Message_Lang_enGB` TEXT NULL, `Message_Lang_koKR` TEXT NULL, `Message_Lang_frFR` TEXT NULL, `Message_Lang_deDE` TEXT NULL, `Message_Lang_enCN` TEXT NULL, `Message_Lang_zhCN` TEXT NULL, `Message_Lang_enTW` TEXT NULL, `Message_Lang_zhTW` TEXT NULL, `Message_Lang_esES` TEXT NULL, `Message_Lang_esMX` TEXT NULL, `Message_Lang_ruRU` TEXT NULL, `Message_Lang_ptPT` TEXT NULL, `Message_Lang_ptBR` TEXT NULL, `Message_Lang_itIT` TEXT NULL, `Message_Lang_Unk` TEXT NULL, `Message_Lang_Mask` INT UNSIGNED NOT NULL DEFAULT '0', PRIMARY KEY (`ID`)) ENGINE=InnoDB DEFAULT CHARSET=utf8; 
-INSERT INTO `Startup_strings` VALUES (1,"MSG_TITLE_WOW","World of Warcraft","","","","","","","","","","","","","","","",16712190); 
-INSERT INTO `Startup_strings` VALUES (2,"MSG_GX_INIT_FAILED_D3D","World of Warcraft was unable to start up 3D acceleration. Please make sure DirectX 9.0c is installed and your video drivers are up-to-date.","","","","","","","","","","","","","","","",16712190); 
-INSERT INTO `Startup_strings` VALUES (3,"MSG_GX_INIT_FAILED","World of Warcraft was unable to start up 3D acceleration.","","","","","","","","","","","","","","","",16712190); 
-INSERT INTO `Startup_strings` VALUES (4,"MSG_HW_UNSUPPORTED","Your 3D accelerator card is not supported by World of Warcraft. Please install a 3D accelerator card with dual-TMU support.","","","","","","","","","","","","","","","",16712190); 
-INSERT INTO `Startup_strings` VALUES (5,"MSG_HW_CHANGED","Hardware changed.  Reload default settings?","","","","","","","","","","","","","","","",16712190); 
-INSERT INTO `Startup_strings` VALUES (9,"MSG_GLUEXML_UI_CORRUPT","Your login interface files are corrupt.  Please reinstall the game.","","","","","","","","","","","","","","","",16712190); 
-INSERT INTO `Startup_strings` VALUES (10,"MSG_FRAMEXML_UI_CORRUPT","Your game interface files are corrupt.  Please remove your Interface\FrameXML folder.","","","","","","","","","","","","","","","",16712190); 
-INSERT INTO `Startup_strings` VALUES (11,"MSG_GX_NO_DEVICE","Failed to find a suitable display device.  Exiting program.","","","","","","","","","","","","","","","",16712190); 
-INSERT INTO `Startup_strings` VALUES (12,"MSG_REMOTE_DESKTOP","Running World of Warcraft through a Remote Desktop connection is not supported.  Exiting program.","","","","","","","","","","","","","","","",16712190); 
+INSERT INTO `Startup_strings` VALUES (1,"MSG_TITLE_WOW","World of Warcraft","","","","","","","","","","","","","","","",16712190),
+(2,"MSG_GX_INIT_FAILED_D3D","World of Warcraft was unable to start up 3D acceleration. Please make sure DirectX 9.0c is installed and your video drivers are up-to-date.","","","","","","","","","","","","","","","",16712190),
+(3,"MSG_GX_INIT_FAILED","World of Warcraft was unable to start up 3D acceleration.","","","","","","","","","","","","","","","",16712190),
+(4,"MSG_HW_UNSUPPORTED","Your 3D accelerator card is not supported by World of Warcraft. Please install a 3D accelerator card with dual-TMU support.","","","","","","","","","","","","","","","",16712190),
+(5,"MSG_HW_CHANGED","Hardware changed.  Reload default settings?","","","","","","","","","","","","","","","",16712190),
+(9,"MSG_GLUEXML_UI_CORRUPT","Your login interface files are corrupt.  Please reinstall the game.","","","","","","","","","","","","","","","",16712190),
+(10,"MSG_FRAMEXML_UI_CORRUPT","Your game interface files are corrupt.  Please remove your Interface\FrameXML folder.","","","","","","","","","","","","","","","",16712190),
+(11,"MSG_GX_NO_DEVICE","Failed to find a suitable display device.  Exiting program.","","","","","","","","","","","","","","","",16712190),
+(12,"MSG_REMOTE_DESKTOP","Running World of Warcraft through a Remote Desktop connection is not supported.  Exiting program.","","","","","","","","","","","","","","","",16712190); 

@@ -1,264 +1,264 @@
 DROP TABLE IF EXISTS `SpellCategory`; 
 CREATE TABLE `SpellCategory` ( `ID` INT NOT NULL DEFAULT '0', `Flags` INT NOT NULL DEFAULT '0', PRIMARY KEY (`ID`)) ENGINE=InnoDB DEFAULT CHARSET=utf8; 
-INSERT INTO `SpellCategory` VALUES (1,0); 
-INSERT INTO `SpellCategory` VALUES (2,0); 
-INSERT INTO `SpellCategory` VALUES (4,4); 
-INSERT INTO `SpellCategory` VALUES (11,0); 
-INSERT INTO `SpellCategory` VALUES (12,0); 
-INSERT INTO `SpellCategory` VALUES (17,0); 
-INSERT INTO `SpellCategory` VALUES (18,0); 
-INSERT INTO `SpellCategory` VALUES (19,0); 
-INSERT INTO `SpellCategory` VALUES (20,0); 
-INSERT INTO `SpellCategory` VALUES (21,0); 
-INSERT INTO `SpellCategory` VALUES (22,0); 
-INSERT INTO `SpellCategory` VALUES (23,0); 
-INSERT INTO `SpellCategory` VALUES (24,0); 
-INSERT INTO `SpellCategory` VALUES (25,0); 
-INSERT INTO `SpellCategory` VALUES (26,0); 
-INSERT INTO `SpellCategory` VALUES (27,0); 
-INSERT INTO `SpellCategory` VALUES (28,0); 
-INSERT INTO `SpellCategory` VALUES (29,0); 
-INSERT INTO `SpellCategory` VALUES (30,0); 
-INSERT INTO `SpellCategory` VALUES (31,0); 
-INSERT INTO `SpellCategory` VALUES (32,0); 
-INSERT INTO `SpellCategory` VALUES (33,0); 
-INSERT INTO `SpellCategory` VALUES (34,0); 
-INSERT INTO `SpellCategory` VALUES (35,0); 
-INSERT INTO `SpellCategory` VALUES (36,0); 
-INSERT INTO `SpellCategory` VALUES (37,0); 
-INSERT INTO `SpellCategory` VALUES (38,0); 
-INSERT INTO `SpellCategory` VALUES (39,0); 
-INSERT INTO `SpellCategory` VALUES (40,0); 
-INSERT INTO `SpellCategory` VALUES (41,0); 
-INSERT INTO `SpellCategory` VALUES (42,0); 
-INSERT INTO `SpellCategory` VALUES (43,0); 
-INSERT INTO `SpellCategory` VALUES (44,0); 
-INSERT INTO `SpellCategory` VALUES (45,0); 
-INSERT INTO `SpellCategory` VALUES (46,0); 
-INSERT INTO `SpellCategory` VALUES (47,0); 
-INSERT INTO `SpellCategory` VALUES (49,0); 
-INSERT INTO `SpellCategory` VALUES (50,0); 
-INSERT INTO `SpellCategory` VALUES (51,0); 
-INSERT INTO `SpellCategory` VALUES (52,0); 
-INSERT INTO `SpellCategory` VALUES (54,0); 
-INSERT INTO `SpellCategory` VALUES (55,0); 
-INSERT INTO `SpellCategory` VALUES (56,0); 
-INSERT INTO `SpellCategory` VALUES (57,0); 
-INSERT INTO `SpellCategory` VALUES (58,0); 
-INSERT INTO `SpellCategory` VALUES (59,0); 
-INSERT INTO `SpellCategory` VALUES (60,0); 
-INSERT INTO `SpellCategory` VALUES (61,0); 
-INSERT INTO `SpellCategory` VALUES (62,0); 
-INSERT INTO `SpellCategory` VALUES (63,0); 
-INSERT INTO `SpellCategory` VALUES (64,0); 
-INSERT INTO `SpellCategory` VALUES (65,0); 
-INSERT INTO `SpellCategory` VALUES (66,0); 
-INSERT INTO `SpellCategory` VALUES (67,0); 
-INSERT INTO `SpellCategory` VALUES (68,0); 
-INSERT INTO `SpellCategory` VALUES (72,0); 
-INSERT INTO `SpellCategory` VALUES (73,0); 
-INSERT INTO `SpellCategory` VALUES (74,0); 
-INSERT INTO `SpellCategory` VALUES (75,0); 
-INSERT INTO `SpellCategory` VALUES (76,0); 
-INSERT INTO `SpellCategory` VALUES (77,0); 
-INSERT INTO `SpellCategory` VALUES (78,0); 
-INSERT INTO `SpellCategory` VALUES (79,0); 
-INSERT INTO `SpellCategory` VALUES (82,0); 
-INSERT INTO `SpellCategory` VALUES (83,0); 
-INSERT INTO `SpellCategory` VALUES (84,0); 
-INSERT INTO `SpellCategory` VALUES (85,0); 
-INSERT INTO `SpellCategory` VALUES (86,0); 
-INSERT INTO `SpellCategory` VALUES (87,0); 
-INSERT INTO `SpellCategory` VALUES (88,0); 
-INSERT INTO `SpellCategory` VALUES (89,0); 
-INSERT INTO `SpellCategory` VALUES (93,0); 
-INSERT INTO `SpellCategory` VALUES (94,0); 
-INSERT INTO `SpellCategory` VALUES (95,0); 
-INSERT INTO `SpellCategory` VALUES (96,0); 
-INSERT INTO `SpellCategory` VALUES (97,0); 
-INSERT INTO `SpellCategory` VALUES (98,0); 
-INSERT INTO `SpellCategory` VALUES (99,0); 
-INSERT INTO `SpellCategory` VALUES (100,0); 
-INSERT INTO `SpellCategory` VALUES (101,0); 
-INSERT INTO `SpellCategory` VALUES (102,0); 
-INSERT INTO `SpellCategory` VALUES (103,0); 
-INSERT INTO `SpellCategory` VALUES (104,0); 
-INSERT INTO `SpellCategory` VALUES (105,0); 
-INSERT INTO `SpellCategory` VALUES (106,0); 
-INSERT INTO `SpellCategory` VALUES (107,0); 
-INSERT INTO `SpellCategory` VALUES (108,0); 
-INSERT INTO `SpellCategory` VALUES (109,0); 
-INSERT INTO `SpellCategory` VALUES (132,0); 
-INSERT INTO `SpellCategory` VALUES (133,0); 
-INSERT INTO `SpellCategory` VALUES (150,0); 
-INSERT INTO `SpellCategory` VALUES (170,1); 
-INSERT INTO `SpellCategory` VALUES (190,0); 
-INSERT INTO `SpellCategory` VALUES (230,0); 
-INSERT INTO `SpellCategory` VALUES (250,0); 
-INSERT INTO `SpellCategory` VALUES (270,0); 
-INSERT INTO `SpellCategory` VALUES (290,0); 
-INSERT INTO `SpellCategory` VALUES (310,0); 
-INSERT INTO `SpellCategory` VALUES (330,0); 
-INSERT INTO `SpellCategory` VALUES (350,0); 
-INSERT INTO `SpellCategory` VALUES (351,2); 
-INSERT INTO `SpellCategory` VALUES (371,0); 
-INSERT INTO `SpellCategory` VALUES (391,0); 
-INSERT INTO `SpellCategory` VALUES (411,0); 
-INSERT INTO `SpellCategory` VALUES (431,0); 
-INSERT INTO `SpellCategory` VALUES (451,0); 
-INSERT INTO `SpellCategory` VALUES (471,0); 
-INSERT INTO `SpellCategory` VALUES (511,0); 
-INSERT INTO `SpellCategory` VALUES (531,0); 
-INSERT INTO `SpellCategory` VALUES (551,0); 
-INSERT INTO `SpellCategory` VALUES (571,0); 
-INSERT INTO `SpellCategory` VALUES (591,0); 
-INSERT INTO `SpellCategory` VALUES (611,0); 
-INSERT INTO `SpellCategory` VALUES (631,0); 
-INSERT INTO `SpellCategory` VALUES (633,0); 
-INSERT INTO `SpellCategory` VALUES (634,0); 
-INSERT INTO `SpellCategory` VALUES (651,0); 
-INSERT INTO `SpellCategory` VALUES (671,0); 
-INSERT INTO `SpellCategory` VALUES (672,0); 
-INSERT INTO `SpellCategory` VALUES (691,0); 
-INSERT INTO `SpellCategory` VALUES (731,0); 
-INSERT INTO `SpellCategory` VALUES (751,0); 
-INSERT INTO `SpellCategory` VALUES (791,0); 
-INSERT INTO `SpellCategory` VALUES (811,0); 
-INSERT INTO `SpellCategory` VALUES (831,0); 
-INSERT INTO `SpellCategory` VALUES (851,0); 
-INSERT INTO `SpellCategory` VALUES (871,0); 
-INSERT INTO `SpellCategory` VALUES (891,0); 
-INSERT INTO `SpellCategory` VALUES (892,0); 
-INSERT INTO `SpellCategory` VALUES (911,0); 
-INSERT INTO `SpellCategory` VALUES (931,0); 
-INSERT INTO `SpellCategory` VALUES (932,0); 
-INSERT INTO `SpellCategory` VALUES (951,0); 
-INSERT INTO `SpellCategory` VALUES (971,0); 
-INSERT INTO `SpellCategory` VALUES (991,0); 
-INSERT INTO `SpellCategory` VALUES (1011,0); 
-INSERT INTO `SpellCategory` VALUES (1031,0); 
-INSERT INTO `SpellCategory` VALUES (1051,0); 
-INSERT INTO `SpellCategory` VALUES (1071,0); 
-INSERT INTO `SpellCategory` VALUES (1091,0); 
-INSERT INTO `SpellCategory` VALUES (1111,0); 
-INSERT INTO `SpellCategory` VALUES (1131,0); 
-INSERT INTO `SpellCategory` VALUES (1132,0); 
-INSERT INTO `SpellCategory` VALUES (1133,0); 
-INSERT INTO `SpellCategory` VALUES (1134,0); 
-INSERT INTO `SpellCategory` VALUES (1135,0); 
-INSERT INTO `SpellCategory` VALUES (1136,0); 
-INSERT INTO `SpellCategory` VALUES (1137,0); 
-INSERT INTO `SpellCategory` VALUES (1138,0); 
-INSERT INTO `SpellCategory` VALUES (1139,0); 
-INSERT INTO `SpellCategory` VALUES (1140,0); 
-INSERT INTO `SpellCategory` VALUES (1141,0); 
-INSERT INTO `SpellCategory` VALUES (1142,0); 
-INSERT INTO `SpellCategory` VALUES (1143,0); 
-INSERT INTO `SpellCategory` VALUES (1144,0); 
-INSERT INTO `SpellCategory` VALUES (1145,0); 
-INSERT INTO `SpellCategory` VALUES (1146,0); 
-INSERT INTO `SpellCategory` VALUES (1147,0); 
-INSERT INTO `SpellCategory` VALUES (1148,0); 
-INSERT INTO `SpellCategory` VALUES (1149,0); 
-INSERT INTO `SpellCategory` VALUES (1150,0); 
-INSERT INTO `SpellCategory` VALUES (1151,0); 
-INSERT INTO `SpellCategory` VALUES (1152,0); 
-INSERT INTO `SpellCategory` VALUES (1153,0); 
-INSERT INTO `SpellCategory` VALUES (1154,0); 
-INSERT INTO `SpellCategory` VALUES (1155,0); 
-INSERT INTO `SpellCategory` VALUES (1156,0); 
-INSERT INTO `SpellCategory` VALUES (1157,0); 
-INSERT INTO `SpellCategory` VALUES (1158,0); 
-INSERT INTO `SpellCategory` VALUES (1159,0); 
-INSERT INTO `SpellCategory` VALUES (1160,0); 
-INSERT INTO `SpellCategory` VALUES (1161,0); 
-INSERT INTO `SpellCategory` VALUES (1162,0); 
-INSERT INTO `SpellCategory` VALUES (1163,0); 
-INSERT INTO `SpellCategory` VALUES (1164,0); 
-INSERT INTO `SpellCategory` VALUES (1165,0); 
-INSERT INTO `SpellCategory` VALUES (1166,0); 
-INSERT INTO `SpellCategory` VALUES (1167,0); 
-INSERT INTO `SpellCategory` VALUES (1168,0); 
-INSERT INTO `SpellCategory` VALUES (1169,0); 
-INSERT INTO `SpellCategory` VALUES (1170,0); 
-INSERT INTO `SpellCategory` VALUES (1171,0); 
-INSERT INTO `SpellCategory` VALUES (1172,0); 
-INSERT INTO `SpellCategory` VALUES (1173,0); 
-INSERT INTO `SpellCategory` VALUES (1174,0); 
-INSERT INTO `SpellCategory` VALUES (1175,0); 
-INSERT INTO `SpellCategory` VALUES (1176,0); 
-INSERT INTO `SpellCategory` VALUES (1177,0); 
-INSERT INTO `SpellCategory` VALUES (1178,0); 
-INSERT INTO `SpellCategory` VALUES (1179,0); 
-INSERT INTO `SpellCategory` VALUES (1180,0); 
-INSERT INTO `SpellCategory` VALUES (1181,0); 
-INSERT INTO `SpellCategory` VALUES (1182,0); 
-INSERT INTO `SpellCategory` VALUES (1183,0); 
-INSERT INTO `SpellCategory` VALUES (1184,0); 
-INSERT INTO `SpellCategory` VALUES (1185,0); 
-INSERT INTO `SpellCategory` VALUES (1186,0); 
-INSERT INTO `SpellCategory` VALUES (1187,0); 
-INSERT INTO `SpellCategory` VALUES (1188,0); 
-INSERT INTO `SpellCategory` VALUES (1189,0); 
-INSERT INTO `SpellCategory` VALUES (1190,0); 
-INSERT INTO `SpellCategory` VALUES (1191,0); 
-INSERT INTO `SpellCategory` VALUES (1192,0); 
-INSERT INTO `SpellCategory` VALUES (1193,1); 
-INSERT INTO `SpellCategory` VALUES (1194,0); 
-INSERT INTO `SpellCategory` VALUES (1195,0); 
-INSERT INTO `SpellCategory` VALUES (1196,0); 
-INSERT INTO `SpellCategory` VALUES (1197,0); 
-INSERT INTO `SpellCategory` VALUES (1198,0); 
-INSERT INTO `SpellCategory` VALUES (1199,0); 
-INSERT INTO `SpellCategory` VALUES (1200,0); 
-INSERT INTO `SpellCategory` VALUES (1201,0); 
-INSERT INTO `SpellCategory` VALUES (1202,0); 
-INSERT INTO `SpellCategory` VALUES (1203,0); 
-INSERT INTO `SpellCategory` VALUES (1204,0); 
-INSERT INTO `SpellCategory` VALUES (1205,0); 
-INSERT INTO `SpellCategory` VALUES (1206,0); 
-INSERT INTO `SpellCategory` VALUES (1207,0); 
-INSERT INTO `SpellCategory` VALUES (1208,0); 
-INSERT INTO `SpellCategory` VALUES (1209,0); 
-INSERT INTO `SpellCategory` VALUES (1210,0); 
-INSERT INTO `SpellCategory` VALUES (1211,0); 
-INSERT INTO `SpellCategory` VALUES (1212,0); 
-INSERT INTO `SpellCategory` VALUES (1213,0); 
-INSERT INTO `SpellCategory` VALUES (1214,0); 
-INSERT INTO `SpellCategory` VALUES (1215,0); 
-INSERT INTO `SpellCategory` VALUES (1216,0); 
-INSERT INTO `SpellCategory` VALUES (1217,0); 
-INSERT INTO `SpellCategory` VALUES (1218,0); 
-INSERT INTO `SpellCategory` VALUES (1219,0); 
-INSERT INTO `SpellCategory` VALUES (1221,0); 
-INSERT INTO `SpellCategory` VALUES (1222,0); 
-INSERT INTO `SpellCategory` VALUES (1223,0); 
-INSERT INTO `SpellCategory` VALUES (1224,0); 
-INSERT INTO `SpellCategory` VALUES (1225,0); 
-INSERT INTO `SpellCategory` VALUES (1226,0); 
-INSERT INTO `SpellCategory` VALUES (1227,0); 
-INSERT INTO `SpellCategory` VALUES (1228,0); 
-INSERT INTO `SpellCategory` VALUES (1229,0); 
-INSERT INTO `SpellCategory` VALUES (1230,0); 
-INSERT INTO `SpellCategory` VALUES (1231,0); 
-INSERT INTO `SpellCategory` VALUES (1232,0); 
-INSERT INTO `SpellCategory` VALUES (1233,0); 
-INSERT INTO `SpellCategory` VALUES (1234,0); 
-INSERT INTO `SpellCategory` VALUES (1235,0); 
-INSERT INTO `SpellCategory` VALUES (1236,0); 
-INSERT INTO `SpellCategory` VALUES (1237,0); 
-INSERT INTO `SpellCategory` VALUES (1238,0); 
-INSERT INTO `SpellCategory` VALUES (1239,0); 
-INSERT INTO `SpellCategory` VALUES (1240,0); 
-INSERT INTO `SpellCategory` VALUES (1241,0); 
-INSERT INTO `SpellCategory` VALUES (1242,0); 
-INSERT INTO `SpellCategory` VALUES (1243,0); 
-INSERT INTO `SpellCategory` VALUES (1244,0); 
-INSERT INTO `SpellCategory` VALUES (1245,0); 
-INSERT INTO `SpellCategory` VALUES (1246,0); 
-INSERT INTO `SpellCategory` VALUES (1247,0); 
-INSERT INTO `SpellCategory` VALUES (1248,0); 
-INSERT INTO `SpellCategory` VALUES (1249,0); 
-INSERT INTO `SpellCategory` VALUES (1250,0); 
-INSERT INTO `SpellCategory` VALUES (1251,0); 
-INSERT INTO `SpellCategory` VALUES (1253,0); 
+INSERT INTO `SpellCategory` VALUES (1,0),
+(2,0),
+(4,4),
+(11,0),
+(12,0),
+(17,0),
+(18,0),
+(19,0),
+(20,0),
+(21,0),
+(22,0),
+(23,0),
+(24,0),
+(25,0),
+(26,0),
+(27,0),
+(28,0),
+(29,0),
+(30,0),
+(31,0),
+(32,0),
+(33,0),
+(34,0),
+(35,0),
+(36,0),
+(37,0),
+(38,0),
+(39,0),
+(40,0),
+(41,0),
+(42,0),
+(43,0),
+(44,0),
+(45,0),
+(46,0),
+(47,0),
+(49,0),
+(50,0),
+(51,0),
+(52,0),
+(54,0),
+(55,0),
+(56,0),
+(57,0),
+(58,0),
+(59,0),
+(60,0),
+(61,0),
+(62,0),
+(63,0),
+(64,0),
+(65,0),
+(66,0),
+(67,0),
+(68,0),
+(72,0),
+(73,0),
+(74,0),
+(75,0),
+(76,0),
+(77,0),
+(78,0),
+(79,0),
+(82,0),
+(83,0),
+(84,0),
+(85,0),
+(86,0),
+(87,0),
+(88,0),
+(89,0),
+(93,0),
+(94,0),
+(95,0),
+(96,0),
+(97,0),
+(98,0),
+(99,0),
+(100,0),
+(101,0),
+(102,0),
+(103,0),
+(104,0),
+(105,0),
+(106,0),
+(107,0),
+(108,0),
+(109,0),
+(132,0),
+(133,0),
+(150,0),
+(170,1),
+(190,0),
+(230,0),
+(250,0),
+(270,0),
+(290,0),
+(310,0),
+(330,0),
+(350,0),
+(351,2),
+(371,0),
+(391,0),
+(411,0),
+(431,0),
+(451,0),
+(471,0),
+(511,0),
+(531,0),
+(551,0),
+(571,0),
+(591,0),
+(611,0),
+(631,0),
+(633,0),
+(634,0),
+(651,0),
+(671,0),
+(672,0),
+(691,0),
+(731,0),
+(751,0),
+(791,0),
+(811,0),
+(831,0),
+(851,0),
+(871,0),
+(891,0),
+(892,0),
+(911,0),
+(931,0),
+(932,0),
+(951,0),
+(971,0),
+(991,0),
+(1011,0),
+(1031,0),
+(1051,0),
+(1071,0),
+(1091,0),
+(1111,0),
+(1131,0),
+(1132,0),
+(1133,0),
+(1134,0),
+(1135,0),
+(1136,0),
+(1137,0),
+(1138,0),
+(1139,0),
+(1140,0),
+(1141,0),
+(1142,0),
+(1143,0),
+(1144,0),
+(1145,0),
+(1146,0),
+(1147,0),
+(1148,0),
+(1149,0),
+(1150,0),
+(1151,0),
+(1152,0),
+(1153,0),
+(1154,0),
+(1155,0),
+(1156,0),
+(1157,0),
+(1158,0),
+(1159,0),
+(1160,0),
+(1161,0),
+(1162,0),
+(1163,0),
+(1164,0),
+(1165,0),
+(1166,0),
+(1167,0),
+(1168,0),
+(1169,0),
+(1170,0),
+(1171,0),
+(1172,0),
+(1173,0),
+(1174,0),
+(1175,0),
+(1176,0),
+(1177,0),
+(1178,0),
+(1179,0),
+(1180,0),
+(1181,0),
+(1182,0),
+(1183,0),
+(1184,0),
+(1185,0),
+(1186,0),
+(1187,0),
+(1188,0),
+(1189,0),
+(1190,0),
+(1191,0),
+(1192,0),
+(1193,1),
+(1194,0),
+(1195,0),
+(1196,0),
+(1197,0),
+(1198,0),
+(1199,0),
+(1200,0),
+(1201,0),
+(1202,0),
+(1203,0),
+(1204,0),
+(1205,0),
+(1206,0),
+(1207,0),
+(1208,0),
+(1209,0),
+(1210,0),
+(1211,0),
+(1212,0),
+(1213,0),
+(1214,0),
+(1215,0),
+(1216,0),
+(1217,0),
+(1218,0),
+(1219,0),
+(1221,0),
+(1222,0),
+(1223,0),
+(1224,0),
+(1225,0),
+(1226,0),
+(1227,0),
+(1228,0),
+(1229,0),
+(1230,0),
+(1231,0),
+(1232,0),
+(1233,0),
+(1234,0),
+(1235,0),
+(1236,0),
+(1237,0),
+(1238,0),
+(1239,0),
+(1240,0),
+(1241,0),
+(1242,0),
+(1243,0),
+(1244,0),
+(1245,0),
+(1246,0),
+(1247,0),
+(1248,0),
+(1249,0),
+(1250,0),
+(1251,0),
+(1253,0); 

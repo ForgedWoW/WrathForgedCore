@@ -1,32 +1,32 @@
 DROP TABLE IF EXISTS `SpellEffectCameraShakes`; 
 CREATE TABLE `SpellEffectCameraShakes` ( `ID` INT NOT NULL DEFAULT '0', `CameraShake_1` INT NOT NULL DEFAULT '0', `CameraShake_2` INT NOT NULL DEFAULT '0', `CameraShake_3` INT NOT NULL DEFAULT '0', PRIMARY KEY (`ID`)) ENGINE=InnoDB DEFAULT CHARSET=utf8; 
-INSERT INTO `SpellEffectCameraShakes` VALUES (1,4,5,6); 
-INSERT INTO `SpellEffectCameraShakes` VALUES (2,7,8,9); 
-INSERT INTO `SpellEffectCameraShakes` VALUES (3,1,0,0); 
-INSERT INTO `SpellEffectCameraShakes` VALUES (4,15,14,15); 
-INSERT INTO `SpellEffectCameraShakes` VALUES (5,11,0,0); 
-INSERT INTO `SpellEffectCameraShakes` VALUES (6,4,5,6); 
-INSERT INTO `SpellEffectCameraShakes` VALUES (7,18,17,18); 
-INSERT INTO `SpellEffectCameraShakes` VALUES (26,36,37,38); 
-INSERT INTO `SpellEffectCameraShakes` VALUES (66,76,77,78); 
-INSERT INTO `SpellEffectCameraShakes` VALUES (67,79,80,81); 
-INSERT INTO `SpellEffectCameraShakes` VALUES (68,82,0,0); 
-INSERT INTO `SpellEffectCameraShakes` VALUES (69,83,0,0); 
-INSERT INTO `SpellEffectCameraShakes` VALUES (70,86,85,84); 
-INSERT INTO `SpellEffectCameraShakes` VALUES (71,87,89,90); 
-INSERT INTO `SpellEffectCameraShakes` VALUES (72,91,93,92); 
-INSERT INTO `SpellEffectCameraShakes` VALUES (73,94,95,96); 
-INSERT INTO `SpellEffectCameraShakes` VALUES (74,97,98,99); 
-INSERT INTO `SpellEffectCameraShakes` VALUES (75,100,101,102); 
-INSERT INTO `SpellEffectCameraShakes` VALUES (76,7,8,9); 
-INSERT INTO `SpellEffectCameraShakes` VALUES (77,103,104,105); 
-INSERT INTO `SpellEffectCameraShakes` VALUES (78,106,13,14); 
-INSERT INTO `SpellEffectCameraShakes` VALUES (79,107,109,110); 
-INSERT INTO `SpellEffectCameraShakes` VALUES (80,0,0,113); 
-INSERT INTO `SpellEffectCameraShakes` VALUES (81,114,115,116); 
-INSERT INTO `SpellEffectCameraShakes` VALUES (82,117,118,119); 
-INSERT INTO `SpellEffectCameraShakes` VALUES (83,120,121,122); 
-INSERT INTO `SpellEffectCameraShakes` VALUES (84,123,124,125); 
-INSERT INTO `SpellEffectCameraShakes` VALUES (87,132,133,134); 
-INSERT INTO `SpellEffectCameraShakes` VALUES (91,141,142,143); 
-INSERT INTO `SpellEffectCameraShakes` VALUES (92,146,146,146); 
+INSERT INTO `SpellEffectCameraShakes` VALUES (1,4,5,6),
+(2,7,8,9),
+(3,1,0,0),
+(4,15,14,15),
+(5,11,0,0),
+(6,4,5,6),
+(7,18,17,18),
+(26,36,37,38),
+(66,76,77,78),
+(67,79,80,81),
+(68,82,0,0),
+(69,83,0,0),
+(70,86,85,84),
+(71,87,89,90),
+(72,91,93,92),
+(73,94,95,96),
+(74,97,98,99),
+(75,100,101,102),
+(76,7,8,9),
+(77,103,104,105),
+(78,106,13,14),
+(79,107,109,110),
+(80,0,0,113),
+(81,114,115,116),
+(82,117,118,119),
+(83,120,121,122),
+(84,123,124,125),
+(87,132,133,134),
+(91,141,142,143),
+(92,146,146,146); 

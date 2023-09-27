@@ -1,8269 +1,8269 @@
 DROP TABLE IF EXISTS `NamesProfanity`; 
 CREATE TABLE `NamesProfanity` ( `ID` INT NOT NULL DEFAULT '0', `Name` TEXT NULL, `Language` INT NOT NULL DEFAULT '0', PRIMARY KEY (`ID`)) ENGINE=InnoDB DEFAULT CHARSET=utf8; 
-INSERT INTO `NamesProfanity` VALUES (2621,"18년",0); 
-INSERT INTO `NamesProfanity` VALUES (2622,"18놈",0); 
-INSERT INTO `NamesProfanity` VALUES (2624,"18새끼",0); 
-INSERT INTO `NamesProfanity` VALUES (2632,"\<chink\>",0); 
-INSERT INTO `NamesProfanity` VALUES (2642,"\<pussy",0); 
-INSERT INTO `NamesProfanity` VALUES (2643,"\<rape\>",0); 
-INSERT INTO `NamesProfanity` VALUES (2645,"\<vagina",0); 
-INSERT INTO `NamesProfanity` VALUES (2658,"가슴만져",1); 
-INSERT INTO `NamesProfanity` VALUES (2659,"가슴빨아",1); 
-INSERT INTO `NamesProfanity` VALUES (2660,"가슴빨어",1); 
-INSERT INTO `NamesProfanity` VALUES (2661,"가슴조물락",1); 
-INSERT INTO `NamesProfanity` VALUES (2662,"가슴주물럭",1); 
-INSERT INTO `NamesProfanity` VALUES (2663,"가슴쪼물딱",1); 
-INSERT INTO `NamesProfanity` VALUES (2664,"가슴쪼물락",1); 
-INSERT INTO `NamesProfanity` VALUES (2665,"가슴핥아",1); 
-INSERT INTO `NamesProfanity` VALUES (2666,"가슴핥어",1); 
-INSERT INTO `NamesProfanity` VALUES (2667,"가슴핧아",1); 
-INSERT INTO `NamesProfanity` VALUES (2668,"가슴핧어",1); 
-INSERT INTO `NamesProfanity` VALUES (2670,"강간",1); 
-INSERT INTO `NamesProfanity` VALUES (2671,"강간한다",1); 
-INSERT INTO `NamesProfanity` VALUES (2715,"개가튼년",1); 
-INSERT INTO `NamesProfanity` VALUES (2716,"개가튼뇬",1); 
-INSERT INTO `NamesProfanity` VALUES (2720,"개같은년",1); 
-INSERT INTO `NamesProfanity` VALUES (2722,"개걸레",1); 
-INSERT INTO `NamesProfanity` VALUES (2724,"개고치",1); 
-INSERT INTO `NamesProfanity` VALUES (2726,"개너미",1); 
-INSERT INTO `NamesProfanity` VALUES (2727,"개년",1); 
-INSERT INTO `NamesProfanity` VALUES (2728,"개놈",1); 
-INSERT INTO `NamesProfanity` VALUES (2729,"개라슥",1); 
-INSERT INTO `NamesProfanity` VALUES (2731,"개보지",1); 
-INSERT INTO `NamesProfanity` VALUES (2732,"개보지년",1); 
-INSERT INTO `NamesProfanity` VALUES (2735,"개부달",1); 
-INSERT INTO `NamesProfanity` VALUES (2736,"개부랄",1); 
-INSERT INTO `NamesProfanity` VALUES (2738,"개불랄",1); 
-INSERT INTO `NamesProfanity` VALUES (2739,"개붕알",1); 
-INSERT INTO `NamesProfanity` VALUES (2741,"개새끼",1); 
-INSERT INTO `NamesProfanity` VALUES (2742,"개색기",1); 
-INSERT INTO `NamesProfanity` VALUES (2743,"개색끼",1); 
-INSERT INTO `NamesProfanity` VALUES (2744,"개색히",1); 
-INSERT INTO `NamesProfanity` VALUES (2745,"개쓰래기",1); 
-INSERT INTO `NamesProfanity` VALUES (2746,"개쓰레기",1); 
-INSERT INTO `NamesProfanity` VALUES (2747,"개씁년",1); 
-INSERT INTO `NamesProfanity` VALUES (2748,"개씁블",1); 
-INSERT INTO `NamesProfanity` VALUES (2749,"개씁자지",1); 
-INSERT INTO `NamesProfanity` VALUES (2750,"개씨발",1); 
-INSERT INTO `NamesProfanity` VALUES (2751,"개씨발넘",1); 
-INSERT INTO `NamesProfanity` VALUES (2752,"개씨발자슥",1); 
-INSERT INTO `NamesProfanity` VALUES (2753,"개씨블",1); 
-INSERT INTO `NamesProfanity` VALUES (2755,"개자슥",1); 
-INSERT INTO `NamesProfanity` VALUES (2756,"개자지",1); 
-INSERT INTO `NamesProfanity` VALUES (2757,"개작두넘",1); 
-INSERT INTO `NamesProfanity` VALUES (2758,"개작두년",1); 
-INSERT INTO `NamesProfanity` VALUES (2759,"개잡년",1); 
-INSERT INTO `NamesProfanity` VALUES (2760,"개잡지랄",1); 
-INSERT INTO `NamesProfanity` VALUES (2761,"개젓가튼넘",1); 
-INSERT INTO `NamesProfanity` VALUES (2762,"개좆",1); 
-INSERT INTO `NamesProfanity` VALUES (2763,"개지랄",1); 
-INSERT INTO `NamesProfanity` VALUES (2764,"개지랄넘",1); 
-INSERT INTO `NamesProfanity` VALUES (2765,"개지랄놈",1); 
-INSERT INTO `NamesProfanity` VALUES (2779,"개후라년",1); 
-INSERT INTO `NamesProfanity` VALUES (2781,"개후라들놈",1); 
-INSERT INTO `NamesProfanity` VALUES (2783,"개후라새끼",1); 
-INSERT INTO `NamesProfanity` VALUES (2784,"걔잡년",1); 
-INSERT INTO `NamesProfanity` VALUES (2785,"걔잡지랄",1); 
-INSERT INTO `NamesProfanity` VALUES (2789,"거시기",1); 
-INSERT INTO `NamesProfanity` VALUES (2791,"걸래년",1); 
-INSERT INTO `NamesProfanity` VALUES (2798,"걸레같은년",1); 
-INSERT INTO `NamesProfanity` VALUES (2799,"걸레년",1); 
-INSERT INTO `NamesProfanity` VALUES (2800,"걸레핀년",1); 
-INSERT INTO `NamesProfanity` VALUES (2801,"게부럴",1); 
-INSERT INTO `NamesProfanity` VALUES (2802,"게지랄놈",1); 
-INSERT INTO `NamesProfanity` VALUES (2804,"귀두",1); 
-INSERT INTO `NamesProfanity` VALUES (2810,"깨쌔끼",1); 
-INSERT INTO `NamesProfanity` VALUES (2812,"꺼져",1); 
-INSERT INTO `NamesProfanity` VALUES (2815,"난자마셔",1); 
-INSERT INTO `NamesProfanity` VALUES (2816,"난자먹어",1); 
-INSERT INTO `NamesProfanity` VALUES (2817,"난자핥아",1); 
-INSERT INTO `NamesProfanity` VALUES (2818,"난자핧아",1); 
-INSERT INTO `NamesProfanity` VALUES (2821,"내꺼빨아",1); 
-INSERT INTO `NamesProfanity` VALUES (2822,"내꺼핥아",1); 
-INSERT INTO `NamesProfanity` VALUES (2823,"내꺼핧아",1); 
-INSERT INTO `NamesProfanity` VALUES (2824,"내미랄",1); 
-INSERT INTO `NamesProfanity` VALUES (2825,"내버지",1); 
-INSERT INTO `NamesProfanity` VALUES (2827,"내씨발",1); 
-INSERT INTO `NamesProfanity` VALUES (2828,"내자지",1); 
-INSERT INTO `NamesProfanity` VALUES (2829,"내잠지",1); 
-INSERT INTO `NamesProfanity` VALUES (2830,"내조지",1); 
-INSERT INTO `NamesProfanity` VALUES (2836,"너거애비",1); 
-INSERT INTO `NamesProfanity` VALUES (2837,"누나강간",1); 
-INSERT INTO `NamesProfanity` VALUES (2858,"느그매",1); 
-INSERT INTO `NamesProfanity` VALUES (2885,"니기미",1); 
-INSERT INTO `NamesProfanity` VALUES (2891,"니미랄",1); 
-INSERT INTO `NamesProfanity` VALUES (2892,"니미럴",1); 
-INSERT INTO `NamesProfanity` VALUES (2893,"니씨브랄",1); 
-INSERT INTO `NamesProfanity` VALUES (2894,"니아범",1); 
-INSERT INTO `NamesProfanity` VALUES (2896,"니애미",1); 
-INSERT INTO `NamesProfanity` VALUES (2897,"니애비",1); 
-INSERT INTO `NamesProfanity` VALUES (2898,"니에미",1); 
-INSERT INTO `NamesProfanity` VALUES (2899,"니에비",1); 
-INSERT INTO `NamesProfanity` VALUES (2904,"니할애비",1); 
-INSERT INTO `NamesProfanity` VALUES (2918,"닳은년",1); 
-INSERT INTO `NamesProfanity` VALUES (2922,"대가리",1); 
-INSERT INTO `NamesProfanity` VALUES (2923,"덜은새끼",1); 
-INSERT INTO `NamesProfanity` VALUES (2925,"돈새끼",1); 
-INSERT INTO `NamesProfanity` VALUES (2927,"돌은넘",1); 
-INSERT INTO `NamesProfanity` VALUES (2928,"돌은년",1); 
-INSERT INTO `NamesProfanity` VALUES (2929,"돌은새끼",1); 
-INSERT INTO `NamesProfanity` VALUES (2930,"동생강간",1); 
-INSERT INTO `NamesProfanity` VALUES (2938,"딸딸이",1); 
-INSERT INTO `NamesProfanity` VALUES (2942,"또라이",1); 
-INSERT INTO `NamesProfanity` VALUES (2951,"띠발뇬",1); 
-INSERT INTO `NamesProfanity` VALUES (2954,"띠블넘",1); 
-INSERT INTO `NamesProfanity` VALUES (2956,"막간년",1); 
-INSERT INTO `NamesProfanity` VALUES (2957,"막대쑤셔줘",1); 
-INSERT INTO `NamesProfanity` VALUES (2958,"막대핥아줘",1); 
-INSERT INTO `NamesProfanity` VALUES (2959,"막대핧아줘",1); 
-INSERT INTO `NamesProfanity` VALUES (2960,"말자지",1); 
-INSERT INTO `NamesProfanity` VALUES (2961,"맛간년",1); 
-INSERT INTO `NamesProfanity` VALUES (2962,"맛없는년",1); 
-INSERT INTO `NamesProfanity` VALUES (2963,"맛이간년",1); 
-INSERT INTO `NamesProfanity` VALUES (2967,"망나니",1); 
-INSERT INTO `NamesProfanity` VALUES (2986,"미친구녕",1); 
-INSERT INTO `NamesProfanity` VALUES (2987,"미친구멍",1); 
-INSERT INTO `NamesProfanity` VALUES (2988,"미친넘",1); 
-INSERT INTO `NamesProfanity` VALUES (2989,"미친년",1); 
-INSERT INTO `NamesProfanity` VALUES (2990,"미친놈",1); 
-INSERT INTO `NamesProfanity` VALUES (2991,"미친눔",1); 
-INSERT INTO `NamesProfanity` VALUES (2993,"미친새끼",1); 
-INSERT INTO `NamesProfanity` VALUES (2994,"미친쉐이",1); 
-INSERT INTO `NamesProfanity` VALUES (2995,"미친씨부랄",1); 
-INSERT INTO `NamesProfanity` VALUES (2996,"미틴것",1); 
-INSERT INTO `NamesProfanity` VALUES (2997,"미틴넘",1); 
-INSERT INTO `NamesProfanity` VALUES (2998,"바주카자지",1); 
-INSERT INTO `NamesProfanity` VALUES (3004,"백보지",1); 
-INSERT INTO `NamesProfanity` VALUES (3005,"버따리자지",1); 
-INSERT INTO `NamesProfanity` VALUES (3012,"버지구녕",1); 
-INSERT INTO `NamesProfanity` VALUES (3013,"버지구멍",1); 
-INSERT INTO `NamesProfanity` VALUES (3014,"버지냄새",1); 
-INSERT INTO `NamesProfanity` VALUES (3015,"버지따먹기",1); 
-INSERT INTO `NamesProfanity` VALUES (3016,"버지뚫어",1); 
-INSERT INTO `NamesProfanity` VALUES (3017,"버지뜨더",1); 
-INSERT INTO `NamesProfanity` VALUES (3018,"버지물마셔",1); 
-INSERT INTO `NamesProfanity` VALUES (3019,"버지벌려",1); 
-INSERT INTO `NamesProfanity` VALUES (3020,"버지벌료",1); 
-INSERT INTO `NamesProfanity` VALUES (3021,"버지빨아",1); 
-INSERT INTO `NamesProfanity` VALUES (3022,"버지빨어",1); 
-INSERT INTO `NamesProfanity` VALUES (3023,"버지썰어",1); 
-INSERT INTO `NamesProfanity` VALUES (3024,"버지쑤셔",1); 
-INSERT INTO `NamesProfanity` VALUES (3025,"버지털",1); 
-INSERT INTO `NamesProfanity` VALUES (3026,"버지핥아",1); 
-INSERT INTO `NamesProfanity` VALUES (3027,"버지핧아",1); 
-INSERT INTO `NamesProfanity` VALUES (3029,"버짓물",1); 
-INSERT INTO `NamesProfanity` VALUES (3030,"버짓물마셔",1); 
-INSERT INTO `NamesProfanity` VALUES (3038,"벌창같은년",1); 
-INSERT INTO `NamesProfanity` VALUES (3054,"병신세리",1); 
-INSERT INTO `NamesProfanity` VALUES (3056,"병신셰리",1); 
-INSERT INTO `NamesProfanity` VALUES (3057,"병신씨발",1); 
-INSERT INTO `NamesProfanity` VALUES (3076,"보지",1); 
-INSERT INTO `NamesProfanity` VALUES (3097,"보지구녕",1); 
-INSERT INTO `NamesProfanity` VALUES (3098,"보지구멍",1); 
-INSERT INTO `NamesProfanity` VALUES (3099,"보지녀",1); 
-INSERT INTO `NamesProfanity` VALUES (3100,"보지따먹기",1); 
-INSERT INTO `NamesProfanity` VALUES (3101,"보지뚫어",1); 
-INSERT INTO `NamesProfanity` VALUES (3102,"보지뜨더",1); 
-INSERT INTO `NamesProfanity` VALUES (3103,"보지머리박기",1); 
-INSERT INTO `NamesProfanity` VALUES (3104,"보지물",1); 
-INSERT INTO `NamesProfanity` VALUES (3105,"보지물마셔",1); 
-INSERT INTO `NamesProfanity` VALUES (3106,"보지박어",1); 
-INSERT INTO `NamesProfanity` VALUES (3107,"보지벌려",1); 
-INSERT INTO `NamesProfanity` VALUES (3108,"보지벌료",1); 
-INSERT INTO `NamesProfanity` VALUES (3109,"보지벌리",1); 
-INSERT INTO `NamesProfanity` VALUES (3110,"보지벌리자",1); 
-INSERT INTO `NamesProfanity` VALUES (3111,"보지보지",1); 
-INSERT INTO `NamesProfanity` VALUES (3114,"보지빨아",1); 
-INSERT INTO `NamesProfanity` VALUES (3115,"보지빨어",1); 
-INSERT INTO `NamesProfanity` VALUES (3116,"보지에자지껴",1); 
-INSERT INTO `NamesProfanity` VALUES (3117,"보지에자지너",1); 
-INSERT INTO `NamesProfanity` VALUES (3118,"보지자지",1); 
-INSERT INTO `NamesProfanity` VALUES (3119,"보지정액",1); 
-INSERT INTO `NamesProfanity` VALUES (3120,"보지쥐어짜",1); 
-INSERT INTO `NamesProfanity` VALUES (3121,"보지찌져",1); 
-INSERT INTO `NamesProfanity` VALUES (3122,"보지찢어",1); 
-INSERT INTO `NamesProfanity` VALUES (3123,"보지털",1); 
-INSERT INTO `NamesProfanity` VALUES (3124,"보지털뽑아",1); 
-INSERT INTO `NamesProfanity` VALUES (3125,"보지털어",1); 
-INSERT INTO `NamesProfanity` VALUES (3129,"보지틀래기",1); 
-INSERT INTO `NamesProfanity` VALUES (3130,"보지핥아",1); 
-INSERT INTO `NamesProfanity` VALUES (3131,"보지핥아줘",1); 
-INSERT INTO `NamesProfanity` VALUES (3132,"보지핥어",1); 
-INSERT INTO `NamesProfanity` VALUES (3135,"보지핧아",1); 
-INSERT INTO `NamesProfanity` VALUES (3136,"보지핧아줘",1); 
-INSERT INTO `NamesProfanity` VALUES (3137,"보지핧어",1); 
-INSERT INTO `NamesProfanity` VALUES (3139,"보짓물",1); 
-INSERT INTO `NamesProfanity` VALUES (3140,"보짓물마셔",1); 
-INSERT INTO `NamesProfanity` VALUES (3157,"빙신쉐이",1); 
-INSERT INTO `NamesProfanity` VALUES (3160,"빠가십새",1); 
-INSERT INTO `NamesProfanity` VALUES (3161,"빠가씹새",1); 
-INSERT INTO `NamesProfanity` VALUES (3163,"빠구리",1); 
-INSERT INTO `NamesProfanity` VALUES (3164,"빠굴이",1); 
-INSERT INTO `NamesProfanity` VALUES (3166,"뻑큐",1); 
-INSERT INTO `NamesProfanity` VALUES (3170,"사까시",1); 
-INSERT INTO `NamesProfanity` VALUES (3179,"성교하자",1); 
-INSERT INTO `NamesProfanity` VALUES (3180,"성교해",1); 
-INSERT INTO `NamesProfanity` VALUES (3182,"성폭행",1); 
-INSERT INTO `NamesProfanity` VALUES (3184,"섹스",1); 
-INSERT INTO `NamesProfanity` VALUES (3185,"섹스하자",1); 
-INSERT INTO `NamesProfanity` VALUES (3186,"섹스해",1); 
-INSERT INTO `NamesProfanity` VALUES (3187,"소자지",1); 
-INSERT INTO `NamesProfanity` VALUES (3190,"쉬밸년",1); 
-INSERT INTO `NamesProfanity` VALUES (3208,"시댕이",1); 
-INSERT INTO `NamesProfanity` VALUES (3214,"시발년",1); 
-INSERT INTO `NamesProfanity` VALUES (3215,"시발놈",1); 
-INSERT INTO `NamesProfanity` VALUES (3217,"시발새끼",1); 
-INSERT INTO `NamesProfanity` VALUES (3219,"시방새",1); 
-INSERT INTO `NamesProfanity` VALUES (3220,"시팍새끼",1); 
-INSERT INTO `NamesProfanity` VALUES (3226,"시팔넘",1); 
-INSERT INTO `NamesProfanity` VALUES (3227,"시팔년",1); 
-INSERT INTO `NamesProfanity` VALUES (3228,"시팔놈",1); 
-INSERT INTO `NamesProfanity` VALUES (3230,"시팔새끼",1); 
-INSERT INTO `NamesProfanity` VALUES (3241,"십버지",1); 
-INSERT INTO `NamesProfanity` VALUES (3242,"십부랄",1); 
-INSERT INTO `NamesProfanity` VALUES (3243,"십부럴",1); 
-INSERT INTO `NamesProfanity` VALUES (3246,"십세이",1); 
-INSERT INTO `NamesProfanity` VALUES (3248,"십셰리",1); 
-INSERT INTO `NamesProfanity` VALUES (3249,"십자석",1); 
-INSERT INTO `NamesProfanity` VALUES (3250,"십자슥",1); 
-INSERT INTO `NamesProfanity` VALUES (3251,"십지랄",1); 
-INSERT INTO `NamesProfanity` VALUES (3252,"십창녀",1); 
-INSERT INTO `NamesProfanity` VALUES (3254,"십탱구리",1); 
-INSERT INTO `NamesProfanity` VALUES (3255,"십탱굴이",1); 
-INSERT INTO `NamesProfanity` VALUES (3259,"십팔새끼",1); 
-INSERT INTO `NamesProfanity` VALUES (3263,"싸가지",1); 
-INSERT INTO `NamesProfanity` VALUES (3270,"쌍년",1); 
-INSERT INTO `NamesProfanity` VALUES (3271,"쌍놈",1); 
-INSERT INTO `NamesProfanity` VALUES (3273,"쌍보지",1); 
-INSERT INTO `NamesProfanity` VALUES (3277,"쌍쌍보지",1); 
-INSERT INTO `NamesProfanity` VALUES (3282,"쌕쓰",1); 
-INSERT INTO `NamesProfanity` VALUES (3284,"썅년",1); 
-INSERT INTO `NamesProfanity` VALUES (3292,"쓰바새끼",1); 
-INSERT INTO `NamesProfanity` VALUES (3295,"쓰브랄쉽세",1); 
-INSERT INTO `NamesProfanity` VALUES (3324,"씨가랭넘",1); 
-INSERT INTO `NamesProfanity` VALUES (3325,"씨가랭년",1); 
-INSERT INTO `NamesProfanity` VALUES (3326,"씨가랭놈",1); 
-INSERT INTO `NamesProfanity` VALUES (3327,"씨댕",1); 
-INSERT INTO `NamesProfanity` VALUES (3328,"씨댕이",1); 
-INSERT INTO `NamesProfanity` VALUES (3329,"씨뎅",1); 
-INSERT INTO `NamesProfanity` VALUES (3330,"씨발",1); 
-INSERT INTO `NamesProfanity` VALUES (3333,"씨발.년",1); 
-INSERT INTO `NamesProfanity` VALUES (3334,"씨발.놈",1); 
-INSERT INTO `NamesProfanity` VALUES (3335,"씨발년",1); 
-INSERT INTO `NamesProfanity` VALUES (3336,"씨발놈",1); 
-INSERT INTO `NamesProfanity` VALUES (3337,"씨발롬",1); 
-INSERT INTO `NamesProfanity` VALUES (3338,"씨발병신",1); 
-INSERT INTO `NamesProfanity` VALUES (3339,"씨방새",1); 
-INSERT INTO `NamesProfanity` VALUES (3340,"씨방세",1); 
-INSERT INTO `NamesProfanity` VALUES (3344,"씨뱅가리",1); 
-INSERT INTO `NamesProfanity` VALUES (3345,"씨벌",1); 
-INSERT INTO `NamesProfanity` VALUES (3346,"씨벌년",1); 
-INSERT INTO `NamesProfanity` VALUES (3347,"씨벌쉐이",1); 
-INSERT INTO `NamesProfanity` VALUES (3349,"씨부랄",1); 
-INSERT INTO `NamesProfanity` VALUES (3350,"씨부럴",1); 
-INSERT INTO `NamesProfanity` VALUES (3352,"씨불알",1); 
-INSERT INTO `NamesProfanity` VALUES (3353,"씨브럴",1); 
-INSERT INTO `NamesProfanity` VALUES (3355,"씨블년",1); 
-INSERT INTO `NamesProfanity` VALUES (3356,"씨블새끼",1); 
-INSERT INTO `NamesProfanity` VALUES (3357,"씨븡새끼",1); 
-INSERT INTO `NamesProfanity` VALUES (3359,"씨섹끼",1); 
-INSERT INTO `NamesProfanity` VALUES (3361,"씨파넘",1); 
-INSERT INTO `NamesProfanity` VALUES (3362,"씨팍새끼",1); 
-INSERT INTO `NamesProfanity` VALUES (3363,"씨팍세끼",1); 
-INSERT INTO `NamesProfanity` VALUES (3364,"씨팔",1); 
-INSERT INTO `NamesProfanity` VALUES (3372,"씨퐁넘",1); 
-INSERT INTO `NamesProfanity` VALUES (3373,"씨퐁뇬",1); 
-INSERT INTO `NamesProfanity` VALUES (3375,"씨퐁보지",1); 
-INSERT INTO `NamesProfanity` VALUES (3377,"씨퐁자지",1); 
-INSERT INTO `NamesProfanity` VALUES (3402,"씹년",1); 
-INSERT INTO `NamesProfanity` VALUES (3403,"씹물",1); 
-INSERT INTO `NamesProfanity` VALUES (3404,"씹미랄",1); 
-INSERT INTO `NamesProfanity` VALUES (3405,"씹버지",1); 
-INSERT INTO `NamesProfanity` VALUES (3407,"씹보지",1); 
-INSERT INTO `NamesProfanity` VALUES (3409,"씹부랄",1); 
-INSERT INTO `NamesProfanity` VALUES (3410,"씹브랄",1); 
-INSERT INTO `NamesProfanity` VALUES (3412,"씹빵구",1); 
-INSERT INTO `NamesProfanity` VALUES (3414,"씹뽀지",1); 
-INSERT INTO `NamesProfanity` VALUES (3415,"씹새",1); 
-INSERT INTO `NamesProfanity` VALUES (3417,"씹새끼",1); 
-INSERT INTO `NamesProfanity` VALUES (3418,"씹세",1); 
-INSERT INTO `NamesProfanity` VALUES (3420,"씹쌔끼",1); 
-INSERT INTO `NamesProfanity` VALUES (3422,"씹자석",1); 
-INSERT INTO `NamesProfanity` VALUES (3423,"씹자슥",1); 
-INSERT INTO `NamesProfanity` VALUES (3424,"씹자지",1); 
-INSERT INTO `NamesProfanity` VALUES (3426,"씹지랄",1); 
-INSERT INTO `NamesProfanity` VALUES (3427,"씹창",1); 
-INSERT INTO `NamesProfanity` VALUES (3428,"씹창녀",1); 
-INSERT INTO `NamesProfanity` VALUES (3429,"씹탱",1); 
-INSERT INTO `NamesProfanity` VALUES (3431,"씹탱굴이",1); 
-INSERT INTO `NamesProfanity` VALUES (3432,"씹탱이",1); 
-INSERT INTO `NamesProfanity` VALUES (3433,"씹팔",1); 
-INSERT INTO `NamesProfanity` VALUES (3434,"아가리",1); 
-INSERT INTO `NamesProfanity` VALUES (3440,"애미랄",1); 
-INSERT INTO `NamesProfanity` VALUES (3441,"애미보지",1); 
-INSERT INTO `NamesProfanity` VALUES (3442,"애미씨뱅",1); 
-INSERT INTO `NamesProfanity` VALUES (3443,"애미자지",1); 
-INSERT INTO `NamesProfanity` VALUES (3444,"애미잡년",1); 
-INSERT INTO `NamesProfanity` VALUES (3445,"애미좃물",1); 
-INSERT INTO `NamesProfanity` VALUES (3451,"양아치",1); 
-INSERT INTO `NamesProfanity` VALUES (3453,"어미강간",1); 
-INSERT INTO `NamesProfanity` VALUES (3454,"어미따먹자",1); 
-INSERT INTO `NamesProfanity` VALUES (3455,"어미쑤시자",1); 
-INSERT INTO `NamesProfanity` VALUES (3457,"엄창",1); 
-INSERT INTO `NamesProfanity` VALUES (3458,"에미",1); 
-INSERT INTO `NamesProfanity` VALUES (3459,"에비",1); 
-INSERT INTO `NamesProfanity` VALUES (3466,"염병할",1); 
-INSERT INTO `NamesProfanity` VALUES (3474,"엿먹어라",1); 
-INSERT INTO `NamesProfanity` VALUES (3475,"영자개새끼",1); 
-INSERT INTO `NamesProfanity` VALUES (3476,"영자새끼",1); 
-INSERT INTO `NamesProfanity` VALUES (3477,"영자씨발놈",1); 
-INSERT INTO `NamesProfanity` VALUES (3479,"오르가즘",1); 
-INSERT INTO `NamesProfanity` VALUES (3480,"왕버지",1); 
-INSERT INTO `NamesProfanity` VALUES (3481,"왕자지",1); 
-INSERT INTO `NamesProfanity` VALUES (3482,"왕잠지",1); 
-INSERT INTO `NamesProfanity` VALUES (3483,"왕털버지",1); 
-INSERT INTO `NamesProfanity` VALUES (3484,"왕털보지",1); 
-INSERT INTO `NamesProfanity` VALUES (3485,"왕털자지",1); 
-INSERT INTO `NamesProfanity` VALUES (3486,"왕털잠지",1); 
-INSERT INTO `NamesProfanity` VALUES (3488,"요년",1); 
-INSERT INTO `NamesProfanity` VALUES (3489,"우미쑤셔",1); 
-INSERT INTO `NamesProfanity` VALUES (3494,"유두빨어",1); 
-INSERT INTO `NamesProfanity` VALUES (3495,"유두핥어",1); 
-INSERT INTO `NamesProfanity` VALUES (3496,"유두핧어",1); 
-INSERT INTO `NamesProfanity` VALUES (3507,"유방만져",1); 
-INSERT INTO `NamesProfanity` VALUES (3508,"유방빨아",1); 
-INSERT INTO `NamesProfanity` VALUES (3509,"유방조물락",1); 
-INSERT INTO `NamesProfanity` VALUES (3510,"유방주물럭",1); 
-INSERT INTO `NamesProfanity` VALUES (3511,"유방쪼물딱",1); 
-INSERT INTO `NamesProfanity` VALUES (3512,"유방쪼물럭",1); 
-INSERT INTO `NamesProfanity` VALUES (3513,"유방핥아",1); 
-INSERT INTO `NamesProfanity` VALUES (3514,"유방핥어",1); 
-INSERT INTO `NamesProfanity` VALUES (3515,"유방핧아",1); 
-INSERT INTO `NamesProfanity` VALUES (3516,"유방핧어",1); 
-INSERT INTO `NamesProfanity` VALUES (3518,"육갑",1); 
-INSERT INTO `NamesProfanity` VALUES (3534,"자기핥아",1); 
-INSERT INTO `NamesProfanity` VALUES (3536,"자기핧아",1); 
-INSERT INTO `NamesProfanity` VALUES (3550,"자지구녕",1); 
-INSERT INTO `NamesProfanity` VALUES (3551,"자지구멍",1); 
-INSERT INTO `NamesProfanity` VALUES (3552,"자지꽂아",1); 
-INSERT INTO `NamesProfanity` VALUES (3553,"자지넣자",1); 
-INSERT INTO `NamesProfanity` VALUES (3554,"자지뜨더",1); 
-INSERT INTO `NamesProfanity` VALUES (3555,"자지뜯어",1); 
-INSERT INTO `NamesProfanity` VALUES (3556,"자지박어",1); 
-INSERT INTO `NamesProfanity` VALUES (3559,"자지빨아",1); 
-INSERT INTO `NamesProfanity` VALUES (3560,"자지빨아줘",1); 
-INSERT INTO `NamesProfanity` VALUES (3561,"자지빨어",1); 
-INSERT INTO `NamesProfanity` VALUES (3562,"자지쑤셔",1); 
-INSERT INTO `NamesProfanity` VALUES (3563,"자지쓰레기",1); 
-INSERT INTO `NamesProfanity` VALUES (3564,"자지정개",1); 
-INSERT INTO `NamesProfanity` VALUES (3565,"자지짤라",1); 
-INSERT INTO `NamesProfanity` VALUES (3566,"자지털",1); 
-INSERT INTO `NamesProfanity` VALUES (3567,"자지핥아",1); 
-INSERT INTO `NamesProfanity` VALUES (3568,"자지핥아줘",1); 
-INSERT INTO `NamesProfanity` VALUES (3569,"자지핥어",1); 
-INSERT INTO `NamesProfanity` VALUES (3571,"자지핧아",1); 
-INSERT INTO `NamesProfanity` VALUES (3572,"자지핧아줘",1); 
-INSERT INTO `NamesProfanity` VALUES (3573,"자지핧어",1); 
-INSERT INTO `NamesProfanity` VALUES (3574,"작은보지",1); 
-INSERT INTO `NamesProfanity` VALUES (3577,"잠지뚫어",1); 
-INSERT INTO `NamesProfanity` VALUES (3578,"잠지물마셔",1); 
-INSERT INTO `NamesProfanity` VALUES (3579,"잠지털",1); 
-INSERT INTO `NamesProfanity` VALUES (3580,"잠짓물마셔",1); 
-INSERT INTO `NamesProfanity` VALUES (3584,"잡것",1); 
-INSERT INTO `NamesProfanity` VALUES (3585,"잡년",1); 
-INSERT INTO `NamesProfanity` VALUES (3586,"잡놈",1); 
-INSERT INTO `NamesProfanity` VALUES (3587,"잡쓰레그",1); 
-INSERT INTO `NamesProfanity` VALUES (3588,"잡쓰레기",1); 
-INSERT INTO `NamesProfanity` VALUES (3590,"저년",1); 
-INSERT INTO `NamesProfanity` VALUES (3604,"젓가튼쉐이",1); 
-INSERT INTO `NamesProfanity` VALUES (3606,"젓같내",1); 
-INSERT INTO `NamesProfanity` VALUES (3607,"젓까",1); 
-INSERT INTO `NamesProfanity` VALUES (3608,"젓냄새",1); 
-INSERT INTO `NamesProfanity` VALUES (3609,"젓대가리",1); 
-INSERT INTO `NamesProfanity` VALUES (3610,"젓떠",1); 
-INSERT INTO `NamesProfanity` VALUES (3611,"젓마무리",1); 
-INSERT INTO `NamesProfanity` VALUES (3613,"젓만이",1); 
-INSERT INTO `NamesProfanity` VALUES (3614,"젓물",1); 
-INSERT INTO `NamesProfanity` VALUES (3616,"젓물냄새",1); 
-INSERT INTO `NamesProfanity` VALUES (3617,"젓밥",1); 
-INSERT INTO `NamesProfanity` VALUES (3618,"정액마셔",1); 
-INSERT INTO `NamesProfanity` VALUES (3619,"정액먹어",1); 
-INSERT INTO `NamesProfanity` VALUES (3620,"정액발사",1); 
-INSERT INTO `NamesProfanity` VALUES (3621,"정액짜",1); 
-INSERT INTO `NamesProfanity` VALUES (3622,"정액핥아",1); 
-INSERT INTO `NamesProfanity` VALUES (3623,"정액핧아",1); 
-INSERT INTO `NamesProfanity` VALUES (3624,"정자마셔",1); 
-INSERT INTO `NamesProfanity` VALUES (3625,"정자먹어",1); 
-INSERT INTO `NamesProfanity` VALUES (3626,"정자핥아",1); 
-INSERT INTO `NamesProfanity` VALUES (3627,"정자핧아",1); 
-INSERT INTO `NamesProfanity` VALUES (3630,"젖까",1); 
-INSERT INTO `NamesProfanity` VALUES (3632,"젖탱이",1); 
-INSERT INTO `NamesProfanity` VALUES (3635,"조개넓은년",1); 
-INSERT INTO `NamesProfanity` VALUES (3636,"조개따조",1); 
-INSERT INTO `NamesProfanity` VALUES (3638,"조개마셔줘",1); 
-INSERT INTO `NamesProfanity` VALUES (3640,"조개벌려조",1); 
-INSERT INTO `NamesProfanity` VALUES (3642,"조개보지",1); 
-INSERT INTO `NamesProfanity` VALUES (3643,"조개속물",1); 
-INSERT INTO `NamesProfanity` VALUES (3644,"조개쑤셔줘",1); 
-INSERT INTO `NamesProfanity` VALUES (3646,"조개핥아줘",1); 
-INSERT INTO `NamesProfanity` VALUES (3647,"조개핧아줘",1); 
-INSERT INTO `NamesProfanity` VALUES (3649,"조또",1); 
-INSERT INTO `NamesProfanity` VALUES (3658,"족같내",1); 
-INSERT INTO `NamesProfanity` VALUES (3659,"족까",1); 
-INSERT INTO `NamesProfanity` VALUES (3661,"족까내",1); 
-INSERT INTO `NamesProfanity` VALUES (3673,"좀마니",1); 
-INSERT INTO `NamesProfanity` VALUES (3674,"좀물",1); 
-INSERT INTO `NamesProfanity` VALUES (3675,"좀쓰레기",1); 
-INSERT INTO `NamesProfanity` VALUES (3676,"좁빠라라",1); 
-INSERT INTO `NamesProfanity` VALUES (3698,"좃가튼뇬",1); 
-INSERT INTO `NamesProfanity` VALUES (3700,"좃간년",1); 
-INSERT INTO `NamesProfanity` VALUES (3701,"좃까",1); 
-INSERT INTO `NamesProfanity` VALUES (3702,"좃까리",1); 
-INSERT INTO `NamesProfanity` VALUES (3704,"좃깟네",1); 
-INSERT INTO `NamesProfanity` VALUES (3705,"좃냄새",1); 
-INSERT INTO `NamesProfanity` VALUES (3706,"좃넘",1); 
-INSERT INTO `NamesProfanity` VALUES (3707,"좃대가리",1); 
-INSERT INTO `NamesProfanity` VALUES (3708,"좃도",1); 
-INSERT INTO `NamesProfanity` VALUES (3709,"좃또",1); 
-INSERT INTO `NamesProfanity` VALUES (3710,"좃마무리",1); 
-INSERT INTO `NamesProfanity` VALUES (3713,"좃만아",1); 
-INSERT INTO `NamesProfanity` VALUES (3714,"좃만이",1); 
-INSERT INTO `NamesProfanity` VALUES (3715,"좃만한것",1); 
-INSERT INTO `NamesProfanity` VALUES (3716,"좃만한쉐이",1); 
-INSERT INTO `NamesProfanity` VALUES (3717,"좃물",1); 
-INSERT INTO `NamesProfanity` VALUES (3719,"좃물냄새",1); 
-INSERT INTO `NamesProfanity` VALUES (3720,"좃보지",1); 
-INSERT INTO `NamesProfanity` VALUES (3722,"좃부랄",1); 
-INSERT INTO `NamesProfanity` VALUES (3724,"좃빠구리",1); 
-INSERT INTO `NamesProfanity` VALUES (3725,"좃빠네",1); 
-INSERT INTO `NamesProfanity` VALUES (3726,"좃빠라라",1); 
-INSERT INTO `NamesProfanity` VALUES (3727,"좃털",1); 
-INSERT INTO `NamesProfanity` VALUES (3762,"좆같은놈",1); 
-INSERT INTO `NamesProfanity` VALUES (3764,"좆같은새끼",1); 
-INSERT INTO `NamesProfanity` VALUES (3765,"좆까",1); 
-INSERT INTO `NamesProfanity` VALUES (3767,"좆까라",1); 
-INSERT INTO `NamesProfanity` VALUES (3768,"좆나",1); 
-INSERT INTO `NamesProfanity` VALUES (3769,"좆년",1); 
-INSERT INTO `NamesProfanity` VALUES (3770,"좆도",1); 
-INSERT INTO `NamesProfanity` VALUES (3779,"좆만아",1); 
-INSERT INTO `NamesProfanity` VALUES (3784,"좆만한년",1); 
-INSERT INTO `NamesProfanity` VALUES (3785,"좆만한놈",1); 
-INSERT INTO `NamesProfanity` VALUES (3787,"좆만한새끼",1); 
-INSERT INTO `NamesProfanity` VALUES (3789,"좆먹어",1); 
-INSERT INTO `NamesProfanity` VALUES (3790,"좆물",1); 
-INSERT INTO `NamesProfanity` VALUES (3791,"좆밥",1); 
-INSERT INTO `NamesProfanity` VALUES (3793,"좆빨아",1); 
-INSERT INTO `NamesProfanity` VALUES (3795,"좆새끼",1); 
-INSERT INTO `NamesProfanity` VALUES (3796,"좆털",1); 
-INSERT INTO `NamesProfanity` VALUES (3802,"좋만한것",1); 
-INSERT INTO `NamesProfanity` VALUES (3808,"주글년",1); 
-INSERT INTO `NamesProfanity` VALUES (3810,"주길년",1); 
-INSERT INTO `NamesProfanity` VALUES (3813,"쥐랄",1); 
-INSERT INTO `NamesProfanity` VALUES (3817,"지랄",1); 
-INSERT INTO `NamesProfanity` VALUES (3818,"지럴",1); 
-INSERT INTO `NamesProfanity` VALUES (3819,"지뢀",1); 
-INSERT INTO `NamesProfanity` VALUES (3826,"쪼다새끼",1); 
-INSERT INTO `NamesProfanity` VALUES (3831,"창녀",1); 
-INSERT INTO `NamesProfanity` VALUES (3832,"창녀버지",1); 
-INSERT INTO `NamesProfanity` VALUES (3833,"처드셈",1); 
-INSERT INTO `NamesProfanity` VALUES (3834,"쳐드셈",1); 
-INSERT INTO `NamesProfanity` VALUES (3835,"쳐쑤셔박어",1); 
-INSERT INTO `NamesProfanity` VALUES (3836,"촌씨브라리",1); 
-INSERT INTO `NamesProfanity` VALUES (3837,"촌씨브랑이",1); 
-INSERT INTO `NamesProfanity` VALUES (3838,"촌씨브랭이",1); 
-INSERT INTO `NamesProfanity` VALUES (3848,"크리토리스",1); 
-INSERT INTO `NamesProfanity` VALUES (3849,"큰보지",1); 
-INSERT INTO `NamesProfanity` VALUES (3857,"클리토리스",1); 
-INSERT INTO `NamesProfanity` VALUES (3861,"페니스",1); 
-INSERT INTO `NamesProfanity` VALUES (3863,"항문수셔",1); 
-INSERT INTO `NamesProfanity` VALUES (3864,"항문쑤셔",1); 
-INSERT INTO `NamesProfanity` VALUES (3869,"허버리년",1); 
-INSERT INTO `NamesProfanity` VALUES (3874,"허벌년",1); 
-INSERT INTO `NamesProfanity` VALUES (3876,"허벌보지",1); 
-INSERT INTO `NamesProfanity` VALUES (3878,"허벌자식",1); 
-INSERT INTO `NamesProfanity` VALUES (3879,"허벌자지",1); 
-INSERT INTO `NamesProfanity` VALUES (3885,"헐렁보지",1); 
-INSERT INTO `NamesProfanity` VALUES (3886,"혀로보지핥이기",1); 
-INSERT INTO `NamesProfanity` VALUES (3887,"혀로보지핧기",1); 
-INSERT INTO `NamesProfanity` VALUES (3900,"호냥년",1); 
-INSERT INTO `NamesProfanity` VALUES (3909,"호로새끼",1); 
-INSERT INTO `NamesProfanity` VALUES (3912,"호로자슥",1); 
-INSERT INTO `NamesProfanity` VALUES (3913,"호로자식",1); 
-INSERT INTO `NamesProfanity` VALUES (3917,"호루자슥",1); 
-INSERT INTO `NamesProfanity` VALUES (3918,"화냥년",1); 
-INSERT INTO `NamesProfanity` VALUES (3925,"후라덜넘",1); 
-INSERT INTO `NamesProfanity` VALUES (3926,"후장",1); 
-INSERT INTO `NamesProfanity` VALUES (3929,"후장꽂아",1); 
-INSERT INTO `NamesProfanity` VALUES (3930,"후장뚫어",0); 
-INSERT INTO `NamesProfanity` VALUES (3932,"\<asshole",0); 
-INSERT INTO `NamesProfanity` VALUES (3955,"dong",0); 
-INSERT INTO `NamesProfanity` VALUES (3956,"\<dyke\>",0); 
-INSERT INTO `NamesProfanity` VALUES (3976,"\<mj\>",0); 
-INSERT INTO `NamesProfanity` VALUES (3978,"\<stoner",0); 
-INSERT INTO `NamesProfanity` VALUES (4039,"\<fisting\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4041,"\<cock",0); 
-INSERT INTO `NamesProfanity` VALUES (4048,"\<raped\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4049,"\<raping\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4052,"\<junk[ie]",0); 
-INSERT INTO `NamesProfanity` VALUES (4081,"\<dike\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4083,"\<defecat",0); 
-INSERT INTO `NamesProfanity` VALUES (4086,"\<ejaculate\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4095,"\<scrotum",0); 
-INSERT INTO `NamesProfanity` VALUES (4139,"\<pusher",0); 
-INSERT INTO `NamesProfanity` VALUES (4171,"\<chinks\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4201,"\<dikes\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4202,"\<dildos\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4208,"\<sativa\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4209,"\<indica\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4212,"\<skunkweed\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4213,"\<doobie\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4215,"\<fingerbang\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4216,"\<gangbang\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4217,"\<gangrape\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4218,"\<japs\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4219,"\<jizzing\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4220,"\<gizzing\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4233,"\<polesmokers\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4239,"\<pussies\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4251,"\<rapes\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4252,"\<saladtosser\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4276,"\<tramps\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4281,"\<fags\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4283,"boob",0); 
-INSERT INTO `NamesProfanity` VALUES (4291,"\<bast[aeiou]rd",0); 
-INSERT INTO `NamesProfanity` VALUES (4292,"\<beastiality\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4293,"\<blowjob",0); 
-INSERT INTO `NamesProfanity` VALUES (4294,"\<boffer\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4301,"\<clowjob\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4308,"\<erection\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4310,"\<donkeypunch\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4312,"\<fawker\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4313,"\<feces",0); 
-INSERT INTO `NamesProfanity` VALUES (4329,"\<nipple",0); 
-INSERT INTO `NamesProfanity` VALUES (4330,"nipples\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4348,"prostitute",0); 
-INSERT INTO `NamesProfanity` VALUES (4363,"\<agnostic\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4369,"\<alquaeda\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4370,"\<amerikkkan\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4371,"\<amphetamine\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4380,"\<arse",0); 
-INSERT INTO `NamesProfanity` VALUES (4381,"\<aryan",0); 
-INSERT INTO `NamesProfanity` VALUES (4392,"\<backdoor\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4397,"\<bi\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4398,"\<bigfatasscow\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4399,"titt[iey]*s\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4409,"bondage\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4411,"boobs\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4412,"breast\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4419,"\<buttocks\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4432,"\<[ck]oitus",0); 
-INSERT INTO `NamesProfanity` VALUES (4433,"\<coke\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4434,"\<condom",0); 
-INSERT INTO `NamesProfanity` VALUES (4445,"\<dahoe\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4447,"\<damn\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4451,"\<darkwanker\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4455,"\<di[ae][rh]+ea",0); 
-INSERT INTO `NamesProfanity` VALUES (4456,"dick\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4458,"\<dirtyho\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4460,"\<domination\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4463,"\<dutch\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4467,"\<enema\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4468,"\<erotic",0); 
-INSERT INTO `NamesProfanity` VALUES (4469,"jackass\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4470,"\<facism\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4472,"\<fakeboobs\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4474,"\<fart\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4477,"\<fetish",0); 
-INSERT INTO `NamesProfanity` VALUES (4478,"fetish\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4480,"\<filthymuslim\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4481,"\<focker\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4482,"\<foreplay\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4483,"\<foreskin\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4485,"\<frottage\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4492,"\<fuk\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4493,"\<fukass\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4496,"\<gay\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4497,"\<genital",0); 
-INSERT INTO `NamesProfanity` VALUES (4498,"\<genitals\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4501,"\<gigolo\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4505,"\<gonorrhea\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4506,"\<grummz\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4507,"\<hairyhorny\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4508,"\<hardboob\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4509,"\<hentail\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4511,"\<hiv\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4513,"\<holocaust\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4516,"\<horny\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4518,"\<hot\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4540,"\<j.*jameson\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4552,"\<kinky\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4557,"\<kraut\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4560,"\<lesb\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4561,"\<lesbian\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4563,"pussy\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4565,"\<lingerie\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4566,"\<load\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4570,"\<lube\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4571,"\<lubricant\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4572,"\<lust\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4573,"\<maidenhead\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4584,"\<morphine\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4608,"\<nudity\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4610,"\<nuts\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4618,"\<oral\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4620,"\<pagan\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4629,"\<perv\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4630,"\<pervert\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4631,"\<phawk\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4636,"\<piss\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4637,"\<playboy\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4638,"\<playgirl\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4639,"\<polish\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4640,"\<poop\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4642,"\<prebubescent\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4649,"\<queer\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4656,"\<reich\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4660,"\<r.*jeremy\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4668,"\<screw\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4669,"\<seamen\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4673,"\<sex\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4677,"\<sirbong\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4683,"\<spank\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4684,"\<speculum\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4685,"\<spreadmylegs\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4689,"\<streaker",0); 
-INSERT INTO `NamesProfanity` VALUES (4690,"\<stripper",0); 
-INSERT INTO `NamesProfanity` VALUES (4692,"\<stud\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4693,"\<submissive\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4694,"\<suck\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4695,"\<sukkitdown\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4697,"\<swiftnuggs\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4698,"\<swingers\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4703,"\<teabag",0); 
-INSERT INTO `NamesProfanity` VALUES (4706,"\<terrorist\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4709,"\<thickbush\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4710,"\<threesome\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4714,"\<snatch",0); 
-INSERT INTO `NamesProfanity` VALUES (4716,"\<trans",0); 
-INSERT INTO `NamesProfanity` VALUES (4717,"\<tribadism\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4720,"\<uglynig\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4722,"\<updabut\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4723,"\<upmybutthole\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4725,"\<urinat",0); 
-INSERT INTO `NamesProfanity` VALUES (4727,"\<vasect",0); 
-INSERT INTO `NamesProfanity` VALUES (4729,"\<venereal\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4731,"\<virgin\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4736,"\<warslut\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4737,"\<white\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4740,"\<wood\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4781,"\<negro",0); 
-INSERT INTO `NamesProfanity` VALUES (4790,"\<tinytits\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4792,"cock\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4798,"blowjob\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4799,"\<tardpopsicle\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4807,"\<urmom\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4810,"fag\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4814,"\<dick",0); 
-INSERT INTO `NamesProfanity` VALUES (4816,"\<turdsplat\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4821,"\<chokeoncocks\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4822,"\<littlearse\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4834,"\<holybijesis\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4839,"\<niggs\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4862,"support",0); 
-INSERT INTO `NamesProfanity` VALUES (4881,"\<absinthe\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4882,"\<absolut\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4883,"\<aceofspades\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4884,"\<adulteress\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4885,"\<adulterous\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4886,"\<adultery\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4887,"\<adultsonly\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4888,"\<agentorange\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4889,"\<aids\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4890,"\<al[ck]ohol",0); 
-INSERT INTO `NamesProfanity` VALUES (4891,"\<alecpowers\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4892,"\<alexwilcox\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4893,"\<amaretto\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4894,"\<anal\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4895,"\<angeladevi\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4896,"\<angeldust\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4897,"\<anglo\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4898,"\<anheiser\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4899,"\<annamalle\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4900,"\<annaslut\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4901,"\<asiacarrera\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4902,"\<aurorasnow\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4903,"\<bacardi\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4904,"\<beaner\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4905,"\<beanlicker\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4906,"\<beer\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4907,"\<bestiality\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4908,"\<bizzle\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4909,"\<black\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4910,"\<blackie\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4911,"\<bloodyhell\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4912,"\<blow\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4913,"\<blunt\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4914,"\<bollocks\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4915,"\<boobs",0); 
-INSERT INTO `NamesProfanity` VALUES (4916,"\<boofer\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4917,"\<bourbon\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4918,"\<brazuca\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4919,"\<breast",0); 
-INSERT INTO `NamesProfanity` VALUES (4920,"\<budda\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4921,"\<buddahead\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4922,"\<budlight\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4923,"\<budweiser\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4924,"\<bugger\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4925,"\<bustydusty\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4926,"\<butt\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4927,"\<buttman\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4928,"\<candyandes\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4929,"\<caucazoid\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4930,"\<cawk\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4931,"\<cervesa\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4932,"\<champagne\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4933,"\<chaseylain\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4934,"\<cheeba\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4935,"\<cherokee \>",0); 
-INSERT INTO `NamesProfanity` VALUES (4936,"\<chino\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4937,"\<chloejones \>",0); 
-INSERT INTO `NamesProfanity` VALUES (4938,"\<christilake\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4939,"\<chrisward \>",0); 
-INSERT INTO `NamesProfanity` VALUES (4940,"\<cocostarfish\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4941,"\<cognac\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4942,"\<cootch\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4943,"\<cooter\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4944,"\<copulate\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4945,"\<cornholes\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4946,"\<corona\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4947,"\<crack\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4948,"\<cracker\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4949,"\<crap\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4950,"\<damned\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4951,"\<dank\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4952,"\<deancoulter\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4953,"\<debidiamond \>",0); 
-INSERT INTO `NamesProfanity` VALUES (4954,"\<deepthroat\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4955,"\<devinderay \>",0); 
-INSERT INTO `NamesProfanity` VALUES (4956,"\<dianazyle \>",0); 
-INSERT INTO `NamesProfanity` VALUES (4957,"\<dietpills\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4958,"\<dirtysanchez\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4959,"\<ditavontease\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4960,"\<doggystyle\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4961,"\<dope\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4962,"\<duckbutter\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4963,"\<ecstacy\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4964,"\<edpowers \>",0); 
-INSERT INTO `NamesProfanity` VALUES (4965,"\<eggplant\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4966,"\<ericaboyer \>",0); 
-INSERT INTO `NamesProfanity` VALUES (4967,"\<extasy\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4968,"\<facial\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4969,"\<fluffer\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4970,"\<fornicat",0); 
-INSERT INTO `NamesProfanity` VALUES (4971,"\<freebase\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4972,"\<fusck",0); 
-INSERT INTO `NamesProfanity` VALUES (4973,"\<fux",0); 
-INSERT INTO `NamesProfanity` VALUES (4974,"\<gagepowers\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4975,"\<gew\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4976,"\<ghb\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4977,"\<ghetto\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4978,"\<gingerhill\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4979,"\<gloryhole\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4980,"\<goldschlager\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4981,"\<goombah\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4982,"\<granddragon\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4983,"\<greaseball\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4984,"\<greaser\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4985,"\<gspot\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4986,"\<guiness\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4987,"\<gunja\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4988,"\<handjob\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4989,"\<hash\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4990,"\<headdoctor\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4991,"\<heidifleiss\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4992,"\<hmo\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4993,"\<honky\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4994,"\<hoodrat\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4995,"\<hookah\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4996,"\<horney\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4997,"\<hustler\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4998,"\<inarivachs\>",0); 
-INSERT INTO `NamesProfanity` VALUES (4999,"\<j.*bobbit\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5000,"\<j.*holmes\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5001,"\<jackdaniels\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5002,"\<jadeeast\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5003,"\<jadehsu \>",0); 
-INSERT INTO `NamesProfanity` VALUES (5004,"\<jadestclair\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5005,"\<jagermeister\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5006,"\<janacova\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5007,"\<jennahaze\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5008,"\<jennajameson\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5009,"\<jenteal\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5010,"\<jessicadee\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5011,"\<jeweldenyle\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5012,"\<jillkelly\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5013,"\<jimbeam\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5014,"\<josecuervo\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5015,"\<juliashton\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5016,"\<karadavis\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5017,"\<keef\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5018,"\<kif\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5019,"\<kikkityler \>",0); 
-INSERT INTO `NamesProfanity` VALUES (5020,"\<kobetai\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5021,"\<kooter\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5022,"\<krystalsteal\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5023,"\<kyke\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5024,"\<kylacole\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5025,"\<kylieireland\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5026,"\<lancegear \>",0); 
-INSERT INTO `NamesProfanity` VALUES (5027,"\<larryflynt\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5028,"\<lecher\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5029,"\<liquidx\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5030,"\<loloferrari\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5031,"\<long.*dong\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5032,"\<ludes\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5033,"\<lunalane\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5034,"\<maltliquor\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5035,"\<mariacheca\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5036,"\<mariatakagi\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5037,"\<marisadiaz \>",0); 
-INSERT INTO `NamesProfanity` VALUES (5038,"\<markdalton  \>",0); 
-INSERT INTO `NamesProfanity` VALUES (5039,"\<markwolff \>",0); 
-INSERT INTO `NamesProfanity` VALUES (5040,"\<marycarey \>",0); 
-INSERT INTO `NamesProfanity` VALUES (5041,"\<mayate\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5042,"\<meatwad\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5043,"\<methhead\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5044,"\<methmonster\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5045,"\<mikolee\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5046,"\<mimimiyagi\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5047,"\<moneyshot\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5048,"\<muff\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5049,"\<mushrooms\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5050,"\<nickelbag\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5051,"\<nikkibenz\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5052,"\<nikkidial\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5053,"\<nip\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5054,"\<nizzle\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5055,"\<nubian",0); 
-INSERT INTO `NamesProfanity` VALUES (5056,"\<nympho\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5057,"\<obsession\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5058,"\<opiate\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5059,"\<orgy\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5060,"\<panties\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5061,"\<pecker\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5062,"\<peternorth\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5063,"\<pissedoff\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5064,"\<pissoff\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5065,"\<pornstar\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5066,"\<prepubescent\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5067,"\<prick\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5068,"\<pube\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5069,"\<punjab\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5070,"\<punkass\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5071,"\<pusse\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5072,"\<randywest\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5073,"\<rebeccalord\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5074,"\<rebeccaporn\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5075,"\<redneck\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5076,"\<reneelarue\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5077,"\<ricer\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5078,"\<rustytrumpet\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5079,"\<ryanconner \>",0); 
-INSERT INTO `NamesProfanity` VALUES (5080,"\<ryanwagner \>",0); 
-INSERT INTO `NamesProfanity` VALUES (5081,"\<sarastjames \>",0); 
-INSERT INTO `NamesProfanity` VALUES (5082,"\<scat\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5083,"\<scatology\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5084,"\<schlong",0); 
-INSERT INTO `NamesProfanity` VALUES (5085,"\<schnapps\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5086,"\<schoolboy",0); 
-INSERT INTO `NamesProfanity` VALUES (5087,"\<selenasteele\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5088,"\<sexy\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5089,"\<seymorebutts\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5090,"\<sheethead\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5091,"\<sherriangel\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5092,"\<shizzle\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5093,"\<shlong\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5094,"\<shmegma\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5095,"\<shrooms\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5096,"\<skeet\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5097,"\<skeetskeet\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5098,"\<slope\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5099,"\<smack\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5100,"\<smut\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5101,"\<snowball",0); 
-INSERT INTO `NamesProfanity` VALUES (5102,"\<sodomize\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5103,"\<sodomy\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5104,"\<speedball\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5105,"\<spew\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5106,"\<spreadeagle\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5107,"\<spunk\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5108,"\<std\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5109,"\<sunsetthomas\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5110,"\<sylviasaint\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5111,"\<teet[sz]\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5112,"\<tequila\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5113,"\<terapatrick\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5114,"\<thc\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5115,"\<tiabella\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5116,"\<toadlicker\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5117,"\<toak\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5118,"\<toke\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5119,"\<tombyron\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5120,"\<tommycruise\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5121,"\<tonyzerega\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5122,"\<tossalad\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5123,"\<tosser\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5124,"\<tossingsalad\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5125,"\<tosssalad\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5126,"\<traceyadams\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5127,"\<tracilords\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5128,"\<tranny\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5129,"\<ttboy\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5130,"\<tyfox\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5131,"\<tylerfaith\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5132,"\<urethra\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5133,"\<veronicahart\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5134,"\<vibrator\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5135,"\<vincevouyer\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5136,"\<vodka\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5137,"\<vulva\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5138,"\<w[ei]+n[ei]+r\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5139,"\<wank\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5140,"\<wankoff\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5141,"\<weed\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5142,"\<wej\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5143,"\<wench\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5144,"\<whackoff\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5145,"\<whiskey\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5146,"\<wildturkey\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5147,"\<willclark\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5148,"\<yellow\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5149,"\<zigzag\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5150,"aryan\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5151,"hefner\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5152,"snatch\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5153,"vagina\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5163,"\<advil\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5166,"\<amputee\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5167,"\<amtrak\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5169,"\<anis\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5170,"\<anolinctus\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5171,"\<antichrist\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5172,"\<arathorn\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5173,"\<arian\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5174,"\<arsonist\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5186,"\<blackenstein\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5187,"\<blacksabbath\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5190,"\<bnet\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5192,"\<bootylicious\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5194,"\<bra\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5203,"\<chinaman\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5205,"\<chronik\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5212,"\<colgate\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5214,"\<coprophagy\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5215,"\<crackhead\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5219,"\<dammit\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5220,"\<darky\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5222,"\<darvocet\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5223,"\<databasesys\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5225,"\<deckardcain\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5227,"\<dr\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5231,"\<dukeofwhales\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5232,"\<dumbass\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5233,"\<ecstasy\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5235,"\<ensign\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5238,"\<fcuk\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5241,"\<ferrari\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5242,"\<fetus",0); 
-INSERT INTO `NamesProfanity` VALUES (5243,"\<fockerz\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5245,"\<fooker\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5250,"cunt\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5251,"\<ghandi\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5254,"\<gofukyorself\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5255,"\<gonadian\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5256,"\<goochgravy\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5257,"\<gookenator\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5261,"\<hemplock\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5262,"\<herpies\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5265,"\<homoerectus\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5266,"\<hore\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5267,"\<hotdamn\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5268,"\<hungelf\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5275,"\<indian\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5276,"\<irapekids\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5277,"\<ironchef\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5280,"\<jc\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5281,"\<jedi\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5282,"\<[gj]en[ao]cide\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5284,"\<jugs\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5289,"\<klismaphilia\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5290,"\<kokigami\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5291,"\<koon\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5292,"\<kosherpork\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5294,"\<lardass\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5296,"\<laurabush\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5306,"\<marlboroman\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5307,"\<masterbaiter\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5308,"\<maxipad\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5314,"\<menstrual\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5315,"\<mhz\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5316,"\<michaeljack\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5317,"bastard\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5318,"\<misogynist\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5320,"\<mister\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5322,"\<mr\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5324,"\<narcoticus\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5325,"\<nigahh\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5331,"\<npc",0); 
-INSERT INTO `NamesProfanity` VALUES (5332,"\<nug\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5333,"\<nunriggers\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5334,"\<nwa\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5336,"\<omgwtf\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5337,"\<opiate",0); 
-INSERT INTO `NamesProfanity` VALUES (5338,"\<oreos\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5341,"\<ovaltine\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5343,"\<papsmear\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5344,"\<pederasty\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5346,"\<penthouse\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5350,"\<pimp",0); 
-INSERT INTO `NamesProfanity` VALUES (5352,"\<pinktaco\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5354,"mofo\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5356,"\<poomaster\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5357,"\<poonjuice\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5358,"\<poop",0); 
-INSERT INTO `NamesProfanity` VALUES (5359,"\<pwnzor\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5360,"\<quadoushka\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5361,"\<r.*nad[ae]r\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5364,"\<sacofricosis\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5366,"\<sega\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5367,"\<sex",0); 
-INSERT INTO `NamesProfanity` VALUES (5371,"\<shadowbane\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5372,"\<shane",0); 
-INSERT INTO `NamesProfanity` VALUES (5373,"\<shiznit\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5374,"\<shortbus\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5381,"\<smoked\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5382,"\<snowwhite\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5385,"\<sperm",0); 
-INSERT INTO `NamesProfanity` VALUES (5386,"\<spluge\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5392,"\<suck",0); 
-INSERT INTO `NamesProfanity` VALUES (5395,"\<supermario\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5396,"\<suppuku\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5397,"\<swastika\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5398,"\<sybian\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5417,"\<toeofcamel\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5418,"\<tokyorose\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5424,"\<urmama\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5429,"\<voltron\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5430,"\<wangmaster\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5431,"\<wanker\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5434,"\<wetdream\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5436,"\<whitebread\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5442,"\<wigger\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5443,"\<williamhung\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5444,"\<windex\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5445,"\<witchking\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5447,"\<x.*x\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5452,"\<yosemitesam\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5454,"\<youranus\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5457,"\<zoolander\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5472,"condom\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5476,"jebus\>",0); 
-INSERT INTO `NamesProfanity` VALUES (5477,"\<kosher",0); 
-INSERT INTO `NamesProfanity` VALUES (5478,"menstrual",0); 
-INSERT INTO `NamesProfanity` VALUES (5480,"sexy",0); 
-INSERT INTO `NamesProfanity` VALUES (5865,"thenine",4); 
-INSERT INTO `NamesProfanity` VALUES (5866,"三K党",4); 
-INSERT INTO `NamesProfanity` VALUES (5867,"中功",4); 
-INSERT INTO `NamesProfanity` VALUES (5868,"九城",4); 
-INSERT INTO `NamesProfanity` VALUES (5869,"乱伦",4); 
-INSERT INTO `NamesProfanity` VALUES (5870,"乳交",4); 
-INSERT INTO `NamesProfanity` VALUES (5871,"乳房",4); 
-INSERT INTO `NamesProfanity` VALUES (5872,"二郎神",4); 
-INSERT INTO `NamesProfanity` VALUES (5873,"他妈的",4); 
-INSERT INTO `NamesProfanity` VALUES (5874,"俞正声",4); 
-INSERT INTO `NamesProfanity` VALUES (5875,"做爱",4); 
-INSERT INTO `NamesProfanity` VALUES (5876,"傻B",4); 
-INSERT INTO `NamesProfanity` VALUES (5877,"傻逼",4); 
-INSERT INTO `NamesProfanity` VALUES (5878,"共产党",4); 
-INSERT INTO `NamesProfanity` VALUES (5879,"共军",4); 
-INSERT INTO `NamesProfanity` VALUES (5880,"共匪",4); 
-INSERT INTO `NamesProfanity` VALUES (5881,"共荣圈",4); 
-INSERT INTO `NamesProfanity` VALUES (5882,"军妓",4); 
-INSERT INTO `NamesProfanity` VALUES (5883,"列宁",4); 
-INSERT INTO `NamesProfanity` VALUES (5884,"刘云山",4); 
-INSERT INTO `NamesProfanity` VALUES (5885,"刘少奇",4); 
-INSERT INTO `NamesProfanity` VALUES (5886,"刘淇",4); 
-INSERT INTO `NamesProfanity` VALUES (5887,"勃不起斯懦夫",4); 
-INSERT INTO `NamesProfanity` VALUES (5888,"勃大精深",4); 
-INSERT INTO `NamesProfanity` VALUES (5889,"卖淫",4); 
-INSERT INTO `NamesProfanity` VALUES (5890,"卵子",4); 
-INSERT INTO `NamesProfanity` VALUES (5891,"口交",4); 
-INSERT INTO `NamesProfanity` VALUES (5892,"叫床",4); 
-INSERT INTO `NamesProfanity` VALUES (5893,"台湾独立",4); 
-INSERT INTO `NamesProfanity` VALUES (5894,"台独",4); 
-INSERT INTO `NamesProfanity` VALUES (5895,"吴仪",4); 
-INSERT INTO `NamesProfanity` VALUES (5896,"吴官正",4); 
-INSERT INTO `NamesProfanity` VALUES (5897,"吴邦国",4); 
-INSERT INTO `NamesProfanity` VALUES (5898,"吹箫",4); 
-INSERT INTO `NamesProfanity` VALUES (5899,"周恩来",4); 
-INSERT INTO `NamesProfanity` VALUES (5900,"周永康",4); 
-INSERT INTO `NamesProfanity` VALUES (5901,"喇嘛",4); 
-INSERT INTO `NamesProfanity` VALUES (5902,"回良玉",4); 
-INSERT INTO `NamesProfanity` VALUES (5903,"国民党",4); 
-INSERT INTO `NamesProfanity` VALUES (5904,"基地组织",4); 
-INSERT INTO `NamesProfanity` VALUES (5905,"外$$挂",4); 
-INSERT INTO `NamesProfanity` VALUES (5906,"外$挂",4); 
-INSERT INTO `NamesProfanity` VALUES (5908,"外*挂",4); 
-INSERT INTO `NamesProfanity` VALUES (5909,"外@@挂",4); 
-INSERT INTO `NamesProfanity` VALUES (5910,"外@挂",4); 
-INSERT INTO `NamesProfanity` VALUES (5911,"外~~挂",4); 
-INSERT INTO `NamesProfanity` VALUES (5912,"外~挂",4); 
-INSERT INTO `NamesProfanity` VALUES (5913,"外··挂",4); 
-INSERT INTO `NamesProfanity` VALUES (5914,"外·挂",4); 
-INSERT INTO `NamesProfanity` VALUES (5915,"外挂",4); 
-INSERT INTO `NamesProfanity` VALUES (5916,"大东亚",4); 
-INSERT INTO `NamesProfanity` VALUES (5917,"奶子",4); 
-INSERT INTO `NamesProfanity` VALUES (5918,"如来",4); 
-INSERT INTO `NamesProfanity` VALUES (5919,"妓女",4); 
-INSERT INTO `NamesProfanity` VALUES (5920,"妓院",4); 
-INSERT INTO `NamesProfanity` VALUES (5921,"婊子",4); 
-INSERT INTO `NamesProfanity` VALUES (5922,"婊子养的",4); 
-INSERT INTO `NamesProfanity` VALUES (5923,"嫖客",4); 
-INSERT INTO `NamesProfanity` VALUES (5924,"嫦娥",4); 
-INSERT INTO `NamesProfanity` VALUES (5925,"孙中山",4); 
-INSERT INTO `NamesProfanity` VALUES (5926,"射精",4); 
-INSERT INTO `NamesProfanity` VALUES (5927,"尉健行",4); 
-INSERT INTO `NamesProfanity` VALUES (5928,"小泉纯一郎",4); 
-INSERT INTO `NamesProfanity` VALUES (5929,"小犬蠢一狼",4); 
-INSERT INTO `NamesProfanity` VALUES (5930,"小鸡鸡",4); 
-INSERT INTO `NamesProfanity` VALUES (5931,"屁股",4); 
-INSERT INTO `NamesProfanity` VALUES (5932,"屄",4); 
-INSERT INTO `NamesProfanity` VALUES (5933,"屌",4); 
-INSERT INTO `NamesProfanity` VALUES (5934,"山口组",4); 
-INSERT INTO `NamesProfanity` VALUES (5935,"巨灵神",4); 
-INSERT INTO `NamesProfanity` VALUES (5936,"希特勒",4); 
-INSERT INTO `NamesProfanity` VALUES (5937,"干死",4); 
-INSERT INTO `NamesProfanity` VALUES (5938,"弟大物勃",4); 
-INSERT INTO `NamesProfanity` VALUES (5939,"张宏堡",4); 
-INSERT INTO `NamesProfanity` VALUES (5940,"张德江",4); 
-INSERT INTO `NamesProfanity` VALUES (5941,"张立昌",4); 
-INSERT INTO `NamesProfanity` VALUES (5942,"强奸",4); 
-INSERT INTO `NamesProfanity` VALUES (5943,"性交",4); 
-INSERT INTO `NamesProfanity` VALUES (5944,"性无能",4); 
-INSERT INTO `NamesProfanity` VALUES (5945,"恐怖主义",4); 
-INSERT INTO `NamesProfanity` VALUES (5946,"恩格斯",4); 
-INSERT INTO `NamesProfanity` VALUES (5947,"情兽",4); 
-INSERT INTO `NamesProfanity` VALUES (5948,"我操",4); 
-INSERT INTO `NamesProfanity` VALUES (5949,"我日",4); 
-INSERT INTO `NamesProfanity` VALUES (5950,"拉登",4); 
-INSERT INTO `NamesProfanity` VALUES (5951,"招妓",4); 
-INSERT INTO `NamesProfanity` VALUES (5952,"撒尿",4); 
-INSERT INTO `NamesProfanity` VALUES (5953,"操你",4); 
-INSERT INTO `NamesProfanity` VALUES (5954,"操你奶奶",4); 
-INSERT INTO `NamesProfanity` VALUES (5955,"操你妈",4); 
-INSERT INTO `NamesProfanity` VALUES (5956,"操逼",4); 
-INSERT INTO `NamesProfanity` VALUES (5957,"支那",4); 
-INSERT INTO `NamesProfanity` VALUES (5958,"放荡",4); 
-INSERT INTO `NamesProfanity` VALUES (5959,"日他娘",4); 
-INSERT INTO `NamesProfanity` VALUES (5960,"日你",4); 
-INSERT INTO `NamesProfanity` VALUES (5961,"日你妈",4); 
-INSERT INTO `NamesProfanity` VALUES (5962,"日本帝国",4); 
-INSERT INTO `NamesProfanity` VALUES (5963,"曹刚川",4); 
-INSERT INTO `NamesProfanity` VALUES (5964,"曾培炎",4); 
-INSERT INTO `NamesProfanity` VALUES (5965,"曾庆红",4); 
-INSERT INTO `NamesProfanity` VALUES (5966,"月经",4); 
-INSERT INTO `NamesProfanity` VALUES (5967,"本拉登",4); 
-INSERT INTO `NamesProfanity` VALUES (5968,"朱镕基",4); 
-INSERT INTO `NamesProfanity` VALUES (5969,"朱骏",4); 
-INSERT INTO `NamesProfanity` VALUES (5970,"李大师",4); 
-INSERT INTO `NamesProfanity` VALUES (5971,"李岚清",4); 
-INSERT INTO `NamesProfanity` VALUES (5972,"李洪志",4); 
-INSERT INTO `NamesProfanity` VALUES (5973,"李瑞环",4); 
-INSERT INTO `NamesProfanity` VALUES (5974,"李登辉",4); 
-INSERT INTO `NamesProfanity` VALUES (5975,"李长春",4); 
-INSERT INTO `NamesProfanity` VALUES (5976,"李鹏",4); 
-INSERT INTO `NamesProfanity` VALUES (5977,"梅毒",4); 
-INSERT INTO `NamesProfanity` VALUES (5978,"次郎",4); 
-INSERT INTO `NamesProfanity` VALUES (5979,"毛泽东",4); 
-INSERT INTO `NamesProfanity` VALUES (5980,"江泽民",4); 
-INSERT INTO `NamesProfanity` VALUES (5981,"沙僧",4); 
-INSERT INTO `NamesProfanity` VALUES (5982,"法$$轮",4); 
-INSERT INTO `NamesProfanity` VALUES (5983,"法$轮",4); 
-INSERT INTO `NamesProfanity` VALUES (5985,"法*轮",4); 
-INSERT INTO `NamesProfanity` VALUES (5986,"法@@轮",4); 
-INSERT INTO `NamesProfanity` VALUES (5987,"法@轮",4); 
-INSERT INTO `NamesProfanity` VALUES (5988,"法^^轮",4); 
-INSERT INTO `NamesProfanity` VALUES (5989,"法^轮",4); 
-INSERT INTO `NamesProfanity` VALUES (5990,"法~~轮",4); 
-INSERT INTO `NamesProfanity` VALUES (5991,"法~轮",4); 
-INSERT INTO `NamesProfanity` VALUES (5992,"法轮",4); 
-INSERT INTO `NamesProfanity` VALUES (5993,"法轮功",4); 
-INSERT INTO `NamesProfanity` VALUES (5994,"法轮大法",4); 
-INSERT INTO `NamesProfanity` VALUES (5995,"淫水",4); 
-INSERT INTO `NamesProfanity` VALUES (5996,"淫秽",4); 
-INSERT INTO `NamesProfanity` VALUES (5997,"淫荡",4); 
-INSERT INTO `NamesProfanity` VALUES (5998,"淫魔",4); 
-INSERT INTO `NamesProfanity` VALUES (5999,"温家宝",4); 
-INSERT INTO `NamesProfanity` VALUES (6000,"游戏管理员",4); 
-INSERT INTO `NamesProfanity` VALUES (6001,"煞笔",4); 
-INSERT INTO `NamesProfanity` VALUES (6002,"爱滋",4); 
-INSERT INTO `NamesProfanity` VALUES (6003,"牛魔王",4); 
-INSERT INTO `NamesProfanity` VALUES (6004,"狗城",4); 
-INSERT INTO `NamesProfanity` VALUES (6005,"狗屁",4); 
-INSERT INTO `NamesProfanity` VALUES (6006,"狗日的",4); 
-INSERT INTO `NamesProfanity` VALUES (6007,"狗狼养的",4); 
-INSERT INTO `NamesProfanity` VALUES (6008,"王乐泉",4); 
-INSERT INTO `NamesProfanity` VALUES (6009,"王兆国",4); 
-INSERT INTO `NamesProfanity` VALUES (6010,"王八蛋",4); 
-INSERT INTO `NamesProfanity` VALUES (6011,"疆独",4); 
-INSERT INTO `NamesProfanity` VALUES (6012,"皇军",4); 
-INSERT INTO `NamesProfanity` VALUES (6015,"私服",4); 
-INSERT INTO `NamesProfanity` VALUES (6016,"精子",4); 
-INSERT INTO `NamesProfanity` VALUES (6017,"精液",4); 
-INSERT INTO `NamesProfanity` VALUES (6018,"精童欲女",4); 
-INSERT INTO `NamesProfanity` VALUES (6019,"纳粹",4); 
-INSERT INTO `NamesProfanity` VALUES (6020,"罗干",4); 
-INSERT INTO `NamesProfanity` VALUES (6021,"肛交",4); 
-INSERT INTO `NamesProfanity` VALUES (6022,"胡耀邦",4); 
-INSERT INTO `NamesProfanity` VALUES (6023,"胡锦涛",4); 
-INSERT INTO `NamesProfanity` VALUES (6024,"花柳",4); 
-INSERT INTO `NamesProfanity` VALUES (6025,"茎候佳阴",4); 
-INSERT INTO `NamesProfanity` VALUES (6026,"荡妇",4); 
-INSERT INTO `NamesProfanity` VALUES (6027,"萨达姆",4); 
-INSERT INTO `NamesProfanity` VALUES (6028,"蒋介石",4); 
-INSERT INTO `NamesProfanity` VALUES (6029,"西藏",4); 
-INSERT INTO `NamesProfanity` VALUES (6030,"观音",4); 
-INSERT INTO `NamesProfanity` VALUES (6031,"贺国强",4); 
-INSERT INTO `NamesProfanity` VALUES (6032,"贾庆林",4); 
-INSERT INTO `NamesProfanity` VALUES (6033,"赤匪",4); 
-INSERT INTO `NamesProfanity` VALUES (6034,"赵紫阳",4); 
-INSERT INTO `NamesProfanity` VALUES (6035,"轮奸",4); 
-INSERT INTO `NamesProfanity` VALUES (6036,"达赖",4); 
-INSERT INTO `NamesProfanity` VALUES (6037,"邓小平",4); 
-INSERT INTO `NamesProfanity` VALUES (6038,"郭伯雄",4); 
-INSERT INTO `NamesProfanity` VALUES (6039,"阴唇",4); 
-INSERT INTO `NamesProfanity` VALUES (6040,"阴毛",4); 
-INSERT INTO `NamesProfanity` VALUES (6041,"阴茎",4); 
-INSERT INTO `NamesProfanity` VALUES (6042,"阴道",4); 
-INSERT INTO `NamesProfanity` VALUES (6043,"阴部",4); 
-INSERT INTO `NamesProfanity` VALUES (6044,"阿扁",4); 
-INSERT INTO `NamesProfanity` VALUES (6045,"陈水扁",4); 
-INSERT INTO `NamesProfanity` VALUES (6046,"陈良宇",4); 
-INSERT INTO `NamesProfanity` VALUES (6047,"韩正",4); 
-INSERT INTO `NamesProfanity` VALUES (6048,"马克思",4); 
-INSERT INTO `NamesProfanity` VALUES (6049,"骚货",4); 
-INSERT INTO `NamesProfanity` VALUES (6050,"骚逼",4); 
-INSERT INTO `NamesProfanity` VALUES (6051,"鸡八",4); 
-INSERT INTO `NamesProfanity` VALUES (6052,"鸡巴",4); 
-INSERT INTO `NamesProfanity` VALUES (6053,"黄菊",4); 
-INSERT INTO `NamesProfanity` VALUES (6054,"黑手党",4); 
-INSERT INTO `NamesProfanity` VALUES (6055,"龟头",4); 
-INSERT INTO `NamesProfanity` VALUES (6061,"\<acclaim\>",0); 
-INSERT INTO `NamesProfanity` VALUES (6062,"\<amongoe",0); 
-INSERT INTO `NamesProfanity` VALUES (6063,"\<anabolica\>",0); 
-INSERT INTO `NamesProfanity` VALUES (6064,"\<analpunisher\>",0); 
-INSERT INTO `NamesProfanity` VALUES (6065,"nazi\>",0); 
-INSERT INTO `NamesProfanity` VALUES (6066,"\<anth?rax\>",0); 
-INSERT INTO `NamesProfanity` VALUES (6067,"\<blasehase\>",0); 
-INSERT INTO `NamesProfanity` VALUES (6068,"\<botox\>",0); 
-INSERT INTO `NamesProfanity` VALUES (6069,"\<bueckstueck\>",0); 
-INSERT INTO `NamesProfanity` VALUES (6070,"\<bumsnudel\>",0); 
-INSERT INTO `NamesProfanity` VALUES (6071,"\<cairne\>",0); 
-INSERT INTO `NamesProfanity` VALUES (6072,"\<christkind\>",0); 
-INSERT INTO `NamesProfanity` VALUES (6073,"\<crackdealer\>",0); 
-INSERT INTO `NamesProfanity` VALUES (6074,"king\>",0); 
-INSERT INTO `NamesProfanity` VALUES (6075,"\<darthjedi\>",0); 
-INSERT INTO `NamesProfanity` VALUES (6076,"\<denethor\>",0); 
-INSERT INTO `NamesProfanity` VALUES (6077,"\<derneger\>",0); 
-INSERT INTO `NamesProfanity` VALUES (6078,"\<diedroge\>",0); 
-INSERT INTO `NamesProfanity` VALUES (6079,"\<dollybuster\>",0); 
-INSERT INTO `NamesProfanity` VALUES (6080,"\<donpeperulez\>",0); 
-INSERT INTO `NamesProfanity` VALUES (6081,"\<dopecheffe\>",0); 
-INSERT INTO `NamesProfanity` VALUES (6082,"\<duke",0); 
-INSERT INTO `NamesProfanity` VALUES (6083,"\<dwalin\>",0); 
-INSERT INTO `NamesProfanity` VALUES (6084,"sucker\>",0); 
-INSERT INTO `NamesProfanity` VALUES (6085,"\<ebola\>",0); 
-INSERT INTO `NamesProfanity` VALUES (6086,"\<eichelkäse\>",0); 
-INSERT INTO `NamesProfanity` VALUES (6087,"f[ue]+rst\>",0); 
-INSERT INTO `NamesProfanity` VALUES (6088,"muschi\>",0); 
-INSERT INTO `NamesProfanity` VALUES (6089,"könig\>",0); 
-INSERT INTO `NamesProfanity` VALUES (6090,"\<eomer\>",0); 
-INSERT INTO `NamesProfanity` VALUES (6091,"\<erzengel\>",0); 
-INSERT INTO `NamesProfanity` VALUES (6092,"\<eternalhoden\>",0); 
-INSERT INTO `NamesProfanity` VALUES (6093,"\<euthanasie\>",0); 
-INSERT INTO `NamesProfanity` VALUES (6094,"\<fick",0); 
-INSERT INTO `NamesProfanity` VALUES (6095,"luder\>",0); 
-INSERT INTO `NamesProfanity` VALUES (6096,"kacke\>",0); 
-INSERT INTO `NamesProfanity` VALUES (6097,"\<fotz",0); 
-INSERT INTO `NamesProfanity` VALUES (6098,"tussi\>",0); 
-INSERT INTO `NamesProfanity` VALUES (6099,"\<frodobeutlin\>",0); 
-INSERT INTO `NamesProfanity` VALUES (6100,"\<frozenthrone\>",0); 
-INSERT INTO `NamesProfanity` VALUES (6101,"\<gandhi\>",0); 
-INSERT INTO `NamesProfanity` VALUES (6102,"\<ganja",0); 
-INSERT INTO `NamesProfanity` VALUES (6103,"\<gayoverlord\>",0); 
-INSERT INTO `NamesProfanity` VALUES (6104,"\<geilebraut\>",0); 
-INSERT INTO `NamesProfanity` VALUES (6105,"\<ginawild\>",0); 
-INSERT INTO `NamesProfanity` VALUES (6106,"\<goebbels\>",0); 
-INSERT INTO `NamesProfanity` VALUES (6107,"\<gott\>",0); 
-INSERT INTO `NamesProfanity` VALUES (6108,"\<graftaliban\>",0); 
-INSERT INTO `NamesProfanity` VALUES (6109,"\<hägar\>",0); 
-INSERT INTO `NamesProfanity` VALUES (6110,"\<hanfernte\>",0); 
-INSERT INTO `NamesProfanity` VALUES (6111,"\<heiland\>",0); 
-INSERT INTO `NamesProfanity` VALUES (6112,"\<hendrix\>",0); 
-INSERT INTO `NamesProfanity` VALUES (6113,"\<heroin",0); 
-INSERT INTO `NamesProfanity` VALUES (6114,"\<hordenhure\>",0); 
-INSERT INTO `NamesProfanity` VALUES (6115,"porno\>",0); 
-INSERT INTO `NamesProfanity` VALUES (6116,"\<[gk]adafi\>",0); 
-INSERT INTO `NamesProfanity` VALUES (6117,"\<kiffer",0); 
-INSERT INTO `NamesProfanity` VALUES (6118,"\<kleineralki\>",0); 
-INSERT INTO `NamesProfanity` VALUES (6119,"\<kleinerfurz\>",0); 
-INSERT INTO `NamesProfanity` VALUES (6120,"\<klitori",0); 
-INSERT INTO `NamesProfanity` VALUES (6121,"ficker\>",0); 
-INSERT INTO `NamesProfanity` VALUES (6122,"\<kpd\>",0); 
-INSERT INTO `NamesProfanity` VALUES (6123,"\<kruppstahl\>",0); 
-INSERT INTO `NamesProfanity` VALUES (6124,"\<mariuhanna\>",0); 
-INSERT INTO `NamesProfanity` VALUES (6125,"\<master",0); 
-INSERT INTO `NamesProfanity` VALUES (6126,"\<meisteryoda\>",0); 
-INSERT INTO `NamesProfanity` VALUES (6127,"\<mengele\>",0); 
-INSERT INTO `NamesProfanity` VALUES (6128,"fick\>",0); 
-INSERT INTO `NamesProfanity` VALUES (6129,"\<michaelmyers\>",0); 
-INSERT INTO `NamesProfanity` VALUES (6130,"\<milkahase\>",0); 
-INSERT INTO `NamesProfanity` VALUES (6131,"\<milkakuh\>",0); 
-INSERT INTO `NamesProfanity` VALUES (6132,"\<mistst[ue]+ck\>",0); 
-INSERT INTO `NamesProfanity` VALUES (6133,"\<moesen",0); 
-INSERT INTO `NamesProfanity` VALUES (6134,"\<möse",0); 
-INSERT INTO `NamesProfanity` VALUES (6135,"\<muschi",0); 
-INSERT INTO `NamesProfanity` VALUES (6136,"\<nachgeburt\>",0); 
-INSERT INTO `NamesProfanity` VALUES (6137,"\<nazghul\>",0); 
-INSERT INTO `NamesProfanity` VALUES (6138,"\<negerin\>",0); 
-INSERT INTO `NamesProfanity` VALUES (6139,"\<nikoleinchen\>",0); 
-INSERT INTO `NamesProfanity` VALUES (6140,"\<onkeltom\>",0); 
-INSERT INTO `NamesProfanity` VALUES (6141,"\<pimmel",0); 
-INSERT INTO `NamesProfanity` VALUES (6142,"\<pimper",0); 
-INSERT INTO `NamesProfanity` VALUES (6143,"\<pommespapst\>",0); 
-INSERT INTO `NamesProfanity` VALUES (6144,"\<popobumser\>",0); 
-INSERT INTO `NamesProfanity` VALUES (6145,"\<porno",0); 
-INSERT INTO `NamesProfanity` VALUES (6146,"\<princess",0); 
-INSERT INTO `NamesProfanity` VALUES (6147,"\<prinz\>",0); 
-INSERT INTO `NamesProfanity` VALUES (6148,"\<rammstein\>",0); 
-INSERT INTO `NamesProfanity` VALUES (6149,"\<rasputin\>",0); 
-INSERT INTO `NamesProfanity` VALUES (6150,"\<redbull\>",0); 
-INSERT INTO `NamesProfanity` VALUES (6151,"\<richthofen\>",0); 
-INSERT INTO `NamesProfanity` VALUES (6152,"\<sarin\>",0); 
-INSERT INTO `NamesProfanity` VALUES (6153,"\<schlampe",0); 
-INSERT INTO `NamesProfanity` VALUES (6154,"\<schwanz",0); 
-INSERT INTO `NamesProfanity` VALUES (6155,"\<sith\>",0); 
-INSERT INTO `NamesProfanity` VALUES (6156,"\<smeagol\>",0); 
-INSERT INTO `NamesProfanity` VALUES (6157,"\<sohngottes\>",0); 
-INSERT INTO `NamesProfanity` VALUES (6158,"\<spikelee\>",0); 
-INSERT INTO `NamesProfanity` VALUES (6159,"\<splintercell\>",0); 
-INSERT INTO `NamesProfanity` VALUES (6160,"\<suicide\>",0); 
-INSERT INTO `NamesProfanity` VALUES (6161,"\<suizidhoden\>",0); 
-INSERT INTO `NamesProfanity` VALUES (6162,"\<terrortunte\>",0); 
-INSERT INTO `NamesProfanity` VALUES (6163,"\<titanrosette\>",0); 
-INSERT INTO `NamesProfanity` VALUES (6164,"\<tittenmaus\>",0); 
-INSERT INTO `NamesProfanity` VALUES (6165,"\<tylerdurden\>",0); 
-INSERT INTO `NamesProfanity` VALUES (6166,"\<vagimampf\>",0); 
-INSERT INTO `NamesProfanity` VALUES (6167,"\<vanginus\>",0); 
-INSERT INTO `NamesProfanity` VALUES (6168,"\<votzentroll\>",0); 
-INSERT INTO `NamesProfanity` VALUES (6169,"\<warcrack\>",0); 
-INSERT INTO `NamesProfanity` VALUES (6170,"\<winnipuuh\>",0); 
-INSERT INTO `NamesProfanity` VALUES (6171,"\<wixxoor\>",0); 
-INSERT INTO `NamesProfanity` VALUES (6172,"\<wowdiablo\>",0); 
-INSERT INTO `NamesProfanity` VALUES (6173,"\<xerox\>",0); 
-INSERT INTO `NamesProfanity` VALUES (6174,"schlampe\>",0); 
-INSERT INTO `NamesProfanity` VALUES (6175,"zipfe?l\>",0); 
-INSERT INTO `NamesProfanity` VALUES (6176,"\<zuhälter",0); 
-INSERT INTO `NamesProfanity` VALUES (6177,"\<zwergpimmel\>",0); 
-INSERT INTO `NamesProfanity` VALUES (6178,"泰坦",4); 
-INSERT INTO `NamesProfanity` VALUES (6179,"萨格拉斯",4); 
-INSERT INTO `NamesProfanity` VALUES (6180,"埃瑞达",4); 
-INSERT INTO `NamesProfanity` VALUES (6181,"纳斯雷兹姆",4); 
-INSERT INTO `NamesProfanity` VALUES (6182,"基尔加丹",4); 
-INSERT INTO `NamesProfanity` VALUES (6183,"阿克蒙德",4); 
-INSERT INTO `NamesProfanity` VALUES (6184,"阿齐蒙德",4); 
-INSERT INTO `NamesProfanity` VALUES (6185,"提克迪奥斯",4); 
-INSERT INTO `NamesProfanity` VALUES (6186,"玛诺洛斯",4); 
-INSERT INTO `NamesProfanity` VALUES (6187,"拉格纳罗斯",4); 
-INSERT INTO `NamesProfanity` VALUES (6188,"瑟拉塞恩",4); 
-INSERT INTO `NamesProfanity` VALUES (6189,"奥拉基尔",4); 
-INSERT INTO `NamesProfanity` VALUES (6190,"耐普图隆",4); 
-INSERT INTO `NamesProfanity` VALUES (6191,"诺兹多姆",4); 
-INSERT INTO `NamesProfanity` VALUES (6192,"阿莱克斯塔萨",4); 
-INSERT INTO `NamesProfanity` VALUES (6193,"诺甘农",4); 
-INSERT INTO `NamesProfanity` VALUES (6194,"玛利苟斯",4); 
-INSERT INTO `NamesProfanity` VALUES (6195,"卡兹格罗斯",4); 
-INSERT INTO `NamesProfanity` VALUES (6196,"耐萨里奥",4); 
-INSERT INTO `NamesProfanity` VALUES (6197,"艾欧娜",4); 
-INSERT INTO `NamesProfanity` VALUES (6198,"阿曼瑟尔",4); 
-INSERT INTO `NamesProfanity` VALUES (6200,"艾露恩",4); 
-INSERT INTO `NamesProfanity` VALUES (6201,"塞纳留斯",4); 
-INSERT INTO `NamesProfanity` VALUES (6202,"艾萨拉",4); 
-INSERT INTO `NamesProfanity` VALUES (6203,"法里奥",4); 
-INSERT INTO `NamesProfanity` VALUES (6204,"玛法里奥",4); 
-INSERT INTO `NamesProfanity` VALUES (6205,"泰兰德",4); 
-INSERT INTO `NamesProfanity` VALUES (6206,"伊利丹",4); 
-INSERT INTO `NamesProfanity` VALUES (6207,"尤迪安",4); 
-INSERT INTO `NamesProfanity` VALUES (6208,"一粒蛋",4); 
-INSERT INTO `NamesProfanity` VALUES (6209,"玛维",4); 
-INSERT INTO `NamesProfanity` VALUES (6210,"伊瑟拉",4); 
-INSERT INTO `NamesProfanity` VALUES (6211,"达斯雷玛",4); 
-INSERT INTO `NamesProfanity` VALUES (6212,"艾格文",4); 
-INSERT INTO `NamesProfanity` VALUES (6213,"麦迪文",4); 
-INSERT INTO `NamesProfanity` VALUES (6214,"古尔丹",4); 
-INSERT INTO `NamesProfanity` VALUES (6215,"格罗姆",4); 
-INSERT INTO `NamesProfanity` VALUES (6216,"地狱咆哮",4); 
-INSERT INTO `NamesProfanity` VALUES (6217,"奥格瑞姆",4); 
-INSERT INTO `NamesProfanity` VALUES (6218,"毁灭之锤",4); 
-INSERT INTO `NamesProfanity` VALUES (6219,"布莱克汉",4); 
-INSERT INTO `NamesProfanity` VALUES (6220,"洛萨",4); 
-INSERT INTO `NamesProfanity` VALUES (6221,"卡德加",4); 
-INSERT INTO `NamesProfanity` VALUES (6222,"杜隆坦",4); 
-INSERT INTO `NamesProfanity` VALUES (6223,"普罗德摩尔",4); 
-INSERT INTO `NamesProfanity` VALUES (6224,"图拉扬",4); 
-INSERT INTO `NamesProfanity` VALUES (6225,"耐奥祖",4); 
-INSERT INTO `NamesProfanity` VALUES (6226,"萨尔",4); 
-INSERT INTO `NamesProfanity` VALUES (6227,"克尔苏加德",4); 
-INSERT INTO `NamesProfanity` VALUES (6228,"巫妖",4); 
-INSERT INTO `NamesProfanity` VALUES (6229,"麦格尼",4); 
-INSERT INTO `NamesProfanity` VALUES (6230,"穆拉丁",4); 
-INSERT INTO `NamesProfanity` VALUES (6231,"恶魔猎手",4); 
-INSERT INTO `NamesProfanity` VALUES (6232,"月之女祭司",4); 
-INSERT INTO `NamesProfanity` VALUES (6233,"丛林守护者",4); 
-INSERT INTO `NamesProfanity` VALUES (6234,"守望者",4); 
-INSERT INTO `NamesProfanity` VALUES (6235,"大法师",4); 
-INSERT INTO `NamesProfanity` VALUES (6236,"山丘之王",4); 
-INSERT INTO `NamesProfanity` VALUES (6237,"圣骑士",4); 
-INSERT INTO `NamesProfanity` VALUES (6238,"血法师",4); 
-INSERT INTO `NamesProfanity` VALUES (6239,"剑圣",4); 
-INSERT INTO `NamesProfanity` VALUES (6240,"先知",4); 
-INSERT INTO `NamesProfanity` VALUES (6241,"牛头酋长",4); 
-INSERT INTO `NamesProfanity` VALUES (6242,"暗影猎手",4); 
-INSERT INTO `NamesProfanity` VALUES (6243,"死亡骑士",4); 
-INSERT INTO `NamesProfanity` VALUES (6244,"恐惧魔王",4); 
-INSERT INTO `NamesProfanity` VALUES (6245,"地穴领主",4); 
-INSERT INTO `NamesProfanity` VALUES (6246,"亡灵",4); 
-INSERT INTO `NamesProfanity` VALUES (6247,"牛头",4); 
-INSERT INTO `NamesProfanity` VALUES (6248,"兽人",4); 
-INSERT INTO `NamesProfanity` VALUES (6249,"地精修补匠",4); 
-INSERT INTO `NamesProfanity` VALUES (6250,"黑暗游侠",4); 
-INSERT INTO `NamesProfanity` VALUES (6251,"深渊领主",4); 
-INSERT INTO `NamesProfanity` VALUES (6252,"熊猫酿酒师",4); 
-INSERT INTO `NamesProfanity` VALUES (6253,"熊猫酒仙",4); 
-INSERT INTO `NamesProfanity` VALUES (6254,"那迦海巫",4); 
-INSERT INTO `NamesProfanity` VALUES (6255,"火焰领主",4); 
-INSERT INTO `NamesProfanity` VALUES (6256,"兽王",4); 
-INSERT INTO `NamesProfanity` VALUES (6257,"炼金术士",4); 
-INSERT INTO `NamesProfanity` VALUES (6258,"希尔瓦娜斯",4); 
-INSERT INTO `NamesProfanity` VALUES (6259,"瓦利玛萨斯",4); 
-INSERT INTO `NamesProfanity` VALUES (6260,"阿尔萨斯",4); 
-INSERT INTO `NamesProfanity` VALUES (6261,"吉安娜",4); 
-INSERT INTO `NamesProfanity` VALUES (6262,"沃尔金",4); 
-INSERT INTO `NamesProfanity` VALUES (6263,"奥尼克希亚",4); 
-INSERT INTO `NamesProfanity` VALUES (6264,"暴风城",4); 
-INSERT INTO `NamesProfanity` VALUES (6265,"铁炉堡",4); 
-INSERT INTO `NamesProfanity` VALUES (6266,"幽暗城",4); 
-INSERT INTO `NamesProfanity` VALUES (6267,"奥格瑞玛",4); 
-INSERT INTO `NamesProfanity` VALUES (6268,"雷霆崖",4); 
-INSERT INTO `NamesProfanity` VALUES (6269,"达纳苏斯",4); 
-INSERT INTO `NamesProfanity` VALUES (6270,"奎尔萨拉斯",4); 
-INSERT INTO `NamesProfanity` VALUES (6271,"永恒之井",4); 
-INSERT INTO `NamesProfanity` VALUES (6272,"世界之树",4); 
-INSERT INTO `NamesProfanity` VALUES (6273,"诺莫瑞根",4); 
-INSERT INTO `NamesProfanity` VALUES (6274,"翡翠梦境",4); 
-INSERT INTO `NamesProfanity` VALUES (6275,"海加尔",4); 
-INSERT INTO `NamesProfanity` VALUES (6276,"月光林地",4); 
-INSERT INTO `NamesProfanity` VALUES (6277,"德拉诺",4); 
-INSERT INTO `NamesProfanity` VALUES (6278,"达拉然",4); 
-INSERT INTO `NamesProfanity` VALUES (6279,"塞拉莫",4); 
-INSERT INTO `NamesProfanity` VALUES (6280,"外域",4); 
-INSERT INTO `NamesProfanity` VALUES (6281,"诺森德",4); 
-INSERT INTO `NamesProfanity` VALUES (6282,"牛逼",4); 
-INSERT INTO `NamesProfanity` VALUES (6283,"牛比",4); 
-INSERT INTO `NamesProfanity` VALUES (6284,"傻叉",4); 
-INSERT INTO `NamesProfanity` VALUES (6285,"洞房",4); 
-INSERT INTO `NamesProfanity` VALUES (6286,"不败",4); 
-INSERT INTO `NamesProfanity` VALUES (6287,"物博",4); 
-INSERT INTO `NamesProfanity` VALUES (6288,"国家",4); 
-INSERT INTO `NamesProfanity` VALUES (6289,"乳汁",4); 
-INSERT INTO `NamesProfanity` VALUES (6290,"淫",4); 
-INSERT INTO `NamesProfanity` VALUES (6291,"你妈",4); 
-INSERT INTO `NamesProfanity` VALUES (6292,"他妈",4); 
-INSERT INTO `NamesProfanity` VALUES (6293,"操",4); 
-INSERT INTO `NamesProfanity` VALUES (6294,"狂抽猛送",4); 
-INSERT INTO `NamesProfanity` VALUES (6295,"测试",4); 
-INSERT INTO `NamesProfanity` VALUES (6296,"骂人",4); 
-INSERT INTO `NamesProfanity` VALUES (6301,"暴雪",4); 
-INSERT INTO `NamesProfanity` VALUES (6302,"矮人",4); 
-INSERT INTO `NamesProfanity` VALUES (6303,"侏儒",4); 
-INSERT INTO `NamesProfanity` VALUES (6305,"暗夜精灵",4); 
-INSERT INTO `NamesProfanity` VALUES (6306,"人类",4); 
-INSERT INTO `NamesProfanity` VALUES (6309,"巨魔",4); 
-INSERT INTO `NamesProfanity` VALUES (6310,"战士",4); 
-INSERT INTO `NamesProfanity` VALUES (6311,"法师",4); 
-INSERT INTO `NamesProfanity` VALUES (6312,"牧师",4); 
-INSERT INTO `NamesProfanity` VALUES (6313,"盗贼",4); 
-INSERT INTO `NamesProfanity` VALUES (6314,"术士",4); 
-INSERT INTO `NamesProfanity` VALUES (6315,"猎人",4); 
-INSERT INTO `NamesProfanity` VALUES (6317,"萨满祭司",4); 
-INSERT INTO `NamesProfanity` VALUES (6318,"德鲁伊",4); 
-INSERT INTO `NamesProfanity` VALUES (6319,"中国",4); 
-INSERT INTO `NamesProfanity` VALUES (6320,"日本",4); 
-INSERT INTO `NamesProfanity` VALUES (6321,"狂抽",4); 
-INSERT INTO `NamesProfanity` VALUES (6322,"猛插",4); 
-INSERT INTO `NamesProfanity` VALUES (6323,"猛送",4); 
-INSERT INTO `NamesProfanity` VALUES (6324,"狂插",4); 
-INSERT INTO `NamesProfanity` VALUES (6325,"你爸",4); 
-INSERT INTO `NamesProfanity` VALUES (6326,"艾泽拉斯",4); 
-INSERT INTO `NamesProfanity` VALUES (6327,"卡利姆多",4); 
-INSERT INTO `NamesProfanity` VALUES (6341,"butthhead",0); 
-INSERT INTO `NamesProfanity` VALUES (6361,"\<fu[ck]+[aeiou]+",0); 
-INSERT INTO `NamesProfanity` VALUES (6362,"官方人員",4); 
-INSERT INTO `NamesProfanity` VALUES (6363,"國民黨",4); 
-INSERT INTO `NamesProfanity` VALUES (6364,"親民黨",4); 
-INSERT INTO `NamesProfanity` VALUES (6365,"民進黨",4); 
-INSERT INTO `NamesProfanity` VALUES (6366,"台聯黨",4); 
-INSERT INTO `NamesProfanity` VALUES (6367,"台獨",4); 
-INSERT INTO `NamesProfanity` VALUES (6368,"台灣獨立",4); 
-INSERT INTO `NamesProfanity` VALUES (6369,"陳水扁",4); 
-INSERT INTO `NamesProfanity` VALUES (6370,"呂秀蓮",4); 
-INSERT INTO `NamesProfanity` VALUES (6371,"宋楚瑜",4); 
-INSERT INTO `NamesProfanity` VALUES (6372,"李登輝",4); 
-INSERT INTO `NamesProfanity` VALUES (6373,"連戰",4); 
-INSERT INTO `NamesProfanity` VALUES (6374,"馬英九",4); 
-INSERT INTO `NamesProfanity` VALUES (6375,"謝長廷",4); 
-INSERT INTO `NamesProfanity` VALUES (6376,"王俊博",4); 
-INSERT INTO `NamesProfanity` VALUES (6377,"林榮一",4); 
-INSERT INTO `NamesProfanity` VALUES (6838,"\<aasgeier\>",3); 
-INSERT INTO `NamesProfanity` VALUES (6839,"\<abgefuckt\>",3); 
-INSERT INTO `NamesProfanity` VALUES (6840,"\<abgespritzt\>",3); 
-INSERT INTO `NamesProfanity` VALUES (6841,"\<abkacken\>",3); 
-INSERT INTO `NamesProfanity` VALUES (6842,"\<abseiler\>",3); 
-INSERT INTO `NamesProfanity` VALUES (6843,"\<abspritzen\>",3); 
-INSERT INTO `NamesProfanity` VALUES (6844,"\<achselhaarratte\>",3); 
-INSERT INTO `NamesProfanity` VALUES (6845,"\<achsellecker\>",3); 
-INSERT INTO `NamesProfanity` VALUES (6846,"\<affenarsch\>",3); 
-INSERT INTO `NamesProfanity` VALUES (6847,"\<affengesicht\>",3); 
-INSERT INTO `NamesProfanity` VALUES (6848,"\<analbürste\>",3); 
-INSERT INTO `NamesProfanity` VALUES (6849,"\<analerotiker\>",3); 
-INSERT INTO `NamesProfanity` VALUES (6850,"\<analgeburt\>",3); 
-INSERT INTO `NamesProfanity` VALUES (6851,"\<analintruder\>",3); 
-INSERT INTO `NamesProfanity` VALUES (6852,"\<analkriecher\>",3); 
-INSERT INTO `NamesProfanity` VALUES (6853,"\<analrakete\>",3); 
-INSERT INTO `NamesProfanity` VALUES (6854,"\<analsex\>",3); 
-INSERT INTO `NamesProfanity` VALUES (6855,"\<analtranse\>",3); 
-INSERT INTO `NamesProfanity` VALUES (6856,"\<analtrompete\>",3); 
-INSERT INTO `NamesProfanity` VALUES (6857,"\<anus\>",3); 
-INSERT INTO `NamesProfanity` VALUES (6858,"\<anwichsen\>",3); 
-INSERT INTO `NamesProfanity` VALUES (6859,"\<arier\>",3); 
-INSERT INTO `NamesProfanity` VALUES (6860,"\<armleuchter\>",3); 
-INSERT INTO `NamesProfanity` VALUES (6861,"\<arsch",3); 
-INSERT INTO `NamesProfanity` VALUES (6862,"\<arsch\>",3); 
-INSERT INTO `NamesProfanity` VALUES (6863,"\<arse\>",3); 
-INSERT INTO `NamesProfanity` VALUES (6864,"\<arsehole\>",3); 
-INSERT INTO `NamesProfanity` VALUES (6865,"\<aryan\>",3); 
-INSERT INTO `NamesProfanity` VALUES (6866,"\<asselarsch\>",3); 
-INSERT INTO `NamesProfanity` VALUES (6867,"\<asylantensau\>",3); 
-INSERT INTO `NamesProfanity` VALUES (6868,"\<ausgeburt\>",3); 
-INSERT INTO `NamesProfanity` VALUES (6869,"\<ausländer",3); 
-INSERT INTO `NamesProfanity` VALUES (6870,"\<babystrich\>",3); 
-INSERT INTO `NamesProfanity` VALUES (6871,"\<bahnhofsbücker\>",3); 
-INSERT INTO `NamesProfanity` VALUES (6872,"\<baumhure\>",3); 
-INSERT INTO `NamesProfanity` VALUES (6873,"\<bazille\>",3); 
-INSERT INTO `NamesProfanity` VALUES (6874,"\<behämmert\>",3); 
-INSERT INTO `NamesProfanity` VALUES (6875,"\<beschissen\>",3); 
-INSERT INTO `NamesProfanity` VALUES (6876,"\<beschneiden\>",3); 
-INSERT INTO `NamesProfanity` VALUES (6877,"\<beschnitten\>",3); 
-INSERT INTO `NamesProfanity` VALUES (6878,"\<bettnässer\>",3); 
-INSERT INTO `NamesProfanity` VALUES (6879,"\<beutelratte\>",3); 
-INSERT INTO `NamesProfanity` VALUES (6880,"\<billighure\>",3); 
-INSERT INTO `NamesProfanity` VALUES (6881,"\<blas\>",3); 
-INSERT INTO `NamesProfanity` VALUES (6882,"\<bollen\>",3); 
-INSERT INTO `NamesProfanity` VALUES (6883,"\<bordsteinschwalbe\>",3); 
-INSERT INTO `NamesProfanity` VALUES (6884,"\<brechmittel\>",3); 
-INSERT INTO `NamesProfanity` VALUES (6885,"\<buk*ake\>",3); 
-INSERT INTO `NamesProfanity` VALUES (6886,"\<bumsbalken\>",3); 
-INSERT INTO `NamesProfanity` VALUES (6887,"\<bumsbrötchen\>",3); 
-INSERT INTO `NamesProfanity` VALUES (6888,"\<bumsen\>",3); 
-INSERT INTO `NamesProfanity` VALUES (6889,"\<bumser\>",3); 
-INSERT INTO `NamesProfanity` VALUES (6890,"\<callboy\>",3); 
-INSERT INTO `NamesProfanity` VALUES (6891,"\<callgirl\>",3); 
-INSERT INTO `NamesProfanity` VALUES (6892,"\<canaille\>",3); 
-INSERT INTO `NamesProfanity` VALUES (6893,"\<cann[aio]bis\>",3); 
-INSERT INTO `NamesProfanity` VALUES (6894,"\<cocaine\>",3); 
-INSERT INTO `NamesProfanity` VALUES (6895,"\<cocksucker\>",3); 
-INSERT INTO `NamesProfanity` VALUES (6896,"\<dämlack\>",3); 
-INSERT INTO `NamesProfanity` VALUES (6897,"\<dämlich",3); 
-INSERT INTO `NamesProfanity` VALUES (6898,"\<darmdübel\>",3); 
-INSERT INTO `NamesProfanity` VALUES (6899,"\<daumenlutscher\>",3); 
-INSERT INTO `NamesProfanity` VALUES (6900,"\<deppl?\>",3); 
-INSERT INTO `NamesProfanity` VALUES (6901,"\<dickarsch\>",3); 
-INSERT INTO `NamesProfanity` VALUES (6902,"\<dickschädel\>",3); 
-INSERT INTO `NamesProfanity` VALUES (6903,"\<dildo\>",3); 
-INSERT INTO `NamesProfanity` VALUES (6904,"\<dildolutscher\>",3); 
-INSERT INTO `NamesProfanity` VALUES (6905,"\<dirne\>",3); 
-INSERT INTO `NamesProfanity` VALUES (6906,"\<dödel\>",3); 
-INSERT INTO `NamesProfanity` VALUES (6907,"\<doofbacke\>",3); 
-INSERT INTO `NamesProfanity` VALUES (6908,"\<doofmann\>",3); 
-INSERT INTO `NamesProfanity` VALUES (6909,"\<dopamin\>",3); 
-INSERT INTO `NamesProfanity` VALUES (6910,"\<dorfdepp\>",3); 
-INSERT INTO `NamesProfanity` VALUES (6911,"\<dösbattl\>",3); 
-INSERT INTO `NamesProfanity` VALUES (6912,"\<döskopf\>",3); 
-INSERT INTO `NamesProfanity` VALUES (6913,"\<dreckfurz\>",3); 
-INSERT INTO `NamesProfanity` VALUES (6914,"\<drecks",3); 
-INSERT INTO `NamesProfanity` VALUES (6915,"\<droge\>",3); 
-INSERT INTO `NamesProfanity` VALUES (6916,"\<dummdödel\>",3); 
-INSERT INTO `NamesProfanity` VALUES (6917,"\<dummfick\>",3); 
-INSERT INTO `NamesProfanity` VALUES (6918,"\<dummschlumpf\>",3); 
-INSERT INTO `NamesProfanity` VALUES (6919,"\<dummschwätzer\>",3); 
-INSERT INTO `NamesProfanity` VALUES (6920,"\<dummschwein\>",3); 
-INSERT INTO `NamesProfanity` VALUES (6921,"\<dunkelmann\>",3); 
-INSERT INTO `NamesProfanity` VALUES (6922,"\<durchficken\>",3); 
-INSERT INTO `NamesProfanity` VALUES (6923,"\<durchgefickt\>",3); 
-INSERT INTO `NamesProfanity` VALUES (6924,"\<durchnehmen\>",3); 
-INSERT INTO `NamesProfanity` VALUES (6925,"\<durchvögeln\>",3); 
-INSERT INTO `NamesProfanity` VALUES (6926,"\<eichelbirne\>",3); 
-INSERT INTO `NamesProfanity` VALUES (6928,"\<champagne\>",2); 
-INSERT INTO `NamesProfanity` VALUES (6929,"\<cherokee \>",2); 
-INSERT INTO `NamesProfanity` VALUES (6930,"\<cognac\>",2); 
-INSERT INTO `NamesProfanity` VALUES (6931,"\<copulate\>",2); 
-INSERT INTO `NamesProfanity` VALUES (6932,"\<corona\>",2); 
-INSERT INTO `NamesProfanity` VALUES (6933,"\<crack\>",2); 
-INSERT INTO `NamesProfanity` VALUES (6934,"\<damned\>",2); 
-INSERT INTO `NamesProfanity` VALUES (6935,"\<deepthroat\>",2); 
-INSERT INTO `NamesProfanity` VALUES (6936,"\<dietpills\>",2); 
-INSERT INTO `NamesProfanity` VALUES (6937,"\<dope\>",2); 
-INSERT INTO `NamesProfanity` VALUES (6938,"\<ecstacy\>",2); 
-INSERT INTO `NamesProfanity` VALUES (6939,"\<extasy\>",2); 
-INSERT INTO `NamesProfanity` VALUES (6940,"\<fornicat",2); 
-INSERT INTO `NamesProfanity` VALUES (6941,"\<fusck",2); 
-INSERT INTO `NamesProfanity` VALUES (6942,"\<fux",2); 
-INSERT INTO `NamesProfanity` VALUES (6943,"\<ghb\>",2); 
-INSERT INTO `NamesProfanity` VALUES (6944,"\<granddragon\>",2); 
-INSERT INTO `NamesProfanity` VALUES (6945,"\<guiness\>",2); 
-INSERT INTO `NamesProfanity` VALUES (6946,"\<hash\>",2); 
-INSERT INTO `NamesProfanity` VALUES (6947,"\<hustler\>",2); 
-INSERT INTO `NamesProfanity` VALUES (6948,"\<jackdaniels\>",2); 
-INSERT INTO `NamesProfanity` VALUES (6949,"\<jennajameson\>",2); 
-INSERT INTO `NamesProfanity` VALUES (6950,"\<jessicadee\>",2); 
-INSERT INTO `NamesProfanity` VALUES (6951,"\<jeweldenyle\>",2); 
-INSERT INTO `NamesProfanity` VALUES (6952,"\<jillkelly\>",2); 
-INSERT INTO `NamesProfanity` VALUES (6953,"\<jimbeam\>",2); 
-INSERT INTO `NamesProfanity` VALUES (6954,"\<josecuervo\>",2); 
-INSERT INTO `NamesProfanity` VALUES (6955,"\<juliashton\>",2); 
-INSERT INTO `NamesProfanity` VALUES (6956,"\<karadavis\>",2); 
-INSERT INTO `NamesProfanity` VALUES (6957,"\<kif\>",2); 
-INSERT INTO `NamesProfanity` VALUES (6958,"\<kikkityler \>",2); 
-INSERT INTO `NamesProfanity` VALUES (6959,"\<kylacole\>",2); 
-INSERT INTO `NamesProfanity` VALUES (6960,"\<kylieireland\>",2); 
-INSERT INTO `NamesProfanity` VALUES (6961,"\<lancegear \>",2); 
-INSERT INTO `NamesProfanity` VALUES (6962,"\<larryflynt\>",2); 
-INSERT INTO `NamesProfanity` VALUES (6963,"\<lecher\>",2); 
-INSERT INTO `NamesProfanity` VALUES (6964,"\<loloferrari\>",2); 
-INSERT INTO `NamesProfanity` VALUES (6965,"\<lunalane\>",2); 
-INSERT INTO `NamesProfanity` VALUES (6966,"\<maltliquor\>",2); 
-INSERT INTO `NamesProfanity` VALUES (6967,"\<mariacheca\>",2); 
-INSERT INTO `NamesProfanity` VALUES (6968,"\<mariatakagi\>",2); 
-INSERT INTO `NamesProfanity` VALUES (6969,"\<marisadiaz \>",2); 
-INSERT INTO `NamesProfanity` VALUES (6970,"\<markdalton  \>",2); 
-INSERT INTO `NamesProfanity` VALUES (6971,"\<markwolff \>",2); 
-INSERT INTO `NamesProfanity` VALUES (6972,"\<marycarey \>",2); 
-INSERT INTO `NamesProfanity` VALUES (6973,"\<mimimiyagi\>",2); 
-INSERT INTO `NamesProfanity` VALUES (6974,"\<nympho\>",2); 
-INSERT INTO `NamesProfanity` VALUES (6975,"\<obsession\>",2); 
-INSERT INTO `NamesProfanity` VALUES (6976,"\<opiate\>",2); 
-INSERT INTO `NamesProfanity` VALUES (6977,"\<orgie\>",2); 
-INSERT INTO `NamesProfanity` VALUES (6978,"\<pornstar\>",2); 
-INSERT INTO `NamesProfanity` VALUES (6979,"\<prepubescent\>",2); 
-INSERT INTO `NamesProfanity` VALUES (6980,"\<redneck\>",2); 
-INSERT INTO `NamesProfanity` VALUES (6981,"\<reneelarue\>",2); 
-INSERT INTO `NamesProfanity` VALUES (6982,"\<ryanconner \>",2); 
-INSERT INTO `NamesProfanity` VALUES (6983,"\<ryanwagner \>",2); 
-INSERT INTO `NamesProfanity` VALUES (6984,"\<sarastjames \>",2); 
-INSERT INTO `NamesProfanity` VALUES (6985,"\<traceyadams\>",2); 
-INSERT INTO `NamesProfanity` VALUES (6986,"\<tracilords\>",2); 
-INSERT INTO `NamesProfanity` VALUES (6987,"\<tylerfaith\>",2); 
-INSERT INTO `NamesProfanity` VALUES (6988,"\<urethra\>",2); 
-INSERT INTO `NamesProfanity` VALUES (6989,"\<veronicahart\>",2); 
-INSERT INTO `NamesProfanity` VALUES (6990,"\<weed\>",2); 
-INSERT INTO `NamesProfanity` VALUES (6991,"\<wildturkey\>",2); 
-INSERT INTO `NamesProfanity` VALUES (6992,"hefner\>",2); 
-INSERT INTO `NamesProfanity` VALUES (6993,"\<asiacarrera\>",2); 
-INSERT INTO `NamesProfanity` VALUES (6994,"\<aurorasnow\>",2); 
-INSERT INTO `NamesProfanity` VALUES (6995,"\<bacardi\>",2); 
-INSERT INTO `NamesProfanity` VALUES (6996,"\<scat\>",2); 
-INSERT INTO `NamesProfanity` VALUES (6997,"\<scatology\>",2); 
-INSERT INTO `NamesProfanity` VALUES (6998,"\<schnapps\>",2); 
-INSERT INTO `NamesProfanity` VALUES (6999,"\<selenasteele\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7000,"\<sexy\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7001,"\<sherriangel\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7002,"\<skeetskeet\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7003,"\<vagina",2); 
-INSERT INTO `NamesProfanity` VALUES (7004,"\<agentorange\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7005,"\<aids\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7006,"\<al[ck]ohol",2); 
-INSERT INTO `NamesProfanity` VALUES (7007,"\<alecpowers\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7008,"\<alexwilcox\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7009,"\<anal\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7010,"\<angeladevi\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7011,"\<angeldust\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7012,"\<beer\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7013,"\<eomer\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7014,"butthhead",2); 
-INSERT INTO `NamesProfanity` VALUES (7015,"\<sodomize\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7016,"\<sodomy\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7017,"\<sunsetthomas\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7018,"\<sylviasaint\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7019,"\<tequila\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7020,"\<terapatrick\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7021,"\<thc\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7022,"\<tiabella\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7023,"\<tommycruise\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7024,"\<tonyzerega\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7025,"\<vincevouyer\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7026,"\<vodka\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7027,"\<vulva\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7028,"\<w[ei]+n[ei]+r\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7029,"\<whiskey\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7030,"\<willclark\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7031,"aryan\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7032,"nazi\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7033,"\<anth?rax\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7034,"\<botox\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7035,"\<cairne\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7036,"\<crackdealer\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7037,"king\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7038,"\<darthjedi\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7039,"\<denethor\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7040,"\<duke",2); 
-INSERT INTO `NamesProfanity` VALUES (7041,"\<dwalin\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7042,"\<ebola\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7043,"f[ue]+rst\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7044,"\<eternalhoden\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7045,"\<euthanasie\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7046,"\<fick",2); 
-INSERT INTO `NamesProfanity` VALUES (7047,"\<frozenthrone\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7048,"\<gandhi\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7049,"\<ganja",2); 
-INSERT INTO `NamesProfanity` VALUES (7050,"\<goebbels\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7051,"\<gott\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7052,"\<hgar\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7053,"\<heiland\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7054,"\<hendrix\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7055,"\<heroin",2); 
-INSERT INTO `NamesProfanity` VALUES (7056,"porno\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7057,"\<[gk]adafi\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7058,"\<kiffer",2); 
-INSERT INTO `NamesProfanity` VALUES (7059,"\<klitori",2); 
-INSERT INTO `NamesProfanity` VALUES (7060,"\<kpd\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7061,"\<mariuhanna\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7062,"\<master",2); 
-INSERT INTO `NamesProfanity` VALUES (7063,"\<meisteryoda\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7064,"\<mengele\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7065,"fick\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7066,"\<michaelmyers\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7067,"\<milkahase\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7068,"\<milkakuh\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7069,"\<nazghul\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7070,"\<porno",2); 
-INSERT INTO `NamesProfanity` VALUES (7071,"\<princess",2); 
-INSERT INTO `NamesProfanity` VALUES (7072,"\<prinz\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7073,"\<rammstein\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7074,"\<rasputin\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7075,"\<redbull\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7076,"\<richthofen\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7077,"\<sarin\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7078,"\<sith\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7079,"\<smeagol\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7080,"\<spikelee\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7081,"\<splintercell\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7082,"\<suicide\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7083,"\<tylerdurden\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7084,"\<vagimampf\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7085,"\<vanginus\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7086,"\<votzentroll\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7087,"\<warcrack\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7088,"\<winnipuuh\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7089,"\<wixxoor\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7090,"\<wowdiablo\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7091,"\<xerox\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7092,"\<absinthe\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7093,"\<absolut\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7094,"\<agnostic\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7095,"\<pussy",2); 
-INSERT INTO `NamesProfanity` VALUES (7096,"\<rape\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7097,"\<aceofspades\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7098,"\<chinks\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7099,"\<dikes\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7100,"\<dildos\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7101,"\<sativa\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7102,"\<indica\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7103,"\<dike\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7104,"\<raped\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7105,"\<raping\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7106,"\<dyke\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7107,"\<mj\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7108,"\<doobie\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7109,"\<junk[ie]",2); 
-INSERT INTO `NamesProfanity` VALUES (7110,"\<defecat",2); 
-INSERT INTO `NamesProfanity` VALUES (7111,"\<alquaeda\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7112,"\<amerikkkan\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7113,"\<amphetamine\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7114,"\<ejaculate\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7115,"\<scrotum",2); 
-INSERT INTO `NamesProfanity` VALUES (7116,"\<fisting\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7117,"\<aryan",2); 
-INSERT INTO `NamesProfanity` VALUES (7118,"\<backdoor\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7119,"titt[iey]*s\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7120,"\<bi\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7121,"\<bigfatasscow\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7122,"bondage\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7123,"boobs\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7124,"breast\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7125,"\<buttocks\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7126,"\<[ck]oitus",2); 
-INSERT INTO `NamesProfanity` VALUES (7127,"\<condom",2); 
-INSERT INTO `NamesProfanity` VALUES (7128,"\<dahoe\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7129,"\<damn\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7130,"\<di[ae][rh]+ea",2); 
-INSERT INTO `NamesProfanity` VALUES (7131,"\<dirtyho\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7132,"\<domination\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7133,"\<dutch\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7134,"\<enema\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7135,"\<erotic",2); 
-INSERT INTO `NamesProfanity` VALUES (7136,"jackass\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7137,"\<facism\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7138,"\<fakeboobs\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7139,"\<fart\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7140,"\<fetish",2); 
-INSERT INTO `NamesProfanity` VALUES (7141,"fetish\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7142,"\<filthymuslim\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7143,"\<focker\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7144,"\<foreplay\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7145,"\<foreskin\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7146,"\<frottage\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7147,"\<fuk\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7148,"\<fukass\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7149,"\<gay\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7150,"\<genital",2); 
-INSERT INTO `NamesProfanity` VALUES (7151,"\<genitals\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7152,"\<gigolo\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7153,"\<gonorrhea\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7154,"\<grummz\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7155,"\<hentail\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7156,"\<holocaust\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7157,"\<horny\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7158,"\<hot\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7159,"\<j.*jameson\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7160,"\<lesb\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7161,"\<lesbian\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7162,"pussy\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7163,"\<lingerie\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7164,"\<lube\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7165,"\<lubricant\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7166,"\<lust\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7167,"\<asshole",2); 
-INSERT INTO `NamesProfanity` VALUES (7168,"\<fingerbang\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7169,"\<gangbang\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7170,"\<gangrape\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7171,"\<pussies\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7172,"\<rapes\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7173,"\<fags\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7174,"boob",2); 
-INSERT INTO `NamesProfanity` VALUES (7175,"\<blowjob",2); 
-INSERT INTO `NamesProfanity` VALUES (7176,"\<feces",2); 
-INSERT INTO `NamesProfanity` VALUES (7177,"\<nipple",2); 
-INSERT INTO `NamesProfanity` VALUES (7178,"nipples\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7179,"prostitute",2); 
-INSERT INTO `NamesProfanity` VALUES (7180,"\<coke\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7181,"\<morphine\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7182,"\<nudity\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7183,"\<nuts\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7184,"\<pagan\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7185,"\<perv\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7186,"\<pervert\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7187,"\<piss\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7188,"\<playboy\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7189,"\<playgirl\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7190,"\<polish\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7191,"\<prebubescent\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7192,"\<queer\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7193,"\<reich\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7194,"\<r.*jeremy\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7195,"\<screw\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7196,"\<seamen\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7197,"\<spreadmylegs\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7198,"\<stripper",2); 
-INSERT INTO `NamesProfanity` VALUES (7199,"\<suck\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7200,"\<sukkitdown\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7201,"\<swingers\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7202,"\<teabag",2); 
-INSERT INTO `NamesProfanity` VALUES (7203,"\<terrorist\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7204,"\<thickbush\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7205,"\<threesome\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7206,"\<snatch",2); 
-INSERT INTO `NamesProfanity` VALUES (7207,"\<updabut\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7208,"\<vasect",2); 
-INSERT INTO `NamesProfanity` VALUES (7209,"\<white\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7210,"cock\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7211,"blowjob\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7212,"\<tardpopsicle\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7213,"\<urmom\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7214,"\<turdsplat\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7215,"\<chokeoncocks\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7216,"\<littlearse\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7217,"\<holybijesis\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7218,"\<niggs\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7219,"\<sacofricosis\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7220,"\<polesmokers\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7221,"\<sega\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7222,"\<sex",2); 
-INSERT INTO `NamesProfanity` VALUES (7223,"\<shadowbane\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7224,"\<shane",2); 
-INSERT INTO `NamesProfanity` VALUES (7225,"\<shiznit\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7226,"\<shortbus\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7227,"\<erection\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7228,"\<smoked\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7229,"\<snowwhite\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7230,"\<oral\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7231,"\<sperm",2); 
-INSERT INTO `NamesProfanity` VALUES (7232,"\<poop\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7233,"\<spluge\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7234,"\<suck",2); 
-INSERT INTO `NamesProfanity` VALUES (7235,"\<supermario\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7236,"support",2); 
-INSERT INTO `NamesProfanity` VALUES (7237,"\<sex\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7238,"\<suppuku\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7239,"\<sirbong\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7240,"\<spank\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7241,"\<speculum\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7242,"\<urinat",2); 
-INSERT INTO `NamesProfanity` VALUES (7243,"\<venereal\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7244,"\<virgin\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7245,"\<advil\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7246,"\<amputee\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7247,"\<amtrak\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7248,"\<anis\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7249,"\<anolinctus\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7250,"\<antichrist\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7251,"\<arathorn\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7252,"\<arian\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7253,"\<arsonist\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7254,"\<blackenstein\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7255,"\<blacksabbath\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7256,"\<bnet\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7257,"\<bootylicious\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7258,"\<bra\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7259,"\<chinaman\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7260,"\<chronik\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7261,"\<colgate\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7262,"\<coprophagy\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7263,"\<crackhead\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7264,"\<dammit\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7265,"\<darky\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7266,"\<darvocet\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7267,"\<databasesys\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7268,"\<deckardcain\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7269,"\<dr\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7270,"\<dukeofwhales\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7271,"\<dumbass\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7272,"\<ecstasy\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7273,"\<ensign\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7274,"\<fcuk\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7275,"\<ferrari\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7276,"\<fetus",2); 
-INSERT INTO `NamesProfanity` VALUES (7277,"\<fockerz\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7278,"\<fooker\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7279,"cunt\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7280,"\<ghandi\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7281,"\<gofukyorself\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7282,"\<gonadian\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7283,"\<goochgravy\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7284,"\<gookenator\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7285,"\<hemplock\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7286,"\<herpies\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7287,"\<homoerectus\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7288,"\<hore\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7289,"\<hotdamn\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7290,"\<hungelf\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7291,"\<indian\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7292,"\<irapekids\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7293,"\<ironchef\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7294,"\<jc\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7295,"\<jedi\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7296,"\<[gj]en[ao]cide\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7297,"\<jugs\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7298,"\<klismaphilia\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7299,"\<kokigami\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7300,"\<koon\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7301,"\<kosherpork\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7302,"\<lardass\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7303,"\<laurabush\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7304,"\<marlboroman\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7305,"\<masterbaiter\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7306,"\<maxipad\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7307,"\<menstrual\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7308,"\<mhz\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7309,"\<michaeljack\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7310,"bastard\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7311,"\<misogynist\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7312,"\<mister\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7313,"\<mr\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7314,"\<narcoticus\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7315,"\<nigahh\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7316,"\<npc",2); 
-INSERT INTO `NamesProfanity` VALUES (7317,"\<nug\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7318,"\<nunriggers\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7319,"\<nwa\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7320,"\<omgwtf\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7321,"\<opiate",2); 
-INSERT INTO `NamesProfanity` VALUES (7322,"\<oreos\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7323,"\<ovaltine\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7324,"\<papsmear\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7325,"\<pederasty\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7326,"\<penthouse\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7327,"\<pimp",2); 
-INSERT INTO `NamesProfanity` VALUES (7328,"\<pinktaco\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7329,"mofo\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7330,"\<poomaster\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7331,"\<poonjuice\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7332,"\<poop",2); 
-INSERT INTO `NamesProfanity` VALUES (7333,"\<pwnzor\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7334,"\<quadoushka\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7335,"\<r.*nad[ae]r\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7336,"\<stud\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7337,"\<submissive\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7338,"\<swiftnuggs\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7339,"\<swastika\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7340,"\<sybian\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7341,"\<toeofcamel\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7342,"\<tokyorose\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7343,"\<urmama\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7344,"\<voltron\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7345,"\<wangmaster\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7346,"\<wanker\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7347,"\<wetdream\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7348,"\<whitebread\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7349,"\<wigger\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7350,"\<williamhung\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7351,"\<windex\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7352,"\<witchking\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7353,"\<x.*x\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7354,"\<yosemitesam\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7355,"\<youranus\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7356,"\<zoolander\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7357,"condom\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7358,"\<kosher",2); 
-INSERT INTO `NamesProfanity` VALUES (7359,"sexy",2); 
-INSERT INTO `NamesProfanity` VALUES (7360,"\<bestiality\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7361,"\<black\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7362,"\<blackie\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7363,"\<bloodyhell\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7364,"\<blow\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7365,"\<blunt\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7366,"\<bollocks\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7367,"\<boobs",2); 
-INSERT INTO `NamesProfanity` VALUES (7368,"\<boofer\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7369,"\<bourbon\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7370,"\<breast",2); 
-INSERT INTO `NamesProfanity` VALUES (7371,"\<budda\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7372,"\<budlight\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7373,"\<budweiser\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7374,"\<bugger\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7375,"\<bustydusty\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7376,"\<butt\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7377,"\<buttman\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7378,"\<candyandes\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7379,"\<caucazoid\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7380,"\<cawk\>",2); 
-INSERT INTO `NamesProfanity` VALUES (7381,"\<fu[ck]+[aeiou]+",2); 
-INSERT INTO `NamesProfanity` VALUES (7382,"\<cervesa\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7383,"\<champagne\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7384,"\<chaseylain\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7385,"\<cheeba\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7386,"\<cherokee \>",3); 
-INSERT INTO `NamesProfanity` VALUES (7387,"\<chino\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7388,"\<chloejones \>",3); 
-INSERT INTO `NamesProfanity` VALUES (7389,"\<christilake\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7390,"\<chrisward \>",3); 
-INSERT INTO `NamesProfanity` VALUES (7391,"\<cocostarfish\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7392,"\<cognac\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7393,"\<cootch\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7394,"\<cooter\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7395,"\<copulate\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7396,"\<cornholes\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7397,"\<corona\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7398,"\<crack\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7399,"\<cracker\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7400,"\<crap\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7401,"\<damned\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7402,"\<dank\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7403,"\<deancoulter\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7404,"\<debidiamond \>",3); 
-INSERT INTO `NamesProfanity` VALUES (7405,"\<deepthroat\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7406,"\<devinderay \>",3); 
-INSERT INTO `NamesProfanity` VALUES (7407,"\<dianazyle \>",3); 
-INSERT INTO `NamesProfanity` VALUES (7408,"\<dietpills\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7409,"\<dirtysanchez\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7410,"\<ditavontease\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7411,"\<doggystyle\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7412,"\<dope\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7413,"\<duckbutter\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7414,"\<ecstacy\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7415,"\<edpowers \>",3); 
-INSERT INTO `NamesProfanity` VALUES (7416,"\<eggplant\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7417,"\<ericaboyer \>",3); 
-INSERT INTO `NamesProfanity` VALUES (7418,"\<extasy\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7419,"\<facial\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7420,"\<fluffer\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7421,"\<fornicat",3); 
-INSERT INTO `NamesProfanity` VALUES (7422,"\<freebase\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7423,"\<fusck",3); 
-INSERT INTO `NamesProfanity` VALUES (7424,"\<fux",3); 
-INSERT INTO `NamesProfanity` VALUES (7425,"\<gagepowers\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7426,"\<gew\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7427,"\<ghb\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7428,"\<ghetto\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7429,"\<gingerhill\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7430,"\<gloryhole\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7431,"\<goldschlager\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7432,"\<goombah\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7433,"\<granddragon\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7434,"\<greaseball\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7435,"\<greaser\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7436,"\<gspot\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7437,"\<guiness\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7438,"\<gunja\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7439,"\<handjob\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7440,"\<hash\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7441,"\<headdoctor\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7442,"\<heidifleiss\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7443,"\<hmo\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7444,"\<honky\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7445,"\<hoodrat\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7446,"\<hookah\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7447,"\<horney\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7448,"\<hustler\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7449,"\<inarivachs\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7450,"\<j.*bobbit\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7451,"\<j.*holmes\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7452,"\<jackdaniels\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7453,"\<jadeeast\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7454,"\<jadehsu \>",3); 
-INSERT INTO `NamesProfanity` VALUES (7455,"\<jadestclair\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7456,"\<jagermeister\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7457,"\<janacova\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7458,"\<jennahaze\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7459,"\<jennajameson\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7460,"\<jenteal\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7461,"\<jessicadee\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7462,"\<jeweldenyle\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7463,"\<jillkelly\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7464,"\<jimbeam\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7465,"\<josecuervo\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7466,"\<juliashton\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7467,"\<karadavis\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7468,"\<keef\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7469,"\<kif\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7470,"\<kikkityler \>",3); 
-INSERT INTO `NamesProfanity` VALUES (7471,"\<kobetai\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7472,"\<kooter\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7473,"\<krystalsteal\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7474,"\<kyke\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7475,"\<kylacole\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7476,"\<kylieireland\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7477,"\<lancegear \>",3); 
-INSERT INTO `NamesProfanity` VALUES (7478,"\<larryflynt\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7479,"\<lecher\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7480,"\<liquidx\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7481,"\<loloferrari\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7482,"\<long.*dong\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7483,"\<ludes\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7484,"\<lunalane\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7485,"\<maltliquor\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7486,"\<mariacheca\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7487,"\<mariatakagi\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7488,"\<marisadiaz \>",3); 
-INSERT INTO `NamesProfanity` VALUES (7489,"\<markdalton  \>",3); 
-INSERT INTO `NamesProfanity` VALUES (7490,"\<markwolff \>",3); 
-INSERT INTO `NamesProfanity` VALUES (7491,"\<marycarey \>",3); 
-INSERT INTO `NamesProfanity` VALUES (7492,"\<mayate\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7493,"\<meatwad\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7494,"\<methhead\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7495,"\<methmonster\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7496,"\<mikolee\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7497,"\<mimimiyagi\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7498,"\<moneyshot\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7499,"\<muff\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7500,"\<mushrooms\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7501,"\<nickelbag\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7502,"\<nikkibenz\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7503,"\<nikkidial\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7504,"\<nip\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7505,"\<nizzle\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7506,"\<nubian",3); 
-INSERT INTO `NamesProfanity` VALUES (7507,"\<nympho\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7508,"\<obsession\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7509,"\<opiate\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7510,"\<orgy\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7511,"\<panties\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7512,"\<pecker\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7513,"\<peternorth\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7514,"\<pissedoff\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7515,"\<pissoff\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7516,"\<pornstar\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7517,"\<prepubescent\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7518,"\<prick\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7519,"\<pube\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7520,"\<punjab\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7521,"\<punkass\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7522,"\<pusse\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7523,"\<randywest\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7524,"\<rebeccalord\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7525,"\<rebeccaporn\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7526,"\<redneck\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7527,"\<reneelarue\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7528,"\<ricer\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7529,"\<rustytrumpet\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7530,"\<ryanconner \>",3); 
-INSERT INTO `NamesProfanity` VALUES (7531,"\<ryanwagner \>",3); 
-INSERT INTO `NamesProfanity` VALUES (7532,"\<sarastjames \>",3); 
-INSERT INTO `NamesProfanity` VALUES (7533,"\<tosser\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7534,"\<tossingsalad\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7535,"\<tosssalad\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7536,"\<traceyadams\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7537,"\<tracilords\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7538,"\<tranny\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7539,"\<ttboy\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7540,"\<tyfox\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7541,"\<tylerfaith\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7542,"\<urethra\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7543,"\<veronicahart\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7544,"\<wankoff\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7545,"\<weed\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7546,"\<wej\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7547,"\<wench\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7548,"\<wildturkey\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7549,"hefner\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7550,"snatch\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7551,"vagina\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7552,"\<annaslut\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7553,"\<asiacarrera\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7554,"\<aurorasnow\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7555,"\<bacardi\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7556,"\<beaner\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7557,"\<beanlicker\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7558,"\<scat\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7559,"\<scatology\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7560,"\<schlong",3); 
-INSERT INTO `NamesProfanity` VALUES (7561,"\<schnapps\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7562,"\<schoolboy",3); 
-INSERT INTO `NamesProfanity` VALUES (7563,"\<selenasteele\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7564,"\<sexy\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7565,"\<seymorebutts\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7566,"\<sheethead\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7567,"\<sherriangel\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7568,"\<shizzle\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7569,"\<shlong\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7570,"\<shmegma\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7571,"\<shrooms\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7572,"\<skeet\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7573,"\<skeetskeet\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7574,"\<vagina",3); 
-INSERT INTO `NamesProfanity` VALUES (7575,"\<adulteress\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7576,"\<adulterous\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7577,"\<adultery\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7578,"\<adultsonly\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7579,"\<agentorange\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7580,"\<aids\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7581,"\<al[ck]ohol",3); 
-INSERT INTO `NamesProfanity` VALUES (7582,"\<alecpowers\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7583,"\<alexwilcox\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7584,"\<amaretto\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7585,"\<anal\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7586,"\<angeladevi\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7587,"\<angeldust\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7588,"\<anglo\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7589,"\<anheiser\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7590,"\<annamalle\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7591,"\<beer\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7592,"\<erzengel\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7593,"könig\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7594,"\<eomer\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7595,"butthead",3); 
-INSERT INTO `NamesProfanity` VALUES (7596,"\<slope\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7597,"\<smack\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7598,"\<smut\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7599,"\<snowball",3); 
-INSERT INTO `NamesProfanity` VALUES (7600,"\<sodomize\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7601,"\<sodomy\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7602,"\<speedball\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7603,"\<spew\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7604,"\<spreadeagle\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7605,"\<spunk\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7606,"\<std\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7607,"\<sunsetthomas\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7608,"\<sylviasaint\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7609,"\<teet[sz]\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7610,"\<tequila\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7611,"\<terapatrick\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7612,"\<thc\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7613,"\<tiabella\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7614,"\<toadlicker\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7615,"\<toak\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7616,"\<toke\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7617,"\<tombyron\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7618,"\<tommycruise\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7619,"\<tonyzerega\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7620,"\<tossalad\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7621,"\<vibrator\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7622,"\<vincevouyer\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7623,"\<vodka\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7624,"\<vulva\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7625,"\<w[ei]+n[ei]+r\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7626,"\<wank\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7627,"\<whackoff\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7628,"\<whiskey\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7629,"\<willclark\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7630,"\<yellow\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7631,"\<zigzag\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7632,"aryan\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7633,"\<acclaim\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7634,"\<amongoe",3); 
-INSERT INTO `NamesProfanity` VALUES (7635,"\<anabolica\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7636,"\<analpunisher\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7637,"nazi\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7638,"\<anth?rax\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7639,"\<blasehase\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7640,"\<botox\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7641,"\<bueckstueck\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7642,"\<bumsnudel\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7643,"\<cairne\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7644,"\<christkind\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7645,"\<crackdealer\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7646,"king\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7647,"\<darthjedi\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7648,"\<denethor\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7649,"\<derneger\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7650,"\<diedroge\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7651,"\<dollybuster\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7652,"\<donpeperulez\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7653,"\<dopecheffe\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7654,"\<duke",3); 
-INSERT INTO `NamesProfanity` VALUES (7655,"\<dwalin\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7656,"sucker\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7657,"\<ebola\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7658,"\<eichelkäse\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7659,"f[ue]+rst\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7660,"muschi\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7661,"\<eternalhoden\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7662,"\<euthanasie\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7663,"\<fick",3); 
-INSERT INTO `NamesProfanity` VALUES (7664,"luder\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7665,"kacke\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7666,"\<fotz",3); 
-INSERT INTO `NamesProfanity` VALUES (7667,"tussi\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7668,"\<frodobeutlin\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7669,"\<frozenthrone\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7670,"\<gandhi\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7671,"\<ganja",3); 
-INSERT INTO `NamesProfanity` VALUES (7672,"\<gayoverlord\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7673,"\<geilebraut\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7674,"\<ginawild\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7675,"\<goebbels\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7676,"\<gott\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7677,"\<graftaliban\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7678,"\<hägar\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7679,"\<hanfernte\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7680,"\<heiland\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7681,"\<hendrix\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7682,"\<heroin",3); 
-INSERT INTO `NamesProfanity` VALUES (7683,"\<hordenhure\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7684,"porno\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7685,"\<[gk]adafi\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7686,"\<kiffer",3); 
-INSERT INTO `NamesProfanity` VALUES (7687,"\<kleineralki\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7688,"\<kleinerfurz\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7689,"\<klitori",3); 
-INSERT INTO `NamesProfanity` VALUES (7690,"ficker\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7691,"\<kpd\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7692,"\<kruppstahl\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7693,"\<mariuhanna\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7694,"\<master",3); 
-INSERT INTO `NamesProfanity` VALUES (7695,"\<meisteryoda\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7696,"\<mengele\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7697,"fick\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7698,"\<michaelmyers\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7699,"\<milkahase\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7700,"\<milkakuh\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7701,"\<mistst[ue]+ck\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7702,"\<moesen",3); 
-INSERT INTO `NamesProfanity` VALUES (7703,"\<möse",3); 
-INSERT INTO `NamesProfanity` VALUES (7704,"\<muschi",3); 
-INSERT INTO `NamesProfanity` VALUES (7705,"\<nachgeburt\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7706,"\<nazghul\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7707,"\<negerin\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7708,"\<nikoleinchen\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7709,"\<onkeltom\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7710,"\<pimmel",3); 
-INSERT INTO `NamesProfanity` VALUES (7711,"\<pimper",3); 
-INSERT INTO `NamesProfanity` VALUES (7712,"\<pommespapst\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7713,"\<popobumser\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7714,"\<porno",3); 
-INSERT INTO `NamesProfanity` VALUES (7715,"\<princess",3); 
-INSERT INTO `NamesProfanity` VALUES (7716,"\<prinz\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7717,"\<rammstein\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7718,"\<rasputin\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7719,"\<redbull\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7720,"\<richthofen\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7721,"\<sarin\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7722,"\<schlampe",3); 
-INSERT INTO `NamesProfanity` VALUES (7723,"\<schwanz",3); 
-INSERT INTO `NamesProfanity` VALUES (7724,"\<sith\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7725,"\<smeagol\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7726,"\<sohngottes\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7727,"\<spikelee\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7728,"\<splintercell\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7729,"\<suicide\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7730,"\<suizidhoden\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7731,"\<terrortunte\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7732,"\<titanrosette\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7733,"\<tittenmaus\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7734,"\<tylerdurden\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7735,"\<vagimampf\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7736,"\<vanginus\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7737,"\<votzentroll\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7738,"\<warcrack\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7739,"\<winnipuuh\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7740,"\<wixxoor\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7741,"\<wowdiablo\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7742,"\<xerox\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7743,"schlampe\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7744,"zipfe?l\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7745,"\<zuhälter",3); 
-INSERT INTO `NamesProfanity` VALUES (7746,"\<zwergpimmel\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7747,"18년",3); 
-INSERT INTO `NamesProfanity` VALUES (7748,"18놈",3); 
-INSERT INTO `NamesProfanity` VALUES (7749,"\<absinthe\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7750,"18새끼",3); 
-INSERT INTO `NamesProfanity` VALUES (7751,"\<absolut\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7752,"\<chink\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7753,"\<agnostic\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7754,"\<pussy",3); 
-INSERT INTO `NamesProfanity` VALUES (7755,"\<rape\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7756,"\<aceofspades\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7757,"\<pusher",3); 
-INSERT INTO `NamesProfanity` VALUES (7758,"\<chinks\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7759,"\<dikes\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7760,"\<dildos\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7761,"\<sativa\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7762,"\<indica\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7763,"\<skunkweed\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7764,"\<dike\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7765,"\<raped\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7766,"\<raping\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7767,"dong",3); 
-INSERT INTO `NamesProfanity` VALUES (7768,"\<dyke\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7769,"\<mj\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7770,"\<doobie\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7771,"\<stoner",3); 
-INSERT INTO `NamesProfanity` VALUES (7772,"\<junk[ie]",3); 
-INSERT INTO `NamesProfanity` VALUES (7773,"\<defecat",3); 
-INSERT INTO `NamesProfanity` VALUES (7774,"\<alquaeda\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7775,"\<amerikkkan\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7776,"\<amphetamine\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7777,"\<ejaculate\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7778,"\<scrotum",3); 
-INSERT INTO `NamesProfanity` VALUES (7779,"\<fisting\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7780,"\<arse",3); 
-INSERT INTO `NamesProfanity` VALUES (7781,"\<cock",3); 
-INSERT INTO `NamesProfanity` VALUES (7782,"\<aryan",3); 
-INSERT INTO `NamesProfanity` VALUES (7783,"\<backdoor\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7784,"titt[iey]*s\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7785,"\<bi\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7786,"\<bigfatasscow\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7787,"bondage\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7788,"boobs\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7789,"breast\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7790,"\<buttocks\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7791,"\<[ck]oitus",3); 
-INSERT INTO `NamesProfanity` VALUES (7792,"\<condom",3); 
-INSERT INTO `NamesProfanity` VALUES (7793,"\<dahoe\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7794,"\<damn\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7795,"\<darkwanker\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7796,"\<di[ae][rh]+ea",3); 
-INSERT INTO `NamesProfanity` VALUES (7797,"dick\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7798,"\<dirtyho\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7799,"\<domination\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7800,"\<dutch\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7801,"\<enema\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7802,"\<erotic",3); 
-INSERT INTO `NamesProfanity` VALUES (7803,"jackass\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7804,"\<facism\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7805,"\<fakeboobs\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7806,"\<fart\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7807,"\<fetish",3); 
-INSERT INTO `NamesProfanity` VALUES (7808,"fetish\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7809,"\<filthymuslim\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7810,"\<focker\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7811,"\<foreplay\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7812,"\<foreskin\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7813,"\<frottage\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7814,"\<fuk\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7815,"\<fukass\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7816,"\<gay\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7817,"\<genital",3); 
-INSERT INTO `NamesProfanity` VALUES (7818,"\<genitals\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7819,"\<gigolo\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7820,"\<gonorrhea\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7821,"\<grummz\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7822,"\<hairyhorny\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7823,"\<hardboob\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7824,"\<hentail\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7825,"\<hiv\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7826,"\<holocaust\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7827,"\<horny\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7828,"\<hot\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7829,"\<j.*jameson\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7830,"\<kinky\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7831,"\<kraut\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7832,"\<lesb\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7833,"\<lesbian\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7834,"pussy\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7835,"\<lingerie\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7836,"\<load\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7837,"\<lube\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7838,"\<lubricant\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7839,"\<lust\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7840,"\<maidenhead\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7841,"후장뚫어",3); 
-INSERT INTO `NamesProfanity` VALUES (7842,"\<asshole",3); 
-INSERT INTO `NamesProfanity` VALUES (7843,"\<fingerbang\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7844,"\<gangbang\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7845,"\<gangrape\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7846,"\<japs\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7847,"\<jizzing\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7848,"\<gizzing\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7849,"\<pussies\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7850,"\<rapes\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7851,"\<saladtosser\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7852,"\<fags\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7853,"boob",3); 
-INSERT INTO `NamesProfanity` VALUES (7854,"\<bast[aeiou]rd",3); 
-INSERT INTO `NamesProfanity` VALUES (7855,"\<beastiality\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7856,"\<blowjob",3); 
-INSERT INTO `NamesProfanity` VALUES (7857,"\<boffer\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7858,"\<clowjob\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7859,"\<donkeypunch\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7860,"\<fawker\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7861,"\<feces",3); 
-INSERT INTO `NamesProfanity` VALUES (7862,"\<nipple",3); 
-INSERT INTO `NamesProfanity` VALUES (7863,"nipples\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7864,"prostitute",3); 
-INSERT INTO `NamesProfanity` VALUES (7865,"\<coke\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7866,"\<morphine\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7867,"\<nudity\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7868,"\<nuts\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7869,"\<pagan\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7870,"\<perv\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7871,"\<pervert\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7872,"\<phawk\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7873,"\<piss\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7874,"\<playboy\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7875,"\<playgirl\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7876,"\<polish\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7877,"\<prebubescent\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7878,"\<queer\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7879,"\<reich\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7880,"\<r.*jeremy\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7881,"\<screw\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7882,"\<seamen\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7883,"\<spreadmylegs\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7884,"\<stripper",3); 
-INSERT INTO `NamesProfanity` VALUES (7885,"\<suck\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7886,"\<sukkitdown\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7887,"\<swingers\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7888,"\<teabag",3); 
-INSERT INTO `NamesProfanity` VALUES (7889,"\<terrorist\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7890,"\<thickbush\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7891,"\<threesome\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7892,"\<snatch",3); 
-INSERT INTO `NamesProfanity` VALUES (7893,"\<updabut\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7894,"\<vasect",3); 
-INSERT INTO `NamesProfanity` VALUES (7895,"\<white\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7896,"\<negro",3); 
-INSERT INTO `NamesProfanity` VALUES (7897,"\<tinytits\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7898,"cock\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7899,"blowjob\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7900,"\<tardpopsicle\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7901,"\<urmom\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7902,"fag\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7903,"\<dick",3); 
-INSERT INTO `NamesProfanity` VALUES (7904,"\<turdsplat\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7905,"\<chokeoncocks\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7906,"\<littlearse\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7907,"\<holybijesis\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7908,"\<niggs\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7909,"\<sacofricosis\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7910,"\<polesmokers\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7911,"\<sega\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7912,"\<sex",3); 
-INSERT INTO `NamesProfanity` VALUES (7913,"\<shadowbane\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7914,"\<shane",3); 
-INSERT INTO `NamesProfanity` VALUES (7915,"\<shiznit\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7916,"\<shortbus\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7917,"\<tramps\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7918,"\<erection\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7919,"\<smoked\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7920,"\<snowwhite\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7921,"\<oral\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7922,"\<sperm",3); 
-INSERT INTO `NamesProfanity` VALUES (7923,"\<poop\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7924,"\<spluge\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7925,"\<suck",3); 
-INSERT INTO `NamesProfanity` VALUES (7926,"\<supermario\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7927,"support",3); 
-INSERT INTO `NamesProfanity` VALUES (7928,"\<sex\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7929,"\<suppuku\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7930,"\<sirbong\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7931,"\<spank\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7932,"\<speculum\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7933,"\<streaker",3); 
-INSERT INTO `NamesProfanity` VALUES (7934,"\<tribadism\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7935,"\<upmybutthole\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7936,"\<urinat",3); 
-INSERT INTO `NamesProfanity` VALUES (7937,"\<venereal\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7938,"\<virgin\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7939,"\<warslut\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7940,"\<wood\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7941,"\<advil\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7942,"\<amputee\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7943,"\<amtrak\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7944,"\<anis\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7945,"\<anolinctus\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7946,"\<antichrist\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7947,"\<arathorn\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7948,"\<arian\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7949,"\<arsonist\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7950,"\<blackenstein\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7951,"\<blacksabbath\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7952,"\<bnet\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7953,"\<bootylicious\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7954,"\<bra\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7955,"\<chinaman\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7956,"\<chronik\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7957,"\<colgate\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7958,"\<coprophagy\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7959,"\<crackhead\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7960,"\<dammit\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7961,"\<darky\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7962,"\<darvocet\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7963,"\<databasesys\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7964,"\<deckardcain\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7965,"\<dr\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7966,"\<dukeofwhales\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7967,"\<dumbass\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7968,"\<ecstasy\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7969,"\<ensign\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7970,"\<fcuk\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7971,"\<ferrari\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7972,"\<fetus",3); 
-INSERT INTO `NamesProfanity` VALUES (7973,"\<fockerz\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7974,"\<fooker\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7975,"cunt\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7976,"\<ghandi\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7977,"\<gofukyorself\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7978,"\<gonadian\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7979,"\<goochgravy\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7980,"\<gookenator\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7981,"\<hemplock\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7982,"\<herpies\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7983,"\<homoerectus\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7984,"\<hore\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7985,"\<hotdamn\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7986,"\<hungelf\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7987,"\<indian\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7988,"\<irapekids\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7989,"\<ironchef\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7990,"\<jc\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7991,"\<jedi\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7992,"\<[gj]en[ao]cide\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7993,"\<jugs\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7994,"\<klismaphilia\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7995,"\<kokigami\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7996,"\<koon\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7997,"\<kosherpork\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7998,"\<lardass\>",3); 
-INSERT INTO `NamesProfanity` VALUES (7999,"\<laurabush\>",3); 
-INSERT INTO `NamesProfanity` VALUES (8000,"\<marlboroman\>",3); 
-INSERT INTO `NamesProfanity` VALUES (8001,"\<masterbaiter\>",3); 
-INSERT INTO `NamesProfanity` VALUES (8002,"\<maxipad\>",3); 
-INSERT INTO `NamesProfanity` VALUES (8003,"\<menstrual\>",3); 
-INSERT INTO `NamesProfanity` VALUES (8004,"\<mhz\>",3); 
-INSERT INTO `NamesProfanity` VALUES (8005,"\<michaeljack\>",3); 
-INSERT INTO `NamesProfanity` VALUES (8006,"bastard\>",3); 
-INSERT INTO `NamesProfanity` VALUES (8007,"\<misogynist\>",3); 
-INSERT INTO `NamesProfanity` VALUES (8008,"\<mister\>",3); 
-INSERT INTO `NamesProfanity` VALUES (8009,"\<mr\>",3); 
-INSERT INTO `NamesProfanity` VALUES (8010,"\<narcoticus\>",3); 
-INSERT INTO `NamesProfanity` VALUES (8011,"\<nigahh\>",3); 
-INSERT INTO `NamesProfanity` VALUES (8012,"\<npc",3); 
-INSERT INTO `NamesProfanity` VALUES (8013,"\<nug\>",3); 
-INSERT INTO `NamesProfanity` VALUES (8014,"\<nunriggers\>",3); 
-INSERT INTO `NamesProfanity` VALUES (8015,"\<nwa\>",3); 
-INSERT INTO `NamesProfanity` VALUES (8016,"\<omgwtf\>",3); 
-INSERT INTO `NamesProfanity` VALUES (8017,"\<opiate",3); 
-INSERT INTO `NamesProfanity` VALUES (8018,"\<oreos\>",3); 
-INSERT INTO `NamesProfanity` VALUES (8019,"\<ovaltine\>",3); 
-INSERT INTO `NamesProfanity` VALUES (8020,"\<papsmear\>",3); 
-INSERT INTO `NamesProfanity` VALUES (8021,"\<pederasty\>",3); 
-INSERT INTO `NamesProfanity` VALUES (8022,"\<penthouse\>",3); 
-INSERT INTO `NamesProfanity` VALUES (8023,"\<pimp",3); 
-INSERT INTO `NamesProfanity` VALUES (8024,"\<pinktaco\>",3); 
-INSERT INTO `NamesProfanity` VALUES (8025,"mofo\>",3); 
-INSERT INTO `NamesProfanity` VALUES (8026,"\<poomaster\>",3); 
-INSERT INTO `NamesProfanity` VALUES (8027,"\<poonjuice\>",3); 
-INSERT INTO `NamesProfanity` VALUES (8028,"\<poop",3); 
-INSERT INTO `NamesProfanity` VALUES (8029,"\<pwnzor\>",3); 
-INSERT INTO `NamesProfanity` VALUES (8030,"\<quadoushka\>",3); 
-INSERT INTO `NamesProfanity` VALUES (8031,"\<r.*nad[ae]r\>",3); 
-INSERT INTO `NamesProfanity` VALUES (8032,"\<stud\>",3); 
-INSERT INTO `NamesProfanity` VALUES (8033,"\<submissive\>",3); 
-INSERT INTO `NamesProfanity` VALUES (8034,"\<swiftnuggs\>",3); 
-INSERT INTO `NamesProfanity` VALUES (8035,"\<trans",3); 
-INSERT INTO `NamesProfanity` VALUES (8036,"\<uglynig\>",3); 
-INSERT INTO `NamesProfanity` VALUES (8037,"\<swastika\>",3); 
-INSERT INTO `NamesProfanity` VALUES (8038,"\<sybian\>",3); 
-INSERT INTO `NamesProfanity` VALUES (8039,"\<toeofcamel\>",3); 
-INSERT INTO `NamesProfanity` VALUES (8040,"\<tokyorose\>",3); 
-INSERT INTO `NamesProfanity` VALUES (8041,"\<urmama\>",3); 
-INSERT INTO `NamesProfanity` VALUES (8042,"\<voltron\>",3); 
-INSERT INTO `NamesProfanity` VALUES (8043,"\<wangmaster\>",3); 
-INSERT INTO `NamesProfanity` VALUES (8044,"\<wanker\>",3); 
-INSERT INTO `NamesProfanity` VALUES (8045,"\<wetdream\>",3); 
-INSERT INTO `NamesProfanity` VALUES (8046,"\<whitebread\>",3); 
-INSERT INTO `NamesProfanity` VALUES (8047,"\<wigger\>",3); 
-INSERT INTO `NamesProfanity` VALUES (8048,"\<williamhung\>",3); 
-INSERT INTO `NamesProfanity` VALUES (8049,"\<windex\>",3); 
-INSERT INTO `NamesProfanity` VALUES (8050,"\<witchking\>",3); 
-INSERT INTO `NamesProfanity` VALUES (8051,"\<x.*x\>",3); 
-INSERT INTO `NamesProfanity` VALUES (8052,"\<yosemitesam\>",3); 
-INSERT INTO `NamesProfanity` VALUES (8053,"\<youranus\>",3); 
-INSERT INTO `NamesProfanity` VALUES (8054,"\<zoolander\>",3); 
-INSERT INTO `NamesProfanity` VALUES (8055,"condom\>",3); 
-INSERT INTO `NamesProfanity` VALUES (8056,"jebus\>",3); 
-INSERT INTO `NamesProfanity` VALUES (8057,"\<kosher",3); 
-INSERT INTO `NamesProfanity` VALUES (8058,"menstrual",3); 
-INSERT INTO `NamesProfanity` VALUES (8059,"sexy",3); 
-INSERT INTO `NamesProfanity` VALUES (8060,"\<bestiality\>",3); 
-INSERT INTO `NamesProfanity` VALUES (8061,"\<bizzle\>",3); 
-INSERT INTO `NamesProfanity` VALUES (8062,"\<black\>",3); 
-INSERT INTO `NamesProfanity` VALUES (8063,"\<blackie\>",3); 
-INSERT INTO `NamesProfanity` VALUES (8064,"\<bloodyhell\>",3); 
-INSERT INTO `NamesProfanity` VALUES (8065,"\<blow\>",3); 
-INSERT INTO `NamesProfanity` VALUES (8066,"\<blunt\>",3); 
-INSERT INTO `NamesProfanity` VALUES (8067,"\<bollocks\>",3); 
-INSERT INTO `NamesProfanity` VALUES (8068,"\<boobs",3); 
-INSERT INTO `NamesProfanity` VALUES (8069,"\<boofer\>",3); 
-INSERT INTO `NamesProfanity` VALUES (8070,"\<bourbon\>",3); 
-INSERT INTO `NamesProfanity` VALUES (8071,"\<brazuca\>",3); 
-INSERT INTO `NamesProfanity` VALUES (8072,"\<breast",3); 
-INSERT INTO `NamesProfanity` VALUES (8073,"\<budda\>",3); 
-INSERT INTO `NamesProfanity` VALUES (8074,"\<buddahead\>",3); 
-INSERT INTO `NamesProfanity` VALUES (8075,"\<budlight\>",3); 
-INSERT INTO `NamesProfanity` VALUES (8076,"\<budweiser\>",3); 
-INSERT INTO `NamesProfanity` VALUES (8077,"\<bugger\>",3); 
-INSERT INTO `NamesProfanity` VALUES (8078,"\<bustydusty\>",3); 
-INSERT INTO `NamesProfanity` VALUES (8079,"\<butt\>",3); 
-INSERT INTO `NamesProfanity` VALUES (8080,"\<buttman\>",3); 
-INSERT INTO `NamesProfanity` VALUES (8081,"\<candyandes\>",3); 
-INSERT INTO `NamesProfanity` VALUES (8082,"\<caucazoid\>",3); 
-INSERT INTO `NamesProfanity` VALUES (8083,"\<cawk\>",3); 
-INSERT INTO `NamesProfanity` VALUES (8084,"\<fu[ck]+[aeiou]+",3); 
-INSERT INTO `NamesProfanity` VALUES (8085,"\<cervesa\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8086,"\<champagne\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8087,"\<chaseylain\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8088,"\<cheeba\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8089,"\<cherokee \>",4); 
-INSERT INTO `NamesProfanity` VALUES (8090,"\<chino\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8091,"\<chloejones \>",4); 
-INSERT INTO `NamesProfanity` VALUES (8092,"\<christilake\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8093,"\<chrisward \>",4); 
-INSERT INTO `NamesProfanity` VALUES (8094,"\<cocostarfish\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8095,"\<cognac\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8096,"\<cootch\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8097,"\<cooter\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8098,"\<copulate\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8099,"\<cornholes\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8100,"\<corona\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8101,"\<crack\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8102,"\<cracker\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8103,"\<crap\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8104,"\<damned\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8105,"\<dank\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8106,"\<deancoulter\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8107,"\<debidiamond \>",4); 
-INSERT INTO `NamesProfanity` VALUES (8108,"\<deepthroat\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8109,"\<devinderay \>",4); 
-INSERT INTO `NamesProfanity` VALUES (8110,"\<dianazyle \>",4); 
-INSERT INTO `NamesProfanity` VALUES (8111,"\<dietpills\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8112,"\<dirtysanchez\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8113,"\<ditavontease\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8114,"\<doggystyle\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8115,"\<dope\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8116,"\<duckbutter\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8117,"\<ecstacy\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8118,"\<edpowers \>",4); 
-INSERT INTO `NamesProfanity` VALUES (8119,"\<eggplant\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8120,"\<ericaboyer \>",4); 
-INSERT INTO `NamesProfanity` VALUES (8121,"\<extasy\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8122,"\<facial\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8123,"\<fluffer\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8124,"\<fornicat",4); 
-INSERT INTO `NamesProfanity` VALUES (8125,"\<freebase\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8126,"\<fusck",4); 
-INSERT INTO `NamesProfanity` VALUES (8127,"\<fux",4); 
-INSERT INTO `NamesProfanity` VALUES (8128,"\<gagepowers\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8129,"\<gew\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8130,"\<ghb\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8131,"\<ghetto\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8132,"\<gingerhill\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8133,"\<gloryhole\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8134,"\<goldschlager\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8135,"\<goombah\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8136,"\<granddragon\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8137,"\<greaseball\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8138,"\<greaser\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8139,"\<gspot\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8140,"\<guiness\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8141,"\<gunja\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8142,"\<handjob\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8143,"\<hash\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8144,"\<headdoctor\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8145,"\<heidifleiss\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8146,"\<hmo\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8147,"\<honky\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8148,"\<hoodrat\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8149,"\<hookah\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8150,"\<horney\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8151,"\<hustler\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8152,"\<inarivachs\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8153,"\<j.*bobbit\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8154,"\<j.*holmes\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8155,"\<jackdaniels\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8156,"\<jadeeast\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8157,"\<jadehsu \>",4); 
-INSERT INTO `NamesProfanity` VALUES (8158,"\<jadestclair\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8159,"\<jagermeister\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8160,"\<janacova\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8161,"\<jennahaze\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8162,"\<jennajameson\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8163,"\<jenteal\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8164,"\<jessicadee\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8165,"\<jeweldenyle\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8166,"\<jillkelly\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8167,"\<jimbeam\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8168,"\<josecuervo\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8169,"\<juliashton\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8170,"\<karadavis\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8171,"\<keef\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8172,"\<kif\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8173,"\<kikkityler \>",4); 
-INSERT INTO `NamesProfanity` VALUES (8174,"\<kobetai\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8175,"\<kooter\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8176,"\<krystalsteal\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8177,"\<kyke\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8178,"\<kylacole\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8179,"\<kylieireland\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8180,"\<lancegear \>",4); 
-INSERT INTO `NamesProfanity` VALUES (8181,"\<larryflynt\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8182,"\<lecher\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8183,"\<liquidx\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8184,"\<loloferrari\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8185,"\<long.*dong\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8186,"\<ludes\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8187,"\<lunalane\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8188,"\<maltliquor\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8189,"\<mariacheca\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8190,"\<mariatakagi\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8191,"\<marisadiaz \>",4); 
-INSERT INTO `NamesProfanity` VALUES (8192,"\<markdalton  \>",4); 
-INSERT INTO `NamesProfanity` VALUES (8193,"\<markwolff \>",4); 
-INSERT INTO `NamesProfanity` VALUES (8194,"\<marycarey \>",4); 
-INSERT INTO `NamesProfanity` VALUES (8195,"\<mayate\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8196,"\<meatwad\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8197,"\<methhead\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8198,"\<methmonster\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8199,"\<mikolee\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8200,"\<mimimiyagi\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8201,"\<moneyshot\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8202,"\<muff\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8203,"\<mushrooms\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8204,"\<nickelbag\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8205,"\<nikkibenz\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8206,"\<nikkidial\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8207,"\<nip\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8208,"\<nizzle\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8209,"\<nubian",4); 
-INSERT INTO `NamesProfanity` VALUES (8210,"\<nympho\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8211,"\<obsession\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8212,"\<opiate\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8213,"\<orgy\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8214,"\<panties\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8215,"\<pecker\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8216,"\<peternorth\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8217,"\<pissedoff\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8218,"\<pissoff\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8219,"\<pornstar\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8220,"\<prepubescent\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8221,"\<prick\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8222,"\<pube\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8223,"\<punjab\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8224,"\<punkass\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8225,"\<pusse\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8226,"\<randywest\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8227,"\<rebeccalord\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8228,"\<rebeccaporn\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8229,"\<redneck\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8230,"\<reneelarue\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8231,"\<ricer\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8232,"\<rustytrumpet\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8233,"\<ryanconner \>",4); 
-INSERT INTO `NamesProfanity` VALUES (8234,"\<ryanwagner \>",4); 
-INSERT INTO `NamesProfanity` VALUES (8235,"\<sarastjames \>",4); 
-INSERT INTO `NamesProfanity` VALUES (8236,"\<tosser\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8237,"\<tossingsalad\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8238,"\<tosssalad\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8239,"\<traceyadams\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8240,"\<tracilords\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8241,"\<tranny\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8242,"\<ttboy\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8243,"\<tyfox\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8244,"\<tylerfaith\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8245,"\<urethra\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8246,"\<veronicahart\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8247,"\<wankoff\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8248,"\<weed\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8249,"\<wej\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8250,"\<wench\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8251,"\<wildturkey\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8252,"hefner\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8253,"snatch\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8254,"vagina\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8255,"\<annaslut\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8256,"\<asiacarrera\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8257,"\<aurorasnow\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8258,"\<bacardi\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8259,"\<beaner\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8260,"\<beanlicker\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8261,"\<scat\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8262,"\<scatology\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8263,"\<schlong",4); 
-INSERT INTO `NamesProfanity` VALUES (8264,"\<schnapps\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8265,"\<schoolboy",4); 
-INSERT INTO `NamesProfanity` VALUES (8266,"\<selenasteele\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8267,"\<sexy\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8268,"\<seymorebutts\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8269,"\<sheethead\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8270,"\<sherriangel\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8271,"\<shizzle\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8272,"\<shlong\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8273,"\<shmegma\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8274,"\<shrooms\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8275,"\<skeet\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8276,"\<skeetskeet\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8277,"\<vagina",4); 
-INSERT INTO `NamesProfanity` VALUES (8278,"\<adulteress\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8279,"\<adulterous\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8280,"\<adultery\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8281,"\<adultsonly\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8282,"\<agentorange\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8283,"\<aids\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8284,"\<al[ck]ohol",4); 
-INSERT INTO `NamesProfanity` VALUES (8285,"\<alecpowers\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8286,"\<alexwilcox\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8287,"\<amaretto\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8288,"\<anal\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8289,"\<angeladevi\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8290,"\<angeldust\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8291,"\<anglo\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8292,"\<anheiser\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8293,"\<annamalle\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8294,"\<beer\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8295,"\<erzengel\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8296,"könig\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8297,"\<eomer\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8298,"butthhead",4); 
-INSERT INTO `NamesProfanity` VALUES (8299,"\<slope\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8300,"\<smack\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8301,"\<smut\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8302,"\<snowball",4); 
-INSERT INTO `NamesProfanity` VALUES (8303,"\<sodomize\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8304,"\<sodomy\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8305,"\<speedball\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8306,"\<spew\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8307,"\<spreadeagle\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8308,"\<spunk\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8309,"\<std\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8310,"\<sunsetthomas\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8311,"\<sylviasaint\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8312,"\<teet[sz]\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8313,"\<tequila\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8314,"\<terapatrick\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8315,"\<thc\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8316,"\<tiabella\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8317,"\<toadlicker\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8318,"\<toak\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8319,"\<toke\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8320,"\<tombyron\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8321,"\<tommycruise\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8322,"\<tonyzerega\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8323,"\<tossalad\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8324,"\<vibrator\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8325,"\<vincevouyer\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8326,"\<vodka\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8327,"\<vulva\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8328,"\<w[ei]+n[ei]+r\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8329,"\<wank\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8330,"\<whackoff\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8331,"\<whiskey\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8332,"\<willclark\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8333,"\<yellow\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8334,"\<zigzag\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8335,"aryan\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8336,"\<acclaim\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8337,"\<amongoe",4); 
-INSERT INTO `NamesProfanity` VALUES (8338,"\<anabolica\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8339,"\<analpunisher\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8340,"nazi\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8341,"\<anth?rax\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8342,"\<blasehase\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8343,"\<botox\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8344,"\<bueckstueck\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8345,"\<bumsnudel\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8346,"\<cairne\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8347,"\<christkind\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8348,"\<crackdealer\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8349,"king\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8350,"\<darthjedi\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8351,"\<denethor\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8352,"\<derneger\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8353,"\<diedroge\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8354,"\<dollybuster\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8355,"\<donpeperulez\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8356,"\<dopecheffe\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8357,"\<duke",4); 
-INSERT INTO `NamesProfanity` VALUES (8358,"\<dwalin\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8359,"sucker\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8360,"\<ebola\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8361,"\<eichelkäse\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8362,"f[ue]+rst\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8363,"muschi\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8364,"\<eternalhoden\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8365,"\<euthanasie\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8366,"\<fick",4); 
-INSERT INTO `NamesProfanity` VALUES (8367,"luder\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8368,"kacke\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8369,"\<fotz",4); 
-INSERT INTO `NamesProfanity` VALUES (8370,"tussi\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8371,"\<frodobeutlin\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8372,"\<frozenthrone\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8373,"\<gandhi\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8374,"\<ganja",4); 
-INSERT INTO `NamesProfanity` VALUES (8375,"\<gayoverlord\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8376,"\<geilebraut\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8377,"\<ginawild\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8378,"\<goebbels\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8379,"\<gott\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8380,"\<graftaliban\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8381,"\<hägar\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8382,"\<hanfernte\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8383,"\<heiland\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8384,"\<hendrix\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8385,"\<heroin",4); 
-INSERT INTO `NamesProfanity` VALUES (8386,"\<hordenhure\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8387,"porno\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8388,"\<[gk]adafi\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8389,"\<kiffer",4); 
-INSERT INTO `NamesProfanity` VALUES (8390,"\<kleineralki\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8391,"\<kleinerfurz\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8392,"\<klitori",4); 
-INSERT INTO `NamesProfanity` VALUES (8393,"ficker\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8394,"\<kpd\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8395,"\<kruppstahl\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8396,"\<mariuhanna\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8397,"\<master",4); 
-INSERT INTO `NamesProfanity` VALUES (8398,"\<meisteryoda\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8399,"\<mengele\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8400,"fick\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8401,"\<michaelmyers\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8402,"\<milkahase\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8403,"\<milkakuh\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8404,"\<mistst[ue]+ck\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8405,"\<moesen",4); 
-INSERT INTO `NamesProfanity` VALUES (8406,"\<möse",4); 
-INSERT INTO `NamesProfanity` VALUES (8407,"\<muschi",4); 
-INSERT INTO `NamesProfanity` VALUES (8408,"\<nachgeburt\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8409,"\<nazghul\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8410,"\<negerin\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8411,"\<nikoleinchen\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8412,"\<onkeltom\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8413,"\<pimmel",4); 
-INSERT INTO `NamesProfanity` VALUES (8414,"\<pimper",4); 
-INSERT INTO `NamesProfanity` VALUES (8415,"\<pommespapst\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8416,"\<popobumser\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8417,"\<porno",4); 
-INSERT INTO `NamesProfanity` VALUES (8418,"\<princess",4); 
-INSERT INTO `NamesProfanity` VALUES (8419,"\<prinz\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8420,"\<rammstein\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8421,"\<rasputin\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8422,"\<redbull\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8423,"\<richthofen\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8424,"\<sarin\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8425,"\<schlampe",4); 
-INSERT INTO `NamesProfanity` VALUES (8426,"\<schwanz",4); 
-INSERT INTO `NamesProfanity` VALUES (8427,"\<sith\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8428,"\<smeagol\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8429,"\<sohngottes\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8430,"\<spikelee\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8431,"\<splintercell\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8432,"\<suicide\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8433,"\<suizidhoden\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8434,"\<terrortunte\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8435,"\<titanrosette\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8436,"\<tittenmaus\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8437,"\<tylerdurden\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8438,"\<vagimampf\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8439,"\<vanginus\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8440,"\<votzentroll\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8441,"\<warcrack\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8442,"\<winnipuuh\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8443,"\<wixxoor\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8444,"\<wowdiablo\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8445,"\<xerox\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8446,"schlampe\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8447,"\<zwergpimmel\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8448,"\<absinthe\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8449,"\<absolut\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8450,"\<chink\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8451,"\<agnostic\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8452,"\<pussy",4); 
-INSERT INTO `NamesProfanity` VALUES (8453,"\<rape\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8454,"\<aceofspades\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8455,"\<pusher",4); 
-INSERT INTO `NamesProfanity` VALUES (8456,"\<chinks\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8457,"\<dikes\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8458,"\<dildos\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8459,"\<sativa\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8460,"\<indica\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8461,"\<skunkweed\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8462,"\<dike\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8463,"\<raped\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8464,"\<raping\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8465,"dong",4); 
-INSERT INTO `NamesProfanity` VALUES (8466,"\<dyke\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8467,"\<mj\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8468,"\<doobie\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8469,"\<stoner",4); 
-INSERT INTO `NamesProfanity` VALUES (8470,"\<junk[ie]",4); 
-INSERT INTO `NamesProfanity` VALUES (8471,"\<defecat",4); 
-INSERT INTO `NamesProfanity` VALUES (8472,"\<alquaeda\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8473,"\<amerikkkan\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8474,"\<amphetamine\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8475,"\<ejaculate\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8476,"\<scrotum",4); 
-INSERT INTO `NamesProfanity` VALUES (8477,"\<fisting\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8478,"\<arse",4); 
-INSERT INTO `NamesProfanity` VALUES (8479,"\<cock",4); 
-INSERT INTO `NamesProfanity` VALUES (8480,"\<aryan",4); 
-INSERT INTO `NamesProfanity` VALUES (8481,"\<backdoor\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8482,"titt[iey]*s\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8483,"\<bi\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8484,"\<bigfatasscow\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8485,"bondage\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8486,"boobs\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8487,"breast\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8488,"\<buttocks\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8489,"\<[ck]oitus",4); 
-INSERT INTO `NamesProfanity` VALUES (8490,"\<condom",4); 
-INSERT INTO `NamesProfanity` VALUES (8491,"\<dahoe\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8492,"\<damn\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8493,"\<darkwanker\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8494,"\<di[ae][rh]+ea",4); 
-INSERT INTO `NamesProfanity` VALUES (8495,"dick\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8496,"\<dirtyho\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8497,"\<domination\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8498,"\<dutch\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8499,"\<enema\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8500,"\<erotic",4); 
-INSERT INTO `NamesProfanity` VALUES (8501,"jackass\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8502,"\<facism\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8503,"\<fakeboobs\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8504,"\<fart\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8505,"\<fetish",4); 
-INSERT INTO `NamesProfanity` VALUES (8506,"fetish\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8507,"\<filthymuslim\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8508,"\<focker\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8509,"\<foreplay\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8510,"\<foreskin\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8511,"\<frottage\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8512,"\<fuk\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8513,"\<fukass\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8514,"\<gay\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8515,"\<genital",4); 
-INSERT INTO `NamesProfanity` VALUES (8516,"\<genitals\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8517,"\<gigolo\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8518,"\<gonorrhea\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8519,"\<grummz\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8520,"\<hairyhorny\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8521,"\<hardboob\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8522,"\<hentail\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8523,"\<hiv\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8524,"\<holocaust\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8525,"\<horny\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8526,"\<hot\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8527,"\<j.*jameson\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8528,"\<kinky\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8529,"\<kraut\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8530,"\<lesb\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8531,"\<lesbian\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8532,"pussy\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8533,"\<lingerie\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8534,"\<load\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8535,"\<lube\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8536,"\<lubricant\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8537,"\<lust\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8538,"\<maidenhead\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8539,"\<asshole",4); 
-INSERT INTO `NamesProfanity` VALUES (8540,"\<fingerbang\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8541,"\<gangbang\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8542,"\<gangrape\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8543,"\<japs\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8544,"\<jizzing\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8545,"\<gizzing\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8546,"\<pussies\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8547,"\<rapes\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8548,"\<saladtosser\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8549,"\<fags\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8550,"boob",4); 
-INSERT INTO `NamesProfanity` VALUES (8551,"\<bast[aeiou]rd",4); 
-INSERT INTO `NamesProfanity` VALUES (8552,"\<beastiality\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8553,"\<blowjob",4); 
-INSERT INTO `NamesProfanity` VALUES (8554,"\<boffer\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8555,"\<clowjob\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8556,"\<donkeypunch\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8557,"\<fawker\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8558,"\<feces",4); 
-INSERT INTO `NamesProfanity` VALUES (8559,"\<nipple",4); 
-INSERT INTO `NamesProfanity` VALUES (8560,"nipples\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8561,"prostitute",4); 
-INSERT INTO `NamesProfanity` VALUES (8562,"\<coke\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8563,"\<morphine\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8564,"\<nudity\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8565,"\<nuts\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8566,"\<pagan\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8567,"\<perv\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8568,"\<pervert\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8569,"\<phawk\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8570,"\<piss\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8571,"\<playboy\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8572,"\<playgirl\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8573,"\<polish\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8574,"\<prebubescent\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8575,"\<queer\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8576,"\<reich\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8577,"\<r.*jeremy\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8578,"\<screw\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8579,"\<seamen\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8580,"\<spreadmylegs\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8581,"\<stripper",4); 
-INSERT INTO `NamesProfanity` VALUES (8582,"\<suck\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8583,"\<sukkitdown\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8584,"\<swingers\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8585,"\<teabag",4); 
-INSERT INTO `NamesProfanity` VALUES (8586,"\<terrorist\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8587,"\<thickbush\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8588,"\<threesome\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8589,"\<snatch",4); 
-INSERT INTO `NamesProfanity` VALUES (8590,"\<updabut\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8591,"\<vasect",4); 
-INSERT INTO `NamesProfanity` VALUES (8592,"\<white\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8593,"\<negro",4); 
-INSERT INTO `NamesProfanity` VALUES (8594,"\<tinytits\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8595,"cock\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8596,"blowjob\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8597,"\<tardpopsicle\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8598,"\<urmom\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8599,"fag\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8600,"\<dick",4); 
-INSERT INTO `NamesProfanity` VALUES (8601,"\<turdsplat\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8602,"\<chokeoncocks\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8603,"\<littlearse\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8604,"\<holybijesis\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8605,"\<niggs\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8606,"\<sacofricosis\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8607,"\<polesmokers\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8608,"\<sega\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8609,"\<sex",4); 
-INSERT INTO `NamesProfanity` VALUES (8610,"\<shadowbane\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8611,"\<shane",4); 
-INSERT INTO `NamesProfanity` VALUES (8612,"\<shiznit\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8613,"\<shortbus\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8614,"\<tramps\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8615,"\<erection\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8616,"\<smoked\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8617,"\<snowwhite\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8618,"\<oral\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8619,"\<sperm",4); 
-INSERT INTO `NamesProfanity` VALUES (8620,"\<poop\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8621,"\<spluge\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8622,"\<suck",4); 
-INSERT INTO `NamesProfanity` VALUES (8623,"\<supermario\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8624,"support",4); 
-INSERT INTO `NamesProfanity` VALUES (8625,"\<sex\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8626,"\<suppuku\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8627,"\<sirbong\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8628,"\<spank\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8629,"\<speculum\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8630,"\<streaker",4); 
-INSERT INTO `NamesProfanity` VALUES (8631,"\<tribadism\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8632,"\<upmybutthole\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8633,"\<urinat",4); 
-INSERT INTO `NamesProfanity` VALUES (8634,"\<venereal\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8635,"\<virgin\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8636,"\<warslut\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8637,"\<wood\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8638,"\<advil\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8639,"\<amputee\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8640,"\<amtrak\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8641,"\<anis\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8642,"\<anolinctus\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8643,"\<antichrist\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8644,"\<arathorn\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8645,"\<arian\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8646,"\<arsonist\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8647,"\<blackenstein\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8648,"\<blacksabbath\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8649,"\<bnet\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8650,"\<bootylicious\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8651,"\<bra\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8652,"\<chinaman\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8653,"\<chronik\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8654,"\<colgate\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8655,"\<coprophagy\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8656,"\<crackhead\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8657,"\<dammit\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8658,"\<darky\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8659,"\<darvocet\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8660,"\<databasesys\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8661,"\<deckardcain\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8662,"\<dr\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8663,"\<dukeofwhales\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8664,"\<dumbass\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8665,"\<ecstasy\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8666,"\<ensign\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8667,"\<fcuk\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8668,"\<ferrari\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8669,"\<fetus",4); 
-INSERT INTO `NamesProfanity` VALUES (8670,"\<fockerz\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8671,"\<fooker\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8672,"cunt\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8673,"\<ghandi\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8674,"\<gofukyorself\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8675,"\<gonadian\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8676,"\<goochgravy\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8677,"\<gookenator\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8678,"\<hemplock\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8679,"\<herpies\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8680,"\<homoerectus\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8681,"\<hore\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8682,"\<hotdamn\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8683,"\<hungelf\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8684,"\<indian\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8685,"\<irapekids\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8686,"\<ironchef\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8687,"\<jc\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8688,"\<jedi\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8689,"\<[gj]en[ao]cide\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8690,"\<jugs\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8691,"\<klismaphilia\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8692,"\<kokigami\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8693,"\<koon\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8694,"\<kosherpork\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8695,"\<lardass\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8696,"\<laurabush\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8697,"\<marlboroman\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8698,"\<masterbaiter\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8699,"\<maxipad\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8700,"\<menstrual\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8701,"\<mhz\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8702,"\<michaeljack\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8703,"bastard\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8704,"\<misogynist\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8705,"\<mister\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8706,"\<mr\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8707,"\<narcoticus\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8708,"\<nigahh\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8709,"\<npc",4); 
-INSERT INTO `NamesProfanity` VALUES (8710,"\<nug\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8711,"\<nunriggers\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8712,"\<nwa\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8713,"\<omgwtf\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8714,"\<opiate",4); 
-INSERT INTO `NamesProfanity` VALUES (8715,"\<oreos\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8716,"\<ovaltine\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8717,"\<papsmear\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8718,"\<pederasty\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8719,"\<penthouse\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8720,"\<pimp",4); 
-INSERT INTO `NamesProfanity` VALUES (8721,"\<pinktaco\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8722,"mofo\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8723,"\<poomaster\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8724,"\<poonjuice\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8725,"\<poop",4); 
-INSERT INTO `NamesProfanity` VALUES (8726,"\<pwnzor\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8727,"\<quadoushka\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8728,"\<r.*nad[ae]r\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8729,"\<stud\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8730,"\<submissive\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8731,"\<swiftnuggs\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8732,"\<trans",4); 
-INSERT INTO `NamesProfanity` VALUES (8733,"\<uglynig\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8734,"\<swastika\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8735,"\<sybian\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8736,"\<toeofcamel\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8737,"\<tokyorose\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8738,"\<urmama\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8739,"\<voltron\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8740,"\<wangmaster\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8741,"\<wanker\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8742,"\<wetdream\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8743,"\<whitebread\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8744,"\<wigger\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8745,"\<williamhung\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8746,"\<windex\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8747,"\<witchking\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8748,"\<x.*x\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8749,"\<yosemitesam\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8750,"\<youranus\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8751,"\<zoolander\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8752,"condom\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8753,"jebus\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8754,"\<kosher",4); 
-INSERT INTO `NamesProfanity` VALUES (8755,"menstrual",4); 
-INSERT INTO `NamesProfanity` VALUES (8756,"sexy",4); 
-INSERT INTO `NamesProfanity` VALUES (8757,"\<bestiality\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8758,"\<bizzle\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8759,"\<black\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8760,"\<blackie\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8761,"\<bloodyhell\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8762,"\<blow\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8763,"\<blunt\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8764,"\<bollocks\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8765,"\<boobs",4); 
-INSERT INTO `NamesProfanity` VALUES (8766,"\<boofer\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8767,"\<bourbon\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8768,"\<brazuca\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8769,"\<breast",4); 
-INSERT INTO `NamesProfanity` VALUES (8770,"\<budda\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8771,"\<buddahead\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8772,"\<budlight\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8773,"\<budweiser\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8774,"\<bugger\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8775,"\<bustydusty\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8776,"\<butt\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8777,"\<buttman\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8778,"\<candyandes\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8779,"\<caucazoid\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8780,"\<cawk\>",4); 
-INSERT INTO `NamesProfanity` VALUES (8781,"\<fu[ck]+[aeiou]+",4); 
-INSERT INTO `NamesProfanity` VALUES (9113,"系统管理员",4); 
-INSERT INTO `NamesProfanity` VALUES (9114,"魔兽客服",4); 
-INSERT INTO `NamesProfanity` VALUES (9115,"凯尔萨斯",4); 
-INSERT INTO `NamesProfanity` VALUES (9116,"纳鲁",4); 
-INSERT INTO `NamesProfanity` VALUES (9117,"血精灵",4); 
-INSERT INTO `NamesProfanity` VALUES (9118,"德莱尼",4); 
-INSERT INTO `NamesProfanity` VALUES (9119,"玛瑟里顿",4); 
-INSERT INTO `NamesProfanity` VALUES (9120,"罗宁",4); 
-INSERT INTO `NamesProfanity` VALUES (9121,"客户服务",4); 
-INSERT INTO `NamesProfanity` VALUES (9122,"系统提示",4); 
-INSERT INTO `NamesProfanity` VALUES (9123,"中奖提示",4); 
-INSERT INTO `NamesProfanity` VALUES (9125,"中奖\>",4); 
-INSERT INTO `NamesProfanity` VALUES (9126,"提示\>",4); 
-INSERT INTO `NamesProfanity` VALUES (9127,"系统\>",4); 
-INSERT INTO `NamesProfanity` VALUES (9128,"管理员\>",4); 
-INSERT INTO `NamesProfanity` VALUES (9129,"温馨\>",4); 
-INSERT INTO `NamesProfanity` VALUES (9130,"拍卖\>",4); 
-INSERT INTO `NamesProfanity` VALUES (9131,"信息\>",4); 
-INSERT INTO `NamesProfanity` VALUES (9132,"幸运\>",4); 
-INSERT INTO `NamesProfanity` VALUES (9133,"通告\>",4); 
-INSERT INTO `NamesProfanity` VALUES (9134,"抽取\>",4); 
-INSERT INTO `NamesProfanity` VALUES (9135,"活动\>",4); 
-INSERT INTO `NamesProfanity` VALUES (9136,"官方\>",4); 
-INSERT INTO `NamesProfanity` VALUES (9137,"告示\>",4); 
-INSERT INTO `NamesProfanity` VALUES (9138,"在线\>",4); 
-INSERT INTO `NamesProfanity` VALUES (9139,"提示员\>",4); 
-INSERT INTO `NamesProfanity` VALUES (9140,"通告员\>",4); 
-INSERT INTO `NamesProfanity` VALUES (9141,"消息\>",4); 
-INSERT INTO `NamesProfanity` VALUES (9142,"惊喜\>",4); 
-INSERT INTO `NamesProfanity` VALUES (9143,"奖品\>",4); 
-INSERT INTO `NamesProfanity` VALUES (9144,"网络\>",4); 
-INSERT INTO `NamesProfanity` VALUES (9145,"魔兽\>",4); 
-INSERT INTO `NamesProfanity` VALUES (9146,"玩家\>",4); 
-INSERT INTO `NamesProfanity` VALUES (9147,"发布员\>",4); 
-INSERT INTO `NamesProfanity` VALUES (9148,"后台\>",4); 
-INSERT INTO `NamesProfanity` VALUES (9149,"礼品\>",4); 
-INSERT INTO `NamesProfanity` VALUES (9150,"布告\>",4); 
-INSERT INTO `NamesProfanity` VALUES (10217,"\<cervesa\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10218,"\<champagne\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10219,"\<chaseylain\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10220,"\<cheeba\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10221,"\<cherokee \>",5); 
-INSERT INTO `NamesProfanity` VALUES (10222,"\<chino\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10223,"\<chloejones \>",5); 
-INSERT INTO `NamesProfanity` VALUES (10224,"\<christilake\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10225,"\<chrisward \>",5); 
-INSERT INTO `NamesProfanity` VALUES (10226,"\<cocostarfish\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10227,"\<cognac\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10228,"\<cootch\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10229,"\<cooter\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10230,"\<copulate\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10231,"\<cornholes\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10232,"\<corona\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10233,"\<crack\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10234,"\<cracker\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10235,"\<crap\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10236,"\<damned\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10237,"\<dank\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10238,"\<deancoulter\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10239,"\<debidiamond \>",5); 
-INSERT INTO `NamesProfanity` VALUES (10240,"\<deepthroat\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10241,"\<devinderay \>",5); 
-INSERT INTO `NamesProfanity` VALUES (10242,"\<dianazyle \>",5); 
-INSERT INTO `NamesProfanity` VALUES (10243,"\<dietpills\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10244,"\<dirtysanchez\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10245,"\<ditavontease\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10246,"\<doggystyle\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10247,"\<dope\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10248,"\<duckbutter\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10249,"\<ecstacy\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10250,"\<edpowers \>",5); 
-INSERT INTO `NamesProfanity` VALUES (10251,"\<eggplant\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10252,"\<ericaboyer \>",5); 
-INSERT INTO `NamesProfanity` VALUES (10253,"\<extasy\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10254,"\<facial\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10255,"\<fluffer\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10256,"\<fornicat",5); 
-INSERT INTO `NamesProfanity` VALUES (10257,"\<freebase\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10258,"\<fusck",5); 
-INSERT INTO `NamesProfanity` VALUES (10259,"\<fux",5); 
-INSERT INTO `NamesProfanity` VALUES (10260,"\<gagepowers\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10261,"\<gew\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10262,"\<ghb\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10263,"\<ghetto\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10264,"\<gingerhill\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10265,"\<gloryhole\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10266,"\<goldschlager\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10267,"\<goombah\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10268,"\<granddragon\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10269,"\<greaseball\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10270,"\<greaser\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10271,"\<gspot\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10272,"\<guiness\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10273,"\<gunja\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10274,"\<handjob\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10275,"\<hash\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10276,"\<headdoctor\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10277,"\<heidifleiss\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10278,"\<hmo\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10279,"\<honky\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10280,"\<hoodrat\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10281,"\<hookah\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10282,"\<horney\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10283,"\<hustler\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10284,"\<inarivachs\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10285,"\<j.*bobbit\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10286,"\<j.*holmes\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10287,"\<jackdaniels\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10288,"\<jadeeast\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10289,"\<jadehsu \>",5); 
-INSERT INTO `NamesProfanity` VALUES (10290,"\<jadestclair\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10291,"\<jagermeister\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10292,"\<janacova\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10293,"\<jennahaze\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10294,"\<jennajameson\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10295,"\<jenteal\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10296,"\<jessicadee\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10297,"\<jeweldenyle\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10298,"\<jillkelly\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10299,"\<jimbeam\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10300,"\<josecuervo\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10301,"\<juliashton\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10302,"\<karadavis\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10303,"\<keef\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10304,"\<kif\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10305,"\<kikkityler \>",5); 
-INSERT INTO `NamesProfanity` VALUES (10306,"\<kobetai\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10307,"\<kooter\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10308,"\<krystalsteal\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10309,"\<kyke\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10310,"\<kylacole\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10311,"\<kylieireland\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10312,"\<lancegear \>",5); 
-INSERT INTO `NamesProfanity` VALUES (10313,"\<larryflynt\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10314,"\<lecher\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10315,"\<liquidx\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10316,"\<loloferrari\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10317,"\<long.*dong\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10318,"\<ludes\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10319,"\<lunalane\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10320,"\<maltliquor\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10321,"\<mariacheca\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10322,"\<mariatakagi\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10323,"\<marisadiaz \>",5); 
-INSERT INTO `NamesProfanity` VALUES (10324,"\<markdalton  \>",5); 
-INSERT INTO `NamesProfanity` VALUES (10325,"\<markwolff \>",5); 
-INSERT INTO `NamesProfanity` VALUES (10326,"\<marycarey \>",5); 
-INSERT INTO `NamesProfanity` VALUES (10327,"\<mayate\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10328,"\<meatwad\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10329,"\<methhead\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10330,"\<methmonster\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10331,"\<mikolee\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10332,"\<mimimiyagi\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10333,"\<moneyshot\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10334,"\<muff\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10335,"\<mushrooms\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10336,"\<nickelbag\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10337,"\<nikkibenz\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10338,"\<nikkidial\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10339,"\<nip\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10340,"\<nizzle\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10341,"\<nubian",5); 
-INSERT INTO `NamesProfanity` VALUES (10342,"\<nympho\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10343,"\<obsession\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10344,"\<opiate\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10345,"\<orgy\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10346,"\<panties\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10347,"\<pecker\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10348,"\<peternorth\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10349,"\<pissedoff\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10350,"\<pissoff\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10351,"\<pornstar\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10352,"\<prepubescent\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10353,"\<prick\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10354,"\<pube\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10355,"\<punjab\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10356,"\<punkass\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10357,"\<pusse\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10358,"\<randywest\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10359,"\<rebeccalord\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10360,"\<rebeccaporn\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10361,"\<redneck\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10362,"\<reneelarue\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10363,"\<ricer\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10364,"\<rustytrumpet\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10365,"\<ryanconner \>",5); 
-INSERT INTO `NamesProfanity` VALUES (10366,"\<ryanwagner \>",5); 
-INSERT INTO `NamesProfanity` VALUES (10367,"\<sarastjames \>",5); 
-INSERT INTO `NamesProfanity` VALUES (10368,"\<tosser\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10369,"\<tossingsalad\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10370,"\<tosssalad\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10371,"\<traceyadams\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10372,"\<tracilords\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10373,"\<tranny\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10374,"\<ttboy\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10375,"\<tyfox\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10376,"\<tylerfaith\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10377,"\<urethra\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10378,"\<veronicahart\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10379,"\<wankoff\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10380,"\<weed\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10381,"\<wej\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10382,"\<wench\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10383,"\<wildturkey\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10384,"hefner\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10385,"snatch\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10386,"vagina\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10387,"\<annaslut\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10388,"\<asiacarrera\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10389,"\<aurorasnow\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10390,"\<bacardi\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10391,"\<beaner\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10392,"\<beanlicker\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10393,"\<scat\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10394,"\<scatology\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10395,"\<schlong",5); 
-INSERT INTO `NamesProfanity` VALUES (10396,"\<schnapps\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10397,"\<schoolboy",5); 
-INSERT INTO `NamesProfanity` VALUES (10398,"\<selenasteele\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10399,"\<sexy\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10400,"\<seymorebutts\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10401,"\<sheethead\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10402,"\<sherriangel\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10403,"\<shizzle\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10404,"\<shlong\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10405,"\<shmegma\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10406,"\<shrooms\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10407,"\<skeet\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10408,"\<skeetskeet\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10409,"\<vagina",5); 
-INSERT INTO `NamesProfanity` VALUES (10410,"\<adulteress\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10411,"\<adulterous\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10412,"\<adultery\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10413,"\<adultsonly\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10414,"\<agentorange\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10415,"\<aids\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10416,"\<al[ck]ohol",5); 
-INSERT INTO `NamesProfanity` VALUES (10417,"\<alecpowers\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10418,"\<alexwilcox\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10419,"\<amaretto\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10420,"\<anal\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10421,"\<angeladevi\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10422,"\<angeldust\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10423,"\<anglo\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10424,"\<anheiser\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10425,"\<annamalle\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10426,"\<beer\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10427,"\<erzengel\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10428,"könig\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10429,"\<eomer\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10430,"butthhead",5); 
-INSERT INTO `NamesProfanity` VALUES (10431,"\<slope\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10432,"\<smack\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10433,"\<smut\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10434,"\<snowball",5); 
-INSERT INTO `NamesProfanity` VALUES (10435,"\<sodomize\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10436,"\<sodomy\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10437,"\<speedball\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10438,"\<spew\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10439,"\<spreadeagle\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10440,"\<spunk\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10441,"\<std\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10442,"\<sunsetthomas\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10443,"\<sylviasaint\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10444,"\<teet[sz]\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10445,"\<tequila\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10446,"\<terapatrick\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10447,"\<thc\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10448,"\<tiabella\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10449,"\<toadlicker\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10450,"\<toak\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10451,"\<toke\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10452,"\<tombyron\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10453,"\<tommycruise\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10454,"\<tonyzerega\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10455,"\<tossalad\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10456,"\<vibrator\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10457,"\<vincevouyer\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10458,"\<vodka\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10459,"\<vulva\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10460,"\<w[ei]+n[ei]+r\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10461,"\<wank\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10462,"\<whackoff\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10463,"\<whiskey\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10464,"\<willclark\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10465,"\<yellow\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10466,"\<zigzag\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10467,"aryan\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10468,"\<acclaim\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10469,"\<amongoe",5); 
-INSERT INTO `NamesProfanity` VALUES (10470,"\<anabolica\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10471,"\<analpunisher\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10472,"nazi\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10473,"\<anth?rax\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10474,"\<blasehase\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10475,"\<botox\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10476,"\<bueckstueck\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10477,"\<bumsnudel\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10478,"\<cairne\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10479,"\<christkind\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10480,"\<crackdealer\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10481,"king\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10482,"\<darthjedi\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10483,"\<denethor\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10484,"\<derneger\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10485,"\<diedroge\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10486,"\<dollybuster\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10487,"\<donpeperulez\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10488,"\<dopecheffe\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10489,"\<duke",5); 
-INSERT INTO `NamesProfanity` VALUES (10490,"\<dwalin\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10491,"sucker\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10492,"\<ebola\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10493,"\<eichelkäse\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10494,"f[ue]+rst\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10495,"muschi\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10496,"\<eternalhoden\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10497,"\<euthanasie\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10498,"\<fick",5); 
-INSERT INTO `NamesProfanity` VALUES (10499,"luder\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10500,"kacke\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10501,"\<fotz",5); 
-INSERT INTO `NamesProfanity` VALUES (10502,"tussi\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10503,"\<frodobeutlin\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10504,"\<frozenthrone\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10505,"\<gandhi\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10506,"\<ganja",5); 
-INSERT INTO `NamesProfanity` VALUES (10507,"\<gayoverlord\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10508,"\<geilebraut\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10509,"\<ginawild\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10510,"\<goebbels\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10511,"\<gott\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10512,"\<graftaliban\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10513,"\<hägar\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10514,"\<hanfernte\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10515,"\<heiland\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10516,"\<hendrix\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10517,"\<heroin",5); 
-INSERT INTO `NamesProfanity` VALUES (10518,"\<hordenhure\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10519,"porno\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10520,"\<[gk]adafi\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10521,"\<kiffer",5); 
-INSERT INTO `NamesProfanity` VALUES (10522,"\<kleineralki\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10523,"\<kleinerfurz\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10524,"\<klitori",5); 
-INSERT INTO `NamesProfanity` VALUES (10525,"ficker\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10526,"\<kpd\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10527,"\<kruppstahl\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10528,"\<mariuhanna\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10529,"\<master",5); 
-INSERT INTO `NamesProfanity` VALUES (10530,"\<meisteryoda\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10531,"\<mengele\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10532,"fick\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10533,"\<michaelmyers\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10534,"\<milkahase\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10535,"\<milkakuh\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10536,"\<mistst[ue]+ck\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10537,"\<moesen",5); 
-INSERT INTO `NamesProfanity` VALUES (10538,"\<möse",5); 
-INSERT INTO `NamesProfanity` VALUES (10539,"\<muschi",5); 
-INSERT INTO `NamesProfanity` VALUES (10540,"\<nachgeburt\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10541,"\<nazghul\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10542,"\<negerin\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10543,"\<nikoleinchen\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10544,"\<onkeltom\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10545,"\<pimmel",5); 
-INSERT INTO `NamesProfanity` VALUES (10546,"\<pimper",5); 
-INSERT INTO `NamesProfanity` VALUES (10547,"\<pommespapst\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10548,"\<popobumser\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10549,"\<porno",5); 
-INSERT INTO `NamesProfanity` VALUES (10550,"\<princess",5); 
-INSERT INTO `NamesProfanity` VALUES (10551,"\<prinz\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10552,"\<rammstein\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10553,"\<rasputin\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10554,"\<redbull\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10555,"\<richthofen\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10556,"\<sarin\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10557,"\<schlampe",5); 
-INSERT INTO `NamesProfanity` VALUES (10558,"\<schwanz",5); 
-INSERT INTO `NamesProfanity` VALUES (10559,"\<sith\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10560,"\<smeagol\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10561,"\<sohngottes\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10562,"\<spikelee\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10563,"\<splintercell\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10564,"\<suicide\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10565,"\<suizidhoden\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10566,"\<terrortunte\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10567,"\<titanrosette\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10568,"\<tittenmaus\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10569,"\<tylerdurden\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10570,"\<vagimampf\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10571,"\<vanginus\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10572,"\<votzentroll\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10573,"\<warcrack\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10574,"\<winnipuuh\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10575,"\<wixxoor\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10576,"\<wowdiablo\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10577,"\<xerox\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10578,"schlampe\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10579,"zipfe?l\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10580,"\<zuhälter",5); 
-INSERT INTO `NamesProfanity` VALUES (10581,"\<zwergpimmel\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10582,"\<absinthe\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10583,"\<absolut\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10584,"\<chink\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10585,"\<agnostic\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10586,"\<pussy",5); 
-INSERT INTO `NamesProfanity` VALUES (10587,"\<rape\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10588,"\<aceofspades\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10589,"\<pusher",5); 
-INSERT INTO `NamesProfanity` VALUES (10590,"\<chinks\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10591,"\<dikes\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10592,"\<dildos\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10593,"\<sativa\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10594,"\<indica\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10595,"\<skunkweed\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10596,"\<dike\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10597,"\<raped\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10598,"\<raping\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10599,"dong",5); 
-INSERT INTO `NamesProfanity` VALUES (10600,"\<dyke\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10601,"\<mj\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10602,"\<doobie\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10603,"\<stoner",5); 
-INSERT INTO `NamesProfanity` VALUES (10604,"\<junk[ie]",5); 
-INSERT INTO `NamesProfanity` VALUES (10605,"\<defecat",5); 
-INSERT INTO `NamesProfanity` VALUES (10606,"\<alquaeda\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10607,"\<amerikkkan\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10608,"\<amphetamine\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10609,"\<ejaculate\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10610,"\<scrotum",5); 
-INSERT INTO `NamesProfanity` VALUES (10611,"\<fisting\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10612,"\<arse",5); 
-INSERT INTO `NamesProfanity` VALUES (10613,"\<cock",5); 
-INSERT INTO `NamesProfanity` VALUES (10614,"\<aryan",5); 
-INSERT INTO `NamesProfanity` VALUES (10615,"\<backdoor\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10616,"titt[iey]*s\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10617,"\<bi\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10618,"\<bigfatasscow\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10619,"bondage\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10620,"boobs\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10621,"breast\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10622,"\<buttocks\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10623,"\<[ck]oitus",5); 
-INSERT INTO `NamesProfanity` VALUES (10624,"\<condom",5); 
-INSERT INTO `NamesProfanity` VALUES (10625,"\<dahoe\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10626,"\<damn\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10627,"\<darkwanker\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10628,"\<di[ae][rh]+ea",5); 
-INSERT INTO `NamesProfanity` VALUES (10629,"dick\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10630,"\<dirtyho\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10631,"\<domination\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10632,"\<dutch\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10633,"\<enema\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10634,"\<erotic",5); 
-INSERT INTO `NamesProfanity` VALUES (10635,"jackass\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10636,"\<facism\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10637,"\<fakeboobs\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10638,"\<fart\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10639,"\<fetish",5); 
-INSERT INTO `NamesProfanity` VALUES (10640,"fetish\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10641,"\<filthymuslim\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10642,"\<focker\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10643,"\<foreplay\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10644,"\<foreskin\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10645,"\<frottage\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10646,"\<fuk\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10647,"\<fukass\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10648,"\<gay\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10649,"\<genital",5); 
-INSERT INTO `NamesProfanity` VALUES (10650,"\<genitals\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10651,"\<gigolo\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10652,"\<gonorrhea\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10653,"\<grummz\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10654,"\<hairyhorny\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10655,"\<hardboob\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10656,"\<hentail\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10657,"\<hiv\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10658,"\<holocaust\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10659,"\<horny\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10660,"\<hot\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10661,"\<j.*jameson\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10662,"\<kinky\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10663,"\<kraut\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10664,"\<lesb\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10665,"\<lesbian\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10666,"pussy\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10667,"\<lingerie\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10668,"\<load\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10669,"\<lube\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10670,"\<lubricant\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10671,"\<lust\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10672,"\<maidenhead\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10673,"\<asshole",5); 
-INSERT INTO `NamesProfanity` VALUES (10674,"\<fingerbang\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10675,"\<gangbang\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10676,"\<gangrape\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10677,"\<japs\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10678,"\<jizzing\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10679,"\<gizzing\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10680,"\<pussies\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10681,"\<rapes\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10682,"\<saladtosser\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10683,"\<fags\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10684,"boob",5); 
-INSERT INTO `NamesProfanity` VALUES (10685,"\<bast[aeiou]rd",5); 
-INSERT INTO `NamesProfanity` VALUES (10686,"\<beastiality\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10687,"\<blowjob",5); 
-INSERT INTO `NamesProfanity` VALUES (10688,"\<boffer\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10689,"\<clowjob\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10690,"\<donkeypunch\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10691,"\<fawker\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10692,"\<feces",5); 
-INSERT INTO `NamesProfanity` VALUES (10693,"\<nipple",5); 
-INSERT INTO `NamesProfanity` VALUES (10694,"nipples\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10695,"prostitute",5); 
-INSERT INTO `NamesProfanity` VALUES (10696,"\<coke\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10697,"\<morphine\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10698,"\<nudity\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10699,"\<nuts\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10700,"\<pagan\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10701,"\<perv\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10702,"\<pervert\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10703,"\<phawk\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10704,"\<piss\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10705,"\<playboy\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10706,"\<playgirl\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10707,"\<polish\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10708,"\<prebubescent\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10709,"\<queer\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10710,"\<reich\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10711,"\<r.*jeremy\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10712,"\<screw\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10713,"\<seamen\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10714,"\<spreadmylegs\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10715,"\<stripper",5); 
-INSERT INTO `NamesProfanity` VALUES (10716,"\<suck\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10717,"\<sukkitdown\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10718,"\<swingers\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10719,"\<teabag",5); 
-INSERT INTO `NamesProfanity` VALUES (10720,"\<terrorist\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10721,"\<thickbush\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10722,"\<threesome\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10723,"\<snatch",5); 
-INSERT INTO `NamesProfanity` VALUES (10724,"\<updabut\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10725,"\<vasect",5); 
-INSERT INTO `NamesProfanity` VALUES (10726,"\<white\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10727,"\<negro",5); 
-INSERT INTO `NamesProfanity` VALUES (10728,"\<tinytits\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10729,"cock\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10730,"blowjob\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10731,"\<tardpopsicle\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10732,"\<urmom\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10733,"fag\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10734,"\<dick",5); 
-INSERT INTO `NamesProfanity` VALUES (10735,"\<turdsplat\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10736,"\<chokeoncocks\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10737,"\<littlearse\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10738,"\<holybijesis\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10739,"\<niggs\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10740,"\<sacofricosis\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10741,"\<polesmokers\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10742,"\<sega\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10743,"\<sex",5); 
-INSERT INTO `NamesProfanity` VALUES (10744,"\<shadowbane\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10745,"\<shane",5); 
-INSERT INTO `NamesProfanity` VALUES (10746,"\<shiznit\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10747,"\<shortbus\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10748,"\<tramps\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10749,"\<erection\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10750,"\<smoked\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10751,"\<snowwhite\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10752,"\<oral\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10753,"\<sperm",5); 
-INSERT INTO `NamesProfanity` VALUES (10754,"\<poop\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10755,"\<spluge\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10756,"\<suck",5); 
-INSERT INTO `NamesProfanity` VALUES (10757,"\<supermario\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10758,"support",5); 
-INSERT INTO `NamesProfanity` VALUES (10759,"\<sex\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10760,"\<suppuku\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10761,"\<sirbong\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10762,"\<spank\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10763,"\<speculum\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10764,"\<streaker",5); 
-INSERT INTO `NamesProfanity` VALUES (10765,"\<tribadism\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10766,"\<upmybutthole\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10767,"\<urinat",5); 
-INSERT INTO `NamesProfanity` VALUES (10768,"\<venereal\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10769,"\<virgin\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10770,"\<warslut\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10771,"\<wood\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10772,"\<advil\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10773,"\<amputee\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10774,"\<amtrak\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10775,"\<anis\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10776,"\<anolinctus\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10777,"\<antichrist\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10778,"\<arathorn\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10779,"\<arian\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10780,"\<arsonist\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10781,"\<blackenstein\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10782,"\<blacksabbath\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10783,"\<bnet\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10784,"\<bootylicious\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10785,"\<bra\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10786,"\<chinaman\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10787,"\<chronik\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10788,"\<colgate\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10789,"\<coprophagy\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10790,"\<crackhead\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10791,"\<dammit\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10792,"\<darky\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10793,"\<darvocet\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10794,"\<databasesys\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10795,"\<deckardcain\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10796,"\<dr\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10797,"\<dukeofwhales\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10798,"\<dumbass\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10799,"\<ecstasy\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10800,"\<ensign\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10801,"\<fcuk\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10802,"\<ferrari\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10803,"\<fetus",5); 
-INSERT INTO `NamesProfanity` VALUES (10804,"\<fockerz\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10805,"\<fooker\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10806,"cunt\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10807,"\<ghandi\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10808,"\<gofukyorself\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10809,"\<gonadian\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10810,"\<goochgravy\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10811,"\<gookenator\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10812,"\<hemplock\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10813,"\<herpies\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10814,"\<homoerectus\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10815,"\<hore\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10816,"\<hotdamn\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10817,"\<hungelf\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10818,"\<indian\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10819,"\<irapekids\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10820,"\<ironchef\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10821,"\<jc\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10822,"\<jedi\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10823,"\<[gj]en[ao]cide\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10824,"\<jugs\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10825,"\<klismaphilia\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10826,"\<kokigami\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10827,"\<koon\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10828,"\<kosherpork\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10829,"\<lardass\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10830,"\<laurabush\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10831,"\<marlboroman\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10832,"\<masterbaiter\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10833,"\<maxipad\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10834,"\<menstrual\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10835,"\<mhz\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10836,"\<michaeljack\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10837,"bastard\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10838,"\<misogynist\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10839,"\<mister\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10840,"\<mr\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10841,"\<narcoticus\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10842,"\<nigahh\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10843,"\<npc",5); 
-INSERT INTO `NamesProfanity` VALUES (10844,"\<nug\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10845,"\<nunriggers\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10846,"\<nwa\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10847,"\<omgwtf\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10848,"\<opiate",5); 
-INSERT INTO `NamesProfanity` VALUES (10849,"\<oreos\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10850,"\<ovaltine\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10851,"\<papsmear\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10852,"\<pederasty\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10853,"\<penthouse\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10854,"\<pimp",5); 
-INSERT INTO `NamesProfanity` VALUES (10855,"\<pinktaco\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10856,"mofo\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10857,"\<poomaster\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10858,"\<poonjuice\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10859,"\<poop",5); 
-INSERT INTO `NamesProfanity` VALUES (10860,"\<pwnzor\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10861,"\<quadoushka\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10862,"\<r.*nad[ae]r\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10863,"\<stud\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10864,"\<submissive\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10865,"\<swiftnuggs\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10866,"\<trans",5); 
-INSERT INTO `NamesProfanity` VALUES (10867,"\<uglynig\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10868,"\<swastika\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10869,"\<sybian\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10870,"\<toeofcamel\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10871,"\<tokyorose\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10872,"\<urmama\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10873,"\<voltron\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10874,"\<wangmaster\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10875,"\<wanker\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10876,"\<wetdream\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10877,"\<whitebread\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10878,"\<wigger\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10879,"\<williamhung\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10880,"\<windex\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10881,"\<witchking\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10882,"\<x.*x\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10883,"\<yosemitesam\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10884,"\<youranus\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10885,"\<zoolander\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10886,"condom\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10887,"jebus\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10888,"\<kosher",5); 
-INSERT INTO `NamesProfanity` VALUES (10889,"menstrual",5); 
-INSERT INTO `NamesProfanity` VALUES (10890,"sexy",5); 
-INSERT INTO `NamesProfanity` VALUES (10891,"\<bestiality\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10892,"\<bizzle\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10893,"\<black\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10894,"\<blackie\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10895,"\<bloodyhell\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10896,"\<blow\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10897,"\<blunt\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10898,"\<bollocks\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10899,"\<boobs",5); 
-INSERT INTO `NamesProfanity` VALUES (10900,"\<boofer\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10901,"\<bourbon\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10902,"\<brazuca\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10903,"\<breast",5); 
-INSERT INTO `NamesProfanity` VALUES (10904,"\<budda\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10905,"\<buddahead\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10906,"\<budlight\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10907,"\<budweiser\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10908,"\<bugger\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10909,"\<bustydusty\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10910,"\<butt\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10911,"\<buttman\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10912,"\<candyandes\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10913,"\<caucazoid\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10914,"\<cawk\>",5); 
-INSERT INTO `NamesProfanity` VALUES (10915,"\<fu[ck]+[aeiou]+",5); 
-INSERT INTO `NamesProfanity` VALUES (10916,"三K党",5); 
-INSERT INTO `NamesProfanity` VALUES (10917,"九城",5); 
-INSERT INTO `NamesProfanity` VALUES (10918,"乱伦",5); 
-INSERT INTO `NamesProfanity` VALUES (10919,"乳交",5); 
-INSERT INTO `NamesProfanity` VALUES (10920,"乳房",5); 
-INSERT INTO `NamesProfanity` VALUES (10921,"他妈的",5); 
-INSERT INTO `NamesProfanity` VALUES (10922,"做爱",5); 
-INSERT INTO `NamesProfanity` VALUES (10923,"共产党",5); 
-INSERT INTO `NamesProfanity` VALUES (10924,"共军",5); 
-INSERT INTO `NamesProfanity` VALUES (10925,"共匪",5); 
-INSERT INTO `NamesProfanity` VALUES (10926,"军妓",5); 
-INSERT INTO `NamesProfanity` VALUES (10927,"刘少奇",5); 
-INSERT INTO `NamesProfanity` VALUES (10928,"卵子",5); 
-INSERT INTO `NamesProfanity` VALUES (10929,"口交",5); 
-INSERT INTO `NamesProfanity` VALUES (10930,"叫床",5); 
-INSERT INTO `NamesProfanity` VALUES (10931,"台湾独立",5); 
-INSERT INTO `NamesProfanity` VALUES (10932,"台独",5); 
-INSERT INTO `NamesProfanity` VALUES (10933,"吹箫",5); 
-INSERT INTO `NamesProfanity` VALUES (10934,"周恩来",5); 
-INSERT INTO `NamesProfanity` VALUES (10935,"国民党",5); 
-INSERT INTO `NamesProfanity` VALUES (10936,"外$$挂",5); 
-INSERT INTO `NamesProfanity` VALUES (10937,"外*挂",5); 
-INSERT INTO `NamesProfanity` VALUES (10938,"外@@挂",5); 
-INSERT INTO `NamesProfanity` VALUES (10939,"外@挂",5); 
-INSERT INTO `NamesProfanity` VALUES (10940,"外~~挂",5); 
-INSERT INTO `NamesProfanity` VALUES (10941,"外~挂",5); 
-INSERT INTO `NamesProfanity` VALUES (10942,"外··挂",5); 
-INSERT INTO `NamesProfanity` VALUES (10943,"外·挂",5); 
-INSERT INTO `NamesProfanity` VALUES (10944,"外挂",5); 
-INSERT INTO `NamesProfanity` VALUES (10945,"奶子",5); 
-INSERT INTO `NamesProfanity` VALUES (10946,"妓女",5); 
-INSERT INTO `NamesProfanity` VALUES (10947,"妓院",5); 
-INSERT INTO `NamesProfanity` VALUES (10948,"婊子",5); 
-INSERT INTO `NamesProfanity` VALUES (10949,"婊子养的",5); 
-INSERT INTO `NamesProfanity` VALUES (10950,"嫖客",5); 
-INSERT INTO `NamesProfanity` VALUES (10951,"孙中山",5); 
-INSERT INTO `NamesProfanity` VALUES (10952,"射精",5); 
-INSERT INTO `NamesProfanity` VALUES (10953,"招妓",5); 
-INSERT INTO `NamesProfanity` VALUES (10954,"撒尿",5); 
-INSERT INTO `NamesProfanity` VALUES (10955,"操你",5); 
-INSERT INTO `NamesProfanity` VALUES (10956,"操你奶奶",5); 
-INSERT INTO `NamesProfanity` VALUES (10957,"操你妈",5); 
-INSERT INTO `NamesProfanity` VALUES (10958,"操逼",5); 
-INSERT INTO `NamesProfanity` VALUES (10959,"日他娘",5); 
-INSERT INTO `NamesProfanity` VALUES (10960,"日你妈",5); 
-INSERT INTO `NamesProfanity` VALUES (10961,"月经",5); 
-INSERT INTO `NamesProfanity` VALUES (10962,"朱镕基",5); 
-INSERT INTO `NamesProfanity` VALUES (10963,"李登辉",5); 
-INSERT INTO `NamesProfanity` VALUES (10964,"毛泽东",5); 
-INSERT INTO `NamesProfanity` VALUES (10965,"性交",5); 
-INSERT INTO `NamesProfanity` VALUES (10966,"江泽民",5); 
-INSERT INTO `NamesProfanity` VALUES (10967,"私服",5); 
-INSERT INTO `NamesProfanity` VALUES (10968,"精子",5); 
-INSERT INTO `NamesProfanity` VALUES (10969,"精液",5); 
-INSERT INTO `NamesProfanity` VALUES (10970,"蒋介石",5); 
-INSERT INTO `NamesProfanity` VALUES (10971,"赵紫阳",5); 
-INSERT INTO `NamesProfanity` VALUES (10972,"乳汁",5); 
-INSERT INTO `NamesProfanity` VALUES (10973,"你妈",5); 
-INSERT INTO `NamesProfanity` VALUES (10974,"淫水",5); 
-INSERT INTO `NamesProfanity` VALUES (10975,"淫荡",5); 
-INSERT INTO `NamesProfanity` VALUES (10976,"淫魔",5); 
-INSERT INTO `NamesProfanity` VALUES (10977,"游戏管理员",5); 
-INSERT INTO `NamesProfanity` VALUES (10978,"爱滋",5); 
-INSERT INTO `NamesProfanity` VALUES (10979,"王八蛋",5); 
-INSERT INTO `NamesProfanity` VALUES (10980,"肛交",5); 
-INSERT INTO `NamesProfanity` VALUES (10981,"胡耀邦",5); 
-INSERT INTO `NamesProfanity` VALUES (10982,"胡锦涛",5); 
-INSERT INTO `NamesProfanity` VALUES (10983,"花柳",5); 
-INSERT INTO `NamesProfanity` VALUES (10984,"邓小平",5); 
-INSERT INTO `NamesProfanity` VALUES (10985,"阴唇",5); 
-INSERT INTO `NamesProfanity` VALUES (10986,"阴毛",5); 
-INSERT INTO `NamesProfanity` VALUES (10987,"阴茎",5); 
-INSERT INTO `NamesProfanity` VALUES (10988,"阴道",5); 
-INSERT INTO `NamesProfanity` VALUES (10989,"阴部",5); 
-INSERT INTO `NamesProfanity` VALUES (10990,"阿扁",5); 
-INSERT INTO `NamesProfanity` VALUES (10991,"陈水扁",5); 
-INSERT INTO `NamesProfanity` VALUES (10992,"鸡八",5); 
-INSERT INTO `NamesProfanity` VALUES (10993,"鸡巴",5); 
-INSERT INTO `NamesProfanity` VALUES (10994,"外$挂",5); 
-INSERT INTO `NamesProfanity` VALUES (10995,"屁股",5); 
-INSERT INTO `NamesProfanity` VALUES (10996,"屄",5); 
-INSERT INTO `NamesProfanity` VALUES (10997,"淫秽",5); 
-INSERT INTO `NamesProfanity` VALUES (10999,"官方人員",5); 
-INSERT INTO `NamesProfanity` VALUES (11000,"國民黨",5); 
-INSERT INTO `NamesProfanity` VALUES (11001,"親民黨",5); 
-INSERT INTO `NamesProfanity` VALUES (11002,"民進黨",5); 
-INSERT INTO `NamesProfanity` VALUES (11003,"台聯黨",5); 
-INSERT INTO `NamesProfanity` VALUES (11004,"台獨",5); 
-INSERT INTO `NamesProfanity` VALUES (11005,"台灣獨立",5); 
-INSERT INTO `NamesProfanity` VALUES (11006,"陳水扁",5); 
-INSERT INTO `NamesProfanity` VALUES (11007,"呂秀蓮",5); 
-INSERT INTO `NamesProfanity` VALUES (11008,"宋楚瑜",5); 
-INSERT INTO `NamesProfanity` VALUES (11009,"李登輝",5); 
-INSERT INTO `NamesProfanity` VALUES (11010,"連戰",5); 
-INSERT INTO `NamesProfanity` VALUES (11011,"馬英九",5); 
-INSERT INTO `NamesProfanity` VALUES (11012,"謝長廷",5); 
-INSERT INTO `NamesProfanity` VALUES (11013,"王俊博",5); 
-INSERT INTO `NamesProfanity` VALUES (11014,"林榮一",5); 
-INSERT INTO `NamesProfanity` VALUES (11015,"管理員",5); 
-INSERT INTO `NamesProfanity` VALUES (11016,"管理者",5); 
-INSERT INTO `NamesProfanity` VALUES (11017,"魔獸世界",5); 
-INSERT INTO `NamesProfanity` VALUES (11018,"公告",5); 
-INSERT INTO `NamesProfanity` VALUES (11019,"拍賣場",5); 
-INSERT INTO `NamesProfanity` VALUES (11020,"拍賣*",5); 
-INSERT INTO `NamesProfanity` VALUES (11021,"肛之*",5); 
-INSERT INTO `NamesProfanity` VALUES (11023,"精射*",5); 
-INSERT INTO `NamesProfanity` VALUES (11024,"施明德",5); 
-INSERT INTO `NamesProfanity` VALUES (11025,"倒扁",5); 
-INSERT INTO `NamesProfanity` VALUES (11026,"暴風雪",5); 
-INSERT INTO `NamesProfanity` VALUES (11027,"中共",5); 
-INSERT INTO `NamesProfanity` VALUES (11028,"挺扁",5); 
-INSERT INTO `NamesProfanity` VALUES (11029,"龜頭*",5); 
-INSERT INTO `NamesProfanity` VALUES (11030,"爛貨",5); 
-INSERT INTO `NamesProfanity` VALUES (11031,"操你媽",5); 
-INSERT INTO `NamesProfanity` VALUES (11032,"草支擺",5); 
-INSERT INTO `NamesProfanity` VALUES (11033,"小雞雞",5); 
-INSERT INTO `NamesProfanity` VALUES (11034,"趕羚羊",5); 
-INSERT INTO `NamesProfanity` VALUES (11035,"藍叫*",5); 
-INSERT INTO `NamesProfanity` VALUES (11036,"懶叫*",5); 
-INSERT INTO `NamesProfanity` VALUES (11037,"插你娘",5); 
-INSERT INTO `NamesProfanity` VALUES (11038,"媽的",5); 
-INSERT INTO `NamesProfanity` VALUES (11039,"幹你",5); 
-INSERT INTO `NamesProfanity` VALUES (11040,"幹妳",5); 
-INSERT INTO `NamesProfanity` VALUES (11865,"\<cervesa\>",1); 
-INSERT INTO `NamesProfanity` VALUES (11866,"\<champagne\>",1); 
-INSERT INTO `NamesProfanity` VALUES (11867,"\<chaseylain\>",1); 
-INSERT INTO `NamesProfanity` VALUES (11868,"\<cheeba\>",1); 
-INSERT INTO `NamesProfanity` VALUES (11869,"\<cherokee \>",1); 
-INSERT INTO `NamesProfanity` VALUES (11870,"\<chino\>",1); 
-INSERT INTO `NamesProfanity` VALUES (11871,"\<chloejones \>",1); 
-INSERT INTO `NamesProfanity` VALUES (11872,"\<christilake\>",1); 
-INSERT INTO `NamesProfanity` VALUES (11873,"\<chrisward \>",1); 
-INSERT INTO `NamesProfanity` VALUES (11874,"\<cocostarfish\>",1); 
-INSERT INTO `NamesProfanity` VALUES (11875,"\<cognac\>",1); 
-INSERT INTO `NamesProfanity` VALUES (11876,"\<cootch\>",1); 
-INSERT INTO `NamesProfanity` VALUES (11877,"\<cooter\>",1); 
-INSERT INTO `NamesProfanity` VALUES (11878,"\<copulate\>",1); 
-INSERT INTO `NamesProfanity` VALUES (11879,"\<cornholes\>",1); 
-INSERT INTO `NamesProfanity` VALUES (11880,"\<corona\>",1); 
-INSERT INTO `NamesProfanity` VALUES (11881,"\<crack\>",1); 
-INSERT INTO `NamesProfanity` VALUES (11882,"\<cracker\>",1); 
-INSERT INTO `NamesProfanity` VALUES (11883,"\<crap\>",1); 
-INSERT INTO `NamesProfanity` VALUES (11884,"\<damned\>",1); 
-INSERT INTO `NamesProfanity` VALUES (11885,"\<dank\>",1); 
-INSERT INTO `NamesProfanity` VALUES (11886,"\<deancoulter\>",1); 
-INSERT INTO `NamesProfanity` VALUES (11887,"\<debidiamond \>",1); 
-INSERT INTO `NamesProfanity` VALUES (11888,"\<deepthroat\>",1); 
-INSERT INTO `NamesProfanity` VALUES (11889,"\<devinderay \>",1); 
-INSERT INTO `NamesProfanity` VALUES (11890,"\<dianazyle \>",1); 
-INSERT INTO `NamesProfanity` VALUES (11891,"\<dietpills\>",1); 
-INSERT INTO `NamesProfanity` VALUES (11892,"\<dirtysanchez\>",1); 
-INSERT INTO `NamesProfanity` VALUES (11893,"\<ditavontease\>",1); 
-INSERT INTO `NamesProfanity` VALUES (11894,"\<doggystyle\>",1); 
-INSERT INTO `NamesProfanity` VALUES (11895,"\<dope\>",1); 
-INSERT INTO `NamesProfanity` VALUES (11896,"\<duckbutter\>",1); 
-INSERT INTO `NamesProfanity` VALUES (11897,"\<ecstacy\>",1); 
-INSERT INTO `NamesProfanity` VALUES (11898,"\<edpowers \>",1); 
-INSERT INTO `NamesProfanity` VALUES (11899,"\<eggplant\>",1); 
-INSERT INTO `NamesProfanity` VALUES (11900,"\<ericaboyer \>",1); 
-INSERT INTO `NamesProfanity` VALUES (11901,"\<extasy\>",1); 
-INSERT INTO `NamesProfanity` VALUES (11902,"\<facial\>",1); 
-INSERT INTO `NamesProfanity` VALUES (11903,"\<fluffer\>",1); 
-INSERT INTO `NamesProfanity` VALUES (11904,"\<fornicat",1); 
-INSERT INTO `NamesProfanity` VALUES (11905,"\<freebase\>",1); 
-INSERT INTO `NamesProfanity` VALUES (11906,"\<fusck",1); 
-INSERT INTO `NamesProfanity` VALUES (11907,"\<fux",1); 
-INSERT INTO `NamesProfanity` VALUES (11908,"\<gagepowers\>",1); 
-INSERT INTO `NamesProfanity` VALUES (11909,"\<gew\>",1); 
-INSERT INTO `NamesProfanity` VALUES (11910,"\<ghb\>",1); 
-INSERT INTO `NamesProfanity` VALUES (11911,"\<ghetto\>",1); 
-INSERT INTO `NamesProfanity` VALUES (11912,"\<gingerhill\>",1); 
-INSERT INTO `NamesProfanity` VALUES (11913,"\<gloryhole\>",1); 
-INSERT INTO `NamesProfanity` VALUES (11914,"\<goldschlager\>",1); 
-INSERT INTO `NamesProfanity` VALUES (11915,"\<goombah\>",1); 
-INSERT INTO `NamesProfanity` VALUES (11916,"\<granddragon\>",1); 
-INSERT INTO `NamesProfanity` VALUES (11917,"\<greaseball\>",1); 
-INSERT INTO `NamesProfanity` VALUES (11918,"\<greaser\>",1); 
-INSERT INTO `NamesProfanity` VALUES (11919,"\<gspot\>",1); 
-INSERT INTO `NamesProfanity` VALUES (11920,"\<guiness\>",1); 
-INSERT INTO `NamesProfanity` VALUES (11921,"\<gunja\>",1); 
-INSERT INTO `NamesProfanity` VALUES (11922,"\<handjob\>",1); 
-INSERT INTO `NamesProfanity` VALUES (11923,"\<hash\>",1); 
-INSERT INTO `NamesProfanity` VALUES (11924,"\<headdoctor\>",1); 
-INSERT INTO `NamesProfanity` VALUES (11925,"\<heidifleiss\>",1); 
-INSERT INTO `NamesProfanity` VALUES (11926,"\<hmo\>",1); 
-INSERT INTO `NamesProfanity` VALUES (11927,"\<honky\>",1); 
-INSERT INTO `NamesProfanity` VALUES (11928,"\<hoodrat\>",1); 
-INSERT INTO `NamesProfanity` VALUES (11929,"\<hookah\>",1); 
-INSERT INTO `NamesProfanity` VALUES (11930,"\<horney\>",1); 
-INSERT INTO `NamesProfanity` VALUES (11931,"\<hustler\>",1); 
-INSERT INTO `NamesProfanity` VALUES (11932,"\<inarivachs\>",1); 
-INSERT INTO `NamesProfanity` VALUES (11933,"\<j.*bobbit\>",1); 
-INSERT INTO `NamesProfanity` VALUES (11934,"\<j.*holmes\>",1); 
-INSERT INTO `NamesProfanity` VALUES (11935,"\<jackdaniels\>",1); 
-INSERT INTO `NamesProfanity` VALUES (11936,"\<jadeeast\>",1); 
-INSERT INTO `NamesProfanity` VALUES (11937,"\<jadehsu \>",1); 
-INSERT INTO `NamesProfanity` VALUES (11938,"\<jadestclair\>",1); 
-INSERT INTO `NamesProfanity` VALUES (11939,"\<jagermeister\>",1); 
-INSERT INTO `NamesProfanity` VALUES (11940,"\<janacova\>",1); 
-INSERT INTO `NamesProfanity` VALUES (11941,"\<jennahaze\>",1); 
-INSERT INTO `NamesProfanity` VALUES (11942,"\<jennajameson\>",1); 
-INSERT INTO `NamesProfanity` VALUES (11943,"\<jenteal\>",1); 
-INSERT INTO `NamesProfanity` VALUES (11944,"\<jessicadee\>",1); 
-INSERT INTO `NamesProfanity` VALUES (11945,"\<jeweldenyle\>",1); 
-INSERT INTO `NamesProfanity` VALUES (11946,"\<jillkelly\>",1); 
-INSERT INTO `NamesProfanity` VALUES (11947,"\<jimbeam\>",1); 
-INSERT INTO `NamesProfanity` VALUES (11948,"\<josecuervo\>",1); 
-INSERT INTO `NamesProfanity` VALUES (11949,"\<juliashton\>",1); 
-INSERT INTO `NamesProfanity` VALUES (11950,"\<karadavis\>",1); 
-INSERT INTO `NamesProfanity` VALUES (11951,"\<keef\>",1); 
-INSERT INTO `NamesProfanity` VALUES (11952,"\<kif\>",1); 
-INSERT INTO `NamesProfanity` VALUES (11953,"\<kikkityler \>",1); 
-INSERT INTO `NamesProfanity` VALUES (11954,"\<kobetai\>",1); 
-INSERT INTO `NamesProfanity` VALUES (11955,"\<kooter\>",1); 
-INSERT INTO `NamesProfanity` VALUES (11956,"\<krystalsteal\>",1); 
-INSERT INTO `NamesProfanity` VALUES (11957,"\<kyke\>",1); 
-INSERT INTO `NamesProfanity` VALUES (11958,"\<kylacole\>",1); 
-INSERT INTO `NamesProfanity` VALUES (11959,"\<kylieireland\>",1); 
-INSERT INTO `NamesProfanity` VALUES (11960,"\<lancegear \>",1); 
-INSERT INTO `NamesProfanity` VALUES (11961,"\<larryflynt\>",1); 
-INSERT INTO `NamesProfanity` VALUES (11962,"\<lecher\>",1); 
-INSERT INTO `NamesProfanity` VALUES (11963,"\<liquidx\>",1); 
-INSERT INTO `NamesProfanity` VALUES (11964,"\<loloferrari\>",1); 
-INSERT INTO `NamesProfanity` VALUES (11965,"\<long.*dong\>",1); 
-INSERT INTO `NamesProfanity` VALUES (11966,"\<ludes\>",1); 
-INSERT INTO `NamesProfanity` VALUES (11967,"\<lunalane\>",1); 
-INSERT INTO `NamesProfanity` VALUES (11968,"\<maltliquor\>",1); 
-INSERT INTO `NamesProfanity` VALUES (11969,"\<mariacheca\>",1); 
-INSERT INTO `NamesProfanity` VALUES (11970,"\<mariatakagi\>",1); 
-INSERT INTO `NamesProfanity` VALUES (11971,"\<marisadiaz \>",1); 
-INSERT INTO `NamesProfanity` VALUES (11972,"\<markdalton  \>",1); 
-INSERT INTO `NamesProfanity` VALUES (11973,"\<markwolff \>",1); 
-INSERT INTO `NamesProfanity` VALUES (11974,"\<marycarey \>",1); 
-INSERT INTO `NamesProfanity` VALUES (11975,"\<mayate\>",1); 
-INSERT INTO `NamesProfanity` VALUES (11976,"\<meatwad\>",1); 
-INSERT INTO `NamesProfanity` VALUES (11977,"\<methhead\>",1); 
-INSERT INTO `NamesProfanity` VALUES (11978,"\<methmonster\>",1); 
-INSERT INTO `NamesProfanity` VALUES (11979,"\<mikolee\>",1); 
-INSERT INTO `NamesProfanity` VALUES (11980,"\<mimimiyagi\>",1); 
-INSERT INTO `NamesProfanity` VALUES (11981,"\<moneyshot\>",1); 
-INSERT INTO `NamesProfanity` VALUES (11982,"\<muff\>",1); 
-INSERT INTO `NamesProfanity` VALUES (11983,"\<mushrooms\>",1); 
-INSERT INTO `NamesProfanity` VALUES (11984,"\<nickelbag\>",1); 
-INSERT INTO `NamesProfanity` VALUES (11985,"\<nikkibenz\>",1); 
-INSERT INTO `NamesProfanity` VALUES (11986,"\<nikkidial\>",1); 
-INSERT INTO `NamesProfanity` VALUES (11987,"\<nip\>",1); 
-INSERT INTO `NamesProfanity` VALUES (11988,"\<nizzle\>",1); 
-INSERT INTO `NamesProfanity` VALUES (11989,"\<nubian",1); 
-INSERT INTO `NamesProfanity` VALUES (11990,"\<nympho\>",1); 
-INSERT INTO `NamesProfanity` VALUES (11991,"\<obsession\>",1); 
-INSERT INTO `NamesProfanity` VALUES (11992,"\<opiate\>",1); 
-INSERT INTO `NamesProfanity` VALUES (11993,"\<orgy\>",1); 
-INSERT INTO `NamesProfanity` VALUES (11994,"\<panties\>",1); 
-INSERT INTO `NamesProfanity` VALUES (11995,"\<pecker\>",1); 
-INSERT INTO `NamesProfanity` VALUES (11996,"\<peternorth\>",1); 
-INSERT INTO `NamesProfanity` VALUES (11997,"\<pissedoff\>",1); 
-INSERT INTO `NamesProfanity` VALUES (11998,"\<pissoff\>",1); 
-INSERT INTO `NamesProfanity` VALUES (11999,"\<pornstar\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12000,"\<prepubescent\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12001,"\<prick\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12002,"\<pube\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12003,"\<punjab\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12004,"\<punkass\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12005,"\<pusse\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12006,"\<randywest\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12007,"\<rebeccalord\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12008,"\<rebeccaporn\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12009,"\<redneck\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12010,"\<reneelarue\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12011,"\<ricer\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12012,"\<rustytrumpet\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12013,"\<ryanconner \>",1); 
-INSERT INTO `NamesProfanity` VALUES (12014,"\<ryanwagner \>",1); 
-INSERT INTO `NamesProfanity` VALUES (12015,"\<sarastjames \>",1); 
-INSERT INTO `NamesProfanity` VALUES (12016,"\<tosser\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12017,"\<tossingsalad\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12018,"\<tosssalad\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12019,"\<traceyadams\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12020,"\<tracilords\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12021,"\<tranny\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12022,"\<ttboy\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12023,"\<tyfox\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12024,"\<tylerfaith\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12025,"\<urethra\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12026,"\<veronicahart\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12027,"\<wankoff\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12028,"\<weed\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12029,"\<wej\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12030,"\<wench\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12031,"\<wildturkey\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12032,"hefner\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12033,"snatch\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12034,"vagina\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12035,"\<annaslut\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12036,"\<asiacarrera\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12037,"\<aurorasnow\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12038,"\<bacardi\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12039,"\<beaner\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12040,"\<beanlicker\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12041,"\<scat\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12042,"\<scatology\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12043,"\<schlong",1); 
-INSERT INTO `NamesProfanity` VALUES (12044,"\<schnapps\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12045,"\<schoolboy",1); 
-INSERT INTO `NamesProfanity` VALUES (12046,"\<selenasteele\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12047,"\<sexy\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12048,"\<seymorebutts\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12049,"\<sheethead\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12050,"\<sherriangel\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12051,"\<shizzle\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12052,"\<shlong\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12053,"\<shmegma\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12054,"\<shrooms\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12055,"\<skeet\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12056,"\<skeetskeet\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12057,"\<vagina",1); 
-INSERT INTO `NamesProfanity` VALUES (12058,"\<adulteress\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12059,"\<adulterous\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12060,"\<adultery\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12061,"\<adultsonly\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12062,"\<agentorange\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12063,"\<aids\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12064,"\<al[ck]ohol",1); 
-INSERT INTO `NamesProfanity` VALUES (12065,"\<alecpowers\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12066,"\<alexwilcox\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12067,"\<amaretto\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12068,"\<anal\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12069,"\<angeladevi\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12070,"\<angeldust\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12071,"\<anglo\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12072,"\<anheiser\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12073,"\<annamalle\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12074,"\<beer\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12075,"\<erzengel\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12076,"könig\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12077,"\<eomer\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12078,"butthhead",1); 
-INSERT INTO `NamesProfanity` VALUES (12079,"\<slope\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12080,"\<smack\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12081,"\<smut\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12082,"\<snowball",1); 
-INSERT INTO `NamesProfanity` VALUES (12083,"\<sodomize\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12084,"\<sodomy\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12085,"\<speedball\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12086,"\<spew\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12087,"\<spreadeagle\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12088,"\<spunk\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12089,"\<std\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12090,"\<sunsetthomas\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12091,"\<sylviasaint\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12092,"\<teet[sz]\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12093,"\<tequila\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12094,"\<terapatrick\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12095,"\<thc\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12096,"\<tiabella\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12097,"\<toadlicker\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12098,"\<toak\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12099,"\<toke\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12100,"\<tombyron\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12101,"\<tommycruise\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12102,"\<tonyzerega\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12103,"\<tossalad\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12104,"\<vibrator\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12105,"\<vincevouyer\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12106,"\<vodka\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12107,"\<vulva\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12108,"\<w[ei]+n[ei]+r\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12109,"\<wank\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12110,"\<whackoff\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12111,"\<whiskey\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12112,"\<willclark\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12113,"\<yellow\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12114,"\<zigzag\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12115,"aryan\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12116,"\<acclaim\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12117,"\<amongoe",1); 
-INSERT INTO `NamesProfanity` VALUES (12118,"\<anabolica\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12119,"\<analpunisher\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12120,"nazi\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12121,"\<anth?rax\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12122,"\<blasehase\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12123,"\<botox\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12124,"\<bueckstueck\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12125,"\<bumsnudel\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12126,"\<cairne\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12127,"\<christkind\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12128,"\<crackdealer\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12129,"king\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12130,"\<darthjedi\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12131,"\<denethor\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12132,"\<derneger\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12133,"\<diedroge\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12134,"\<dollybuster\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12135,"\<donpeperulez\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12136,"\<dopecheffe\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12137,"\<duke",1); 
-INSERT INTO `NamesProfanity` VALUES (12138,"\<dwalin\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12139,"sucker\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12140,"\<ebola\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12141,"\<eichelkäse\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12142,"f[ue]+rst\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12143,"muschi\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12144,"\<eternalhoden\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12145,"\<euthanasie\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12146,"\<fick",1); 
-INSERT INTO `NamesProfanity` VALUES (12147,"luder\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12148,"kacke\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12149,"\<fotz",1); 
-INSERT INTO `NamesProfanity` VALUES (12150,"tussi\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12151,"\<frodobeutlin\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12152,"\<frozenthrone\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12153,"\<gandhi\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12154,"\<ganja",1); 
-INSERT INTO `NamesProfanity` VALUES (12155,"\<gayoverlord\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12156,"\<geilebraut\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12157,"\<ginawild\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12158,"\<goebbels\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12159,"\<gott\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12160,"\<graftaliban\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12161,"\<hägar\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12162,"\<hanfernte\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12163,"\<heiland\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12164,"\<hendrix\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12165,"\<heroin",1); 
-INSERT INTO `NamesProfanity` VALUES (12166,"\<hordenhure\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12167,"porno\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12168,"\<[gk]adafi\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12169,"\<kiffer",1); 
-INSERT INTO `NamesProfanity` VALUES (12170,"\<kleineralki\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12171,"\<kleinerfurz\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12172,"\<klitori",1); 
-INSERT INTO `NamesProfanity` VALUES (12173,"ficker\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12174,"\<kpd\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12175,"\<kruppstahl\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12176,"\<mariuhanna\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12177,"\<master",1); 
-INSERT INTO `NamesProfanity` VALUES (12178,"\<meisteryoda\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12179,"\<mengele\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12180,"fick\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12181,"\<michaelmyers\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12182,"\<milkahase\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12183,"\<milkakuh\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12184,"\<mistst[ue]+ck\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12185,"\<moesen",1); 
-INSERT INTO `NamesProfanity` VALUES (12186,"\<möse",1); 
-INSERT INTO `NamesProfanity` VALUES (12187,"\<muschi",1); 
-INSERT INTO `NamesProfanity` VALUES (12188,"\<nachgeburt\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12189,"\<nazghul\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12190,"\<negerin\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12191,"\<nikoleinchen\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12192,"\<onkeltom\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12193,"\<pimmel",1); 
-INSERT INTO `NamesProfanity` VALUES (12194,"\<pimper",1); 
-INSERT INTO `NamesProfanity` VALUES (12195,"\<pommespapst\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12196,"\<popobumser\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12197,"\<porno",1); 
-INSERT INTO `NamesProfanity` VALUES (12198,"\<princess",1); 
-INSERT INTO `NamesProfanity` VALUES (12199,"\<prinz\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12200,"\<rammstein\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12201,"\<rasputin\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12202,"\<redbull\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12203,"\<richthofen\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12204,"\<sarin\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12205,"\<schlampe",1); 
-INSERT INTO `NamesProfanity` VALUES (12206,"\<schwanz",1); 
-INSERT INTO `NamesProfanity` VALUES (12207,"\<sith\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12208,"\<smeagol\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12209,"\<sohngottes\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12210,"\<spikelee\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12211,"\<splintercell\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12212,"\<suicide\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12213,"\<suizidhoden\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12214,"\<terrortunte\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12215,"\<titanrosette\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12216,"\<tittenmaus\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12217,"\<tylerdurden\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12218,"\<vagimampf\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12219,"\<vanginus\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12220,"\<votzentroll\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12221,"\<warcrack\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12222,"\<winnipuuh\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12223,"\<wixxoor\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12224,"\<wowdiablo\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12225,"\<xerox\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12226,"schlampe\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12227,"zipfe?l\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12228,"\<zuhälter",1); 
-INSERT INTO `NamesProfanity` VALUES (12229,"\<zwergpimmel\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12230,"18년",1); 
-INSERT INTO `NamesProfanity` VALUES (12231,"18놈",1); 
-INSERT INTO `NamesProfanity` VALUES (12232,"\<absinthe\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12233,"18새끼",1); 
-INSERT INTO `NamesProfanity` VALUES (12234,"\<absolut\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12235,"\<chink\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12236,"\<agnostic\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12237,"\<pussy",1); 
-INSERT INTO `NamesProfanity` VALUES (12238,"\<rape\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12239,"\<aceofspades\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12240,"\<pusher",1); 
-INSERT INTO `NamesProfanity` VALUES (12241,"\<chinks\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12242,"\<dikes\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12243,"\<dildos\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12244,"\<sativa\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12245,"\<indica\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12246,"\<skunkweed\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12247,"\<dike\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12248,"\<raped\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12249,"\<raping\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12250,"dong",1); 
-INSERT INTO `NamesProfanity` VALUES (12251,"\<dyke\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12252,"\<mj\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12253,"\<doobie\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12254,"\<stoner",1); 
-INSERT INTO `NamesProfanity` VALUES (12255,"\<junk[ie]",1); 
-INSERT INTO `NamesProfanity` VALUES (12256,"\<defecat",1); 
-INSERT INTO `NamesProfanity` VALUES (12257,"\<alquaeda\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12258,"\<amerikkkan\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12259,"\<amphetamine\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12260,"\<ejaculate\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12261,"\<scrotum",1); 
-INSERT INTO `NamesProfanity` VALUES (12262,"\<fisting\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12263,"\<arse",1); 
-INSERT INTO `NamesProfanity` VALUES (12264,"\<cock",1); 
-INSERT INTO `NamesProfanity` VALUES (12265,"\<aryan",1); 
-INSERT INTO `NamesProfanity` VALUES (12266,"\<backdoor\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12267,"titt[iey]*s\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12268,"\<bi\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12269,"\<bigfatasscow\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12270,"bondage\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12271,"boobs\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12272,"breast\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12273,"\<buttocks\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12274,"\<[ck]oitus",1); 
-INSERT INTO `NamesProfanity` VALUES (12275,"\<condom",1); 
-INSERT INTO `NamesProfanity` VALUES (12276,"\<dahoe\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12277,"\<damn\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12278,"\<darkwanker\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12279,"\<di[ae][rh]+ea",1); 
-INSERT INTO `NamesProfanity` VALUES (12280,"dick\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12281,"\<dirtyho\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12282,"\<domination\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12283,"\<dutch\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12284,"\<enema\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12285,"\<erotic",1); 
-INSERT INTO `NamesProfanity` VALUES (12286,"jackass\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12287,"\<facism\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12288,"\<fakeboobs\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12289,"\<fart\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12290,"\<fetish",1); 
-INSERT INTO `NamesProfanity` VALUES (12291,"fetish\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12292,"\<filthymuslim\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12293,"\<focker\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12294,"\<foreplay\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12295,"\<foreskin\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12296,"\<frottage\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12297,"\<fuk\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12298,"\<fukass\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12299,"\<gay\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12300,"\<genital",1); 
-INSERT INTO `NamesProfanity` VALUES (12301,"\<genitals\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12302,"\<gigolo\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12303,"\<gonorrhea\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12304,"\<grummz\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12305,"\<hairyhorny\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12306,"\<hardboob\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12307,"\<hentail\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12308,"\<hiv\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12309,"\<holocaust\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12310,"\<horny\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12311,"\<hot\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12312,"\<j.*jameson\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12313,"\<kinky\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12314,"\<kraut\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12315,"\<lesb\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12316,"\<lesbian\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12317,"pussy\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12318,"\<lingerie\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12319,"\<load\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12320,"\<lube\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12321,"\<lubricant\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12322,"\<lust\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12323,"\<maidenhead\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12324,"후장뚫어",1); 
-INSERT INTO `NamesProfanity` VALUES (12325,"\<asshole",1); 
-INSERT INTO `NamesProfanity` VALUES (12326,"\<fingerbang\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12327,"\<gangbang\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12328,"\<gangrape\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12329,"\<japs\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12330,"\<jizzing\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12331,"\<gizzing\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12332,"\<pussies\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12333,"\<rapes\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12334,"\<saladtosser\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12335,"\<fags\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12336,"boob",1); 
-INSERT INTO `NamesProfanity` VALUES (12337,"\<bast[aeiou]rd",1); 
-INSERT INTO `NamesProfanity` VALUES (12338,"\<beastiality\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12339,"\<blowjob",1); 
-INSERT INTO `NamesProfanity` VALUES (12340,"\<boffer\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12341,"\<clowjob\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12342,"\<donkeypunch\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12343,"\<fawker\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12344,"\<feces",1); 
-INSERT INTO `NamesProfanity` VALUES (12345,"\<nipple",1); 
-INSERT INTO `NamesProfanity` VALUES (12346,"nipples\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12347,"prostitute",1); 
-INSERT INTO `NamesProfanity` VALUES (12348,"\<coke\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12349,"\<morphine\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12350,"\<nudity\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12351,"\<nuts\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12352,"\<pagan\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12353,"\<perv\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12354,"\<pervert\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12355,"\<phawk\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12356,"\<piss\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12357,"\<playboy\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12358,"\<playgirl\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12359,"\<polish\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12360,"\<prebubescent\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12361,"\<queer\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12362,"\<reich\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12363,"\<r.*jeremy\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12364,"\<screw\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12365,"\<seamen\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12366,"\<spreadmylegs\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12367,"\<stripper",1); 
-INSERT INTO `NamesProfanity` VALUES (12368,"\<suck\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12369,"\<sukkitdown\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12370,"\<swingers\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12371,"\<teabag",1); 
-INSERT INTO `NamesProfanity` VALUES (12372,"\<terrorist\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12373,"\<thickbush\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12374,"\<threesome\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12375,"\<snatch",1); 
-INSERT INTO `NamesProfanity` VALUES (12376,"\<updabut\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12377,"\<vasect",1); 
-INSERT INTO `NamesProfanity` VALUES (12378,"\<white\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12379,"\<negro",1); 
-INSERT INTO `NamesProfanity` VALUES (12380,"\<tinytits\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12381,"cock\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12382,"blowjob\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12383,"\<tardpopsicle\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12384,"\<urmom\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12385,"fag\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12386,"\<dick",1); 
-INSERT INTO `NamesProfanity` VALUES (12387,"\<turdsplat\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12388,"\<chokeoncocks\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12389,"\<littlearse\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12390,"\<holybijesis\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12391,"\<niggs\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12392,"\<sacofricosis\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12393,"\<polesmokers\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12394,"\<sega\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12395,"\<sex",1); 
-INSERT INTO `NamesProfanity` VALUES (12396,"\<shadowbane\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12397,"\<shane",1); 
-INSERT INTO `NamesProfanity` VALUES (12398,"\<shiznit\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12399,"\<shortbus\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12400,"\<tramps\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12401,"\<erection\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12402,"\<smoked\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12403,"\<snowwhite\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12404,"\<oral\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12405,"\<sperm",1); 
-INSERT INTO `NamesProfanity` VALUES (12406,"\<poop\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12407,"\<spluge\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12408,"\<suck",1); 
-INSERT INTO `NamesProfanity` VALUES (12409,"\<supermario\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12410,"support",1); 
-INSERT INTO `NamesProfanity` VALUES (12411,"\<sex\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12412,"\<suppuku\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12413,"\<sirbong\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12414,"\<spank\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12415,"\<speculum\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12416,"\<streaker",1); 
-INSERT INTO `NamesProfanity` VALUES (12417,"\<tribadism\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12418,"\<upmybutthole\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12419,"\<urinat",1); 
-INSERT INTO `NamesProfanity` VALUES (12420,"\<venereal\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12421,"\<virgin\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12422,"\<warslut\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12423,"\<wood\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12424,"\<advil\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12425,"\<amputee\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12426,"\<amtrak\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12427,"\<anis\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12428,"\<anolinctus\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12429,"\<antichrist\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12430,"\<arathorn\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12431,"\<arian\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12432,"\<arsonist\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12433,"\<blackenstein\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12434,"\<blacksabbath\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12435,"\<bnet\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12436,"\<bootylicious\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12437,"\<bra\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12438,"\<chinaman\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12439,"\<chronik\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12440,"\<colgate\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12441,"\<coprophagy\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12442,"\<crackhead\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12443,"\<dammit\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12444,"\<darky\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12445,"\<darvocet\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12446,"\<databasesys\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12447,"\<deckardcain\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12448,"\<dr\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12449,"\<dukeofwhales\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12450,"\<dumbass\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12451,"\<ecstasy\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12452,"\<ensign\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12453,"\<fcuk\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12454,"\<ferrari\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12455,"\<fetus",1); 
-INSERT INTO `NamesProfanity` VALUES (12456,"\<fockerz\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12457,"\<fooker\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12458,"cunt\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12459,"\<ghandi\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12460,"\<gofukyorself\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12461,"\<gonadian\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12462,"\<goochgravy\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12463,"\<gookenator\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12464,"\<hemplock\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12465,"\<herpies\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12466,"\<homoerectus\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12467,"\<hore\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12468,"\<hotdamn\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12469,"\<hungelf\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12470,"\<indian\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12471,"\<irapekids\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12472,"\<ironchef\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12473,"\<jc\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12474,"\<jedi\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12475,"\<[gj]en[ao]cide\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12476,"\<jugs\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12477,"\<klismaphilia\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12478,"\<kokigami\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12479,"\<koon\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12480,"\<kosherpork\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12481,"\<lardass\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12482,"\<laurabush\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12483,"\<marlboroman\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12484,"\<masterbaiter\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12485,"\<maxipad\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12486,"\<menstrual\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12487,"\<mhz\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12488,"\<michaeljack\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12489,"bastard\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12490,"\<misogynist\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12491,"\<mister\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12492,"\<mr\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12493,"\<narcoticus\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12494,"\<nigahh\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12495,"\<npc",1); 
-INSERT INTO `NamesProfanity` VALUES (12496,"\<nug\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12497,"\<nunriggers\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12498,"\<nwa\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12499,"\<omgwtf\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12500,"\<opiate",1); 
-INSERT INTO `NamesProfanity` VALUES (12501,"\<oreos\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12502,"\<ovaltine\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12503,"\<papsmear\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12504,"\<pederasty\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12505,"\<penthouse\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12506,"\<pimp",1); 
-INSERT INTO `NamesProfanity` VALUES (12507,"\<pinktaco\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12508,"mofo\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12509,"\<poomaster\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12510,"\<poonjuice\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12511,"\<poop",1); 
-INSERT INTO `NamesProfanity` VALUES (12512,"\<pwnzor\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12513,"\<quadoushka\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12514,"\<r.*nad[ae]r\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12515,"\<stud\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12516,"\<submissive\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12517,"\<swiftnuggs\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12518,"\<trans",1); 
-INSERT INTO `NamesProfanity` VALUES (12519,"\<uglynig\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12520,"\<swastika\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12521,"\<sybian\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12522,"\<toeofcamel\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12523,"\<tokyorose\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12524,"\<urmama\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12525,"\<voltron\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12526,"\<wangmaster\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12527,"\<wanker\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12528,"\<wetdream\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12529,"\<whitebread\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12530,"\<wigger\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12531,"\<williamhung\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12532,"\<windex\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12533,"\<witchking\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12534,"\<x.*x\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12535,"\<yosemitesam\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12536,"\<youranus\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12537,"\<zoolander\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12538,"condom\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12539,"jebus\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12540,"\<kosher",1); 
-INSERT INTO `NamesProfanity` VALUES (12541,"menstrual",1); 
-INSERT INTO `NamesProfanity` VALUES (12542,"sexy",1); 
-INSERT INTO `NamesProfanity` VALUES (12543,"\<bestiality\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12544,"\<bizzle\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12545,"\<black\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12546,"\<blackie\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12547,"\<bloodyhell\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12548,"\<blow\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12549,"\<blunt\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12550,"\<bollocks\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12551,"\<boobs",1); 
-INSERT INTO `NamesProfanity` VALUES (12552,"\<boofer\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12553,"\<bourbon\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12554,"\<brazuca\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12555,"\<breast",1); 
-INSERT INTO `NamesProfanity` VALUES (12556,"\<budda\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12557,"\<buddahead\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12558,"\<budlight\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12559,"\<budweiser\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12560,"\<bugger\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12561,"\<bustydusty\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12562,"\<butt\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12563,"\<buttman\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12564,"\<candyandes\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12565,"\<caucazoid\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12566,"\<cawk\>",1); 
-INSERT INTO `NamesProfanity` VALUES (12567,"\<fu[ck]+[aeiou]+",1); 
-INSERT INTO `NamesProfanity` VALUES (13055,"\<cervesa\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13056,"\<champagne\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13057,"\<chaseylain\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13058,"\<cheeba\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13059,"\<cherokee \>",6); 
-INSERT INTO `NamesProfanity` VALUES (13060,"\<chino\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13061,"\<chloejones \>",6); 
-INSERT INTO `NamesProfanity` VALUES (13062,"\<christilake\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13063,"\<chrisward \>",6); 
-INSERT INTO `NamesProfanity` VALUES (13064,"\<cocostarfish\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13065,"\<cognac\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13066,"\<cootch\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13067,"\<cooter\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13068,"\<copulate\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13069,"\<cornholes\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13070,"\<corona\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13071,"\<crack\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13072,"\<cracker\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13073,"\<crap\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13074,"\<damned\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13075,"\<dank\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13076,"\<deancoulter\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13077,"\<debidiamond \>",6); 
-INSERT INTO `NamesProfanity` VALUES (13078,"\<deepthroat\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13079,"\<devinderay \>",6); 
-INSERT INTO `NamesProfanity` VALUES (13080,"\<dianazyle \>",6); 
-INSERT INTO `NamesProfanity` VALUES (13081,"\<dietpills\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13082,"\<dirtysanchez\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13083,"\<ditavontease\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13084,"\<doggystyle\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13085,"\<dope\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13086,"\<duckbutter\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13087,"\<ecstacy\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13088,"\<edpowers \>",6); 
-INSERT INTO `NamesProfanity` VALUES (13089,"\<eggplant\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13090,"\<ericaboyer \>",6); 
-INSERT INTO `NamesProfanity` VALUES (13091,"\<extasy\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13092,"\<facial\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13093,"\<fluffer\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13094,"\<fornicat",6); 
-INSERT INTO `NamesProfanity` VALUES (13095,"\<freebase\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13096,"\<fusck",6); 
-INSERT INTO `NamesProfanity` VALUES (13097,"\<fux",6); 
-INSERT INTO `NamesProfanity` VALUES (13098,"\<gagepowers\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13099,"\<gew\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13100,"\<ghb\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13101,"\<ghetto\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13102,"\<gingerhill\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13103,"\<gloryhole\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13104,"\<goldschlager\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13105,"\<goombah\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13106,"\<granddragon\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13107,"\<greaseball\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13108,"\<greaser\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13109,"\<gspot\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13110,"\<guiness\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13111,"\<gunja\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13112,"\<handjob\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13113,"\<hash\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13114,"\<headdoctor\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13115,"\<heidifleiss\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13116,"\<hmo\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13117,"\<honky\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13118,"\<hoodrat\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13119,"\<hookah\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13120,"\<horney\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13121,"\<hustler\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13122,"\<inarivachs\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13123,"\<j.*bobbit\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13124,"\<j.*holmes\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13125,"\<jackdaniels\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13126,"\<jadeeast\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13127,"\<jadehsu \>",6); 
-INSERT INTO `NamesProfanity` VALUES (13128,"\<jadestclair\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13129,"\<jagermeister\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13130,"\<janacova\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13131,"\<jennahaze\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13132,"\<jennajameson\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13133,"\<jenteal\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13134,"\<jessicadee\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13135,"\<jeweldenyle\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13136,"\<jillkelly\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13137,"\<jimbeam\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13138,"\<josecuervo\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13139,"\<juliashton\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13140,"\<karadavis\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13141,"\<keef\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13142,"\<kif\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13143,"\<kikkityler \>",6); 
-INSERT INTO `NamesProfanity` VALUES (13144,"\<kobetai\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13145,"\<kooter\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13146,"\<krystalsteal\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13147,"\<kyke\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13148,"\<kylacole\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13149,"\<kylieireland\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13150,"\<lancegear \>",6); 
-INSERT INTO `NamesProfanity` VALUES (13151,"\<larryflynt\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13152,"\<lecher\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13153,"\<liquidx\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13154,"\<loloferrari\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13155,"\<long.*dong\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13156,"\<ludes\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13157,"\<lunalane\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13158,"\<maltliquor\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13159,"\<mariacheca\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13160,"\<mariatakagi\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13161,"\<marisadiaz \>",6); 
-INSERT INTO `NamesProfanity` VALUES (13162,"\<markdalton  \>",6); 
-INSERT INTO `NamesProfanity` VALUES (13163,"\<markwolff \>",6); 
-INSERT INTO `NamesProfanity` VALUES (13164,"\<marycarey \>",6); 
-INSERT INTO `NamesProfanity` VALUES (13165,"\<mayate\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13166,"\<meatwad\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13167,"\<methhead\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13168,"\<methmonster\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13169,"\<mikolee\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13170,"\<mimimiyagi\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13171,"\<moneyshot\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13172,"\<muff\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13173,"\<mushrooms\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13174,"\<nickelbag\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13175,"\<nikkibenz\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13176,"\<nikkidial\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13177,"\<nip\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13178,"\<nizzle\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13179,"\<nubian",6); 
-INSERT INTO `NamesProfanity` VALUES (13180,"\<nympho\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13181,"\<obsession\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13182,"\<opiate\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13183,"\<orgy\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13184,"\<panties\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13185,"\<pecker\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13186,"\<peternorth\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13187,"\<pissedoff\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13188,"\<pissoff\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13189,"\<pornstar\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13190,"\<prepubescent\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13191,"\<prick\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13192,"\<pube\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13193,"\<punjab\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13194,"\<punkass\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13195,"\<pusse\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13196,"\<randywest\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13197,"\<rebeccalord\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13198,"\<rebeccaporn\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13199,"\<redneck\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13200,"\<reneelarue\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13201,"\<ricer\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13202,"\<rustytrumpet\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13203,"\<ryanconner \>",6); 
-INSERT INTO `NamesProfanity` VALUES (13204,"\<ryanwagner \>",6); 
-INSERT INTO `NamesProfanity` VALUES (13205,"\<sarastjames \>",6); 
-INSERT INTO `NamesProfanity` VALUES (13206,"\<tosser\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13207,"\<tossingsalad\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13208,"\<tosssalad\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13209,"\<traceyadams\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13210,"\<tracilords\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13211,"\<tranny\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13212,"\<ttboy\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13213,"\<tyfox\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13214,"\<tylerfaith\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13215,"\<urethra\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13216,"\<veronicahart\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13217,"\<wankoff\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13218,"\<weed\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13219,"\<wej\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13220,"\<wench\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13221,"\<wildturkey\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13222,"hefner\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13223,"snatch\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13224,"vagina",6); 
-INSERT INTO `NamesProfanity` VALUES (13225,"\<annaslut\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13226,"\<asiacarrera\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13227,"\<aurorasnow\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13228,"\<bacardi\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13229,"\<beaner\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13230,"\<beanlicker\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13231,"\<scat\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13232,"\<scatology\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13233,"\<schlong",6); 
-INSERT INTO `NamesProfanity` VALUES (13234,"\<schnapps\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13235,"\<schoolboy",6); 
-INSERT INTO `NamesProfanity` VALUES (13236,"\<selenasteele\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13237,"\<sexy\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13238,"\<seymorebutts\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13239,"\<sheethead\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13240,"\<sherriangel\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13241,"\<shizzle\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13242,"\<shlong\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13243,"\<shmegma\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13244,"\<shrooms\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13245,"\<skeet\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13246,"\<skeetskeet\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13247,"\<adulteress\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13248,"\<adulterous\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13249,"\<adultery\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13250,"\<adultsonly\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13251,"\<agentorange\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13252,"\<aids\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13253,"\<al[ck]ohol",6); 
-INSERT INTO `NamesProfanity` VALUES (13254,"\<alecpowers\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13255,"\<alexwilcox\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13256,"\<amaretto\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13257,"\<anal\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13258,"\<angeladevi\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13259,"\<angeldust\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13260,"\<anglo\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13261,"\<anheiser\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13262,"\<annamalle\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13263,"\<beer\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13264,"\<erzengel\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13265,"könig\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13266,"\<eomer\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13267,"butthhead",6); 
-INSERT INTO `NamesProfanity` VALUES (13268,"\<slope\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13269,"\<smack\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13270,"\<smut\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13271,"\<snowball",6); 
-INSERT INTO `NamesProfanity` VALUES (13272,"\<sodomize\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13273,"\<sodomy\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13274,"\<speedball\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13275,"\<spew\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13276,"\<spreadeagle\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13277,"\<spunk\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13278,"\<std\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13279,"\<sunsetthomas\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13280,"\<sylviasaint\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13281,"\<teet[sz]\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13282,"\<tequila\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13283,"\<terapatrick\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13284,"\<thc\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13285,"\<tiabella\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13286,"\<toadlicker\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13287,"\<toak\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13288,"\<toke\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13289,"\<tombyron\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13290,"\<tommycruise\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13291,"\<tonyzerega\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13292,"\<tossalad\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13293,"\<vibrator\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13294,"\<vincevouyer\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13295,"\<vodka\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13296,"\<vulva\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13297,"\<w[ei]+n[ei]+r\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13298,"\<wank\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13299,"\<whackoff\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13300,"\<whiskey\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13301,"\<willclark\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13302,"\<yellow\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13303,"\<zigzag\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13304,"aryan\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13305,"\<acclaim\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13306,"\<amongoe",6); 
-INSERT INTO `NamesProfanity` VALUES (13307,"\<anabolica\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13308,"\<analpunisher\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13309,"nazi\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13310,"\<anth?rax\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13311,"\<blasehase\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13312,"\<botox\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13313,"\<bueckstueck\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13314,"\<bumsnudel\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13315,"\<cairne\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13316,"\<christkind\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13317,"\<crackdealer\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13318,"king\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13319,"\<darthjedi\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13320,"\<denethor\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13321,"\<derneger\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13322,"\<diedroge\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13323,"\<dollybuster\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13324,"\<donpeperulez\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13325,"\<dopecheffe\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13326,"\<duke",6); 
-INSERT INTO `NamesProfanity` VALUES (13327,"\<dwalin\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13328,"sucker\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13329,"\<ebola\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13330,"\<eichelkäse\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13331,"f[ue]+rst\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13332,"muschi\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13333,"\<eternalhoden\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13334,"\<euthanasie\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13335,"\<fick",6); 
-INSERT INTO `NamesProfanity` VALUES (13336,"luder\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13337,"kacke\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13338,"\<fotz",6); 
-INSERT INTO `NamesProfanity` VALUES (13339,"tussi\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13340,"\<frodobeutlin\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13341,"\<frozenthrone\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13342,"\<gandhi\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13343,"\<ganja",6); 
-INSERT INTO `NamesProfanity` VALUES (13344,"\<gayoverlord\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13345,"\<geilebraut\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13346,"\<ginawild\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13347,"\<goebbels\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13348,"\<gott\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13349,"\<graftaliban\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13350,"\<hägar\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13351,"\<hanfernte\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13352,"\<heiland\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13353,"\<hendrix\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13354,"\<heroin",6); 
-INSERT INTO `NamesProfanity` VALUES (13355,"\<hordenhure\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13356,"porno\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13357,"\<[gk]adafi\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13358,"\<kiffer",6); 
-INSERT INTO `NamesProfanity` VALUES (13359,"\<kleineralki\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13360,"\<kleinerfurz\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13361,"\<klitori",6); 
-INSERT INTO `NamesProfanity` VALUES (13362,"ficker\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13363,"\<kpd\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13364,"\<kruppstahl\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13365,"\<mariuhanna\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13366,"\<master",6); 
-INSERT INTO `NamesProfanity` VALUES (13367,"\<meisteryoda\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13368,"\<mengele\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13369,"fick\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13370,"\<michaelmyers\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13371,"\<milkahase\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13372,"\<milkakuh\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13373,"\<mistst[ue]+ck\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13374,"\<moesen",6); 
-INSERT INTO `NamesProfanity` VALUES (13375,"\<möse",6); 
-INSERT INTO `NamesProfanity` VALUES (13376,"\<muschi",6); 
-INSERT INTO `NamesProfanity` VALUES (13377,"\<nachgeburt\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13378,"\<nazghul\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13379,"\<negerin\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13380,"\<nikoleinchen\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13381,"\<onkeltom\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13382,"\<pimmel",6); 
-INSERT INTO `NamesProfanity` VALUES (13383,"\<pimper",6); 
-INSERT INTO `NamesProfanity` VALUES (13384,"\<pommespapst\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13385,"\<popobumser\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13386,"\<porno",6); 
-INSERT INTO `NamesProfanity` VALUES (13387,"\<princess",6); 
-INSERT INTO `NamesProfanity` VALUES (13388,"\<prinz\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13389,"\<rammstein\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13390,"\<rasputin\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13391,"\<redbull\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13392,"\<richthofen\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13393,"\<sarin\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13394,"\<schlampe",6); 
-INSERT INTO `NamesProfanity` VALUES (13395,"\<schwanz",6); 
-INSERT INTO `NamesProfanity` VALUES (13396,"\<sith\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13397,"\<smeagol\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13398,"\<sohngottes\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13399,"\<spikelee\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13400,"\<splintercell\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13401,"\<suicide\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13402,"\<suizidhoden\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13403,"\<terrortunte\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13404,"\<titanrosette\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13405,"\<tittenmaus\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13406,"\<tylerdurden\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13407,"\<vagimampf\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13408,"\<vanginus\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13409,"\<votzentroll\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13410,"\<warcrack\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13411,"\<winnipuuh\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13412,"\<wixxoor\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13413,"\<wowdiablo\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13414,"\<xerox\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13415,"schlampe\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13416,"zipfe?l\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13417,"\<zuhälter",6); 
-INSERT INTO `NamesProfanity` VALUES (13418,"\<zwergpimmel\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13419,"\<absinthe\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13420,"\<absolut\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13421,"\<chink\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13422,"\<agnostic\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13423,"\<pussy",6); 
-INSERT INTO `NamesProfanity` VALUES (13424,"\<rape\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13425,"\<aceofspades\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13426,"\<pusher",6); 
-INSERT INTO `NamesProfanity` VALUES (13427,"\<chinks\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13428,"\<dikes\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13429,"\<dildos\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13430,"\<sativa\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13431,"\<indica\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13432,"\<skunkweed\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13433,"\<dike\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13434,"\<raped\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13435,"\<raping\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13436,"dong",6); 
-INSERT INTO `NamesProfanity` VALUES (13437,"\<dyke\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13438,"\<mj\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13439,"\<doobie\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13440,"\<stoner",6); 
-INSERT INTO `NamesProfanity` VALUES (13441,"\<junk[ie]",6); 
-INSERT INTO `NamesProfanity` VALUES (13442,"\<defecat",6); 
-INSERT INTO `NamesProfanity` VALUES (13443,"\<alquaeda\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13444,"\<amerikkkan\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13445,"\<amphetamine\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13446,"\<ejaculate\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13447,"\<scrotum",6); 
-INSERT INTO `NamesProfanity` VALUES (13448,"\<fisting\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13449,"\<arse",6); 
-INSERT INTO `NamesProfanity` VALUES (13450,"\<cock",6); 
-INSERT INTO `NamesProfanity` VALUES (13451,"\<aryan",6); 
-INSERT INTO `NamesProfanity` VALUES (13452,"\<backdoor\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13453,"titt[iey]*s\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13454,"\<bi\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13455,"\<bigfatasscow\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13456,"bondage\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13457,"boobs\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13458,"breast\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13459,"\<buttocks\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13460,"\<[ck]oitus",6); 
-INSERT INTO `NamesProfanity` VALUES (13461,"\<condom",6); 
-INSERT INTO `NamesProfanity` VALUES (13462,"\<dahoe\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13463,"\<damn\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13464,"\<darkwanker\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13465,"\<di[ae][rh]+ea",6); 
-INSERT INTO `NamesProfanity` VALUES (13466,"dick\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13467,"\<dirtyho\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13468,"\<domination\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13469,"\<dutch\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13470,"\<enema\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13471,"\<erotic",6); 
-INSERT INTO `NamesProfanity` VALUES (13472,"jackass\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13473,"\<facism\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13474,"\<fakeboobs\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13475,"\<fart\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13476,"\<fetish",6); 
-INSERT INTO `NamesProfanity` VALUES (13477,"fetish\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13478,"\<filthymuslim\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13479,"\<focker\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13480,"\<foreplay\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13481,"\<foreskin\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13482,"\<frottage\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13483,"\<fuk\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13484,"\<fukass\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13485,"\<gay\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13486,"\<genital",6); 
-INSERT INTO `NamesProfanity` VALUES (13487,"\<genitals\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13488,"\<gigolo\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13489,"\<gonorrhea\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13490,"\<grummz\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13491,"\<hairyhorny\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13492,"\<hardboob\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13493,"\<hentail\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13494,"\<hiv\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13495,"\<holocaust\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13496,"\<horny\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13497,"\<hot\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13498,"\<j.*jameson\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13499,"\<kinky\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13500,"\<kraut\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13501,"\<lesb\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13502,"\<lesbian\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13503,"pussy\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13504,"\<lingerie\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13505,"\<load\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13506,"\<lube\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13507,"\<lubricant\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13508,"\<lust\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13509,"\<maidenhead\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13510,"후장뚫어",6); 
-INSERT INTO `NamesProfanity` VALUES (13511,"\<asshole",6); 
-INSERT INTO `NamesProfanity` VALUES (13512,"\<fingerbang\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13513,"\<gangbang\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13514,"\<gangrape\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13515,"\<japs\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13516,"\<jizzing\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13517,"\<gizzing\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13518,"\<pussies\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13519,"\<rapes\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13520,"\<saladtosser\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13521,"\<fags\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13522,"boob",6); 
-INSERT INTO `NamesProfanity` VALUES (13523,"\<bast[aeiou]rd",6); 
-INSERT INTO `NamesProfanity` VALUES (13524,"\<beastiality\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13525,"\<blowjob",6); 
-INSERT INTO `NamesProfanity` VALUES (13526,"\<boffer\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13527,"\<clowjob\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13528,"\<donkeypunch\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13529,"\<fawker\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13530,"\<feces",6); 
-INSERT INTO `NamesProfanity` VALUES (13531,"\<nipple",6); 
-INSERT INTO `NamesProfanity` VALUES (13532,"nipples\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13533,"prostitute",6); 
-INSERT INTO `NamesProfanity` VALUES (13534,"\<coke\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13535,"\<morphine\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13536,"\<nudity\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13537,"\<nuts\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13538,"\<pagan\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13539,"\<perv\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13540,"\<pervert\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13541,"\<phawk\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13542,"\<piss\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13543,"\<playboy\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13544,"\<playgirl\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13545,"\<polish\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13546,"\<prebubescent\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13547,"\<queer\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13548,"\<reich\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13549,"\<r.*jeremy\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13550,"\<screw\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13551,"\<seamen\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13552,"\<spreadmylegs\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13553,"\<stripper",6); 
-INSERT INTO `NamesProfanity` VALUES (13554,"\<suck\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13555,"\<sukkitdown\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13556,"\<swingers\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13557,"\<teabag",6); 
-INSERT INTO `NamesProfanity` VALUES (13558,"\<terrorist\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13559,"\<thickbush\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13560,"\<threesome\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13561,"\<snatch",6); 
-INSERT INTO `NamesProfanity` VALUES (13562,"\<updabut\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13563,"\<vasect",6); 
-INSERT INTO `NamesProfanity` VALUES (13564,"\<white\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13565,"\<negro",6); 
-INSERT INTO `NamesProfanity` VALUES (13566,"\<tinytits\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13567,"cock\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13568,"blowjob\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13569,"\<tardpopsicle\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13570,"\<urmom\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13571,"fag\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13572,"\<dick",6); 
-INSERT INTO `NamesProfanity` VALUES (13573,"\<turdsplat\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13574,"\<chokeoncocks\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13575,"\<littlearse\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13576,"\<holybijesis\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13577,"\<niggs\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13578,"\<sacofricosis\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13579,"\<polesmokers\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13580,"\<sega\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13581,"\<sex",6); 
-INSERT INTO `NamesProfanity` VALUES (13582,"\<shadowbane\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13583,"\<shane",6); 
-INSERT INTO `NamesProfanity` VALUES (13584,"\<shiznit\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13585,"\<shortbus\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13586,"\<tramps\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13587,"\<erection\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13588,"\<smoked\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13589,"\<snowwhite\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13590,"\<oral\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13591,"\<sperm",6); 
-INSERT INTO `NamesProfanity` VALUES (13592,"\<poop\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13593,"\<spluge\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13594,"\<suck",6); 
-INSERT INTO `NamesProfanity` VALUES (13595,"\<supermario\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13596,"support",6); 
-INSERT INTO `NamesProfanity` VALUES (13597,"\<sex\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13598,"\<suppuku\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13599,"\<sirbong\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13600,"\<spank\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13601,"\<speculum\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13602,"\<streaker",6); 
-INSERT INTO `NamesProfanity` VALUES (13603,"\<tribadism\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13604,"\<upmybutthole\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13605,"\<urinat",6); 
-INSERT INTO `NamesProfanity` VALUES (13606,"\<venereal\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13607,"\<virgin\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13608,"\<warslut\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13609,"\<wood\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13610,"\<advil\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13611,"\<amputee\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13612,"\<amtrak\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13613,"\<anis\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13614,"\<anolinctus\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13615,"\<antichrist\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13616,"\<arathorn\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13617,"\<arian\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13618,"\<arsonist\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13619,"\<blackenstein\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13620,"\<blacksabbath\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13621,"\<bnet\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13622,"\<bootylicious\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13623,"\<bra\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13624,"\<chinaman\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13625,"\<chronik\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13626,"\<colgate\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13627,"\<coprophagy\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13628,"\<crackhead\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13629,"\<dammit\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13630,"\<darky\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13631,"\<darvocet\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13632,"\<databasesys\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13633,"\<deckardcain\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13634,"\<dr\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13635,"\<dukeofwhales\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13636,"\<dumbass\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13637,"\<ecstasy\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13638,"\<ensign\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13639,"\<fcuk\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13640,"\<ferrari\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13641,"\<fetus",6); 
-INSERT INTO `NamesProfanity` VALUES (13642,"\<fockerz\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13643,"\<fooker\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13644,"cunt\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13645,"\<ghandi\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13646,"\<gofukyorself\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13647,"\<gonadian\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13648,"\<goochgravy\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13649,"\<gookenator\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13650,"\<hemplock\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13651,"\<herpies\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13652,"\<homoerectus\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13653,"\<hore\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13654,"\<hotdamn\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13655,"\<hungelf\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13656,"\<indian\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13657,"\<irapekids\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13658,"\<ironchef\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13659,"\<jc\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13660,"\<jedi\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13661,"\<[gj]en[ao]cide\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13662,"\<jugs\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13663,"\<klismaphilia\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13664,"\<kokigami\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13665,"\<koon\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13666,"\<kosherpork\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13667,"\<lardass\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13668,"\<laurabush\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13669,"\<marlboroman\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13670,"\<masterbaiter\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13671,"\<maxipad\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13672,"\<menstrual\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13673,"\<mhz\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13674,"\<michaeljack\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13675,"bastard\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13676,"\<misogynist\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13677,"\<mister\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13678,"\<mr\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13679,"\<narcoticus\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13680,"\<nigahh\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13681,"\<npc",6); 
-INSERT INTO `NamesProfanity` VALUES (13682,"\<nug\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13683,"\<nunriggers\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13684,"\<nwa\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13685,"\<omgwtf\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13686,"\<opiate",6); 
-INSERT INTO `NamesProfanity` VALUES (13687,"\<oreos\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13688,"\<ovaltine\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13689,"\<papsmear\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13690,"\<pederasty\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13691,"\<penthouse\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13692,"\<pimp",6); 
-INSERT INTO `NamesProfanity` VALUES (13693,"\<pinktaco\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13694,"mofo\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13695,"\<poomaster\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13696,"\<poonjuice\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13697,"\<poop",6); 
-INSERT INTO `NamesProfanity` VALUES (13698,"\<pwnzor\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13699,"\<quadoushka\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13700,"\<r.*nad[ae]r\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13701,"\<stud\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13702,"\<submissive\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13703,"\<swiftnuggs\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13704,"\<trans",6); 
-INSERT INTO `NamesProfanity` VALUES (13705,"\<uglynig\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13706,"\<swastika\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13707,"\<sybian\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13708,"\<toeofcamel\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13709,"\<tokyorose\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13710,"\<urmama\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13711,"\<voltron\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13712,"\<wangmaster\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13713,"\<wanker\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13714,"\<wetdream\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13715,"\<whitebread\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13716,"\<wigger\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13717,"\<williamhung\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13718,"\<windex\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13719,"\<witchking\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13720,"\<x.*x\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13721,"\<yosemitesam\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13722,"\<youranus\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13723,"\<zoolander\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13724,"condom\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13725,"jebus\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13726,"\<kosher",6); 
-INSERT INTO `NamesProfanity` VALUES (13727,"menstrual",6); 
-INSERT INTO `NamesProfanity` VALUES (13728,"sexy",6); 
-INSERT INTO `NamesProfanity` VALUES (13729,"\<bestiality\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13730,"\<bizzle\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13731,"\<black\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13732,"\<blackie\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13733,"\<bloodyhell\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13734,"\<blow\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13735,"\<blunt\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13736,"\<bollocks\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13737,"\<boobs",6); 
-INSERT INTO `NamesProfanity` VALUES (13738,"\<boofer\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13739,"\<bourbon\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13740,"\<brazuca\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13741,"\<breast",6); 
-INSERT INTO `NamesProfanity` VALUES (13742,"\<budda\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13743,"\<buddahead\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13744,"\<budlight\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13745,"\<budweiser\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13746,"\<bugger\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13747,"\<bustydusty\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13748,"\<butt\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13749,"\<buttman\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13750,"\<candyandes\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13751,"\<caucazoid\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13752,"\<cawk\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13753,"\<fu[ck]+[aeiou]+",6); 
-INSERT INTO `NamesProfanity` VALUES (13754,"\<jod[eií]",6); 
-INSERT INTO `NamesProfanity` VALUES (13755,"mierda",6); 
-INSERT INTO `NamesProfanity` VALUES (13756,"coño",6); 
-INSERT INTO `NamesProfanity` VALUES (13757,"\<[gj]ilipo",6); 
-INSERT INTO `NamesProfanity` VALUES (13758,"\<meapilas\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13759,"\<capull",6); 
-INSERT INTO `NamesProfanity` VALUES (13760,"\<cabr[oó]n",6); 
-INSERT INTO `NamesProfanity` VALUES (13761,"\<mari[cq]",6); 
-INSERT INTO `NamesProfanity` VALUES (13762,"\<pene",6); 
-INSERT INTO `NamesProfanity` VALUES (13763,"polla",6); 
-INSERT INTO `NamesProfanity` VALUES (13764,"\<poya",6); 
-INSERT INTO `NamesProfanity` VALUES (13765,"\<pinga\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13766,"\<pito",6); 
-INSERT INTO `NamesProfanity` VALUES (13767,"\<va[gj]ina",6); 
-INSERT INTO `NamesProfanity` VALUES (13768,"\<lesbi",6); 
-INSERT INTO `NamesProfanity` VALUES (13769,"\<minga\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13770,"\<put[aoó]",6); 
-INSERT INTO `NamesProfanity` VALUES (13771,"\<zorra",6); 
-INSERT INTO `NamesProfanity` VALUES (13772,"\<paja\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13773,"\<paji[lt]",6); 
-INSERT INTO `NamesProfanity` VALUES (13774,"\<nazi\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13775,"\<kkk\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13776,"\<escroto\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13777,"\<coj[oó]n",6); 
-INSERT INTO `NamesProfanity` VALUES (13778,"\<correr[mst]",6); 
-INSERT INTO `NamesProfanity` VALUES (13779,"\<corri[eé]ndo[mst]e\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13780,"\<eyacul",6); 
-INSERT INTO `NamesProfanity` VALUES (13781,"\<esperm",6); 
-INSERT INTO `NamesProfanity` VALUES (13782,"\<mama[rd]",6); 
-INSERT INTO `NamesProfanity` VALUES (13783,"\<encula[rd]",6); 
-INSERT INTO `NamesProfanity` VALUES (13784,"\<culo\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13785,"\<viol[aó]",6); 
-INSERT INTO `NamesProfanity` VALUES (13786,"\<ped[oó]f",6); 
-INSERT INTO `NamesProfanity` VALUES (13787,"\<pederast",6); 
-INSERT INTO `NamesProfanity` VALUES (13788,"gay",6); 
-INSERT INTO `NamesProfanity` VALUES (13789,"\<culandr[oó]n\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13790,"\<sodomi",6); 
-INSERT INTO `NamesProfanity` VALUES (13791,"\<sadomaso",6); 
-INSERT INTO `NamesProfanity` VALUES (13792,"\<sudaca",6); 
-INSERT INTO `NamesProfanity` VALUES (13793,"\<negraco\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13794,"\<moro\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13795,"\<moros\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13796,"\<moromierda\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13797,"\<jop[eu]",6); 
-INSERT INTO `NamesProfanity` VALUES (13798,"\<po[lr]cul",6); 
-INSERT INTO `NamesProfanity` VALUES (13799,"\<ostia",6); 
-INSERT INTO `NamesProfanity` VALUES (13800,"\<hostia",6); 
-INSERT INTO `NamesProfanity` VALUES (13801,"\<cullons\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13802,"\<gabacho\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13803,"\<pringao\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13804,"\<tont[ao]",6); 
-INSERT INTO `NamesProfanity` VALUES (13805,"\<mam[oó]n",6); 
-INSERT INTO `NamesProfanity` VALUES (13806,"\<niñ[ao]t",6); 
-INSERT INTO `NamesProfanity` VALUES (13807,"\<nenaza",6); 
-INSERT INTO `NamesProfanity` VALUES (13808,"\<homo\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13809,"choch[eio]",6); 
-INSERT INTO `NamesProfanity` VALUES (13810,"txotx[eio]",6); 
-INSERT INTO `NamesProfanity` VALUES (13811,"xox[eio]",6); 
-INSERT INTO `NamesProfanity` VALUES (13812,"\<mastur",6); 
-INSERT INTO `NamesProfanity` VALUES (13813,"\<cl[ií]toris\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13814,"\<b[aá]lano\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13815,"\<prepucio\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13816,"\<hero[ií]na\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13817,"\<pellote\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13818,"\<hach[ií]s\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13819,"\<hatx[ií]s\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13820,"\<LSD\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13821,"\<coca[ií]na\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13822,"\<p[uú]bis\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13823,"\<p[uú]bico\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13826,"\<fela[ct]i",6); 
-INSERT INTO `NamesProfanity` VALUES (13827,"\<cunnilingus\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13828,"\<mari[hj]uana\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13829,"\<porro\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13830,"\<desvirga",6); 
-INSERT INTO `NamesProfanity` VALUES (13831,"\<himen\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13832,"\<meretriz\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13833,"\<prostituta\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13834,"\<rohypnol\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13835,"\<rugmunch",6); 
-INSERT INTO `NamesProfanity` VALUES (13836,"nig+er\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13838,"\<semen\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13839,"\<sexmachine\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13840,"\<slut\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13841,"\<slutmuffin\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13842,"\<smegma\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13843,"\<spanishfly\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13844,"\<spics\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13845,"\<squarehead\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13846,"\<stfu\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13847,"\<strapon\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13848,"\<talliwhacker\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13849,"\<tards\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13850,"\<teabagging\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13851,"\<throbknobbin\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13852,"\<thunderfuck\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13853,"\<tirdburglar",6); 
-INSERT INTO `NamesProfanity` VALUES (13854,"\<turdburglars\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13855,"\<twatlick",6); 
-INSERT INTO `NamesProfanity` VALUES (13856,"\<twats\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13857,"\<twatsuck",6); 
-INSERT INTO `NamesProfanity` VALUES (13858,"\<viagra\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13859,"\<whop\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13860,"\<zoophilia\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13861,"\<fagg[aeiouy]t",6); 
-INSERT INTO `NamesProfanity` VALUES (13862,"\<pillowbiter",6); 
-INSERT INTO `NamesProfanity` VALUES (13863,"\<poohstab",6); 
-INSERT INTO `NamesProfanity` VALUES (13865,"\<dildo\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13866,"\<heeb\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13867,"\<kike\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13868,"\<mudshark",6); 
-INSERT INTO `NamesProfanity` VALUES (13869,"\<mooley\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13870,"\<nig+a",6); 
-INSERT INTO `NamesProfanity` VALUES (13871,"\<jap\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13872,"feltch",6); 
-INSERT INTO `NamesProfanity` VALUES (13873,"\<homos\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13874,"\<tittie",6); 
-INSERT INTO `NamesProfanity` VALUES (13875,"\<tits\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13876,"\<slamhound",6); 
-INSERT INTO `NamesProfanity` VALUES (13877,"\<gutterslut\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13878,"\<cumguz",6); 
-INSERT INTO `NamesProfanity` VALUES (13879,"\<injun\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13880,"\<gooch\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13881,"bong",6); 
-INSERT INTO `NamesProfanity` VALUES (13882,"\<pothead",6); 
-INSERT INTO `NamesProfanity` VALUES (13883,"shit",6); 
-INSERT INTO `NamesProfanity` VALUES (13884,"\<twat\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13885,"\<assface\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13886,"\<nosecandy\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13887,"\<towelhead\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13888,"\<fudgepacker\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13889,"\<assmaster\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13891,"\<milf\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13892,"\<rumprang",6); 
-INSERT INTO `NamesProfanity` VALUES (13893,"\<spic\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13894,"\<spick",6); 
-INSERT INTO `NamesProfanity` VALUES (13895,"wetback",6); 
-INSERT INTO `NamesProfanity` VALUES (13896,"\<queef",6); 
-INSERT INTO `NamesProfanity` VALUES (13897,"\<nig\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13898,"fagg[aeiouy]t\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13899,"\<rapist\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13900,"\<gook\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13901,"\<polesmok",6); 
-INSERT INTO `NamesProfanity` VALUES (13902,"\<cracksmoker",6); 
-INSERT INTO `NamesProfanity` VALUES (13903,"\<jism\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13904,"\<dingleberry\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13905,"\<mooncricket",6); 
-INSERT INTO `NamesProfanity` VALUES (13906,"\<assman\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13907,"\<spearchuck",6); 
-INSERT INTO `NamesProfanity` VALUES (13908,"\<hardon\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13909,"\<stiffy\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13910,"\<cumstain",6); 
-INSERT INTO `NamesProfanity` VALUES (13911,"\<dunecoon\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13912,"\<buttfloss\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13913,"\<peckertracks\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13914,"\<cornhole\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13915,"\<wop\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13916,"\<cock\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13917,"\<asspound",6); 
-INSERT INTO `NamesProfanity` VALUES (13918,"\<buttboy",6); 
-INSERT INTO `NamesProfanity` VALUES (13919,"\<sploog",6); 
-INSERT INTO `NamesProfanity` VALUES (13920,"\<meatsword\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13921,"\<skinbat",6); 
-INSERT INTO `NamesProfanity` VALUES (13922,"히로뽕",6); 
-INSERT INTO `NamesProfanity` VALUES (13924,"\<zipperhead\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13925,"\<porchmonk",6); 
-INSERT INTO `NamesProfanity` VALUES (13926,"\<junglebunny\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13927,"\<jizz\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13928,"\<africoon\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13929,"\<aidsbearer\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13930,"\<analcumdrip\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13931,"\<analdoctor\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13932,"\<aperape\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13933,"\<assbandit\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13934,"\<assbasher\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13935,"\<asshunter\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13936,"\<asskiss",6); 
-INSERT INTO `NamesProfanity` VALUES (13937,"\<asslick",6); 
-INSERT INTO `NamesProfanity` VALUES (13938,"\<assram",6); 
-INSERT INTO `NamesProfanity` VALUES (13939,"\<assrape",6); 
-INSERT INTO `NamesProfanity` VALUES (13940,"\<biotch\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13941,"\<blackanese\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13942,"\<blaxican\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13943,"\<blowjob\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13944,"\<blueball\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13945,"\<bonch\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13946,"\<boners\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13947,"nig+a\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13948,"\<bullshirt\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13949,"\<buttbang\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13950,"\<buttfucker",6); 
-INSERT INTO `NamesProfanity` VALUES (13951,"\<buttlick",6); 
-INSERT INTO `NamesProfanity` VALUES (13952,"\<buttmonkey\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13953,"\<buttmunch",6); 
-INSERT INTO `NamesProfanity` VALUES (13954,"\<buttnugget",6); 
-INSERT INTO `NamesProfanity` VALUES (13955,"\<buttslam",6); 
-INSERT INTO `NamesProfanity` VALUES (13956,"\<buttstain\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13957,"\<cameljockey\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13958,"\<cann[aio]bis\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13959,"\<carpetmuncher",6); 
-INSERT INTO `NamesProfanity` VALUES (13960,"\<cheapwhore\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13961,"\<chinawhite\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13962,"\<chinko\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13963,"\<choad\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13964,"\<circlejerk\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13965,"\<circumcise\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13966,"\<cocaine\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13967,"\<cocksucker\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13968,"\<coon\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13969,"\<cracka\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13970,"\<crackerass",6); 
-INSERT INTO `NamesProfanity` VALUES (13971,"\<crackpipe",6); 
-INSERT INTO `NamesProfanity` VALUES (13972,"\<creamtits\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13973,"\<crystalmeth\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13974,"\<cumboy",6); 
-INSERT INTO `NamesProfanity` VALUES (13975,"\<cumbubble",6); 
-INSERT INTO `NamesProfanity` VALUES (13976,"\<cumbucket\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13977,"\<cumcatcher",6); 
-INSERT INTO `NamesProfanity` VALUES (13978,"\<cumdumpster",6); 
-INSERT INTO `NamesProfanity` VALUES (13979,"\<cumeater\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13980,"\<cumm\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13981,"\<cumonmyface\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13982,"\<cums\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13983,"\<cumshooter",6); 
-INSERT INTO `NamesProfanity` VALUES (13984,"\<cumshot",6); 
-INSERT INTO `NamesProfanity` VALUES (13985,"\<cumslot",6); 
-INSERT INTO `NamesProfanity` VALUES (13986,"\<dankhoe\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13987,"\<danknugg",6); 
-INSERT INTO `NamesProfanity` VALUES (13988,"\<hashish\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13989,"\<heroin\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13990,"\<holywanker\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13991,"\<honkey\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13992,"\<hornytauren\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13993,"\<hotslut\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13994,"\<hymen\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13995,"\<jackoff\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13996,"\<kikes\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13997,"\<kunt\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13998,"\<lesbo\>",6); 
-INSERT INTO `NamesProfanity` VALUES (13999,"\<longusdongus\>",6); 
-INSERT INTO `NamesProfanity` VALUES (14000,"\<lsd\>",6); 
-INSERT INTO `NamesProfanity` VALUES (14001,"\<mangina\>",6); 
-INSERT INTO `NamesProfanity` VALUES (14002,"\<mansatchel\>",6); 
-INSERT INTO `NamesProfanity` VALUES (14003,"\<marijuana\>",6); 
-INSERT INTO `NamesProfanity` VALUES (14004,"\<mast[eu]rbat",6); 
-INSERT INTO `NamesProfanity` VALUES (14005,"\<meth\>",6); 
-INSERT INTO `NamesProfanity` VALUES (14006,"\<mooby\>",6); 
-INSERT INTO `NamesProfanity` VALUES (14007,"\<morningwood\>",6); 
-INSERT INTO `NamesProfanity` VALUES (14008,"\<monstercock",6); 
-INSERT INTO `NamesProfanity` VALUES (14009,"\<moulie\>",6); 
-INSERT INTO `NamesProfanity` VALUES (14010,"\<muffdiver",6); 
-INSERT INTO `NamesProfanity` VALUES (14011,"\<natzi\>",6); 
-INSERT INTO `NamesProfanity` VALUES (14012,"\<necrophil",6); 
-INSERT INTO `NamesProfanity` VALUES (14013,"\<negrolicious\>",6); 
-INSERT INTO `NamesProfanity` VALUES (14014,"\<negromancer\>",6); 
-INSERT INTO `NamesProfanity` VALUES (14015,"\<nicklebag\>",6); 
-INSERT INTO `NamesProfanity` VALUES (14016,"\<niglet",6); 
-INSERT INTO `NamesProfanity` VALUES (14017,"\<nignog\>",6); 
-INSERT INTO `NamesProfanity` VALUES (14018,"\<nigs\>",6); 
-INSERT INTO `NamesProfanity` VALUES (14019,"\<oface\>",6); 
-INSERT INTO `NamesProfanity` VALUES (14020,"\<onanism\>",6); 
-INSERT INTO `NamesProfanity` VALUES (14021,"\<opium\>",6); 
-INSERT INTO `NamesProfanity` VALUES (14022,"\<orgasm\>",6); 
-INSERT INTO `NamesProfanity` VALUES (14023,"\<pcp\>",6); 
-INSERT INTO `NamesProfanity` VALUES (14024,"\<pedophile\>",6); 
-INSERT INTO `NamesProfanity` VALUES (14025,"\<penis",6); 
-INSERT INTO `NamesProfanity` VALUES (14026,"\<phugface\>",6); 
-INSERT INTO `NamesProfanity` VALUES (14027,"\<pikajew\>",6); 
-INSERT INTO `NamesProfanity` VALUES (14028,"\<poontang\>",6); 
-INSERT INTO `NamesProfanity` VALUES (14029,"\<porn\>",6); 
-INSERT INTO `NamesProfanity` VALUES (14030,"\<priapism\>",6); 
-INSERT INTO `NamesProfanity` VALUES (14031,"\<pr[o0]n\>",6); 
-INSERT INTO `NamesProfanity` VALUES (14032,"\<pudendum\>",6); 
-INSERT INTO `NamesProfanity` VALUES (14033,"\<pussyfart",6); 
-INSERT INTO `NamesProfanity` VALUES (14034,"\<pussylick",6); 
-INSERT INTO `NamesProfanity` VALUES (14035,"\<pussystomp",6); 
-INSERT INTO `NamesProfanity` VALUES (14036,"\<puto\>",6); 
-INSERT INTO `NamesProfanity` VALUES (14037,"\<quaaludes\>",6); 
-INSERT INTO `NamesProfanity` VALUES (14038,"\<queers\>",6); 
-INSERT INTO `NamesProfanity` VALUES (14039,"\<qweef\>",6); 
-INSERT INTO `NamesProfanity` VALUES (14040,"\<raghead\>",6); 
-INSERT INTO `NamesProfanity` VALUES (14041,"\<reefer\>",6); 
-INSERT INTO `NamesProfanity` VALUES (14042,"\<reggin\>",6); 
-INSERT INTO `NamesProfanity` VALUES (14043,"\<rimjob\>",6); 
-INSERT INTO `NamesProfanity` VALUES (14044,"\<gizz\>",6); 
-INSERT INTO `NamesProfanity` VALUES (14045,"\<cooze\>",6); 
-INSERT INTO `NamesProfanity` VALUES (14046,"\<cumming\>",6); 
-INSERT INTO `NamesProfanity` VALUES (14047,"\<boner\>",6); 
-INSERT INTO `NamesProfanity` VALUES (14049,"\<buttpirate",6); 
-INSERT INTO `NamesProfanity` VALUES (14050,"\<titty",6); 
-INSERT INTO `NamesProfanity` VALUES (14051,"\<poostab",6); 
-INSERT INTO `NamesProfanity` VALUES (14052,"fuck",6); 
-INSERT INTO `NamesProfanity` VALUES (14053,"\<ass\>",6); 
-INSERT INTO `NamesProfanity` VALUES (14054,"bia?ts?ch",6); 
-INSERT INTO `NamesProfanity` VALUES (14055,"\<clit",6); 
-INSERT INTO `NamesProfanity` VALUES (14056,"\<cum\>",6); 
-INSERT INTO `NamesProfanity` VALUES (14057,"\<cunt",6); 
-INSERT INTO `NamesProfanity` VALUES (14058,"\<nig+er",6); 
-INSERT INTO `NamesProfanity` VALUES (14059,"penis\>",6); 
-INSERT INTO `NamesProfanity` VALUES (14060,"whore",6); 
-INSERT INTO `NamesProfanity` VALUES (14061,"ㅈㄹ",6); 
-INSERT INTO `NamesProfanity` VALUES (14062,"yuckfu",6); 
-INSERT INTO `NamesProfanity` VALUES (14063,"yuckfou",6); 
-INSERT INTO `NamesProfanity` VALUES (14064,"transvestite",6); 
-INSERT INTO `NamesProfanity` VALUES (14065,"transsexual",6); 
-INSERT INTO `NamesProfanity` VALUES (14066,"testicle",6); 
-INSERT INTO `NamesProfanity` VALUES (14067,"tampon",6); 
-INSERT INTO `NamesProfanity` VALUES (14068,"sphincter",6); 
-INSERT INTO `NamesProfanity` VALUES (14069,"sperm",6); 
-INSERT INTO `NamesProfanity` VALUES (14070,"phuck",6); 
-INSERT INTO `NamesProfanity` VALUES (14071,"gangbang",6); 
-INSERT INTO `NamesProfanity` VALUES (14072,"felch",6); 
-INSERT INTO `NamesProfanity` VALUES (14073,"bukkake",6); 
-INSERT INTO `NamesProfanity` VALUES (14074,"bukakke",6); 
-INSERT INTO `NamesProfanity` VALUES (14075,"bukake",6); 
-INSERT INTO `NamesProfanity` VALUES (14076,"\<twaty\>",6); 
-INSERT INTO `NamesProfanity` VALUES (14077,"\<twatty\>",6); 
-INSERT INTO `NamesProfanity` VALUES (14078,"\<turbanhead",6); 
-INSERT INTO `NamesProfanity` VALUES (14079,"\<titsnass\>",6); 
-INSERT INTO `NamesProfanity` VALUES (14080,"\<titnass\>",6); 
-INSERT INTO `NamesProfanity` VALUES (14081,"\<sh[ie][ie]thead\>",6); 
-INSERT INTO `NamesProfanity` VALUES (14082,"\<peckerwood\>",6); 
-INSERT INTO `NamesProfanity` VALUES (14083,"\<negroid",6); 
-INSERT INTO `NamesProfanity` VALUES (14084,"\<mooncricket\>",6); 
-INSERT INTO `NamesProfanity` VALUES (14085,"\<kyke",6); 
-INSERT INTO `NamesProfanity` VALUES (14086,"\<jigg",6); 
-INSERT INTO `NamesProfanity` VALUES (14087,"\<jerkoff\>",6); 
-INSERT INTO `NamesProfanity` VALUES (14088,"\<hentai\>",6); 
-INSERT INTO `NamesProfanity` VALUES (14089,"\<gringo\>",6); 
-INSERT INTO `NamesProfanity` VALUES (14090,"\<goddamn",6); 
-INSERT INTO `NamesProfanity` VALUES (14091,"\<gizm\>",6); 
-INSERT INTO `NamesProfanity` VALUES (14092,"\<gism\>",6); 
-INSERT INTO `NamesProfanity` VALUES (14093,"\<ganja\>",6); 
-INSERT INTO `NamesProfanity` VALUES (14094,"GMworker",6); 
-INSERT INTO `NamesProfanity` VALUES (14095,"Offgamers",6); 
-INSERT INTO `NamesProfanity` VALUES (14096,"Mysupersales",6); 
-INSERT INTO `NamesProfanity` VALUES (14097,"Ezgaming",6); 
-INSERT INTO `NamesProfanity` VALUES (14098,"itembay",6); 
-INSERT INTO `NamesProfanity` VALUES (14099,"zlywy",6); 
-INSERT INTO `NamesProfanity` VALUES (14100,"wowsupplier",6); 
-INSERT INTO `NamesProfanity` VALUES (14101,"gmworkers",6); 
-INSERT INTO `NamesProfanity` VALUES (14102,"thsale",6); 
-INSERT INTO `NamesProfanity` VALUES (14103,"offgamers",6); 
-INSERT INTO `NamesProfanity` VALUES (14104,"mysupersales",6); 
-INSERT INTO `NamesProfanity` VALUES (14105,"igxe",6); 
-INSERT INTO `NamesProfanity` VALUES (14106,"ezgaming",6); 
-INSERT INTO `NamesProfanity` VALUES (14107,"\<whitti?ey?\>",6); 
-INSERT INTO `NamesProfanity` VALUES (14108,"\<fellatio",6); 
-INSERT INTO `NamesProfanity` VALUES (14109,"\<fawk",6); 
-INSERT INTO `NamesProfanity` VALUES (14110,"\<dimebag\>",6); 
-INSERT INTO `NamesProfanity` VALUES (14111,"\<dickholster\>",6); 
-INSERT INTO `NamesProfanity` VALUES (14112,"\<diaperhead\>",6); 
-INSERT INTO `NamesProfanity` VALUES (14113,"\<cunny\>",6); 
-INSERT INTO `NamesProfanity` VALUES (14114,"\<bustanut\>",6); 
-INSERT INTO `NamesProfanity` VALUES (14115,"\<asshat\>",6); 
-INSERT INTO `NamesProfanity` VALUES (14116,"\<aryan\>",6); 
-INSERT INTO `NamesProfanity` VALUES (14117,"\<arsehole\>",6); 
-INSERT INTO `NamesProfanity` VALUES (14118,"\<arse\>",6); 
-INSERT INTO `NamesProfanity` VALUES (14119,"\<americunt\>",6); 
-INSERT INTO `NamesProfanity` VALUES (14120,"\<alphanigg",6); 
-INSERT INTO `NamesProfanity` VALUES (14121,"\<aggin\>",6); 
-INSERT INTO `NamesProfanity` VALUES (14122,"\<aftercum\>",6); 
-INSERT INTO `NamesProfanity` VALUES (14123,"\<[e]jacul",2); 
-INSERT INTO `NamesProfanity` VALUES (14124,"\<[e]r[e]ction\>",2); 
-INSERT INTO `NamesProfanity` VALUES (14125,"\<[e]rotique",2); 
-INSERT INTO `NamesProfanity` VALUES (14126,"\<[e]talon\>",2); 
-INSERT INTO `NamesProfanity` VALUES (14127,"\<[gj][e]n[ao]cide\>",2); 
-INSERT INTO `NamesProfanity` VALUES (14128,"\<[kc]a[sc]h[e]re?\>",2); 
-INSERT INTO `NamesProfanity` VALUES (14129,"\<adolescente?\>",2); 
-INSERT INTO `NamesProfanity` VALUES (14130,"\<adult[e]re\>",2); 
-INSERT INTO `NamesProfanity` VALUES (14131,"\<agnostique\>",2); 
-INSERT INTO `NamesProfanity` VALUES (14132,"\<al[ck]ool",2); 
-INSERT INTO `NamesProfanity` VALUES (14133,"\<amph[e]tamine\>",2); 
-INSERT INTO `NamesProfanity` VALUES (14134,"\<amput[e]e\?>",2); 
-INSERT INTO `NamesProfanity` VALUES (14135,"\<anale\>",2); 
-INSERT INTO `NamesProfanity` VALUES (14136,"\<ant[e]christ\>",2); 
-INSERT INTO `NamesProfanity` VALUES (14137,"\<arbi\>",2); 
-INSERT INTO `NamesProfanity` VALUES (14138,"\<aryen\>",2); 
-INSERT INTO `NamesProfanity` VALUES (14139,"\<b[a]tard*",2); 
-INSERT INTO `NamesProfanity` VALUES (14140,"\<ba[nm]boula\>",2); 
-INSERT INTO `NamesProfanity` VALUES (14141,"\<beuze?\>",2); 
-INSERT INTO `NamesProfanity` VALUES (14142,"\<bi[e]re\>",2); 
-INSERT INTO `NamesProfanity` VALUES (14143,"\<bicot\>",2); 
-INSERT INTO `NamesProfanity` VALUES (14144,"\<bite\>",2); 
-INSERT INTO `NamesProfanity` VALUES (14145,"\<bl[e]n+or+agies?\>",2); 
-INSERT INTO `NamesProfanity` VALUES (14146,"\<blanc\>",2); 
-INSERT INTO `NamesProfanity` VALUES (14147,"\<boudda\>",2); 
-INSERT INTO `NamesProfanity` VALUES (14148,"\<bouseux\>",2); 
-INSERT INTO `NamesProfanity` VALUES (14149,"\<branleu[rs]e?\>",2); 
-INSERT INTO `NamesProfanity` VALUES (14150,"\<brasdhonneur\>",2); 
-INSERT INTO `NamesProfanity` VALUES (14151,"\<caca\>",2); 
-INSERT INTO `NamesProfanity` VALUES (14152,"\<cam[e]s?\>",2); 
-INSERT INTO `NamesProfanity` VALUES (14153,"\<can+ab+is\>",2); 
-INSERT INTO `NamesProfanity` VALUES (14154,"\<catin\>",2); 
-INSERT INTO `NamesProfanity` VALUES (14155,"\<chanvre\>",2); 
-INSERT INTO `NamesProfanity` VALUES (14156,"\<chatte\>",2); 
-INSERT INTO `NamesProfanity` VALUES (14157,"\<chattemite\>",2); 
-INSERT INTO `NamesProfanity` VALUES (14158,"\<chaud\>",2); 
-INSERT INTO `NamesProfanity` VALUES (14159,"\<chaude\>",2); 
-INSERT INTO `NamesProfanity` VALUES (14160,"\<chaudlapin\>",2); 
-INSERT INTO `NamesProfanity` VALUES (14161,"\<chichon\>",2); 
-INSERT INTO `NamesProfanity` VALUES (14162,"\<chinetoques?\>",2); 
-INSERT INTO `NamesProfanity` VALUES (14163,"\<chinois\>",2); 
-INSERT INTO `NamesProfanity` VALUES (14164,"\<chleu\>",2); 
-INSERT INTO `NamesProfanity` VALUES (14165,"\<clitori",2); 
-INSERT INTO `NamesProfanity` VALUES (14166,"\<coca[i]ne\>",2); 
-INSERT INTO `NamesProfanity` VALUES (14167,"\<con\>",2); 
-INSERT INTO `NamesProfanity` VALUES (14168,"\<con+as+e\>",2); 
-INSERT INTO `NamesProfanity` VALUES (14169,"\<connard\>",2); 
-INSERT INTO `NamesProfanity` VALUES (14170,"\<conne\>",2); 
-INSERT INTO `NamesProfanity` VALUES (14171,"\<coprophag*\>",2); 
-INSERT INTO `NamesProfanity` VALUES (14172,"\<copulat*\>",2); 
-INSERT INTO `NamesProfanity` VALUES (14173,"\<couilles?\>",2); 
-INSERT INTO `NamesProfanity` VALUES (14174,"\<cr[a]ch[a]t\>",2); 
-INSERT INTO `NamesProfanity` VALUES (14175,"\<cul\>",2); 
-INSERT INTO `NamesProfanity` VALUES (14176,"\<culotte\>",2); 
-INSERT INTO `NamesProfanity` VALUES (14177,"\<d[e]bauche\>",2); 
-INSERT INTO `NamesProfanity` VALUES (14178,"\<d[e]f[e]cat",2); 
-INSERT INTO `NamesProfanity` VALUES (14179,"\<derche\>",2); 
-INSERT INTO `NamesProfanity` VALUES (14181,"\<drogu[e]s?\>",2); 
-INSERT INTO `NamesProfanity` VALUES (14182,"\<ectasie\>",2); 
-INSERT INTO `NamesProfanity` VALUES (14183,"\<encul",2); 
-INSERT INTO `NamesProfanity` VALUES (14184,"\<extasie\>",2); 
-INSERT INTO `NamesProfanity` VALUES (14185,"\<f[e]c[e]s\>",2); 
-INSERT INTO `NamesProfanity` VALUES (14186,"\<fascime\>",2); 
-INSERT INTO `NamesProfanity` VALUES (14187,"\<fellation\>",2); 
-INSERT INTO `NamesProfanity` VALUES (14188,"\<fess[e]es?\>",2); 
-INSERT INTO `NamesProfanity` VALUES (14189,"\<ftichiste?\>",2); 
-INSERT INTO `NamesProfanity` VALUES (14190,"\<fion\>",2); 
-INSERT INTO `NamesProfanity` VALUES (14191,"\<foetus\>",2); 
-INSERT INTO `NamesProfanity` VALUES (14192,"\<foutre\>",2); 
-INSERT INTO `NamesProfanity` VALUES (14194,"\<g[e]nital\>",2); 
-INSERT INTO `NamesProfanity` VALUES (14195,"\<g[e]nitaux\>",2); 
-INSERT INTO `NamesProfanity` VALUES (14196,"\<garce\>",2); 
-INSERT INTO `NamesProfanity` VALUES (14197,"\<geisha\>",2); 
-INSERT INTO `NamesProfanity` VALUES (14198,"\<godemich[e]t?\>",2); 
-INSERT INTO `NamesProfanity` VALUES (14199,"\<h[e]roine?\>",2); 
-INSERT INTO `NamesProfanity` VALUES (14200,"\<ha[sc][sc]i[sc][sc]h\>",2); 
-INSERT INTO `NamesProfanity` VALUES (14201,"\<hasch\>",2); 
-INSERT INTO `NamesProfanity` VALUES (14202,"\<jaune\>",2); 
-INSERT INTO `NamesProfanity` VALUES (14203,"\<joint\>",2); 
-INSERT INTO `NamesProfanity` VALUES (14205,"\<l[e]checul\>",2); 
-INSERT INTO `NamesProfanity` VALUES (14206,"\<lavement\>",2); 
-INSERT INTO `NamesProfanity` VALUES (14207,"\<lesbien*",2); 
-INSERT INTO `NamesProfanity` VALUES (14208,"\<lubrique\>",2); 
-INSERT INTO `NamesProfanity` VALUES (14209,"\<luxure\>",2); 
-INSERT INTO `NamesProfanity` VALUES (14210,"\<mac\>",2); 
-INSERT INTO `NamesProfanity` VALUES (14211,"\<maquereau\>",2); 
-INSERT INTO `NamesProfanity` VALUES (14212,"\<maquerelle\>",2); 
-INSERT INTO `NamesProfanity` VALUES (14213,"\<mariejeanne\>",2); 
-INSERT INTO `NamesProfanity` VALUES (14214,"\<marijuana\>",2); 
-INSERT INTO `NamesProfanity` VALUES (14215,"\<masturb",2); 
-INSERT INTO `NamesProfanity` VALUES (14216,"\<menstrues\>",2); 
-INSERT INTO `NamesProfanity` VALUES (14217,"\<merde\>",2); 
-INSERT INTO `NamesProfanity` VALUES (14218,"\<micheton\>",2); 
-INSERT INTO `NamesProfanity` VALUES (14219,"\<michetonneuse\>",2); 
-INSERT INTO `NamesProfanity` VALUES (14220,"\<minou\>",2); 
-INSERT INTO `NamesProfanity` VALUES (14221,"\<misogynes?\>",2); 
-INSERT INTO `NamesProfanity` VALUES (14222,"\<moricaude?\>",2); 
-INSERT INTO `NamesProfanity` VALUES (14223,"\<mouk[e]re\>",2); 
-INSERT INTO `NamesProfanity` VALUES (14224,"\<n[e]gre\>",2); 
-INSERT INTO `NamesProfanity` VALUES (14226,"\<n[e]n[e]s?\>",2); 
-INSERT INTO `NamesProfanity` VALUES (14227,"\<narcotiques?\>",2); 
-INSERT INTO `NamesProfanity` VALUES (14228,"\<nichons?\>",2); 
-INSERT INTO `NamesProfanity` VALUES (14229,"\<noir\>",2); 
-INSERT INTO `NamesProfanity` VALUES (14230,"\<nudit[e]\>",2); 
-INSERT INTO `NamesProfanity` VALUES (14231,"\<obs[e]d[e]s?\>",2); 
-INSERT INTO `NamesProfanity` VALUES (14232,"\<opium\>",2); 
-INSERT INTO `NamesProfanity` VALUES (14233,"\<orgies?\>",2); 
-INSERT INTO `NamesProfanity` VALUES (14234,"\<p[e]d[e]raste?\>",2); 
-INSERT INTO `NamesProfanity` VALUES (14236,"\<p[e]tard\>",2); 
-INSERT INTO `NamesProfanity` VALUES (14237,"\<p[e]tasse\>",2); 
-INSERT INTO `NamesProfanity` VALUES (14238,"\<pa[i]en\>",2); 
-INSERT INTO `NamesProfanity` VALUES (14239,"\<partouze?\>",2); 
-INSERT INTO `NamesProfanity` VALUES (14240,"\<pedzouille\>",2); 
-INSERT INTO `NamesProfanity` VALUES (14241,"\<pervers\>",2); 
-INSERT INTO `NamesProfanity` VALUES (14242,"\<pet\>",2); 
-INSERT INTO `NamesProfanity` VALUES (14243,"\<phallus\>",2); 
-INSERT INTO `NamesProfanity` VALUES (14244,"\<pipe\>",2); 
-INSERT INTO `NamesProfanity` VALUES (14245,"\<pipi\>",2); 
-INSERT INTO `NamesProfanity` VALUES (14246,"\<pisse\>",2); 
-INSERT INTO `NamesProfanity` VALUES (14247,"\<pouffiasse\>",2); 
-INSERT INTO `NamesProfanity` VALUES (14248,"\<poule\>",2); 
-INSERT INTO `NamesProfanity` VALUES (14249,"\<pr[e]adolescente?\>",2); 
-INSERT INTO `NamesProfanity` VALUES (14250,"\<pr[e]liminaires?\>",2); 
-INSERT INTO `NamesProfanity` VALUES (14251,"\<pr[e]puce\>",2); 
-INSERT INTO `NamesProfanity` VALUES (14252,"\<pr[e]s[e]rvatif\>",2); 
-INSERT INTO `NamesProfanity` VALUES (14253,"\<priape\>",2); 
-INSERT INTO `NamesProfanity` VALUES (14254,"\<prostitu[e][e]\>",2); 
-INSERT INTO `NamesProfanity` VALUES (14255,"\<prout\>",2); 
-INSERT INTO `NamesProfanity` VALUES (14256,"\<prox[e]n[e]te\>",2); 
-INSERT INTO `NamesProfanity` VALUES (14257,"\<putain\>",2); 
-INSERT INTO `NamesProfanity` VALUES (14258,"\<pute\>",2); 
-INSERT INTO `NamesProfanity` VALUES (14259,"\<pyromane\>",2); 
-INSERT INTO `NamesProfanity` VALUES (14260,"\<racoleuse\>",2); 
-INSERT INTO `NamesProfanity` VALUES (14261,"\<raton\>",2); 
-INSERT INTO `NamesProfanity` VALUES (14262,"\<roulure\>",2); 
-INSERT INTO `NamesProfanity` VALUES (14263,"\<sadique\>",2); 
-INSERT INTO `NamesProfanity` VALUES (14264,"\<salau[td]\>",2); 
-INSERT INTO `NamesProfanity` VALUES (14265,"\<salope?\>",2); 
-INSERT INTO `NamesProfanity` VALUES (14266,"\<scatologi*",2); 
-INSERT INTO `NamesProfanity` VALUES (14267,"\<schnouff\>",2); 
-INSERT INTO `NamesProfanity` VALUES (14268,"\<sein\>",2); 
-INSERT INTO `NamesProfanity` VALUES (14269,"\<seppuku\>",2); 
-INSERT INTO `NamesProfanity` VALUES (14270,"\<sexe\>",2); 
-INSERT INTO `NamesProfanity` VALUES (14271,"\<shit\>",2); 
-INSERT INTO `NamesProfanity` VALUES (14272,"\<sida\>",2); 
-INSERT INTO `NamesProfanity` VALUES (14273,"\<sodomi*",2); 
-INSERT INTO `NamesProfanity` VALUES (14274,"\<soumise?\>",2); 
-INSERT INTO `NamesProfanity` VALUES (14275,"\<souteneur\>",2); 
-INSERT INTO `NamesProfanity` VALUES (14276,"\<sperme\>",2); 
-INSERT INTO `NamesProfanity` VALUES (14277,"\<stripteaseuse\>",2); 
-INSERT INTO `NamesProfanity` VALUES (14278,"\<suc[e]r?\>",2); 
-INSERT INTO `NamesProfanity` VALUES (14279,"\<sucebite\>",2); 
-INSERT INTO `NamesProfanity` VALUES (14280,"\<t[e]ton\>",2); 
-INSERT INTO `NamesProfanity` VALUES (14281,"\<tapineuse\>",2); 
-INSERT INTO `NamesProfanity` VALUES (14282,"\<tarp[e]\>",2); 
-INSERT INTO `NamesProfanity` VALUES (14283,"\<terroriste\>",2); 
-INSERT INTO `NamesProfanity` VALUES (14284,"\<testicules?\>",2); 
-INSERT INTO `NamesProfanity` VALUES (14285,"\<teu[cs]hi?\>",2); 
-INSERT INTO `NamesProfanity` VALUES (14286,"\<tourpe?\>",2); 
-INSERT INTO `NamesProfanity` VALUES (14287,"\<toxicomane\>",2); 
-INSERT INTO `NamesProfanity` VALUES (14288,"\<tra[i]n[e]e\>",2); 
-INSERT INTO `NamesProfanity` VALUES (14289,"\<trimardeuse\>",2); 
-INSERT INTO `NamesProfanity` VALUES (14290,"\<tronedeglace\>",2); 
-INSERT INTO `NamesProfanity` VALUES (14291,"\<turfeuse\>",2); 
-INSERT INTO `NamesProfanity` VALUES (14292,"\<urine*",2); 
-INSERT INTO `NamesProfanity` VALUES (14293,"\<v[e]n[e]rien*",2); 
-INSERT INTO `NamesProfanity` VALUES (14294,"\<vagin*",2); 
-INSERT INTO `NamesProfanity` VALUES (14295,"\<vatefaire",2); 
-INSERT INTO `NamesProfanity` VALUES (14296,"\<verge\>",2); 
-INSERT INTO `NamesProfanity` VALUES (14297,"\<vice\>",2); 
-INSERT INTO `NamesProfanity` VALUES (14298,"\<vierges?\>",2); 
-INSERT INTO `NamesProfanity` VALUES (14299,"\<viole[e][sr]?\>",2); 
-INSERT INTO `NamesProfanity` VALUES (14300,"\<virginit[e]\>",2); 
-INSERT INTO `NamesProfanity` VALUES (14301,"\<vit\>",2); 
-INSERT INTO `NamesProfanity` VALUES (14302,"\<vulve\>",2); 
-INSERT INTO `NamesProfanity` VALUES (14303,"\<zoophil",2); 
-INSERT INTO `NamesProfanity` VALUES (14304,"\<[e]bola\>",2); 
-INSERT INTO `NamesProfanity` VALUES (14305,"\<b[ie]nladen",2); 
-INSERT INTO `NamesProfanity` VALUES (14306,"\<bou[ck]ak\>",2); 
-INSERT INTO `NamesProfanity` VALUES (14307,"\<bougnoule?s?\>",2); 
-INSERT INTO `NamesProfanity` VALUES (14308,"\<co[kc]*ain",2); 
-INSERT INTO `NamesProfanity` VALUES (14309,"\<dutrou\>",2); 
-INSERT INTO `NamesProfanity` VALUES (14310,"\<g[e]nocide\>",2); 
-INSERT INTO `NamesProfanity` VALUES (14311,"\<h[yi]t*l*er\>",2); 
-INSERT INTO `NamesProfanity` VALUES (14312,"\<hamas\>",2); 
-INSERT INTO `NamesProfanity` VALUES (14313,"\<hesbo*la\>",2); 
-INSERT INTO `NamesProfanity` VALUES (14314,"\<hiro[sc]hima\>",2); 
-INSERT INTO `NamesProfanity` VALUES (14315,"\<holo[ckauo]ste?\>",2); 
-INSERT INTO `NamesProfanity` VALUES (14316,"\<homicide\>",2); 
-INSERT INTO `NamesProfanity` VALUES (14317,"\<mes*rin\>",2); 
-INSERT INTO `NamesProfanity` VALUES (14318,"\<naga[sz]aki\>",2); 
-INSERT INTO `NamesProfanity` VALUES (14319,"\<pogrom\>",2); 
-INSERT INTO `NamesProfanity` VALUES (14320,"\<ra[e]l\>",2); 
-INSERT INTO `NamesProfanity` VALUES (14321,"\<shoa\>",2); 
-INSERT INTO `NamesProfanity` VALUES (14322,"\<ss\>",2); 
-INSERT INTO `NamesProfanity` VALUES (14323,"\<staline?\>",2); 
-INSERT INTO `NamesProfanity` VALUES (14324,"\<viol\>",2); 
-INSERT INTO `NamesProfanity` VALUES (14325,"ducul\>",2); 
-INSERT INTO `NamesProfanity` VALUES (14326,"soutiengorge",2); 
-INSERT INTO `NamesProfanity` VALUES (14327,"阿卡玛",4); 
-INSERT INTO `NamesProfanity` VALUES (14328,"柏卖行",4); 
-INSERT INTO `NamesProfanity` VALUES (14329,"奥蕾莉亚",4); 
-INSERT INTO `NamesProfanity` VALUES (14330,"图拉杨",4); 
-INSERT INTO `NamesProfanity` VALUES (14331,"奥尔多\>",4); 
-INSERT INTO `NamesProfanity` VALUES (14332,"占星者\>",4); 
-INSERT INTO `NamesProfanity` VALUES (14333,"荣耀堡\>",4); 
-INSERT INTO `NamesProfanity` VALUES (14334,"萨尔玛\>",4); 
-INSERT INTO `NamesProfanity` VALUES (14335,"孢子村\>",4); 
-INSERT INTO `NamesProfanity` VALUES (14336,"奥格瑞拉\>",4); 
-INSERT INTO `NamesProfanity` VALUES (14337,"星界财团\>",4); 
-INSERT INTO `NamesProfanity` VALUES (14338,"流沙之鳞\>",4); 
-INSERT INTO `NamesProfanity` VALUES (14339,"时光守护者\>",4); 
-INSERT INTO `NamesProfanity` VALUES (14340,"库雷尼\>",4); 
-INSERT INTO `NamesProfanity` VALUES (14341,"玛格汉\>",4); 
-INSERT INTO `NamesProfanity` VALUES (14342,"茎候\>",4); 
-INSERT INTO `NamesProfanity` VALUES (14343,"灵翼\>",4); 
-INSERT INTO `NamesProfanity` VALUES (14344,"灰舌\>",4); 
-INSERT INTO `NamesProfanity` VALUES (14345,"塞纳里奥\>",4); 
-INSERT INTO `NamesProfanity` VALUES (14346,"沙塔尔\>",4); 
-INSERT INTO `NamesProfanity` VALUES (14347,"紫罗兰之\>",4); 
-INSERT INTO `NamesProfanity` VALUES (14348,"贫民窟\>",4); 
-INSERT INTO `NamesProfanity` VALUES (14349,"塔奎林\>",4); 
-INSERT INTO `NamesProfanity` VALUES (14350,"远行者\>",4); 
-INSERT INTO `NamesProfanity` VALUES (14351,"transexual",-1); 
-INSERT INTO `NamesProfanity` VALUES (14352,"trannie",-1); 
-INSERT INTO `NamesProfanity` VALUES (14353,"shemale",-1); 
-INSERT INTO `NamesProfanity` VALUES (14354,"Homosexual",-1); 
-INSERT INTO `NamesProfanity` VALUES (14355,"Heterosexual",-1); 
-INSERT INTO `NamesProfanity` VALUES (14356,"\<Homo\>",-1); 
-INSERT INTO `NamesProfanity` VALUES (14357,"\<Hetero\>",-1); 
-INSERT INTO `NamesProfanity` VALUES (14358,"\<reggin\>",4); 
-INSERT INTO `NamesProfanity` VALUES (14359,"习近平",4); 
-INSERT INTO `NamesProfanity` VALUES (14360,"李克强",4); 
-INSERT INTO `NamesProfanity` VALUES (14361,"\<х+у+[еийюя]",8); 
-INSERT INTO `NamesProfanity` VALUES (14362,"зах+у+[еийюя]",8); 
-INSERT INTO `NamesProfanity` VALUES (14363,"нах+у+[еийюя]",8); 
-INSERT INTO `NamesProfanity` VALUES (14364,"нех+у+[еийюя]",8); 
-INSERT INTO `NamesProfanity` VALUES (14365,"ох+у+[еийюя]",8); 
-INSERT INTO `NamesProfanity` VALUES (14366,"отх+у+[еийюя]",8); 
-INSERT INTO `NamesProfanity` VALUES (14367,"прих+у+[еийюя]",8); 
-INSERT INTO `NamesProfanity` VALUES (14368,"бляд",8); 
-INSERT INTO `NamesProfanity` VALUES (14369,"\<блят",8); 
-INSERT INTO `NamesProfanity` VALUES (14370,"\<бля\>",8); 
-INSERT INTO `NamesProfanity` VALUES (14371,"\<блиа",8); 
-INSERT INTO `NamesProfanity` VALUES (14372,"пизд",8); 
-INSERT INTO `NamesProfanity` VALUES (14373,"пезд",8); 
-INSERT INTO `NamesProfanity` VALUES (14374,"писд",8); 
-INSERT INTO `NamesProfanity` VALUES (14375,"песд",8); 
-INSERT INTO `NamesProfanity` VALUES (14376,"\<еб",8); 
-INSERT INTO `NamesProfanity` VALUES (14377,"[аеийоуъ]еб",8); 
-INSERT INTO `NamesProfanity` VALUES (14378,"йоб",8); 
-INSERT INTO `NamesProfanity` VALUES (14379,"нииб",8); 
-INSERT INTO `NamesProfanity` VALUES (14380,"муд[аио]",8); 
-INSERT INTO `NamesProfanity` VALUES (14381,"сра[клнтч]",8); 
-INSERT INTO `NamesProfanity` VALUES (14382,"гове?н",8); 
-INSERT INTO `NamesProfanity` VALUES (14383,"гаве?н",8); 
-INSERT INTO `NamesProfanity` VALUES (14384,"пидор",8); 
-INSERT INTO `NamesProfanity` VALUES (14385,"педер",8); 
-INSERT INTO `NamesProfanity` VALUES (14386,"\<пидар",8); 
-INSERT INTO `NamesProfanity` VALUES (14387,"\<пидер",8); 
-INSERT INTO `NamesProfanity` VALUES (14388,"дроч",8); 
-INSERT INTO `NamesProfanity` VALUES (14389,"задрот",8); 
-INSERT INTO `NamesProfanity` VALUES (14390,"гондон",8); 
-INSERT INTO `NamesProfanity` VALUES (14391,"гандон",8); 
-INSERT INTO `NamesProfanity` VALUES (14392,"залуп[аеуы]\>",8); 
-INSERT INTO `NamesProfanity` VALUES (14393,"залупой\>",8); 
-INSERT INTO `NamesProfanity` VALUES (14394,"блю[вею]",8); 
-INSERT INTO `NamesProfanity` VALUES (14395,"сперм",8); 
-INSERT INTO `NamesProfanity` VALUES (14396,"гомик",8); 
-INSERT INTO `NamesProfanity` VALUES (14397,"пенис",8); 
-INSERT INTO `NamesProfanity` VALUES (14398,"здец",8); 
-INSERT INTO `NamesProfanity` VALUES (14399,"\<сукин",8); 
-INSERT INTO `NamesProfanity` VALUES (14400,"\<сучье",8); 
-INSERT INTO `NamesProfanity` VALUES (14401,"сцук",8); 
-INSERT INTO `NamesProfanity` VALUES (14402,"пелотк",8); 
-INSERT INTO `NamesProfanity` VALUES (14403,"\<хер\>",8); 
-INSERT INTO `NamesProfanity` VALUES (14404,"\<похер",8); 
-INSERT INTO `NamesProfanity` VALUES (14405,"\<нахер",8); 
-INSERT INTO `NamesProfanity` VALUES (14406,"\<херн",8); 
-INSERT INTO `NamesProfanity` VALUES (14407,"жоп[аеуы]\>",8); 
-INSERT INTO `NamesProfanity` VALUES (14408,"жопой\>",8); 
-INSERT INTO `NamesProfanity` VALUES (14409,"\<гомосек",8); 
-INSERT INTO `NamesProfanity` VALUES (14410,"\<манд[аеуы]\>",8); 
-INSERT INTO `NamesProfanity` VALUES (14411,"\<мандой\>",8); 
-INSERT INTO `NamesProfanity` VALUES (14412,"\<ыуа",8); 
-INSERT INTO `NamesProfanity` VALUES (14413,"\<медвед\>",8); 
-INSERT INTO `NamesProfanity` VALUES (14414,"\<падоно?к",8); 
-INSERT INTO `NamesProfanity` VALUES (14415,"\<кр[ао]савчег\>",8); 
-INSERT INTO `NamesProfanity` VALUES (14416,"\<аф+тар\>",8); 
-INSERT INTO `NamesProfanity` VALUES (14417,"\<превед\>",8); 
-INSERT INTO `NamesProfanity` VALUES (14418,"\<йад",8); 
-INSERT INTO `NamesProfanity` VALUES (14419,"зачот",8); 
-INSERT INTO `NamesProfanity` VALUES (14420,"газенваген",8); 
-INSERT INTO `NamesProfanity` VALUES (14421,"ахтунг",8); 
-INSERT INTO `NamesProfanity` VALUES (14422,"пешы",8); 
-INSERT INTO `NamesProfanity` VALUES (14423,"\<исчо\>",8); 
-INSERT INTO `NamesProfanity` VALUES (14424,"жывотн",8); 
-INSERT INTO `NamesProfanity` VALUES (14425,"сотона",8); 
-INSERT INTO `NamesProfanity` VALUES (14426,"аццк",8); 
-INSERT INTO `NamesProfanity` VALUES (14427,"\<лох",8); 
-INSERT INTO `NamesProfanity` VALUES (14428,"фтопку",8); 
-INSERT INTO `NamesProfanity` VALUES (14429,"\<хохол\>",8); 
-INSERT INTO `NamesProfanity` VALUES (14430,"\<хохл",8); 
-INSERT INTO `NamesProfanity` VALUES (14431,"\<нигг+ер",8); 
-INSERT INTO `NamesProfanity` VALUES (14432,"\<пиндос",8); 
-INSERT INTO `NamesProfanity` VALUES (14433,"\<москал[иья]",8); 
-INSERT INTO `NamesProfanity` VALUES (14434,"\<москалей",8); 
-INSERT INTO `NamesProfanity` VALUES (14435,"\<жид[а-йл-я]",8); 
-INSERT INTO `NamesProfanity` VALUES (14436,"\<наци\>",8); 
-INSERT INTO `NamesProfanity` VALUES (14437,"наци[зс]",8); 
-INSERT INTO `NamesProfanity` VALUES (14438,"фаши",8); 
-INSERT INTO `NamesProfanity` VALUES (14439,"台湾",4); 
-INSERT INTO `NamesProfanity` VALUES (14440,"Tibet",4); 
-INSERT INTO `NamesProfanity` VALUES (14441,"Xizang",4); 
-INSERT INTO `NamesProfanity` VALUES (14442,"Taiwan",4); 
-INSERT INTO `NamesProfanity` VALUES (14443,"\<cervesa\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14444,"\<champagne\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14445,"\<chaseylain\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14446,"\<cheeba\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14447,"\<cherokee \>",7); 
-INSERT INTO `NamesProfanity` VALUES (14448,"\<chino\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14449,"\<chloejones \>",7); 
-INSERT INTO `NamesProfanity` VALUES (14450,"\<christilake\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14451,"\<chrisward \>",7); 
-INSERT INTO `NamesProfanity` VALUES (14452,"\<cocostarfish\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14453,"\<cognac\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14454,"\<cootch\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14455,"\<cooter\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14456,"\<copulate\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14457,"\<cornholes\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14458,"\<corona\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14459,"\<crack\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14460,"\<cracker\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14461,"\<crap\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14462,"\<damned\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14463,"\<dank\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14464,"\<deancoulter\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14465,"\<debidiamond \>",7); 
-INSERT INTO `NamesProfanity` VALUES (14466,"\<deepthroat\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14467,"\<devinderay \>",7); 
-INSERT INTO `NamesProfanity` VALUES (14468,"\<dianazyle \>",7); 
-INSERT INTO `NamesProfanity` VALUES (14469,"\<dietpills\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14470,"\<dirtysanchez\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14471,"\<ditavontease\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14472,"\<doggystyle\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14473,"\<dope\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14474,"\<duckbutter\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14475,"\<ecstacy\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14476,"\<edpowers \>",7); 
-INSERT INTO `NamesProfanity` VALUES (14477,"\<eggplant\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14478,"\<ericaboyer \>",7); 
-INSERT INTO `NamesProfanity` VALUES (14479,"\<extasy\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14480,"\<facial\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14481,"\<fluffer\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14482,"\<fornicat",7); 
-INSERT INTO `NamesProfanity` VALUES (14483,"\<freebase\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14484,"\<fusck",7); 
-INSERT INTO `NamesProfanity` VALUES (14485,"\<fux",7); 
-INSERT INTO `NamesProfanity` VALUES (14486,"\<gagepowers\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14487,"\<gew\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14488,"\<ghb\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14489,"\<ghetto\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14490,"\<gingerhill\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14491,"\<gloryhole\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14492,"\<goldschlager\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14493,"\<goombah\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14494,"\<granddragon\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14495,"\<greaseball\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14496,"\<greaser\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14497,"\<gspot\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14498,"\<guiness\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14499,"\<gunja\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14500,"\<handjob\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14501,"\<hash\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14502,"\<headdoctor\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14503,"\<heidifleiss\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14504,"\<hmo\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14505,"\<honky\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14506,"\<hoodrat\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14507,"\<hookah\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14508,"\<horney\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14509,"\<hustler\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14510,"\<inarivachs\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14511,"\<j.*bobbit\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14512,"\<j.*holmes\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14513,"\<jackdaniels\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14514,"\<jadeeast\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14515,"\<jadehsu \>",7); 
-INSERT INTO `NamesProfanity` VALUES (14516,"\<jadestclair\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14517,"\<jagermeister\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14518,"\<janacova\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14519,"\<jennahaze\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14520,"\<jennajameson\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14521,"\<jenteal\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14522,"\<jessicadee\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14523,"\<jeweldenyle\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14524,"\<jillkelly\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14525,"\<jimbeam\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14526,"\<josecuervo\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14527,"\<juliashton\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14528,"\<karadavis\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14529,"\<keef\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14530,"\<kif\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14531,"\<kikkityler \>",7); 
-INSERT INTO `NamesProfanity` VALUES (14532,"\<kobetai\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14533,"\<kooter\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14534,"\<krystalsteal\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14535,"\<kyke\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14536,"\<kylacole\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14537,"\<kylieireland\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14538,"\<lancegear \>",7); 
-INSERT INTO `NamesProfanity` VALUES (14539,"\<larryflynt\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14540,"\<lecher\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14541,"\<liquidx\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14542,"\<loloferrari\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14543,"\<long.*dong\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14544,"\<ludes\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14545,"\<lunalane\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14546,"\<maltliquor\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14547,"\<mariacheca\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14548,"\<mariatakagi\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14549,"\<marisadiaz \>",7); 
-INSERT INTO `NamesProfanity` VALUES (14550,"\<markdalton  \>",7); 
-INSERT INTO `NamesProfanity` VALUES (14551,"\<markwolff \>",7); 
-INSERT INTO `NamesProfanity` VALUES (14552,"\<marycarey \>",7); 
-INSERT INTO `NamesProfanity` VALUES (14553,"\<mayate\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14554,"\<meatwad\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14555,"\<methhead\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14556,"\<methmonster\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14557,"\<mikolee\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14558,"\<mimimiyagi\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14559,"\<moneyshot\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14560,"\<muff\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14561,"\<mushrooms\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14562,"\<nickelbag\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14563,"\<nikkibenz\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14564,"\<nikkidial\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14565,"\<nip\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14566,"\<nizzle\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14567,"\<nubian",7); 
-INSERT INTO `NamesProfanity` VALUES (14568,"\<nympho\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14569,"\<obsession\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14570,"\<opiate\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14571,"\<orgy\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14572,"\<panties\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14573,"\<pecker\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14574,"\<peternorth\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14575,"\<pissedoff\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14576,"\<pissoff\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14577,"\<pornstar\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14578,"\<prepubescent\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14579,"\<prick\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14580,"\<pube\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14581,"\<punjab\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14582,"\<punkass\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14583,"\<pusse\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14584,"\<randywest\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14585,"\<rebeccalord\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14586,"\<rebeccaporn\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14587,"\<redneck\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14588,"\<reneelarue\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14589,"\<ricer\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14590,"\<rustytrumpet\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14591,"\<ryanconner \>",7); 
-INSERT INTO `NamesProfanity` VALUES (14592,"\<ryanwagner \>",7); 
-INSERT INTO `NamesProfanity` VALUES (14593,"\<sarastjames \>",7); 
-INSERT INTO `NamesProfanity` VALUES (14594,"\<tosser\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14595,"\<tossingsalad\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14596,"\<tosssalad\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14597,"\<traceyadams\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14598,"\<tracilords\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14599,"\<tranny\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14600,"\<ttboy\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14601,"\<tyfox\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14602,"\<tylerfaith\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14603,"\<urethra\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14604,"\<veronicahart\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14605,"\<wankoff\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14606,"\<weed\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14607,"\<wej\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14608,"\<wench\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14609,"\<wildturkey\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14610,"hefner\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14611,"snatch\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14612,"vagina",7); 
-INSERT INTO `NamesProfanity` VALUES (14613,"\<annaslut\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14614,"\<asiacarrera\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14615,"\<aurorasnow\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14616,"\<bacardi\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14617,"\<beaner\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14618,"\<beanlicker\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14619,"\<scat\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14620,"\<scatology\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14621,"\<schlong",7); 
-INSERT INTO `NamesProfanity` VALUES (14622,"\<schnapps\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14623,"\<schoolboy",7); 
-INSERT INTO `NamesProfanity` VALUES (14624,"\<selenasteele\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14625,"\<sexy\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14626,"\<seymorebutts\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14627,"\<sheethead\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14628,"\<sherriangel\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14629,"\<shizzle\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14630,"\<shlong\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14631,"\<shmegma\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14632,"\<shrooms\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14633,"\<skeet\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14634,"\<skeetskeet\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14635,"\<adulteress\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14636,"\<adulterous\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14637,"\<adultery\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14638,"\<adultsonly\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14639,"\<agentorange\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14640,"\<aids\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14641,"\<al[ck]ohol",7); 
-INSERT INTO `NamesProfanity` VALUES (14642,"\<alecpowers\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14643,"\<alexwilcox\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14644,"\<amaretto\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14645,"\<anal\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14646,"\<angeladevi\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14647,"\<angeldust\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14648,"\<anglo\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14649,"\<anheiser\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14650,"\<annamalle\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14651,"\<beer\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14652,"\<erzengel\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14653,"könig\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14654,"\<eomer\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14655,"butthhead",7); 
-INSERT INTO `NamesProfanity` VALUES (14656,"\<slope\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14657,"\<smack\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14658,"\<smut\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14659,"\<snowball",7); 
-INSERT INTO `NamesProfanity` VALUES (14660,"\<sodomize\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14661,"\<sodomy\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14662,"\<speedball\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14663,"\<spew\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14664,"\<spreadeagle\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14665,"\<spunk\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14666,"\<std\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14667,"\<sunsetthomas\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14668,"\<sylviasaint\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14669,"\<teet[sz]\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14670,"\<tequila\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14671,"\<terapatrick\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14672,"\<thc\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14673,"\<tiabella\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14674,"\<toadlicker\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14675,"\<toak\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14676,"\<toke\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14677,"\<tombyron\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14678,"\<tommycruise\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14679,"\<tonyzerega\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14680,"\<tossalad\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14681,"\<vibrator\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14682,"\<vincevouyer\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14683,"\<vodka\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14684,"\<vulva\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14685,"\<w[ei]+n[ei]+r\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14686,"\<wank\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14687,"\<whackoff\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14688,"\<whiskey\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14689,"\<willclark\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14690,"\<yellow\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14691,"\<zigzag\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14692,"aryan\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14693,"\<acclaim\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14694,"\<amongoe",7); 
-INSERT INTO `NamesProfanity` VALUES (14695,"\<anabolica\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14696,"\<analpunisher\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14697,"nazi\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14698,"\<anth?rax\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14699,"\<blasehase\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14700,"\<botox\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14701,"\<bueckstueck\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14702,"\<bumsnudel\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14703,"\<cairne\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14704,"\<christkind\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14705,"\<crackdealer\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14706,"king\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14707,"\<darthjedi\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14708,"\<denethor\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14709,"\<derneger\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14710,"\<diedroge\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14711,"\<dollybuster\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14712,"\<donpeperulez\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14713,"\<dopecheffe\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14714,"\<duke",7); 
-INSERT INTO `NamesProfanity` VALUES (14715,"\<dwalin\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14716,"sucker\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14717,"\<ebola\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14718,"\<eichelkäse\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14719,"f[ue]+rst\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14720,"muschi\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14721,"\<eternalhoden\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14722,"\<euthanasie\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14723,"\<fick",7); 
-INSERT INTO `NamesProfanity` VALUES (14724,"luder\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14725,"kacke\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14726,"\<fotz",7); 
-INSERT INTO `NamesProfanity` VALUES (14727,"tussi\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14728,"\<frodobeutlin\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14729,"\<frozenthrone\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14730,"\<gandhi\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14731,"\<ganja",7); 
-INSERT INTO `NamesProfanity` VALUES (14732,"\<gayoverlord\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14733,"\<geilebraut\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14734,"\<ginawild\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14735,"\<goebbels\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14736,"\<gott\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14737,"\<graftaliban\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14738,"\<hägar\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14739,"\<hanfernte\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14740,"\<heiland\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14741,"\<hendrix\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14742,"\<heroin",7); 
-INSERT INTO `NamesProfanity` VALUES (14743,"\<hordenhure\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14744,"porno\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14745,"\<[gk]adafi\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14746,"\<kiffer",7); 
-INSERT INTO `NamesProfanity` VALUES (14747,"\<kleineralki\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14748,"\<kleinerfurz\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14749,"\<klitori",7); 
-INSERT INTO `NamesProfanity` VALUES (14750,"ficker\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14751,"\<kpd\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14752,"\<kruppstahl\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14753,"\<mariuhanna\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14754,"\<master",7); 
-INSERT INTO `NamesProfanity` VALUES (14755,"\<meisteryoda\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14756,"\<mengele\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14757,"fick\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14758,"\<michaelmyers\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14759,"\<milkahase\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14760,"\<milkakuh\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14761,"\<mistst[ue]+ck\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14762,"\<moesen",7); 
-INSERT INTO `NamesProfanity` VALUES (14763,"\<möse",7); 
-INSERT INTO `NamesProfanity` VALUES (14764,"\<muschi",7); 
-INSERT INTO `NamesProfanity` VALUES (14765,"\<nachgeburt\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14766,"\<nazghul\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14767,"\<negerin\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14768,"\<nikoleinchen\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14769,"\<onkeltom\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14770,"\<pimmel",7); 
-INSERT INTO `NamesProfanity` VALUES (14771,"\<pimper",7); 
-INSERT INTO `NamesProfanity` VALUES (14772,"\<pommespapst\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14773,"\<popobumser\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14774,"\<porno",7); 
-INSERT INTO `NamesProfanity` VALUES (14775,"\<princess",7); 
-INSERT INTO `NamesProfanity` VALUES (14776,"\<prinz\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14777,"\<rammstein\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14778,"\<rasputin\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14779,"\<redbull\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14780,"\<richthofen\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14781,"\<sarin\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14782,"\<schlampe",7); 
-INSERT INTO `NamesProfanity` VALUES (14783,"\<schwanz",7); 
-INSERT INTO `NamesProfanity` VALUES (14784,"\<sith\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14785,"\<smeagol\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14786,"\<sohngottes\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14787,"\<spikelee\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14788,"\<splintercell\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14789,"\<suicide\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14790,"\<suizidhoden\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14791,"\<terrortunte\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14792,"\<titanrosette\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14793,"\<tittenmaus\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14794,"\<tylerdurden\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14795,"\<vagimampf\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14796,"\<vanginus\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14797,"\<votzentroll\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14798,"\<warcrack\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14799,"\<winnipuuh\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14800,"\<wixxoor\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14801,"\<wowdiablo\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14802,"\<xerox\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14803,"schlampe\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14804,"zipfe?l\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14805,"\<zuhälter",7); 
-INSERT INTO `NamesProfanity` VALUES (14806,"\<zwergpimmel\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14807,"\<absinthe\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14808,"\<absolut\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14809,"\<chink\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14810,"\<agnostic\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14811,"\<pussy",7); 
-INSERT INTO `NamesProfanity` VALUES (14812,"\<rape\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14813,"\<aceofspades\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14814,"\<pusher",7); 
-INSERT INTO `NamesProfanity` VALUES (14815,"\<chinks\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14816,"\<dikes\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14817,"\<dildos\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14818,"\<sativa\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14819,"\<indica\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14820,"\<skunkweed\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14821,"\<dike\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14822,"\<raped\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14823,"\<raping\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14824,"dong",7); 
-INSERT INTO `NamesProfanity` VALUES (14825,"\<dyke\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14826,"\<mj\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14827,"\<doobie\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14828,"\<stoner",7); 
-INSERT INTO `NamesProfanity` VALUES (14829,"\<junk[ie]",7); 
-INSERT INTO `NamesProfanity` VALUES (14830,"\<defecat",7); 
-INSERT INTO `NamesProfanity` VALUES (14831,"\<alquaeda\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14832,"\<amerikkkan\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14833,"\<amphetamine\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14834,"\<ejaculate\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14835,"\<scrotum",7); 
-INSERT INTO `NamesProfanity` VALUES (14836,"\<fisting\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14837,"\<arse",7); 
-INSERT INTO `NamesProfanity` VALUES (14838,"\<cock",7); 
-INSERT INTO `NamesProfanity` VALUES (14839,"\<aryan",7); 
-INSERT INTO `NamesProfanity` VALUES (14840,"\<backdoor\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14841,"titt[iey]*s\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14842,"\<bi\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14843,"\<bigfatasscow\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14844,"bondage\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14845,"boobs\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14846,"breast\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14847,"\<buttocks\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14848,"\<[ck]oitus",7); 
-INSERT INTO `NamesProfanity` VALUES (14849,"\<condom",7); 
-INSERT INTO `NamesProfanity` VALUES (14850,"\<dahoe\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14851,"\<damn\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14852,"\<darkwanker\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14853,"\<di[ae][rh]+ea",7); 
-INSERT INTO `NamesProfanity` VALUES (14854,"dick\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14855,"\<dirtyho\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14856,"\<domination\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14857,"\<dutch\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14858,"\<enema\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14859,"\<erotic",7); 
-INSERT INTO `NamesProfanity` VALUES (14860,"jackass\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14861,"\<facism\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14862,"\<fakeboobs\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14863,"\<fart\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14864,"\<fetish",7); 
-INSERT INTO `NamesProfanity` VALUES (14865,"fetish\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14866,"\<filthymuslim\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14867,"\<focker\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14868,"\<foreplay\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14869,"\<foreskin\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14870,"\<frottage\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14871,"\<fuk\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14872,"\<fukass\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14873,"\<gay\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14874,"\<genital",7); 
-INSERT INTO `NamesProfanity` VALUES (14875,"\<genitals\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14876,"\<gigolo\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14877,"\<gonorrhea\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14878,"\<grummz\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14879,"\<hairyhorny\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14880,"\<hardboob\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14881,"\<hentail\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14882,"\<hiv\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14883,"\<holocaust\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14884,"\<horny\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14885,"\<hot\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14886,"\<j.*jameson\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14887,"\<kinky\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14888,"\<kraut\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14889,"\<lesb\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14890,"\<lesbian\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14891,"pussy\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14892,"\<lingerie\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14893,"\<load\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14894,"\<lube\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14895,"\<lubricant\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14896,"\<lust\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14897,"\<maidenhead\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14898,"후장뚫어",7); 
-INSERT INTO `NamesProfanity` VALUES (14899,"\<asshole",7); 
-INSERT INTO `NamesProfanity` VALUES (14900,"\<fingerbang\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14901,"\<gangbang\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14902,"\<gangrape\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14903,"\<japs\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14904,"\<jizzing\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14905,"\<gizzing\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14906,"\<pussies\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14907,"\<rapes\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14908,"\<saladtosser\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14909,"\<fags\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14910,"boob",7); 
-INSERT INTO `NamesProfanity` VALUES (14911,"\<bast[aeiou]rd",7); 
-INSERT INTO `NamesProfanity` VALUES (14912,"\<beastiality\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14913,"\<blowjob",7); 
-INSERT INTO `NamesProfanity` VALUES (14914,"\<boffer\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14915,"\<clowjob\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14916,"\<donkeypunch\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14917,"\<fawker\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14918,"\<feces",7); 
-INSERT INTO `NamesProfanity` VALUES (14919,"\<nipple",7); 
-INSERT INTO `NamesProfanity` VALUES (14920,"nipples\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14921,"prostitute",7); 
-INSERT INTO `NamesProfanity` VALUES (14922,"\<coke\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14923,"\<morphine\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14924,"\<nudity\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14925,"\<nuts\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14926,"\<pagan\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14927,"\<perv\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14928,"\<pervert\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14929,"\<phawk\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14930,"\<piss\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14931,"\<playboy\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14932,"\<playgirl\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14933,"\<polish\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14934,"\<prebubescent\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14935,"\<queer\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14936,"\<reich\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14937,"\<r.*jeremy\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14938,"\<screw\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14939,"\<seamen\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14940,"\<spreadmylegs\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14941,"\<stripper",7); 
-INSERT INTO `NamesProfanity` VALUES (14942,"\<suck\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14943,"\<sukkitdown\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14944,"\<swingers\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14945,"\<teabag",7); 
-INSERT INTO `NamesProfanity` VALUES (14946,"\<terrorist\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14947,"\<thickbush\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14948,"\<threesome\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14949,"\<snatch",7); 
-INSERT INTO `NamesProfanity` VALUES (14950,"\<updabut\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14951,"\<vasect",7); 
-INSERT INTO `NamesProfanity` VALUES (14952,"\<white\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14953,"\<negro",7); 
-INSERT INTO `NamesProfanity` VALUES (14954,"\<tinytits\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14955,"cock\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14956,"blowjob\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14957,"\<tardpopsicle\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14958,"\<urmom\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14959,"fag\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14960,"\<dick",7); 
-INSERT INTO `NamesProfanity` VALUES (14961,"\<turdsplat\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14962,"\<chokeoncocks\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14963,"\<littlearse\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14964,"\<holybijesis\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14965,"\<niggs\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14966,"\<sacofricosis\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14967,"\<polesmokers\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14968,"\<sega\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14969,"\<sex",7); 
-INSERT INTO `NamesProfanity` VALUES (14970,"\<shadowbane\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14971,"\<shane",7); 
-INSERT INTO `NamesProfanity` VALUES (14972,"\<shiznit\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14973,"\<shortbus\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14974,"\<tramps\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14975,"\<erection\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14976,"\<smoked\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14977,"\<snowwhite\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14978,"\<oral\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14979,"\<sperm",7); 
-INSERT INTO `NamesProfanity` VALUES (14980,"\<poop\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14981,"\<spluge\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14982,"\<suck",7); 
-INSERT INTO `NamesProfanity` VALUES (14983,"\<supermario\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14984,"support",7); 
-INSERT INTO `NamesProfanity` VALUES (14985,"\<sex\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14986,"\<suppuku\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14987,"\<sirbong\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14988,"\<spank\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14989,"\<speculum\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14990,"\<streaker",7); 
-INSERT INTO `NamesProfanity` VALUES (14991,"\<tribadism\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14992,"\<upmybutthole\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14993,"\<urinat",7); 
-INSERT INTO `NamesProfanity` VALUES (14994,"\<venereal\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14995,"\<virgin\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14996,"\<warslut\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14997,"\<wood\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14998,"\<advil\>",7); 
-INSERT INTO `NamesProfanity` VALUES (14999,"\<amputee\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15000,"\<amtrak\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15001,"\<anis\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15002,"\<anolinctus\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15003,"\<antichrist\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15004,"\<arathorn\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15005,"\<arian\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15006,"\<arsonist\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15007,"\<blackenstein\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15008,"\<blacksabbath\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15009,"\<bnet\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15010,"\<bootylicious\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15011,"\<bra\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15012,"\<chinaman\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15013,"\<chronik\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15014,"\<colgate\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15015,"\<coprophagy\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15016,"\<crackhead\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15017,"\<dammit\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15018,"\<darky\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15019,"\<darvocet\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15020,"\<databasesys\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15021,"\<deckardcain\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15022,"\<dr\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15023,"\<dukeofwhales\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15024,"\<dumbass\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15025,"\<ecstasy\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15026,"\<ensign\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15027,"\<fcuk\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15028,"\<ferrari\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15029,"\<fetus",7); 
-INSERT INTO `NamesProfanity` VALUES (15030,"\<fockerz\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15031,"\<fooker\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15032,"cunt\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15033,"\<ghandi\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15034,"\<gofukyorself\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15035,"\<gonadian\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15036,"\<goochgravy\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15037,"\<gookenator\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15038,"\<hemplock\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15039,"\<herpies\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15040,"\<homoerectus\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15041,"\<hore\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15042,"\<hotdamn\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15043,"\<hungelf\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15044,"\<indian\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15045,"\<irapekids\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15046,"\<ironchef\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15047,"\<jc\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15048,"\<jedi\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15049,"\<[gj]en[ao]cide\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15050,"\<jugs\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15051,"\<klismaphilia\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15052,"\<kokigami\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15053,"\<koon\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15054,"\<kosherpork\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15055,"\<lardass\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15056,"\<laurabush\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15057,"\<marlboroman\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15058,"\<masterbaiter\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15059,"\<maxipad\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15060,"\<menstrual\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15061,"\<mhz\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15062,"\<michaeljack\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15063,"bastard\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15064,"\<misogynist\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15065,"\<mister\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15066,"\<mr\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15067,"\<narcoticus\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15068,"\<nigahh\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15069,"\<npc",7); 
-INSERT INTO `NamesProfanity` VALUES (15070,"\<nug\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15071,"\<nunriggers\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15072,"\<nwa\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15073,"\<omgwtf\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15074,"\<opiate",7); 
-INSERT INTO `NamesProfanity` VALUES (15075,"\<oreos\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15076,"\<ovaltine\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15077,"\<papsmear\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15078,"\<pederasty\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15079,"\<penthouse\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15080,"\<pimp",7); 
-INSERT INTO `NamesProfanity` VALUES (15081,"\<pinktaco\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15082,"mofo\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15083,"\<poomaster\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15084,"\<poonjuice\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15085,"\<poop",7); 
-INSERT INTO `NamesProfanity` VALUES (15086,"\<pwnzor\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15087,"\<quadoushka\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15088,"\<r.*nad[ae]r\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15089,"\<stud\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15090,"\<submissive\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15091,"\<swiftnuggs\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15092,"\<trans",7); 
-INSERT INTO `NamesProfanity` VALUES (15093,"\<uglynig\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15094,"\<swastika\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15095,"\<sybian\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15096,"\<toeofcamel\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15097,"\<tokyorose\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15098,"\<urmama\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15099,"\<voltron\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15100,"\<wangmaster\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15101,"\<wanker\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15102,"\<wetdream\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15103,"\<whitebread\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15104,"\<wigger\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15105,"\<williamhung\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15106,"\<windex\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15107,"\<witchking\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15108,"\<x.*x\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15109,"\<yosemitesam\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15110,"\<youranus\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15111,"\<zoolander\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15112,"condom\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15113,"jebus\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15114,"\<kosher",7); 
-INSERT INTO `NamesProfanity` VALUES (15115,"menstrual",7); 
-INSERT INTO `NamesProfanity` VALUES (15116,"sexy",7); 
-INSERT INTO `NamesProfanity` VALUES (15117,"\<bestiality\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15118,"\<bizzle\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15119,"\<black\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15120,"\<blackie\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15121,"\<bloodyhell\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15122,"\<blow\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15123,"\<blunt\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15124,"\<bollocks\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15125,"\<boobs",7); 
-INSERT INTO `NamesProfanity` VALUES (15126,"\<boofer\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15127,"\<bourbon\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15128,"\<brazuca\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15129,"\<breast",7); 
-INSERT INTO `NamesProfanity` VALUES (15130,"\<budda\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15131,"\<buddahead\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15132,"\<budlight\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15133,"\<budweiser\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15134,"\<bugger\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15135,"\<bustydusty\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15136,"\<butt\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15137,"\<buttman\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15138,"\<candyandes\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15139,"\<caucazoid\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15140,"\<cawk\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15141,"\<fu[ck]+[aeiou]+",7); 
-INSERT INTO `NamesProfanity` VALUES (15142,"\<jod[eií]",7); 
-INSERT INTO `NamesProfanity` VALUES (15143,"mierda",7); 
-INSERT INTO `NamesProfanity` VALUES (15144,"coño",7); 
-INSERT INTO `NamesProfanity` VALUES (15145,"\<[gj]ilipo",7); 
-INSERT INTO `NamesProfanity` VALUES (15146,"\<meapilas\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15147,"\<capull",7); 
-INSERT INTO `NamesProfanity` VALUES (15148,"\<cabr[oó]n",7); 
-INSERT INTO `NamesProfanity` VALUES (15149,"\<mari[cq]",7); 
-INSERT INTO `NamesProfanity` VALUES (15150,"\<pene",7); 
-INSERT INTO `NamesProfanity` VALUES (15151,"polla",7); 
-INSERT INTO `NamesProfanity` VALUES (15152,"\<poya",7); 
-INSERT INTO `NamesProfanity` VALUES (15153,"\<pinga\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15154,"\<pito",7); 
-INSERT INTO `NamesProfanity` VALUES (15155,"\<va[gj]ina",7); 
-INSERT INTO `NamesProfanity` VALUES (15156,"\<lesbi",7); 
-INSERT INTO `NamesProfanity` VALUES (15157,"\<minga\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15158,"\<put[aoó]",7); 
-INSERT INTO `NamesProfanity` VALUES (15159,"\<zorra",7); 
-INSERT INTO `NamesProfanity` VALUES (15160,"\<paja\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15161,"\<paji[lt]",7); 
-INSERT INTO `NamesProfanity` VALUES (15162,"\<nazi\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15163,"\<kkk\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15164,"\<escroto\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15165,"\<coj[oó]n",7); 
-INSERT INTO `NamesProfanity` VALUES (15166,"\<correr[mst]",7); 
-INSERT INTO `NamesProfanity` VALUES (15167,"\<corri[eé]ndo[mst]e\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15168,"\<eyacul",7); 
-INSERT INTO `NamesProfanity` VALUES (15169,"\<esperm",7); 
-INSERT INTO `NamesProfanity` VALUES (15170,"\<mama[rd]",7); 
-INSERT INTO `NamesProfanity` VALUES (15171,"\<encula[rd]",7); 
-INSERT INTO `NamesProfanity` VALUES (15172,"\<culo\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15173,"\<viol[aó]",7); 
-INSERT INTO `NamesProfanity` VALUES (15174,"\<ped[oó]f",7); 
-INSERT INTO `NamesProfanity` VALUES (15175,"\<pederast",7); 
-INSERT INTO `NamesProfanity` VALUES (15176,"gay",7); 
-INSERT INTO `NamesProfanity` VALUES (15177,"\<culandr[oó]n\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15178,"\<sodomi",7); 
-INSERT INTO `NamesProfanity` VALUES (15179,"\<sadomaso",7); 
-INSERT INTO `NamesProfanity` VALUES (15180,"\<sudaca",7); 
-INSERT INTO `NamesProfanity` VALUES (15181,"\<negraco\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15182,"\<moro\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15183,"\<moros\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15184,"\<moromierda\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15185,"\<jop[eu]",7); 
-INSERT INTO `NamesProfanity` VALUES (15186,"\<po[lr]cul",7); 
-INSERT INTO `NamesProfanity` VALUES (15187,"\<ostia",7); 
-INSERT INTO `NamesProfanity` VALUES (15188,"\<hostia",7); 
-INSERT INTO `NamesProfanity` VALUES (15189,"\<cullons\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15190,"\<gabacho\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15191,"\<pringao\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15192,"\<tont[ao]",7); 
-INSERT INTO `NamesProfanity` VALUES (15193,"\<mam[oó]n",7); 
-INSERT INTO `NamesProfanity` VALUES (15194,"\<niñ[ao]t",7); 
-INSERT INTO `NamesProfanity` VALUES (15195,"\<nenaza",7); 
-INSERT INTO `NamesProfanity` VALUES (15196,"\<homo\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15197,"choch[eio]",7); 
-INSERT INTO `NamesProfanity` VALUES (15198,"txotx[eio]",7); 
-INSERT INTO `NamesProfanity` VALUES (15199,"xox[eio]",7); 
-INSERT INTO `NamesProfanity` VALUES (15200,"\<mastur",7); 
-INSERT INTO `NamesProfanity` VALUES (15201,"\<cl[ií]toris\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15202,"\<b[aá]lano\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15203,"\<prepucio\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15204,"\<hero[ií]na\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15205,"\<pellote\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15206,"\<hach[ií]s\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15207,"\<hatx[ií]s\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15208,"\<LSD\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15209,"\<coca[ií]na\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15210,"\<p[uú]bis\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15211,"\<p[uú]bico\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15212,"\<fela[ct]i",7); 
-INSERT INTO `NamesProfanity` VALUES (15213,"\<cunnilingus\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15214,"\<mari[hj]uana\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15215,"\<porro\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15216,"\<desvirga",7); 
-INSERT INTO `NamesProfanity` VALUES (15217,"\<himen\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15218,"\<meretriz\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15219,"\<prostituta\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15220,"\<rohypnol\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15221,"\<rugmunch",7); 
-INSERT INTO `NamesProfanity` VALUES (15222,"nig+er\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15223,"\<semen\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15224,"\<sexmachine\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15225,"\<slut\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15226,"\<slutmuffin\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15227,"\<smegma\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15228,"\<spanishfly\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15229,"\<spics\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15230,"\<squarehead\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15231,"\<stfu\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15232,"\<strapon\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15233,"\<talliwhacker\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15234,"\<tards\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15235,"\<teabagging\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15236,"\<throbknobbin\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15237,"\<thunderfuck\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15238,"\<tirdburglar",7); 
-INSERT INTO `NamesProfanity` VALUES (15239,"\<turdburglars\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15240,"\<twatlick",7); 
-INSERT INTO `NamesProfanity` VALUES (15241,"\<twats\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15242,"\<twatsuck",7); 
-INSERT INTO `NamesProfanity` VALUES (15243,"\<viagra\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15244,"\<whop\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15245,"\<zoophilia\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15246,"\<fagg[aeiouy]t",7); 
-INSERT INTO `NamesProfanity` VALUES (15247,"\<pillowbiter",7); 
-INSERT INTO `NamesProfanity` VALUES (15248,"\<poohstab",7); 
-INSERT INTO `NamesProfanity` VALUES (15249,"\<dildo\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15250,"\<heeb\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15251,"\<kike\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15252,"\<mudshark",7); 
-INSERT INTO `NamesProfanity` VALUES (15253,"\<mooley\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15254,"\<nig+a",7); 
-INSERT INTO `NamesProfanity` VALUES (15255,"\<jap\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15256,"feltch",7); 
-INSERT INTO `NamesProfanity` VALUES (15257,"\<homos\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15258,"\<tittie",7); 
-INSERT INTO `NamesProfanity` VALUES (15259,"\<tits\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15260,"\<slamhound",7); 
-INSERT INTO `NamesProfanity` VALUES (15261,"\<gutterslut\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15262,"\<cumguz",7); 
-INSERT INTO `NamesProfanity` VALUES (15263,"\<injun\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15264,"\<gooch\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15265,"bong",7); 
-INSERT INTO `NamesProfanity` VALUES (15266,"\<pothead",7); 
-INSERT INTO `NamesProfanity` VALUES (15267,"shit",7); 
-INSERT INTO `NamesProfanity` VALUES (15268,"\<twat\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15269,"\<assface\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15270,"\<nosecandy\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15271,"\<towelhead\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15272,"\<fudgepacker\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15273,"\<assmaster\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15274,"\<milf\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15275,"\<rumprang",7); 
-INSERT INTO `NamesProfanity` VALUES (15276,"\<spic\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15277,"\<spick",7); 
-INSERT INTO `NamesProfanity` VALUES (15278,"wetback",7); 
-INSERT INTO `NamesProfanity` VALUES (15279,"\<queef",7); 
-INSERT INTO `NamesProfanity` VALUES (15280,"\<nig\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15281,"fagg[aeiouy]t\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15282,"\<rapist\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15283,"\<gook\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15284,"\<polesmok",7); 
-INSERT INTO `NamesProfanity` VALUES (15285,"\<cracksmoker",7); 
-INSERT INTO `NamesProfanity` VALUES (15286,"\<jism\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15287,"\<dingleberry\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15288,"\<mooncricket",7); 
-INSERT INTO `NamesProfanity` VALUES (15289,"\<assman\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15290,"\<spearchuck",7); 
-INSERT INTO `NamesProfanity` VALUES (15291,"\<hardon\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15292,"\<stiffy\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15293,"\<cumstain",7); 
-INSERT INTO `NamesProfanity` VALUES (15294,"\<dunecoon\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15295,"\<buttfloss\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15296,"\<peckertracks\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15297,"\<cornhole\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15298,"\<wop\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15299,"\<cock\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15300,"\<asspound",7); 
-INSERT INTO `NamesProfanity` VALUES (15301,"\<buttboy",7); 
-INSERT INTO `NamesProfanity` VALUES (15302,"\<sploog",7); 
-INSERT INTO `NamesProfanity` VALUES (15303,"\<meatsword\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15304,"\<skinbat",7); 
-INSERT INTO `NamesProfanity` VALUES (15305,"히로뽕",7); 
-INSERT INTO `NamesProfanity` VALUES (15306,"\<zipperhead\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15307,"\<porchmonk",7); 
-INSERT INTO `NamesProfanity` VALUES (15308,"\<junglebunny\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15309,"\<jizz\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15310,"\<africoon\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15311,"\<aidsbearer\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15312,"\<analcumdrip\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15313,"\<analdoctor\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15314,"\<aperape\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15315,"\<assbandit\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15316,"\<assbasher\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15317,"\<asshunter\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15318,"\<asskiss",7); 
-INSERT INTO `NamesProfanity` VALUES (15319,"\<asslick",7); 
-INSERT INTO `NamesProfanity` VALUES (15320,"\<assram",7); 
-INSERT INTO `NamesProfanity` VALUES (15321,"\<assrape",7); 
-INSERT INTO `NamesProfanity` VALUES (15322,"\<biotch\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15323,"\<blackanese\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15324,"\<blaxican\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15325,"\<blowjob\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15326,"\<blueball\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15327,"\<bonch\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15328,"\<boners\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15329,"nig+a\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15330,"\<bullshirt\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15331,"\<buttbang\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15332,"\<buttfucker",7); 
-INSERT INTO `NamesProfanity` VALUES (15333,"\<buttlick",7); 
-INSERT INTO `NamesProfanity` VALUES (15334,"\<buttmonkey\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15335,"\<buttmunch",7); 
-INSERT INTO `NamesProfanity` VALUES (15336,"\<buttnugget",7); 
-INSERT INTO `NamesProfanity` VALUES (15337,"\<buttslam",7); 
-INSERT INTO `NamesProfanity` VALUES (15338,"\<buttstain\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15339,"\<cameljockey\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15340,"\<cann[aio]bis\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15341,"\<carpetmuncher",7); 
-INSERT INTO `NamesProfanity` VALUES (15342,"\<cheapwhore\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15343,"\<chinawhite\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15344,"\<chinko\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15345,"\<choad\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15346,"\<circlejerk\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15347,"\<circumcise\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15348,"\<cocaine\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15349,"\<cocksucker\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15350,"\<coon\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15351,"\<cracka\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15352,"\<crackerass",7); 
-INSERT INTO `NamesProfanity` VALUES (15353,"\<crackpipe",7); 
-INSERT INTO `NamesProfanity` VALUES (15354,"\<creamtits\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15355,"\<crystalmeth\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15356,"\<cumboy",7); 
-INSERT INTO `NamesProfanity` VALUES (15357,"\<cumbubble",7); 
-INSERT INTO `NamesProfanity` VALUES (15358,"\<cumbucket\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15359,"\<cumcatcher",7); 
-INSERT INTO `NamesProfanity` VALUES (15360,"\<cumdumpster",7); 
-INSERT INTO `NamesProfanity` VALUES (15361,"\<cumeater\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15362,"\<cumm\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15363,"\<cumonmyface\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15364,"\<cums\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15365,"\<cumshooter",7); 
-INSERT INTO `NamesProfanity` VALUES (15366,"\<cumshot",7); 
-INSERT INTO `NamesProfanity` VALUES (15367,"\<cumslot",7); 
-INSERT INTO `NamesProfanity` VALUES (15368,"\<dankhoe\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15369,"\<danknugg",7); 
-INSERT INTO `NamesProfanity` VALUES (15370,"\<hashish\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15371,"\<heroin\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15372,"\<holywanker\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15373,"\<honkey\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15374,"\<hornytauren\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15375,"\<hotslut\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15376,"\<hymen\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15377,"\<jackoff\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15378,"\<kikes\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15379,"\<kunt\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15380,"\<lesbo\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15381,"\<longusdongus\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15382,"\<lsd\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15383,"\<mangina\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15384,"\<mansatchel\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15385,"\<marijuana\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15386,"\<mast[eu]rbat",7); 
-INSERT INTO `NamesProfanity` VALUES (15387,"\<meth\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15388,"\<mooby\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15389,"\<morningwood\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15390,"\<monstercock",7); 
-INSERT INTO `NamesProfanity` VALUES (15391,"\<moulie\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15392,"\<muffdiver",7); 
-INSERT INTO `NamesProfanity` VALUES (15393,"\<natzi\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15394,"\<necrophil",7); 
-INSERT INTO `NamesProfanity` VALUES (15395,"\<negrolicious\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15396,"\<negromancer\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15397,"\<nicklebag\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15398,"\<niglet",7); 
-INSERT INTO `NamesProfanity` VALUES (15399,"\<nignog\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15400,"\<nigs\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15401,"\<oface\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15402,"\<onanism\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15403,"\<opium\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15404,"\<orgasm\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15405,"\<pcp\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15406,"\<pedophile\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15407,"\<penis",7); 
-INSERT INTO `NamesProfanity` VALUES (15408,"\<phugface\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15409,"\<pikajew\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15410,"\<poontang\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15411,"\<porn\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15412,"\<priapism\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15413,"\<pr[o0]n\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15414,"\<pudendum\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15415,"\<pussyfart",7); 
-INSERT INTO `NamesProfanity` VALUES (15416,"\<pussylick",7); 
-INSERT INTO `NamesProfanity` VALUES (15417,"\<pussystomp",7); 
-INSERT INTO `NamesProfanity` VALUES (15418,"\<puto\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15419,"\<quaaludes\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15420,"\<queers\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15421,"\<qweef\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15422,"\<raghead\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15423,"\<reefer\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15424,"\<reggin\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15425,"\<rimjob\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15426,"\<gizz\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15427,"\<cooze\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15428,"\<cumming\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15429,"\<boner\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15430,"\<buttpirate",7); 
-INSERT INTO `NamesProfanity` VALUES (15431,"\<titty",7); 
-INSERT INTO `NamesProfanity` VALUES (15432,"\<poostab",7); 
-INSERT INTO `NamesProfanity` VALUES (15433,"fuck",7); 
-INSERT INTO `NamesProfanity` VALUES (15434,"\<ass\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15435,"bia?ts?ch",7); 
-INSERT INTO `NamesProfanity` VALUES (15436,"\<clit",7); 
-INSERT INTO `NamesProfanity` VALUES (15437,"\<cum\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15438,"\<cunt",7); 
-INSERT INTO `NamesProfanity` VALUES (15439,"\<nig+er",7); 
-INSERT INTO `NamesProfanity` VALUES (15440,"penis\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15441,"whore",7); 
-INSERT INTO `NamesProfanity` VALUES (15442,"ㅈㄹ",7); 
-INSERT INTO `NamesProfanity` VALUES (15443,"yuckfu",7); 
-INSERT INTO `NamesProfanity` VALUES (15444,"yuckfou",7); 
-INSERT INTO `NamesProfanity` VALUES (15445,"transvestite",7); 
-INSERT INTO `NamesProfanity` VALUES (15446,"transsexual",7); 
-INSERT INTO `NamesProfanity` VALUES (15447,"testicle",7); 
-INSERT INTO `NamesProfanity` VALUES (15448,"tampon",7); 
-INSERT INTO `NamesProfanity` VALUES (15449,"sphincter",7); 
-INSERT INTO `NamesProfanity` VALUES (15450,"sperm",7); 
-INSERT INTO `NamesProfanity` VALUES (15451,"phuck",7); 
-INSERT INTO `NamesProfanity` VALUES (15452,"gangbang",7); 
-INSERT INTO `NamesProfanity` VALUES (15453,"felch",7); 
-INSERT INTO `NamesProfanity` VALUES (15454,"bukkake",7); 
-INSERT INTO `NamesProfanity` VALUES (15455,"bukakke",7); 
-INSERT INTO `NamesProfanity` VALUES (15456,"bukake",7); 
-INSERT INTO `NamesProfanity` VALUES (15457,"\<twaty\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15458,"\<twatty\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15459,"\<turbanhead",7); 
-INSERT INTO `NamesProfanity` VALUES (15460,"\<titsnass\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15461,"\<titnass\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15462,"\<sh[ie][ie]thead\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15463,"\<peckerwood\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15464,"\<negroid",7); 
-INSERT INTO `NamesProfanity` VALUES (15465,"\<mooncricket\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15466,"\<kyke",7); 
-INSERT INTO `NamesProfanity` VALUES (15467,"\<jigg",7); 
-INSERT INTO `NamesProfanity` VALUES (15468,"\<jerkoff\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15469,"\<hentai\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15470,"\<gringo\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15471,"\<goddamn",7); 
-INSERT INTO `NamesProfanity` VALUES (15472,"\<gizm\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15473,"\<gism\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15474,"\<ganja\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15475,"GMworker",7); 
-INSERT INTO `NamesProfanity` VALUES (15476,"Offgamers",7); 
-INSERT INTO `NamesProfanity` VALUES (15477,"Mysupersales",7); 
-INSERT INTO `NamesProfanity` VALUES (15478,"Ezgaming",7); 
-INSERT INTO `NamesProfanity` VALUES (15479,"itembay",7); 
-INSERT INTO `NamesProfanity` VALUES (15480,"zlywy",7); 
-INSERT INTO `NamesProfanity` VALUES (15481,"wowsupplier",7); 
-INSERT INTO `NamesProfanity` VALUES (15482,"gmworkers",7); 
-INSERT INTO `NamesProfanity` VALUES (15483,"thsale",7); 
-INSERT INTO `NamesProfanity` VALUES (15484,"offgamers",7); 
-INSERT INTO `NamesProfanity` VALUES (15485,"mysupersales",7); 
-INSERT INTO `NamesProfanity` VALUES (15486,"igxe",7); 
-INSERT INTO `NamesProfanity` VALUES (15487,"ezgaming",7); 
-INSERT INTO `NamesProfanity` VALUES (15488,"\<whitti?ey?\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15489,"\<fellatio",7); 
-INSERT INTO `NamesProfanity` VALUES (15490,"\<fawk",7); 
-INSERT INTO `NamesProfanity` VALUES (15491,"\<dimebag\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15492,"\<dickholster\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15493,"\<diaperhead\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15494,"\<cunny\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15495,"\<bustanut\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15496,"\<asshat\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15497,"\<aryan\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15498,"\<arsehole\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15499,"\<arse\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15500,"\<americunt\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15501,"\<alphanigg",7); 
-INSERT INTO `NamesProfanity` VALUES (15502,"\<aggin\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15503,"\<aftercum\>",7); 
-INSERT INTO `NamesProfanity` VALUES (15511,"йух",8); 
-INSERT INTO `NamesProfanity` VALUES (15583,"\<Разбойник\>",8); 
-INSERT INTO `NamesProfanity` VALUES (15584,"\<Клыкарр\>",8); 
-INSERT INTO `NamesProfanity` VALUES (15585,"\<Леснойтролль\>",8); 
-INSERT INTO `NamesProfanity` VALUES (15586,"\<Человек\>",8); 
-INSERT INTO `NamesProfanity` VALUES (15587,"\<Орк\>",8); 
-INSERT INTO `NamesProfanity` VALUES (15588,"\<Дворф\>",8); 
-INSERT INTO `NamesProfanity` VALUES (15589,"\<Дварф\>",8); 
-INSERT INTO `NamesProfanity` VALUES (15590,"\<Дворфийка\>",8); 
-INSERT INTO `NamesProfanity` VALUES (15591,"\<Ночнойэльф\>",8); 
-INSERT INTO `NamesProfanity` VALUES (15592,"\<Эльф\>",8); 
-INSERT INTO `NamesProfanity` VALUES (15593,"\<Эльфийка\>",8); 
-INSERT INTO `NamesProfanity` VALUES (15594,"\<Таурен\>",8); 
-INSERT INTO `NamesProfanity` VALUES (15595,"\<Гном\>",8); 
-INSERT INTO `NamesProfanity` VALUES (15596,"\<Тролль\>",8); 
-INSERT INTO `NamesProfanity` VALUES (15597,"\<Гоблин\>",8); 
-INSERT INTO `NamesProfanity` VALUES (15598,"\<Эльфкрови\>",8); 
-INSERT INTO `NamesProfanity` VALUES (15599,"\<Дреней\>",8); 
-INSERT INTO `NamesProfanity` VALUES (15600,"\<Оркскверны\>",8); 
-INSERT INTO `NamesProfanity` VALUES (15601,"\<Падший\>",8); 
-INSERT INTO `NamesProfanity` VALUES (15602,"\<Врайкул\>",8); 
-INSERT INTO `NamesProfanity` VALUES (15603,"\<Воин\>",8); 
-INSERT INTO `NamesProfanity` VALUES (15604,"\<Паладин\>",8); 
-INSERT INTO `NamesProfanity` VALUES (15605,"\<Охотник\>",8); 
-INSERT INTO `NamesProfanity` VALUES (15607,"\<Жрец\>",8); 
-INSERT INTO `NamesProfanity` VALUES (15608,"\<Шаман\>",8); 
-INSERT INTO `NamesProfanity` VALUES (15609,"\<Маг\>",8); 
-INSERT INTO `NamesProfanity` VALUES (15610,"\<Чернокнижник\>",8); 
-INSERT INTO `NamesProfanity` VALUES (15611,"\<Друид\>",8); 
-INSERT INTO `NamesProfanity` VALUES (15612,"\<Рыцарьсмерти\>",8); 
-INSERT INTO `NamesProfanity` VALUES (15613,"\<Орчиха\>",8); 
-INSERT INTO `NamesProfanity` VALUES (15615,"\<Ночнаяэльфийка\>",8); 
-INSERT INTO `NamesProfanity` VALUES (15616,"\<Нежить\>",8); 
-INSERT INTO `NamesProfanity` VALUES (15617,"\<Эльфийкакрови\>",8); 
-INSERT INTO `NamesProfanity` VALUES (15618,"\<Орчихаскверны\>",8); 
-INSERT INTO `NamesProfanity` VALUES (15619,"\<Нага\>",8); 
-INSERT INTO `NamesProfanity` VALUES (15620,"\<Падшая\>",8); 
-INSERT INTO `NamesProfanity` VALUES (15621,"\<Воительница\>",8); 
-INSERT INTO `NamesProfanity` VALUES (15622,"\<Охотница\>",8); 
-INSERT INTO `NamesProfanity` VALUES (15623,"\<Разбойница\>",8); 
-INSERT INTO `NamesProfanity` VALUES (15624,"\<Жрица\>",8); 
-INSERT INTO `NamesProfanity` VALUES (15625,"\<Шаманка\>",8); 
-INSERT INTO `NamesProfanity` VALUES (15626,"\<Волшебница\>",8); 
-INSERT INTO `NamesProfanity` VALUES (15627,"\<Чернокнижница\>",8); 
-INSERT INTO `NamesProfanity` VALUES (15628,"\<Тауренка\>",8); 
-INSERT INTO `NamesProfanity` VALUES (15629,"\<Гномка\>",8); 
-INSERT INTO `NamesProfanity` VALUES (15631,"\<Мана\>",8); 
-INSERT INTO `NamesProfanity` VALUES (15632,"\<Ярость\>",8); 
-INSERT INTO `NamesProfanity` VALUES (15633,"\<Энергия\>",8); 
-INSERT INTO `NamesProfanity` VALUES (15634,"\<Настроение\>",8); 
-INSERT INTO `NamesProfanity` VALUES (15635,"\<Руны\>",8); 
-INSERT INTO `NamesProfanity` VALUES (15636,"\<Гномесса\>",8); 
-INSERT INTO `NamesProfanity` VALUES (15637,"\<Троллиха\>",8); 
-INSERT INTO `NamesProfanity` VALUES (15638,"\<бог\>",8); 
-INSERT INTO `NamesProfanity` VALUES (15639,"\<дьявол\>",8); 
-INSERT INTO `NamesProfanity` VALUES (15640,"\<сатана\>",8); 
-INSERT INTO `NamesProfanity` VALUES (15641,"\<аллах",8); 
-INSERT INTO `NamesProfanity` VALUES (15642,"\<Иисус",8); 
-INSERT INTO `NamesProfanity` VALUES (15643,"\<Христос",8); 
-INSERT INTO `NamesProfanity` VALUES (15644,"\<Кришн",8); 
-INSERT INTO `NamesProfanity` VALUES (15645,"\<Магомет\>",8); 
-INSERT INTO `NamesProfanity` VALUES (15646,"\<Мухаммад\>",8); 
-INSERT INTO `NamesProfanity` VALUES (15647,"\<Мухаммед\>",8); 
-INSERT INTO `NamesProfanity` VALUES (15648,"\<Будда\>",8); 
-INSERT INTO `NamesProfanity` VALUES (15649,"\<Путин",8); 
-INSERT INTO `NamesProfanity` VALUES (15650,"\<Буш",8); 
-INSERT INTO `NamesProfanity` VALUES (15651,"\<Клинтон",8); 
-INSERT INTO `NamesProfanity` VALUES (15652,"\<Саркози",8); 
-INSERT INTO `NamesProfanity` VALUES (15653,"\<Медведев",8); 
-INSERT INTO `NamesProfanity` VALUES (20739,"逼孕",4); 
-INSERT INTO `NamesProfanity` VALUES (20741,"八路",4); 
-INSERT INTO `NamesProfanity` VALUES (20742,"白痴",4); 
-INSERT INTO `NamesProfanity` VALUES (20743,"班禅",4); 
-INSERT INTO `NamesProfanity` VALUES (20744,"膀胱",4); 
-INSERT INTO `NamesProfanity` VALUES (20745,"逼孕套",4); 
-INSERT INTO `NamesProfanity` VALUES (20746,"比卵",4); 
-INSERT INTO `NamesProfanity` VALUES (20747,"比水",4); 
-INSERT INTO `NamesProfanity` VALUES (20748,"比样",4); 
-INSERT INTO `NamesProfanity` VALUES (20749,"避孕",4); 
-INSERT INTO `NamesProfanity` VALUES (20750,"避孕套",4); 
-INSERT INTO `NamesProfanity` VALUES (20751,"不爽不要钱",4); 
-INSERT INTO `NamesProfanity` VALUES (20752,"藏獨",4); 
-INSERT INTO `NamesProfanity` VALUES (20753,"藏独",4); 
-INSERT INTO `NamesProfanity` VALUES (20754,"操蛋",4); 
-INSERT INTO `NamesProfanity` VALUES (20755,"操死",4); 
-INSERT INTO `NamesProfanity` VALUES (20756,"操鸡",4); 
-INSERT INTO `NamesProfanity` VALUES (20757,"操她",4); 
-INSERT INTO `NamesProfanity` VALUES (20758,"操你爸",4); 
-INSERT INTO `NamesProfanity` VALUES (20759,"操你老母",4); 
-INSERT INTO `NamesProfanity` VALUES (20760,"操你爷爷",4); 
-INSERT INTO `NamesProfanity` VALUES (20761,"操你祖宗",4); 
-INSERT INTO `NamesProfanity` VALUES (20762,"胡锦套",4); 
-INSERT INTO `NamesProfanity` VALUES (20763,"男含大长茎",4); 
-INSERT INTO `NamesProfanity` VALUES (20764,"插逼",4); 
-INSERT INTO `NamesProfanity` VALUES (20765,"插她",4); 
-INSERT INTO `NamesProfanity` VALUES (20766,"插你爸",4); 
-INSERT INTO `NamesProfanity` VALUES (20767,"插你老母",4); 
-INSERT INTO `NamesProfanity` VALUES (20768,"插你妈",4); 
-INSERT INTO `NamesProfanity` VALUES (20769,"插你奶奶",4); 
-INSERT INTO `NamesProfanity` VALUES (20770,"插你全家",4); 
-INSERT INTO `NamesProfanity` VALUES (20771,"插你爷爷",4); 
-INSERT INTO `NamesProfanity` VALUES (20772,"插你祖宗",4); 
-INSERT INTO `NamesProfanity` VALUES (20773,"插他",4); 
-INSERT INTO `NamesProfanity` VALUES (20774,"插我",4); 
-INSERT INTO `NamesProfanity` VALUES (20775,"娼妓",4); 
-INSERT INTO `NamesProfanity` VALUES (20776,"车仑",4); 
-INSERT INTO `NamesProfanity` VALUES (20777,"车仑女干",4); 
-INSERT INTO `NamesProfanity` VALUES (20778,"陈毅",4); 
-INSERT INTO `NamesProfanity` VALUES (20779,"陈云",4); 
-INSERT INTO `NamesProfanity` VALUES (20780,"陳毅",4); 
-INSERT INTO `NamesProfanity` VALUES (20781,"陳雲",4); 
-INSERT INTO `NamesProfanity` VALUES (20782,"迟浩田",4); 
-INSERT INTO `NamesProfanity` VALUES (20783,"遲浩田",4); 
-INSERT INTO `NamesProfanity` VALUES (20784,"処女",4); 
-INSERT INTO `NamesProfanity` VALUES (20785,"处女膜",4); 
-INSERT INTO `NamesProfanity` VALUES (20786,"达賴",4); 
-INSERT INTO `NamesProfanity` VALUES (20787,"达癞",4); 
-INSERT INTO `NamesProfanity` VALUES (20788,"達赖",4); 
-INSERT INTO `NamesProfanity` VALUES (20789,"達賴",4); 
-INSERT INTO `NamesProfanity` VALUES (20790,"打飞机",4); 
-INSERT INTO `NamesProfanity` VALUES (20791,"大逼",4); 
-INSERT INTO `NamesProfanity` VALUES (20792,"大比",4); 
-INSERT INTO `NamesProfanity` VALUES (20793,"大东亚共荣",4); 
-INSERT INTO `NamesProfanity` VALUES (20794,"大鸡巴",4); 
-INSERT INTO `NamesProfanity` VALUES (20795,"大血比",4); 
-INSERT INTO `NamesProfanity` VALUES (20796,"鄧小平",4); 
-INSERT INTO `NamesProfanity` VALUES (20797,"吊子",4); 
-INSERT INTO `NamesProfanity` VALUES (20798,"丁关根",4); 
-INSERT INTO `NamesProfanity` VALUES (20799,"腚眼",4); 
-INSERT INTO `NamesProfanity` VALUES (20800,"东条",4); 
-INSERT INTO `NamesProfanity` VALUES (20801,"东条英机",4); 
-INSERT INTO `NamesProfanity` VALUES (20802,"东突",4); 
-INSERT INTO `NamesProfanity` VALUES (20803,"东亚",4); 
-INSERT INTO `NamesProfanity` VALUES (20804,"东亚病夫",4); 
-INSERT INTO `NamesProfanity` VALUES (20805,"東突",4); 
-INSERT INTO `NamesProfanity` VALUES (20806,"東亞病夫",4); 
-INSERT INTO `NamesProfanity` VALUES (20807,"发抡",4); 
-INSERT INTO `NamesProfanity` VALUES (20808,"发仑",4); 
-INSERT INTO `NamesProfanity` VALUES (20809,"发伦",4); 
-INSERT INTO `NamesProfanity` VALUES (20810,"发沦",4); 
-INSERT INTO `NamesProfanity` VALUES (20811,"发纶",4); 
-INSERT INTO `NamesProfanity` VALUES (20812,"发轮",4); 
-INSERT INTO `NamesProfanity` VALUES (20813,"发论",4); 
-INSERT INTO `NamesProfanity` VALUES (20814,"發倫",4); 
-INSERT INTO `NamesProfanity` VALUES (20815,"法抡",4); 
-INSERT INTO `NamesProfanity` VALUES (20816,"法仑",4); 
-INSERT INTO `NamesProfanity` VALUES (20817,"法伦",4); 
-INSERT INTO `NamesProfanity` VALUES (20818,"法沦",4); 
-INSERT INTO `NamesProfanity` VALUES (20819,"法纶",4); 
-INSERT INTO `NamesProfanity` VALUES (20820,"法倫",4); 
-INSERT INTO `NamesProfanity` VALUES (20821,"法论",4); 
-INSERT INTO `NamesProfanity` VALUES (20822,"法論",4); 
-INSERT INTO `NamesProfanity` VALUES (20823,"房事",4); 
-INSERT INTO `NamesProfanity` VALUES (20824,"粪便",4); 
-INSERT INTO `NamesProfanity` VALUES (20825,"糞",4); 
-INSERT INTO `NamesProfanity` VALUES (20826,"干逼",4); 
-INSERT INTO `NamesProfanity` VALUES (20827,"干比",4); 
-INSERT INTO `NamesProfanity` VALUES (20828,"干你",4); 
-INSERT INTO `NamesProfanity` VALUES (20829,"干你老比",4); 
-INSERT INTO `NamesProfanity` VALUES (20830,"干你老母",4); 
-INSERT INTO `NamesProfanity` VALUES (20831,"干你娘",4); 
-INSERT INTO `NamesProfanity` VALUES (20832,"干全家",4); 
-INSERT INTO `NamesProfanity` VALUES (20833,"肛门",4); 
-INSERT INTO `NamesProfanity` VALUES (20834,"肛門",4); 
-INSERT INTO `NamesProfanity` VALUES (20835,"睾丸",4); 
-INSERT INTO `NamesProfanity` VALUES (20836,"搞你",4); 
-INSERT INTO `NamesProfanity` VALUES (20837,"搞死",4); 
-INSERT INTO `NamesProfanity` VALUES (20838,"共產黨",4); 
-INSERT INTO `NamesProfanity` VALUES (20839,"狗比",4); 
-INSERT INTO `NamesProfanity` VALUES (20840,"狗操",4); 
-INSERT INTO `NamesProfanity` VALUES (20841,"狗成",4); 
-INSERT INTO `NamesProfanity` VALUES (20842,"狗诚",4); 
-INSERT INTO `NamesProfanity` VALUES (20843,"狗乘",4); 
-INSERT INTO `NamesProfanity` VALUES (20844,"狗幹",4); 
-INSERT INTO `NamesProfanity` VALUES (20845,"狗卵",4); 
-INSERT INTO `NamesProfanity` VALUES (20846,"狗娘",4); 
-INSERT INTO `NamesProfanity` VALUES (20847,"狗剩",4); 
-INSERT INTO `NamesProfanity` VALUES (20848,"狗杂种",4); 
-INSERT INTO `NamesProfanity` VALUES (20849,"龟公",4); 
-INSERT INTO `NamesProfanity` VALUES (20850,"龟投",4); 
-INSERT INTO `NamesProfanity` VALUES (20851,"亀頭",4); 
-INSERT INTO `NamesProfanity` VALUES (20852,"龜頭",4); 
-INSERT INTO `NamesProfanity` VALUES (20853,"系统",4); 
-INSERT INTO `NamesProfanity` VALUES (20854,"黑鬼",4); 
-INSERT INTO `NamesProfanity` VALUES (20855,"胡錦濤",4); 
-INSERT INTO `NamesProfanity` VALUES (20856,"黄片",4); 
-INSERT INTO `NamesProfanity` VALUES (20857,"姜春云",4); 
-INSERT INTO `NamesProfanity` VALUES (20858,"鸡吧",4); 
-INSERT INTO `NamesProfanity` VALUES (20859,"鸡奸",4); 
-INSERT INTO `NamesProfanity` VALUES (20860,"江澤民",4); 
-INSERT INTO `NamesProfanity` VALUES (20861,"鸡院",4); 
-INSERT INTO `NamesProfanity` VALUES (20862,"基地組織",4); 
-INSERT INTO `NamesProfanity` VALUES (20863,"雞",4); 
-INSERT INTO `NamesProfanity` VALUES (20864,"妓",4); 
-INSERT INTO `NamesProfanity` VALUES (20865,"賈慶林",4); 
-INSERT INTO `NamesProfanity` VALUES (20866,"国家领导人",4); 
-INSERT INTO `NamesProfanity` VALUES (20867,"国家主席",4); 
-INSERT INTO `NamesProfanity` VALUES (20868,"国权",4); 
-INSERT INTO `NamesProfanity` VALUES (20869,"国务院",4); 
-INSERT INTO `NamesProfanity` VALUES (20870,"國家領導人",4); 
-INSERT INTO `NamesProfanity` VALUES (20871,"國家主席",4); 
-INSERT INTO `NamesProfanity` VALUES (20872,"國權",4); 
-INSERT INTO `NamesProfanity` VALUES (20873,"國務院",4); 
-INSERT INTO `NamesProfanity` VALUES (20874,"贱逼",4); 
-INSERT INTO `NamesProfanity` VALUES (20875,"贱比",4); 
-INSERT INTO `NamesProfanity` VALUES (20876,"贱货",4); 
-INSERT INTO `NamesProfanity` VALUES (20877,"贱人",4); 
-INSERT INTO `NamesProfanity` VALUES (20878,"贱种",4); 
-INSERT INTO `NamesProfanity` VALUES (20879,"陈冠希",4); 
-INSERT INTO `NamesProfanity` VALUES (20880,"交配",4); 
-INSERT INTO `NamesProfanity` VALUES (20881,"叫春",4); 
-INSERT INTO `NamesProfanity` VALUES (20882,"金枪不倒",4); 
-INSERT INTO `NamesProfanity` VALUES (20883,"金泽辰",4); 
-INSERT INTO `NamesProfanity` VALUES (20884,"经血",4); 
-INSERT INTO `NamesProfanity` VALUES (20885,"精童",4); 
-INSERT INTO `NamesProfanity` VALUES (20886,"靖国神社",4); 
-INSERT INTO `NamesProfanity` VALUES (20887,"九霾",4); 
-INSERT INTO `NamesProfanity` VALUES (20888,"开苞",4); 
-INSERT INTO `NamesProfanity` VALUES (20889,"砍翻一条街",4); 
-INSERT INTO `NamesProfanity` VALUES (20890,"砍死你",4); 
-INSERT INTO `NamesProfanity` VALUES (20891,"客服",4); 
-INSERT INTO `NamesProfanity` VALUES (20892,"拉皮条",4); 
-INSERT INTO `NamesProfanity` VALUES (20893,"服务中心",4); 
-INSERT INTO `NamesProfanity` VALUES (20894,"烂逼",4); 
-INSERT INTO `NamesProfanity` VALUES (20895,"烂比",4); 
-INSERT INTO `NamesProfanity` VALUES (20896,"烂货",4); 
-INSERT INTO `NamesProfanity` VALUES (20897,"卖比",4); 
-INSERT INTO `NamesProfanity` VALUES (20898,"滥逼",4); 
-INSERT INTO `NamesProfanity` VALUES (20899,"滥比",4); 
-INSERT INTO `NamesProfanity` VALUES (20900,"滥货",4); 
-INSERT INTO `NamesProfanity` VALUES (20901,"滥交",4); 
-INSERT INTO `NamesProfanity` VALUES (20902,"妈比",4); 
-INSERT INTO `NamesProfanity` VALUES (20903,"老逼",4); 
-INSERT INTO `NamesProfanity` VALUES (20904,"老比",4); 
-INSERT INTO `NamesProfanity` VALUES (20905,"老卵",4); 
-INSERT INTO `NamesProfanity` VALUES (20906,"李長春",4); 
-INSERT INTO `NamesProfanity` VALUES (20907,"李大師",4); 
-INSERT INTO `NamesProfanity` VALUES (20908,"李嵐清",4); 
-INSERT INTO `NamesProfanity` VALUES (20909,"李鵬",4); 
-INSERT INTO `NamesProfanity` VALUES (20910,"李瑞環",4); 
-INSERT INTO `NamesProfanity` VALUES (20911,"李铁映",4); 
-INSERT INTO `NamesProfanity` VALUES (20912,"列寧",4); 
-INSERT INTO `NamesProfanity` VALUES (20913,"林彪",4); 
-INSERT INTO `NamesProfanity` VALUES (20914,"劉淇",4); 
-INSERT INTO `NamesProfanity` VALUES (20915,"劉少奇",4); 
-INSERT INTO `NamesProfanity` VALUES (20916,"劉雲山",4); 
-INSERT INTO `NamesProfanity` VALUES (20917,"六四",4); 
-INSERT INTO `NamesProfanity` VALUES (20918,"六四民运",4); 
-INSERT INTO `NamesProfanity` VALUES (20919,"六四民運",4); 
-INSERT INTO `NamesProfanity` VALUES (20920,"六四事件",4); 
-INSERT INTO `NamesProfanity` VALUES (20921,"乱交",4); 
-INSERT INTO `NamesProfanity` VALUES (20922,"売春婦",4); 
-INSERT INTO `NamesProfanity` VALUES (20923,"卖逼",4); 
-INSERT INTO `NamesProfanity` VALUES (20924,"卖骚",4); 
-INSERT INTO `NamesProfanity` VALUES (20925,"毛澤東",4); 
-INSERT INTO `NamesProfanity` VALUES (20926,"蜜穴",4); 
-INSERT INTO `NamesProfanity` VALUES (20927,"民运",4); 
-INSERT INTO `NamesProfanity` VALUES (20928,"民運",4); 
-INSERT INTO `NamesProfanity` VALUES (20929,"奶头",4); 
-INSERT INTO `NamesProfanity` VALUES (20930,"摸你",4); 
-INSERT INTO `NamesProfanity` VALUES (20931,"内裤",4); 
-INSERT INTO `NamesProfanity` VALUES (20932,"内衣",4); 
-INSERT INTO `NamesProfanity` VALUES (20933,"奶罩",4); 
-INSERT INTO `NamesProfanity` VALUES (20934,"你妈逼",4); 
-INSERT INTO `NamesProfanity` VALUES (20935,"你妈比",4); 
-INSERT INTO `NamesProfanity` VALUES (20936,"捏你鸡巴",4); 
-INSERT INTO `NamesProfanity` VALUES (20937,"捏你奶子",4); 
-INSERT INTO `NamesProfanity` VALUES (20938,"侬着冈峦",4); 
-INSERT INTO `NamesProfanity` VALUES (20939,"侬着卵抛",4); 
-INSERT INTO `NamesProfanity` VALUES (20940,"女干",4); 
-INSERT INTO `NamesProfanity` VALUES (20941,"皮条客",4); 
-INSERT INTO `NamesProfanity` VALUES (20942,"屁精",4); 
-INSERT INTO `NamesProfanity` VALUES (20943,"嫖娼",4); 
-INSERT INTO `NamesProfanity` VALUES (20944,"钱其琛",4); 
-INSERT INTO `NamesProfanity` VALUES (20945,"强暴",4); 
-INSERT INTO `NamesProfanity` VALUES (20946,"禽兽",4); 
-INSERT INTO `NamesProfanity` VALUES (20947,"让你操",4); 
-INSERT INTO `NamesProfanity` VALUES (20948,"人大",4); 
-INSERT INTO `NamesProfanity` VALUES (20949,"人大常委",4); 
-INSERT INTO `NamesProfanity` VALUES (20950,"人代",4); 
-INSERT INTO `NamesProfanity` VALUES (20951,"人民代表",4); 
-INSERT INTO `NamesProfanity` VALUES (20952,"人民代表大会",4); 
-INSERT INTO `NamesProfanity` VALUES (20953,"人民代表大會",4); 
-INSERT INTO `NamesProfanity` VALUES (20954,"日本人",4); 
-INSERT INTO `NamesProfanity` VALUES (20955,"日逼",4); 
-INSERT INTO `NamesProfanity` VALUES (20956,"日穿",4); 
-INSERT INTO `NamesProfanity` VALUES (20957,"日蛋",4); 
-INSERT INTO `NamesProfanity` VALUES (20958,"日九城",4); 
-INSERT INTO `NamesProfanity` VALUES (20959,"日军",4); 
-INSERT INTO `NamesProfanity` VALUES (20960,"日你爸",4); 
-INSERT INTO `NamesProfanity` VALUES (20961,"日你老母",4); 
-INSERT INTO `NamesProfanity` VALUES (20962,"日你奶奶",4); 
-INSERT INTO `NamesProfanity` VALUES (20963,"日你娘",4); 
-INSERT INTO `NamesProfanity` VALUES (20964,"日你全家",4); 
-INSERT INTO `NamesProfanity` VALUES (20965,"日你爷爷",4); 
-INSERT INTO `NamesProfanity` VALUES (20966,"日你祖宗",4); 
-INSERT INTO `NamesProfanity` VALUES (20967,"日死",4); 
-INSERT INTO `NamesProfanity` VALUES (20968,"日王",4); 
-INSERT INTO `NamesProfanity` VALUES (20969,"肉棒",4); 
-INSERT INTO `NamesProfanity` VALUES (20970,"肉洞",4); 
-INSERT INTO `NamesProfanity` VALUES (20971,"肉棍",4); 
-INSERT INTO `NamesProfanity` VALUES (20972,"乳头",4); 
-INSERT INTO `NamesProfanity` VALUES (20973,"乳腺",4); 
-INSERT INTO `NamesProfanity` VALUES (20974,"乳晕",4); 
-INSERT INTO `NamesProfanity` VALUES (20975,"乳罩",4); 
-INSERT INTO `NamesProfanity` VALUES (20976,"撒泡尿",4); 
-INSERT INTO `NamesProfanity` VALUES (20977,"三个代表",4); 
-INSERT INTO `NamesProfanity` VALUES (20978,"三级片",4); 
-INSERT INTO `NamesProfanity` VALUES (20979,"三去车仑工力",4); 
-INSERT INTO `NamesProfanity` VALUES (20980,"骚棒",4); 
-INSERT INTO `NamesProfanity` VALUES (20981,"骚包",4); 
-INSERT INTO `NamesProfanity` VALUES (20982,"骚棍",4); 
-INSERT INTO `NamesProfanity` VALUES (20983,"骚鸡",4); 
-INSERT INTO `NamesProfanity` VALUES (20984,"骚卵",4); 
-INSERT INTO `NamesProfanity` VALUES (20985,"杀你全家",4); 
-INSERT INTO `NamesProfanity` VALUES (20986,"杀你一家",4); 
-INSERT INTO `NamesProfanity` VALUES (20987,"傻比",4); 
-INSERT INTO `NamesProfanity` VALUES (20988,"傻吊",4); 
-INSERT INTO `NamesProfanity` VALUES (20989,"傻鸟",4); 
-INSERT INTO `NamesProfanity` VALUES (20990,"山本",4); 
-INSERT INTO `NamesProfanity` VALUES (20991,"山本五十六",4); 
-INSERT INTO `NamesProfanity` VALUES (20992,"射了",4); 
-INSERT INTO `NamesProfanity` VALUES (20993,"射了还说要",4); 
-INSERT INTO `NamesProfanity` VALUES (20994,"身寸米青",4); 
-INSERT INTO `NamesProfanity` VALUES (20995,"身体障害者",4); 
-INSERT INTO `NamesProfanity` VALUES (20996,"他吗的",4); 
-INSERT INTO `NamesProfanity` VALUES (20997,"他奶奶的",4); 
-INSERT INTO `NamesProfanity` VALUES (20998,"湿了还说不要",4); 
-INSERT INTO `NamesProfanity` VALUES (20999,"湿了还说要",4); 
-INSERT INTO `NamesProfanity` VALUES (21000,"十八摸",4); 
-INSERT INTO `NamesProfanity` VALUES (21001,"十六大",4); 
-INSERT INTO `NamesProfanity` VALUES (21002,"屎",4); 
-INSERT INTO `NamesProfanity` VALUES (21003,"手淫",4); 
-INSERT INTO `NamesProfanity` VALUES (21004,"私处",4); 
-INSERT INTO `NamesProfanity` VALUES (21005,"私—服",4); 
-INSERT INTO `NamesProfanity` VALUES (21006,"他娘的",4); 
-INSERT INTO `NamesProfanity` VALUES (21007,"台湾獨立",4); 
-INSERT INTO `NamesProfanity` VALUES (21008,"台湾国",4); 
-INSERT INTO `NamesProfanity` VALUES (21009,"台灣狗",4); 
-INSERT INTO `NamesProfanity` VALUES (21010,"台灣国",4); 
-INSERT INTO `NamesProfanity` VALUES (21011,"台灣國",4); 
-INSERT INTO `NamesProfanity` VALUES (21012,"台灣豬",4); 
-INSERT INTO `NamesProfanity` VALUES (21013,"臺湾國",4); 
-INSERT INTO `NamesProfanity` VALUES (21014,"臺灣國",4); 
-INSERT INTO `NamesProfanity` VALUES (21015,"太监",4); 
-INSERT INTO `NamesProfanity` VALUES (21016,"天阉",4); 
-INSERT INTO `NamesProfanity` VALUES (21017,"田纪云",4); 
-INSERT INTO `NamesProfanity` VALUES (21018,"同房",4); 
-INSERT INTO `NamesProfanity` VALUES (21019,"文胸",4); 
-INSERT INTO `NamesProfanity` VALUES (21020,"捅逼",4); 
-INSERT INTO `NamesProfanity` VALUES (21021,"捅比",4); 
-INSERT INTO `NamesProfanity` VALUES (21022,"捅她",4); 
-INSERT INTO `NamesProfanity` VALUES (21023,"捅你",4); 
-INSERT INTO `NamesProfanity` VALUES (21024,"捅我",4); 
-INSERT INTO `NamesProfanity` VALUES (21025,"王八",4); 
-INSERT INTO `NamesProfanity` VALUES (21026,"猥亵",4); 
-INSERT INTO `NamesProfanity` VALUES (21027,"慰安妇",4); 
-INSERT INTO `NamesProfanity` VALUES (21028,"慰安婦",4); 
-INSERT INTO `NamesProfanity` VALUES (21029,"魏京生",4); 
-INSERT INTO `NamesProfanity` VALUES (21030,"我靠",4); 
-INSERT INTO `NamesProfanity` VALUES (21031,"吳邦國",4); 
-INSERT INTO `NamesProfanity` VALUES (21032,"吳官正",4); 
-INSERT INTO `NamesProfanity` VALUES (21033,"吳儀",4); 
-INSERT INTO `NamesProfanity` VALUES (21034,"吾尔开希",4); 
-INSERT INTO `NamesProfanity` VALUES (21035,"吾爾開希",4); 
-INSERT INTO `NamesProfanity` VALUES (21036,"下贱",4); 
-INSERT INTO `NamesProfanity` VALUES (21037,"下体",4); 
-INSERT INTO `NamesProfanity` VALUES (21038,"小比样",4); 
-INSERT INTO `NamesProfanity` VALUES (21039,"小便",4); 
-INSERT INTO `NamesProfanity` VALUES (21040,"新疆獨立",4); 
-INSERT INTO `NamesProfanity` VALUES (21041,"新疆独立",4); 
-INSERT INTO `NamesProfanity` VALUES (21042,"行房",4); 
-INSERT INTO `NamesProfanity` VALUES (21043,"性爱",4); 
-INSERT INTO `NamesProfanity` VALUES (21044,"性病",4); 
-INSERT INTO `NamesProfanity` VALUES (21045,"性高潮",4); 
-INSERT INTO `NamesProfanity` VALUES (21046,"性虐待",4); 
-INSERT INTO `NamesProfanity` VALUES (21047,"性器",4); 
-INSERT INTO `NamesProfanity` VALUES (21048,"性情中人",4); 
-INSERT INTO `NamesProfanity` VALUES (21049,"性生活",4); 
-INSERT INTO `NamesProfanity` VALUES (21050,"性息",4); 
-INSERT INTO `NamesProfanity` VALUES (21051,"性欲",4); 
-INSERT INTO `NamesProfanity` VALUES (21052,"胸部",4); 
-INSERT INTO `NamesProfanity` VALUES (21053,"胸罩",4); 
-INSERT INTO `NamesProfanity` VALUES (21054,"顏射",4); 
-INSERT INTO `NamesProfanity` VALUES (21055,"阳具",4); 
-INSERT INTO `NamesProfanity` VALUES (21056,"阳痿",4); 
-INSERT INTO `NamesProfanity` VALUES (21057,"阳物",4); 
-INSERT INTO `NamesProfanity` VALUES (21058,"野合",4); 
-INSERT INTO `NamesProfanity` VALUES (21059,"一党",4); 
-INSERT INTO `NamesProfanity` VALUES (21060,"一黨",4); 
-INSERT INTO `NamesProfanity` VALUES (21061,"一夜九次郎",4); 
-INSERT INTO `NamesProfanity` VALUES (21062,"一夜情",4); 
-INSERT INTO `NamesProfanity` VALUES (21063,"一中一台",4); 
-INSERT INTO `NamesProfanity` VALUES (21064,"阴户",4); 
-INSERT INTO `NamesProfanity` VALUES (21065,"阴精",4); 
-INSERT INTO `NamesProfanity` VALUES (21066,"阴门",4); 
-INSERT INTO `NamesProfanity` VALUES (21067,"阴囊",4); 
-INSERT INTO `NamesProfanity` VALUES (21068,"陰戶",4); 
-INSERT INTO `NamesProfanity` VALUES (21069,"淫货",4); 
-INSERT INTO `NamesProfanity` VALUES (21070,"淫贱",4); 
-INSERT INTO `NamesProfanity` VALUES (21071,"淫乱",4); 
-INSERT INTO `NamesProfanity` VALUES (21072,"猶太豬",4); 
-INSERT INTO `NamesProfanity` VALUES (21073,"于幼军",4); 
-INSERT INTO `NamesProfanity` VALUES (21074,"於幼軍",4); 
-INSERT INTO `NamesProfanity` VALUES (21075,"俞正聲",4); 
-INSERT INTO `NamesProfanity` VALUES (21076,"欲女",4); 
-INSERT INTO `NamesProfanity` VALUES (21077,"援交",4); 
-INSERT INTO `NamesProfanity` VALUES (21078,"杂种",4); 
-INSERT INTO `NamesProfanity` VALUES (21079,"早泄",4); 
-INSERT INTO `NamesProfanity` VALUES (21080,"造爱",4); 
-INSERT INTO `NamesProfanity` VALUES (21081,"曾慶紅",4); 
-INSERT INTO `NamesProfanity` VALUES (21082,"张万年",4); 
-INSERT INTO `NamesProfanity` VALUES (21083,"張德江",4); 
-INSERT INTO `NamesProfanity` VALUES (21084,"張宏堡",4); 
-INSERT INTO `NamesProfanity` VALUES (21085,"張立昌",4); 
-INSERT INTO `NamesProfanity` VALUES (21086,"張萬年",4); 
-INSERT INTO `NamesProfanity` VALUES (21087,"招鸡",4); 
-INSERT INTO `NamesProfanity` VALUES (21088,"贞操",4); 
-INSERT INTO `NamesProfanity` VALUES (21089,"真善忍",4); 
-INSERT INTO `NamesProfanity` VALUES (21090,"政府",4); 
-INSERT INTO `NamesProfanity` VALUES (21091,"政协",4); 
-INSERT INTO `NamesProfanity` VALUES (21092,"政協",4); 
-INSERT INTO `NamesProfanity` VALUES (21093,"政治局",4); 
-INSERT INTO `NamesProfanity` VALUES (21094,"政治局常委",4); 
-INSERT INTO `NamesProfanity` VALUES (21095,"政治协商会议",4); 
-INSERT INTO `NamesProfanity` VALUES (21096,"政治協商會議",4); 
-INSERT INTO `NamesProfanity` VALUES (21097,"知的障害",4); 
-INSERT INTO `NamesProfanity` VALUES (21098,"知障",4); 
-INSERT INTO `NamesProfanity` VALUES (21099,"中国共产党",4); 
-INSERT INTO `NamesProfanity` VALUES (21100,"中國共產黨",4); 
-INSERT INTO `NamesProfanity` VALUES (21101,"中國狗",4); 
-INSERT INTO `NamesProfanity` VALUES (21102,"中國豬",4); 
-INSERT INTO `NamesProfanity` VALUES (21103,"中华人民",4); 
-INSERT INTO `NamesProfanity` VALUES (21104,"共和國",4); 
-INSERT INTO `NamesProfanity` VALUES (21105,"周恩來",4); 
-INSERT INTO `NamesProfanity` VALUES (21106,"朱德",4); 
-INSERT INTO `NamesProfanity` VALUES (21107,"朱駿",4); 
-INSERT INTO `NamesProfanity` VALUES (21108,"朱狨基",4); 
-INSERT INTO `NamesProfanity` VALUES (21109,"朱容基",4); 
-INSERT INTO `NamesProfanity` VALUES (21110,"专政",4); 
-INSERT INTO `NamesProfanity` VALUES (21111,"專政",4); 
-INSERT INTO `NamesProfanity` VALUES (21112,"子宫",4); 
-INSERT INTO `NamesProfanity` VALUES (21113,"自焚",4); 
-INSERT INTO `NamesProfanity` VALUES (21114,"自慰",4); 
-INSERT INTO `NamesProfanity` VALUES (21115,"作爱",4); 
-INSERT INTO `NamesProfanity` VALUES (21116,"陈玉娇",4); 
-INSERT INTO `NamesProfanity` VALUES (21117,"玉娇饼",4); 
-INSERT INTO `NamesProfanity` VALUES (21118,"亲日",4); 
-INSERT INTO `NamesProfanity` VALUES (21119,"反中",4); 
-INSERT INTO `NamesProfanity` VALUES (21120,"九一八",4); 
-INSERT INTO `NamesProfanity` VALUES (21121,"勿忘国耻",4); 
-INSERT INTO `NamesProfanity` VALUES (21122,"南京大屠杀",4); 
-INSERT INTO `NamesProfanity` VALUES (21123,"死难同胞",4); 
-INSERT INTO `NamesProfanity` VALUES (21124,"南京城",4); 
-INSERT INTO `NamesProfanity` VALUES (21125,"华中方面军",4); 
-INSERT INTO `NamesProfanity` VALUES (21126,"松井石根",4); 
-INSERT INTO `NamesProfanity` VALUES (21127,"谷寿夫",4); 
-INSERT INTO `NamesProfanity` VALUES (21128,"法西斯",4); 
-INSERT INTO `NamesProfanity` VALUES (21129,"惨绝人寰",4); 
-INSERT INTO `NamesProfanity` VALUES (21130,"大规模屠杀",4); 
-INSERT INTO `NamesProfanity` VALUES (21131,"三十万同胞",4); 
-INSERT INTO `NamesProfanity` VALUES (21132,"三十万中国人",4); 
-INSERT INTO `NamesProfanity` VALUES (21133,"民主党",4); 
-INSERT INTO `NamesProfanity` VALUES (21134,"自由党",4); 
-INSERT INTO `NamesProfanity` VALUES (21135,"蓝营",4); 
-INSERT INTO `NamesProfanity` VALUES (21136,"绿营",4); 
-INSERT INTO `NamesProfanity` VALUES (21137,"共党",4); 
-INSERT INTO `NamesProfanity` VALUES (21138,"江独裁",4); 
-INSERT INTO `NamesProfanity` VALUES (21139,"八九风波",4); 
-INSERT INTO `NamesProfanity` VALUES (21140,"共产",4); 
-INSERT INTO `NamesProfanity` VALUES (21141,"多党",4); 
-INSERT INTO `NamesProfanity` VALUES (21142,"分裂主义",4); 
-INSERT INTO `NamesProfanity` VALUES (21143,"党政",4); 
-INSERT INTO `NamesProfanity` VALUES (21144,"江狗",4); 
-INSERT INTO `NamesProfanity` VALUES (21145,"李宏旨",4); 
-INSERT INTO `NamesProfanity` VALUES (21146,"大法",4); 
-INSERT INTO `NamesProfanity` VALUES (21147,"勃大茎深",4); 
-INSERT INTO `NamesProfanity` VALUES (21148,"为人民服务",4); 
-INSERT INTO `NamesProfanity` VALUES (21149,"毁人不倦",4); 
-INSERT INTO `NamesProfanity` VALUES (21150,"藏青会",4); 
-INSERT INTO `NamesProfanity` VALUES (21151,"贪污",4); 
-INSERT INTO `NamesProfanity` VALUES (21152,"腐败",4); 
-INSERT INTO `NamesProfanity` VALUES (21153,"陈马会",4); 
-INSERT INTO `NamesProfanity` VALUES (21154,"呛马围陈",4); 
-INSERT INTO `NamesProfanity` VALUES (21155,"流血冲突",4); 
-INSERT INTO `NamesProfanity` VALUES (21156,"马英九",4); 
-INSERT INTO `NamesProfanity` VALUES (21157,"马克思主义",4); 
-INSERT INTO `NamesProfanity` VALUES (21158,"党中央",4); 
-INSERT INTO `NamesProfanity` VALUES (21159,"圆明园",4); 
-INSERT INTO `NamesProfanity` VALUES (21160,"操你娘",4); 
-INSERT INTO `NamesProfanity` VALUES (21161,"干你妈",4); 
-INSERT INTO `NamesProfanity` VALUES (21162,"插你",4); 
-INSERT INTO `NamesProfanity` VALUES (21163,"色情",4); 
-INSERT INTO `NamesProfanity` VALUES (21164,"淫你",4); 
-INSERT INTO `NamesProfanity` VALUES (21165,"鸡奸你",4); 
-INSERT INTO `NamesProfanity` VALUES (21166,"日批",4); 
-INSERT INTO `NamesProfanity` VALUES (21167,"操你全家",4); 
-INSERT INTO `NamesProfanity` VALUES (21168,"草你",4); 
-INSERT INTO `NamesProfanity` VALUES (21169,"以夜情",4); 
-INSERT INTO `NamesProfanity` VALUES (21170,"一夜青",4); 
-INSERT INTO `NamesProfanity` VALUES (21171,"黄色网",4); 
-INSERT INTO `NamesProfanity` VALUES (21172,"黄色网站",4); 
-INSERT INTO `NamesProfanity` VALUES (21173,"黄色小说",4); 
-INSERT INTO `NamesProfanity` VALUES (21174,"小电影",4); 
-INSERT INTO `NamesProfanity` VALUES (21175,"成人网站",4); 
-INSERT INTO `NamesProfanity` VALUES (21176,"操比",4); 
-INSERT INTO `NamesProfanity` VALUES (21177,"艾滋",4); 
-INSERT INTO `NamesProfanity` VALUES (21178,"舔阴",4); 
-INSERT INTO `NamesProfanity` VALUES (21179,"吸阴",4); 
-INSERT INTO `NamesProfanity` VALUES (21180,"情色中心",4); 
-INSERT INTO `NamesProfanity` VALUES (21181,"梅花网乳房",4); 
-INSERT INTO `NamesProfanity` VALUES (21182,"同志",4); 
-INSERT INTO `NamesProfanity` VALUES (21183,"同性恋",4); 
-INSERT INTO `NamesProfanity` VALUES (21184,"腐女",4); 
-INSERT INTO `NamesProfanity` VALUES (21185,"阴蒂",4); 
-INSERT INTO `NamesProfanity` VALUES (21186,"阴阜",4); 
-INSERT INTO `NamesProfanity` VALUES (21187,"包皮",4); 
-INSERT INTO `NamesProfanity` VALUES (21188,"淫妇",4); 
-INSERT INTO `NamesProfanity` VALUES (21189,"奸夫",4); 
-INSERT INTO `NamesProfanity` VALUES (21190,"荡娃",4); 
-INSERT INTO `NamesProfanity` VALUES (21191,"小穴",4); 
-INSERT INTO `NamesProfanity` VALUES (21192,"阳器",4); 
-INSERT INTO `NamesProfanity` VALUES (21193,"勃起",4); 
-INSERT INTO `NamesProfanity` VALUES (21195,"卖批",4); 
-INSERT INTO `NamesProfanity` VALUES (21196,"做鸡",4); 
-INSERT INTO `NamesProfanity` VALUES (21197,"奸你",4); 
-INSERT INTO `NamesProfanity` VALUES (21198,"姦你",4); 
-INSERT INTO `NamesProfanity` VALUES (21199,"狗娘养的",4); 
-INSERT INTO `NamesProfanity` VALUES (21200,"屌你",4); 
-INSERT INTO `NamesProfanity` VALUES (21201,"干屄",4); 
-INSERT INTO `NamesProfanity` VALUES (21202,"肏穴",4); 
-INSERT INTO `NamesProfanity` VALUES (21203,"强姦",4); 
-INSERT INTO `NamesProfanity` VALUES (21204,"奸淫",4); 
-INSERT INTO `NamesProfanity` VALUES (21205,"姦淫",4); 
-INSERT INTO `NamesProfanity` VALUES (21206,"轮姦",4); 
-INSERT INTO `NamesProfanity` VALUES (21207,"肉柱",4); 
-INSERT INTO `NamesProfanity` VALUES (21208,"丫挺",4); 
-INSERT INTO `NamesProfanity` VALUES (21210,"你他妈",4); 
-INSERT INTO `NamesProfanity` VALUES (21212,"狗日",4); 
-INSERT INTO `NamesProfanity` VALUES (21213,"狗样",4); 
-INSERT INTO `NamesProfanity` VALUES (21214,"混蛋",4); 
-INSERT INTO `NamesProfanity` VALUES (21215,"妈的",4); 
-INSERT INTO `NamesProfanity` VALUES (21216,"去你妈",4); 
-INSERT INTO `NamesProfanity` VALUES (21217,"放屁",4); 
-INSERT INTO `NamesProfanity` VALUES (21218,"龟孙子",4); 
-INSERT INTO `NamesProfanity` VALUES (21219,"垃圾GM",4); 
-INSERT INTO `NamesProfanity` VALUES (21220,"叫鸡",4); 
-INSERT INTO `NamesProfanity` VALUES (21221,"毛片",4); 
-INSERT INTO `NamesProfanity` VALUES (21222,"色戒",4); 
-INSERT INTO `NamesProfanity` VALUES (21223,"金瓶梅",4); 
-INSERT INTO `NamesProfanity` VALUES (21224,"桃色交易",4); 
-INSERT INTO `NamesProfanity` VALUES (21225,"玉蒲团",4); 
-INSERT INTO `NamesProfanity` VALUES (21226,"鄙视网易",4); 
-INSERT INTO `NamesProfanity` VALUES (21227,"网易倒闭",4); 
-INSERT INTO `NamesProfanity` VALUES (21228,"盛大在线",4); 
-INSERT INTO `NamesProfanity` VALUES (21229,"资料处理中心",4); 
-INSERT INTO `NamesProfanity` VALUES (21230,"垃圾网易",4); 
-INSERT INTO `NamesProfanity` VALUES (21231,"系统数据号",4); 
-INSERT INTO `NamesProfanity` VALUES (21232,"网易赚黑钱",4); 
-INSERT INTO `NamesProfanity` VALUES (21234,"肉体",4); 
-INSERT INTO `NamesProfanity` VALUES (21235,"制服",4); 
-INSERT INTO `NamesProfanity` VALUES (21236,"工作室",4); 
-INSERT INTO `NamesProfanity` VALUES (21237,"徐宥箴",4); 
-INSERT INTO `NamesProfanity` VALUES (21238,"自动打怪",4); 
-INSERT INTO `NamesProfanity` VALUES (21239,"自动智能跑",4); 
-INSERT INTO `NamesProfanity` VALUES (21240,"自动报警",4); 
-INSERT INTO `NamesProfanity` VALUES (21241,"突厥",4); 
-INSERT INTO `NamesProfanity` VALUES (21242,"强女干",4); 
-INSERT INTO `NamesProfanity` VALUES (21243,"小姐",4); 
-INSERT INTO `NamesProfanity` VALUES (21244,"猛男",4); 
-INSERT INTO `NamesProfanity` VALUES (21245,"缠绵",4); 
-INSERT INTO `NamesProfanity` VALUES (21246,"脱衣",4); 
-INSERT INTO `NamesProfanity` VALUES (21247,"胴体",4); 
-INSERT INTO `NamesProfanity` VALUES (21248,"继女",4); 
-INSERT INTO `NamesProfanity` VALUES (21249,"玳理",4); 
-INSERT INTO `NamesProfanity` VALUES (21250,"娍人",4); 
-INSERT INTO `NamesProfanity` VALUES (21251,"姖乳",4); 
-INSERT INTO `NamesProfanity` VALUES (21252,"少妇",4); 
-INSERT INTO `NamesProfanity` VALUES (21253,"肉慾",4); 
-INSERT INTO `NamesProfanity` VALUES (21254,"少婦",4); 
-INSERT INTO `NamesProfanity` VALUES (21255,"美乳",4); 
-INSERT INTO `NamesProfanity` VALUES (21256,"空姐",4); 
-INSERT INTO `NamesProfanity` VALUES (21257,"艳女",4); 
-INSERT INTO `NamesProfanity` VALUES (21258,"淫妻",4); 
-INSERT INTO `NamesProfanity` VALUES (21259,"性感妹妹",4); 
-INSERT INTO `NamesProfanity` VALUES (21260,"偷拍",4); 
-INSERT INTO `NamesProfanity` VALUES (21261,"空中小姐",4); 
-INSERT INTO `NamesProfanity` VALUES (21262,"小浪妹",4); 
-INSERT INTO `NamesProfanity` VALUES (21263,"牦片",4); 
-INSERT INTO `NamesProfanity` VALUES (21264,"包你射",4); 
-INSERT INTO `NamesProfanity` VALUES (21265,"带练",4); 
-INSERT INTO `NamesProfanity` VALUES (21266,"接练级",4); 
-INSERT INTO `NamesProfanity` VALUES (21267,"代连",4); 
-INSERT INTO `NamesProfanity` VALUES (21268,"带连",4); 
-INSERT INTO `NamesProfanity` VALUES (21269,"盗号马",4); 
-INSERT INTO `NamesProfanity` VALUES (21270,"盗号木马",4); 
-INSERT INTO `NamesProfanity` VALUES (21271,"玳链",4); 
-INSERT INTO `NamesProfanity` VALUES (21272,"代練",4); 
-INSERT INTO `NamesProfanity` VALUES (21273,"玳练",4); 
-INSERT INTO `NamesProfanity` VALUES (21274,"蚮连",4); 
-INSERT INTO `NamesProfanity` VALUES (21275,"待练",4); 
-INSERT INTO `NamesProfanity` VALUES (21276,"蚮練",4); 
-INSERT INTO `NamesProfanity` VALUES (21277,"蚮炼",4); 
-INSERT INTO `NamesProfanity` VALUES (21278,"玳練",4); 
-INSERT INTO `NamesProfanity` VALUES (21279,"男妓",4); 
-INSERT INTO `NamesProfanity` VALUES (21280,"卖信封",4); 
-INSERT INTO `NamesProfanity` VALUES (21281,"代涟",4); 
-INSERT INTO `NamesProfanity` VALUES (21282,"代琏",4); 
-INSERT INTO `NamesProfanity` VALUES (21283,"做愛",4); 
-INSERT INTO `NamesProfanity` VALUES (21284,"激情片",4); 
-INSERT INTO `NamesProfanity` VALUES (21285,"處女",4); 
-INSERT INTO `NamesProfanity` VALUES (21286,"处女",4); 
-INSERT INTO `NamesProfanity` VALUES (21287,"處囡",4); 
-INSERT INTO `NamesProfanity` VALUES (21288,"倮聊",4); 
-INSERT INTO `NamesProfanity` VALUES (21289,"淫娃",4); 
-INSERT INTO `NamesProfanity` VALUES (21290,"婬娃",4); 
-INSERT INTO `NamesProfanity` VALUES (21291,"叫雞",4); 
-INSERT INTO `NamesProfanity` VALUES (21292,"双飛",4); 
-INSERT INTO `NamesProfanity` VALUES (21293,"女優",4); 
-INSERT INTO `NamesProfanity` VALUES (21294,"女优",4); 
-INSERT INTO `NamesProfanity` VALUES (21295,"自拍",4); 
-INSERT INTO `NamesProfanity` VALUES (21296,"换偶",4); 
-INSERT INTO `NamesProfanity` VALUES (21297,"黄网导航",4); 
-INSERT INTO `NamesProfanity` VALUES (21298,"轮奸虐杀",4); 
-INSERT INTO `NamesProfanity` VALUES (21299,"超爽电影",4); 
-INSERT INTO `NamesProfanity` VALUES (21300,"极品爽片",4); 
-INSERT INTO `NamesProfanity` VALUES (21301,"换妻",4); 
-INSERT INTO `NamesProfanity` VALUES (21302,"春宫图",4); 
-INSERT INTO `NamesProfanity` VALUES (21303,"暴漏图片",4); 
-INSERT INTO `NamesProfanity` VALUES (21304,"暴露图片",4); 
-INSERT INTO `NamesProfanity` VALUES (21305,"自尉",4); 
-INSERT INTO `NamesProfanity` VALUES (21306,"偷情",4); 
-INSERT INTO `NamesProfanity` VALUES (21307,"偷怕",4); 
-INSERT INTO `NamesProfanity` VALUES (21308,"性慾",4); 
-INSERT INTO `NamesProfanity` VALUES (21309,"全裸视频",4); 
-INSERT INTO `NamesProfanity` VALUES (21310,"色魔",4); 
-INSERT INTO `NamesProfanity` VALUES (21311,"弓虽女干",4); 
-INSERT INTO `NamesProfanity` VALUES (21312,"強奷",4); 
-INSERT INTO `NamesProfanity` VALUES (21313,"李日强",4); 
-INSERT INTO `NamesProfanity` VALUES (21314,"日比",4); 
-INSERT INTO `NamesProfanity` VALUES (21315,"抢姧",4); 
-INSERT INTO `NamesProfanity` VALUES (21316,"輪姧",4); 
-INSERT INTO `NamesProfanity` VALUES (21317,"开房",4); 
-INSERT INTO `NamesProfanity` VALUES (21318,"癮水",4); 
-INSERT INTO `NamesProfanity` VALUES (21319,"黄网",4); 
-INSERT INTO `NamesProfanity` VALUES (21320,"簧网",4); 
-INSERT INTO `NamesProfanity` VALUES (21321,"色网",4); 
-INSERT INTO `NamesProfanity` VALUES (21322,"全祼视频",4); 
-INSERT INTO `NamesProfanity` VALUES (21323,"禁片",4); 
-INSERT INTO `NamesProfanity` VALUES (21324,"乱囵",4); 
-INSERT INTO `NamesProfanity` VALUES (21325,"卖霪",4); 
-INSERT INTO `NamesProfanity` VALUES (21326,"黃網",4); 
-INSERT INTO `NamesProfanity` VALUES (21327,"涩晴网",4); 
-INSERT INTO `NamesProfanity` VALUES (21328,"淫片",4); 
-INSERT INTO `NamesProfanity` VALUES (21329,"内射",4); 
-INSERT INTO `NamesProfanity` VALUES (21330,"淫蕩",4); 
-INSERT INTO `NamesProfanity` VALUES (21331,"舂葯",4); 
-INSERT INTO `NamesProfanity` VALUES (21332,"春藥",4); 
-INSERT INTO `NamesProfanity` VALUES (21333,"舂药",4); 
-INSERT INTO `NamesProfanity` VALUES (21334,"舂藥",4); 
-INSERT INTO `NamesProfanity` VALUES (21335,"春葯",4); 
-INSERT INTO `NamesProfanity` VALUES (21336,"艳照",4); 
-INSERT INTO `NamesProfanity` VALUES (21337,"裸照",4); 
-INSERT INTO `NamesProfanity` VALUES (21338,"裸聊",4); 
-INSERT INTO `NamesProfanity` VALUES (21339,"激情视频",4); 
-INSERT INTO `NamesProfanity` VALUES (21340,"神经病",4); 
-INSERT INTO `NamesProfanity` VALUES (21341,"激情網站",4); 
-INSERT INTO `NamesProfanity` VALUES (21342,"一液情",4); 
-INSERT INTO `NamesProfanity` VALUES (21343,"憿情片",4); 
-INSERT INTO `NamesProfanity` VALUES (21344,"性奴",4); 
-INSERT INTO `NamesProfanity` VALUES (21345,"催情",4); 
-INSERT INTO `NamesProfanity` VALUES (21346,"迷奸",4); 
-INSERT INTO `NamesProfanity` VALUES (21347,"禁网",4); 
-INSERT INTO `NamesProfanity` VALUES (21348,"\<gm\>",4); 
-INSERT INTO `NamesProfanity` VALUES (21349,"\<163\>",4); 
-INSERT INTO `NamesProfanity` VALUES (21350,"员0",4); 
-INSERT INTO `NamesProfanity` VALUES (21351,"员1",4); 
-INSERT INTO `NamesProfanity` VALUES (21352,"员2",4); 
-INSERT INTO `NamesProfanity` VALUES (21353,"员3",4); 
-INSERT INTO `NamesProfanity` VALUES (21354,"员4",4); 
-INSERT INTO `NamesProfanity` VALUES (21355,"员5",4); 
-INSERT INTO `NamesProfanity` VALUES (21356,"员6",4); 
-INSERT INTO `NamesProfanity` VALUES (21357,"员7",4); 
-INSERT INTO `NamesProfanity` VALUES (21358,"员8",4); 
-INSERT INTO `NamesProfanity` VALUES (21359,"员9",4); 
-INSERT INTO `NamesProfanity` VALUES (21360,"员０",4); 
-INSERT INTO `NamesProfanity` VALUES (21361,"员１",4); 
-INSERT INTO `NamesProfanity` VALUES (21362,"员２",4); 
-INSERT INTO `NamesProfanity` VALUES (21363,"员３",4); 
-INSERT INTO `NamesProfanity` VALUES (21364,"员４",4); 
-INSERT INTO `NamesProfanity` VALUES (21365,"员５",4); 
-INSERT INTO `NamesProfanity` VALUES (21366,"员６",4); 
-INSERT INTO `NamesProfanity` VALUES (21367,"员７",4); 
-INSERT INTO `NamesProfanity` VALUES (21368,"员８",4); 
-INSERT INTO `NamesProfanity` VALUES (21369,"员９",4); 
-INSERT INTO `NamesProfanity` VALUES (21370,"员零",4); 
-INSERT INTO `NamesProfanity` VALUES (21371,"员一",4); 
-INSERT INTO `NamesProfanity` VALUES (21372,"员二",4); 
-INSERT INTO `NamesProfanity` VALUES (21373,"员三",4); 
-INSERT INTO `NamesProfanity` VALUES (21374,"员四",4); 
-INSERT INTO `NamesProfanity` VALUES (21375,"员五",4); 
-INSERT INTO `NamesProfanity` VALUES (21376,"员六",4); 
-INSERT INTO `NamesProfanity` VALUES (21377,"员七",4); 
-INSERT INTO `NamesProfanity` VALUES (21378,"员八",4); 
-INSERT INTO `NamesProfanity` VALUES (21379,"员九",4); 
-INSERT INTO `NamesProfanity` VALUES (21380,"员十",4); 
-INSERT INTO `NamesProfanity` VALUES (21381,"游戏开发商",4); 
-INSERT INTO `NamesProfanity` VALUES (21382,"网易",4); 
-INSERT INTO `NamesProfanity` VALUES (21383,"丁磊",4); 
-INSERT INTO `NamesProfanity` VALUES (21384,"三石",4); 
-INSERT INTO `NamesProfanity` VALUES (21385,"官方",4); 
-INSERT INTO `NamesProfanity` VALUES (21386,"服务",4); 
-INSERT INTO `NamesProfanity` VALUES (21387,"兑奖",4); 
-INSERT INTO `NamesProfanity` VALUES (21388,"抽奖",4); 
-INSERT INTO `NamesProfanity` VALUES (21389,"发布",4); 
-INSERT INTO `NamesProfanity` VALUES (21390,"信息",4); 
-INSERT INTO `NamesProfanity` VALUES (21391,"发放",4); 
-INSERT INTO `NamesProfanity` VALUES (21392,"消息",4); 
-INSERT INTO `NamesProfanity` VALUES (21393,"发奖",4); 
-INSERT INTO `NamesProfanity` VALUES (21394,"大使",4); 
-INSERT INTO `NamesProfanity` VALUES (21395,"中奖",4); 
-INSERT INTO `NamesProfanity` VALUES (21396,"奖励",4); 
-INSERT INTO `NamesProfanity` VALUES (21397,"管理",4); 
-INSERT INTO `NamesProfanity` VALUES (21398,"运维",4); 
-INSERT INTO `NamesProfanity` VALUES (21399,"序号",4); 
-INSERT INTO `NamesProfanity` VALUES (21400,"序列号",4); 
-INSERT INTO `NamesProfanity` VALUES (21401,"推广",4); 
-INSERT INTO `NamesProfanity` VALUES (21402,"网络",4); 
-INSERT INTO `NamesProfanity` VALUES (21403,"梦幻西游",4); 
-INSERT INTO `NamesProfanity` VALUES (21404,"大话西游",4); 
-INSERT INTO `NamesProfanity` VALUES (21405,"巡游",4); 
-INSERT INTO `NamesProfanity` VALUES (21406,"他奶奶",4); 
-INSERT INTO `NamesProfanity` VALUES (21407,"你奶奶",4); 
-INSERT INTO `NamesProfanity` VALUES (21408,"他姥姥",4); 
-INSERT INTO `NamesProfanity` VALUES (21409,"你姥姥",4); 
-INSERT INTO `NamesProfanity` VALUES (21410,"你娘",4); 
-INSERT INTO `NamesProfanity` VALUES (21411,"他娘",4); 
-INSERT INTO `NamesProfanity` VALUES (21412,"他爷",4); 
-INSERT INTO `NamesProfanity` VALUES (21413,"他爸",4); 
-INSERT INTO `NamesProfanity` VALUES (21414,"他爹",4); 
-INSERT INTO `NamesProfanity` VALUES (21415,"轮功",4); 
-INSERT INTO `NamesProfanity` VALUES (21416,"网之易",4); 
-INSERT INTO `NamesProfanity` VALUES (21417,"丁三石",4); 
-INSERT INTO `NamesProfanity` VALUES (21418,"中央",4); 
-INSERT INTO `NamesProfanity` VALUES (21419,"中华民国",4); 
-INSERT INTO `NamesProfanity` VALUES (21420,"蒋中正",4); 
-INSERT INTO `NamesProfanity` VALUES (21421,"蒋经国",4); 
-INSERT INTO `NamesProfanity` VALUES (21422,"江青",4); 
-INSERT INTO `NamesProfanity` VALUES (21423,"康生",4); 
-INSERT INTO `NamesProfanity` VALUES (21424,"林立果",4); 
-INSERT INTO `NamesProfanity` VALUES (21425,"张春桥",4); 
-INSERT INTO `NamesProfanity` VALUES (21426,"姚文元",4); 
-INSERT INTO `NamesProfanity` VALUES (21427,"打倒政府",4); 
-INSERT INTO `NamesProfanity` VALUES (21428,"毛润之",4); 
-INSERT INTO `NamesProfanity` VALUES (21429,"华国锋",4); 
-INSERT INTO `NamesProfanity` VALUES (21430,"天皇",4); 
-INSERT INTO `NamesProfanity` VALUES (21431,"黑社会",4); 
-INSERT INTO `NamesProfanity` VALUES (21432,"黑帮",4); 
-INSERT INTO `NamesProfanity` VALUES (21433,"解放军",4); 
-INSERT INTO `NamesProfanity` VALUES (21434,"警察",4); 
-INSERT INTO `NamesProfanity` VALUES (21435,"公安",4); 
-INSERT INTO `NamesProfanity` VALUES (21436,"老毛",4); 
-INSERT INTO `NamesProfanity` VALUES (21437,"代练",4); 
-INSERT INTO `NamesProfanity` VALUES (21438,"尻",4); 
-INSERT INTO `NamesProfanity` VALUES (21439,"肏",4); 
-INSERT INTO `NamesProfanity` VALUES (21440,"\<jb\>",4); 
-INSERT INTO `NamesProfanity` VALUES (21441,"反华",4); 
-INSERT INTO `NamesProfanity` VALUES (21442,"草",4); 
-INSERT INTO `NamesProfanity` VALUES (21443,"靠",4); 
-INSERT INTO `NamesProfanity` VALUES (21444,"日",4); 
-INSERT INTO `NamesProfanity` VALUES (21445,"成人电影",4); 
-INSERT INTO `NamesProfanity` VALUES (21446,"成人片",4); 
-INSERT INTO `NamesProfanity` VALUES (21447,"春药",4); 
-INSERT INTO `NamesProfanity` VALUES (21448,"催情药",4); 
-INSERT INTO `NamesProfanity` VALUES (21449,"黄色录像",4); 
-INSERT INTO `NamesProfanity` VALUES (21450,"激情",4); 
-INSERT INTO `NamesProfanity` VALUES (21451,"六合彩",4); 
-INSERT INTO `NamesProfanity` VALUES (21452,"迷奸药",4); 
-INSERT INTO `NamesProfanity` VALUES (21453,"迷药",4); 
-INSERT INTO `NamesProfanity` VALUES (21454,"三唑仑",4); 
-INSERT INTO `NamesProfanity` VALUES (21455,"色情服务",4); 
-INSERT INTO `NamesProfanity` VALUES (21456,"色情小电影",4); 
-INSERT INTO `NamesProfanity` VALUES (21457,"身份证生成器",4); 
-INSERT INTO `NamesProfanity` VALUES (21458,"摇头丸",4); 
-INSERT INTO `NamesProfanity` VALUES (21459,"淫靡",4); 
-INSERT INTO `NamesProfanity` VALUES (21460,"\<MBD\>",4); 
-INSERT INTO `NamesProfanity` VALUES (21461,"\<SB\>",4); 
-INSERT INTO `NamesProfanity` VALUES (21462,"\<TMD\>",4); 
-INSERT INTO `NamesProfanity` VALUES (21463,"逼毛",4); 
-INSERT INTO `NamesProfanity` VALUES (21464,"人妖",4); 
-INSERT INTO `NamesProfanity` VALUES (21465,"系统信息",4); 
+INSERT INTO `NamesProfanity` VALUES (2621,"18년",0),
+(2622,"18놈",0),
+(2624,"18새끼",0),
+(2632,"\<chink\>",0),
+(2642,"\<pussy",0),
+(2643,"\<rape\>",0),
+(2645,"\<vagina",0),
+(2658,"가슴만져",1),
+(2659,"가슴빨아",1),
+(2660,"가슴빨어",1),
+(2661,"가슴조물락",1),
+(2662,"가슴주물럭",1),
+(2663,"가슴쪼물딱",1),
+(2664,"가슴쪼물락",1),
+(2665,"가슴핥아",1),
+(2666,"가슴핥어",1),
+(2667,"가슴핧아",1),
+(2668,"가슴핧어",1),
+(2670,"강간",1),
+(2671,"강간한다",1),
+(2715,"개가튼년",1),
+(2716,"개가튼뇬",1),
+(2720,"개같은년",1),
+(2722,"개걸레",1),
+(2724,"개고치",1),
+(2726,"개너미",1),
+(2727,"개년",1),
+(2728,"개놈",1),
+(2729,"개라슥",1),
+(2731,"개보지",1),
+(2732,"개보지년",1),
+(2735,"개부달",1),
+(2736,"개부랄",1),
+(2738,"개불랄",1),
+(2739,"개붕알",1),
+(2741,"개새끼",1),
+(2742,"개색기",1),
+(2743,"개색끼",1),
+(2744,"개색히",1),
+(2745,"개쓰래기",1),
+(2746,"개쓰레기",1),
+(2747,"개씁년",1),
+(2748,"개씁블",1),
+(2749,"개씁자지",1),
+(2750,"개씨발",1),
+(2751,"개씨발넘",1),
+(2752,"개씨발자슥",1),
+(2753,"개씨블",1),
+(2755,"개자슥",1),
+(2756,"개자지",1),
+(2757,"개작두넘",1),
+(2758,"개작두년",1),
+(2759,"개잡년",1),
+(2760,"개잡지랄",1),
+(2761,"개젓가튼넘",1),
+(2762,"개좆",1),
+(2763,"개지랄",1),
+(2764,"개지랄넘",1),
+(2765,"개지랄놈",1),
+(2779,"개후라년",1),
+(2781,"개후라들놈",1),
+(2783,"개후라새끼",1),
+(2784,"걔잡년",1),
+(2785,"걔잡지랄",1),
+(2789,"거시기",1),
+(2791,"걸래년",1),
+(2798,"걸레같은년",1),
+(2799,"걸레년",1),
+(2800,"걸레핀년",1),
+(2801,"게부럴",1),
+(2802,"게지랄놈",1),
+(2804,"귀두",1),
+(2810,"깨쌔끼",1),
+(2812,"꺼져",1),
+(2815,"난자마셔",1),
+(2816,"난자먹어",1),
+(2817,"난자핥아",1),
+(2818,"난자핧아",1),
+(2821,"내꺼빨아",1),
+(2822,"내꺼핥아",1),
+(2823,"내꺼핧아",1),
+(2824,"내미랄",1),
+(2825,"내버지",1),
+(2827,"내씨발",1),
+(2828,"내자지",1),
+(2829,"내잠지",1),
+(2830,"내조지",1),
+(2836,"너거애비",1),
+(2837,"누나강간",1),
+(2858,"느그매",1),
+(2885,"니기미",1),
+(2891,"니미랄",1),
+(2892,"니미럴",1),
+(2893,"니씨브랄",1),
+(2894,"니아범",1),
+(2896,"니애미",1),
+(2897,"니애비",1),
+(2898,"니에미",1),
+(2899,"니에비",1),
+(2904,"니할애비",1),
+(2918,"닳은년",1),
+(2922,"대가리",1),
+(2923,"덜은새끼",1),
+(2925,"돈새끼",1),
+(2927,"돌은넘",1),
+(2928,"돌은년",1),
+(2929,"돌은새끼",1),
+(2930,"동생강간",1),
+(2938,"딸딸이",1),
+(2942,"또라이",1),
+(2951,"띠발뇬",1),
+(2954,"띠블넘",1),
+(2956,"막간년",1),
+(2957,"막대쑤셔줘",1),
+(2958,"막대핥아줘",1),
+(2959,"막대핧아줘",1),
+(2960,"말자지",1),
+(2961,"맛간년",1),
+(2962,"맛없는년",1),
+(2963,"맛이간년",1),
+(2967,"망나니",1),
+(2986,"미친구녕",1),
+(2987,"미친구멍",1),
+(2988,"미친넘",1),
+(2989,"미친년",1),
+(2990,"미친놈",1),
+(2991,"미친눔",1),
+(2993,"미친새끼",1),
+(2994,"미친쉐이",1),
+(2995,"미친씨부랄",1),
+(2996,"미틴것",1),
+(2997,"미틴넘",1),
+(2998,"바주카자지",1),
+(3004,"백보지",1),
+(3005,"버따리자지",1),
+(3012,"버지구녕",1),
+(3013,"버지구멍",1),
+(3014,"버지냄새",1),
+(3015,"버지따먹기",1),
+(3016,"버지뚫어",1),
+(3017,"버지뜨더",1),
+(3018,"버지물마셔",1),
+(3019,"버지벌려",1),
+(3020,"버지벌료",1),
+(3021,"버지빨아",1),
+(3022,"버지빨어",1),
+(3023,"버지썰어",1),
+(3024,"버지쑤셔",1),
+(3025,"버지털",1),
+(3026,"버지핥아",1),
+(3027,"버지핧아",1),
+(3029,"버짓물",1),
+(3030,"버짓물마셔",1),
+(3038,"벌창같은년",1),
+(3054,"병신세리",1),
+(3056,"병신셰리",1),
+(3057,"병신씨발",1),
+(3076,"보지",1),
+(3097,"보지구녕",1),
+(3098,"보지구멍",1),
+(3099,"보지녀",1),
+(3100,"보지따먹기",1),
+(3101,"보지뚫어",1),
+(3102,"보지뜨더",1),
+(3103,"보지머리박기",1),
+(3104,"보지물",1),
+(3105,"보지물마셔",1),
+(3106,"보지박어",1),
+(3107,"보지벌려",1),
+(3108,"보지벌료",1),
+(3109,"보지벌리",1),
+(3110,"보지벌리자",1),
+(3111,"보지보지",1),
+(3114,"보지빨아",1),
+(3115,"보지빨어",1),
+(3116,"보지에자지껴",1),
+(3117,"보지에자지너",1),
+(3118,"보지자지",1),
+(3119,"보지정액",1),
+(3120,"보지쥐어짜",1),
+(3121,"보지찌져",1),
+(3122,"보지찢어",1),
+(3123,"보지털",1),
+(3124,"보지털뽑아",1),
+(3125,"보지털어",1),
+(3129,"보지틀래기",1),
+(3130,"보지핥아",1),
+(3131,"보지핥아줘",1),
+(3132,"보지핥어",1),
+(3135,"보지핧아",1),
+(3136,"보지핧아줘",1),
+(3137,"보지핧어",1),
+(3139,"보짓물",1),
+(3140,"보짓물마셔",1),
+(3157,"빙신쉐이",1),
+(3160,"빠가십새",1),
+(3161,"빠가씹새",1),
+(3163,"빠구리",1),
+(3164,"빠굴이",1),
+(3166,"뻑큐",1),
+(3170,"사까시",1),
+(3179,"성교하자",1),
+(3180,"성교해",1),
+(3182,"성폭행",1),
+(3184,"섹스",1),
+(3185,"섹스하자",1),
+(3186,"섹스해",1),
+(3187,"소자지",1),
+(3190,"쉬밸년",1),
+(3208,"시댕이",1),
+(3214,"시발년",1),
+(3215,"시발놈",1),
+(3217,"시발새끼",1),
+(3219,"시방새",1),
+(3220,"시팍새끼",1),
+(3226,"시팔넘",1),
+(3227,"시팔년",1),
+(3228,"시팔놈",1),
+(3230,"시팔새끼",1),
+(3241,"십버지",1),
+(3242,"십부랄",1),
+(3243,"십부럴",1),
+(3246,"십세이",1),
+(3248,"십셰리",1),
+(3249,"십자석",1),
+(3250,"십자슥",1),
+(3251,"십지랄",1),
+(3252,"십창녀",1),
+(3254,"십탱구리",1),
+(3255,"십탱굴이",1),
+(3259,"십팔새끼",1),
+(3263,"싸가지",1),
+(3270,"쌍년",1),
+(3271,"쌍놈",1),
+(3273,"쌍보지",1),
+(3277,"쌍쌍보지",1),
+(3282,"쌕쓰",1),
+(3284,"썅년",1),
+(3292,"쓰바새끼",1),
+(3295,"쓰브랄쉽세",1),
+(3324,"씨가랭넘",1),
+(3325,"씨가랭년",1),
+(3326,"씨가랭놈",1),
+(3327,"씨댕",1),
+(3328,"씨댕이",1),
+(3329,"씨뎅",1),
+(3330,"씨발",1),
+(3333,"씨발.년",1),
+(3334,"씨발.놈",1),
+(3335,"씨발년",1),
+(3336,"씨발놈",1),
+(3337,"씨발롬",1),
+(3338,"씨발병신",1),
+(3339,"씨방새",1),
+(3340,"씨방세",1),
+(3344,"씨뱅가리",1),
+(3345,"씨벌",1),
+(3346,"씨벌년",1),
+(3347,"씨벌쉐이",1),
+(3349,"씨부랄",1),
+(3350,"씨부럴",1),
+(3352,"씨불알",1),
+(3353,"씨브럴",1),
+(3355,"씨블년",1),
+(3356,"씨블새끼",1),
+(3357,"씨븡새끼",1),
+(3359,"씨섹끼",1),
+(3361,"씨파넘",1),
+(3362,"씨팍새끼",1),
+(3363,"씨팍세끼",1),
+(3364,"씨팔",1),
+(3372,"씨퐁넘",1),
+(3373,"씨퐁뇬",1),
+(3375,"씨퐁보지",1),
+(3377,"씨퐁자지",1),
+(3402,"씹년",1),
+(3403,"씹물",1),
+(3404,"씹미랄",1),
+(3405,"씹버지",1),
+(3407,"씹보지",1),
+(3409,"씹부랄",1),
+(3410,"씹브랄",1),
+(3412,"씹빵구",1),
+(3414,"씹뽀지",1),
+(3415,"씹새",1),
+(3417,"씹새끼",1),
+(3418,"씹세",1),
+(3420,"씹쌔끼",1),
+(3422,"씹자석",1),
+(3423,"씹자슥",1),
+(3424,"씹자지",1),
+(3426,"씹지랄",1),
+(3427,"씹창",1),
+(3428,"씹창녀",1),
+(3429,"씹탱",1),
+(3431,"씹탱굴이",1),
+(3432,"씹탱이",1),
+(3433,"씹팔",1),
+(3434,"아가리",1),
+(3440,"애미랄",1),
+(3441,"애미보지",1),
+(3442,"애미씨뱅",1),
+(3443,"애미자지",1),
+(3444,"애미잡년",1),
+(3445,"애미좃물",1),
+(3451,"양아치",1),
+(3453,"어미강간",1),
+(3454,"어미따먹자",1),
+(3455,"어미쑤시자",1),
+(3457,"엄창",1),
+(3458,"에미",1),
+(3459,"에비",1),
+(3466,"염병할",1),
+(3474,"엿먹어라",1),
+(3475,"영자개새끼",1),
+(3476,"영자새끼",1),
+(3477,"영자씨발놈",1),
+(3479,"오르가즘",1),
+(3480,"왕버지",1),
+(3481,"왕자지",1),
+(3482,"왕잠지",1),
+(3483,"왕털버지",1),
+(3484,"왕털보지",1),
+(3485,"왕털자지",1),
+(3486,"왕털잠지",1),
+(3488,"요년",1),
+(3489,"우미쑤셔",1),
+(3494,"유두빨어",1),
+(3495,"유두핥어",1),
+(3496,"유두핧어",1),
+(3507,"유방만져",1),
+(3508,"유방빨아",1),
+(3509,"유방조물락",1),
+(3510,"유방주물럭",1),
+(3511,"유방쪼물딱",1),
+(3512,"유방쪼물럭",1),
+(3513,"유방핥아",1),
+(3514,"유방핥어",1),
+(3515,"유방핧아",1),
+(3516,"유방핧어",1),
+(3518,"육갑",1),
+(3534,"자기핥아",1),
+(3536,"자기핧아",1),
+(3550,"자지구녕",1),
+(3551,"자지구멍",1),
+(3552,"자지꽂아",1),
+(3553,"자지넣자",1),
+(3554,"자지뜨더",1),
+(3555,"자지뜯어",1),
+(3556,"자지박어",1),
+(3559,"자지빨아",1),
+(3560,"자지빨아줘",1),
+(3561,"자지빨어",1),
+(3562,"자지쑤셔",1),
+(3563,"자지쓰레기",1),
+(3564,"자지정개",1),
+(3565,"자지짤라",1),
+(3566,"자지털",1),
+(3567,"자지핥아",1),
+(3568,"자지핥아줘",1),
+(3569,"자지핥어",1),
+(3571,"자지핧아",1),
+(3572,"자지핧아줘",1),
+(3573,"자지핧어",1),
+(3574,"작은보지",1),
+(3577,"잠지뚫어",1),
+(3578,"잠지물마셔",1),
+(3579,"잠지털",1),
+(3580,"잠짓물마셔",1),
+(3584,"잡것",1),
+(3585,"잡년",1),
+(3586,"잡놈",1),
+(3587,"잡쓰레그",1),
+(3588,"잡쓰레기",1),
+(3590,"저년",1),
+(3604,"젓가튼쉐이",1),
+(3606,"젓같내",1),
+(3607,"젓까",1),
+(3608,"젓냄새",1),
+(3609,"젓대가리",1),
+(3610,"젓떠",1),
+(3611,"젓마무리",1),
+(3613,"젓만이",1),
+(3614,"젓물",1),
+(3616,"젓물냄새",1),
+(3617,"젓밥",1),
+(3618,"정액마셔",1),
+(3619,"정액먹어",1),
+(3620,"정액발사",1),
+(3621,"정액짜",1),
+(3622,"정액핥아",1),
+(3623,"정액핧아",1),
+(3624,"정자마셔",1),
+(3625,"정자먹어",1),
+(3626,"정자핥아",1),
+(3627,"정자핧아",1),
+(3630,"젖까",1),
+(3632,"젖탱이",1),
+(3635,"조개넓은년",1),
+(3636,"조개따조",1),
+(3638,"조개마셔줘",1),
+(3640,"조개벌려조",1),
+(3642,"조개보지",1),
+(3643,"조개속물",1),
+(3644,"조개쑤셔줘",1),
+(3646,"조개핥아줘",1),
+(3647,"조개핧아줘",1),
+(3649,"조또",1),
+(3658,"족같내",1),
+(3659,"족까",1),
+(3661,"족까내",1),
+(3673,"좀마니",1),
+(3674,"좀물",1),
+(3675,"좀쓰레기",1),
+(3676,"좁빠라라",1),
+(3698,"좃가튼뇬",1),
+(3700,"좃간년",1),
+(3701,"좃까",1),
+(3702,"좃까리",1),
+(3704,"좃깟네",1),
+(3705,"좃냄새",1),
+(3706,"좃넘",1),
+(3707,"좃대가리",1),
+(3708,"좃도",1),
+(3709,"좃또",1),
+(3710,"좃마무리",1),
+(3713,"좃만아",1),
+(3714,"좃만이",1),
+(3715,"좃만한것",1),
+(3716,"좃만한쉐이",1),
+(3717,"좃물",1),
+(3719,"좃물냄새",1),
+(3720,"좃보지",1),
+(3722,"좃부랄",1),
+(3724,"좃빠구리",1),
+(3725,"좃빠네",1),
+(3726,"좃빠라라",1),
+(3727,"좃털",1),
+(3762,"좆같은놈",1),
+(3764,"좆같은새끼",1),
+(3765,"좆까",1),
+(3767,"좆까라",1),
+(3768,"좆나",1),
+(3769,"좆년",1),
+(3770,"좆도",1),
+(3779,"좆만아",1),
+(3784,"좆만한년",1),
+(3785,"좆만한놈",1),
+(3787,"좆만한새끼",1),
+(3789,"좆먹어",1),
+(3790,"좆물",1),
+(3791,"좆밥",1),
+(3793,"좆빨아",1),
+(3795,"좆새끼",1),
+(3796,"좆털",1),
+(3802,"좋만한것",1),
+(3808,"주글년",1),
+(3810,"주길년",1),
+(3813,"쥐랄",1),
+(3817,"지랄",1),
+(3818,"지럴",1),
+(3819,"지뢀",1),
+(3826,"쪼다새끼",1),
+(3831,"창녀",1),
+(3832,"창녀버지",1),
+(3833,"처드셈",1),
+(3834,"쳐드셈",1),
+(3835,"쳐쑤셔박어",1),
+(3836,"촌씨브라리",1),
+(3837,"촌씨브랑이",1),
+(3838,"촌씨브랭이",1),
+(3848,"크리토리스",1),
+(3849,"큰보지",1),
+(3857,"클리토리스",1),
+(3861,"페니스",1),
+(3863,"항문수셔",1),
+(3864,"항문쑤셔",1),
+(3869,"허버리년",1),
+(3874,"허벌년",1),
+(3876,"허벌보지",1),
+(3878,"허벌자식",1),
+(3879,"허벌자지",1),
+(3885,"헐렁보지",1),
+(3886,"혀로보지핥이기",1),
+(3887,"혀로보지핧기",1),
+(3900,"호냥년",1),
+(3909,"호로새끼",1),
+(3912,"호로자슥",1),
+(3913,"호로자식",1),
+(3917,"호루자슥",1),
+(3918,"화냥년",1),
+(3925,"후라덜넘",1),
+(3926,"후장",1),
+(3929,"후장꽂아",1),
+(3930,"후장뚫어",0),
+(3932,"\<asshole",0),
+(3955,"dong",0),
+(3956,"\<dyke\>",0),
+(3976,"\<mj\>",0),
+(3978,"\<stoner",0),
+(4039,"\<fisting\>",0),
+(4041,"\<cock",0),
+(4048,"\<raped\>",0),
+(4049,"\<raping\>",0),
+(4052,"\<junk[ie]",0),
+(4081,"\<dike\>",0),
+(4083,"\<defecat",0),
+(4086,"\<ejaculate\>",0),
+(4095,"\<scrotum",0),
+(4139,"\<pusher",0),
+(4171,"\<chinks\>",0),
+(4201,"\<dikes\>",0),
+(4202,"\<dildos\>",0),
+(4208,"\<sativa\>",0),
+(4209,"\<indica\>",0),
+(4212,"\<skunkweed\>",0),
+(4213,"\<doobie\>",0),
+(4215,"\<fingerbang\>",0),
+(4216,"\<gangbang\>",0),
+(4217,"\<gangrape\>",0),
+(4218,"\<japs\>",0),
+(4219,"\<jizzing\>",0),
+(4220,"\<gizzing\>",0),
+(4233,"\<polesmokers\>",0),
+(4239,"\<pussies\>",0),
+(4251,"\<rapes\>",0),
+(4252,"\<saladtosser\>",0),
+(4276,"\<tramps\>",0),
+(4281,"\<fags\>",0),
+(4283,"boob",0),
+(4291,"\<bast[aeiou]rd",0),
+(4292,"\<beastiality\>",0),
+(4293,"\<blowjob",0),
+(4294,"\<boffer\>",0),
+(4301,"\<clowjob\>",0),
+(4308,"\<erection\>",0),
+(4310,"\<donkeypunch\>",0),
+(4312,"\<fawker\>",0),
+(4313,"\<feces",0),
+(4329,"\<nipple",0),
+(4330,"nipples\>",0),
+(4348,"prostitute",0),
+(4363,"\<agnostic\>",0),
+(4369,"\<alquaeda\>",0),
+(4370,"\<amerikkkan\>",0),
+(4371,"\<amphetamine\>",0),
+(4380,"\<arse",0),
+(4381,"\<aryan",0),
+(4392,"\<backdoor\>",0),
+(4397,"\<bi\>",0),
+(4398,"\<bigfatasscow\>",0),
+(4399,"titt[iey]*s\>",0),
+(4409,"bondage\>",0),
+(4411,"boobs\>",0),
+(4412,"breast\>",0),
+(4419,"\<buttocks\>",0),
+(4432,"\<[ck]oitus",0),
+(4433,"\<coke\>",0),
+(4434,"\<condom",0),
+(4445,"\<dahoe\>",0),
+(4447,"\<damn\>",0),
+(4451,"\<darkwanker\>",0),
+(4455,"\<di[ae][rh]+ea",0),
+(4456,"dick\>",0),
+(4458,"\<dirtyho\>",0),
+(4460,"\<domination\>",0),
+(4463,"\<dutch\>",0),
+(4467,"\<enema\>",0),
+(4468,"\<erotic",0),
+(4469,"jackass\>",0),
+(4470,"\<facism\>",0),
+(4472,"\<fakeboobs\>",0),
+(4474,"\<fart\>",0),
+(4477,"\<fetish",0),
+(4478,"fetish\>",0),
+(4480,"\<filthymuslim\>",0),
+(4481,"\<focker\>",0),
+(4482,"\<foreplay\>",0),
+(4483,"\<foreskin\>",0),
+(4485,"\<frottage\>",0),
+(4492,"\<fuk\>",0),
+(4493,"\<fukass\>",0),
+(4496,"\<gay\>",0),
+(4497,"\<genital",0),
+(4498,"\<genitals\>",0),
+(4501,"\<gigolo\>",0),
+(4505,"\<gonorrhea\>",0),
+(4506,"\<grummz\>",0),
+(4507,"\<hairyhorny\>",0),
+(4508,"\<hardboob\>",0),
+(4509,"\<hentail\>",0),
+(4511,"\<hiv\>",0),
+(4513,"\<holocaust\>",0),
+(4516,"\<horny\>",0),
+(4518,"\<hot\>",0),
+(4540,"\<j.*jameson\>",0),
+(4552,"\<kinky\>",0),
+(4557,"\<kraut\>",0),
+(4560,"\<lesb\>",0),
+(4561,"\<lesbian\>",0),
+(4563,"pussy\>",0),
+(4565,"\<lingerie\>",0),
+(4566,"\<load\>",0),
+(4570,"\<lube\>",0),
+(4571,"\<lubricant\>",0),
+(4572,"\<lust\>",0),
+(4573,"\<maidenhead\>",0),
+(4584,"\<morphine\>",0),
+(4608,"\<nudity\>",0),
+(4610,"\<nuts\>",0),
+(4618,"\<oral\>",0),
+(4620,"\<pagan\>",0),
+(4629,"\<perv\>",0),
+(4630,"\<pervert\>",0),
+(4631,"\<phawk\>",0),
+(4636,"\<piss\>",0),
+(4637,"\<playboy\>",0),
+(4638,"\<playgirl\>",0),
+(4639,"\<polish\>",0),
+(4640,"\<poop\>",0),
+(4642,"\<prebubescent\>",0),
+(4649,"\<queer\>",0),
+(4656,"\<reich\>",0),
+(4660,"\<r.*jeremy\>",0),
+(4668,"\<screw\>",0),
+(4669,"\<seamen\>",0),
+(4673,"\<sex\>",0),
+(4677,"\<sirbong\>",0),
+(4683,"\<spank\>",0),
+(4684,"\<speculum\>",0),
+(4685,"\<spreadmylegs\>",0),
+(4689,"\<streaker",0),
+(4690,"\<stripper",0),
+(4692,"\<stud\>",0),
+(4693,"\<submissive\>",0),
+(4694,"\<suck\>",0),
+(4695,"\<sukkitdown\>",0),
+(4697,"\<swiftnuggs\>",0),
+(4698,"\<swingers\>",0),
+(4703,"\<teabag",0),
+(4706,"\<terrorist\>",0),
+(4709,"\<thickbush\>",0),
+(4710,"\<threesome\>",0),
+(4714,"\<snatch",0),
+(4716,"\<trans",0),
+(4717,"\<tribadism\>",0),
+(4720,"\<uglynig\>",0),
+(4722,"\<updabut\>",0),
+(4723,"\<upmybutthole\>",0),
+(4725,"\<urinat",0),
+(4727,"\<vasect",0),
+(4729,"\<venereal\>",0),
+(4731,"\<virgin\>",0),
+(4736,"\<warslut\>",0),
+(4737,"\<white\>",0),
+(4740,"\<wood\>",0),
+(4781,"\<negro",0),
+(4790,"\<tinytits\>",0),
+(4792,"cock\>",0),
+(4798,"blowjob\>",0),
+(4799,"\<tardpopsicle\>",0),
+(4807,"\<urmom\>",0),
+(4810,"fag\>",0),
+(4814,"\<dick",0),
+(4816,"\<turdsplat\>",0),
+(4821,"\<chokeoncocks\>",0),
+(4822,"\<littlearse\>",0),
+(4834,"\<holybijesis\>",0),
+(4839,"\<niggs\>",0),
+(4862,"support",0),
+(4881,"\<absinthe\>",0),
+(4882,"\<absolut\>",0),
+(4883,"\<aceofspades\>",0),
+(4884,"\<adulteress\>",0),
+(4885,"\<adulterous\>",0),
+(4886,"\<adultery\>",0),
+(4887,"\<adultsonly\>",0),
+(4888,"\<agentorange\>",0),
+(4889,"\<aids\>",0),
+(4890,"\<al[ck]ohol",0),
+(4891,"\<alecpowers\>",0),
+(4892,"\<alexwilcox\>",0),
+(4893,"\<amaretto\>",0),
+(4894,"\<anal\>",0),
+(4895,"\<angeladevi\>",0),
+(4896,"\<angeldust\>",0),
+(4897,"\<anglo\>",0),
+(4898,"\<anheiser\>",0),
+(4899,"\<annamalle\>",0),
+(4900,"\<annaslut\>",0),
+(4901,"\<asiacarrera\>",0),
+(4902,"\<aurorasnow\>",0),
+(4903,"\<bacardi\>",0),
+(4904,"\<beaner\>",0),
+(4905,"\<beanlicker\>",0),
+(4906,"\<beer\>",0),
+(4907,"\<bestiality\>",0),
+(4908,"\<bizzle\>",0),
+(4909,"\<black\>",0),
+(4910,"\<blackie\>",0),
+(4911,"\<bloodyhell\>",0),
+(4912,"\<blow\>",0),
+(4913,"\<blunt\>",0),
+(4914,"\<bollocks\>",0),
+(4915,"\<boobs",0),
+(4916,"\<boofer\>",0),
+(4917,"\<bourbon\>",0),
+(4918,"\<brazuca\>",0),
+(4919,"\<breast",0),
+(4920,"\<budda\>",0),
+(4921,"\<buddahead\>",0),
+(4922,"\<budlight\>",0),
+(4923,"\<budweiser\>",0),
+(4924,"\<bugger\>",0),
+(4925,"\<bustydusty\>",0),
+(4926,"\<butt\>",0),
+(4927,"\<buttman\>",0),
+(4928,"\<candyandes\>",0),
+(4929,"\<caucazoid\>",0),
+(4930,"\<cawk\>",0),
+(4931,"\<cervesa\>",0),
+(4932,"\<champagne\>",0),
+(4933,"\<chaseylain\>",0),
+(4934,"\<cheeba\>",0),
+(4935,"\<cherokee \>",0),
+(4936,"\<chino\>",0),
+(4937,"\<chloejones \>",0),
+(4938,"\<christilake\>",0),
+(4939,"\<chrisward \>",0),
+(4940,"\<cocostarfish\>",0),
+(4941,"\<cognac\>",0),
+(4942,"\<cootch\>",0),
+(4943,"\<cooter\>",0),
+(4944,"\<copulate\>",0),
+(4945,"\<cornholes\>",0),
+(4946,"\<corona\>",0),
+(4947,"\<crack\>",0),
+(4948,"\<cracker\>",0),
+(4949,"\<crap\>",0),
+(4950,"\<damned\>",0),
+(4951,"\<dank\>",0),
+(4952,"\<deancoulter\>",0),
+(4953,"\<debidiamond \>",0),
+(4954,"\<deepthroat\>",0),
+(4955,"\<devinderay \>",0),
+(4956,"\<dianazyle \>",0),
+(4957,"\<dietpills\>",0),
+(4958,"\<dirtysanchez\>",0),
+(4959,"\<ditavontease\>",0),
+(4960,"\<doggystyle\>",0),
+(4961,"\<dope\>",0),
+(4962,"\<duckbutter\>",0),
+(4963,"\<ecstacy\>",0),
+(4964,"\<edpowers \>",0),
+(4965,"\<eggplant\>",0),
+(4966,"\<ericaboyer \>",0),
+(4967,"\<extasy\>",0),
+(4968,"\<facial\>",0),
+(4969,"\<fluffer\>",0),
+(4970,"\<fornicat",0),
+(4971,"\<freebase\>",0),
+(4972,"\<fusck",0),
+(4973,"\<fux",0),
+(4974,"\<gagepowers\>",0),
+(4975,"\<gew\>",0),
+(4976,"\<ghb\>",0),
+(4977,"\<ghetto\>",0),
+(4978,"\<gingerhill\>",0),
+(4979,"\<gloryhole\>",0),
+(4980,"\<goldschlager\>",0),
+(4981,"\<goombah\>",0),
+(4982,"\<granddragon\>",0),
+(4983,"\<greaseball\>",0),
+(4984,"\<greaser\>",0),
+(4985,"\<gspot\>",0),
+(4986,"\<guiness\>",0),
+(4987,"\<gunja\>",0),
+(4988,"\<handjob\>",0),
+(4989,"\<hash\>",0),
+(4990,"\<headdoctor\>",0),
+(4991,"\<heidifleiss\>",0),
+(4992,"\<hmo\>",0),
+(4993,"\<honky\>",0),
+(4994,"\<hoodrat\>",0),
+(4995,"\<hookah\>",0),
+(4996,"\<horney\>",0),
+(4997,"\<hustler\>",0),
+(4998,"\<inarivachs\>",0),
+(4999,"\<j.*bobbit\>",0),
+(5000,"\<j.*holmes\>",0),
+(5001,"\<jackdaniels\>",0),
+(5002,"\<jadeeast\>",0),
+(5003,"\<jadehsu \>",0),
+(5004,"\<jadestclair\>",0),
+(5005,"\<jagermeister\>",0),
+(5006,"\<janacova\>",0),
+(5007,"\<jennahaze\>",0),
+(5008,"\<jennajameson\>",0),
+(5009,"\<jenteal\>",0),
+(5010,"\<jessicadee\>",0),
+(5011,"\<jeweldenyle\>",0),
+(5012,"\<jillkelly\>",0),
+(5013,"\<jimbeam\>",0),
+(5014,"\<josecuervo\>",0),
+(5015,"\<juliashton\>",0),
+(5016,"\<karadavis\>",0),
+(5017,"\<keef\>",0),
+(5018,"\<kif\>",0),
+(5019,"\<kikkityler \>",0),
+(5020,"\<kobetai\>",0),
+(5021,"\<kooter\>",0),
+(5022,"\<krystalsteal\>",0),
+(5023,"\<kyke\>",0),
+(5024,"\<kylacole\>",0),
+(5025,"\<kylieireland\>",0),
+(5026,"\<lancegear \>",0),
+(5027,"\<larryflynt\>",0),
+(5028,"\<lecher\>",0),
+(5029,"\<liquidx\>",0),
+(5030,"\<loloferrari\>",0),
+(5031,"\<long.*dong\>",0),
+(5032,"\<ludes\>",0),
+(5033,"\<lunalane\>",0),
+(5034,"\<maltliquor\>",0),
+(5035,"\<mariacheca\>",0),
+(5036,"\<mariatakagi\>",0),
+(5037,"\<marisadiaz \>",0),
+(5038,"\<markdalton  \>",0),
+(5039,"\<markwolff \>",0),
+(5040,"\<marycarey \>",0),
+(5041,"\<mayate\>",0),
+(5042,"\<meatwad\>",0),
+(5043,"\<methhead\>",0),
+(5044,"\<methmonster\>",0),
+(5045,"\<mikolee\>",0),
+(5046,"\<mimimiyagi\>",0),
+(5047,"\<moneyshot\>",0),
+(5048,"\<muff\>",0),
+(5049,"\<mushrooms\>",0),
+(5050,"\<nickelbag\>",0),
+(5051,"\<nikkibenz\>",0),
+(5052,"\<nikkidial\>",0),
+(5053,"\<nip\>",0),
+(5054,"\<nizzle\>",0),
+(5055,"\<nubian",0),
+(5056,"\<nympho\>",0),
+(5057,"\<obsession\>",0),
+(5058,"\<opiate\>",0),
+(5059,"\<orgy\>",0),
+(5060,"\<panties\>",0),
+(5061,"\<pecker\>",0),
+(5062,"\<peternorth\>",0),
+(5063,"\<pissedoff\>",0),
+(5064,"\<pissoff\>",0),
+(5065,"\<pornstar\>",0),
+(5066,"\<prepubescent\>",0),
+(5067,"\<prick\>",0),
+(5068,"\<pube\>",0),
+(5069,"\<punjab\>",0),
+(5070,"\<punkass\>",0),
+(5071,"\<pusse\>",0),
+(5072,"\<randywest\>",0),
+(5073,"\<rebeccalord\>",0),
+(5074,"\<rebeccaporn\>",0),
+(5075,"\<redneck\>",0),
+(5076,"\<reneelarue\>",0),
+(5077,"\<ricer\>",0),
+(5078,"\<rustytrumpet\>",0),
+(5079,"\<ryanconner \>",0),
+(5080,"\<ryanwagner \>",0),
+(5081,"\<sarastjames \>",0),
+(5082,"\<scat\>",0),
+(5083,"\<scatology\>",0),
+(5084,"\<schlong",0),
+(5085,"\<schnapps\>",0),
+(5086,"\<schoolboy",0),
+(5087,"\<selenasteele\>",0),
+(5088,"\<sexy\>",0),
+(5089,"\<seymorebutts\>",0),
+(5090,"\<sheethead\>",0),
+(5091,"\<sherriangel\>",0),
+(5092,"\<shizzle\>",0),
+(5093,"\<shlong\>",0),
+(5094,"\<shmegma\>",0),
+(5095,"\<shrooms\>",0),
+(5096,"\<skeet\>",0),
+(5097,"\<skeetskeet\>",0),
+(5098,"\<slope\>",0),
+(5099,"\<smack\>",0),
+(5100,"\<smut\>",0),
+(5101,"\<snowball",0),
+(5102,"\<sodomize\>",0),
+(5103,"\<sodomy\>",0),
+(5104,"\<speedball\>",0),
+(5105,"\<spew\>",0),
+(5106,"\<spreadeagle\>",0),
+(5107,"\<spunk\>",0),
+(5108,"\<std\>",0),
+(5109,"\<sunsetthomas\>",0),
+(5110,"\<sylviasaint\>",0),
+(5111,"\<teet[sz]\>",0),
+(5112,"\<tequila\>",0),
+(5113,"\<terapatrick\>",0),
+(5114,"\<thc\>",0),
+(5115,"\<tiabella\>",0),
+(5116,"\<toadlicker\>",0),
+(5117,"\<toak\>",0),
+(5118,"\<toke\>",0),
+(5119,"\<tombyron\>",0),
+(5120,"\<tommycruise\>",0),
+(5121,"\<tonyzerega\>",0),
+(5122,"\<tossalad\>",0),
+(5123,"\<tosser\>",0),
+(5124,"\<tossingsalad\>",0),
+(5125,"\<tosssalad\>",0),
+(5126,"\<traceyadams\>",0),
+(5127,"\<tracilords\>",0),
+(5128,"\<tranny\>",0),
+(5129,"\<ttboy\>",0),
+(5130,"\<tyfox\>",0),
+(5131,"\<tylerfaith\>",0),
+(5132,"\<urethra\>",0),
+(5133,"\<veronicahart\>",0),
+(5134,"\<vibrator\>",0),
+(5135,"\<vincevouyer\>",0),
+(5136,"\<vodka\>",0),
+(5137,"\<vulva\>",0),
+(5138,"\<w[ei]+n[ei]+r\>",0),
+(5139,"\<wank\>",0),
+(5140,"\<wankoff\>",0),
+(5141,"\<weed\>",0),
+(5142,"\<wej\>",0),
+(5143,"\<wench\>",0),
+(5144,"\<whackoff\>",0),
+(5145,"\<whiskey\>",0),
+(5146,"\<wildturkey\>",0),
+(5147,"\<willclark\>",0),
+(5148,"\<yellow\>",0),
+(5149,"\<zigzag\>",0),
+(5150,"aryan\>",0),
+(5151,"hefner\>",0),
+(5152,"snatch\>",0),
+(5153,"vagina\>",0),
+(5163,"\<advil\>",0),
+(5166,"\<amputee\>",0),
+(5167,"\<amtrak\>",0),
+(5169,"\<anis\>",0),
+(5170,"\<anolinctus\>",0),
+(5171,"\<antichrist\>",0),
+(5172,"\<arathorn\>",0),
+(5173,"\<arian\>",0),
+(5174,"\<arsonist\>",0),
+(5186,"\<blackenstein\>",0),
+(5187,"\<blacksabbath\>",0),
+(5190,"\<bnet\>",0),
+(5192,"\<bootylicious\>",0),
+(5194,"\<bra\>",0),
+(5203,"\<chinaman\>",0),
+(5205,"\<chronik\>",0),
+(5212,"\<colgate\>",0),
+(5214,"\<coprophagy\>",0),
+(5215,"\<crackhead\>",0),
+(5219,"\<dammit\>",0),
+(5220,"\<darky\>",0),
+(5222,"\<darvocet\>",0),
+(5223,"\<databasesys\>",0),
+(5225,"\<deckardcain\>",0),
+(5227,"\<dr\>",0),
+(5231,"\<dukeofwhales\>",0),
+(5232,"\<dumbass\>",0),
+(5233,"\<ecstasy\>",0),
+(5235,"\<ensign\>",0),
+(5238,"\<fcuk\>",0),
+(5241,"\<ferrari\>",0),
+(5242,"\<fetus",0),
+(5243,"\<fockerz\>",0),
+(5245,"\<fooker\>",0),
+(5250,"cunt\>",0),
+(5251,"\<ghandi\>",0),
+(5254,"\<gofukyorself\>",0),
+(5255,"\<gonadian\>",0),
+(5256,"\<goochgravy\>",0),
+(5257,"\<gookenator\>",0),
+(5261,"\<hemplock\>",0),
+(5262,"\<herpies\>",0),
+(5265,"\<homoerectus\>",0),
+(5266,"\<hore\>",0),
+(5267,"\<hotdamn\>",0),
+(5268,"\<hungelf\>",0),
+(5275,"\<indian\>",0),
+(5276,"\<irapekids\>",0),
+(5277,"\<ironchef\>",0),
+(5280,"\<jc\>",0),
+(5281,"\<jedi\>",0),
+(5282,"\<[gj]en[ao]cide\>",0),
+(5284,"\<jugs\>",0),
+(5289,"\<klismaphilia\>",0),
+(5290,"\<kokigami\>",0),
+(5291,"\<koon\>",0),
+(5292,"\<kosherpork\>",0),
+(5294,"\<lardass\>",0),
+(5296,"\<laurabush\>",0),
+(5306,"\<marlboroman\>",0),
+(5307,"\<masterbaiter\>",0),
+(5308,"\<maxipad\>",0),
+(5314,"\<menstrual\>",0),
+(5315,"\<mhz\>",0),
+(5316,"\<michaeljack\>",0),
+(5317,"bastard\>",0),
+(5318,"\<misogynist\>",0),
+(5320,"\<mister\>",0),
+(5322,"\<mr\>",0),
+(5324,"\<narcoticus\>",0),
+(5325,"\<nigahh\>",0),
+(5331,"\<npc",0),
+(5332,"\<nug\>",0),
+(5333,"\<nunriggers\>",0),
+(5334,"\<nwa\>",0),
+(5336,"\<omgwtf\>",0),
+(5337,"\<opiate",0),
+(5338,"\<oreos\>",0),
+(5341,"\<ovaltine\>",0),
+(5343,"\<papsmear\>",0),
+(5344,"\<pederasty\>",0),
+(5346,"\<penthouse\>",0),
+(5350,"\<pimp",0),
+(5352,"\<pinktaco\>",0),
+(5354,"mofo\>",0),
+(5356,"\<poomaster\>",0),
+(5357,"\<poonjuice\>",0),
+(5358,"\<poop",0),
+(5359,"\<pwnzor\>",0),
+(5360,"\<quadoushka\>",0),
+(5361,"\<r.*nad[ae]r\>",0),
+(5364,"\<sacofricosis\>",0),
+(5366,"\<sega\>",0),
+(5367,"\<sex",0),
+(5371,"\<shadowbane\>",0),
+(5372,"\<shane",0),
+(5373,"\<shiznit\>",0),
+(5374,"\<shortbus\>",0),
+(5381,"\<smoked\>",0),
+(5382,"\<snowwhite\>",0),
+(5385,"\<sperm",0),
+(5386,"\<spluge\>",0),
+(5392,"\<suck",0),
+(5395,"\<supermario\>",0),
+(5396,"\<suppuku\>",0),
+(5397,"\<swastika\>",0),
+(5398,"\<sybian\>",0),
+(5417,"\<toeofcamel\>",0),
+(5418,"\<tokyorose\>",0),
+(5424,"\<urmama\>",0),
+(5429,"\<voltron\>",0),
+(5430,"\<wangmaster\>",0),
+(5431,"\<wanker\>",0),
+(5434,"\<wetdream\>",0),
+(5436,"\<whitebread\>",0),
+(5442,"\<wigger\>",0),
+(5443,"\<williamhung\>",0),
+(5444,"\<windex\>",0),
+(5445,"\<witchking\>",0),
+(5447,"\<x.*x\>",0),
+(5452,"\<yosemitesam\>",0),
+(5454,"\<youranus\>",0),
+(5457,"\<zoolander\>",0),
+(5472,"condom\>",0),
+(5476,"jebus\>",0),
+(5477,"\<kosher",0),
+(5478,"menstrual",0),
+(5480,"sexy",0),
+(5865,"thenine",4),
+(5866,"三K党",4),
+(5867,"中功",4),
+(5868,"九城",4),
+(5869,"乱伦",4),
+(5870,"乳交",4),
+(5871,"乳房",4),
+(5872,"二郎神",4),
+(5873,"他妈的",4),
+(5874,"俞正声",4),
+(5875,"做爱",4),
+(5876,"傻B",4),
+(5877,"傻逼",4),
+(5878,"共产党",4),
+(5879,"共军",4),
+(5880,"共匪",4),
+(5881,"共荣圈",4),
+(5882,"军妓",4),
+(5883,"列宁",4),
+(5884,"刘云山",4),
+(5885,"刘少奇",4),
+(5886,"刘淇",4),
+(5887,"勃不起斯懦夫",4),
+(5888,"勃大精深",4),
+(5889,"卖淫",4),
+(5890,"卵子",4),
+(5891,"口交",4),
+(5892,"叫床",4),
+(5893,"台湾独立",4),
+(5894,"台独",4),
+(5895,"吴仪",4),
+(5896,"吴官正",4),
+(5897,"吴邦国",4),
+(5898,"吹箫",4),
+(5899,"周恩来",4),
+(5900,"周永康",4),
+(5901,"喇嘛",4),
+(5902,"回良玉",4),
+(5903,"国民党",4),
+(5904,"基地组织",4),
+(5905,"外$$挂",4),
+(5906,"外$挂",4),
+(5908,"外*挂",4),
+(5909,"外@@挂",4),
+(5910,"外@挂",4),
+(5911,"外~~挂",4),
+(5912,"外~挂",4),
+(5913,"外··挂",4),
+(5914,"外·挂",4),
+(5915,"外挂",4),
+(5916,"大东亚",4),
+(5917,"奶子",4),
+(5918,"如来",4),
+(5919,"妓女",4),
+(5920,"妓院",4),
+(5921,"婊子",4),
+(5922,"婊子养的",4),
+(5923,"嫖客",4),
+(5924,"嫦娥",4),
+(5925,"孙中山",4),
+(5926,"射精",4),
+(5927,"尉健行",4),
+(5928,"小泉纯一郎",4),
+(5929,"小犬蠢一狼",4),
+(5930,"小鸡鸡",4),
+(5931,"屁股",4),
+(5932,"屄",4),
+(5933,"屌",4),
+(5934,"山口组",4),
+(5935,"巨灵神",4),
+(5936,"希特勒",4),
+(5937,"干死",4),
+(5938,"弟大物勃",4),
+(5939,"张宏堡",4),
+(5940,"张德江",4),
+(5941,"张立昌",4),
+(5942,"强奸",4),
+(5943,"性交",4),
+(5944,"性无能",4),
+(5945,"恐怖主义",4),
+(5946,"恩格斯",4),
+(5947,"情兽",4),
+(5948,"我操",4),
+(5949,"我日",4),
+(5950,"拉登",4),
+(5951,"招妓",4),
+(5952,"撒尿",4),
+(5953,"操你",4),
+(5954,"操你奶奶",4),
+(5955,"操你妈",4),
+(5956,"操逼",4),
+(5957,"支那",4),
+(5958,"放荡",4),
+(5959,"日他娘",4),
+(5960,"日你",4),
+(5961,"日你妈",4),
+(5962,"日本帝国",4),
+(5963,"曹刚川",4),
+(5964,"曾培炎",4),
+(5965,"曾庆红",4),
+(5966,"月经",4),
+(5967,"本拉登",4),
+(5968,"朱镕基",4),
+(5969,"朱骏",4),
+(5970,"李大师",4),
+(5971,"李岚清",4),
+(5972,"李洪志",4),
+(5973,"李瑞环",4),
+(5974,"李登辉",4),
+(5975,"李长春",4),
+(5976,"李鹏",4),
+(5977,"梅毒",4),
+(5978,"次郎",4),
+(5979,"毛泽东",4),
+(5980,"江泽民",4),
+(5981,"沙僧",4),
+(5982,"法$$轮",4),
+(5983,"法$轮",4),
+(5985,"法*轮",4),
+(5986,"法@@轮",4),
+(5987,"法@轮",4),
+(5988,"法^^轮",4),
+(5989,"法^轮",4),
+(5990,"法~~轮",4),
+(5991,"法~轮",4),
+(5992,"法轮",4),
+(5993,"法轮功",4),
+(5994,"法轮大法",4),
+(5995,"淫水",4),
+(5996,"淫秽",4),
+(5997,"淫荡",4),
+(5998,"淫魔",4),
+(5999,"温家宝",4),
+(6000,"游戏管理员",4),
+(6001,"煞笔",4),
+(6002,"爱滋",4),
+(6003,"牛魔王",4),
+(6004,"狗城",4),
+(6005,"狗屁",4),
+(6006,"狗日的",4),
+(6007,"狗狼养的",4),
+(6008,"王乐泉",4),
+(6009,"王兆国",4),
+(6010,"王八蛋",4),
+(6011,"疆独",4),
+(6012,"皇军",4),
+(6015,"私服",4),
+(6016,"精子",4),
+(6017,"精液",4),
+(6018,"精童欲女",4),
+(6019,"纳粹",4),
+(6020,"罗干",4),
+(6021,"肛交",4),
+(6022,"胡耀邦",4),
+(6023,"胡锦涛",4),
+(6024,"花柳",4),
+(6025,"茎候佳阴",4),
+(6026,"荡妇",4),
+(6027,"萨达姆",4),
+(6028,"蒋介石",4),
+(6029,"西藏",4),
+(6030,"观音",4),
+(6031,"贺国强",4),
+(6032,"贾庆林",4),
+(6033,"赤匪",4),
+(6034,"赵紫阳",4),
+(6035,"轮奸",4),
+(6036,"达赖",4),
+(6037,"邓小平",4),
+(6038,"郭伯雄",4),
+(6039,"阴唇",4),
+(6040,"阴毛",4),
+(6041,"阴茎",4),
+(6042,"阴道",4),
+(6043,"阴部",4),
+(6044,"阿扁",4),
+(6045,"陈水扁",4),
+(6046,"陈良宇",4),
+(6047,"韩正",4),
+(6048,"马克思",4),
+(6049,"骚货",4),
+(6050,"骚逼",4),
+(6051,"鸡八",4),
+(6052,"鸡巴",4),
+(6053,"黄菊",4),
+(6054,"黑手党",4),
+(6055,"龟头",4),
+(6061,"\<acclaim\>",0),
+(6062,"\<amongoe",0),
+(6063,"\<anabolica\>",0),
+(6064,"\<analpunisher\>",0),
+(6065,"nazi\>",0),
+(6066,"\<anth?rax\>",0),
+(6067,"\<blasehase\>",0),
+(6068,"\<botox\>",0),
+(6069,"\<bueckstueck\>",0),
+(6070,"\<bumsnudel\>",0),
+(6071,"\<cairne\>",0),
+(6072,"\<christkind\>",0),
+(6073,"\<crackdealer\>",0),
+(6074,"king\>",0),
+(6075,"\<darthjedi\>",0),
+(6076,"\<denethor\>",0),
+(6077,"\<derneger\>",0),
+(6078,"\<diedroge\>",0),
+(6079,"\<dollybuster\>",0),
+(6080,"\<donpeperulez\>",0),
+(6081,"\<dopecheffe\>",0),
+(6082,"\<duke",0),
+(6083,"\<dwalin\>",0),
+(6084,"sucker\>",0),
+(6085,"\<ebola\>",0),
+(6086,"\<eichelkäse\>",0),
+(6087,"f[ue]+rst\>",0),
+(6088,"muschi\>",0),
+(6089,"könig\>",0),
+(6090,"\<eomer\>",0),
+(6091,"\<erzengel\>",0),
+(6092,"\<eternalhoden\>",0),
+(6093,"\<euthanasie\>",0),
+(6094,"\<fick",0),
+(6095,"luder\>",0),
+(6096,"kacke\>",0),
+(6097,"\<fotz",0),
+(6098,"tussi\>",0),
+(6099,"\<frodobeutlin\>",0),
+(6100,"\<frozenthrone\>",0),
+(6101,"\<gandhi\>",0),
+(6102,"\<ganja",0),
+(6103,"\<gayoverlord\>",0),
+(6104,"\<geilebraut\>",0),
+(6105,"\<ginawild\>",0),
+(6106,"\<goebbels\>",0),
+(6107,"\<gott\>",0),
+(6108,"\<graftaliban\>",0),
+(6109,"\<hägar\>",0),
+(6110,"\<hanfernte\>",0),
+(6111,"\<heiland\>",0),
+(6112,"\<hendrix\>",0),
+(6113,"\<heroin",0),
+(6114,"\<hordenhure\>",0),
+(6115,"porno\>",0),
+(6116,"\<[gk]adafi\>",0),
+(6117,"\<kiffer",0),
+(6118,"\<kleineralki\>",0),
+(6119,"\<kleinerfurz\>",0),
+(6120,"\<klitori",0),
+(6121,"ficker\>",0),
+(6122,"\<kpd\>",0),
+(6123,"\<kruppstahl\>",0),
+(6124,"\<mariuhanna\>",0),
+(6125,"\<master",0),
+(6126,"\<meisteryoda\>",0),
+(6127,"\<mengele\>",0),
+(6128,"fick\>",0),
+(6129,"\<michaelmyers\>",0),
+(6130,"\<milkahase\>",0),
+(6131,"\<milkakuh\>",0),
+(6132,"\<mistst[ue]+ck\>",0),
+(6133,"\<moesen",0),
+(6134,"\<möse",0),
+(6135,"\<muschi",0),
+(6136,"\<nachgeburt\>",0),
+(6137,"\<nazghul\>",0),
+(6138,"\<negerin\>",0),
+(6139,"\<nikoleinchen\>",0),
+(6140,"\<onkeltom\>",0),
+(6141,"\<pimmel",0),
+(6142,"\<pimper",0),
+(6143,"\<pommespapst\>",0),
+(6144,"\<popobumser\>",0),
+(6145,"\<porno",0),
+(6146,"\<princess",0),
+(6147,"\<prinz\>",0),
+(6148,"\<rammstein\>",0),
+(6149,"\<rasputin\>",0),
+(6150,"\<redbull\>",0),
+(6151,"\<richthofen\>",0),
+(6152,"\<sarin\>",0),
+(6153,"\<schlampe",0),
+(6154,"\<schwanz",0),
+(6155,"\<sith\>",0),
+(6156,"\<smeagol\>",0),
+(6157,"\<sohngottes\>",0),
+(6158,"\<spikelee\>",0),
+(6159,"\<splintercell\>",0),
+(6160,"\<suicide\>",0),
+(6161,"\<suizidhoden\>",0),
+(6162,"\<terrortunte\>",0),
+(6163,"\<titanrosette\>",0),
+(6164,"\<tittenmaus\>",0),
+(6165,"\<tylerdurden\>",0),
+(6166,"\<vagimampf\>",0),
+(6167,"\<vanginus\>",0),
+(6168,"\<votzentroll\>",0),
+(6169,"\<warcrack\>",0),
+(6170,"\<winnipuuh\>",0),
+(6171,"\<wixxoor\>",0),
+(6172,"\<wowdiablo\>",0),
+(6173,"\<xerox\>",0),
+(6174,"schlampe\>",0),
+(6175,"zipfe?l\>",0),
+(6176,"\<zuhälter",0),
+(6177,"\<zwergpimmel\>",0),
+(6178,"泰坦",4),
+(6179,"萨格拉斯",4),
+(6180,"埃瑞达",4),
+(6181,"纳斯雷兹姆",4),
+(6182,"基尔加丹",4),
+(6183,"阿克蒙德",4),
+(6184,"阿齐蒙德",4),
+(6185,"提克迪奥斯",4),
+(6186,"玛诺洛斯",4),
+(6187,"拉格纳罗斯",4),
+(6188,"瑟拉塞恩",4),
+(6189,"奥拉基尔",4),
+(6190,"耐普图隆",4),
+(6191,"诺兹多姆",4),
+(6192,"阿莱克斯塔萨",4),
+(6193,"诺甘农",4),
+(6194,"玛利苟斯",4),
+(6195,"卡兹格罗斯",4),
+(6196,"耐萨里奥",4),
+(6197,"艾欧娜",4),
+(6198,"阿曼瑟尔",4),
+(6200,"艾露恩",4),
+(6201,"塞纳留斯",4),
+(6202,"艾萨拉",4),
+(6203,"法里奥",4),
+(6204,"玛法里奥",4),
+(6205,"泰兰德",4),
+(6206,"伊利丹",4),
+(6207,"尤迪安",4),
+(6208,"一粒蛋",4),
+(6209,"玛维",4),
+(6210,"伊瑟拉",4),
+(6211,"达斯雷玛",4),
+(6212,"艾格文",4),
+(6213,"麦迪文",4),
+(6214,"古尔丹",4),
+(6215,"格罗姆",4),
+(6216,"地狱咆哮",4),
+(6217,"奥格瑞姆",4),
+(6218,"毁灭之锤",4),
+(6219,"布莱克汉",4),
+(6220,"洛萨",4),
+(6221,"卡德加",4),
+(6222,"杜隆坦",4),
+(6223,"普罗德摩尔",4),
+(6224,"图拉扬",4),
+(6225,"耐奥祖",4),
+(6226,"萨尔",4),
+(6227,"克尔苏加德",4),
+(6228,"巫妖",4),
+(6229,"麦格尼",4),
+(6230,"穆拉丁",4),
+(6231,"恶魔猎手",4),
+(6232,"月之女祭司",4),
+(6233,"丛林守护者",4),
+(6234,"守望者",4),
+(6235,"大法师",4),
+(6236,"山丘之王",4),
+(6237,"圣骑士",4),
+(6238,"血法师",4),
+(6239,"剑圣",4),
+(6240,"先知",4),
+(6241,"牛头酋长",4),
+(6242,"暗影猎手",4),
+(6243,"死亡骑士",4),
+(6244,"恐惧魔王",4),
+(6245,"地穴领主",4),
+(6246,"亡灵",4),
+(6247,"牛头",4),
+(6248,"兽人",4),
+(6249,"地精修补匠",4),
+(6250,"黑暗游侠",4),
+(6251,"深渊领主",4),
+(6252,"熊猫酿酒师",4),
+(6253,"熊猫酒仙",4),
+(6254,"那迦海巫",4),
+(6255,"火焰领主",4),
+(6256,"兽王",4),
+(6257,"炼金术士",4),
+(6258,"希尔瓦娜斯",4),
+(6259,"瓦利玛萨斯",4),
+(6260,"阿尔萨斯",4),
+(6261,"吉安娜",4),
+(6262,"沃尔金",4),
+(6263,"奥尼克希亚",4),
+(6264,"暴风城",4),
+(6265,"铁炉堡",4),
+(6266,"幽暗城",4),
+(6267,"奥格瑞玛",4),
+(6268,"雷霆崖",4),
+(6269,"达纳苏斯",4),
+(6270,"奎尔萨拉斯",4),
+(6271,"永恒之井",4),
+(6272,"世界之树",4),
+(6273,"诺莫瑞根",4),
+(6274,"翡翠梦境",4),
+(6275,"海加尔",4),
+(6276,"月光林地",4),
+(6277,"德拉诺",4),
+(6278,"达拉然",4),
+(6279,"塞拉莫",4),
+(6280,"外域",4),
+(6281,"诺森德",4),
+(6282,"牛逼",4),
+(6283,"牛比",4),
+(6284,"傻叉",4),
+(6285,"洞房",4),
+(6286,"不败",4),
+(6287,"物博",4),
+(6288,"国家",4),
+(6289,"乳汁",4),
+(6290,"淫",4),
+(6291,"你妈",4),
+(6292,"他妈",4),
+(6293,"操",4),
+(6294,"狂抽猛送",4),
+(6295,"测试",4),
+(6296,"骂人",4),
+(6301,"暴雪",4),
+(6302,"矮人",4),
+(6303,"侏儒",4),
+(6305,"暗夜精灵",4),
+(6306,"人类",4),
+(6309,"巨魔",4),
+(6310,"战士",4),
+(6311,"法师",4),
+(6312,"牧师",4),
+(6313,"盗贼",4),
+(6314,"术士",4),
+(6315,"猎人",4),
+(6317,"萨满祭司",4),
+(6318,"德鲁伊",4),
+(6319,"中国",4),
+(6320,"日本",4),
+(6321,"狂抽",4),
+(6322,"猛插",4),
+(6323,"猛送",4),
+(6324,"狂插",4),
+(6325,"你爸",4),
+(6326,"艾泽拉斯",4),
+(6327,"卡利姆多",4),
+(6341,"butthhead",0),
+(6361,"\<fu[ck]+[aeiou]+",0),
+(6362,"官方人員",4),
+(6363,"國民黨",4),
+(6364,"親民黨",4),
+(6365,"民進黨",4),
+(6366,"台聯黨",4),
+(6367,"台獨",4),
+(6368,"台灣獨立",4),
+(6369,"陳水扁",4),
+(6370,"呂秀蓮",4),
+(6371,"宋楚瑜",4),
+(6372,"李登輝",4),
+(6373,"連戰",4),
+(6374,"馬英九",4),
+(6375,"謝長廷",4),
+(6376,"王俊博",4),
+(6377,"林榮一",4),
+(6838,"\<aasgeier\>",3),
+(6839,"\<abgefuckt\>",3),
+(6840,"\<abgespritzt\>",3),
+(6841,"\<abkacken\>",3),
+(6842,"\<abseiler\>",3),
+(6843,"\<abspritzen\>",3),
+(6844,"\<achselhaarratte\>",3),
+(6845,"\<achsellecker\>",3),
+(6846,"\<affenarsch\>",3),
+(6847,"\<affengesicht\>",3),
+(6848,"\<analbürste\>",3),
+(6849,"\<analerotiker\>",3),
+(6850,"\<analgeburt\>",3),
+(6851,"\<analintruder\>",3),
+(6852,"\<analkriecher\>",3),
+(6853,"\<analrakete\>",3),
+(6854,"\<analsex\>",3),
+(6855,"\<analtranse\>",3),
+(6856,"\<analtrompete\>",3),
+(6857,"\<anus\>",3),
+(6858,"\<anwichsen\>",3),
+(6859,"\<arier\>",3),
+(6860,"\<armleuchter\>",3),
+(6861,"\<arsch",3),
+(6862,"\<arsch\>",3),
+(6863,"\<arse\>",3),
+(6864,"\<arsehole\>",3),
+(6865,"\<aryan\>",3),
+(6866,"\<asselarsch\>",3),
+(6867,"\<asylantensau\>",3),
+(6868,"\<ausgeburt\>",3),
+(6869,"\<ausländer",3),
+(6870,"\<babystrich\>",3),
+(6871,"\<bahnhofsbücker\>",3),
+(6872,"\<baumhure\>",3),
+(6873,"\<bazille\>",3),
+(6874,"\<behämmert\>",3),
+(6875,"\<beschissen\>",3),
+(6876,"\<beschneiden\>",3),
+(6877,"\<beschnitten\>",3),
+(6878,"\<bettnässer\>",3),
+(6879,"\<beutelratte\>",3),
+(6880,"\<billighure\>",3),
+(6881,"\<blas\>",3),
+(6882,"\<bollen\>",3),
+(6883,"\<bordsteinschwalbe\>",3),
+(6884,"\<brechmittel\>",3),
+(6885,"\<buk*ake\>",3),
+(6886,"\<bumsbalken\>",3),
+(6887,"\<bumsbrötchen\>",3),
+(6888,"\<bumsen\>",3),
+(6889,"\<bumser\>",3),
+(6890,"\<callboy\>",3),
+(6891,"\<callgirl\>",3),
+(6892,"\<canaille\>",3),
+(6893,"\<cann[aio]bis\>",3),
+(6894,"\<cocaine\>",3),
+(6895,"\<cocksucker\>",3),
+(6896,"\<dämlack\>",3),
+(6897,"\<dämlich",3),
+(6898,"\<darmdübel\>",3),
+(6899,"\<daumenlutscher\>",3),
+(6900,"\<deppl?\>",3),
+(6901,"\<dickarsch\>",3),
+(6902,"\<dickschädel\>",3),
+(6903,"\<dildo\>",3),
+(6904,"\<dildolutscher\>",3),
+(6905,"\<dirne\>",3),
+(6906,"\<dödel\>",3),
+(6907,"\<doofbacke\>",3),
+(6908,"\<doofmann\>",3),
+(6909,"\<dopamin\>",3),
+(6910,"\<dorfdepp\>",3),
+(6911,"\<dösbattl\>",3),
+(6912,"\<döskopf\>",3),
+(6913,"\<dreckfurz\>",3),
+(6914,"\<drecks",3),
+(6915,"\<droge\>",3),
+(6916,"\<dummdödel\>",3),
+(6917,"\<dummfick\>",3),
+(6918,"\<dummschlumpf\>",3),
+(6919,"\<dummschwätzer\>",3),
+(6920,"\<dummschwein\>",3),
+(6921,"\<dunkelmann\>",3),
+(6922,"\<durchficken\>",3),
+(6923,"\<durchgefickt\>",3),
+(6924,"\<durchnehmen\>",3),
+(6925,"\<durchvögeln\>",3),
+(6926,"\<eichelbirne\>",3),
+(6928,"\<champagne\>",2),
+(6929,"\<cherokee \>",2),
+(6930,"\<cognac\>",2),
+(6931,"\<copulate\>",2),
+(6932,"\<corona\>",2),
+(6933,"\<crack\>",2),
+(6934,"\<damned\>",2),
+(6935,"\<deepthroat\>",2),
+(6936,"\<dietpills\>",2),
+(6937,"\<dope\>",2),
+(6938,"\<ecstacy\>",2),
+(6939,"\<extasy\>",2),
+(6940,"\<fornicat",2),
+(6941,"\<fusck",2),
+(6942,"\<fux",2),
+(6943,"\<ghb\>",2),
+(6944,"\<granddragon\>",2),
+(6945,"\<guiness\>",2),
+(6946,"\<hash\>",2),
+(6947,"\<hustler\>",2),
+(6948,"\<jackdaniels\>",2),
+(6949,"\<jennajameson\>",2),
+(6950,"\<jessicadee\>",2),
+(6951,"\<jeweldenyle\>",2),
+(6952,"\<jillkelly\>",2),
+(6953,"\<jimbeam\>",2),
+(6954,"\<josecuervo\>",2),
+(6955,"\<juliashton\>",2),
+(6956,"\<karadavis\>",2),
+(6957,"\<kif\>",2),
+(6958,"\<kikkityler \>",2),
+(6959,"\<kylacole\>",2),
+(6960,"\<kylieireland\>",2),
+(6961,"\<lancegear \>",2),
+(6962,"\<larryflynt\>",2),
+(6963,"\<lecher\>",2),
+(6964,"\<loloferrari\>",2),
+(6965,"\<lunalane\>",2),
+(6966,"\<maltliquor\>",2),
+(6967,"\<mariacheca\>",2),
+(6968,"\<mariatakagi\>",2),
+(6969,"\<marisadiaz \>",2),
+(6970,"\<markdalton  \>",2),
+(6971,"\<markwolff \>",2),
+(6972,"\<marycarey \>",2),
+(6973,"\<mimimiyagi\>",2),
+(6974,"\<nympho\>",2),
+(6975,"\<obsession\>",2),
+(6976,"\<opiate\>",2),
+(6977,"\<orgie\>",2),
+(6978,"\<pornstar\>",2),
+(6979,"\<prepubescent\>",2),
+(6980,"\<redneck\>",2),
+(6981,"\<reneelarue\>",2),
+(6982,"\<ryanconner \>",2),
+(6983,"\<ryanwagner \>",2),
+(6984,"\<sarastjames \>",2),
+(6985,"\<traceyadams\>",2),
+(6986,"\<tracilords\>",2),
+(6987,"\<tylerfaith\>",2),
+(6988,"\<urethra\>",2),
+(6989,"\<veronicahart\>",2),
+(6990,"\<weed\>",2),
+(6991,"\<wildturkey\>",2),
+(6992,"hefner\>",2),
+(6993,"\<asiacarrera\>",2),
+(6994,"\<aurorasnow\>",2),
+(6995,"\<bacardi\>",2),
+(6996,"\<scat\>",2),
+(6997,"\<scatology\>",2),
+(6998,"\<schnapps\>",2),
+(6999,"\<selenasteele\>",2),
+(7000,"\<sexy\>",2),
+(7001,"\<sherriangel\>",2),
+(7002,"\<skeetskeet\>",2),
+(7003,"\<vagina",2),
+(7004,"\<agentorange\>",2),
+(7005,"\<aids\>",2),
+(7006,"\<al[ck]ohol",2),
+(7007,"\<alecpowers\>",2),
+(7008,"\<alexwilcox\>",2),
+(7009,"\<anal\>",2),
+(7010,"\<angeladevi\>",2),
+(7011,"\<angeldust\>",2),
+(7012,"\<beer\>",2),
+(7013,"\<eomer\>",2),
+(7014,"butthhead",2),
+(7015,"\<sodomize\>",2),
+(7016,"\<sodomy\>",2),
+(7017,"\<sunsetthomas\>",2),
+(7018,"\<sylviasaint\>",2),
+(7019,"\<tequila\>",2),
+(7020,"\<terapatrick\>",2),
+(7021,"\<thc\>",2),
+(7022,"\<tiabella\>",2),
+(7023,"\<tommycruise\>",2),
+(7024,"\<tonyzerega\>",2),
+(7025,"\<vincevouyer\>",2),
+(7026,"\<vodka\>",2),
+(7027,"\<vulva\>",2),
+(7028,"\<w[ei]+n[ei]+r\>",2),
+(7029,"\<whiskey\>",2),
+(7030,"\<willclark\>",2),
+(7031,"aryan\>",2),
+(7032,"nazi\>",2),
+(7033,"\<anth?rax\>",2),
+(7034,"\<botox\>",2),
+(7035,"\<cairne\>",2),
+(7036,"\<crackdealer\>",2),
+(7037,"king\>",2),
+(7038,"\<darthjedi\>",2),
+(7039,"\<denethor\>",2),
+(7040,"\<duke",2),
+(7041,"\<dwalin\>",2),
+(7042,"\<ebola\>",2),
+(7043,"f[ue]+rst\>",2),
+(7044,"\<eternalhoden\>",2),
+(7045,"\<euthanasie\>",2),
+(7046,"\<fick",2),
+(7047,"\<frozenthrone\>",2),
+(7048,"\<gandhi\>",2),
+(7049,"\<ganja",2),
+(7050,"\<goebbels\>",2),
+(7051,"\<gott\>",2),
+(7052,"\<hgar\>",2),
+(7053,"\<heiland\>",2),
+(7054,"\<hendrix\>",2),
+(7055,"\<heroin",2),
+(7056,"porno\>",2),
+(7057,"\<[gk]adafi\>",2),
+(7058,"\<kiffer",2),
+(7059,"\<klitori",2),
+(7060,"\<kpd\>",2),
+(7061,"\<mariuhanna\>",2),
+(7062,"\<master",2),
+(7063,"\<meisteryoda\>",2),
+(7064,"\<mengele\>",2),
+(7065,"fick\>",2),
+(7066,"\<michaelmyers\>",2),
+(7067,"\<milkahase\>",2),
+(7068,"\<milkakuh\>",2),
+(7069,"\<nazghul\>",2),
+(7070,"\<porno",2),
+(7071,"\<princess",2),
+(7072,"\<prinz\>",2),
+(7073,"\<rammstein\>",2),
+(7074,"\<rasputin\>",2),
+(7075,"\<redbull\>",2),
+(7076,"\<richthofen\>",2),
+(7077,"\<sarin\>",2),
+(7078,"\<sith\>",2),
+(7079,"\<smeagol\>",2),
+(7080,"\<spikelee\>",2),
+(7081,"\<splintercell\>",2),
+(7082,"\<suicide\>",2),
+(7083,"\<tylerdurden\>",2),
+(7084,"\<vagimampf\>",2),
+(7085,"\<vanginus\>",2),
+(7086,"\<votzentroll\>",2),
+(7087,"\<warcrack\>",2),
+(7088,"\<winnipuuh\>",2),
+(7089,"\<wixxoor\>",2),
+(7090,"\<wowdiablo\>",2),
+(7091,"\<xerox\>",2),
+(7092,"\<absinthe\>",2),
+(7093,"\<absolut\>",2),
+(7094,"\<agnostic\>",2),
+(7095,"\<pussy",2),
+(7096,"\<rape\>",2),
+(7097,"\<aceofspades\>",2),
+(7098,"\<chinks\>",2),
+(7099,"\<dikes\>",2),
+(7100,"\<dildos\>",2),
+(7101,"\<sativa\>",2),
+(7102,"\<indica\>",2),
+(7103,"\<dike\>",2),
+(7104,"\<raped\>",2),
+(7105,"\<raping\>",2),
+(7106,"\<dyke\>",2),
+(7107,"\<mj\>",2),
+(7108,"\<doobie\>",2),
+(7109,"\<junk[ie]",2),
+(7110,"\<defecat",2),
+(7111,"\<alquaeda\>",2),
+(7112,"\<amerikkkan\>",2),
+(7113,"\<amphetamine\>",2),
+(7114,"\<ejaculate\>",2),
+(7115,"\<scrotum",2),
+(7116,"\<fisting\>",2),
+(7117,"\<aryan",2),
+(7118,"\<backdoor\>",2),
+(7119,"titt[iey]*s\>",2),
+(7120,"\<bi\>",2),
+(7121,"\<bigfatasscow\>",2),
+(7122,"bondage\>",2),
+(7123,"boobs\>",2),
+(7124,"breast\>",2),
+(7125,"\<buttocks\>",2),
+(7126,"\<[ck]oitus",2),
+(7127,"\<condom",2),
+(7128,"\<dahoe\>",2),
+(7129,"\<damn\>",2),
+(7130,"\<di[ae][rh]+ea",2),
+(7131,"\<dirtyho\>",2),
+(7132,"\<domination\>",2),
+(7133,"\<dutch\>",2),
+(7134,"\<enema\>",2),
+(7135,"\<erotic",2),
+(7136,"jackass\>",2),
+(7137,"\<facism\>",2),
+(7138,"\<fakeboobs\>",2),
+(7139,"\<fart\>",2),
+(7140,"\<fetish",2),
+(7141,"fetish\>",2),
+(7142,"\<filthymuslim\>",2),
+(7143,"\<focker\>",2),
+(7144,"\<foreplay\>",2),
+(7145,"\<foreskin\>",2),
+(7146,"\<frottage\>",2),
+(7147,"\<fuk\>",2),
+(7148,"\<fukass\>",2),
+(7149,"\<gay\>",2),
+(7150,"\<genital",2),
+(7151,"\<genitals\>",2),
+(7152,"\<gigolo\>",2),
+(7153,"\<gonorrhea\>",2),
+(7154,"\<grummz\>",2),
+(7155,"\<hentail\>",2),
+(7156,"\<holocaust\>",2),
+(7157,"\<horny\>",2),
+(7158,"\<hot\>",2),
+(7159,"\<j.*jameson\>",2),
+(7160,"\<lesb\>",2),
+(7161,"\<lesbian\>",2),
+(7162,"pussy\>",2),
+(7163,"\<lingerie\>",2),
+(7164,"\<lube\>",2),
+(7165,"\<lubricant\>",2),
+(7166,"\<lust\>",2),
+(7167,"\<asshole",2),
+(7168,"\<fingerbang\>",2),
+(7169,"\<gangbang\>",2),
+(7170,"\<gangrape\>",2),
+(7171,"\<pussies\>",2),
+(7172,"\<rapes\>",2),
+(7173,"\<fags\>",2),
+(7174,"boob",2),
+(7175,"\<blowjob",2),
+(7176,"\<feces",2),
+(7177,"\<nipple",2),
+(7178,"nipples\>",2),
+(7179,"prostitute",2),
+(7180,"\<coke\>",2),
+(7181,"\<morphine\>",2),
+(7182,"\<nudity\>",2),
+(7183,"\<nuts\>",2),
+(7184,"\<pagan\>",2),
+(7185,"\<perv\>",2),
+(7186,"\<pervert\>",2),
+(7187,"\<piss\>",2),
+(7188,"\<playboy\>",2),
+(7189,"\<playgirl\>",2),
+(7190,"\<polish\>",2),
+(7191,"\<prebubescent\>",2),
+(7192,"\<queer\>",2),
+(7193,"\<reich\>",2),
+(7194,"\<r.*jeremy\>",2),
+(7195,"\<screw\>",2),
+(7196,"\<seamen\>",2),
+(7197,"\<spreadmylegs\>",2),
+(7198,"\<stripper",2),
+(7199,"\<suck\>",2),
+(7200,"\<sukkitdown\>",2),
+(7201,"\<swingers\>",2),
+(7202,"\<teabag",2),
+(7203,"\<terrorist\>",2),
+(7204,"\<thickbush\>",2),
+(7205,"\<threesome\>",2),
+(7206,"\<snatch",2),
+(7207,"\<updabut\>",2),
+(7208,"\<vasect",2),
+(7209,"\<white\>",2),
+(7210,"cock\>",2),
+(7211,"blowjob\>",2),
+(7212,"\<tardpopsicle\>",2),
+(7213,"\<urmom\>",2),
+(7214,"\<turdsplat\>",2),
+(7215,"\<chokeoncocks\>",2),
+(7216,"\<littlearse\>",2),
+(7217,"\<holybijesis\>",2),
+(7218,"\<niggs\>",2),
+(7219,"\<sacofricosis\>",2),
+(7220,"\<polesmokers\>",2),
+(7221,"\<sega\>",2),
+(7222,"\<sex",2),
+(7223,"\<shadowbane\>",2),
+(7224,"\<shane",2),
+(7225,"\<shiznit\>",2),
+(7226,"\<shortbus\>",2),
+(7227,"\<erection\>",2),
+(7228,"\<smoked\>",2),
+(7229,"\<snowwhite\>",2),
+(7230,"\<oral\>",2),
+(7231,"\<sperm",2),
+(7232,"\<poop\>",2),
+(7233,"\<spluge\>",2),
+(7234,"\<suck",2),
+(7235,"\<supermario\>",2),
+(7236,"support",2),
+(7237,"\<sex\>",2),
+(7238,"\<suppuku\>",2),
+(7239,"\<sirbong\>",2),
+(7240,"\<spank\>",2),
+(7241,"\<speculum\>",2),
+(7242,"\<urinat",2),
+(7243,"\<venereal\>",2),
+(7244,"\<virgin\>",2),
+(7245,"\<advil\>",2),
+(7246,"\<amputee\>",2),
+(7247,"\<amtrak\>",2),
+(7248,"\<anis\>",2),
+(7249,"\<anolinctus\>",2),
+(7250,"\<antichrist\>",2),
+(7251,"\<arathorn\>",2),
+(7252,"\<arian\>",2),
+(7253,"\<arsonist\>",2),
+(7254,"\<blackenstein\>",2),
+(7255,"\<blacksabbath\>",2),
+(7256,"\<bnet\>",2),
+(7257,"\<bootylicious\>",2),
+(7258,"\<bra\>",2),
+(7259,"\<chinaman\>",2),
+(7260,"\<chronik\>",2),
+(7261,"\<colgate\>",2),
+(7262,"\<coprophagy\>",2),
+(7263,"\<crackhead\>",2),
+(7264,"\<dammit\>",2),
+(7265,"\<darky\>",2),
+(7266,"\<darvocet\>",2),
+(7267,"\<databasesys\>",2),
+(7268,"\<deckardcain\>",2),
+(7269,"\<dr\>",2),
+(7270,"\<dukeofwhales\>",2),
+(7271,"\<dumbass\>",2),
+(7272,"\<ecstasy\>",2),
+(7273,"\<ensign\>",2),
+(7274,"\<fcuk\>",2),
+(7275,"\<ferrari\>",2),
+(7276,"\<fetus",2),
+(7277,"\<fockerz\>",2),
+(7278,"\<fooker\>",2),
+(7279,"cunt\>",2),
+(7280,"\<ghandi\>",2),
+(7281,"\<gofukyorself\>",2),
+(7282,"\<gonadian\>",2),
+(7283,"\<goochgravy\>",2),
+(7284,"\<gookenator\>",2),
+(7285,"\<hemplock\>",2),
+(7286,"\<herpies\>",2),
+(7287,"\<homoerectus\>",2),
+(7288,"\<hore\>",2),
+(7289,"\<hotdamn\>",2),
+(7290,"\<hungelf\>",2),
+(7291,"\<indian\>",2),
+(7292,"\<irapekids\>",2),
+(7293,"\<ironchef\>",2),
+(7294,"\<jc\>",2),
+(7295,"\<jedi\>",2),
+(7296,"\<[gj]en[ao]cide\>",2),
+(7297,"\<jugs\>",2),
+(7298,"\<klismaphilia\>",2),
+(7299,"\<kokigami\>",2),
+(7300,"\<koon\>",2),
+(7301,"\<kosherpork\>",2),
+(7302,"\<lardass\>",2),
+(7303,"\<laurabush\>",2),
+(7304,"\<marlboroman\>",2),
+(7305,"\<masterbaiter\>",2),
+(7306,"\<maxipad\>",2),
+(7307,"\<menstrual\>",2),
+(7308,"\<mhz\>",2),
+(7309,"\<michaeljack\>",2),
+(7310,"bastard\>",2),
+(7311,"\<misogynist\>",2),
+(7312,"\<mister\>",2),
+(7313,"\<mr\>",2),
+(7314,"\<narcoticus\>",2),
+(7315,"\<nigahh\>",2),
+(7316,"\<npc",2),
+(7317,"\<nug\>",2),
+(7318,"\<nunriggers\>",2),
+(7319,"\<nwa\>",2),
+(7320,"\<omgwtf\>",2),
+(7321,"\<opiate",2),
+(7322,"\<oreos\>",2),
+(7323,"\<ovaltine\>",2),
+(7324,"\<papsmear\>",2),
+(7325,"\<pederasty\>",2),
+(7326,"\<penthouse\>",2),
+(7327,"\<pimp",2),
+(7328,"\<pinktaco\>",2),
+(7329,"mofo\>",2),
+(7330,"\<poomaster\>",2),
+(7331,"\<poonjuice\>",2),
+(7332,"\<poop",2),
+(7333,"\<pwnzor\>",2),
+(7334,"\<quadoushka\>",2),
+(7335,"\<r.*nad[ae]r\>",2),
+(7336,"\<stud\>",2),
+(7337,"\<submissive\>",2),
+(7338,"\<swiftnuggs\>",2),
+(7339,"\<swastika\>",2),
+(7340,"\<sybian\>",2),
+(7341,"\<toeofcamel\>",2),
+(7342,"\<tokyorose\>",2),
+(7343,"\<urmama\>",2),
+(7344,"\<voltron\>",2),
+(7345,"\<wangmaster\>",2),
+(7346,"\<wanker\>",2),
+(7347,"\<wetdream\>",2),
+(7348,"\<whitebread\>",2),
+(7349,"\<wigger\>",2),
+(7350,"\<williamhung\>",2),
+(7351,"\<windex\>",2),
+(7352,"\<witchking\>",2),
+(7353,"\<x.*x\>",2),
+(7354,"\<yosemitesam\>",2),
+(7355,"\<youranus\>",2),
+(7356,"\<zoolander\>",2),
+(7357,"condom\>",2),
+(7358,"\<kosher",2),
+(7359,"sexy",2),
+(7360,"\<bestiality\>",2),
+(7361,"\<black\>",2),
+(7362,"\<blackie\>",2),
+(7363,"\<bloodyhell\>",2),
+(7364,"\<blow\>",2),
+(7365,"\<blunt\>",2),
+(7366,"\<bollocks\>",2),
+(7367,"\<boobs",2),
+(7368,"\<boofer\>",2),
+(7369,"\<bourbon\>",2),
+(7370,"\<breast",2),
+(7371,"\<budda\>",2),
+(7372,"\<budlight\>",2),
+(7373,"\<budweiser\>",2),
+(7374,"\<bugger\>",2),
+(7375,"\<bustydusty\>",2),
+(7376,"\<butt\>",2),
+(7377,"\<buttman\>",2),
+(7378,"\<candyandes\>",2),
+(7379,"\<caucazoid\>",2),
+(7380,"\<cawk\>",2),
+(7381,"\<fu[ck]+[aeiou]+",2),
+(7382,"\<cervesa\>",3),
+(7383,"\<champagne\>",3),
+(7384,"\<chaseylain\>",3),
+(7385,"\<cheeba\>",3),
+(7386,"\<cherokee \>",3),
+(7387,"\<chino\>",3),
+(7388,"\<chloejones \>",3),
+(7389,"\<christilake\>",3),
+(7390,"\<chrisward \>",3),
+(7391,"\<cocostarfish\>",3),
+(7392,"\<cognac\>",3),
+(7393,"\<cootch\>",3),
+(7394,"\<cooter\>",3),
+(7395,"\<copulate\>",3),
+(7396,"\<cornholes\>",3),
+(7397,"\<corona\>",3),
+(7398,"\<crack\>",3),
+(7399,"\<cracker\>",3),
+(7400,"\<crap\>",3),
+(7401,"\<damned\>",3),
+(7402,"\<dank\>",3),
+(7403,"\<deancoulter\>",3),
+(7404,"\<debidiamond \>",3),
+(7405,"\<deepthroat\>",3),
+(7406,"\<devinderay \>",3),
+(7407,"\<dianazyle \>",3),
+(7408,"\<dietpills\>",3),
+(7409,"\<dirtysanchez\>",3),
+(7410,"\<ditavontease\>",3),
+(7411,"\<doggystyle\>",3),
+(7412,"\<dope\>",3),
+(7413,"\<duckbutter\>",3),
+(7414,"\<ecstacy\>",3),
+(7415,"\<edpowers \>",3),
+(7416,"\<eggplant\>",3),
+(7417,"\<ericaboyer \>",3),
+(7418,"\<extasy\>",3),
+(7419,"\<facial\>",3),
+(7420,"\<fluffer\>",3),
+(7421,"\<fornicat",3),
+(7422,"\<freebase\>",3),
+(7423,"\<fusck",3),
+(7424,"\<fux",3),
+(7425,"\<gagepowers\>",3),
+(7426,"\<gew\>",3),
+(7427,"\<ghb\>",3),
+(7428,"\<ghetto\>",3),
+(7429,"\<gingerhill\>",3),
+(7430,"\<gloryhole\>",3),
+(7431,"\<goldschlager\>",3),
+(7432,"\<goombah\>",3),
+(7433,"\<granddragon\>",3),
+(7434,"\<greaseball\>",3),
+(7435,"\<greaser\>",3),
+(7436,"\<gspot\>",3),
+(7437,"\<guiness\>",3),
+(7438,"\<gunja\>",3),
+(7439,"\<handjob\>",3),
+(7440,"\<hash\>",3),
+(7441,"\<headdoctor\>",3),
+(7442,"\<heidifleiss\>",3),
+(7443,"\<hmo\>",3),
+(7444,"\<honky\>",3),
+(7445,"\<hoodrat\>",3),
+(7446,"\<hookah\>",3),
+(7447,"\<horney\>",3),
+(7448,"\<hustler\>",3),
+(7449,"\<inarivachs\>",3),
+(7450,"\<j.*bobbit\>",3),
+(7451,"\<j.*holmes\>",3),
+(7452,"\<jackdaniels\>",3),
+(7453,"\<jadeeast\>",3),
+(7454,"\<jadehsu \>",3),
+(7455,"\<jadestclair\>",3),
+(7456,"\<jagermeister\>",3),
+(7457,"\<janacova\>",3),
+(7458,"\<jennahaze\>",3),
+(7459,"\<jennajameson\>",3),
+(7460,"\<jenteal\>",3),
+(7461,"\<jessicadee\>",3),
+(7462,"\<jeweldenyle\>",3),
+(7463,"\<jillkelly\>",3),
+(7464,"\<jimbeam\>",3),
+(7465,"\<josecuervo\>",3),
+(7466,"\<juliashton\>",3),
+(7467,"\<karadavis\>",3),
+(7468,"\<keef\>",3),
+(7469,"\<kif\>",3),
+(7470,"\<kikkityler \>",3),
+(7471,"\<kobetai\>",3),
+(7472,"\<kooter\>",3),
+(7473,"\<krystalsteal\>",3),
+(7474,"\<kyke\>",3),
+(7475,"\<kylacole\>",3),
+(7476,"\<kylieireland\>",3),
+(7477,"\<lancegear \>",3),
+(7478,"\<larryflynt\>",3),
+(7479,"\<lecher\>",3),
+(7480,"\<liquidx\>",3),
+(7481,"\<loloferrari\>",3),
+(7482,"\<long.*dong\>",3),
+(7483,"\<ludes\>",3),
+(7484,"\<lunalane\>",3),
+(7485,"\<maltliquor\>",3),
+(7486,"\<mariacheca\>",3),
+(7487,"\<mariatakagi\>",3),
+(7488,"\<marisadiaz \>",3),
+(7489,"\<markdalton  \>",3),
+(7490,"\<markwolff \>",3),
+(7491,"\<marycarey \>",3),
+(7492,"\<mayate\>",3),
+(7493,"\<meatwad\>",3),
+(7494,"\<methhead\>",3),
+(7495,"\<methmonster\>",3),
+(7496,"\<mikolee\>",3),
+(7497,"\<mimimiyagi\>",3),
+(7498,"\<moneyshot\>",3),
+(7499,"\<muff\>",3),
+(7500,"\<mushrooms\>",3),
+(7501,"\<nickelbag\>",3),
+(7502,"\<nikkibenz\>",3),
+(7503,"\<nikkidial\>",3),
+(7504,"\<nip\>",3),
+(7505,"\<nizzle\>",3),
+(7506,"\<nubian",3),
+(7507,"\<nympho\>",3),
+(7508,"\<obsession\>",3),
+(7509,"\<opiate\>",3),
+(7510,"\<orgy\>",3),
+(7511,"\<panties\>",3),
+(7512,"\<pecker\>",3),
+(7513,"\<peternorth\>",3),
+(7514,"\<pissedoff\>",3),
+(7515,"\<pissoff\>",3),
+(7516,"\<pornstar\>",3),
+(7517,"\<prepubescent\>",3),
+(7518,"\<prick\>",3),
+(7519,"\<pube\>",3),
+(7520,"\<punjab\>",3),
+(7521,"\<punkass\>",3),
+(7522,"\<pusse\>",3),
+(7523,"\<randywest\>",3),
+(7524,"\<rebeccalord\>",3),
+(7525,"\<rebeccaporn\>",3),
+(7526,"\<redneck\>",3),
+(7527,"\<reneelarue\>",3),
+(7528,"\<ricer\>",3),
+(7529,"\<rustytrumpet\>",3),
+(7530,"\<ryanconner \>",3),
+(7531,"\<ryanwagner \>",3),
+(7532,"\<sarastjames \>",3),
+(7533,"\<tosser\>",3),
+(7534,"\<tossingsalad\>",3),
+(7535,"\<tosssalad\>",3),
+(7536,"\<traceyadams\>",3),
+(7537,"\<tracilords\>",3),
+(7538,"\<tranny\>",3),
+(7539,"\<ttboy\>",3),
+(7540,"\<tyfox\>",3),
+(7541,"\<tylerfaith\>",3),
+(7542,"\<urethra\>",3),
+(7543,"\<veronicahart\>",3),
+(7544,"\<wankoff\>",3),
+(7545,"\<weed\>",3),
+(7546,"\<wej\>",3),
+(7547,"\<wench\>",3),
+(7548,"\<wildturkey\>",3),
+(7549,"hefner\>",3),
+(7550,"snatch\>",3),
+(7551,"vagina\>",3),
+(7552,"\<annaslut\>",3),
+(7553,"\<asiacarrera\>",3),
+(7554,"\<aurorasnow\>",3),
+(7555,"\<bacardi\>",3),
+(7556,"\<beaner\>",3),
+(7557,"\<beanlicker\>",3),
+(7558,"\<scat\>",3),
+(7559,"\<scatology\>",3),
+(7560,"\<schlong",3),
+(7561,"\<schnapps\>",3),
+(7562,"\<schoolboy",3),
+(7563,"\<selenasteele\>",3),
+(7564,"\<sexy\>",3),
+(7565,"\<seymorebutts\>",3),
+(7566,"\<sheethead\>",3),
+(7567,"\<sherriangel\>",3),
+(7568,"\<shizzle\>",3),
+(7569,"\<shlong\>",3),
+(7570,"\<shmegma\>",3),
+(7571,"\<shrooms\>",3),
+(7572,"\<skeet\>",3),
+(7573,"\<skeetskeet\>",3),
+(7574,"\<vagina",3),
+(7575,"\<adulteress\>",3),
+(7576,"\<adulterous\>",3),
+(7577,"\<adultery\>",3),
+(7578,"\<adultsonly\>",3),
+(7579,"\<agentorange\>",3),
+(7580,"\<aids\>",3),
+(7581,"\<al[ck]ohol",3),
+(7582,"\<alecpowers\>",3),
+(7583,"\<alexwilcox\>",3),
+(7584,"\<amaretto\>",3),
+(7585,"\<anal\>",3),
+(7586,"\<angeladevi\>",3),
+(7587,"\<angeldust\>",3),
+(7588,"\<anglo\>",3),
+(7589,"\<anheiser\>",3),
+(7590,"\<annamalle\>",3),
+(7591,"\<beer\>",3),
+(7592,"\<erzengel\>",3),
+(7593,"könig\>",3),
+(7594,"\<eomer\>",3),
+(7595,"butthead",3),
+(7596,"\<slope\>",3),
+(7597,"\<smack\>",3),
+(7598,"\<smut\>",3),
+(7599,"\<snowball",3),
+(7600,"\<sodomize\>",3),
+(7601,"\<sodomy\>",3),
+(7602,"\<speedball\>",3),
+(7603,"\<spew\>",3),
+(7604,"\<spreadeagle\>",3),
+(7605,"\<spunk\>",3),
+(7606,"\<std\>",3),
+(7607,"\<sunsetthomas\>",3),
+(7608,"\<sylviasaint\>",3),
+(7609,"\<teet[sz]\>",3),
+(7610,"\<tequila\>",3),
+(7611,"\<terapatrick\>",3),
+(7612,"\<thc\>",3),
+(7613,"\<tiabella\>",3),
+(7614,"\<toadlicker\>",3),
+(7615,"\<toak\>",3),
+(7616,"\<toke\>",3),
+(7617,"\<tombyron\>",3),
+(7618,"\<tommycruise\>",3),
+(7619,"\<tonyzerega\>",3),
+(7620,"\<tossalad\>",3),
+(7621,"\<vibrator\>",3),
+(7622,"\<vincevouyer\>",3),
+(7623,"\<vodka\>",3),
+(7624,"\<vulva\>",3),
+(7625,"\<w[ei]+n[ei]+r\>",3),
+(7626,"\<wank\>",3),
+(7627,"\<whackoff\>",3),
+(7628,"\<whiskey\>",3),
+(7629,"\<willclark\>",3),
+(7630,"\<yellow\>",3),
+(7631,"\<zigzag\>",3),
+(7632,"aryan\>",3),
+(7633,"\<acclaim\>",3),
+(7634,"\<amongoe",3),
+(7635,"\<anabolica\>",3),
+(7636,"\<analpunisher\>",3),
+(7637,"nazi\>",3),
+(7638,"\<anth?rax\>",3),
+(7639,"\<blasehase\>",3),
+(7640,"\<botox\>",3),
+(7641,"\<bueckstueck\>",3),
+(7642,"\<bumsnudel\>",3),
+(7643,"\<cairne\>",3),
+(7644,"\<christkind\>",3),
+(7645,"\<crackdealer\>",3),
+(7646,"king\>",3),
+(7647,"\<darthjedi\>",3),
+(7648,"\<denethor\>",3),
+(7649,"\<derneger\>",3),
+(7650,"\<diedroge\>",3),
+(7651,"\<dollybuster\>",3),
+(7652,"\<donpeperulez\>",3),
+(7653,"\<dopecheffe\>",3),
+(7654,"\<duke",3),
+(7655,"\<dwalin\>",3),
+(7656,"sucker\>",3),
+(7657,"\<ebola\>",3),
+(7658,"\<eichelkäse\>",3),
+(7659,"f[ue]+rst\>",3),
+(7660,"muschi\>",3),
+(7661,"\<eternalhoden\>",3),
+(7662,"\<euthanasie\>",3),
+(7663,"\<fick",3),
+(7664,"luder\>",3),
+(7665,"kacke\>",3),
+(7666,"\<fotz",3),
+(7667,"tussi\>",3),
+(7668,"\<frodobeutlin\>",3),
+(7669,"\<frozenthrone\>",3),
+(7670,"\<gandhi\>",3),
+(7671,"\<ganja",3),
+(7672,"\<gayoverlord\>",3),
+(7673,"\<geilebraut\>",3),
+(7674,"\<ginawild\>",3),
+(7675,"\<goebbels\>",3),
+(7676,"\<gott\>",3),
+(7677,"\<graftaliban\>",3),
+(7678,"\<hägar\>",3),
+(7679,"\<hanfernte\>",3),
+(7680,"\<heiland\>",3),
+(7681,"\<hendrix\>",3),
+(7682,"\<heroin",3),
+(7683,"\<hordenhure\>",3),
+(7684,"porno\>",3),
+(7685,"\<[gk]adafi\>",3),
+(7686,"\<kiffer",3),
+(7687,"\<kleineralki\>",3),
+(7688,"\<kleinerfurz\>",3),
+(7689,"\<klitori",3),
+(7690,"ficker\>",3),
+(7691,"\<kpd\>",3),
+(7692,"\<kruppstahl\>",3),
+(7693,"\<mariuhanna\>",3),
+(7694,"\<master",3),
+(7695,"\<meisteryoda\>",3),
+(7696,"\<mengele\>",3),
+(7697,"fick\>",3),
+(7698,"\<michaelmyers\>",3),
+(7699,"\<milkahase\>",3),
+(7700,"\<milkakuh\>",3),
+(7701,"\<mistst[ue]+ck\>",3),
+(7702,"\<moesen",3),
+(7703,"\<möse",3),
+(7704,"\<muschi",3),
+(7705,"\<nachgeburt\>",3),
+(7706,"\<nazghul\>",3),
+(7707,"\<negerin\>",3),
+(7708,"\<nikoleinchen\>",3),
+(7709,"\<onkeltom\>",3),
+(7710,"\<pimmel",3),
+(7711,"\<pimper",3),
+(7712,"\<pommespapst\>",3),
+(7713,"\<popobumser\>",3),
+(7714,"\<porno",3),
+(7715,"\<princess",3),
+(7716,"\<prinz\>",3),
+(7717,"\<rammstein\>",3),
+(7718,"\<rasputin\>",3),
+(7719,"\<redbull\>",3),
+(7720,"\<richthofen\>",3),
+(7721,"\<sarin\>",3),
+(7722,"\<schlampe",3),
+(7723,"\<schwanz",3),
+(7724,"\<sith\>",3),
+(7725,"\<smeagol\>",3),
+(7726,"\<sohngottes\>",3),
+(7727,"\<spikelee\>",3),
+(7728,"\<splintercell\>",3),
+(7729,"\<suicide\>",3),
+(7730,"\<suizidhoden\>",3),
+(7731,"\<terrortunte\>",3),
+(7732,"\<titanrosette\>",3),
+(7733,"\<tittenmaus\>",3),
+(7734,"\<tylerdurden\>",3),
+(7735,"\<vagimampf\>",3),
+(7736,"\<vanginus\>",3),
+(7737,"\<votzentroll\>",3),
+(7738,"\<warcrack\>",3),
+(7739,"\<winnipuuh\>",3),
+(7740,"\<wixxoor\>",3),
+(7741,"\<wowdiablo\>",3),
+(7742,"\<xerox\>",3),
+(7743,"schlampe\>",3),
+(7744,"zipfe?l\>",3),
+(7745,"\<zuhälter",3),
+(7746,"\<zwergpimmel\>",3),
+(7747,"18년",3),
+(7748,"18놈",3),
+(7749,"\<absinthe\>",3),
+(7750,"18새끼",3),
+(7751,"\<absolut\>",3),
+(7752,"\<chink\>",3),
+(7753,"\<agnostic\>",3),
+(7754,"\<pussy",3),
+(7755,"\<rape\>",3),
+(7756,"\<aceofspades\>",3),
+(7757,"\<pusher",3),
+(7758,"\<chinks\>",3),
+(7759,"\<dikes\>",3),
+(7760,"\<dildos\>",3),
+(7761,"\<sativa\>",3),
+(7762,"\<indica\>",3),
+(7763,"\<skunkweed\>",3),
+(7764,"\<dike\>",3),
+(7765,"\<raped\>",3),
+(7766,"\<raping\>",3),
+(7767,"dong",3),
+(7768,"\<dyke\>",3),
+(7769,"\<mj\>",3),
+(7770,"\<doobie\>",3),
+(7771,"\<stoner",3),
+(7772,"\<junk[ie]",3),
+(7773,"\<defecat",3),
+(7774,"\<alquaeda\>",3),
+(7775,"\<amerikkkan\>",3),
+(7776,"\<amphetamine\>",3),
+(7777,"\<ejaculate\>",3),
+(7778,"\<scrotum",3),
+(7779,"\<fisting\>",3),
+(7780,"\<arse",3),
+(7781,"\<cock",3),
+(7782,"\<aryan",3),
+(7783,"\<backdoor\>",3),
+(7784,"titt[iey]*s\>",3),
+(7785,"\<bi\>",3),
+(7786,"\<bigfatasscow\>",3),
+(7787,"bondage\>",3),
+(7788,"boobs\>",3),
+(7789,"breast\>",3),
+(7790,"\<buttocks\>",3),
+(7791,"\<[ck]oitus",3),
+(7792,"\<condom",3),
+(7793,"\<dahoe\>",3),
+(7794,"\<damn\>",3),
+(7795,"\<darkwanker\>",3),
+(7796,"\<di[ae][rh]+ea",3),
+(7797,"dick\>",3),
+(7798,"\<dirtyho\>",3),
+(7799,"\<domination\>",3),
+(7800,"\<dutch\>",3),
+(7801,"\<enema\>",3),
+(7802,"\<erotic",3),
+(7803,"jackass\>",3),
+(7804,"\<facism\>",3),
+(7805,"\<fakeboobs\>",3),
+(7806,"\<fart\>",3),
+(7807,"\<fetish",3),
+(7808,"fetish\>",3),
+(7809,"\<filthymuslim\>",3),
+(7810,"\<focker\>",3),
+(7811,"\<foreplay\>",3),
+(7812,"\<foreskin\>",3),
+(7813,"\<frottage\>",3),
+(7814,"\<fuk\>",3),
+(7815,"\<fukass\>",3),
+(7816,"\<gay\>",3),
+(7817,"\<genital",3),
+(7818,"\<genitals\>",3),
+(7819,"\<gigolo\>",3),
+(7820,"\<gonorrhea\>",3),
+(7821,"\<grummz\>",3),
+(7822,"\<hairyhorny\>",3),
+(7823,"\<hardboob\>",3),
+(7824,"\<hentail\>",3),
+(7825,"\<hiv\>",3),
+(7826,"\<holocaust\>",3),
+(7827,"\<horny\>",3),
+(7828,"\<hot\>",3),
+(7829,"\<j.*jameson\>",3),
+(7830,"\<kinky\>",3),
+(7831,"\<kraut\>",3),
+(7832,"\<lesb\>",3),
+(7833,"\<lesbian\>",3),
+(7834,"pussy\>",3),
+(7835,"\<lingerie\>",3),
+(7836,"\<load\>",3),
+(7837,"\<lube\>",3),
+(7838,"\<lubricant\>",3),
+(7839,"\<lust\>",3),
+(7840,"\<maidenhead\>",3),
+(7841,"후장뚫어",3),
+(7842,"\<asshole",3),
+(7843,"\<fingerbang\>",3),
+(7844,"\<gangbang\>",3),
+(7845,"\<gangrape\>",3),
+(7846,"\<japs\>",3),
+(7847,"\<jizzing\>",3),
+(7848,"\<gizzing\>",3),
+(7849,"\<pussies\>",3),
+(7850,"\<rapes\>",3),
+(7851,"\<saladtosser\>",3),
+(7852,"\<fags\>",3),
+(7853,"boob",3),
+(7854,"\<bast[aeiou]rd",3),
+(7855,"\<beastiality\>",3),
+(7856,"\<blowjob",3),
+(7857,"\<boffer\>",3),
+(7858,"\<clowjob\>",3),
+(7859,"\<donkeypunch\>",3),
+(7860,"\<fawker\>",3),
+(7861,"\<feces",3),
+(7862,"\<nipple",3),
+(7863,"nipples\>",3),
+(7864,"prostitute",3),
+(7865,"\<coke\>",3),
+(7866,"\<morphine\>",3),
+(7867,"\<nudity\>",3),
+(7868,"\<nuts\>",3),
+(7869,"\<pagan\>",3),
+(7870,"\<perv\>",3),
+(7871,"\<pervert\>",3),
+(7872,"\<phawk\>",3),
+(7873,"\<piss\>",3),
+(7874,"\<playboy\>",3),
+(7875,"\<playgirl\>",3),
+(7876,"\<polish\>",3),
+(7877,"\<prebubescent\>",3),
+(7878,"\<queer\>",3),
+(7879,"\<reich\>",3),
+(7880,"\<r.*jeremy\>",3),
+(7881,"\<screw\>",3),
+(7882,"\<seamen\>",3),
+(7883,"\<spreadmylegs\>",3),
+(7884,"\<stripper",3),
+(7885,"\<suck\>",3),
+(7886,"\<sukkitdown\>",3),
+(7887,"\<swingers\>",3),
+(7888,"\<teabag",3),
+(7889,"\<terrorist\>",3),
+(7890,"\<thickbush\>",3),
+(7891,"\<threesome\>",3),
+(7892,"\<snatch",3),
+(7893,"\<updabut\>",3),
+(7894,"\<vasect",3),
+(7895,"\<white\>",3),
+(7896,"\<negro",3),
+(7897,"\<tinytits\>",3),
+(7898,"cock\>",3),
+(7899,"blowjob\>",3),
+(7900,"\<tardpopsicle\>",3),
+(7901,"\<urmom\>",3),
+(7902,"fag\>",3),
+(7903,"\<dick",3),
+(7904,"\<turdsplat\>",3),
+(7905,"\<chokeoncocks\>",3),
+(7906,"\<littlearse\>",3),
+(7907,"\<holybijesis\>",3),
+(7908,"\<niggs\>",3),
+(7909,"\<sacofricosis\>",3),
+(7910,"\<polesmokers\>",3),
+(7911,"\<sega\>",3),
+(7912,"\<sex",3),
+(7913,"\<shadowbane\>",3),
+(7914,"\<shane",3),
+(7915,"\<shiznit\>",3),
+(7916,"\<shortbus\>",3),
+(7917,"\<tramps\>",3),
+(7918,"\<erection\>",3),
+(7919,"\<smoked\>",3),
+(7920,"\<snowwhite\>",3),
+(7921,"\<oral\>",3),
+(7922,"\<sperm",3),
+(7923,"\<poop\>",3),
+(7924,"\<spluge\>",3),
+(7925,"\<suck",3),
+(7926,"\<supermario\>",3),
+(7927,"support",3),
+(7928,"\<sex\>",3),
+(7929,"\<suppuku\>",3),
+(7930,"\<sirbong\>",3),
+(7931,"\<spank\>",3),
+(7932,"\<speculum\>",3),
+(7933,"\<streaker",3),
+(7934,"\<tribadism\>",3),
+(7935,"\<upmybutthole\>",3),
+(7936,"\<urinat",3),
+(7937,"\<venereal\>",3),
+(7938,"\<virgin\>",3),
+(7939,"\<warslut\>",3),
+(7940,"\<wood\>",3),
+(7941,"\<advil\>",3),
+(7942,"\<amputee\>",3),
+(7943,"\<amtrak\>",3),
+(7944,"\<anis\>",3),
+(7945,"\<anolinctus\>",3),
+(7946,"\<antichrist\>",3),
+(7947,"\<arathorn\>",3),
+(7948,"\<arian\>",3),
+(7949,"\<arsonist\>",3),
+(7950,"\<blackenstein\>",3),
+(7951,"\<blacksabbath\>",3),
+(7952,"\<bnet\>",3),
+(7953,"\<bootylicious\>",3),
+(7954,"\<bra\>",3),
+(7955,"\<chinaman\>",3),
+(7956,"\<chronik\>",3),
+(7957,"\<colgate\>",3),
+(7958,"\<coprophagy\>",3),
+(7959,"\<crackhead\>",3),
+(7960,"\<dammit\>",3),
+(7961,"\<darky\>",3),
+(7962,"\<darvocet\>",3),
+(7963,"\<databasesys\>",3),
+(7964,"\<deckardcain\>",3),
+(7965,"\<dr\>",3),
+(7966,"\<dukeofwhales\>",3),
+(7967,"\<dumbass\>",3),
+(7968,"\<ecstasy\>",3),
+(7969,"\<ensign\>",3),
+(7970,"\<fcuk\>",3),
+(7971,"\<ferrari\>",3),
+(7972,"\<fetus",3),
+(7973,"\<fockerz\>",3),
+(7974,"\<fooker\>",3),
+(7975,"cunt\>",3),
+(7976,"\<ghandi\>",3),
+(7977,"\<gofukyorself\>",3),
+(7978,"\<gonadian\>",3),
+(7979,"\<goochgravy\>",3),
+(7980,"\<gookenator\>",3),
+(7981,"\<hemplock\>",3),
+(7982,"\<herpies\>",3),
+(7983,"\<homoerectus\>",3),
+(7984,"\<hore\>",3),
+(7985,"\<hotdamn\>",3),
+(7986,"\<hungelf\>",3),
+(7987,"\<indian\>",3),
+(7988,"\<irapekids\>",3),
+(7989,"\<ironchef\>",3),
+(7990,"\<jc\>",3),
+(7991,"\<jedi\>",3),
+(7992,"\<[gj]en[ao]cide\>",3),
+(7993,"\<jugs\>",3),
+(7994,"\<klismaphilia\>",3),
+(7995,"\<kokigami\>",3),
+(7996,"\<koon\>",3),
+(7997,"\<kosherpork\>",3),
+(7998,"\<lardass\>",3),
+(7999,"\<laurabush\>",3),
+(8000,"\<marlboroman\>",3),
+(8001,"\<masterbaiter\>",3),
+(8002,"\<maxipad\>",3),
+(8003,"\<menstrual\>",3),
+(8004,"\<mhz\>",3),
+(8005,"\<michaeljack\>",3),
+(8006,"bastard\>",3),
+(8007,"\<misogynist\>",3),
+(8008,"\<mister\>",3),
+(8009,"\<mr\>",3),
+(8010,"\<narcoticus\>",3),
+(8011,"\<nigahh\>",3),
+(8012,"\<npc",3),
+(8013,"\<nug\>",3),
+(8014,"\<nunriggers\>",3),
+(8015,"\<nwa\>",3),
+(8016,"\<omgwtf\>",3),
+(8017,"\<opiate",3),
+(8018,"\<oreos\>",3),
+(8019,"\<ovaltine\>",3),
+(8020,"\<papsmear\>",3),
+(8021,"\<pederasty\>",3),
+(8022,"\<penthouse\>",3),
+(8023,"\<pimp",3),
+(8024,"\<pinktaco\>",3),
+(8025,"mofo\>",3),
+(8026,"\<poomaster\>",3),
+(8027,"\<poonjuice\>",3),
+(8028,"\<poop",3),
+(8029,"\<pwnzor\>",3),
+(8030,"\<quadoushka\>",3),
+(8031,"\<r.*nad[ae]r\>",3),
+(8032,"\<stud\>",3),
+(8033,"\<submissive\>",3),
+(8034,"\<swiftnuggs\>",3),
+(8035,"\<trans",3),
+(8036,"\<uglynig\>",3),
+(8037,"\<swastika\>",3),
+(8038,"\<sybian\>",3),
+(8039,"\<toeofcamel\>",3),
+(8040,"\<tokyorose\>",3),
+(8041,"\<urmama\>",3),
+(8042,"\<voltron\>",3),
+(8043,"\<wangmaster\>",3),
+(8044,"\<wanker\>",3),
+(8045,"\<wetdream\>",3),
+(8046,"\<whitebread\>",3),
+(8047,"\<wigger\>",3),
+(8048,"\<williamhung\>",3),
+(8049,"\<windex\>",3),
+(8050,"\<witchking\>",3),
+(8051,"\<x.*x\>",3),
+(8052,"\<yosemitesam\>",3),
+(8053,"\<youranus\>",3),
+(8054,"\<zoolander\>",3),
+(8055,"condom\>",3),
+(8056,"jebus\>",3),
+(8057,"\<kosher",3),
+(8058,"menstrual",3),
+(8059,"sexy",3),
+(8060,"\<bestiality\>",3),
+(8061,"\<bizzle\>",3),
+(8062,"\<black\>",3),
+(8063,"\<blackie\>",3),
+(8064,"\<bloodyhell\>",3),
+(8065,"\<blow\>",3),
+(8066,"\<blunt\>",3),
+(8067,"\<bollocks\>",3),
+(8068,"\<boobs",3),
+(8069,"\<boofer\>",3),
+(8070,"\<bourbon\>",3),
+(8071,"\<brazuca\>",3),
+(8072,"\<breast",3),
+(8073,"\<budda\>",3),
+(8074,"\<buddahead\>",3),
+(8075,"\<budlight\>",3),
+(8076,"\<budweiser\>",3),
+(8077,"\<bugger\>",3),
+(8078,"\<bustydusty\>",3),
+(8079,"\<butt\>",3),
+(8080,"\<buttman\>",3),
+(8081,"\<candyandes\>",3),
+(8082,"\<caucazoid\>",3),
+(8083,"\<cawk\>",3),
+(8084,"\<fu[ck]+[aeiou]+",3),
+(8085,"\<cervesa\>",4),
+(8086,"\<champagne\>",4),
+(8087,"\<chaseylain\>",4),
+(8088,"\<cheeba\>",4),
+(8089,"\<cherokee \>",4),
+(8090,"\<chino\>",4),
+(8091,"\<chloejones \>",4),
+(8092,"\<christilake\>",4),
+(8093,"\<chrisward \>",4),
+(8094,"\<cocostarfish\>",4),
+(8095,"\<cognac\>",4),
+(8096,"\<cootch\>",4),
+(8097,"\<cooter\>",4),
+(8098,"\<copulate\>",4),
+(8099,"\<cornholes\>",4),
+(8100,"\<corona\>",4),
+(8101,"\<crack\>",4),
+(8102,"\<cracker\>",4),
+(8103,"\<crap\>",4),
+(8104,"\<damned\>",4),
+(8105,"\<dank\>",4),
+(8106,"\<deancoulter\>",4),
+(8107,"\<debidiamond \>",4),
+(8108,"\<deepthroat\>",4),
+(8109,"\<devinderay \>",4),
+(8110,"\<dianazyle \>",4),
+(8111,"\<dietpills\>",4),
+(8112,"\<dirtysanchez\>",4),
+(8113,"\<ditavontease\>",4),
+(8114,"\<doggystyle\>",4),
+(8115,"\<dope\>",4),
+(8116,"\<duckbutter\>",4),
+(8117,"\<ecstacy\>",4),
+(8118,"\<edpowers \>",4),
+(8119,"\<eggplant\>",4),
+(8120,"\<ericaboyer \>",4),
+(8121,"\<extasy\>",4),
+(8122,"\<facial\>",4),
+(8123,"\<fluffer\>",4),
+(8124,"\<fornicat",4),
+(8125,"\<freebase\>",4),
+(8126,"\<fusck",4),
+(8127,"\<fux",4),
+(8128,"\<gagepowers\>",4),
+(8129,"\<gew\>",4),
+(8130,"\<ghb\>",4),
+(8131,"\<ghetto\>",4),
+(8132,"\<gingerhill\>",4),
+(8133,"\<gloryhole\>",4),
+(8134,"\<goldschlager\>",4),
+(8135,"\<goombah\>",4),
+(8136,"\<granddragon\>",4),
+(8137,"\<greaseball\>",4),
+(8138,"\<greaser\>",4),
+(8139,"\<gspot\>",4),
+(8140,"\<guiness\>",4),
+(8141,"\<gunja\>",4),
+(8142,"\<handjob\>",4),
+(8143,"\<hash\>",4),
+(8144,"\<headdoctor\>",4),
+(8145,"\<heidifleiss\>",4),
+(8146,"\<hmo\>",4),
+(8147,"\<honky\>",4),
+(8148,"\<hoodrat\>",4),
+(8149,"\<hookah\>",4),
+(8150,"\<horney\>",4),
+(8151,"\<hustler\>",4),
+(8152,"\<inarivachs\>",4),
+(8153,"\<j.*bobbit\>",4),
+(8154,"\<j.*holmes\>",4),
+(8155,"\<jackdaniels\>",4),
+(8156,"\<jadeeast\>",4),
+(8157,"\<jadehsu \>",4),
+(8158,"\<jadestclair\>",4),
+(8159,"\<jagermeister\>",4),
+(8160,"\<janacova\>",4),
+(8161,"\<jennahaze\>",4),
+(8162,"\<jennajameson\>",4),
+(8163,"\<jenteal\>",4),
+(8164,"\<jessicadee\>",4),
+(8165,"\<jeweldenyle\>",4),
+(8166,"\<jillkelly\>",4),
+(8167,"\<jimbeam\>",4),
+(8168,"\<josecuervo\>",4),
+(8169,"\<juliashton\>",4),
+(8170,"\<karadavis\>",4),
+(8171,"\<keef\>",4),
+(8172,"\<kif\>",4),
+(8173,"\<kikkityler \>",4),
+(8174,"\<kobetai\>",4),
+(8175,"\<kooter\>",4),
+(8176,"\<krystalsteal\>",4),
+(8177,"\<kyke\>",4),
+(8178,"\<kylacole\>",4),
+(8179,"\<kylieireland\>",4),
+(8180,"\<lancegear \>",4),
+(8181,"\<larryflynt\>",4),
+(8182,"\<lecher\>",4),
+(8183,"\<liquidx\>",4),
+(8184,"\<loloferrari\>",4),
+(8185,"\<long.*dong\>",4),
+(8186,"\<ludes\>",4),
+(8187,"\<lunalane\>",4),
+(8188,"\<maltliquor\>",4),
+(8189,"\<mariacheca\>",4),
+(8190,"\<mariatakagi\>",4),
+(8191,"\<marisadiaz \>",4),
+(8192,"\<markdalton  \>",4),
+(8193,"\<markwolff \>",4),
+(8194,"\<marycarey \>",4),
+(8195,"\<mayate\>",4),
+(8196,"\<meatwad\>",4),
+(8197,"\<methhead\>",4),
+(8198,"\<methmonster\>",4),
+(8199,"\<mikolee\>",4),
+(8200,"\<mimimiyagi\>",4),
+(8201,"\<moneyshot\>",4),
+(8202,"\<muff\>",4),
+(8203,"\<mushrooms\>",4),
+(8204,"\<nickelbag\>",4),
+(8205,"\<nikkibenz\>",4),
+(8206,"\<nikkidial\>",4),
+(8207,"\<nip\>",4),
+(8208,"\<nizzle\>",4),
+(8209,"\<nubian",4),
+(8210,"\<nympho\>",4),
+(8211,"\<obsession\>",4),
+(8212,"\<opiate\>",4),
+(8213,"\<orgy\>",4),
+(8214,"\<panties\>",4),
+(8215,"\<pecker\>",4),
+(8216,"\<peternorth\>",4),
+(8217,"\<pissedoff\>",4),
+(8218,"\<pissoff\>",4),
+(8219,"\<pornstar\>",4),
+(8220,"\<prepubescent\>",4),
+(8221,"\<prick\>",4),
+(8222,"\<pube\>",4),
+(8223,"\<punjab\>",4),
+(8224,"\<punkass\>",4),
+(8225,"\<pusse\>",4),
+(8226,"\<randywest\>",4),
+(8227,"\<rebeccalord\>",4),
+(8228,"\<rebeccaporn\>",4),
+(8229,"\<redneck\>",4),
+(8230,"\<reneelarue\>",4),
+(8231,"\<ricer\>",4),
+(8232,"\<rustytrumpet\>",4),
+(8233,"\<ryanconner \>",4),
+(8234,"\<ryanwagner \>",4),
+(8235,"\<sarastjames \>",4),
+(8236,"\<tosser\>",4),
+(8237,"\<tossingsalad\>",4),
+(8238,"\<tosssalad\>",4),
+(8239,"\<traceyadams\>",4),
+(8240,"\<tracilords\>",4),
+(8241,"\<tranny\>",4),
+(8242,"\<ttboy\>",4),
+(8243,"\<tyfox\>",4),
+(8244,"\<tylerfaith\>",4),
+(8245,"\<urethra\>",4),
+(8246,"\<veronicahart\>",4),
+(8247,"\<wankoff\>",4),
+(8248,"\<weed\>",4),
+(8249,"\<wej\>",4),
+(8250,"\<wench\>",4),
+(8251,"\<wildturkey\>",4),
+(8252,"hefner\>",4),
+(8253,"snatch\>",4),
+(8254,"vagina\>",4),
+(8255,"\<annaslut\>",4),
+(8256,"\<asiacarrera\>",4),
+(8257,"\<aurorasnow\>",4),
+(8258,"\<bacardi\>",4),
+(8259,"\<beaner\>",4),
+(8260,"\<beanlicker\>",4),
+(8261,"\<scat\>",4),
+(8262,"\<scatology\>",4),
+(8263,"\<schlong",4),
+(8264,"\<schnapps\>",4),
+(8265,"\<schoolboy",4),
+(8266,"\<selenasteele\>",4),
+(8267,"\<sexy\>",4),
+(8268,"\<seymorebutts\>",4),
+(8269,"\<sheethead\>",4),
+(8270,"\<sherriangel\>",4),
+(8271,"\<shizzle\>",4),
+(8272,"\<shlong\>",4),
+(8273,"\<shmegma\>",4),
+(8274,"\<shrooms\>",4),
+(8275,"\<skeet\>",4),
+(8276,"\<skeetskeet\>",4),
+(8277,"\<vagina",4),
+(8278,"\<adulteress\>",4),
+(8279,"\<adulterous\>",4),
+(8280,"\<adultery\>",4),
+(8281,"\<adultsonly\>",4),
+(8282,"\<agentorange\>",4),
+(8283,"\<aids\>",4),
+(8284,"\<al[ck]ohol",4),
+(8285,"\<alecpowers\>",4),
+(8286,"\<alexwilcox\>",4),
+(8287,"\<amaretto\>",4),
+(8288,"\<anal\>",4),
+(8289,"\<angeladevi\>",4),
+(8290,"\<angeldust\>",4),
+(8291,"\<anglo\>",4),
+(8292,"\<anheiser\>",4),
+(8293,"\<annamalle\>",4),
+(8294,"\<beer\>",4),
+(8295,"\<erzengel\>",4),
+(8296,"könig\>",4),
+(8297,"\<eomer\>",4),
+(8298,"butthhead",4),
+(8299,"\<slope\>",4),
+(8300,"\<smack\>",4),
+(8301,"\<smut\>",4),
+(8302,"\<snowball",4),
+(8303,"\<sodomize\>",4),
+(8304,"\<sodomy\>",4),
+(8305,"\<speedball\>",4),
+(8306,"\<spew\>",4),
+(8307,"\<spreadeagle\>",4),
+(8308,"\<spunk\>",4),
+(8309,"\<std\>",4),
+(8310,"\<sunsetthomas\>",4),
+(8311,"\<sylviasaint\>",4),
+(8312,"\<teet[sz]\>",4),
+(8313,"\<tequila\>",4),
+(8314,"\<terapatrick\>",4),
+(8315,"\<thc\>",4),
+(8316,"\<tiabella\>",4),
+(8317,"\<toadlicker\>",4),
+(8318,"\<toak\>",4),
+(8319,"\<toke\>",4),
+(8320,"\<tombyron\>",4),
+(8321,"\<tommycruise\>",4),
+(8322,"\<tonyzerega\>",4),
+(8323,"\<tossalad\>",4),
+(8324,"\<vibrator\>",4),
+(8325,"\<vincevouyer\>",4),
+(8326,"\<vodka\>",4),
+(8327,"\<vulva\>",4),
+(8328,"\<w[ei]+n[ei]+r\>",4),
+(8329,"\<wank\>",4),
+(8330,"\<whackoff\>",4),
+(8331,"\<whiskey\>",4),
+(8332,"\<willclark\>",4),
+(8333,"\<yellow\>",4),
+(8334,"\<zigzag\>",4),
+(8335,"aryan\>",4),
+(8336,"\<acclaim\>",4),
+(8337,"\<amongoe",4),
+(8338,"\<anabolica\>",4),
+(8339,"\<analpunisher\>",4),
+(8340,"nazi\>",4),
+(8341,"\<anth?rax\>",4),
+(8342,"\<blasehase\>",4),
+(8343,"\<botox\>",4),
+(8344,"\<bueckstueck\>",4),
+(8345,"\<bumsnudel\>",4),
+(8346,"\<cairne\>",4),
+(8347,"\<christkind\>",4),
+(8348,"\<crackdealer\>",4),
+(8349,"king\>",4),
+(8350,"\<darthjedi\>",4),
+(8351,"\<denethor\>",4),
+(8352,"\<derneger\>",4),
+(8353,"\<diedroge\>",4),
+(8354,"\<dollybuster\>",4),
+(8355,"\<donpeperulez\>",4),
+(8356,"\<dopecheffe\>",4),
+(8357,"\<duke",4),
+(8358,"\<dwalin\>",4),
+(8359,"sucker\>",4),
+(8360,"\<ebola\>",4),
+(8361,"\<eichelkäse\>",4),
+(8362,"f[ue]+rst\>",4),
+(8363,"muschi\>",4),
+(8364,"\<eternalhoden\>",4),
+(8365,"\<euthanasie\>",4),
+(8366,"\<fick",4),
+(8367,"luder\>",4),
+(8368,"kacke\>",4),
+(8369,"\<fotz",4),
+(8370,"tussi\>",4),
+(8371,"\<frodobeutlin\>",4),
+(8372,"\<frozenthrone\>",4),
+(8373,"\<gandhi\>",4),
+(8374,"\<ganja",4),
+(8375,"\<gayoverlord\>",4),
+(8376,"\<geilebraut\>",4),
+(8377,"\<ginawild\>",4),
+(8378,"\<goebbels\>",4),
+(8379,"\<gott\>",4),
+(8380,"\<graftaliban\>",4),
+(8381,"\<hägar\>",4),
+(8382,"\<hanfernte\>",4),
+(8383,"\<heiland\>",4),
+(8384,"\<hendrix\>",4),
+(8385,"\<heroin",4),
+(8386,"\<hordenhure\>",4),
+(8387,"porno\>",4),
+(8388,"\<[gk]adafi\>",4),
+(8389,"\<kiffer",4),
+(8390,"\<kleineralki\>",4),
+(8391,"\<kleinerfurz\>",4),
+(8392,"\<klitori",4),
+(8393,"ficker\>",4),
+(8394,"\<kpd\>",4),
+(8395,"\<kruppstahl\>",4),
+(8396,"\<mariuhanna\>",4),
+(8397,"\<master",4),
+(8398,"\<meisteryoda\>",4),
+(8399,"\<mengele\>",4),
+(8400,"fick\>",4),
+(8401,"\<michaelmyers\>",4),
+(8402,"\<milkahase\>",4),
+(8403,"\<milkakuh\>",4),
+(8404,"\<mistst[ue]+ck\>",4),
+(8405,"\<moesen",4),
+(8406,"\<möse",4),
+(8407,"\<muschi",4),
+(8408,"\<nachgeburt\>",4),
+(8409,"\<nazghul\>",4),
+(8410,"\<negerin\>",4),
+(8411,"\<nikoleinchen\>",4),
+(8412,"\<onkeltom\>",4),
+(8413,"\<pimmel",4),
+(8414,"\<pimper",4),
+(8415,"\<pommespapst\>",4),
+(8416,"\<popobumser\>",4),
+(8417,"\<porno",4),
+(8418,"\<princess",4),
+(8419,"\<prinz\>",4),
+(8420,"\<rammstein\>",4),
+(8421,"\<rasputin\>",4),
+(8422,"\<redbull\>",4),
+(8423,"\<richthofen\>",4),
+(8424,"\<sarin\>",4),
+(8425,"\<schlampe",4),
+(8426,"\<schwanz",4),
+(8427,"\<sith\>",4),
+(8428,"\<smeagol\>",4),
+(8429,"\<sohngottes\>",4),
+(8430,"\<spikelee\>",4),
+(8431,"\<splintercell\>",4),
+(8432,"\<suicide\>",4),
+(8433,"\<suizidhoden\>",4),
+(8434,"\<terrortunte\>",4),
+(8435,"\<titanrosette\>",4),
+(8436,"\<tittenmaus\>",4),
+(8437,"\<tylerdurden\>",4),
+(8438,"\<vagimampf\>",4),
+(8439,"\<vanginus\>",4),
+(8440,"\<votzentroll\>",4),
+(8441,"\<warcrack\>",4),
+(8442,"\<winnipuuh\>",4),
+(8443,"\<wixxoor\>",4),
+(8444,"\<wowdiablo\>",4),
+(8445,"\<xerox\>",4),
+(8446,"schlampe\>",4),
+(8447,"\<zwergpimmel\>",4),
+(8448,"\<absinthe\>",4),
+(8449,"\<absolut\>",4),
+(8450,"\<chink\>",4),
+(8451,"\<agnostic\>",4),
+(8452,"\<pussy",4),
+(8453,"\<rape\>",4),
+(8454,"\<aceofspades\>",4),
+(8455,"\<pusher",4),
+(8456,"\<chinks\>",4),
+(8457,"\<dikes\>",4),
+(8458,"\<dildos\>",4),
+(8459,"\<sativa\>",4),
+(8460,"\<indica\>",4),
+(8461,"\<skunkweed\>",4),
+(8462,"\<dike\>",4),
+(8463,"\<raped\>",4),
+(8464,"\<raping\>",4),
+(8465,"dong",4),
+(8466,"\<dyke\>",4),
+(8467,"\<mj\>",4),
+(8468,"\<doobie\>",4),
+(8469,"\<stoner",4),
+(8470,"\<junk[ie]",4),
+(8471,"\<defecat",4),
+(8472,"\<alquaeda\>",4),
+(8473,"\<amerikkkan\>",4),
+(8474,"\<amphetamine\>",4),
+(8475,"\<ejaculate\>",4),
+(8476,"\<scrotum",4),
+(8477,"\<fisting\>",4),
+(8478,"\<arse",4),
+(8479,"\<cock",4),
+(8480,"\<aryan",4),
+(8481,"\<backdoor\>",4),
+(8482,"titt[iey]*s\>",4),
+(8483,"\<bi\>",4),
+(8484,"\<bigfatasscow\>",4),
+(8485,"bondage\>",4),
+(8486,"boobs\>",4),
+(8487,"breast\>",4),
+(8488,"\<buttocks\>",4),
+(8489,"\<[ck]oitus",4),
+(8490,"\<condom",4),
+(8491,"\<dahoe\>",4),
+(8492,"\<damn\>",4),
+(8493,"\<darkwanker\>",4),
+(8494,"\<di[ae][rh]+ea",4),
+(8495,"dick\>",4),
+(8496,"\<dirtyho\>",4),
+(8497,"\<domination\>",4),
+(8498,"\<dutch\>",4),
+(8499,"\<enema\>",4),
+(8500,"\<erotic",4),
+(8501,"jackass\>",4),
+(8502,"\<facism\>",4),
+(8503,"\<fakeboobs\>",4),
+(8504,"\<fart\>",4),
+(8505,"\<fetish",4),
+(8506,"fetish\>",4),
+(8507,"\<filthymuslim\>",4),
+(8508,"\<focker\>",4),
+(8509,"\<foreplay\>",4),
+(8510,"\<foreskin\>",4),
+(8511,"\<frottage\>",4),
+(8512,"\<fuk\>",4),
+(8513,"\<fukass\>",4),
+(8514,"\<gay\>",4),
+(8515,"\<genital",4),
+(8516,"\<genitals\>",4),
+(8517,"\<gigolo\>",4),
+(8518,"\<gonorrhea\>",4),
+(8519,"\<grummz\>",4),
+(8520,"\<hairyhorny\>",4),
+(8521,"\<hardboob\>",4),
+(8522,"\<hentail\>",4),
+(8523,"\<hiv\>",4),
+(8524,"\<holocaust\>",4),
+(8525,"\<horny\>",4),
+(8526,"\<hot\>",4),
+(8527,"\<j.*jameson\>",4),
+(8528,"\<kinky\>",4),
+(8529,"\<kraut\>",4),
+(8530,"\<lesb\>",4),
+(8531,"\<lesbian\>",4),
+(8532,"pussy\>",4),
+(8533,"\<lingerie\>",4),
+(8534,"\<load\>",4),
+(8535,"\<lube\>",4),
+(8536,"\<lubricant\>",4),
+(8537,"\<lust\>",4),
+(8538,"\<maidenhead\>",4),
+(8539,"\<asshole",4),
+(8540,"\<fingerbang\>",4),
+(8541,"\<gangbang\>",4),
+(8542,"\<gangrape\>",4),
+(8543,"\<japs\>",4),
+(8544,"\<jizzing\>",4),
+(8545,"\<gizzing\>",4),
+(8546,"\<pussies\>",4),
+(8547,"\<rapes\>",4),
+(8548,"\<saladtosser\>",4),
+(8549,"\<fags\>",4),
+(8550,"boob",4),
+(8551,"\<bast[aeiou]rd",4),
+(8552,"\<beastiality\>",4),
+(8553,"\<blowjob",4),
+(8554,"\<boffer\>",4),
+(8555,"\<clowjob\>",4),
+(8556,"\<donkeypunch\>",4),
+(8557,"\<fawker\>",4),
+(8558,"\<feces",4),
+(8559,"\<nipple",4),
+(8560,"nipples\>",4),
+(8561,"prostitute",4),
+(8562,"\<coke\>",4),
+(8563,"\<morphine\>",4),
+(8564,"\<nudity\>",4),
+(8565,"\<nuts\>",4),
+(8566,"\<pagan\>",4),
+(8567,"\<perv\>",4),
+(8568,"\<pervert\>",4),
+(8569,"\<phawk\>",4),
+(8570,"\<piss\>",4),
+(8571,"\<playboy\>",4),
+(8572,"\<playgirl\>",4),
+(8573,"\<polish\>",4),
+(8574,"\<prebubescent\>",4),
+(8575,"\<queer\>",4),
+(8576,"\<reich\>",4),
+(8577,"\<r.*jeremy\>",4),
+(8578,"\<screw\>",4),
+(8579,"\<seamen\>",4),
+(8580,"\<spreadmylegs\>",4),
+(8581,"\<stripper",4),
+(8582,"\<suck\>",4),
+(8583,"\<sukkitdown\>",4),
+(8584,"\<swingers\>",4),
+(8585,"\<teabag",4),
+(8586,"\<terrorist\>",4),
+(8587,"\<thickbush\>",4),
+(8588,"\<threesome\>",4),
+(8589,"\<snatch",4),
+(8590,"\<updabut\>",4),
+(8591,"\<vasect",4),
+(8592,"\<white\>",4),
+(8593,"\<negro",4),
+(8594,"\<tinytits\>",4),
+(8595,"cock\>",4),
+(8596,"blowjob\>",4),
+(8597,"\<tardpopsicle\>",4),
+(8598,"\<urmom\>",4),
+(8599,"fag\>",4),
+(8600,"\<dick",4),
+(8601,"\<turdsplat\>",4),
+(8602,"\<chokeoncocks\>",4),
+(8603,"\<littlearse\>",4),
+(8604,"\<holybijesis\>",4),
+(8605,"\<niggs\>",4),
+(8606,"\<sacofricosis\>",4),
+(8607,"\<polesmokers\>",4),
+(8608,"\<sega\>",4),
+(8609,"\<sex",4),
+(8610,"\<shadowbane\>",4),
+(8611,"\<shane",4),
+(8612,"\<shiznit\>",4),
+(8613,"\<shortbus\>",4),
+(8614,"\<tramps\>",4),
+(8615,"\<erection\>",4),
+(8616,"\<smoked\>",4),
+(8617,"\<snowwhite\>",4),
+(8618,"\<oral\>",4),
+(8619,"\<sperm",4),
+(8620,"\<poop\>",4),
+(8621,"\<spluge\>",4),
+(8622,"\<suck",4),
+(8623,"\<supermario\>",4),
+(8624,"support",4),
+(8625,"\<sex\>",4),
+(8626,"\<suppuku\>",4),
+(8627,"\<sirbong\>",4),
+(8628,"\<spank\>",4),
+(8629,"\<speculum\>",4),
+(8630,"\<streaker",4),
+(8631,"\<tribadism\>",4),
+(8632,"\<upmybutthole\>",4),
+(8633,"\<urinat",4),
+(8634,"\<venereal\>",4),
+(8635,"\<virgin\>",4),
+(8636,"\<warslut\>",4),
+(8637,"\<wood\>",4),
+(8638,"\<advil\>",4),
+(8639,"\<amputee\>",4),
+(8640,"\<amtrak\>",4),
+(8641,"\<anis\>",4),
+(8642,"\<anolinctus\>",4),
+(8643,"\<antichrist\>",4),
+(8644,"\<arathorn\>",4),
+(8645,"\<arian\>",4),
+(8646,"\<arsonist\>",4),
+(8647,"\<blackenstein\>",4),
+(8648,"\<blacksabbath\>",4),
+(8649,"\<bnet\>",4),
+(8650,"\<bootylicious\>",4),
+(8651,"\<bra\>",4),
+(8652,"\<chinaman\>",4),
+(8653,"\<chronik\>",4),
+(8654,"\<colgate\>",4),
+(8655,"\<coprophagy\>",4),
+(8656,"\<crackhead\>",4),
+(8657,"\<dammit\>",4),
+(8658,"\<darky\>",4),
+(8659,"\<darvocet\>",4),
+(8660,"\<databasesys\>",4),
+(8661,"\<deckardcain\>",4),
+(8662,"\<dr\>",4),
+(8663,"\<dukeofwhales\>",4),
+(8664,"\<dumbass\>",4),
+(8665,"\<ecstasy\>",4),
+(8666,"\<ensign\>",4),
+(8667,"\<fcuk\>",4),
+(8668,"\<ferrari\>",4),
+(8669,"\<fetus",4),
+(8670,"\<fockerz\>",4),
+(8671,"\<fooker\>",4),
+(8672,"cunt\>",4),
+(8673,"\<ghandi\>",4),
+(8674,"\<gofukyorself\>",4),
+(8675,"\<gonadian\>",4),
+(8676,"\<goochgravy\>",4),
+(8677,"\<gookenator\>",4),
+(8678,"\<hemplock\>",4),
+(8679,"\<herpies\>",4),
+(8680,"\<homoerectus\>",4),
+(8681,"\<hore\>",4),
+(8682,"\<hotdamn\>",4),
+(8683,"\<hungelf\>",4),
+(8684,"\<indian\>",4),
+(8685,"\<irapekids\>",4),
+(8686,"\<ironchef\>",4),
+(8687,"\<jc\>",4),
+(8688,"\<jedi\>",4),
+(8689,"\<[gj]en[ao]cide\>",4),
+(8690,"\<jugs\>",4),
+(8691,"\<klismaphilia\>",4),
+(8692,"\<kokigami\>",4),
+(8693,"\<koon\>",4),
+(8694,"\<kosherpork\>",4),
+(8695,"\<lardass\>",4),
+(8696,"\<laurabush\>",4),
+(8697,"\<marlboroman\>",4),
+(8698,"\<masterbaiter\>",4),
+(8699,"\<maxipad\>",4),
+(8700,"\<menstrual\>",4),
+(8701,"\<mhz\>",4),
+(8702,"\<michaeljack\>",4),
+(8703,"bastard\>",4),
+(8704,"\<misogynist\>",4),
+(8705,"\<mister\>",4),
+(8706,"\<mr\>",4),
+(8707,"\<narcoticus\>",4),
+(8708,"\<nigahh\>",4),
+(8709,"\<npc",4),
+(8710,"\<nug\>",4),
+(8711,"\<nunriggers\>",4),
+(8712,"\<nwa\>",4),
+(8713,"\<omgwtf\>",4),
+(8714,"\<opiate",4),
+(8715,"\<oreos\>",4),
+(8716,"\<ovaltine\>",4),
+(8717,"\<papsmear\>",4),
+(8718,"\<pederasty\>",4),
+(8719,"\<penthouse\>",4),
+(8720,"\<pimp",4),
+(8721,"\<pinktaco\>",4),
+(8722,"mofo\>",4),
+(8723,"\<poomaster\>",4),
+(8724,"\<poonjuice\>",4),
+(8725,"\<poop",4),
+(8726,"\<pwnzor\>",4),
+(8727,"\<quadoushka\>",4),
+(8728,"\<r.*nad[ae]r\>",4),
+(8729,"\<stud\>",4),
+(8730,"\<submissive\>",4),
+(8731,"\<swiftnuggs\>",4),
+(8732,"\<trans",4),
+(8733,"\<uglynig\>",4),
+(8734,"\<swastika\>",4),
+(8735,"\<sybian\>",4),
+(8736,"\<toeofcamel\>",4),
+(8737,"\<tokyorose\>",4),
+(8738,"\<urmama\>",4),
+(8739,"\<voltron\>",4),
+(8740,"\<wangmaster\>",4),
+(8741,"\<wanker\>",4),
+(8742,"\<wetdream\>",4),
+(8743,"\<whitebread\>",4),
+(8744,"\<wigger\>",4),
+(8745,"\<williamhung\>",4),
+(8746,"\<windex\>",4),
+(8747,"\<witchking\>",4),
+(8748,"\<x.*x\>",4),
+(8749,"\<yosemitesam\>",4),
+(8750,"\<youranus\>",4),
+(8751,"\<zoolander\>",4),
+(8752,"condom\>",4),
+(8753,"jebus\>",4),
+(8754,"\<kosher",4),
+(8755,"menstrual",4),
+(8756,"sexy",4),
+(8757,"\<bestiality\>",4),
+(8758,"\<bizzle\>",4),
+(8759,"\<black\>",4),
+(8760,"\<blackie\>",4),
+(8761,"\<bloodyhell\>",4),
+(8762,"\<blow\>",4),
+(8763,"\<blunt\>",4),
+(8764,"\<bollocks\>",4),
+(8765,"\<boobs",4),
+(8766,"\<boofer\>",4),
+(8767,"\<bourbon\>",4),
+(8768,"\<brazuca\>",4),
+(8769,"\<breast",4),
+(8770,"\<budda\>",4),
+(8771,"\<buddahead\>",4),
+(8772,"\<budlight\>",4),
+(8773,"\<budweiser\>",4),
+(8774,"\<bugger\>",4),
+(8775,"\<bustydusty\>",4),
+(8776,"\<butt\>",4),
+(8777,"\<buttman\>",4),
+(8778,"\<candyandes\>",4),
+(8779,"\<caucazoid\>",4),
+(8780,"\<cawk\>",4),
+(8781,"\<fu[ck]+[aeiou]+",4),
+(9113,"系统管理员",4),
+(9114,"魔兽客服",4),
+(9115,"凯尔萨斯",4),
+(9116,"纳鲁",4),
+(9117,"血精灵",4),
+(9118,"德莱尼",4),
+(9119,"玛瑟里顿",4),
+(9120,"罗宁",4),
+(9121,"客户服务",4),
+(9122,"系统提示",4),
+(9123,"中奖提示",4),
+(9125,"中奖\>",4),
+(9126,"提示\>",4),
+(9127,"系统\>",4),
+(9128,"管理员\>",4),
+(9129,"温馨\>",4),
+(9130,"拍卖\>",4),
+(9131,"信息\>",4),
+(9132,"幸运\>",4),
+(9133,"通告\>",4),
+(9134,"抽取\>",4),
+(9135,"活动\>",4),
+(9136,"官方\>",4),
+(9137,"告示\>",4),
+(9138,"在线\>",4),
+(9139,"提示员\>",4),
+(9140,"通告员\>",4),
+(9141,"消息\>",4),
+(9142,"惊喜\>",4),
+(9143,"奖品\>",4),
+(9144,"网络\>",4),
+(9145,"魔兽\>",4),
+(9146,"玩家\>",4),
+(9147,"发布员\>",4),
+(9148,"后台\>",4),
+(9149,"礼品\>",4),
+(9150,"布告\>",4),
+(10217,"\<cervesa\>",5),
+(10218,"\<champagne\>",5),
+(10219,"\<chaseylain\>",5),
+(10220,"\<cheeba\>",5),
+(10221,"\<cherokee \>",5),
+(10222,"\<chino\>",5),
+(10223,"\<chloejones \>",5),
+(10224,"\<christilake\>",5),
+(10225,"\<chrisward \>",5),
+(10226,"\<cocostarfish\>",5),
+(10227,"\<cognac\>",5),
+(10228,"\<cootch\>",5),
+(10229,"\<cooter\>",5),
+(10230,"\<copulate\>",5),
+(10231,"\<cornholes\>",5),
+(10232,"\<corona\>",5),
+(10233,"\<crack\>",5),
+(10234,"\<cracker\>",5),
+(10235,"\<crap\>",5),
+(10236,"\<damned\>",5),
+(10237,"\<dank\>",5),
+(10238,"\<deancoulter\>",5),
+(10239,"\<debidiamond \>",5),
+(10240,"\<deepthroat\>",5),
+(10241,"\<devinderay \>",5),
+(10242,"\<dianazyle \>",5),
+(10243,"\<dietpills\>",5),
+(10244,"\<dirtysanchez\>",5),
+(10245,"\<ditavontease\>",5),
+(10246,"\<doggystyle\>",5),
+(10247,"\<dope\>",5),
+(10248,"\<duckbutter\>",5),
+(10249,"\<ecstacy\>",5),
+(10250,"\<edpowers \>",5),
+(10251,"\<eggplant\>",5),
+(10252,"\<ericaboyer \>",5),
+(10253,"\<extasy\>",5),
+(10254,"\<facial\>",5),
+(10255,"\<fluffer\>",5),
+(10256,"\<fornicat",5),
+(10257,"\<freebase\>",5),
+(10258,"\<fusck",5),
+(10259,"\<fux",5),
+(10260,"\<gagepowers\>",5),
+(10261,"\<gew\>",5),
+(10262,"\<ghb\>",5),
+(10263,"\<ghetto\>",5),
+(10264,"\<gingerhill\>",5),
+(10265,"\<gloryhole\>",5),
+(10266,"\<goldschlager\>",5),
+(10267,"\<goombah\>",5),
+(10268,"\<granddragon\>",5),
+(10269,"\<greaseball\>",5),
+(10270,"\<greaser\>",5),
+(10271,"\<gspot\>",5),
+(10272,"\<guiness\>",5),
+(10273,"\<gunja\>",5),
+(10274,"\<handjob\>",5),
+(10275,"\<hash\>",5),
+(10276,"\<headdoctor\>",5),
+(10277,"\<heidifleiss\>",5),
+(10278,"\<hmo\>",5),
+(10279,"\<honky\>",5),
+(10280,"\<hoodrat\>",5),
+(10281,"\<hookah\>",5),
+(10282,"\<horney\>",5),
+(10283,"\<hustler\>",5),
+(10284,"\<inarivachs\>",5),
+(10285,"\<j.*bobbit\>",5),
+(10286,"\<j.*holmes\>",5),
+(10287,"\<jackdaniels\>",5),
+(10288,"\<jadeeast\>",5),
+(10289,"\<jadehsu \>",5),
+(10290,"\<jadestclair\>",5),
+(10291,"\<jagermeister\>",5),
+(10292,"\<janacova\>",5),
+(10293,"\<jennahaze\>",5),
+(10294,"\<jennajameson\>",5),
+(10295,"\<jenteal\>",5),
+(10296,"\<jessicadee\>",5),
+(10297,"\<jeweldenyle\>",5),
+(10298,"\<jillkelly\>",5),
+(10299,"\<jimbeam\>",5),
+(10300,"\<josecuervo\>",5),
+(10301,"\<juliashton\>",5),
+(10302,"\<karadavis\>",5),
+(10303,"\<keef\>",5),
+(10304,"\<kif\>",5),
+(10305,"\<kikkityler \>",5),
+(10306,"\<kobetai\>",5),
+(10307,"\<kooter\>",5),
+(10308,"\<krystalsteal\>",5),
+(10309,"\<kyke\>",5),
+(10310,"\<kylacole\>",5),
+(10311,"\<kylieireland\>",5),
+(10312,"\<lancegear \>",5),
+(10313,"\<larryflynt\>",5),
+(10314,"\<lecher\>",5),
+(10315,"\<liquidx\>",5),
+(10316,"\<loloferrari\>",5),
+(10317,"\<long.*dong\>",5),
+(10318,"\<ludes\>",5),
+(10319,"\<lunalane\>",5),
+(10320,"\<maltliquor\>",5),
+(10321,"\<mariacheca\>",5),
+(10322,"\<mariatakagi\>",5),
+(10323,"\<marisadiaz \>",5),
+(10324,"\<markdalton  \>",5),
+(10325,"\<markwolff \>",5),
+(10326,"\<marycarey \>",5),
+(10327,"\<mayate\>",5),
+(10328,"\<meatwad\>",5),
+(10329,"\<methhead\>",5),
+(10330,"\<methmonster\>",5),
+(10331,"\<mikolee\>",5),
+(10332,"\<mimimiyagi\>",5),
+(10333,"\<moneyshot\>",5),
+(10334,"\<muff\>",5),
+(10335,"\<mushrooms\>",5),
+(10336,"\<nickelbag\>",5),
+(10337,"\<nikkibenz\>",5),
+(10338,"\<nikkidial\>",5),
+(10339,"\<nip\>",5),
+(10340,"\<nizzle\>",5),
+(10341,"\<nubian",5),
+(10342,"\<nympho\>",5),
+(10343,"\<obsession\>",5),
+(10344,"\<opiate\>",5),
+(10345,"\<orgy\>",5),
+(10346,"\<panties\>",5),
+(10347,"\<pecker\>",5),
+(10348,"\<peternorth\>",5),
+(10349,"\<pissedoff\>",5),
+(10350,"\<pissoff\>",5),
+(10351,"\<pornstar\>",5),
+(10352,"\<prepubescent\>",5),
+(10353,"\<prick\>",5),
+(10354,"\<pube\>",5),
+(10355,"\<punjab\>",5),
+(10356,"\<punkass\>",5),
+(10357,"\<pusse\>",5),
+(10358,"\<randywest\>",5),
+(10359,"\<rebeccalord\>",5),
+(10360,"\<rebeccaporn\>",5),
+(10361,"\<redneck\>",5),
+(10362,"\<reneelarue\>",5),
+(10363,"\<ricer\>",5),
+(10364,"\<rustytrumpet\>",5),
+(10365,"\<ryanconner \>",5),
+(10366,"\<ryanwagner \>",5),
+(10367,"\<sarastjames \>",5),
+(10368,"\<tosser\>",5),
+(10369,"\<tossingsalad\>",5),
+(10370,"\<tosssalad\>",5),
+(10371,"\<traceyadams\>",5),
+(10372,"\<tracilords\>",5),
+(10373,"\<tranny\>",5),
+(10374,"\<ttboy\>",5),
+(10375,"\<tyfox\>",5),
+(10376,"\<tylerfaith\>",5),
+(10377,"\<urethra\>",5),
+(10378,"\<veronicahart\>",5),
+(10379,"\<wankoff\>",5),
+(10380,"\<weed\>",5),
+(10381,"\<wej\>",5),
+(10382,"\<wench\>",5),
+(10383,"\<wildturkey\>",5),
+(10384,"hefner\>",5),
+(10385,"snatch\>",5),
+(10386,"vagina\>",5),
+(10387,"\<annaslut\>",5),
+(10388,"\<asiacarrera\>",5),
+(10389,"\<aurorasnow\>",5),
+(10390,"\<bacardi\>",5),
+(10391,"\<beaner\>",5),
+(10392,"\<beanlicker\>",5),
+(10393,"\<scat\>",5),
+(10394,"\<scatology\>",5),
+(10395,"\<schlong",5),
+(10396,"\<schnapps\>",5),
+(10397,"\<schoolboy",5),
+(10398,"\<selenasteele\>",5),
+(10399,"\<sexy\>",5),
+(10400,"\<seymorebutts\>",5),
+(10401,"\<sheethead\>",5),
+(10402,"\<sherriangel\>",5),
+(10403,"\<shizzle\>",5),
+(10404,"\<shlong\>",5),
+(10405,"\<shmegma\>",5),
+(10406,"\<shrooms\>",5),
+(10407,"\<skeet\>",5),
+(10408,"\<skeetskeet\>",5),
+(10409,"\<vagina",5),
+(10410,"\<adulteress\>",5),
+(10411,"\<adulterous\>",5),
+(10412,"\<adultery\>",5),
+(10413,"\<adultsonly\>",5),
+(10414,"\<agentorange\>",5),
+(10415,"\<aids\>",5),
+(10416,"\<al[ck]ohol",5),
+(10417,"\<alecpowers\>",5),
+(10418,"\<alexwilcox\>",5),
+(10419,"\<amaretto\>",5),
+(10420,"\<anal\>",5),
+(10421,"\<angeladevi\>",5),
+(10422,"\<angeldust\>",5),
+(10423,"\<anglo\>",5),
+(10424,"\<anheiser\>",5),
+(10425,"\<annamalle\>",5),
+(10426,"\<beer\>",5),
+(10427,"\<erzengel\>",5),
+(10428,"könig\>",5),
+(10429,"\<eomer\>",5),
+(10430,"butthhead",5),
+(10431,"\<slope\>",5),
+(10432,"\<smack\>",5),
+(10433,"\<smut\>",5),
+(10434,"\<snowball",5),
+(10435,"\<sodomize\>",5),
+(10436,"\<sodomy\>",5),
+(10437,"\<speedball\>",5),
+(10438,"\<spew\>",5),
+(10439,"\<spreadeagle\>",5),
+(10440,"\<spunk\>",5),
+(10441,"\<std\>",5),
+(10442,"\<sunsetthomas\>",5),
+(10443,"\<sylviasaint\>",5),
+(10444,"\<teet[sz]\>",5),
+(10445,"\<tequila\>",5),
+(10446,"\<terapatrick\>",5),
+(10447,"\<thc\>",5),
+(10448,"\<tiabella\>",5),
+(10449,"\<toadlicker\>",5),
+(10450,"\<toak\>",5),
+(10451,"\<toke\>",5),
+(10452,"\<tombyron\>",5),
+(10453,"\<tommycruise\>",5),
+(10454,"\<tonyzerega\>",5),
+(10455,"\<tossalad\>",5),
+(10456,"\<vibrator\>",5),
+(10457,"\<vincevouyer\>",5),
+(10458,"\<vodka\>",5),
+(10459,"\<vulva\>",5),
+(10460,"\<w[ei]+n[ei]+r\>",5),
+(10461,"\<wank\>",5),
+(10462,"\<whackoff\>",5),
+(10463,"\<whiskey\>",5),
+(10464,"\<willclark\>",5),
+(10465,"\<yellow\>",5),
+(10466,"\<zigzag\>",5),
+(10467,"aryan\>",5),
+(10468,"\<acclaim\>",5),
+(10469,"\<amongoe",5),
+(10470,"\<anabolica\>",5),
+(10471,"\<analpunisher\>",5),
+(10472,"nazi\>",5),
+(10473,"\<anth?rax\>",5),
+(10474,"\<blasehase\>",5),
+(10475,"\<botox\>",5),
+(10476,"\<bueckstueck\>",5),
+(10477,"\<bumsnudel\>",5),
+(10478,"\<cairne\>",5),
+(10479,"\<christkind\>",5),
+(10480,"\<crackdealer\>",5),
+(10481,"king\>",5),
+(10482,"\<darthjedi\>",5),
+(10483,"\<denethor\>",5),
+(10484,"\<derneger\>",5),
+(10485,"\<diedroge\>",5),
+(10486,"\<dollybuster\>",5),
+(10487,"\<donpeperulez\>",5),
+(10488,"\<dopecheffe\>",5),
+(10489,"\<duke",5),
+(10490,"\<dwalin\>",5),
+(10491,"sucker\>",5),
+(10492,"\<ebola\>",5),
+(10493,"\<eichelkäse\>",5),
+(10494,"f[ue]+rst\>",5),
+(10495,"muschi\>",5),
+(10496,"\<eternalhoden\>",5),
+(10497,"\<euthanasie\>",5),
+(10498,"\<fick",5),
+(10499,"luder\>",5),
+(10500,"kacke\>",5),
+(10501,"\<fotz",5),
+(10502,"tussi\>",5),
+(10503,"\<frodobeutlin\>",5),
+(10504,"\<frozenthrone\>",5),
+(10505,"\<gandhi\>",5),
+(10506,"\<ganja",5),
+(10507,"\<gayoverlord\>",5),
+(10508,"\<geilebraut\>",5),
+(10509,"\<ginawild\>",5),
+(10510,"\<goebbels\>",5),
+(10511,"\<gott\>",5),
+(10512,"\<graftaliban\>",5),
+(10513,"\<hägar\>",5),
+(10514,"\<hanfernte\>",5),
+(10515,"\<heiland\>",5),
+(10516,"\<hendrix\>",5),
+(10517,"\<heroin",5),
+(10518,"\<hordenhure\>",5),
+(10519,"porno\>",5),
+(10520,"\<[gk]adafi\>",5),
+(10521,"\<kiffer",5),
+(10522,"\<kleineralki\>",5),
+(10523,"\<kleinerfurz\>",5),
+(10524,"\<klitori",5),
+(10525,"ficker\>",5),
+(10526,"\<kpd\>",5),
+(10527,"\<kruppstahl\>",5),
+(10528,"\<mariuhanna\>",5),
+(10529,"\<master",5),
+(10530,"\<meisteryoda\>",5),
+(10531,"\<mengele\>",5),
+(10532,"fick\>",5),
+(10533,"\<michaelmyers\>",5),
+(10534,"\<milkahase\>",5),
+(10535,"\<milkakuh\>",5),
+(10536,"\<mistst[ue]+ck\>",5),
+(10537,"\<moesen",5),
+(10538,"\<möse",5),
+(10539,"\<muschi",5),
+(10540,"\<nachgeburt\>",5),
+(10541,"\<nazghul\>",5),
+(10542,"\<negerin\>",5),
+(10543,"\<nikoleinchen\>",5),
+(10544,"\<onkeltom\>",5),
+(10545,"\<pimmel",5),
+(10546,"\<pimper",5),
+(10547,"\<pommespapst\>",5),
+(10548,"\<popobumser\>",5),
+(10549,"\<porno",5),
+(10550,"\<princess",5),
+(10551,"\<prinz\>",5),
+(10552,"\<rammstein\>",5),
+(10553,"\<rasputin\>",5),
+(10554,"\<redbull\>",5),
+(10555,"\<richthofen\>",5),
+(10556,"\<sarin\>",5),
+(10557,"\<schlampe",5),
+(10558,"\<schwanz",5),
+(10559,"\<sith\>",5),
+(10560,"\<smeagol\>",5),
+(10561,"\<sohngottes\>",5),
+(10562,"\<spikelee\>",5),
+(10563,"\<splintercell\>",5),
+(10564,"\<suicide\>",5),
+(10565,"\<suizidhoden\>",5),
+(10566,"\<terrortunte\>",5),
+(10567,"\<titanrosette\>",5),
+(10568,"\<tittenmaus\>",5),
+(10569,"\<tylerdurden\>",5),
+(10570,"\<vagimampf\>",5),
+(10571,"\<vanginus\>",5),
+(10572,"\<votzentroll\>",5),
+(10573,"\<warcrack\>",5),
+(10574,"\<winnipuuh\>",5),
+(10575,"\<wixxoor\>",5),
+(10576,"\<wowdiablo\>",5),
+(10577,"\<xerox\>",5),
+(10578,"schlampe\>",5),
+(10579,"zipfe?l\>",5),
+(10580,"\<zuhälter",5),
+(10581,"\<zwergpimmel\>",5),
+(10582,"\<absinthe\>",5),
+(10583,"\<absolut\>",5),
+(10584,"\<chink\>",5),
+(10585,"\<agnostic\>",5),
+(10586,"\<pussy",5),
+(10587,"\<rape\>",5),
+(10588,"\<aceofspades\>",5),
+(10589,"\<pusher",5),
+(10590,"\<chinks\>",5),
+(10591,"\<dikes\>",5),
+(10592,"\<dildos\>",5),
+(10593,"\<sativa\>",5),
+(10594,"\<indica\>",5),
+(10595,"\<skunkweed\>",5),
+(10596,"\<dike\>",5),
+(10597,"\<raped\>",5),
+(10598,"\<raping\>",5),
+(10599,"dong",5),
+(10600,"\<dyke\>",5),
+(10601,"\<mj\>",5),
+(10602,"\<doobie\>",5),
+(10603,"\<stoner",5),
+(10604,"\<junk[ie]",5),
+(10605,"\<defecat",5),
+(10606,"\<alquaeda\>",5),
+(10607,"\<amerikkkan\>",5),
+(10608,"\<amphetamine\>",5),
+(10609,"\<ejaculate\>",5),
+(10610,"\<scrotum",5),
+(10611,"\<fisting\>",5),
+(10612,"\<arse",5),
+(10613,"\<cock",5),
+(10614,"\<aryan",5),
+(10615,"\<backdoor\>",5),
+(10616,"titt[iey]*s\>",5),
+(10617,"\<bi\>",5),
+(10618,"\<bigfatasscow\>",5),
+(10619,"bondage\>",5),
+(10620,"boobs\>",5),
+(10621,"breast\>",5),
+(10622,"\<buttocks\>",5),
+(10623,"\<[ck]oitus",5),
+(10624,"\<condom",5),
+(10625,"\<dahoe\>",5),
+(10626,"\<damn\>",5),
+(10627,"\<darkwanker\>",5),
+(10628,"\<di[ae][rh]+ea",5),
+(10629,"dick\>",5),
+(10630,"\<dirtyho\>",5),
+(10631,"\<domination\>",5),
+(10632,"\<dutch\>",5),
+(10633,"\<enema\>",5),
+(10634,"\<erotic",5),
+(10635,"jackass\>",5),
+(10636,"\<facism\>",5),
+(10637,"\<fakeboobs\>",5),
+(10638,"\<fart\>",5),
+(10639,"\<fetish",5),
+(10640,"fetish\>",5),
+(10641,"\<filthymuslim\>",5),
+(10642,"\<focker\>",5),
+(10643,"\<foreplay\>",5),
+(10644,"\<foreskin\>",5),
+(10645,"\<frottage\>",5),
+(10646,"\<fuk\>",5),
+(10647,"\<fukass\>",5),
+(10648,"\<gay\>",5),
+(10649,"\<genital",5),
+(10650,"\<genitals\>",5),
+(10651,"\<gigolo\>",5),
+(10652,"\<gonorrhea\>",5),
+(10653,"\<grummz\>",5),
+(10654,"\<hairyhorny\>",5),
+(10655,"\<hardboob\>",5),
+(10656,"\<hentail\>",5),
+(10657,"\<hiv\>",5),
+(10658,"\<holocaust\>",5),
+(10659,"\<horny\>",5),
+(10660,"\<hot\>",5),
+(10661,"\<j.*jameson\>",5),
+(10662,"\<kinky\>",5),
+(10663,"\<kraut\>",5),
+(10664,"\<lesb\>",5),
+(10665,"\<lesbian\>",5),
+(10666,"pussy\>",5),
+(10667,"\<lingerie\>",5),
+(10668,"\<load\>",5),
+(10669,"\<lube\>",5),
+(10670,"\<lubricant\>",5),
+(10671,"\<lust\>",5),
+(10672,"\<maidenhead\>",5),
+(10673,"\<asshole",5),
+(10674,"\<fingerbang\>",5),
+(10675,"\<gangbang\>",5),
+(10676,"\<gangrape\>",5),
+(10677,"\<japs\>",5),
+(10678,"\<jizzing\>",5),
+(10679,"\<gizzing\>",5),
+(10680,"\<pussies\>",5),
+(10681,"\<rapes\>",5),
+(10682,"\<saladtosser\>",5),
+(10683,"\<fags\>",5),
+(10684,"boob",5),
+(10685,"\<bast[aeiou]rd",5),
+(10686,"\<beastiality\>",5),
+(10687,"\<blowjob",5),
+(10688,"\<boffer\>",5),
+(10689,"\<clowjob\>",5),
+(10690,"\<donkeypunch\>",5),
+(10691,"\<fawker\>",5),
+(10692,"\<feces",5),
+(10693,"\<nipple",5),
+(10694,"nipples\>",5),
+(10695,"prostitute",5),
+(10696,"\<coke\>",5),
+(10697,"\<morphine\>",5),
+(10698,"\<nudity\>",5),
+(10699,"\<nuts\>",5),
+(10700,"\<pagan\>",5),
+(10701,"\<perv\>",5),
+(10702,"\<pervert\>",5),
+(10703,"\<phawk\>",5),
+(10704,"\<piss\>",5),
+(10705,"\<playboy\>",5),
+(10706,"\<playgirl\>",5),
+(10707,"\<polish\>",5),
+(10708,"\<prebubescent\>",5),
+(10709,"\<queer\>",5),
+(10710,"\<reich\>",5),
+(10711,"\<r.*jeremy\>",5),
+(10712,"\<screw\>",5),
+(10713,"\<seamen\>",5),
+(10714,"\<spreadmylegs\>",5),
+(10715,"\<stripper",5),
+(10716,"\<suck\>",5),
+(10717,"\<sukkitdown\>",5),
+(10718,"\<swingers\>",5),
+(10719,"\<teabag",5),
+(10720,"\<terrorist\>",5),
+(10721,"\<thickbush\>",5),
+(10722,"\<threesome\>",5),
+(10723,"\<snatch",5),
+(10724,"\<updabut\>",5),
+(10725,"\<vasect",5),
+(10726,"\<white\>",5),
+(10727,"\<negro",5),
+(10728,"\<tinytits\>",5),
+(10729,"cock\>",5),
+(10730,"blowjob\>",5),
+(10731,"\<tardpopsicle\>",5),
+(10732,"\<urmom\>",5),
+(10733,"fag\>",5),
+(10734,"\<dick",5),
+(10735,"\<turdsplat\>",5),
+(10736,"\<chokeoncocks\>",5),
+(10737,"\<littlearse\>",5),
+(10738,"\<holybijesis\>",5),
+(10739,"\<niggs\>",5),
+(10740,"\<sacofricosis\>",5),
+(10741,"\<polesmokers\>",5),
+(10742,"\<sega\>",5),
+(10743,"\<sex",5),
+(10744,"\<shadowbane\>",5),
+(10745,"\<shane",5),
+(10746,"\<shiznit\>",5),
+(10747,"\<shortbus\>",5),
+(10748,"\<tramps\>",5),
+(10749,"\<erection\>",5),
+(10750,"\<smoked\>",5),
+(10751,"\<snowwhite\>",5),
+(10752,"\<oral\>",5),
+(10753,"\<sperm",5),
+(10754,"\<poop\>",5),
+(10755,"\<spluge\>",5),
+(10756,"\<suck",5),
+(10757,"\<supermario\>",5),
+(10758,"support",5),
+(10759,"\<sex\>",5),
+(10760,"\<suppuku\>",5),
+(10761,"\<sirbong\>",5),
+(10762,"\<spank\>",5),
+(10763,"\<speculum\>",5),
+(10764,"\<streaker",5),
+(10765,"\<tribadism\>",5),
+(10766,"\<upmybutthole\>",5),
+(10767,"\<urinat",5),
+(10768,"\<venereal\>",5),
+(10769,"\<virgin\>",5),
+(10770,"\<warslut\>",5),
+(10771,"\<wood\>",5),
+(10772,"\<advil\>",5),
+(10773,"\<amputee\>",5),
+(10774,"\<amtrak\>",5),
+(10775,"\<anis\>",5),
+(10776,"\<anolinctus\>",5),
+(10777,"\<antichrist\>",5),
+(10778,"\<arathorn\>",5),
+(10779,"\<arian\>",5),
+(10780,"\<arsonist\>",5),
+(10781,"\<blackenstein\>",5),
+(10782,"\<blacksabbath\>",5),
+(10783,"\<bnet\>",5),
+(10784,"\<bootylicious\>",5),
+(10785,"\<bra\>",5),
+(10786,"\<chinaman\>",5),
+(10787,"\<chronik\>",5),
+(10788,"\<colgate\>",5),
+(10789,"\<coprophagy\>",5),
+(10790,"\<crackhead\>",5),
+(10791,"\<dammit\>",5),
+(10792,"\<darky\>",5),
+(10793,"\<darvocet\>",5),
+(10794,"\<databasesys\>",5),
+(10795,"\<deckardcain\>",5),
+(10796,"\<dr\>",5),
+(10797,"\<dukeofwhales\>",5),
+(10798,"\<dumbass\>",5),
+(10799,"\<ecstasy\>",5),
+(10800,"\<ensign\>",5),
+(10801,"\<fcuk\>",5),
+(10802,"\<ferrari\>",5),
+(10803,"\<fetus",5),
+(10804,"\<fockerz\>",5),
+(10805,"\<fooker\>",5),
+(10806,"cunt\>",5),
+(10807,"\<ghandi\>",5),
+(10808,"\<gofukyorself\>",5),
+(10809,"\<gonadian\>",5),
+(10810,"\<goochgravy\>",5),
+(10811,"\<gookenator\>",5),
+(10812,"\<hemplock\>",5),
+(10813,"\<herpies\>",5),
+(10814,"\<homoerectus\>",5),
+(10815,"\<hore\>",5),
+(10816,"\<hotdamn\>",5),
+(10817,"\<hungelf\>",5),
+(10818,"\<indian\>",5),
+(10819,"\<irapekids\>",5),
+(10820,"\<ironchef\>",5),
+(10821,"\<jc\>",5),
+(10822,"\<jedi\>",5),
+(10823,"\<[gj]en[ao]cide\>",5),
+(10824,"\<jugs\>",5),
+(10825,"\<klismaphilia\>",5),
+(10826,"\<kokigami\>",5),
+(10827,"\<koon\>",5),
+(10828,"\<kosherpork\>",5),
+(10829,"\<lardass\>",5),
+(10830,"\<laurabush\>",5),
+(10831,"\<marlboroman\>",5),
+(10832,"\<masterbaiter\>",5),
+(10833,"\<maxipad\>",5),
+(10834,"\<menstrual\>",5),
+(10835,"\<mhz\>",5),
+(10836,"\<michaeljack\>",5),
+(10837,"bastard\>",5),
+(10838,"\<misogynist\>",5),
+(10839,"\<mister\>",5),
+(10840,"\<mr\>",5),
+(10841,"\<narcoticus\>",5),
+(10842,"\<nigahh\>",5),
+(10843,"\<npc",5),
+(10844,"\<nug\>",5),
+(10845,"\<nunriggers\>",5),
+(10846,"\<nwa\>",5),
+(10847,"\<omgwtf\>",5),
+(10848,"\<opiate",5),
+(10849,"\<oreos\>",5),
+(10850,"\<ovaltine\>",5),
+(10851,"\<papsmear\>",5),
+(10852,"\<pederasty\>",5),
+(10853,"\<penthouse\>",5),
+(10854,"\<pimp",5),
+(10855,"\<pinktaco\>",5),
+(10856,"mofo\>",5),
+(10857,"\<poomaster\>",5),
+(10858,"\<poonjuice\>",5),
+(10859,"\<poop",5),
+(10860,"\<pwnzor\>",5),
+(10861,"\<quadoushka\>",5),
+(10862,"\<r.*nad[ae]r\>",5),
+(10863,"\<stud\>",5),
+(10864,"\<submissive\>",5),
+(10865,"\<swiftnuggs\>",5),
+(10866,"\<trans",5),
+(10867,"\<uglynig\>",5),
+(10868,"\<swastika\>",5),
+(10869,"\<sybian\>",5),
+(10870,"\<toeofcamel\>",5),
+(10871,"\<tokyorose\>",5),
+(10872,"\<urmama\>",5),
+(10873,"\<voltron\>",5),
+(10874,"\<wangmaster\>",5),
+(10875,"\<wanker\>",5),
+(10876,"\<wetdream\>",5),
+(10877,"\<whitebread\>",5),
+(10878,"\<wigger\>",5),
+(10879,"\<williamhung\>",5),
+(10880,"\<windex\>",5),
+(10881,"\<witchking\>",5),
+(10882,"\<x.*x\>",5),
+(10883,"\<yosemitesam\>",5),
+(10884,"\<youranus\>",5),
+(10885,"\<zoolander\>",5),
+(10886,"condom\>",5),
+(10887,"jebus\>",5),
+(10888,"\<kosher",5),
+(10889,"menstrual",5),
+(10890,"sexy",5),
+(10891,"\<bestiality\>",5),
+(10892,"\<bizzle\>",5),
+(10893,"\<black\>",5),
+(10894,"\<blackie\>",5),
+(10895,"\<bloodyhell\>",5),
+(10896,"\<blow\>",5),
+(10897,"\<blunt\>",5),
+(10898,"\<bollocks\>",5),
+(10899,"\<boobs",5),
+(10900,"\<boofer\>",5),
+(10901,"\<bourbon\>",5),
+(10902,"\<brazuca\>",5),
+(10903,"\<breast",5),
+(10904,"\<budda\>",5),
+(10905,"\<buddahead\>",5),
+(10906,"\<budlight\>",5),
+(10907,"\<budweiser\>",5),
+(10908,"\<bugger\>",5),
+(10909,"\<bustydusty\>",5),
+(10910,"\<butt\>",5),
+(10911,"\<buttman\>",5),
+(10912,"\<candyandes\>",5),
+(10913,"\<caucazoid\>",5),
+(10914,"\<cawk\>",5),
+(10915,"\<fu[ck]+[aeiou]+",5),
+(10916,"三K党",5),
+(10917,"九城",5),
+(10918,"乱伦",5),
+(10919,"乳交",5),
+(10920,"乳房",5),
+(10921,"他妈的",5),
+(10922,"做爱",5),
+(10923,"共产党",5),
+(10924,"共军",5),
+(10925,"共匪",5),
+(10926,"军妓",5),
+(10927,"刘少奇",5),
+(10928,"卵子",5),
+(10929,"口交",5),
+(10930,"叫床",5),
+(10931,"台湾独立",5),
+(10932,"台独",5),
+(10933,"吹箫",5),
+(10934,"周恩来",5),
+(10935,"国民党",5),
+(10936,"外$$挂",5),
+(10937,"外*挂",5),
+(10938,"外@@挂",5),
+(10939,"外@挂",5),
+(10940,"外~~挂",5),
+(10941,"外~挂",5),
+(10942,"外··挂",5),
+(10943,"外·挂",5),
+(10944,"外挂",5),
+(10945,"奶子",5),
+(10946,"妓女",5),
+(10947,"妓院",5),
+(10948,"婊子",5),
+(10949,"婊子养的",5),
+(10950,"嫖客",5),
+(10951,"孙中山",5),
+(10952,"射精",5),
+(10953,"招妓",5),
+(10954,"撒尿",5),
+(10955,"操你",5),
+(10956,"操你奶奶",5),
+(10957,"操你妈",5),
+(10958,"操逼",5),
+(10959,"日他娘",5),
+(10960,"日你妈",5),
+(10961,"月经",5),
+(10962,"朱镕基",5),
+(10963,"李登辉",5),
+(10964,"毛泽东",5),
+(10965,"性交",5),
+(10966,"江泽民",5),
+(10967,"私服",5),
+(10968,"精子",5),
+(10969,"精液",5),
+(10970,"蒋介石",5),
+(10971,"赵紫阳",5),
+(10972,"乳汁",5),
+(10973,"你妈",5),
+(10974,"淫水",5),
+(10975,"淫荡",5),
+(10976,"淫魔",5),
+(10977,"游戏管理员",5),
+(10978,"爱滋",5),
+(10979,"王八蛋",5),
+(10980,"肛交",5),
+(10981,"胡耀邦",5),
+(10982,"胡锦涛",5),
+(10983,"花柳",5),
+(10984,"邓小平",5),
+(10985,"阴唇",5),
+(10986,"阴毛",5),
+(10987,"阴茎",5),
+(10988,"阴道",5),
+(10989,"阴部",5),
+(10990,"阿扁",5),
+(10991,"陈水扁",5),
+(10992,"鸡八",5),
+(10993,"鸡巴",5),
+(10994,"外$挂",5),
+(10995,"屁股",5),
+(10996,"屄",5),
+(10997,"淫秽",5),
+(10999,"官方人員",5),
+(11000,"國民黨",5),
+(11001,"親民黨",5),
+(11002,"民進黨",5),
+(11003,"台聯黨",5),
+(11004,"台獨",5),
+(11005,"台灣獨立",5),
+(11006,"陳水扁",5),
+(11007,"呂秀蓮",5),
+(11008,"宋楚瑜",5),
+(11009,"李登輝",5),
+(11010,"連戰",5),
+(11011,"馬英九",5),
+(11012,"謝長廷",5),
+(11013,"王俊博",5),
+(11014,"林榮一",5),
+(11015,"管理員",5),
+(11016,"管理者",5),
+(11017,"魔獸世界",5),
+(11018,"公告",5),
+(11019,"拍賣場",5),
+(11020,"拍賣*",5),
+(11021,"肛之*",5),
+(11023,"精射*",5),
+(11024,"施明德",5),
+(11025,"倒扁",5),
+(11026,"暴風雪",5),
+(11027,"中共",5),
+(11028,"挺扁",5),
+(11029,"龜頭*",5),
+(11030,"爛貨",5),
+(11031,"操你媽",5),
+(11032,"草支擺",5),
+(11033,"小雞雞",5),
+(11034,"趕羚羊",5),
+(11035,"藍叫*",5),
+(11036,"懶叫*",5),
+(11037,"插你娘",5),
+(11038,"媽的",5),
+(11039,"幹你",5),
+(11040,"幹妳",5),
+(11865,"\<cervesa\>",1),
+(11866,"\<champagne\>",1),
+(11867,"\<chaseylain\>",1),
+(11868,"\<cheeba\>",1),
+(11869,"\<cherokee \>",1),
+(11870,"\<chino\>",1),
+(11871,"\<chloejones \>",1),
+(11872,"\<christilake\>",1),
+(11873,"\<chrisward \>",1),
+(11874,"\<cocostarfish\>",1),
+(11875,"\<cognac\>",1),
+(11876,"\<cootch\>",1),
+(11877,"\<cooter\>",1),
+(11878,"\<copulate\>",1),
+(11879,"\<cornholes\>",1),
+(11880,"\<corona\>",1),
+(11881,"\<crack\>",1),
+(11882,"\<cracker\>",1),
+(11883,"\<crap\>",1),
+(11884,"\<damned\>",1),
+(11885,"\<dank\>",1),
+(11886,"\<deancoulter\>",1),
+(11887,"\<debidiamond \>",1),
+(11888,"\<deepthroat\>",1),
+(11889,"\<devinderay \>",1),
+(11890,"\<dianazyle \>",1),
+(11891,"\<dietpills\>",1),
+(11892,"\<dirtysanchez\>",1),
+(11893,"\<ditavontease\>",1),
+(11894,"\<doggystyle\>",1),
+(11895,"\<dope\>",1),
+(11896,"\<duckbutter\>",1),
+(11897,"\<ecstacy\>",1),
+(11898,"\<edpowers \>",1),
+(11899,"\<eggplant\>",1),
+(11900,"\<ericaboyer \>",1),
+(11901,"\<extasy\>",1),
+(11902,"\<facial\>",1),
+(11903,"\<fluffer\>",1),
+(11904,"\<fornicat",1),
+(11905,"\<freebase\>",1),
+(11906,"\<fusck",1),
+(11907,"\<fux",1),
+(11908,"\<gagepowers\>",1),
+(11909,"\<gew\>",1),
+(11910,"\<ghb\>",1),
+(11911,"\<ghetto\>",1),
+(11912,"\<gingerhill\>",1),
+(11913,"\<gloryhole\>",1),
+(11914,"\<goldschlager\>",1),
+(11915,"\<goombah\>",1),
+(11916,"\<granddragon\>",1),
+(11917,"\<greaseball\>",1),
+(11918,"\<greaser\>",1),
+(11919,"\<gspot\>",1),
+(11920,"\<guiness\>",1),
+(11921,"\<gunja\>",1),
+(11922,"\<handjob\>",1),
+(11923,"\<hash\>",1),
+(11924,"\<headdoctor\>",1),
+(11925,"\<heidifleiss\>",1),
+(11926,"\<hmo\>",1),
+(11927,"\<honky\>",1),
+(11928,"\<hoodrat\>",1),
+(11929,"\<hookah\>",1),
+(11930,"\<horney\>",1),
+(11931,"\<hustler\>",1),
+(11932,"\<inarivachs\>",1),
+(11933,"\<j.*bobbit\>",1),
+(11934,"\<j.*holmes\>",1),
+(11935,"\<jackdaniels\>",1),
+(11936,"\<jadeeast\>",1),
+(11937,"\<jadehsu \>",1),
+(11938,"\<jadestclair\>",1),
+(11939,"\<jagermeister\>",1),
+(11940,"\<janacova\>",1),
+(11941,"\<jennahaze\>",1),
+(11942,"\<jennajameson\>",1),
+(11943,"\<jenteal\>",1),
+(11944,"\<jessicadee\>",1),
+(11945,"\<jeweldenyle\>",1),
+(11946,"\<jillkelly\>",1),
+(11947,"\<jimbeam\>",1),
+(11948,"\<josecuervo\>",1),
+(11949,"\<juliashton\>",1),
+(11950,"\<karadavis\>",1),
+(11951,"\<keef\>",1),
+(11952,"\<kif\>",1),
+(11953,"\<kikkityler \>",1),
+(11954,"\<kobetai\>",1),
+(11955,"\<kooter\>",1),
+(11956,"\<krystalsteal\>",1),
+(11957,"\<kyke\>",1),
+(11958,"\<kylacole\>",1),
+(11959,"\<kylieireland\>",1),
+(11960,"\<lancegear \>",1),
+(11961,"\<larryflynt\>",1),
+(11962,"\<lecher\>",1),
+(11963,"\<liquidx\>",1),
+(11964,"\<loloferrari\>",1),
+(11965,"\<long.*dong\>",1),
+(11966,"\<ludes\>",1),
+(11967,"\<lunalane\>",1),
+(11968,"\<maltliquor\>",1),
+(11969,"\<mariacheca\>",1),
+(11970,"\<mariatakagi\>",1),
+(11971,"\<marisadiaz \>",1),
+(11972,"\<markdalton  \>",1),
+(11973,"\<markwolff \>",1),
+(11974,"\<marycarey \>",1),
+(11975,"\<mayate\>",1),
+(11976,"\<meatwad\>",1),
+(11977,"\<methhead\>",1),
+(11978,"\<methmonster\>",1),
+(11979,"\<mikolee\>",1),
+(11980,"\<mimimiyagi\>",1),
+(11981,"\<moneyshot\>",1),
+(11982,"\<muff\>",1),
+(11983,"\<mushrooms\>",1),
+(11984,"\<nickelbag\>",1),
+(11985,"\<nikkibenz\>",1),
+(11986,"\<nikkidial\>",1),
+(11987,"\<nip\>",1),
+(11988,"\<nizzle\>",1),
+(11989,"\<nubian",1),
+(11990,"\<nympho\>",1),
+(11991,"\<obsession\>",1),
+(11992,"\<opiate\>",1),
+(11993,"\<orgy\>",1),
+(11994,"\<panties\>",1),
+(11995,"\<pecker\>",1),
+(11996,"\<peternorth\>",1),
+(11997,"\<pissedoff\>",1),
+(11998,"\<pissoff\>",1),
+(11999,"\<pornstar\>",1),
+(12000,"\<prepubescent\>",1),
+(12001,"\<prick\>",1),
+(12002,"\<pube\>",1),
+(12003,"\<punjab\>",1),
+(12004,"\<punkass\>",1),
+(12005,"\<pusse\>",1),
+(12006,"\<randywest\>",1),
+(12007,"\<rebeccalord\>",1),
+(12008,"\<rebeccaporn\>",1),
+(12009,"\<redneck\>",1),
+(12010,"\<reneelarue\>",1),
+(12011,"\<ricer\>",1),
+(12012,"\<rustytrumpet\>",1),
+(12013,"\<ryanconner \>",1),
+(12014,"\<ryanwagner \>",1),
+(12015,"\<sarastjames \>",1),
+(12016,"\<tosser\>",1),
+(12017,"\<tossingsalad\>",1),
+(12018,"\<tosssalad\>",1),
+(12019,"\<traceyadams\>",1),
+(12020,"\<tracilords\>",1),
+(12021,"\<tranny\>",1),
+(12022,"\<ttboy\>",1),
+(12023,"\<tyfox\>",1),
+(12024,"\<tylerfaith\>",1),
+(12025,"\<urethra\>",1),
+(12026,"\<veronicahart\>",1),
+(12027,"\<wankoff\>",1),
+(12028,"\<weed\>",1),
+(12029,"\<wej\>",1),
+(12030,"\<wench\>",1),
+(12031,"\<wildturkey\>",1),
+(12032,"hefner\>",1),
+(12033,"snatch\>",1),
+(12034,"vagina\>",1),
+(12035,"\<annaslut\>",1),
+(12036,"\<asiacarrera\>",1),
+(12037,"\<aurorasnow\>",1),
+(12038,"\<bacardi\>",1),
+(12039,"\<beaner\>",1),
+(12040,"\<beanlicker\>",1),
+(12041,"\<scat\>",1),
+(12042,"\<scatology\>",1),
+(12043,"\<schlong",1),
+(12044,"\<schnapps\>",1),
+(12045,"\<schoolboy",1),
+(12046,"\<selenasteele\>",1),
+(12047,"\<sexy\>",1),
+(12048,"\<seymorebutts\>",1),
+(12049,"\<sheethead\>",1),
+(12050,"\<sherriangel\>",1),
+(12051,"\<shizzle\>",1),
+(12052,"\<shlong\>",1),
+(12053,"\<shmegma\>",1),
+(12054,"\<shrooms\>",1),
+(12055,"\<skeet\>",1),
+(12056,"\<skeetskeet\>",1),
+(12057,"\<vagina",1),
+(12058,"\<adulteress\>",1),
+(12059,"\<adulterous\>",1),
+(12060,"\<adultery\>",1),
+(12061,"\<adultsonly\>",1),
+(12062,"\<agentorange\>",1),
+(12063,"\<aids\>",1),
+(12064,"\<al[ck]ohol",1),
+(12065,"\<alecpowers\>",1),
+(12066,"\<alexwilcox\>",1),
+(12067,"\<amaretto\>",1),
+(12068,"\<anal\>",1),
+(12069,"\<angeladevi\>",1),
+(12070,"\<angeldust\>",1),
+(12071,"\<anglo\>",1),
+(12072,"\<anheiser\>",1),
+(12073,"\<annamalle\>",1),
+(12074,"\<beer\>",1),
+(12075,"\<erzengel\>",1),
+(12076,"könig\>",1),
+(12077,"\<eomer\>",1),
+(12078,"butthhead",1),
+(12079,"\<slope\>",1),
+(12080,"\<smack\>",1),
+(12081,"\<smut\>",1),
+(12082,"\<snowball",1),
+(12083,"\<sodomize\>",1),
+(12084,"\<sodomy\>",1),
+(12085,"\<speedball\>",1),
+(12086,"\<spew\>",1),
+(12087,"\<spreadeagle\>",1),
+(12088,"\<spunk\>",1),
+(12089,"\<std\>",1),
+(12090,"\<sunsetthomas\>",1),
+(12091,"\<sylviasaint\>",1),
+(12092,"\<teet[sz]\>",1),
+(12093,"\<tequila\>",1),
+(12094,"\<terapatrick\>",1),
+(12095,"\<thc\>",1),
+(12096,"\<tiabella\>",1),
+(12097,"\<toadlicker\>",1),
+(12098,"\<toak\>",1),
+(12099,"\<toke\>",1),
+(12100,"\<tombyron\>",1),
+(12101,"\<tommycruise\>",1),
+(12102,"\<tonyzerega\>",1),
+(12103,"\<tossalad\>",1),
+(12104,"\<vibrator\>",1),
+(12105,"\<vincevouyer\>",1),
+(12106,"\<vodka\>",1),
+(12107,"\<vulva\>",1),
+(12108,"\<w[ei]+n[ei]+r\>",1),
+(12109,"\<wank\>",1),
+(12110,"\<whackoff\>",1),
+(12111,"\<whiskey\>",1),
+(12112,"\<willclark\>",1),
+(12113,"\<yellow\>",1),
+(12114,"\<zigzag\>",1),
+(12115,"aryan\>",1),
+(12116,"\<acclaim\>",1),
+(12117,"\<amongoe",1),
+(12118,"\<anabolica\>",1),
+(12119,"\<analpunisher\>",1),
+(12120,"nazi\>",1),
+(12121,"\<anth?rax\>",1),
+(12122,"\<blasehase\>",1),
+(12123,"\<botox\>",1),
+(12124,"\<bueckstueck\>",1),
+(12125,"\<bumsnudel\>",1),
+(12126,"\<cairne\>",1),
+(12127,"\<christkind\>",1),
+(12128,"\<crackdealer\>",1),
+(12129,"king\>",1),
+(12130,"\<darthjedi\>",1),
+(12131,"\<denethor\>",1),
+(12132,"\<derneger\>",1),
+(12133,"\<diedroge\>",1),
+(12134,"\<dollybuster\>",1),
+(12135,"\<donpeperulez\>",1),
+(12136,"\<dopecheffe\>",1),
+(12137,"\<duke",1),
+(12138,"\<dwalin\>",1),
+(12139,"sucker\>",1),
+(12140,"\<ebola\>",1),
+(12141,"\<eichelkäse\>",1),
+(12142,"f[ue]+rst\>",1),
+(12143,"muschi\>",1),
+(12144,"\<eternalhoden\>",1),
+(12145,"\<euthanasie\>",1),
+(12146,"\<fick",1),
+(12147,"luder\>",1),
+(12148,"kacke\>",1),
+(12149,"\<fotz",1),
+(12150,"tussi\>",1),
+(12151,"\<frodobeutlin\>",1),
+(12152,"\<frozenthrone\>",1),
+(12153,"\<gandhi\>",1),
+(12154,"\<ganja",1),
+(12155,"\<gayoverlord\>",1),
+(12156,"\<geilebraut\>",1),
+(12157,"\<ginawild\>",1),
+(12158,"\<goebbels\>",1),
+(12159,"\<gott\>",1),
+(12160,"\<graftaliban\>",1),
+(12161,"\<hägar\>",1),
+(12162,"\<hanfernte\>",1),
+(12163,"\<heiland\>",1),
+(12164,"\<hendrix\>",1),
+(12165,"\<heroin",1),
+(12166,"\<hordenhure\>",1),
+(12167,"porno\>",1),
+(12168,"\<[gk]adafi\>",1),
+(12169,"\<kiffer",1),
+(12170,"\<kleineralki\>",1),
+(12171,"\<kleinerfurz\>",1),
+(12172,"\<klitori",1),
+(12173,"ficker\>",1),
+(12174,"\<kpd\>",1),
+(12175,"\<kruppstahl\>",1),
+(12176,"\<mariuhanna\>",1),
+(12177,"\<master",1),
+(12178,"\<meisteryoda\>",1),
+(12179,"\<mengele\>",1),
+(12180,"fick\>",1),
+(12181,"\<michaelmyers\>",1),
+(12182,"\<milkahase\>",1),
+(12183,"\<milkakuh\>",1),
+(12184,"\<mistst[ue]+ck\>",1),
+(12185,"\<moesen",1),
+(12186,"\<möse",1),
+(12187,"\<muschi",1),
+(12188,"\<nachgeburt\>",1),
+(12189,"\<nazghul\>",1),
+(12190,"\<negerin\>",1),
+(12191,"\<nikoleinchen\>",1),
+(12192,"\<onkeltom\>",1),
+(12193,"\<pimmel",1),
+(12194,"\<pimper",1),
+(12195,"\<pommespapst\>",1),
+(12196,"\<popobumser\>",1),
+(12197,"\<porno",1),
+(12198,"\<princess",1),
+(12199,"\<prinz\>",1),
+(12200,"\<rammstein\>",1),
+(12201,"\<rasputin\>",1),
+(12202,"\<redbull\>",1),
+(12203,"\<richthofen\>",1),
+(12204,"\<sarin\>",1),
+(12205,"\<schlampe",1),
+(12206,"\<schwanz",1),
+(12207,"\<sith\>",1),
+(12208,"\<smeagol\>",1),
+(12209,"\<sohngottes\>",1),
+(12210,"\<spikelee\>",1),
+(12211,"\<splintercell\>",1),
+(12212,"\<suicide\>",1),
+(12213,"\<suizidhoden\>",1),
+(12214,"\<terrortunte\>",1),
+(12215,"\<titanrosette\>",1),
+(12216,"\<tittenmaus\>",1),
+(12217,"\<tylerdurden\>",1),
+(12218,"\<vagimampf\>",1),
+(12219,"\<vanginus\>",1),
+(12220,"\<votzentroll\>",1),
+(12221,"\<warcrack\>",1),
+(12222,"\<winnipuuh\>",1),
+(12223,"\<wixxoor\>",1),
+(12224,"\<wowdiablo\>",1),
+(12225,"\<xerox\>",1),
+(12226,"schlampe\>",1),
+(12227,"zipfe?l\>",1),
+(12228,"\<zuhälter",1),
+(12229,"\<zwergpimmel\>",1),
+(12230,"18년",1),
+(12231,"18놈",1),
+(12232,"\<absinthe\>",1),
+(12233,"18새끼",1),
+(12234,"\<absolut\>",1),
+(12235,"\<chink\>",1),
+(12236,"\<agnostic\>",1),
+(12237,"\<pussy",1),
+(12238,"\<rape\>",1),
+(12239,"\<aceofspades\>",1),
+(12240,"\<pusher",1),
+(12241,"\<chinks\>",1),
+(12242,"\<dikes\>",1),
+(12243,"\<dildos\>",1),
+(12244,"\<sativa\>",1),
+(12245,"\<indica\>",1),
+(12246,"\<skunkweed\>",1),
+(12247,"\<dike\>",1),
+(12248,"\<raped\>",1),
+(12249,"\<raping\>",1),
+(12250,"dong",1),
+(12251,"\<dyke\>",1),
+(12252,"\<mj\>",1),
+(12253,"\<doobie\>",1),
+(12254,"\<stoner",1),
+(12255,"\<junk[ie]",1),
+(12256,"\<defecat",1),
+(12257,"\<alquaeda\>",1),
+(12258,"\<amerikkkan\>",1),
+(12259,"\<amphetamine\>",1),
+(12260,"\<ejaculate\>",1),
+(12261,"\<scrotum",1),
+(12262,"\<fisting\>",1),
+(12263,"\<arse",1),
+(12264,"\<cock",1),
+(12265,"\<aryan",1),
+(12266,"\<backdoor\>",1),
+(12267,"titt[iey]*s\>",1),
+(12268,"\<bi\>",1),
+(12269,"\<bigfatasscow\>",1),
+(12270,"bondage\>",1),
+(12271,"boobs\>",1),
+(12272,"breast\>",1),
+(12273,"\<buttocks\>",1),
+(12274,"\<[ck]oitus",1),
+(12275,"\<condom",1),
+(12276,"\<dahoe\>",1),
+(12277,"\<damn\>",1),
+(12278,"\<darkwanker\>",1),
+(12279,"\<di[ae][rh]+ea",1),
+(12280,"dick\>",1),
+(12281,"\<dirtyho\>",1),
+(12282,"\<domination\>",1),
+(12283,"\<dutch\>",1),
+(12284,"\<enema\>",1),
+(12285,"\<erotic",1),
+(12286,"jackass\>",1),
+(12287,"\<facism\>",1),
+(12288,"\<fakeboobs\>",1),
+(12289,"\<fart\>",1),
+(12290,"\<fetish",1),
+(12291,"fetish\>",1),
+(12292,"\<filthymuslim\>",1),
+(12293,"\<focker\>",1),
+(12294,"\<foreplay\>",1),
+(12295,"\<foreskin\>",1),
+(12296,"\<frottage\>",1),
+(12297,"\<fuk\>",1),
+(12298,"\<fukass\>",1),
+(12299,"\<gay\>",1),
+(12300,"\<genital",1),
+(12301,"\<genitals\>",1),
+(12302,"\<gigolo\>",1),
+(12303,"\<gonorrhea\>",1),
+(12304,"\<grummz\>",1),
+(12305,"\<hairyhorny\>",1),
+(12306,"\<hardboob\>",1),
+(12307,"\<hentail\>",1),
+(12308,"\<hiv\>",1),
+(12309,"\<holocaust\>",1),
+(12310,"\<horny\>",1),
+(12311,"\<hot\>",1),
+(12312,"\<j.*jameson\>",1),
+(12313,"\<kinky\>",1),
+(12314,"\<kraut\>",1),
+(12315,"\<lesb\>",1),
+(12316,"\<lesbian\>",1),
+(12317,"pussy\>",1),
+(12318,"\<lingerie\>",1),
+(12319,"\<load\>",1),
+(12320,"\<lube\>",1),
+(12321,"\<lubricant\>",1),
+(12322,"\<lust\>",1),
+(12323,"\<maidenhead\>",1),
+(12324,"후장뚫어",1),
+(12325,"\<asshole",1),
+(12326,"\<fingerbang\>",1),
+(12327,"\<gangbang\>",1),
+(12328,"\<gangrape\>",1),
+(12329,"\<japs\>",1),
+(12330,"\<jizzing\>",1),
+(12331,"\<gizzing\>",1),
+(12332,"\<pussies\>",1),
+(12333,"\<rapes\>",1),
+(12334,"\<saladtosser\>",1),
+(12335,"\<fags\>",1),
+(12336,"boob",1),
+(12337,"\<bast[aeiou]rd",1),
+(12338,"\<beastiality\>",1),
+(12339,"\<blowjob",1),
+(12340,"\<boffer\>",1),
+(12341,"\<clowjob\>",1),
+(12342,"\<donkeypunch\>",1),
+(12343,"\<fawker\>",1),
+(12344,"\<feces",1),
+(12345,"\<nipple",1),
+(12346,"nipples\>",1),
+(12347,"prostitute",1),
+(12348,"\<coke\>",1),
+(12349,"\<morphine\>",1),
+(12350,"\<nudity\>",1),
+(12351,"\<nuts\>",1),
+(12352,"\<pagan\>",1),
+(12353,"\<perv\>",1),
+(12354,"\<pervert\>",1),
+(12355,"\<phawk\>",1),
+(12356,"\<piss\>",1),
+(12357,"\<playboy\>",1),
+(12358,"\<playgirl\>",1),
+(12359,"\<polish\>",1),
+(12360,"\<prebubescent\>",1),
+(12361,"\<queer\>",1),
+(12362,"\<reich\>",1),
+(12363,"\<r.*jeremy\>",1),
+(12364,"\<screw\>",1),
+(12365,"\<seamen\>",1),
+(12366,"\<spreadmylegs\>",1),
+(12367,"\<stripper",1),
+(12368,"\<suck\>",1),
+(12369,"\<sukkitdown\>",1),
+(12370,"\<swingers\>",1),
+(12371,"\<teabag",1),
+(12372,"\<terrorist\>",1),
+(12373,"\<thickbush\>",1),
+(12374,"\<threesome\>",1),
+(12375,"\<snatch",1),
+(12376,"\<updabut\>",1),
+(12377,"\<vasect",1),
+(12378,"\<white\>",1),
+(12379,"\<negro",1),
+(12380,"\<tinytits\>",1),
+(12381,"cock\>",1),
+(12382,"blowjob\>",1),
+(12383,"\<tardpopsicle\>",1),
+(12384,"\<urmom\>",1),
+(12385,"fag\>",1),
+(12386,"\<dick",1),
+(12387,"\<turdsplat\>",1),
+(12388,"\<chokeoncocks\>",1),
+(12389,"\<littlearse\>",1),
+(12390,"\<holybijesis\>",1),
+(12391,"\<niggs\>",1),
+(12392,"\<sacofricosis\>",1),
+(12393,"\<polesmokers\>",1),
+(12394,"\<sega\>",1),
+(12395,"\<sex",1),
+(12396,"\<shadowbane\>",1),
+(12397,"\<shane",1),
+(12398,"\<shiznit\>",1),
+(12399,"\<shortbus\>",1),
+(12400,"\<tramps\>",1),
+(12401,"\<erection\>",1),
+(12402,"\<smoked\>",1),
+(12403,"\<snowwhite\>",1),
+(12404,"\<oral\>",1),
+(12405,"\<sperm",1),
+(12406,"\<poop\>",1),
+(12407,"\<spluge\>",1),
+(12408,"\<suck",1),
+(12409,"\<supermario\>",1),
+(12410,"support",1),
+(12411,"\<sex\>",1),
+(12412,"\<suppuku\>",1),
+(12413,"\<sirbong\>",1),
+(12414,"\<spank\>",1),
+(12415,"\<speculum\>",1),
+(12416,"\<streaker",1),
+(12417,"\<tribadism\>",1),
+(12418,"\<upmybutthole\>",1),
+(12419,"\<urinat",1),
+(12420,"\<venereal\>",1),
+(12421,"\<virgin\>",1),
+(12422,"\<warslut\>",1),
+(12423,"\<wood\>",1),
+(12424,"\<advil\>",1),
+(12425,"\<amputee\>",1),
+(12426,"\<amtrak\>",1),
+(12427,"\<anis\>",1),
+(12428,"\<anolinctus\>",1),
+(12429,"\<antichrist\>",1),
+(12430,"\<arathorn\>",1),
+(12431,"\<arian\>",1),
+(12432,"\<arsonist\>",1),
+(12433,"\<blackenstein\>",1),
+(12434,"\<blacksabbath\>",1),
+(12435,"\<bnet\>",1),
+(12436,"\<bootylicious\>",1),
+(12437,"\<bra\>",1),
+(12438,"\<chinaman\>",1),
+(12439,"\<chronik\>",1),
+(12440,"\<colgate\>",1),
+(12441,"\<coprophagy\>",1),
+(12442,"\<crackhead\>",1),
+(12443,"\<dammit\>",1),
+(12444,"\<darky\>",1),
+(12445,"\<darvocet\>",1),
+(12446,"\<databasesys\>",1),
+(12447,"\<deckardcain\>",1),
+(12448,"\<dr\>",1),
+(12449,"\<dukeofwhales\>",1),
+(12450,"\<dumbass\>",1),
+(12451,"\<ecstasy\>",1),
+(12452,"\<ensign\>",1),
+(12453,"\<fcuk\>",1),
+(12454,"\<ferrari\>",1),
+(12455,"\<fetus",1),
+(12456,"\<fockerz\>",1),
+(12457,"\<fooker\>",1),
+(12458,"cunt\>",1),
+(12459,"\<ghandi\>",1),
+(12460,"\<gofukyorself\>",1),
+(12461,"\<gonadian\>",1),
+(12462,"\<goochgravy\>",1),
+(12463,"\<gookenator\>",1),
+(12464,"\<hemplock\>",1),
+(12465,"\<herpies\>",1),
+(12466,"\<homoerectus\>",1),
+(12467,"\<hore\>",1),
+(12468,"\<hotdamn\>",1),
+(12469,"\<hungelf\>",1),
+(12470,"\<indian\>",1),
+(12471,"\<irapekids\>",1),
+(12472,"\<ironchef\>",1),
+(12473,"\<jc\>",1),
+(12474,"\<jedi\>",1),
+(12475,"\<[gj]en[ao]cide\>",1),
+(12476,"\<jugs\>",1),
+(12477,"\<klismaphilia\>",1),
+(12478,"\<kokigami\>",1),
+(12479,"\<koon\>",1),
+(12480,"\<kosherpork\>",1),
+(12481,"\<lardass\>",1),
+(12482,"\<laurabush\>",1),
+(12483,"\<marlboroman\>",1),
+(12484,"\<masterbaiter\>",1),
+(12485,"\<maxipad\>",1),
+(12486,"\<menstrual\>",1),
+(12487,"\<mhz\>",1),
+(12488,"\<michaeljack\>",1),
+(12489,"bastard\>",1),
+(12490,"\<misogynist\>",1),
+(12491,"\<mister\>",1),
+(12492,"\<mr\>",1),
+(12493,"\<narcoticus\>",1),
+(12494,"\<nigahh\>",1),
+(12495,"\<npc",1),
+(12496,"\<nug\>",1),
+(12497,"\<nunriggers\>",1),
+(12498,"\<nwa\>",1),
+(12499,"\<omgwtf\>",1),
+(12500,"\<opiate",1),
+(12501,"\<oreos\>",1),
+(12502,"\<ovaltine\>",1),
+(12503,"\<papsmear\>",1),
+(12504,"\<pederasty\>",1),
+(12505,"\<penthouse\>",1),
+(12506,"\<pimp",1),
+(12507,"\<pinktaco\>",1),
+(12508,"mofo\>",1),
+(12509,"\<poomaster\>",1),
+(12510,"\<poonjuice\>",1),
+(12511,"\<poop",1),
+(12512,"\<pwnzor\>",1),
+(12513,"\<quadoushka\>",1),
+(12514,"\<r.*nad[ae]r\>",1),
+(12515,"\<stud\>",1),
+(12516,"\<submissive\>",1),
+(12517,"\<swiftnuggs\>",1),
+(12518,"\<trans",1),
+(12519,"\<uglynig\>",1),
+(12520,"\<swastika\>",1),
+(12521,"\<sybian\>",1),
+(12522,"\<toeofcamel\>",1),
+(12523,"\<tokyorose\>",1),
+(12524,"\<urmama\>",1),
+(12525,"\<voltron\>",1),
+(12526,"\<wangmaster\>",1),
+(12527,"\<wanker\>",1),
+(12528,"\<wetdream\>",1),
+(12529,"\<whitebread\>",1),
+(12530,"\<wigger\>",1),
+(12531,"\<williamhung\>",1),
+(12532,"\<windex\>",1),
+(12533,"\<witchking\>",1),
+(12534,"\<x.*x\>",1),
+(12535,"\<yosemitesam\>",1),
+(12536,"\<youranus\>",1),
+(12537,"\<zoolander\>",1),
+(12538,"condom\>",1),
+(12539,"jebus\>",1),
+(12540,"\<kosher",1),
+(12541,"menstrual",1),
+(12542,"sexy",1),
+(12543,"\<bestiality\>",1),
+(12544,"\<bizzle\>",1),
+(12545,"\<black\>",1),
+(12546,"\<blackie\>",1),
+(12547,"\<bloodyhell\>",1),
+(12548,"\<blow\>",1),
+(12549,"\<blunt\>",1),
+(12550,"\<bollocks\>",1),
+(12551,"\<boobs",1),
+(12552,"\<boofer\>",1),
+(12553,"\<bourbon\>",1),
+(12554,"\<brazuca\>",1),
+(12555,"\<breast",1),
+(12556,"\<budda\>",1),
+(12557,"\<buddahead\>",1),
+(12558,"\<budlight\>",1),
+(12559,"\<budweiser\>",1),
+(12560,"\<bugger\>",1),
+(12561,"\<bustydusty\>",1),
+(12562,"\<butt\>",1),
+(12563,"\<buttman\>",1),
+(12564,"\<candyandes\>",1),
+(12565,"\<caucazoid\>",1),
+(12566,"\<cawk\>",1),
+(12567,"\<fu[ck]+[aeiou]+",1),
+(13055,"\<cervesa\>",6),
+(13056,"\<champagne\>",6),
+(13057,"\<chaseylain\>",6),
+(13058,"\<cheeba\>",6),
+(13059,"\<cherokee \>",6),
+(13060,"\<chino\>",6),
+(13061,"\<chloejones \>",6),
+(13062,"\<christilake\>",6),
+(13063,"\<chrisward \>",6),
+(13064,"\<cocostarfish\>",6),
+(13065,"\<cognac\>",6),
+(13066,"\<cootch\>",6),
+(13067,"\<cooter\>",6),
+(13068,"\<copulate\>",6),
+(13069,"\<cornholes\>",6),
+(13070,"\<corona\>",6),
+(13071,"\<crack\>",6),
+(13072,"\<cracker\>",6),
+(13073,"\<crap\>",6),
+(13074,"\<damned\>",6),
+(13075,"\<dank\>",6),
+(13076,"\<deancoulter\>",6),
+(13077,"\<debidiamond \>",6),
+(13078,"\<deepthroat\>",6),
+(13079,"\<devinderay \>",6),
+(13080,"\<dianazyle \>",6),
+(13081,"\<dietpills\>",6),
+(13082,"\<dirtysanchez\>",6),
+(13083,"\<ditavontease\>",6),
+(13084,"\<doggystyle\>",6),
+(13085,"\<dope\>",6),
+(13086,"\<duckbutter\>",6),
+(13087,"\<ecstacy\>",6),
+(13088,"\<edpowers \>",6),
+(13089,"\<eggplant\>",6),
+(13090,"\<ericaboyer \>",6),
+(13091,"\<extasy\>",6),
+(13092,"\<facial\>",6),
+(13093,"\<fluffer\>",6),
+(13094,"\<fornicat",6),
+(13095,"\<freebase\>",6),
+(13096,"\<fusck",6),
+(13097,"\<fux",6),
+(13098,"\<gagepowers\>",6),
+(13099,"\<gew\>",6),
+(13100,"\<ghb\>",6),
+(13101,"\<ghetto\>",6),
+(13102,"\<gingerhill\>",6),
+(13103,"\<gloryhole\>",6),
+(13104,"\<goldschlager\>",6),
+(13105,"\<goombah\>",6),
+(13106,"\<granddragon\>",6),
+(13107,"\<greaseball\>",6),
+(13108,"\<greaser\>",6),
+(13109,"\<gspot\>",6),
+(13110,"\<guiness\>",6),
+(13111,"\<gunja\>",6),
+(13112,"\<handjob\>",6),
+(13113,"\<hash\>",6),
+(13114,"\<headdoctor\>",6),
+(13115,"\<heidifleiss\>",6),
+(13116,"\<hmo\>",6),
+(13117,"\<honky\>",6),
+(13118,"\<hoodrat\>",6),
+(13119,"\<hookah\>",6),
+(13120,"\<horney\>",6),
+(13121,"\<hustler\>",6),
+(13122,"\<inarivachs\>",6),
+(13123,"\<j.*bobbit\>",6),
+(13124,"\<j.*holmes\>",6),
+(13125,"\<jackdaniels\>",6),
+(13126,"\<jadeeast\>",6),
+(13127,"\<jadehsu \>",6),
+(13128,"\<jadestclair\>",6),
+(13129,"\<jagermeister\>",6),
+(13130,"\<janacova\>",6),
+(13131,"\<jennahaze\>",6),
+(13132,"\<jennajameson\>",6),
+(13133,"\<jenteal\>",6),
+(13134,"\<jessicadee\>",6),
+(13135,"\<jeweldenyle\>",6),
+(13136,"\<jillkelly\>",6),
+(13137,"\<jimbeam\>",6),
+(13138,"\<josecuervo\>",6),
+(13139,"\<juliashton\>",6),
+(13140,"\<karadavis\>",6),
+(13141,"\<keef\>",6),
+(13142,"\<kif\>",6),
+(13143,"\<kikkityler \>",6),
+(13144,"\<kobetai\>",6),
+(13145,"\<kooter\>",6),
+(13146,"\<krystalsteal\>",6),
+(13147,"\<kyke\>",6),
+(13148,"\<kylacole\>",6),
+(13149,"\<kylieireland\>",6),
+(13150,"\<lancegear \>",6),
+(13151,"\<larryflynt\>",6),
+(13152,"\<lecher\>",6),
+(13153,"\<liquidx\>",6),
+(13154,"\<loloferrari\>",6),
+(13155,"\<long.*dong\>",6),
+(13156,"\<ludes\>",6),
+(13157,"\<lunalane\>",6),
+(13158,"\<maltliquor\>",6),
+(13159,"\<mariacheca\>",6),
+(13160,"\<mariatakagi\>",6),
+(13161,"\<marisadiaz \>",6),
+(13162,"\<markdalton  \>",6),
+(13163,"\<markwolff \>",6),
+(13164,"\<marycarey \>",6),
+(13165,"\<mayate\>",6),
+(13166,"\<meatwad\>",6),
+(13167,"\<methhead\>",6),
+(13168,"\<methmonster\>",6),
+(13169,"\<mikolee\>",6),
+(13170,"\<mimimiyagi\>",6),
+(13171,"\<moneyshot\>",6),
+(13172,"\<muff\>",6),
+(13173,"\<mushrooms\>",6),
+(13174,"\<nickelbag\>",6),
+(13175,"\<nikkibenz\>",6),
+(13176,"\<nikkidial\>",6),
+(13177,"\<nip\>",6),
+(13178,"\<nizzle\>",6),
+(13179,"\<nubian",6),
+(13180,"\<nympho\>",6),
+(13181,"\<obsession\>",6),
+(13182,"\<opiate\>",6),
+(13183,"\<orgy\>",6),
+(13184,"\<panties\>",6),
+(13185,"\<pecker\>",6),
+(13186,"\<peternorth\>",6),
+(13187,"\<pissedoff\>",6),
+(13188,"\<pissoff\>",6),
+(13189,"\<pornstar\>",6),
+(13190,"\<prepubescent\>",6),
+(13191,"\<prick\>",6),
+(13192,"\<pube\>",6),
+(13193,"\<punjab\>",6),
+(13194,"\<punkass\>",6),
+(13195,"\<pusse\>",6),
+(13196,"\<randywest\>",6),
+(13197,"\<rebeccalord\>",6),
+(13198,"\<rebeccaporn\>",6),
+(13199,"\<redneck\>",6),
+(13200,"\<reneelarue\>",6),
+(13201,"\<ricer\>",6),
+(13202,"\<rustytrumpet\>",6),
+(13203,"\<ryanconner \>",6),
+(13204,"\<ryanwagner \>",6),
+(13205,"\<sarastjames \>",6),
+(13206,"\<tosser\>",6),
+(13207,"\<tossingsalad\>",6),
+(13208,"\<tosssalad\>",6),
+(13209,"\<traceyadams\>",6),
+(13210,"\<tracilords\>",6),
+(13211,"\<tranny\>",6),
+(13212,"\<ttboy\>",6),
+(13213,"\<tyfox\>",6),
+(13214,"\<tylerfaith\>",6),
+(13215,"\<urethra\>",6),
+(13216,"\<veronicahart\>",6),
+(13217,"\<wankoff\>",6),
+(13218,"\<weed\>",6),
+(13219,"\<wej\>",6),
+(13220,"\<wench\>",6),
+(13221,"\<wildturkey\>",6),
+(13222,"hefner\>",6),
+(13223,"snatch\>",6),
+(13224,"vagina",6),
+(13225,"\<annaslut\>",6),
+(13226,"\<asiacarrera\>",6),
+(13227,"\<aurorasnow\>",6),
+(13228,"\<bacardi\>",6),
+(13229,"\<beaner\>",6),
+(13230,"\<beanlicker\>",6),
+(13231,"\<scat\>",6),
+(13232,"\<scatology\>",6),
+(13233,"\<schlong",6),
+(13234,"\<schnapps\>",6),
+(13235,"\<schoolboy",6),
+(13236,"\<selenasteele\>",6),
+(13237,"\<sexy\>",6),
+(13238,"\<seymorebutts\>",6),
+(13239,"\<sheethead\>",6),
+(13240,"\<sherriangel\>",6),
+(13241,"\<shizzle\>",6),
+(13242,"\<shlong\>",6),
+(13243,"\<shmegma\>",6),
+(13244,"\<shrooms\>",6),
+(13245,"\<skeet\>",6),
+(13246,"\<skeetskeet\>",6),
+(13247,"\<adulteress\>",6),
+(13248,"\<adulterous\>",6),
+(13249,"\<adultery\>",6),
+(13250,"\<adultsonly\>",6),
+(13251,"\<agentorange\>",6),
+(13252,"\<aids\>",6),
+(13253,"\<al[ck]ohol",6),
+(13254,"\<alecpowers\>",6),
+(13255,"\<alexwilcox\>",6),
+(13256,"\<amaretto\>",6),
+(13257,"\<anal\>",6),
+(13258,"\<angeladevi\>",6),
+(13259,"\<angeldust\>",6),
+(13260,"\<anglo\>",6),
+(13261,"\<anheiser\>",6),
+(13262,"\<annamalle\>",6),
+(13263,"\<beer\>",6),
+(13264,"\<erzengel\>",6),
+(13265,"könig\>",6),
+(13266,"\<eomer\>",6),
+(13267,"butthhead",6),
+(13268,"\<slope\>",6),
+(13269,"\<smack\>",6),
+(13270,"\<smut\>",6),
+(13271,"\<snowball",6),
+(13272,"\<sodomize\>",6),
+(13273,"\<sodomy\>",6),
+(13274,"\<speedball\>",6),
+(13275,"\<spew\>",6),
+(13276,"\<spreadeagle\>",6),
+(13277,"\<spunk\>",6),
+(13278,"\<std\>",6),
+(13279,"\<sunsetthomas\>",6),
+(13280,"\<sylviasaint\>",6),
+(13281,"\<teet[sz]\>",6),
+(13282,"\<tequila\>",6),
+(13283,"\<terapatrick\>",6),
+(13284,"\<thc\>",6),
+(13285,"\<tiabella\>",6),
+(13286,"\<toadlicker\>",6),
+(13287,"\<toak\>",6),
+(13288,"\<toke\>",6),
+(13289,"\<tombyron\>",6),
+(13290,"\<tommycruise\>",6),
+(13291,"\<tonyzerega\>",6),
+(13292,"\<tossalad\>",6),
+(13293,"\<vibrator\>",6),
+(13294,"\<vincevouyer\>",6),
+(13295,"\<vodka\>",6),
+(13296,"\<vulva\>",6),
+(13297,"\<w[ei]+n[ei]+r\>",6),
+(13298,"\<wank\>",6),
+(13299,"\<whackoff\>",6),
+(13300,"\<whiskey\>",6),
+(13301,"\<willclark\>",6),
+(13302,"\<yellow\>",6),
+(13303,"\<zigzag\>",6),
+(13304,"aryan\>",6),
+(13305,"\<acclaim\>",6),
+(13306,"\<amongoe",6),
+(13307,"\<anabolica\>",6),
+(13308,"\<analpunisher\>",6),
+(13309,"nazi\>",6),
+(13310,"\<anth?rax\>",6),
+(13311,"\<blasehase\>",6),
+(13312,"\<botox\>",6),
+(13313,"\<bueckstueck\>",6),
+(13314,"\<bumsnudel\>",6),
+(13315,"\<cairne\>",6),
+(13316,"\<christkind\>",6),
+(13317,"\<crackdealer\>",6),
+(13318,"king\>",6),
+(13319,"\<darthjedi\>",6),
+(13320,"\<denethor\>",6),
+(13321,"\<derneger\>",6),
+(13322,"\<diedroge\>",6),
+(13323,"\<dollybuster\>",6),
+(13324,"\<donpeperulez\>",6),
+(13325,"\<dopecheffe\>",6),
+(13326,"\<duke",6),
+(13327,"\<dwalin\>",6),
+(13328,"sucker\>",6),
+(13329,"\<ebola\>",6),
+(13330,"\<eichelkäse\>",6),
+(13331,"f[ue]+rst\>",6),
+(13332,"muschi\>",6),
+(13333,"\<eternalhoden\>",6),
+(13334,"\<euthanasie\>",6),
+(13335,"\<fick",6),
+(13336,"luder\>",6),
+(13337,"kacke\>",6),
+(13338,"\<fotz",6),
+(13339,"tussi\>",6),
+(13340,"\<frodobeutlin\>",6),
+(13341,"\<frozenthrone\>",6),
+(13342,"\<gandhi\>",6),
+(13343,"\<ganja",6),
+(13344,"\<gayoverlord\>",6),
+(13345,"\<geilebraut\>",6),
+(13346,"\<ginawild\>",6),
+(13347,"\<goebbels\>",6),
+(13348,"\<gott\>",6),
+(13349,"\<graftaliban\>",6),
+(13350,"\<hägar\>",6),
+(13351,"\<hanfernte\>",6),
+(13352,"\<heiland\>",6),
+(13353,"\<hendrix\>",6),
+(13354,"\<heroin",6),
+(13355,"\<hordenhure\>",6),
+(13356,"porno\>",6),
+(13357,"\<[gk]adafi\>",6),
+(13358,"\<kiffer",6),
+(13359,"\<kleineralki\>",6),
+(13360,"\<kleinerfurz\>",6),
+(13361,"\<klitori",6),
+(13362,"ficker\>",6),
+(13363,"\<kpd\>",6),
+(13364,"\<kruppstahl\>",6),
+(13365,"\<mariuhanna\>",6),
+(13366,"\<master",6),
+(13367,"\<meisteryoda\>",6),
+(13368,"\<mengele\>",6),
+(13369,"fick\>",6),
+(13370,"\<michaelmyers\>",6),
+(13371,"\<milkahase\>",6),
+(13372,"\<milkakuh\>",6),
+(13373,"\<mistst[ue]+ck\>",6),
+(13374,"\<moesen",6),
+(13375,"\<möse",6),
+(13376,"\<muschi",6),
+(13377,"\<nachgeburt\>",6),
+(13378,"\<nazghul\>",6),
+(13379,"\<negerin\>",6),
+(13380,"\<nikoleinchen\>",6),
+(13381,"\<onkeltom\>",6),
+(13382,"\<pimmel",6),
+(13383,"\<pimper",6),
+(13384,"\<pommespapst\>",6),
+(13385,"\<popobumser\>",6),
+(13386,"\<porno",6),
+(13387,"\<princess",6),
+(13388,"\<prinz\>",6),
+(13389,"\<rammstein\>",6),
+(13390,"\<rasputin\>",6),
+(13391,"\<redbull\>",6),
+(13392,"\<richthofen\>",6),
+(13393,"\<sarin\>",6),
+(13394,"\<schlampe",6),
+(13395,"\<schwanz",6),
+(13396,"\<sith\>",6),
+(13397,"\<smeagol\>",6),
+(13398,"\<sohngottes\>",6),
+(13399,"\<spikelee\>",6),
+(13400,"\<splintercell\>",6),
+(13401,"\<suicide\>",6),
+(13402,"\<suizidhoden\>",6),
+(13403,"\<terrortunte\>",6),
+(13404,"\<titanrosette\>",6),
+(13405,"\<tittenmaus\>",6),
+(13406,"\<tylerdurden\>",6),
+(13407,"\<vagimampf\>",6),
+(13408,"\<vanginus\>",6),
+(13409,"\<votzentroll\>",6),
+(13410,"\<warcrack\>",6),
+(13411,"\<winnipuuh\>",6),
+(13412,"\<wixxoor\>",6),
+(13413,"\<wowdiablo\>",6),
+(13414,"\<xerox\>",6),
+(13415,"schlampe\>",6),
+(13416,"zipfe?l\>",6),
+(13417,"\<zuhälter",6),
+(13418,"\<zwergpimmel\>",6),
+(13419,"\<absinthe\>",6),
+(13420,"\<absolut\>",6),
+(13421,"\<chink\>",6),
+(13422,"\<agnostic\>",6),
+(13423,"\<pussy",6),
+(13424,"\<rape\>",6),
+(13425,"\<aceofspades\>",6),
+(13426,"\<pusher",6),
+(13427,"\<chinks\>",6),
+(13428,"\<dikes\>",6),
+(13429,"\<dildos\>",6),
+(13430,"\<sativa\>",6),
+(13431,"\<indica\>",6),
+(13432,"\<skunkweed\>",6),
+(13433,"\<dike\>",6),
+(13434,"\<raped\>",6),
+(13435,"\<raping\>",6),
+(13436,"dong",6),
+(13437,"\<dyke\>",6),
+(13438,"\<mj\>",6),
+(13439,"\<doobie\>",6),
+(13440,"\<stoner",6),
+(13441,"\<junk[ie]",6),
+(13442,"\<defecat",6),
+(13443,"\<alquaeda\>",6),
+(13444,"\<amerikkkan\>",6),
+(13445,"\<amphetamine\>",6),
+(13446,"\<ejaculate\>",6),
+(13447,"\<scrotum",6),
+(13448,"\<fisting\>",6),
+(13449,"\<arse",6),
+(13450,"\<cock",6),
+(13451,"\<aryan",6),
+(13452,"\<backdoor\>",6),
+(13453,"titt[iey]*s\>",6),
+(13454,"\<bi\>",6),
+(13455,"\<bigfatasscow\>",6),
+(13456,"bondage\>",6),
+(13457,"boobs\>",6),
+(13458,"breast\>",6),
+(13459,"\<buttocks\>",6),
+(13460,"\<[ck]oitus",6),
+(13461,"\<condom",6),
+(13462,"\<dahoe\>",6),
+(13463,"\<damn\>",6),
+(13464,"\<darkwanker\>",6),
+(13465,"\<di[ae][rh]+ea",6),
+(13466,"dick\>",6),
+(13467,"\<dirtyho\>",6),
+(13468,"\<domination\>",6),
+(13469,"\<dutch\>",6),
+(13470,"\<enema\>",6),
+(13471,"\<erotic",6),
+(13472,"jackass\>",6),
+(13473,"\<facism\>",6),
+(13474,"\<fakeboobs\>",6),
+(13475,"\<fart\>",6),
+(13476,"\<fetish",6),
+(13477,"fetish\>",6),
+(13478,"\<filthymuslim\>",6),
+(13479,"\<focker\>",6),
+(13480,"\<foreplay\>",6),
+(13481,"\<foreskin\>",6),
+(13482,"\<frottage\>",6),
+(13483,"\<fuk\>",6),
+(13484,"\<fukass\>",6),
+(13485,"\<gay\>",6),
+(13486,"\<genital",6),
+(13487,"\<genitals\>",6),
+(13488,"\<gigolo\>",6),
+(13489,"\<gonorrhea\>",6),
+(13490,"\<grummz\>",6),
+(13491,"\<hairyhorny\>",6),
+(13492,"\<hardboob\>",6),
+(13493,"\<hentail\>",6),
+(13494,"\<hiv\>",6),
+(13495,"\<holocaust\>",6),
+(13496,"\<horny\>",6),
+(13497,"\<hot\>",6),
+(13498,"\<j.*jameson\>",6),
+(13499,"\<kinky\>",6),
+(13500,"\<kraut\>",6),
+(13501,"\<lesb\>",6),
+(13502,"\<lesbian\>",6),
+(13503,"pussy\>",6),
+(13504,"\<lingerie\>",6),
+(13505,"\<load\>",6),
+(13506,"\<lube\>",6),
+(13507,"\<lubricant\>",6),
+(13508,"\<lust\>",6),
+(13509,"\<maidenhead\>",6),
+(13510,"후장뚫어",6),
+(13511,"\<asshole",6),
+(13512,"\<fingerbang\>",6),
+(13513,"\<gangbang\>",6),
+(13514,"\<gangrape\>",6),
+(13515,"\<japs\>",6),
+(13516,"\<jizzing\>",6),
+(13517,"\<gizzing\>",6),
+(13518,"\<pussies\>",6),
+(13519,"\<rapes\>",6),
+(13520,"\<saladtosser\>",6),
+(13521,"\<fags\>",6),
+(13522,"boob",6),
+(13523,"\<bast[aeiou]rd",6),
+(13524,"\<beastiality\>",6),
+(13525,"\<blowjob",6),
+(13526,"\<boffer\>",6),
+(13527,"\<clowjob\>",6),
+(13528,"\<donkeypunch\>",6),
+(13529,"\<fawker\>",6),
+(13530,"\<feces",6),
+(13531,"\<nipple",6),
+(13532,"nipples\>",6),
+(13533,"prostitute",6),
+(13534,"\<coke\>",6),
+(13535,"\<morphine\>",6),
+(13536,"\<nudity\>",6),
+(13537,"\<nuts\>",6),
+(13538,"\<pagan\>",6),
+(13539,"\<perv\>",6),
+(13540,"\<pervert\>",6),
+(13541,"\<phawk\>",6),
+(13542,"\<piss\>",6),
+(13543,"\<playboy\>",6),
+(13544,"\<playgirl\>",6),
+(13545,"\<polish\>",6),
+(13546,"\<prebubescent\>",6),
+(13547,"\<queer\>",6),
+(13548,"\<reich\>",6),
+(13549,"\<r.*jeremy\>",6),
+(13550,"\<screw\>",6),
+(13551,"\<seamen\>",6),
+(13552,"\<spreadmylegs\>",6),
+(13553,"\<stripper",6),
+(13554,"\<suck\>",6),
+(13555,"\<sukkitdown\>",6),
+(13556,"\<swingers\>",6),
+(13557,"\<teabag",6),
+(13558,"\<terrorist\>",6),
+(13559,"\<thickbush\>",6),
+(13560,"\<threesome\>",6),
+(13561,"\<snatch",6),
+(13562,"\<updabut\>",6),
+(13563,"\<vasect",6),
+(13564,"\<white\>",6),
+(13565,"\<negro",6),
+(13566,"\<tinytits\>",6),
+(13567,"cock\>",6),
+(13568,"blowjob\>",6),
+(13569,"\<tardpopsicle\>",6),
+(13570,"\<urmom\>",6),
+(13571,"fag\>",6),
+(13572,"\<dick",6),
+(13573,"\<turdsplat\>",6),
+(13574,"\<chokeoncocks\>",6),
+(13575,"\<littlearse\>",6),
+(13576,"\<holybijesis\>",6),
+(13577,"\<niggs\>",6),
+(13578,"\<sacofricosis\>",6),
+(13579,"\<polesmokers\>",6),
+(13580,"\<sega\>",6),
+(13581,"\<sex",6),
+(13582,"\<shadowbane\>",6),
+(13583,"\<shane",6),
+(13584,"\<shiznit\>",6),
+(13585,"\<shortbus\>",6),
+(13586,"\<tramps\>",6),
+(13587,"\<erection\>",6),
+(13588,"\<smoked\>",6),
+(13589,"\<snowwhite\>",6),
+(13590,"\<oral\>",6),
+(13591,"\<sperm",6),
+(13592,"\<poop\>",6),
+(13593,"\<spluge\>",6),
+(13594,"\<suck",6),
+(13595,"\<supermario\>",6),
+(13596,"support",6),
+(13597,"\<sex\>",6),
+(13598,"\<suppuku\>",6),
+(13599,"\<sirbong\>",6),
+(13600,"\<spank\>",6),
+(13601,"\<speculum\>",6),
+(13602,"\<streaker",6),
+(13603,"\<tribadism\>",6),
+(13604,"\<upmybutthole\>",6),
+(13605,"\<urinat",6),
+(13606,"\<venereal\>",6),
+(13607,"\<virgin\>",6),
+(13608,"\<warslut\>",6),
+(13609,"\<wood\>",6),
+(13610,"\<advil\>",6),
+(13611,"\<amputee\>",6),
+(13612,"\<amtrak\>",6),
+(13613,"\<anis\>",6),
+(13614,"\<anolinctus\>",6),
+(13615,"\<antichrist\>",6),
+(13616,"\<arathorn\>",6),
+(13617,"\<arian\>",6),
+(13618,"\<arsonist\>",6),
+(13619,"\<blackenstein\>",6),
+(13620,"\<blacksabbath\>",6),
+(13621,"\<bnet\>",6),
+(13622,"\<bootylicious\>",6),
+(13623,"\<bra\>",6),
+(13624,"\<chinaman\>",6),
+(13625,"\<chronik\>",6),
+(13626,"\<colgate\>",6),
+(13627,"\<coprophagy\>",6),
+(13628,"\<crackhead\>",6),
+(13629,"\<dammit\>",6),
+(13630,"\<darky\>",6),
+(13631,"\<darvocet\>",6),
+(13632,"\<databasesys\>",6),
+(13633,"\<deckardcain\>",6),
+(13634,"\<dr\>",6),
+(13635,"\<dukeofwhales\>",6),
+(13636,"\<dumbass\>",6),
+(13637,"\<ecstasy\>",6),
+(13638,"\<ensign\>",6),
+(13639,"\<fcuk\>",6),
+(13640,"\<ferrari\>",6),
+(13641,"\<fetus",6),
+(13642,"\<fockerz\>",6),
+(13643,"\<fooker\>",6),
+(13644,"cunt\>",6),
+(13645,"\<ghandi\>",6),
+(13646,"\<gofukyorself\>",6),
+(13647,"\<gonadian\>",6),
+(13648,"\<goochgravy\>",6),
+(13649,"\<gookenator\>",6),
+(13650,"\<hemplock\>",6),
+(13651,"\<herpies\>",6),
+(13652,"\<homoerectus\>",6),
+(13653,"\<hore\>",6),
+(13654,"\<hotdamn\>",6),
+(13655,"\<hungelf\>",6),
+(13656,"\<indian\>",6),
+(13657,"\<irapekids\>",6),
+(13658,"\<ironchef\>",6),
+(13659,"\<jc\>",6),
+(13660,"\<jedi\>",6),
+(13661,"\<[gj]en[ao]cide\>",6),
+(13662,"\<jugs\>",6),
+(13663,"\<klismaphilia\>",6),
+(13664,"\<kokigami\>",6),
+(13665,"\<koon\>",6),
+(13666,"\<kosherpork\>",6),
+(13667,"\<lardass\>",6),
+(13668,"\<laurabush\>",6),
+(13669,"\<marlboroman\>",6),
+(13670,"\<masterbaiter\>",6),
+(13671,"\<maxipad\>",6),
+(13672,"\<menstrual\>",6),
+(13673,"\<mhz\>",6),
+(13674,"\<michaeljack\>",6),
+(13675,"bastard\>",6),
+(13676,"\<misogynist\>",6),
+(13677,"\<mister\>",6),
+(13678,"\<mr\>",6),
+(13679,"\<narcoticus\>",6),
+(13680,"\<nigahh\>",6),
+(13681,"\<npc",6),
+(13682,"\<nug\>",6),
+(13683,"\<nunriggers\>",6),
+(13684,"\<nwa\>",6),
+(13685,"\<omgwtf\>",6),
+(13686,"\<opiate",6),
+(13687,"\<oreos\>",6),
+(13688,"\<ovaltine\>",6),
+(13689,"\<papsmear\>",6),
+(13690,"\<pederasty\>",6),
+(13691,"\<penthouse\>",6),
+(13692,"\<pimp",6),
+(13693,"\<pinktaco\>",6),
+(13694,"mofo\>",6),
+(13695,"\<poomaster\>",6),
+(13696,"\<poonjuice\>",6),
+(13697,"\<poop",6),
+(13698,"\<pwnzor\>",6),
+(13699,"\<quadoushka\>",6),
+(13700,"\<r.*nad[ae]r\>",6),
+(13701,"\<stud\>",6),
+(13702,"\<submissive\>",6),
+(13703,"\<swiftnuggs\>",6),
+(13704,"\<trans",6),
+(13705,"\<uglynig\>",6),
+(13706,"\<swastika\>",6),
+(13707,"\<sybian\>",6),
+(13708,"\<toeofcamel\>",6),
+(13709,"\<tokyorose\>",6),
+(13710,"\<urmama\>",6),
+(13711,"\<voltron\>",6),
+(13712,"\<wangmaster\>",6),
+(13713,"\<wanker\>",6),
+(13714,"\<wetdream\>",6),
+(13715,"\<whitebread\>",6),
+(13716,"\<wigger\>",6),
+(13717,"\<williamhung\>",6),
+(13718,"\<windex\>",6),
+(13719,"\<witchking\>",6),
+(13720,"\<x.*x\>",6),
+(13721,"\<yosemitesam\>",6),
+(13722,"\<youranus\>",6),
+(13723,"\<zoolander\>",6),
+(13724,"condom\>",6),
+(13725,"jebus\>",6),
+(13726,"\<kosher",6),
+(13727,"menstrual",6),
+(13728,"sexy",6),
+(13729,"\<bestiality\>",6),
+(13730,"\<bizzle\>",6),
+(13731,"\<black\>",6),
+(13732,"\<blackie\>",6),
+(13733,"\<bloodyhell\>",6),
+(13734,"\<blow\>",6),
+(13735,"\<blunt\>",6),
+(13736,"\<bollocks\>",6),
+(13737,"\<boobs",6),
+(13738,"\<boofer\>",6),
+(13739,"\<bourbon\>",6),
+(13740,"\<brazuca\>",6),
+(13741,"\<breast",6),
+(13742,"\<budda\>",6),
+(13743,"\<buddahead\>",6),
+(13744,"\<budlight\>",6),
+(13745,"\<budweiser\>",6),
+(13746,"\<bugger\>",6),
+(13747,"\<bustydusty\>",6),
+(13748,"\<butt\>",6),
+(13749,"\<buttman\>",6),
+(13750,"\<candyandes\>",6),
+(13751,"\<caucazoid\>",6),
+(13752,"\<cawk\>",6),
+(13753,"\<fu[ck]+[aeiou]+",6),
+(13754,"\<jod[eií]",6),
+(13755,"mierda",6),
+(13756,"coño",6),
+(13757,"\<[gj]ilipo",6),
+(13758,"\<meapilas\>",6),
+(13759,"\<capull",6),
+(13760,"\<cabr[oó]n",6),
+(13761,"\<mari[cq]",6),
+(13762,"\<pene",6),
+(13763,"polla",6),
+(13764,"\<poya",6),
+(13765,"\<pinga\>",6),
+(13766,"\<pito",6),
+(13767,"\<va[gj]ina",6),
+(13768,"\<lesbi",6),
+(13769,"\<minga\>",6),
+(13770,"\<put[aoó]",6),
+(13771,"\<zorra",6),
+(13772,"\<paja\>",6),
+(13773,"\<paji[lt]",6),
+(13774,"\<nazi\>",6),
+(13775,"\<kkk\>",6),
+(13776,"\<escroto\>",6),
+(13777,"\<coj[oó]n",6),
+(13778,"\<correr[mst]",6),
+(13779,"\<corri[eé]ndo[mst]e\>",6),
+(13780,"\<eyacul",6),
+(13781,"\<esperm",6),
+(13782,"\<mama[rd]",6),
+(13783,"\<encula[rd]",6),
+(13784,"\<culo\>",6),
+(13785,"\<viol[aó]",6),
+(13786,"\<ped[oó]f",6),
+(13787,"\<pederast",6),
+(13788,"gay",6),
+(13789,"\<culandr[oó]n\>",6),
+(13790,"\<sodomi",6),
+(13791,"\<sadomaso",6),
+(13792,"\<sudaca",6),
+(13793,"\<negraco\>",6),
+(13794,"\<moro\>",6),
+(13795,"\<moros\>",6),
+(13796,"\<moromierda\>",6),
+(13797,"\<jop[eu]",6),
+(13798,"\<po[lr]cul",6),
+(13799,"\<ostia",6),
+(13800,"\<hostia",6),
+(13801,"\<cullons\>",6),
+(13802,"\<gabacho\>",6),
+(13803,"\<pringao\>",6),
+(13804,"\<tont[ao]",6),
+(13805,"\<mam[oó]n",6),
+(13806,"\<niñ[ao]t",6),
+(13807,"\<nenaza",6),
+(13808,"\<homo\>",6),
+(13809,"choch[eio]",6),
+(13810,"txotx[eio]",6),
+(13811,"xox[eio]",6),
+(13812,"\<mastur",6),
+(13813,"\<cl[ií]toris\>",6),
+(13814,"\<b[aá]lano\>",6),
+(13815,"\<prepucio\>",6),
+(13816,"\<hero[ií]na\>",6),
+(13817,"\<pellote\>",6),
+(13818,"\<hach[ií]s\>",6),
+(13819,"\<hatx[ií]s\>",6),
+(13820,"\<LSD\>",6),
+(13821,"\<coca[ií]na\>",6),
+(13822,"\<p[uú]bis\>",6),
+(13823,"\<p[uú]bico\>",6),
+(13826,"\<fela[ct]i",6),
+(13827,"\<cunnilingus\>",6),
+(13828,"\<mari[hj]uana\>",6),
+(13829,"\<porro\>",6),
+(13830,"\<desvirga",6),
+(13831,"\<himen\>",6),
+(13832,"\<meretriz\>",6),
+(13833,"\<prostituta\>",6),
+(13834,"\<rohypnol\>",6),
+(13835,"\<rugmunch",6),
+(13836,"nig+er\>",6),
+(13838,"\<semen\>",6),
+(13839,"\<sexmachine\>",6),
+(13840,"\<slut\>",6),
+(13841,"\<slutmuffin\>",6),
+(13842,"\<smegma\>",6),
+(13843,"\<spanishfly\>",6),
+(13844,"\<spics\>",6),
+(13845,"\<squarehead\>",6),
+(13846,"\<stfu\>",6),
+(13847,"\<strapon\>",6),
+(13848,"\<talliwhacker\>",6),
+(13849,"\<tards\>",6),
+(13850,"\<teabagging\>",6),
+(13851,"\<throbknobbin\>",6),
+(13852,"\<thunderfuck\>",6),
+(13853,"\<tirdburglar",6),
+(13854,"\<turdburglars\>",6),
+(13855,"\<twatlick",6),
+(13856,"\<twats\>",6),
+(13857,"\<twatsuck",6),
+(13858,"\<viagra\>",6),
+(13859,"\<whop\>",6),
+(13860,"\<zoophilia\>",6),
+(13861,"\<fagg[aeiouy]t",6),
+(13862,"\<pillowbiter",6),
+(13863,"\<poohstab",6),
+(13865,"\<dildo\>",6),
+(13866,"\<heeb\>",6),
+(13867,"\<kike\>",6),
+(13868,"\<mudshark",6),
+(13869,"\<mooley\>",6),
+(13870,"\<nig+a",6),
+(13871,"\<jap\>",6),
+(13872,"feltch",6),
+(13873,"\<homos\>",6),
+(13874,"\<tittie",6),
+(13875,"\<tits\>",6),
+(13876,"\<slamhound",6),
+(13877,"\<gutterslut\>",6),
+(13878,"\<cumguz",6),
+(13879,"\<injun\>",6),
+(13880,"\<gooch\>",6),
+(13881,"bong",6),
+(13882,"\<pothead",6),
+(13883,"shit",6),
+(13884,"\<twat\>",6),
+(13885,"\<assface\>",6),
+(13886,"\<nosecandy\>",6),
+(13887,"\<towelhead\>",6),
+(13888,"\<fudgepacker\>",6),
+(13889,"\<assmaster\>",6),
+(13891,"\<milf\>",6),
+(13892,"\<rumprang",6),
+(13893,"\<spic\>",6),
+(13894,"\<spick",6),
+(13895,"wetback",6),
+(13896,"\<queef",6),
+(13897,"\<nig\>",6),
+(13898,"fagg[aeiouy]t\>",6),
+(13899,"\<rapist\>",6),
+(13900,"\<gook\>",6),
+(13901,"\<polesmok",6),
+(13902,"\<cracksmoker",6),
+(13903,"\<jism\>",6),
+(13904,"\<dingleberry\>",6),
+(13905,"\<mooncricket",6),
+(13906,"\<assman\>",6),
+(13907,"\<spearchuck",6),
+(13908,"\<hardon\>",6),
+(13909,"\<stiffy\>",6),
+(13910,"\<cumstain",6),
+(13911,"\<dunecoon\>",6),
+(13912,"\<buttfloss\>",6),
+(13913,"\<peckertracks\>",6),
+(13914,"\<cornhole\>",6),
+(13915,"\<wop\>",6),
+(13916,"\<cock\>",6),
+(13917,"\<asspound",6),
+(13918,"\<buttboy",6),
+(13919,"\<sploog",6),
+(13920,"\<meatsword\>",6),
+(13921,"\<skinbat",6),
+(13922,"히로뽕",6),
+(13924,"\<zipperhead\>",6),
+(13925,"\<porchmonk",6),
+(13926,"\<junglebunny\>",6),
+(13927,"\<jizz\>",6),
+(13928,"\<africoon\>",6),
+(13929,"\<aidsbearer\>",6),
+(13930,"\<analcumdrip\>",6),
+(13931,"\<analdoctor\>",6),
+(13932,"\<aperape\>",6),
+(13933,"\<assbandit\>",6),
+(13934,"\<assbasher\>",6),
+(13935,"\<asshunter\>",6),
+(13936,"\<asskiss",6),
+(13937,"\<asslick",6),
+(13938,"\<assram",6),
+(13939,"\<assrape",6),
+(13940,"\<biotch\>",6),
+(13941,"\<blackanese\>",6),
+(13942,"\<blaxican\>",6),
+(13943,"\<blowjob\>",6),
+(13944,"\<blueball\>",6),
+(13945,"\<bonch\>",6),
+(13946,"\<boners\>",6),
+(13947,"nig+a\>",6),
+(13948,"\<bullshirt\>",6),
+(13949,"\<buttbang\>",6),
+(13950,"\<buttfucker",6),
+(13951,"\<buttlick",6),
+(13952,"\<buttmonkey\>",6),
+(13953,"\<buttmunch",6),
+(13954,"\<buttnugget",6),
+(13955,"\<buttslam",6),
+(13956,"\<buttstain\>",6),
+(13957,"\<cameljockey\>",6),
+(13958,"\<cann[aio]bis\>",6),
+(13959,"\<carpetmuncher",6),
+(13960,"\<cheapwhore\>",6),
+(13961,"\<chinawhite\>",6),
+(13962,"\<chinko\>",6),
+(13963,"\<choad\>",6),
+(13964,"\<circlejerk\>",6),
+(13965,"\<circumcise\>",6),
+(13966,"\<cocaine\>",6),
+(13967,"\<cocksucker\>",6),
+(13968,"\<coon\>",6),
+(13969,"\<cracka\>",6),
+(13970,"\<crackerass",6),
+(13971,"\<crackpipe",6),
+(13972,"\<creamtits\>",6),
+(13973,"\<crystalmeth\>",6),
+(13974,"\<cumboy",6),
+(13975,"\<cumbubble",6),
+(13976,"\<cumbucket\>",6),
+(13977,"\<cumcatcher",6),
+(13978,"\<cumdumpster",6),
+(13979,"\<cumeater\>",6),
+(13980,"\<cumm\>",6),
+(13981,"\<cumonmyface\>",6),
+(13982,"\<cums\>",6),
+(13983,"\<cumshooter",6),
+(13984,"\<cumshot",6),
+(13985,"\<cumslot",6),
+(13986,"\<dankhoe\>",6),
+(13987,"\<danknugg",6),
+(13988,"\<hashish\>",6),
+(13989,"\<heroin\>",6),
+(13990,"\<holywanker\>",6),
+(13991,"\<honkey\>",6),
+(13992,"\<hornytauren\>",6),
+(13993,"\<hotslut\>",6),
+(13994,"\<hymen\>",6),
+(13995,"\<jackoff\>",6),
+(13996,"\<kikes\>",6),
+(13997,"\<kunt\>",6),
+(13998,"\<lesbo\>",6),
+(13999,"\<longusdongus\>",6),
+(14000,"\<lsd\>",6),
+(14001,"\<mangina\>",6),
+(14002,"\<mansatchel\>",6),
+(14003,"\<marijuana\>",6),
+(14004,"\<mast[eu]rbat",6),
+(14005,"\<meth\>",6),
+(14006,"\<mooby\>",6),
+(14007,"\<morningwood\>",6),
+(14008,"\<monstercock",6),
+(14009,"\<moulie\>",6),
+(14010,"\<muffdiver",6),
+(14011,"\<natzi\>",6),
+(14012,"\<necrophil",6),
+(14013,"\<negrolicious\>",6),
+(14014,"\<negromancer\>",6),
+(14015,"\<nicklebag\>",6),
+(14016,"\<niglet",6),
+(14017,"\<nignog\>",6),
+(14018,"\<nigs\>",6),
+(14019,"\<oface\>",6),
+(14020,"\<onanism\>",6),
+(14021,"\<opium\>",6),
+(14022,"\<orgasm\>",6),
+(14023,"\<pcp\>",6),
+(14024,"\<pedophile\>",6),
+(14025,"\<penis",6),
+(14026,"\<phugface\>",6),
+(14027,"\<pikajew\>",6),
+(14028,"\<poontang\>",6),
+(14029,"\<porn\>",6),
+(14030,"\<priapism\>",6),
+(14031,"\<pr[o0]n\>",6),
+(14032,"\<pudendum\>",6),
+(14033,"\<pussyfart",6),
+(14034,"\<pussylick",6),
+(14035,"\<pussystomp",6),
+(14036,"\<puto\>",6),
+(14037,"\<quaaludes\>",6),
+(14038,"\<queers\>",6),
+(14039,"\<qweef\>",6),
+(14040,"\<raghead\>",6),
+(14041,"\<reefer\>",6),
+(14042,"\<reggin\>",6),
+(14043,"\<rimjob\>",6),
+(14044,"\<gizz\>",6),
+(14045,"\<cooze\>",6),
+(14046,"\<cumming\>",6),
+(14047,"\<boner\>",6),
+(14049,"\<buttpirate",6),
+(14050,"\<titty",6),
+(14051,"\<poostab",6),
+(14052,"fuck",6),
+(14053,"\<ass\>",6),
+(14054,"bia?ts?ch",6),
+(14055,"\<clit",6),
+(14056,"\<cum\>",6),
+(14057,"\<cunt",6),
+(14058,"\<nig+er",6),
+(14059,"penis\>",6),
+(14060,"whore",6),
+(14061,"ㅈㄹ",6),
+(14062,"yuckfu",6),
+(14063,"yuckfou",6),
+(14064,"transvestite",6),
+(14065,"transsexual",6),
+(14066,"testicle",6),
+(14067,"tampon",6),
+(14068,"sphincter",6),
+(14069,"sperm",6),
+(14070,"phuck",6),
+(14071,"gangbang",6),
+(14072,"felch",6),
+(14073,"bukkake",6),
+(14074,"bukakke",6),
+(14075,"bukake",6),
+(14076,"\<twaty\>",6),
+(14077,"\<twatty\>",6),
+(14078,"\<turbanhead",6),
+(14079,"\<titsnass\>",6),
+(14080,"\<titnass\>",6),
+(14081,"\<sh[ie][ie]thead\>",6),
+(14082,"\<peckerwood\>",6),
+(14083,"\<negroid",6),
+(14084,"\<mooncricket\>",6),
+(14085,"\<kyke",6),
+(14086,"\<jigg",6),
+(14087,"\<jerkoff\>",6),
+(14088,"\<hentai\>",6),
+(14089,"\<gringo\>",6),
+(14090,"\<goddamn",6),
+(14091,"\<gizm\>",6),
+(14092,"\<gism\>",6),
+(14093,"\<ganja\>",6),
+(14094,"GMworker",6),
+(14095,"Offgamers",6),
+(14096,"Mysupersales",6),
+(14097,"Ezgaming",6),
+(14098,"itembay",6),
+(14099,"zlywy",6),
+(14100,"wowsupplier",6),
+(14101,"gmworkers",6),
+(14102,"thsale",6),
+(14103,"offgamers",6),
+(14104,"mysupersales",6),
+(14105,"igxe",6),
+(14106,"ezgaming",6),
+(14107,"\<whitti?ey?\>",6),
+(14108,"\<fellatio",6),
+(14109,"\<fawk",6),
+(14110,"\<dimebag\>",6),
+(14111,"\<dickholster\>",6),
+(14112,"\<diaperhead\>",6),
+(14113,"\<cunny\>",6),
+(14114,"\<bustanut\>",6),
+(14115,"\<asshat\>",6),
+(14116,"\<aryan\>",6),
+(14117,"\<arsehole\>",6),
+(14118,"\<arse\>",6),
+(14119,"\<americunt\>",6),
+(14120,"\<alphanigg",6),
+(14121,"\<aggin\>",6),
+(14122,"\<aftercum\>",6),
+(14123,"\<[e]jacul",2),
+(14124,"\<[e]r[e]ction\>",2),
+(14125,"\<[e]rotique",2),
+(14126,"\<[e]talon\>",2),
+(14127,"\<[gj][e]n[ao]cide\>",2),
+(14128,"\<[kc]a[sc]h[e]re?\>",2),
+(14129,"\<adolescente?\>",2),
+(14130,"\<adult[e]re\>",2),
+(14131,"\<agnostique\>",2),
+(14132,"\<al[ck]ool",2),
+(14133,"\<amph[e]tamine\>",2),
+(14134,"\<amput[e]e\?>",2),
+(14135,"\<anale\>",2),
+(14136,"\<ant[e]christ\>",2),
+(14137,"\<arbi\>",2),
+(14138,"\<aryen\>",2),
+(14139,"\<b[a]tard*",2),
+(14140,"\<ba[nm]boula\>",2),
+(14141,"\<beuze?\>",2),
+(14142,"\<bi[e]re\>",2),
+(14143,"\<bicot\>",2),
+(14144,"\<bite\>",2),
+(14145,"\<bl[e]n+or+agies?\>",2),
+(14146,"\<blanc\>",2),
+(14147,"\<boudda\>",2),
+(14148,"\<bouseux\>",2),
+(14149,"\<branleu[rs]e?\>",2),
+(14150,"\<brasdhonneur\>",2),
+(14151,"\<caca\>",2),
+(14152,"\<cam[e]s?\>",2),
+(14153,"\<can+ab+is\>",2),
+(14154,"\<catin\>",2),
+(14155,"\<chanvre\>",2),
+(14156,"\<chatte\>",2),
+(14157,"\<chattemite\>",2),
+(14158,"\<chaud\>",2),
+(14159,"\<chaude\>",2),
+(14160,"\<chaudlapin\>",2),
+(14161,"\<chichon\>",2),
+(14162,"\<chinetoques?\>",2),
+(14163,"\<chinois\>",2),
+(14164,"\<chleu\>",2),
+(14165,"\<clitori",2),
+(14166,"\<coca[i]ne\>",2),
+(14167,"\<con\>",2),
+(14168,"\<con+as+e\>",2),
+(14169,"\<connard\>",2),
+(14170,"\<conne\>",2),
+(14171,"\<coprophag*\>",2),
+(14172,"\<copulat*\>",2),
+(14173,"\<couilles?\>",2),
+(14174,"\<cr[a]ch[a]t\>",2),
+(14175,"\<cul\>",2),
+(14176,"\<culotte\>",2),
+(14177,"\<d[e]bauche\>",2),
+(14178,"\<d[e]f[e]cat",2),
+(14179,"\<derche\>",2),
+(14181,"\<drogu[e]s?\>",2),
+(14182,"\<ectasie\>",2),
+(14183,"\<encul",2),
+(14184,"\<extasie\>",2),
+(14185,"\<f[e]c[e]s\>",2),
+(14186,"\<fascime\>",2),
+(14187,"\<fellation\>",2),
+(14188,"\<fess[e]es?\>",2),
+(14189,"\<ftichiste?\>",2),
+(14190,"\<fion\>",2),
+(14191,"\<foetus\>",2),
+(14192,"\<foutre\>",2),
+(14194,"\<g[e]nital\>",2),
+(14195,"\<g[e]nitaux\>",2),
+(14196,"\<garce\>",2),
+(14197,"\<geisha\>",2),
+(14198,"\<godemich[e]t?\>",2),
+(14199,"\<h[e]roine?\>",2),
+(14200,"\<ha[sc][sc]i[sc][sc]h\>",2),
+(14201,"\<hasch\>",2),
+(14202,"\<jaune\>",2),
+(14203,"\<joint\>",2),
+(14205,"\<l[e]checul\>",2),
+(14206,"\<lavement\>",2),
+(14207,"\<lesbien*",2),
+(14208,"\<lubrique\>",2),
+(14209,"\<luxure\>",2),
+(14210,"\<mac\>",2),
+(14211,"\<maquereau\>",2),
+(14212,"\<maquerelle\>",2),
+(14213,"\<mariejeanne\>",2),
+(14214,"\<marijuana\>",2),
+(14215,"\<masturb",2),
+(14216,"\<menstrues\>",2),
+(14217,"\<merde\>",2),
+(14218,"\<micheton\>",2),
+(14219,"\<michetonneuse\>",2),
+(14220,"\<minou\>",2),
+(14221,"\<misogynes?\>",2),
+(14222,"\<moricaude?\>",2),
+(14223,"\<mouk[e]re\>",2),
+(14224,"\<n[e]gre\>",2),
+(14226,"\<n[e]n[e]s?\>",2),
+(14227,"\<narcotiques?\>",2),
+(14228,"\<nichons?\>",2),
+(14229,"\<noir\>",2),
+(14230,"\<nudit[e]\>",2),
+(14231,"\<obs[e]d[e]s?\>",2),
+(14232,"\<opium\>",2),
+(14233,"\<orgies?\>",2),
+(14234,"\<p[e]d[e]raste?\>",2),
+(14236,"\<p[e]tard\>",2),
+(14237,"\<p[e]tasse\>",2),
+(14238,"\<pa[i]en\>",2),
+(14239,"\<partouze?\>",2),
+(14240,"\<pedzouille\>",2),
+(14241,"\<pervers\>",2),
+(14242,"\<pet\>",2),
+(14243,"\<phallus\>",2),
+(14244,"\<pipe\>",2),
+(14245,"\<pipi\>",2),
+(14246,"\<pisse\>",2),
+(14247,"\<pouffiasse\>",2),
+(14248,"\<poule\>",2),
+(14249,"\<pr[e]adolescente?\>",2),
+(14250,"\<pr[e]liminaires?\>",2),
+(14251,"\<pr[e]puce\>",2),
+(14252,"\<pr[e]s[e]rvatif\>",2),
+(14253,"\<priape\>",2),
+(14254,"\<prostitu[e][e]\>",2),
+(14255,"\<prout\>",2),
+(14256,"\<prox[e]n[e]te\>",2),
+(14257,"\<putain\>",2),
+(14258,"\<pute\>",2),
+(14259,"\<pyromane\>",2),
+(14260,"\<racoleuse\>",2),
+(14261,"\<raton\>",2),
+(14262,"\<roulure\>",2),
+(14263,"\<sadique\>",2),
+(14264,"\<salau[td]\>",2),
+(14265,"\<salope?\>",2),
+(14266,"\<scatologi*",2),
+(14267,"\<schnouff\>",2),
+(14268,"\<sein\>",2),
+(14269,"\<seppuku\>",2),
+(14270,"\<sexe\>",2),
+(14271,"\<shit\>",2),
+(14272,"\<sida\>",2),
+(14273,"\<sodomi*",2),
+(14274,"\<soumise?\>",2),
+(14275,"\<souteneur\>",2),
+(14276,"\<sperme\>",2),
+(14277,"\<stripteaseuse\>",2),
+(14278,"\<suc[e]r?\>",2),
+(14279,"\<sucebite\>",2),
+(14280,"\<t[e]ton\>",2),
+(14281,"\<tapineuse\>",2),
+(14282,"\<tarp[e]\>",2),
+(14283,"\<terroriste\>",2),
+(14284,"\<testicules?\>",2),
+(14285,"\<teu[cs]hi?\>",2),
+(14286,"\<tourpe?\>",2),
+(14287,"\<toxicomane\>",2),
+(14288,"\<tra[i]n[e]e\>",2),
+(14289,"\<trimardeuse\>",2),
+(14290,"\<tronedeglace\>",2),
+(14291,"\<turfeuse\>",2),
+(14292,"\<urine*",2),
+(14293,"\<v[e]n[e]rien*",2),
+(14294,"\<vagin*",2),
+(14295,"\<vatefaire",2),
+(14296,"\<verge\>",2),
+(14297,"\<vice\>",2),
+(14298,"\<vierges?\>",2),
+(14299,"\<viole[e][sr]?\>",2),
+(14300,"\<virginit[e]\>",2),
+(14301,"\<vit\>",2),
+(14302,"\<vulve\>",2),
+(14303,"\<zoophil",2),
+(14304,"\<[e]bola\>",2),
+(14305,"\<b[ie]nladen",2),
+(14306,"\<bou[ck]ak\>",2),
+(14307,"\<bougnoule?s?\>",2),
+(14308,"\<co[kc]*ain",2),
+(14309,"\<dutrou\>",2),
+(14310,"\<g[e]nocide\>",2),
+(14311,"\<h[yi]t*l*er\>",2),
+(14312,"\<hamas\>",2),
+(14313,"\<hesbo*la\>",2),
+(14314,"\<hiro[sc]hima\>",2),
+(14315,"\<holo[ckauo]ste?\>",2),
+(14316,"\<homicide\>",2),
+(14317,"\<mes*rin\>",2),
+(14318,"\<naga[sz]aki\>",2),
+(14319,"\<pogrom\>",2),
+(14320,"\<ra[e]l\>",2),
+(14321,"\<shoa\>",2),
+(14322,"\<ss\>",2),
+(14323,"\<staline?\>",2),
+(14324,"\<viol\>",2),
+(14325,"ducul\>",2),
+(14326,"soutiengorge",2),
+(14327,"阿卡玛",4),
+(14328,"柏卖行",4),
+(14329,"奥蕾莉亚",4),
+(14330,"图拉杨",4),
+(14331,"奥尔多\>",4),
+(14332,"占星者\>",4),
+(14333,"荣耀堡\>",4),
+(14334,"萨尔玛\>",4),
+(14335,"孢子村\>",4),
+(14336,"奥格瑞拉\>",4),
+(14337,"星界财团\>",4),
+(14338,"流沙之鳞\>",4),
+(14339,"时光守护者\>",4),
+(14340,"库雷尼\>",4),
+(14341,"玛格汉\>",4),
+(14342,"茎候\>",4),
+(14343,"灵翼\>",4),
+(14344,"灰舌\>",4),
+(14345,"塞纳里奥\>",4),
+(14346,"沙塔尔\>",4),
+(14347,"紫罗兰之\>",4),
+(14348,"贫民窟\>",4),
+(14349,"塔奎林\>",4),
+(14350,"远行者\>",4),
+(14351,"transexual",-1),
+(14352,"trannie",-1),
+(14353,"shemale",-1),
+(14354,"Homosexual",-1),
+(14355,"Heterosexual",-1),
+(14356,"\<Homo\>",-1),
+(14357,"\<Hetero\>",-1),
+(14358,"\<reggin\>",4),
+(14359,"习近平",4),
+(14360,"李克强",4),
+(14361,"\<х+у+[еийюя]",8),
+(14362,"зах+у+[еийюя]",8),
+(14363,"нах+у+[еийюя]",8),
+(14364,"нех+у+[еийюя]",8),
+(14365,"ох+у+[еийюя]",8),
+(14366,"отх+у+[еийюя]",8),
+(14367,"прих+у+[еийюя]",8),
+(14368,"бляд",8),
+(14369,"\<блят",8),
+(14370,"\<бля\>",8),
+(14371,"\<блиа",8),
+(14372,"пизд",8),
+(14373,"пезд",8),
+(14374,"писд",8),
+(14375,"песд",8),
+(14376,"\<еб",8),
+(14377,"[аеийоуъ]еб",8),
+(14378,"йоб",8),
+(14379,"нииб",8),
+(14380,"муд[аио]",8),
+(14381,"сра[клнтч]",8),
+(14382,"гове?н",8),
+(14383,"гаве?н",8),
+(14384,"пидор",8),
+(14385,"педер",8),
+(14386,"\<пидар",8),
+(14387,"\<пидер",8),
+(14388,"дроч",8),
+(14389,"задрот",8),
+(14390,"гондон",8),
+(14391,"гандон",8),
+(14392,"залуп[аеуы]\>",8),
+(14393,"залупой\>",8),
+(14394,"блю[вею]",8),
+(14395,"сперм",8),
+(14396,"гомик",8),
+(14397,"пенис",8),
+(14398,"здец",8),
+(14399,"\<сукин",8),
+(14400,"\<сучье",8),
+(14401,"сцук",8),
+(14402,"пелотк",8),
+(14403,"\<хер\>",8),
+(14404,"\<похер",8),
+(14405,"\<нахер",8),
+(14406,"\<херн",8),
+(14407,"жоп[аеуы]\>",8),
+(14408,"жопой\>",8),
+(14409,"\<гомосек",8),
+(14410,"\<манд[аеуы]\>",8),
+(14411,"\<мандой\>",8),
+(14412,"\<ыуа",8),
+(14413,"\<медвед\>",8),
+(14414,"\<падоно?к",8),
+(14415,"\<кр[ао]савчег\>",8),
+(14416,"\<аф+тар\>",8),
+(14417,"\<превед\>",8),
+(14418,"\<йад",8),
+(14419,"зачот",8),
+(14420,"газенваген",8),
+(14421,"ахтунг",8),
+(14422,"пешы",8),
+(14423,"\<исчо\>",8),
+(14424,"жывотн",8),
+(14425,"сотона",8),
+(14426,"аццк",8),
+(14427,"\<лох",8),
+(14428,"фтопку",8),
+(14429,"\<хохол\>",8),
+(14430,"\<хохл",8),
+(14431,"\<нигг+ер",8),
+(14432,"\<пиндос",8),
+(14433,"\<москал[иья]",8),
+(14434,"\<москалей",8),
+(14435,"\<жид[а-йл-я]",8),
+(14436,"\<наци\>",8),
+(14437,"наци[зс]",8),
+(14438,"фаши",8),
+(14439,"台湾",4),
+(14440,"Tibet",4),
+(14441,"Xizang",4),
+(14442,"Taiwan",4),
+(14443,"\<cervesa\>",7),
+(14444,"\<champagne\>",7),
+(14445,"\<chaseylain\>",7),
+(14446,"\<cheeba\>",7),
+(14447,"\<cherokee \>",7),
+(14448,"\<chino\>",7),
+(14449,"\<chloejones \>",7),
+(14450,"\<christilake\>",7),
+(14451,"\<chrisward \>",7),
+(14452,"\<cocostarfish\>",7),
+(14453,"\<cognac\>",7),
+(14454,"\<cootch\>",7),
+(14455,"\<cooter\>",7),
+(14456,"\<copulate\>",7),
+(14457,"\<cornholes\>",7),
+(14458,"\<corona\>",7),
+(14459,"\<crack\>",7),
+(14460,"\<cracker\>",7),
+(14461,"\<crap\>",7),
+(14462,"\<damned\>",7),
+(14463,"\<dank\>",7),
+(14464,"\<deancoulter\>",7),
+(14465,"\<debidiamond \>",7),
+(14466,"\<deepthroat\>",7),
+(14467,"\<devinderay \>",7),
+(14468,"\<dianazyle \>",7),
+(14469,"\<dietpills\>",7),
+(14470,"\<dirtysanchez\>",7),
+(14471,"\<ditavontease\>",7),
+(14472,"\<doggystyle\>",7),
+(14473,"\<dope\>",7),
+(14474,"\<duckbutter\>",7),
+(14475,"\<ecstacy\>",7),
+(14476,"\<edpowers \>",7),
+(14477,"\<eggplant\>",7),
+(14478,"\<ericaboyer \>",7),
+(14479,"\<extasy\>",7),
+(14480,"\<facial\>",7),
+(14481,"\<fluffer\>",7),
+(14482,"\<fornicat",7),
+(14483,"\<freebase\>",7),
+(14484,"\<fusck",7),
+(14485,"\<fux",7),
+(14486,"\<gagepowers\>",7),
+(14487,"\<gew\>",7),
+(14488,"\<ghb\>",7),
+(14489,"\<ghetto\>",7),
+(14490,"\<gingerhill\>",7),
+(14491,"\<gloryhole\>",7),
+(14492,"\<goldschlager\>",7),
+(14493,"\<goombah\>",7),
+(14494,"\<granddragon\>",7),
+(14495,"\<greaseball\>",7),
+(14496,"\<greaser\>",7),
+(14497,"\<gspot\>",7),
+(14498,"\<guiness\>",7),
+(14499,"\<gunja\>",7),
+(14500,"\<handjob\>",7),
+(14501,"\<hash\>",7),
+(14502,"\<headdoctor\>",7),
+(14503,"\<heidifleiss\>",7),
+(14504,"\<hmo\>",7),
+(14505,"\<honky\>",7),
+(14506,"\<hoodrat\>",7),
+(14507,"\<hookah\>",7),
+(14508,"\<horney\>",7),
+(14509,"\<hustler\>",7),
+(14510,"\<inarivachs\>",7),
+(14511,"\<j.*bobbit\>",7),
+(14512,"\<j.*holmes\>",7),
+(14513,"\<jackdaniels\>",7),
+(14514,"\<jadeeast\>",7),
+(14515,"\<jadehsu \>",7),
+(14516,"\<jadestclair\>",7),
+(14517,"\<jagermeister\>",7),
+(14518,"\<janacova\>",7),
+(14519,"\<jennahaze\>",7),
+(14520,"\<jennajameson\>",7),
+(14521,"\<jenteal\>",7),
+(14522,"\<jessicadee\>",7),
+(14523,"\<jeweldenyle\>",7),
+(14524,"\<jillkelly\>",7),
+(14525,"\<jimbeam\>",7),
+(14526,"\<josecuervo\>",7),
+(14527,"\<juliashton\>",7),
+(14528,"\<karadavis\>",7),
+(14529,"\<keef\>",7),
+(14530,"\<kif\>",7),
+(14531,"\<kikkityler \>",7),
+(14532,"\<kobetai\>",7),
+(14533,"\<kooter\>",7),
+(14534,"\<krystalsteal\>",7),
+(14535,"\<kyke\>",7),
+(14536,"\<kylacole\>",7),
+(14537,"\<kylieireland\>",7),
+(14538,"\<lancegear \>",7),
+(14539,"\<larryflynt\>",7),
+(14540,"\<lecher\>",7),
+(14541,"\<liquidx\>",7),
+(14542,"\<loloferrari\>",7),
+(14543,"\<long.*dong\>",7),
+(14544,"\<ludes\>",7),
+(14545,"\<lunalane\>",7),
+(14546,"\<maltliquor\>",7),
+(14547,"\<mariacheca\>",7),
+(14548,"\<mariatakagi\>",7),
+(14549,"\<marisadiaz \>",7),
+(14550,"\<markdalton  \>",7),
+(14551,"\<markwolff \>",7),
+(14552,"\<marycarey \>",7),
+(14553,"\<mayate\>",7),
+(14554,"\<meatwad\>",7),
+(14555,"\<methhead\>",7),
+(14556,"\<methmonster\>",7),
+(14557,"\<mikolee\>",7),
+(14558,"\<mimimiyagi\>",7),
+(14559,"\<moneyshot\>",7),
+(14560,"\<muff\>",7),
+(14561,"\<mushrooms\>",7),
+(14562,"\<nickelbag\>",7),
+(14563,"\<nikkibenz\>",7),
+(14564,"\<nikkidial\>",7),
+(14565,"\<nip\>",7),
+(14566,"\<nizzle\>",7),
+(14567,"\<nubian",7),
+(14568,"\<nympho\>",7),
+(14569,"\<obsession\>",7),
+(14570,"\<opiate\>",7),
+(14571,"\<orgy\>",7),
+(14572,"\<panties\>",7),
+(14573,"\<pecker\>",7),
+(14574,"\<peternorth\>",7),
+(14575,"\<pissedoff\>",7),
+(14576,"\<pissoff\>",7),
+(14577,"\<pornstar\>",7),
+(14578,"\<prepubescent\>",7),
+(14579,"\<prick\>",7),
+(14580,"\<pube\>",7),
+(14581,"\<punjab\>",7),
+(14582,"\<punkass\>",7),
+(14583,"\<pusse\>",7),
+(14584,"\<randywest\>",7),
+(14585,"\<rebeccalord\>",7),
+(14586,"\<rebeccaporn\>",7),
+(14587,"\<redneck\>",7),
+(14588,"\<reneelarue\>",7),
+(14589,"\<ricer\>",7),
+(14590,"\<rustytrumpet\>",7),
+(14591,"\<ryanconner \>",7),
+(14592,"\<ryanwagner \>",7),
+(14593,"\<sarastjames \>",7),
+(14594,"\<tosser\>",7),
+(14595,"\<tossingsalad\>",7),
+(14596,"\<tosssalad\>",7),
+(14597,"\<traceyadams\>",7),
+(14598,"\<tracilords\>",7),
+(14599,"\<tranny\>",7),
+(14600,"\<ttboy\>",7),
+(14601,"\<tyfox\>",7),
+(14602,"\<tylerfaith\>",7),
+(14603,"\<urethra\>",7),
+(14604,"\<veronicahart\>",7),
+(14605,"\<wankoff\>",7),
+(14606,"\<weed\>",7),
+(14607,"\<wej\>",7),
+(14608,"\<wench\>",7),
+(14609,"\<wildturkey\>",7),
+(14610,"hefner\>",7),
+(14611,"snatch\>",7),
+(14612,"vagina",7),
+(14613,"\<annaslut\>",7),
+(14614,"\<asiacarrera\>",7),
+(14615,"\<aurorasnow\>",7),
+(14616,"\<bacardi\>",7),
+(14617,"\<beaner\>",7),
+(14618,"\<beanlicker\>",7),
+(14619,"\<scat\>",7),
+(14620,"\<scatology\>",7),
+(14621,"\<schlong",7),
+(14622,"\<schnapps\>",7),
+(14623,"\<schoolboy",7),
+(14624,"\<selenasteele\>",7),
+(14625,"\<sexy\>",7),
+(14626,"\<seymorebutts\>",7),
+(14627,"\<sheethead\>",7),
+(14628,"\<sherriangel\>",7),
+(14629,"\<shizzle\>",7),
+(14630,"\<shlong\>",7),
+(14631,"\<shmegma\>",7),
+(14632,"\<shrooms\>",7),
+(14633,"\<skeet\>",7),
+(14634,"\<skeetskeet\>",7),
+(14635,"\<adulteress\>",7),
+(14636,"\<adulterous\>",7),
+(14637,"\<adultery\>",7),
+(14638,"\<adultsonly\>",7),
+(14639,"\<agentorange\>",7),
+(14640,"\<aids\>",7),
+(14641,"\<al[ck]ohol",7),
+(14642,"\<alecpowers\>",7),
+(14643,"\<alexwilcox\>",7),
+(14644,"\<amaretto\>",7),
+(14645,"\<anal\>",7),
+(14646,"\<angeladevi\>",7),
+(14647,"\<angeldust\>",7),
+(14648,"\<anglo\>",7),
+(14649,"\<anheiser\>",7),
+(14650,"\<annamalle\>",7),
+(14651,"\<beer\>",7),
+(14652,"\<erzengel\>",7),
+(14653,"könig\>",7),
+(14654,"\<eomer\>",7),
+(14655,"butthhead",7),
+(14656,"\<slope\>",7),
+(14657,"\<smack\>",7),
+(14658,"\<smut\>",7),
+(14659,"\<snowball",7),
+(14660,"\<sodomize\>",7),
+(14661,"\<sodomy\>",7),
+(14662,"\<speedball\>",7),
+(14663,"\<spew\>",7),
+(14664,"\<spreadeagle\>",7),
+(14665,"\<spunk\>",7),
+(14666,"\<std\>",7),
+(14667,"\<sunsetthomas\>",7),
+(14668,"\<sylviasaint\>",7),
+(14669,"\<teet[sz]\>",7),
+(14670,"\<tequila\>",7),
+(14671,"\<terapatrick\>",7),
+(14672,"\<thc\>",7),
+(14673,"\<tiabella\>",7),
+(14674,"\<toadlicker\>",7),
+(14675,"\<toak\>",7),
+(14676,"\<toke\>",7),
+(14677,"\<tombyron\>",7),
+(14678,"\<tommycruise\>",7),
+(14679,"\<tonyzerega\>",7),
+(14680,"\<tossalad\>",7),
+(14681,"\<vibrator\>",7),
+(14682,"\<vincevouyer\>",7),
+(14683,"\<vodka\>",7),
+(14684,"\<vulva\>",7),
+(14685,"\<w[ei]+n[ei]+r\>",7),
+(14686,"\<wank\>",7),
+(14687,"\<whackoff\>",7),
+(14688,"\<whiskey\>",7),
+(14689,"\<willclark\>",7),
+(14690,"\<yellow\>",7),
+(14691,"\<zigzag\>",7),
+(14692,"aryan\>",7),
+(14693,"\<acclaim\>",7),
+(14694,"\<amongoe",7),
+(14695,"\<anabolica\>",7),
+(14696,"\<analpunisher\>",7),
+(14697,"nazi\>",7),
+(14698,"\<anth?rax\>",7),
+(14699,"\<blasehase\>",7),
+(14700,"\<botox\>",7),
+(14701,"\<bueckstueck\>",7),
+(14702,"\<bumsnudel\>",7),
+(14703,"\<cairne\>",7),
+(14704,"\<christkind\>",7),
+(14705,"\<crackdealer\>",7),
+(14706,"king\>",7),
+(14707,"\<darthjedi\>",7),
+(14708,"\<denethor\>",7),
+(14709,"\<derneger\>",7),
+(14710,"\<diedroge\>",7),
+(14711,"\<dollybuster\>",7),
+(14712,"\<donpeperulez\>",7),
+(14713,"\<dopecheffe\>",7),
+(14714,"\<duke",7),
+(14715,"\<dwalin\>",7),
+(14716,"sucker\>",7),
+(14717,"\<ebola\>",7),
+(14718,"\<eichelkäse\>",7),
+(14719,"f[ue]+rst\>",7),
+(14720,"muschi\>",7),
+(14721,"\<eternalhoden\>",7),
+(14722,"\<euthanasie\>",7),
+(14723,"\<fick",7),
+(14724,"luder\>",7),
+(14725,"kacke\>",7),
+(14726,"\<fotz",7),
+(14727,"tussi\>",7),
+(14728,"\<frodobeutlin\>",7),
+(14729,"\<frozenthrone\>",7),
+(14730,"\<gandhi\>",7),
+(14731,"\<ganja",7),
+(14732,"\<gayoverlord\>",7),
+(14733,"\<geilebraut\>",7),
+(14734,"\<ginawild\>",7),
+(14735,"\<goebbels\>",7),
+(14736,"\<gott\>",7),
+(14737,"\<graftaliban\>",7),
+(14738,"\<hägar\>",7),
+(14739,"\<hanfernte\>",7),
+(14740,"\<heiland\>",7),
+(14741,"\<hendrix\>",7),
+(14742,"\<heroin",7),
+(14743,"\<hordenhure\>",7),
+(14744,"porno\>",7),
+(14745,"\<[gk]adafi\>",7),
+(14746,"\<kiffer",7),
+(14747,"\<kleineralki\>",7),
+(14748,"\<kleinerfurz\>",7),
+(14749,"\<klitori",7),
+(14750,"ficker\>",7),
+(14751,"\<kpd\>",7),
+(14752,"\<kruppstahl\>",7),
+(14753,"\<mariuhanna\>",7),
+(14754,"\<master",7),
+(14755,"\<meisteryoda\>",7),
+(14756,"\<mengele\>",7),
+(14757,"fick\>",7),
+(14758,"\<michaelmyers\>",7),
+(14759,"\<milkahase\>",7),
+(14760,"\<milkakuh\>",7),
+(14761,"\<mistst[ue]+ck\>",7),
+(14762,"\<moesen",7),
+(14763,"\<möse",7),
+(14764,"\<muschi",7),
+(14765,"\<nachgeburt\>",7),
+(14766,"\<nazghul\>",7),
+(14767,"\<negerin\>",7),
+(14768,"\<nikoleinchen\>",7),
+(14769,"\<onkeltom\>",7),
+(14770,"\<pimmel",7),
+(14771,"\<pimper",7),
+(14772,"\<pommespapst\>",7),
+(14773,"\<popobumser\>",7),
+(14774,"\<porno",7),
+(14775,"\<princess",7),
+(14776,"\<prinz\>",7),
+(14777,"\<rammstein\>",7),
+(14778,"\<rasputin\>",7),
+(14779,"\<redbull\>",7),
+(14780,"\<richthofen\>",7),
+(14781,"\<sarin\>",7),
+(14782,"\<schlampe",7),
+(14783,"\<schwanz",7),
+(14784,"\<sith\>",7),
+(14785,"\<smeagol\>",7),
+(14786,"\<sohngottes\>",7),
+(14787,"\<spikelee\>",7),
+(14788,"\<splintercell\>",7),
+(14789,"\<suicide\>",7),
+(14790,"\<suizidhoden\>",7),
+(14791,"\<terrortunte\>",7),
+(14792,"\<titanrosette\>",7),
+(14793,"\<tittenmaus\>",7),
+(14794,"\<tylerdurden\>",7),
+(14795,"\<vagimampf\>",7),
+(14796,"\<vanginus\>",7),
+(14797,"\<votzentroll\>",7),
+(14798,"\<warcrack\>",7),
+(14799,"\<winnipuuh\>",7),
+(14800,"\<wixxoor\>",7),
+(14801,"\<wowdiablo\>",7),
+(14802,"\<xerox\>",7),
+(14803,"schlampe\>",7),
+(14804,"zipfe?l\>",7),
+(14805,"\<zuhälter",7),
+(14806,"\<zwergpimmel\>",7),
+(14807,"\<absinthe\>",7),
+(14808,"\<absolut\>",7),
+(14809,"\<chink\>",7),
+(14810,"\<agnostic\>",7),
+(14811,"\<pussy",7),
+(14812,"\<rape\>",7),
+(14813,"\<aceofspades\>",7),
+(14814,"\<pusher",7),
+(14815,"\<chinks\>",7),
+(14816,"\<dikes\>",7),
+(14817,"\<dildos\>",7),
+(14818,"\<sativa\>",7),
+(14819,"\<indica\>",7),
+(14820,"\<skunkweed\>",7),
+(14821,"\<dike\>",7),
+(14822,"\<raped\>",7),
+(14823,"\<raping\>",7),
+(14824,"dong",7),
+(14825,"\<dyke\>",7),
+(14826,"\<mj\>",7),
+(14827,"\<doobie\>",7),
+(14828,"\<stoner",7),
+(14829,"\<junk[ie]",7),
+(14830,"\<defecat",7),
+(14831,"\<alquaeda\>",7),
+(14832,"\<amerikkkan\>",7),
+(14833,"\<amphetamine\>",7),
+(14834,"\<ejaculate\>",7),
+(14835,"\<scrotum",7),
+(14836,"\<fisting\>",7),
+(14837,"\<arse",7),
+(14838,"\<cock",7),
+(14839,"\<aryan",7),
+(14840,"\<backdoor\>",7),
+(14841,"titt[iey]*s\>",7),
+(14842,"\<bi\>",7),
+(14843,"\<bigfatasscow\>",7),
+(14844,"bondage\>",7),
+(14845,"boobs\>",7),
+(14846,"breast\>",7),
+(14847,"\<buttocks\>",7),
+(14848,"\<[ck]oitus",7),
+(14849,"\<condom",7),
+(14850,"\<dahoe\>",7),
+(14851,"\<damn\>",7),
+(14852,"\<darkwanker\>",7),
+(14853,"\<di[ae][rh]+ea",7),
+(14854,"dick\>",7),
+(14855,"\<dirtyho\>",7),
+(14856,"\<domination\>",7),
+(14857,"\<dutch\>",7),
+(14858,"\<enema\>",7),
+(14859,"\<erotic",7),
+(14860,"jackass\>",7),
+(14861,"\<facism\>",7),
+(14862,"\<fakeboobs\>",7),
+(14863,"\<fart\>",7),
+(14864,"\<fetish",7),
+(14865,"fetish\>",7),
+(14866,"\<filthymuslim\>",7),
+(14867,"\<focker\>",7),
+(14868,"\<foreplay\>",7),
+(14869,"\<foreskin\>",7),
+(14870,"\<frottage\>",7),
+(14871,"\<fuk\>",7),
+(14872,"\<fukass\>",7),
+(14873,"\<gay\>",7),
+(14874,"\<genital",7),
+(14875,"\<genitals\>",7),
+(14876,"\<gigolo\>",7),
+(14877,"\<gonorrhea\>",7),
+(14878,"\<grummz\>",7),
+(14879,"\<hairyhorny\>",7),
+(14880,"\<hardboob\>",7),
+(14881,"\<hentail\>",7),
+(14882,"\<hiv\>",7),
+(14883,"\<holocaust\>",7),
+(14884,"\<horny\>",7),
+(14885,"\<hot\>",7),
+(14886,"\<j.*jameson\>",7),
+(14887,"\<kinky\>",7),
+(14888,"\<kraut\>",7),
+(14889,"\<lesb\>",7),
+(14890,"\<lesbian\>",7),
+(14891,"pussy\>",7),
+(14892,"\<lingerie\>",7),
+(14893,"\<load\>",7),
+(14894,"\<lube\>",7),
+(14895,"\<lubricant\>",7),
+(14896,"\<lust\>",7),
+(14897,"\<maidenhead\>",7),
+(14898,"후장뚫어",7),
+(14899,"\<asshole",7),
+(14900,"\<fingerbang\>",7),
+(14901,"\<gangbang\>",7),
+(14902,"\<gangrape\>",7),
+(14903,"\<japs\>",7),
+(14904,"\<jizzing\>",7),
+(14905,"\<gizzing\>",7),
+(14906,"\<pussies\>",7),
+(14907,"\<rapes\>",7),
+(14908,"\<saladtosser\>",7),
+(14909,"\<fags\>",7),
+(14910,"boob",7),
+(14911,"\<bast[aeiou]rd",7),
+(14912,"\<beastiality\>",7),
+(14913,"\<blowjob",7),
+(14914,"\<boffer\>",7),
+(14915,"\<clowjob\>",7),
+(14916,"\<donkeypunch\>",7),
+(14917,"\<fawker\>",7),
+(14918,"\<feces",7),
+(14919,"\<nipple",7),
+(14920,"nipples\>",7),
+(14921,"prostitute",7),
+(14922,"\<coke\>",7),
+(14923,"\<morphine\>",7),
+(14924,"\<nudity\>",7),
+(14925,"\<nuts\>",7),
+(14926,"\<pagan\>",7),
+(14927,"\<perv\>",7),
+(14928,"\<pervert\>",7),
+(14929,"\<phawk\>",7),
+(14930,"\<piss\>",7),
+(14931,"\<playboy\>",7),
+(14932,"\<playgirl\>",7),
+(14933,"\<polish\>",7),
+(14934,"\<prebubescent\>",7),
+(14935,"\<queer\>",7),
+(14936,"\<reich\>",7),
+(14937,"\<r.*jeremy\>",7),
+(14938,"\<screw\>",7),
+(14939,"\<seamen\>",7),
+(14940,"\<spreadmylegs\>",7),
+(14941,"\<stripper",7),
+(14942,"\<suck\>",7),
+(14943,"\<sukkitdown\>",7),
+(14944,"\<swingers\>",7),
+(14945,"\<teabag",7),
+(14946,"\<terrorist\>",7),
+(14947,"\<thickbush\>",7),
+(14948,"\<threesome\>",7),
+(14949,"\<snatch",7),
+(14950,"\<updabut\>",7),
+(14951,"\<vasect",7),
+(14952,"\<white\>",7),
+(14953,"\<negro",7),
+(14954,"\<tinytits\>",7),
+(14955,"cock\>",7),
+(14956,"blowjob\>",7),
+(14957,"\<tardpopsicle\>",7),
+(14958,"\<urmom\>",7),
+(14959,"fag\>",7),
+(14960,"\<dick",7),
+(14961,"\<turdsplat\>",7),
+(14962,"\<chokeoncocks\>",7),
+(14963,"\<littlearse\>",7),
+(14964,"\<holybijesis\>",7),
+(14965,"\<niggs\>",7),
+(14966,"\<sacofricosis\>",7),
+(14967,"\<polesmokers\>",7),
+(14968,"\<sega\>",7),
+(14969,"\<sex",7),
+(14970,"\<shadowbane\>",7),
+(14971,"\<shane",7),
+(14972,"\<shiznit\>",7),
+(14973,"\<shortbus\>",7),
+(14974,"\<tramps\>",7),
+(14975,"\<erection\>",7),
+(14976,"\<smoked\>",7),
+(14977,"\<snowwhite\>",7),
+(14978,"\<oral\>",7),
+(14979,"\<sperm",7),
+(14980,"\<poop\>",7),
+(14981,"\<spluge\>",7),
+(14982,"\<suck",7),
+(14983,"\<supermario\>",7),
+(14984,"support",7),
+(14985,"\<sex\>",7),
+(14986,"\<suppuku\>",7),
+(14987,"\<sirbong\>",7),
+(14988,"\<spank\>",7),
+(14989,"\<speculum\>",7),
+(14990,"\<streaker",7),
+(14991,"\<tribadism\>",7),
+(14992,"\<upmybutthole\>",7),
+(14993,"\<urinat",7),
+(14994,"\<venereal\>",7),
+(14995,"\<virgin\>",7),
+(14996,"\<warslut\>",7),
+(14997,"\<wood\>",7),
+(14998,"\<advil\>",7),
+(14999,"\<amputee\>",7),
+(15000,"\<amtrak\>",7),
+(15001,"\<anis\>",7),
+(15002,"\<anolinctus\>",7),
+(15003,"\<antichrist\>",7),
+(15004,"\<arathorn\>",7),
+(15005,"\<arian\>",7),
+(15006,"\<arsonist\>",7),
+(15007,"\<blackenstein\>",7),
+(15008,"\<blacksabbath\>",7),
+(15009,"\<bnet\>",7),
+(15010,"\<bootylicious\>",7),
+(15011,"\<bra\>",7),
+(15012,"\<chinaman\>",7),
+(15013,"\<chronik\>",7),
+(15014,"\<colgate\>",7),
+(15015,"\<coprophagy\>",7),
+(15016,"\<crackhead\>",7),
+(15017,"\<dammit\>",7),
+(15018,"\<darky\>",7),
+(15019,"\<darvocet\>",7),
+(15020,"\<databasesys\>",7),
+(15021,"\<deckardcain\>",7),
+(15022,"\<dr\>",7),
+(15023,"\<dukeofwhales\>",7),
+(15024,"\<dumbass\>",7),
+(15025,"\<ecstasy\>",7),
+(15026,"\<ensign\>",7),
+(15027,"\<fcuk\>",7),
+(15028,"\<ferrari\>",7),
+(15029,"\<fetus",7),
+(15030,"\<fockerz\>",7),
+(15031,"\<fooker\>",7),
+(15032,"cunt\>",7),
+(15033,"\<ghandi\>",7),
+(15034,"\<gofukyorself\>",7),
+(15035,"\<gonadian\>",7),
+(15036,"\<goochgravy\>",7),
+(15037,"\<gookenator\>",7),
+(15038,"\<hemplock\>",7),
+(15039,"\<herpies\>",7),
+(15040,"\<homoerectus\>",7),
+(15041,"\<hore\>",7),
+(15042,"\<hotdamn\>",7),
+(15043,"\<hungelf\>",7),
+(15044,"\<indian\>",7),
+(15045,"\<irapekids\>",7),
+(15046,"\<ironchef\>",7),
+(15047,"\<jc\>",7),
+(15048,"\<jedi\>",7),
+(15049,"\<[gj]en[ao]cide\>",7),
+(15050,"\<jugs\>",7),
+(15051,"\<klismaphilia\>",7),
+(15052,"\<kokigami\>",7),
+(15053,"\<koon\>",7),
+(15054,"\<kosherpork\>",7),
+(15055,"\<lardass\>",7),
+(15056,"\<laurabush\>",7),
+(15057,"\<marlboroman\>",7),
+(15058,"\<masterbaiter\>",7),
+(15059,"\<maxipad\>",7),
+(15060,"\<menstrual\>",7),
+(15061,"\<mhz\>",7),
+(15062,"\<michaeljack\>",7),
+(15063,"bastard\>",7),
+(15064,"\<misogynist\>",7),
+(15065,"\<mister\>",7),
+(15066,"\<mr\>",7),
+(15067,"\<narcoticus\>",7),
+(15068,"\<nigahh\>",7),
+(15069,"\<npc",7),
+(15070,"\<nug\>",7),
+(15071,"\<nunriggers\>",7),
+(15072,"\<nwa\>",7),
+(15073,"\<omgwtf\>",7),
+(15074,"\<opiate",7),
+(15075,"\<oreos\>",7),
+(15076,"\<ovaltine\>",7),
+(15077,"\<papsmear\>",7),
+(15078,"\<pederasty\>",7),
+(15079,"\<penthouse\>",7),
+(15080,"\<pimp",7),
+(15081,"\<pinktaco\>",7),
+(15082,"mofo\>",7),
+(15083,"\<poomaster\>",7),
+(15084,"\<poonjuice\>",7),
+(15085,"\<poop",7),
+(15086,"\<pwnzor\>",7),
+(15087,"\<quadoushka\>",7),
+(15088,"\<r.*nad[ae]r\>",7),
+(15089,"\<stud\>",7),
+(15090,"\<submissive\>",7),
+(15091,"\<swiftnuggs\>",7),
+(15092,"\<trans",7),
+(15093,"\<uglynig\>",7),
+(15094,"\<swastika\>",7),
+(15095,"\<sybian\>",7),
+(15096,"\<toeofcamel\>",7),
+(15097,"\<tokyorose\>",7),
+(15098,"\<urmama\>",7),
+(15099,"\<voltron\>",7),
+(15100,"\<wangmaster\>",7),
+(15101,"\<wanker\>",7),
+(15102,"\<wetdream\>",7),
+(15103,"\<whitebread\>",7),
+(15104,"\<wigger\>",7),
+(15105,"\<williamhung\>",7),
+(15106,"\<windex\>",7),
+(15107,"\<witchking\>",7),
+(15108,"\<x.*x\>",7),
+(15109,"\<yosemitesam\>",7),
+(15110,"\<youranus\>",7),
+(15111,"\<zoolander\>",7),
+(15112,"condom\>",7),
+(15113,"jebus\>",7),
+(15114,"\<kosher",7),
+(15115,"menstrual",7),
+(15116,"sexy",7),
+(15117,"\<bestiality\>",7),
+(15118,"\<bizzle\>",7),
+(15119,"\<black\>",7),
+(15120,"\<blackie\>",7),
+(15121,"\<bloodyhell\>",7),
+(15122,"\<blow\>",7),
+(15123,"\<blunt\>",7),
+(15124,"\<bollocks\>",7),
+(15125,"\<boobs",7),
+(15126,"\<boofer\>",7),
+(15127,"\<bourbon\>",7),
+(15128,"\<brazuca\>",7),
+(15129,"\<breast",7),
+(15130,"\<budda\>",7),
+(15131,"\<buddahead\>",7),
+(15132,"\<budlight\>",7),
+(15133,"\<budweiser\>",7),
+(15134,"\<bugger\>",7),
+(15135,"\<bustydusty\>",7),
+(15136,"\<butt\>",7),
+(15137,"\<buttman\>",7),
+(15138,"\<candyandes\>",7),
+(15139,"\<caucazoid\>",7),
+(15140,"\<cawk\>",7),
+(15141,"\<fu[ck]+[aeiou]+",7),
+(15142,"\<jod[eií]",7),
+(15143,"mierda",7),
+(15144,"coño",7),
+(15145,"\<[gj]ilipo",7),
+(15146,"\<meapilas\>",7),
+(15147,"\<capull",7),
+(15148,"\<cabr[oó]n",7),
+(15149,"\<mari[cq]",7),
+(15150,"\<pene",7),
+(15151,"polla",7),
+(15152,"\<poya",7),
+(15153,"\<pinga\>",7),
+(15154,"\<pito",7),
+(15155,"\<va[gj]ina",7),
+(15156,"\<lesbi",7),
+(15157,"\<minga\>",7),
+(15158,"\<put[aoó]",7),
+(15159,"\<zorra",7),
+(15160,"\<paja\>",7),
+(15161,"\<paji[lt]",7),
+(15162,"\<nazi\>",7),
+(15163,"\<kkk\>",7),
+(15164,"\<escroto\>",7),
+(15165,"\<coj[oó]n",7),
+(15166,"\<correr[mst]",7),
+(15167,"\<corri[eé]ndo[mst]e\>",7),
+(15168,"\<eyacul",7),
+(15169,"\<esperm",7),
+(15170,"\<mama[rd]",7),
+(15171,"\<encula[rd]",7),
+(15172,"\<culo\>",7),
+(15173,"\<viol[aó]",7),
+(15174,"\<ped[oó]f",7),
+(15175,"\<pederast",7),
+(15176,"gay",7),
+(15177,"\<culandr[oó]n\>",7),
+(15178,"\<sodomi",7),
+(15179,"\<sadomaso",7),
+(15180,"\<sudaca",7),
+(15181,"\<negraco\>",7),
+(15182,"\<moro\>",7),
+(15183,"\<moros\>",7),
+(15184,"\<moromierda\>",7),
+(15185,"\<jop[eu]",7),
+(15186,"\<po[lr]cul",7),
+(15187,"\<ostia",7),
+(15188,"\<hostia",7),
+(15189,"\<cullons\>",7),
+(15190,"\<gabacho\>",7),
+(15191,"\<pringao\>",7),
+(15192,"\<tont[ao]",7),
+(15193,"\<mam[oó]n",7),
+(15194,"\<niñ[ao]t",7),
+(15195,"\<nenaza",7),
+(15196,"\<homo\>",7),
+(15197,"choch[eio]",7),
+(15198,"txotx[eio]",7),
+(15199,"xox[eio]",7),
+(15200,"\<mastur",7),
+(15201,"\<cl[ií]toris\>",7),
+(15202,"\<b[aá]lano\>",7),
+(15203,"\<prepucio\>",7),
+(15204,"\<hero[ií]na\>",7),
+(15205,"\<pellote\>",7),
+(15206,"\<hach[ií]s\>",7),
+(15207,"\<hatx[ií]s\>",7),
+(15208,"\<LSD\>",7),
+(15209,"\<coca[ií]na\>",7),
+(15210,"\<p[uú]bis\>",7),
+(15211,"\<p[uú]bico\>",7),
+(15212,"\<fela[ct]i",7),
+(15213,"\<cunnilingus\>",7),
+(15214,"\<mari[hj]uana\>",7),
+(15215,"\<porro\>",7),
+(15216,"\<desvirga",7),
+(15217,"\<himen\>",7),
+(15218,"\<meretriz\>",7),
+(15219,"\<prostituta\>",7),
+(15220,"\<rohypnol\>",7),
+(15221,"\<rugmunch",7),
+(15222,"nig+er\>",7),
+(15223,"\<semen\>",7),
+(15224,"\<sexmachine\>",7),
+(15225,"\<slut\>",7),
+(15226,"\<slutmuffin\>",7),
+(15227,"\<smegma\>",7),
+(15228,"\<spanishfly\>",7),
+(15229,"\<spics\>",7),
+(15230,"\<squarehead\>",7),
+(15231,"\<stfu\>",7),
+(15232,"\<strapon\>",7),
+(15233,"\<talliwhacker\>",7),
+(15234,"\<tards\>",7),
+(15235,"\<teabagging\>",7),
+(15236,"\<throbknobbin\>",7),
+(15237,"\<thunderfuck\>",7),
+(15238,"\<tirdburglar",7),
+(15239,"\<turdburglars\>",7),
+(15240,"\<twatlick",7),
+(15241,"\<twats\>",7),
+(15242,"\<twatsuck",7),
+(15243,"\<viagra\>",7),
+(15244,"\<whop\>",7),
+(15245,"\<zoophilia\>",7),
+(15246,"\<fagg[aeiouy]t",7),
+(15247,"\<pillowbiter",7),
+(15248,"\<poohstab",7),
+(15249,"\<dildo\>",7),
+(15250,"\<heeb\>",7),
+(15251,"\<kike\>",7),
+(15252,"\<mudshark",7),
+(15253,"\<mooley\>",7),
+(15254,"\<nig+a",7),
+(15255,"\<jap\>",7),
+(15256,"feltch",7),
+(15257,"\<homos\>",7),
+(15258,"\<tittie",7),
+(15259,"\<tits\>",7),
+(15260,"\<slamhound",7),
+(15261,"\<gutterslut\>",7),
+(15262,"\<cumguz",7),
+(15263,"\<injun\>",7),
+(15264,"\<gooch\>",7),
+(15265,"bong",7),
+(15266,"\<pothead",7),
+(15267,"shit",7),
+(15268,"\<twat\>",7),
+(15269,"\<assface\>",7),
+(15270,"\<nosecandy\>",7),
+(15271,"\<towelhead\>",7),
+(15272,"\<fudgepacker\>",7),
+(15273,"\<assmaster\>",7),
+(15274,"\<milf\>",7),
+(15275,"\<rumprang",7),
+(15276,"\<spic\>",7),
+(15277,"\<spick",7),
+(15278,"wetback",7),
+(15279,"\<queef",7),
+(15280,"\<nig\>",7),
+(15281,"fagg[aeiouy]t\>",7),
+(15282,"\<rapist\>",7),
+(15283,"\<gook\>",7),
+(15284,"\<polesmok",7),
+(15285,"\<cracksmoker",7),
+(15286,"\<jism\>",7),
+(15287,"\<dingleberry\>",7),
+(15288,"\<mooncricket",7),
+(15289,"\<assman\>",7),
+(15290,"\<spearchuck",7),
+(15291,"\<hardon\>",7),
+(15292,"\<stiffy\>",7),
+(15293,"\<cumstain",7),
+(15294,"\<dunecoon\>",7),
+(15295,"\<buttfloss\>",7),
+(15296,"\<peckertracks\>",7),
+(15297,"\<cornhole\>",7),
+(15298,"\<wop\>",7),
+(15299,"\<cock\>",7),
+(15300,"\<asspound",7),
+(15301,"\<buttboy",7),
+(15302,"\<sploog",7),
+(15303,"\<meatsword\>",7),
+(15304,"\<skinbat",7),
+(15305,"히로뽕",7),
+(15306,"\<zipperhead\>",7),
+(15307,"\<porchmonk",7),
+(15308,"\<junglebunny\>",7),
+(15309,"\<jizz\>",7),
+(15310,"\<africoon\>",7),
+(15311,"\<aidsbearer\>",7),
+(15312,"\<analcumdrip\>",7),
+(15313,"\<analdoctor\>",7),
+(15314,"\<aperape\>",7),
+(15315,"\<assbandit\>",7),
+(15316,"\<assbasher\>",7),
+(15317,"\<asshunter\>",7),
+(15318,"\<asskiss",7),
+(15319,"\<asslick",7),
+(15320,"\<assram",7),
+(15321,"\<assrape",7),
+(15322,"\<biotch\>",7),
+(15323,"\<blackanese\>",7),
+(15324,"\<blaxican\>",7),
+(15325,"\<blowjob\>",7),
+(15326,"\<blueball\>",7),
+(15327,"\<bonch\>",7),
+(15328,"\<boners\>",7),
+(15329,"nig+a\>",7),
+(15330,"\<bullshirt\>",7),
+(15331,"\<buttbang\>",7),
+(15332,"\<buttfucker",7),
+(15333,"\<buttlick",7),
+(15334,"\<buttmonkey\>",7),
+(15335,"\<buttmunch",7),
+(15336,"\<buttnugget",7),
+(15337,"\<buttslam",7),
+(15338,"\<buttstain\>",7),
+(15339,"\<cameljockey\>",7),
+(15340,"\<cann[aio]bis\>",7),
+(15341,"\<carpetmuncher",7),
+(15342,"\<cheapwhore\>",7),
+(15343,"\<chinawhite\>",7),
+(15344,"\<chinko\>",7),
+(15345,"\<choad\>",7),
+(15346,"\<circlejerk\>",7),
+(15347,"\<circumcise\>",7),
+(15348,"\<cocaine\>",7),
+(15349,"\<cocksucker\>",7),
+(15350,"\<coon\>",7),
+(15351,"\<cracka\>",7),
+(15352,"\<crackerass",7),
+(15353,"\<crackpipe",7),
+(15354,"\<creamtits\>",7),
+(15355,"\<crystalmeth\>",7),
+(15356,"\<cumboy",7),
+(15357,"\<cumbubble",7),
+(15358,"\<cumbucket\>",7),
+(15359,"\<cumcatcher",7),
+(15360,"\<cumdumpster",7),
+(15361,"\<cumeater\>",7),
+(15362,"\<cumm\>",7),
+(15363,"\<cumonmyface\>",7),
+(15364,"\<cums\>",7),
+(15365,"\<cumshooter",7),
+(15366,"\<cumshot",7),
+(15367,"\<cumslot",7),
+(15368,"\<dankhoe\>",7),
+(15369,"\<danknugg",7),
+(15370,"\<hashish\>",7),
+(15371,"\<heroin\>",7),
+(15372,"\<holywanker\>",7),
+(15373,"\<honkey\>",7),
+(15374,"\<hornytauren\>",7),
+(15375,"\<hotslut\>",7),
+(15376,"\<hymen\>",7),
+(15377,"\<jackoff\>",7),
+(15378,"\<kikes\>",7),
+(15379,"\<kunt\>",7),
+(15380,"\<lesbo\>",7),
+(15381,"\<longusdongus\>",7),
+(15382,"\<lsd\>",7),
+(15383,"\<mangina\>",7),
+(15384,"\<mansatchel\>",7),
+(15385,"\<marijuana\>",7),
+(15386,"\<mast[eu]rbat",7),
+(15387,"\<meth\>",7),
+(15388,"\<mooby\>",7),
+(15389,"\<morningwood\>",7),
+(15390,"\<monstercock",7),
+(15391,"\<moulie\>",7),
+(15392,"\<muffdiver",7),
+(15393,"\<natzi\>",7),
+(15394,"\<necrophil",7),
+(15395,"\<negrolicious\>",7),
+(15396,"\<negromancer\>",7),
+(15397,"\<nicklebag\>",7),
+(15398,"\<niglet",7),
+(15399,"\<nignog\>",7),
+(15400,"\<nigs\>",7),
+(15401,"\<oface\>",7),
+(15402,"\<onanism\>",7),
+(15403,"\<opium\>",7),
+(15404,"\<orgasm\>",7),
+(15405,"\<pcp\>",7),
+(15406,"\<pedophile\>",7),
+(15407,"\<penis",7),
+(15408,"\<phugface\>",7),
+(15409,"\<pikajew\>",7),
+(15410,"\<poontang\>",7),
+(15411,"\<porn\>",7),
+(15412,"\<priapism\>",7),
+(15413,"\<pr[o0]n\>",7),
+(15414,"\<pudendum\>",7),
+(15415,"\<pussyfart",7),
+(15416,"\<pussylick",7),
+(15417,"\<pussystomp",7),
+(15418,"\<puto\>",7),
+(15419,"\<quaaludes\>",7),
+(15420,"\<queers\>",7),
+(15421,"\<qweef\>",7),
+(15422,"\<raghead\>",7),
+(15423,"\<reefer\>",7),
+(15424,"\<reggin\>",7),
+(15425,"\<rimjob\>",7),
+(15426,"\<gizz\>",7),
+(15427,"\<cooze\>",7),
+(15428,"\<cumming\>",7),
+(15429,"\<boner\>",7),
+(15430,"\<buttpirate",7),
+(15431,"\<titty",7),
+(15432,"\<poostab",7),
+(15433,"fuck",7),
+(15434,"\<ass\>",7),
+(15435,"bia?ts?ch",7),
+(15436,"\<clit",7),
+(15437,"\<cum\>",7),
+(15438,"\<cunt",7),
+(15439,"\<nig+er",7),
+(15440,"penis\>",7),
+(15441,"whore",7),
+(15442,"ㅈㄹ",7),
+(15443,"yuckfu",7),
+(15444,"yuckfou",7),
+(15445,"transvestite",7),
+(15446,"transsexual",7),
+(15447,"testicle",7),
+(15448,"tampon",7),
+(15449,"sphincter",7),
+(15450,"sperm",7),
+(15451,"phuck",7),
+(15452,"gangbang",7),
+(15453,"felch",7),
+(15454,"bukkake",7),
+(15455,"bukakke",7),
+(15456,"bukake",7),
+(15457,"\<twaty\>",7),
+(15458,"\<twatty\>",7),
+(15459,"\<turbanhead",7),
+(15460,"\<titsnass\>",7),
+(15461,"\<titnass\>",7),
+(15462,"\<sh[ie][ie]thead\>",7),
+(15463,"\<peckerwood\>",7),
+(15464,"\<negroid",7),
+(15465,"\<mooncricket\>",7),
+(15466,"\<kyke",7),
+(15467,"\<jigg",7),
+(15468,"\<jerkoff\>",7),
+(15469,"\<hentai\>",7),
+(15470,"\<gringo\>",7),
+(15471,"\<goddamn",7),
+(15472,"\<gizm\>",7),
+(15473,"\<gism\>",7),
+(15474,"\<ganja\>",7),
+(15475,"GMworker",7),
+(15476,"Offgamers",7),
+(15477,"Mysupersales",7),
+(15478,"Ezgaming",7),
+(15479,"itembay",7),
+(15480,"zlywy",7),
+(15481,"wowsupplier",7),
+(15482,"gmworkers",7),
+(15483,"thsale",7),
+(15484,"offgamers",7),
+(15485,"mysupersales",7),
+(15486,"igxe",7),
+(15487,"ezgaming",7),
+(15488,"\<whitti?ey?\>",7),
+(15489,"\<fellatio",7),
+(15490,"\<fawk",7),
+(15491,"\<dimebag\>",7),
+(15492,"\<dickholster\>",7),
+(15493,"\<diaperhead\>",7),
+(15494,"\<cunny\>",7),
+(15495,"\<bustanut\>",7),
+(15496,"\<asshat\>",7),
+(15497,"\<aryan\>",7),
+(15498,"\<arsehole\>",7),
+(15499,"\<arse\>",7),
+(15500,"\<americunt\>",7),
+(15501,"\<alphanigg",7),
+(15502,"\<aggin\>",7),
+(15503,"\<aftercum\>",7),
+(15511,"йух",8),
+(15583,"\<Разбойник\>",8),
+(15584,"\<Клыкарр\>",8),
+(15585,"\<Леснойтролль\>",8),
+(15586,"\<Человек\>",8),
+(15587,"\<Орк\>",8),
+(15588,"\<Дворф\>",8),
+(15589,"\<Дварф\>",8),
+(15590,"\<Дворфийка\>",8),
+(15591,"\<Ночнойэльф\>",8),
+(15592,"\<Эльф\>",8),
+(15593,"\<Эльфийка\>",8),
+(15594,"\<Таурен\>",8),
+(15595,"\<Гном\>",8),
+(15596,"\<Тролль\>",8),
+(15597,"\<Гоблин\>",8),
+(15598,"\<Эльфкрови\>",8),
+(15599,"\<Дреней\>",8),
+(15600,"\<Оркскверны\>",8),
+(15601,"\<Падший\>",8),
+(15602,"\<Врайкул\>",8),
+(15603,"\<Воин\>",8),
+(15604,"\<Паладин\>",8),
+(15605,"\<Охотник\>",8),
+(15607,"\<Жрец\>",8),
+(15608,"\<Шаман\>",8),
+(15609,"\<Маг\>",8),
+(15610,"\<Чернокнижник\>",8),
+(15611,"\<Друид\>",8),
+(15612,"\<Рыцарьсмерти\>",8),
+(15613,"\<Орчиха\>",8),
+(15615,"\<Ночнаяэльфийка\>",8),
+(15616,"\<Нежить\>",8),
+(15617,"\<Эльфийкакрови\>",8),
+(15618,"\<Орчихаскверны\>",8),
+(15619,"\<Нага\>",8),
+(15620,"\<Падшая\>",8),
+(15621,"\<Воительница\>",8),
+(15622,"\<Охотница\>",8),
+(15623,"\<Разбойница\>",8),
+(15624,"\<Жрица\>",8),
+(15625,"\<Шаманка\>",8),
+(15626,"\<Волшебница\>",8),
+(15627,"\<Чернокнижница\>",8),
+(15628,"\<Тауренка\>",8),
+(15629,"\<Гномка\>",8),
+(15631,"\<Мана\>",8),
+(15632,"\<Ярость\>",8),
+(15633,"\<Энергия\>",8),
+(15634,"\<Настроение\>",8),
+(15635,"\<Руны\>",8),
+(15636,"\<Гномесса\>",8),
+(15637,"\<Троллиха\>",8),
+(15638,"\<бог\>",8),
+(15639,"\<дьявол\>",8),
+(15640,"\<сатана\>",8),
+(15641,"\<аллах",8),
+(15642,"\<Иисус",8),
+(15643,"\<Христос",8),
+(15644,"\<Кришн",8),
+(15645,"\<Магомет\>",8),
+(15646,"\<Мухаммад\>",8),
+(15647,"\<Мухаммед\>",8),
+(15648,"\<Будда\>",8),
+(15649,"\<Путин",8),
+(15650,"\<Буш",8),
+(15651,"\<Клинтон",8),
+(15652,"\<Саркози",8),
+(15653,"\<Медведев",8),
+(20739,"逼孕",4),
+(20741,"八路",4),
+(20742,"白痴",4),
+(20743,"班禅",4),
+(20744,"膀胱",4),
+(20745,"逼孕套",4),
+(20746,"比卵",4),
+(20747,"比水",4),
+(20748,"比样",4),
+(20749,"避孕",4),
+(20750,"避孕套",4),
+(20751,"不爽不要钱",4),
+(20752,"藏獨",4),
+(20753,"藏独",4),
+(20754,"操蛋",4),
+(20755,"操死",4),
+(20756,"操鸡",4),
+(20757,"操她",4),
+(20758,"操你爸",4),
+(20759,"操你老母",4),
+(20760,"操你爷爷",4),
+(20761,"操你祖宗",4),
+(20762,"胡锦套",4),
+(20763,"男含大长茎",4),
+(20764,"插逼",4),
+(20765,"插她",4),
+(20766,"插你爸",4),
+(20767,"插你老母",4),
+(20768,"插你妈",4),
+(20769,"插你奶奶",4),
+(20770,"插你全家",4),
+(20771,"插你爷爷",4),
+(20772,"插你祖宗",4),
+(20773,"插他",4),
+(20774,"插我",4),
+(20775,"娼妓",4),
+(20776,"车仑",4),
+(20777,"车仑女干",4),
+(20778,"陈毅",4),
+(20779,"陈云",4),
+(20780,"陳毅",4),
+(20781,"陳雲",4),
+(20782,"迟浩田",4),
+(20783,"遲浩田",4),
+(20784,"処女",4),
+(20785,"处女膜",4),
+(20786,"达賴",4),
+(20787,"达癞",4),
+(20788,"達赖",4),
+(20789,"達賴",4),
+(20790,"打飞机",4),
+(20791,"大逼",4),
+(20792,"大比",4),
+(20793,"大东亚共荣",4),
+(20794,"大鸡巴",4),
+(20795,"大血比",4),
+(20796,"鄧小平",4),
+(20797,"吊子",4),
+(20798,"丁关根",4),
+(20799,"腚眼",4),
+(20800,"东条",4),
+(20801,"东条英机",4),
+(20802,"东突",4),
+(20803,"东亚",4),
+(20804,"东亚病夫",4),
+(20805,"東突",4),
+(20806,"東亞病夫",4),
+(20807,"发抡",4),
+(20808,"发仑",4),
+(20809,"发伦",4),
+(20810,"发沦",4),
+(20811,"发纶",4),
+(20812,"发轮",4),
+(20813,"发论",4),
+(20814,"發倫",4),
+(20815,"法抡",4),
+(20816,"法仑",4),
+(20817,"法伦",4),
+(20818,"法沦",4),
+(20819,"法纶",4),
+(20820,"法倫",4),
+(20821,"法论",4),
+(20822,"法論",4),
+(20823,"房事",4),
+(20824,"粪便",4),
+(20825,"糞",4),
+(20826,"干逼",4),
+(20827,"干比",4),
+(20828,"干你",4),
+(20829,"干你老比",4),
+(20830,"干你老母",4),
+(20831,"干你娘",4),
+(20832,"干全家",4),
+(20833,"肛门",4),
+(20834,"肛門",4),
+(20835,"睾丸",4),
+(20836,"搞你",4),
+(20837,"搞死",4),
+(20838,"共產黨",4),
+(20839,"狗比",4),
+(20840,"狗操",4),
+(20841,"狗成",4),
+(20842,"狗诚",4),
+(20843,"狗乘",4),
+(20844,"狗幹",4),
+(20845,"狗卵",4),
+(20846,"狗娘",4),
+(20847,"狗剩",4),
+(20848,"狗杂种",4),
+(20849,"龟公",4),
+(20850,"龟投",4),
+(20851,"亀頭",4),
+(20852,"龜頭",4),
+(20853,"系统",4),
+(20854,"黑鬼",4),
+(20855,"胡錦濤",4),
+(20856,"黄片",4),
+(20857,"姜春云",4),
+(20858,"鸡吧",4),
+(20859,"鸡奸",4),
+(20860,"江澤民",4),
+(20861,"鸡院",4),
+(20862,"基地組織",4),
+(20863,"雞",4),
+(20864,"妓",4),
+(20865,"賈慶林",4),
+(20866,"国家领导人",4),
+(20867,"国家主席",4),
+(20868,"国权",4),
+(20869,"国务院",4),
+(20870,"國家領導人",4),
+(20871,"國家主席",4),
+(20872,"國權",4),
+(20873,"國務院",4),
+(20874,"贱逼",4),
+(20875,"贱比",4),
+(20876,"贱货",4),
+(20877,"贱人",4),
+(20878,"贱种",4),
+(20879,"陈冠希",4),
+(20880,"交配",4),
+(20881,"叫春",4),
+(20882,"金枪不倒",4),
+(20883,"金泽辰",4),
+(20884,"经血",4),
+(20885,"精童",4),
+(20886,"靖国神社",4),
+(20887,"九霾",4),
+(20888,"开苞",4),
+(20889,"砍翻一条街",4),
+(20890,"砍死你",4),
+(20891,"客服",4),
+(20892,"拉皮条",4),
+(20893,"服务中心",4),
+(20894,"烂逼",4),
+(20895,"烂比",4),
+(20896,"烂货",4),
+(20897,"卖比",4),
+(20898,"滥逼",4),
+(20899,"滥比",4),
+(20900,"滥货",4),
+(20901,"滥交",4),
+(20902,"妈比",4),
+(20903,"老逼",4),
+(20904,"老比",4),
+(20905,"老卵",4),
+(20906,"李長春",4),
+(20907,"李大師",4),
+(20908,"李嵐清",4),
+(20909,"李鵬",4),
+(20910,"李瑞環",4),
+(20911,"李铁映",4),
+(20912,"列寧",4),
+(20913,"林彪",4),
+(20914,"劉淇",4),
+(20915,"劉少奇",4),
+(20916,"劉雲山",4),
+(20917,"六四",4),
+(20918,"六四民运",4),
+(20919,"六四民運",4),
+(20920,"六四事件",4),
+(20921,"乱交",4),
+(20922,"売春婦",4),
+(20923,"卖逼",4),
+(20924,"卖骚",4),
+(20925,"毛澤東",4),
+(20926,"蜜穴",4),
+(20927,"民运",4),
+(20928,"民運",4),
+(20929,"奶头",4),
+(20930,"摸你",4),
+(20931,"内裤",4),
+(20932,"内衣",4),
+(20933,"奶罩",4),
+(20934,"你妈逼",4),
+(20935,"你妈比",4),
+(20936,"捏你鸡巴",4),
+(20937,"捏你奶子",4),
+(20938,"侬着冈峦",4),
+(20939,"侬着卵抛",4),
+(20940,"女干",4),
+(20941,"皮条客",4),
+(20942,"屁精",4),
+(20943,"嫖娼",4),
+(20944,"钱其琛",4),
+(20945,"强暴",4),
+(20946,"禽兽",4),
+(20947,"让你操",4),
+(20948,"人大",4),
+(20949,"人大常委",4),
+(20950,"人代",4),
+(20951,"人民代表",4),
+(20952,"人民代表大会",4),
+(20953,"人民代表大會",4),
+(20954,"日本人",4),
+(20955,"日逼",4),
+(20956,"日穿",4),
+(20957,"日蛋",4),
+(20958,"日九城",4),
+(20959,"日军",4),
+(20960,"日你爸",4),
+(20961,"日你老母",4),
+(20962,"日你奶奶",4),
+(20963,"日你娘",4),
+(20964,"日你全家",4),
+(20965,"日你爷爷",4),
+(20966,"日你祖宗",4),
+(20967,"日死",4),
+(20968,"日王",4),
+(20969,"肉棒",4),
+(20970,"肉洞",4),
+(20971,"肉棍",4),
+(20972,"乳头",4),
+(20973,"乳腺",4),
+(20974,"乳晕",4),
+(20975,"乳罩",4),
+(20976,"撒泡尿",4),
+(20977,"三个代表",4),
+(20978,"三级片",4),
+(20979,"三去车仑工力",4),
+(20980,"骚棒",4),
+(20981,"骚包",4),
+(20982,"骚棍",4),
+(20983,"骚鸡",4),
+(20984,"骚卵",4),
+(20985,"杀你全家",4),
+(20986,"杀你一家",4),
+(20987,"傻比",4),
+(20988,"傻吊",4),
+(20989,"傻鸟",4),
+(20990,"山本",4),
+(20991,"山本五十六",4),
+(20992,"射了",4),
+(20993,"射了还说要",4),
+(20994,"身寸米青",4),
+(20995,"身体障害者",4),
+(20996,"他吗的",4),
+(20997,"他奶奶的",4),
+(20998,"湿了还说不要",4),
+(20999,"湿了还说要",4),
+(21000,"十八摸",4),
+(21001,"十六大",4),
+(21002,"屎",4),
+(21003,"手淫",4),
+(21004,"私处",4),
+(21005,"私—服",4),
+(21006,"他娘的",4),
+(21007,"台湾獨立",4),
+(21008,"台湾国",4),
+(21009,"台灣狗",4),
+(21010,"台灣国",4),
+(21011,"台灣國",4),
+(21012,"台灣豬",4),
+(21013,"臺湾國",4),
+(21014,"臺灣國",4),
+(21015,"太监",4),
+(21016,"天阉",4),
+(21017,"田纪云",4),
+(21018,"同房",4),
+(21019,"文胸",4),
+(21020,"捅逼",4),
+(21021,"捅比",4),
+(21022,"捅她",4),
+(21023,"捅你",4),
+(21024,"捅我",4),
+(21025,"王八",4),
+(21026,"猥亵",4),
+(21027,"慰安妇",4),
+(21028,"慰安婦",4),
+(21029,"魏京生",4),
+(21030,"我靠",4),
+(21031,"吳邦國",4),
+(21032,"吳官正",4),
+(21033,"吳儀",4),
+(21034,"吾尔开希",4),
+(21035,"吾爾開希",4),
+(21036,"下贱",4),
+(21037,"下体",4),
+(21038,"小比样",4),
+(21039,"小便",4),
+(21040,"新疆獨立",4),
+(21041,"新疆独立",4),
+(21042,"行房",4),
+(21043,"性爱",4),
+(21044,"性病",4),
+(21045,"性高潮",4),
+(21046,"性虐待",4),
+(21047,"性器",4),
+(21048,"性情中人",4),
+(21049,"性生活",4),
+(21050,"性息",4),
+(21051,"性欲",4),
+(21052,"胸部",4),
+(21053,"胸罩",4),
+(21054,"顏射",4),
+(21055,"阳具",4),
+(21056,"阳痿",4),
+(21057,"阳物",4),
+(21058,"野合",4),
+(21059,"一党",4),
+(21060,"一黨",4),
+(21061,"一夜九次郎",4),
+(21062,"一夜情",4),
+(21063,"一中一台",4),
+(21064,"阴户",4),
+(21065,"阴精",4),
+(21066,"阴门",4),
+(21067,"阴囊",4),
+(21068,"陰戶",4),
+(21069,"淫货",4),
+(21070,"淫贱",4),
+(21071,"淫乱",4),
+(21072,"猶太豬",4),
+(21073,"于幼军",4),
+(21074,"於幼軍",4),
+(21075,"俞正聲",4),
+(21076,"欲女",4),
+(21077,"援交",4),
+(21078,"杂种",4),
+(21079,"早泄",4),
+(21080,"造爱",4),
+(21081,"曾慶紅",4),
+(21082,"张万年",4),
+(21083,"張德江",4),
+(21084,"張宏堡",4),
+(21085,"張立昌",4),
+(21086,"張萬年",4),
+(21087,"招鸡",4),
+(21088,"贞操",4),
+(21089,"真善忍",4),
+(21090,"政府",4),
+(21091,"政协",4),
+(21092,"政協",4),
+(21093,"政治局",4),
+(21094,"政治局常委",4),
+(21095,"政治协商会议",4),
+(21096,"政治協商會議",4),
+(21097,"知的障害",4),
+(21098,"知障",4),
+(21099,"中国共产党",4),
+(21100,"中國共產黨",4),
+(21101,"中國狗",4),
+(21102,"中國豬",4),
+(21103,"中华人民",4),
+(21104,"共和國",4),
+(21105,"周恩來",4),
+(21106,"朱德",4),
+(21107,"朱駿",4),
+(21108,"朱狨基",4),
+(21109,"朱容基",4),
+(21110,"专政",4),
+(21111,"專政",4),
+(21112,"子宫",4),
+(21113,"自焚",4),
+(21114,"自慰",4),
+(21115,"作爱",4),
+(21116,"陈玉娇",4),
+(21117,"玉娇饼",4),
+(21118,"亲日",4),
+(21119,"反中",4),
+(21120,"九一八",4),
+(21121,"勿忘国耻",4),
+(21122,"南京大屠杀",4),
+(21123,"死难同胞",4),
+(21124,"南京城",4),
+(21125,"华中方面军",4),
+(21126,"松井石根",4),
+(21127,"谷寿夫",4),
+(21128,"法西斯",4),
+(21129,"惨绝人寰",4),
+(21130,"大规模屠杀",4),
+(21131,"三十万同胞",4),
+(21132,"三十万中国人",4),
+(21133,"民主党",4),
+(21134,"自由党",4),
+(21135,"蓝营",4),
+(21136,"绿营",4),
+(21137,"共党",4),
+(21138,"江独裁",4),
+(21139,"八九风波",4),
+(21140,"共产",4),
+(21141,"多党",4),
+(21142,"分裂主义",4),
+(21143,"党政",4),
+(21144,"江狗",4),
+(21145,"李宏旨",4),
+(21146,"大法",4),
+(21147,"勃大茎深",4),
+(21148,"为人民服务",4),
+(21149,"毁人不倦",4),
+(21150,"藏青会",4),
+(21151,"贪污",4),
+(21152,"腐败",4),
+(21153,"陈马会",4),
+(21154,"呛马围陈",4),
+(21155,"流血冲突",4),
+(21156,"马英九",4),
+(21157,"马克思主义",4),
+(21158,"党中央",4),
+(21159,"圆明园",4),
+(21160,"操你娘",4),
+(21161,"干你妈",4),
+(21162,"插你",4),
+(21163,"色情",4),
+(21164,"淫你",4),
+(21165,"鸡奸你",4),
+(21166,"日批",4),
+(21167,"操你全家",4),
+(21168,"草你",4),
+(21169,"以夜情",4),
+(21170,"一夜青",4),
+(21171,"黄色网",4),
+(21172,"黄色网站",4),
+(21173,"黄色小说",4),
+(21174,"小电影",4),
+(21175,"成人网站",4),
+(21176,"操比",4),
+(21177,"艾滋",4),
+(21178,"舔阴",4),
+(21179,"吸阴",4),
+(21180,"情色中心",4),
+(21181,"梅花网乳房",4),
+(21182,"同志",4),
+(21183,"同性恋",4),
+(21184,"腐女",4),
+(21185,"阴蒂",4),
+(21186,"阴阜",4),
+(21187,"包皮",4),
+(21188,"淫妇",4),
+(21189,"奸夫",4),
+(21190,"荡娃",4),
+(21191,"小穴",4),
+(21192,"阳器",4),
+(21193,"勃起",4),
+(21195,"卖批",4),
+(21196,"做鸡",4),
+(21197,"奸你",4),
+(21198,"姦你",4),
+(21199,"狗娘养的",4),
+(21200,"屌你",4),
+(21201,"干屄",4),
+(21202,"肏穴",4),
+(21203,"强姦",4),
+(21204,"奸淫",4),
+(21205,"姦淫",4),
+(21206,"轮姦",4),
+(21207,"肉柱",4),
+(21208,"丫挺",4),
+(21210,"你他妈",4),
+(21212,"狗日",4),
+(21213,"狗样",4),
+(21214,"混蛋",4),
+(21215,"妈的",4),
+(21216,"去你妈",4),
+(21217,"放屁",4),
+(21218,"龟孙子",4),
+(21219,"垃圾GM",4),
+(21220,"叫鸡",4),
+(21221,"毛片",4),
+(21222,"色戒",4),
+(21223,"金瓶梅",4),
+(21224,"桃色交易",4),
+(21225,"玉蒲团",4),
+(21226,"鄙视网易",4),
+(21227,"网易倒闭",4),
+(21228,"盛大在线",4),
+(21229,"资料处理中心",4),
+(21230,"垃圾网易",4),
+(21231,"系统数据号",4),
+(21232,"网易赚黑钱",4),
+(21234,"肉体",4),
+(21235,"制服",4),
+(21236,"工作室",4),
+(21237,"徐宥箴",4),
+(21238,"自动打怪",4),
+(21239,"自动智能跑",4),
+(21240,"自动报警",4),
+(21241,"突厥",4),
+(21242,"强女干",4),
+(21243,"小姐",4),
+(21244,"猛男",4),
+(21245,"缠绵",4),
+(21246,"脱衣",4),
+(21247,"胴体",4),
+(21248,"继女",4),
+(21249,"玳理",4),
+(21250,"娍人",4),
+(21251,"姖乳",4),
+(21252,"少妇",4),
+(21253,"肉慾",4),
+(21254,"少婦",4),
+(21255,"美乳",4),
+(21256,"空姐",4),
+(21257,"艳女",4),
+(21258,"淫妻",4),
+(21259,"性感妹妹",4),
+(21260,"偷拍",4),
+(21261,"空中小姐",4),
+(21262,"小浪妹",4),
+(21263,"牦片",4),
+(21264,"包你射",4),
+(21265,"带练",4),
+(21266,"接练级",4),
+(21267,"代连",4),
+(21268,"带连",4),
+(21269,"盗号马",4),
+(21270,"盗号木马",4),
+(21271,"玳链",4),
+(21272,"代練",4),
+(21273,"玳练",4),
+(21274,"蚮连",4),
+(21275,"待练",4),
+(21276,"蚮練",4),
+(21277,"蚮炼",4),
+(21278,"玳練",4),
+(21279,"男妓",4),
+(21280,"卖信封",4),
+(21281,"代涟",4),
+(21282,"代琏",4),
+(21283,"做愛",4),
+(21284,"激情片",4),
+(21285,"處女",4),
+(21286,"处女",4),
+(21287,"處囡",4),
+(21288,"倮聊",4),
+(21289,"淫娃",4),
+(21290,"婬娃",4),
+(21291,"叫雞",4),
+(21292,"双飛",4),
+(21293,"女優",4),
+(21294,"女优",4),
+(21295,"自拍",4),
+(21296,"换偶",4),
+(21297,"黄网导航",4),
+(21298,"轮奸虐杀",4),
+(21299,"超爽电影",4),
+(21300,"极品爽片",4),
+(21301,"换妻",4),
+(21302,"春宫图",4),
+(21303,"暴漏图片",4),
+(21304,"暴露图片",4),
+(21305,"自尉",4),
+(21306,"偷情",4),
+(21307,"偷怕",4),
+(21308,"性慾",4),
+(21309,"全裸视频",4),
+(21310,"色魔",4),
+(21311,"弓虽女干",4),
+(21312,"強奷",4),
+(21313,"李日强",4),
+(21314,"日比",4),
+(21315,"抢姧",4),
+(21316,"輪姧",4),
+(21317,"开房",4),
+(21318,"癮水",4),
+(21319,"黄网",4),
+(21320,"簧网",4),
+(21321,"色网",4),
+(21322,"全祼视频",4),
+(21323,"禁片",4),
+(21324,"乱囵",4),
+(21325,"卖霪",4),
+(21326,"黃網",4),
+(21327,"涩晴网",4),
+(21328,"淫片",4),
+(21329,"内射",4),
+(21330,"淫蕩",4),
+(21331,"舂葯",4),
+(21332,"春藥",4),
+(21333,"舂药",4),
+(21334,"舂藥",4),
+(21335,"春葯",4),
+(21336,"艳照",4),
+(21337,"裸照",4),
+(21338,"裸聊",4),
+(21339,"激情视频",4),
+(21340,"神经病",4),
+(21341,"激情網站",4),
+(21342,"一液情",4),
+(21343,"憿情片",4),
+(21344,"性奴",4),
+(21345,"催情",4),
+(21346,"迷奸",4),
+(21347,"禁网",4),
+(21348,"\<gm\>",4),
+(21349,"\<163\>",4),
+(21350,"员0",4),
+(21351,"员1",4),
+(21352,"员2",4),
+(21353,"员3",4),
+(21354,"员4",4),
+(21355,"员5",4),
+(21356,"员6",4),
+(21357,"员7",4),
+(21358,"员8",4),
+(21359,"员9",4),
+(21360,"员０",4),
+(21361,"员１",4),
+(21362,"员２",4),
+(21363,"员３",4),
+(21364,"员４",4),
+(21365,"员５",4),
+(21366,"员６",4),
+(21367,"员７",4),
+(21368,"员８",4),
+(21369,"员９",4),
+(21370,"员零",4),
+(21371,"员一",4),
+(21372,"员二",4),
+(21373,"员三",4),
+(21374,"员四",4),
+(21375,"员五",4),
+(21376,"员六",4),
+(21377,"员七",4),
+(21378,"员八",4),
+(21379,"员九",4),
+(21380,"员十",4),
+(21381,"游戏开发商",4),
+(21382,"网易",4),
+(21383,"丁磊",4),
+(21384,"三石",4),
+(21385,"官方",4),
+(21386,"服务",4),
+(21387,"兑奖",4),
+(21388,"抽奖",4),
+(21389,"发布",4),
+(21390,"信息",4),
+(21391,"发放",4),
+(21392,"消息",4),
+(21393,"发奖",4),
+(21394,"大使",4),
+(21395,"中奖",4),
+(21396,"奖励",4),
+(21397,"管理",4),
+(21398,"运维",4),
+(21399,"序号",4),
+(21400,"序列号",4),
+(21401,"推广",4),
+(21402,"网络",4),
+(21403,"梦幻西游",4),
+(21404,"大话西游",4),
+(21405,"巡游",4),
+(21406,"他奶奶",4),
+(21407,"你奶奶",4),
+(21408,"他姥姥",4),
+(21409,"你姥姥",4),
+(21410,"你娘",4),
+(21411,"他娘",4),
+(21412,"他爷",4),
+(21413,"他爸",4),
+(21414,"他爹",4),
+(21415,"轮功",4),
+(21416,"网之易",4),
+(21417,"丁三石",4),
+(21418,"中央",4),
+(21419,"中华民国",4),
+(21420,"蒋中正",4),
+(21421,"蒋经国",4),
+(21422,"江青",4),
+(21423,"康生",4),
+(21424,"林立果",4),
+(21425,"张春桥",4),
+(21426,"姚文元",4),
+(21427,"打倒政府",4),
+(21428,"毛润之",4),
+(21429,"华国锋",4),
+(21430,"天皇",4),
+(21431,"黑社会",4),
+(21432,"黑帮",4),
+(21433,"解放军",4),
+(21434,"警察",4),
+(21435,"公安",4),
+(21436,"老毛",4),
+(21437,"代练",4),
+(21438,"尻",4),
+(21439,"肏",4),
+(21440,"\<jb\>",4),
+(21441,"反华",4),
+(21442,"草",4),
+(21443,"靠",4),
+(21444,"日",4),
+(21445,"成人电影",4),
+(21446,"成人片",4),
+(21447,"春药",4),
+(21448,"催情药",4),
+(21449,"黄色录像",4),
+(21450,"激情",4),
+(21451,"六合彩",4),
+(21452,"迷奸药",4),
+(21453,"迷药",4),
+(21454,"三唑仑",4),
+(21455,"色情服务",4),
+(21456,"色情小电影",4),
+(21457,"身份证生成器",4),
+(21458,"摇头丸",4),
+(21459,"淫靡",4),
+(21460,"\<MBD\>",4),
+(21461,"\<SB\>",4),
+(21462,"\<TMD\>",4),
+(21463,"逼毛",4),
+(21464,"人妖",4),
+(21465,"系统信息",4); 

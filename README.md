@@ -26,7 +26,9 @@ Actively accepts Pull Requests.
 ## Setup
 ### Requirements
 - .NET 7.0 installed
-- [Trinity Core Database](https://trinitycore.info/install/Database-Installation)
+- [Trinity Core Database: Create](https://github.com/TrinityCore/TrinityCore/blob/3.3.5/sql/create/create_mysql.sql)
+    - [world](https://trinitycore.info/install/Database-Installation)
+    - [Auth & Character](https://github.com/TrinityCore/TrinityCore/tree/3.3.5/sql/base) 
 - [Trinity Core AuthServer](https://github.com/TrinityCore/TrinityCore/tree/3.3.5)
 
 ### Importing Existing DBC
@@ -37,6 +39,7 @@ Use your existing DBC files from your TrinityCore installation and import them i
 2. Use [WDBX Editor](https://github.com/robinsch/WDBXEditor) to run the following command:
 
 NOTE: change the paths to match your environment
+Quicky convvert all dbc files to sql files using a batch file.
 ```bash
 cd "C:\WoWData\3.3.5 AC\dbc"
 for %%F in (*.dbc) do (

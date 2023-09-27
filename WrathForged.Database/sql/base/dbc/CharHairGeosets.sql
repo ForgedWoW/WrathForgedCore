@@ -1,341 +1,341 @@
 DROP TABLE IF EXISTS `CharHairGeosets`; 
 CREATE TABLE `CharHairGeosets` ( `ID` INT NOT NULL DEFAULT '0', `RaceID` INT NOT NULL DEFAULT '0', `SexID` INT NOT NULL DEFAULT '0', `VariationID` INT NOT NULL DEFAULT '0', `GeosetID` INT NOT NULL DEFAULT '0', `Showscalp` INT NOT NULL DEFAULT '0', PRIMARY KEY (`ID`)) ENGINE=InnoDB DEFAULT CHARSET=utf8; 
-INSERT INTO `CharHairGeosets` VALUES (21,1,0,0,0,1); 
-INSERT INTO `CharHairGeosets` VALUES (22,1,0,1,2,0); 
-INSERT INTO `CharHairGeosets` VALUES (23,1,0,2,3,0); 
-INSERT INTO `CharHairGeosets` VALUES (24,1,0,3,4,0); 
-INSERT INTO `CharHairGeosets` VALUES (25,1,0,4,5,0); 
-INSERT INTO `CharHairGeosets` VALUES (26,1,0,5,6,0); 
-INSERT INTO `CharHairGeosets` VALUES (27,1,0,6,7,0); 
-INSERT INTO `CharHairGeosets` VALUES (28,1,0,7,8,0); 
-INSERT INTO `CharHairGeosets` VALUES (29,1,0,8,9,0); 
-INSERT INTO `CharHairGeosets` VALUES (30,1,0,9,10,0); 
-INSERT INTO `CharHairGeosets` VALUES (31,1,0,10,11,0); 
-INSERT INTO `CharHairGeosets` VALUES (32,1,0,11,12,0); 
-INSERT INTO `CharHairGeosets` VALUES (34,1,1,0,2,0); 
-INSERT INTO `CharHairGeosets` VALUES (35,1,1,1,3,0); 
-INSERT INTO `CharHairGeosets` VALUES (36,1,1,2,4,0); 
-INSERT INTO `CharHairGeosets` VALUES (37,1,1,3,5,0); 
-INSERT INTO `CharHairGeosets` VALUES (38,1,1,4,6,0); 
-INSERT INTO `CharHairGeosets` VALUES (39,1,1,5,7,0); 
-INSERT INTO `CharHairGeosets` VALUES (40,1,1,6,8,0); 
-INSERT INTO `CharHairGeosets` VALUES (41,1,1,7,9,0); 
-INSERT INTO `CharHairGeosets` VALUES (42,1,1,8,10,0); 
-INSERT INTO `CharHairGeosets` VALUES (43,1,1,9,11,0); 
-INSERT INTO `CharHairGeosets` VALUES (44,1,1,10,12,0); 
-INSERT INTO `CharHairGeosets` VALUES (45,1,1,11,13,0); 
-INSERT INTO `CharHairGeosets` VALUES (46,1,1,12,14,0); 
-INSERT INTO `CharHairGeosets` VALUES (47,1,1,13,15,0); 
-INSERT INTO `CharHairGeosets` VALUES (48,1,1,14,16,0); 
-INSERT INTO `CharHairGeosets` VALUES (49,1,1,15,17,0); 
-INSERT INTO `CharHairGeosets` VALUES (50,1,1,16,18,0); 
-INSERT INTO `CharHairGeosets` VALUES (51,1,1,17,19,0); 
-INSERT INTO `CharHairGeosets` VALUES (52,1,1,18,20,0); 
-INSERT INTO `CharHairGeosets` VALUES (53,2,0,0,0,1); 
-INSERT INTO `CharHairGeosets` VALUES (54,2,0,1,2,0); 
-INSERT INTO `CharHairGeosets` VALUES (55,2,0,2,3,0); 
-INSERT INTO `CharHairGeosets` VALUES (56,2,0,3,4,0); 
-INSERT INTO `CharHairGeosets` VALUES (57,2,0,4,5,0); 
-INSERT INTO `CharHairGeosets` VALUES (58,2,0,5,6,0); 
-INSERT INTO `CharHairGeosets` VALUES (59,2,0,6,7,0); 
-INSERT INTO `CharHairGeosets` VALUES (60,2,1,0,2,0); 
-INSERT INTO `CharHairGeosets` VALUES (61,2,1,1,3,0); 
-INSERT INTO `CharHairGeosets` VALUES (62,2,1,2,4,0); 
-INSERT INTO `CharHairGeosets` VALUES (63,2,1,3,5,0); 
-INSERT INTO `CharHairGeosets` VALUES (64,2,1,4,6,0); 
-INSERT INTO `CharHairGeosets` VALUES (65,2,1,5,7,0); 
-INSERT INTO `CharHairGeosets` VALUES (66,2,1,6,8,0); 
-INSERT INTO `CharHairGeosets` VALUES (69,6,0,0,2,0); 
-INSERT INTO `CharHairGeosets` VALUES (70,6,0,1,3,0); 
-INSERT INTO `CharHairGeosets` VALUES (71,6,0,2,4,0); 
-INSERT INTO `CharHairGeosets` VALUES (72,6,0,3,5,0); 
-INSERT INTO `CharHairGeosets` VALUES (73,6,0,4,6,0); 
-INSERT INTO `CharHairGeosets` VALUES (74,6,0,5,7,0); 
-INSERT INTO `CharHairGeosets` VALUES (75,6,0,6,8,0); 
-INSERT INTO `CharHairGeosets` VALUES (76,6,0,7,9,0); 
-INSERT INTO `CharHairGeosets` VALUES (78,6,1,0,2,0); 
-INSERT INTO `CharHairGeosets` VALUES (79,6,1,1,3,0); 
-INSERT INTO `CharHairGeosets` VALUES (80,6,1,2,4,0); 
-INSERT INTO `CharHairGeosets` VALUES (81,6,1,3,5,0); 
-INSERT INTO `CharHairGeosets` VALUES (82,6,1,4,6,0); 
-INSERT INTO `CharHairGeosets` VALUES (85,3,0,0,0,1); 
-INSERT INTO `CharHairGeosets` VALUES (86,3,0,1,2,0); 
-INSERT INTO `CharHairGeosets` VALUES (87,3,0,2,3,0); 
-INSERT INTO `CharHairGeosets` VALUES (88,3,0,3,4,0); 
-INSERT INTO `CharHairGeosets` VALUES (89,3,0,4,5,0); 
-INSERT INTO `CharHairGeosets` VALUES (90,3,0,5,6,0); 
-INSERT INTO `CharHairGeosets` VALUES (91,3,0,6,7,0); 
-INSERT INTO `CharHairGeosets` VALUES (92,3,0,7,8,0); 
-INSERT INTO `CharHairGeosets` VALUES (93,3,0,8,9,0); 
-INSERT INTO `CharHairGeosets` VALUES (94,3,0,9,10,0); 
-INSERT INTO `CharHairGeosets` VALUES (95,3,0,10,11,0); 
-INSERT INTO `CharHairGeosets` VALUES (97,3,1,0,2,0); 
-INSERT INTO `CharHairGeosets` VALUES (98,3,1,1,3,0); 
-INSERT INTO `CharHairGeosets` VALUES (99,3,1,2,4,0); 
-INSERT INTO `CharHairGeosets` VALUES (100,3,1,3,5,0); 
-INSERT INTO `CharHairGeosets` VALUES (101,3,1,4,6,0); 
-INSERT INTO `CharHairGeosets` VALUES (102,3,1,5,7,0); 
-INSERT INTO `CharHairGeosets` VALUES (103,3,1,6,8,0); 
-INSERT INTO `CharHairGeosets` VALUES (104,3,1,7,9,0); 
-INSERT INTO `CharHairGeosets` VALUES (105,3,1,8,10,0); 
-INSERT INTO `CharHairGeosets` VALUES (106,3,1,9,11,0); 
-INSERT INTO `CharHairGeosets` VALUES (107,3,1,10,12,0); 
-INSERT INTO `CharHairGeosets` VALUES (108,3,1,11,13,0); 
-INSERT INTO `CharHairGeosets` VALUES (109,3,1,12,14,0); 
-INSERT INTO `CharHairGeosets` VALUES (110,3,1,13,15,0); 
-INSERT INTO `CharHairGeosets` VALUES (112,4,0,0,2,0); 
-INSERT INTO `CharHairGeosets` VALUES (113,4,0,1,3,0); 
-INSERT INTO `CharHairGeosets` VALUES (114,4,0,2,4,0); 
-INSERT INTO `CharHairGeosets` VALUES (115,4,0,3,5,0); 
-INSERT INTO `CharHairGeosets` VALUES (116,4,0,4,6,0); 
-INSERT INTO `CharHairGeosets` VALUES (117,4,0,5,7,0); 
-INSERT INTO `CharHairGeosets` VALUES (118,4,0,6,8,0); 
-INSERT INTO `CharHairGeosets` VALUES (120,4,1,0,2,0); 
-INSERT INTO `CharHairGeosets` VALUES (121,4,1,1,3,0); 
-INSERT INTO `CharHairGeosets` VALUES (122,4,1,2,4,0); 
-INSERT INTO `CharHairGeosets` VALUES (123,4,1,3,5,0); 
-INSERT INTO `CharHairGeosets` VALUES (124,4,1,4,6,0); 
-INSERT INTO `CharHairGeosets` VALUES (125,4,1,5,7,0); 
-INSERT INTO `CharHairGeosets` VALUES (126,4,1,6,8,0); 
-INSERT INTO `CharHairGeosets` VALUES (127,5,0,0,0,1); 
-INSERT INTO `CharHairGeosets` VALUES (128,5,0,1,2,0); 
-INSERT INTO `CharHairGeosets` VALUES (129,5,0,2,3,0); 
-INSERT INTO `CharHairGeosets` VALUES (130,5,0,3,4,0); 
-INSERT INTO `CharHairGeosets` VALUES (131,5,0,4,5,0); 
-INSERT INTO `CharHairGeosets` VALUES (132,5,0,5,6,0); 
-INSERT INTO `CharHairGeosets` VALUES (133,5,0,6,7,0); 
-INSERT INTO `CharHairGeosets` VALUES (134,5,0,7,8,0); 
-INSERT INTO `CharHairGeosets` VALUES (135,5,0,8,9,0); 
-INSERT INTO `CharHairGeosets` VALUES (136,5,0,9,10,0); 
-INSERT INTO `CharHairGeosets` VALUES (138,5,1,0,2,0); 
-INSERT INTO `CharHairGeosets` VALUES (139,5,1,1,3,0); 
-INSERT INTO `CharHairGeosets` VALUES (140,5,1,2,4,0); 
-INSERT INTO `CharHairGeosets` VALUES (141,5,1,3,5,0); 
-INSERT INTO `CharHairGeosets` VALUES (142,5,1,4,6,0); 
-INSERT INTO `CharHairGeosets` VALUES (143,5,1,5,7,0); 
-INSERT INTO `CharHairGeosets` VALUES (144,5,1,6,8,0); 
-INSERT INTO `CharHairGeosets` VALUES (145,5,1,7,9,0); 
-INSERT INTO `CharHairGeosets` VALUES (146,5,1,8,10,0); 
-INSERT INTO `CharHairGeosets` VALUES (147,5,1,9,11,0); 
-INSERT INTO `CharHairGeosets` VALUES (148,7,0,0,0,1); 
-INSERT INTO `CharHairGeosets` VALUES (149,7,0,1,2,0); 
-INSERT INTO `CharHairGeosets` VALUES (150,7,0,2,3,0); 
-INSERT INTO `CharHairGeosets` VALUES (151,7,0,3,4,0); 
-INSERT INTO `CharHairGeosets` VALUES (152,7,0,4,5,0); 
-INSERT INTO `CharHairGeosets` VALUES (153,7,0,5,6,0); 
-INSERT INTO `CharHairGeosets` VALUES (154,7,0,6,7,0); 
-INSERT INTO `CharHairGeosets` VALUES (159,7,1,0,2,0); 
-INSERT INTO `CharHairGeosets` VALUES (160,7,1,1,3,0); 
-INSERT INTO `CharHairGeosets` VALUES (161,7,1,2,4,0); 
-INSERT INTO `CharHairGeosets` VALUES (162,7,1,3,5,0); 
-INSERT INTO `CharHairGeosets` VALUES (163,7,1,4,6,0); 
-INSERT INTO `CharHairGeosets` VALUES (164,7,1,5,7,0); 
-INSERT INTO `CharHairGeosets` VALUES (165,7,1,6,8,0); 
-INSERT INTO `CharHairGeosets` VALUES (169,8,0,1,2,0); 
-INSERT INTO `CharHairGeosets` VALUES (170,8,0,2,3,0); 
-INSERT INTO `CharHairGeosets` VALUES (172,8,0,4,5,0); 
-INSERT INTO `CharHairGeosets` VALUES (173,8,0,5,6,0); 
-INSERT INTO `CharHairGeosets` VALUES (176,8,1,0,2,0); 
-INSERT INTO `CharHairGeosets` VALUES (177,8,1,1,3,0); 
-INSERT INTO `CharHairGeosets` VALUES (178,8,1,3,5,0); 
-INSERT INTO `CharHairGeosets` VALUES (179,8,1,2,4,0); 
-INSERT INTO `CharHairGeosets` VALUES (180,8,1,4,6,0); 
-INSERT INTO `CharHairGeosets` VALUES (181,8,0,3,4,0); 
-INSERT INTO `CharHairGeosets` VALUES (201,6,1,5,7,0); 
-INSERT INTO `CharHairGeosets` VALUES (202,6,1,6,8,0); 
-INSERT INTO `CharHairGeosets` VALUES (221,8,0,0,0,0); 
-INSERT INTO `CharHairGeosets` VALUES (241,9,0,0,1,0); 
-INSERT INTO `CharHairGeosets` VALUES (242,9,0,0,2,1); 
-INSERT INTO `CharHairGeosets` VALUES (243,9,0,0,1,0); 
-INSERT INTO `CharHairGeosets` VALUES (244,9,0,0,2,1); 
-INSERT INTO `CharHairGeosets` VALUES (246,10,0,0,2,0); 
-INSERT INTO `CharHairGeosets` VALUES (247,14,0,0,1,0); 
-INSERT INTO `CharHairGeosets` VALUES (248,11,0,0,2,0); 
-INSERT INTO `CharHairGeosets` VALUES (249,11,1,0,2,0); 
-INSERT INTO `CharHairGeosets` VALUES (250,10,1,1,3,0); 
-INSERT INTO `CharHairGeosets` VALUES (251,10,1,2,4,0); 
-INSERT INTO `CharHairGeosets` VALUES (252,10,0,2,4,0); 
-INSERT INTO `CharHairGeosets` VALUES (253,10,0,1,3,0); 
-INSERT INTO `CharHairGeosets` VALUES (254,11,0,1,3,0); 
-INSERT INTO `CharHairGeosets` VALUES (256,10,0,3,5,0); 
-INSERT INTO `CharHairGeosets` VALUES (257,10,0,4,6,0); 
-INSERT INTO `CharHairGeosets` VALUES (258,10,0,5,7,0); 
-INSERT INTO `CharHairGeosets` VALUES (259,10,0,6,8,0); 
-INSERT INTO `CharHairGeosets` VALUES (260,10,0,7,9,0); 
-INSERT INTO `CharHairGeosets` VALUES (261,10,0,8,10,0); 
-INSERT INTO `CharHairGeosets` VALUES (262,10,0,9,11,0); 
-INSERT INTO `CharHairGeosets` VALUES (263,10,0,10,12,0); 
-INSERT INTO `CharHairGeosets` VALUES (264,12,0,0,2,0); 
-INSERT INTO `CharHairGeosets` VALUES (265,12,1,0,2,0); 
-INSERT INTO `CharHairGeosets` VALUES (266,11,1,1,3,0); 
-INSERT INTO `CharHairGeosets` VALUES (267,11,1,2,4,0); 
-INSERT INTO `CharHairGeosets` VALUES (268,11,1,3,5,0); 
-INSERT INTO `CharHairGeosets` VALUES (269,11,1,4,6,0); 
-INSERT INTO `CharHairGeosets` VALUES (270,11,1,5,7,0); 
-INSERT INTO `CharHairGeosets` VALUES (271,11,1,6,8,0); 
-INSERT INTO `CharHairGeosets` VALUES (272,11,1,7,9,0); 
-INSERT INTO `CharHairGeosets` VALUES (273,11,1,8,10,0); 
-INSERT INTO `CharHairGeosets` VALUES (274,11,1,9,11,0); 
-INSERT INTO `CharHairGeosets` VALUES (275,11,1,10,12,0); 
-INSERT INTO `CharHairGeosets` VALUES (276,11,0,2,4,0); 
-INSERT INTO `CharHairGeosets` VALUES (277,11,0,3,5,0); 
-INSERT INTO `CharHairGeosets` VALUES (278,11,0,4,6,0); 
-INSERT INTO `CharHairGeosets` VALUES (279,11,0,5,7,0); 
-INSERT INTO `CharHairGeosets` VALUES (280,11,0,6,8,0); 
-INSERT INTO `CharHairGeosets` VALUES (281,11,0,7,9,0); 
-INSERT INTO `CharHairGeosets` VALUES (282,10,1,3,5,0); 
-INSERT INTO `CharHairGeosets` VALUES (283,10,1,4,6,0); 
-INSERT INTO `CharHairGeosets` VALUES (284,10,1,5,7,0); 
-INSERT INTO `CharHairGeosets` VALUES (285,10,1,6,8,0); 
-INSERT INTO `CharHairGeosets` VALUES (286,10,1,7,9,0); 
-INSERT INTO `CharHairGeosets` VALUES (287,10,1,8,10,0); 
-INSERT INTO `CharHairGeosets` VALUES (288,10,1,9,11,0); 
-INSERT INTO `CharHairGeosets` VALUES (289,10,1,10,12,0); 
-INSERT INTO `CharHairGeosets` VALUES (290,10,1,11,13,0); 
-INSERT INTO `CharHairGeosets` VALUES (291,10,1,12,14,0); 
-INSERT INTO `CharHairGeosets` VALUES (292,10,1,13,15,0); 
-INSERT INTO `CharHairGeosets` VALUES (293,10,1,14,16,0); 
-INSERT INTO `CharHairGeosets` VALUES (294,13,0,0,0,0); 
-INSERT INTO `CharHairGeosets` VALUES (295,13,1,0,0,0); 
-INSERT INTO `CharHairGeosets` VALUES (297,14,1,0,0,0); 
-INSERT INTO `CharHairGeosets` VALUES (298,15,0,0,0,0); 
-INSERT INTO `CharHairGeosets` VALUES (299,15,1,0,0,0); 
-INSERT INTO `CharHairGeosets` VALUES (301,14,0,1,2,0); 
-INSERT INTO `CharHairGeosets` VALUES (302,14,0,2,3,0); 
-INSERT INTO `CharHairGeosets` VALUES (303,10,1,0,2,0); 
-INSERT INTO `CharHairGeosets` VALUES (304,16,0,2,3,0); 
-INSERT INTO `CharHairGeosets` VALUES (305,16,1,0,0,0); 
-INSERT INTO `CharHairGeosets` VALUES (306,17,0,6,7,1); 
-INSERT INTO `CharHairGeosets` VALUES (307,17,1,0,0,0); 
-INSERT INTO `CharHairGeosets` VALUES (312,8,0,0,0,0); 
-INSERT INTO `CharHairGeosets` VALUES (313,8,0,0,0,0); 
-INSERT INTO `CharHairGeosets` VALUES (314,16,0,0,0,0); 
-INSERT INTO `CharHairGeosets` VALUES (315,16,0,1,2,0); 
-INSERT INTO `CharHairGeosets` VALUES (316,16,0,3,4,0); 
-INSERT INTO `CharHairGeosets` VALUES (317,16,0,4,5,0); 
-INSERT INTO `CharHairGeosets` VALUES (318,16,0,5,6,0); 
-INSERT INTO `CharHairGeosets` VALUES (319,18,0,0,0,0); 
-INSERT INTO `CharHairGeosets` VALUES (320,18,1,0,0,0); 
-INSERT INTO `CharHairGeosets` VALUES (321,18,0,1,2,0); 
-INSERT INTO `CharHairGeosets` VALUES (322,18,0,2,3,0); 
-INSERT INTO `CharHairGeosets` VALUES (323,18,0,3,4,0); 
-INSERT INTO `CharHairGeosets` VALUES (324,18,0,4,5,0); 
-INSERT INTO `CharHairGeosets` VALUES (325,18,0,5,6,0); 
-INSERT INTO `CharHairGeosets` VALUES (327,17,0,0,1,0); 
-INSERT INTO `CharHairGeosets` VALUES (328,17,0,2,3,1); 
-INSERT INTO `CharHairGeosets` VALUES (329,17,0,3,4,1); 
-INSERT INTO `CharHairGeosets` VALUES (330,17,0,4,5,1); 
-INSERT INTO `CharHairGeosets` VALUES (331,17,0,1,2,1); 
-INSERT INTO `CharHairGeosets` VALUES (332,17,0,5,6,1); 
-INSERT INTO `CharHairGeosets` VALUES (333,19,0,0,1,1); 
-INSERT INTO `CharHairGeosets` VALUES (334,19,1,0,0,0); 
-INSERT INTO `CharHairGeosets` VALUES (335,10,1,15,17,0); 
-INSERT INTO `CharHairGeosets` VALUES (336,10,1,16,18,0); 
-INSERT INTO `CharHairGeosets` VALUES (337,10,1,17,19,0); 
-INSERT INTO `CharHairGeosets` VALUES (338,10,1,18,20,0); 
-INSERT INTO `CharHairGeosets` VALUES (339,10,1,19,21,0); 
-INSERT INTO `CharHairGeosets` VALUES (340,10,0,11,13,0); 
-INSERT INTO `CharHairGeosets` VALUES (341,10,0,12,14,0); 
-INSERT INTO `CharHairGeosets` VALUES (342,10,0,13,15,0); 
-INSERT INTO `CharHairGeosets` VALUES (343,10,0,14,16,0); 
-INSERT INTO `CharHairGeosets` VALUES (344,10,0,15,17,0); 
-INSERT INTO `CharHairGeosets` VALUES (345,11,1,11,13,0); 
-INSERT INTO `CharHairGeosets` VALUES (346,11,1,12,14,0); 
-INSERT INTO `CharHairGeosets` VALUES (347,11,1,13,15,0); 
-INSERT INTO `CharHairGeosets` VALUES (348,11,1,14,16,0); 
-INSERT INTO `CharHairGeosets` VALUES (349,11,1,15,17,0); 
-INSERT INTO `CharHairGeosets` VALUES (350,11,0,8,0,1); 
-INSERT INTO `CharHairGeosets` VALUES (351,11,0,9,10,0); 
-INSERT INTO `CharHairGeosets` VALUES (352,11,0,11,12,0); 
-INSERT INTO `CharHairGeosets` VALUES (353,11,0,12,13,0); 
-INSERT INTO `CharHairGeosets` VALUES (354,11,0,13,14,0); 
-INSERT INTO `CharHairGeosets` VALUES (355,3,1,14,16,0); 
-INSERT INTO `CharHairGeosets` VALUES (356,3,1,15,17,0); 
-INSERT INTO `CharHairGeosets` VALUES (357,3,1,16,18,0); 
-INSERT INTO `CharHairGeosets` VALUES (358,3,1,17,19,0); 
-INSERT INTO `CharHairGeosets` VALUES (359,3,1,18,20,0); 
-INSERT INTO `CharHairGeosets` VALUES (360,3,0,11,12,0); 
-INSERT INTO `CharHairGeosets` VALUES (361,3,0,12,13,0); 
-INSERT INTO `CharHairGeosets` VALUES (362,3,0,13,14,0); 
-INSERT INTO `CharHairGeosets` VALUES (363,3,0,14,15,0); 
-INSERT INTO `CharHairGeosets` VALUES (364,3,0,15,16,0); 
-INSERT INTO `CharHairGeosets` VALUES (365,7,1,7,9,0); 
-INSERT INTO `CharHairGeosets` VALUES (366,7,1,8,10,0); 
-INSERT INTO `CharHairGeosets` VALUES (367,7,1,9,11,0); 
-INSERT INTO `CharHairGeosets` VALUES (368,7,1,10,12,0); 
-INSERT INTO `CharHairGeosets` VALUES (369,7,1,11,13,0); 
-INSERT INTO `CharHairGeosets` VALUES (370,7,0,7,8,0); 
-INSERT INTO `CharHairGeosets` VALUES (371,7,0,8,9,0); 
-INSERT INTO `CharHairGeosets` VALUES (372,7,0,9,10,0); 
-INSERT INTO `CharHairGeosets` VALUES (373,7,0,10,11,0); 
-INSERT INTO `CharHairGeosets` VALUES (374,7,0,11,12,0); 
-INSERT INTO `CharHairGeosets` VALUES (375,1,1,19,21,0); 
-INSERT INTO `CharHairGeosets` VALUES (376,1,1,20,22,0); 
-INSERT INTO `CharHairGeosets` VALUES (377,1,1,21,23,0); 
-INSERT INTO `CharHairGeosets` VALUES (378,1,1,22,24,0); 
-INSERT INTO `CharHairGeosets` VALUES (379,1,1,23,25,0); 
-INSERT INTO `CharHairGeosets` VALUES (380,1,0,12,13,0); 
-INSERT INTO `CharHairGeosets` VALUES (381,1,0,13,14,0); 
-INSERT INTO `CharHairGeosets` VALUES (382,1,0,14,15,0); 
-INSERT INTO `CharHairGeosets` VALUES (383,1,0,15,16,0); 
-INSERT INTO `CharHairGeosets` VALUES (384,1,0,16,17,0); 
-INSERT INTO `CharHairGeosets` VALUES (385,4,1,7,9,0); 
-INSERT INTO `CharHairGeosets` VALUES (386,4,1,8,10,0); 
-INSERT INTO `CharHairGeosets` VALUES (387,4,1,9,11,0); 
-INSERT INTO `CharHairGeosets` VALUES (388,4,1,10,12,0); 
-INSERT INTO `CharHairGeosets` VALUES (389,4,1,11,13,0); 
-INSERT INTO `CharHairGeosets` VALUES (390,4,0,7,9,0); 
-INSERT INTO `CharHairGeosets` VALUES (391,4,0,8,10,0); 
-INSERT INTO `CharHairGeosets` VALUES (392,4,0,9,11,0); 
-INSERT INTO `CharHairGeosets` VALUES (393,4,0,10,12,0); 
-INSERT INTO `CharHairGeosets` VALUES (394,4,0,11,13,0); 
-INSERT INTO `CharHairGeosets` VALUES (395,2,1,7,0,1); 
-INSERT INTO `CharHairGeosets` VALUES (396,2,1,9,10,0); 
-INSERT INTO `CharHairGeosets` VALUES (397,2,1,10,11,0); 
-INSERT INTO `CharHairGeosets` VALUES (398,2,1,11,12,0); 
-INSERT INTO `CharHairGeosets` VALUES (399,2,1,12,13,0); 
-INSERT INTO `CharHairGeosets` VALUES (400,2,0,7,8,0); 
-INSERT INTO `CharHairGeosets` VALUES (401,2,0,8,9,0); 
-INSERT INTO `CharHairGeosets` VALUES (402,2,0,9,10,0); 
-INSERT INTO `CharHairGeosets` VALUES (403,2,0,10,11,0); 
-INSERT INTO `CharHairGeosets` VALUES (404,2,0,11,12,0); 
-INSERT INTO `CharHairGeosets` VALUES (405,6,1,7,9,0); 
-INSERT INTO `CharHairGeosets` VALUES (406,6,1,8,10,0); 
-INSERT INTO `CharHairGeosets` VALUES (407,6,1,9,11,0); 
-INSERT INTO `CharHairGeosets` VALUES (408,6,1,10,12,0); 
-INSERT INTO `CharHairGeosets` VALUES (409,6,1,11,13,0); 
-INSERT INTO `CharHairGeosets` VALUES (410,6,0,8,10,0); 
-INSERT INTO `CharHairGeosets` VALUES (411,6,0,9,11,0); 
-INSERT INTO `CharHairGeosets` VALUES (412,6,0,10,12,0); 
-INSERT INTO `CharHairGeosets` VALUES (413,6,0,11,13,0); 
-INSERT INTO `CharHairGeosets` VALUES (414,6,0,12,14,0); 
-INSERT INTO `CharHairGeosets` VALUES (415,8,1,5,7,1); 
-INSERT INTO `CharHairGeosets` VALUES (416,8,1,6,8,0); 
-INSERT INTO `CharHairGeosets` VALUES (417,8,1,7,9,1); 
-INSERT INTO `CharHairGeosets` VALUES (418,8,1,8,10,0); 
-INSERT INTO `CharHairGeosets` VALUES (419,8,1,9,11,1); 
-INSERT INTO `CharHairGeosets` VALUES (420,8,0,6,7,0); 
-INSERT INTO `CharHairGeosets` VALUES (421,8,0,7,8,1); 
-INSERT INTO `CharHairGeosets` VALUES (422,8,0,8,9,1); 
-INSERT INTO `CharHairGeosets` VALUES (423,8,0,9,10,1); 
-INSERT INTO `CharHairGeosets` VALUES (424,5,1,10,12,0); 
-INSERT INTO `CharHairGeosets` VALUES (425,5,1,11,13,0); 
-INSERT INTO `CharHairGeosets` VALUES (426,5,1,12,14,0); 
-INSERT INTO `CharHairGeosets` VALUES (427,5,1,13,15,0); 
-INSERT INTO `CharHairGeosets` VALUES (428,5,1,14,16,0); 
-INSERT INTO `CharHairGeosets` VALUES (429,5,0,10,11,0); 
-INSERT INTO `CharHairGeosets` VALUES (430,5,0,11,12,0); 
-INSERT INTO `CharHairGeosets` VALUES (431,5,0,12,13,0); 
-INSERT INTO `CharHairGeosets` VALUES (432,5,0,13,14,0); 
-INSERT INTO `CharHairGeosets` VALUES (433,5,0,14,15,0); 
-INSERT INTO `CharHairGeosets` VALUES (435,20,0,0,0,0); 
-INSERT INTO `CharHairGeosets` VALUES (436,20,1,0,0,0); 
-INSERT INTO `CharHairGeosets` VALUES (438,21,1,0,0,0); 
-INSERT INTO `CharHairGeosets` VALUES (439,21,0,0,0,0); 
-INSERT INTO `CharHairGeosets` VALUES (440,21,0,1,2,0); 
-INSERT INTO `CharHairGeosets` VALUES (441,21,0,2,3,0); 
-INSERT INTO `CharHairGeosets` VALUES (442,21,0,3,4,0); 
-INSERT INTO `CharHairGeosets` VALUES (443,21,0,4,5,0); 
-INSERT INTO `CharHairGeosets` VALUES (444,21,0,5,6,0); 
-INSERT INTO `CharHairGeosets` VALUES (445,2,1,8,9,0); 
-INSERT INTO `CharHairGeosets` VALUES (446,11,0,10,11,0); 
+INSERT INTO `CharHairGeosets` VALUES (21,1,0,0,0,1),
+(22,1,0,1,2,0),
+(23,1,0,2,3,0),
+(24,1,0,3,4,0),
+(25,1,0,4,5,0),
+(26,1,0,5,6,0),
+(27,1,0,6,7,0),
+(28,1,0,7,8,0),
+(29,1,0,8,9,0),
+(30,1,0,9,10,0),
+(31,1,0,10,11,0),
+(32,1,0,11,12,0),
+(34,1,1,0,2,0),
+(35,1,1,1,3,0),
+(36,1,1,2,4,0),
+(37,1,1,3,5,0),
+(38,1,1,4,6,0),
+(39,1,1,5,7,0),
+(40,1,1,6,8,0),
+(41,1,1,7,9,0),
+(42,1,1,8,10,0),
+(43,1,1,9,11,0),
+(44,1,1,10,12,0),
+(45,1,1,11,13,0),
+(46,1,1,12,14,0),
+(47,1,1,13,15,0),
+(48,1,1,14,16,0),
+(49,1,1,15,17,0),
+(50,1,1,16,18,0),
+(51,1,1,17,19,0),
+(52,1,1,18,20,0),
+(53,2,0,0,0,1),
+(54,2,0,1,2,0),
+(55,2,0,2,3,0),
+(56,2,0,3,4,0),
+(57,2,0,4,5,0),
+(58,2,0,5,6,0),
+(59,2,0,6,7,0),
+(60,2,1,0,2,0),
+(61,2,1,1,3,0),
+(62,2,1,2,4,0),
+(63,2,1,3,5,0),
+(64,2,1,4,6,0),
+(65,2,1,5,7,0),
+(66,2,1,6,8,0),
+(69,6,0,0,2,0),
+(70,6,0,1,3,0),
+(71,6,0,2,4,0),
+(72,6,0,3,5,0),
+(73,6,0,4,6,0),
+(74,6,0,5,7,0),
+(75,6,0,6,8,0),
+(76,6,0,7,9,0),
+(78,6,1,0,2,0),
+(79,6,1,1,3,0),
+(80,6,1,2,4,0),
+(81,6,1,3,5,0),
+(82,6,1,4,6,0),
+(85,3,0,0,0,1),
+(86,3,0,1,2,0),
+(87,3,0,2,3,0),
+(88,3,0,3,4,0),
+(89,3,0,4,5,0),
+(90,3,0,5,6,0),
+(91,3,0,6,7,0),
+(92,3,0,7,8,0),
+(93,3,0,8,9,0),
+(94,3,0,9,10,0),
+(95,3,0,10,11,0),
+(97,3,1,0,2,0),
+(98,3,1,1,3,0),
+(99,3,1,2,4,0),
+(100,3,1,3,5,0),
+(101,3,1,4,6,0),
+(102,3,1,5,7,0),
+(103,3,1,6,8,0),
+(104,3,1,7,9,0),
+(105,3,1,8,10,0),
+(106,3,1,9,11,0),
+(107,3,1,10,12,0),
+(108,3,1,11,13,0),
+(109,3,1,12,14,0),
+(110,3,1,13,15,0),
+(112,4,0,0,2,0),
+(113,4,0,1,3,0),
+(114,4,0,2,4,0),
+(115,4,0,3,5,0),
+(116,4,0,4,6,0),
+(117,4,0,5,7,0),
+(118,4,0,6,8,0),
+(120,4,1,0,2,0),
+(121,4,1,1,3,0),
+(122,4,1,2,4,0),
+(123,4,1,3,5,0),
+(124,4,1,4,6,0),
+(125,4,1,5,7,0),
+(126,4,1,6,8,0),
+(127,5,0,0,0,1),
+(128,5,0,1,2,0),
+(129,5,0,2,3,0),
+(130,5,0,3,4,0),
+(131,5,0,4,5,0),
+(132,5,0,5,6,0),
+(133,5,0,6,7,0),
+(134,5,0,7,8,0),
+(135,5,0,8,9,0),
+(136,5,0,9,10,0),
+(138,5,1,0,2,0),
+(139,5,1,1,3,0),
+(140,5,1,2,4,0),
+(141,5,1,3,5,0),
+(142,5,1,4,6,0),
+(143,5,1,5,7,0),
+(144,5,1,6,8,0),
+(145,5,1,7,9,0),
+(146,5,1,8,10,0),
+(147,5,1,9,11,0),
+(148,7,0,0,0,1),
+(149,7,0,1,2,0),
+(150,7,0,2,3,0),
+(151,7,0,3,4,0),
+(152,7,0,4,5,0),
+(153,7,0,5,6,0),
+(154,7,0,6,7,0),
+(159,7,1,0,2,0),
+(160,7,1,1,3,0),
+(161,7,1,2,4,0),
+(162,7,1,3,5,0),
+(163,7,1,4,6,0),
+(164,7,1,5,7,0),
+(165,7,1,6,8,0),
+(169,8,0,1,2,0),
+(170,8,0,2,3,0),
+(172,8,0,4,5,0),
+(173,8,0,5,6,0),
+(176,8,1,0,2,0),
+(177,8,1,1,3,0),
+(178,8,1,3,5,0),
+(179,8,1,2,4,0),
+(180,8,1,4,6,0),
+(181,8,0,3,4,0),
+(201,6,1,5,7,0),
+(202,6,1,6,8,0),
+(221,8,0,0,0,0),
+(241,9,0,0,1,0),
+(242,9,0,0,2,1),
+(243,9,0,0,1,0),
+(244,9,0,0,2,1),
+(246,10,0,0,2,0),
+(247,14,0,0,1,0),
+(248,11,0,0,2,0),
+(249,11,1,0,2,0),
+(250,10,1,1,3,0),
+(251,10,1,2,4,0),
+(252,10,0,2,4,0),
+(253,10,0,1,3,0),
+(254,11,0,1,3,0),
+(256,10,0,3,5,0),
+(257,10,0,4,6,0),
+(258,10,0,5,7,0),
+(259,10,0,6,8,0),
+(260,10,0,7,9,0),
+(261,10,0,8,10,0),
+(262,10,0,9,11,0),
+(263,10,0,10,12,0),
+(264,12,0,0,2,0),
+(265,12,1,0,2,0),
+(266,11,1,1,3,0),
+(267,11,1,2,4,0),
+(268,11,1,3,5,0),
+(269,11,1,4,6,0),
+(270,11,1,5,7,0),
+(271,11,1,6,8,0),
+(272,11,1,7,9,0),
+(273,11,1,8,10,0),
+(274,11,1,9,11,0),
+(275,11,1,10,12,0),
+(276,11,0,2,4,0),
+(277,11,0,3,5,0),
+(278,11,0,4,6,0),
+(279,11,0,5,7,0),
+(280,11,0,6,8,0),
+(281,11,0,7,9,0),
+(282,10,1,3,5,0),
+(283,10,1,4,6,0),
+(284,10,1,5,7,0),
+(285,10,1,6,8,0),
+(286,10,1,7,9,0),
+(287,10,1,8,10,0),
+(288,10,1,9,11,0),
+(289,10,1,10,12,0),
+(290,10,1,11,13,0),
+(291,10,1,12,14,0),
+(292,10,1,13,15,0),
+(293,10,1,14,16,0),
+(294,13,0,0,0,0),
+(295,13,1,0,0,0),
+(297,14,1,0,0,0),
+(298,15,0,0,0,0),
+(299,15,1,0,0,0),
+(301,14,0,1,2,0),
+(302,14,0,2,3,0),
+(303,10,1,0,2,0),
+(304,16,0,2,3,0),
+(305,16,1,0,0,0),
+(306,17,0,6,7,1),
+(307,17,1,0,0,0),
+(312,8,0,0,0,0),
+(313,8,0,0,0,0),
+(314,16,0,0,0,0),
+(315,16,0,1,2,0),
+(316,16,0,3,4,0),
+(317,16,0,4,5,0),
+(318,16,0,5,6,0),
+(319,18,0,0,0,0),
+(320,18,1,0,0,0),
+(321,18,0,1,2,0),
+(322,18,0,2,3,0),
+(323,18,0,3,4,0),
+(324,18,0,4,5,0),
+(325,18,0,5,6,0),
+(327,17,0,0,1,0),
+(328,17,0,2,3,1),
+(329,17,0,3,4,1),
+(330,17,0,4,5,1),
+(331,17,0,1,2,1),
+(332,17,0,5,6,1),
+(333,19,0,0,1,1),
+(334,19,1,0,0,0),
+(335,10,1,15,17,0),
+(336,10,1,16,18,0),
+(337,10,1,17,19,0),
+(338,10,1,18,20,0),
+(339,10,1,19,21,0),
+(340,10,0,11,13,0),
+(341,10,0,12,14,0),
+(342,10,0,13,15,0),
+(343,10,0,14,16,0),
+(344,10,0,15,17,0),
+(345,11,1,11,13,0),
+(346,11,1,12,14,0),
+(347,11,1,13,15,0),
+(348,11,1,14,16,0),
+(349,11,1,15,17,0),
+(350,11,0,8,0,1),
+(351,11,0,9,10,0),
+(352,11,0,11,12,0),
+(353,11,0,12,13,0),
+(354,11,0,13,14,0),
+(355,3,1,14,16,0),
+(356,3,1,15,17,0),
+(357,3,1,16,18,0),
+(358,3,1,17,19,0),
+(359,3,1,18,20,0),
+(360,3,0,11,12,0),
+(361,3,0,12,13,0),
+(362,3,0,13,14,0),
+(363,3,0,14,15,0),
+(364,3,0,15,16,0),
+(365,7,1,7,9,0),
+(366,7,1,8,10,0),
+(367,7,1,9,11,0),
+(368,7,1,10,12,0),
+(369,7,1,11,13,0),
+(370,7,0,7,8,0),
+(371,7,0,8,9,0),
+(372,7,0,9,10,0),
+(373,7,0,10,11,0),
+(374,7,0,11,12,0),
+(375,1,1,19,21,0),
+(376,1,1,20,22,0),
+(377,1,1,21,23,0),
+(378,1,1,22,24,0),
+(379,1,1,23,25,0),
+(380,1,0,12,13,0),
+(381,1,0,13,14,0),
+(382,1,0,14,15,0),
+(383,1,0,15,16,0),
+(384,1,0,16,17,0),
+(385,4,1,7,9,0),
+(386,4,1,8,10,0),
+(387,4,1,9,11,0),
+(388,4,1,10,12,0),
+(389,4,1,11,13,0),
+(390,4,0,7,9,0),
+(391,4,0,8,10,0),
+(392,4,0,9,11,0),
+(393,4,0,10,12,0),
+(394,4,0,11,13,0),
+(395,2,1,7,0,1),
+(396,2,1,9,10,0),
+(397,2,1,10,11,0),
+(398,2,1,11,12,0),
+(399,2,1,12,13,0),
+(400,2,0,7,8,0),
+(401,2,0,8,9,0),
+(402,2,0,9,10,0),
+(403,2,0,10,11,0),
+(404,2,0,11,12,0),
+(405,6,1,7,9,0),
+(406,6,1,8,10,0),
+(407,6,1,9,11,0),
+(408,6,1,10,12,0),
+(409,6,1,11,13,0),
+(410,6,0,8,10,0),
+(411,6,0,9,11,0),
+(412,6,0,10,12,0),
+(413,6,0,11,13,0),
+(414,6,0,12,14,0),
+(415,8,1,5,7,1),
+(416,8,1,6,8,0),
+(417,8,1,7,9,1),
+(418,8,1,8,10,0),
+(419,8,1,9,11,1),
+(420,8,0,6,7,0),
+(421,8,0,7,8,1),
+(422,8,0,8,9,1),
+(423,8,0,9,10,1),
+(424,5,1,10,12,0),
+(425,5,1,11,13,0),
+(426,5,1,12,14,0),
+(427,5,1,13,15,0),
+(428,5,1,14,16,0),
+(429,5,0,10,11,0),
+(430,5,0,11,12,0),
+(431,5,0,12,13,0),
+(432,5,0,13,14,0),
+(433,5,0,14,15,0),
+(435,20,0,0,0,0),
+(436,20,1,0,0,0),
+(438,21,1,0,0,0),
+(439,21,0,0,0,0),
+(440,21,0,1,2,0),
+(441,21,0,2,3,0),
+(442,21,0,3,4,0),
+(443,21,0,4,5,0),
+(444,21,0,5,6,0),
+(445,2,1,8,9,0),
+(446,11,0,10,11,0); 

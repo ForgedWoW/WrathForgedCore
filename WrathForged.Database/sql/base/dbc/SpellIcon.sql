@@ -1,3228 +1,3228 @@
 DROP TABLE IF EXISTS `SpellIcon`; 
 CREATE TABLE `SpellIcon` ( `ID` INT NOT NULL DEFAULT '0', `TextureFilename` TEXT NULL, PRIMARY KEY (`ID`)) ENGINE=InnoDB DEFAULT CHARSET=utf8; 
-INSERT INTO `SpellIcon` VALUES (1,"Interface\Icons\Trade_Engineering"); 
-INSERT INTO `SpellIcon` VALUES (9,"Interface\Icons\Spell_Shadow_BlackPlague"); 
-INSERT INTO `SpellIcon` VALUES (10,"Interface\Icons\Spell_Nature_NaturesBlessing"); 
-INSERT INTO `SpellIcon` VALUES (11,"Interface\Icons\Spell_Fire_Fire"); 
-INSERT INTO `SpellIcon` VALUES (12,"Interface\Icons\Spell_Fire_Fireball"); 
-INSERT INTO `SpellIcon` VALUES (13,"Interface\Icons\Spell_Nature_MagicImmunity"); 
-INSERT INTO `SpellIcon` VALUES (14,"Interface\Icons\Spell_Frost_Frost"); 
-INSERT INTO `SpellIcon` VALUES (15,"Interface\Icons\Spell_Frost_Stun"); 
-INSERT INTO `SpellIcon` VALUES (16,"Interface\Icons\Spell_Fire_FireArmor"); 
-INSERT INTO `SpellIcon` VALUES (17,"Interface\Icons\Spell_Frost_IceShock"); 
-INSERT INTO `SpellIcon` VALUES (18,"Interface\Icons\Spell_Fire_FireBolt"); 
-INSERT INTO `SpellIcon` VALUES (19,"Interface\Icons\Spell_Nature_LightningShield"); 
-INSERT INTO `SpellIcon` VALUES (20,"Interface\Icons\Spell_Nature_StrangleVines"); 
-INSERT INTO `SpellIcon` VALUES (21,"Interface\Icons\Spell_Nature_FarSight"); 
-INSERT INTO `SpellIcon` VALUES (22,"Interface\Icons\Spell_Shadow_ShadeTrueSight"); 
-INSERT INTO `SpellIcon` VALUES (23,"Interface\Icons\Ability_ShockWave"); 
-INSERT INTO `SpellIcon` VALUES (24,"Interface\Icons\Spell_Nature_Reincarnation"); 
-INSERT INTO `SpellIcon` VALUES (25,"Interface\Icons\Ability_ThunderBolt"); 
-INSERT INTO `SpellIcon` VALUES (26,"Interface\Icons\Ability_MeleeDamage"); 
-INSERT INTO `SpellIcon` VALUES (27,"Interface\Icons\Spell_Nature_Slow"); 
-INSERT INTO `SpellIcon` VALUES (28,"Interface\Icons\Ability_Defend"); 
-INSERT INTO `SpellIcon` VALUES (29,"Interface\Icons\Ability_Seal"); 
-INSERT INTO `SpellIcon` VALUES (30,"Interface\Icons\Spell_Nature_Invisibilty"); 
-INSERT INTO `SpellIcon` VALUES (31,"Interface\Icons\Spell_Fire_Immolation"); 
-INSERT INTO `SpellIcon` VALUES (32,"Interface\Icons\Spell_Ice_Lament"); 
-INSERT INTO `SpellIcon` VALUES (33,"Interface\Icons\Spell_Fire_SealOfFire"); 
-INSERT INTO `SpellIcon` VALUES (34,"Interface\Icons\Spell_Fire_FlameBlades"); 
-INSERT INTO `SpellIcon` VALUES (35,"Interface\Icons\Spell_Frost_Glacier"); 
-INSERT INTO `SpellIcon` VALUES (36,"Interface\Icons\Spell_Frost_ManaRecharge"); 
-INSERT INTO `SpellIcon` VALUES (37,"Interface\Icons\Spell_Fire_SelfDestruct"); 
-INSERT INTO `SpellIcon` VALUES (38,"Interface\Icons\Spell_Nature_BloodLust"); 
-INSERT INTO `SpellIcon` VALUES (39,"Interface\Icons\Spell_Nature_NatureTouchGrow"); 
-INSERT INTO `SpellIcon` VALUES (40,"Interface\Icons\Spell_Nature_NatureTouchDecay"); 
-INSERT INTO `SpellIcon` VALUES (41,"Interface\Icons\Spell_Nature_DryadDispelMagic"); 
-INSERT INTO `SpellIcon` VALUES (42,"Interface\Icons\Ability_ThunderClap"); 
-INSERT INTO `SpellIcon` VALUES (43,"Interface\Icons\Ability_Temp"); 
-INSERT INTO `SpellIcon` VALUES (44,"Interface\Icons\Spell_Nature_Sleep"); 
-INSERT INTO `SpellIcon` VALUES (45,"Interface\Icons\Spell_Fire_MeteorStorm"); 
-INSERT INTO `SpellIcon` VALUES (46,"Interface\Icons\Spell_Nature_MoonGlow"); 
-INSERT INTO `SpellIcon` VALUES (47,"Interface\Icons\Spell_Nature_Purge"); 
-INSERT INTO `SpellIcon` VALUES (48,"Interface\Icons\Spell_Shadow_MindSteal"); 
-INSERT INTO `SpellIcon` VALUES (49,"Interface\Icons\Ability_EyeOfTheOwl"); 
-INSERT INTO `SpellIcon` VALUES (50,"Interface\Icons\Ability_BullRush"); 
-INSERT INTO `SpellIcon` VALUES (51,"Interface\Icons\Spell_Holy_InnerFire"); 
-INSERT INTO `SpellIcon` VALUES (52,"Interface\Icons\Spell_Holy_Devotion"); 
-INSERT INTO `SpellIcon` VALUES (53,"Interface\Icons\Spell_Nature_Thorns"); 
-INSERT INTO `SpellIcon` VALUES (54,"Interface\Icons\Spell_Nature_Brilliance"); 
-INSERT INTO `SpellIcon` VALUES (55,"Interface\Icons\Spell_Shadow_ChillTouch"); 
-INSERT INTO `SpellIcon` VALUES (56,"Interface\Icons\Spell_Frost_FreezingBreath"); 
-INSERT INTO `SpellIcon` VALUES (57,"Interface\Icons\Spell_Fire_EnchantWeapon"); 
-INSERT INTO `SpellIcon` VALUES (58,"Interface\Icons\Spell_Nature_TimeStop"); 
-INSERT INTO `SpellIcon` VALUES (59,"Interface\Icons\Spell_Misc_Food"); 
-INSERT INTO `SpellIcon` VALUES (60,"Interface\Icons\Spell_Misc_Drink"); 
-INSERT INTO `SpellIcon` VALUES (61,"Interface\Icons\Spell_Shadow_RaiseDead"); 
-INSERT INTO `SpellIcon` VALUES (62,"Interface\Icons\Spell_Nature_Lightning"); 
-INSERT INTO `SpellIcon` VALUES (63,"Interface\Icons\Spell_Nature_Strength"); 
-INSERT INTO `SpellIcon` VALUES (64,"Interface\Icons\Spell_Nature_Rejuvenation"); 
-INSERT INTO `SpellIcon` VALUES (65,"Interface\Icons\Spell_Nature_NullWard"); 
-INSERT INTO `SpellIcon` VALUES (66,"Interface\Icons\Spell_Nature_Earthquake"); 
-INSERT INTO `SpellIcon` VALUES (67,"Interface\Icons\Spell_Nature_SpiritWolf"); 
-INSERT INTO `SpellIcon` VALUES (68,"Interface\Icons\Spell_Nature_CorrosiveBreath"); 
-INSERT INTO `SpellIcon` VALUES (69,"Interface\Icons\Ability_Ensnare"); 
-INSERT INTO `SpellIcon` VALUES (70,"Interface\Icons\Spell_Holy_HolyBolt"); 
-INSERT INTO `SpellIcon` VALUES (71,"Interface\Icons\Spell_Shadow_Charm"); 
-INSERT INTO `SpellIcon` VALUES (72,"Interface\Icons\Spell_Nature_GuardianWard"); 
-INSERT INTO `SpellIcon` VALUES (73,"Interface\Icons\Spell_Holy_Restoration"); 
-INSERT INTO `SpellIcon` VALUES (74,"Interface\Icons\Spell_Holy_DispelMagic"); 
-INSERT INTO `SpellIcon` VALUES (75,"Interface\Icons\Spell_Shadow_SpectralSight"); 
-INSERT INTO `SpellIcon` VALUES (76,"Interface\Icons\Spell_Shadow_FingerOfDeath"); 
-INSERT INTO `SpellIcon` VALUES (77,"Interface\Icons\Spell_Shadow_MindRot"); 
-INSERT INTO `SpellIcon` VALUES (78,"Interface\Icons\Spell_Holy_Invulnerable"); 
-INSERT INTO `SpellIcon` VALUES (79,"Interface\Icons\Spell_Holy_LayOnHands"); 
-INSERT INTO `SpellIcon` VALUES (80,"Interface\Icons\Spell_Holy_SealOfValor"); 
-INSERT INTO `SpellIcon` VALUES (81,"Interface\Icons\Spell_Holy_DivineIntervention"); 
-INSERT INTO `SpellIcon` VALUES (82,"Interface\Icons\Spell_Nature_Polymorph"); 
-INSERT INTO `SpellIcon` VALUES (83,"Interface\Icons\Ability_Whirlwind"); 
-INSERT INTO `SpellIcon` VALUES (84,"Interface\Icons\Ability_Racial_Avatar"); 
-INSERT INTO `SpellIcon` VALUES (85,"Interface\Icons\Ability_UpgradeMoonGlaive"); 
-INSERT INTO `SpellIcon` VALUES (86,"Interface\Icons\Ability_Racial_BloodRage"); 
-INSERT INTO `SpellIcon` VALUES (87,"Interface\Icons\Spell_Shadow_Teleport"); 
-INSERT INTO `SpellIcon` VALUES (88,"Interface\Icons\Spell_Shadow_DeathCoil"); 
-INSERT INTO `SpellIcon` VALUES (89,"Interface\Icons\Spell_Shadow_RagingScream"); 
-INSERT INTO `SpellIcon` VALUES (90,"Interface\Icons\Spell_Shadow_Metamorphosis"); 
-INSERT INTO `SpellIcon` VALUES (91,"Interface\Icons\Spell_Shadow_AuraOfDarkness"); 
-INSERT INTO `SpellIcon` VALUES (92,"Interface\Icons\Spell_Shadow_SoulGem"); 
-INSERT INTO `SpellIcon` VALUES (93,"Interface\Icons\Spell_Shadow_UnholyStrength"); 
-INSERT INTO `SpellIcon` VALUES (94,"Interface\Icons\Spell_Frost_SummonWaterElemental"); 
-INSERT INTO `SpellIcon` VALUES (95,"Interface\Icons\Spell_Shadow_UnholyFrenzy"); 
-INSERT INTO `SpellIcon` VALUES (96,"Interface\Icons\Spell_Shadow_Cripple"); 
-INSERT INTO `SpellIcon` VALUES (97,"Interface\Icons\Spell_Shadow_PlagueCloud"); 
-INSERT INTO `SpellIcon` VALUES (98,"Interface\Icons\Spell_Shadow_Possession"); 
-INSERT INTO `SpellIcon` VALUES (99,"Interface\Icons\Spell_Shadow_AntiMagicShell"); 
-INSERT INTO `SpellIcon` VALUES (100,"Interface\Icons\Spell_Nature_Tranquility"); 
-INSERT INTO `SpellIcon` VALUES (101,"Interface\Icons\Spell_Frost_WindWalkOn"); 
-INSERT INTO `SpellIcon` VALUES (102,"Interface\Icons\Ability_Smash"); 
-INSERT INTO `SpellIcon` VALUES (103,"Interface\Icons\Ability_Ambush"); 
-INSERT INTO `SpellIcon` VALUES (104,"Interface\Icons\Spell_Holy_Heal"); 
-INSERT INTO `SpellIcon` VALUES (105,"Interface\Icons\Ability_SearingArrow"); 
-INSERT INTO `SpellIcon` VALUES (106,"Interface\Icons\Spell_Nature_MoonKey"); 
-INSERT INTO `SpellIcon` VALUES (107,"Interface\Icons\Ability_Racial_BearForm"); 
-INSERT INTO `SpellIcon` VALUES (108,"Interface\Icons\Ability_GhoulFrenzy"); 
-INSERT INTO `SpellIcon` VALUES (109,"Interface\Icons\Spell_Nature_FaerieFire"); 
-INSERT INTO `SpellIcon` VALUES (110,"Interface\Icons\Spell_Nature_SlowPoison"); 
-INSERT INTO `SpellIcon` VALUES (111,"Interface\Icons\Spell_Nature_ForceOfNature"); 
-INSERT INTO `SpellIcon` VALUES (112,"Interface\Icons\Spell_Nature_RavenForm"); 
-INSERT INTO `SpellIcon` VALUES (113,"Interface\Icons\Spell_Shadow_Haunting"); 
-INSERT INTO `SpellIcon` VALUES (114,"Interface\Icons\Spell_Shadow_ShadowPact"); 
-INSERT INTO `SpellIcon` VALUES (115,"Interface\Icons\Spell_Nature_Swiftness"); 
-INSERT INTO `SpellIcon` VALUES (116,"Interface\Icons\Spell_Shadow_CarrionSwarm"); 
-INSERT INTO `SpellIcon` VALUES (117,"Interface\Icons\Spell_Nature_WispHeal"); 
-INSERT INTO `SpellIcon` VALUES (118,"Interface\Icons\Spell_Shadow_DeathAndDecay"); 
-INSERT INTO `SpellIcon` VALUES (119,"Interface\Icons\Spell_Frost_FrostArmor"); 
-INSERT INTO `SpellIcon` VALUES (120,"Interface\Icons\Spell_Totem_WardOfDraining"); 
-INSERT INTO `SpellIcon` VALUES (121,"Interface\Icons\Spell_Holy_Resurrection"); 
-INSERT INTO `SpellIcon` VALUES (122,"Interface\Icons\Spell_Nature_WispSplode"); 
-INSERT INTO `SpellIcon` VALUES (123,"Interface\Icons\Spell_Nature_Regeneration"); 
-INSERT INTO `SpellIcon` VALUES (124,"Interface\Icons\Spell_Nature_ResistMagic"); 
-INSERT INTO `SpellIcon` VALUES (125,"Interface\Icons\Spell_Holy_MagicalSentry"); 
-INSERT INTO `SpellIcon` VALUES (126,"Interface\Icons\Ability_Marksmanship"); 
-INSERT INTO `SpellIcon` VALUES (127,"Interface\Icons\Ability_TheBlackArrow"); 
-INSERT INTO `SpellIcon` VALUES (128,"Interface\Icons\Ability_TrueShot"); 
-INSERT INTO `SpellIcon` VALUES (129,"Interface\Icons\Ability_WarStomp"); 
-INSERT INTO `SpellIcon` VALUES (130,"Interface\Icons\Spell_Shadow_RitualOfSacrifice"); 
-INSERT INTO `SpellIcon` VALUES (131,"Interface\Icons\Ability_Racial_ShadowMeld"); 
-INSERT INTO `SpellIcon` VALUES (132,"Interface\Icons\Ability_GolemStormBolt"); 
-INSERT INTO `SpellIcon` VALUES (133,"Interface\Icons\Spell_Frost_WizardMark"); 
-INSERT INTO `SpellIcon` VALUES (134,"Interface\Icons\Spell_Shadow_DeathScream"); 
-INSERT INTO `SpellIcon` VALUES (135,"Interface\Icons\Spell_Shadow_EvilEye"); 
-INSERT INTO `SpellIcon` VALUES (136,"Interface\Icons\Spell_Fire_Flare"); 
-INSERT INTO `SpellIcon` VALUES (137,"Interface\Icons\Spell_Shadow_MindBomb"); 
-INSERT INTO `SpellIcon` VALUES (138,"Interface\Icons\Ability_CriticalStrike"); 
-INSERT INTO `SpellIcon` VALUES (139,"Interface\Icons\Spell_Nature_EnchantArmor"); 
-INSERT INTO `SpellIcon` VALUES (140,"Interface\Icons\Spell_Shadow_SealOfKings"); 
-INSERT INTO `SpellIcon` VALUES (141,"Interface\Icons\Spell_Nature_CallStorm"); 
-INSERT INTO `SpellIcon` VALUES (142,"Interface\Icons\Spell_Frost_IceClaw"); 
-INSERT INTO `SpellIcon` VALUES (143,"Interface\Icons\Spell_Frost_Wisp"); 
-INSERT INTO `SpellIcon` VALUES (144,"Interface\Icons\Frostbolt_test"); 
-INSERT INTO `SpellIcon` VALUES (145,"Interface\Icons\Spell_Frost_ManaBurn"); 
-INSERT INTO `SpellIcon` VALUES (146,"Interface\Icons\Ability_Racial_Cannibalize"); 
-INSERT INTO `SpellIcon` VALUES (147,"Interface\Icons\Spell_Shadow_VampiricAura"); 
-INSERT INTO `SpellIcon` VALUES (148,"Interface\Icons\Ability_GolemThunderClap"); 
-INSERT INTO `SpellIcon` VALUES (149,"Interface\Icons\Spell_Nature_Regenerate"); 
-INSERT INTO `SpellIcon` VALUES (150,"Interface\Icons\Spell_Shadow_UnsummonBuilding"); 
-INSERT INTO `SpellIcon` VALUES (151,"Interface\Icons\Ability_SteelMelee"); 
-INSERT INTO `SpellIcon` VALUES (152,"Interface\Icons\Spell_Shadow_Requiem"); 
-INSERT INTO `SpellIcon` VALUES (153,"Interface\Icons\Spell_Shadow_LifeDrain"); 
-INSERT INTO `SpellIcon` VALUES (154,"Interface\Icons\Spell_Shadow_DarkRitual"); 
-INSERT INTO `SpellIcon` VALUES (155,"Interface\Icons\Spell_Nature_Drowsy"); 
-INSERT INTO `SpellIcon` VALUES (156,"Interface\Icons\Spell_Holy_SearingLight"); 
-INSERT INTO `SpellIcon` VALUES (157,"Interface\Icons\Ability_Hibernation"); 
-INSERT INTO `SpellIcon` VALUES (158,"Interface\Icons\Spell_Holy_Excorcism"); 
-INSERT INTO `SpellIcon` VALUES (159,"Interface\Icons\Spell_Holy_Retribution"); 
-INSERT INTO `SpellIcon` VALUES (160,"Interface\Icons\Spell_Shadow_CorpseExplode"); 
-INSERT INTO `SpellIcon` VALUES (161,"Interface\Icons\Ability_TownWatch"); 
-INSERT INTO `SpellIcon` VALUES (162,"Interface\Icons\Ability_Repair"); 
-INSERT INTO `SpellIcon` VALUES (163,"Interface\Icons\Ability_PoisonSting"); 
-INSERT INTO `SpellIcon` VALUES (164,"Interface\Icons\Spell_Shadow_Twilight"); 
-INSERT INTO `SpellIcon` VALUES (165,"Interface\Icons\Spell_Nature_ChainLightning"); 
-INSERT INTO `SpellIcon` VALUES (166,"Interface\Icons\Ability_Devour"); 
-INSERT INTO `SpellIcon` VALUES (167,"Interface\Icons\Spell_Holy_Dizzy"); 
-INSERT INTO `SpellIcon` VALUES (168,"Interface\Icons\Spell_Nature_NaturesWrath"); 
-INSERT INTO `SpellIcon` VALUES (169,"Interface\Icons\Spell_Shadow_DeathPact"); 
-INSERT INTO `SpellIcon` VALUES (170,"Interface\Icons\Spell_Shadow_DarkSummoning"); 
-INSERT INTO `SpellIcon` VALUES (171,"Interface\Icons\Ability_Spy"); 
-INSERT INTO `SpellIcon` VALUES (172,"Interface\Icons\Spell_Ice_MagicDamage"); 
-INSERT INTO `SpellIcon` VALUES (173,"Interface\Icons\Spell_Shadow_GatherShadows"); 
-INSERT INTO `SpellIcon` VALUES (174,"Interface\Icons\Spell_Nature_EarthBind"); 
-INSERT INTO `SpellIcon` VALUES (175,"Interface\Icons\Spell_Shadow_GhostKey"); 
-INSERT INTO `SpellIcon` VALUES (176,"Interface\Icons\Spell_Frost_Frostbolt"); 
-INSERT INTO `SpellIcon` VALUES (177,"Interface\Icons\Spell_Holy_AshesToAshes"); 
-INSERT INTO `SpellIcon` VALUES (178,"Interface\Icons\Spell_Shadow_ShadowWard"); 
-INSERT INTO `SpellIcon` VALUES (179,"Interface\Icons\Ability_Tracking"); 
-INSERT INTO `SpellIcon` VALUES (180,"Interface\Icons\Spell_Frost_ChainsOfIce"); 
-INSERT INTO `SpellIcon` VALUES (181,"Interface\Icons\Spell_Frost_FrostArmor02"); 
-INSERT INTO `SpellIcon` VALUES (182,"Interface\Icons\Spell_Frost_ChillingArmor"); 
-INSERT INTO `SpellIcon` VALUES (183,"Interface\Icons\Spell_Fire_FireBolt02"); 
-INSERT INTO `SpellIcon` VALUES (184,"Interface\Icons\Spell_Fire_Fireball02"); 
-INSERT INTO `SpellIcon` VALUES (185,"Interface\Icons\Spell_Fire_FlameBolt"); 
-INSERT INTO `SpellIcon` VALUES (186,"Interface\Icons\Spell_Frost_FrostBlast"); 
-INSERT INTO `SpellIcon` VALUES (187,"Interface\Icons\Spell_Frost_ChillingBlast"); 
-INSERT INTO `SpellIcon` VALUES (188,"Interface\Icons\Spell_Frost_FrostBolt02"); 
-INSERT INTO `SpellIcon` VALUES (189,"Interface\Icons\Spell_Frost_ChillingBolt"); 
-INSERT INTO `SpellIcon` VALUES (190,"Interface\Icons\Spell_Misc_Food_08"); 
-INSERT INTO `SpellIcon` VALUES (191,"Interface\Icons\Spell_Misc_ConjureManaJewel"); 
-INSERT INTO `SpellIcon` VALUES (192,"Interface\Icons\Spell_Fire_SunKey"); 
-INSERT INTO `SpellIcon` VALUES (193,"Interface\Icons\Spell_Frost_FrostNova"); 
-INSERT INTO `SpellIcon` VALUES (194,"Interface\Icons\Spell_Nature_NullifyPoison"); 
-INSERT INTO `SpellIcon` VALUES (195,"Interface\Icons\Spell_Nature_RemoveCurse"); 
-INSERT INTO `SpellIcon` VALUES (196,"Interface\Icons\Spell_Nature_RemoveDisease"); 
-INSERT INTO `SpellIcon` VALUES (197,"Interface\Icons\Spell_Nature_ResistNature"); 
-INSERT INTO `SpellIcon` VALUES (198,"Interface\Icons\Spell_Nature_SpiritArmor"); 
-INSERT INTO `SpellIcon` VALUES (199,"Interface\Icons\Spell_Nature_ThunderClap"); 
-INSERT INTO `SpellIcon` VALUES (200,"Interface\Icons\Spell_Nature_UndyingStrength"); 
-INSERT INTO `SpellIcon` VALUES (201,"Interface\Icons\Ability_Physical_Taunt"); 
-INSERT INTO `SpellIcon` VALUES (202,"Interface\Icons\Racial_Dwarf_FindTreasure"); 
-INSERT INTO `SpellIcon` VALUES (203,"Interface\Icons\Spell_Holy_HarmUndeadAura"); 
-INSERT INTO `SpellIcon` VALUES (204,"Interface\Icons\Spell_Holy_RetributionAura"); 
-INSERT INTO `SpellIcon` VALUES (205,"Interface\Icons\Spell_Holy_RighteousFury"); 
-INSERT INTO `SpellIcon` VALUES (206,"Interface\Icons\Spell_Holy_RighteousnessAura"); 
-INSERT INTO `SpellIcon` VALUES (207,"Interface\Icons\Spell_Shadow_AntiShadow"); 
-INSERT INTO `SpellIcon` VALUES (208,"Interface\Icons\Spell_Shadow_BurningSpirit"); 
-INSERT INTO `SpellIcon` VALUES (209,"Interface\Icons\Spell_Shadow_DetectLesserInvisibility"); 
-INSERT INTO `SpellIcon` VALUES (210,"Interface\Icons\Spell_Shadow_DetectInvisibility"); 
-INSERT INTO `SpellIcon` VALUES (211,"Interface\Icons\Spell_Shadow_ImpPhaseShift"); 
-INSERT INTO `SpellIcon` VALUES (212,"Interface\Icons\Spell_Shadow_ManaBurn"); 
-INSERT INTO `SpellIcon` VALUES (213,"Interface\Icons\Spell_Shadow_ShadowBolt"); 
-INSERT INTO `SpellIcon` VALUES (214,"Interface\Icons\Spell_Shadow_SummonFelHunter"); 
-INSERT INTO `SpellIcon` VALUES (215,"Interface\Icons\Spell_Shadow_SummonImp"); 
-INSERT INTO `SpellIcon` VALUES (216,"Interface\Icons\Spell_Shadow_SummonSuccubus"); 
-INSERT INTO `SpellIcon` VALUES (217,"Interface\Icons\Spell_Shadow_SummonVoidWalker"); 
-INSERT INTO `SpellIcon` VALUES (218,"Interface\Icons\Ability_ImpalingBolt"); 
-INSERT INTO `SpellIcon` VALUES (219,"Interface\Icons\Ability_PierceDamage"); 
-INSERT INTO `SpellIcon` VALUES (220,"Interface\Icons\Spell_Nature_Cyclone"); 
-INSERT INTO `SpellIcon` VALUES (221,"Interface\Icons\Spell_Shadow_AnimateDead"); 
-INSERT INTO `SpellIcon` VALUES (222,"Interface\Icons\Spell_Shadow_NightOfTheDead"); 
-INSERT INTO `SpellIcon` VALUES (223,"Interface\Icons\Spell_Orc_Omniscience"); 
-INSERT INTO `SpellIcon` VALUES (224,"Spells\Icon\Spell_Fire_Fire"); 
-INSERT INTO `SpellIcon` VALUES (225,"Interface\Icons\Spell_Nature_StarFall"); 
-INSERT INTO `SpellIcon` VALUES (226,"Interface\Icons\INV_Potion_19"); 
-INSERT INTO `SpellIcon` VALUES (227,"Interface\Icons\INV_Misc_Bag_11"); 
-INSERT INTO `SpellIcon` VALUES (228,"Interface\Icons\Spell_Shadow_GrimWard"); 
-INSERT INTO `SpellIcon` VALUES (229,"Interface\Icons\Spell_Nature_MirrorImage"); 
-INSERT INTO `SpellIcon` VALUES (230,"Interface\Icons\INV_Boots_03"); 
-INSERT INTO `SpellIcon` VALUES (231,"Interface\Icons\INV_Misc_Food_24"); 
-INSERT INTO `SpellIcon` VALUES (232,"Interface\Icons\Spell_Holy_Silence"); 
-INSERT INTO `SpellIcon` VALUES (233,"Interface\Icons\Spell_Shadow_Fumble"); 
-INSERT INTO `SpellIcon` VALUES (234,"Interface\Icons\Spell_Shadow_ShadowWordPain"); 
-INSERT INTO `SpellIcon` VALUES (235,"Interface\Icons\Spell_Shadow_ShadowWordDominate"); 
-INSERT INTO `SpellIcon` VALUES (236,"Interface\Icons\Spell_Holy_RemoveCurse"); 
-INSERT INTO `SpellIcon` VALUES (237,"Interface\Icons\Spell_Holy_HolySmite"); 
-INSERT INTO `SpellIcon` VALUES (238,"Interface\Icons\Spell_Holy_BlessingOfStamina"); 
-INSERT INTO `SpellIcon` VALUES (239,"Interface\Icons\Spell_Holy_BlessingOfStrength"); 
-INSERT INTO `SpellIcon` VALUES (240,"Interface\Icons\Spell_Holy_BlessingOfAgility"); 
-INSERT INTO `SpellIcon` VALUES (241,"Interface\Icons\Spell_Holy_GreaterHeal"); 
-INSERT INTO `SpellIcon` VALUES (242,"Interface\Icons\Spell_Holy_FlashHeal"); 
-INSERT INTO `SpellIcon` VALUES (243,"Interface\Icons\Ability_BackStab"); 
-INSERT INTO `SpellIcon` VALUES (244,"Interface\Icons\Ability_CheapShot"); 
-INSERT INTO `SpellIcon` VALUES (245,"Interface\Icons\Ability_Gouge"); 
-INSERT INTO `SpellIcon` VALUES (246,"Interface\Icons\Ability_Kick"); 
-INSERT INTO `SpellIcon` VALUES (247,"Interface\Icons\Ability_Poisons"); 
-INSERT INTO `SpellIcon` VALUES (248,"Interface\Icons\INV_Potion_12"); 
-INSERT INTO `SpellIcon` VALUES (249,"Interface\Icons\Ability_Sap"); 
-INSERT INTO `SpellIcon` VALUES (250,"Interface\Icons\Ability_Stealth"); 
-INSERT INTO `SpellIcon` VALUES (251,"Interface\Icons\Ability_Throw"); 
-INSERT INTO `SpellIcon` VALUES (252,"Interface\Icons\Ability_Vanish"); 
-INSERT INTO `SpellIcon` VALUES (253,"Interface\Icons\Ability_Hunter_AimedShot"); 
-INSERT INTO `SpellIcon` VALUES (254,"Interface\Icons\Ability_Hunter_BeastSooth"); 
-INSERT INTO `SpellIcon` VALUES (255,"Interface\Icons\Ability_Hunter_BeastTaming"); 
-INSERT INTO `SpellIcon` VALUES (256,"Interface\Icons\Ability_Hunter_CriticalShot"); 
-INSERT INTO `SpellIcon` VALUES (257,"Interface\Icons\Ability_Hunter_SwiftStrike"); 
-INSERT INTO `SpellIcon` VALUES (258,"Interface\Icons\INV_Misc_Food_08"); 
-INSERT INTO `SpellIcon` VALUES (259,"Interface\Icons\INV_Misc_Food_12"); 
-INSERT INTO `SpellIcon` VALUES (260,"Interface\Icons\INV_Misc_Food_11"); 
-INSERT INTO `SpellIcon` VALUES (261,"Interface\Icons\Ability_Druid_Maul"); 
-INSERT INTO `SpellIcon` VALUES (262,"Interface\Icons\Ability_Druid_Rake"); 
-INSERT INTO `SpellIcon` VALUES (263,"Interface\Icons\Spell_Nature_AbolishMagic"); 
-INSERT INTO `SpellIcon` VALUES (264,"Interface\Icons\Spell_Nature_NullifyDisease"); 
-INSERT INTO `SpellIcon` VALUES (265,"Interface\Icons\Spell_Nature_NullifyPoison_02"); 
-INSERT INTO `SpellIcon` VALUES (266,"Interface\Icons\Spell_Nature_ProtectionformNature"); 
-INSERT INTO `SpellIcon` VALUES (267,"Interface\Icons\Ability_Hunter_MendPet"); 
-INSERT INTO `SpellIcon` VALUES (268,"Interface\Icons\INV_Misc_Ale_01"); 
-INSERT INTO `SpellIcon` VALUES (269,"Interface\Icons\INV_Weapon_Crossbow_01"); 
-INSERT INTO `SpellIcon` VALUES (270,"Interface\Icons\INV_Ore_Tin_01"); 
-INSERT INTO `SpellIcon` VALUES (271,"Interface\Icons\INV_Misc_Birdbeck_02"); 
-INSERT INTO `SpellIcon` VALUES (272,"Interface\Icons\Spell_Nature_Web"); 
-INSERT INTO `SpellIcon` VALUES (273,"Interface\Icons\INV_Misc_EmptyFlask_01"); 
-INSERT INTO `SpellIcon` VALUES (274,"Interface\Icons\INV_Musket_03"); 
-INSERT INTO `SpellIcon` VALUES (275,"Interface\Icons\INV_Musket_04"); 
-INSERT INTO `SpellIcon` VALUES (276,"Interface\Icons\Ability_Warrior_DefensiveStance"); 
-INSERT INTO `SpellIcon` VALUES (277,"Interface\Icons\Ability_Warrior_Cleave"); 
-INSERT INTO `SpellIcon` VALUES (278,"Interface\Icons\Ability_Warrior_Challange"); 
-INSERT INTO `SpellIcon` VALUES (279,"Interface\Icons\Ability_Warrior_OffensiveStance"); 
-INSERT INTO `SpellIcon` VALUES (280,"Interface\Icons\Ability_Warrior_ShieldBash"); 
-INSERT INTO `SpellIcon` VALUES (281,"Interface\Icons\Ability_Warrior_ShieldWall"); 
-INSERT INTO `SpellIcon` VALUES (282,"Interface\Icons\Ability_Warrior_WarCry"); 
-INSERT INTO `SpellIcon` VALUES (283,"Interface\Icons\INV_Misc_Gem_Stone_01"); 
-INSERT INTO `SpellIcon` VALUES (284,"Interface\Icons\INV_Stone_04"); 
-INSERT INTO `SpellIcon` VALUES (285,"Interface\Icons\Spell_Frost_IceStorm"); 
-INSERT INTO `SpellIcon` VALUES (286,"Interface\Icons\INV_Staff_08"); 
-INSERT INTO `SpellIcon` VALUES (287,"Interface\Icons\INV_Misc_Orb_03"); 
-INSERT INTO `SpellIcon` VALUES (288,"Interface\Icons\INV_Ammo_Arrow_02"); 
-INSERT INTO `SpellIcon` VALUES (289,"Interface\Icons\INV_Misc_Bowl_01"); 
-INSERT INTO `SpellIcon` VALUES (290,"Interface\Icons\INV_ThrowingKnife_03"); 
-INSERT INTO `SpellIcon` VALUES (291,"Interface\Icons\Spell_Holy_DevotionAura"); 
-INSERT INTO `SpellIcon` VALUES (292,"Interface\Icons\Spell_Holy_Excorcism_02"); 
-INSERT INTO `SpellIcon` VALUES (293,"Interface\Icons\INV_Misc_Head_Tiger_01"); 
-INSERT INTO `SpellIcon` VALUES (294,"Interface\Icons\INV_Wand_01"); 
-INSERT INTO `SpellIcon` VALUES (295,"Interface\Icons\INV_Wand_02"); 
-INSERT INTO `SpellIcon` VALUES (296,"Interface\Icons\INV_Staff_03"); 
-INSERT INTO `SpellIcon` VALUES (297,"Interface\Icons\INV_Chest_Plate02"); 
-INSERT INTO `SpellIcon` VALUES (298,"Interface\Icons\Spell_Holy_FistOfJustice"); 
-INSERT INTO `SpellIcon` VALUES (299,"Interface\Icons\Spell_Holy_HealingAura"); 
-INSERT INTO `SpellIcon` VALUES (300,"Interface\Icons\Spell_Holy_Purify"); 
-INSERT INTO `SpellIcon` VALUES (301,"Interface\Icons\Spell_Holy_SealOfFury"); 
-INSERT INTO `SpellIcon` VALUES (302,"Interface\Icons\Spell_Holy_SealOfMight"); 
-INSERT INTO `SpellIcon` VALUES (303,"Interface\Icons\Spell_Holy_SealOfProtection"); 
-INSERT INTO `SpellIcon` VALUES (304,"Interface\Icons\Spell_Holy_SealOfRighteousness"); 
-INSERT INTO `SpellIcon` VALUES (305,"Interface\Icons\Spell_Holy_SealOfSalvation"); 
-INSERT INTO `SpellIcon` VALUES (306,"Interface\Icons\Spell_Holy_SealOfWisdom"); 
-INSERT INTO `SpellIcon` VALUES (307,"Interface\Icons\Spell_Holy_SealOfWrath"); 
-INSERT INTO `SpellIcon` VALUES (308,"Interface\Icons\Spell_Holy_SenseUndead"); 
-INSERT INTO `SpellIcon` VALUES (309,"Interface\Icons\Spell_Holy_TurnUndead"); 
-INSERT INTO `SpellIcon` VALUES (310,"Interface\Icons\Spell_Nature_Sentinal"); 
-INSERT INTO `SpellIcon` VALUES (311,"Interface\Icons\INV_Misc_MonsterFang_01"); 
-INSERT INTO `SpellIcon` VALUES (312,"Interface\Icons\Spell_Nature_UnyeildingStamina"); 
-INSERT INTO `SpellIcon` VALUES (313,"Interface\Icons\Spell_Shadow_AbominationExplosion"); 
-INSERT INTO `SpellIcon` VALUES (314,"Interface\Icons\INV_Gauntlets_05"); 
-INSERT INTO `SpellIcon` VALUES (315,"Interface\Icons\INV_Jewelry_Talisman_01"); 
-INSERT INTO `SpellIcon` VALUES (316,"Interface\Icons\Spell_Holy_PrayerOfHealing"); 
-INSERT INTO `SpellIcon` VALUES (317,"Interface\Icons\Spell_Magic_PolymorphPig"); 
-INSERT INTO `SpellIcon` VALUES (318,"Interface\Icons\Spell_Magic_PolymorphChicken"); 
-INSERT INTO `SpellIcon` VALUES (319,"Interface\Icons\INV_Scroll_02"); 
-INSERT INTO `SpellIcon` VALUES (320,"Interface\Icons\Spell_Lightning_LightningBolt01"); 
-INSERT INTO `SpellIcon` VALUES (321,"Interface\Icons\Spell_Holy_Renew"); 
-INSERT INTO `SpellIcon` VALUES (322,"Interface\Icons\INV_Mace_12"); 
-INSERT INTO `SpellIcon` VALUES (323,"Interface\Icons\INV_Misc_LeatherScrap_08"); 
-INSERT INTO `SpellIcon` VALUES (324,"Interface\Icons\INV_Fabric_Silk_02"); 
-INSERT INTO `SpellIcon` VALUES (325,"Interface\Icons\INV_Misc_Wrench_02"); 
-INSERT INTO `SpellIcon` VALUES (326,"Interface\Icons\INV_Misc_ArmorKit_17"); 
-INSERT INTO `SpellIcon` VALUES (327,"Interface\Icons\INV_Potion_14"); 
-INSERT INTO `SpellIcon` VALUES (328,"Interface\Icons\INV_Axe_04"); 
-INSERT INTO `SpellIcon` VALUES (329,"Interface\Icons\Spell_Holy_HolyProtection"); 
-INSERT INTO `SpellIcon` VALUES (330,"Interface\Icons\Spell_Holy_NullifyDisease"); 
-INSERT INTO `SpellIcon` VALUES (331,"Interface\Icons\Spell_Magic_LesserInvisibilty"); 
-INSERT INTO `SpellIcon` VALUES (332,"Interface\Icons\Spell_Magic_MageArmor"); 
-INSERT INTO `SpellIcon` VALUES (333,"Interface\Icons\Trade_Engineering"); 
-INSERT INTO `SpellIcon` VALUES (334,"Interface\Icons\Spell_Nature_AgitatingTotem"); 
-INSERT INTO `SpellIcon` VALUES (335,"Interface\Icons\Trade_BlackSmithing"); 
-INSERT INTO `SpellIcon` VALUES (336,"Interface\Icons\Trade_Mining"); 
-INSERT INTO `SpellIcon` VALUES (337,"Interface\Icons\Spell_Nature_InvisibilityTotem"); 
-INSERT INTO `SpellIcon` VALUES (338,"Interface\Icons\Spell_Nature_ManaRegenTotem"); 
-INSERT INTO `SpellIcon` VALUES (339,"Interface\Icons\Trade_Alchemy"); 
-INSERT INTO `SpellIcon` VALUES (340,"Interface\Icons\Spell_Nature_SlowingTotem"); 
-INSERT INTO `SpellIcon` VALUES (341,"Interface\Icons\Trade_Tailoring"); 
-INSERT INTO `SpellIcon` VALUES (342,"Interface\Icons\Trade_BrewPoison"); 
-INSERT INTO `SpellIcon` VALUES (343,"Interface\Icons\INV_Misc_Key_04"); 
-INSERT INTO `SpellIcon` VALUES (344,"Interface\Icons\INV_Misc_Gem_Sapphire_01"); 
-INSERT INTO `SpellIcon` VALUES (345,"Interface\Icons\Trade_Herbalism"); 
-INSERT INTO `SpellIcon` VALUES (346,"Interface\Icons\Trade_LeatherWorking"); 
-INSERT INTO `SpellIcon` VALUES (347,"Interface\Icons\INV_Misc_Shell_03"); 
-INSERT INTO `SpellIcon` VALUES (348,"Interface\Icons\INV_Potion_01"); 
-INSERT INTO `SpellIcon` VALUES (349,"Interface\Icons\INV_Misc_Shell_02"); 
-INSERT INTO `SpellIcon` VALUES (350,"Interface\Icons\INV_Misc_Dust_02"); 
-INSERT INTO `SpellIcon` VALUES (351,"Interface\Icons\INV_Misc_Ammo_Gunpowder_02"); 
-INSERT INTO `SpellIcon` VALUES (352,"Interface\Icons\INV_Orb_Arcanite_01"); 
-INSERT INTO `SpellIcon` VALUES (353,"Interface\Icons\INV_Misc_Gear_01"); 
-INSERT INTO `SpellIcon` VALUES (354,"Interface\Icons\INV_Cask_01"); 
-INSERT INTO `SpellIcon` VALUES (355,"Interface\Icons\INV_Misc_Bomb_05"); 
-INSERT INTO `SpellIcon` VALUES (356,"Interface\Icons\INV_Misc_StoneTablet_04"); 
-INSERT INTO `SpellIcon` VALUES (357,"Interface\Icons\INV_Scroll_05"); 
-INSERT INTO `SpellIcon` VALUES (358,"Interface\Icons\INV_Misc_Fork&Knife"); 
-INSERT INTO `SpellIcon` VALUES (359,"Interface\Icons\INV_Misc_EmptyFlask_02"); 
-INSERT INTO `SpellIcon` VALUES (360,"Interface\Icons\INV_Flask_02"); 
-INSERT INTO `SpellIcon` VALUES (361,"Interface\Icons\INV_Flask_05"); 
-INSERT INTO `SpellIcon` VALUES (362,"Interface\Icons\INV_Wine_01"); 
-INSERT INTO `SpellIcon` VALUES (363,"Interface\Icons\INV_Misc_Cape_18"); 
-INSERT INTO `SpellIcon` VALUES (364,"Interface\Icons\INV_Weapon_Bow_05"); 
-INSERT INTO `SpellIcon` VALUES (365,"Interface\Icons\INV_Weapon_Halberd_06"); 
-INSERT INTO `SpellIcon` VALUES (366,"Interface\Icons\INV_Axe_09"); 
-INSERT INTO `SpellIcon` VALUES (367,"Interface\Icons\INV_Mace_01"); 
-INSERT INTO `SpellIcon` VALUES (368,"Interface\Icons\INV_Sword_04"); 
-INSERT INTO `SpellIcon` VALUES (369,"Interface\Icons\INV_Sword_06"); 
-INSERT INTO `SpellIcon` VALUES (370,"Interface\Icons\INV_Spear_05"); 
-INSERT INTO `SpellIcon` VALUES (371,"Interface\Icons\INV_Axe_17"); 
-INSERT INTO `SpellIcon` VALUES (372,"Interface\Icons\INV_Gauntlets_06"); 
-INSERT INTO `SpellIcon` VALUES (373,"Interface\Icons\INV_Misc_Pipe_01"); 
-INSERT INTO `SpellIcon` VALUES (374,"Interface\Icons\INV_Misc_Food_09"); 
-INSERT INTO `SpellIcon` VALUES (393,"Interface\Icons\INV_Weapon_Rifle_01"); 
-INSERT INTO `SpellIcon` VALUES (413,"Interface\Icons\INV_Shield_05"); 
-INSERT INTO `SpellIcon` VALUES (433,"Interface\Icons\INV_Banner_03"); 
-INSERT INTO `SpellIcon` VALUES (434,"Interface\Icons\INV_ThrowingKnife_05"); 
-INSERT INTO `SpellIcon` VALUES (435,"Interface\Icons\INV_Mace_04"); 
-INSERT INTO `SpellIcon` VALUES (436,"Interface\Icons\INV_Weapon_Bow_02"); 
-INSERT INTO `SpellIcon` VALUES (437,"Interface\Icons\INV_Axe_13"); 
-INSERT INTO `SpellIcon` VALUES (438,"Interface\Icons\INV_Sword_26"); 
-INSERT INTO `SpellIcon` VALUES (439,"Interface\Icons\INV_Hammer_03"); 
-INSERT INTO `SpellIcon` VALUES (440,"Interface\Icons\INV_Shield_04"); 
-INSERT INTO `SpellIcon` VALUES (441,"Interface\Icons\INV_Axe_16"); 
-INSERT INTO `SpellIcon` VALUES (442,"Interface\Icons\INV_Stone_01"); 
-INSERT INTO `SpellIcon` VALUES (443,"Interface\Icons\INV_Axe_11"); 
-INSERT INTO `SpellIcon` VALUES (444,"Interface\Icons\INV_Chest_Plate01"); 
-INSERT INTO `SpellIcon` VALUES (453,"Interface\Icons\Spell_Holy_BlessingOfProtection"); 
-INSERT INTO `SpellIcon` VALUES (454,"Interface\Icons\Ability_Hunter_BeastSoothe"); 
-INSERT INTO `SpellIcon` VALUES (455,"Interface\Icons\Ability_Hunter_BeastCall"); 
-INSERT INTO `SpellIcon` VALUES (456,"Interface\Icons\Ability_Warrior_BattleShout"); 
-INSERT INTO `SpellIcon` VALUES (457,"Interface\Icons\Ability_Warrior_Charge"); 
-INSERT INTO `SpellIcon` VALUES (458,"Interface\Icons\Spell_Nature_AstralRecal"); 
-INSERT INTO `SpellIcon` VALUES (459,"Interface\Icons\Spell_Nature_AstralRecalGroup"); 
-INSERT INTO `SpellIcon` VALUES (460,"Interface\Icons\Spell_Shadow_SummonInfernal"); 
-INSERT INTO `SpellIcon` VALUES (473,"Interface\Icons\Ability_Druid_Bash"); 
-INSERT INTO `SpellIcon` VALUES (493,"Interface\Icons\Ability_Druid_CatForm"); 
-INSERT INTO `SpellIcon` VALUES (494,"Interface\Icons\Ability_Druid_Disembowel"); 
-INSERT INTO `SpellIcon` VALUES (495,"Interface\Icons\Ability_Druid_SupriseAttack"); 
-INSERT INTO `SpellIcon` VALUES (496,"Interface\Icons\Ability_Druid_Swipe"); 
-INSERT INTO `SpellIcon` VALUES (497,"Interface\Icons\Ability_Rogue_Disguise"); 
-INSERT INTO `SpellIcon` VALUES (498,"Interface\Icons\Ability_Rogue_Garrote"); 
-INSERT INTO `SpellIcon` VALUES (499,"Interface\Icons\Ability_Rogue_KidneyShot"); 
-INSERT INTO `SpellIcon` VALUES (500,"Interface\Icons\Ability_Rogue_Rupture"); 
-INSERT INTO `SpellIcon` VALUES (501,"Interface\Icons\Spell_Frost_FrostWard"); 
-INSERT INTO `SpellIcon` VALUES (502,"Interface\Icons\Spell_Holy_MindVision"); 
-INSERT INTO `SpellIcon` VALUES (503,"Interface\Icons\Spell_Holy_Redemption"); 
-INSERT INTO `SpellIcon` VALUES (504,"Interface\Icons\Spell_Holy_SealOfSacrifice"); 
-INSERT INTO `SpellIcon` VALUES (505,"Interface\Icons\Spell_Magic_FeatherFall"); 
-INSERT INTO `SpellIcon` VALUES (513,"Interface\Icons\Ability_Rogue_DualWeild"); 
-INSERT INTO `SpellIcon` VALUES (514,"Interface\Icons\Ability_Rogue_Eviscerate"); 
-INSERT INTO `SpellIcon` VALUES (515,"Interface\Icons\Ability_Rogue_SliceDice"); 
-INSERT INTO `SpellIcon` VALUES (516,"Interface\Icons\Ability_Rogue_Sprint"); 
-INSERT INTO `SpellIcon` VALUES (517,"Interface\Icons\Ability_Rogue_Trip"); 
-INSERT INTO `SpellIcon` VALUES (518,"Interface\Icons\INV_Poison_MindNumbing"); 
-INSERT INTO `SpellIcon` VALUES (533,"Interface\Icons\Ability_DualWield"); 
-INSERT INTO `SpellIcon` VALUES (534,"Interface\Icons\Ability_Hunter_BeastTraining"); 
-INSERT INTO `SpellIcon` VALUES (535,"Interface\Icons\Ability_Hunter_Pathfinding"); 
-INSERT INTO `SpellIcon` VALUES (536,"Interface\Icons\Ability_Hunter_Quickshot"); 
-INSERT INTO `SpellIcon` VALUES (537,"Interface\Icons\Ability_Hunter_RunningShot"); 
-INSERT INTO `SpellIcon` VALUES (538,"Interface\Icons\Ability_Hunter_SniperShot"); 
-INSERT INTO `SpellIcon` VALUES (539,"Interface\Icons\Ability_Rogue_Feint"); 
-INSERT INTO `SpellIcon` VALUES (540,"Interface\Icons\Spell_Holy_PrayerOfHealing02"); 
-INSERT INTO `SpellIcon` VALUES (541,"Interface\Icons\Spell_Shadow_BloodBoil"); 
-INSERT INTO `SpellIcon` VALUES (542,"Interface\Icons\Spell_Shadow_CurseOfAchimonde"); 
-INSERT INTO `SpellIcon` VALUES (543,"Interface\Icons\Spell_Shadow_CurseOfMannoroth"); 
-INSERT INTO `SpellIcon` VALUES (544,"Interface\Icons\Spell_Shadow_CurseOfSargeras"); 
-INSERT INTO `SpellIcon` VALUES (545,"Interface\Icons\Spell_Shadow_DemonBreath"); 
-INSERT INTO `SpellIcon` VALUES (546,"Interface\Icons\Spell_Shadow_LifeDrain02"); 
-INSERT INTO `SpellIcon` VALUES (547,"Interface\Icons\Spell_Shadow_RainOfFire"); 
-INSERT INTO `SpellIcon` VALUES (548,"Interface\Icons\Spell_Shadow_SiphonMana"); 
-INSERT INTO `SpellIcon` VALUES (553,"Interface\Icons\Ability_Racial_Ultravision"); 
-INSERT INTO `SpellIcon` VALUES (554,"Interface\Icons\INV_Misc_Orb_04"); 
-INSERT INTO `SpellIcon` VALUES (555,"Interface\Icons\Spell_Holy_AuraOfLight"); 
-INSERT INTO `SpellIcon` VALUES (556,"Interface\Icons\INV_Food_Egg_02"); 
-INSERT INTO `SpellIcon` VALUES (557,"Interface\Icons\INV_Wine_03"); 
-INSERT INTO `SpellIcon` VALUES (558,"Interface\Icons\Ability_Parry"); 
-INSERT INTO `SpellIcon` VALUES (559,"Interface\Icons\Ability_Warrior_DecisiveStrike"); 
-INSERT INTO `SpellIcon` VALUES (560,"Interface\Icons\Ability_Warrior_Disarm"); 
-INSERT INTO `SpellIcon` VALUES (561,"Interface\Icons\Ability_Warrior_InnerRage"); 
-INSERT INTO `SpellIcon` VALUES (562,"Interface\Icons\Ability_Warrior_Revenge"); 
-INSERT INTO `SpellIcon` VALUES (563,"Interface\Icons\Ability_Warrior_Riposte"); 
-INSERT INTO `SpellIcon` VALUES (564,"Interface\Icons\Ability_Warrior_SavageBlow"); 
-INSERT INTO `SpellIcon` VALUES (565,"Interface\Icons\Ability_Warrior_Sunder"); 
-INSERT INTO `SpellIcon` VALUES (566,"Interface\Icons\Spell_Holy_PowerWordShield"); 
-INSERT INTO `SpellIcon` VALUES (576,"Interface\Icons\INV_Misc_Fish_05"); 
-INSERT INTO `SpellIcon` VALUES (577,"Interface\Icons\INV_Misc_Fish_06"); 
-INSERT INTO `SpellIcon` VALUES (578,"Interface\Icons\Trade_Engraving"); 
-INSERT INTO `SpellIcon` VALUES (579,"Interface\Icons\INV_Staff_Goldfeathered_01"); 
-INSERT INTO `SpellIcon` VALUES (580,"Interface\Icons\Trade_Fishing"); 
-INSERT INTO `SpellIcon` VALUES (596,"Interface\Icons\Spell_Shadow_Curse"); 
-INSERT INTO `SpellIcon` VALUES (597,"Interface\Icons\INV_Misc_MonsterHead_03"); 
-INSERT INTO `SpellIcon` VALUES (598,"Interface\Icons\INV_Staff_01"); 
-INSERT INTO `SpellIcon` VALUES (599,"Interface\Icons\INV_Misc_Bone_09"); 
-INSERT INTO `SpellIcon` VALUES (600,"Interface\Icons\INV_Misc_Bone_06"); 
-INSERT INTO `SpellIcon` VALUES (601,"Interface\Icons\INV_Misc_Foot_Kodo"); 
-INSERT INTO `SpellIcon` VALUES (616,"Interface\Icons\INV_Misc_Fish_03"); 
-INSERT INTO `SpellIcon` VALUES (617,"Interface\Icons\INV_Misc_Monster_MouseTail"); 
-INSERT INTO `SpellIcon` VALUES (636,"Interface\Icons\Spell_Nature_Acid_01"); 
-INSERT INTO `SpellIcon` VALUES (656,"Interface\Icons\INV_Gizmo_02"); 
-INSERT INTO `SpellIcon` VALUES (657,"Interface\Icons\INV_Gizmo_03"); 
-INSERT INTO `SpellIcon` VALUES (658,"Interface\Icons\INV_Gizmo_01"); 
-INSERT INTO `SpellIcon` VALUES (676,"Interface\Icons\INV_Misc_Food_18"); 
-INSERT INTO `SpellIcon` VALUES (677,"Interface\Icons\Ability_ShootWand"); 
-INSERT INTO `SpellIcon` VALUES (678,"Interface\Icons\Spell_Fire_FlameShock"); 
-INSERT INTO `SpellIcon` VALUES (679,"Interface\Icons\Spell_Fire_FlameTounge"); 
-INSERT INTO `SpellIcon` VALUES (680,"Interface\Icons\Spell_Fire_SearingTotem"); 
-INSERT INTO `SpellIcon` VALUES (681,"Interface\Icons\Spell_Frost_FrostBrand"); 
-INSERT INTO `SpellIcon` VALUES (682,"Interface\Icons\Spell_Holy_LesserHeal"); 
-INSERT INTO `SpellIcon` VALUES (683,"Interface\Icons\Spell_Holy_LesserHeal02"); 
-INSERT INTO `SpellIcon` VALUES (684,"Interface\Icons\Spell_Holy_Heal02"); 
-INSERT INTO `SpellIcon` VALUES (685,"Interface\Icons\Spell_Holy_WordFortitude"); 
-INSERT INTO `SpellIcon` VALUES (686,"Interface\Icons\Spell_Nature_StrengthOfEarthTotem02"); 
-INSERT INTO `SpellIcon` VALUES (687,"Interface\Icons\Spell_Nature_EarthShock"); 
-INSERT INTO `SpellIcon` VALUES (688,"Interface\Icons\Spell_Nature_RockBiter"); 
-INSERT INTO `SpellIcon` VALUES (689,"Interface\Icons\Spell_Nature_StoneClawTotem"); 
-INSERT INTO `SpellIcon` VALUES (690,"Interface\Icons\Spell_Nature_StoneSkinTotem"); 
-INSERT INTO `SpellIcon` VALUES (691,"Interface\Icons\Spell_Nature_EarthBindTotem"); 
-INSERT INTO `SpellIcon` VALUES (692,"Interface\Icons\Spell_Shadow_CurseOfTounges"); 
-INSERT INTO `SpellIcon` VALUES (693,"Interface\Icons\Spell_Shadow_SacrificialShield"); 
-INSERT INTO `SpellIcon` VALUES (694,"Interface\Icons\Spell_Shadow_SoothingKiss"); 
-INSERT INTO `SpellIcon` VALUES (695,"Interface\Icons\Ability_FiegnDead"); 
-INSERT INTO `SpellIcon` VALUES (696,"Interface\Icons\INV_Misc_Spyglass_01"); 
-INSERT INTO `SpellIcon` VALUES (716,"Interface\Icons\INV_Boots_02"); 
-INSERT INTO `SpellIcon` VALUES (736,"Interface\Icons\INV_Misc_Pelt_Wolf_01"); 
-INSERT INTO `SpellIcon` VALUES (756,"Interface\Icons\INV_Gauntlets_04"); 
-INSERT INTO `SpellIcon` VALUES (776,"Interface\Icons\INV_Misc_Rune_01"); 
-INSERT INTO `SpellIcon` VALUES (796,"Interface\Icons\INV_Chest_Chain_05"); 
-INSERT INTO `SpellIcon` VALUES (816,"Interface\Icons\Spell_Fire_SoulBurn"); 
-INSERT INTO `SpellIcon` VALUES (836,"Interface\Icons\Ability_Mount_BlackPanther"); 
-INSERT INTO `SpellIcon` VALUES (856,"Interface\Icons\Ability_Rogue_Ambush"); 
-INSERT INTO `SpellIcon` VALUES (857,"Interface\Icons\Ability_Rogue_FeignDeath"); 
-INSERT INTO `SpellIcon` VALUES (858,"Interface\Icons\INV_Misc_Ammo_Bullet_01"); 
-INSERT INTO `SpellIcon` VALUES (876,"Interface\Icons\Spell_Fire_LavaSpawn"); 
-INSERT INTO `SpellIcon` VALUES (896,"Interface\Icons\INV_Chest_Leather_09"); 
-INSERT INTO `SpellIcon` VALUES (897,"Interface\Icons\INV_Chest_Cloth_21"); 
-INSERT INTO `SpellIcon` VALUES (916,"Interface\Icons\Ability_Mount_WhiteTiger"); 
-INSERT INTO `SpellIcon` VALUES (917,"Interface\Icons\INV_Shield_09"); 
-INSERT INTO `SpellIcon` VALUES (936,"Interface\Icons\INV_Misc_Key_03"); 
-INSERT INTO `SpellIcon` VALUES (937,"Interface\Icons\Spell_Fire_Incinerate"); 
-INSERT INTO `SpellIcon` VALUES (956,"Interface\Icons\Ability_Mount_WhiteDireWolf"); 
-INSERT INTO `SpellIcon` VALUES (957,"Interface\Icons\Ability_Druid_ChallangingRoar"); 
-INSERT INTO `SpellIcon` VALUES (958,"Interface\Icons\Ability_Druid_Cower"); 
-INSERT INTO `SpellIcon` VALUES (959,"Interface\Icons\Ability_Druid_Dash"); 
-INSERT INTO `SpellIcon` VALUES (960,"Interface\Icons\Ability_Druid_DemoralizingRoar"); 
-INSERT INTO `SpellIcon` VALUES (961,"Interface\Icons\Ability_Druid_Enrage"); 
-INSERT INTO `SpellIcon` VALUES (962,"Interface\Icons\Spell_Nature_HealingTouch"); 
-INSERT INTO `SpellIcon` VALUES (963,"Interface\Icons\Spell_Nature_HealingWaveGreater"); 
-INSERT INTO `SpellIcon` VALUES (964,"Interface\Icons\Spell_Nature_HealingWaveLesser"); 
-INSERT INTO `SpellIcon` VALUES (965,"Interface\Icons\INV_Ammo_Bullet_02"); 
-INSERT INTO `SpellIcon` VALUES (976,"Interface\Icons\Spell_Frost_FrostShock"); 
-INSERT INTO `SpellIcon` VALUES (996,"Interface\Icons\INV_Weapon_Halberd_08"); 
-INSERT INTO `SpellIcon` VALUES (997,"Interface\Icons\INV_Chest_Plate04"); 
-INSERT INTO `SpellIcon` VALUES (1016,"Interface\Icons\INV_Misc_Food_04"); 
-INSERT INTO `SpellIcon` VALUES (1036,"Interface\Icons\INV_Misc_Gem_Emerald_01"); 
-INSERT INTO `SpellIcon` VALUES (1037,"Interface\Icons\INV_Misc_Gem_Emerald_02"); 
-INSERT INTO `SpellIcon` VALUES (1038,"Interface\Icons\INV_Misc_Gem_Opal_01"); 
-INSERT INTO `SpellIcon` VALUES (1039,"Interface\Icons\INV_Misc_Gem_Ruby_01"); 
-INSERT INTO `SpellIcon` VALUES (1056,"Interface\Icons\INV_Wine_02"); 
-INSERT INTO `SpellIcon` VALUES (1057,"Interface\Icons\INV_Wine_04"); 
-INSERT INTO `SpellIcon` VALUES (1076,"Interface\Icons\INV_Misc_Head_Undead_01"); 
-INSERT INTO `SpellIcon` VALUES (1096,"Interface\Icons\INV_Misc_Milk_02"); 
-INSERT INTO `SpellIcon` VALUES (1097,"Interface\Icons\INV_Misc_Head_Human_02"); 
-INSERT INTO `SpellIcon` VALUES (1098,"Interface\Icons\INV_Misc_Key_05"); 
-INSERT INTO `SpellIcon` VALUES (1099,"Interface\Icons\INV_Misc_Key_06"); 
-INSERT INTO `SpellIcon` VALUES (1100,"Interface\Icons\INV_Misc_Key_12"); 
-INSERT INTO `SpellIcon` VALUES (1101,"Interface\Icons\INV_Misc_Key_14"); 
-INSERT INTO `SpellIcon` VALUES (1116,"Interface\Icons\INV_Misc_MonsterClaw_02"); 
-INSERT INTO `SpellIcon` VALUES (1136,"Interface\Icons\INV_Misc_MonsterScales_03"); 
-INSERT INTO `SpellIcon` VALUES (1137,"Interface\Icons\Spell_Fire_Volcano"); 
-INSERT INTO `SpellIcon` VALUES (1156,"Interface\Icons\INV_Jewelry_Amulet_07"); 
-INSERT INTO `SpellIcon` VALUES (1176,"Interface\Icons\Ability_Mount_RidingHorse"); 
-INSERT INTO `SpellIcon` VALUES (1177,"Interface\Icons\Ability_Mount_MountainRam"); 
-INSERT INTO `SpellIcon` VALUES (1178,"Interface\Icons\Ability_Mount_BlackDireWolf"); 
-INSERT INTO `SpellIcon` VALUES (1179,"Interface\Icons\Ability_Mount_NightmareHorse"); 
-INSERT INTO `SpellIcon` VALUES (1180,"Interface\Icons\Ability_Mount_Raptor"); 
-INSERT INTO `SpellIcon` VALUES (1181,"Interface\Icons\Ability_Mount_JungleTiger"); 
-INSERT INTO `SpellIcon` VALUES (1196,"Interface\Icons\INV_Misc_Ammo_Gunpowder_01"); 
-INSERT INTO `SpellIcon` VALUES (1197,"Interface\Icons\Spell_Fire_WindsofWoe"); 
-INSERT INTO `SpellIcon` VALUES (1216,"Interface\Icons\INV_Misc_Flower_02"); 
-INSERT INTO `SpellIcon` VALUES (1217,"Interface\Icons\INV_Misc_Herb_03"); 
-INSERT INTO `SpellIcon` VALUES (1236,"Interface\Icons\Spell_Frost_IceShard"); 
-INSERT INTO `SpellIcon` VALUES (1237,"Interface\Icons\INV_Misc_Bandage_08"); 
-INSERT INTO `SpellIcon` VALUES (1238,"Interface\Icons\INV_Hammer_18"); 
-INSERT INTO `SpellIcon` VALUES (1239,"Interface\Icons\INV_Wand_08"); 
-INSERT INTO `SpellIcon` VALUES (1240,"Interface\Icons\Ability_Mount_MechaStrider"); 
-INSERT INTO `SpellIcon` VALUES (1241,"Interface\Icons\Ability_Mount_Undeadhorse"); 
-INSERT INTO `SpellIcon` VALUES (1242,"Interface\Icons\INV_Hammer_24"); 
-INSERT INTO `SpellIcon` VALUES (1256,"Interface\Icons\INV_Misc_MonsterSpiderCarapace_01"); 
-INSERT INTO `SpellIcon` VALUES (1276,"Interface\Icons\INV_Ingot_03"); 
-INSERT INTO `SpellIcon` VALUES (1277,"Interface\Icons\INV_Ingot_Steel"); 
-INSERT INTO `SpellIcon` VALUES (1296,"Interface\Icons\INV_Potion_63"); 
-INSERT INTO `SpellIcon` VALUES (1297,"Interface\Icons\INV_Potion_84"); 
-INSERT INTO `SpellIcon` VALUES (1298,"Interface\Icons\INV_Potion_91"); 
-INSERT INTO `SpellIcon` VALUES (1299,"Interface\Icons\INV_Potion_93"); 
-INSERT INTO `SpellIcon` VALUES (1300,"Interface\Icons\INV_Potion_65"); 
-INSERT INTO `SpellIcon` VALUES (1301,"Interface\Icons\INV_Potion_86"); 
-INSERT INTO `SpellIcon` VALUES (1302,"Interface\Icons\INV_Potion_33"); 
-INSERT INTO `SpellIcon` VALUES (1303,"Interface\Icons\INV_Potion_58"); 
-INSERT INTO `SpellIcon` VALUES (1304,"Interface\Icons\INV_Potion_44"); 
-INSERT INTO `SpellIcon` VALUES (1305,"Interface\Icons\INV_Potion_79"); 
-INSERT INTO `SpellIcon` VALUES (1306,"Interface\Icons\INV_Drink_09"); 
-INSERT INTO `SpellIcon` VALUES (1307,"Interface\Icons\INV_Potion_15"); 
-INSERT INTO `SpellIcon` VALUES (1308,"Interface\Icons\INV_Potion_13"); 
-INSERT INTO `SpellIcon` VALUES (1309,"Interface\Icons\INV_Drink_07"); 
-INSERT INTO `SpellIcon` VALUES (1310,"Interface\Icons\INV_Potion_08"); 
-INSERT INTO `SpellIcon` VALUES (1311,"Interface\Icons\INV_Potion_18"); 
-INSERT INTO `SpellIcon` VALUES (1312,"Interface\Icons\INV_Drink_13"); 
-INSERT INTO `SpellIcon` VALUES (1313,"Interface\Icons\INV_Drink_05"); 
-INSERT INTO `SpellIcon` VALUES (1314,"Interface\Icons\INV_Drink_04"); 
-INSERT INTO `SpellIcon` VALUES (1315,"Interface\Icons\INV_Potion_30"); 
-INSERT INTO `SpellIcon` VALUES (1316,"Interface\Icons\INV_Potion_69"); 
-INSERT INTO `SpellIcon` VALUES (1336,"Interface\Icons\INV_Potion_10"); 
-INSERT INTO `SpellIcon` VALUES (1337,"Interface\Icons\INV_Potion_61"); 
-INSERT INTO `SpellIcon` VALUES (1356,"Interface\Icons\INV_Potion_04"); 
-INSERT INTO `SpellIcon` VALUES (1357,"Interface\Icons\INV_Drink_06"); 
-INSERT INTO `SpellIcon` VALUES (1358,"Interface\Icons\INV_Drink_Milk_02"); 
-INSERT INTO `SpellIcon` VALUES (1359,"Interface\Icons\INV_Drink_10"); 
-INSERT INTO `SpellIcon` VALUES (1360,"Interface\Icons\INV_Drink_11"); 
-INSERT INTO `SpellIcon` VALUES (1361,"Interface\Icons\INV_Drink_12"); 
-INSERT INTO `SpellIcon` VALUES (1377,"Interface\Icons\INV_Misc_Net_01"); 
-INSERT INTO `SpellIcon` VALUES (1397,"Interface\Icons\Spell_Nature_Windfury"); 
-INSERT INTO `SpellIcon` VALUES (1417,"Interface\Icons\INV_Misc_Horn_03"); 
-INSERT INTO `SpellIcon` VALUES (1437,"Interface\Icons\INV_Misc_Food_10"); 
-INSERT INTO `SpellIcon` VALUES (1457,"Interface\Icons\INV_Ammo_Arrow_01"); 
-INSERT INTO `SpellIcon` VALUES (1458,"Interface\Icons\INV_Axe_05"); 
-INSERT INTO `SpellIcon` VALUES (1459,"Interface\Icons\INV_Weapon_Halbard_01"); 
-INSERT INTO `SpellIcon` VALUES (1460,"Interface\Icons\INV_Mace_02"); 
-INSERT INTO `SpellIcon` VALUES (1461,"Interface\Icons\INV_Sword_20"); 
-INSERT INTO `SpellIcon` VALUES (1462,"Interface\Icons\INV_Sword_27"); 
-INSERT INTO `SpellIcon` VALUES (1463,"Interface\Icons\INV_Shield_06"); 
-INSERT INTO `SpellIcon` VALUES (1464,"Interface\Icons\INV_Sword_05"); 
-INSERT INTO `SpellIcon` VALUES (1465,"Interface\Icons\Spell_Nature_AncestralGuardian"); 
-INSERT INTO `SpellIcon` VALUES (1466,"Interface\Icons\INV_Gizmo_Pipe_04"); 
-INSERT INTO `SpellIcon` VALUES (1467,"Interface\Icons\INV_Misc_Food_15"); 
-INSERT INTO `SpellIcon` VALUES (1468,"Interface\Icons\Spell_Shadow_CreepingPlague"); 
-INSERT INTO `SpellIcon` VALUES (1469,"Interface\Icons\INV_Misc_Gem_Opal_03"); 
-INSERT INTO `SpellIcon` VALUES (1470,"Interface\Icons\INV_Misc_Gem_Topaz_01"); 
-INSERT INTO `SpellIcon` VALUES (1471,"Interface\Icons\INV_Misc_Gem_Crystal_01"); 
-INSERT INTO `SpellIcon` VALUES (1472,"Interface\Icons\INV_Misc_Gem_Variety_02"); 
-INSERT INTO `SpellIcon` VALUES (1473,"Interface\Icons\INV_Axe_03"); 
-INSERT INTO `SpellIcon` VALUES (1474,"Interface\Icons\INV_Axe_06"); 
-INSERT INTO `SpellIcon` VALUES (1475,"Interface\Icons\Ability_Druid_AquaticForm"); 
-INSERT INTO `SpellIcon` VALUES (1476,"Interface\Icons\Ability_Druid_TravelForm"); 
-INSERT INTO `SpellIcon` VALUES (1477,"Interface\Icons\Ability_Warrior_PunishingBlow"); 
-INSERT INTO `SpellIcon` VALUES (1478,"Interface\Icons\Ability_Rogue_Distract"); 
-INSERT INTO `SpellIcon` VALUES (1479,"Interface\Icons\Spell_Arcane_PortalDarnassus"); 
-INSERT INTO `SpellIcon` VALUES (1480,"Interface\Icons\Spell_Arcane_PortalIronForge"); 
-INSERT INTO `SpellIcon` VALUES (1481,"Interface\Icons\Spell_Arcane_PortalOrgrimmar"); 
-INSERT INTO `SpellIcon` VALUES (1482,"Interface\Icons\Spell_Arcane_PortalStormWind"); 
-INSERT INTO `SpellIcon` VALUES (1483,"Interface\Icons\Spell_Arcane_PortalThunderBluff"); 
-INSERT INTO `SpellIcon` VALUES (1484,"Interface\Icons\Spell_Arcane_PortalUnderCity"); 
-INSERT INTO `SpellIcon` VALUES (1485,"Interface\Icons\Spell_Arcane_StarFire"); 
-INSERT INTO `SpellIcon` VALUES (1486,"Interface\Icons\Spell_Arcane_TeleportDarnassus"); 
-INSERT INTO `SpellIcon` VALUES (1487,"Interface\Icons\Spell_Holy_MindSooth"); 
-INSERT INTO `SpellIcon` VALUES (1488,"Interface\Icons\Spell_Shadow_PsychicScream"); 
-INSERT INTO `SpellIcon` VALUES (1489,"Interface\Icons\Spell_Arcane_TeleportIronForge"); 
-INSERT INTO `SpellIcon` VALUES (1490,"Interface\Icons\Spell_Arcane_TeleportOrgrimmar"); 
-INSERT INTO `SpellIcon` VALUES (1491,"Interface\Icons\Spell_Arcane_TeleportStormWind"); 
-INSERT INTO `SpellIcon` VALUES (1492,"Interface\Icons\Spell_Arcane_TeleportThunderBluff"); 
-INSERT INTO `SpellIcon` VALUES (1493,"Interface\Icons\Spell_Arcane_TeleportUnderCity"); 
-INSERT INTO `SpellIcon` VALUES (1494,"Interface\Icons\Spell_Shadow_Contagion"); 
-INSERT INTO `SpellIcon` VALUES (1495,"Interface\Icons\INV_Drink_15"); 
-INSERT INTO `SpellIcon` VALUES (1496,"Interface\Icons\INV_Misc_Herb_16"); 
-INSERT INTO `SpellIcon` VALUES (1497,"Interface\Icons\INV_Misc_Wrench_01"); 
-INSERT INTO `SpellIcon` VALUES (1498,"Interface\Icons\INV_Shield_01"); 
-INSERT INTO `SpellIcon` VALUES (1499,"Interface\Icons\Spell_Arcane_Blink"); 
-INSERT INTO `SpellIcon` VALUES (1500,"Interface\Icons\Spell_Shadow_EnslaveDemon"); 
-INSERT INTO `SpellIcon` VALUES (1501,"Interface\Icons\INV_Weapon_ShortBlade_14"); 
-INSERT INTO `SpellIcon` VALUES (1502,"Interface\Icons\INV_Staff_10"); 
-INSERT INTO `SpellIcon` VALUES (1503,"Interface\Icons\INV_Staff_11"); 
-INSERT INTO `SpellIcon` VALUES (1504,"Interface\Icons\INV_Weapon_ShortBlade_05"); 
-INSERT INTO `SpellIcon` VALUES (1505,"Interface\Icons\INV_ThrowingKnife_01"); 
-INSERT INTO `SpellIcon` VALUES (1506,"Interface\Icons\INV_Ammo_FireTar"); 
-INSERT INTO `SpellIcon` VALUES (1507,"Interface\Icons\INV_Misc_MonsterScales_12"); 
-INSERT INTO `SpellIcon` VALUES (1508,"Interface\Icons\INV_Sword_11"); 
-INSERT INTO `SpellIcon` VALUES (1509,"Interface\Icons\INV_Misc_Food_50"); 
-INSERT INTO `SpellIcon` VALUES (1510,"Interface\Icons\Ability_Mount_PinkTiger"); 
-INSERT INTO `SpellIcon` VALUES (1511,"Interface\Icons\Ability_Hunter_BeastCall02"); 
-INSERT INTO `SpellIcon` VALUES (1512,"Interface\Icons\INV_Misc_Food_33"); 
-INSERT INTO `SpellIcon` VALUES (1513,"Interface\Icons\INV_Drink_03"); 
-INSERT INTO `SpellIcon` VALUES (1514,"Interface\Icons\INV_Egg_02"); 
-INSERT INTO `SpellIcon` VALUES (1515,"Interface\Icons\INV_Misc_Gem_Crystal_02"); 
-INSERT INTO `SpellIcon` VALUES (1516,"Interface\Icons\INV_Misc_Gem_Diamond_02"); 
-INSERT INTO `SpellIcon` VALUES (1517,"Interface\Icons\INV_Misc_Gem_Ruby_02"); 
-INSERT INTO `SpellIcon` VALUES (1518,"Interface\Icons\INV_Misc_Gem_Amethyst_01"); 
-INSERT INTO `SpellIcon` VALUES (1519,"Interface\Icons\INV_Misc_Food_31"); 
-INSERT INTO `SpellIcon` VALUES (1520,"Interface\Icons\INV_Cask_03"); 
-INSERT INTO `SpellIcon` VALUES (1521,"Interface\Icons\INV_Misc_ShadowEgg"); 
-INSERT INTO `SpellIcon` VALUES (1522,"Interface\Icons\INV_Box_PetCarrier_01"); 
-INSERT INTO `SpellIcon` VALUES (1523,"Interface\Icons\INV_Staff_30"); 
-INSERT INTO `SpellIcon` VALUES (1524,"Interface\Icons\INV_Weapon_ShortBlade_10"); 
-INSERT INTO `SpellIcon` VALUES (1525,"Interface\Icons\INV_Misc_MonsterScales_05"); 
-INSERT INTO `SpellIcon` VALUES (1526,"Interface\Icons\INV_Axe_01"); 
-INSERT INTO `SpellIcon` VALUES (1527,"Interface\Icons\INV_Spear_06"); 
-INSERT INTO `SpellIcon` VALUES (1528,"Interface\Icons\INV_ThrowingKnife_02"); 
-INSERT INTO `SpellIcon` VALUES (1529,"Interface\Icons\INV_Axe_08"); 
-INSERT INTO `SpellIcon` VALUES (1530,"Interface\Icons\Ability_Hunter_EagleEye"); 
-INSERT INTO `SpellIcon` VALUES (1531,"Interface\Icons\Ability_Druid_Ravage"); 
-INSERT INTO `SpellIcon` VALUES (1532,"Interface\Icons\INV_Misc_MonsterScales_17"); 
-INSERT INTO `SpellIcon` VALUES (1533,"Interface\Icons\INV_Misc_MonsterScales_11"); 
-INSERT INTO `SpellIcon` VALUES (1534,"Interface\Icons\Ability_Druid_CatFormAttack"); 
-INSERT INTO `SpellIcon` VALUES (1535,"Interface\Icons\INV_Misc_MonsterScales_09"); 
-INSERT INTO `SpellIcon` VALUES (1536,"Interface\Icons\INV_Misc_MonsterScales_15"); 
-INSERT INTO `SpellIcon` VALUES (1537,"Interface\Icons\INV_Misc_MonsterScales_13"); 
-INSERT INTO `SpellIcon` VALUES (1538,"Interface\Icons\INV_Misc_MonsterScales_07"); 
-INSERT INTO `SpellIcon` VALUES (1539,"Interface\Icons\INV_Ore_Arcanite_01"); 
-INSERT INTO `SpellIcon` VALUES (1540,"Interface\Icons\INV_Belt_18"); 
-INSERT INTO `SpellIcon` VALUES (1541,"Interface\Icons\INV_Misc_Slime_01"); 
-INSERT INTO `SpellIcon` VALUES (1542,"Interface\Icons\INV_Egg_04"); 
-INSERT INTO `SpellIcon` VALUES (1543,"Interface\Icons\INV_Egg_05"); 
-INSERT INTO `SpellIcon` VALUES (1544,"Interface\Icons\INV_Hammer_09"); 
-INSERT INTO `SpellIcon` VALUES (1545,"Interface\Icons\INV_Axe_18"); 
-INSERT INTO `SpellIcon` VALUES (1546,"Interface\Icons\INV_Axe_10"); 
-INSERT INTO `SpellIcon` VALUES (1547,"Interface\Icons\INV_Shoulder_11"); 
-INSERT INTO `SpellIcon` VALUES (1548,"Interface\Icons\INV_Misc_Head_Dragon_01"); 
-INSERT INTO `SpellIcon` VALUES (1549,"Interface\Icons\Ability_Hunter_AspectOfTheMonkey"); 
-INSERT INTO `SpellIcon` VALUES (1550,"Interface\Icons\INV_Misc_Horn_01"); 
-INSERT INTO `SpellIcon` VALUES (1551,"Interface\Icons\INV_Shield_20"); 
-INSERT INTO `SpellIcon` VALUES (1552,"Interface\Icons\Spell_Shadow_Shadowform"); 
-INSERT INTO `SpellIcon` VALUES (1553,"Interface\Icons\INV_Misc_Rune_04"); 
-INSERT INTO `SpellIcon` VALUES (1554,"Interface\Icons\INV_Sword_32"); 
-INSERT INTO `SpellIcon` VALUES (1555,"Interface\Icons\INV_Jewelry_Talisman_06"); 
-INSERT INTO `SpellIcon` VALUES (1556,"Interface\Icons\INV_Jewelry_Amulet_01"); 
-INSERT INTO `SpellIcon` VALUES (1557,"Interface\Icons\INV_Axe_12"); 
-INSERT INTO `SpellIcon` VALUES (1558,"Interface\Icons\INV_Misc_Pelt_Bear_03"); 
-INSERT INTO `SpellIcon` VALUES (1559,"Interface\Icons\Ability_Hunter_Pet_Bear"); 
-INSERT INTO `SpellIcon` VALUES (1560,"Interface\Icons\INV_Spear_08"); 
-INSERT INTO `SpellIcon` VALUES (1561,"Interface\Icons\INV_Misc_MonsterClaw_04"); 
-INSERT INTO `SpellIcon` VALUES (1562,"Interface\Icons\INV_Misc_MonsterClaw_03"); 
-INSERT INTO `SpellIcon` VALUES (1563,"Interface\Icons\Ability_Hunter_Pet_Cat"); 
-INSERT INTO `SpellIcon` VALUES (1564,"Interface\Icons\INV_Misc_Urn_01"); 
-INSERT INTO `SpellIcon` VALUES (1565,"Interface\Icons\Ability_Hunter_Pet_Hyena"); 
-INSERT INTO `SpellIcon` VALUES (1566,"Interface\Icons\INV_Sword_22"); 
-INSERT INTO `SpellIcon` VALUES (1567,"Interface\Icons\INV_Hammer_23"); 
-INSERT INTO `SpellIcon` VALUES (1568,"Interface\Icons\INV_Misc_Gem_Bloodstone_01"); 
-INSERT INTO `SpellIcon` VALUES (1569,"Interface\Icons\INV_Potion_11"); 
-INSERT INTO `SpellIcon` VALUES (1570,"Interface\Icons\INV_Potion_92"); 
-INSERT INTO `SpellIcon` VALUES (1571,"Interface\Icons\INV_Sword_25"); 
-INSERT INTO `SpellIcon` VALUES (1572,"Interface\Icons\INV_Sword_41"); 
-INSERT INTO `SpellIcon` VALUES (1573,"Interface\Icons\Ability_Hunter_Pet_Wolf"); 
-INSERT INTO `SpellIcon` VALUES (1574,"Interface\Icons\INV_Ingot_Eternium"); 
-INSERT INTO `SpellIcon` VALUES (1575,"Interface\Icons\INV_Misc_Rune_05"); 
-INSERT INTO `SpellIcon` VALUES (1576,"Interface\Icons\INV_Misc_StoneTablet_05"); 
-INSERT INTO `SpellIcon` VALUES (1577,"Interface\Icons\Ability_Hunter_Pet_Bat"); 
-INSERT INTO `SpellIcon` VALUES (1578,"Interface\Icons\Ability_Hunter_Pet_Boar"); 
-INSERT INTO `SpellIcon` VALUES (1579,"Interface\Icons\Ability_Hunter_Pet_Vulture"); 
-INSERT INTO `SpellIcon` VALUES (1580,"Interface\Icons\Ability_Hunter_Pet_Crab"); 
-INSERT INTO `SpellIcon` VALUES (1581,"Interface\Icons\Ability_Hunter_Pet_Crocolisk"); 
-INSERT INTO `SpellIcon` VALUES (1582,"Interface\Icons\Ability_Hunter_Pet_Gorilla"); 
-INSERT INTO `SpellIcon` VALUES (1583,"Interface\Icons\Ability_Hunter_Pet_Owl"); 
-INSERT INTO `SpellIcon` VALUES (1584,"Interface\Icons\Ability_Hunter_Pet_Raptor"); 
-INSERT INTO `SpellIcon` VALUES (1585,"Interface\Icons\Ability_Hunter_Pet_Scorpid"); 
-INSERT INTO `SpellIcon` VALUES (1586,"Interface\Icons\Ability_Hunter_Pet_Spider"); 
-INSERT INTO `SpellIcon` VALUES (1587,"Interface\Icons\Ability_Hunter_Pet_TallStrider"); 
-INSERT INTO `SpellIcon` VALUES (1588,"Interface\Icons\Ability_Hunter_Pet_Turtle"); 
-INSERT INTO `SpellIcon` VALUES (1589,"Interface\Icons\Ability_Hunter_Pet_WindSerpent"); 
-INSERT INTO `SpellIcon` VALUES (1590,"Interface\Icons\Spell_Shadow_ScourgeBuild"); 
-INSERT INTO `SpellIcon` VALUES (1591,"Interface\Icons\Spell_Shadow_DeadofNight"); 
-INSERT INTO `SpellIcon` VALUES (1592,"Interface\Icons\INV_Misc_Fish_08"); 
-INSERT INTO `SpellIcon` VALUES (1593,"Interface\Icons\INV_Stone_14"); 
-INSERT INTO `SpellIcon` VALUES (1594,"Interface\Icons\INV_Shield_19"); 
-INSERT INTO `SpellIcon` VALUES (1595,"Interface\Icons\INV_Misc_Orb_02"); 
-INSERT INTO `SpellIcon` VALUES (1596,"Interface\Icons\INV_Weapon_Halberd_11"); 
-INSERT INTO `SpellIcon` VALUES (1597,"Interface\Icons\INV_Potion_31"); 
-INSERT INTO `SpellIcon` VALUES (1598,"Interface\Icons\INV_Helmet_45"); 
-INSERT INTO `SpellIcon` VALUES (1599,"Interface\Icons\INV_Helmet_08"); 
-INSERT INTO `SpellIcon` VALUES (1600,"Interface\Icons\INV_Stone_13"); 
-INSERT INTO `SpellIcon` VALUES (1601,"Interface\Icons\INV_Sword_02"); 
-INSERT INTO `SpellIcon` VALUES (1602,"Interface\Icons\INV_Potion_29"); 
-INSERT INTO `SpellIcon` VALUES (1603,"Interface\Icons\INV_Potion_16"); 
-INSERT INTO `SpellIcon` VALUES (1604,"Interface\Icons\INV_Potion_40"); 
-INSERT INTO `SpellIcon` VALUES (1605,"Interface\Icons\INV_Potion_46"); 
-INSERT INTO `SpellIcon` VALUES (1606,"Interface\Icons\INV_Potion_67"); 
-INSERT INTO `SpellIcon` VALUES (1607,"Interface\Icons\INV_Potion_47"); 
-INSERT INTO `SpellIcon` VALUES (1608,"Interface\Icons\INV_Jewelry_Talisman_07"); 
-INSERT INTO `SpellIcon` VALUES (1609,"Interface\Icons\INV_Potion_32"); 
-INSERT INTO `SpellIcon` VALUES (1610,"Interface\Icons\INV_Misc_Flute_01"); 
-INSERT INTO `SpellIcon` VALUES (1611,"Interface\Icons\INV_Misc_Bone_HumanSkull_01"); 
-INSERT INTO `SpellIcon` VALUES (1612,"Interface\Icons\INV_Boots_Plate_03"); 
-INSERT INTO `SpellIcon` VALUES (1613,"Interface\Icons\INV_Gauntlets_19"); 
-INSERT INTO `SpellIcon` VALUES (1614,"Interface\Icons\Spell_Shadow_CallofBone"); 
-INSERT INTO `SpellIcon` VALUES (1615,"Interface\Icons\INV_Misc_Head_Tauren_02"); 
-INSERT INTO `SpellIcon` VALUES (1616,"Interface\Icons\INV_Ammo_Bullet_01"); 
-INSERT INTO `SpellIcon` VALUES (1617,"Interface\Icons\INV_Ammo_Bullet_03"); 
-INSERT INTO `SpellIcon` VALUES (1618,"Interface\Icons\INV_Misc_MonsterScales_14"); 
-INSERT INTO `SpellIcon` VALUES (1619,"Interface\Icons\INV_Gizmo_08"); 
-INSERT INTO `SpellIcon` VALUES (1620,"Interface\Icons\INV_Misc_Bandage_11"); 
-INSERT INTO `SpellIcon` VALUES (1621,"Interface\Icons\INV_Misc_Bandage_12"); 
-INSERT INTO `SpellIcon` VALUES (1622,"Interface\Icons\INV_Staff_02"); 
-INSERT INTO `SpellIcon` VALUES (1623,"Interface\Icons\INV_Staff_07"); 
-INSERT INTO `SpellIcon` VALUES (1624,"Interface\Icons\INV_Wand_07"); 
-INSERT INTO `SpellIcon` VALUES (1625,"Interface\Icons\INV_Battery_01"); 
-INSERT INTO `SpellIcon` VALUES (1626,"Interface\Icons\INV_Misc_Flower_01"); 
-INSERT INTO `SpellIcon` VALUES (1627,"Interface\Icons\INV_Misc_Food_Wheat_02"); 
-INSERT INTO `SpellIcon` VALUES (1628,"Interface\Icons\INV_Axe_02"); 
-INSERT INTO `SpellIcon` VALUES (1629,"Interface\Icons\INV_Spear_07"); 
-INSERT INTO `SpellIcon` VALUES (1630,"Interface\Icons\Ability_PoisonArrow"); 
-INSERT INTO `SpellIcon` VALUES (1631,"Interface\Icons\INV_Weapon_Rifle_02"); 
-INSERT INTO `SpellIcon` VALUES (1632,"Interface\Icons\INV_Weapon_Rifle_06"); 
-INSERT INTO `SpellIcon` VALUES (1633,"Interface\Icons\INV_Gauntlets_10"); 
-INSERT INTO `SpellIcon` VALUES (1634,"Interface\Icons\INV_Misc_Food_02"); 
-INSERT INTO `SpellIcon` VALUES (1635,"Interface\Icons\INV_Hammer_04"); 
-INSERT INTO `SpellIcon` VALUES (1636,"Interface\Icons\INV_Wand_09"); 
-INSERT INTO `SpellIcon` VALUES (1637,"Interface\Icons\INV_Crown_01"); 
-INSERT INTO `SpellIcon` VALUES (1638,"Interface\Icons\INV_Potion_55"); 
-INSERT INTO `SpellIcon` VALUES (1639,"Interface\Icons\INV_Potion_62"); 
-INSERT INTO `SpellIcon` VALUES (1640,"Interface\Icons\INV_Potion_97"); 
-INSERT INTO `SpellIcon` VALUES (1641,"Interface\Icons\INV_Potion_48"); 
-INSERT INTO `SpellIcon` VALUES (1642,"Interface\Icons\INV_Potion_26"); 
-INSERT INTO `SpellIcon` VALUES (1643,"Interface\Icons\INV_Potion_41"); 
-INSERT INTO `SpellIcon` VALUES (1644,"Interface\Icons\INV_Misc_Book_07"); 
-INSERT INTO `SpellIcon` VALUES (1645,"Interface\Icons\INV_Enchant_EssenceAstralLarge"); 
-INSERT INTO `SpellIcon` VALUES (1646,"Interface\Icons\INV_Enchant_EssenceAstralSmall"); 
-INSERT INTO `SpellIcon` VALUES (1647,"Interface\Icons\INV_Spear_04"); 
-INSERT INTO `SpellIcon` VALUES (1648,"Interface\Icons\INV_Sword_48"); 
-INSERT INTO `SpellIcon` VALUES (1649,"Interface\Icons\Spell_Nature_Preservation"); 
-INSERT INTO `SpellIcon` VALUES (1650,"Interface\Icons\INV_ThrowingAxe_03"); 
-INSERT INTO `SpellIcon` VALUES (1651,"Interface\Icons\INV_Misc_Bone_OrcSkull_01"); 
-INSERT INTO `SpellIcon` VALUES (1652,"Interface\Icons\INV_Helmet_23"); 
-INSERT INTO `SpellIcon` VALUES (1653,"Interface\Icons\INV_Misc_Pelt_Bear_Ruin_02"); 
-INSERT INTO `SpellIcon` VALUES (1654,"Interface\Icons\INV_Enchant_EssenceEternalLarge"); 
-INSERT INTO `SpellIcon` VALUES (1655,"Interface\Icons\INV_Musket_02"); 
-INSERT INTO `SpellIcon` VALUES (1656,"Interface\Icons\INV_Enchant_ShardBrilliantSmall"); 
-INSERT INTO `SpellIcon` VALUES (1657,"Interface\Icons\INV_Misc_Note_02"); 
-INSERT INTO `SpellIcon` VALUES (1658,"Interface\Icons\INV_Feather_01"); 
-INSERT INTO `SpellIcon` VALUES (1659,"Interface\Icons\INV_Misc_MonsterScales_08"); 
-INSERT INTO `SpellIcon` VALUES (1660,"Interface\Icons\Spell_Arcane_TeleportMoonglade"); 
-INSERT INTO `SpellIcon` VALUES (1661,"Interface\Icons\Racial_Troll_Berserk"); 
-INSERT INTO `SpellIcon` VALUES (1662,"Interface\Icons\Racial_Orc_BerserkerStrength"); 
-INSERT INTO `SpellIcon` VALUES (1663,"Interface\Icons\INV_Hammer_05"); 
-INSERT INTO `SpellIcon` VALUES (1664,"Interface\Icons\INV_Hammer_01"); 
-INSERT INTO `SpellIcon` VALUES (1665,"Interface\Icons\INV_Ammo_Snowball"); 
-INSERT INTO `SpellIcon` VALUES (1666,"Interface\Icons\INV_Boots_05"); 
-INSERT INTO `SpellIcon` VALUES (1667,"Interface\Icons\INV_Gizmo_07"); 
-INSERT INTO `SpellIcon` VALUES (1668,"Interface\Icons\INV_Shield_10"); 
-INSERT INTO `SpellIcon` VALUES (1669,"Interface\Icons\Spell_Holy_PrayerOfFortitude"); 
-INSERT INTO `SpellIcon` VALUES (1670,"Interface\Icons\INV_Potion_03"); 
-INSERT INTO `SpellIcon` VALUES (1671,"Interface\Icons\INV_Misc_Herb_07"); 
-INSERT INTO `SpellIcon` VALUES (1672,"Interface\Icons\INV_Jewelry_Talisman_08"); 
-INSERT INTO `SpellIcon` VALUES (1673,"Interface\Icons\Spell_Nature_DiseaseCleansingTotem"); 
-INSERT INTO `SpellIcon` VALUES (1674,"Interface\Icons\Spell_Frost_FireResistanceTotem"); 
-INSERT INTO `SpellIcon` VALUES (1675,"Interface\Icons\Spell_Nature_NatureResistanceTotem"); 
-INSERT INTO `SpellIcon` VALUES (1676,"Interface\Icons\Spell_Nature_TremorTotem"); 
-INSERT INTO `SpellIcon` VALUES (1677,"Interface\Icons\Spell_Nature_GroundingTotem"); 
-INSERT INTO `SpellIcon` VALUES (1678,"Interface\Icons\Spell_Fire_FrostResistanceTotem"); 
-INSERT INTO `SpellIcon` VALUES (1679,"Interface\Icons\Spell_Nature_PoisonCleansingTotem"); 
-INSERT INTO `SpellIcon` VALUES (1680,"Interface\Icons\Ability_Druid_FerociousBite"); 
-INSERT INTO `SpellIcon` VALUES (1681,"Interface\Icons\Ability_Druid_Mangle.tga"); 
-INSERT INTO `SpellIcon` VALUES (1682,"Interface\Icons\Ability_Mount_Kodo_01"); 
-INSERT INTO `SpellIcon` VALUES (1683,"Interface\Icons\Ability_Mount_Kodo_02"); 
-INSERT INTO `SpellIcon` VALUES (1684,"Interface\Icons\Ability_Mount_Kodo_03"); 
-INSERT INTO `SpellIcon` VALUES (1685,"Interface\Icons\INV_Misc_Organ_03"); 
-INSERT INTO `SpellIcon` VALUES (1686,"Interface\Icons\INV_Potion_25"); 
-INSERT INTO `SpellIcon` VALUES (1687,"Interface\Icons\INV_Drink_18"); 
-INSERT INTO `SpellIcon` VALUES (1688,"Interface\Icons\INV_Misc_Food_55"); 
-INSERT INTO `SpellIcon` VALUES (1689,"Interface\Icons\INV_Crown_02"); 
-INSERT INTO `SpellIcon` VALUES (1690,"Interface\Icons\Spell_Nature_MassTeleport"); 
-INSERT INTO `SpellIcon` VALUES (1691,"Interface\Icons\INV_Banner_02"); 
-INSERT INTO `SpellIcon` VALUES (1692,"Interface\Icons\INV_Gizmo_09"); 
-INSERT INTO `SpellIcon` VALUES (1693,"Interface\Icons\INV_Misc_Gem_Amethyst_02"); 
-INSERT INTO `SpellIcon` VALUES (1694,"Interface\Icons\Spell_Holy_ArcaneIntellect"); 
-INSERT INTO `SpellIcon` VALUES (1695,"Interface\Icons\INV_Misc_Birdbeck_01"); 
-INSERT INTO `SpellIcon` VALUES (1696,"Interface\Icons\INV_Misc_Bomb_04"); 
-INSERT INTO `SpellIcon` VALUES (1697,"Interface\Icons\Ability_Hunter_Harass"); 
-INSERT INTO `SpellIcon` VALUES (1698,"Interface\Icons\INV_Banner_01"); 
-INSERT INTO `SpellIcon` VALUES (1699,"Interface\Icons\INV_Misc_Head_Dragon_Black"); 
-INSERT INTO `SpellIcon` VALUES (1700,"Interface\Icons\INV_Misc_Head_Dragon_Blue"); 
-INSERT INTO `SpellIcon` VALUES (1701,"Interface\Icons\INV_Misc_Head_Dragon_Bronze"); 
-INSERT INTO `SpellIcon` VALUES (1702,"Interface\Icons\INV_Misc_Head_Dragon_Green"); 
-INSERT INTO `SpellIcon` VALUES (1703,"Interface\Icons\INV_BannerPVP_01"); 
-INSERT INTO `SpellIcon` VALUES (1704,"Interface\Icons\INV_BannerPVP_02"); 
-INSERT INTO `SpellIcon` VALUES (1705,"Interface\Icons\INV_Misc_ArmorKit_18"); 
-INSERT INTO `SpellIcon` VALUES (1706,"Interface\Icons\INV_Misc_Organ_06"); 
-INSERT INTO `SpellIcon` VALUES (1707,"Interface\Icons\INV_Enchant_ShardBrilliantLarge"); 
-INSERT INTO `SpellIcon` VALUES (1708,"Interface\Icons\INV_Enchant_EssenceMagicLarge"); 
-INSERT INTO `SpellIcon` VALUES (1709,"Interface\Icons\INV_Enchant_EssenceNetherLarge"); 
-INSERT INTO `SpellIcon` VALUES (1710,"Interface\Icons\INV_Gauntlets_03"); 
-INSERT INTO `SpellIcon` VALUES (1711,"Interface\Icons\Spell_MageArmor"); 
-INSERT INTO `SpellIcon` VALUES (1712,"Interface\Icons\Spell_FireResistanceTotem_01"); 
-INSERT INTO `SpellIcon` VALUES (1713,"Interface\Icons\Spell_FrostResistanceTotem_01"); 
-INSERT INTO `SpellIcon` VALUES (1714,"Interface\Icons\Spell_Holy_ElunesGrace"); 
-INSERT INTO `SpellIcon` VALUES (1715,"Interface\Icons\Ability_Mount_Dreadsteed"); 
-INSERT INTO `SpellIcon` VALUES (1716,"Interface\Icons\Ability_Mount_Charger"); 
-INSERT INTO `SpellIcon` VALUES (1717,"Interface\Icons\INV_Misc_Rune_06"); 
-INSERT INTO `SpellIcon` VALUES (1718,"Interface\Icons\INV_Misc_Gem_Pearl_05"); 
-INSERT INTO `SpellIcon` VALUES (1719,"Interface\Icons\Ability_Creature_Poison_03"); 
-INSERT INTO `SpellIcon` VALUES (1720,"Interface\Icons\INV_Misc_Eye_01"); 
-INSERT INTO `SpellIcon` VALUES (1721,"Interface\Icons\INV_Spear_02"); 
-INSERT INTO `SpellIcon` VALUES (1722,"Interface\Icons\Ability_Suffocate"); 
-INSERT INTO `SpellIcon` VALUES (1723,"Interface\Icons\INV_Gauntlets_31"); 
-INSERT INTO `SpellIcon` VALUES (1724,"Interface\Icons\INV_Fishingpole_02"); 
-INSERT INTO `SpellIcon` VALUES (1725,"Interface\Icons\INV_Misc_Fish_04"); 
-INSERT INTO `SpellIcon` VALUES (1726,"Interface\Icons\INV_Feather_03"); 
-INSERT INTO `SpellIcon` VALUES (1727,"Interface\Icons\INV_Jewelry_Necklace_11"); 
-INSERT INTO `SpellIcon` VALUES (1728,"Interface\Icons\INV_Potion_45"); 
-INSERT INTO `SpellIcon` VALUES (1729,"Interface\Icons\INV_Potion_17"); 
-INSERT INTO `SpellIcon` VALUES (1730,"Interface\Icons\INV_Misc_Key_08"); 
-INSERT INTO `SpellIcon` VALUES (1731,"Interface\Icons\INV_Chest_Plate16"); 
-INSERT INTO `SpellIcon` VALUES (1732,"Interface\Icons\INV_Potion_07"); 
-INSERT INTO `SpellIcon` VALUES (1733,"Interface\Icons\INV_Gizmo_GoblinBoomBox_01"); 
-INSERT INTO `SpellIcon` VALUES (1734,"Interface\Icons\Ability_Creature_Poison_05"); 
-INSERT INTO `SpellIcon` VALUES (1735,"Interface\Icons\INV_Misc_Gem_Bloodstone_02"); 
-INSERT INTO `SpellIcon` VALUES (1736,"Interface\Icons\Ability_Creature_Poison_01"); 
-INSERT INTO `SpellIcon` VALUES (1737,"Interface\Icons\Ability_Creature_Disease_02"); 
-INSERT INTO `SpellIcon` VALUES (1738,"Interface\Icons\INV_ZulGurubTrinket"); 
-INSERT INTO `SpellIcon` VALUES (1739,"Interface\Icons\Ability_Creature_Cursed_05"); 
-INSERT INTO `SpellIcon` VALUES (1740,"Interface\Icons\INV-Sword_53"); 
-INSERT INTO `SpellIcon` VALUES (1741,"Interface\Icons\Ability_Creature_Cursed_04"); 
-INSERT INTO `SpellIcon` VALUES (1742,"Interface\Icons\INV_Waepon_Bow_ZulGrub_D_02"); 
-INSERT INTO `SpellIcon` VALUES (1743,"Interface\Icons\INV_Misc_Food_28"); 
-INSERT INTO `SpellIcon` VALUES (1744,"Interface\Icons\INV_Misc_Head_Gnome_01"); 
-INSERT INTO `SpellIcon` VALUES (1745,"Interface\Icons\INV_Misc_Head_Gnome_02"); 
-INSERT INTO `SpellIcon` VALUES (1746,"Interface\Icons\Spell_Nature_CrystalBall"); 
-INSERT INTO `SpellIcon` VALUES (1747,"Interface\Icons\INV_Misc_Food_59"); 
-INSERT INTO `SpellIcon` VALUES (1748,"Interface\Icons\INV_Misc_Gem_Amethyst_03"); 
-INSERT INTO `SpellIcon` VALUES (1749,"Interface\Icons\Spell_Nature_LightningBolt"); 
-INSERT INTO `SpellIcon` VALUES (1750,"Interface\Icons\Ability_Creature_Cursed_03"); 
-INSERT INTO `SpellIcon` VALUES (1751,"Interface\Icons\INV_Misc_Head_Murloc_01"); 
-INSERT INTO `SpellIcon` VALUES (1752,"Interface\Icons\INV_Misc_MonsterHead_02"); 
-INSERT INTO `SpellIcon` VALUES (1753,"Interface\Icons\INV_Shield_08"); 
-INSERT INTO `SpellIcon` VALUES (1754,"Interface\Icons\Spell_Nature_CrystalBall"); 
-INSERT INTO `SpellIcon` VALUES (1755,"Interface\Icons\INV_Misc_Bomb_02"); 
-INSERT INTO `SpellIcon` VALUES (1756,"Interface\Icons\INV_Misc_Gem_02"); 
-INSERT INTO `SpellIcon` VALUES (1757,"Interface\Icons\INV_Misc_Gem_Pearl_04"); 
-INSERT INTO `SpellIcon` VALUES (1758,"Interface\Icons\INV_Stone_15"); 
-INSERT INTO `SpellIcon` VALUES (1759,"Interface\Icons\Ability_Creature_Poison_02"); 
-INSERT INTO `SpellIcon` VALUES (1760,"Interface\Icons\Ability_Creature_Poison_04"); 
-INSERT INTO `SpellIcon` VALUES (1761,"Interface\Icons\Ability_Creature_Cursed_01"); 
-INSERT INTO `SpellIcon` VALUES (1762,"Interface\Icons\Ability_Creature_Cursed_02"); 
-INSERT INTO `SpellIcon` VALUES (1763,"Interface\Icons\INV_Drink_01"); 
-INSERT INTO `SpellIcon` VALUES (1764,"Interface\Icons\Ability_Creature_Disease_01"); 
-INSERT INTO `SpellIcon` VALUES (1765,"Interface\Icons\INV_Misc_MonsterScales_18"); 
-INSERT INTO `SpellIcon` VALUES (1766,"Interface\Icons\Ability_Creature_Cursed_03"); 
-INSERT INTO `SpellIcon` VALUES (1767,"Interface\Icons\INV_Jewelry_Necklace_08"); 
-INSERT INTO `SpellIcon` VALUES (1768,"Interface\Icons\INV_Misc_Gem_01"); 
-INSERT INTO `SpellIcon` VALUES (1769,"Interface\Icons\INV_Misc_Gem_02"); 
-INSERT INTO `SpellIcon` VALUES (1770,"Interface\Icons\INV_Misc_Gem_03"); 
-INSERT INTO `SpellIcon` VALUES (1771,"Interface\Icons\Spell_Nature_InsectSwarm"); 
-INSERT INTO `SpellIcon` VALUES (1772,"Interface\Icons\INV_Jewelry_Necklace_01"); 
-INSERT INTO `SpellIcon` VALUES (1773,"Interface\Icons\INV_Shield_21"); 
-INSERT INTO `SpellIcon` VALUES (1774,"Interface\Icons\INV_Jewelry_Necklace_06"); 
-INSERT INTO `SpellIcon` VALUES (1775,"Interface\Icons\Mail_GMIcon"); 
-INSERT INTO `SpellIcon` VALUES (1776,"Interface\Icons\INV_Misc_QuestionMark"); 
-INSERT INTO `SpellIcon` VALUES (1777,"Interface\Icons\INV_Misc_Head_Gnome_01"); 
-INSERT INTO `SpellIcon` VALUES (1778,"Interface\Icons\INV_Misc_Fish_20"); 
-INSERT INTO `SpellIcon` VALUES (1779,"Interface\Icons\INV_Misc_Fish_21"); 
-INSERT INTO `SpellIcon` VALUES (1780,"Interface\Icons\INV_Drink_08"); 
-INSERT INTO `SpellIcon` VALUES (1781,"Interface\Icons\INV_Misc_MonsterTail_03"); 
-INSERT INTO `SpellIcon` VALUES (1782,"Interface\Icons\INV_Shield_23"); 
-INSERT INTO `SpellIcon` VALUES (1783,"Interface\Icons\INV_Drink_08"); 
-INSERT INTO `SpellIcon` VALUES (1784,"Interface\Icons\INV_Misc_PocketWatch_01"); 
-INSERT INTO `SpellIcon` VALUES (1785,"Interface\Icons\INV_Drink_02"); 
-INSERT INTO `SpellIcon` VALUES (1786,"Interface\Icons\INV_Misc_Gem_02"); 
-INSERT INTO `SpellIcon` VALUES (1787,"Interface\Icons\INV_Misc_Gem_Topaz_02"); 
-INSERT INTO `SpellIcon` VALUES (1788,"Interface\Icons\INV_Misc_Food_65"); 
-INSERT INTO `SpellIcon` VALUES (1789,"Interface\Icons\INV_Food_ChristmasFruitCake_01"); 
-INSERT INTO `SpellIcon` VALUES (1790,"Interface\Icons\INV_Misc_AhnQirajTrinket_04"); 
-INSERT INTO `SpellIcon` VALUES (1791,"Interface\Icons\INV_Misc_AhnQirajTrinket_02"); 
-INSERT INTO `SpellIcon` VALUES (1792,"Interface\Icons\INV_Misc_Herb_10"); 
-INSERT INTO `SpellIcon` VALUES (1793,"Interface\Icons\INV_Misc_Herb_09"); 
-INSERT INTO `SpellIcon` VALUES (1794,"Interface\Icons\INV_Misc_Branch_01"); 
-INSERT INTO `SpellIcon` VALUES (1795,"Interface\Icons\Spell_Holy_Power"); 
-INSERT INTO `SpellIcon` VALUES (1796,"Interface\Icons\Spell_Holy_UnyieldingFaith"); 
-INSERT INTO `SpellIcon` VALUES (1797,"Interface\Icons\Spell_Holy_PersuitofJustice"); 
-INSERT INTO `SpellIcon` VALUES (1798,"Interface\Icons\Spell_Holy_Vindication"); 
-INSERT INTO `SpellIcon` VALUES (1799,"Interface\Icons\Spell_Holy_EyeforanEye"); 
-INSERT INTO `SpellIcon` VALUES (1800,"Interface\Icons\Spell_Magic_GreaterBlessingofKings"); 
-INSERT INTO `SpellIcon` VALUES (1801,"Interface\Icons\Spell_Holy_GreaterBlessingofLight"); 
-INSERT INTO `SpellIcon` VALUES (1802,"Interface\Icons\Spell_Holy_GreaterBlessingofKings"); 
-INSERT INTO `SpellIcon` VALUES (1803,"Interface\Icons\Spell_Holy_GreaterBlessingofSalvation"); 
-INSERT INTO `SpellIcon` VALUES (1804,"Interface\Icons\Spell_Holy_GreaterBlessingofSanctuary"); 
-INSERT INTO `SpellIcon` VALUES (1805,"Interface\Icons\Spell_Holy_GreaterBlessingofWisdom"); 
-INSERT INTO `SpellIcon` VALUES (1806,"Interface\Icons\INV_Food_ChristmasFruitCake_01"); 
-INSERT INTO `SpellIcon` VALUES (1807,"Interface\Icons\INV_Misc_Food_DimSum"); 
-INSERT INTO `SpellIcon` VALUES (1808,"Interface\Icons\INV_Potion_60"); 
-INSERT INTO `SpellIcon` VALUES (1809,"Interface\Icons\INV_Misc_QirajiCrystal_05"); 
-INSERT INTO `SpellIcon` VALUES (1810,"Interface\Icons\INV_Misc_QirajiCrystal_04"); 
-INSERT INTO `SpellIcon` VALUES (1811,"Interface\Icons\INV_Misc_QirajiCrystal_03"); 
-INSERT INTO `SpellIcon` VALUES (1812,"Interface\Icons\INV_Misc_QirajiCrystal_02"); 
-INSERT INTO `SpellIcon` VALUES (1813,"Interface\Icons\INV_Misc_QirajiCrystal_01"); 
-INSERT INTO `SpellIcon` VALUES (1814,"Interface\Icons\INV_Weapon_Bow_12"); 
-INSERT INTO `SpellIcon` VALUES (1815,"Interface\Icons\INV_Misc_EngGizmos_03"); 
-INSERT INTO `SpellIcon` VALUES (1816,"Interface\Icons\INV_Waepon_Bow_ZulGrub_D_02"); 
-INSERT INTO `SpellIcon` VALUES (1817,"Interface\Icons\INV_Misc_Food_59"); 
-INSERT INTO `SpellIcon` VALUES (1818,"Interface\Icons\INV_Helmet_46"); 
-INSERT INTO `SpellIcon` VALUES (1819,"Interface\Icons\INV_Misc_AhnQirajTrinket_05"); 
-INSERT INTO `SpellIcon` VALUES (1820,"Interface\Icons\Spell_Holy_EyeforanEye"); 
-INSERT INTO `SpellIcon` VALUES (1821,"Interface\Icons\Spell_Holy_PersuitofJustice"); 
-INSERT INTO `SpellIcon` VALUES (1822,"Interface\Icons\Spell_Holy_Vindication"); 
-INSERT INTO `SpellIcon` VALUES (1823,"Interface\Icons\Spell_Holy_UnyieldingFaith"); 
-INSERT INTO `SpellIcon` VALUES (1824,"Interface\Icons\Spell_Holy_Power"); 
-INSERT INTO `SpellIcon` VALUES (1825,"Interface\Icons\INV_Misc_AhnQirajTrinket_01"); 
-INSERT INTO `SpellIcon` VALUES (1826,"Interface\Icons\INV_Misc_AhnQirajTrinket_06"); 
-INSERT INTO `SpellIcon` VALUES (1827,"Interface\Icons\INV_QirajIdol_Death"); 
-INSERT INTO `SpellIcon` VALUES (1828,"Interface\Icons\INV_Misc_MissileLargeCluster_White"); 
-INSERT INTO `SpellIcon` VALUES (1829,"Interface\Icons\INV_Misc_Gem_Pearl_02"); 
-INSERT INTO `SpellIcon` VALUES (1830,"Interface\Icons\Spell_Holy_Vindication"); 
-INSERT INTO `SpellIcon` VALUES (1831,"Interface\Icons\INV_Jewelry_Necklace_16"); 
-INSERT INTO `SpellIcon` VALUES (1832,"Interface\Icons\INV_Misc_TheGoldenCheep"); 
-INSERT INTO `SpellIcon` VALUES (1833,"Interface\Icons\Mail_GMIcon"); 
-INSERT INTO `SpellIcon` VALUES (1834,"Interface\Icons\INV_ThrowingKnife_04"); 
-INSERT INTO `SpellIcon` VALUES (1835,"Interface\Icons\INV_Sword_30"); 
-INSERT INTO `SpellIcon` VALUES (1836,"Interface\Icons\INV_Fabric_MoonRag_01"); 
-INSERT INTO `SpellIcon` VALUES (1837,"Interface\Icons\INV_Fabric_FelRag"); 
-INSERT INTO `SpellIcon` VALUES (1838,"Interface\Icons\INV_Potion_02"); 
-INSERT INTO `SpellIcon` VALUES (1839,"Interface\Icons\INV_Potion_72"); 
-INSERT INTO `SpellIcon` VALUES (1840,"Interface\Icons\INV_Misc_Organ_01"); 
-INSERT INTO `SpellIcon` VALUES (1841,"Interface\Icons\INV_Misc_Organ_02"); 
-INSERT INTO `SpellIcon` VALUES (1842,"Interface\Icons\INV_Misc_Food_32"); 
-INSERT INTO `SpellIcon` VALUES (1843,"Interface\Icons\INV_Drink_Waterskin_07"); 
-INSERT INTO `SpellIcon` VALUES (1844,"Interface\Icons\INV_Drink_16"); 
-INSERT INTO `SpellIcon` VALUES (1845,"Interface\Icons\INV_Staff_26"); 
-INSERT INTO `SpellIcon` VALUES (1846,"Interface\Icons\INV_ValentinePerfumeBottle"); 
-INSERT INTO `SpellIcon` VALUES (1847,"Interface\Icons\INV_ValentineCologneBottle"); 
-INSERT INTO `SpellIcon` VALUES (1848,"Interface\Icons\INV_Misc_Dust_04"); 
-INSERT INTO `SpellIcon` VALUES (1849,"Interface\Icons\INV_ValentinesBoxOfChocolates02"); 
-INSERT INTO `SpellIcon` VALUES (1850,"Interface\Icons\INV_ValentinesCard01"); 
-INSERT INTO `SpellIcon` VALUES (1851,"Interface\Icons\INV_Potion_21"); 
-INSERT INTO `SpellIcon` VALUES (1852,"Interface\Icons\INV_Potion_52"); 
-INSERT INTO `SpellIcon` VALUES (1853,"Interface\Icons\Spell_BrokenHeart"); 
-INSERT INTO `SpellIcon` VALUES (1854,"Interface\Icons\INV_ValentinesChocolate01"); 
-INSERT INTO `SpellIcon` VALUES (1855,"Interface\Icons\INV_ValentinesChocolate02"); 
-INSERT INTO `SpellIcon` VALUES (1856,"Interface\Icons\INV_ValentinesChocolate03"); 
-INSERT INTO `SpellIcon` VALUES (1857,"Interface\Icons\INV_ValentinesChocolate04"); 
-INSERT INTO `SpellIcon` VALUES (1858,"Interface\Icons\INV_Holiday_Christmas_Present_02"); 
-INSERT INTO `SpellIcon` VALUES (1859,"Interface\Icons\INV_Holiday_Christmas_Present_01"); 
-INSERT INTO `SpellIcon` VALUES (1860,"Interface\Icons\INV_Misc_Gift_04"); 
-INSERT INTO `SpellIcon` VALUES (1861,"Interface\Icons\INV_Misc_Gift_01"); 
-INSERT INTO `SpellIcon` VALUES (1862,"Interface\Icons\INV_Misc_Gift_05"); 
-INSERT INTO `SpellIcon` VALUES (1863,"Interface\Icons\INV_Misc_Gift_03"); 
-INSERT INTO `SpellIcon` VALUES (1864,"Interface\Icons\INV_Jewelry_Ring_03"); 
-INSERT INTO `SpellIcon` VALUES (1865,"Interface\Icons\INV_Misc_Book_11"); 
-INSERT INTO `SpellIcon` VALUES (1866,"Interface\Icons\INV_Weapon_Rifle_11"); 
-INSERT INTO `SpellIcon` VALUES (1867,"Interface\Icons\INV_Weapon_Rifle_10"); 
-INSERT INTO `SpellIcon` VALUES (1868,"Interface\Icons\Spell_Holy_SearingLightPriest"); 
-INSERT INTO `SpellIcon` VALUES (1869,"Interface\Icons\Spell_Holy_PrayerofShadowProtection"); 
-INSERT INTO `SpellIcon` VALUES (1870,"Interface\Icons\Spell_Holy_PrayerofSpirit"); 
-INSERT INTO `SpellIcon` VALUES (1871,"Interface\Icons\Spell_Holy_HealingFocus"); 
-INSERT INTO `SpellIcon` VALUES (1872,"Interface\Icons\Spell_Holy_PowerInfusion"); 
-INSERT INTO `SpellIcon` VALUES (1873,"Interface\Icons\Spell_Holy_SpiritualGuidence"); 
-INSERT INTO `SpellIcon` VALUES (1874,"Interface\Icons\Spell_Holy_HolyNova"); 
-INSERT INTO `SpellIcon` VALUES (1875,"Interface\Icons\Spell_Holy_BlessedRecovery"); 
-INSERT INTO `SpellIcon` VALUES (1876,"Interface\Icons\Spell_Shadow_ImprovedVampiricEmbrace"); 
-INSERT INTO `SpellIcon` VALUES (1877,"Interface\Icons\INV_QirajIdol_Life"); 
-INSERT INTO `SpellIcon` VALUES (1878,"Interface\Icons\Spell_Holy_SummonLightwell"); 
-INSERT INTO `SpellIcon` VALUES (1879,"Interface\Icons\Spell_Holy_DivineSpirit"); 
-INSERT INTO `SpellIcon` VALUES (1880,"Interface\Icons\Spell_Holy_SpellWarding"); 
-INSERT INTO `SpellIcon` VALUES (1881,"Interface\Icons\INV_Misc_Fish_31"); 
-INSERT INTO `SpellIcon` VALUES (1882,"Interface\Icons\INV_Misc_Herb_11"); 
-INSERT INTO `SpellIcon` VALUES (1883,"Interface\Icons\INV_Misc_Herb_11a"); 
-INSERT INTO `SpellIcon` VALUES (1884,"Interface\Icons\INV_Sword_2H_AshbringerCorrupt"); 
-INSERT INTO `SpellIcon` VALUES (1885,"Interface\Icons\Spell_ChargeNegative"); 
-INSERT INTO `SpellIcon` VALUES (1886,"Interface\Icons\Spell_ChargePositive"); 
-INSERT INTO `SpellIcon` VALUES (1887,"Interface\Icons\INV_Torch_Lit"); 
-INSERT INTO `SpellIcon` VALUES (1888,"Interface\Icons\INV_Misc_Food_35"); 
-INSERT INTO `SpellIcon` VALUES (1889,"Interface\Icons\INV_Misc_Food_32"); 
-INSERT INTO `SpellIcon` VALUES (1890,"Interface\Icons\INV_Relics_TotemofLife"); 
-INSERT INTO `SpellIcon` VALUES (1891,"Interface\Icons\INV_Boots_Cloth_15"); 
-INSERT INTO `SpellIcon` VALUES (1892,"Interface\Icons\INV_Misc_Token_ArgentDawn"); 
-INSERT INTO `SpellIcon` VALUES (1893,"Interface\Icons\INV_Trinket_Naxxramas05"); 
-INSERT INTO `SpellIcon` VALUES (1894,"Interface\Icons\INV_Misc_Token_ArgentDawn2"); 
-INSERT INTO `SpellIcon` VALUES (1895,"Interface\Icons\INV_Misc_Token_ArgentDawn3"); 
-INSERT INTO `SpellIcon` VALUES (1896,"Interface\Icons\INV_Trinket_Naxxramas01"); 
-INSERT INTO `SpellIcon` VALUES (1897,"Interface\Icons\INV_Trinket_Naxxramas03"); 
-INSERT INTO `SpellIcon` VALUES (1898,"Interface\Icons\INV_Trinket_Naxxramas06"); 
-INSERT INTO `SpellIcon` VALUES (1899,"Interface\Icons\INV_Trinket_Naxxramas04"); 
-INSERT INTO `SpellIcon` VALUES (1900,"Interface\Icons\INV_Enchant_ShardNexusLarge"); 
-INSERT INTO `SpellIcon` VALUES (1901,"Interface\Icons\INV_Enchant_ShardGlimmeringLarge"); 
-INSERT INTO `SpellIcon` VALUES (1902,"Interface\Icons\INV_Qiraj_JewelBlessed"); 
-INSERT INTO `SpellIcon` VALUES (1903,"Interface\Icons\INV_Misc_Food_14"); 
-INSERT INTO `SpellIcon` VALUES (1904,"Interface\Icons\INV_Relics_TotemofRage"); 
-INSERT INTO `SpellIcon` VALUES (1905,"Interface\Icons\INV_Wand_06"); 
-INSERT INTO `SpellIcon` VALUES (1906,"Interface\Icons\INV_Battery_02"); 
-INSERT INTO `SpellIcon` VALUES (1907,"Interface\Icons\INV_Misc_Food_07"); 
-INSERT INTO `SpellIcon` VALUES (1908,"Interface\Icons\INV_Drink_Waterskin_09"); 
-INSERT INTO `SpellIcon` VALUES (1909,"Interface\Icons\INV_Misc_Food_19"); 
-INSERT INTO `SpellIcon` VALUES (1910,"Interface\Icons\Ability_Creature_Disease_05"); 
-INSERT INTO `SpellIcon` VALUES (1911,"Interface\Icons\INV_Misc_Food_73CinnamonRoll"); 
-INSERT INTO `SpellIcon` VALUES (1912,"Interface\Icons\Spell_Nature_Polymorph_Cow"); 
-INSERT INTO `SpellIcon` VALUES (1913,"Interface\Icons\INV_Gauntlets_26"); 
-INSERT INTO `SpellIcon` VALUES (1914,"Interface\Icons\INV_Helmet_21"); 
-INSERT INTO `SpellIcon` VALUES (1915,"Interface\Icons\INV_Staff_23"); 
-INSERT INTO `SpellIcon` VALUES (1916,"Interface\Icons\INV_Helmet_21"); 
-INSERT INTO `SpellIcon` VALUES (1917,"Interface\Icons\INV_Relics_IdolofRejuvenation"); 
-INSERT INTO `SpellIcon` VALUES (1918,"Interface\Icons\Spell_Arcane_ArcaneResilience"); 
-INSERT INTO `SpellIcon` VALUES (1919,"Interface\Icons\INV_SummerFest_Symbol_Medium"); 
-INSERT INTO `SpellIcon` VALUES (1920,"Interface\Icons\Spell_Fire_MasterOfElements"); 
-INSERT INTO `SpellIcon` VALUES (1921,"Interface\Icons\Spell_Nature_StormReach"); 
-INSERT INTO `SpellIcon` VALUES (1922,"Interface\Icons\Ability_Druid_Mangle"); 
-INSERT INTO `SpellIcon` VALUES (1923,"Interface\Icons\INV_SummerFest_FireSpirit"); 
-INSERT INTO `SpellIcon` VALUES (1924,"Interface\Icons\INV_Bracer_09"); 
-INSERT INTO `SpellIcon` VALUES (1925,"Interface\Icons\INV_Misc_Food_53"); 
-INSERT INTO `SpellIcon` VALUES (1926,"Interface\Icons\INV_SummerFest_Smorc"); 
-INSERT INTO `SpellIcon` VALUES (1927,"Interface\Icons\Inv_Misc_SummerFest_BrazierOrange"); 
-INSERT INTO `SpellIcon` VALUES (1928,"Interface\Icons\Ability_Mount_NetherdrakePurple"); 
-INSERT INTO `SpellIcon` VALUES (1929,"Interface\Icons\Spell_Nature_HealingWay"); 
-INSERT INTO `SpellIcon` VALUES (1930,"Interface\Icons\Spell_Fire_ElementalDevastation"); 
-INSERT INTO `SpellIcon` VALUES (1931,"Interface\Icons\Spell_Nature_EyeOfTheStorm"); 
-INSERT INTO `SpellIcon` VALUES (1932,"Interface\Icons\Spell_Shadow_SeedOfDestruction"); 
-INSERT INTO `SpellIcon` VALUES (1933,"Interface\Icons\Spell_Shadow_NetherCloak"); 
-INSERT INTO `SpellIcon` VALUES (1934,"Interface\Icons\Ability_Warrior_RallyingCry"); 
-INSERT INTO `SpellIcon` VALUES (1935,"Interface\Icons\Ability_Warrior_ShieldReflection"); 
-INSERT INTO `SpellIcon` VALUES (1936,"Interface\Icons\INV_Misc_Rune_02"); 
-INSERT INTO `SpellIcon` VALUES (1937,"Interface\Icons\INV_RoseBouquet01"); 
-INSERT INTO `SpellIcon` VALUES (1938,"Interface\Icons\Ability_Warrior_CommandingShout"); 
-INSERT INTO `SpellIcon` VALUES (1939,"Interface\Icons\Spell_Shadow_PainSpike"); 
-INSERT INTO `SpellIcon` VALUES (1940,"Interface\Icons\Spell_Shadow_Brainwash"); 
-INSERT INTO `SpellIcon` VALUES (1941,"Interface\Icons\Ability_Warrior_ShieldGuard"); 
-INSERT INTO `SpellIcon` VALUES (1942,"Interface\Icons\Spell_Shadow_ShadowMend"); 
-INSERT INTO `SpellIcon` VALUES (1943,"Interface\Icons\INV_Misc_EngGizmos_19"); 
-INSERT INTO `SpellIcon` VALUES (1944,"Interface\Icons\INV_RosePotted01"); 
-INSERT INTO `SpellIcon` VALUES (1945,"Interface\Icons\Ability_Warrior_Intervene"); 
-INSERT INTO `SpellIcon` VALUES (1946,"Interface\Icons\Spell_Holy_ChampionsGrace"); 
-INSERT INTO `SpellIcon` VALUES (1947,"Interface\Icons\Spell_Holy_ChampionsBond"); 
-INSERT INTO `SpellIcon` VALUES (1948,"Interface\Icons\Spell_Holy_SummonChampion"); 
-INSERT INTO `SpellIcon` VALUES (1949,"Interface\Icons\Spell_Holy_ReviveChampion"); 
-INSERT INTO `SpellIcon` VALUES (1950,"Interface\Icons\Spell_Holy_EmpowerChampion"); 
-INSERT INTO `SpellIcon` VALUES (1951,"Interface\Icons\Spell_Holy_ProclaimChampion"); 
-INSERT INTO `SpellIcon` VALUES (1952,"Interface\Icons\Spell_Arcane_Arcane04"); 
-INSERT INTO `SpellIcon` VALUES (1953,"Interface\Icons\INV_Misc_Gem_AmethystRough_01"); 
-INSERT INTO `SpellIcon` VALUES (1954,"Interface\Icons\Spell_Arcane_Arcane01"); 
-INSERT INTO `SpellIcon` VALUES (1955,"Interface\Icons\INV_Trinket_Naxxramas02"); 
-INSERT INTO `SpellIcon` VALUES (1956,"Interface\Icons\INV_Mace23"); 
-INSERT INTO `SpellIcon` VALUES (1957,"Interface\Icons\Spell_Arcane_Arcane03"); 
-INSERT INTO `SpellIcon` VALUES (1958,"Interface\Icons\Spell_Shadow_ConeOfSilence"); 
-INSERT INTO `SpellIcon` VALUES (1959,"Interface\Icons\Ability_Creature_Disease_03"); 
-INSERT INTO `SpellIcon` VALUES (1960,"Interface\Icons\Ability_Creature_Poison_06"); 
-INSERT INTO `SpellIcon` VALUES (1961,"Interface\Icons\Spell_Arcane_Arcane02"); 
-INSERT INTO `SpellIcon` VALUES (1962,"Interface\Icons\Ability_Warrior_EndlessRage"); 
-INSERT INTO `SpellIcon` VALUES (1963,"Interface\Icons\INV_Gizmo_RocketBoot_01"); 
-INSERT INTO `SpellIcon` VALUES (1964,"Interface\Icons\INV_DataCrystal01"); 
-INSERT INTO `SpellIcon` VALUES (1965,"Interface\Icons\INV_Chest_Plate08"); 
-INSERT INTO `SpellIcon` VALUES (1966,"Interface\Icons\INV_Sword_2H_Blood_C_01"); 
-INSERT INTO `SpellIcon` VALUES (1967,"Interface\Icons\INV_Enchant_EssenceMysticalLarge"); 
-INSERT INTO `SpellIcon` VALUES (1968,"Interface\Icons\INV_Belt_27"); 
-INSERT INTO `SpellIcon` VALUES (1969,"Interface\Icons\INV_Helmet_28"); 
-INSERT INTO `SpellIcon` VALUES (1970,"Interface\Icons\INV_Misc_Food_69"); 
-INSERT INTO `SpellIcon` VALUES (1971,"Interface\Icons\INV_Chest_Cloth_18"); 
-INSERT INTO `SpellIcon` VALUES (1972,"Interface\Icons\INV_Weapon_Crossbow_11"); 
-INSERT INTO `SpellIcon` VALUES (1973,"Interface\Icons\INV_Misc_Orb_01"); 
-INSERT INTO `SpellIcon` VALUES (1974,"Interface\Icons\Spell_Holiday_ToW_SpiceCloud"); 
-INSERT INTO `SpellIcon` VALUES (1975,"Interface\Icons\INV_Sword_42"); 
-INSERT INTO `SpellIcon` VALUES (1976,"Interface\Icons\Ability_Warrior_WeaponMastery"); 
-INSERT INTO `SpellIcon` VALUES (1977,"Interface\Icons\Spell_Shadow_LastingAfflictions"); 
-INSERT INTO `SpellIcon` VALUES (1978,"Interface\Icons\Spell_Shadow_PainfulAfflictions"); 
-INSERT INTO `SpellIcon` VALUES (1979,"Interface\Icons\Spell_Shadow_UnstableAfllictions"); 
-INSERT INTO `SpellIcon` VALUES (1980,"Interface\Icons\Spell_Shadow_DemonicFortitude"); 
-INSERT INTO `SpellIcon` VALUES (1981,"Interface\Icons\Spell_Shadow_DemonicTactics"); 
-INSERT INTO `SpellIcon` VALUES (1982,"Interface\Icons\Spell_Shadow_ManaFeed"); 
-INSERT INTO `SpellIcon` VALUES (1983,"Interface\Icons\Spell_Shadow_SummonFelGuard"); 
-INSERT INTO `SpellIcon` VALUES (1984,"Interface\Icons\Spell_Shadow_DestructiveSoul"); 
-INSERT INTO `SpellIcon` VALUES (1985,"Interface\Icons\Spell_Shadow_NetherProtection"); 
-INSERT INTO `SpellIcon` VALUES (1986,"Interface\Icons\Spell_Shadow_ShadowandFlame"); 
-INSERT INTO `SpellIcon` VALUES (1987,"Interface\Icons\Spell_Shadow_SoulLeech"); 
-INSERT INTO `SpellIcon` VALUES (1988,"Interface\Icons\Spell_Shadow_Shadowfury"); 
-INSERT INTO `SpellIcon` VALUES (1989,"Interface\Icons\Ability_Warrior_ImprovedDisciplines"); 
-INSERT INTO `SpellIcon` VALUES (1990,"Interface\Icons\INV_Jewelry_Necklace_30"); 
-INSERT INTO `SpellIcon` VALUES (1991,"Interface\Icons\INV_Jewelry_Necklace_15"); 
-INSERT INTO `SpellIcon` VALUES (1992,"Interface\Icons\INV_Jewelry_Necklace_27Naxxramas"); 
-INSERT INTO `SpellIcon` VALUES (1993,"Interface\Icons\INV_Jewelry_Necklace_28"); 
-INSERT INTO `SpellIcon` VALUES (1994,"Interface\Icons\INV_Jewelry_Necklace_29Naxxramas"); 
-INSERT INTO `SpellIcon` VALUES (1995,"Interface\Icons\INV_Jewelry_Necklace_AhnQiraj_02"); 
-INSERT INTO `SpellIcon` VALUES (1996,"Interface\Icons\INV_Chest_Plate06"); 
-INSERT INTO `SpellIcon` VALUES (1997,"Interface\Icons\Ability_Warrior_SecondWind"); 
-INSERT INTO `SpellIcon` VALUES (1998,"Interface\Icons\INV_Shoulder_07"); 
-INSERT INTO `SpellIcon` VALUES (1999,"Interface\Icons\INV_Boots_Cloth_16"); 
-INSERT INTO `SpellIcon` VALUES (2000,"Interface\Icons\INV_Boots_Cloth_02"); 
-INSERT INTO `SpellIcon` VALUES (2001,"Interface\Icons\INV_Misc_Gem_BloodGem_01"); 
-INSERT INTO `SpellIcon` VALUES (2002,"Interface\Icons\INV_Musket_01"); 
-INSERT INTO `SpellIcon` VALUES (2003,"Interface\Icons\INV_Sword_51"); 
-INSERT INTO `SpellIcon` VALUES (2004,"Interface\Icons\INV_Sword_17"); 
-INSERT INTO `SpellIcon` VALUES (2005,"Interface\Icons\Ability_Warrior_BloodFrenzy"); 
-INSERT INTO `SpellIcon` VALUES (2006,"Interface\Icons\Ability_Warrior_Rampage"); 
-INSERT INTO `SpellIcon` VALUES (2007,"Interface\Icons\Ability_Warrior_ShieldMastery"); 
-INSERT INTO `SpellIcon` VALUES (2008,"Interface\Icons\Ability_Warrior_FocusedRage"); 
-INSERT INTO `SpellIcon` VALUES (2009,"Interface\Icons\INV_DataCrystal09"); 
-INSERT INTO `SpellIcon` VALUES (2010,"Interface\Icons\Spell_Nature_UnrelentingStorm"); 
-INSERT INTO `SpellIcon` VALUES (2011,"Interface\Icons\Spell_Nature_GiftoftheWaterSpirit"); 
-INSERT INTO `SpellIcon` VALUES (2012,"Interface\Icons\Spell_Nature_NatureBlessing"); 
-INSERT INTO `SpellIcon` VALUES (2013,"Interface\Icons\Spell_Nature_NatureGuardian"); 
-INSERT INTO `SpellIcon` VALUES (2014,"Interface\Icons\Spell_Nature_FocusedMind"); 
-INSERT INTO `SpellIcon` VALUES (2015,"Interface\Icons\Spell_Nature_SkinofEarth"); 
-INSERT INTO `SpellIcon` VALUES (2016,"Interface\Icons\Spell_Nature_ElementalAbsorption"); 
-INSERT INTO `SpellIcon` VALUES (2017,"Interface\Icons\Spell_Nature_ElementalPrecision_1"); 
-INSERT INTO `SpellIcon` VALUES (2018,"Interface\Icons\Spell_Nature_LightningOverload"); 
-INSERT INTO `SpellIcon` VALUES (2019,"Interface\Icons\Spell_Fire_TotemOfWrath"); 
-INSERT INTO `SpellIcon` VALUES (2020,"Interface\Icons\Spell_Nature_Regeneration_02"); 
-INSERT INTO `SpellIcon` VALUES (2021,"Interface\Icons\Spell_Nature_UnleashedRage"); 
-INSERT INTO `SpellIcon` VALUES (2022,"Interface\Icons\Spell_Nature_MentalQuickness"); 
-INSERT INTO `SpellIcon` VALUES (2023,"Interface\Icons\Ability_DualWieldSpecialization"); 
-INSERT INTO `SpellIcon` VALUES (2024,"Interface\Icons\Spell_Nature_ShamanRage"); 
-INSERT INTO `SpellIcon` VALUES (2025,"Interface\Icons\Spell_Nature_ElementalShields"); 
-INSERT INTO `SpellIcon` VALUES (2026,"Interface\Icons\Ability_Creature_Disease_04"); 
-INSERT INTO `SpellIcon` VALUES (2027,"Interface\Icons\Spell_Shadow_SoulLeech_3"); 
-INSERT INTO `SpellIcon` VALUES (2028,"Interface\Icons\Spell_Shadow_SoulLeech_2"); 
-INSERT INTO `SpellIcon` VALUES (2029,"Interface\Icons\INV_DataCrystal12"); 
-INSERT INTO `SpellIcon` VALUES (2030,"Interface\Icons\INV_Letter_04"); 
-INSERT INTO `SpellIcon` VALUES (2031,"Interface\Icons\INV_Letter_05"); 
-INSERT INTO `SpellIcon` VALUES (2032,"Interface\Icons\INV_Misc_Gem_DeepPeridot_02"); 
-INSERT INTO `SpellIcon` VALUES (2033,"Interface\Icons\INV_Mushroom_02"); 
-INSERT INTO `SpellIcon` VALUES (2034,"Interface\Icons\INV_Stone_05"); 
-INSERT INTO `SpellIcon` VALUES (2035,"Interface\Icons\INV_Misc_Food_54"); 
-INSERT INTO `SpellIcon` VALUES (2036,"Interface\Icons\INV_Spear_03"); 
-INSERT INTO `SpellIcon` VALUES (2037,"Interface\Icons\INV_Shoulder_37"); 
-INSERT INTO `SpellIcon` VALUES (2038,"Interface\Icons\Spell_Shadow_SoulLeech_1"); 
-INSERT INTO `SpellIcon` VALUES (2039,"Interface\Icons\Spell_Shadow_UnstableAffliction_3"); 
-INSERT INTO `SpellIcon` VALUES (2040,"Interface\Icons\INV_Relics_LibramofTruth"); 
-INSERT INTO `SpellIcon` VALUES (2041,"Interface\Icons\INV_Misc_Food_43"); 
-INSERT INTO `SpellIcon` VALUES (2042,"Interface\Icons\Spell_Shadow_UnstableAffliction_2"); 
-INSERT INTO `SpellIcon` VALUES (2043,"Interface\Icons\Inv_Helm_Mask_ZulGurub_D_01"); 
-INSERT INTO `SpellIcon` VALUES (2044,"Interface\Icons\INV_Helmet_06"); 
-INSERT INTO `SpellIcon` VALUES (2045,"Interface\Icons\INV_Helmet_01"); 
-INSERT INTO `SpellIcon` VALUES (2046,"Interface\Icons\INV_Misc_Organ_05"); 
-INSERT INTO `SpellIcon` VALUES (2047,"Interface\Icons\INV_Enchant_EssenceMysticalSmall"); 
-INSERT INTO `SpellIcon` VALUES (2048,"Interface\Icons\INV_Enchant_EssenceNetherSmall"); 
-INSERT INTO `SpellIcon` VALUES (2049,"Interface\Icons\INV_Feather_07"); 
-INSERT INTO `SpellIcon` VALUES (2050,"Interface\Icons\INV_Feather_04"); 
-INSERT INTO `SpellIcon` VALUES (2051,"Interface\Icons\INV_MISC_HERB_06"); 
-INSERT INTO `SpellIcon` VALUES (2052,"Interface\Icons\INV_Staff_12"); 
-INSERT INTO `SpellIcon` VALUES (2053,"Interface\Icons\Ability_Warrior_Devastate"); 
-INSERT INTO `SpellIcon` VALUES (2054,"Interface\Icons\Ability_Mount_Gryphon_01"); 
-INSERT INTO `SpellIcon` VALUES (2055,"Interface\Icons\Ability_Mount_Wyvern_01"); 
-INSERT INTO `SpellIcon` VALUES (2056,"Interface\Icons\INV_Misc_Idol_01"); 
-INSERT INTO `SpellIcon` VALUES (2057,"Interface\Icons\INV_Mushroom_07"); 
-INSERT INTO `SpellIcon` VALUES (2058,"Interface\Icons\INV_Jewelry_Talisman_04"); 
-INSERT INTO `SpellIcon` VALUES (2059,"Interface\Icons\INV_Mace_10"); 
-INSERT INTO `SpellIcon` VALUES (2060,"Interface\Icons\INV_Misc_Food_71"); 
-INSERT INTO `SpellIcon` VALUES (2061,"Interface\Icons\INV_Axe_23"); 
-INSERT INTO `SpellIcon` VALUES (2062,"Interface\Icons\INV_Gauntlets_23"); 
-INSERT INTO `SpellIcon` VALUES (2063,"Interface\Icons\INV_QirajIdol_Sun"); 
-INSERT INTO `SpellIcon` VALUES (2064,"Interface\Icons\INV_Potion_103"); 
-INSERT INTO `SpellIcon` VALUES (2065,"Interface\Icons\INV_Potion_104"); 
-INSERT INTO `SpellIcon` VALUES (2066,"Interface\Icons\INV_Potion_105"); 
-INSERT INTO `SpellIcon` VALUES (2067,"Interface\Icons\INV_Misc_Herb_Dreamingglory"); 
-INSERT INTO `SpellIcon` VALUES (2068,"Interface\Icons\INV_Potion_124"); 
-INSERT INTO `SpellIcon` VALUES (2069,"Interface\Icons\INV_Potion_123"); 
-INSERT INTO `SpellIcon` VALUES (2070,"Interface\Icons\INV_Potion_126"); 
-INSERT INTO `SpellIcon` VALUES (2071,"Interface\Icons\INV_Potion_125"); 
-INSERT INTO `SpellIcon` VALUES (2072,"Interface\Icons\INV_Potion_127"); 
-INSERT INTO `SpellIcon` VALUES (2073,"Interface\Icons\INV_Potion_147"); 
-INSERT INTO `SpellIcon` VALUES (2074,"Interface\Icons\INV_Potion_149"); 
-INSERT INTO `SpellIcon` VALUES (2075,"Interface\Icons\INV_Potion_146"); 
-INSERT INTO `SpellIcon` VALUES (2076,"Interface\Icons\INV_Potion_139"); 
-INSERT INTO `SpellIcon` VALUES (2077,"Interface\Icons\INV_Potion_145"); 
-INSERT INTO `SpellIcon` VALUES (2078,"Interface\Icons\INV_Potion_133"); 
-INSERT INTO `SpellIcon` VALUES (2079,"Interface\Icons\INV_Potion_148"); 
-INSERT INTO `SpellIcon` VALUES (2080,"Interface\Icons\INV_Potion_122"); 
-INSERT INTO `SpellIcon` VALUES (2081,"Interface\Icons\INV_Potion_119"); 
-INSERT INTO `SpellIcon` VALUES (2082,"Interface\Icons\INV_Potion_118"); 
-INSERT INTO `SpellIcon` VALUES (2083,"Interface\Icons\INV_Potion_117"); 
-INSERT INTO `SpellIcon` VALUES (2084,"Interface\Icons\INV_Potion_116"); 
-INSERT INTO `SpellIcon` VALUES (2085,"Interface\Icons\INV_Potion_115"); 
-INSERT INTO `SpellIcon` VALUES (2086,"Interface\Icons\INV_Potion_110"); 
-INSERT INTO `SpellIcon` VALUES (2087,"Interface\Icons\INV_Potion_107"); 
-INSERT INTO `SpellIcon` VALUES (2088,"Interface\Icons\INV_Potion_108"); 
-INSERT INTO `SpellIcon` VALUES (2089,"Interface\Icons\INV_Potion_106"); 
-INSERT INTO `SpellIcon` VALUES (2090,"Interface\Icons\INV_Potion_109"); 
-INSERT INTO `SpellIcon` VALUES (2091,"Interface\Icons\INV_Potion_135"); 
-INSERT INTO `SpellIcon` VALUES (2092,"Interface\Icons\INV_Potion_136"); 
-INSERT INTO `SpellIcon` VALUES (2093,"Interface\Icons\INV_Potion_151"); 
-INSERT INTO `SpellIcon` VALUES (2094,"Interface\Icons\INV_Potion_142"); 
-INSERT INTO `SpellIcon` VALUES (2095,"Interface\Icons\INV_Potion_150"); 
-INSERT INTO `SpellIcon` VALUES (2096,"Interface\Icons\INV_Sword_31"); 
-INSERT INTO `SpellIcon` VALUES (2097,"Interface\Icons\INV_ThrowingKnife_06"); 
-INSERT INTO `SpellIcon` VALUES (2098,"Interface\Icons\INV_Misc_Gem_Diamond_01"); 
-INSERT INTO `SpellIcon` VALUES (2099,"Interface\Icons\INV_Mask_01"); 
-INSERT INTO `SpellIcon` VALUES (2100,"Interface\Icons\INV_Helmet_03"); 
-INSERT INTO `SpellIcon` VALUES (2101,"Interface\Icons\INV_Misc_Herb_Felblossom"); 
-INSERT INTO `SpellIcon` VALUES (2102,"Interface\Icons\INV_Misc_EngGizmos_12"); 
-INSERT INTO `SpellIcon` VALUES (2103,"Interface\Icons\INV_Misc_Cape_16"); 
-INSERT INTO `SpellIcon` VALUES (2104,"Interface\Icons\INV_Jewelry_Amulet_04"); 
-INSERT INTO `SpellIcon` VALUES (2105,"Interface\Icons\INV_Misc_Fish_14"); 
-INSERT INTO `SpellIcon` VALUES (2106,"Interface\Icons\INV_Relics_LibramofHope"); 
-INSERT INTO `SpellIcon` VALUES (2107,"Interface\Icons\INV_Misc_Herb_Flamecap"); 
-INSERT INTO `SpellIcon` VALUES (2108,"Interface\Icons\Ability_Rogue_BladeTwisting"); 
-INSERT INTO `SpellIcon` VALUES (2109,"Interface\Icons\Ability_Rogue_CheatDeath"); 
-INSERT INTO `SpellIcon` VALUES (2110,"Interface\Icons\Ability_Rogue_DeadenedNerves"); 
-INSERT INTO `SpellIcon` VALUES (2111,"Interface\Icons\Ability_Rogue_EnvelopingShadows"); 
-INSERT INTO `SpellIcon` VALUES (2112,"Interface\Icons\Ability_Rogue_FindWeakness"); 
-INSERT INTO `SpellIcon` VALUES (2113,"Interface\Icons\Ability_Rogue_FleetFooted"); 
-INSERT INTO `SpellIcon` VALUES (2114,"Interface\Icons\Ability_Rogue_MasterOfSubtlety"); 
-INSERT INTO `SpellIcon` VALUES (2115,"Interface\Icons\Ability_Rogue_NervesOfSteel"); 
-INSERT INTO `SpellIcon` VALUES (2116,"Interface\Icons\Ability_Rogue_QuickRecovery"); 
-INSERT INTO `SpellIcon` VALUES (2117,"Interface\Icons\Ability_Rogue_ShadowStrikes"); 
-INSERT INTO `SpellIcon` VALUES (2118,"Interface\Icons\Ability_Rogue_SinisterCalling"); 
-INSERT INTO `SpellIcon` VALUES (2119,"Interface\Icons\Ability_Rogue_SurpriseAttack"); 
-INSERT INTO `SpellIcon` VALUES (2120,"Interface\Icons\Spell_Arcane_ArcanePotency"); 
-INSERT INTO `SpellIcon` VALUES (2121,"Interface\Icons\Spell_Arcane_MindMastery"); 
-INSERT INTO `SpellIcon` VALUES (2122,"Interface\Icons\Spell_Arcane_PortalExodar"); 
-INSERT INTO `SpellIcon` VALUES (2123,"Interface\Icons\Spell_Arcane_PortalSilvermoon"); 
-INSERT INTO `SpellIcon` VALUES (2124,"Interface\Icons\Spell_Arcane_TeleportExodar"); 
-INSERT INTO `SpellIcon` VALUES (2125,"Interface\Icons\Spell_Arcane_TeleportSilvermoon"); 
-INSERT INTO `SpellIcon` VALUES (2126,"Interface\Icons\Spell_Arcane_PrismaticCloak"); 
-INSERT INTO `SpellIcon` VALUES (2127,"Interface\Icons\Spell_Fire_BurningSpeed"); 
-INSERT INTO `SpellIcon` VALUES (2128,"Interface\Icons\Spell_Fire_Burnout"); 
-INSERT INTO `SpellIcon` VALUES (2129,"Interface\Icons\Spell_Fire_MoltenBlood"); 
-INSERT INTO `SpellIcon` VALUES (2130,"Interface\Icons\Spell_Fire_PlayingWithFire"); 
-INSERT INTO `SpellIcon` VALUES (2131,"Interface\Icons\Spell_Frost_ArcticWinds"); 
-INSERT INTO `SpellIcon` VALUES (2132,"Interface\Icons\Spell_Frost_FrozenCore"); 
-INSERT INTO `SpellIcon` VALUES (2133,"Interface\Icons\Spell_Frost_IceFloes"); 
-INSERT INTO `SpellIcon` VALUES (2134,"Interface\Icons\Spell_Frost_SummonWaterElemental_2"); 
-INSERT INTO `SpellIcon` VALUES (2135,"Interface\Icons\Spell_Holy_ArdentDefender"); 
-INSERT INTO `SpellIcon` VALUES (2136,"Interface\Icons\Spell_Holy_AuraMastery"); 
-INSERT INTO `SpellIcon` VALUES (2137,"Interface\Icons\Spell_Holy_BlessedLife"); 
-INSERT INTO `SpellIcon` VALUES (2138,"Interface\Icons\Spell_Holy_DivineIllumination"); 
-INSERT INTO `SpellIcon` VALUES (2139,"Interface\Icons\Spell_Holy_HolyGuidance"); 
-INSERT INTO `SpellIcon` VALUES (2140,"Interface\Icons\Spell_Holy_ImprovedResistanceAuras"); 
-INSERT INTO `SpellIcon` VALUES (2141,"Interface\Icons\Spell_Holy_LightsGrace"); 
-INSERT INTO `SpellIcon` VALUES (2142,"Interface\Icons\Spell_Holy_PureOfHeart"); 
-INSERT INTO `SpellIcon` VALUES (2143,"Interface\Icons\Spell_Holy_WeaponMastery"); 
-INSERT INTO `SpellIcon` VALUES (2144,"Interface\Icons\INV_Stone_11"); 
-INSERT INTO `SpellIcon` VALUES (2145,"Interface\Icons\Ability_Mount_CockatriceMountElite"); 
-INSERT INTO `SpellIcon` VALUES (2146,"Interface\Icons\INV_Potion_128"); 
-INSERT INTO `SpellIcon` VALUES (2147,"Interface\Icons\INV_Misc_Bomb_09"); 
-INSERT INTO `SpellIcon` VALUES (2148,"Interface\Icons\INV_Potion_111"); 
-INSERT INTO `SpellIcon` VALUES (2149,"Interface\Icons\INV_Potion_152"); 
-INSERT INTO `SpellIcon` VALUES (2150,"Interface\Icons\INV_Potion_96"); 
-INSERT INTO `SpellIcon` VALUES (2151,"Interface\Icons\INV_Potion_59"); 
-INSERT INTO `SpellIcon` VALUES (2152,"Interface\Icons\Spell_Arcane_ManaTap"); 
-INSERT INTO `SpellIcon` VALUES (2153,"Interface\Icons\INV_Stone_08"); 
-INSERT INTO `SpellIcon` VALUES (2154,"Interface\Icons\INV_DataCrystal04"); 
-INSERT INTO `SpellIcon` VALUES (2155,"Interface\Icons\INV_Misc_StoneTablet_01"); 
-INSERT INTO `SpellIcon` VALUES (2156,"Interface\Icons\INV_Boots_Cloth_13"); 
-INSERT INTO `SpellIcon` VALUES (2157,"Interface\Icons\INV_Misc_Head_Orc_02"); 
-INSERT INTO `SpellIcon` VALUES (2158,"Interface\Icons\Spell_Arcane_StudentOfMagic"); 
-INSERT INTO `SpellIcon` VALUES (2159,"Interface\Icons\INV_Misc_Food_17"); 
-INSERT INTO `SpellIcon` VALUES (2160,"Interface\Icons\INV_Misc_Organ_04"); 
-INSERT INTO `SpellIcon` VALUES (2161,"Interface\Icons\INV_Misc_Powder_Iron"); 
-INSERT INTO `SpellIcon` VALUES (2162,"Interface\Icons\Spell_Frost_ColdHearted"); 
-INSERT INTO `SpellIcon` VALUES (2163,"Interface\Icons\INV_Misc_Bone_03"); 
-INSERT INTO `SpellIcon` VALUES (2164,"Interface\Icons\INV_Misc_Herb_Nightmareseed"); 
-INSERT INTO `SpellIcon` VALUES (2165,"Interface\Icons\Ability_Mount_RidingElekk"); 
-INSERT INTO `SpellIcon` VALUES (2166,"Interface\Icons\Ability_Mount_RidingElekkElite"); 
-INSERT INTO `SpellIcon` VALUES (2167,"Interface\Icons\INV_Waepon_Bow_ZulGrub_D_01"); 
-INSERT INTO `SpellIcon` VALUES (2168,"Interface\Icons\Spell_Holy_AvengineWrath"); 
-INSERT INTO `SpellIcon` VALUES (2169,"Interface\Icons\Spell_Holy_Fanaticism"); 
-INSERT INTO `SpellIcon` VALUES (2170,"Interface\Icons\Spell_Holy_DivinePurpose"); 
-INSERT INTO `SpellIcon` VALUES (2171,"Interface\Icons\Spell_Holy_Crusade"); 
-INSERT INTO `SpellIcon` VALUES (2172,"Interface\Icons\Spell_Holy_AvengersShield"); 
-INSERT INTO `SpellIcon` VALUES (2173,"Interface\Icons\Spell_Holy_PurifyingPower"); 
-INSERT INTO `SpellIcon` VALUES (2174,"Interface\Icons\Spell_Arcane_PortalShattrath"); 
-INSERT INTO `SpellIcon` VALUES (2175,"Interface\Icons\Spell_Arcane_TeleportShattrath"); 
-INSERT INTO `SpellIcon` VALUES (2176,"Interface\Icons\Spell_Holy_SurgeOfLight"); 
-INSERT INTO `SpellIcon` VALUES (2177,"Interface\Icons\Spell_Holy_BlessedResillience"); 
-INSERT INTO `SpellIcon` VALUES (2178,"Interface\Icons\Spell_Holy_PainSupression"); 
-INSERT INTO `SpellIcon` VALUES (2179,"Interface\Icons\Spell_Shadow_ShadowPower"); 
-INSERT INTO `SpellIcon` VALUES (2180,"Interface\Icons\INV_Potion_98"); 
-INSERT INTO `SpellIcon` VALUES (2181,"Interface\Icons\INV_Potion_99"); 
-INSERT INTO `SpellIcon` VALUES (2182,"Interface\Icons\INV_Potion_100"); 
-INSERT INTO `SpellIcon` VALUES (2183,"Interface\Icons\INV_Potion_101"); 
-INSERT INTO `SpellIcon` VALUES (2184,"Interface\Icons\INV_Potion_141"); 
-INSERT INTO `SpellIcon` VALUES (2185,"Interface\Icons\INV_Stone_SharpeningStone_01"); 
-INSERT INTO `SpellIcon` VALUES (2186,"Interface\Icons\INV_Stone_SharpeningStone_02"); 
-INSERT INTO `SpellIcon` VALUES (2187,"Interface\Icons\INV_Stone_SharpeningStone_03"); 
-INSERT INTO `SpellIcon` VALUES (2188,"Interface\Icons\INV_Stone_SharpeningStone_04"); 
-INSERT INTO `SpellIcon` VALUES (2189,"Interface\Icons\INV_Stone_SharpeningStone_05"); 
-INSERT INTO `SpellIcon` VALUES (2190,"Interface\Icons\INV_Stone_02"); 
-INSERT INTO `SpellIcon` VALUES (2191,"Interface\Icons\INV_Stone_SharpeningStone_06"); 
-INSERT INTO `SpellIcon` VALUES (2192,"Interface\Icons\INV_Stone_SharpeningStone_07"); 
-INSERT INTO `SpellIcon` VALUES (2193,"Interface\Icons\INV_Stone_WeightStone_02"); 
-INSERT INTO `SpellIcon` VALUES (2194,"Interface\Icons\INV_Stone_WeightStone_03"); 
-INSERT INTO `SpellIcon` VALUES (2195,"Interface\Icons\INV_Stone_WeightStone_01"); 
-INSERT INTO `SpellIcon` VALUES (2196,"Interface\Icons\INV_Stone_WeightStone_04"); 
-INSERT INTO `SpellIcon` VALUES (2197,"Interface\Icons\INV_Stone_WeightStone_05"); 
-INSERT INTO `SpellIcon` VALUES (2198,"Interface\Icons\INV_Stone_WeightStone_06"); 
-INSERT INTO `SpellIcon` VALUES (2199,"Interface\Icons\INV_Stone_WeightStone_07"); 
-INSERT INTO `SpellIcon` VALUES (2200,"Interface\Icons\INV_Potion_20"); 
-INSERT INTO `SpellIcon` VALUES (2201,"Interface\Icons\INV_Misc_Rune_12"); 
-INSERT INTO `SpellIcon` VALUES (2202,"Interface\Icons\INV_Misc_Rune_13"); 
-INSERT INTO `SpellIcon` VALUES (2203,"Interface\Icons\INV_Misc_Rune_10"); 
-INSERT INTO `SpellIcon` VALUES (2204,"Interface\Icons\INV_Misc_Rune_11"); 
-INSERT INTO `SpellIcon` VALUES (2205,"Interface\Icons\Ability_Warrior_VictoryRush"); 
-INSERT INTO `SpellIcon` VALUES (2206,"Interface\Icons\Spell_Shadow_Shadesofdarkness"); 
-INSERT INTO `SpellIcon` VALUES (2207,"Interface\Icons\Spell_Misc_HellifrePVPCombatMorale"); 
-INSERT INTO `SpellIcon` VALUES (2208,"Interface\Icons\INV_Misc_Foot_Centaur"); 
-INSERT INTO `SpellIcon` VALUES (2209,"Interface\Icons\Spell_Shadow_ShadowEmbrace"); 
-INSERT INTO `SpellIcon` VALUES (2210,"Interface\Icons\Spell_Shadow_FocusedPower"); 
-INSERT INTO `SpellIcon` VALUES (2211,"Interface\Icons\Spell_Shadow_Misery"); 
-INSERT INTO `SpellIcon` VALUES (2212,"Interface\Icons\Spell_Holy_Absolution"); 
-INSERT INTO `SpellIcon` VALUES (2213,"Interface\Icons\Spell_Holy_Stoicism"); 
-INSERT INTO `SpellIcon` VALUES (2214,"Interface\Icons\Spell_Holy_CircleOfRenewal"); 
-INSERT INTO `SpellIcon` VALUES (2215,"Interface\Icons\Spell_Arcane_FocusedPower"); 
-INSERT INTO `SpellIcon` VALUES (2216,"Interface\Icons\Spell_unused"); 
-INSERT INTO `SpellIcon` VALUES (2217,"Interface\Icons\INV_Misc_EngGizmos_15"); 
-INSERT INTO `SpellIcon` VALUES (2218,"Interface\Icons\Spell_Holy_SymbolOfHope"); 
-INSERT INTO `SpellIcon` VALUES (2219,"Interface\Icons\Spell_Holy_PrayerOfMendingtga"); 
-INSERT INTO `SpellIcon` VALUES (2220,"Interface\Icons\Inv_Misc_SummerFest_BrazierGreen"); 
-INSERT INTO `SpellIcon` VALUES (2221,"Interface\Icons\Ability_Hunter_SilentHunter"); 
-INSERT INTO `SpellIcon` VALUES (2222,"Interface\Icons\Ability_Hunter_ZenArchery"); 
-INSERT INTO `SpellIcon` VALUES (2223,"Interface\Icons\Ability_Hunter_CombatExperience"); 
-INSERT INTO `SpellIcon` VALUES (2224,"Interface\Icons\Ability_Hunter_CatlikeReflexes"); 
-INSERT INTO `SpellIcon` VALUES (2225,"Interface\Icons\Ability_Hunter_SerpentSwiftness"); 
-INSERT INTO `SpellIcon` VALUES (2226,"Interface\Icons\Ability_Hunter_KillCommand"); 
-INSERT INTO `SpellIcon` VALUES (2227,"Interface\Icons\Ability_Hunter_AspectoftheViper"); 
-INSERT INTO `SpellIcon` VALUES (2228,"Interface\Icons\Ability_Hunter_SteadyShot"); 
-INSERT INTO `SpellIcon` VALUES (2229,"Interface\Icons\Ability_Hunter_BeastWithin"); 
-INSERT INTO `SpellIcon` VALUES (2230,"Interface\Icons\Ability_Hunter_MasterMarksman"); 
-INSERT INTO `SpellIcon` VALUES (2231,"Interface\Icons\Ability_Hunter_Misdirection"); 
-INSERT INTO `SpellIcon` VALUES (2232,"Interface\Icons\Ability_Hunter_FerociousInspiration"); 
-INSERT INTO `SpellIcon` VALUES (2233,"Interface\Icons\Ability_Hunter_MasterTactitian"); 
-INSERT INTO `SpellIcon` VALUES (2234,"Interface\Icons\Ability_Hunter_AnimalHandler"); 
-INSERT INTO `SpellIcon` VALUES (2235,"Interface\Icons\Ability_Hunter_Displacement"); 
-INSERT INTO `SpellIcon` VALUES (2236,"Interface\Icons\Ability_Hunter_ThrilloftheHunt"); 
-INSERT INTO `SpellIcon` VALUES (2237,"Interface\Icons\Ability_Rogue_Disembowel"); 
-INSERT INTO `SpellIcon` VALUES (2238,"Interface\Icons\Ability_Hunter_Readiness"); 
-INSERT INTO `SpellIcon` VALUES (2239,"Interface\Icons\Ability_Hunter_SurvivalInstincts"); 
-INSERT INTO `SpellIcon` VALUES (2240,"Interface\Icons\Ability_Hunter_Resourcefulness"); 
-INSERT INTO `SpellIcon` VALUES (2241,"Interface\Icons\INV_Misc_Crop_02"); 
-INSERT INTO `SpellIcon` VALUES (2242,"Interface\Icons\INV_Enchant_VoidSphere"); 
-INSERT INTO `SpellIcon` VALUES (2243,"Interface\Icons\INV_Enchant_PrismaticSphere"); 
-INSERT INTO `SpellIcon` VALUES (2244,"Interface\Icons\INV_Weapon_Rifle_19"); 
-INSERT INTO `SpellIcon` VALUES (2245,"Interface\Icons\INV_Jewelry_Ring_62"); 
-INSERT INTO `SpellIcon` VALUES (2246,"Interface\Icons\Ability_Druid_Lacerate"); 
-INSERT INTO `SpellIcon` VALUES (2247,"Interface\Icons\Ability_Druid_BalanceofPower"); 
-INSERT INTO `SpellIcon` VALUES (2248,"Interface\Icons\Ability_Druid_TwilightsWrath"); 
-INSERT INTO `SpellIcon` VALUES (2249,"Interface\Icons\Ability_Druid_EmpoweredRejuvination"); 
-INSERT INTO `SpellIcon` VALUES (2250,"Interface\Icons\Ability_Druid_NaturalPerfection"); 
-INSERT INTO `SpellIcon` VALUES (2251,"Interface\Icons\Ability_Druid_EmpoweredTouch"); 
-INSERT INTO `SpellIcon` VALUES (2252,"Interface\Icons\Ability_Druid_PredatoryInstincts"); 
-INSERT INTO `SpellIcon` VALUES (2253,"Interface\Icons\Ability_Druid_PrimalTenacity"); 
-INSERT INTO `SpellIcon` VALUES (2254,"Interface\Icons\Ability_Druid_HealingInstincts"); 
-INSERT INTO `SpellIcon` VALUES (2255,"Interface\Icons\Ability_Druid_Dreamstate"); 
-INSERT INTO `SpellIcon` VALUES (2256,"Interface\Icons\Ability_Druid_LunarGuidance"); 
-INSERT INTO `SpellIcon` VALUES (2257,"Interface\Icons\Ability_Druid_TreeofLife"); 
-INSERT INTO `SpellIcon` VALUES (2258,"Interface\Icons\Ability_Druid_ForceofNature"); 
-INSERT INTO `SpellIcon` VALUES (2259,"Interface\Icons\INV_Misc_Gem_Pearl_06"); 
-INSERT INTO `SpellIcon` VALUES (2260,"Interface\Icons\INV_Weapon_Shortblade_38"); 
-INSERT INTO `SpellIcon` VALUES (2261,"Interface\Icons\INV_Enchant_DustArcane"); 
-INSERT INTO `SpellIcon` VALUES (2262,"Interface\Icons\INV_Misc_EngGizmos_20"); 
-INSERT INTO `SpellIcon` VALUES (2263,"Interface\Icons\INV_Gizmo_TheBiggerOne"); 
-INSERT INTO `SpellIcon` VALUES (2264,"Interface\Icons\INV_Misc_Bell_01"); 
-INSERT INTO `SpellIcon` VALUES (2265,"Interface\Icons\INV_Jewelcrafting_GoldenHare"); 
-INSERT INTO `SpellIcon` VALUES (2266,"Interface\Icons\Spell_Holy_BlindingHeal"); 
-INSERT INTO `SpellIcon` VALUES (2267,"Interface\Icons\Spell_Arcane_MassDispel"); 
-INSERT INTO `SpellIcon` VALUES (2268,"Interface\Icons\Spell_Holy_Heroism"); 
-INSERT INTO `SpellIcon` VALUES (2269,"Interface\Icons\INV_Weapon_Shortblade_28"); 
-INSERT INTO `SpellIcon` VALUES (2270,"Interface\Icons\INV_Jewelcrafting_BlackPearlPanther"); 
-INSERT INTO `SpellIcon` VALUES (2271,"Interface\Icons\INV_Weapon_Rifle_18"); 
-INSERT INTO `SpellIcon` VALUES (2272,"Interface\Icons\INV_Sword_49"); 
-INSERT INTO `SpellIcon` VALUES (2273,"Interface\Icons\INV_Misc_Head_Human_01"); 
-INSERT INTO `SpellIcon` VALUES (2274,"Interface\Icons\Ability_Druid_FlightForm"); 
-INSERT INTO `SpellIcon` VALUES (2275,"Interface\Icons\INV_Misc_Drum_03"); 
-INSERT INTO `SpellIcon` VALUES (2276,"Interface\Icons\INV_Misc_Drum_05"); 
-INSERT INTO `SpellIcon` VALUES (2277,"Interface\Icons\INV_Misc_Drum_06"); 
-INSERT INTO `SpellIcon` VALUES (2278,"Interface\Icons\INV_Misc_Drum_04"); 
-INSERT INTO `SpellIcon` VALUES (2279,"Interface\Icons\INV_Misc_Drum_07"); 
-INSERT INTO `SpellIcon` VALUES (2280,"Interface\Icons\INV_Misc_Drum_02"); 
-INSERT INTO `SpellIcon` VALUES (2281,"Interface\Icons\Spell_Arcane_ArcaneTorrent"); 
-INSERT INTO `SpellIcon` VALUES (2282,"Interface\Icons\INV_Misc_Herb_Netherbloom"); 
-INSERT INTO `SpellIcon` VALUES (2283,"Interface\Icons\Ability_Rogue_BloodyEye"); 
-INSERT INTO `SpellIcon` VALUES (2284,"Interface\Icons\INV_Weapon_Shortblade_39"); 
-INSERT INTO `SpellIcon` VALUES (2285,"Interface\Icons\Ability_Hunter_RapidKilling"); 
-INSERT INTO `SpellIcon` VALUES (2286,"Interface\Icons\INV_Feather_16"); 
-INSERT INTO `SpellIcon` VALUES (2287,"Interface\Icons\Ability_Shaman_WaterShield"); 
-INSERT INTO `SpellIcon` VALUES (2288,"Interface\Icons\Ability_Shaman_Heroism"); 
-INSERT INTO `SpellIcon` VALUES (2289,"Interface\Icons\Spell_Nature_EarthElemental_Totem"); 
-INSERT INTO `SpellIcon` VALUES (2290,"Interface\Icons\Spell_Fire_Elemental_Totem"); 
-INSERT INTO `SpellIcon` VALUES (2291,"Interface\Icons\Spell_Holy_CrusaderAura"); 
-INSERT INTO `SpellIcon` VALUES (2292,"Interface\Icons\Spell_Holy_SealOfVengeance"); 
-INSERT INTO `SpellIcon` VALUES (2293,"Interface\Icons\Spell_Holy_SealOfBlood"); 
-INSERT INTO `SpellIcon` VALUES (2294,"Interface\Icons\Spell_Arcane_Blast"); 
-INSERT INTO `SpellIcon` VALUES (2295,"Interface\Icons\Ability_Hunter_SnakeTrap"); 
-INSERT INTO `SpellIcon` VALUES (2296,"Interface\Icons\Spell_Shadow_Shadowfiend"); 
-INSERT INTO `SpellIcon` VALUES (2297,"Interface\Icons\Spell_Shadow_FelArmour"); 
-INSERT INTO `SpellIcon` VALUES (2298,"Interface\Icons\Spell_Fire_FelFlameBolt"); 
-INSERT INTO `SpellIcon` VALUES (2299,"Interface\Icons\Spell_Fire_FelFire"); 
-INSERT INTO `SpellIcon` VALUES (2300,"Interface\Icons\INV_BannerPVP_03"); 
-INSERT INTO `SpellIcon` VALUES (2301,"Interface\Icons\INV_Elemental_Mote_Earth01"); 
-INSERT INTO `SpellIcon` VALUES (2302,"Interface\Icons\INV_Elemental_Mote_Fire01"); 
-INSERT INTO `SpellIcon` VALUES (2303,"Interface\Icons\INV_Gizmo_KhoriumPowerCore"); 
-INSERT INTO `SpellIcon` VALUES (2304,"Interface\Icons\INV_Feather_12"); 
-INSERT INTO `SpellIcon` VALUES (2305,"Interface\Icons\INV_Stone_10"); 
-INSERT INTO `SpellIcon` VALUES (2306,"Interface\Icons\INV_Gizmo_SuperSapperCharge"); 
-INSERT INTO `SpellIcon` VALUES (2307,"Interface\Icons\Ability_Mage_MoltenArmor"); 
-INSERT INTO `SpellIcon` VALUES (2308,"Interface\Icons\Ability_Mage_Invisibility"); 
-INSERT INTO `SpellIcon` VALUES (2309,"Interface\Icons\Spell_Holy_CrusaderStrike"); 
-INSERT INTO `SpellIcon` VALUES (2310,"Interface\Icons\Ability_Warlock_Avoidance"); 
-INSERT INTO `SpellIcon` VALUES (2311,"Interface\Icons\Spell_Shadow_UnstableAffliction_1"); 
-INSERT INTO `SpellIcon` VALUES (2312,"Interface\Icons\Ability_Druid_Mangle2"); 
-INSERT INTO `SpellIcon` VALUES (2313,"Interface\Icons\INV_DataCrystal02"); 
-INSERT INTO `SpellIcon` VALUES (2314,"Interface\Icons\INV_Weapon_Rifle_15"); 
-INSERT INTO `SpellIcon` VALUES (2315,"Interface\Icons\INV_Misc_Dust_03"); 
-INSERT INTO `SpellIcon` VALUES (2316,"Interface\Icons\INV_Egg_03"); 
-INSERT INTO `SpellIcon` VALUES (2317,"Interface\Icons\INV_Misc_Herb_Nightmarevine"); 
-INSERT INTO `SpellIcon` VALUES (2318,"Interface\Icons\Ability_Hunter_GoForTheThroat"); 
-INSERT INTO `SpellIcon` VALUES (2319,"Interface\Icons\INV_Rod_EnchantedFelsteel"); 
-INSERT INTO `SpellIcon` VALUES (2320,"Interface\Icons\INV_Weapon_ShortBlade_07"); 
-INSERT INTO `SpellIcon` VALUES (2321,"Interface\Icons\INV_Misc_Gem_EbonDraenite_02"); 
-INSERT INTO `SpellIcon` VALUES (2322,"Interface\Icons\INV_Misc_LeatherScrap_13"); 
-INSERT INTO `SpellIcon` VALUES (2323,"Interface\Icons\INV_Qiraj_OuroHide"); 
-INSERT INTO `SpellIcon` VALUES (2324,"Interface\Icons\INV_Misc_Idol_03"); 
-INSERT INTO `SpellIcon` VALUES (2325,"Interface\Icons\INV_Misc_Statue_06"); 
-INSERT INTO `SpellIcon` VALUES (2326,"Interface\Icons\Spell_Holy_ConsumeMagic"); 
-INSERT INTO `SpellIcon` VALUES (2327,"Interface\Icons\INV_Elemental_Primal_Fire"); 
-INSERT INTO `SpellIcon` VALUES (2328,"Interface\Icons\Ability_Hunter_Pet_DragonHawk"); 
-INSERT INTO `SpellIcon` VALUES (2329,"Interface\Icons\INV_Misc_ArmorKit_24"); 
-INSERT INTO `SpellIcon` VALUES (2330,"Interface\Icons\INV_Misc_ArmorKit_21"); 
-INSERT INTO `SpellIcon` VALUES (2331,"Interface\Icons\INV_Misc_ArmorKit_25"); 
-INSERT INTO `SpellIcon` VALUES (2332,"Interface\Icons\INV_Misc_ArmorKit_23"); 
-INSERT INTO `SpellIcon` VALUES (2333,"Interface\Icons\Ability_Mount_NetherDrakeElite"); 
-INSERT INTO `SpellIcon` VALUES (2334,"Interface\Icons\INV_Misc_Ammo_Bullet_02"); 
-INSERT INTO `SpellIcon` VALUES (2335,"Interface\Icons\INV_Misc_Ammo_Bullet_03"); 
-INSERT INTO `SpellIcon` VALUES (2336,"Interface\Icons\INV_Misc_Ammo_Bullet_04"); 
-INSERT INTO `SpellIcon` VALUES (2337,"Interface\Icons\INV_Stone_16"); 
-INSERT INTO `SpellIcon` VALUES (2338,"Interface\Icons\INV_2H_Auchindoun_01"); 
-INSERT INTO `SpellIcon` VALUES (2339,"Interface\Icons\INV_Crate_03"); 
-INSERT INTO `SpellIcon` VALUES (2340,"Interface\Icons\Spell_Fire_Felcano"); 
-INSERT INTO `SpellIcon` VALUES (2341,"Interface\Icons\INV_Boots_Cloth_01"); 
-INSERT INTO `SpellIcon` VALUES (2342,"Interface\Icons\INV_Boots_Cloth_03"); 
-INSERT INTO `SpellIcon` VALUES (2343,"Interface\Icons\INV_Staff_27"); 
-INSERT INTO `SpellIcon` VALUES (2344,"Interface\Icons\INV_Wand_04"); 
-INSERT INTO `SpellIcon` VALUES (2345,"Interface\Icons\INV_Wand_05"); 
-INSERT INTO `SpellIcon` VALUES (2346,"Interface\Icons\INV_Drink_Waterskin_11"); 
-INSERT INTO `SpellIcon` VALUES (2347,"Interface\Icons\INV_Misc_Statue_08"); 
-INSERT INTO `SpellIcon` VALUES (2348,"Interface\Icons\INV_Misc_Statue_05"); 
-INSERT INTO `SpellIcon` VALUES (2349,"Interface\Icons\INV_Misc_Statue_09"); 
-INSERT INTO `SpellIcon` VALUES (2350,"Interface\Icons\INV_Misc_Statue_10"); 
-INSERT INTO `SpellIcon` VALUES (2351,"Interface\Icons\INV_Misc_Statue_07"); 
-INSERT INTO `SpellIcon` VALUES (2352,"Interface\Icons\Spell_Fire_FelPyroblast"); 
-INSERT INTO `SpellIcon` VALUES (2353,"Interface\Icons\INV_Misc_Food_66"); 
-INSERT INTO `SpellIcon` VALUES (2354,"Interface\Icons\Spell_Fire_FelFlameStrike"); 
-INSERT INTO `SpellIcon` VALUES (2355,"Interface\Icons\Spell_Fire_FelImmolation"); 
-INSERT INTO `SpellIcon` VALUES (2356,"Interface\Icons\Spell_Fire_FelFireNova"); 
-INSERT INTO `SpellIcon` VALUES (2357,"Interface\Icons\INV_QirajIdol_War"); 
-INSERT INTO `SpellIcon` VALUES (2358,"Interface\Icons\INV_Misc_Dust_05"); 
-INSERT INTO `SpellIcon` VALUES (2359,"Interface\Icons\INV_Misc_Head_Elf_01"); 
-INSERT INTO `SpellIcon` VALUES (2360,"Interface\Icons\INV_Misc_Head_Elf_02"); 
-INSERT INTO `SpellIcon` VALUES (2361,"Interface\Icons\INV_Misc_Head_Tauren_01"); 
-INSERT INTO `SpellIcon` VALUES (2362,"Interface\Icons\INV_Potion_06"); 
-INSERT INTO `SpellIcon` VALUES (2363,"Interface\Icons\Ability_Rogue_Shadowstep"); 
-INSERT INTO `SpellIcon` VALUES (2364,"Interface\Icons\INV_Misc_Bag_07"); 
-INSERT INTO `SpellIcon` VALUES (2365,"Interface\Icons\Spell_Fire_FelFireward"); 
-INSERT INTO `SpellIcon` VALUES (2366,"Interface\Icons\Spell_Fire_FelFlameRing"); 
-INSERT INTO `SpellIcon` VALUES (2367,"Interface\Icons\INV_Gizmo_GoblingTonkController"); 
-INSERT INTO `SpellIcon` VALUES (2368,"Interface\Icons\INV_Misc_MissileLarge_Red"); 
-INSERT INTO `SpellIcon` VALUES (2369,"Interface\Icons\Spell_Fire_FelHellfire"); 
-INSERT INTO `SpellIcon` VALUES (2370,"Interface\Icons\INV_Ingot_09"); 
-INSERT INTO `SpellIcon` VALUES (2371,"Interface\Icons\INV_Elemental_Mote_Nether"); 
-INSERT INTO `SpellIcon` VALUES (2372,"Interface\Icons\INV_Chest_Wolf"); 
-INSERT INTO `SpellIcon` VALUES (2373,"Interface\Icons\INV_Weapon_Rifle_21"); 
-INSERT INTO `SpellIcon` VALUES (2374,"Interface\Icons\Ability_Hunter_Pet_Sporebat"); 
-INSERT INTO `SpellIcon` VALUES (2375,"Interface\Icons\Spell_Fire_FelFlameBreath"); 
-INSERT INTO `SpellIcon` VALUES (2376,"Interface\Icons\INV_Weapon_Halberd_03"); 
-INSERT INTO `SpellIcon` VALUES (2377,"Interface\Icons\INV_Helmet_31"); 
-INSERT INTO `SpellIcon` VALUES (2378,"Interface\Icons\INV_Feather_13"); 
-INSERT INTO `SpellIcon` VALUES (2379,"Interface\Icons\INV_Elemental_Primal_Water"); 
-INSERT INTO `SpellIcon` VALUES (2380,"Interface\Icons\INV_Elemental_Primal_Earth"); 
-INSERT INTO `SpellIcon` VALUES (2381,"Interface\Icons\INV_Elemental_Primal_Air"); 
-INSERT INTO `SpellIcon` VALUES (2382,"Interface\Icons\INV_Elemental_Primal_Life"); 
-INSERT INTO `SpellIcon` VALUES (2383,"Interface\Icons\INV_Elemental_Primal_Mana"); 
-INSERT INTO `SpellIcon` VALUES (2384,"Interface\Icons\INV_Elemental_Primal_Shadow"); 
-INSERT INTO `SpellIcon` VALUES (2385,"Interface\Icons\Spell_Fire_FelRainOfFire"); 
-INSERT INTO `SpellIcon` VALUES (2386,"Interface\Icons\INV_Sword_63"); 
-INSERT INTO `SpellIcon` VALUES (2387,"Interface\Icons\INV_Sword_54"); 
-INSERT INTO `SpellIcon` VALUES (2388,"Interface\Icons\INV_Misc_Key_10"); 
-INSERT INTO `SpellIcon` VALUES (2389,"Interface\Icons\INV_Misc_Key_02"); 
-INSERT INTO `SpellIcon` VALUES (2390,"Interface\Icons\INV_Potion_140"); 
-INSERT INTO `SpellIcon` VALUES (2391,"Interface\Icons\INV_Scroll_01"); 
-INSERT INTO `SpellIcon` VALUES (2392,"Interface\Icons\INV_Potion_138"); 
-INSERT INTO `SpellIcon` VALUES (2393,"Interface\Icons\INV_Potion_144"); 
-INSERT INTO `SpellIcon` VALUES (2394,"Interface\Icons\INV_Boots_Chain_01"); 
-INSERT INTO `SpellIcon` VALUES (2395,"Interface\Icons\Ability_Mount_CockatriceMount_Black"); 
-INSERT INTO `SpellIcon` VALUES (2396,"Interface\Icons\Ability_Mount_CockatriceMount_Blue"); 
-INSERT INTO `SpellIcon` VALUES (2397,"Interface\Icons\Ability_Mount_CockatriceMount_Purple"); 
-INSERT INTO `SpellIcon` VALUES (2398,"Interface\Icons\Ability_Mount_CockatriceMount"); 
-INSERT INTO `SpellIcon` VALUES (2399,"Interface\Icons\Ability_Mount_CockatriceMountElite_Green"); 
-INSERT INTO `SpellIcon` VALUES (2400,"Interface\Icons\Ability_Mount_CockatriceMountElite_Purple"); 
-INSERT INTO `SpellIcon` VALUES (2401,"Interface\Icons\Ability_Mount_CockatriceMountElite_Black"); 
-INSERT INTO `SpellIcon` VALUES (2402,"Interface\Icons\INV_Cask_02"); 
-INSERT INTO `SpellIcon` VALUES (2403,"Interface\Icons\Ability_Mount_RidingElekk_Purple"); 
-INSERT INTO `SpellIcon` VALUES (2404,"Interface\Icons\Ability_Mount_RidingElekk_Grey"); 
-INSERT INTO `SpellIcon` VALUES (2405,"Interface\Icons\Ability_Mount_RidingElekkElite_Blue"); 
-INSERT INTO `SpellIcon` VALUES (2406,"Interface\Icons\Ability_Mount_RidingElekkElite_Green"); 
-INSERT INTO `SpellIcon` VALUES (2407,"Interface\Icons\Ability_Mount_RidingElekkElite_Purple"); 
-INSERT INTO `SpellIcon` VALUES (2408,"Interface\Icons\INV_Potion_137"); 
-INSERT INTO `SpellIcon` VALUES (2409,"Interface\Icons\INV_Misc_Drum_01"); 
-INSERT INTO `SpellIcon` VALUES (2410,"Interface\Icons\INV_Misc_Bone_10"); 
-INSERT INTO `SpellIcon` VALUES (2411,"Interface\Icons\INV_Misc_Herb_Manathistle"); 
-INSERT INTO `SpellIcon` VALUES (2412,"Interface\Icons\INV_Mask_02"); 
-INSERT INTO `SpellIcon` VALUES (2413,"Interface\Icons\Spell_Misc_HellifrePVPHonorHoldFavor"); 
-INSERT INTO `SpellIcon` VALUES (2414,"Interface\Icons\INV_Armor_Shield_Naxxramas_D_02"); 
-INSERT INTO `SpellIcon` VALUES (2415,"Interface\Icons\INV_Potion_76"); 
-INSERT INTO `SpellIcon` VALUES (2416,"Interface\Icons\INV_Pick_01"); 
-INSERT INTO `SpellIcon` VALUES (2417,"Interface\Icons\INV_Pick_03"); 
-INSERT INTO `SpellIcon` VALUES (2418,"Interface\Icons\INV_Pick_02"); 
-INSERT INTO `SpellIcon` VALUES (2419,"Interface\Icons\INV_Wand_03"); 
-INSERT INTO `SpellIcon` VALUES (2420,"Interface\Icons\INV_Sword_10"); 
-INSERT INTO `SpellIcon` VALUES (2421,"Interface\Icons\INV_Helmet_66"); 
-INSERT INTO `SpellIcon` VALUES (2422,"Interface\Icons\Ability_Hunter_Pet_NetherRay"); 
-INSERT INTO `SpellIcon` VALUES (2423,"Interface\Icons\INV_Potion_154"); 
-INSERT INTO `SpellIcon` VALUES (2424,"Interface\Icons\INV_Potion_158"); 
-INSERT INTO `SpellIcon` VALUES (2425,"Interface\Icons\INV_Potion_155"); 
-INSERT INTO `SpellIcon` VALUES (2426,"Interface\Icons\INV_Potion_159"); 
-INSERT INTO `SpellIcon` VALUES (2427,"Interface\Icons\Spell_unused2"); 
-INSERT INTO `SpellIcon` VALUES (2428,"Interface\Icons\INV_Misc_Coin_10"); 
-INSERT INTO `SpellIcon` VALUES (2429,"Interface\Icons\INV_Rod_EnchantedAdamantite"); 
-INSERT INTO `SpellIcon` VALUES (2430,"Interface\Icons\Spell_Holy_LastingDefense"); 
-INSERT INTO `SpellIcon` VALUES (2431,"Interface\Icons\INV_WEAPON_HAND_08"); 
-INSERT INTO `SpellIcon` VALUES (2432,"Interface\Icons\INV_Weapon_Hand_09"); 
-INSERT INTO `SpellIcon` VALUES (2433,"Interface\Icons\INV_Weapon_Hand_06"); 
-INSERT INTO `SpellIcon` VALUES (2434,"Interface\Icons\INV_Weapon_Crossbow_18"); 
-INSERT INTO `SpellIcon` VALUES (2435,"Interface\Icons\Spell_Nature_GiftoftheWild"); 
-INSERT INTO `SpellIcon` VALUES (2436,"Interface\Icons\INV_Misc_Book_06"); 
-INSERT INTO `SpellIcon` VALUES (2437,"Interface\Icons\INV_Jewelry_Necklace_03"); 
-INSERT INTO `SpellIcon` VALUES (2438,"Interface\Icons\INV_Weapon_Shortblade_46"); 
-INSERT INTO `SpellIcon` VALUES (2439,"Interface\Icons\INV_Potion_35"); 
-INSERT INTO `SpellIcon` VALUES (2440,"Interface\Icons\INV_Potion_77"); 
-INSERT INTO `SpellIcon` VALUES (2441,"Interface\Icons\INV_Potion_70"); 
-INSERT INTO `SpellIcon` VALUES (2442,"Interface\Icons\INV_Potion_42"); 
-INSERT INTO `SpellIcon` VALUES (2443,"Interface\Icons\INV_Hammer_13"); 
-INSERT INTO `SpellIcon` VALUES (2444,"Interface\Icons\INV_Hammer_Unique_Sulfuras"); 
-INSERT INTO `SpellIcon` VALUES (2445,"Interface\Icons\Spell_Fire_BluePyroblast"); 
-INSERT INTO `SpellIcon` VALUES (2446,"Interface\Icons\Spell_Fire_BlueFlameBolt"); 
-INSERT INTO `SpellIcon` VALUES (2447,"Interface\Icons\INV_SWORD_52"); 
-INSERT INTO `SpellIcon` VALUES (2448,"Interface\Icons\INV_Misc_Apexis_Crystal"); 
-INSERT INTO `SpellIcon` VALUES (2449,"Interface\Icons\INV_Netherwhelp"); 
-INSERT INTO `SpellIcon` VALUES (2450,"Interface\Icons\INV_DataCrystal06"); 
-INSERT INTO `SpellIcon` VALUES (2451,"Interface\Icons\INV_Misc_Gem_Sapphire_02"); 
-INSERT INTO `SpellIcon` VALUES (2452,"Interface\Icons\INV_Misc_Noose_01"); 
-INSERT INTO `SpellIcon` VALUES (2453,"Interface\Icons\INV_Misc_Gem_LionsEye_01"); 
-INSERT INTO `SpellIcon` VALUES (2454,"Interface\Icons\INV_Misc_Gem_BloodGem_02"); 
-INSERT INTO `SpellIcon` VALUES (2455,"Interface\Icons\INV_Misc_Gem_AzureDraenite_02"); 
-INSERT INTO `SpellIcon` VALUES (2456,"Interface\Icons\Spell_Fire_BlueImmolation"); 
-INSERT INTO `SpellIcon` VALUES (2457,"Interface\Icons\INV_Chest_Cloth_66"); 
-INSERT INTO `SpellIcon` VALUES (2458,"Interface\Icons\Spell_Fire_BlueFire"); 
-INSERT INTO `SpellIcon` VALUES (2459,"Interface\Icons\Spell_Fire_BlueRainOfFire"); 
-INSERT INTO `SpellIcon` VALUES (2460,"Interface\Icons\Spell_Fire_BlueFlameRing"); 
-INSERT INTO `SpellIcon` VALUES (2461,"Interface\Icons\Spell_Fire_BlueFireNova"); 
-INSERT INTO `SpellIcon` VALUES (2462,"Interface\Icons\INV_Weapon_Halberd18"); 
-INSERT INTO `SpellIcon` VALUES (2463,"Interface\Icons\INV_Gauntlets_17"); 
-INSERT INTO `SpellIcon` VALUES (2464,"Interface\Icons\INV_DataCrystal05"); 
-INSERT INTO `SpellIcon` VALUES (2465,"Interface\Icons\INV_Weapon_ShortBlade_25"); 
-INSERT INTO `SpellIcon` VALUES (2466,"Interface\Icons\Ability_Mount_CockatriceMountElite_Blue"); 
-INSERT INTO `SpellIcon` VALUES (2467,"Interface\Icons\INV-Mount_Raven_54"); 
-INSERT INTO `SpellIcon` VALUES (2468,"Interface\Icons\INV_Misc_Ribbon_01"); 
-INSERT INTO `SpellIcon` VALUES (2469,"Interface\Icons\INV_Potion_164"); 
-INSERT INTO `SpellIcon` VALUES (2470,"Interface\Icons\INV_Misc_ArmorKit_22"); 
-INSERT INTO `SpellIcon` VALUES (2471,"Interface\Icons\INV_Misc_ArmorKit_16"); 
-INSERT INTO `SpellIcon` VALUES (2472,"Interface\Icons\INV_Misc_ArmorKit_15"); 
-INSERT INTO `SpellIcon` VALUES (2473,"Interface\Icons\INV_Misc_ArmorKit_07"); 
-INSERT INTO `SpellIcon` VALUES (2474,"Interface\Icons\INV_Misc_ArmorKit_09"); 
-INSERT INTO `SpellIcon` VALUES (2475,"Interface\Icons\INV_Misc_ArmorKit_05"); 
-INSERT INTO `SpellIcon` VALUES (2476,"Interface\Icons\INV_Misc_ArmorKit_26"); 
-INSERT INTO `SpellIcon` VALUES (2477,"Interface\Icons\Spell_Fire_BlueHellfire"); 
-INSERT INTO `SpellIcon` VALUES (2478,"Interface\Icons\INV_Gizmo_Poltryiser_01"); 
-INSERT INTO `SpellIcon` VALUES (2479,"Interface\Icons\INV_Helmet_49"); 
-INSERT INTO `SpellIcon` VALUES (2480,"Interface\Icons\INV_Gizmo_ManaPotionPack"); 
-INSERT INTO `SpellIcon` VALUES (2481,"Interface\Icons\INV_Misc_Food_64"); 
-INSERT INTO `SpellIcon` VALUES (2482,"Interface\Icons\INV_Misc_Food_88_RavagerNuggets"); 
-INSERT INTO `SpellIcon` VALUES (2483,"Interface\Icons\INV_Misc_Food_76"); 
-INSERT INTO `SpellIcon` VALUES (2484,"Interface\Icons\INV_Misc_Root_02"); 
-INSERT INTO `SpellIcon` VALUES (2485,"Interface\Icons\INV_Misc_Food_60"); 
-INSERT INTO `SpellIcon` VALUES (2486,"Interface\Icons\INV_Misc_Spyglass_02"); 
-INSERT INTO `SpellIcon` VALUES (2487,"Interface\Icons\INV_Wand_1H_Stratholme_D_01"); 
-INSERT INTO `SpellIcon` VALUES (2488,"Interface\Icons\INV_Mushroom_09"); 
-INSERT INTO `SpellIcon` VALUES (2489,"Interface\Icons\INV_Enchant_ShardPrismaticSmall"); 
-INSERT INTO `SpellIcon` VALUES (2490,"Interface\Icons\INV_Enchant_Disenchant"); 
-INSERT INTO `SpellIcon` VALUES (2491,"Interface\Icons\INV_Drink_17"); 
-INSERT INTO `SpellIcon` VALUES (2492,"Interface\Icons\INV_Box_01"); 
-INSERT INTO `SpellIcon` VALUES (2493,"Interface\Icons\INV_Misc_Food_25"); 
-INSERT INTO `SpellIcon` VALUES (2494,"Interface\Icons\INV_Misc_Horn_02"); 
-INSERT INTO `SpellIcon` VALUES (2495,"Interface\Icons\INV_Misc_Fish_02"); 
-INSERT INTO `SpellIcon` VALUES (2496,"Interface\Icons\INV_Jewelry_Necklace_12"); 
-INSERT INTO `SpellIcon` VALUES (2497,"Interface\Icons\INV_Misc_Bandage_04"); 
-INSERT INTO `SpellIcon` VALUES (2498,"Interface\Icons\INV_Misc_Bandage_04"); 
-INSERT INTO `SpellIcon` VALUES (2499,"Interface\Icons\INV_Misc_Bomb_03"); 
-INSERT INTO `SpellIcon` VALUES (2500,"Interface\Icons\INV_Weapon_ShortBlade_26"); 
-INSERT INTO `SpellIcon` VALUES (2501,"Interface\Icons\INV_Misc_Key_11"); 
-INSERT INTO `SpellIcon` VALUES (2502,"Interface\Icons\INV_MISC_KEY_13"); 
-INSERT INTO `SpellIcon` VALUES (2503,"Interface\Icons\INV_Trinket_HonorHold"); 
-INSERT INTO `SpellIcon` VALUES (2504,"Interface\Icons\INV_Relics_IdolofFerocity"); 
-INSERT INTO `SpellIcon` VALUES (2505,"Interface\Icons\INV_Misc_Bomb_07"); 
-INSERT INTO `SpellIcon` VALUES (2506,"Interface\Icons\INV_Misc_Orb_05"); 
-INSERT INTO `SpellIcon` VALUES (2507,"Interface\Icons\INV_Misc_Note_03"); 
-INSERT INTO `SpellIcon` VALUES (2508,"Interface\Icons\INV_Misc_EngGizmos_01"); 
-INSERT INTO `SpellIcon` VALUES (2509,"Interface\Icons\INV_Misc_StoneTablet_11"); 
-INSERT INTO `SpellIcon` VALUES (2510,"Interface\Icons\INV_Bow_1H_Auchindoun_D_01"); 
-INSERT INTO `SpellIcon` VALUES (2511,"Interface\Icons\INV_Misc_Ammo_Arrow_03"); 
-INSERT INTO `SpellIcon` VALUES (2512,"Interface\Icons\INV_Offhand_Stratholme_A_01"); 
-INSERT INTO `SpellIcon` VALUES (2513,"Interface\Icons\INV_Misc_Head_Troll_01"); 
-INSERT INTO `SpellIcon` VALUES (2514,"Interface\Icons\INV_Misc_Food_Wheat_01"); 
-INSERT INTO `SpellIcon` VALUES (2515,"Interface\Icons\INV_Cask_04"); 
-INSERT INTO `SpellIcon` VALUES (2516,"Interface\Icons\INV_Jewelry_Talisman_12"); 
-INSERT INTO `SpellIcon` VALUES (2517,"Interface\Icons\INV_Wand_20"); 
-INSERT INTO `SpellIcon` VALUES (2518,"Interface\Icons\INV_Misc_Beer_01"); 
-INSERT INTO `SpellIcon` VALUES (2519,"Interface\Icons\INV_Misc_Bone_DwarfSkull_01"); 
-INSERT INTO `SpellIcon` VALUES (2520,"Interface\Icons\INV_Weapon_Halberd_21"); 
-INSERT INTO `SpellIcon` VALUES (2521,"Interface\Icons\INV_Gauntlets_29"); 
-INSERT INTO `SpellIcon` VALUES (2522,"Interface\Icons\INV_Shoulder_08"); 
-INSERT INTO `SpellIcon` VALUES (2523,"Interface\Icons\INV_Misc_Toy_04"); 
-INSERT INTO `SpellIcon` VALUES (2524,"Interface\Icons\INV_Misc_Toy_02"); 
-INSERT INTO `SpellIcon` VALUES (2525,"Interface\Icons\INV_Misc_Toy_01"); 
-INSERT INTO `SpellIcon` VALUES (2526,"Interface\Icons\INV_Misc_Toy_03"); 
-INSERT INTO `SpellIcon` VALUES (2527,"Interface\Icons\INV_Misc_EngGizmos_05"); 
-INSERT INTO `SpellIcon` VALUES (2528,"Interface\Icons\INV_Misc_Bag_28_Halloween"); 
-INSERT INTO `SpellIcon` VALUES (2529,"Interface\Icons\INV_Wand_19"); 
-INSERT INTO `SpellIcon` VALUES (2530,"Interface\Icons\INV_Weapon_Bow_16"); 
-INSERT INTO `SpellIcon` VALUES (2531,"Interface\Icons\INV_Belt_05"); 
-INSERT INTO `SpellIcon` VALUES (2532,"Interface\Icons\INV_Drink_19"); 
-INSERT INTO `SpellIcon` VALUES (2533,"Interface\Icons\INV_Misc_Fish_09"); 
-INSERT INTO `SpellIcon` VALUES (2534,"Interface\Icons\INV_Gizmo_RocketBootExtreme"); 
-INSERT INTO `SpellIcon` VALUES (2535,"Interface\Icons\INV_Holiday_BrewfestBuff_01"); 
-INSERT INTO `SpellIcon` VALUES (2536,"Interface\Icons\INV_Misc_Herb_15"); 
-INSERT INTO `SpellIcon` VALUES (2537,"Interface\Icons\INV_Misc_ArmorKit_20"); 
-INSERT INTO `SpellIcon` VALUES (2538,"Interface\Icons\Ability_Hunter_Pet_Ravager"); 
-INSERT INTO `SpellIcon` VALUES (2539,"Interface\Icons\INV_Misc_EngGizmos_06"); 
-INSERT INTO `SpellIcon` VALUES (2540,"Interface\Icons\INV_DRINK_14"); 
-INSERT INTO `SpellIcon` VALUES (2541,"Interface\Icons\Ability_Hunter_DisarmingShot"); 
-INSERT INTO `SpellIcon` VALUES (2542,"Interface\Icons\Spell_Holy_Chastise"); 
-INSERT INTO `SpellIcon` VALUES (2543,"Interface\Icons\INV_Misc_Idol_02"); 
-INSERT INTO `SpellIcon` VALUES (2544,"Interface\Icons\INV_DataCrystal10"); 
-INSERT INTO `SpellIcon` VALUES (2545,"Interface\Icons\INV_Misc_Basket_01"); 
-INSERT INTO `SpellIcon` VALUES (2546,"Interface\Icons\Ability_Mount_GyrocoptorElite"); 
-INSERT INTO `SpellIcon` VALUES (2547,"Interface\Icons\Ability_Mount_Gyrocoptor"); 
-INSERT INTO `SpellIcon` VALUES (2548,"Interface\Icons\INV_Axe_15"); 
-INSERT INTO `SpellIcon` VALUES (2549,"Interface\Icons\INV_Sword_2H_Blacksmithing_02"); 
-INSERT INTO `SpellIcon` VALUES (2550,"Interface\Icons\INV_Potion_53"); 
-INSERT INTO `SpellIcon` VALUES (2551,"Interface\Icons\INV_Drink_23"); 
-INSERT INTO `SpellIcon` VALUES (2552,"Interface\Icons\INV_Gizmo_06"); 
-INSERT INTO `SpellIcon` VALUES (2553,"Interface\Icons\INV_Misc_Shell_01"); 
-INSERT INTO `SpellIcon` VALUES (2554,"Interface\Icons\Ability_Mount_WarHippogryph"); 
-INSERT INTO `SpellIcon` VALUES (2555,"Interface\Icons\INV_Misc_ArmorKit_04"); 
-INSERT INTO `SpellIcon` VALUES (2556,"Interface\Icons\INV_Crate_04"); 
-INSERT INTO `SpellIcon` VALUES (2557,"Interface\Icons\INV_Feather_05"); 
-INSERT INTO `SpellIcon` VALUES (2558,"Interface\Icons\INV_Enchant_ShardPrismaticLarge"); 
-INSERT INTO `SpellIcon` VALUES (2559,"Interface\Icons\INV_Misc_Bag_08"); 
-INSERT INTO `SpellIcon` VALUES (2560,"Interface\Icons\INV_Misc_Food_01"); 
-INSERT INTO `SpellIcon` VALUES (2561,"Interface\Icons\INV_Gizmo_ZapThrottleGasCollector"); 
-INSERT INTO `SpellIcon` VALUES (2562,"Interface\Icons\Ability_Shaman_Stormstrike"); 
-INSERT INTO `SpellIcon` VALUES (2563,"Interface\Icons\INV_Misc_TabardPVP_04"); 
-INSERT INTO `SpellIcon` VALUES (2564,"Interface\Icons\INV_Potion_166"); 
-INSERT INTO `SpellIcon` VALUES (2565,"Interface\Icons\INV_Misc_Bomb_01"); 
-INSERT INTO `SpellIcon` VALUES (2566,"Interface\Icons\INV_Hammer_11"); 
-INSERT INTO `SpellIcon` VALUES (2567,"Interface\Icons\INV_Hammer_17"); 
-INSERT INTO `SpellIcon` VALUES (2568,"Interface\Icons\INV_Helmet_05"); 
-INSERT INTO `SpellIcon` VALUES (2569,"Interface\Icons\INV_Mace_17"); 
-INSERT INTO `SpellIcon` VALUES (2570,"Interface\Icons\INV_Mace_25"); 
-INSERT INTO `SpellIcon` VALUES (2571,"Interface\Icons\INV_Axe_61"); 
-INSERT INTO `SpellIcon` VALUES (2572,"Interface\Icons\INV_Sword_73"); 
-INSERT INTO `SpellIcon` VALUES (2573,"Interface\Icons\INV_Helmet_55"); 
-INSERT INTO `SpellIcon` VALUES (2574,"Interface\Icons\INV_Helmet_57"); 
-INSERT INTO `SpellIcon` VALUES (2575,"Interface\Icons\INV_Helmet_58"); 
-INSERT INTO `SpellIcon` VALUES (2576,"Interface\Icons\INV_Misc_Flower_03"); 
-INSERT INTO `SpellIcon` VALUES (2577,"Interface\Icons\INV_Misc_Powder_Green"); 
-INSERT INTO `SpellIcon` VALUES (2578,"Interface\Icons\INV_Misc_Map_01"); 
-INSERT INTO `SpellIcon` VALUES (2579,"Interface\Icons\Spell_Fire_BlueFlameBreath"); 
-INSERT INTO `SpellIcon` VALUES (2580,"Interface\Icons\INV_Jewelry_Ring_46"); 
-INSERT INTO `SpellIcon` VALUES (2581,"Interface\Icons\INV_Misc_ArmorKit_08"); 
-INSERT INTO `SpellIcon` VALUES (2582,"Interface\Icons\INV_Misc_Gem_Pearl_01"); 
-INSERT INTO `SpellIcon` VALUES (2583,"Interface\Icons\INV_Misc_GroupNeedMore"); 
-INSERT INTO `SpellIcon` VALUES (2584,"Interface\Icons\INV_Qiraj_JewelEncased"); 
-INSERT INTO `SpellIcon` VALUES (2585,"Interface\Icons\INV_Misc_Flower_04"); 
-INSERT INTO `SpellIcon` VALUES (2586,"Interface\Icons\INV_Armor_Shield_Naxxramas_D_01"); 
-INSERT INTO `SpellIcon` VALUES (2587,"Interface\Icons\INV_Misc_ScrewDriver_02"); 
-INSERT INTO `SpellIcon` VALUES (2588,"Interface\Icons\INV_Sword_89"); 
-INSERT INTO `SpellIcon` VALUES (2589,"Interface\Icons\INV_Misc_MissileSmall_Red"); 
-INSERT INTO `SpellIcon` VALUES (2590,"Interface\Icons\INV_Gizmo_NewGoggles"); 
-INSERT INTO `SpellIcon` VALUES (2591,"Interface\Icons\INV_SummerFest_FireFlower"); 
-INSERT INTO `SpellIcon` VALUES (2592,"Interface\Icons\INV_Misc_Bag_Soulbag"); 
-INSERT INTO `SpellIcon` VALUES (2593,"Interface\Icons\INV_Misc_Fish_23"); 
-INSERT INTO `SpellIcon` VALUES (2594,"Interface\Icons\INV_Misc_Fish_10"); 
-INSERT INTO `SpellIcon` VALUES (2595,"Interface\Icons\INV_Rod_EnchantedEternium"); 
-INSERT INTO `SpellIcon` VALUES (2596,"Interface\Icons\INV_Weapon_Glave_01"); 
-INSERT INTO `SpellIcon` VALUES (2597,"Interface\Icons\INV_Weapon_Shortblade_48"); 
-INSERT INTO `SpellIcon` VALUES (2598,"Interface\Icons\INV_Misc_Head_Dragon_Red"); 
-INSERT INTO `SpellIcon` VALUES (2599,"Interface\Icons\INV_Staff_78"); 
-INSERT INTO `SpellIcon` VALUES (2600,"Interface\Icons\INV_Misc_Food_68"); 
-INSERT INTO `SpellIcon` VALUES (2601,"Interface\Icons\INV_Enchant_DustDream"); 
-INSERT INTO `SpellIcon` VALUES (2602,"Interface\Icons\INV_Ingot_Thorium"); 
-INSERT INTO `SpellIcon` VALUES (2603,"Interface\Icons\Spell_Nature_ElementalPrecision_2"); 
-INSERT INTO `SpellIcon` VALUES (2604,"Interface\Icons\INV_Misc_Gem_Variety_01"); 
-INSERT INTO `SpellIcon` VALUES (2605,"Interface\Icons\INV_Misc_MissileSmall_Blue"); 
-INSERT INTO `SpellIcon` VALUES (2606,"Interface\Icons\INV_Misc_Weathermachine_01"); 
-INSERT INTO `SpellIcon` VALUES (2607,"Interface\Icons\INV_Holiday_Summerfest_Petals"); 
-INSERT INTO `SpellIcon` VALUES (2608,"Interface\Icons\INV_Misc_Petbiscuit_01"); 
-INSERT INTO `SpellIcon` VALUES (2609,"Interface\Icons\INV_QirajIdol_Obsidian"); 
-INSERT INTO `SpellIcon` VALUES (2610,"Interface\Icons\INV_Misc_Book_09"); 
-INSERT INTO `SpellIcon` VALUES (2611,"Interface\Icons\INV_Misc_FireDancer_01"); 
-INSERT INTO `SpellIcon` VALUES (2612,"Interface\Icons\INV_Misc_PunchCards_Blue"); 
-INSERT INTO `SpellIcon` VALUES (2613,"Interface\Icons\INV_Misc_Ticket_Tarot_Beasts_01"); 
-INSERT INTO `SpellIcon` VALUES (2614,"Interface\Icons\Spell_Misc_WarsongBrutal"); 
-INSERT INTO `SpellIcon` VALUES (2615,"Interface\Icons\Spell_Misc_WarsongFocus"); 
-INSERT INTO `SpellIcon` VALUES (2616,"Interface\Icons\INV_Misc_Food_51"); 
-INSERT INTO `SpellIcon` VALUES (2617,"Interface\Icons\INV_MISC_FOOD_80"); 
-INSERT INTO `SpellIcon` VALUES (2618,"Interface\Icons\INV_Weapon_Hand_03"); 
-INSERT INTO `SpellIcon` VALUES (2619,"Interface\Icons\INV_Misc_Head_02"); 
-INSERT INTO `SpellIcon` VALUES (2620,"Interface\Icons\INV_Jewelry_Ring_35"); 
-INSERT INTO `SpellIcon` VALUES (2621,"Interface\Icons\INV_Qiraj_CarapaceOldGod"); 
-INSERT INTO `SpellIcon` VALUES (2622,"Interface\Icons\INV_Sword_62"); 
-INSERT INTO `SpellIcon` VALUES (2623,"Interface\Icons\Spell_Deathknight_PlagueStrike"); 
-INSERT INTO `SpellIcon` VALUES (2624,"Interface\Icons\Spell_Deathknight_DeathStrike"); 
-INSERT INTO `SpellIcon` VALUES (2625,"Interface\Icons\Spell_Misc_HellifrePVPThrallmarFavor"); 
-INSERT INTO `SpellIcon` VALUES (2626,"Interface\Icons\INV_Shield_32"); 
-INSERT INTO `SpellIcon` VALUES (2627,"Interface\Icons\INV_Misc_Gem_CrystalCut_01"); 
-INSERT INTO `SpellIcon` VALUES (2628,"Interface\Icons\INV_Belt_12"); 
-INSERT INTO `SpellIcon` VALUES (2629,"Interface\Icons\INV_Gizmo_GnomishFlameTurret"); 
-INSERT INTO `SpellIcon` VALUES (2630,"Interface\Icons\INV_Scroll_04"); 
-INSERT INTO `SpellIcon` VALUES (2631,"Interface\Icons\INV_Misc_Ticket_Tarot_Stack_01"); 
-INSERT INTO `SpellIcon` VALUES (2632,"Interface\Icons\Spell_Deathknight_FrostPresence"); 
-INSERT INTO `SpellIcon` VALUES (2633,"Interface\Icons\Spell_Deathknight_UnholyPresence"); 
-INSERT INTO `SpellIcon` VALUES (2634,"Interface\Icons\INV_MACE_66"); 
-INSERT INTO `SpellIcon` VALUES (2635,"Interface\Icons\INV_Sword_104"); 
-INSERT INTO `SpellIcon` VALUES (2636,"Interface\Icons\Spell_Deathknight_BloodPresence"); 
-INSERT INTO `SpellIcon` VALUES (2637,"Interface\Icons\INV_Shirt_GuildTabard_01"); 
-INSERT INTO `SpellIcon` VALUES (2638,"Interface\Icons\INV_Axe_89"); 
-INSERT INTO `SpellIcon` VALUES (2639,"Interface\Icons\Spell_Deathknight_ClassIcon"); 
-INSERT INTO `SpellIcon` VALUES (2640,"Interface\Icons\INV_Sword_105"); 
-INSERT INTO `SpellIcon` VALUES (2641,"Interface\Icons\INV_Drink_Waterskin_12"); 
-INSERT INTO `SpellIcon` VALUES (2642,"Interface\Icons\INV_Misc_GroupLooking"); 
-INSERT INTO `SpellIcon` VALUES (2643,"Interface\Icons\INV_Jewelry_Amulet_03"); 
-INSERT INTO `SpellIcon` VALUES (2644,"Interface\Icons\INV_Misc_Food_63"); 
-INSERT INTO `SpellIcon` VALUES (2645,"Interface\Icons\INV_Drink_Waterskin_03"); 
-INSERT INTO `SpellIcon` VALUES (2646,"Interface\Icons\INV_Bijou_Red"); 
-INSERT INTO `SpellIcon` VALUES (2647,"Interface\Icons\INV_Misc_Gear_08"); 
-INSERT INTO `SpellIcon` VALUES (2648,"Interface\Icons\INV_Mace_1H_Stratholme_D_02"); 
-INSERT INTO `SpellIcon` VALUES (2649,"Interface\Icons\INV_Misc_Bandage_15"); 
-INSERT INTO `SpellIcon` VALUES (2650,"Interface\Icons\INV_SummerFest_FirePotion"); 
-INSERT INTO `SpellIcon` VALUES (2651,"Interface\Icons\INV_Misc_Bone_08"); 
-INSERT INTO `SpellIcon` VALUES (2652,"Interface\Icons\INV_Misc_Food_30"); 
-INSERT INTO `SpellIcon` VALUES (2653,"Interface\Icons\INV_Shoulder_36"); 
-INSERT INTO `SpellIcon` VALUES (2654,"Interface\Icons\INV_Jewelcrafting_JadeOwl"); 
-INSERT INTO `SpellIcon` VALUES (2655,"Interface\Icons\INV_Sword_03"); 
-INSERT INTO `SpellIcon` VALUES (2656,"Interface\Icons\INV_Sword_112"); 
-INSERT INTO `SpellIcon` VALUES (2657,"Interface\Icons\INV_Sword_07"); 
-INSERT INTO `SpellIcon` VALUES (2658,"Interface\Icons\INV_Misc_Food_20"); 
-INSERT INTO `SpellIcon` VALUES (2659,"Interface\Icons\Spell_Arcane_PortalStonard"); 
-INSERT INTO `SpellIcon` VALUES (2660,"Interface\Icons\Spell_Arcane_TeleportStonard"); 
-INSERT INTO `SpellIcon` VALUES (2661,"Interface\Icons\Spell_Arcane_TeleportTheramore"); 
-INSERT INTO `SpellIcon` VALUES (2662,"Interface\Icons\Spell_Arcane_PortalTheramore"); 
-INSERT INTO `SpellIcon` VALUES (2663,"Interface\Icons\INV_Misc_Herb_08"); 
-INSERT INTO `SpellIcon` VALUES (2664,"Interface\Icons\INV_Axe_68"); 
-INSERT INTO `SpellIcon` VALUES (2665,"Interface\Icons\INV_Gizmo_RocketLauncher"); 
-INSERT INTO `SpellIcon` VALUES (2666,"Interface\Icons\INV_Weapon_Rifle_20"); 
-INSERT INTO `SpellIcon` VALUES (2667,"Interface\Icons\INV_Sword_40"); 
-INSERT INTO `SpellIcon` VALUES (2668,"Interface\Icons\INV_Misc_MissileSmall_Yellow"); 
-INSERT INTO `SpellIcon` VALUES (2669,"Interface\Icons\INV_Misc_Herb_ConstrictorGrass"); 
-INSERT INTO `SpellIcon` VALUES (2670,"Interface\Icons\INV_Potion_162"); 
-INSERT INTO `SpellIcon` VALUES (2671,"Interface\Icons\INV_Misc_Bandage_05"); 
-INSERT INTO `SpellIcon` VALUES (2672,"Interface\Icons\INV_Gizmo_FelIronBomb"); 
-INSERT INTO `SpellIcon` VALUES (2673,"Interface\Icons\INV_Feather_14"); 
-INSERT INTO `SpellIcon` VALUES (2674,"Interface\Icons\INV_Misc_MonsterScales_01"); 
-INSERT INTO `SpellIcon` VALUES (2675,"Interface\Icons\INV_Weapon_Halberd14"); 
-INSERT INTO `SpellIcon` VALUES (2676,"Interface\Icons\INV_Potion_27"); 
-INSERT INTO `SpellIcon` VALUES (2677,"Interface\Icons\INV_Chest_Chain"); 
-INSERT INTO `SpellIcon` VALUES (2678,"Interface\Icons\INV_Mace_52"); 
-INSERT INTO `SpellIcon` VALUES (2679,"Interface\Icons\INV_Jewelcrafting_TruesilverCrab"); 
-INSERT INTO `SpellIcon` VALUES (2680,"Interface\Icons\INV_Misc_PocketWatch_02"); 
-INSERT INTO `SpellIcon` VALUES (2681,"Interface\Icons\Creature_SporeMushroom"); 
-INSERT INTO `SpellIcon` VALUES (2682,"Interface\Icons\INV_Misc_Pelt_01"); 
-INSERT INTO `SpellIcon` VALUES (2683,"Interface\Icons\INV_Misc_PunchCards_Yellow"); 
-INSERT INTO `SpellIcon` VALUES (2684,"Interface\Icons\INV_Misc_PunchCards_Red"); 
-INSERT INTO `SpellIcon` VALUES (2685,"Interface\Icons\INV_Misc_PunchCards_Blue"); 
-INSERT INTO `SpellIcon` VALUES (2686,"Interface\Icons\INV_Misc_Bone_01"); 
-INSERT INTO `SpellIcon` VALUES (2687,"Interface\Icons\INV_Misc_Ear_Human_02"); 
-INSERT INTO `SpellIcon` VALUES (2688,"Interface\Icons\INV_Misc_Gem_Pearl_08"); 
-INSERT INTO `SpellIcon` VALUES (2689,"Interface\Icons\INV_Ore_FelIron"); 
-INSERT INTO `SpellIcon` VALUES (2690,"Interface\Icons\INV_Misc_Head_Gnoll_01"); 
-INSERT INTO `SpellIcon` VALUES (2691,"Interface\Icons\INV_Misc_Bandage_16"); 
-INSERT INTO `SpellIcon` VALUES (2692,"Interface\Icons\INV_Misc_Bandana_03"); 
-INSERT INTO `SpellIcon` VALUES (2693,"Interface\Icons\INV_Misc_Pelt_Bear_01"); 
-INSERT INTO `SpellIcon` VALUES (2694,"Interface\Icons\INV_Weapon_Shortblade_84"); 
-INSERT INTO `SpellIcon` VALUES (2695,"Interface\Icons\INV_SummerFest_FireDrink"); 
-INSERT INTO `SpellIcon` VALUES (2696,"Interface\Icons\INV_Misc_Bone_02"); 
-INSERT INTO `SpellIcon` VALUES (2697,"Interface\Icons\INV_Misc_Powder_Copper"); 
-INSERT INTO `SpellIcon` VALUES (2698,"Interface\Icons\INV_Helmet_41"); 
-INSERT INTO `SpellIcon` VALUES (2699,"Interface\Icons\INV_Misc_Fish_34"); 
-INSERT INTO `SpellIcon` VALUES (2700,"Interface\Icons\INV_Potion_57"); 
-INSERT INTO `SpellIcon` VALUES (2701,"Interface\Icons\INV_Misc_Ear_Human_01"); 
-INSERT INTO `SpellIcon` VALUES (2702,"Interface\Icons\INV_Sword_122"); 
-INSERT INTO `SpellIcon` VALUES (2703,"Interface\Icons\INV_Armor_Helm_Plate_Naxxramas_RaidWarrior_C_01"); 
-INSERT INTO `SpellIcon` VALUES (2704,"Interface\Icons\INV_Crate_02"); 
-INSERT INTO `SpellIcon` VALUES (2705,"Interface\Icons\INV_Misc_Food_70"); 
-INSERT INTO `SpellIcon` VALUES (2706,"Interface\Icons\INV_Misc_Orb_05"); 
-INSERT INTO `SpellIcon` VALUES (2707,"Interface\Icons\INV_Misc_LeatherScrap_01"); 
-INSERT INTO `SpellIcon` VALUES (2708,"Interface\Icons\INV_Weapon_ShortBlade_09"); 
-INSERT INTO `SpellIcon` VALUES (2709,"Interface\Icons\INV_Weapon_Shortblade_60"); 
-INSERT INTO `SpellIcon` VALUES (2710,"Interface\Icons\INV_Weapon_Hand_18"); 
-INSERT INTO `SpellIcon` VALUES (2711,"Interface\Icons\INV_Axe_35"); 
-INSERT INTO `SpellIcon` VALUES (2712,"Interface\Icons\INV_Misc_DiscoBall_01"); 
-INSERT INTO `SpellIcon` VALUES (2713,"Interface\Icons\INV_Misc_Crop_01"); 
-INSERT INTO `SpellIcon` VALUES (2714,"Interface\Icons\Ability_Mount_KotoBrewfest"); 
-INSERT INTO `SpellIcon` VALUES (2715,"Interface\Icons\INV_Axe_95"); 
-INSERT INTO `SpellIcon` VALUES (2716,"Interface\Icons\INV_Boots_Plate_06"); 
-INSERT INTO `SpellIcon` VALUES (2717,"Interface\Icons\INV_Misc_ElvenCoins"); 
-INSERT INTO `SpellIcon` VALUES (2718,"Interface\Icons\Spell_DeathKnight_ArmyOfTheDead"); 
-INSERT INTO `SpellIcon` VALUES (2719,"Interface\Icons\Spell_DeathKnight_EmpowerRuneBlade"); 
-INSERT INTO `SpellIcon` VALUES (2720,"Interface\Icons\Spell_DeathKnight_IceBoundFortitude"); 
-INSERT INTO `SpellIcon` VALUES (2721,"Interface\Icons\Spell_DeathKnight_IceTouch"); 
-INSERT INTO `SpellIcon` VALUES (2722,"Interface\Icons\Spell_DeathKnight_MindFreeze"); 
-INSERT INTO `SpellIcon` VALUES (2723,"Interface\Icons\Spell_DeathKnight_Strangulate"); 
-INSERT INTO `SpellIcon` VALUES (2724,"Interface\Icons\Spell_DeathKnight_BloodTap"); 
-INSERT INTO `SpellIcon` VALUES (2725,"Interface\Icons\Spell_DeathKnight_BloodBoil"); 
-INSERT INTO `SpellIcon` VALUES (2726,"Interface\Icons\Spell_DeathKnight_RuneTap"); 
-INSERT INTO `SpellIcon` VALUES (2727,"Interface\Icons\Spell_DeathKnight_FrozenRuneWeapon"); 
-INSERT INTO `SpellIcon` VALUES (2728,"Interface\Icons\INV_Weapon_Shortblade_78"); 
-INSERT INTO `SpellIcon` VALUES (2729,"Interface\Icons\Ability_Warrior_IntensifyRage"); 
-INSERT INTO `SpellIcon` VALUES (2730,"Interface\Icons\Spell_DeathKnight_Butcher"); 
-INSERT INTO `SpellIcon` VALUES (2731,"Interface\Icons\Spell_DeathKnight_BladedArmor"); 
-INSERT INTO `SpellIcon` VALUES (2732,"Interface\Icons\Thrown_1H_Harpoon_D_01Bronze"); 
-INSERT INTO `SpellIcon` VALUES (2733,"Interface\Icons\INV_Holiday_Christmas_Wrapping_01"); 
-INSERT INTO `SpellIcon` VALUES (2734,"Interface\Icons\INV_Holiday_Christmas_Present_03"); 
-INSERT INTO `SpellIcon` VALUES (2735,"Interface\Icons\INV_MISC_HOOK_01"); 
-INSERT INTO `SpellIcon` VALUES (2736,"Interface\Icons\INV_Fishingpole_01"); 
-INSERT INTO `SpellIcon` VALUES (2737,"Interface\Icons\INV_Helmet_44"); 
-INSERT INTO `SpellIcon` VALUES (2738,"Interface\Icons\INV_CHEST_MAIL_04"); 
-INSERT INTO `SpellIcon` VALUES (2739,"Interface\Icons\INV_Chest_Leather_13"); 
-INSERT INTO `SpellIcon` VALUES (2740,"Interface\Icons\Spell_DeathKnight_EmpowerRuneBlade2"); 
-INSERT INTO `SpellIcon` VALUES (2741,"Interface\Icons\INV_Misc_SurgeonGlove_01"); 
-INSERT INTO `SpellIcon` VALUES (2742,"Interface\Icons\INV_Misc_Bandage_Netherweave_Heavy"); 
-INSERT INTO `SpellIcon` VALUES (2743,"Interface\Icons\INV_Bijou_Blue"); 
-INSERT INTO `SpellIcon` VALUES (2744,"Interface\Icons\INV_Bijou_Bronze"); 
-INSERT INTO `SpellIcon` VALUES (2745,"Interface\Icons\INV_Bijou_Green"); 
-INSERT INTO `SpellIcon` VALUES (2746,"Interface\Icons\INV_Bijou_Orange"); 
-INSERT INTO `SpellIcon` VALUES (2747,"Interface\Icons\INV_Bijou_Purple"); 
-INSERT INTO `SpellIcon` VALUES (2748,"Interface\Icons\INV_Bijou_Yellow"); 
-INSERT INTO `SpellIcon` VALUES (2749,"Interface\Icons\INV_Bijou_Gold"); 
-INSERT INTO `SpellIcon` VALUES (2750,"Interface\Icons\Ability_Warrior_TitansGrip"); 
-INSERT INTO `SpellIcon` VALUES (2751,"Interface\Icons\Spell_DeathKnight_Butcher2"); 
-INSERT INTO `SpellIcon` VALUES (2752,"Interface\Icons\INV_Crystallized_Earth"); 
-INSERT INTO `SpellIcon` VALUES (2753,"Interface\Icons\INV_Misc_Head_Quillboar_01"); 
-INSERT INTO `SpellIcon` VALUES (2754,"Interface\Icons\INV_Helmet_92"); 
-INSERT INTO `SpellIcon` VALUES (2755,"Interface\Icons\INV_Misc_EngGizmos_RocketChicken"); 
-INSERT INTO `SpellIcon` VALUES (2756,"Interface\Icons\INV_Sword_39"); 
-INSERT INTO `SpellIcon` VALUES (2757,"Interface\Icons\INV_Staff_Medivh"); 
-INSERT INTO `SpellIcon` VALUES (2758,"Interface\Icons\INV_Scarab_Crystal"); 
-INSERT INTO `SpellIcon` VALUES (2759,"Interface\Icons\INV_Misc_Map02"); 
-INSERT INTO `SpellIcon` VALUES (2760,"Interface\Icons\INV_Misc_Map04"); 
-INSERT INTO `SpellIcon` VALUES (2761,"Interface\Icons\INV_Misc_Map05"); 
-INSERT INTO `SpellIcon` VALUES (2762,"Interface\Icons\INV_Misc_Map03"); 
-INSERT INTO `SpellIcon` VALUES (2763,"Interface\Icons\INV_Misc_Map06"); 
-INSERT INTO `SpellIcon` VALUES (2764,"Interface\Icons\INV_TradeskillItem_03"); 
-INSERT INTO `SpellIcon` VALUES (2765,"Interface\Icons\INV_Wand_23"); 
-INSERT INTO `SpellIcon` VALUES (2766,"Interface\Icons\INV_Misc_Comb_02"); 
-INSERT INTO `SpellIcon` VALUES (2767,"Interface\Icons\Ability_Warrior_Bloodsurge"); 
-INSERT INTO `SpellIcon` VALUES (2768,"Interface\Icons\INV_Potion_90"); 
-INSERT INTO `SpellIcon` VALUES (2769,"Interface\Icons\Ability_Warrior_BullRush"); 
-INSERT INTO `SpellIcon` VALUES (2770,"Interface\Icons\Ability_Warrior_Trauma"); 
-INSERT INTO `SpellIcon` VALUES (2771,"Interface\Icons\Ability_Warrior_ShieldBreak"); 
-INSERT INTO `SpellIcon` VALUES (2772,"Interface\Icons\INV_Misc_Bomb_06"); 
-INSERT INTO `SpellIcon` VALUES (2773,"Interface\Icons\INV_Mace_81"); 
-INSERT INTO `SpellIcon` VALUES (2774,"Interface\Icons\Ability_Warrior_BloodBath"); 
-INSERT INTO `SpellIcon` VALUES (2775,"Interface\Icons\Ability_Warrior_UnrelentingAssault"); 
-INSERT INTO `SpellIcon` VALUES (2776,"Interface\Icons\Ability_Warrior_StrengthOfArms"); 
-INSERT INTO `SpellIcon` VALUES (2777,"Interface\Icons\Ability_Warrior_Shockwave"); 
-INSERT INTO `SpellIcon` VALUES (2778,"Interface\Icons\Ability_Warrior_CriticalBlock"); 
-INSERT INTO `SpellIcon` VALUES (2779,"Interface\Icons\Ability_Warrior_StalwartProtector"); 
-INSERT INTO `SpellIcon` VALUES (2780,"Interface\Icons\Ability_Warrior_SwordandBoard"); 
-INSERT INTO `SpellIcon` VALUES (2781,"Interface\Icons\Ability_Warrior_Safeguard"); 
-INSERT INTO `SpellIcon` VALUES (2782,"Interface\Icons\Ability_Warrior_Bladestorm"); 
-INSERT INTO `SpellIcon` VALUES (2783,"Interface\Icons\Ability_Warrior_FuriousResolve"); 
-INSERT INTO `SpellIcon` VALUES (2784,"Interface\Icons\INV_Misc_Food_61"); 
-INSERT INTO `SpellIcon` VALUES (2785,"Interface\Icons\INV_Misc_Head_Orc_01"); 
-INSERT INTO `SpellIcon` VALUES (2786,"Interface\Icons\INV_Misc_Head_Undead_02"); 
-INSERT INTO `SpellIcon` VALUES (2787,"Interface\Icons\INV_Misc_PheonixPet_01"); 
-INSERT INTO `SpellIcon` VALUES (2788,"Interface\Icons\INV_Misc_Head_Dwarf_01"); 
-INSERT INTO `SpellIcon` VALUES (2789,"Interface\Icons\INV_Chest_Cloth_59"); 
-INSERT INTO `SpellIcon` VALUES (2790,"Interface\Icons\INV_DataCrystal11"); 
-INSERT INTO `SpellIcon` VALUES (2791,"Interface\Icons\INV_Jewelry_Necklace_25"); 
-INSERT INTO `SpellIcon` VALUES (2792,"Interface\Icons\INV_Helmet_52"); 
-INSERT INTO `SpellIcon` VALUES (2793,"Interface\Icons\INV_Mace_54"); 
-INSERT INTO `SpellIcon` VALUES (2794,"Interface\Icons\INV_Weapon_Shortblade_57"); 
-INSERT INTO `SpellIcon` VALUES (2795,"Interface\Icons\INV_DiabloStone"); 
-INSERT INTO `SpellIcon` VALUES (2796,"Interface\Icons\INV_Staff_52"); 
-INSERT INTO `SpellIcon` VALUES (2797,"Interface\Icons\INV_Staff_15"); 
-INSERT INTO `SpellIcon` VALUES (2798,"Interface\Icons\INV_SHOULDER_59"); 
-INSERT INTO `SpellIcon` VALUES (2799,"Interface\Icons\INV_Weapon_Shortblade_42"); 
-INSERT INTO `SpellIcon` VALUES (2800,"Interface\Icons\INV_Staff_73"); 
-INSERT INTO `SpellIcon` VALUES (2801,"Interface\Icons\INV_Misc_Coin_01"); 
-INSERT INTO `SpellIcon` VALUES (2802,"Interface\Icons\INV_Misc_Coin_04"); 
-INSERT INTO `SpellIcon` VALUES (2803,"Interface\Icons\INV_Misc_Coin_08"); 
-INSERT INTO `SpellIcon` VALUES (2804,"Interface\Icons\INV_Misc_Coin_15"); 
-INSERT INTO `SpellIcon` VALUES (2805,"Interface\Icons\INV_Misc_Coin_07"); 
-INSERT INTO `SpellIcon` VALUES (2806,"Interface\Icons\INV_Helmet_114"); 
-INSERT INTO `SpellIcon` VALUES (2807,"Interface\Icons\INV_Shield_48"); 
-INSERT INTO `SpellIcon` VALUES (2808,"Interface\Icons\INV_Enchant_VoidCrystal"); 
-INSERT INTO `SpellIcon` VALUES (2809,"Interface\Icons\INV_Misc_Herb_Felweed"); 
-INSERT INTO `SpellIcon` VALUES (2810,"Interface\Icons\INV_Enchant_EssenceArcaneSmall"); 
-INSERT INTO `SpellIcon` VALUES (2811,"Interface\Icons\INV_Jewelry_TrinketPVP_02"); 
-INSERT INTO `SpellIcon` VALUES (2812,"Interface\Icons\INV_Jewelry_TrinketPVP_01"); 
-INSERT INTO `SpellIcon` VALUES (2813,"Interface\Icons\INV_Helmet_130"); 
-INSERT INTO `SpellIcon` VALUES (2814,"Interface\Icons\INV_Misc_Rune_14"); 
-INSERT INTO `SpellIcon` VALUES (2815,"Interface\Icons\INV_Trinket_Thrallmar"); 
-INSERT INTO `SpellIcon` VALUES (2816,"Interface\Icons\INV_Ingot_06"); 
-INSERT INTO `SpellIcon` VALUES (2817,"Interface\Icons\INV_Fabric_Spellfire"); 
-INSERT INTO `SpellIcon` VALUES (2818,"Interface\Icons\Spell_Holy_Penance"); 
-INSERT INTO `SpellIcon` VALUES (2819,"Interface\Icons\Spell_Holy_HopeAndGrace"); 
-INSERT INTO `SpellIcon` VALUES (2820,"Interface\Icons\Spell_Holy_DevineAegis"); 
-INSERT INTO `SpellIcon` VALUES (2821,"Interface\Icons\Spell_Holy_Aspiration"); 
-INSERT INTO `SpellIcon` VALUES (2822,"Interface\Icons\INV_Weapon_Shortblade_47"); 
-INSERT INTO `SpellIcon` VALUES (2823,"Interface\Icons\INV_Shield_16"); 
-INSERT INTO `SpellIcon` VALUES (2824,"Interface\Icons\INV_Scroll_07"); 
-INSERT INTO `SpellIcon` VALUES (2825,"Interface\Icons\INV_MISC_RUNE_08"); 
-INSERT INTO `SpellIcon` VALUES (2826,"Interface\Icons\INV_Jewelry_FrostwolfTrinket_01"); 
-INSERT INTO `SpellIcon` VALUES (2827,"Interface\Icons\INV_Jewelry_StormPikeTrinket_01"); 
-INSERT INTO `SpellIcon` VALUES (2828,"Interface\Icons\INV_Jewelry_FrostwolfTrinket_05"); 
-INSERT INTO `SpellIcon` VALUES (2829,"Interface\Icons\INV_Jewelry_StormPikeTrinket_05"); 
-INSERT INTO `SpellIcon` VALUES (2830,"Interface\Icons\INV_BRD_Banner"); 
-INSERT INTO `SpellIcon` VALUES (2831,"Interface\Icons\INV_Weapon_Bow_07"); 
-INSERT INTO `SpellIcon` VALUES (2832,"Interface\Icons\INV_Staff_13"); 
-INSERT INTO `SpellIcon` VALUES (2833,"Interface\Icons\INV_Elemental_Mote_Water01"); 
-INSERT INTO `SpellIcon` VALUES (2834,"Interface\Icons\Ability_Warrior_Vigilance"); 
-INSERT INTO `SpellIcon` VALUES (2835,"Interface\Icons\INV_Misc_Rune_07"); 
-INSERT INTO `SpellIcon` VALUES (2836,"Interface\Icons\Ability_Druid_Cyclone"); 
-INSERT INTO `SpellIcon` VALUES (2837,"Interface\Icons\Ability_Druid_GaleWinds"); 
-INSERT INTO `SpellIcon` VALUES (2838,"Interface\Icons\Ability_Druid_Typhoon"); 
-INSERT INTO `SpellIcon` VALUES (2839,"Interface\Icons\INV_Jewelry_Necklace_21"); 
-INSERT INTO `SpellIcon` VALUES (2840,"Interface\Icons\INV_Pick_05"); 
-INSERT INTO `SpellIcon` VALUES (2841,"Interface\Icons\Ability_Warrior_Incite"); 
-INSERT INTO `SpellIcon` VALUES (2842,"Interface\Icons\INV_WEAPON_BOW_39"); 
-INSERT INTO `SpellIcon` VALUES (2843,"Interface\Icons\INV_Mace_51"); 
-INSERT INTO `SpellIcon` VALUES (2844,"Interface\Icons\Spell_Holy_TestOfFaith"); 
-INSERT INTO `SpellIcon` VALUES (2845,"Interface\Icons\Spell_Holy_DivineProvidence"); 
-INSERT INTO `SpellIcon` VALUES (2846,"Interface\Icons\INV_Misc_Note_01"); 
-INSERT INTO `SpellIcon` VALUES (2847,"Interface\Icons\Spell_Shadow_PsychicHorrors"); 
-INSERT INTO `SpellIcon` VALUES (2848,"Interface\Icons\Spell_Shadow_MindTwisting"); 
-INSERT INTO `SpellIcon` VALUES (2849,"Interface\Icons\INV_Misc_Head_Centaur_01"); 
-INSERT INTO `SpellIcon` VALUES (2850,"Interface\Icons\Ability_Druid_KingoftheJungle"); 
-INSERT INTO `SpellIcon` VALUES (2851,"Interface\Icons\Ability_Druid_MasterShapeshifter"); 
-INSERT INTO `SpellIcon` VALUES (2852,"Interface\Icons\Ability_Druid_Berserk"); 
-INSERT INTO `SpellIcon` VALUES (2853,"Interface\Icons\Ability_Druid_OwlkinFrenzy"); 
-INSERT INTO `SpellIcon` VALUES (2854,"Interface\Icons\Ability_Druid_Starfall"); 
-INSERT INTO `SpellIcon` VALUES (2855,"Interface\Icons\Ability_Druid_ImprovedMoonkinForm"); 
-INSERT INTO `SpellIcon` VALUES (2856,"Interface\Icons\Ability_Druid_Eclipse"); 
-INSERT INTO `SpellIcon` VALUES (2857,"Interface\Icons\Ability_Druid_InfectedWound"); 
-INSERT INTO `SpellIcon` VALUES (2858,"Interface\Icons\Ability_Druid_PrimalPrecision"); 
-INSERT INTO `SpellIcon` VALUES (2859,"Interface\Icons\Ability_Druid_PrimalAgression"); 
-INSERT INTO `SpellIcon` VALUES (2860,"Interface\Icons\Ability_Druid_GiftoftheEarthmother"); 
-INSERT INTO `SpellIcon` VALUES (2861,"Interface\Icons\Ability_Druid_ImprovedTreeForm"); 
-INSERT INTO `SpellIcon` VALUES (2862,"Interface\Icons\Ability_Druid_Replenish"); 
-INSERT INTO `SpellIcon` VALUES (2863,"Interface\Icons\Ability_Druid_Nourish"); 
-INSERT INTO `SpellIcon` VALUES (2864,"Interface\Icons\Ability_Druid_Flourish"); 
-INSERT INTO `SpellIcon` VALUES (2865,"Interface\Icons\Ability_Druid_SkinTeeth"); 
-INSERT INTO `SpellIcon` VALUES (2866,"Interface\Icons\INV_Misc_Herb_05"); 
-INSERT INTO `SpellIcon` VALUES (2867,"Interface\Icons\INV_Enchant_EssenceEternalSmall"); 
-INSERT INTO `SpellIcon` VALUES (2868,"Interface\Icons\INV_Misc_Herb_04"); 
-INSERT INTO `SpellIcon` VALUES (2869,"Interface\Icons\INV_Misc_Herb_18"); 
-INSERT INTO `SpellIcon` VALUES (2870,"Interface\Icons\INV_Misc_Herb_12"); 
-INSERT INTO `SpellIcon` VALUES (2871,"Interface\Icons\INV_MISC_HERB_01"); 
-INSERT INTO `SpellIcon` VALUES (2872,"Interface\Icons\INV_Enchant_DustVision"); 
-INSERT INTO `SpellIcon` VALUES (2873,"Interface\Icons\Spell_Holy_GuardianSpirit"); 
-INSERT INTO `SpellIcon` VALUES (2874,"Interface\Icons\Spell_Shadow_PainAndSuffering"); 
-INSERT INTO `SpellIcon` VALUES (2875,"Interface\Icons\Spell_Shadow_Dispersion"); 
-INSERT INTO `SpellIcon` VALUES (2876,"Interface\Icons\INV_Misc_Herb_14"); 
-INSERT INTO `SpellIcon` VALUES (2877,"Interface\Icons\INV_Jewelcrafting_LivingRuby_02"); 
-INSERT INTO `SpellIcon` VALUES (2878,"Interface\Icons\INV_Mushroom_06"); 
-INSERT INTO `SpellIcon` VALUES (2879,"Interface\Icons\INV_Potion_36"); 
-INSERT INTO `SpellIcon` VALUES (2880,"Interface\Icons\INV_Misc_Herb_IceCap"); 
-INSERT INTO `SpellIcon` VALUES (2881,"Interface\Icons\INV_Misc_Herb_Terrocone"); 
-INSERT INTO `SpellIcon` VALUES (2882,"Interface\Icons\INV_Ore_Eternium"); 
-INSERT INTO `SpellIcon` VALUES (2883,"Interface\Icons\INV_Sword_103"); 
-INSERT INTO `SpellIcon` VALUES (2884,"Interface\Icons\INV_Misc_Bag_07_Blue"); 
-INSERT INTO `SpellIcon` VALUES (2885,"Interface\Icons\INV_Mace_80"); 
-INSERT INTO `SpellIcon` VALUES (2886,"Interface\Icons\INV_Misc_Herb_TalandrasRose"); 
-INSERT INTO `SpellIcon` VALUES (2887,"Interface\Icons\INV_Misc_Herb_IceThorn"); 
-INSERT INTO `SpellIcon` VALUES (2888,"Interface\Icons\INV_Misc_Book_01"); 
-INSERT INTO `SpellIcon` VALUES (2889,"Interface\Icons\INV_Misc_Book_05"); 
-INSERT INTO `SpellIcon` VALUES (2890,"Interface\Icons\INV_Misc_Book_10"); 
-INSERT INTO `SpellIcon` VALUES (2891,"Interface\Icons\INV_Misc_Book_08"); 
-INSERT INTO `SpellIcon` VALUES (2892,"Interface\Icons\INV_Misc_Book_04"); 
-INSERT INTO `SpellIcon` VALUES (2893,"Interface\Icons\INV_Misc_Book_02"); 
-INSERT INTO `SpellIcon` VALUES (2894,"Interface\Icons\Spell_Holy_Rapture"); 
-INSERT INTO `SpellIcon` VALUES (2895,"Interface\Icons\Spell_Shadow_MindShear"); 
-INSERT INTO `SpellIcon` VALUES (2896,"Interface\Icons\INV_Sword_01"); 
-INSERT INTO `SpellIcon` VALUES (2897,"Interface\Icons\INV_Jewelry_StormPikeTrinket_03"); 
-INSERT INTO `SpellIcon` VALUES (2898,"Interface\Icons\INV_Jewelry_FrostwolfTrinket_03"); 
-INSERT INTO `SpellIcon` VALUES (2899,"Interface\Icons\Spell_Holy_BorrowedTime"); 
-INSERT INTO `SpellIcon` VALUES (2900,"Interface\Icons\Spell_Holy_Serendipity"); 
-INSERT INTO `SpellIcon` VALUES (2901,"Interface\Icons\Spell_Shadow_TwistedFaith"); 
-INSERT INTO `SpellIcon` VALUES (2902,"Interface\Icons\INV_Drink_21"); 
-INSERT INTO `SpellIcon` VALUES (2903,"Interface\Icons\Ability_Rogue_HonorAmongstThieves"); 
-INSERT INTO `SpellIcon` VALUES (2904,"Interface\Icons\Ability_Rogue_FanofKnives"); 
-INSERT INTO `SpellIcon` VALUES (2905,"Interface\Icons\Ability_Rogue_TurntheTables"); 
-INSERT INTO `SpellIcon` VALUES (2906,"Interface\Icons\Ability_Rogue_WrongfullyAccused"); 
-INSERT INTO `SpellIcon` VALUES (2907,"Interface\Icons\Ability_Rogue_MurderSpree"); 
-INSERT INTO `SpellIcon` VALUES (2908,"Interface\Icons\Ability_Rogue_Dismantle"); 
-INSERT INTO `SpellIcon` VALUES (2909,"Interface\Icons\Ability_Rogue_CutToTheChase"); 
-INSERT INTO `SpellIcon` VALUES (2910,"Interface\Icons\Ability_Rogue_ThrowingSpecialization"); 
-INSERT INTO `SpellIcon` VALUES (2911,"Interface\Icons\INV_Enchant_ShardGleamingSmall"); 
-INSERT INTO `SpellIcon` VALUES (2912,"Interface\Icons\INV_Staff_63"); 
-INSERT INTO `SpellIcon` VALUES (2913,"Interface\Icons\INV_Misc_Ammo_Bullet_05"); 
-INSERT INTO `SpellIcon` VALUES (2914,"Interface\Icons\INV_Shield_59"); 
-INSERT INTO `SpellIcon` VALUES (2915,"Interface\Icons\INV_Sword_37"); 
-INSERT INTO `SpellIcon` VALUES (2916,"Interface\Icons\INV_Sword_38"); 
-INSERT INTO `SpellIcon` VALUES (2917,"Interface\Icons\INV_Misc_CelebrationCake_01"); 
-INSERT INTO `SpellIcon` VALUES (2918,"Interface\Icons\INV_Misc_Fish_35"); 
-INSERT INTO `SpellIcon` VALUES (2919,"Interface\Icons\Ability_Mount_CockatriceMountElite_White"); 
-INSERT INTO `SpellIcon` VALUES (2920,"Interface\Icons\INV_Mushroom_11"); 
-INSERT INTO `SpellIcon` VALUES (2921,"Interface\Icons\INV_Misc_PunchCards_Prismatic"); 
-INSERT INTO `SpellIcon` VALUES (2922,"Interface\Icons\INV_Mace_30"); 
-INSERT INTO `SpellIcon` VALUES (2923,"Interface\Icons\INV_Misc_Cauldron_Arcane"); 
-INSERT INTO `SpellIcon` VALUES (2924,"Interface\Icons\INV_Misc_TabardPVP_03"); 
-INSERT INTO `SpellIcon` VALUES (2925,"Interface\Icons\INV_Misc_Food_49"); 
-INSERT INTO `SpellIcon` VALUES (2926,"Interface\Icons\INV_Weapon_Rifle_05"); 
-INSERT INTO `SpellIcon` VALUES (2927,"Interface\Icons\INV_HELMET_94"); 
-INSERT INTO `SpellIcon` VALUES (2928,"Interface\Icons\INV_Bracer_07"); 
-INSERT INTO `SpellIcon` VALUES (2929,"Interface\Icons\INV_Misc_Quiver_02"); 
-INSERT INTO `SpellIcon` VALUES (2930,"Interface\Icons\INV_Misc_Bag_12"); 
-INSERT INTO `SpellIcon` VALUES (2931,"Interface\Icons\INV_Misc_Gem_Diamond_05"); 
-INSERT INTO `SpellIcon` VALUES (2932,"Interface\Icons\INV_Misc_ThrowingBall_01"); 
-INSERT INTO `SpellIcon` VALUES (2933,"Interface\Icons\INV_Fishingpole_03"); 
-INSERT INTO `SpellIcon` VALUES (2934,"Interface\Icons\INV_Jewelry_Necklace_22"); 
-INSERT INTO `SpellIcon` VALUES (2935,"Interface\Icons\Ability_Hunter_WildQuiver"); 
-INSERT INTO `SpellIcon` VALUES (2936,"Interface\Icons\Ability_Hunter_CobraStrikes"); 
-INSERT INTO `SpellIcon` VALUES (2937,"Interface\Icons\INV_Enchant_DustIllusion"); 
-INSERT INTO `SpellIcon` VALUES (2938,"Interface\Icons\Ability_Mage_BrainFreeze"); 
-INSERT INTO `SpellIcon` VALUES (2939,"Interface\Icons\Ability_Mage_DeepFreeze"); 
-INSERT INTO `SpellIcon` VALUES (2940,"Interface\Icons\Ability_Mage_PotentSpirit"); 
-INSERT INTO `SpellIcon` VALUES (2941,"Interface\Icons\Ability_Mage_IncantersAbsorbtion"); 
-INSERT INTO `SpellIcon` VALUES (2942,"Interface\Icons\Ability_Mage_StudentOfTheMind"); 
-INSERT INTO `SpellIcon` VALUES (2943,"Interface\Icons\Ability_Mage_NetherWindPresence"); 
-INSERT INTO `SpellIcon` VALUES (2944,"Interface\Icons\INV_Torch_Thrown"); 
-INSERT INTO `SpellIcon` VALUES (2945,"Interface\Icons\Ability_Mage_ShatterShield"); 
-INSERT INTO `SpellIcon` VALUES (2946,"Interface\Icons\Ability_Mage_FrostFireBolt"); 
-INSERT INTO `SpellIcon` VALUES (2947,"Interface\Icons\Ability_Mage_WintersGrasp"); 
-INSERT INTO `SpellIcon` VALUES (2948,"Interface\Icons\Ability_Mage_WorldInFlames"); 
-INSERT INTO `SpellIcon` VALUES (2949,"Interface\Icons\INV_Misc_SawBlade_01"); 
-INSERT INTO `SpellIcon` VALUES (2950,"Interface\Icons\INV_MISC_FOOD_26"); 
-INSERT INTO `SpellIcon` VALUES (2951,"Interface\Icons\INV_Misc_Food_27"); 
-INSERT INTO `SpellIcon` VALUES (2952,"Interface\Icons\INV_Misc_Food_29"); 
-INSERT INTO `SpellIcon` VALUES (2953,"Interface\Icons\INV_Mask_04"); 
-INSERT INTO `SpellIcon` VALUES (2954,"Interface\Icons\INV_Mask_06"); 
-INSERT INTO `SpellIcon` VALUES (2955,"Interface\Icons\INV_Offhand_Naxxramas_03"); 
-INSERT INTO `SpellIcon` VALUES (2956,"Interface\Icons\Ability_Rogue_DeviousPoisons"); 
-INSERT INTO `SpellIcon` VALUES (2957,"Interface\Icons\Ability_Rogue_BloodSplatter"); 
-INSERT INTO `SpellIcon` VALUES (2958,"Interface\Icons\Ability_Rogue_Waylay"); 
-INSERT INTO `SpellIcon` VALUES (2959,"Interface\Icons\Ability_Rogue_ShadowDance"); 
-INSERT INTO `SpellIcon` VALUES (2960,"Interface\Icons\INV_Misc_Fish_48"); 
-INSERT INTO `SpellIcon` VALUES (2961,"Interface\Icons\Ability_Rogue_HungerforBlood"); 
-INSERT INTO `SpellIcon` VALUES (2962,"Interface\Icons\Ability_Rogue_SlaughterfromtheShadows"); 
-INSERT INTO `SpellIcon` VALUES (2963,"Interface\Icons\Ability_Rogue_DeadlyBrew"); 
-INSERT INTO `SpellIcon` VALUES (2964,"Interface\Icons\Ability_Rogue_UnfairAdvantage"); 
-INSERT INTO `SpellIcon` VALUES (2965,"Interface\Icons\Ability_Mage_ChilledToTheBone"); 
-INSERT INTO `SpellIcon` VALUES (2966,"Interface\Icons\Ability_Mage_ConjureFoodRank9"); 
-INSERT INTO `SpellIcon` VALUES (2967,"Interface\Icons\Ability_Mage_ConjureFoodRank10"); 
-INSERT INTO `SpellIcon` VALUES (2968,"Interface\Icons\Ability_Warrior_BloodNova"); 
-INSERT INTO `SpellIcon` VALUES (2969,"Interface\Icons\INV_Misc_DragonKite_01"); 
-INSERT INTO `SpellIcon` VALUES (2970,"Interface\Icons\Achievement_General"); 
-INSERT INTO `SpellIcon` VALUES (2971,"Interface\Icons\INV_Sword_61"); 
-INSERT INTO `SpellIcon` VALUES (2972,"Interface\Icons\INV_Axe_94"); 
-INSERT INTO `SpellIcon` VALUES (2973,"Interface\Icons\INV_Enchant_ShardRadientSmall"); 
-INSERT INTO `SpellIcon` VALUES (2974,"Interface\Icons\INV_SummerFest_Symbol_High"); 
-INSERT INTO `SpellIcon` VALUES (2975,"Interface\Icons\INV_SummerFest_Symbol_Low"); 
-INSERT INTO `SpellIcon` VALUES (2976,"Interface\Icons\INV_Egg_01"); 
-INSERT INTO `SpellIcon` VALUES (2977,"Interface\Icons\INV_Misc_ArmorKit_14"); 
-INSERT INTO `SpellIcon` VALUES (2978,"Interface\Icons\INV_Misc_Herb_BlackLotus"); 
-INSERT INTO `SpellIcon` VALUES (2979,"Interface\Icons\INV_Mace_22"); 
-INSERT INTO `SpellIcon` VALUES (2980,"Interface\Icons\INV_Crystallized_Water"); 
-INSERT INTO `SpellIcon` VALUES (2981,"Interface\Icons\INV_Crystallized_Life"); 
-INSERT INTO `SpellIcon` VALUES (2982,"Interface\Icons\Ability_Rogue_FocusedAttacks"); 
-INSERT INTO `SpellIcon` VALUES (2983,"Interface\Icons\Ability_Rogue_PreyontheWeak"); 
-INSERT INTO `SpellIcon` VALUES (2984,"Interface\Icons\Ability_Rogue_StayofExecution"); 
-INSERT INTO `SpellIcon` VALUES (2985,"Interface\Icons\Thrown_1H_Harpoon_D_01"); 
-INSERT INTO `SpellIcon` VALUES (2986,"Interface\Icons\INV_Staff_05"); 
-INSERT INTO `SpellIcon` VALUES (2987,"Interface\Icons\INV_Misc_Gem_FlameSpessarite_02"); 
-INSERT INTO `SpellIcon` VALUES (2988,"Interface\Icons\INV_Misc_Food_104_TundraBerries"); 
-INSERT INTO `SpellIcon` VALUES (2989,"Interface\Icons\INV_Misc_Bag_27"); 
-INSERT INTO `SpellIcon` VALUES (2990,"Interface\Icons\INV_Scroll_10"); 
-INSERT INTO `SpellIcon` VALUES (2991,"Interface\Icons\Ability_Druid_EarthandSky"); 
-INSERT INTO `SpellIcon` VALUES (2992,"Interface\Icons\INV_Misc_Coin_06"); 
-INSERT INTO `SpellIcon` VALUES (2993,"Interface\Icons\INV_Misc_Coin_02"); 
-INSERT INTO `SpellIcon` VALUES (2994,"Interface\Icons\INV_Misc_Coin_03"); 
-INSERT INTO `SpellIcon` VALUES (2995,"Interface\Icons\INV_Misc_Coin_16"); 
-INSERT INTO `SpellIcon` VALUES (2996,"Interface\Icons\INV_Holiday_BeerfestPretzel01"); 
-INSERT INTO `SpellIcon` VALUES (2997,"Interface\Icons\INV_Misc_Cauldron_Nature"); 
-INSERT INTO `SpellIcon` VALUES (2998,"Interface\Icons\Ability_Mage_Burnout"); 
-INSERT INTO `SpellIcon` VALUES (2999,"Interface\Icons\Ability_Mage_HotStreak"); 
-INSERT INTO `SpellIcon` VALUES (3000,"Interface\Icons\Ability_Mage_LivingBomb"); 
-INSERT INTO `SpellIcon` VALUES (3001,"Interface\Icons\INV_Mace_69"); 
-INSERT INTO `SpellIcon` VALUES (3002,"Interface\Icons\INV_Potion_165"); 
-INSERT INTO `SpellIcon` VALUES (3003,"Interface\Icons\INV_Misc_Book_13"); 
-INSERT INTO `SpellIcon` VALUES (3004,"Interface\Icons\INV_Misc_Food_85_StegadonBite"); 
-INSERT INTO `SpellIcon` VALUES (3005,"Interface\Icons\Spell_DeathKnight_SummonDeathCharger"); 
-INSERT INTO `SpellIcon` VALUES (3006,"Interface\Icons\Spell_DeathKnight_SpellDeflection"); 
-INSERT INTO `SpellIcon` VALUES (3007,"Interface\Icons\Spell_DeathKnight_DarkConviction"); 
-INSERT INTO `SpellIcon` VALUES (3008,"Interface\Icons\Spell_DeathKnight_Vendetta"); 
-INSERT INTO `SpellIcon` VALUES (3009,"Interface\Icons\Spell_DeathKnight_Subversion"); 
-INSERT INTO `SpellIcon` VALUES (3010,"Interface\Icons\Spell_DeathKnight_Gnaw_Ghoul"); 
-INSERT INTO `SpellIcon` VALUES (3011,"Interface\Icons\Spell_DeathKnight_Thrash_Ghoul"); 
-INSERT INTO `SpellIcon` VALUES (3012,"Interface\Icons\Spell_DeathKnight_Explode_Ghoul"); 
-INSERT INTO `SpellIcon` VALUES (3013,"Interface\Icons\Ability_Paladin_JudgementRed"); 
-INSERT INTO `SpellIcon` VALUES (3014,"Interface\Icons\Ability_Paladin_JudgementBlue"); 
-INSERT INTO `SpellIcon` VALUES (3015,"Interface\Icons\Ability_Paladin_JudgementsoftheJust"); 
-INSERT INTO `SpellIcon` VALUES (3016,"Interface\Icons\Ability_Paladin_ShieldoftheTemplar"); 
-INSERT INTO `SpellIcon` VALUES (3017,"Interface\Icons\Ability_Paladin_JudgementoftheWise"); 
-INSERT INTO `SpellIcon` VALUES (3018,"Interface\Icons\Ability_Paladin_JudgementofthePure"); 
-INSERT INTO `SpellIcon` VALUES (3019,"Interface\Icons\Ability_Paladin_SacredCleansing"); 
-INSERT INTO `SpellIcon` VALUES (3020,"Interface\Icons\Ability_Paladin_EnlightenedJudgements"); 
-INSERT INTO `SpellIcon` VALUES (3021,"Interface\Icons\Ability_Paladin_InfusionofLight"); 
-INSERT INTO `SpellIcon` VALUES (3022,"Interface\Icons\Ability_Paladin_BlessedHands"); 
-INSERT INTO `SpellIcon` VALUES (3023,"Interface\Icons\Ability_Paladin_HammeroftheRighteous"); 
-INSERT INTO `SpellIcon` VALUES (3024,"Interface\Icons\Ability_Paladin_TouchedbyLight"); 
-INSERT INTO `SpellIcon` VALUES (3025,"Interface\Icons\Ability_Paladin_RighteousVengeance"); 
-INSERT INTO `SpellIcon` VALUES (3026,"Interface\Icons\Ability_Paladin_GaurdedbytheLight"); 
-INSERT INTO `SpellIcon` VALUES (3027,"Interface\Icons\Ability_Paladin_DivineStorm"); 
-INSERT INTO `SpellIcon` VALUES (3028,"Interface\Icons\Ability_Paladin_SwiftRetribution"); 
-INSERT INTO `SpellIcon` VALUES (3029,"Interface\Icons\Ability_Paladin_SanctifiedWrath"); 
-INSERT INTO `SpellIcon` VALUES (3030,"Interface\Icons\Ability_Paladin_SheathofLight"); 
-INSERT INTO `SpellIcon` VALUES (3031,"Interface\Icons\Ability_Paladin_ShieldofVengeance"); 
-INSERT INTO `SpellIcon` VALUES (3032,"Interface\Icons\Ability_Paladin_BeaconofLight"); 
-INSERT INTO `SpellIcon` VALUES (3033,"Interface\Icons\Ability_Paladin_BlessedMending"); 
-INSERT INTO `SpellIcon` VALUES (3034,"Interface\Icons\Ability_Paladin_ArtofWar"); 
-INSERT INTO `SpellIcon` VALUES (3035,"Interface\Icons\INV_Potion_54"); 
-INSERT INTO `SpellIcon` VALUES (3036,"Interface\Icons\Achievement_Arena_2v2_7"); 
-INSERT INTO `SpellIcon` VALUES (3037,"Interface\Icons\Achievement_Arena_2v2_5"); 
-INSERT INTO `SpellIcon` VALUES (3038,"Interface\Icons\Achievement_Arena_2v2_4"); 
-INSERT INTO `SpellIcon` VALUES (3039,"Interface\Icons\Achievement_Arena_2v2_1"); 
-INSERT INTO `SpellIcon` VALUES (3040,"Interface\Icons\INV_Chest_Cloth_30"); 
-INSERT INTO `SpellIcon` VALUES (3041,"Interface\Icons\INV_Weapon_Shortblade_79"); 
-INSERT INTO `SpellIcon` VALUES (3042,"Interface\Icons\INV_Crate_01"); 
-INSERT INTO `SpellIcon` VALUES (3043,"Interface\Icons\Achievement_Arena_5v5_7"); 
-INSERT INTO `SpellIcon` VALUES (3044,"Interface\Icons\Achievement_Arena_5v5_5"); 
-INSERT INTO `SpellIcon` VALUES (3045,"Interface\Icons\Achievement_Arena_5v5_4"); 
-INSERT INTO `SpellIcon` VALUES (3046,"Interface\Icons\Achievement_Arena_5v5_1"); 
-INSERT INTO `SpellIcon` VALUES (3047,"Interface\Icons\Achievement_Arena_3v3_7"); 
-INSERT INTO `SpellIcon` VALUES (3048,"Interface\Icons\Achievement_Arena_3v3_5"); 
-INSERT INTO `SpellIcon` VALUES (3049,"Interface\Icons\Achievement_Arena_3v3_4"); 
-INSERT INTO `SpellIcon` VALUES (3050,"Interface\Icons\Achievement_Arena_3v3_1"); 
-INSERT INTO `SpellIcon` VALUES (3051,"Interface\Icons\Spell_Arcane_PortalDalaran"); 
-INSERT INTO `SpellIcon` VALUES (3052,"Interface\Icons\INV_Box_Birdcage_01"); 
-INSERT INTO `SpellIcon` VALUES (3053,"Interface\Icons\Spell_Shaman_ElementalOath"); 
-INSERT INTO `SpellIcon` VALUES (3054,"Interface\Icons\INV_Sword_66"); 
-INSERT INTO `SpellIcon` VALUES (3055,"Interface\Icons\INV_Misc_EngGizmos_30"); 
-INSERT INTO `SpellIcon` VALUES (3056,"Interface\Icons\INV_Misc_EngGizmos_13"); 
-INSERT INTO `SpellIcon` VALUES (3057,"Interface\Icons\Spell_Shaman_TidalWaves"); 
-INSERT INTO `SpellIcon` VALUES (3058,"Interface\Icons\Spell_Shaman_Hex"); 
-INSERT INTO `SpellIcon` VALUES (3059,"Interface\Icons\Spell_Shaman_StaticShock"); 
-INSERT INTO `SpellIcon` VALUES (3060,"Interface\Icons\Spell_Shaman_GiftEarthmother"); 
-INSERT INTO `SpellIcon` VALUES (3061,"Interface\Icons\Spell_Shaman_EarthlivingWeapon"); 
-INSERT INTO `SpellIcon` VALUES (3062,"Interface\Icons\Spell_Shaman_SpiritLink"); 
-INSERT INTO `SpellIcon` VALUES (3063,"Interface\Icons\Spell_Shaman_StormEarthFire"); 
-INSERT INTO `SpellIcon` VALUES (3064,"Interface\Icons\Spell_Shaman_LavaBurst"); 
-INSERT INTO `SpellIcon` VALUES (3065,"Interface\Icons\Spell_Shaman_AncestralAwakening"); 
-INSERT INTO `SpellIcon` VALUES (3066,"Interface\Icons\Spell_Shaman_AstralShift"); 
-INSERT INTO `SpellIcon` VALUES (3067,"Interface\Icons\INV_Chest_Christmas02"); 
-INSERT INTO `SpellIcon` VALUES (3068,"Interface\Icons\INV_Crate_05"); 
-INSERT INTO `SpellIcon` VALUES (3069,"Interface\Icons\INV_Misc_DragonKite_02"); 
-INSERT INTO `SpellIcon` VALUES (3070,"Interface\Icons\INV_Belt_25"); 
-INSERT INTO `SpellIcon` VALUES (3071,"Interface\Icons\INV_Belt_09"); 
-INSERT INTO `SpellIcon` VALUES (3072,"Interface\Icons\INV_Ore_Mithril_01"); 
-INSERT INTO `SpellIcon` VALUES (3073,"Interface\Icons\INV_Misc_Bag_17"); 
-INSERT INTO `SpellIcon` VALUES (3074,"Interface\Icons\INV_DataCrystal03"); 
-INSERT INTO `SpellIcon` VALUES (3075,"Interface\Icons\INV_Misc_Key_07"); 
-INSERT INTO `SpellIcon` VALUES (3076,"Interface\Icons\INV_Qiraj_HiltOrnate"); 
-INSERT INTO `SpellIcon` VALUES (3077,"Interface\Icons\INV_Misc_Fish_37"); 
-INSERT INTO `SpellIcon` VALUES (3078,"Interface\Icons\INV_Potion_112"); 
-INSERT INTO `SpellIcon` VALUES (3079,"Interface\Icons\INV_Feather_11"); 
-INSERT INTO `SpellIcon` VALUES (3080,"Interface\Icons\Spell_Shaman_ThunderStorm"); 
-INSERT INTO `SpellIcon` VALUES (3081,"Interface\Icons\Spell_Shaman_FeralSpirit"); 
-INSERT INTO `SpellIcon` VALUES (3082,"Interface\Icons\INV_MISC_BEER_02"); 
-INSERT INTO `SpellIcon` VALUES (3083,"Interface\Icons\INV_Misc_Beer_04"); 
-INSERT INTO `SpellIcon` VALUES (3084,"Interface\Icons\INV_Shirt_15"); 
-INSERT INTO `SpellIcon` VALUES (3085,"Interface\Icons\INV_Shirt_12"); 
-INSERT INTO `SpellIcon` VALUES (3086,"Interface\Icons\INV_Sword_68"); 
-INSERT INTO `SpellIcon` VALUES (3087,"Interface\Icons\Spell_Shaman_LavaFlow"); 
-INSERT INTO `SpellIcon` VALUES (3088,"Interface\Icons\Spell_Nature_WispSplodeGreen"); 
-INSERT INTO `SpellIcon` VALUES (3089,"Interface\Icons\INV_Weapon_Rifle_29"); 
-INSERT INTO `SpellIcon` VALUES (3090,"Interface\Icons\INV_Jewelcrafting_Talasite_03"); 
-INSERT INTO `SpellIcon` VALUES (3091,"Interface\Icons\INV_Misc_EngGizmos_32"); 
-INSERT INTO `SpellIcon` VALUES (3092,"Interface\Icons\INV_Helmet_67"); 
-INSERT INTO `SpellIcon` VALUES (3093,"Interface\Icons\UI-Glyph-Rune-11"); 
-INSERT INTO `SpellIcon` VALUES (3094,"Interface\Icons\INV_Misc_Rune_09"); 
-INSERT INTO `SpellIcon` VALUES (3095,"Interface\Icons\INV_Boots_Mail_01"); 
-INSERT INTO `SpellIcon` VALUES (3096,"Interface\Icons\INV_Jewelry_Talisman_10"); 
-INSERT INTO `SpellIcon` VALUES (3097,"Interface\Icons\INV_Weapon_ShortBlade_12"); 
-INSERT INTO `SpellIcon` VALUES (3098,"Interface\Spellbook\UI-Glyph-Rune-11"); 
-INSERT INTO `SpellIcon` VALUES (3099,"Interface\Icons\INV_Misc_Herb_Ragveil"); 
-INSERT INTO `SpellIcon` VALUES (3100,"Interface\Icons\Achievement_Arena_2v2_2"); 
-INSERT INTO `SpellIcon` VALUES (3101,"Interface\Icons\INV_Misc_Thread_01"); 
-INSERT INTO `SpellIcon` VALUES (3102,"Interface\Icons\INV_Jewelcrafting_BronzeSetting"); 
-INSERT INTO `SpellIcon` VALUES (3103,"Interface\Icons\INV_GAUNTLETS_61"); 
-INSERT INTO `SpellIcon` VALUES (3104,"Interface\Icons\INV_Jewelcrafting_ThoriumSetting"); 
-INSERT INTO `SpellIcon` VALUES (3105,"Interface\Icons\INV_Belt_36"); 
-INSERT INTO `SpellIcon` VALUES (3106,"Interface\Icons\Spell_Holy_Persecution"); 
-INSERT INTO `SpellIcon` VALUES (3107,"Interface\Icons\INV_Misc_Pelt_Boar_Ruin_03"); 
-INSERT INTO `SpellIcon` VALUES (3109,"Interface\Icons\INV_Boots_Plate_05"); 
-INSERT INTO `SpellIcon` VALUES (3110,"Interface\Spellbook\UI-Glyph-Rune-1"); 
-INSERT INTO `SpellIcon` VALUES (3112,"Interface\Spellbook\UI-Glyph-Rune-10"); 
-INSERT INTO `SpellIcon` VALUES (3113,"Interface\Spellbook\UI-Glyph-Rune-12"); 
-INSERT INTO `SpellIcon` VALUES (3114,"Interface\Spellbook\UI-Glyph-Rune-13"); 
-INSERT INTO `SpellIcon` VALUES (3115,"Interface\Spellbook\UI-Glyph-Rune-14"); 
-INSERT INTO `SpellIcon` VALUES (3116,"Interface\Spellbook\UI-Glyph-Rune-15"); 
-INSERT INTO `SpellIcon` VALUES (3117,"Interface\Spellbook\UI-Glyph-Rune-16"); 
-INSERT INTO `SpellIcon` VALUES (3118,"Interface\Spellbook\UI-Glyph-Rune-17"); 
-INSERT INTO `SpellIcon` VALUES (3119,"Interface\Spellbook\UI-Glyph-Rune-18"); 
-INSERT INTO `SpellIcon` VALUES (3120,"Interface\Spellbook\UI-Glyph-Rune-19"); 
-INSERT INTO `SpellIcon` VALUES (3121,"Interface\Spellbook\UI-Glyph-Rune-20"); 
-INSERT INTO `SpellIcon` VALUES (3122,"Interface\Spellbook\UI-Glyph-Rune-2"); 
-INSERT INTO `SpellIcon` VALUES (3123,"Interface\Spellbook\UI-Glyph-Rune-3"); 
-INSERT INTO `SpellIcon` VALUES (3124,"Interface\Spellbook\UI-Glyph-Rune-4"); 
-INSERT INTO `SpellIcon` VALUES (3125,"Interface\Spellbook\UI-Glyph-Rune-5"); 
-INSERT INTO `SpellIcon` VALUES (3126,"Interface\Spellbook\UI-Glyph-Rune-6"); 
-INSERT INTO `SpellIcon` VALUES (3127,"Interface\Spellbook\UI-Glyph-Rune-7"); 
-INSERT INTO `SpellIcon` VALUES (3128,"Interface\Spellbook\UI-Glyph-Rune-8"); 
-INSERT INTO `SpellIcon` VALUES (3129,"Interface\Spellbook\UI-Glyph-Rune1"); 
-INSERT INTO `SpellIcon` VALUES (3130,"Interface\Icons\INV_Misc_Slime_02"); 
-INSERT INTO `SpellIcon` VALUES (3131,"Interface\Icons\Spell_Holy_ImpHolyConcentration"); 
-INSERT INTO `SpellIcon` VALUES (3132,"Interface\Icons\INV_Jewelcrafting_CrimsonHare"); 
-INSERT INTO `SpellIcon` VALUES (3133,"Interface\Icons\INV_Jewelcrafting_AzureOwl"); 
-INSERT INTO `SpellIcon` VALUES (3134,"Interface\Icons\INV_Jewelcrafting_PurpleSerpent"); 
-INSERT INTO `SpellIcon` VALUES (3135,"Interface\Icons\INV_Jewelcrafting_EmeraldBoar"); 
-INSERT INTO `SpellIcon` VALUES (3136,"Interface\Icons\INV_Jewelcrafting_Nightseye_03"); 
-INSERT INTO `SpellIcon` VALUES (3137,"Interface\Icons\INV_Staff_16"); 
-INSERT INTO `SpellIcon` VALUES (3138,"Interface\Icons\INV_Weapon_Halberd_02"); 
-INSERT INTO `SpellIcon` VALUES (3139,"Interface\Icons\Spell_Shadow_Skull"); 
-INSERT INTO `SpellIcon` VALUES (3140,"Interface\Icons\INV_Misc_Bomb_08"); 
-INSERT INTO `SpellIcon` VALUES (3141,"Interface\Icons\Spell_DeathKnight_BloodPlague"); 
-INSERT INTO `SpellIcon` VALUES (3142,"Interface\Icons\Spell_DeathKnight_FrostFever"); 
-INSERT INTO `SpellIcon` VALUES (3143,"Interface\Icons\Spell_DeathKnight_ScourgeStrike"); 
-INSERT INTO `SpellIcon` VALUES (3144,"Interface\Icons\Spell_DeathKnight_AntiMagicZone"); 
-INSERT INTO `SpellIcon` VALUES (3145,"Interface\Icons\INV_Weapon_Shortblade_40"); 
-INSERT INTO `SpellIcon` VALUES (3146,"Interface\Icons\INV_Spear_11"); 
-INSERT INTO `SpellIcon` VALUES (3147,"Interface\Icons\Spell_DeathKnight_PathOfFrost"); 
-INSERT INTO `SpellIcon` VALUES (3148,"Interface\Icons\INV_Sword_126"); 
-INSERT INTO `SpellIcon` VALUES (3149,"Interface\Icons\Ability_HeroicLeap"); 
-INSERT INTO `SpellIcon` VALUES (3150,"Interface\Icons\INV_Misc_Food_119_RhinoMeat"); 
-INSERT INTO `SpellIcon` VALUES (3151,"Interface\Icons\INV_Gizmo_FuelCell"); 
-INSERT INTO `SpellIcon` VALUES (3152,"Interface\Icons\INV_Belt_16"); 
-INSERT INTO `SpellIcon` VALUES (3153,"Interface\Icons\INV_Misc_Map07"); 
-INSERT INTO `SpellIcon` VALUES (3154,"Interface\Icons\INV_Boots_Mail_02"); 
-INSERT INTO `SpellIcon` VALUES (3155,"Interface\Icons\INV_Helmet_32"); 
-INSERT INTO `SpellIcon` VALUES (3156,"Interface\Icons\Spell_Shaman_MaelstromWeapon"); 
-INSERT INTO `SpellIcon` VALUES (3157,"Interface\Icons\Spell_Shaman_BlessingOfEternals"); 
-INSERT INTO `SpellIcon` VALUES (3158,"Interface\Icons\Spell_Shaman_SpectralTransformation"); 
-INSERT INTO `SpellIcon` VALUES (3159,"Interface\Icons\Spell_Shaman_ImprovedStormstrike"); 
-INSERT INTO `SpellIcon` VALUES (3160,"Interface\Icons\INV_Mace_46"); 
-INSERT INTO `SpellIcon` VALUES (3161,"Interface\Icons\INV_Sword_96"); 
-INSERT INTO `SpellIcon` VALUES (3162,"Interface\Icons\INV_Misc_Food_84_RoastClefthoof"); 
-INSERT INTO `SpellIcon` VALUES (3163,"Interface\Icons\INV_Misc_EngGizmos_04"); 
-INSERT INTO `SpellIcon` VALUES (3164,"Interface\Icons\INV_Misc_Ticket_Darkmoon_01"); 
-INSERT INTO `SpellIcon` VALUES (3165,"Interface\Icons\INV_Misc_Food_86_Basilisk"); 
-INSERT INTO `SpellIcon` VALUES (3166,"Interface\Icons\INV_DataCrystal07"); 
-INSERT INTO `SpellIcon` VALUES (3167,"Interface\Icons\Spell_Arcane_TeleportDalaran"); 
-INSERT INTO `SpellIcon` VALUES (3168,"Interface\Icons\Achievement_Arena_2v2_3"); 
-INSERT INTO `SpellIcon` VALUES (3169,"Interface\Icons\Ability_Warlock_EverlastingAffliction"); 
-INSERT INTO `SpellIcon` VALUES (3170,"Interface\Icons\Ability_Warlock_Backdraft"); 
-INSERT INTO `SpellIcon` VALUES (3171,"Interface\Icons\Ability_Warlock_EmpoweredImp"); 
-INSERT INTO `SpellIcon` VALUES (3172,"Interface\Icons\Ability_Warlock_Haunt"); 
-INSERT INTO `SpellIcon` VALUES (3173,"Interface\Icons\Ability_Warlock_FireandBrimstone"); 
-INSERT INTO `SpellIcon` VALUES (3174,"Interface\Icons\Ability_Warlock_DemonicEmpowerment"); 
-INSERT INTO `SpellIcon` VALUES (3175,"Interface\Icons\Ability_Warlock_MoltenCore"); 
-INSERT INTO `SpellIcon` VALUES (3176,"Interface\Icons\Ability_Warlock_ImprovedSoulLeech"); 
-INSERT INTO `SpellIcon` VALUES (3177,"Interface\Icons\Ability_Warlock_ImprovedDemonicTactics"); 
-INSERT INTO `SpellIcon` VALUES (3178,"Interface\Icons\Ability_Warlock_ChaosBolt"); 
-INSERT INTO `SpellIcon` VALUES (3179,"Interface\Icons\INV_Misc_Fish_50"); 
-INSERT INTO `SpellIcon` VALUES (3180,"Interface\Icons\INV_Misc_Food_99"); 
-INSERT INTO `SpellIcon` VALUES (3181,"Interface\Icons\Ability_Miling"); 
-INSERT INTO `SpellIcon` VALUES (3182,"Interface\Icons\INV_Axe_66"); 
-INSERT INTO `SpellIcon` VALUES (3183,"Interface\Icons\Spell_Misc_EmotionHappy"); 
-INSERT INTO `SpellIcon` VALUES (3184,"Interface\Icons\Spell_Magic_ManaGain"); 
-INSERT INTO `SpellIcon` VALUES (3185,"Interface\Icons\INV_Staff_67"); 
-INSERT INTO `SpellIcon` VALUES (3186,"Interface\Icons\Ability_Druid_ManaTree"); 
-INSERT INTO `SpellIcon` VALUES (3187,"Interface\Icons\INV_Misc_Food_87_SporelingSnack"); 
-INSERT INTO `SpellIcon` VALUES (3188,"Interface\Icons\INV_Misc_Head_Vrykul"); 
-INSERT INTO `SpellIcon` VALUES (3189,"Interface\Icons\Ability_Mage_FieryPayback"); 
-INSERT INTO `SpellIcon` VALUES (3190,"Interface\Icons\INV_Helmet_68"); 
-INSERT INTO `SpellIcon` VALUES (3191,"Interface\Icons\INV_Misc_Food_62"); 
-INSERT INTO `SpellIcon` VALUES (3192,"Interface\Icons\INV_ValentinesCard02"); 
-INSERT INTO `SpellIcon` VALUES (3193,"Interface\Icons\INV_Chest_Cloth_50"); 
-INSERT INTO `SpellIcon` VALUES (3194,"Interface\Icons\INV_Misc_Cauldron_Fire"); 
-INSERT INTO `SpellIcon` VALUES (3195,"Interface\Icons\INV_ValentinePinkRocket"); 
-INSERT INTO `SpellIcon` VALUES (3196,"Interface\Icons\INV_ValentinesCandy"); 
-INSERT INTO `SpellIcon` VALUES (3197,"Interface\Icons\Spell_Misc_EmotionSad"); 
-INSERT INTO `SpellIcon` VALUES (3198,"Interface\Icons\Spell_Misc_EmotionAngry"); 
-INSERT INTO `SpellIcon` VALUES (3199,"Interface\Icons\Spell_Misc_EmotionAfraid"); 
-INSERT INTO `SpellIcon` VALUES (3200,"Interface\Icons\INV_Hammer_16"); 
-INSERT INTO `SpellIcon` VALUES (3201,"Interface\Icons\INV_Bone_Skull_04"); 
-INSERT INTO `SpellIcon` VALUES (3202,"Interface\Icons\INV_Egg_09"); 
-INSERT INTO `SpellIcon` VALUES (3203,"Interface\Icons\INV_Helmet_74"); 
-INSERT INTO `SpellIcon` VALUES (3204,"Interface\Icons\INV_Helmet_90"); 
-INSERT INTO `SpellIcon` VALUES (3205,"Interface\Icons\INV_Misc_MonsterFang_02"); 
-INSERT INTO `SpellIcon` VALUES (3206,"Interface\Icons\INV_Misc_Food_117_HeartySoup"); 
-INSERT INTO `SpellIcon` VALUES (3207,"Interface\Icons\INV_Weapon_Rifle_16"); 
-INSERT INTO `SpellIcon` VALUES (3208,"Interface\Icons\Ability_Mount_RocketMount"); 
-INSERT INTO `SpellIcon` VALUES (3209,"Interface\Icons\Spell_Holy_DivineHymn"); 
-INSERT INTO `SpellIcon` VALUES (3210,"Interface\Icons\INV_Misc_Bag_10_Black"); 
-INSERT INTO `SpellIcon` VALUES (3211,"Interface\Icons\INV_Misc_Food_138_Fish"); 
-INSERT INTO `SpellIcon` VALUES (3212,"Interface\Icons\INV_Misc_Food_141_Fish"); 
-INSERT INTO `SpellIcon` VALUES (3213,"Interface\Icons\INV_Misc_Food_140_Fish"); 
-INSERT INTO `SpellIcon` VALUES (3214,"Interface\Icons\INV_Shield_31"); 
-INSERT INTO `SpellIcon` VALUES (3215,"Interface\Icons\INV_Misc_Food_98_Talbuk"); 
-INSERT INTO `SpellIcon` VALUES (3216,"Interface\Icons\INV_Elemental_Crystal_Water"); 
-INSERT INTO `SpellIcon` VALUES (3217,"Interface\Icons\Spell_Shadow_DemonicCircleSummon"); 
-INSERT INTO `SpellIcon` VALUES (3218,"Interface\Icons\INV_Misc_Food_13"); 
-INSERT INTO `SpellIcon` VALUES (3219,"Interface\Icons\INV_Misc_Food_92_Lobster"); 
-INSERT INTO `SpellIcon` VALUES (3220,"Interface\Icons\Spell_Shadow_DemonicPact"); 
-INSERT INTO `SpellIcon` VALUES (3221,"Interface\Icons\Spell_Shadow_DemonicCircleTeleport"); 
-INSERT INTO `SpellIcon` VALUES (3222,"Interface\Icons\Spell_Shadow_FelMending"); 
-INSERT INTO `SpellIcon` VALUES (3223,"Interface\Icons\Spell_Shadow_DeathsEmbrace"); 
-INSERT INTO `SpellIcon` VALUES (3224,"Interface\Icons\Achievement_Dungeon_UtgardeKeep"); 
-INSERT INTO `SpellIcon` VALUES (3225,"Interface\Icons\Achievement_Dungeon_UtgardeKeep_Heroic"); 
-INSERT INTO `SpellIcon` VALUES (3226,"Interface\Icons\Achievement_Dungeon_UtgardeKeep_Normal"); 
-INSERT INTO `SpellIcon` VALUES (3227,"Interface\Icons\Achievement_Dungeon_Nexus70_Normal"); 
-INSERT INTO `SpellIcon` VALUES (3228,"Interface\Icons\Achievement_Dungeon_Nexus70_Heroic"); 
-INSERT INTO `SpellIcon` VALUES (3229,"Interface\Icons\Achievement_Dungeon_AzjolUppercity_Normal"); 
-INSERT INTO `SpellIcon` VALUES (3230,"Interface\Icons\Achievement_Dungeon_AzjolUppercity_Heroic"); 
-INSERT INTO `SpellIcon` VALUES (3231,"Interface\Icons\Achievement_Dungeon_AzjolLowercity_Normal"); 
-INSERT INTO `SpellIcon` VALUES (3232,"Interface\Icons\Achievement_Dungeon_AzjolLowercity_Heroic"); 
-INSERT INTO `SpellIcon` VALUES (3233,"Interface\Icons\Achievement_Dungeon_Drak'Tharon_Normal"); 
-INSERT INTO `SpellIcon` VALUES (3234,"Interface\Icons\Achievement_Dungeon_Drak'Tharon_Heroic"); 
-INSERT INTO `SpellIcon` VALUES (3235,"Interface\Icons\Achievement_Dungeon_TheVioletHold_Normal"); 
-INSERT INTO `SpellIcon` VALUES (3236,"Interface\Icons\Achievement_Dungeon_TheVioletHold_Heroic"); 
-INSERT INTO `SpellIcon` VALUES (3237,"Interface\Icons\Achievement_Dungeon_Gundrak_Normal"); 
-INSERT INTO `SpellIcon` VALUES (3238,"Interface\Icons\Achievement_Dungeon_Gundrak_Heroic"); 
-INSERT INTO `SpellIcon` VALUES (3239,"Interface\Icons\Achievement_Dungeon_Ulduar77_Normal"); 
-INSERT INTO `SpellIcon` VALUES (3240,"Interface\Icons\Achievement_Dungeon_Ulduar77_Heroic"); 
-INSERT INTO `SpellIcon` VALUES (3241,"Interface\Icons\Achievement_Dungeon_Ulduar80_Normal"); 
-INSERT INTO `SpellIcon` VALUES (3242,"Interface\Icons\Achievement_Dungeon_Ulduar80_Heroic"); 
-INSERT INTO `SpellIcon` VALUES (3243,"Interface\Icons\Achievement_Dungeon_Nexus80_Normal"); 
-INSERT INTO `SpellIcon` VALUES (3244,"Interface\Icons\Achievement_Dungeon_Nexus80_Heroic"); 
-INSERT INTO `SpellIcon` VALUES (3245,"Interface\Icons\Achievement_Dungeon_UtgardePinnacle_Normal"); 
-INSERT INTO `SpellIcon` VALUES (3246,"Interface\Icons\Achievement_Dungeon_UtgardePinnacle_Heroic"); 
-INSERT INTO `SpellIcon` VALUES (3247,"Interface\Icons\Ability_Hunter_PiercingShots"); 
-INSERT INTO `SpellIcon` VALUES (3248,"Interface\Icons\Achievement_Dungeon_CoTStratholme_Normal"); 
-INSERT INTO `SpellIcon` VALUES (3249,"Interface\Icons\Achievement_Dungeon_CoTStratholme_Heroic"); 
-INSERT INTO `SpellIcon` VALUES (3250,"Interface\Icons\Achievement_Dungeon_AzjolUppercity_25man"); 
-INSERT INTO `SpellIcon` VALUES (3251,"Interface\Icons\Achievement_Dungeon_AzjolUppercity_10man"); 
-INSERT INTO `SpellIcon` VALUES (3252,"Interface\Icons\Achievement_Dungeon_CoABlackDragonflight_Normal"); 
-INSERT INTO `SpellIcon` VALUES (3253,"Interface\Icons\Achievement_Dungeon_CoABlackDragonflight_Heroic"); 
-INSERT INTO `SpellIcon` VALUES (3254,"Interface\Icons\Achievement_Dungeon_CoABlackDragonflight"); 
-INSERT INTO `SpellIcon` VALUES (3255,"Interface\Icons\Achievement_Dungeon_CoABlackDragonflight_10man"); 
-INSERT INTO `SpellIcon` VALUES (3256,"Interface\Icons\Achievement_Dungeon_NexusRaid"); 
-INSERT INTO `SpellIcon` VALUES (3257,"Interface\Icons\Achievement_Dungeon_NexusRaid_10man"); 
-INSERT INTO `SpellIcon` VALUES (3258,"Interface\Icons\Achievement_Dungeon_Naxxramas_Normal"); 
-INSERT INTO `SpellIcon` VALUES (3259,"Interface\Icons\Achievement_Dungeon_Naxxramas_10man"); 
-INSERT INTO `SpellIcon` VALUES (3260,"Interface\Icons\Ability_Mage_ColdAsIce"); 
-INSERT INTO `SpellIcon` VALUES (3261,"Interface\Icons\Ability_Mage_MissileBarrage"); 
-INSERT INTO `SpellIcon` VALUES (3262,"Interface\Icons\Ability_Mage_FireStarter"); 
-INSERT INTO `SpellIcon` VALUES (3263,"Interface\Icons\Ability_Mage_TormentOfTheWeak"); 
-INSERT INTO `SpellIcon` VALUES (3264,"Interface\Icons\Achievement_Dungeon_TheVioletHold_25man"); 
-INSERT INTO `SpellIcon` VALUES (3265,"Interface\Icons\Achievement_Dungeon_CoTStratholme_25man"); 
-INSERT INTO `SpellIcon` VALUES (3266,"Interface\Icons\INV_Misc_Food_115_CondorSoup"); 
-INSERT INTO `SpellIcon` VALUES (3267,"Interface\Icons\INV_Inscription_Tradeskill01"); 
-INSERT INTO `SpellIcon` VALUES (3268,"Interface\Icons\Achievement_Level_10"); 
-INSERT INTO `SpellIcon` VALUES (3269,"Interface\Icons\Achievement_Level_20"); 
-INSERT INTO `SpellIcon` VALUES (3270,"Interface\Icons\Achievement_Level_30"); 
-INSERT INTO `SpellIcon` VALUES (3271,"Interface\Icons\Achievement_Level_40"); 
-INSERT INTO `SpellIcon` VALUES (3272,"Interface\Icons\Achievement_Level_50"); 
-INSERT INTO `SpellIcon` VALUES (3273,"Interface\Icons\Achievement_Level_60"); 
-INSERT INTO `SpellIcon` VALUES (3274,"Interface\Icons\Achievement_Level_70"); 
-INSERT INTO `SpellIcon` VALUES (3275,"Interface\Icons\Achievement_Level_80"); 
-INSERT INTO `SpellIcon` VALUES (3276,"Interface\Icons\INV_Shield_34"); 
-INSERT INTO `SpellIcon` VALUES (3277,"Interface\Icons\Ability_Hunter_Pet_Wasp"); 
-INSERT INTO `SpellIcon` VALUES (3278,"Interface\Icons\Ability_Hunter_Pet_Moth"); 
-INSERT INTO `SpellIcon` VALUES (3279,"Interface\Icons\INV_Feather_08"); 
-INSERT INTO `SpellIcon` VALUES (3280,"Interface\Icons\INV_Crate_06"); 
-INSERT INTO `SpellIcon` VALUES (3281,"Interface\Icons\INV_Misc_Bag_16"); 
-INSERT INTO `SpellIcon` VALUES (3282,"Interface\Icons\INV_Misc_Herb_GoldClover"); 
-INSERT INTO `SpellIcon` VALUES (3283,"Interface\Icons\Achievement_Character_Gnome_Male"); 
-INSERT INTO `SpellIcon` VALUES (3284,"Interface\Icons\Achievement_Character_Bloodelf_Male"); 
-INSERT INTO `SpellIcon` VALUES (3285,"Interface\Icons\Achievement_Character_Draenei_Male"); 
-INSERT INTO `SpellIcon` VALUES (3286,"Interface\Icons\Achievement_Character_Dwarf_Male"); 
-INSERT INTO `SpellIcon` VALUES (3287,"Interface\Icons\Achievement_Character_Human_Male"); 
-INSERT INTO `SpellIcon` VALUES (3288,"Interface\Icons\Achievement_Character_Nightelf_Male"); 
-INSERT INTO `SpellIcon` VALUES (3289,"Interface\Icons\Achievement_Character_Orc_Male"); 
-INSERT INTO `SpellIcon` VALUES (3290,"Interface\Icons\Achievement_Character_Tauren_Male"); 
-INSERT INTO `SpellIcon` VALUES (3291,"Interface\Icons\Achievement_Character_Troll_Male"); 
-INSERT INTO `SpellIcon` VALUES (3292,"Interface\Icons\Achievement_Character_Undead_Male"); 
-INSERT INTO `SpellIcon` VALUES (3293,"Interface\Icons\INV_Crown_14"); 
-INSERT INTO `SpellIcon` VALUES (3294,"Interface\Icons\INV_Boots_Cloth_21"); 
-INSERT INTO `SpellIcon` VALUES (3295,"Interface\Icons\Achievement_Dungeon_AzjolUppercity"); 
-INSERT INTO `SpellIcon` VALUES (3296,"Interface\Icons\Achievement_Dungeon_AzjolLowercity_25man"); 
-INSERT INTO `SpellIcon` VALUES (3297,"Interface\Icons\Achievement_Dungeon_AzjolLowercity_10man"); 
-INSERT INTO `SpellIcon` VALUES (3298,"Interface\Icons\Achievement_Dungeon_AzjolLowercity"); 
-INSERT INTO `SpellIcon` VALUES (3299,"Interface\Icons\Achievement_Dungeon_Gundrak_25man"); 
-INSERT INTO `SpellIcon` VALUES (3300,"Interface\Icons\Achievement_Dungeon_TheVioletHold_10man"); 
-INSERT INTO `SpellIcon` VALUES (3301,"Interface\Icons\Achievement_Dungeon_Ulduar77_10man"); 
-INSERT INTO `SpellIcon` VALUES (3302,"Interface\Icons\Achievement_Dungeon_Ulduar80_25man"); 
-INSERT INTO `SpellIcon` VALUES (3303,"Interface\Icons\Achievement_Dungeon_Nexus80_25man"); 
-INSERT INTO `SpellIcon` VALUES (3304,"Interface\Icons\Achievement_Dungeon_NexusRaid_Heroic"); 
-INSERT INTO `SpellIcon` VALUES (3305,"Interface\Icons\Achievement_Dungeon_NexusRaid_25man"); 
-INSERT INTO `SpellIcon` VALUES (3306,"Interface\Icons\Achievement_Dungeon_Nexus80_10man"); 
-INSERT INTO `SpellIcon` VALUES (3307,"Interface\Icons\Achievement_Dungeon_UtgardePinnacle_10man"); 
-INSERT INTO `SpellIcon` VALUES (3308,"Interface\Icons\Achievement_Dungeon_CoABlackDragonflight_25man"); 
-INSERT INTO `SpellIcon` VALUES (3309,"Interface\Icons\INV_Scroll_11"); 
-INSERT INTO `SpellIcon` VALUES (3310,"Interface\Icons\INV_Fabric_Soulcloth"); 
-INSERT INTO `SpellIcon` VALUES (3311,"Interface\Icons\INV_Inscription_MajorGlyph00"); 
-INSERT INTO `SpellIcon` VALUES (3312,"Interface\Spellbook\UI-Glyph-Rune-9"); 
-INSERT INTO `SpellIcon` VALUES (3313,"Interface\Icons\Ability_Hunter_Pet_Devilsaur"); 
-INSERT INTO `SpellIcon` VALUES (3314,"Interface\Icons\Spell_Shadow_DemonForm"); 
-INSERT INTO `SpellIcon` VALUES (3315,"Interface\Icons\Spell_Shadow_DemonicEmpathy"); 
-INSERT INTO `SpellIcon` VALUES (3316,"Interface\Icons\Ability_Warlock_Eradication"); 
-INSERT INTO `SpellIcon` VALUES (3317,"Interface\Icons\Ability_Warlock_ShadowFlame"); 
-INSERT INTO `SpellIcon` VALUES (3318,"Interface\Icons\INV_Potion_83"); 
-INSERT INTO `SpellIcon` VALUES (3319,"Interface\Icons\ACHIEVEMENT_BOSS_KINGYMIRON_01"); 
-INSERT INTO `SpellIcon` VALUES (3320,"Interface\Icons\ACHIEVEMENT_BOSS_KINGYMIRON_02"); 
-INSERT INTO `SpellIcon` VALUES (3321,"Interface\Icons\ACHIEVEMENT_BOSS_KINGYMIRON_03"); 
-INSERT INTO `SpellIcon` VALUES (3322,"Interface\Icons\INV_Misc_Head_ClockworkGnome_01"); 
-INSERT INTO `SpellIcon` VALUES (3323,"Interface\Icons\Achievement_Character_Bloodelf_Female"); 
-INSERT INTO `SpellIcon` VALUES (3324,"Interface\Icons\Achievement_Character_Draenei_Female"); 
-INSERT INTO `SpellIcon` VALUES (3325,"Interface\Icons\Achievement_Character_Human_Female"); 
-INSERT INTO `SpellIcon` VALUES (3326,"Interface\Icons\Achievement_Character_Tauren_Female"); 
-INSERT INTO `SpellIcon` VALUES (3327,"Interface\Icons\Achievement_Character_Nightelf_Female"); 
-INSERT INTO `SpellIcon` VALUES (3328,"Interface\Icons\INV_Misc_Coin_17"); 
-INSERT INTO `SpellIcon` VALUES (3329,"Interface\Icons\INV_Egg_06"); 
-INSERT INTO `SpellIcon` VALUES (3330,"Interface\Icons\Achievement_Zone_BoreanTundra_01"); 
-INSERT INTO `SpellIcon` VALUES (3331,"Interface\Icons\Achievement_Zone_HowlingFjord_01"); 
-INSERT INTO `SpellIcon` VALUES (3332,"Interface\Icons\Achievement_Zone_DragonBlight_01"); 
-INSERT INTO `SpellIcon` VALUES (3333,"Interface\Icons\Achievement_Zone_GrizzlyHills_01"); 
-INSERT INTO `SpellIcon` VALUES (3334,"Interface\Icons\Achievement_Zone_ZulDrak_03"); 
-INSERT INTO `SpellIcon` VALUES (3335,"Interface\Icons\Achievement_Zone_Sholazar_01"); 
-INSERT INTO `SpellIcon` VALUES (3336,"Interface\Icons\Achievement_Zone_BoreanTundra_07"); 
-INSERT INTO `SpellIcon` VALUES (3337,"Interface\Icons\Achievement_Zone_HowlingFjord_07"); 
-INSERT INTO `SpellIcon` VALUES (3338,"Interface\Icons\Achievement_Zone_DragonBlight_07"); 
-INSERT INTO `SpellIcon` VALUES (3339,"Interface\Icons\Achievement_Zone_GrizzlyHills_07"); 
-INSERT INTO `SpellIcon` VALUES (3340,"Interface\Icons\Achievement_Zone_ZulDrak_07"); 
-INSERT INTO `SpellIcon` VALUES (3341,"Interface\Icons\Achievement_Zone_Sholazar_07"); 
-INSERT INTO `SpellIcon` VALUES (3342,"Interface\Icons\INV_Misc_Web_01"); 
-INSERT INTO `SpellIcon` VALUES (3343,"Interface\Icons\Achievement_Zone_GrizzlyHills_11"); 
-INSERT INTO `SpellIcon` VALUES (3344,"Interface\Icons\Achievement_PVP_H_01"); 
-INSERT INTO `SpellIcon` VALUES (3345,"Interface\Icons\Achievement_PVP_H_02"); 
-INSERT INTO `SpellIcon` VALUES (3346,"Interface\Icons\Achievement_PVP_H_03"); 
-INSERT INTO `SpellIcon` VALUES (3347,"Interface\Icons\Achievement_PVP_H_04"); 
-INSERT INTO `SpellIcon` VALUES (3348,"Interface\Icons\Achievement_PVP_H_05"); 
-INSERT INTO `SpellIcon` VALUES (3349,"Interface\Icons\Achievement_PVP_H_06"); 
-INSERT INTO `SpellIcon` VALUES (3350,"Interface\Icons\Achievement_PVP_H_07"); 
-INSERT INTO `SpellIcon` VALUES (3351,"Interface\Icons\Achievement_PVP_H_08"); 
-INSERT INTO `SpellIcon` VALUES (3352,"Interface\Icons\Achievement_PVP_H_09"); 
-INSERT INTO `SpellIcon` VALUES (3353,"Interface\Icons\Achievement_PVP_H_10"); 
-INSERT INTO `SpellIcon` VALUES (3354,"Interface\Icons\Achievement_PVP_H_11"); 
-INSERT INTO `SpellIcon` VALUES (3355,"Interface\Icons\Achievement_PVP_H_12"); 
-INSERT INTO `SpellIcon` VALUES (3356,"Interface\Icons\Achievement_PVP_H_13"); 
-INSERT INTO `SpellIcon` VALUES (3357,"Interface\Icons\Achievement_PVP_H_14"); 
-INSERT INTO `SpellIcon` VALUES (3358,"Interface\Icons\Achievement_PVP_A_01"); 
-INSERT INTO `SpellIcon` VALUES (3359,"Interface\Icons\Achievement_PVP_A_02"); 
-INSERT INTO `SpellIcon` VALUES (3360,"Interface\Icons\Achievement_PVP_A_03"); 
-INSERT INTO `SpellIcon` VALUES (3361,"Interface\Icons\Achievement_PVP_A_04"); 
-INSERT INTO `SpellIcon` VALUES (3362,"Interface\Icons\Achievement_PVP_A_05"); 
-INSERT INTO `SpellIcon` VALUES (3363,"Interface\Icons\Achievement_PVP_A_06"); 
-INSERT INTO `SpellIcon` VALUES (3364,"Interface\Icons\Achievement_PVP_A_07"); 
-INSERT INTO `SpellIcon` VALUES (3365,"Interface\Icons\Achievement_PVP_A_08"); 
-INSERT INTO `SpellIcon` VALUES (3366,"Interface\Icons\Achievement_PVP_A_09"); 
-INSERT INTO `SpellIcon` VALUES (3367,"Interface\Icons\Achievement_PVP_A_10"); 
-INSERT INTO `SpellIcon` VALUES (3368,"Interface\Icons\Achievement_PVP_A_11"); 
-INSERT INTO `SpellIcon` VALUES (3369,"Interface\Icons\Achievement_PVP_A_12"); 
-INSERT INTO `SpellIcon` VALUES (3370,"Interface\Icons\Achievement_PVP_A_13"); 
-INSERT INTO `SpellIcon` VALUES (3371,"Interface\Icons\Achievement_PVP_A_14"); 
-INSERT INTO `SpellIcon` VALUES (3372,"Interface\Icons\Achievement_PVP_A_15"); 
-INSERT INTO `SpellIcon` VALUES (3373,"Interface\Icons\Achievement_PVP_H_15"); 
-INSERT INTO `SpellIcon` VALUES (3374,"Interface\Icons\Achievement_PVP_H_16"); 
-INSERT INTO `SpellIcon` VALUES (3375,"Interface\Icons\Achievement_PVP_A_16"); 
-INSERT INTO `SpellIcon` VALUES (3376,"Interface\Icons\Ability_Mage_ArcaneBarrage"); 
-INSERT INTO `SpellIcon` VALUES (3377,"Interface\Icons\Achievement_BG_winAV"); 
-INSERT INTO `SpellIcon` VALUES (3378,"Interface\Icons\Achievement_BG_win_AV_X_times"); 
-INSERT INTO `SpellIcon` VALUES (3379,"Interface\Icons\Achievement_BG_Xkills_AVgraveyard"); 
-INSERT INTO `SpellIcon` VALUES (3380,"Interface\Icons\Achievement_BG_winAV_underXminutes"); 
-INSERT INTO `SpellIcon` VALUES (3381,"Interface\Icons\Achievement_BG_winAB"); 
-INSERT INTO `SpellIcon` VALUES (3382,"Interface\Icons\Achievement_BG_win_AB_X_times"); 
-INSERT INTO `SpellIcon` VALUES (3383,"Interface\Icons\Achievement_BG_winAB_underXminutes"); 
-INSERT INTO `SpellIcon` VALUES (3384,"Interface\Icons\Achievement_BG_winEOS"); 
-INSERT INTO `SpellIcon` VALUES (3385,"Interface\Icons\Achievement_BG_win_EOS_X_times"); 
-INSERT INTO `SpellIcon` VALUES (3386,"Interface\Icons\Achievement_BG_winEOS_underXminutes"); 
-INSERT INTO `SpellIcon` VALUES (3387,"Interface\Icons\Achievement_BG_winWSG"); 
-INSERT INTO `SpellIcon` VALUES (3388,"Interface\Icons\Achievement_BG_win_WSG_X_times"); 
-INSERT INTO `SpellIcon` VALUES (3389,"Interface\Icons\Achievement_BG_winWSG_underXminutes"); 
-INSERT INTO `SpellIcon` VALUES (3390,"Interface\Icons\Achievement_BG_captureflag_WSG"); 
-INSERT INTO `SpellIcon` VALUES (3391,"Interface\Icons\Achievement_BG_captureflag_EOS"); 
-INSERT INTO `SpellIcon` VALUES (3392,"Interface\Icons\Achievement_Dungeon_Nexus70_25man"); 
-INSERT INTO `SpellIcon` VALUES (3393,"Interface\Icons\INV_Misc_Head_Nerubian_01"); 
-INSERT INTO `SpellIcon` VALUES (3394,"Interface\Icons\INV_Misc_MonsterHorn_04"); 
-INSERT INTO `SpellIcon` VALUES (3395,"Interface\Icons\INV_Misc_MonsterScales_16"); 
-INSERT INTO `SpellIcon` VALUES (3396,"Interface\Icons\INV_Misc_MonsterScales_20"); 
-INSERT INTO `SpellIcon` VALUES (3397,"Interface\Icons\Achievement_BG_AB_defendflags"); 
-INSERT INTO `SpellIcon` VALUES (3398,"Interface\Icons\Achievement_BG_interruptX_flagcapture_attempts"); 
-INSERT INTO `SpellIcon` VALUES (3399,"Interface\Icons\Achievement_BG_interruptX_flagcapture_attempts_"); 
-INSERT INTO `SpellIcon` VALUES (3400,"Interface\Icons\Achievement_BG_kill_flag_carrierWSG"); 
-INSERT INTO `SpellIcon` VALUES (3401,"Interface\Icons\Achievement_BG_kill_flag_carrierEOS"); 
-INSERT INTO `SpellIcon` VALUES (3402,"Interface\Icons\Achievement_BG_winSOA"); 
-INSERT INTO `SpellIcon` VALUES (3403,"Interface\Icons\Achievement_BG_winSOA_underXminutes"); 
-INSERT INTO `SpellIcon` VALUES (3404,"Interface\Icons\Achievement_Zone_StormPeaks_01"); 
-INSERT INTO `SpellIcon` VALUES (3405,"Interface\Icons\Achievement_Zone_StormPeaks_07"); 
-INSERT INTO `SpellIcon` VALUES (3406,"Interface\Icons\Ability_Hunter_HuntingParty"); 
-INSERT INTO `SpellIcon` VALUES (3407,"Interface\Icons\Ability_Hunter_ExplosiveShot"); 
-INSERT INTO `SpellIcon` VALUES (3408,"Interface\Icons\Ability_Hunter_SniperTraining"); 
-INSERT INTO `SpellIcon` VALUES (3409,"Interface\Icons\Ability_Hunter_ImprovedSteadyShot"); 
-INSERT INTO `SpellIcon` VALUES (3410,"Interface\Icons\Ability_Hunter_MarkedForDeath"); 
-INSERT INTO `SpellIcon` VALUES (3411,"Interface\Icons\Ability_Hunter_FocusedAim"); 
-INSERT INTO `SpellIcon` VALUES (3412,"Interface\Icons\Ability_Hunter_ChimeraShot2"); 
-INSERT INTO `SpellIcon` VALUES (3413,"Interface\Icons\Ability_Rogue_TricksOftheTrade"); 
-INSERT INTO `SpellIcon` VALUES (3414,"Interface\Icons\Achievement_Quests_Completed_08"); 
-INSERT INTO `SpellIcon` VALUES (3415,"Interface\Icons\Achievement_Quests_Completed_07"); 
-INSERT INTO `SpellIcon` VALUES (3416,"Interface\Icons\Achievement_Quests_Completed_06"); 
-INSERT INTO `SpellIcon` VALUES (3417,"Interface\Icons\Achievement_Quests_Completed_05"); 
-INSERT INTO `SpellIcon` VALUES (3418,"Interface\Icons\Achievement_Quests_Completed_04"); 
-INSERT INTO `SpellIcon` VALUES (3419,"Interface\Icons\Achievement_Quests_Completed_03"); 
-INSERT INTO `SpellIcon` VALUES (3420,"Interface\Icons\Achievement_Quests_Completed_02"); 
-INSERT INTO `SpellIcon` VALUES (3421,"Interface\Icons\Achievement_Quests_Completed_01"); 
-INSERT INTO `SpellIcon` VALUES (3422,"Interface\Icons\Achievement_BG_topDPS"); 
-INSERT INTO `SpellIcon` VALUES (3423,"Interface\Icons\Achievement_BG_killingblow_berserker"); 
-INSERT INTO `SpellIcon` VALUES (3424,"Interface\Icons\Achievement_Quests_Completed_Daily_01"); 
-INSERT INTO `SpellIcon` VALUES (3425,"Interface\Icons\Achievement_Quests_Completed_Daily_02"); 
-INSERT INTO `SpellIcon` VALUES (3426,"Interface\Icons\Achievement_Quests_Completed_Daily_03"); 
-INSERT INTO `SpellIcon` VALUES (3427,"Interface\Icons\Achievement_Quests_Completed_Daily_04"); 
-INSERT INTO `SpellIcon` VALUES (3428,"Interface\Icons\Achievement_Quests_Completed_Daily_05"); 
-INSERT INTO `SpellIcon` VALUES (3429,"Interface\Icons\Achievement_Quests_Completed_Daily_08"); 
-INSERT INTO `SpellIcon` VALUES (3430,"Interface\Icons\Ability_Warlock_DemonicPower"); 
-INSERT INTO `SpellIcon` VALUES (3431,"Interface\Icons\INV_Weapon_Crossbow_12"); 
-INSERT INTO `SpellIcon` VALUES (3432,"Interface\Icons\INV_Misc_Powder_Purple"); 
-INSERT INTO `SpellIcon` VALUES (3433,"Interface\Icons\Achievement_BG_winAV_bothmines"); 
-INSERT INTO `SpellIcon` VALUES (3434,"Interface\Icons\Achievement_BG_kill_on_mount"); 
-INSERT INTO `SpellIcon` VALUES (3435,"Interface\Icons\INV_Misc_MissileSmallCluster_Red"); 
-INSERT INTO `SpellIcon` VALUES (3436,"Interface\Icons\Achievement_Character_Orc_Female"); 
-INSERT INTO `SpellIcon` VALUES (3437,"Interface\Icons\Ability_Hunter_LongShots"); 
-INSERT INTO `SpellIcon` VALUES (3438,"Interface\Icons\INV_Inscription_TarotGreatness"); 
-INSERT INTO `SpellIcon` VALUES (3439,"Interface\Icons\INV_Inscription_TarotIllusion"); 
-INSERT INTO `SpellIcon` VALUES (3440,"Interface\Icons\Ability_Mount_Drake_Bronze"); 
-INSERT INTO `SpellIcon` VALUES (3441,"Interface\Icons\Ability_Mount_Drake_Blue"); 
-INSERT INTO `SpellIcon` VALUES (3442,"Interface\Icons\Ability_Mount_Drake_Proto"); 
-INSERT INTO `SpellIcon` VALUES (3443,"Interface\Icons\Ability_Mount_Mammoth_Brown"); 
-INSERT INTO `SpellIcon` VALUES (3444,"Interface\Icons\Ability_Mount_Mammoth_Black"); 
-INSERT INTO `SpellIcon` VALUES (3445,"Interface\Icons\INV_Ore_Platinum_01"); 
-INSERT INTO `SpellIcon` VALUES (3446,"Interface\Icons\Ability_Mount_Mammoth_White"); 
-INSERT INTO `SpellIcon` VALUES (3447,"Interface\Icons\INV_JEWELRY_RING_73"); 
-INSERT INTO `SpellIcon` VALUES (3448,"Interface\Icons\INV_Misc_Platnumdisks"); 
-INSERT INTO `SpellIcon` VALUES (3449,"Interface\Icons\Ability_Druid_EclipseOrange"); 
-INSERT INTO `SpellIcon` VALUES (3450,"Interface\Icons\INV_Misc_Coin_18"); 
-INSERT INTO `SpellIcon` VALUES (3451,"Interface\Icons\INV_Misc_Coin_19"); 
-INSERT INTO `SpellIcon` VALUES (3452,"Interface\Icons\Achievement_BG_winAB_5cap"); 
-INSERT INTO `SpellIcon` VALUES (3453,"Interface\Icons\Achievement_PVP_P_15"); 
-INSERT INTO `SpellIcon` VALUES (3454,"Interface\Icons\Achievement_PVP_P_01"); 
-INSERT INTO `SpellIcon` VALUES (3455,"Interface\Icons\Achievement_PVP_P_02"); 
-INSERT INTO `SpellIcon` VALUES (3456,"Interface\Icons\Achievement_PVP_P_03"); 
-INSERT INTO `SpellIcon` VALUES (3457,"Interface\Icons\Achievement_PVP_P_04"); 
-INSERT INTO `SpellIcon` VALUES (3458,"Interface\Icons\Achievement_PVP_P_05"); 
-INSERT INTO `SpellIcon` VALUES (3459,"Interface\Icons\Achievement_PVP_P_06"); 
-INSERT INTO `SpellIcon` VALUES (3460,"Interface\Icons\Achievement_PVP_P_11"); 
-INSERT INTO `SpellIcon` VALUES (3461,"Interface\Icons\Achievement_PVP_P_14"); 
-INSERT INTO `SpellIcon` VALUES (3462,"Interface\Icons\Achievement_PVP_P_09"); 
-INSERT INTO `SpellIcon` VALUES (3463,"Interface\Icons\Achievement_PVP_G_01"); 
-INSERT INTO `SpellIcon` VALUES (3464,"Interface\Icons\Achievement_PVP_G_09"); 
-INSERT INTO `SpellIcon` VALUES (3465,"Interface\Icons\Achievement_PVP_G_11"); 
-INSERT INTO `SpellIcon` VALUES (3466,"Interface\Icons\Achievement_PVP_G_14"); 
-INSERT INTO `SpellIcon` VALUES (3467,"Interface\Icons\Achievement_PVP_G_15"); 
-INSERT INTO `SpellIcon` VALUES (3468,"Interface\Icons\Achievement_BG_overcome500disadvantage"); 
-INSERT INTO `SpellIcon` VALUES (3469,"Interface\Icons\Achievement_BG_ABshutout"); 
-INSERT INTO `SpellIcon` VALUES (3470,"Interface\Icons\Achievement_BG_takeXflags_AB"); 
-INSERT INTO `SpellIcon` VALUES (3471,"Interface\Icons\Achievement_Zone_CrystalSong_01"); 
-INSERT INTO `SpellIcon` VALUES (3472,"Interface\Icons\INV_Offhand_Hyjal_D_01"); 
-INSERT INTO `SpellIcon` VALUES (3473,"Interface\Icons\Achievement_Zone_IceCrown_01"); 
-INSERT INTO `SpellIcon` VALUES (3474,"Interface\Icons\Achievement_Zone_IceCrown_07"); 
-INSERT INTO `SpellIcon` VALUES (3475,"Interface\Icons\Achievement_Zone_IceCrown_05"); 
-INSERT INTO `SpellIcon` VALUES (3476,"Interface\Icons\Achievement_Zone_BoreanTundra_11"); 
-INSERT INTO `SpellIcon` VALUES (3477,"Interface\Icons\Achievement_Zone_Sholazar_08"); 
-INSERT INTO `SpellIcon` VALUES (3478,"Interface\Icons\Achievement_Zone_Sholazar_11"); 
-INSERT INTO `SpellIcon` VALUES (3479,"Interface\Icons\Achievement_Zone_ZulDrak_05"); 
-INSERT INTO `SpellIcon` VALUES (3480,"Interface\Icons\Achievement_Halloween_RottenEgg_01"); 
-INSERT INTO `SpellIcon` VALUES (3481,"Interface\Icons\Achievement_Quests_Completed_Daily_x5"); 
-INSERT INTO `SpellIcon` VALUES (3482,"Interface\Icons\Achievement_BG_3flagcap_nodeaths"); 
-INSERT INTO `SpellIcon` VALUES (3483,"Interface\Icons\Achievement_BG_grab_cap_flagunderXseconds"); 
-INSERT INTO `SpellIcon` VALUES (3484,"Interface\Icons\Achievement_BG_returnXflags_def_WSG"); 
-INSERT INTO `SpellIcon` VALUES (3485,"Interface\Icons\Achievement_BG_winWSG_3-0"); 
-INSERT INTO `SpellIcon` VALUES (3486,"Interface\Icons\Ability_Hunter_MastersCall"); 
-INSERT INTO `SpellIcon` VALUES (3487,"Interface\Icons\Ability_Hunter_Invigeration"); 
-INSERT INTO `SpellIcon` VALUES (3488,"Interface\Icons\INV_Gauntlets_22"); 
-INSERT INTO `SpellIcon` VALUES (3489,"Interface\Icons\INV_Gauntlets_15"); 
-INSERT INTO `SpellIcon` VALUES (3490,"Interface\Icons\Achievement_Zone_EasternKingdoms_01"); 
-INSERT INTO `SpellIcon` VALUES (3491,"Interface\Icons\Achievement_Zone_Kalimdor_01"); 
-INSERT INTO `SpellIcon` VALUES (3492,"Interface\Icons\Achievement_Zone_Outland_01"); 
-INSERT INTO `SpellIcon` VALUES (3493,"Interface\Icons\Achievement_Zone_Northrend_01"); 
-INSERT INTO `SpellIcon` VALUES (3494,"Interface\Icons\INV_Helmet_25"); 
-INSERT INTO `SpellIcon` VALUES (3495,"Interface\Icons\Ability_Mount_Drake_Red"); 
-INSERT INTO `SpellIcon` VALUES (3496,"Interface\Icons\Ability_Mount_PolarBear_White"); 
-INSERT INTO `SpellIcon` VALUES (3497,"Interface\Icons\Ability_Mount_PolarBear_Brown"); 
-INSERT INTO `SpellIcon` VALUES (3498,"Interface\Icons\Ability_Mount_PolarBear_Black"); 
-INSERT INTO `SpellIcon` VALUES (3499,"Interface\Icons\INV_Helmet_22"); 
-INSERT INTO `SpellIcon` VALUES (3500,"Interface\Icons\Achievement_BG_masterofallBGs"); 
-INSERT INTO `SpellIcon` VALUES (3501,"Interface\Icons\INV_Elemental_Mote_Shadow01"); 
-INSERT INTO `SpellIcon` VALUES (3502,"Interface\Icons\Achievement_Dungeon_Drak'Tharon_25man"); 
-INSERT INTO `SpellIcon` VALUES (3503,"Interface\Icons\INV_Misc_EngGizmos_EssenceDistiller"); 
-INSERT INTO `SpellIcon` VALUES (3504,"Interface\Icons\INV_Misc_EngGizmos_02"); 
-INSERT INTO `SpellIcon` VALUES (3505,"Interface\Icons\Spell_Fire_BlueFlameStrike"); 
-INSERT INTO `SpellIcon` VALUES (3506,"Interface\Icons\INV_Titanium_Shield_Spike"); 
-INSERT INTO `SpellIcon` VALUES (3507,"Interface\Icons\INV_Misc_EngGizmos_08"); 
-INSERT INTO `SpellIcon` VALUES (3508,"Interface\Icons\Achievement_BG_hld4bases_EOS"); 
-INSERT INTO `SpellIcon` VALUES (3509,"Interface\Icons\Achievement_Halloween_Candy_01"); 
-INSERT INTO `SpellIcon` VALUES (3510,"Interface\Icons\Achievement_Halloween_Smiley_01"); 
-INSERT INTO `SpellIcon` VALUES (3511,"Interface\Icons\Achievement_Halloween_Cat_01"); 
-INSERT INTO `SpellIcon` VALUES (3512,"Interface\Icons\Achievement_Halloween_Bat_01"); 
-INSERT INTO `SpellIcon` VALUES (3513,"Interface\Icons\Achievement_Halloween_Ghost_01"); 
-INSERT INTO `SpellIcon` VALUES (3514,"Interface\Icons\Achievement_Halloween_Witch_01"); 
-INSERT INTO `SpellIcon` VALUES (3515,"Interface\Icons\Achievement_Halloween_Spider_01"); 
-INSERT INTO `SpellIcon` VALUES (3516,"Interface\Icons\INV_Shoulder_22"); 
-INSERT INTO `SpellIcon` VALUES (3517,"Interface\Icons\INV_Drink_22"); 
-INSERT INTO `SpellIcon` VALUES (3518,"Interface\Icons\Ability_Warrior_Warbringer"); 
-INSERT INTO `SpellIcon` VALUES (3519,"Interface\Icons\Ability_Hunter_BeastMastery"); 
-INSERT INTO `SpellIcon` VALUES (3520,"Interface\Icons\Ability_Hunter_PointofNoEscape"); 
-INSERT INTO `SpellIcon` VALUES (3521,"Interface\Icons\Ability_Hunter_PotentVenom"); 
-INSERT INTO `SpellIcon` VALUES (3522,"Interface\Icons\Ability_Hunter_ImprovedTracking"); 
-INSERT INTO `SpellIcon` VALUES (3523,"Interface\Icons\Ability_Hunter_AspectMastery"); 
-INSERT INTO `SpellIcon` VALUES (3524,"Interface\Icons\Ability_Hunter_Assassinate"); 
-INSERT INTO `SpellIcon` VALUES (3525,"Interface\Icons\INV_Misc_Toy_05"); 
-INSERT INTO `SpellIcon` VALUES (3526,"Interface\Icons\INV_Misc_Toy_08"); 
-INSERT INTO `SpellIcon` VALUES (3527,"Interface\Icons\INV_Misc_Note_05"); 
-INSERT INTO `SpellIcon` VALUES (3528,"Interface\Icons\Achievement_Zone_Darnassus"); 
-INSERT INTO `SpellIcon` VALUES (3529,"Interface\Icons\Achievement_Zone_DeadwindPass"); 
-INSERT INTO `SpellIcon` VALUES (3530,"Interface\Icons\Achievement_Zone_Desolace"); 
-INSERT INTO `SpellIcon` VALUES (3531,"Interface\Icons\Achievement_Zone_DunMorogh"); 
-INSERT INTO `SpellIcon` VALUES (3532,"Interface\Icons\Achievement_Zone_Durotar"); 
-INSERT INTO `SpellIcon` VALUES (3533,"Interface\Icons\Achievement_Zone_Duskwood"); 
-INSERT INTO `SpellIcon` VALUES (3534,"Interface\Icons\Achievement_Zone_DustwallowMarsh"); 
-INSERT INTO `SpellIcon` VALUES (3535,"Interface\Icons\Achievement_Zone_EasternPlaguelands"); 
-INSERT INTO `SpellIcon` VALUES (3536,"Interface\Icons\Achievement_Zone_ElwynnForest"); 
-INSERT INTO `SpellIcon` VALUES (3537,"Interface\Icons\Achievement_Zone_EversongWoods"); 
-INSERT INTO `SpellIcon` VALUES (3538,"Interface\Icons\Achievement_Zone_Felwood"); 
-INSERT INTO `SpellIcon` VALUES (3539,"Interface\Icons\Achievement_Zone_Feralas"); 
-INSERT INTO `SpellIcon` VALUES (3540,"Interface\Icons\Achievement_Zone_Ghostlands"); 
-INSERT INTO `SpellIcon` VALUES (3541,"Interface\Icons\Achievement_Zone_AlteracMountains_01"); 
-INSERT INTO `SpellIcon` VALUES (3542,"Interface\Icons\Achievement_Zone_ArathiHighlands_01"); 
-INSERT INTO `SpellIcon` VALUES (3543,"Interface\Icons\Achievement_Zone_Ashenvale_01"); 
-INSERT INTO `SpellIcon` VALUES (3544,"Interface\Icons\Achievement_Zone_Azshara_01"); 
-INSERT INTO `SpellIcon` VALUES (3545,"Interface\Icons\Achievement_Zone_AzuremystIsle_01"); 
-INSERT INTO `SpellIcon` VALUES (3546,"Interface\Icons\Achievement_Zone_Badlands_01"); 
-INSERT INTO `SpellIcon` VALUES (3547,"Interface\Icons\Achievement_Zone_Barrens_01"); 
-INSERT INTO `SpellIcon` VALUES (3548,"Interface\Icons\Achievement_Zone_Blackrock_01"); 
-INSERT INTO `SpellIcon` VALUES (3549,"Interface\Icons\Achievement_Zone_BladesEdgeMtns_01"); 
-INSERT INTO `SpellIcon` VALUES (3550,"Interface\Icons\Achievement_Zone_BlastedLands_01"); 
-INSERT INTO `SpellIcon` VALUES (3551,"Interface\Icons\Achievement_Zone_BloodmystIsle_01"); 
-INSERT INTO `SpellIcon` VALUES (3552,"Interface\Icons\Achievement_Zone_BurningSteppes_01"); 
-INSERT INTO `SpellIcon` VALUES (3553,"Interface\Icons\Achievement_Zone_Darkshore_01"); 
-INSERT INTO `SpellIcon` VALUES (3554,"Interface\Icons\Achievement_Zone_HellfirePeninsula_01"); 
-INSERT INTO `SpellIcon` VALUES (3555,"Interface\Icons\Achievement_Zone_HillsbradFoothills"); 
-INSERT INTO `SpellIcon` VALUES (3556,"Interface\Icons\Achievement_Zone_Hinterlands_01"); 
-INSERT INTO `SpellIcon` VALUES (3557,"Interface\Icons\Achievement_Zone_IsleOfQuelDanas"); 
-INSERT INTO `SpellIcon` VALUES (3558,"Interface\Icons\Achievement_Zone_LochModan"); 
-INSERT INTO `SpellIcon` VALUES (3559,"Interface\Icons\Ability_Hunter_SeparationAnxiety"); 
-INSERT INTO `SpellIcon` VALUES (3560,"Interface\Icons\Ability_Hunter_RapidRegeneration"); 
-INSERT INTO `SpellIcon` VALUES (3561,"Interface\Icons\Ability_Hunter_Longevity"); 
-INSERT INTO `SpellIcon` VALUES (3562,"Interface\Icons\Achievement_Zone_Mulgore_01"); 
-INSERT INTO `SpellIcon` VALUES (3563,"Interface\Icons\Achievement_Zone_Nagrand_01"); 
-INSERT INTO `SpellIcon` VALUES (3564,"Interface\Icons\Achievement_Zone_Netherstorm_01"); 
-INSERT INTO `SpellIcon` VALUES (3565,"Interface\Icons\Achievement_Zone_RedridgeMountains"); 
-INSERT INTO `SpellIcon` VALUES (3566,"Interface\Icons\Achievement_Zone_SearingGorge_01"); 
-INSERT INTO `SpellIcon` VALUES (3567,"Interface\Icons\Achievement_Zone_Silithus_01"); 
-INSERT INTO `SpellIcon` VALUES (3568,"Interface\Icons\Achievement_Zone_Stranglethorn_01"); 
-INSERT INTO `SpellIcon` VALUES (3569,"Interface\Icons\Achievement_Zone_SwampSorrows_01"); 
-INSERT INTO `SpellIcon` VALUES (3570,"Interface\Icons\Achievement_Zone_TirisfalGlades_01"); 
-INSERT INTO `SpellIcon` VALUES (3571,"Interface\Icons\Achievement_Zone_WesternPlaguelands_01"); 
-INSERT INTO `SpellIcon` VALUES (3572,"Interface\Icons\Achievement_Zone_WestFall_01"); 
-INSERT INTO `SpellIcon` VALUES (3573,"Interface\Icons\Achievement_Zone_Wetlands_01"); 
-INSERT INTO `SpellIcon` VALUES (3574,"Interface\Icons\Achievement_PVP_A_A"); 
-INSERT INTO `SpellIcon` VALUES (3575,"Interface\Icons\Achievement_PVP_H_H"); 
-INSERT INTO `SpellIcon` VALUES (3576,"Interface\Icons\Achievement_Zone_Silverpine_01"); 
-INSERT INTO `SpellIcon` VALUES (3577,"Interface\Icons\Achievement_Zone_Tanaris_01"); 
-INSERT INTO `SpellIcon` VALUES (3578,"Interface\Icons\Achievement_Zone_Stonetalon_01"); 
-INSERT INTO `SpellIcon` VALUES (3579,"Interface\Icons\Ability_Hunter_LockAndLoad"); 
-INSERT INTO `SpellIcon` VALUES (3580,"Interface\Icons\Achievement_Zone_ThousandNeedles_01"); 
-INSERT INTO `SpellIcon` VALUES (3581,"Interface\Icons\Achievement_BG_DefendXtowers_AV"); 
-INSERT INTO `SpellIcon` VALUES (3582,"Interface\Icons\Achievement_BG_KillXEnemies_GeneralsRoom"); 
-INSERT INTO `SpellIcon` VALUES (3583,"Interface\Icons\Achievement_BG_KillFlagCarriers_grabFlag_CapIt"); 
-INSERT INTO `SpellIcon` VALUES (3584,"Interface\Icons\Achievement_Zone_Shadowmoon"); 
-INSERT INTO `SpellIcon` VALUES (3585,"Interface\Icons\Achievement_Zone_Zangarmarsh"); 
-INSERT INTO `SpellIcon` VALUES (3586,"Interface\Icons\Achievement_Zone_Terrokar"); 
-INSERT INTO `SpellIcon` VALUES (3587,"Interface\Icons\Achievement_Zone_Winterspring"); 
-INSERT INTO `SpellIcon` VALUES (3588,"Interface\Icons\Achievement_Zone_UnGoroCrater_01"); 
-INSERT INTO `SpellIcon` VALUES (3589,"Interface\Icons\INV_Torch_Unlit"); 
-INSERT INTO `SpellIcon` VALUES (3590,"Interface\Icons\Achievement_Boss_Exarch_Maladaar"); 
-INSERT INTO `SpellIcon` VALUES (3591,"Interface\Icons\Achievement_Boss_Quagmirran"); 
-INSERT INTO `SpellIcon` VALUES (3592,"Interface\Icons\Achievement_Boss_Kiljaedan"); 
-INSERT INTO `SpellIcon` VALUES (3593,"Interface\Icons\Achievement_FeatsOfStrength_Gladiator_01"); 
-INSERT INTO `SpellIcon` VALUES (3594,"Interface\Icons\Achievement_FeatsOfStrength_Gladiator_02"); 
-INSERT INTO `SpellIcon` VALUES (3595,"Interface\Icons\Achievement_FeatsOfStrength_Gladiator_03"); 
-INSERT INTO `SpellIcon` VALUES (3596,"Interface\Icons\Achievement_FeatsOfStrength_Gladiator_04"); 
-INSERT INTO `SpellIcon` VALUES (3597,"Interface\Icons\Achievement_FeatsOfStrength_Gladiator_05"); 
-INSERT INTO `SpellIcon` VALUES (3598,"Interface\Icons\Achievement_FeatsOfStrength_Gladiator_06"); 
-INSERT INTO `SpellIcon` VALUES (3599,"Interface\Icons\Achievement_FeatsOfStrength_Gladiator_07"); 
-INSERT INTO `SpellIcon` VALUES (3600,"Interface\Icons\Achievement_FeatsOfStrength_Gladiator_08"); 
-INSERT INTO `SpellIcon` VALUES (3601,"Interface\Icons\Achievement_FeatsOfStrength_Gladiator_10"); 
-INSERT INTO `SpellIcon` VALUES (3602,"Interface\Icons\Achievement_Reputation_08"); 
-INSERT INTO `SpellIcon` VALUES (3603,"Interface\Icons\Achievement_Reputation_07"); 
-INSERT INTO `SpellIcon` VALUES (3604,"Interface\Icons\Achievement_Reputation_06"); 
-INSERT INTO `SpellIcon` VALUES (3605,"Interface\Icons\Achievement_Reputation_05"); 
-INSERT INTO `SpellIcon` VALUES (3606,"Interface\Icons\Achievement_Reputation_04"); 
-INSERT INTO `SpellIcon` VALUES (3607,"Interface\Icons\Achievement_Reputation_03"); 
-INSERT INTO `SpellIcon` VALUES (3608,"Interface\Icons\Achievement_Reputation_02"); 
-INSERT INTO `SpellIcon` VALUES (3609,"Interface\Icons\Achievement_Reputation_01"); 
-INSERT INTO `SpellIcon` VALUES (3610,"Interface\Icons\Achievement_Dungeon_TheVioletHold"); 
-INSERT INTO `SpellIcon` VALUES (3611,"Interface\Icons\INV_Potion_114"); 
-INSERT INTO `SpellIcon` VALUES (3612,"Interface\Icons\INV_Alchemy_Potion_05"); 
-INSERT INTO `SpellIcon` VALUES (3613,"Interface\Icons\INV_Alchemy_Potion_Empty"); 
-INSERT INTO `SpellIcon` VALUES (3614,"Interface\Icons\INV_Potion_161"); 
-INSERT INTO `SpellIcon` VALUES (3615,"Interface\Icons\INV_Alchemy_Potion_03"); 
-INSERT INTO `SpellIcon` VALUES (3616,"Interface\Icons\INV_Alchemy_Potion_04"); 
-INSERT INTO `SpellIcon` VALUES (3617,"Interface\Icons\INV_Alchemy_Potion_01"); 
-INSERT INTO `SpellIcon` VALUES (3618,"Interface\Icons\INV_Alchemy_Potion_02"); 
-INSERT INTO `SpellIcon` VALUES (3619,"Interface\Icons\INV_Alchemy_Potion_06"); 
-INSERT INTO `SpellIcon` VALUES (3620,"Interface\Icons\INV_Alchemy_EndlessFlask_06"); 
-INSERT INTO `SpellIcon` VALUES (3621,"Interface\Icons\INV_Alchemy_EndlessFlask_03"); 
-INSERT INTO `SpellIcon` VALUES (3622,"Interface\Icons\INV_Alchemy_EndlessFlask_05"); 
-INSERT INTO `SpellIcon` VALUES (3623,"Interface\Icons\INV_Alchemy_EndlessFlask_04"); 
-INSERT INTO `SpellIcon` VALUES (3624,"Interface\Icons\INV_Alchemy_EndlessFlask_02"); 
-INSERT INTO `SpellIcon` VALUES (3625,"Interface\Icons\INV_Alchemy_Elixir_Empty"); 
-INSERT INTO `SpellIcon` VALUES (3626,"Interface\Icons\Ability_Mount_Mammoth_Brown_3seater"); 
-INSERT INTO `SpellIcon` VALUES (3627,"Interface\Icons\Achievement_Boss_EdwinVancleef"); 
-INSERT INTO `SpellIcon` VALUES (3628,"Interface\Icons\Achievement_Boss_GruulTheDragonkiller"); 
-INSERT INTO `SpellIcon` VALUES (3629,"Interface\Icons\Achievement_Boss_KelidanTheBreaker"); 
-INSERT INTO `SpellIcon` VALUES (3630,"Interface\Icons\Achievement_Boss_Zuljin"); 
-INSERT INTO `SpellIcon` VALUES (3631,"Interface\Icons\Achievement_Boss_TalonKingIkiss"); 
-INSERT INTO `SpellIcon` VALUES (3632,"Interface\Icons\INV_Fabric_MoonRag_Primal"); 
-INSERT INTO `SpellIcon` VALUES (3633,"Interface\Icons\INV_Fabric_Felcloth_Ebon"); 
-INSERT INTO `SpellIcon` VALUES (3634,"Interface\Icons\INV_Fabric_Mageweave_01"); 
-INSERT INTO `SpellIcon` VALUES (3635,"Interface\Icons\INV_Fabric_PurpleFire_01"); 
-INSERT INTO `SpellIcon` VALUES (3636,"Interface\Icons\Achievement_Zone_StormPeaks_12"); 
-INSERT INTO `SpellIcon` VALUES (3637,"Interface\Icons\Achievement_Zone_StormPeaks_03"); 
-INSERT INTO `SpellIcon` VALUES (3638,"Interface\Icons\Achievement_Zone_DragonBlight_09"); 
-INSERT INTO `SpellIcon` VALUES (3639,"Interface\Icons\Achievement_Boss_Archimonde "); 
-INSERT INTO `SpellIcon` VALUES (3640,"Interface\Icons\Achievement_Boss_Magtheridon"); 
-INSERT INTO `SpellIcon` VALUES (3641,"Interface\Icons\Achievement_Boss_Mekgineer_Thermaplugg "); 
-INSERT INTO `SpellIcon` VALUES (3642,"Interface\Icons\Achievement_Boss_WarpSplinter"); 
-INSERT INTO `SpellIcon` VALUES (3643,"Interface\Icons\Ability_Mount_Mammoth_Black_3seater"); 
-INSERT INTO `SpellIcon` VALUES (3644,"Interface\Icons\Ability_Mount_Mammoth_White_3seater"); 
-INSERT INTO `SpellIcon` VALUES (3645,"Interface\Icons\Spell_Holy_ProclaimChampion_02"); 
-INSERT INTO `SpellIcon` VALUES (3646,"Interface\Icons\INV_Misc_Toy_10"); 
-INSERT INTO `SpellIcon` VALUES (3647,"Interface\Icons\Ability_Hunter_HunterVsWild"); 
-INSERT INTO `SpellIcon` VALUES (3648,"Interface\Icons\INV_Misc_MonsterTail_06"); 
-INSERT INTO `SpellIcon` VALUES (3649,"Interface\Icons\Achievement_Boss_Hakkar"); 
-INSERT INTO `SpellIcon` VALUES (3650,"Interface\Icons\Achievement_Boss_Overlord_Wyrmthalak"); 
-INSERT INTO `SpellIcon` VALUES (3651,"Interface\Icons\Achievement_Boss_Hakkar"); 
-INSERT INTO `SpellIcon` VALUES (3652,"Interface\Icons\Achievement_Boss_Bazil_Thredd"); 
-INSERT INTO `SpellIcon` VALUES (3653,"Interface\Icons\Achievement_Boss_Bazil_Akumai"); 
-INSERT INTO `SpellIcon` VALUES (3654,"Interface\Icons\Achievement_Boss_Mutanus_the_Devourer"); 
-INSERT INTO `SpellIcon` VALUES (3655,"Interface\Icons\Achievement_Boss_Amnennar_the_Coldbringer"); 
-INSERT INTO `SpellIcon` VALUES (3656,"Interface\Icons\Achievement_Boss_Archaedas"); 
-INSERT INTO `SpellIcon` VALUES (3657,"Interface\Icons\Achievement_Boss_Warlord_Kalithresh"); 
-INSERT INTO `SpellIcon` VALUES (3658,"Interface\Icons\Achievement_Boss_LadyVashj"); 
-INSERT INTO `SpellIcon` VALUES (3659,"Interface\Icons\Achievement_Boss_Harbinger_Skyriss"); 
-INSERT INTO `SpellIcon` VALUES (3660,"Interface\Icons\Achievement_Leader_ Thrall"); 
-INSERT INTO `SpellIcon` VALUES (3661,"Interface\Icons\Achievement_Leader_Sylvanas"); 
-INSERT INTO `SpellIcon` VALUES (3662,"Interface\Icons\Achievement_Boss_EmperorDagranThaurissan"); 
-INSERT INTO `SpellIcon` VALUES (3663,"Interface\Icons\Achievement_Boss_Illidan"); 
-INSERT INTO `SpellIcon` VALUES (3664,"Interface\Icons\Achievement_Boss_Kael'thasSunstrider_01"); 
-INSERT INTO `SpellIcon` VALUES (3665,"Interface\Icons\Achievement_Boss_Kael'thasSunstrider_01"); 
-INSERT INTO `SpellIcon` VALUES (3666,"Interface\Icons\Achievement_Boss_Nexus_Prince_Shaffar"); 
-INSERT INTO `SpellIcon` VALUES (3667,"Interface\Icons\Ability_Mount_Drake_Azure"); 
-INSERT INTO `SpellIcon` VALUES (3668,"Interface\Icons\Ability_Mount_Drake_Twilight"); 
-INSERT INTO `SpellIcon` VALUES (3669,"Interface\Icons\Achievement_Leader_Cairne Bloodhoof"); 
-INSERT INTO `SpellIcon` VALUES (3670,"Interface\Icons\Achievement_Leader_Lorthemar_Theron "); 
-INSERT INTO `SpellIcon` VALUES (3671,"Interface\Icons\Achievement_Leader_King_Varian_Wrynn"); 
-INSERT INTO `SpellIcon` VALUES (3672,"Interface\Icons\Achievement_Leader_King_Magni_Bronzebeard"); 
-INSERT INTO `SpellIcon` VALUES (3673,"Interface\Icons\Achievement_Leader_Tyrande_Whisperwind"); 
-INSERT INTO `SpellIcon` VALUES (3674,"Interface\Icons\Achievement_Leader_Prophet_Velen"); 
-INSERT INTO `SpellIcon` VALUES (3675,"Interface\Icons\Achievement_Character_Troll_Female"); 
-INSERT INTO `SpellIcon` VALUES (3676,"Interface\Icons\Ability_Hunter_Assassinate2"); 
-INSERT INTO `SpellIcon` VALUES (3677,"Interface\Icons\Achievement_Boss_CThun"); 
-INSERT INTO `SpellIcon` VALUES (3678,"Interface\Icons\Achievement_Profession_ChefHat"); 
-INSERT INTO `SpellIcon` VALUES (3679,"Interface\Icons\Achievement_WorldEvent_LittleHelper"); 
-INSERT INTO `SpellIcon` VALUES (3680,"Interface\Icons\Achievement_Boss_OmarTheUnscarred_01"); 
-INSERT INTO `SpellIcon` VALUES (3681,"Interface\Icons\Achievement_Boss_OssirianTheUnscarred"); 
-INSERT INTO `SpellIcon` VALUES (3682,"Interface\Icons\Achievement_Reputation_KirinTor"); 
-INSERT INTO `SpellIcon` VALUES (3683,"Interface\Icons\Achievement_Reputation_KnightsoftheEbonBlade"); 
-INSERT INTO `SpellIcon` VALUES (3684,"Interface\Icons\Achievement_Reputation_WyrmrestTemple"); 
-INSERT INTO `SpellIcon` VALUES (3685,"Interface\Icons\Achievement_Reputation_timbermaw"); 
-INSERT INTO `SpellIcon` VALUES (3686,"Interface\Icons\Achievement_Boss_CharlgaRazorflank"); 
-INSERT INTO `SpellIcon` VALUES (3687,"Interface\Icons\Achievement_Boss_ChiefUkorzSandscalp"); 
-INSERT INTO `SpellIcon` VALUES (3688,"Interface\Icons\Achievement_Boss_PathaleonTheCalculator"); 
-INSERT INTO `SpellIcon` VALUES (3689,"Interface\Icons\Achievement_Boss_PrincessTheradras"); 
-INSERT INTO `SpellIcon` VALUES (3690,"Interface\Icons\Achievement_Boss_ShadeOfEranikus"); 
-INSERT INTO `SpellIcon` VALUES (3691,"Interface\Icons\Achievement_Profession_Fishing_OutlandAngler"); 
-INSERT INTO `SpellIcon` VALUES (3692,"Interface\Icons\Achievement_Profession_Fishing_NorthrendAngler"); 
-INSERT INTO `SpellIcon` VALUES (3693,"Interface\Icons\Achievement_Profession_Fishing_OldManBarlowned"); 
-INSERT INTO `SpellIcon` VALUES (3694,"Interface\Icons\Achievement_Profession_Fishing_JourneymanFisher"); 
-INSERT INTO `SpellIcon` VALUES (3695,"Interface\Icons\Achievement_WorldEvent_Merrymaker"); 
-INSERT INTO `SpellIcon` VALUES (3696,"Interface\Icons\Achievement_Reputation_AshtongueDeathsworn"); 
-INSERT INTO `SpellIcon` VALUES (3697,"Interface\Icons\Achievement_WorldEvent_Brewmaster"); 
-INSERT INTO `SpellIcon` VALUES (3698,"Interface\Icons\Achievement_WorldEvent_Lunar"); 
-INSERT INTO `SpellIcon` VALUES (3699,"Interface\Icons\Achievement_WorldEvent_Valentine"); 
-INSERT INTO `SpellIcon` VALUES (3700,"Interface\Icons\Achievement_WorldEvent_XmasOgre"); 
-INSERT INTO `SpellIcon` VALUES (3701,"Interface\Icons\Achievement_Profession_Fishing_FindFish"); 
-INSERT INTO `SpellIcon` VALUES (3702,"Interface\Icons\Achievement_Reputation_Tuskarr"); 
-INSERT INTO `SpellIcon` VALUES (3703,"Interface\Icons\Achievement_WorldEvent_Reindeer"); 
-INSERT INTO `SpellIcon` VALUES (3704,"Interface\Icons\Achievement_WorldEvent_Thanksgiving"); 
-INSERT INTO `SpellIcon` VALUES (3705,"Interface\Icons\INV_Misc_Food_106_FjordPeach"); 
-INSERT INTO `SpellIcon` VALUES (3706,"Interface\Icons\Achievement_Noblegarden_Chocolate_Egg"); 
-INSERT INTO `SpellIcon` VALUES (3707,"Interface\Icons\Ability_Druid_TigersRoar"); 
-INSERT INTO `SpellIcon` VALUES (3708,"Interface\Icons\INV_Misc_Bag_10_Blue"); 
-INSERT INTO `SpellIcon` VALUES (3709,"Interface\Icons\INV_Misc_Organ_10"); 
-INSERT INTO `SpellIcon` VALUES (3710,"Interface\Icons\INV_Misc_Food_147_Cake"); 
-INSERT INTO `SpellIcon` VALUES (3711,"Interface\Icons\INV_Egg_07"); 
-INSERT INTO `SpellIcon` VALUES (3712,"Interface\Icons\INV_Shirt_08"); 
-INSERT INTO `SpellIcon` VALUES (3713,"Interface\Icons\INV_Chest_Cloth_04"); 
-INSERT INTO `SpellIcon` VALUES (3714,"Interface\Icons\INV_Misc_Gem_Pearl_03"); 
-INSERT INTO `SpellIcon` VALUES (3715,"Interface\Icons\INV_Misc_Gem_FlameSpessarite_03"); 
-INSERT INTO `SpellIcon` VALUES (3716,"Interface\Icons\INV_Hammer_15"); 
-INSERT INTO `SpellIcon` VALUES (3717,"Interface\Icons\Spell_Shaman_ImprovedEarthShield"); 
-INSERT INTO `SpellIcon` VALUES (3718,"Interface\Icons\INV_Misc_Plant_03"); 
-INSERT INTO `SpellIcon` VALUES (3721,"Interface\Icons\INV_Misc_Note_04"); 
-INSERT INTO `SpellIcon` VALUES (3722,"Interface\Icons\Spell_Holy_UnyieldingFaith"); 
-INSERT INTO `SpellIcon` VALUES (3723,"Interface\Icons\ACHIEVEMENT_WIN_WINTERGRASP"); 
-INSERT INTO `SpellIcon` VALUES (3724,"Interface\Icons\Ability_WIntergrasp_rank1"); 
-INSERT INTO `SpellIcon` VALUES (3725,"Interface\Icons\Ability_WIntergrasp_rank2"); 
-INSERT INTO `SpellIcon` VALUES (3726,"Interface\Icons\INV_Sword_130"); 
-INSERT INTO `SpellIcon` VALUES (3727,"Interface\Icons\INV_Shirt_Black_01"); 
-INSERT INTO `SpellIcon` VALUES (3728,"Interface\Icons\INV_Misc_Map09"); 
-INSERT INTO `SpellIcon` VALUES (3729,"Interface\Icons\INV_Alchemy_Elixir_04"); 
-INSERT INTO `SpellIcon` VALUES (3730,"Interface\Icons\INV_Alchemy_Elixir_01"); 
-INSERT INTO `SpellIcon` VALUES (3731,"Interface\Icons\INV_EssenceOfWintergrasp"); 
-INSERT INTO `SpellIcon` VALUES (3732,"Interface\Icons\INV_Ammo_Bullet_08"); 
-INSERT INTO `SpellIcon` VALUES (3733,"Interface\Icons\INV_Ore_Cobalt"); 
-INSERT INTO `SpellIcon` VALUES (3734,"Interface\Icons\inv_misc_enggizmos_27"); 
-INSERT INTO `SpellIcon` VALUES (3735,"Interface\Icons\INV_Misc_ScrewDriver_01"); 
-INSERT INTO `SpellIcon` VALUES (3736,"Interface\Icons\INV_Gizmo_Pipe_03"); 
-INSERT INTO `SpellIcon` VALUES (3737,"Interface\Icons\Trade_Engineering"); 
-INSERT INTO `SpellIcon` VALUES (3738,"Interface\Icons\inv_weapon_rifle_31"); 
-INSERT INTO `SpellIcon` VALUES (3739,"Interface\Icons\inv_misc_book_03"); 
-INSERT INTO `SpellIcon` VALUES (3740,"Interface\Icons\Ability_Shaman_CleanseSpirit"); 
-INSERT INTO `SpellIcon` VALUES (3741,"Interface\Icons\Ability_Shaman_Lavalash"); 
-INSERT INTO `SpellIcon` VALUES (3742,"Interface\Icons\inv_inscription_inkbluewhite01"); 
-INSERT INTO `SpellIcon` VALUES (3743,"Interface\Icons\INV_Weapon_Shortblade_68"); 
-INSERT INTO `SpellIcon` VALUES (3744,"Interface\Icons\Achievement_Reputation_ArgentChampion"); 
-INSERT INTO `SpellIcon` VALUES (3745,"Interface\Icons\INV_Ammo_Bullet_06"); 
-INSERT INTO `SpellIcon` VALUES (3747,"Interface\Icons\INV_GAUNTLETS_66"); 
-INSERT INTO `SpellIcon` VALUES (3748,"Interface\Icons\INV_Misc_Horn_04"); 
-INSERT INTO `SpellIcon` VALUES (3751,"Interface\Icons\INV_Axe_19"); 
-INSERT INTO `SpellIcon` VALUES (3752,"Interface\Icons\INV_PET_FROSTWYRM"); 
-INSERT INTO `SpellIcon` VALUES (3753,"Interface\Icons\inv_hammer_02"); 
-INSERT INTO `SpellIcon` VALUES (3754,"Interface\Icons\inv_mace_28"); 
-INSERT INTO `SpellIcon` VALUES (3755,"Interface\Icons\INV_Rod_Adamantite"); 
-INSERT INTO `SpellIcon` VALUES (3757,"Interface\Icons\inv_ingot_titansteel_dark"); 
-INSERT INTO `SpellIcon` VALUES (3758,"Interface\Icons\inv_belt_02"); 
-INSERT INTO `SpellIcon` VALUES (3759,"Interface\Icons\inv_misc_root_01"); 
-INSERT INTO `SpellIcon` VALUES (3760,"Interface\Icons\Ability_Vehicle_DemolisherFlameCatapult"); 
-INSERT INTO `SpellIcon` VALUES (3761,"Interface\Icons\ability_vehicle_siegeenginecannon"); 
-INSERT INTO `SpellIcon` VALUES (3762,"Interface\Icons\ability_vehicle_demolisherram"); 
-INSERT INTO `SpellIcon` VALUES (3763,"Interface\Icons\ability_vehicle_siegeengineram"); 
-INSERT INTO `SpellIcon` VALUES (3764,"Interface\Icons\ability_vehicle_plaguebarrel"); 
-INSERT INTO `SpellIcon` VALUES (3765,"Interface\Icons\ability_vehicle_liquidpyrite"); 
-INSERT INTO `SpellIcon` VALUES (3766,"Interface\Icons\ability_vehicle_powertowheels"); 
-INSERT INTO `SpellIcon` VALUES (3767,"Interface\Icons\ability_vehicle_reloadammo"); 
-INSERT INTO `SpellIcon` VALUES (3768,"Interface\Icons\ability_vehicle_launchplayer"); 
-INSERT INTO `SpellIcon` VALUES (3769,"Interface\Icons\ability_vehicle_sonicshockwave"); 
-INSERT INTO `SpellIcon` VALUES (3770,"Interface\Icons\ability_vehicle_oiljets"); 
-INSERT INTO `SpellIcon` VALUES (3771,"Interface\Icons\ability_vehicle_playerloaded"); 
-INSERT INTO `SpellIcon` VALUES (3772,"Interface\Icons\ability_vehicle_loadselfcatapult"); 
-INSERT INTO `SpellIcon` VALUES (3773,"Interface\Icons\ability_vehicle_rocketboost"); 
-INSERT INTO `SpellIcon` VALUES (3774,"Interface\Icons\ability_vehicle_siegeenginecharge"); 
-INSERT INTO `SpellIcon` VALUES (3775,"Interface\Icons\achievement_reputation_wolvar"); 
-INSERT INTO `SpellIcon` VALUES (3776,"Interface\Icons\INV_Shield_02"); 
-INSERT INTO `SpellIcon` VALUES (3777,"Interface\Icons\inv_misc_monsterclaw_06"); 
-INSERT INTO `SpellIcon` VALUES (3778,"Interface\Icons\Trade_Engineering"); 
-INSERT INTO `SpellIcon` VALUES (3779,"Interface\Icons\ability_vehicle_liquidpyrite _blue"); 
-INSERT INTO `SpellIcon` VALUES (3780,"Interface\Icons\Spell_Fire_BlueCano"); 
-INSERT INTO `SpellIcon` VALUES (3781,"Interface\Icons\inv_ore_saronite_01"); 
-INSERT INTO `SpellIcon` VALUES (3782,"Interface\Icons\inv_shield_14"); 
-INSERT INTO `SpellIcon` VALUES (3783,"Interface\Icons\inv_shirt_orange_01"); 
-INSERT INTO `SpellIcon` VALUES (3784,"Interface\Icons\achievement_zone_ironforge"); 
-INSERT INTO `SpellIcon` VALUES (3785,"Interface\Icons\Spell_Deathknight_IcyTalons"); 
-INSERT INTO `SpellIcon` VALUES (3786,"Interface\Icons\spell_nature_riptide"); 
-INSERT INTO `SpellIcon` VALUES (3787,"Interface\Icons\inv_belt_06"); 
-INSERT INTO `SpellIcon` VALUES (3788,"Interface\Icons\inv_shirt_purple_01"); 
-INSERT INTO `SpellIcon` VALUES (3789,"Interface\Icons\Spell_Shadow_DevouringPlague"); 
-INSERT INTO `SpellIcon` VALUES (3790,"Interface\Icons\Spell_Shadow_DevouringPlague."); 
-INSERT INTO `SpellIcon` VALUES (3791,"Interface\Icons\inv_stone_weightstone_08"); 
-INSERT INTO `SpellIcon` VALUES (3792,"Interface\Icons\inv_misc_spyglass_03"); 
-INSERT INTO `SpellIcon` VALUES (3794,"Interface\Icons\inv_fabric_moonshroud"); 
-INSERT INTO `SpellIcon` VALUES (3795,"Interface\Icons\inv_misc_tournaments_symbol_bloodelf"); 
-INSERT INTO `SpellIcon` VALUES (3796,"Interface\Icons\inv_misc_tournaments_symbol_draenei"); 
-INSERT INTO `SpellIcon` VALUES (3797,"Interface\Icons\inv_misc_tournaments_symbol_dwarf"); 
-INSERT INTO `SpellIcon` VALUES (3798,"Interface\Icons\inv_misc_tournaments_symbol_scourge"); 
-INSERT INTO `SpellIcon` VALUES (3799,"Interface\Icons\inv_misc_tournaments_symbol_gnome"); 
-INSERT INTO `SpellIcon` VALUES (3800,"Interface\Icons\inv_misc_tournaments_symbol_human"); 
-INSERT INTO `SpellIcon` VALUES (3801,"Interface\Icons\inv_misc_tournaments_symbol_nightelf"); 
-INSERT INTO `SpellIcon` VALUES (3802,"Interface\Icons\inv_misc_tournaments_symbol_orc"); 
-INSERT INTO `SpellIcon` VALUES (3803,"Interface\Icons\inv_misc_tournaments_symbol_tauren"); 
-INSERT INTO `SpellIcon` VALUES (3804,"Interface\Icons\inv_misc_tournaments_symbol_troll"); 
-INSERT INTO `SpellIcon` VALUES (3805,"Interface\Icons\achievement_reputation_argentcrusader"); 
-INSERT INTO `SpellIcon` VALUES (3806,"Interface\Icons\inv_misc_tournaments_banner_orc"); 
-INSERT INTO `SpellIcon` VALUES (3807,"Interface\Icons\inv_misc_tournaments_banner_human"); 
-INSERT INTO `SpellIcon` VALUES (3808,"Interface\Icons\inv_sword_65"); 
-INSERT INTO `SpellIcon` VALUES (3809,"Interface\Icons\inv_boots_cloth_08"); 
-INSERT INTO `SpellIcon` VALUES (3811,"Interface\Icons\achievement_boss_xt002deconstructor_01"); 
-INSERT INTO `SpellIcon` VALUES (3812,"Interface\Icons\inv_misc_fish_56"); 
-INSERT INTO `SpellIcon` VALUES (3813,"Interface\Icons\inv_misc_idol_05"); 
-INSERT INTO `SpellIcon` VALUES (3814,"Interface\Icons\inv_inscription_pigment_bug07"); 
-INSERT INTO `SpellIcon` VALUES (3815,"Interface\Icons\trade_engineering"); 
-INSERT INTO `SpellIcon` VALUES (3816,"Interface\Icons\trade_engineering"); 
-INSERT INTO `SpellIcon` VALUES (3817,"Interface\Icons\Achievement_Boss_Nefarion"); 
-INSERT INTO `SpellIcon` VALUES (3818,"Interface\Icons\INV_Mace_99"); 
-INSERT INTO `SpellIcon` VALUES (3819,"Interface\Icons\Achievement_Boss_Ragnaros"); 
-INSERT INTO `SpellIcon` VALUES (3820,"Interface\Icons\Achievement_Boss_Onyxia"); 
-INSERT INTO `SpellIcon` VALUES (3821,"Interface\Icons\Achievement_Boss_GeneralDrakkisath"); 
-INSERT INTO `SpellIcon` VALUES (3822,"Interface\Icons\Achievement_Boss_ArchmageArugal"); 
-INSERT INTO `SpellIcon` VALUES (3823,"Interface\Icons\Achievement_Boss_theBlackStalker"); 
-INSERT INTO `SpellIcon` VALUES (3824,"Interface\Icons\Achievement_Boss_EpochHunter"); 
-INSERT INTO `SpellIcon` VALUES (3825,"Interface\Icons\Achievement_Boss_Murmur"); 
-INSERT INTO `SpellIcon` VALUES (3826,"Interface\Icons\Achievement_Boss_Aeonus_01"); 
-INSERT INTO `SpellIcon` VALUES (3827,"Interface\Icons\Achievement_Boss_KargathBladefist_01"); 
-INSERT INTO `SpellIcon` VALUES (3828,"Interface\Icons\Achievement_Boss_PrinceMalchezaar_02"); 
-INSERT INTO `SpellIcon` VALUES (3829,"Interface\Icons\inv_sword_121"); 
-INSERT INTO `SpellIcon` VALUES (3830,"Interface\Icons\inv_misc_runedorb_01"); 
-INSERT INTO `SpellIcon` VALUES (3831,"Interface\Icons\achievement_bg_killingblow_most"); 
-INSERT INTO `SpellIcon` VALUES (3833,"Interface\Icons\ability_mount_flyingcarpet"); 
-INSERT INTO `SpellIcon` VALUES (3835,"Interface\Icons\inv_misc_leatherscrap_17"); 
-INSERT INTO `SpellIcon` VALUES (3836,"Interface\Icons\inv_misc_gem_bloodstone_03"); 
-INSERT INTO `SpellIcon` VALUES (3837,"Interface\Icons\spell_holy_powerwordbarrier"); 
-INSERT INTO `SpellIcon` VALUES (3838,"Interface\Icons\inv_enchant_dustsoul"); 
-INSERT INTO `SpellIcon` VALUES (3839,"Interface\Icons\inv_misc_enggizmos_16"); 
-INSERT INTO `SpellIcon` VALUES (3840,"Interface\Icons\inv_gizmo_healthpotionpack"); 
-INSERT INTO `SpellIcon` VALUES (3841,"Interface\Icons\inv_misc_bone_skull_02"); 
-INSERT INTO `SpellIcon` VALUES (3842,"Interface\Icons\ability_mount_goldengryphon"); 
-INSERT INTO `SpellIcon` VALUES (3843,"Interface\Icons\ability_mount_tawnywindrider"); 
-INSERT INTO `SpellIcon` VALUES (3844,"Interface\Icons\Achievement_Dungeon_UlduarRaid_Archway_01"); 
-INSERT INTO `SpellIcon` VALUES (3845,"Interface\Icons\ability_vehicle_shellshieldgenerator"); 
-INSERT INTO `SpellIcon` VALUES (3846,"Interface\Icons\Achievement_Boss_TribunalofAges"); 
-INSERT INTO `SpellIcon` VALUES (3847,"Interface\Icons\Achievement_Dungeon_UlduarRaid_Misc_05"); 
-INSERT INTO `SpellIcon` VALUES (3848,"Interface\Icons\Achievement_Boss_YoggSaron_01"); 
-INSERT INTO `SpellIcon` VALUES (3849,"Interface\Icons\Achievement_Dungeon_UlduarRaid_Misc_01"); 
-INSERT INTO `SpellIcon` VALUES (3850,"Interface\Icons\INV_Misc_Orb_05"); 
-INSERT INTO `SpellIcon` VALUES (3851,"Interface\Icons\Achievement_Boss_Razorscale"); 
-INSERT INTO `SpellIcon` VALUES (3852,"Interface\Icons\Achievement_Boss_Razorscale_01"); 
-INSERT INTO `SpellIcon` VALUES (3853,"Interface\Icons\Achievement_Dungeon_UlduarRaid_IronDwarf_01"); 
-INSERT INTO `SpellIcon` VALUES (3854,"Interface\Icons\Achievement_Boss_TheFlameLeviathan_01"); 
-INSERT INTO `SpellIcon` VALUES (3855,"Interface\Icons\Achievement_Boss_Ignis_01"); 
-INSERT INTO `SpellIcon` VALUES (3856,"Interface\Icons\INV_Gizmo_BronzeFramework_01"); 
-INSERT INTO `SpellIcon` VALUES (3857,"Interface\Icons\INV_Misc_EngGizmos_14"); 
-INSERT INTO `SpellIcon` VALUES (3858,"Interface\Icons\Achievement_Boss_TheIronCouncil_01"); 
-INSERT INTO `SpellIcon` VALUES (3859,"Interface\Icons\Achievement_Boss_Kologarn_01"); 
-INSERT INTO `SpellIcon` VALUES (3860,"Interface\Icons\INV_Helmet_51"); 
-INSERT INTO `SpellIcon` VALUES (3861,"Interface\Icons\INV_Helmet_50"); 
-INSERT INTO `SpellIcon` VALUES (3862,"Interface\Icons\Achievement_Boss_Hodir_01"); 
-INSERT INTO `SpellIcon` VALUES (3863,"Interface\Icons\Achievement_Boss_Thorim"); 
-INSERT INTO `SpellIcon` VALUES (3864,"Interface\Icons\Achievement_Dungeon_UlduarRaid_IronSentinel_01"); 
-INSERT INTO `SpellIcon` VALUES (3865,"Interface\Icons\Achievement_Boss_Freya_01"); 
-INSERT INTO `SpellIcon` VALUES (3866,"Interface\Icons\INV_Misc_MissileSmallCluster_Yellow"); 
-INSERT INTO `SpellIcon` VALUES (3867,"Interface\Icons\Achievement_Boss_Mimiron_01"); 
-INSERT INTO `SpellIcon` VALUES (3868,"Interface\Icons\Achievement_Boss_GeneralVezax_01"); 
-INSERT INTO `SpellIcon` VALUES (3869,"Interface\Icons\Achievement_Boss_Algalon_01"); 
-INSERT INTO `SpellIcon` VALUES (3870,"Interface\Icons\Achievement_Boss_Auriaya_01"); 
-INSERT INTO `SpellIcon` VALUES (3871,"Interface\Icons\Achievement_Boss_HeraldVolazj"); 
-INSERT INTO `SpellIcon` VALUES (3872,"Interface\Icons\INV_SpiritShard_02"); 
-INSERT INTO `SpellIcon` VALUES (3873,"Interface\Icons\inv_misc_fish_turtle_03"); 
-INSERT INTO `SpellIcon` VALUES (3874,"Interface\Icons\INV_Pet_ScorchedStone"); 
-INSERT INTO `SpellIcon` VALUES (3875,"Interface\Icons\INV_ValentinesCardTornLeft"); 
-INSERT INTO `SpellIcon` VALUES (3876,"Interface\Icons\INV_Helmet_19"); 
-INSERT INTO `SpellIcon` VALUES (3877,"Interface\Icons\INV_Helmet_122"); 
-INSERT INTO `SpellIcon` VALUES (3878,"Interface\Icons\spell_fire_rune"); 
-INSERT INTO `SpellIcon` VALUES (3879,"Interface\Icons\achievement_dungeon_ulduarraid_irongolem_01"); 
-INSERT INTO `SpellIcon` VALUES (3880,"Interface\Icons\trade_engineering"); 
-INSERT INTO `SpellIcon` VALUES (3881,"Interface\Icons\trade_engineering"); 
-INSERT INTO `SpellIcon` VALUES (3882,"Interface\Icons\trade_engineering"); 
-INSERT INTO `SpellIcon` VALUES (3883,"Interface\Icons\trade_engineering"); 
-INSERT INTO `SpellIcon` VALUES (3884,"Interface\Icons\trade_engineering"); 
-INSERT INTO `SpellIcon` VALUES (3885,"Interface\Icons\trade_engineering"); 
-INSERT INTO `SpellIcon` VALUES (3886,"Interface\Icons\trade_engineering"); 
-INSERT INTO `SpellIcon` VALUES (3887,"Interface\Icons\trade_engineering"); 
-INSERT INTO `SpellIcon` VALUES (3888,"Interface\Icons\trade_engineering"); 
-INSERT INTO `SpellIcon` VALUES (3889,"Interface\Icons\trade_engineering"); 
-INSERT INTO `SpellIcon` VALUES (3890,"Interface\Icons\inv_misc_fish_turtle_02"); 
-INSERT INTO `SpellIcon` VALUES (3891,"Interface\Icons\ability_mount_spectraltiger"); 
-INSERT INTO `SpellIcon` VALUES (3892,"Interface\Icons\ability_mount_blackbattlestrider"); 
-INSERT INTO `SpellIcon` VALUES (3893,"Interface\Icons\ability_mount_magnificentflyingcarpet"); 
-INSERT INTO `SpellIcon` VALUES (3894,"Interface\Icons\ability_mount_ebonblade"); 
-INSERT INTO `SpellIcon` VALUES (3895,"Interface\Icons\ability_mount_bigblizzardbear"); 
-INSERT INTO `SpellIcon` VALUES (3896,"Interface\Icons\inv_pet_babyblizzardbear"); 
-INSERT INTO `SpellIcon` VALUES (3897,"Interface\Icons\ability_mount_swiftpurplewindrider"); 
-INSERT INTO `SpellIcon` VALUES (3898,"Interface\Icons\ability_mount_swiftgreenwindrider"); 
-INSERT INTO `SpellIcon` VALUES (3899,"Interface\Icons\ability_mount_swiftredwindrider"); 
-INSERT INTO `SpellIcon` VALUES (3900,"Interface\Icons\ability_mount_swiftyellowwindrider"); 
-INSERT INTO `SpellIcon` VALUES (3901,"Interface\Icons\ability_mount_greenwindrider"); 
-INSERT INTO `SpellIcon` VALUES (3902,"Interface\Icons\ability_mount_bluewindrider"); 
-INSERT INTO `SpellIcon` VALUES (3903,"Interface\Icons\ability_mount_snowygryphon"); 
-INSERT INTO `SpellIcon` VALUES (3904,"Interface\Icons\ability_mount_ebongryphon"); 
-INSERT INTO `SpellIcon` VALUES (3905,"Interface\Icons\inv_pet_cockroach"); 
-INSERT INTO `SpellIcon` VALUES (3906,"Interface\Icons\inv_pet_lilsmoky"); 
-INSERT INTO `SpellIcon` VALUES (3907,"Interface\Icons\inv_pet_ratcage"); 
-INSERT INTO `SpellIcon` VALUES (3908,"Interface\Icons\inv_pet_sleepywilly"); 
-INSERT INTO `SpellIcon` VALUES (3909,"Interface\Icons\inv_pet_babyshark"); 
-INSERT INTO `SpellIcon` VALUES (3910,"Interface\Icons\inv_pet_egbert"); 
-INSERT INTO `SpellIcon` VALUES (3911,"Interface\Icons\inv_pet_nurturedpenguinegg"); 
-INSERT INTO `SpellIcon` VALUES (3912,"Interface\Icons\inv_pet_pinkmurlocegg"); 
-INSERT INTO `SpellIcon` VALUES (3913,"Interface\Icons\ability_mount_redfrostwyrm_01"); 
-INSERT INTO `SpellIcon` VALUES (3914,"Interface\Icons\INV_Misc_Gem_AzureDraenite_01"); 
-INSERT INTO `SpellIcon` VALUES (3915,"Interface\Icons\inv_misc_eye_02"); 
-INSERT INTO `SpellIcon` VALUES (3916,"Interface\Icons\inv_crown_13"); 
-INSERT INTO `SpellIcon` VALUES (3917,"Interface\Icons\Achievement_Dungeon_UlduarRaid_Titan_01"); 
-INSERT INTO `SpellIcon` VALUES (3918,"Interface\Icons\inv_weapon_hand_07"); 
-INSERT INTO `SpellIcon` VALUES (3919,"Interface\Icons\inv_misc_pocketwatch_03"); 
-INSERT INTO `SpellIcon` VALUES (3920,"Interface\Icons\inv_drink_08"); 
-INSERT INTO `SpellIcon` VALUES (3921,"Interface\Icons\inv_potion_129"); 
-INSERT INTO `SpellIcon` VALUES (3922,"Interface\Icons\inv_potion_156"); 
-INSERT INTO `SpellIcon` VALUES (3923,"Interface\Icons\spell_nature_rune"); 
-INSERT INTO `SpellIcon` VALUES (3924,"Interface\Icons\spell_holy_rune"); 
-INSERT INTO `SpellIcon` VALUES (3925,"Interface\Icons\spell_ice_rune"); 
-INSERT INTO `SpellIcon` VALUES (3927,"Interface\Icons\INV_Box_04"); 
-INSERT INTO `SpellIcon` VALUES (3928,"Interface\Icons\INV_Misc_Food_132_Meat"); 
-INSERT INTO `SpellIcon` VALUES (3930,"Interface\Icons\spell_druid_feralchargecat"); 
-INSERT INTO `SpellIcon` VALUES (3931,"Interface\Icons\achievement_reputation_murlocoracle"); 
-INSERT INTO `SpellIcon` VALUES (3932,"Interface\Icons\inv_misc_bone_humanskull_02"); 
-INSERT INTO `SpellIcon` VALUES (3933,"Interface\Icons\inv_thanksgiving_cranberrysauce"); 
-INSERT INTO `SpellIcon` VALUES (3934,"Interface\Icons\inv_thanksgiving_pumpkinpie"); 
-INSERT INTO `SpellIcon` VALUES (3935,"Interface\Icons\inv_thanksgiving_stuffing"); 
-INSERT INTO `SpellIcon` VALUES (3936,"Interface\Icons\inv_thanksgiving_turkey"); 
-INSERT INTO `SpellIcon` VALUES (3937,"Interface\Icons\inv_thanksgiving_sweetpotato "); 
-INSERT INTO `SpellIcon` VALUES (3938,"Interface\Icons\inv_misc_herb_tigerlily"); 
-INSERT INTO `SpellIcon` VALUES (3940,"Interface\Icons\INV_Misc_Orb_05"); 
-INSERT INTO `SpellIcon` VALUES (3941,"Interface\Icons\ability_mount_razorscale"); 
-INSERT INTO `SpellIcon` VALUES (3947,"Interface\Icons\achievement_worldevent_mistletoe"); 
-INSERT INTO `SpellIcon` VALUES (3949,"Interface\Icons\INV_Weapon_Shortblade_92"); 
-INSERT INTO `SpellIcon` VALUES (3952,"Interface\Icons\INV_Potion_120"); 
-INSERT INTO `SpellIcon` VALUES (3953,"Interface\Icons\inv_inscription_inkred01"); 
-INSERT INTO `SpellIcon` VALUES (3954,"Interface\Icons\achievement_reputation_ogre"); 
-INSERT INTO `SpellIcon` VALUES (3956,"Interface\Icons\inv_misc_trailofflowers"); 
-INSERT INTO `SpellIcon` VALUES (3957,"Interface\Icons\inv_misc_ogrepinata"); 
-INSERT INTO `SpellIcon` VALUES (3958,"Interface\Icons\inv_elemental_mote_mana"); 
-INSERT INTO `SpellIcon` VALUES (3959,"Interface\Icons\INV_Misc_NerubianChitin_01"); 
-INSERT INTO `SpellIcon` VALUES (3960,"Interface\Icons\Spell_Fire_BlueFireward"); 
-INSERT INTO `SpellIcon` VALUES (3961,"Interface\Icons\Ability_Hunter_Pet_Silithid"); 
-INSERT INTO `SpellIcon` VALUES (3964,"Interface\Icons\inv_rod_platinum"); 
-INSERT INTO `SpellIcon` VALUES (3966,"Interface\Icons\inv_helmet_65"); 
-INSERT INTO `SpellIcon` VALUES (3967,"Interface\Icons\inv_holiday_thanksgiving_cornucopia"); 
-INSERT INTO `SpellIcon` VALUES (3968,"Interface\Icons\inv_alchemy_elixir_05"); 
-INSERT INTO `SpellIcon` VALUES (3970,"Interface\Icons\inv_thanksgiving_cranberrysauce_act"); 
-INSERT INTO `SpellIcon` VALUES (3971,"Interface\Icons\inv_thanksgiving_pumpkinpie_act"); 
-INSERT INTO `SpellIcon` VALUES (3972,"Interface\Icons\inv_thanksgiving_stuffing_act"); 
-INSERT INTO `SpellIcon` VALUES (3973,"Interface\Icons\inv_thanksgiving_sweetpotato_act "); 
-INSERT INTO `SpellIcon` VALUES (3974,"Interface\Icons\inv_thanksgiving_turkey_act"); 
-INSERT INTO `SpellIcon` VALUES (3975,"Interface\Icons\INV_Misc_Statue_01"); 
-INSERT INTO `SpellIcon` VALUES (3976,"Interface\Icons\inv_elemental_primal_nether"); 
-INSERT INTO `SpellIcon` VALUES (3978,"Interface\Icons\inv_misc_monsterhorn_07"); 
-INSERT INTO `SpellIcon` VALUES (3979,"Interface\Icons\inv_jewelcrafting_gem_41"); 
-INSERT INTO `SpellIcon` VALUES (3980,"Interface\Icons\INV_Staff_14"); 
-INSERT INTO `SpellIcon` VALUES (3981,"Interface\Icons\INV_Staff_19"); 
-INSERT INTO `SpellIcon` VALUES (3982,"Interface\Icons\INV_Staff_20"); 
-INSERT INTO `SpellIcon` VALUES (3983,"Interface\Icons\INV_Staff_18"); 
-INSERT INTO `SpellIcon` VALUES (3984,"Interface\Icons\inv_jewelcrafting_gem_39"); 
-INSERT INTO `SpellIcon` VALUES (3985,"Interface\Icons\inv_jewelcrafting_gem_33"); 
-INSERT INTO `SpellIcon` VALUES (3986,"Interface\Icons\inv_jewelcrafting_gem_36"); 
-INSERT INTO `SpellIcon` VALUES (3987,"Interface\Icons\inv_jewelcrafting_gem_35"); 
-INSERT INTO `SpellIcon` VALUES (3988,"Interface\Icons\inv_jewelcrafting_gem_32"); 
-INSERT INTO `SpellIcon` VALUES (3989,"Interface\Icons\inv_jewelcrafting_gem_34"); 
-INSERT INTO `SpellIcon` VALUES (3990,"Interface\Icons\inv_jewelcrafting_gem_31"); 
-INSERT INTO `SpellIcon` VALUES (3991,"Interface\Icons\Spell_Shaman_Dropall_01"); 
-INSERT INTO `SpellIcon` VALUES (3992,"Interface\Icons\Spell_Shaman_Dropall_02"); 
-INSERT INTO `SpellIcon` VALUES (3993,"Interface\Icons\Spell_Shaman_Dropall_03"); 
-INSERT INTO `SpellIcon` VALUES (3994,"Interface\Icons\Spell_Shaman_TotemRecall"); 
-INSERT INTO `SpellIcon` VALUES (3997,"Interface\Icons\inv_weapon_shortblade_06"); 
-INSERT INTO `SpellIcon` VALUES (3998,"Interface\Icons\Ability_Warrior_ShatteringThrow"); 
-INSERT INTO `SpellIcon` VALUES (4000,"Interface\Icons\inv_letter_06"); 
-INSERT INTO `SpellIcon` VALUES (4001,"Interface\Icons\inv_misc_monsterclaw_09"); 
-INSERT INTO `SpellIcon` VALUES (4002,"Interface\Icons\INV_Shield_61"); 
-INSERT INTO `SpellIcon` VALUES (4003,"Interface\Icons\INV_Helmet_134"); 
-INSERT INTO `SpellIcon` VALUES (4004,"Interface\Icons\INV_Helmet_138"); 
-INSERT INTO `SpellIcon` VALUES (4005,"Interface\Icons\Achievement_Boss_SvalaSorrowgrave"); 
-INSERT INTO `SpellIcon` VALUES (4006,"Interface\Icons\Achievement_Boss_Anubarak"); 
-INSERT INTO `SpellIcon` VALUES (4007,"Interface\Icons\Achievement_Arena_5v5_3"); 
-INSERT INTO `SpellIcon` VALUES (4008,"Interface\Icons\INV_Crown_15"); 
-INSERT INTO `SpellIcon` VALUES (4009,"Interface\Icons\INV_Helmet_78"); 
-INSERT INTO `SpellIcon` VALUES (4016,"Interface\Icons\INV_Ingot_Cobalt"); 
-INSERT INTO `SpellIcon` VALUES (4017,"Interface\Icons\INV_Weapon_Shortblade_37"); 
-INSERT INTO `SpellIcon` VALUES (4022,"Interface\Icons\inv_gauntlets_12"); 
-INSERT INTO `SpellIcon` VALUES (4025,"INTERFACE\ICONS\ability_hunter_pet_worm"); 
-INSERT INTO `SpellIcon` VALUES (4034,"INTERFACE\ICONS\inv_inscription_weaponscroll01"); 
-INSERT INTO `SpellIcon` VALUES (4035,"INTERFACE\ICONS\inv_letter_09"); 
-INSERT INTO `SpellIcon` VALUES (4037,"INTERFACE\ICONS\inv_misc_gear_05"); 
-INSERT INTO `SpellIcon` VALUES (4038,"INTERFACE\ICONS\inv_shirt_09"); 
-INSERT INTO `SpellIcon` VALUES (4040,"INTERFACE\ICONS\inv_misc_pet_01"); 
-INSERT INTO `SpellIcon` VALUES (4041,"INTERFACE\ICONS\inv_belt_19"); 
-INSERT INTO `SpellIcon` VALUES (4052,"INTERFACE\ICONS\achievement_zone_icecrown_06"); 
-INSERT INTO `SpellIcon` VALUES (4054,"INTERFACE\ICONS\inv_shield_49"); 
-INSERT INTO `SpellIcon` VALUES (4055,"INTERFACE\ICONS\trade_engineering"); 
-INSERT INTO `SpellIcon` VALUES (4059,"INTERFACE\ICONS\trade_engineering"); 
-INSERT INTO `SpellIcon` VALUES (4061,"INTERFACE\ICONS\inv_enchant_abysscrystal"); 
-INSERT INTO `SpellIcon` VALUES (4062,"INTERFACE\ICONS\ability_hunter_pet_corehound"); 
-INSERT INTO `SpellIcon` VALUES (4064,"INTERFACE\ICONS\inv_relics_totemofrebirth"); 
-INSERT INTO `SpellIcon` VALUES (4065,"INTERFACE\ICONS\inv_jewelcrafting_gem_23"); 
-INSERT INTO `SpellIcon` VALUES (4066,"INTERFACE\ICONS\inv_jewelcrafting_gem_06"); 
-INSERT INTO `SpellIcon` VALUES (4067,"INTERFACE\ICONS\spell_magic_polymorphrabbit"); 
-INSERT INTO `SpellIcon` VALUES (4068,"INTERFACE\ICONS\spell_shadow_rune"); 
-INSERT INTO `SpellIcon` VALUES (4069,"INTERFACE\ICONS\inv_misc_shovel_01"); 
-INSERT INTO `SpellIcon` VALUES (4071,"INTERFACE\ICONS\inv_misc_pet_02"); 
-INSERT INTO `SpellIcon` VALUES (4072,"INTERFACE\ICONS\inv_misc_pet_03"); 
-INSERT INTO `SpellIcon` VALUES (4073,"INTERFACE\ICONS\inv_misc_pet_04"); 
-INSERT INTO `SpellIcon` VALUES (4074,"INTERFACE\ICONS\inv_misc_penguinpet"); 
-INSERT INTO `SpellIcon` VALUES (4075,"INTERFACE\ICONS\achievement_boss_kelthuzad_01"); 
-INSERT INTO `SpellIcon` VALUES (4092,"INTERFACE\ICONS\inv_misc_mohawkgrenade"); 
-INSERT INTO `SpellIcon` VALUES (4094,"INTERFACE\ICONS\inv_misc_herb_frostlotus"); 
-INSERT INTO `SpellIcon` VALUES (4106,"INTERFACE\ICONS\inv_inscription_inkgreen03"); 
-INSERT INTO `SpellIcon` VALUES (4107,"INTERFACE\ICONS\inv_inscription_inkorange01"); 
-INSERT INTO `SpellIcon` VALUES (4108,"INTERFACE\ICONS\achievement_boss_maexxna"); 
-INSERT INTO `SpellIcon` VALUES (4110,"INTERFACE\ICONS\inv_jewelcrafting_shadowspirit_02"); 
-INSERT INTO `SpellIcon` VALUES (4111,"INTERFACE\ICONS\trade_engineering"); 
-INSERT INTO `SpellIcon` VALUES (4112,"INTERFACE\ICONS\trade_engineering"); 
-INSERT INTO `SpellIcon` VALUES (4114,"INTERFACE\ICONS\inv_misc_monsterclaw_05"); 
-INSERT INTO `SpellIcon` VALUES (4115,"INTERFACE\ICONS\inv_misc_monsterhorn_06"); 
-INSERT INTO `SpellIcon` VALUES (4116,"INTERFACE\ICONS\trade_engineering"); 
-INSERT INTO `SpellIcon` VALUES (4118,"INTERFACE\ICONS\inv_misc_herb_evergreenmoss"); 
-INSERT INTO `SpellIcon` VALUES (4119,"INTERFACE\ICONS\inv_misc_tabardpvp_02"); 
-INSERT INTO `SpellIcon` VALUES (4120,"INTERFACE\ICONS\inv_misc_tabardpvp_01"); 
-INSERT INTO `SpellIcon` VALUES (4122,"INTERFACE\ICONS\achievement_bg_ab_kill_in_mine"); 
-INSERT INTO `SpellIcon` VALUES (4124,"INTERFACE\ICONS\achievement_pvp_o_02"); 
-INSERT INTO `SpellIcon` VALUES (4125,"INTERFACE\ICONS\ability_creature_cursed_03"); 
-INSERT INTO `SpellIcon` VALUES (4126,"INTERFACE\ICONS\inv_helmet_146"); 
-INSERT INTO `SpellIcon` VALUES (4127,"INTERFACE\ICONS\inv_helmet_96"); 
-INSERT INTO `SpellIcon` VALUES (4128,"INTERFACE\ICONS\inv_inscription_inkpurple04"); 
-INSERT INTO `SpellIcon` VALUES (4129,"INTERFACE\ICONS\inv_inscription_inkpurple02"); 
-INSERT INTO `SpellIcon` VALUES (4130,"INTERFACE\ICONS\inv_inscription_inkpurple03"); 
-INSERT INTO `SpellIcon` VALUES (4131,"INTERFACE\ICONS\inv_inscription_inkgreen02"); 
-INSERT INTO `SpellIcon` VALUES (4132,"INTERFACE\ICONS\inv_inscription_inkgreen04"); 
-INSERT INTO `SpellIcon` VALUES (4134,"INTERFACE\ICONS\inv_jewelry_necklace_43"); 
-INSERT INTO `SpellIcon` VALUES (4135,"INTERFACE\ICONS\inv_jewelry_talisman_03"); 
-INSERT INTO `SpellIcon` VALUES (4139,"INTERFACE\ICONS\inv_shirt_03"); 
-INSERT INTO `SpellIcon` VALUES (4140,"INTERFACE\ICONS\trade_engineering"); 
-INSERT INTO `SpellIcon` VALUES (4141,"INTERFACE\ICONS\axe_1h_draenei_b_01"); 
-INSERT INTO `SpellIcon` VALUES (4142,"INTERFACE\ICONS\inv_axe_113"); 
-INSERT INTO `SpellIcon` VALUES (4143,"INTERFACE\ICONS\inv_sword_155"); 
-INSERT INTO `SpellIcon` VALUES (4144,"INTERFACE\ICONS\inv_ingot_platinum"); 
-INSERT INTO `SpellIcon` VALUES (4145,"INTERFACE\ICONS\achievement_dungeon_hordeairship"); 
-INSERT INTO `SpellIcon` VALUES (4148,"INTERFACE\ICONS\achievement_boss_lichking"); 
-INSERT INTO `SpellIcon` VALUES (4149,"INTERFACE\ICONS\achievement_dungeon_icecrown_forgeofsouls"); 
-INSERT INTO `SpellIcon` VALUES (4150,"INTERFACE\ICONS\achievement_dungeon_icecrown_pitofsaron"); 
-INSERT INTO `SpellIcon` VALUES (4151,"INTERFACE\ICONS\achievement_dungeon_icecrown_hallsofreflection"); 
-INSERT INTO `SpellIcon` VALUES (4152,"INTERFACE\ICONS\achievement_boss_bronjahm"); 
-INSERT INTO `SpellIcon` VALUES (4153,"INTERFACE\ICONS\achievement_boss_devourerofsouls"); 
-INSERT INTO `SpellIcon` VALUES (4154,"INTERFACE\ICONS\achievement_boss_forgemaster"); 
-INSERT INTO `SpellIcon` VALUES (4155,"INTERFACE\ICONS\achievement_boss_scourgelordtyrannus"); 
-INSERT INTO `SpellIcon` VALUES (4156,"INTERFACE\ICONS\inv_helmet_151"); 
-INSERT INTO `SpellIcon` VALUES (4157,"INTERFACE\ICONS\achievement_dungeon_icecrown_frostmourne"); 
-INSERT INTO `SpellIcon` VALUES (4158,"INTERFACE\ICONS\achievement_dungeon_icecrown_frostwinghalls"); 
-INSERT INTO `SpellIcon` VALUES (4159,"INTERFACE\ICONS\achievement_boss_lordmarrowgar"); 
-INSERT INTO `SpellIcon` VALUES (4160,"INTERFACE\ICONS\achievement_boss_ladydeathwhisper"); 
-INSERT INTO `SpellIcon` VALUES (4161,"INTERFACE\ICONS\achievement_boss_saurfang"); 
-INSERT INTO `SpellIcon` VALUES (4162,"INTERFACE\ICONS\achievement_boss_festergutrotface"); 
-INSERT INTO `SpellIcon` VALUES (4163,"INTERFACE\ICONS\achievement_boss_profputricide"); 
-INSERT INTO `SpellIcon` VALUES (4164,"INTERFACE\ICONS\achievement_boss_princetaldaram"); 
-INSERT INTO `SpellIcon` VALUES (4165,"INTERFACE\ICONS\achievement_boss_lanathel"); 
-INSERT INTO `SpellIcon` VALUES (4166,"INTERFACE\ICONS\achievement_boss_sindragosa"); 
-INSERT INTO `SpellIcon` VALUES (4167,"INTERFACE\ICONS\achievement_dungeon_icecrown_icecrownentrance"); 
-INSERT INTO `SpellIcon` VALUES (4168,"INTERFACE\ICONS\inv_helmet_142"); 
-INSERT INTO `SpellIcon` VALUES (4169,"INTERFACE\ICONS\achievement_zone_icecrown_03"); 
-INSERT INTO `SpellIcon` VALUES (4170,"INTERFACE\ICONS\inv_gizmo_runichealthinjector"); 
-INSERT INTO `SpellIcon` VALUES (4173,"INTERFACE\ICONS\achievement_dungeon_gloryoftheraider"); 
-INSERT INTO `SpellIcon` VALUES (4174,"INTERFACE\ICONS\spell_holy_persuitofjustice"); 
-INSERT INTO `SpellIcon` VALUES (4175,"INTERFACE\ICONS\inv_misc_dice_01"); 
-INSERT INTO `SpellIcon` VALUES (4176,"INTERFACE\ICONS\inv_weapon_shortblade_59"); 
-INSERT INTO `SpellIcon` VALUES (4177,"INTERFACE\ICONS\achievement_dungeon_plaguewing"); 
-INSERT INTO `SpellIcon` VALUES (4178,"INTERFACE\ICONS\achievement_dungeon_crimsonhall"); 
-INSERT INTO `SpellIcon` VALUES (4179,"INTERFACE\ICONS\achievement_dungeon_frozenthrone"); 
-INSERT INTO `SpellIcon` VALUES (4180,"INTERFACE\ICONS\achievement_dungeon_naxxramas"); 
-INSERT INTO `SpellIcon` VALUES (4181,"INTERFACE\ICONS\achievement_dungeon_naxxramas_25man"); 
-INSERT INTO `SpellIcon` VALUES (4182,"INTERFACE\ICONS\inv_axe_114"); 
-INSERT INTO `SpellIcon` VALUES (4185,"INTERFACE\ICONS\inv_misc_leatherscrap_11"); 
-INSERT INTO `SpellIcon` VALUES (4189,"INTERFACE\ICONS\inv_staff_97"); 
-INSERT INTO `SpellIcon` VALUES (4190,"INTERFACE\ICONS\inv_staff_96"); 
-INSERT INTO `SpellIcon` VALUES (4191,"INTERFACE\ICONS\inv_staff_107"); 
-INSERT INTO `SpellIcon` VALUES (4216,"INTERFACE\ICONS\inv_valentinescardtornright"); 
-INSERT INTO `SpellIcon` VALUES (4220,"INTERFACE\ICONS\inv_chest_cloth_17"); 
-INSERT INTO `SpellIcon` VALUES (4223,"INTERFACE\ICONS\inv_misc_beer_06"); 
-INSERT INTO `SpellIcon` VALUES (4230,"INTERFACE\ICONS\inv_misc_orb_05"); 
-INSERT INTO `SpellIcon` VALUES (4231,"INTERFACE\ICONS\inv_misc_orb_05"); 
-INSERT INTO `SpellIcon` VALUES (4232,"INTERFACE\ICONS\inv_misc_tournaments_banner_gnome"); 
-INSERT INTO `SpellIcon` VALUES (4233,"INTERFACE\ICONS\inv_misc_note_06"); 
-INSERT INTO `SpellIcon` VALUES (4234,"INTERFACE\ICONS\inv_misc_frostemblem_01"); 
-INSERT INTO `SpellIcon` VALUES (4237,"INTERFACE\ICONS\inv_potion_34"); 
-INSERT INTO `SpellIcon` VALUES (4239,"INTERFACE\ICONS\inv_misc_tournaments_banner_troll"); 
-INSERT INTO `SpellIcon` VALUES (4240,"INTERFACE\ICONS\inv_misc_statue_02"); 
-INSERT INTO `SpellIcon` VALUES (4242,"INTERFACE\ICONS\ability_hunter_pet_rhino"); 
-INSERT INTO `SpellIcon` VALUES (4244,"INTERFACE\ICONS\inv_misc_bag_10_green"); 
-INSERT INTO `SpellIcon` VALUES (4248,"INTERFACE\ICONS\inv_misc_orb_05"); 
-INSERT INTO `SpellIcon` VALUES (4249,"INTERFACE\ICONS\inv_misc_orb_05"); 
-INSERT INTO `SpellIcon` VALUES (4250,"INTERFACE\ICONS\inv_misc_orb_05"); 
-INSERT INTO `SpellIcon` VALUES (4253,"INTERFACE\ICONS\inv_potion_94"); 
-INSERT INTO `SpellIcon` VALUES (4254,"INTERFACE\ICONS\inv_misc_tournaments_banner_scourge"); 
-INSERT INTO `SpellIcon` VALUES (4261,"INTERFACE\ICONS\inv_gizmo_04"); 
-INSERT INTO `SpellIcon` VALUES (4262,"INTERFACE\ICONS\inv_gizmo_05"); 
-INSERT INTO `SpellIcon` VALUES (4267,"INTERFACE\ICONS\inv_chest_cloth_52"); 
-INSERT INTO `SpellIcon` VALUES (4276,"INTERFACE\ICONS\ability_mount_celestialhorse"); 
-INSERT INTO `SpellIcon` VALUES (4280,"INTERFACE\ICONS\ability_mount_rocketmountblue"); 
-INSERT INTO `SpellIcon` VALUES (4286,"INTERFACE\ICONS\ability_mount_rocketmount2"); 
-INSERT INTO `SpellIcon` VALUES (4289,"INTERFACE\ICONS\ability_mount_frostyflyingcarpet"); 
-INSERT INTO `SpellIcon` VALUES (4347,"INTERFACE\ICONS\inv_sigil_thorim"); 
-INSERT INTO `SpellIcon` VALUES (4350,"INTERFACE\ICONS\inv_misc_rubysanctum1"); 
-INSERT INTO `SpellIcon` VALUES (4351,"INTERFACE\ICONS\inv_misc_rubysanctum4"); 
-INSERT INTO `SpellIcon` VALUES (4373,"INTERFACE\ICONS\inv_misc_ammo_arrow_01"); 
-INSERT INTO `SpellIcon` VALUES (4375,"INTERFACE\ICONS\t_roboticon"); 
+INSERT INTO `SpellIcon` VALUES (1,"Interface\Icons\Trade_Engineering"),
+(9,"Interface\Icons\Spell_Shadow_BlackPlague"),
+(10,"Interface\Icons\Spell_Nature_NaturesBlessing"),
+(11,"Interface\Icons\Spell_Fire_Fire"),
+(12,"Interface\Icons\Spell_Fire_Fireball"),
+(13,"Interface\Icons\Spell_Nature_MagicImmunity"),
+(14,"Interface\Icons\Spell_Frost_Frost"),
+(15,"Interface\Icons\Spell_Frost_Stun"),
+(16,"Interface\Icons\Spell_Fire_FireArmor"),
+(17,"Interface\Icons\Spell_Frost_IceShock"),
+(18,"Interface\Icons\Spell_Fire_FireBolt"),
+(19,"Interface\Icons\Spell_Nature_LightningShield"),
+(20,"Interface\Icons\Spell_Nature_StrangleVines"),
+(21,"Interface\Icons\Spell_Nature_FarSight"),
+(22,"Interface\Icons\Spell_Shadow_ShadeTrueSight"),
+(23,"Interface\Icons\Ability_ShockWave"),
+(24,"Interface\Icons\Spell_Nature_Reincarnation"),
+(25,"Interface\Icons\Ability_ThunderBolt"),
+(26,"Interface\Icons\Ability_MeleeDamage"),
+(27,"Interface\Icons\Spell_Nature_Slow"),
+(28,"Interface\Icons\Ability_Defend"),
+(29,"Interface\Icons\Ability_Seal"),
+(30,"Interface\Icons\Spell_Nature_Invisibilty"),
+(31,"Interface\Icons\Spell_Fire_Immolation"),
+(32,"Interface\Icons\Spell_Ice_Lament"),
+(33,"Interface\Icons\Spell_Fire_SealOfFire"),
+(34,"Interface\Icons\Spell_Fire_FlameBlades"),
+(35,"Interface\Icons\Spell_Frost_Glacier"),
+(36,"Interface\Icons\Spell_Frost_ManaRecharge"),
+(37,"Interface\Icons\Spell_Fire_SelfDestruct"),
+(38,"Interface\Icons\Spell_Nature_BloodLust"),
+(39,"Interface\Icons\Spell_Nature_NatureTouchGrow"),
+(40,"Interface\Icons\Spell_Nature_NatureTouchDecay"),
+(41,"Interface\Icons\Spell_Nature_DryadDispelMagic"),
+(42,"Interface\Icons\Ability_ThunderClap"),
+(43,"Interface\Icons\Ability_Temp"),
+(44,"Interface\Icons\Spell_Nature_Sleep"),
+(45,"Interface\Icons\Spell_Fire_MeteorStorm"),
+(46,"Interface\Icons\Spell_Nature_MoonGlow"),
+(47,"Interface\Icons\Spell_Nature_Purge"),
+(48,"Interface\Icons\Spell_Shadow_MindSteal"),
+(49,"Interface\Icons\Ability_EyeOfTheOwl"),
+(50,"Interface\Icons\Ability_BullRush"),
+(51,"Interface\Icons\Spell_Holy_InnerFire"),
+(52,"Interface\Icons\Spell_Holy_Devotion"),
+(53,"Interface\Icons\Spell_Nature_Thorns"),
+(54,"Interface\Icons\Spell_Nature_Brilliance"),
+(55,"Interface\Icons\Spell_Shadow_ChillTouch"),
+(56,"Interface\Icons\Spell_Frost_FreezingBreath"),
+(57,"Interface\Icons\Spell_Fire_EnchantWeapon"),
+(58,"Interface\Icons\Spell_Nature_TimeStop"),
+(59,"Interface\Icons\Spell_Misc_Food"),
+(60,"Interface\Icons\Spell_Misc_Drink"),
+(61,"Interface\Icons\Spell_Shadow_RaiseDead"),
+(62,"Interface\Icons\Spell_Nature_Lightning"),
+(63,"Interface\Icons\Spell_Nature_Strength"),
+(64,"Interface\Icons\Spell_Nature_Rejuvenation"),
+(65,"Interface\Icons\Spell_Nature_NullWard"),
+(66,"Interface\Icons\Spell_Nature_Earthquake"),
+(67,"Interface\Icons\Spell_Nature_SpiritWolf"),
+(68,"Interface\Icons\Spell_Nature_CorrosiveBreath"),
+(69,"Interface\Icons\Ability_Ensnare"),
+(70,"Interface\Icons\Spell_Holy_HolyBolt"),
+(71,"Interface\Icons\Spell_Shadow_Charm"),
+(72,"Interface\Icons\Spell_Nature_GuardianWard"),
+(73,"Interface\Icons\Spell_Holy_Restoration"),
+(74,"Interface\Icons\Spell_Holy_DispelMagic"),
+(75,"Interface\Icons\Spell_Shadow_SpectralSight"),
+(76,"Interface\Icons\Spell_Shadow_FingerOfDeath"),
+(77,"Interface\Icons\Spell_Shadow_MindRot"),
+(78,"Interface\Icons\Spell_Holy_Invulnerable"),
+(79,"Interface\Icons\Spell_Holy_LayOnHands"),
+(80,"Interface\Icons\Spell_Holy_SealOfValor"),
+(81,"Interface\Icons\Spell_Holy_DivineIntervention"),
+(82,"Interface\Icons\Spell_Nature_Polymorph"),
+(83,"Interface\Icons\Ability_Whirlwind"),
+(84,"Interface\Icons\Ability_Racial_Avatar"),
+(85,"Interface\Icons\Ability_UpgradeMoonGlaive"),
+(86,"Interface\Icons\Ability_Racial_BloodRage"),
+(87,"Interface\Icons\Spell_Shadow_Teleport"),
+(88,"Interface\Icons\Spell_Shadow_DeathCoil"),
+(89,"Interface\Icons\Spell_Shadow_RagingScream"),
+(90,"Interface\Icons\Spell_Shadow_Metamorphosis"),
+(91,"Interface\Icons\Spell_Shadow_AuraOfDarkness"),
+(92,"Interface\Icons\Spell_Shadow_SoulGem"),
+(93,"Interface\Icons\Spell_Shadow_UnholyStrength"),
+(94,"Interface\Icons\Spell_Frost_SummonWaterElemental"),
+(95,"Interface\Icons\Spell_Shadow_UnholyFrenzy"),
+(96,"Interface\Icons\Spell_Shadow_Cripple"),
+(97,"Interface\Icons\Spell_Shadow_PlagueCloud"),
+(98,"Interface\Icons\Spell_Shadow_Possession"),
+(99,"Interface\Icons\Spell_Shadow_AntiMagicShell"),
+(100,"Interface\Icons\Spell_Nature_Tranquility"),
+(101,"Interface\Icons\Spell_Frost_WindWalkOn"),
+(102,"Interface\Icons\Ability_Smash"),
+(103,"Interface\Icons\Ability_Ambush"),
+(104,"Interface\Icons\Spell_Holy_Heal"),
+(105,"Interface\Icons\Ability_SearingArrow"),
+(106,"Interface\Icons\Spell_Nature_MoonKey"),
+(107,"Interface\Icons\Ability_Racial_BearForm"),
+(108,"Interface\Icons\Ability_GhoulFrenzy"),
+(109,"Interface\Icons\Spell_Nature_FaerieFire"),
+(110,"Interface\Icons\Spell_Nature_SlowPoison"),
+(111,"Interface\Icons\Spell_Nature_ForceOfNature"),
+(112,"Interface\Icons\Spell_Nature_RavenForm"),
+(113,"Interface\Icons\Spell_Shadow_Haunting"),
+(114,"Interface\Icons\Spell_Shadow_ShadowPact"),
+(115,"Interface\Icons\Spell_Nature_Swiftness"),
+(116,"Interface\Icons\Spell_Shadow_CarrionSwarm"),
+(117,"Interface\Icons\Spell_Nature_WispHeal"),
+(118,"Interface\Icons\Spell_Shadow_DeathAndDecay"),
+(119,"Interface\Icons\Spell_Frost_FrostArmor"),
+(120,"Interface\Icons\Spell_Totem_WardOfDraining"),
+(121,"Interface\Icons\Spell_Holy_Resurrection"),
+(122,"Interface\Icons\Spell_Nature_WispSplode"),
+(123,"Interface\Icons\Spell_Nature_Regeneration"),
+(124,"Interface\Icons\Spell_Nature_ResistMagic"),
+(125,"Interface\Icons\Spell_Holy_MagicalSentry"),
+(126,"Interface\Icons\Ability_Marksmanship"),
+(127,"Interface\Icons\Ability_TheBlackArrow"),
+(128,"Interface\Icons\Ability_TrueShot"),
+(129,"Interface\Icons\Ability_WarStomp"),
+(130,"Interface\Icons\Spell_Shadow_RitualOfSacrifice"),
+(131,"Interface\Icons\Ability_Racial_ShadowMeld"),
+(132,"Interface\Icons\Ability_GolemStormBolt"),
+(133,"Interface\Icons\Spell_Frost_WizardMark"),
+(134,"Interface\Icons\Spell_Shadow_DeathScream"),
+(135,"Interface\Icons\Spell_Shadow_EvilEye"),
+(136,"Interface\Icons\Spell_Fire_Flare"),
+(137,"Interface\Icons\Spell_Shadow_MindBomb"),
+(138,"Interface\Icons\Ability_CriticalStrike"),
+(139,"Interface\Icons\Spell_Nature_EnchantArmor"),
+(140,"Interface\Icons\Spell_Shadow_SealOfKings"),
+(141,"Interface\Icons\Spell_Nature_CallStorm"),
+(142,"Interface\Icons\Spell_Frost_IceClaw"),
+(143,"Interface\Icons\Spell_Frost_Wisp"),
+(144,"Interface\Icons\Frostbolt_test"),
+(145,"Interface\Icons\Spell_Frost_ManaBurn"),
+(146,"Interface\Icons\Ability_Racial_Cannibalize"),
+(147,"Interface\Icons\Spell_Shadow_VampiricAura"),
+(148,"Interface\Icons\Ability_GolemThunderClap"),
+(149,"Interface\Icons\Spell_Nature_Regenerate"),
+(150,"Interface\Icons\Spell_Shadow_UnsummonBuilding"),
+(151,"Interface\Icons\Ability_SteelMelee"),
+(152,"Interface\Icons\Spell_Shadow_Requiem"),
+(153,"Interface\Icons\Spell_Shadow_LifeDrain"),
+(154,"Interface\Icons\Spell_Shadow_DarkRitual"),
+(155,"Interface\Icons\Spell_Nature_Drowsy"),
+(156,"Interface\Icons\Spell_Holy_SearingLight"),
+(157,"Interface\Icons\Ability_Hibernation"),
+(158,"Interface\Icons\Spell_Holy_Excorcism"),
+(159,"Interface\Icons\Spell_Holy_Retribution"),
+(160,"Interface\Icons\Spell_Shadow_CorpseExplode"),
+(161,"Interface\Icons\Ability_TownWatch"),
+(162,"Interface\Icons\Ability_Repair"),
+(163,"Interface\Icons\Ability_PoisonSting"),
+(164,"Interface\Icons\Spell_Shadow_Twilight"),
+(165,"Interface\Icons\Spell_Nature_ChainLightning"),
+(166,"Interface\Icons\Ability_Devour"),
+(167,"Interface\Icons\Spell_Holy_Dizzy"),
+(168,"Interface\Icons\Spell_Nature_NaturesWrath"),
+(169,"Interface\Icons\Spell_Shadow_DeathPact"),
+(170,"Interface\Icons\Spell_Shadow_DarkSummoning"),
+(171,"Interface\Icons\Ability_Spy"),
+(172,"Interface\Icons\Spell_Ice_MagicDamage"),
+(173,"Interface\Icons\Spell_Shadow_GatherShadows"),
+(174,"Interface\Icons\Spell_Nature_EarthBind"),
+(175,"Interface\Icons\Spell_Shadow_GhostKey"),
+(176,"Interface\Icons\Spell_Frost_Frostbolt"),
+(177,"Interface\Icons\Spell_Holy_AshesToAshes"),
+(178,"Interface\Icons\Spell_Shadow_ShadowWard"),
+(179,"Interface\Icons\Ability_Tracking"),
+(180,"Interface\Icons\Spell_Frost_ChainsOfIce"),
+(181,"Interface\Icons\Spell_Frost_FrostArmor02"),
+(182,"Interface\Icons\Spell_Frost_ChillingArmor"),
+(183,"Interface\Icons\Spell_Fire_FireBolt02"),
+(184,"Interface\Icons\Spell_Fire_Fireball02"),
+(185,"Interface\Icons\Spell_Fire_FlameBolt"),
+(186,"Interface\Icons\Spell_Frost_FrostBlast"),
+(187,"Interface\Icons\Spell_Frost_ChillingBlast"),
+(188,"Interface\Icons\Spell_Frost_FrostBolt02"),
+(189,"Interface\Icons\Spell_Frost_ChillingBolt"),
+(190,"Interface\Icons\Spell_Misc_Food_08"),
+(191,"Interface\Icons\Spell_Misc_ConjureManaJewel"),
+(192,"Interface\Icons\Spell_Fire_SunKey"),
+(193,"Interface\Icons\Spell_Frost_FrostNova"),
+(194,"Interface\Icons\Spell_Nature_NullifyPoison"),
+(195,"Interface\Icons\Spell_Nature_RemoveCurse"),
+(196,"Interface\Icons\Spell_Nature_RemoveDisease"),
+(197,"Interface\Icons\Spell_Nature_ResistNature"),
+(198,"Interface\Icons\Spell_Nature_SpiritArmor"),
+(199,"Interface\Icons\Spell_Nature_ThunderClap"),
+(200,"Interface\Icons\Spell_Nature_UndyingStrength"),
+(201,"Interface\Icons\Ability_Physical_Taunt"),
+(202,"Interface\Icons\Racial_Dwarf_FindTreasure"),
+(203,"Interface\Icons\Spell_Holy_HarmUndeadAura"),
+(204,"Interface\Icons\Spell_Holy_RetributionAura"),
+(205,"Interface\Icons\Spell_Holy_RighteousFury"),
+(206,"Interface\Icons\Spell_Holy_RighteousnessAura"),
+(207,"Interface\Icons\Spell_Shadow_AntiShadow"),
+(208,"Interface\Icons\Spell_Shadow_BurningSpirit"),
+(209,"Interface\Icons\Spell_Shadow_DetectLesserInvisibility"),
+(210,"Interface\Icons\Spell_Shadow_DetectInvisibility"),
+(211,"Interface\Icons\Spell_Shadow_ImpPhaseShift"),
+(212,"Interface\Icons\Spell_Shadow_ManaBurn"),
+(213,"Interface\Icons\Spell_Shadow_ShadowBolt"),
+(214,"Interface\Icons\Spell_Shadow_SummonFelHunter"),
+(215,"Interface\Icons\Spell_Shadow_SummonImp"),
+(216,"Interface\Icons\Spell_Shadow_SummonSuccubus"),
+(217,"Interface\Icons\Spell_Shadow_SummonVoidWalker"),
+(218,"Interface\Icons\Ability_ImpalingBolt"),
+(219,"Interface\Icons\Ability_PierceDamage"),
+(220,"Interface\Icons\Spell_Nature_Cyclone"),
+(221,"Interface\Icons\Spell_Shadow_AnimateDead"),
+(222,"Interface\Icons\Spell_Shadow_NightOfTheDead"),
+(223,"Interface\Icons\Spell_Orc_Omniscience"),
+(224,"Spells\Icon\Spell_Fire_Fire"),
+(225,"Interface\Icons\Spell_Nature_StarFall"),
+(226,"Interface\Icons\INV_Potion_19"),
+(227,"Interface\Icons\INV_Misc_Bag_11"),
+(228,"Interface\Icons\Spell_Shadow_GrimWard"),
+(229,"Interface\Icons\Spell_Nature_MirrorImage"),
+(230,"Interface\Icons\INV_Boots_03"),
+(231,"Interface\Icons\INV_Misc_Food_24"),
+(232,"Interface\Icons\Spell_Holy_Silence"),
+(233,"Interface\Icons\Spell_Shadow_Fumble"),
+(234,"Interface\Icons\Spell_Shadow_ShadowWordPain"),
+(235,"Interface\Icons\Spell_Shadow_ShadowWordDominate"),
+(236,"Interface\Icons\Spell_Holy_RemoveCurse"),
+(237,"Interface\Icons\Spell_Holy_HolySmite"),
+(238,"Interface\Icons\Spell_Holy_BlessingOfStamina"),
+(239,"Interface\Icons\Spell_Holy_BlessingOfStrength"),
+(240,"Interface\Icons\Spell_Holy_BlessingOfAgility"),
+(241,"Interface\Icons\Spell_Holy_GreaterHeal"),
+(242,"Interface\Icons\Spell_Holy_FlashHeal"),
+(243,"Interface\Icons\Ability_BackStab"),
+(244,"Interface\Icons\Ability_CheapShot"),
+(245,"Interface\Icons\Ability_Gouge"),
+(246,"Interface\Icons\Ability_Kick"),
+(247,"Interface\Icons\Ability_Poisons"),
+(248,"Interface\Icons\INV_Potion_12"),
+(249,"Interface\Icons\Ability_Sap"),
+(250,"Interface\Icons\Ability_Stealth"),
+(251,"Interface\Icons\Ability_Throw"),
+(252,"Interface\Icons\Ability_Vanish"),
+(253,"Interface\Icons\Ability_Hunter_AimedShot"),
+(254,"Interface\Icons\Ability_Hunter_BeastSooth"),
+(255,"Interface\Icons\Ability_Hunter_BeastTaming"),
+(256,"Interface\Icons\Ability_Hunter_CriticalShot"),
+(257,"Interface\Icons\Ability_Hunter_SwiftStrike"),
+(258,"Interface\Icons\INV_Misc_Food_08"),
+(259,"Interface\Icons\INV_Misc_Food_12"),
+(260,"Interface\Icons\INV_Misc_Food_11"),
+(261,"Interface\Icons\Ability_Druid_Maul"),
+(262,"Interface\Icons\Ability_Druid_Rake"),
+(263,"Interface\Icons\Spell_Nature_AbolishMagic"),
+(264,"Interface\Icons\Spell_Nature_NullifyDisease"),
+(265,"Interface\Icons\Spell_Nature_NullifyPoison_02"),
+(266,"Interface\Icons\Spell_Nature_ProtectionformNature"),
+(267,"Interface\Icons\Ability_Hunter_MendPet"),
+(268,"Interface\Icons\INV_Misc_Ale_01"),
+(269,"Interface\Icons\INV_Weapon_Crossbow_01"),
+(270,"Interface\Icons\INV_Ore_Tin_01"),
+(271,"Interface\Icons\INV_Misc_Birdbeck_02"),
+(272,"Interface\Icons\Spell_Nature_Web"),
+(273,"Interface\Icons\INV_Misc_EmptyFlask_01"),
+(274,"Interface\Icons\INV_Musket_03"),
+(275,"Interface\Icons\INV_Musket_04"),
+(276,"Interface\Icons\Ability_Warrior_DefensiveStance"),
+(277,"Interface\Icons\Ability_Warrior_Cleave"),
+(278,"Interface\Icons\Ability_Warrior_Challange"),
+(279,"Interface\Icons\Ability_Warrior_OffensiveStance"),
+(280,"Interface\Icons\Ability_Warrior_ShieldBash"),
+(281,"Interface\Icons\Ability_Warrior_ShieldWall"),
+(282,"Interface\Icons\Ability_Warrior_WarCry"),
+(283,"Interface\Icons\INV_Misc_Gem_Stone_01"),
+(284,"Interface\Icons\INV_Stone_04"),
+(285,"Interface\Icons\Spell_Frost_IceStorm"),
+(286,"Interface\Icons\INV_Staff_08"),
+(287,"Interface\Icons\INV_Misc_Orb_03"),
+(288,"Interface\Icons\INV_Ammo_Arrow_02"),
+(289,"Interface\Icons\INV_Misc_Bowl_01"),
+(290,"Interface\Icons\INV_ThrowingKnife_03"),
+(291,"Interface\Icons\Spell_Holy_DevotionAura"),
+(292,"Interface\Icons\Spell_Holy_Excorcism_02"),
+(293,"Interface\Icons\INV_Misc_Head_Tiger_01"),
+(294,"Interface\Icons\INV_Wand_01"),
+(295,"Interface\Icons\INV_Wand_02"),
+(296,"Interface\Icons\INV_Staff_03"),
+(297,"Interface\Icons\INV_Chest_Plate02"),
+(298,"Interface\Icons\Spell_Holy_FistOfJustice"),
+(299,"Interface\Icons\Spell_Holy_HealingAura"),
+(300,"Interface\Icons\Spell_Holy_Purify"),
+(301,"Interface\Icons\Spell_Holy_SealOfFury"),
+(302,"Interface\Icons\Spell_Holy_SealOfMight"),
+(303,"Interface\Icons\Spell_Holy_SealOfProtection"),
+(304,"Interface\Icons\Spell_Holy_SealOfRighteousness"),
+(305,"Interface\Icons\Spell_Holy_SealOfSalvation"),
+(306,"Interface\Icons\Spell_Holy_SealOfWisdom"),
+(307,"Interface\Icons\Spell_Holy_SealOfWrath"),
+(308,"Interface\Icons\Spell_Holy_SenseUndead"),
+(309,"Interface\Icons\Spell_Holy_TurnUndead"),
+(310,"Interface\Icons\Spell_Nature_Sentinal"),
+(311,"Interface\Icons\INV_Misc_MonsterFang_01"),
+(312,"Interface\Icons\Spell_Nature_UnyeildingStamina"),
+(313,"Interface\Icons\Spell_Shadow_AbominationExplosion"),
+(314,"Interface\Icons\INV_Gauntlets_05"),
+(315,"Interface\Icons\INV_Jewelry_Talisman_01"),
+(316,"Interface\Icons\Spell_Holy_PrayerOfHealing"),
+(317,"Interface\Icons\Spell_Magic_PolymorphPig"),
+(318,"Interface\Icons\Spell_Magic_PolymorphChicken"),
+(319,"Interface\Icons\INV_Scroll_02"),
+(320,"Interface\Icons\Spell_Lightning_LightningBolt01"),
+(321,"Interface\Icons\Spell_Holy_Renew"),
+(322,"Interface\Icons\INV_Mace_12"),
+(323,"Interface\Icons\INV_Misc_LeatherScrap_08"),
+(324,"Interface\Icons\INV_Fabric_Silk_02"),
+(325,"Interface\Icons\INV_Misc_Wrench_02"),
+(326,"Interface\Icons\INV_Misc_ArmorKit_17"),
+(327,"Interface\Icons\INV_Potion_14"),
+(328,"Interface\Icons\INV_Axe_04"),
+(329,"Interface\Icons\Spell_Holy_HolyProtection"),
+(330,"Interface\Icons\Spell_Holy_NullifyDisease"),
+(331,"Interface\Icons\Spell_Magic_LesserInvisibilty"),
+(332,"Interface\Icons\Spell_Magic_MageArmor"),
+(333,"Interface\Icons\Trade_Engineering"),
+(334,"Interface\Icons\Spell_Nature_AgitatingTotem"),
+(335,"Interface\Icons\Trade_BlackSmithing"),
+(336,"Interface\Icons\Trade_Mining"),
+(337,"Interface\Icons\Spell_Nature_InvisibilityTotem"),
+(338,"Interface\Icons\Spell_Nature_ManaRegenTotem"),
+(339,"Interface\Icons\Trade_Alchemy"),
+(340,"Interface\Icons\Spell_Nature_SlowingTotem"),
+(341,"Interface\Icons\Trade_Tailoring"),
+(342,"Interface\Icons\Trade_BrewPoison"),
+(343,"Interface\Icons\INV_Misc_Key_04"),
+(344,"Interface\Icons\INV_Misc_Gem_Sapphire_01"),
+(345,"Interface\Icons\Trade_Herbalism"),
+(346,"Interface\Icons\Trade_LeatherWorking"),
+(347,"Interface\Icons\INV_Misc_Shell_03"),
+(348,"Interface\Icons\INV_Potion_01"),
+(349,"Interface\Icons\INV_Misc_Shell_02"),
+(350,"Interface\Icons\INV_Misc_Dust_02"),
+(351,"Interface\Icons\INV_Misc_Ammo_Gunpowder_02"),
+(352,"Interface\Icons\INV_Orb_Arcanite_01"),
+(353,"Interface\Icons\INV_Misc_Gear_01"),
+(354,"Interface\Icons\INV_Cask_01"),
+(355,"Interface\Icons\INV_Misc_Bomb_05"),
+(356,"Interface\Icons\INV_Misc_StoneTablet_04"),
+(357,"Interface\Icons\INV_Scroll_05"),
+(358,"Interface\Icons\INV_Misc_Fork&Knife"),
+(359,"Interface\Icons\INV_Misc_EmptyFlask_02"),
+(360,"Interface\Icons\INV_Flask_02"),
+(361,"Interface\Icons\INV_Flask_05"),
+(362,"Interface\Icons\INV_Wine_01"),
+(363,"Interface\Icons\INV_Misc_Cape_18"),
+(364,"Interface\Icons\INV_Weapon_Bow_05"),
+(365,"Interface\Icons\INV_Weapon_Halberd_06"),
+(366,"Interface\Icons\INV_Axe_09"),
+(367,"Interface\Icons\INV_Mace_01"),
+(368,"Interface\Icons\INV_Sword_04"),
+(369,"Interface\Icons\INV_Sword_06"),
+(370,"Interface\Icons\INV_Spear_05"),
+(371,"Interface\Icons\INV_Axe_17"),
+(372,"Interface\Icons\INV_Gauntlets_06"),
+(373,"Interface\Icons\INV_Misc_Pipe_01"),
+(374,"Interface\Icons\INV_Misc_Food_09"),
+(393,"Interface\Icons\INV_Weapon_Rifle_01"),
+(413,"Interface\Icons\INV_Shield_05"),
+(433,"Interface\Icons\INV_Banner_03"),
+(434,"Interface\Icons\INV_ThrowingKnife_05"),
+(435,"Interface\Icons\INV_Mace_04"),
+(436,"Interface\Icons\INV_Weapon_Bow_02"),
+(437,"Interface\Icons\INV_Axe_13"),
+(438,"Interface\Icons\INV_Sword_26"),
+(439,"Interface\Icons\INV_Hammer_03"),
+(440,"Interface\Icons\INV_Shield_04"),
+(441,"Interface\Icons\INV_Axe_16"),
+(442,"Interface\Icons\INV_Stone_01"),
+(443,"Interface\Icons\INV_Axe_11"),
+(444,"Interface\Icons\INV_Chest_Plate01"),
+(453,"Interface\Icons\Spell_Holy_BlessingOfProtection"),
+(454,"Interface\Icons\Ability_Hunter_BeastSoothe"),
+(455,"Interface\Icons\Ability_Hunter_BeastCall"),
+(456,"Interface\Icons\Ability_Warrior_BattleShout"),
+(457,"Interface\Icons\Ability_Warrior_Charge"),
+(458,"Interface\Icons\Spell_Nature_AstralRecal"),
+(459,"Interface\Icons\Spell_Nature_AstralRecalGroup"),
+(460,"Interface\Icons\Spell_Shadow_SummonInfernal"),
+(473,"Interface\Icons\Ability_Druid_Bash"),
+(493,"Interface\Icons\Ability_Druid_CatForm"),
+(494,"Interface\Icons\Ability_Druid_Disembowel"),
+(495,"Interface\Icons\Ability_Druid_SupriseAttack"),
+(496,"Interface\Icons\Ability_Druid_Swipe"),
+(497,"Interface\Icons\Ability_Rogue_Disguise"),
+(498,"Interface\Icons\Ability_Rogue_Garrote"),
+(499,"Interface\Icons\Ability_Rogue_KidneyShot"),
+(500,"Interface\Icons\Ability_Rogue_Rupture"),
+(501,"Interface\Icons\Spell_Frost_FrostWard"),
+(502,"Interface\Icons\Spell_Holy_MindVision"),
+(503,"Interface\Icons\Spell_Holy_Redemption"),
+(504,"Interface\Icons\Spell_Holy_SealOfSacrifice"),
+(505,"Interface\Icons\Spell_Magic_FeatherFall"),
+(513,"Interface\Icons\Ability_Rogue_DualWeild"),
+(514,"Interface\Icons\Ability_Rogue_Eviscerate"),
+(515,"Interface\Icons\Ability_Rogue_SliceDice"),
+(516,"Interface\Icons\Ability_Rogue_Sprint"),
+(517,"Interface\Icons\Ability_Rogue_Trip"),
+(518,"Interface\Icons\INV_Poison_MindNumbing"),
+(533,"Interface\Icons\Ability_DualWield"),
+(534,"Interface\Icons\Ability_Hunter_BeastTraining"),
+(535,"Interface\Icons\Ability_Hunter_Pathfinding"),
+(536,"Interface\Icons\Ability_Hunter_Quickshot"),
+(537,"Interface\Icons\Ability_Hunter_RunningShot"),
+(538,"Interface\Icons\Ability_Hunter_SniperShot"),
+(539,"Interface\Icons\Ability_Rogue_Feint"),
+(540,"Interface\Icons\Spell_Holy_PrayerOfHealing02"),
+(541,"Interface\Icons\Spell_Shadow_BloodBoil"),
+(542,"Interface\Icons\Spell_Shadow_CurseOfAchimonde"),
+(543,"Interface\Icons\Spell_Shadow_CurseOfMannoroth"),
+(544,"Interface\Icons\Spell_Shadow_CurseOfSargeras"),
+(545,"Interface\Icons\Spell_Shadow_DemonBreath"),
+(546,"Interface\Icons\Spell_Shadow_LifeDrain02"),
+(547,"Interface\Icons\Spell_Shadow_RainOfFire"),
+(548,"Interface\Icons\Spell_Shadow_SiphonMana"),
+(553,"Interface\Icons\Ability_Racial_Ultravision"),
+(554,"Interface\Icons\INV_Misc_Orb_04"),
+(555,"Interface\Icons\Spell_Holy_AuraOfLight"),
+(556,"Interface\Icons\INV_Food_Egg_02"),
+(557,"Interface\Icons\INV_Wine_03"),
+(558,"Interface\Icons\Ability_Parry"),
+(559,"Interface\Icons\Ability_Warrior_DecisiveStrike"),
+(560,"Interface\Icons\Ability_Warrior_Disarm"),
+(561,"Interface\Icons\Ability_Warrior_InnerRage"),
+(562,"Interface\Icons\Ability_Warrior_Revenge"),
+(563,"Interface\Icons\Ability_Warrior_Riposte"),
+(564,"Interface\Icons\Ability_Warrior_SavageBlow"),
+(565,"Interface\Icons\Ability_Warrior_Sunder"),
+(566,"Interface\Icons\Spell_Holy_PowerWordShield"),
+(576,"Interface\Icons\INV_Misc_Fish_05"),
+(577,"Interface\Icons\INV_Misc_Fish_06"),
+(578,"Interface\Icons\Trade_Engraving"),
+(579,"Interface\Icons\INV_Staff_Goldfeathered_01"),
+(580,"Interface\Icons\Trade_Fishing"),
+(596,"Interface\Icons\Spell_Shadow_Curse"),
+(597,"Interface\Icons\INV_Misc_MonsterHead_03"),
+(598,"Interface\Icons\INV_Staff_01"),
+(599,"Interface\Icons\INV_Misc_Bone_09"),
+(600,"Interface\Icons\INV_Misc_Bone_06"),
+(601,"Interface\Icons\INV_Misc_Foot_Kodo"),
+(616,"Interface\Icons\INV_Misc_Fish_03"),
+(617,"Interface\Icons\INV_Misc_Monster_MouseTail"),
+(636,"Interface\Icons\Spell_Nature_Acid_01"),
+(656,"Interface\Icons\INV_Gizmo_02"),
+(657,"Interface\Icons\INV_Gizmo_03"),
+(658,"Interface\Icons\INV_Gizmo_01"),
+(676,"Interface\Icons\INV_Misc_Food_18"),
+(677,"Interface\Icons\Ability_ShootWand"),
+(678,"Interface\Icons\Spell_Fire_FlameShock"),
+(679,"Interface\Icons\Spell_Fire_FlameTounge"),
+(680,"Interface\Icons\Spell_Fire_SearingTotem"),
+(681,"Interface\Icons\Spell_Frost_FrostBrand"),
+(682,"Interface\Icons\Spell_Holy_LesserHeal"),
+(683,"Interface\Icons\Spell_Holy_LesserHeal02"),
+(684,"Interface\Icons\Spell_Holy_Heal02"),
+(685,"Interface\Icons\Spell_Holy_WordFortitude"),
+(686,"Interface\Icons\Spell_Nature_StrengthOfEarthTotem02"),
+(687,"Interface\Icons\Spell_Nature_EarthShock"),
+(688,"Interface\Icons\Spell_Nature_RockBiter"),
+(689,"Interface\Icons\Spell_Nature_StoneClawTotem"),
+(690,"Interface\Icons\Spell_Nature_StoneSkinTotem"),
+(691,"Interface\Icons\Spell_Nature_EarthBindTotem"),
+(692,"Interface\Icons\Spell_Shadow_CurseOfTounges"),
+(693,"Interface\Icons\Spell_Shadow_SacrificialShield"),
+(694,"Interface\Icons\Spell_Shadow_SoothingKiss"),
+(695,"Interface\Icons\Ability_FiegnDead"),
+(696,"Interface\Icons\INV_Misc_Spyglass_01"),
+(716,"Interface\Icons\INV_Boots_02"),
+(736,"Interface\Icons\INV_Misc_Pelt_Wolf_01"),
+(756,"Interface\Icons\INV_Gauntlets_04"),
+(776,"Interface\Icons\INV_Misc_Rune_01"),
+(796,"Interface\Icons\INV_Chest_Chain_05"),
+(816,"Interface\Icons\Spell_Fire_SoulBurn"),
+(836,"Interface\Icons\Ability_Mount_BlackPanther"),
+(856,"Interface\Icons\Ability_Rogue_Ambush"),
+(857,"Interface\Icons\Ability_Rogue_FeignDeath"),
+(858,"Interface\Icons\INV_Misc_Ammo_Bullet_01"),
+(876,"Interface\Icons\Spell_Fire_LavaSpawn"),
+(896,"Interface\Icons\INV_Chest_Leather_09"),
+(897,"Interface\Icons\INV_Chest_Cloth_21"),
+(916,"Interface\Icons\Ability_Mount_WhiteTiger"),
+(917,"Interface\Icons\INV_Shield_09"),
+(936,"Interface\Icons\INV_Misc_Key_03"),
+(937,"Interface\Icons\Spell_Fire_Incinerate"),
+(956,"Interface\Icons\Ability_Mount_WhiteDireWolf"),
+(957,"Interface\Icons\Ability_Druid_ChallangingRoar"),
+(958,"Interface\Icons\Ability_Druid_Cower"),
+(959,"Interface\Icons\Ability_Druid_Dash"),
+(960,"Interface\Icons\Ability_Druid_DemoralizingRoar"),
+(961,"Interface\Icons\Ability_Druid_Enrage"),
+(962,"Interface\Icons\Spell_Nature_HealingTouch"),
+(963,"Interface\Icons\Spell_Nature_HealingWaveGreater"),
+(964,"Interface\Icons\Spell_Nature_HealingWaveLesser"),
+(965,"Interface\Icons\INV_Ammo_Bullet_02"),
+(976,"Interface\Icons\Spell_Frost_FrostShock"),
+(996,"Interface\Icons\INV_Weapon_Halberd_08"),
+(997,"Interface\Icons\INV_Chest_Plate04"),
+(1016,"Interface\Icons\INV_Misc_Food_04"),
+(1036,"Interface\Icons\INV_Misc_Gem_Emerald_01"),
+(1037,"Interface\Icons\INV_Misc_Gem_Emerald_02"),
+(1038,"Interface\Icons\INV_Misc_Gem_Opal_01"),
+(1039,"Interface\Icons\INV_Misc_Gem_Ruby_01"),
+(1056,"Interface\Icons\INV_Wine_02"),
+(1057,"Interface\Icons\INV_Wine_04"),
+(1076,"Interface\Icons\INV_Misc_Head_Undead_01"),
+(1096,"Interface\Icons\INV_Misc_Milk_02"),
+(1097,"Interface\Icons\INV_Misc_Head_Human_02"),
+(1098,"Interface\Icons\INV_Misc_Key_05"),
+(1099,"Interface\Icons\INV_Misc_Key_06"),
+(1100,"Interface\Icons\INV_Misc_Key_12"),
+(1101,"Interface\Icons\INV_Misc_Key_14"),
+(1116,"Interface\Icons\INV_Misc_MonsterClaw_02"),
+(1136,"Interface\Icons\INV_Misc_MonsterScales_03"),
+(1137,"Interface\Icons\Spell_Fire_Volcano"),
+(1156,"Interface\Icons\INV_Jewelry_Amulet_07"),
+(1176,"Interface\Icons\Ability_Mount_RidingHorse"),
+(1177,"Interface\Icons\Ability_Mount_MountainRam"),
+(1178,"Interface\Icons\Ability_Mount_BlackDireWolf"),
+(1179,"Interface\Icons\Ability_Mount_NightmareHorse"),
+(1180,"Interface\Icons\Ability_Mount_Raptor"),
+(1181,"Interface\Icons\Ability_Mount_JungleTiger"),
+(1196,"Interface\Icons\INV_Misc_Ammo_Gunpowder_01"),
+(1197,"Interface\Icons\Spell_Fire_WindsofWoe"),
+(1216,"Interface\Icons\INV_Misc_Flower_02"),
+(1217,"Interface\Icons\INV_Misc_Herb_03"),
+(1236,"Interface\Icons\Spell_Frost_IceShard"),
+(1237,"Interface\Icons\INV_Misc_Bandage_08"),
+(1238,"Interface\Icons\INV_Hammer_18"),
+(1239,"Interface\Icons\INV_Wand_08"),
+(1240,"Interface\Icons\Ability_Mount_MechaStrider"),
+(1241,"Interface\Icons\Ability_Mount_Undeadhorse"),
+(1242,"Interface\Icons\INV_Hammer_24"),
+(1256,"Interface\Icons\INV_Misc_MonsterSpiderCarapace_01"),
+(1276,"Interface\Icons\INV_Ingot_03"),
+(1277,"Interface\Icons\INV_Ingot_Steel"),
+(1296,"Interface\Icons\INV_Potion_63"),
+(1297,"Interface\Icons\INV_Potion_84"),
+(1298,"Interface\Icons\INV_Potion_91"),
+(1299,"Interface\Icons\INV_Potion_93"),
+(1300,"Interface\Icons\INV_Potion_65"),
+(1301,"Interface\Icons\INV_Potion_86"),
+(1302,"Interface\Icons\INV_Potion_33"),
+(1303,"Interface\Icons\INV_Potion_58"),
+(1304,"Interface\Icons\INV_Potion_44"),
+(1305,"Interface\Icons\INV_Potion_79"),
+(1306,"Interface\Icons\INV_Drink_09"),
+(1307,"Interface\Icons\INV_Potion_15"),
+(1308,"Interface\Icons\INV_Potion_13"),
+(1309,"Interface\Icons\INV_Drink_07"),
+(1310,"Interface\Icons\INV_Potion_08"),
+(1311,"Interface\Icons\INV_Potion_18"),
+(1312,"Interface\Icons\INV_Drink_13"),
+(1313,"Interface\Icons\INV_Drink_05"),
+(1314,"Interface\Icons\INV_Drink_04"),
+(1315,"Interface\Icons\INV_Potion_30"),
+(1316,"Interface\Icons\INV_Potion_69"),
+(1336,"Interface\Icons\INV_Potion_10"),
+(1337,"Interface\Icons\INV_Potion_61"),
+(1356,"Interface\Icons\INV_Potion_04"),
+(1357,"Interface\Icons\INV_Drink_06"),
+(1358,"Interface\Icons\INV_Drink_Milk_02"),
+(1359,"Interface\Icons\INV_Drink_10"),
+(1360,"Interface\Icons\INV_Drink_11"),
+(1361,"Interface\Icons\INV_Drink_12"),
+(1377,"Interface\Icons\INV_Misc_Net_01"),
+(1397,"Interface\Icons\Spell_Nature_Windfury"),
+(1417,"Interface\Icons\INV_Misc_Horn_03"),
+(1437,"Interface\Icons\INV_Misc_Food_10"),
+(1457,"Interface\Icons\INV_Ammo_Arrow_01"),
+(1458,"Interface\Icons\INV_Axe_05"),
+(1459,"Interface\Icons\INV_Weapon_Halbard_01"),
+(1460,"Interface\Icons\INV_Mace_02"),
+(1461,"Interface\Icons\INV_Sword_20"),
+(1462,"Interface\Icons\INV_Sword_27"),
+(1463,"Interface\Icons\INV_Shield_06"),
+(1464,"Interface\Icons\INV_Sword_05"),
+(1465,"Interface\Icons\Spell_Nature_AncestralGuardian"),
+(1466,"Interface\Icons\INV_Gizmo_Pipe_04"),
+(1467,"Interface\Icons\INV_Misc_Food_15"),
+(1468,"Interface\Icons\Spell_Shadow_CreepingPlague"),
+(1469,"Interface\Icons\INV_Misc_Gem_Opal_03"),
+(1470,"Interface\Icons\INV_Misc_Gem_Topaz_01"),
+(1471,"Interface\Icons\INV_Misc_Gem_Crystal_01"),
+(1472,"Interface\Icons\INV_Misc_Gem_Variety_02"),
+(1473,"Interface\Icons\INV_Axe_03"),
+(1474,"Interface\Icons\INV_Axe_06"),
+(1475,"Interface\Icons\Ability_Druid_AquaticForm"),
+(1476,"Interface\Icons\Ability_Druid_TravelForm"),
+(1477,"Interface\Icons\Ability_Warrior_PunishingBlow"),
+(1478,"Interface\Icons\Ability_Rogue_Distract"),
+(1479,"Interface\Icons\Spell_Arcane_PortalDarnassus"),
+(1480,"Interface\Icons\Spell_Arcane_PortalIronForge"),
+(1481,"Interface\Icons\Spell_Arcane_PortalOrgrimmar"),
+(1482,"Interface\Icons\Spell_Arcane_PortalStormWind"),
+(1483,"Interface\Icons\Spell_Arcane_PortalThunderBluff"),
+(1484,"Interface\Icons\Spell_Arcane_PortalUnderCity"),
+(1485,"Interface\Icons\Spell_Arcane_StarFire"),
+(1486,"Interface\Icons\Spell_Arcane_TeleportDarnassus"),
+(1487,"Interface\Icons\Spell_Holy_MindSooth"),
+(1488,"Interface\Icons\Spell_Shadow_PsychicScream"),
+(1489,"Interface\Icons\Spell_Arcane_TeleportIronForge"),
+(1490,"Interface\Icons\Spell_Arcane_TeleportOrgrimmar"),
+(1491,"Interface\Icons\Spell_Arcane_TeleportStormWind"),
+(1492,"Interface\Icons\Spell_Arcane_TeleportThunderBluff"),
+(1493,"Interface\Icons\Spell_Arcane_TeleportUnderCity"),
+(1494,"Interface\Icons\Spell_Shadow_Contagion"),
+(1495,"Interface\Icons\INV_Drink_15"),
+(1496,"Interface\Icons\INV_Misc_Herb_16"),
+(1497,"Interface\Icons\INV_Misc_Wrench_01"),
+(1498,"Interface\Icons\INV_Shield_01"),
+(1499,"Interface\Icons\Spell_Arcane_Blink"),
+(1500,"Interface\Icons\Spell_Shadow_EnslaveDemon"),
+(1501,"Interface\Icons\INV_Weapon_ShortBlade_14"),
+(1502,"Interface\Icons\INV_Staff_10"),
+(1503,"Interface\Icons\INV_Staff_11"),
+(1504,"Interface\Icons\INV_Weapon_ShortBlade_05"),
+(1505,"Interface\Icons\INV_ThrowingKnife_01"),
+(1506,"Interface\Icons\INV_Ammo_FireTar"),
+(1507,"Interface\Icons\INV_Misc_MonsterScales_12"),
+(1508,"Interface\Icons\INV_Sword_11"),
+(1509,"Interface\Icons\INV_Misc_Food_50"),
+(1510,"Interface\Icons\Ability_Mount_PinkTiger"),
+(1511,"Interface\Icons\Ability_Hunter_BeastCall02"),
+(1512,"Interface\Icons\INV_Misc_Food_33"),
+(1513,"Interface\Icons\INV_Drink_03"),
+(1514,"Interface\Icons\INV_Egg_02"),
+(1515,"Interface\Icons\INV_Misc_Gem_Crystal_02"),
+(1516,"Interface\Icons\INV_Misc_Gem_Diamond_02"),
+(1517,"Interface\Icons\INV_Misc_Gem_Ruby_02"),
+(1518,"Interface\Icons\INV_Misc_Gem_Amethyst_01"),
+(1519,"Interface\Icons\INV_Misc_Food_31"),
+(1520,"Interface\Icons\INV_Cask_03"),
+(1521,"Interface\Icons\INV_Misc_ShadowEgg"),
+(1522,"Interface\Icons\INV_Box_PetCarrier_01"),
+(1523,"Interface\Icons\INV_Staff_30"),
+(1524,"Interface\Icons\INV_Weapon_ShortBlade_10"),
+(1525,"Interface\Icons\INV_Misc_MonsterScales_05"),
+(1526,"Interface\Icons\INV_Axe_01"),
+(1527,"Interface\Icons\INV_Spear_06"),
+(1528,"Interface\Icons\INV_ThrowingKnife_02"),
+(1529,"Interface\Icons\INV_Axe_08"),
+(1530,"Interface\Icons\Ability_Hunter_EagleEye"),
+(1531,"Interface\Icons\Ability_Druid_Ravage"),
+(1532,"Interface\Icons\INV_Misc_MonsterScales_17"),
+(1533,"Interface\Icons\INV_Misc_MonsterScales_11"),
+(1534,"Interface\Icons\Ability_Druid_CatFormAttack"),
+(1535,"Interface\Icons\INV_Misc_MonsterScales_09"),
+(1536,"Interface\Icons\INV_Misc_MonsterScales_15"),
+(1537,"Interface\Icons\INV_Misc_MonsterScales_13"),
+(1538,"Interface\Icons\INV_Misc_MonsterScales_07"),
+(1539,"Interface\Icons\INV_Ore_Arcanite_01"),
+(1540,"Interface\Icons\INV_Belt_18"),
+(1541,"Interface\Icons\INV_Misc_Slime_01"),
+(1542,"Interface\Icons\INV_Egg_04"),
+(1543,"Interface\Icons\INV_Egg_05"),
+(1544,"Interface\Icons\INV_Hammer_09"),
+(1545,"Interface\Icons\INV_Axe_18"),
+(1546,"Interface\Icons\INV_Axe_10"),
+(1547,"Interface\Icons\INV_Shoulder_11"),
+(1548,"Interface\Icons\INV_Misc_Head_Dragon_01"),
+(1549,"Interface\Icons\Ability_Hunter_AspectOfTheMonkey"),
+(1550,"Interface\Icons\INV_Misc_Horn_01"),
+(1551,"Interface\Icons\INV_Shield_20"),
+(1552,"Interface\Icons\Spell_Shadow_Shadowform"),
+(1553,"Interface\Icons\INV_Misc_Rune_04"),
+(1554,"Interface\Icons\INV_Sword_32"),
+(1555,"Interface\Icons\INV_Jewelry_Talisman_06"),
+(1556,"Interface\Icons\INV_Jewelry_Amulet_01"),
+(1557,"Interface\Icons\INV_Axe_12"),
+(1558,"Interface\Icons\INV_Misc_Pelt_Bear_03"),
+(1559,"Interface\Icons\Ability_Hunter_Pet_Bear"),
+(1560,"Interface\Icons\INV_Spear_08"),
+(1561,"Interface\Icons\INV_Misc_MonsterClaw_04"),
+(1562,"Interface\Icons\INV_Misc_MonsterClaw_03"),
+(1563,"Interface\Icons\Ability_Hunter_Pet_Cat"),
+(1564,"Interface\Icons\INV_Misc_Urn_01"),
+(1565,"Interface\Icons\Ability_Hunter_Pet_Hyena"),
+(1566,"Interface\Icons\INV_Sword_22"),
+(1567,"Interface\Icons\INV_Hammer_23"),
+(1568,"Interface\Icons\INV_Misc_Gem_Bloodstone_01"),
+(1569,"Interface\Icons\INV_Potion_11"),
+(1570,"Interface\Icons\INV_Potion_92"),
+(1571,"Interface\Icons\INV_Sword_25"),
+(1572,"Interface\Icons\INV_Sword_41"),
+(1573,"Interface\Icons\Ability_Hunter_Pet_Wolf"),
+(1574,"Interface\Icons\INV_Ingot_Eternium"),
+(1575,"Interface\Icons\INV_Misc_Rune_05"),
+(1576,"Interface\Icons\INV_Misc_StoneTablet_05"),
+(1577,"Interface\Icons\Ability_Hunter_Pet_Bat"),
+(1578,"Interface\Icons\Ability_Hunter_Pet_Boar"),
+(1579,"Interface\Icons\Ability_Hunter_Pet_Vulture"),
+(1580,"Interface\Icons\Ability_Hunter_Pet_Crab"),
+(1581,"Interface\Icons\Ability_Hunter_Pet_Crocolisk"),
+(1582,"Interface\Icons\Ability_Hunter_Pet_Gorilla"),
+(1583,"Interface\Icons\Ability_Hunter_Pet_Owl"),
+(1584,"Interface\Icons\Ability_Hunter_Pet_Raptor"),
+(1585,"Interface\Icons\Ability_Hunter_Pet_Scorpid"),
+(1586,"Interface\Icons\Ability_Hunter_Pet_Spider"),
+(1587,"Interface\Icons\Ability_Hunter_Pet_TallStrider"),
+(1588,"Interface\Icons\Ability_Hunter_Pet_Turtle"),
+(1589,"Interface\Icons\Ability_Hunter_Pet_WindSerpent"),
+(1590,"Interface\Icons\Spell_Shadow_ScourgeBuild"),
+(1591,"Interface\Icons\Spell_Shadow_DeadofNight"),
+(1592,"Interface\Icons\INV_Misc_Fish_08"),
+(1593,"Interface\Icons\INV_Stone_14"),
+(1594,"Interface\Icons\INV_Shield_19"),
+(1595,"Interface\Icons\INV_Misc_Orb_02"),
+(1596,"Interface\Icons\INV_Weapon_Halberd_11"),
+(1597,"Interface\Icons\INV_Potion_31"),
+(1598,"Interface\Icons\INV_Helmet_45"),
+(1599,"Interface\Icons\INV_Helmet_08"),
+(1600,"Interface\Icons\INV_Stone_13"),
+(1601,"Interface\Icons\INV_Sword_02"),
+(1602,"Interface\Icons\INV_Potion_29"),
+(1603,"Interface\Icons\INV_Potion_16"),
+(1604,"Interface\Icons\INV_Potion_40"),
+(1605,"Interface\Icons\INV_Potion_46"),
+(1606,"Interface\Icons\INV_Potion_67"),
+(1607,"Interface\Icons\INV_Potion_47"),
+(1608,"Interface\Icons\INV_Jewelry_Talisman_07"),
+(1609,"Interface\Icons\INV_Potion_32"),
+(1610,"Interface\Icons\INV_Misc_Flute_01"),
+(1611,"Interface\Icons\INV_Misc_Bone_HumanSkull_01"),
+(1612,"Interface\Icons\INV_Boots_Plate_03"),
+(1613,"Interface\Icons\INV_Gauntlets_19"),
+(1614,"Interface\Icons\Spell_Shadow_CallofBone"),
+(1615,"Interface\Icons\INV_Misc_Head_Tauren_02"),
+(1616,"Interface\Icons\INV_Ammo_Bullet_01"),
+(1617,"Interface\Icons\INV_Ammo_Bullet_03"),
+(1618,"Interface\Icons\INV_Misc_MonsterScales_14"),
+(1619,"Interface\Icons\INV_Gizmo_08"),
+(1620,"Interface\Icons\INV_Misc_Bandage_11"),
+(1621,"Interface\Icons\INV_Misc_Bandage_12"),
+(1622,"Interface\Icons\INV_Staff_02"),
+(1623,"Interface\Icons\INV_Staff_07"),
+(1624,"Interface\Icons\INV_Wand_07"),
+(1625,"Interface\Icons\INV_Battery_01"),
+(1626,"Interface\Icons\INV_Misc_Flower_01"),
+(1627,"Interface\Icons\INV_Misc_Food_Wheat_02"),
+(1628,"Interface\Icons\INV_Axe_02"),
+(1629,"Interface\Icons\INV_Spear_07"),
+(1630,"Interface\Icons\Ability_PoisonArrow"),
+(1631,"Interface\Icons\INV_Weapon_Rifle_02"),
+(1632,"Interface\Icons\INV_Weapon_Rifle_06"),
+(1633,"Interface\Icons\INV_Gauntlets_10"),
+(1634,"Interface\Icons\INV_Misc_Food_02"),
+(1635,"Interface\Icons\INV_Hammer_04"),
+(1636,"Interface\Icons\INV_Wand_09"),
+(1637,"Interface\Icons\INV_Crown_01"),
+(1638,"Interface\Icons\INV_Potion_55"),
+(1639,"Interface\Icons\INV_Potion_62"),
+(1640,"Interface\Icons\INV_Potion_97"),
+(1641,"Interface\Icons\INV_Potion_48"),
+(1642,"Interface\Icons\INV_Potion_26"),
+(1643,"Interface\Icons\INV_Potion_41"),
+(1644,"Interface\Icons\INV_Misc_Book_07"),
+(1645,"Interface\Icons\INV_Enchant_EssenceAstralLarge"),
+(1646,"Interface\Icons\INV_Enchant_EssenceAstralSmall"),
+(1647,"Interface\Icons\INV_Spear_04"),
+(1648,"Interface\Icons\INV_Sword_48"),
+(1649,"Interface\Icons\Spell_Nature_Preservation"),
+(1650,"Interface\Icons\INV_ThrowingAxe_03"),
+(1651,"Interface\Icons\INV_Misc_Bone_OrcSkull_01"),
+(1652,"Interface\Icons\INV_Helmet_23"),
+(1653,"Interface\Icons\INV_Misc_Pelt_Bear_Ruin_02"),
+(1654,"Interface\Icons\INV_Enchant_EssenceEternalLarge"),
+(1655,"Interface\Icons\INV_Musket_02"),
+(1656,"Interface\Icons\INV_Enchant_ShardBrilliantSmall"),
+(1657,"Interface\Icons\INV_Misc_Note_02"),
+(1658,"Interface\Icons\INV_Feather_01"),
+(1659,"Interface\Icons\INV_Misc_MonsterScales_08"),
+(1660,"Interface\Icons\Spell_Arcane_TeleportMoonglade"),
+(1661,"Interface\Icons\Racial_Troll_Berserk"),
+(1662,"Interface\Icons\Racial_Orc_BerserkerStrength"),
+(1663,"Interface\Icons\INV_Hammer_05"),
+(1664,"Interface\Icons\INV_Hammer_01"),
+(1665,"Interface\Icons\INV_Ammo_Snowball"),
+(1666,"Interface\Icons\INV_Boots_05"),
+(1667,"Interface\Icons\INV_Gizmo_07"),
+(1668,"Interface\Icons\INV_Shield_10"),
+(1669,"Interface\Icons\Spell_Holy_PrayerOfFortitude"),
+(1670,"Interface\Icons\INV_Potion_03"),
+(1671,"Interface\Icons\INV_Misc_Herb_07"),
+(1672,"Interface\Icons\INV_Jewelry_Talisman_08"),
+(1673,"Interface\Icons\Spell_Nature_DiseaseCleansingTotem"),
+(1674,"Interface\Icons\Spell_Frost_FireResistanceTotem"),
+(1675,"Interface\Icons\Spell_Nature_NatureResistanceTotem"),
+(1676,"Interface\Icons\Spell_Nature_TremorTotem"),
+(1677,"Interface\Icons\Spell_Nature_GroundingTotem"),
+(1678,"Interface\Icons\Spell_Fire_FrostResistanceTotem"),
+(1679,"Interface\Icons\Spell_Nature_PoisonCleansingTotem"),
+(1680,"Interface\Icons\Ability_Druid_FerociousBite"),
+(1681,"Interface\Icons\Ability_Druid_Mangle.tga"),
+(1682,"Interface\Icons\Ability_Mount_Kodo_01"),
+(1683,"Interface\Icons\Ability_Mount_Kodo_02"),
+(1684,"Interface\Icons\Ability_Mount_Kodo_03"),
+(1685,"Interface\Icons\INV_Misc_Organ_03"),
+(1686,"Interface\Icons\INV_Potion_25"),
+(1687,"Interface\Icons\INV_Drink_18"),
+(1688,"Interface\Icons\INV_Misc_Food_55"),
+(1689,"Interface\Icons\INV_Crown_02"),
+(1690,"Interface\Icons\Spell_Nature_MassTeleport"),
+(1691,"Interface\Icons\INV_Banner_02"),
+(1692,"Interface\Icons\INV_Gizmo_09"),
+(1693,"Interface\Icons\INV_Misc_Gem_Amethyst_02"),
+(1694,"Interface\Icons\Spell_Holy_ArcaneIntellect"),
+(1695,"Interface\Icons\INV_Misc_Birdbeck_01"),
+(1696,"Interface\Icons\INV_Misc_Bomb_04"),
+(1697,"Interface\Icons\Ability_Hunter_Harass"),
+(1698,"Interface\Icons\INV_Banner_01"),
+(1699,"Interface\Icons\INV_Misc_Head_Dragon_Black"),
+(1700,"Interface\Icons\INV_Misc_Head_Dragon_Blue"),
+(1701,"Interface\Icons\INV_Misc_Head_Dragon_Bronze"),
+(1702,"Interface\Icons\INV_Misc_Head_Dragon_Green"),
+(1703,"Interface\Icons\INV_BannerPVP_01"),
+(1704,"Interface\Icons\INV_BannerPVP_02"),
+(1705,"Interface\Icons\INV_Misc_ArmorKit_18"),
+(1706,"Interface\Icons\INV_Misc_Organ_06"),
+(1707,"Interface\Icons\INV_Enchant_ShardBrilliantLarge"),
+(1708,"Interface\Icons\INV_Enchant_EssenceMagicLarge"),
+(1709,"Interface\Icons\INV_Enchant_EssenceNetherLarge"),
+(1710,"Interface\Icons\INV_Gauntlets_03"),
+(1711,"Interface\Icons\Spell_MageArmor"),
+(1712,"Interface\Icons\Spell_FireResistanceTotem_01"),
+(1713,"Interface\Icons\Spell_FrostResistanceTotem_01"),
+(1714,"Interface\Icons\Spell_Holy_ElunesGrace"),
+(1715,"Interface\Icons\Ability_Mount_Dreadsteed"),
+(1716,"Interface\Icons\Ability_Mount_Charger"),
+(1717,"Interface\Icons\INV_Misc_Rune_06"),
+(1718,"Interface\Icons\INV_Misc_Gem_Pearl_05"),
+(1719,"Interface\Icons\Ability_Creature_Poison_03"),
+(1720,"Interface\Icons\INV_Misc_Eye_01"),
+(1721,"Interface\Icons\INV_Spear_02"),
+(1722,"Interface\Icons\Ability_Suffocate"),
+(1723,"Interface\Icons\INV_Gauntlets_31"),
+(1724,"Interface\Icons\INV_Fishingpole_02"),
+(1725,"Interface\Icons\INV_Misc_Fish_04"),
+(1726,"Interface\Icons\INV_Feather_03"),
+(1727,"Interface\Icons\INV_Jewelry_Necklace_11"),
+(1728,"Interface\Icons\INV_Potion_45"),
+(1729,"Interface\Icons\INV_Potion_17"),
+(1730,"Interface\Icons\INV_Misc_Key_08"),
+(1731,"Interface\Icons\INV_Chest_Plate16"),
+(1732,"Interface\Icons\INV_Potion_07"),
+(1733,"Interface\Icons\INV_Gizmo_GoblinBoomBox_01"),
+(1734,"Interface\Icons\Ability_Creature_Poison_05"),
+(1735,"Interface\Icons\INV_Misc_Gem_Bloodstone_02"),
+(1736,"Interface\Icons\Ability_Creature_Poison_01"),
+(1737,"Interface\Icons\Ability_Creature_Disease_02"),
+(1738,"Interface\Icons\INV_ZulGurubTrinket"),
+(1739,"Interface\Icons\Ability_Creature_Cursed_05"),
+(1740,"Interface\Icons\INV-Sword_53"),
+(1741,"Interface\Icons\Ability_Creature_Cursed_04"),
+(1742,"Interface\Icons\INV_Waepon_Bow_ZulGrub_D_02"),
+(1743,"Interface\Icons\INV_Misc_Food_28"),
+(1744,"Interface\Icons\INV_Misc_Head_Gnome_01"),
+(1745,"Interface\Icons\INV_Misc_Head_Gnome_02"),
+(1746,"Interface\Icons\Spell_Nature_CrystalBall"),
+(1747,"Interface\Icons\INV_Misc_Food_59"),
+(1748,"Interface\Icons\INV_Misc_Gem_Amethyst_03"),
+(1749,"Interface\Icons\Spell_Nature_LightningBolt"),
+(1750,"Interface\Icons\Ability_Creature_Cursed_03"),
+(1751,"Interface\Icons\INV_Misc_Head_Murloc_01"),
+(1752,"Interface\Icons\INV_Misc_MonsterHead_02"),
+(1753,"Interface\Icons\INV_Shield_08"),
+(1754,"Interface\Icons\Spell_Nature_CrystalBall"),
+(1755,"Interface\Icons\INV_Misc_Bomb_02"),
+(1756,"Interface\Icons\INV_Misc_Gem_02"),
+(1757,"Interface\Icons\INV_Misc_Gem_Pearl_04"),
+(1758,"Interface\Icons\INV_Stone_15"),
+(1759,"Interface\Icons\Ability_Creature_Poison_02"),
+(1760,"Interface\Icons\Ability_Creature_Poison_04"),
+(1761,"Interface\Icons\Ability_Creature_Cursed_01"),
+(1762,"Interface\Icons\Ability_Creature_Cursed_02"),
+(1763,"Interface\Icons\INV_Drink_01"),
+(1764,"Interface\Icons\Ability_Creature_Disease_01"),
+(1765,"Interface\Icons\INV_Misc_MonsterScales_18"),
+(1766,"Interface\Icons\Ability_Creature_Cursed_03"),
+(1767,"Interface\Icons\INV_Jewelry_Necklace_08"),
+(1768,"Interface\Icons\INV_Misc_Gem_01"),
+(1769,"Interface\Icons\INV_Misc_Gem_02"),
+(1770,"Interface\Icons\INV_Misc_Gem_03"),
+(1771,"Interface\Icons\Spell_Nature_InsectSwarm"),
+(1772,"Interface\Icons\INV_Jewelry_Necklace_01"),
+(1773,"Interface\Icons\INV_Shield_21"),
+(1774,"Interface\Icons\INV_Jewelry_Necklace_06"),
+(1775,"Interface\Icons\Mail_GMIcon"),
+(1776,"Interface\Icons\INV_Misc_QuestionMark"),
+(1777,"Interface\Icons\INV_Misc_Head_Gnome_01"),
+(1778,"Interface\Icons\INV_Misc_Fish_20"),
+(1779,"Interface\Icons\INV_Misc_Fish_21"),
+(1780,"Interface\Icons\INV_Drink_08"),
+(1781,"Interface\Icons\INV_Misc_MonsterTail_03"),
+(1782,"Interface\Icons\INV_Shield_23"),
+(1783,"Interface\Icons\INV_Drink_08"),
+(1784,"Interface\Icons\INV_Misc_PocketWatch_01"),
+(1785,"Interface\Icons\INV_Drink_02"),
+(1786,"Interface\Icons\INV_Misc_Gem_02"),
+(1787,"Interface\Icons\INV_Misc_Gem_Topaz_02"),
+(1788,"Interface\Icons\INV_Misc_Food_65"),
+(1789,"Interface\Icons\INV_Food_ChristmasFruitCake_01"),
+(1790,"Interface\Icons\INV_Misc_AhnQirajTrinket_04"),
+(1791,"Interface\Icons\INV_Misc_AhnQirajTrinket_02"),
+(1792,"Interface\Icons\INV_Misc_Herb_10"),
+(1793,"Interface\Icons\INV_Misc_Herb_09"),
+(1794,"Interface\Icons\INV_Misc_Branch_01"),
+(1795,"Interface\Icons\Spell_Holy_Power"),
+(1796,"Interface\Icons\Spell_Holy_UnyieldingFaith"),
+(1797,"Interface\Icons\Spell_Holy_PersuitofJustice"),
+(1798,"Interface\Icons\Spell_Holy_Vindication"),
+(1799,"Interface\Icons\Spell_Holy_EyeforanEye"),
+(1800,"Interface\Icons\Spell_Magic_GreaterBlessingofKings"),
+(1801,"Interface\Icons\Spell_Holy_GreaterBlessingofLight"),
+(1802,"Interface\Icons\Spell_Holy_GreaterBlessingofKings"),
+(1803,"Interface\Icons\Spell_Holy_GreaterBlessingofSalvation"),
+(1804,"Interface\Icons\Spell_Holy_GreaterBlessingofSanctuary"),
+(1805,"Interface\Icons\Spell_Holy_GreaterBlessingofWisdom"),
+(1806,"Interface\Icons\INV_Food_ChristmasFruitCake_01"),
+(1807,"Interface\Icons\INV_Misc_Food_DimSum"),
+(1808,"Interface\Icons\INV_Potion_60"),
+(1809,"Interface\Icons\INV_Misc_QirajiCrystal_05"),
+(1810,"Interface\Icons\INV_Misc_QirajiCrystal_04"),
+(1811,"Interface\Icons\INV_Misc_QirajiCrystal_03"),
+(1812,"Interface\Icons\INV_Misc_QirajiCrystal_02"),
+(1813,"Interface\Icons\INV_Misc_QirajiCrystal_01"),
+(1814,"Interface\Icons\INV_Weapon_Bow_12"),
+(1815,"Interface\Icons\INV_Misc_EngGizmos_03"),
+(1816,"Interface\Icons\INV_Waepon_Bow_ZulGrub_D_02"),
+(1817,"Interface\Icons\INV_Misc_Food_59"),
+(1818,"Interface\Icons\INV_Helmet_46"),
+(1819,"Interface\Icons\INV_Misc_AhnQirajTrinket_05"),
+(1820,"Interface\Icons\Spell_Holy_EyeforanEye"),
+(1821,"Interface\Icons\Spell_Holy_PersuitofJustice"),
+(1822,"Interface\Icons\Spell_Holy_Vindication"),
+(1823,"Interface\Icons\Spell_Holy_UnyieldingFaith"),
+(1824,"Interface\Icons\Spell_Holy_Power"),
+(1825,"Interface\Icons\INV_Misc_AhnQirajTrinket_01"),
+(1826,"Interface\Icons\INV_Misc_AhnQirajTrinket_06"),
+(1827,"Interface\Icons\INV_QirajIdol_Death"),
+(1828,"Interface\Icons\INV_Misc_MissileLargeCluster_White"),
+(1829,"Interface\Icons\INV_Misc_Gem_Pearl_02"),
+(1830,"Interface\Icons\Spell_Holy_Vindication"),
+(1831,"Interface\Icons\INV_Jewelry_Necklace_16"),
+(1832,"Interface\Icons\INV_Misc_TheGoldenCheep"),
+(1833,"Interface\Icons\Mail_GMIcon"),
+(1834,"Interface\Icons\INV_ThrowingKnife_04"),
+(1835,"Interface\Icons\INV_Sword_30"),
+(1836,"Interface\Icons\INV_Fabric_MoonRag_01"),
+(1837,"Interface\Icons\INV_Fabric_FelRag"),
+(1838,"Interface\Icons\INV_Potion_02"),
+(1839,"Interface\Icons\INV_Potion_72"),
+(1840,"Interface\Icons\INV_Misc_Organ_01"),
+(1841,"Interface\Icons\INV_Misc_Organ_02"),
+(1842,"Interface\Icons\INV_Misc_Food_32"),
+(1843,"Interface\Icons\INV_Drink_Waterskin_07"),
+(1844,"Interface\Icons\INV_Drink_16"),
+(1845,"Interface\Icons\INV_Staff_26"),
+(1846,"Interface\Icons\INV_ValentinePerfumeBottle"),
+(1847,"Interface\Icons\INV_ValentineCologneBottle"),
+(1848,"Interface\Icons\INV_Misc_Dust_04"),
+(1849,"Interface\Icons\INV_ValentinesBoxOfChocolates02"),
+(1850,"Interface\Icons\INV_ValentinesCard01"),
+(1851,"Interface\Icons\INV_Potion_21"),
+(1852,"Interface\Icons\INV_Potion_52"),
+(1853,"Interface\Icons\Spell_BrokenHeart"),
+(1854,"Interface\Icons\INV_ValentinesChocolate01"),
+(1855,"Interface\Icons\INV_ValentinesChocolate02"),
+(1856,"Interface\Icons\INV_ValentinesChocolate03"),
+(1857,"Interface\Icons\INV_ValentinesChocolate04"),
+(1858,"Interface\Icons\INV_Holiday_Christmas_Present_02"),
+(1859,"Interface\Icons\INV_Holiday_Christmas_Present_01"),
+(1860,"Interface\Icons\INV_Misc_Gift_04"),
+(1861,"Interface\Icons\INV_Misc_Gift_01"),
+(1862,"Interface\Icons\INV_Misc_Gift_05"),
+(1863,"Interface\Icons\INV_Misc_Gift_03"),
+(1864,"Interface\Icons\INV_Jewelry_Ring_03"),
+(1865,"Interface\Icons\INV_Misc_Book_11"),
+(1866,"Interface\Icons\INV_Weapon_Rifle_11"),
+(1867,"Interface\Icons\INV_Weapon_Rifle_10"),
+(1868,"Interface\Icons\Spell_Holy_SearingLightPriest"),
+(1869,"Interface\Icons\Spell_Holy_PrayerofShadowProtection"),
+(1870,"Interface\Icons\Spell_Holy_PrayerofSpirit"),
+(1871,"Interface\Icons\Spell_Holy_HealingFocus"),
+(1872,"Interface\Icons\Spell_Holy_PowerInfusion"),
+(1873,"Interface\Icons\Spell_Holy_SpiritualGuidence"),
+(1874,"Interface\Icons\Spell_Holy_HolyNova"),
+(1875,"Interface\Icons\Spell_Holy_BlessedRecovery"),
+(1876,"Interface\Icons\Spell_Shadow_ImprovedVampiricEmbrace"),
+(1877,"Interface\Icons\INV_QirajIdol_Life"),
+(1878,"Interface\Icons\Spell_Holy_SummonLightwell"),
+(1879,"Interface\Icons\Spell_Holy_DivineSpirit"),
+(1880,"Interface\Icons\Spell_Holy_SpellWarding"),
+(1881,"Interface\Icons\INV_Misc_Fish_31"),
+(1882,"Interface\Icons\INV_Misc_Herb_11"),
+(1883,"Interface\Icons\INV_Misc_Herb_11a"),
+(1884,"Interface\Icons\INV_Sword_2H_AshbringerCorrupt"),
+(1885,"Interface\Icons\Spell_ChargeNegative"),
+(1886,"Interface\Icons\Spell_ChargePositive"),
+(1887,"Interface\Icons\INV_Torch_Lit"),
+(1888,"Interface\Icons\INV_Misc_Food_35"),
+(1889,"Interface\Icons\INV_Misc_Food_32"),
+(1890,"Interface\Icons\INV_Relics_TotemofLife"),
+(1891,"Interface\Icons\INV_Boots_Cloth_15"),
+(1892,"Interface\Icons\INV_Misc_Token_ArgentDawn"),
+(1893,"Interface\Icons\INV_Trinket_Naxxramas05"),
+(1894,"Interface\Icons\INV_Misc_Token_ArgentDawn2"),
+(1895,"Interface\Icons\INV_Misc_Token_ArgentDawn3"),
+(1896,"Interface\Icons\INV_Trinket_Naxxramas01"),
+(1897,"Interface\Icons\INV_Trinket_Naxxramas03"),
+(1898,"Interface\Icons\INV_Trinket_Naxxramas06"),
+(1899,"Interface\Icons\INV_Trinket_Naxxramas04"),
+(1900,"Interface\Icons\INV_Enchant_ShardNexusLarge"),
+(1901,"Interface\Icons\INV_Enchant_ShardGlimmeringLarge"),
+(1902,"Interface\Icons\INV_Qiraj_JewelBlessed"),
+(1903,"Interface\Icons\INV_Misc_Food_14"),
+(1904,"Interface\Icons\INV_Relics_TotemofRage"),
+(1905,"Interface\Icons\INV_Wand_06"),
+(1906,"Interface\Icons\INV_Battery_02"),
+(1907,"Interface\Icons\INV_Misc_Food_07"),
+(1908,"Interface\Icons\INV_Drink_Waterskin_09"),
+(1909,"Interface\Icons\INV_Misc_Food_19"),
+(1910,"Interface\Icons\Ability_Creature_Disease_05"),
+(1911,"Interface\Icons\INV_Misc_Food_73CinnamonRoll"),
+(1912,"Interface\Icons\Spell_Nature_Polymorph_Cow"),
+(1913,"Interface\Icons\INV_Gauntlets_26"),
+(1914,"Interface\Icons\INV_Helmet_21"),
+(1915,"Interface\Icons\INV_Staff_23"),
+(1916,"Interface\Icons\INV_Helmet_21"),
+(1917,"Interface\Icons\INV_Relics_IdolofRejuvenation"),
+(1918,"Interface\Icons\Spell_Arcane_ArcaneResilience"),
+(1919,"Interface\Icons\INV_SummerFest_Symbol_Medium"),
+(1920,"Interface\Icons\Spell_Fire_MasterOfElements"),
+(1921,"Interface\Icons\Spell_Nature_StormReach"),
+(1922,"Interface\Icons\Ability_Druid_Mangle"),
+(1923,"Interface\Icons\INV_SummerFest_FireSpirit"),
+(1924,"Interface\Icons\INV_Bracer_09"),
+(1925,"Interface\Icons\INV_Misc_Food_53"),
+(1926,"Interface\Icons\INV_SummerFest_Smorc"),
+(1927,"Interface\Icons\Inv_Misc_SummerFest_BrazierOrange"),
+(1928,"Interface\Icons\Ability_Mount_NetherdrakePurple"),
+(1929,"Interface\Icons\Spell_Nature_HealingWay"),
+(1930,"Interface\Icons\Spell_Fire_ElementalDevastation"),
+(1931,"Interface\Icons\Spell_Nature_EyeOfTheStorm"),
+(1932,"Interface\Icons\Spell_Shadow_SeedOfDestruction"),
+(1933,"Interface\Icons\Spell_Shadow_NetherCloak"),
+(1934,"Interface\Icons\Ability_Warrior_RallyingCry"),
+(1935,"Interface\Icons\Ability_Warrior_ShieldReflection"),
+(1936,"Interface\Icons\INV_Misc_Rune_02"),
+(1937,"Interface\Icons\INV_RoseBouquet01"),
+(1938,"Interface\Icons\Ability_Warrior_CommandingShout"),
+(1939,"Interface\Icons\Spell_Shadow_PainSpike"),
+(1940,"Interface\Icons\Spell_Shadow_Brainwash"),
+(1941,"Interface\Icons\Ability_Warrior_ShieldGuard"),
+(1942,"Interface\Icons\Spell_Shadow_ShadowMend"),
+(1943,"Interface\Icons\INV_Misc_EngGizmos_19"),
+(1944,"Interface\Icons\INV_RosePotted01"),
+(1945,"Interface\Icons\Ability_Warrior_Intervene"),
+(1946,"Interface\Icons\Spell_Holy_ChampionsGrace"),
+(1947,"Interface\Icons\Spell_Holy_ChampionsBond"),
+(1948,"Interface\Icons\Spell_Holy_SummonChampion"),
+(1949,"Interface\Icons\Spell_Holy_ReviveChampion"),
+(1950,"Interface\Icons\Spell_Holy_EmpowerChampion"),
+(1951,"Interface\Icons\Spell_Holy_ProclaimChampion"),
+(1952,"Interface\Icons\Spell_Arcane_Arcane04"),
+(1953,"Interface\Icons\INV_Misc_Gem_AmethystRough_01"),
+(1954,"Interface\Icons\Spell_Arcane_Arcane01"),
+(1955,"Interface\Icons\INV_Trinket_Naxxramas02"),
+(1956,"Interface\Icons\INV_Mace23"),
+(1957,"Interface\Icons\Spell_Arcane_Arcane03"),
+(1958,"Interface\Icons\Spell_Shadow_ConeOfSilence"),
+(1959,"Interface\Icons\Ability_Creature_Disease_03"),
+(1960,"Interface\Icons\Ability_Creature_Poison_06"),
+(1961,"Interface\Icons\Spell_Arcane_Arcane02"),
+(1962,"Interface\Icons\Ability_Warrior_EndlessRage"),
+(1963,"Interface\Icons\INV_Gizmo_RocketBoot_01"),
+(1964,"Interface\Icons\INV_DataCrystal01"),
+(1965,"Interface\Icons\INV_Chest_Plate08"),
+(1966,"Interface\Icons\INV_Sword_2H_Blood_C_01"),
+(1967,"Interface\Icons\INV_Enchant_EssenceMysticalLarge"),
+(1968,"Interface\Icons\INV_Belt_27"),
+(1969,"Interface\Icons\INV_Helmet_28"),
+(1970,"Interface\Icons\INV_Misc_Food_69"),
+(1971,"Interface\Icons\INV_Chest_Cloth_18"),
+(1972,"Interface\Icons\INV_Weapon_Crossbow_11"),
+(1973,"Interface\Icons\INV_Misc_Orb_01"),
+(1974,"Interface\Icons\Spell_Holiday_ToW_SpiceCloud"),
+(1975,"Interface\Icons\INV_Sword_42"),
+(1976,"Interface\Icons\Ability_Warrior_WeaponMastery"),
+(1977,"Interface\Icons\Spell_Shadow_LastingAfflictions"),
+(1978,"Interface\Icons\Spell_Shadow_PainfulAfflictions"),
+(1979,"Interface\Icons\Spell_Shadow_UnstableAfllictions"),
+(1980,"Interface\Icons\Spell_Shadow_DemonicFortitude"),
+(1981,"Interface\Icons\Spell_Shadow_DemonicTactics"),
+(1982,"Interface\Icons\Spell_Shadow_ManaFeed"),
+(1983,"Interface\Icons\Spell_Shadow_SummonFelGuard"),
+(1984,"Interface\Icons\Spell_Shadow_DestructiveSoul"),
+(1985,"Interface\Icons\Spell_Shadow_NetherProtection"),
+(1986,"Interface\Icons\Spell_Shadow_ShadowandFlame"),
+(1987,"Interface\Icons\Spell_Shadow_SoulLeech"),
+(1988,"Interface\Icons\Spell_Shadow_Shadowfury"),
+(1989,"Interface\Icons\Ability_Warrior_ImprovedDisciplines"),
+(1990,"Interface\Icons\INV_Jewelry_Necklace_30"),
+(1991,"Interface\Icons\INV_Jewelry_Necklace_15"),
+(1992,"Interface\Icons\INV_Jewelry_Necklace_27Naxxramas"),
+(1993,"Interface\Icons\INV_Jewelry_Necklace_28"),
+(1994,"Interface\Icons\INV_Jewelry_Necklace_29Naxxramas"),
+(1995,"Interface\Icons\INV_Jewelry_Necklace_AhnQiraj_02"),
+(1996,"Interface\Icons\INV_Chest_Plate06"),
+(1997,"Interface\Icons\Ability_Warrior_SecondWind"),
+(1998,"Interface\Icons\INV_Shoulder_07"),
+(1999,"Interface\Icons\INV_Boots_Cloth_16"),
+(2000,"Interface\Icons\INV_Boots_Cloth_02"),
+(2001,"Interface\Icons\INV_Misc_Gem_BloodGem_01"),
+(2002,"Interface\Icons\INV_Musket_01"),
+(2003,"Interface\Icons\INV_Sword_51"),
+(2004,"Interface\Icons\INV_Sword_17"),
+(2005,"Interface\Icons\Ability_Warrior_BloodFrenzy"),
+(2006,"Interface\Icons\Ability_Warrior_Rampage"),
+(2007,"Interface\Icons\Ability_Warrior_ShieldMastery"),
+(2008,"Interface\Icons\Ability_Warrior_FocusedRage"),
+(2009,"Interface\Icons\INV_DataCrystal09"),
+(2010,"Interface\Icons\Spell_Nature_UnrelentingStorm"),
+(2011,"Interface\Icons\Spell_Nature_GiftoftheWaterSpirit"),
+(2012,"Interface\Icons\Spell_Nature_NatureBlessing"),
+(2013,"Interface\Icons\Spell_Nature_NatureGuardian"),
+(2014,"Interface\Icons\Spell_Nature_FocusedMind"),
+(2015,"Interface\Icons\Spell_Nature_SkinofEarth"),
+(2016,"Interface\Icons\Spell_Nature_ElementalAbsorption"),
+(2017,"Interface\Icons\Spell_Nature_ElementalPrecision_1"),
+(2018,"Interface\Icons\Spell_Nature_LightningOverload"),
+(2019,"Interface\Icons\Spell_Fire_TotemOfWrath"),
+(2020,"Interface\Icons\Spell_Nature_Regeneration_02"),
+(2021,"Interface\Icons\Spell_Nature_UnleashedRage"),
+(2022,"Interface\Icons\Spell_Nature_MentalQuickness"),
+(2023,"Interface\Icons\Ability_DualWieldSpecialization"),
+(2024,"Interface\Icons\Spell_Nature_ShamanRage"),
+(2025,"Interface\Icons\Spell_Nature_ElementalShields"),
+(2026,"Interface\Icons\Ability_Creature_Disease_04"),
+(2027,"Interface\Icons\Spell_Shadow_SoulLeech_3"),
+(2028,"Interface\Icons\Spell_Shadow_SoulLeech_2"),
+(2029,"Interface\Icons\INV_DataCrystal12"),
+(2030,"Interface\Icons\INV_Letter_04"),
+(2031,"Interface\Icons\INV_Letter_05"),
+(2032,"Interface\Icons\INV_Misc_Gem_DeepPeridot_02"),
+(2033,"Interface\Icons\INV_Mushroom_02"),
+(2034,"Interface\Icons\INV_Stone_05"),
+(2035,"Interface\Icons\INV_Misc_Food_54"),
+(2036,"Interface\Icons\INV_Spear_03"),
+(2037,"Interface\Icons\INV_Shoulder_37"),
+(2038,"Interface\Icons\Spell_Shadow_SoulLeech_1"),
+(2039,"Interface\Icons\Spell_Shadow_UnstableAffliction_3"),
+(2040,"Interface\Icons\INV_Relics_LibramofTruth"),
+(2041,"Interface\Icons\INV_Misc_Food_43"),
+(2042,"Interface\Icons\Spell_Shadow_UnstableAffliction_2"),
+(2043,"Interface\Icons\Inv_Helm_Mask_ZulGurub_D_01"),
+(2044,"Interface\Icons\INV_Helmet_06"),
+(2045,"Interface\Icons\INV_Helmet_01"),
+(2046,"Interface\Icons\INV_Misc_Organ_05"),
+(2047,"Interface\Icons\INV_Enchant_EssenceMysticalSmall"),
+(2048,"Interface\Icons\INV_Enchant_EssenceNetherSmall"),
+(2049,"Interface\Icons\INV_Feather_07"),
+(2050,"Interface\Icons\INV_Feather_04"),
+(2051,"Interface\Icons\INV_MISC_HERB_06"),
+(2052,"Interface\Icons\INV_Staff_12"),
+(2053,"Interface\Icons\Ability_Warrior_Devastate"),
+(2054,"Interface\Icons\Ability_Mount_Gryphon_01"),
+(2055,"Interface\Icons\Ability_Mount_Wyvern_01"),
+(2056,"Interface\Icons\INV_Misc_Idol_01"),
+(2057,"Interface\Icons\INV_Mushroom_07"),
+(2058,"Interface\Icons\INV_Jewelry_Talisman_04"),
+(2059,"Interface\Icons\INV_Mace_10"),
+(2060,"Interface\Icons\INV_Misc_Food_71"),
+(2061,"Interface\Icons\INV_Axe_23"),
+(2062,"Interface\Icons\INV_Gauntlets_23"),
+(2063,"Interface\Icons\INV_QirajIdol_Sun"),
+(2064,"Interface\Icons\INV_Potion_103"),
+(2065,"Interface\Icons\INV_Potion_104"),
+(2066,"Interface\Icons\INV_Potion_105"),
+(2067,"Interface\Icons\INV_Misc_Herb_Dreamingglory"),
+(2068,"Interface\Icons\INV_Potion_124"),
+(2069,"Interface\Icons\INV_Potion_123"),
+(2070,"Interface\Icons\INV_Potion_126"),
+(2071,"Interface\Icons\INV_Potion_125"),
+(2072,"Interface\Icons\INV_Potion_127"),
+(2073,"Interface\Icons\INV_Potion_147"),
+(2074,"Interface\Icons\INV_Potion_149"),
+(2075,"Interface\Icons\INV_Potion_146"),
+(2076,"Interface\Icons\INV_Potion_139"),
+(2077,"Interface\Icons\INV_Potion_145"),
+(2078,"Interface\Icons\INV_Potion_133"),
+(2079,"Interface\Icons\INV_Potion_148"),
+(2080,"Interface\Icons\INV_Potion_122"),
+(2081,"Interface\Icons\INV_Potion_119"),
+(2082,"Interface\Icons\INV_Potion_118"),
+(2083,"Interface\Icons\INV_Potion_117"),
+(2084,"Interface\Icons\INV_Potion_116"),
+(2085,"Interface\Icons\INV_Potion_115"),
+(2086,"Interface\Icons\INV_Potion_110"),
+(2087,"Interface\Icons\INV_Potion_107"),
+(2088,"Interface\Icons\INV_Potion_108"),
+(2089,"Interface\Icons\INV_Potion_106"),
+(2090,"Interface\Icons\INV_Potion_109"),
+(2091,"Interface\Icons\INV_Potion_135"),
+(2092,"Interface\Icons\INV_Potion_136"),
+(2093,"Interface\Icons\INV_Potion_151"),
+(2094,"Interface\Icons\INV_Potion_142"),
+(2095,"Interface\Icons\INV_Potion_150"),
+(2096,"Interface\Icons\INV_Sword_31"),
+(2097,"Interface\Icons\INV_ThrowingKnife_06"),
+(2098,"Interface\Icons\INV_Misc_Gem_Diamond_01"),
+(2099,"Interface\Icons\INV_Mask_01"),
+(2100,"Interface\Icons\INV_Helmet_03"),
+(2101,"Interface\Icons\INV_Misc_Herb_Felblossom"),
+(2102,"Interface\Icons\INV_Misc_EngGizmos_12"),
+(2103,"Interface\Icons\INV_Misc_Cape_16"),
+(2104,"Interface\Icons\INV_Jewelry_Amulet_04"),
+(2105,"Interface\Icons\INV_Misc_Fish_14"),
+(2106,"Interface\Icons\INV_Relics_LibramofHope"),
+(2107,"Interface\Icons\INV_Misc_Herb_Flamecap"),
+(2108,"Interface\Icons\Ability_Rogue_BladeTwisting"),
+(2109,"Interface\Icons\Ability_Rogue_CheatDeath"),
+(2110,"Interface\Icons\Ability_Rogue_DeadenedNerves"),
+(2111,"Interface\Icons\Ability_Rogue_EnvelopingShadows"),
+(2112,"Interface\Icons\Ability_Rogue_FindWeakness"),
+(2113,"Interface\Icons\Ability_Rogue_FleetFooted"),
+(2114,"Interface\Icons\Ability_Rogue_MasterOfSubtlety"),
+(2115,"Interface\Icons\Ability_Rogue_NervesOfSteel"),
+(2116,"Interface\Icons\Ability_Rogue_QuickRecovery"),
+(2117,"Interface\Icons\Ability_Rogue_ShadowStrikes"),
+(2118,"Interface\Icons\Ability_Rogue_SinisterCalling"),
+(2119,"Interface\Icons\Ability_Rogue_SurpriseAttack"),
+(2120,"Interface\Icons\Spell_Arcane_ArcanePotency"),
+(2121,"Interface\Icons\Spell_Arcane_MindMastery"),
+(2122,"Interface\Icons\Spell_Arcane_PortalExodar"),
+(2123,"Interface\Icons\Spell_Arcane_PortalSilvermoon"),
+(2124,"Interface\Icons\Spell_Arcane_TeleportExodar"),
+(2125,"Interface\Icons\Spell_Arcane_TeleportSilvermoon"),
+(2126,"Interface\Icons\Spell_Arcane_PrismaticCloak"),
+(2127,"Interface\Icons\Spell_Fire_BurningSpeed"),
+(2128,"Interface\Icons\Spell_Fire_Burnout"),
+(2129,"Interface\Icons\Spell_Fire_MoltenBlood"),
+(2130,"Interface\Icons\Spell_Fire_PlayingWithFire"),
+(2131,"Interface\Icons\Spell_Frost_ArcticWinds"),
+(2132,"Interface\Icons\Spell_Frost_FrozenCore"),
+(2133,"Interface\Icons\Spell_Frost_IceFloes"),
+(2134,"Interface\Icons\Spell_Frost_SummonWaterElemental_2"),
+(2135,"Interface\Icons\Spell_Holy_ArdentDefender"),
+(2136,"Interface\Icons\Spell_Holy_AuraMastery"),
+(2137,"Interface\Icons\Spell_Holy_BlessedLife"),
+(2138,"Interface\Icons\Spell_Holy_DivineIllumination"),
+(2139,"Interface\Icons\Spell_Holy_HolyGuidance"),
+(2140,"Interface\Icons\Spell_Holy_ImprovedResistanceAuras"),
+(2141,"Interface\Icons\Spell_Holy_LightsGrace"),
+(2142,"Interface\Icons\Spell_Holy_PureOfHeart"),
+(2143,"Interface\Icons\Spell_Holy_WeaponMastery"),
+(2144,"Interface\Icons\INV_Stone_11"),
+(2145,"Interface\Icons\Ability_Mount_CockatriceMountElite"),
+(2146,"Interface\Icons\INV_Potion_128"),
+(2147,"Interface\Icons\INV_Misc_Bomb_09"),
+(2148,"Interface\Icons\INV_Potion_111"),
+(2149,"Interface\Icons\INV_Potion_152"),
+(2150,"Interface\Icons\INV_Potion_96"),
+(2151,"Interface\Icons\INV_Potion_59"),
+(2152,"Interface\Icons\Spell_Arcane_ManaTap"),
+(2153,"Interface\Icons\INV_Stone_08"),
+(2154,"Interface\Icons\INV_DataCrystal04"),
+(2155,"Interface\Icons\INV_Misc_StoneTablet_01"),
+(2156,"Interface\Icons\INV_Boots_Cloth_13"),
+(2157,"Interface\Icons\INV_Misc_Head_Orc_02"),
+(2158,"Interface\Icons\Spell_Arcane_StudentOfMagic"),
+(2159,"Interface\Icons\INV_Misc_Food_17"),
+(2160,"Interface\Icons\INV_Misc_Organ_04"),
+(2161,"Interface\Icons\INV_Misc_Powder_Iron"),
+(2162,"Interface\Icons\Spell_Frost_ColdHearted"),
+(2163,"Interface\Icons\INV_Misc_Bone_03"),
+(2164,"Interface\Icons\INV_Misc_Herb_Nightmareseed"),
+(2165,"Interface\Icons\Ability_Mount_RidingElekk"),
+(2166,"Interface\Icons\Ability_Mount_RidingElekkElite"),
+(2167,"Interface\Icons\INV_Waepon_Bow_ZulGrub_D_01"),
+(2168,"Interface\Icons\Spell_Holy_AvengineWrath"),
+(2169,"Interface\Icons\Spell_Holy_Fanaticism"),
+(2170,"Interface\Icons\Spell_Holy_DivinePurpose"),
+(2171,"Interface\Icons\Spell_Holy_Crusade"),
+(2172,"Interface\Icons\Spell_Holy_AvengersShield"),
+(2173,"Interface\Icons\Spell_Holy_PurifyingPower"),
+(2174,"Interface\Icons\Spell_Arcane_PortalShattrath"),
+(2175,"Interface\Icons\Spell_Arcane_TeleportShattrath"),
+(2176,"Interface\Icons\Spell_Holy_SurgeOfLight"),
+(2177,"Interface\Icons\Spell_Holy_BlessedResillience"),
+(2178,"Interface\Icons\Spell_Holy_PainSupression"),
+(2179,"Interface\Icons\Spell_Shadow_ShadowPower"),
+(2180,"Interface\Icons\INV_Potion_98"),
+(2181,"Interface\Icons\INV_Potion_99"),
+(2182,"Interface\Icons\INV_Potion_100"),
+(2183,"Interface\Icons\INV_Potion_101"),
+(2184,"Interface\Icons\INV_Potion_141"),
+(2185,"Interface\Icons\INV_Stone_SharpeningStone_01"),
+(2186,"Interface\Icons\INV_Stone_SharpeningStone_02"),
+(2187,"Interface\Icons\INV_Stone_SharpeningStone_03"),
+(2188,"Interface\Icons\INV_Stone_SharpeningStone_04"),
+(2189,"Interface\Icons\INV_Stone_SharpeningStone_05"),
+(2190,"Interface\Icons\INV_Stone_02"),
+(2191,"Interface\Icons\INV_Stone_SharpeningStone_06"),
+(2192,"Interface\Icons\INV_Stone_SharpeningStone_07"),
+(2193,"Interface\Icons\INV_Stone_WeightStone_02"),
+(2194,"Interface\Icons\INV_Stone_WeightStone_03"),
+(2195,"Interface\Icons\INV_Stone_WeightStone_01"),
+(2196,"Interface\Icons\INV_Stone_WeightStone_04"),
+(2197,"Interface\Icons\INV_Stone_WeightStone_05"),
+(2198,"Interface\Icons\INV_Stone_WeightStone_06"),
+(2199,"Interface\Icons\INV_Stone_WeightStone_07"),
+(2200,"Interface\Icons\INV_Potion_20"),
+(2201,"Interface\Icons\INV_Misc_Rune_12"),
+(2202,"Interface\Icons\INV_Misc_Rune_13"),
+(2203,"Interface\Icons\INV_Misc_Rune_10"),
+(2204,"Interface\Icons\INV_Misc_Rune_11"),
+(2205,"Interface\Icons\Ability_Warrior_VictoryRush"),
+(2206,"Interface\Icons\Spell_Shadow_Shadesofdarkness"),
+(2207,"Interface\Icons\Spell_Misc_HellifrePVPCombatMorale"),
+(2208,"Interface\Icons\INV_Misc_Foot_Centaur"),
+(2209,"Interface\Icons\Spell_Shadow_ShadowEmbrace"),
+(2210,"Interface\Icons\Spell_Shadow_FocusedPower"),
+(2211,"Interface\Icons\Spell_Shadow_Misery"),
+(2212,"Interface\Icons\Spell_Holy_Absolution"),
+(2213,"Interface\Icons\Spell_Holy_Stoicism"),
+(2214,"Interface\Icons\Spell_Holy_CircleOfRenewal"),
+(2215,"Interface\Icons\Spell_Arcane_FocusedPower"),
+(2216,"Interface\Icons\Spell_unused"),
+(2217,"Interface\Icons\INV_Misc_EngGizmos_15"),
+(2218,"Interface\Icons\Spell_Holy_SymbolOfHope"),
+(2219,"Interface\Icons\Spell_Holy_PrayerOfMendingtga"),
+(2220,"Interface\Icons\Inv_Misc_SummerFest_BrazierGreen"),
+(2221,"Interface\Icons\Ability_Hunter_SilentHunter"),
+(2222,"Interface\Icons\Ability_Hunter_ZenArchery"),
+(2223,"Interface\Icons\Ability_Hunter_CombatExperience"),
+(2224,"Interface\Icons\Ability_Hunter_CatlikeReflexes"),
+(2225,"Interface\Icons\Ability_Hunter_SerpentSwiftness"),
+(2226,"Interface\Icons\Ability_Hunter_KillCommand"),
+(2227,"Interface\Icons\Ability_Hunter_AspectoftheViper"),
+(2228,"Interface\Icons\Ability_Hunter_SteadyShot"),
+(2229,"Interface\Icons\Ability_Hunter_BeastWithin"),
+(2230,"Interface\Icons\Ability_Hunter_MasterMarksman"),
+(2231,"Interface\Icons\Ability_Hunter_Misdirection"),
+(2232,"Interface\Icons\Ability_Hunter_FerociousInspiration"),
+(2233,"Interface\Icons\Ability_Hunter_MasterTactitian"),
+(2234,"Interface\Icons\Ability_Hunter_AnimalHandler"),
+(2235,"Interface\Icons\Ability_Hunter_Displacement"),
+(2236,"Interface\Icons\Ability_Hunter_ThrilloftheHunt"),
+(2237,"Interface\Icons\Ability_Rogue_Disembowel"),
+(2238,"Interface\Icons\Ability_Hunter_Readiness"),
+(2239,"Interface\Icons\Ability_Hunter_SurvivalInstincts"),
+(2240,"Interface\Icons\Ability_Hunter_Resourcefulness"),
+(2241,"Interface\Icons\INV_Misc_Crop_02"),
+(2242,"Interface\Icons\INV_Enchant_VoidSphere"),
+(2243,"Interface\Icons\INV_Enchant_PrismaticSphere"),
+(2244,"Interface\Icons\INV_Weapon_Rifle_19"),
+(2245,"Interface\Icons\INV_Jewelry_Ring_62"),
+(2246,"Interface\Icons\Ability_Druid_Lacerate"),
+(2247,"Interface\Icons\Ability_Druid_BalanceofPower"),
+(2248,"Interface\Icons\Ability_Druid_TwilightsWrath"),
+(2249,"Interface\Icons\Ability_Druid_EmpoweredRejuvination"),
+(2250,"Interface\Icons\Ability_Druid_NaturalPerfection"),
+(2251,"Interface\Icons\Ability_Druid_EmpoweredTouch"),
+(2252,"Interface\Icons\Ability_Druid_PredatoryInstincts"),
+(2253,"Interface\Icons\Ability_Druid_PrimalTenacity"),
+(2254,"Interface\Icons\Ability_Druid_HealingInstincts"),
+(2255,"Interface\Icons\Ability_Druid_Dreamstate"),
+(2256,"Interface\Icons\Ability_Druid_LunarGuidance"),
+(2257,"Interface\Icons\Ability_Druid_TreeofLife"),
+(2258,"Interface\Icons\Ability_Druid_ForceofNature"),
+(2259,"Interface\Icons\INV_Misc_Gem_Pearl_06"),
+(2260,"Interface\Icons\INV_Weapon_Shortblade_38"),
+(2261,"Interface\Icons\INV_Enchant_DustArcane"),
+(2262,"Interface\Icons\INV_Misc_EngGizmos_20"),
+(2263,"Interface\Icons\INV_Gizmo_TheBiggerOne"),
+(2264,"Interface\Icons\INV_Misc_Bell_01"),
+(2265,"Interface\Icons\INV_Jewelcrafting_GoldenHare"),
+(2266,"Interface\Icons\Spell_Holy_BlindingHeal"),
+(2267,"Interface\Icons\Spell_Arcane_MassDispel"),
+(2268,"Interface\Icons\Spell_Holy_Heroism"),
+(2269,"Interface\Icons\INV_Weapon_Shortblade_28"),
+(2270,"Interface\Icons\INV_Jewelcrafting_BlackPearlPanther"),
+(2271,"Interface\Icons\INV_Weapon_Rifle_18"),
+(2272,"Interface\Icons\INV_Sword_49"),
+(2273,"Interface\Icons\INV_Misc_Head_Human_01"),
+(2274,"Interface\Icons\Ability_Druid_FlightForm"),
+(2275,"Interface\Icons\INV_Misc_Drum_03"),
+(2276,"Interface\Icons\INV_Misc_Drum_05"),
+(2277,"Interface\Icons\INV_Misc_Drum_06"),
+(2278,"Interface\Icons\INV_Misc_Drum_04"),
+(2279,"Interface\Icons\INV_Misc_Drum_07"),
+(2280,"Interface\Icons\INV_Misc_Drum_02"),
+(2281,"Interface\Icons\Spell_Arcane_ArcaneTorrent"),
+(2282,"Interface\Icons\INV_Misc_Herb_Netherbloom"),
+(2283,"Interface\Icons\Ability_Rogue_BloodyEye"),
+(2284,"Interface\Icons\INV_Weapon_Shortblade_39"),
+(2285,"Interface\Icons\Ability_Hunter_RapidKilling"),
+(2286,"Interface\Icons\INV_Feather_16"),
+(2287,"Interface\Icons\Ability_Shaman_WaterShield"),
+(2288,"Interface\Icons\Ability_Shaman_Heroism"),
+(2289,"Interface\Icons\Spell_Nature_EarthElemental_Totem"),
+(2290,"Interface\Icons\Spell_Fire_Elemental_Totem"),
+(2291,"Interface\Icons\Spell_Holy_CrusaderAura"),
+(2292,"Interface\Icons\Spell_Holy_SealOfVengeance"),
+(2293,"Interface\Icons\Spell_Holy_SealOfBlood"),
+(2294,"Interface\Icons\Spell_Arcane_Blast"),
+(2295,"Interface\Icons\Ability_Hunter_SnakeTrap"),
+(2296,"Interface\Icons\Spell_Shadow_Shadowfiend"),
+(2297,"Interface\Icons\Spell_Shadow_FelArmour"),
+(2298,"Interface\Icons\Spell_Fire_FelFlameBolt"),
+(2299,"Interface\Icons\Spell_Fire_FelFire"),
+(2300,"Interface\Icons\INV_BannerPVP_03"),
+(2301,"Interface\Icons\INV_Elemental_Mote_Earth01"),
+(2302,"Interface\Icons\INV_Elemental_Mote_Fire01"),
+(2303,"Interface\Icons\INV_Gizmo_KhoriumPowerCore"),
+(2304,"Interface\Icons\INV_Feather_12"),
+(2305,"Interface\Icons\INV_Stone_10"),
+(2306,"Interface\Icons\INV_Gizmo_SuperSapperCharge"),
+(2307,"Interface\Icons\Ability_Mage_MoltenArmor"),
+(2308,"Interface\Icons\Ability_Mage_Invisibility"),
+(2309,"Interface\Icons\Spell_Holy_CrusaderStrike"),
+(2310,"Interface\Icons\Ability_Warlock_Avoidance"),
+(2311,"Interface\Icons\Spell_Shadow_UnstableAffliction_1"),
+(2312,"Interface\Icons\Ability_Druid_Mangle2"),
+(2313,"Interface\Icons\INV_DataCrystal02"),
+(2314,"Interface\Icons\INV_Weapon_Rifle_15"),
+(2315,"Interface\Icons\INV_Misc_Dust_03"),
+(2316,"Interface\Icons\INV_Egg_03"),
+(2317,"Interface\Icons\INV_Misc_Herb_Nightmarevine"),
+(2318,"Interface\Icons\Ability_Hunter_GoForTheThroat"),
+(2319,"Interface\Icons\INV_Rod_EnchantedFelsteel"),
+(2320,"Interface\Icons\INV_Weapon_ShortBlade_07"),
+(2321,"Interface\Icons\INV_Misc_Gem_EbonDraenite_02"),
+(2322,"Interface\Icons\INV_Misc_LeatherScrap_13"),
+(2323,"Interface\Icons\INV_Qiraj_OuroHide"),
+(2324,"Interface\Icons\INV_Misc_Idol_03"),
+(2325,"Interface\Icons\INV_Misc_Statue_06"),
+(2326,"Interface\Icons\Spell_Holy_ConsumeMagic"),
+(2327,"Interface\Icons\INV_Elemental_Primal_Fire"),
+(2328,"Interface\Icons\Ability_Hunter_Pet_DragonHawk"),
+(2329,"Interface\Icons\INV_Misc_ArmorKit_24"),
+(2330,"Interface\Icons\INV_Misc_ArmorKit_21"),
+(2331,"Interface\Icons\INV_Misc_ArmorKit_25"),
+(2332,"Interface\Icons\INV_Misc_ArmorKit_23"),
+(2333,"Interface\Icons\Ability_Mount_NetherDrakeElite"),
+(2334,"Interface\Icons\INV_Misc_Ammo_Bullet_02"),
+(2335,"Interface\Icons\INV_Misc_Ammo_Bullet_03"),
+(2336,"Interface\Icons\INV_Misc_Ammo_Bullet_04"),
+(2337,"Interface\Icons\INV_Stone_16"),
+(2338,"Interface\Icons\INV_2H_Auchindoun_01"),
+(2339,"Interface\Icons\INV_Crate_03"),
+(2340,"Interface\Icons\Spell_Fire_Felcano"),
+(2341,"Interface\Icons\INV_Boots_Cloth_01"),
+(2342,"Interface\Icons\INV_Boots_Cloth_03"),
+(2343,"Interface\Icons\INV_Staff_27"),
+(2344,"Interface\Icons\INV_Wand_04"),
+(2345,"Interface\Icons\INV_Wand_05"),
+(2346,"Interface\Icons\INV_Drink_Waterskin_11"),
+(2347,"Interface\Icons\INV_Misc_Statue_08"),
+(2348,"Interface\Icons\INV_Misc_Statue_05"),
+(2349,"Interface\Icons\INV_Misc_Statue_09"),
+(2350,"Interface\Icons\INV_Misc_Statue_10"),
+(2351,"Interface\Icons\INV_Misc_Statue_07"),
+(2352,"Interface\Icons\Spell_Fire_FelPyroblast"),
+(2353,"Interface\Icons\INV_Misc_Food_66"),
+(2354,"Interface\Icons\Spell_Fire_FelFlameStrike"),
+(2355,"Interface\Icons\Spell_Fire_FelImmolation"),
+(2356,"Interface\Icons\Spell_Fire_FelFireNova"),
+(2357,"Interface\Icons\INV_QirajIdol_War"),
+(2358,"Interface\Icons\INV_Misc_Dust_05"),
+(2359,"Interface\Icons\INV_Misc_Head_Elf_01"),
+(2360,"Interface\Icons\INV_Misc_Head_Elf_02"),
+(2361,"Interface\Icons\INV_Misc_Head_Tauren_01"),
+(2362,"Interface\Icons\INV_Potion_06"),
+(2363,"Interface\Icons\Ability_Rogue_Shadowstep"),
+(2364,"Interface\Icons\INV_Misc_Bag_07"),
+(2365,"Interface\Icons\Spell_Fire_FelFireward"),
+(2366,"Interface\Icons\Spell_Fire_FelFlameRing"),
+(2367,"Interface\Icons\INV_Gizmo_GoblingTonkController"),
+(2368,"Interface\Icons\INV_Misc_MissileLarge_Red"),
+(2369,"Interface\Icons\Spell_Fire_FelHellfire"),
+(2370,"Interface\Icons\INV_Ingot_09"),
+(2371,"Interface\Icons\INV_Elemental_Mote_Nether"),
+(2372,"Interface\Icons\INV_Chest_Wolf"),
+(2373,"Interface\Icons\INV_Weapon_Rifle_21"),
+(2374,"Interface\Icons\Ability_Hunter_Pet_Sporebat"),
+(2375,"Interface\Icons\Spell_Fire_FelFlameBreath"),
+(2376,"Interface\Icons\INV_Weapon_Halberd_03"),
+(2377,"Interface\Icons\INV_Helmet_31"),
+(2378,"Interface\Icons\INV_Feather_13"),
+(2379,"Interface\Icons\INV_Elemental_Primal_Water"),
+(2380,"Interface\Icons\INV_Elemental_Primal_Earth"),
+(2381,"Interface\Icons\INV_Elemental_Primal_Air"),
+(2382,"Interface\Icons\INV_Elemental_Primal_Life"),
+(2383,"Interface\Icons\INV_Elemental_Primal_Mana"),
+(2384,"Interface\Icons\INV_Elemental_Primal_Shadow"),
+(2385,"Interface\Icons\Spell_Fire_FelRainOfFire"),
+(2386,"Interface\Icons\INV_Sword_63"),
+(2387,"Interface\Icons\INV_Sword_54"),
+(2388,"Interface\Icons\INV_Misc_Key_10"),
+(2389,"Interface\Icons\INV_Misc_Key_02"),
+(2390,"Interface\Icons\INV_Potion_140"),
+(2391,"Interface\Icons\INV_Scroll_01"),
+(2392,"Interface\Icons\INV_Potion_138"),
+(2393,"Interface\Icons\INV_Potion_144"),
+(2394,"Interface\Icons\INV_Boots_Chain_01"),
+(2395,"Interface\Icons\Ability_Mount_CockatriceMount_Black"),
+(2396,"Interface\Icons\Ability_Mount_CockatriceMount_Blue"),
+(2397,"Interface\Icons\Ability_Mount_CockatriceMount_Purple"),
+(2398,"Interface\Icons\Ability_Mount_CockatriceMount"),
+(2399,"Interface\Icons\Ability_Mount_CockatriceMountElite_Green"),
+(2400,"Interface\Icons\Ability_Mount_CockatriceMountElite_Purple"),
+(2401,"Interface\Icons\Ability_Mount_CockatriceMountElite_Black"),
+(2402,"Interface\Icons\INV_Cask_02"),
+(2403,"Interface\Icons\Ability_Mount_RidingElekk_Purple"),
+(2404,"Interface\Icons\Ability_Mount_RidingElekk_Grey"),
+(2405,"Interface\Icons\Ability_Mount_RidingElekkElite_Blue"),
+(2406,"Interface\Icons\Ability_Mount_RidingElekkElite_Green"),
+(2407,"Interface\Icons\Ability_Mount_RidingElekkElite_Purple"),
+(2408,"Interface\Icons\INV_Potion_137"),
+(2409,"Interface\Icons\INV_Misc_Drum_01"),
+(2410,"Interface\Icons\INV_Misc_Bone_10"),
+(2411,"Interface\Icons\INV_Misc_Herb_Manathistle"),
+(2412,"Interface\Icons\INV_Mask_02"),
+(2413,"Interface\Icons\Spell_Misc_HellifrePVPHonorHoldFavor"),
+(2414,"Interface\Icons\INV_Armor_Shield_Naxxramas_D_02"),
+(2415,"Interface\Icons\INV_Potion_76"),
+(2416,"Interface\Icons\INV_Pick_01"),
+(2417,"Interface\Icons\INV_Pick_03"),
+(2418,"Interface\Icons\INV_Pick_02"),
+(2419,"Interface\Icons\INV_Wand_03"),
+(2420,"Interface\Icons\INV_Sword_10"),
+(2421,"Interface\Icons\INV_Helmet_66"),
+(2422,"Interface\Icons\Ability_Hunter_Pet_NetherRay"),
+(2423,"Interface\Icons\INV_Potion_154"),
+(2424,"Interface\Icons\INV_Potion_158"),
+(2425,"Interface\Icons\INV_Potion_155"),
+(2426,"Interface\Icons\INV_Potion_159"),
+(2427,"Interface\Icons\Spell_unused2"),
+(2428,"Interface\Icons\INV_Misc_Coin_10"),
+(2429,"Interface\Icons\INV_Rod_EnchantedAdamantite"),
+(2430,"Interface\Icons\Spell_Holy_LastingDefense"),
+(2431,"Interface\Icons\INV_WEAPON_HAND_08"),
+(2432,"Interface\Icons\INV_Weapon_Hand_09"),
+(2433,"Interface\Icons\INV_Weapon_Hand_06"),
+(2434,"Interface\Icons\INV_Weapon_Crossbow_18"),
+(2435,"Interface\Icons\Spell_Nature_GiftoftheWild"),
+(2436,"Interface\Icons\INV_Misc_Book_06"),
+(2437,"Interface\Icons\INV_Jewelry_Necklace_03"),
+(2438,"Interface\Icons\INV_Weapon_Shortblade_46"),
+(2439,"Interface\Icons\INV_Potion_35"),
+(2440,"Interface\Icons\INV_Potion_77"),
+(2441,"Interface\Icons\INV_Potion_70"),
+(2442,"Interface\Icons\INV_Potion_42"),
+(2443,"Interface\Icons\INV_Hammer_13"),
+(2444,"Interface\Icons\INV_Hammer_Unique_Sulfuras"),
+(2445,"Interface\Icons\Spell_Fire_BluePyroblast"),
+(2446,"Interface\Icons\Spell_Fire_BlueFlameBolt"),
+(2447,"Interface\Icons\INV_SWORD_52"),
+(2448,"Interface\Icons\INV_Misc_Apexis_Crystal"),
+(2449,"Interface\Icons\INV_Netherwhelp"),
+(2450,"Interface\Icons\INV_DataCrystal06"),
+(2451,"Interface\Icons\INV_Misc_Gem_Sapphire_02"),
+(2452,"Interface\Icons\INV_Misc_Noose_01"),
+(2453,"Interface\Icons\INV_Misc_Gem_LionsEye_01"),
+(2454,"Interface\Icons\INV_Misc_Gem_BloodGem_02"),
+(2455,"Interface\Icons\INV_Misc_Gem_AzureDraenite_02"),
+(2456,"Interface\Icons\Spell_Fire_BlueImmolation"),
+(2457,"Interface\Icons\INV_Chest_Cloth_66"),
+(2458,"Interface\Icons\Spell_Fire_BlueFire"),
+(2459,"Interface\Icons\Spell_Fire_BlueRainOfFire"),
+(2460,"Interface\Icons\Spell_Fire_BlueFlameRing"),
+(2461,"Interface\Icons\Spell_Fire_BlueFireNova"),
+(2462,"Interface\Icons\INV_Weapon_Halberd18"),
+(2463,"Interface\Icons\INV_Gauntlets_17"),
+(2464,"Interface\Icons\INV_DataCrystal05"),
+(2465,"Interface\Icons\INV_Weapon_ShortBlade_25"),
+(2466,"Interface\Icons\Ability_Mount_CockatriceMountElite_Blue"),
+(2467,"Interface\Icons\INV-Mount_Raven_54"),
+(2468,"Interface\Icons\INV_Misc_Ribbon_01"),
+(2469,"Interface\Icons\INV_Potion_164"),
+(2470,"Interface\Icons\INV_Misc_ArmorKit_22"),
+(2471,"Interface\Icons\INV_Misc_ArmorKit_16"),
+(2472,"Interface\Icons\INV_Misc_ArmorKit_15"),
+(2473,"Interface\Icons\INV_Misc_ArmorKit_07"),
+(2474,"Interface\Icons\INV_Misc_ArmorKit_09"),
+(2475,"Interface\Icons\INV_Misc_ArmorKit_05"),
+(2476,"Interface\Icons\INV_Misc_ArmorKit_26"),
+(2477,"Interface\Icons\Spell_Fire_BlueHellfire"),
+(2478,"Interface\Icons\INV_Gizmo_Poltryiser_01"),
+(2479,"Interface\Icons\INV_Helmet_49"),
+(2480,"Interface\Icons\INV_Gizmo_ManaPotionPack"),
+(2481,"Interface\Icons\INV_Misc_Food_64"),
+(2482,"Interface\Icons\INV_Misc_Food_88_RavagerNuggets"),
+(2483,"Interface\Icons\INV_Misc_Food_76"),
+(2484,"Interface\Icons\INV_Misc_Root_02"),
+(2485,"Interface\Icons\INV_Misc_Food_60"),
+(2486,"Interface\Icons\INV_Misc_Spyglass_02"),
+(2487,"Interface\Icons\INV_Wand_1H_Stratholme_D_01"),
+(2488,"Interface\Icons\INV_Mushroom_09"),
+(2489,"Interface\Icons\INV_Enchant_ShardPrismaticSmall"),
+(2490,"Interface\Icons\INV_Enchant_Disenchant"),
+(2491,"Interface\Icons\INV_Drink_17"),
+(2492,"Interface\Icons\INV_Box_01"),
+(2493,"Interface\Icons\INV_Misc_Food_25"),
+(2494,"Interface\Icons\INV_Misc_Horn_02"),
+(2495,"Interface\Icons\INV_Misc_Fish_02"),
+(2496,"Interface\Icons\INV_Jewelry_Necklace_12"),
+(2497,"Interface\Icons\INV_Misc_Bandage_04"),
+(2498,"Interface\Icons\INV_Misc_Bandage_04"),
+(2499,"Interface\Icons\INV_Misc_Bomb_03"),
+(2500,"Interface\Icons\INV_Weapon_ShortBlade_26"),
+(2501,"Interface\Icons\INV_Misc_Key_11"),
+(2502,"Interface\Icons\INV_MISC_KEY_13"),
+(2503,"Interface\Icons\INV_Trinket_HonorHold"),
+(2504,"Interface\Icons\INV_Relics_IdolofFerocity"),
+(2505,"Interface\Icons\INV_Misc_Bomb_07"),
+(2506,"Interface\Icons\INV_Misc_Orb_05"),
+(2507,"Interface\Icons\INV_Misc_Note_03"),
+(2508,"Interface\Icons\INV_Misc_EngGizmos_01"),
+(2509,"Interface\Icons\INV_Misc_StoneTablet_11"),
+(2510,"Interface\Icons\INV_Bow_1H_Auchindoun_D_01"),
+(2511,"Interface\Icons\INV_Misc_Ammo_Arrow_03"),
+(2512,"Interface\Icons\INV_Offhand_Stratholme_A_01"),
+(2513,"Interface\Icons\INV_Misc_Head_Troll_01"),
+(2514,"Interface\Icons\INV_Misc_Food_Wheat_01"),
+(2515,"Interface\Icons\INV_Cask_04"),
+(2516,"Interface\Icons\INV_Jewelry_Talisman_12"),
+(2517,"Interface\Icons\INV_Wand_20"),
+(2518,"Interface\Icons\INV_Misc_Beer_01"),
+(2519,"Interface\Icons\INV_Misc_Bone_DwarfSkull_01"),
+(2520,"Interface\Icons\INV_Weapon_Halberd_21"),
+(2521,"Interface\Icons\INV_Gauntlets_29"),
+(2522,"Interface\Icons\INV_Shoulder_08"),
+(2523,"Interface\Icons\INV_Misc_Toy_04"),
+(2524,"Interface\Icons\INV_Misc_Toy_02"),
+(2525,"Interface\Icons\INV_Misc_Toy_01"),
+(2526,"Interface\Icons\INV_Misc_Toy_03"),
+(2527,"Interface\Icons\INV_Misc_EngGizmos_05"),
+(2528,"Interface\Icons\INV_Misc_Bag_28_Halloween"),
+(2529,"Interface\Icons\INV_Wand_19"),
+(2530,"Interface\Icons\INV_Weapon_Bow_16"),
+(2531,"Interface\Icons\INV_Belt_05"),
+(2532,"Interface\Icons\INV_Drink_19"),
+(2533,"Interface\Icons\INV_Misc_Fish_09"),
+(2534,"Interface\Icons\INV_Gizmo_RocketBootExtreme"),
+(2535,"Interface\Icons\INV_Holiday_BrewfestBuff_01"),
+(2536,"Interface\Icons\INV_Misc_Herb_15"),
+(2537,"Interface\Icons\INV_Misc_ArmorKit_20"),
+(2538,"Interface\Icons\Ability_Hunter_Pet_Ravager"),
+(2539,"Interface\Icons\INV_Misc_EngGizmos_06"),
+(2540,"Interface\Icons\INV_DRINK_14"),
+(2541,"Interface\Icons\Ability_Hunter_DisarmingShot"),
+(2542,"Interface\Icons\Spell_Holy_Chastise"),
+(2543,"Interface\Icons\INV_Misc_Idol_02"),
+(2544,"Interface\Icons\INV_DataCrystal10"),
+(2545,"Interface\Icons\INV_Misc_Basket_01"),
+(2546,"Interface\Icons\Ability_Mount_GyrocoptorElite"),
+(2547,"Interface\Icons\Ability_Mount_Gyrocoptor"),
+(2548,"Interface\Icons\INV_Axe_15"),
+(2549,"Interface\Icons\INV_Sword_2H_Blacksmithing_02"),
+(2550,"Interface\Icons\INV_Potion_53"),
+(2551,"Interface\Icons\INV_Drink_23"),
+(2552,"Interface\Icons\INV_Gizmo_06"),
+(2553,"Interface\Icons\INV_Misc_Shell_01"),
+(2554,"Interface\Icons\Ability_Mount_WarHippogryph"),
+(2555,"Interface\Icons\INV_Misc_ArmorKit_04"),
+(2556,"Interface\Icons\INV_Crate_04"),
+(2557,"Interface\Icons\INV_Feather_05"),
+(2558,"Interface\Icons\INV_Enchant_ShardPrismaticLarge"),
+(2559,"Interface\Icons\INV_Misc_Bag_08"),
+(2560,"Interface\Icons\INV_Misc_Food_01"),
+(2561,"Interface\Icons\INV_Gizmo_ZapThrottleGasCollector"),
+(2562,"Interface\Icons\Ability_Shaman_Stormstrike"),
+(2563,"Interface\Icons\INV_Misc_TabardPVP_04"),
+(2564,"Interface\Icons\INV_Potion_166"),
+(2565,"Interface\Icons\INV_Misc_Bomb_01"),
+(2566,"Interface\Icons\INV_Hammer_11"),
+(2567,"Interface\Icons\INV_Hammer_17"),
+(2568,"Interface\Icons\INV_Helmet_05"),
+(2569,"Interface\Icons\INV_Mace_17"),
+(2570,"Interface\Icons\INV_Mace_25"),
+(2571,"Interface\Icons\INV_Axe_61"),
+(2572,"Interface\Icons\INV_Sword_73"),
+(2573,"Interface\Icons\INV_Helmet_55"),
+(2574,"Interface\Icons\INV_Helmet_57"),
+(2575,"Interface\Icons\INV_Helmet_58"),
+(2576,"Interface\Icons\INV_Misc_Flower_03"),
+(2577,"Interface\Icons\INV_Misc_Powder_Green"),
+(2578,"Interface\Icons\INV_Misc_Map_01"),
+(2579,"Interface\Icons\Spell_Fire_BlueFlameBreath"),
+(2580,"Interface\Icons\INV_Jewelry_Ring_46"),
+(2581,"Interface\Icons\INV_Misc_ArmorKit_08"),
+(2582,"Interface\Icons\INV_Misc_Gem_Pearl_01"),
+(2583,"Interface\Icons\INV_Misc_GroupNeedMore"),
+(2584,"Interface\Icons\INV_Qiraj_JewelEncased"),
+(2585,"Interface\Icons\INV_Misc_Flower_04"),
+(2586,"Interface\Icons\INV_Armor_Shield_Naxxramas_D_01"),
+(2587,"Interface\Icons\INV_Misc_ScrewDriver_02"),
+(2588,"Interface\Icons\INV_Sword_89"),
+(2589,"Interface\Icons\INV_Misc_MissileSmall_Red"),
+(2590,"Interface\Icons\INV_Gizmo_NewGoggles"),
+(2591,"Interface\Icons\INV_SummerFest_FireFlower"),
+(2592,"Interface\Icons\INV_Misc_Bag_Soulbag"),
+(2593,"Interface\Icons\INV_Misc_Fish_23"),
+(2594,"Interface\Icons\INV_Misc_Fish_10"),
+(2595,"Interface\Icons\INV_Rod_EnchantedEternium"),
+(2596,"Interface\Icons\INV_Weapon_Glave_01"),
+(2597,"Interface\Icons\INV_Weapon_Shortblade_48"),
+(2598,"Interface\Icons\INV_Misc_Head_Dragon_Red"),
+(2599,"Interface\Icons\INV_Staff_78"),
+(2600,"Interface\Icons\INV_Misc_Food_68"),
+(2601,"Interface\Icons\INV_Enchant_DustDream"),
+(2602,"Interface\Icons\INV_Ingot_Thorium"),
+(2603,"Interface\Icons\Spell_Nature_ElementalPrecision_2"),
+(2604,"Interface\Icons\INV_Misc_Gem_Variety_01"),
+(2605,"Interface\Icons\INV_Misc_MissileSmall_Blue"),
+(2606,"Interface\Icons\INV_Misc_Weathermachine_01"),
+(2607,"Interface\Icons\INV_Holiday_Summerfest_Petals"),
+(2608,"Interface\Icons\INV_Misc_Petbiscuit_01"),
+(2609,"Interface\Icons\INV_QirajIdol_Obsidian"),
+(2610,"Interface\Icons\INV_Misc_Book_09"),
+(2611,"Interface\Icons\INV_Misc_FireDancer_01"),
+(2612,"Interface\Icons\INV_Misc_PunchCards_Blue"),
+(2613,"Interface\Icons\INV_Misc_Ticket_Tarot_Beasts_01"),
+(2614,"Interface\Icons\Spell_Misc_WarsongBrutal"),
+(2615,"Interface\Icons\Spell_Misc_WarsongFocus"),
+(2616,"Interface\Icons\INV_Misc_Food_51"),
+(2617,"Interface\Icons\INV_MISC_FOOD_80"),
+(2618,"Interface\Icons\INV_Weapon_Hand_03"),
+(2619,"Interface\Icons\INV_Misc_Head_02"),
+(2620,"Interface\Icons\INV_Jewelry_Ring_35"),
+(2621,"Interface\Icons\INV_Qiraj_CarapaceOldGod"),
+(2622,"Interface\Icons\INV_Sword_62"),
+(2623,"Interface\Icons\Spell_Deathknight_PlagueStrike"),
+(2624,"Interface\Icons\Spell_Deathknight_DeathStrike"),
+(2625,"Interface\Icons\Spell_Misc_HellifrePVPThrallmarFavor"),
+(2626,"Interface\Icons\INV_Shield_32"),
+(2627,"Interface\Icons\INV_Misc_Gem_CrystalCut_01"),
+(2628,"Interface\Icons\INV_Belt_12"),
+(2629,"Interface\Icons\INV_Gizmo_GnomishFlameTurret"),
+(2630,"Interface\Icons\INV_Scroll_04"),
+(2631,"Interface\Icons\INV_Misc_Ticket_Tarot_Stack_01"),
+(2632,"Interface\Icons\Spell_Deathknight_FrostPresence"),
+(2633,"Interface\Icons\Spell_Deathknight_UnholyPresence"),
+(2634,"Interface\Icons\INV_MACE_66"),
+(2635,"Interface\Icons\INV_Sword_104"),
+(2636,"Interface\Icons\Spell_Deathknight_BloodPresence"),
+(2637,"Interface\Icons\INV_Shirt_GuildTabard_01"),
+(2638,"Interface\Icons\INV_Axe_89"),
+(2639,"Interface\Icons\Spell_Deathknight_ClassIcon"),
+(2640,"Interface\Icons\INV_Sword_105"),
+(2641,"Interface\Icons\INV_Drink_Waterskin_12"),
+(2642,"Interface\Icons\INV_Misc_GroupLooking"),
+(2643,"Interface\Icons\INV_Jewelry_Amulet_03"),
+(2644,"Interface\Icons\INV_Misc_Food_63"),
+(2645,"Interface\Icons\INV_Drink_Waterskin_03"),
+(2646,"Interface\Icons\INV_Bijou_Red"),
+(2647,"Interface\Icons\INV_Misc_Gear_08"),
+(2648,"Interface\Icons\INV_Mace_1H_Stratholme_D_02"),
+(2649,"Interface\Icons\INV_Misc_Bandage_15"),
+(2650,"Interface\Icons\INV_SummerFest_FirePotion"),
+(2651,"Interface\Icons\INV_Misc_Bone_08"),
+(2652,"Interface\Icons\INV_Misc_Food_30"),
+(2653,"Interface\Icons\INV_Shoulder_36"),
+(2654,"Interface\Icons\INV_Jewelcrafting_JadeOwl"),
+(2655,"Interface\Icons\INV_Sword_03"),
+(2656,"Interface\Icons\INV_Sword_112"),
+(2657,"Interface\Icons\INV_Sword_07"),
+(2658,"Interface\Icons\INV_Misc_Food_20"),
+(2659,"Interface\Icons\Spell_Arcane_PortalStonard"),
+(2660,"Interface\Icons\Spell_Arcane_TeleportStonard"),
+(2661,"Interface\Icons\Spell_Arcane_TeleportTheramore"),
+(2662,"Interface\Icons\Spell_Arcane_PortalTheramore"),
+(2663,"Interface\Icons\INV_Misc_Herb_08"),
+(2664,"Interface\Icons\INV_Axe_68"),
+(2665,"Interface\Icons\INV_Gizmo_RocketLauncher"),
+(2666,"Interface\Icons\INV_Weapon_Rifle_20"),
+(2667,"Interface\Icons\INV_Sword_40"),
+(2668,"Interface\Icons\INV_Misc_MissileSmall_Yellow"),
+(2669,"Interface\Icons\INV_Misc_Herb_ConstrictorGrass"),
+(2670,"Interface\Icons\INV_Potion_162"),
+(2671,"Interface\Icons\INV_Misc_Bandage_05"),
+(2672,"Interface\Icons\INV_Gizmo_FelIronBomb"),
+(2673,"Interface\Icons\INV_Feather_14"),
+(2674,"Interface\Icons\INV_Misc_MonsterScales_01"),
+(2675,"Interface\Icons\INV_Weapon_Halberd14"),
+(2676,"Interface\Icons\INV_Potion_27"),
+(2677,"Interface\Icons\INV_Chest_Chain"),
+(2678,"Interface\Icons\INV_Mace_52"),
+(2679,"Interface\Icons\INV_Jewelcrafting_TruesilverCrab"),
+(2680,"Interface\Icons\INV_Misc_PocketWatch_02"),
+(2681,"Interface\Icons\Creature_SporeMushroom"),
+(2682,"Interface\Icons\INV_Misc_Pelt_01"),
+(2683,"Interface\Icons\INV_Misc_PunchCards_Yellow"),
+(2684,"Interface\Icons\INV_Misc_PunchCards_Red"),
+(2685,"Interface\Icons\INV_Misc_PunchCards_Blue"),
+(2686,"Interface\Icons\INV_Misc_Bone_01"),
+(2687,"Interface\Icons\INV_Misc_Ear_Human_02"),
+(2688,"Interface\Icons\INV_Misc_Gem_Pearl_08"),
+(2689,"Interface\Icons\INV_Ore_FelIron"),
+(2690,"Interface\Icons\INV_Misc_Head_Gnoll_01"),
+(2691,"Interface\Icons\INV_Misc_Bandage_16"),
+(2692,"Interface\Icons\INV_Misc_Bandana_03"),
+(2693,"Interface\Icons\INV_Misc_Pelt_Bear_01"),
+(2694,"Interface\Icons\INV_Weapon_Shortblade_84"),
+(2695,"Interface\Icons\INV_SummerFest_FireDrink"),
+(2696,"Interface\Icons\INV_Misc_Bone_02"),
+(2697,"Interface\Icons\INV_Misc_Powder_Copper"),
+(2698,"Interface\Icons\INV_Helmet_41"),
+(2699,"Interface\Icons\INV_Misc_Fish_34"),
+(2700,"Interface\Icons\INV_Potion_57"),
+(2701,"Interface\Icons\INV_Misc_Ear_Human_01"),
+(2702,"Interface\Icons\INV_Sword_122"),
+(2703,"Interface\Icons\INV_Armor_Helm_Plate_Naxxramas_RaidWarrior_C_01"),
+(2704,"Interface\Icons\INV_Crate_02"),
+(2705,"Interface\Icons\INV_Misc_Food_70"),
+(2706,"Interface\Icons\INV_Misc_Orb_05"),
+(2707,"Interface\Icons\INV_Misc_LeatherScrap_01"),
+(2708,"Interface\Icons\INV_Weapon_ShortBlade_09"),
+(2709,"Interface\Icons\INV_Weapon_Shortblade_60"),
+(2710,"Interface\Icons\INV_Weapon_Hand_18"),
+(2711,"Interface\Icons\INV_Axe_35"),
+(2712,"Interface\Icons\INV_Misc_DiscoBall_01"),
+(2713,"Interface\Icons\INV_Misc_Crop_01"),
+(2714,"Interface\Icons\Ability_Mount_KotoBrewfest"),
+(2715,"Interface\Icons\INV_Axe_95"),
+(2716,"Interface\Icons\INV_Boots_Plate_06"),
+(2717,"Interface\Icons\INV_Misc_ElvenCoins"),
+(2718,"Interface\Icons\Spell_DeathKnight_ArmyOfTheDead"),
+(2719,"Interface\Icons\Spell_DeathKnight_EmpowerRuneBlade"),
+(2720,"Interface\Icons\Spell_DeathKnight_IceBoundFortitude"),
+(2721,"Interface\Icons\Spell_DeathKnight_IceTouch"),
+(2722,"Interface\Icons\Spell_DeathKnight_MindFreeze"),
+(2723,"Interface\Icons\Spell_DeathKnight_Strangulate"),
+(2724,"Interface\Icons\Spell_DeathKnight_BloodTap"),
+(2725,"Interface\Icons\Spell_DeathKnight_BloodBoil"),
+(2726,"Interface\Icons\Spell_DeathKnight_RuneTap"),
+(2727,"Interface\Icons\Spell_DeathKnight_FrozenRuneWeapon"),
+(2728,"Interface\Icons\INV_Weapon_Shortblade_78"),
+(2729,"Interface\Icons\Ability_Warrior_IntensifyRage"),
+(2730,"Interface\Icons\Spell_DeathKnight_Butcher"),
+(2731,"Interface\Icons\Spell_DeathKnight_BladedArmor"),
+(2732,"Interface\Icons\Thrown_1H_Harpoon_D_01Bronze"),
+(2733,"Interface\Icons\INV_Holiday_Christmas_Wrapping_01"),
+(2734,"Interface\Icons\INV_Holiday_Christmas_Present_03"),
+(2735,"Interface\Icons\INV_MISC_HOOK_01"),
+(2736,"Interface\Icons\INV_Fishingpole_01"),
+(2737,"Interface\Icons\INV_Helmet_44"),
+(2738,"Interface\Icons\INV_CHEST_MAIL_04"),
+(2739,"Interface\Icons\INV_Chest_Leather_13"),
+(2740,"Interface\Icons\Spell_DeathKnight_EmpowerRuneBlade2"),
+(2741,"Interface\Icons\INV_Misc_SurgeonGlove_01"),
+(2742,"Interface\Icons\INV_Misc_Bandage_Netherweave_Heavy"),
+(2743,"Interface\Icons\INV_Bijou_Blue"),
+(2744,"Interface\Icons\INV_Bijou_Bronze"),
+(2745,"Interface\Icons\INV_Bijou_Green"),
+(2746,"Interface\Icons\INV_Bijou_Orange"),
+(2747,"Interface\Icons\INV_Bijou_Purple"),
+(2748,"Interface\Icons\INV_Bijou_Yellow"),
+(2749,"Interface\Icons\INV_Bijou_Gold"),
+(2750,"Interface\Icons\Ability_Warrior_TitansGrip"),
+(2751,"Interface\Icons\Spell_DeathKnight_Butcher2"),
+(2752,"Interface\Icons\INV_Crystallized_Earth"),
+(2753,"Interface\Icons\INV_Misc_Head_Quillboar_01"),
+(2754,"Interface\Icons\INV_Helmet_92"),
+(2755,"Interface\Icons\INV_Misc_EngGizmos_RocketChicken"),
+(2756,"Interface\Icons\INV_Sword_39"),
+(2757,"Interface\Icons\INV_Staff_Medivh"),
+(2758,"Interface\Icons\INV_Scarab_Crystal"),
+(2759,"Interface\Icons\INV_Misc_Map02"),
+(2760,"Interface\Icons\INV_Misc_Map04"),
+(2761,"Interface\Icons\INV_Misc_Map05"),
+(2762,"Interface\Icons\INV_Misc_Map03"),
+(2763,"Interface\Icons\INV_Misc_Map06"),
+(2764,"Interface\Icons\INV_TradeskillItem_03"),
+(2765,"Interface\Icons\INV_Wand_23"),
+(2766,"Interface\Icons\INV_Misc_Comb_02"),
+(2767,"Interface\Icons\Ability_Warrior_Bloodsurge"),
+(2768,"Interface\Icons\INV_Potion_90"),
+(2769,"Interface\Icons\Ability_Warrior_BullRush"),
+(2770,"Interface\Icons\Ability_Warrior_Trauma"),
+(2771,"Interface\Icons\Ability_Warrior_ShieldBreak"),
+(2772,"Interface\Icons\INV_Misc_Bomb_06"),
+(2773,"Interface\Icons\INV_Mace_81"),
+(2774,"Interface\Icons\Ability_Warrior_BloodBath"),
+(2775,"Interface\Icons\Ability_Warrior_UnrelentingAssault"),
+(2776,"Interface\Icons\Ability_Warrior_StrengthOfArms"),
+(2777,"Interface\Icons\Ability_Warrior_Shockwave"),
+(2778,"Interface\Icons\Ability_Warrior_CriticalBlock"),
+(2779,"Interface\Icons\Ability_Warrior_StalwartProtector"),
+(2780,"Interface\Icons\Ability_Warrior_SwordandBoard"),
+(2781,"Interface\Icons\Ability_Warrior_Safeguard"),
+(2782,"Interface\Icons\Ability_Warrior_Bladestorm"),
+(2783,"Interface\Icons\Ability_Warrior_FuriousResolve"),
+(2784,"Interface\Icons\INV_Misc_Food_61"),
+(2785,"Interface\Icons\INV_Misc_Head_Orc_01"),
+(2786,"Interface\Icons\INV_Misc_Head_Undead_02"),
+(2787,"Interface\Icons\INV_Misc_PheonixPet_01"),
+(2788,"Interface\Icons\INV_Misc_Head_Dwarf_01"),
+(2789,"Interface\Icons\INV_Chest_Cloth_59"),
+(2790,"Interface\Icons\INV_DataCrystal11"),
+(2791,"Interface\Icons\INV_Jewelry_Necklace_25"),
+(2792,"Interface\Icons\INV_Helmet_52"),
+(2793,"Interface\Icons\INV_Mace_54"),
+(2794,"Interface\Icons\INV_Weapon_Shortblade_57"),
+(2795,"Interface\Icons\INV_DiabloStone"),
+(2796,"Interface\Icons\INV_Staff_52"),
+(2797,"Interface\Icons\INV_Staff_15"),
+(2798,"Interface\Icons\INV_SHOULDER_59"),
+(2799,"Interface\Icons\INV_Weapon_Shortblade_42"),
+(2800,"Interface\Icons\INV_Staff_73"),
+(2801,"Interface\Icons\INV_Misc_Coin_01"),
+(2802,"Interface\Icons\INV_Misc_Coin_04"),
+(2803,"Interface\Icons\INV_Misc_Coin_08"),
+(2804,"Interface\Icons\INV_Misc_Coin_15"),
+(2805,"Interface\Icons\INV_Misc_Coin_07"),
+(2806,"Interface\Icons\INV_Helmet_114"),
+(2807,"Interface\Icons\INV_Shield_48"),
+(2808,"Interface\Icons\INV_Enchant_VoidCrystal"),
+(2809,"Interface\Icons\INV_Misc_Herb_Felweed"),
+(2810,"Interface\Icons\INV_Enchant_EssenceArcaneSmall"),
+(2811,"Interface\Icons\INV_Jewelry_TrinketPVP_02"),
+(2812,"Interface\Icons\INV_Jewelry_TrinketPVP_01"),
+(2813,"Interface\Icons\INV_Helmet_130"),
+(2814,"Interface\Icons\INV_Misc_Rune_14"),
+(2815,"Interface\Icons\INV_Trinket_Thrallmar"),
+(2816,"Interface\Icons\INV_Ingot_06"),
+(2817,"Interface\Icons\INV_Fabric_Spellfire"),
+(2818,"Interface\Icons\Spell_Holy_Penance"),
+(2819,"Interface\Icons\Spell_Holy_HopeAndGrace"),
+(2820,"Interface\Icons\Spell_Holy_DevineAegis"),
+(2821,"Interface\Icons\Spell_Holy_Aspiration"),
+(2822,"Interface\Icons\INV_Weapon_Shortblade_47"),
+(2823,"Interface\Icons\INV_Shield_16"),
+(2824,"Interface\Icons\INV_Scroll_07"),
+(2825,"Interface\Icons\INV_MISC_RUNE_08"),
+(2826,"Interface\Icons\INV_Jewelry_FrostwolfTrinket_01"),
+(2827,"Interface\Icons\INV_Jewelry_StormPikeTrinket_01"),
+(2828,"Interface\Icons\INV_Jewelry_FrostwolfTrinket_05"),
+(2829,"Interface\Icons\INV_Jewelry_StormPikeTrinket_05"),
+(2830,"Interface\Icons\INV_BRD_Banner"),
+(2831,"Interface\Icons\INV_Weapon_Bow_07"),
+(2832,"Interface\Icons\INV_Staff_13"),
+(2833,"Interface\Icons\INV_Elemental_Mote_Water01"),
+(2834,"Interface\Icons\Ability_Warrior_Vigilance"),
+(2835,"Interface\Icons\INV_Misc_Rune_07"),
+(2836,"Interface\Icons\Ability_Druid_Cyclone"),
+(2837,"Interface\Icons\Ability_Druid_GaleWinds"),
+(2838,"Interface\Icons\Ability_Druid_Typhoon"),
+(2839,"Interface\Icons\INV_Jewelry_Necklace_21"),
+(2840,"Interface\Icons\INV_Pick_05"),
+(2841,"Interface\Icons\Ability_Warrior_Incite"),
+(2842,"Interface\Icons\INV_WEAPON_BOW_39"),
+(2843,"Interface\Icons\INV_Mace_51"),
+(2844,"Interface\Icons\Spell_Holy_TestOfFaith"),
+(2845,"Interface\Icons\Spell_Holy_DivineProvidence"),
+(2846,"Interface\Icons\INV_Misc_Note_01"),
+(2847,"Interface\Icons\Spell_Shadow_PsychicHorrors"),
+(2848,"Interface\Icons\Spell_Shadow_MindTwisting"),
+(2849,"Interface\Icons\INV_Misc_Head_Centaur_01"),
+(2850,"Interface\Icons\Ability_Druid_KingoftheJungle"),
+(2851,"Interface\Icons\Ability_Druid_MasterShapeshifter"),
+(2852,"Interface\Icons\Ability_Druid_Berserk"),
+(2853,"Interface\Icons\Ability_Druid_OwlkinFrenzy"),
+(2854,"Interface\Icons\Ability_Druid_Starfall"),
+(2855,"Interface\Icons\Ability_Druid_ImprovedMoonkinForm"),
+(2856,"Interface\Icons\Ability_Druid_Eclipse"),
+(2857,"Interface\Icons\Ability_Druid_InfectedWound"),
+(2858,"Interface\Icons\Ability_Druid_PrimalPrecision"),
+(2859,"Interface\Icons\Ability_Druid_PrimalAgression"),
+(2860,"Interface\Icons\Ability_Druid_GiftoftheEarthmother"),
+(2861,"Interface\Icons\Ability_Druid_ImprovedTreeForm"),
+(2862,"Interface\Icons\Ability_Druid_Replenish"),
+(2863,"Interface\Icons\Ability_Druid_Nourish"),
+(2864,"Interface\Icons\Ability_Druid_Flourish"),
+(2865,"Interface\Icons\Ability_Druid_SkinTeeth"),
+(2866,"Interface\Icons\INV_Misc_Herb_05"),
+(2867,"Interface\Icons\INV_Enchant_EssenceEternalSmall"),
+(2868,"Interface\Icons\INV_Misc_Herb_04"),
+(2869,"Interface\Icons\INV_Misc_Herb_18"),
+(2870,"Interface\Icons\INV_Misc_Herb_12"),
+(2871,"Interface\Icons\INV_MISC_HERB_01"),
+(2872,"Interface\Icons\INV_Enchant_DustVision"),
+(2873,"Interface\Icons\Spell_Holy_GuardianSpirit"),
+(2874,"Interface\Icons\Spell_Shadow_PainAndSuffering"),
+(2875,"Interface\Icons\Spell_Shadow_Dispersion"),
+(2876,"Interface\Icons\INV_Misc_Herb_14"),
+(2877,"Interface\Icons\INV_Jewelcrafting_LivingRuby_02"),
+(2878,"Interface\Icons\INV_Mushroom_06"),
+(2879,"Interface\Icons\INV_Potion_36"),
+(2880,"Interface\Icons\INV_Misc_Herb_IceCap"),
+(2881,"Interface\Icons\INV_Misc_Herb_Terrocone"),
+(2882,"Interface\Icons\INV_Ore_Eternium"),
+(2883,"Interface\Icons\INV_Sword_103"),
+(2884,"Interface\Icons\INV_Misc_Bag_07_Blue"),
+(2885,"Interface\Icons\INV_Mace_80"),
+(2886,"Interface\Icons\INV_Misc_Herb_TalandrasRose"),
+(2887,"Interface\Icons\INV_Misc_Herb_IceThorn"),
+(2888,"Interface\Icons\INV_Misc_Book_01"),
+(2889,"Interface\Icons\INV_Misc_Book_05"),
+(2890,"Interface\Icons\INV_Misc_Book_10"),
+(2891,"Interface\Icons\INV_Misc_Book_08"),
+(2892,"Interface\Icons\INV_Misc_Book_04"),
+(2893,"Interface\Icons\INV_Misc_Book_02"),
+(2894,"Interface\Icons\Spell_Holy_Rapture"),
+(2895,"Interface\Icons\Spell_Shadow_MindShear"),
+(2896,"Interface\Icons\INV_Sword_01"),
+(2897,"Interface\Icons\INV_Jewelry_StormPikeTrinket_03"),
+(2898,"Interface\Icons\INV_Jewelry_FrostwolfTrinket_03"),
+(2899,"Interface\Icons\Spell_Holy_BorrowedTime"),
+(2900,"Interface\Icons\Spell_Holy_Serendipity"),
+(2901,"Interface\Icons\Spell_Shadow_TwistedFaith"),
+(2902,"Interface\Icons\INV_Drink_21"),
+(2903,"Interface\Icons\Ability_Rogue_HonorAmongstThieves"),
+(2904,"Interface\Icons\Ability_Rogue_FanofKnives"),
+(2905,"Interface\Icons\Ability_Rogue_TurntheTables"),
+(2906,"Interface\Icons\Ability_Rogue_WrongfullyAccused"),
+(2907,"Interface\Icons\Ability_Rogue_MurderSpree"),
+(2908,"Interface\Icons\Ability_Rogue_Dismantle"),
+(2909,"Interface\Icons\Ability_Rogue_CutToTheChase"),
+(2910,"Interface\Icons\Ability_Rogue_ThrowingSpecialization"),
+(2911,"Interface\Icons\INV_Enchant_ShardGleamingSmall"),
+(2912,"Interface\Icons\INV_Staff_63"),
+(2913,"Interface\Icons\INV_Misc_Ammo_Bullet_05"),
+(2914,"Interface\Icons\INV_Shield_59"),
+(2915,"Interface\Icons\INV_Sword_37"),
+(2916,"Interface\Icons\INV_Sword_38"),
+(2917,"Interface\Icons\INV_Misc_CelebrationCake_01"),
+(2918,"Interface\Icons\INV_Misc_Fish_35"),
+(2919,"Interface\Icons\Ability_Mount_CockatriceMountElite_White"),
+(2920,"Interface\Icons\INV_Mushroom_11"),
+(2921,"Interface\Icons\INV_Misc_PunchCards_Prismatic"),
+(2922,"Interface\Icons\INV_Mace_30"),
+(2923,"Interface\Icons\INV_Misc_Cauldron_Arcane"),
+(2924,"Interface\Icons\INV_Misc_TabardPVP_03"),
+(2925,"Interface\Icons\INV_Misc_Food_49"),
+(2926,"Interface\Icons\INV_Weapon_Rifle_05"),
+(2927,"Interface\Icons\INV_HELMET_94"),
+(2928,"Interface\Icons\INV_Bracer_07"),
+(2929,"Interface\Icons\INV_Misc_Quiver_02"),
+(2930,"Interface\Icons\INV_Misc_Bag_12"),
+(2931,"Interface\Icons\INV_Misc_Gem_Diamond_05"),
+(2932,"Interface\Icons\INV_Misc_ThrowingBall_01"),
+(2933,"Interface\Icons\INV_Fishingpole_03"),
+(2934,"Interface\Icons\INV_Jewelry_Necklace_22"),
+(2935,"Interface\Icons\Ability_Hunter_WildQuiver"),
+(2936,"Interface\Icons\Ability_Hunter_CobraStrikes"),
+(2937,"Interface\Icons\INV_Enchant_DustIllusion"),
+(2938,"Interface\Icons\Ability_Mage_BrainFreeze"),
+(2939,"Interface\Icons\Ability_Mage_DeepFreeze"),
+(2940,"Interface\Icons\Ability_Mage_PotentSpirit"),
+(2941,"Interface\Icons\Ability_Mage_IncantersAbsorbtion"),
+(2942,"Interface\Icons\Ability_Mage_StudentOfTheMind"),
+(2943,"Interface\Icons\Ability_Mage_NetherWindPresence"),
+(2944,"Interface\Icons\INV_Torch_Thrown"),
+(2945,"Interface\Icons\Ability_Mage_ShatterShield"),
+(2946,"Interface\Icons\Ability_Mage_FrostFireBolt"),
+(2947,"Interface\Icons\Ability_Mage_WintersGrasp"),
+(2948,"Interface\Icons\Ability_Mage_WorldInFlames"),
+(2949,"Interface\Icons\INV_Misc_SawBlade_01"),
+(2950,"Interface\Icons\INV_MISC_FOOD_26"),
+(2951,"Interface\Icons\INV_Misc_Food_27"),
+(2952,"Interface\Icons\INV_Misc_Food_29"),
+(2953,"Interface\Icons\INV_Mask_04"),
+(2954,"Interface\Icons\INV_Mask_06"),
+(2955,"Interface\Icons\INV_Offhand_Naxxramas_03"),
+(2956,"Interface\Icons\Ability_Rogue_DeviousPoisons"),
+(2957,"Interface\Icons\Ability_Rogue_BloodSplatter"),
+(2958,"Interface\Icons\Ability_Rogue_Waylay"),
+(2959,"Interface\Icons\Ability_Rogue_ShadowDance"),
+(2960,"Interface\Icons\INV_Misc_Fish_48"),
+(2961,"Interface\Icons\Ability_Rogue_HungerforBlood"),
+(2962,"Interface\Icons\Ability_Rogue_SlaughterfromtheShadows"),
+(2963,"Interface\Icons\Ability_Rogue_DeadlyBrew"),
+(2964,"Interface\Icons\Ability_Rogue_UnfairAdvantage"),
+(2965,"Interface\Icons\Ability_Mage_ChilledToTheBone"),
+(2966,"Interface\Icons\Ability_Mage_ConjureFoodRank9"),
+(2967,"Interface\Icons\Ability_Mage_ConjureFoodRank10"),
+(2968,"Interface\Icons\Ability_Warrior_BloodNova"),
+(2969,"Interface\Icons\INV_Misc_DragonKite_01"),
+(2970,"Interface\Icons\Achievement_General"),
+(2971,"Interface\Icons\INV_Sword_61"),
+(2972,"Interface\Icons\INV_Axe_94"),
+(2973,"Interface\Icons\INV_Enchant_ShardRadientSmall"),
+(2974,"Interface\Icons\INV_SummerFest_Symbol_High"),
+(2975,"Interface\Icons\INV_SummerFest_Symbol_Low"),
+(2976,"Interface\Icons\INV_Egg_01"),
+(2977,"Interface\Icons\INV_Misc_ArmorKit_14"),
+(2978,"Interface\Icons\INV_Misc_Herb_BlackLotus"),
+(2979,"Interface\Icons\INV_Mace_22"),
+(2980,"Interface\Icons\INV_Crystallized_Water"),
+(2981,"Interface\Icons\INV_Crystallized_Life"),
+(2982,"Interface\Icons\Ability_Rogue_FocusedAttacks"),
+(2983,"Interface\Icons\Ability_Rogue_PreyontheWeak"),
+(2984,"Interface\Icons\Ability_Rogue_StayofExecution"),
+(2985,"Interface\Icons\Thrown_1H_Harpoon_D_01"),
+(2986,"Interface\Icons\INV_Staff_05"),
+(2987,"Interface\Icons\INV_Misc_Gem_FlameSpessarite_02"),
+(2988,"Interface\Icons\INV_Misc_Food_104_TundraBerries"),
+(2989,"Interface\Icons\INV_Misc_Bag_27"),
+(2990,"Interface\Icons\INV_Scroll_10"),
+(2991,"Interface\Icons\Ability_Druid_EarthandSky"),
+(2992,"Interface\Icons\INV_Misc_Coin_06"),
+(2993,"Interface\Icons\INV_Misc_Coin_02"),
+(2994,"Interface\Icons\INV_Misc_Coin_03"),
+(2995,"Interface\Icons\INV_Misc_Coin_16"),
+(2996,"Interface\Icons\INV_Holiday_BeerfestPretzel01"),
+(2997,"Interface\Icons\INV_Misc_Cauldron_Nature"),
+(2998,"Interface\Icons\Ability_Mage_Burnout"),
+(2999,"Interface\Icons\Ability_Mage_HotStreak"),
+(3000,"Interface\Icons\Ability_Mage_LivingBomb"),
+(3001,"Interface\Icons\INV_Mace_69"),
+(3002,"Interface\Icons\INV_Potion_165"),
+(3003,"Interface\Icons\INV_Misc_Book_13"),
+(3004,"Interface\Icons\INV_Misc_Food_85_StegadonBite"),
+(3005,"Interface\Icons\Spell_DeathKnight_SummonDeathCharger"),
+(3006,"Interface\Icons\Spell_DeathKnight_SpellDeflection"),
+(3007,"Interface\Icons\Spell_DeathKnight_DarkConviction"),
+(3008,"Interface\Icons\Spell_DeathKnight_Vendetta"),
+(3009,"Interface\Icons\Spell_DeathKnight_Subversion"),
+(3010,"Interface\Icons\Spell_DeathKnight_Gnaw_Ghoul"),
+(3011,"Interface\Icons\Spell_DeathKnight_Thrash_Ghoul"),
+(3012,"Interface\Icons\Spell_DeathKnight_Explode_Ghoul"),
+(3013,"Interface\Icons\Ability_Paladin_JudgementRed"),
+(3014,"Interface\Icons\Ability_Paladin_JudgementBlue"),
+(3015,"Interface\Icons\Ability_Paladin_JudgementsoftheJust"),
+(3016,"Interface\Icons\Ability_Paladin_ShieldoftheTemplar"),
+(3017,"Interface\Icons\Ability_Paladin_JudgementoftheWise"),
+(3018,"Interface\Icons\Ability_Paladin_JudgementofthePure"),
+(3019,"Interface\Icons\Ability_Paladin_SacredCleansing"),
+(3020,"Interface\Icons\Ability_Paladin_EnlightenedJudgements"),
+(3021,"Interface\Icons\Ability_Paladin_InfusionofLight"),
+(3022,"Interface\Icons\Ability_Paladin_BlessedHands"),
+(3023,"Interface\Icons\Ability_Paladin_HammeroftheRighteous"),
+(3024,"Interface\Icons\Ability_Paladin_TouchedbyLight"),
+(3025,"Interface\Icons\Ability_Paladin_RighteousVengeance"),
+(3026,"Interface\Icons\Ability_Paladin_GaurdedbytheLight"),
+(3027,"Interface\Icons\Ability_Paladin_DivineStorm"),
+(3028,"Interface\Icons\Ability_Paladin_SwiftRetribution"),
+(3029,"Interface\Icons\Ability_Paladin_SanctifiedWrath"),
+(3030,"Interface\Icons\Ability_Paladin_SheathofLight"),
+(3031,"Interface\Icons\Ability_Paladin_ShieldofVengeance"),
+(3032,"Interface\Icons\Ability_Paladin_BeaconofLight"),
+(3033,"Interface\Icons\Ability_Paladin_BlessedMending"),
+(3034,"Interface\Icons\Ability_Paladin_ArtofWar"),
+(3035,"Interface\Icons\INV_Potion_54"),
+(3036,"Interface\Icons\Achievement_Arena_2v2_7"),
+(3037,"Interface\Icons\Achievement_Arena_2v2_5"),
+(3038,"Interface\Icons\Achievement_Arena_2v2_4"),
+(3039,"Interface\Icons\Achievement_Arena_2v2_1"),
+(3040,"Interface\Icons\INV_Chest_Cloth_30"),
+(3041,"Interface\Icons\INV_Weapon_Shortblade_79"),
+(3042,"Interface\Icons\INV_Crate_01"),
+(3043,"Interface\Icons\Achievement_Arena_5v5_7"),
+(3044,"Interface\Icons\Achievement_Arena_5v5_5"),
+(3045,"Interface\Icons\Achievement_Arena_5v5_4"),
+(3046,"Interface\Icons\Achievement_Arena_5v5_1"),
+(3047,"Interface\Icons\Achievement_Arena_3v3_7"),
+(3048,"Interface\Icons\Achievement_Arena_3v3_5"),
+(3049,"Interface\Icons\Achievement_Arena_3v3_4"),
+(3050,"Interface\Icons\Achievement_Arena_3v3_1"),
+(3051,"Interface\Icons\Spell_Arcane_PortalDalaran"),
+(3052,"Interface\Icons\INV_Box_Birdcage_01"),
+(3053,"Interface\Icons\Spell_Shaman_ElementalOath"),
+(3054,"Interface\Icons\INV_Sword_66"),
+(3055,"Interface\Icons\INV_Misc_EngGizmos_30"),
+(3056,"Interface\Icons\INV_Misc_EngGizmos_13"),
+(3057,"Interface\Icons\Spell_Shaman_TidalWaves"),
+(3058,"Interface\Icons\Spell_Shaman_Hex"),
+(3059,"Interface\Icons\Spell_Shaman_StaticShock"),
+(3060,"Interface\Icons\Spell_Shaman_GiftEarthmother"),
+(3061,"Interface\Icons\Spell_Shaman_EarthlivingWeapon"),
+(3062,"Interface\Icons\Spell_Shaman_SpiritLink"),
+(3063,"Interface\Icons\Spell_Shaman_StormEarthFire"),
+(3064,"Interface\Icons\Spell_Shaman_LavaBurst"),
+(3065,"Interface\Icons\Spell_Shaman_AncestralAwakening"),
+(3066,"Interface\Icons\Spell_Shaman_AstralShift"),
+(3067,"Interface\Icons\INV_Chest_Christmas02"),
+(3068,"Interface\Icons\INV_Crate_05"),
+(3069,"Interface\Icons\INV_Misc_DragonKite_02"),
+(3070,"Interface\Icons\INV_Belt_25"),
+(3071,"Interface\Icons\INV_Belt_09"),
+(3072,"Interface\Icons\INV_Ore_Mithril_01"),
+(3073,"Interface\Icons\INV_Misc_Bag_17"),
+(3074,"Interface\Icons\INV_DataCrystal03"),
+(3075,"Interface\Icons\INV_Misc_Key_07"),
+(3076,"Interface\Icons\INV_Qiraj_HiltOrnate"),
+(3077,"Interface\Icons\INV_Misc_Fish_37"),
+(3078,"Interface\Icons\INV_Potion_112"),
+(3079,"Interface\Icons\INV_Feather_11"),
+(3080,"Interface\Icons\Spell_Shaman_ThunderStorm"),
+(3081,"Interface\Icons\Spell_Shaman_FeralSpirit"),
+(3082,"Interface\Icons\INV_MISC_BEER_02"),
+(3083,"Interface\Icons\INV_Misc_Beer_04"),
+(3084,"Interface\Icons\INV_Shirt_15"),
+(3085,"Interface\Icons\INV_Shirt_12"),
+(3086,"Interface\Icons\INV_Sword_68"),
+(3087,"Interface\Icons\Spell_Shaman_LavaFlow"),
+(3088,"Interface\Icons\Spell_Nature_WispSplodeGreen"),
+(3089,"Interface\Icons\INV_Weapon_Rifle_29"),
+(3090,"Interface\Icons\INV_Jewelcrafting_Talasite_03"),
+(3091,"Interface\Icons\INV_Misc_EngGizmos_32"),
+(3092,"Interface\Icons\INV_Helmet_67"),
+(3093,"Interface\Icons\UI-Glyph-Rune-11"),
+(3094,"Interface\Icons\INV_Misc_Rune_09"),
+(3095,"Interface\Icons\INV_Boots_Mail_01"),
+(3096,"Interface\Icons\INV_Jewelry_Talisman_10"),
+(3097,"Interface\Icons\INV_Weapon_ShortBlade_12"),
+(3098,"Interface\Spellbook\UI-Glyph-Rune-11"),
+(3099,"Interface\Icons\INV_Misc_Herb_Ragveil"),
+(3100,"Interface\Icons\Achievement_Arena_2v2_2"),
+(3101,"Interface\Icons\INV_Misc_Thread_01"),
+(3102,"Interface\Icons\INV_Jewelcrafting_BronzeSetting"),
+(3103,"Interface\Icons\INV_GAUNTLETS_61"),
+(3104,"Interface\Icons\INV_Jewelcrafting_ThoriumSetting"),
+(3105,"Interface\Icons\INV_Belt_36"),
+(3106,"Interface\Icons\Spell_Holy_Persecution"),
+(3107,"Interface\Icons\INV_Misc_Pelt_Boar_Ruin_03"),
+(3109,"Interface\Icons\INV_Boots_Plate_05"),
+(3110,"Interface\Spellbook\UI-Glyph-Rune-1"),
+(3112,"Interface\Spellbook\UI-Glyph-Rune-10"),
+(3113,"Interface\Spellbook\UI-Glyph-Rune-12"),
+(3114,"Interface\Spellbook\UI-Glyph-Rune-13"),
+(3115,"Interface\Spellbook\UI-Glyph-Rune-14"),
+(3116,"Interface\Spellbook\UI-Glyph-Rune-15"),
+(3117,"Interface\Spellbook\UI-Glyph-Rune-16"),
+(3118,"Interface\Spellbook\UI-Glyph-Rune-17"),
+(3119,"Interface\Spellbook\UI-Glyph-Rune-18"),
+(3120,"Interface\Spellbook\UI-Glyph-Rune-19"),
+(3121,"Interface\Spellbook\UI-Glyph-Rune-20"),
+(3122,"Interface\Spellbook\UI-Glyph-Rune-2"),
+(3123,"Interface\Spellbook\UI-Glyph-Rune-3"),
+(3124,"Interface\Spellbook\UI-Glyph-Rune-4"),
+(3125,"Interface\Spellbook\UI-Glyph-Rune-5"),
+(3126,"Interface\Spellbook\UI-Glyph-Rune-6"),
+(3127,"Interface\Spellbook\UI-Glyph-Rune-7"),
+(3128,"Interface\Spellbook\UI-Glyph-Rune-8"),
+(3129,"Interface\Spellbook\UI-Glyph-Rune1"),
+(3130,"Interface\Icons\INV_Misc_Slime_02"),
+(3131,"Interface\Icons\Spell_Holy_ImpHolyConcentration"),
+(3132,"Interface\Icons\INV_Jewelcrafting_CrimsonHare"),
+(3133,"Interface\Icons\INV_Jewelcrafting_AzureOwl"),
+(3134,"Interface\Icons\INV_Jewelcrafting_PurpleSerpent"),
+(3135,"Interface\Icons\INV_Jewelcrafting_EmeraldBoar"),
+(3136,"Interface\Icons\INV_Jewelcrafting_Nightseye_03"),
+(3137,"Interface\Icons\INV_Staff_16"),
+(3138,"Interface\Icons\INV_Weapon_Halberd_02"),
+(3139,"Interface\Icons\Spell_Shadow_Skull"),
+(3140,"Interface\Icons\INV_Misc_Bomb_08"),
+(3141,"Interface\Icons\Spell_DeathKnight_BloodPlague"),
+(3142,"Interface\Icons\Spell_DeathKnight_FrostFever"),
+(3143,"Interface\Icons\Spell_DeathKnight_ScourgeStrike"),
+(3144,"Interface\Icons\Spell_DeathKnight_AntiMagicZone"),
+(3145,"Interface\Icons\INV_Weapon_Shortblade_40"),
+(3146,"Interface\Icons\INV_Spear_11"),
+(3147,"Interface\Icons\Spell_DeathKnight_PathOfFrost"),
+(3148,"Interface\Icons\INV_Sword_126"),
+(3149,"Interface\Icons\Ability_HeroicLeap"),
+(3150,"Interface\Icons\INV_Misc_Food_119_RhinoMeat"),
+(3151,"Interface\Icons\INV_Gizmo_FuelCell"),
+(3152,"Interface\Icons\INV_Belt_16"),
+(3153,"Interface\Icons\INV_Misc_Map07"),
+(3154,"Interface\Icons\INV_Boots_Mail_02"),
+(3155,"Interface\Icons\INV_Helmet_32"),
+(3156,"Interface\Icons\Spell_Shaman_MaelstromWeapon"),
+(3157,"Interface\Icons\Spell_Shaman_BlessingOfEternals"),
+(3158,"Interface\Icons\Spell_Shaman_SpectralTransformation"),
+(3159,"Interface\Icons\Spell_Shaman_ImprovedStormstrike"),
+(3160,"Interface\Icons\INV_Mace_46"),
+(3161,"Interface\Icons\INV_Sword_96"),
+(3162,"Interface\Icons\INV_Misc_Food_84_RoastClefthoof"),
+(3163,"Interface\Icons\INV_Misc_EngGizmos_04"),
+(3164,"Interface\Icons\INV_Misc_Ticket_Darkmoon_01"),
+(3165,"Interface\Icons\INV_Misc_Food_86_Basilisk"),
+(3166,"Interface\Icons\INV_DataCrystal07"),
+(3167,"Interface\Icons\Spell_Arcane_TeleportDalaran"),
+(3168,"Interface\Icons\Achievement_Arena_2v2_3"),
+(3169,"Interface\Icons\Ability_Warlock_EverlastingAffliction"),
+(3170,"Interface\Icons\Ability_Warlock_Backdraft"),
+(3171,"Interface\Icons\Ability_Warlock_EmpoweredImp"),
+(3172,"Interface\Icons\Ability_Warlock_Haunt"),
+(3173,"Interface\Icons\Ability_Warlock_FireandBrimstone"),
+(3174,"Interface\Icons\Ability_Warlock_DemonicEmpowerment"),
+(3175,"Interface\Icons\Ability_Warlock_MoltenCore"),
+(3176,"Interface\Icons\Ability_Warlock_ImprovedSoulLeech"),
+(3177,"Interface\Icons\Ability_Warlock_ImprovedDemonicTactics"),
+(3178,"Interface\Icons\Ability_Warlock_ChaosBolt"),
+(3179,"Interface\Icons\INV_Misc_Fish_50"),
+(3180,"Interface\Icons\INV_Misc_Food_99"),
+(3181,"Interface\Icons\Ability_Miling"),
+(3182,"Interface\Icons\INV_Axe_66"),
+(3183,"Interface\Icons\Spell_Misc_EmotionHappy"),
+(3184,"Interface\Icons\Spell_Magic_ManaGain"),
+(3185,"Interface\Icons\INV_Staff_67"),
+(3186,"Interface\Icons\Ability_Druid_ManaTree"),
+(3187,"Interface\Icons\INV_Misc_Food_87_SporelingSnack"),
+(3188,"Interface\Icons\INV_Misc_Head_Vrykul"),
+(3189,"Interface\Icons\Ability_Mage_FieryPayback"),
+(3190,"Interface\Icons\INV_Helmet_68"),
+(3191,"Interface\Icons\INV_Misc_Food_62"),
+(3192,"Interface\Icons\INV_ValentinesCard02"),
+(3193,"Interface\Icons\INV_Chest_Cloth_50"),
+(3194,"Interface\Icons\INV_Misc_Cauldron_Fire"),
+(3195,"Interface\Icons\INV_ValentinePinkRocket"),
+(3196,"Interface\Icons\INV_ValentinesCandy"),
+(3197,"Interface\Icons\Spell_Misc_EmotionSad"),
+(3198,"Interface\Icons\Spell_Misc_EmotionAngry"),
+(3199,"Interface\Icons\Spell_Misc_EmotionAfraid"),
+(3200,"Interface\Icons\INV_Hammer_16"),
+(3201,"Interface\Icons\INV_Bone_Skull_04"),
+(3202,"Interface\Icons\INV_Egg_09"),
+(3203,"Interface\Icons\INV_Helmet_74"),
+(3204,"Interface\Icons\INV_Helmet_90"),
+(3205,"Interface\Icons\INV_Misc_MonsterFang_02"),
+(3206,"Interface\Icons\INV_Misc_Food_117_HeartySoup"),
+(3207,"Interface\Icons\INV_Weapon_Rifle_16"),
+(3208,"Interface\Icons\Ability_Mount_RocketMount"),
+(3209,"Interface\Icons\Spell_Holy_DivineHymn"),
+(3210,"Interface\Icons\INV_Misc_Bag_10_Black"),
+(3211,"Interface\Icons\INV_Misc_Food_138_Fish"),
+(3212,"Interface\Icons\INV_Misc_Food_141_Fish"),
+(3213,"Interface\Icons\INV_Misc_Food_140_Fish"),
+(3214,"Interface\Icons\INV_Shield_31"),
+(3215,"Interface\Icons\INV_Misc_Food_98_Talbuk"),
+(3216,"Interface\Icons\INV_Elemental_Crystal_Water"),
+(3217,"Interface\Icons\Spell_Shadow_DemonicCircleSummon"),
+(3218,"Interface\Icons\INV_Misc_Food_13"),
+(3219,"Interface\Icons\INV_Misc_Food_92_Lobster"),
+(3220,"Interface\Icons\Spell_Shadow_DemonicPact"),
+(3221,"Interface\Icons\Spell_Shadow_DemonicCircleTeleport"),
+(3222,"Interface\Icons\Spell_Shadow_FelMending"),
+(3223,"Interface\Icons\Spell_Shadow_DeathsEmbrace"),
+(3224,"Interface\Icons\Achievement_Dungeon_UtgardeKeep"),
+(3225,"Interface\Icons\Achievement_Dungeon_UtgardeKeep_Heroic"),
+(3226,"Interface\Icons\Achievement_Dungeon_UtgardeKeep_Normal"),
+(3227,"Interface\Icons\Achievement_Dungeon_Nexus70_Normal"),
+(3228,"Interface\Icons\Achievement_Dungeon_Nexus70_Heroic"),
+(3229,"Interface\Icons\Achievement_Dungeon_AzjolUppercity_Normal"),
+(3230,"Interface\Icons\Achievement_Dungeon_AzjolUppercity_Heroic"),
+(3231,"Interface\Icons\Achievement_Dungeon_AzjolLowercity_Normal"),
+(3232,"Interface\Icons\Achievement_Dungeon_AzjolLowercity_Heroic"),
+(3233,"Interface\Icons\Achievement_Dungeon_Drak'Tharon_Normal"),
+(3234,"Interface\Icons\Achievement_Dungeon_Drak'Tharon_Heroic"),
+(3235,"Interface\Icons\Achievement_Dungeon_TheVioletHold_Normal"),
+(3236,"Interface\Icons\Achievement_Dungeon_TheVioletHold_Heroic"),
+(3237,"Interface\Icons\Achievement_Dungeon_Gundrak_Normal"),
+(3238,"Interface\Icons\Achievement_Dungeon_Gundrak_Heroic"),
+(3239,"Interface\Icons\Achievement_Dungeon_Ulduar77_Normal"),
+(3240,"Interface\Icons\Achievement_Dungeon_Ulduar77_Heroic"),
+(3241,"Interface\Icons\Achievement_Dungeon_Ulduar80_Normal"),
+(3242,"Interface\Icons\Achievement_Dungeon_Ulduar80_Heroic"),
+(3243,"Interface\Icons\Achievement_Dungeon_Nexus80_Normal"),
+(3244,"Interface\Icons\Achievement_Dungeon_Nexus80_Heroic"),
+(3245,"Interface\Icons\Achievement_Dungeon_UtgardePinnacle_Normal"),
+(3246,"Interface\Icons\Achievement_Dungeon_UtgardePinnacle_Heroic"),
+(3247,"Interface\Icons\Ability_Hunter_PiercingShots"),
+(3248,"Interface\Icons\Achievement_Dungeon_CoTStratholme_Normal"),
+(3249,"Interface\Icons\Achievement_Dungeon_CoTStratholme_Heroic"),
+(3250,"Interface\Icons\Achievement_Dungeon_AzjolUppercity_25man"),
+(3251,"Interface\Icons\Achievement_Dungeon_AzjolUppercity_10man"),
+(3252,"Interface\Icons\Achievement_Dungeon_CoABlackDragonflight_Normal"),
+(3253,"Interface\Icons\Achievement_Dungeon_CoABlackDragonflight_Heroic"),
+(3254,"Interface\Icons\Achievement_Dungeon_CoABlackDragonflight"),
+(3255,"Interface\Icons\Achievement_Dungeon_CoABlackDragonflight_10man"),
+(3256,"Interface\Icons\Achievement_Dungeon_NexusRaid"),
+(3257,"Interface\Icons\Achievement_Dungeon_NexusRaid_10man"),
+(3258,"Interface\Icons\Achievement_Dungeon_Naxxramas_Normal"),
+(3259,"Interface\Icons\Achievement_Dungeon_Naxxramas_10man"),
+(3260,"Interface\Icons\Ability_Mage_ColdAsIce"),
+(3261,"Interface\Icons\Ability_Mage_MissileBarrage"),
+(3262,"Interface\Icons\Ability_Mage_FireStarter"),
+(3263,"Interface\Icons\Ability_Mage_TormentOfTheWeak"),
+(3264,"Interface\Icons\Achievement_Dungeon_TheVioletHold_25man"),
+(3265,"Interface\Icons\Achievement_Dungeon_CoTStratholme_25man"),
+(3266,"Interface\Icons\INV_Misc_Food_115_CondorSoup"),
+(3267,"Interface\Icons\INV_Inscription_Tradeskill01"),
+(3268,"Interface\Icons\Achievement_Level_10"),
+(3269,"Interface\Icons\Achievement_Level_20"),
+(3270,"Interface\Icons\Achievement_Level_30"),
+(3271,"Interface\Icons\Achievement_Level_40"),
+(3272,"Interface\Icons\Achievement_Level_50"),
+(3273,"Interface\Icons\Achievement_Level_60"),
+(3274,"Interface\Icons\Achievement_Level_70"),
+(3275,"Interface\Icons\Achievement_Level_80"),
+(3276,"Interface\Icons\INV_Shield_34"),
+(3277,"Interface\Icons\Ability_Hunter_Pet_Wasp"),
+(3278,"Interface\Icons\Ability_Hunter_Pet_Moth"),
+(3279,"Interface\Icons\INV_Feather_08"),
+(3280,"Interface\Icons\INV_Crate_06"),
+(3281,"Interface\Icons\INV_Misc_Bag_16"),
+(3282,"Interface\Icons\INV_Misc_Herb_GoldClover"),
+(3283,"Interface\Icons\Achievement_Character_Gnome_Male"),
+(3284,"Interface\Icons\Achievement_Character_Bloodelf_Male"),
+(3285,"Interface\Icons\Achievement_Character_Draenei_Male"),
+(3286,"Interface\Icons\Achievement_Character_Dwarf_Male"),
+(3287,"Interface\Icons\Achievement_Character_Human_Male"),
+(3288,"Interface\Icons\Achievement_Character_Nightelf_Male"),
+(3289,"Interface\Icons\Achievement_Character_Orc_Male"),
+(3290,"Interface\Icons\Achievement_Character_Tauren_Male"),
+(3291,"Interface\Icons\Achievement_Character_Troll_Male"),
+(3292,"Interface\Icons\Achievement_Character_Undead_Male"),
+(3293,"Interface\Icons\INV_Crown_14"),
+(3294,"Interface\Icons\INV_Boots_Cloth_21"),
+(3295,"Interface\Icons\Achievement_Dungeon_AzjolUppercity"),
+(3296,"Interface\Icons\Achievement_Dungeon_AzjolLowercity_25man"),
+(3297,"Interface\Icons\Achievement_Dungeon_AzjolLowercity_10man"),
+(3298,"Interface\Icons\Achievement_Dungeon_AzjolLowercity"),
+(3299,"Interface\Icons\Achievement_Dungeon_Gundrak_25man"),
+(3300,"Interface\Icons\Achievement_Dungeon_TheVioletHold_10man"),
+(3301,"Interface\Icons\Achievement_Dungeon_Ulduar77_10man"),
+(3302,"Interface\Icons\Achievement_Dungeon_Ulduar80_25man"),
+(3303,"Interface\Icons\Achievement_Dungeon_Nexus80_25man"),
+(3304,"Interface\Icons\Achievement_Dungeon_NexusRaid_Heroic"),
+(3305,"Interface\Icons\Achievement_Dungeon_NexusRaid_25man"),
+(3306,"Interface\Icons\Achievement_Dungeon_Nexus80_10man"),
+(3307,"Interface\Icons\Achievement_Dungeon_UtgardePinnacle_10man"),
+(3308,"Interface\Icons\Achievement_Dungeon_CoABlackDragonflight_25man"),
+(3309,"Interface\Icons\INV_Scroll_11"),
+(3310,"Interface\Icons\INV_Fabric_Soulcloth"),
+(3311,"Interface\Icons\INV_Inscription_MajorGlyph00"),
+(3312,"Interface\Spellbook\UI-Glyph-Rune-9"),
+(3313,"Interface\Icons\Ability_Hunter_Pet_Devilsaur"),
+(3314,"Interface\Icons\Spell_Shadow_DemonForm"),
+(3315,"Interface\Icons\Spell_Shadow_DemonicEmpathy"),
+(3316,"Interface\Icons\Ability_Warlock_Eradication"),
+(3317,"Interface\Icons\Ability_Warlock_ShadowFlame"),
+(3318,"Interface\Icons\INV_Potion_83"),
+(3319,"Interface\Icons\ACHIEVEMENT_BOSS_KINGYMIRON_01"),
+(3320,"Interface\Icons\ACHIEVEMENT_BOSS_KINGYMIRON_02"),
+(3321,"Interface\Icons\ACHIEVEMENT_BOSS_KINGYMIRON_03"),
+(3322,"Interface\Icons\INV_Misc_Head_ClockworkGnome_01"),
+(3323,"Interface\Icons\Achievement_Character_Bloodelf_Female"),
+(3324,"Interface\Icons\Achievement_Character_Draenei_Female"),
+(3325,"Interface\Icons\Achievement_Character_Human_Female"),
+(3326,"Interface\Icons\Achievement_Character_Tauren_Female"),
+(3327,"Interface\Icons\Achievement_Character_Nightelf_Female"),
+(3328,"Interface\Icons\INV_Misc_Coin_17"),
+(3329,"Interface\Icons\INV_Egg_06"),
+(3330,"Interface\Icons\Achievement_Zone_BoreanTundra_01"),
+(3331,"Interface\Icons\Achievement_Zone_HowlingFjord_01"),
+(3332,"Interface\Icons\Achievement_Zone_DragonBlight_01"),
+(3333,"Interface\Icons\Achievement_Zone_GrizzlyHills_01"),
+(3334,"Interface\Icons\Achievement_Zone_ZulDrak_03"),
+(3335,"Interface\Icons\Achievement_Zone_Sholazar_01"),
+(3336,"Interface\Icons\Achievement_Zone_BoreanTundra_07"),
+(3337,"Interface\Icons\Achievement_Zone_HowlingFjord_07"),
+(3338,"Interface\Icons\Achievement_Zone_DragonBlight_07"),
+(3339,"Interface\Icons\Achievement_Zone_GrizzlyHills_07"),
+(3340,"Interface\Icons\Achievement_Zone_ZulDrak_07"),
+(3341,"Interface\Icons\Achievement_Zone_Sholazar_07"),
+(3342,"Interface\Icons\INV_Misc_Web_01"),
+(3343,"Interface\Icons\Achievement_Zone_GrizzlyHills_11"),
+(3344,"Interface\Icons\Achievement_PVP_H_01"),
+(3345,"Interface\Icons\Achievement_PVP_H_02"),
+(3346,"Interface\Icons\Achievement_PVP_H_03"),
+(3347,"Interface\Icons\Achievement_PVP_H_04"),
+(3348,"Interface\Icons\Achievement_PVP_H_05"),
+(3349,"Interface\Icons\Achievement_PVP_H_06"),
+(3350,"Interface\Icons\Achievement_PVP_H_07"),
+(3351,"Interface\Icons\Achievement_PVP_H_08"),
+(3352,"Interface\Icons\Achievement_PVP_H_09"),
+(3353,"Interface\Icons\Achievement_PVP_H_10"),
+(3354,"Interface\Icons\Achievement_PVP_H_11"),
+(3355,"Interface\Icons\Achievement_PVP_H_12"),
+(3356,"Interface\Icons\Achievement_PVP_H_13"),
+(3357,"Interface\Icons\Achievement_PVP_H_14"),
+(3358,"Interface\Icons\Achievement_PVP_A_01"),
+(3359,"Interface\Icons\Achievement_PVP_A_02"),
+(3360,"Interface\Icons\Achievement_PVP_A_03"),
+(3361,"Interface\Icons\Achievement_PVP_A_04"),
+(3362,"Interface\Icons\Achievement_PVP_A_05"),
+(3363,"Interface\Icons\Achievement_PVP_A_06"),
+(3364,"Interface\Icons\Achievement_PVP_A_07"),
+(3365,"Interface\Icons\Achievement_PVP_A_08"),
+(3366,"Interface\Icons\Achievement_PVP_A_09"),
+(3367,"Interface\Icons\Achievement_PVP_A_10"),
+(3368,"Interface\Icons\Achievement_PVP_A_11"),
+(3369,"Interface\Icons\Achievement_PVP_A_12"),
+(3370,"Interface\Icons\Achievement_PVP_A_13"),
+(3371,"Interface\Icons\Achievement_PVP_A_14"),
+(3372,"Interface\Icons\Achievement_PVP_A_15"),
+(3373,"Interface\Icons\Achievement_PVP_H_15"),
+(3374,"Interface\Icons\Achievement_PVP_H_16"),
+(3375,"Interface\Icons\Achievement_PVP_A_16"),
+(3376,"Interface\Icons\Ability_Mage_ArcaneBarrage"),
+(3377,"Interface\Icons\Achievement_BG_winAV"),
+(3378,"Interface\Icons\Achievement_BG_win_AV_X_times"),
+(3379,"Interface\Icons\Achievement_BG_Xkills_AVgraveyard"),
+(3380,"Interface\Icons\Achievement_BG_winAV_underXminutes"),
+(3381,"Interface\Icons\Achievement_BG_winAB"),
+(3382,"Interface\Icons\Achievement_BG_win_AB_X_times"),
+(3383,"Interface\Icons\Achievement_BG_winAB_underXminutes"),
+(3384,"Interface\Icons\Achievement_BG_winEOS"),
+(3385,"Interface\Icons\Achievement_BG_win_EOS_X_times"),
+(3386,"Interface\Icons\Achievement_BG_winEOS_underXminutes"),
+(3387,"Interface\Icons\Achievement_BG_winWSG"),
+(3388,"Interface\Icons\Achievement_BG_win_WSG_X_times"),
+(3389,"Interface\Icons\Achievement_BG_winWSG_underXminutes"),
+(3390,"Interface\Icons\Achievement_BG_captureflag_WSG"),
+(3391,"Interface\Icons\Achievement_BG_captureflag_EOS"),
+(3392,"Interface\Icons\Achievement_Dungeon_Nexus70_25man"),
+(3393,"Interface\Icons\INV_Misc_Head_Nerubian_01"),
+(3394,"Interface\Icons\INV_Misc_MonsterHorn_04"),
+(3395,"Interface\Icons\INV_Misc_MonsterScales_16"),
+(3396,"Interface\Icons\INV_Misc_MonsterScales_20"),
+(3397,"Interface\Icons\Achievement_BG_AB_defendflags"),
+(3398,"Interface\Icons\Achievement_BG_interruptX_flagcapture_attempts"),
+(3399,"Interface\Icons\Achievement_BG_interruptX_flagcapture_attempts_"),
+(3400,"Interface\Icons\Achievement_BG_kill_flag_carrierWSG"),
+(3401,"Interface\Icons\Achievement_BG_kill_flag_carrierEOS"),
+(3402,"Interface\Icons\Achievement_BG_winSOA"),
+(3403,"Interface\Icons\Achievement_BG_winSOA_underXminutes"),
+(3404,"Interface\Icons\Achievement_Zone_StormPeaks_01"),
+(3405,"Interface\Icons\Achievement_Zone_StormPeaks_07"),
+(3406,"Interface\Icons\Ability_Hunter_HuntingParty"),
+(3407,"Interface\Icons\Ability_Hunter_ExplosiveShot"),
+(3408,"Interface\Icons\Ability_Hunter_SniperTraining"),
+(3409,"Interface\Icons\Ability_Hunter_ImprovedSteadyShot"),
+(3410,"Interface\Icons\Ability_Hunter_MarkedForDeath"),
+(3411,"Interface\Icons\Ability_Hunter_FocusedAim"),
+(3412,"Interface\Icons\Ability_Hunter_ChimeraShot2"),
+(3413,"Interface\Icons\Ability_Rogue_TricksOftheTrade"),
+(3414,"Interface\Icons\Achievement_Quests_Completed_08"),
+(3415,"Interface\Icons\Achievement_Quests_Completed_07"),
+(3416,"Interface\Icons\Achievement_Quests_Completed_06"),
+(3417,"Interface\Icons\Achievement_Quests_Completed_05"),
+(3418,"Interface\Icons\Achievement_Quests_Completed_04"),
+(3419,"Interface\Icons\Achievement_Quests_Completed_03"),
+(3420,"Interface\Icons\Achievement_Quests_Completed_02"),
+(3421,"Interface\Icons\Achievement_Quests_Completed_01"),
+(3422,"Interface\Icons\Achievement_BG_topDPS"),
+(3423,"Interface\Icons\Achievement_BG_killingblow_berserker"),
+(3424,"Interface\Icons\Achievement_Quests_Completed_Daily_01"),
+(3425,"Interface\Icons\Achievement_Quests_Completed_Daily_02"),
+(3426,"Interface\Icons\Achievement_Quests_Completed_Daily_03"),
+(3427,"Interface\Icons\Achievement_Quests_Completed_Daily_04"),
+(3428,"Interface\Icons\Achievement_Quests_Completed_Daily_05"),
+(3429,"Interface\Icons\Achievement_Quests_Completed_Daily_08"),
+(3430,"Interface\Icons\Ability_Warlock_DemonicPower"),
+(3431,"Interface\Icons\INV_Weapon_Crossbow_12"),
+(3432,"Interface\Icons\INV_Misc_Powder_Purple"),
+(3433,"Interface\Icons\Achievement_BG_winAV_bothmines"),
+(3434,"Interface\Icons\Achievement_BG_kill_on_mount"),
+(3435,"Interface\Icons\INV_Misc_MissileSmallCluster_Red"),
+(3436,"Interface\Icons\Achievement_Character_Orc_Female"),
+(3437,"Interface\Icons\Ability_Hunter_LongShots"),
+(3438,"Interface\Icons\INV_Inscription_TarotGreatness"),
+(3439,"Interface\Icons\INV_Inscription_TarotIllusion"),
+(3440,"Interface\Icons\Ability_Mount_Drake_Bronze"),
+(3441,"Interface\Icons\Ability_Mount_Drake_Blue"),
+(3442,"Interface\Icons\Ability_Mount_Drake_Proto"),
+(3443,"Interface\Icons\Ability_Mount_Mammoth_Brown"),
+(3444,"Interface\Icons\Ability_Mount_Mammoth_Black"),
+(3445,"Interface\Icons\INV_Ore_Platinum_01"),
+(3446,"Interface\Icons\Ability_Mount_Mammoth_White"),
+(3447,"Interface\Icons\INV_JEWELRY_RING_73"),
+(3448,"Interface\Icons\INV_Misc_Platnumdisks"),
+(3449,"Interface\Icons\Ability_Druid_EclipseOrange"),
+(3450,"Interface\Icons\INV_Misc_Coin_18"),
+(3451,"Interface\Icons\INV_Misc_Coin_19"),
+(3452,"Interface\Icons\Achievement_BG_winAB_5cap"),
+(3453,"Interface\Icons\Achievement_PVP_P_15"),
+(3454,"Interface\Icons\Achievement_PVP_P_01"),
+(3455,"Interface\Icons\Achievement_PVP_P_02"),
+(3456,"Interface\Icons\Achievement_PVP_P_03"),
+(3457,"Interface\Icons\Achievement_PVP_P_04"),
+(3458,"Interface\Icons\Achievement_PVP_P_05"),
+(3459,"Interface\Icons\Achievement_PVP_P_06"),
+(3460,"Interface\Icons\Achievement_PVP_P_11"),
+(3461,"Interface\Icons\Achievement_PVP_P_14"),
+(3462,"Interface\Icons\Achievement_PVP_P_09"),
+(3463,"Interface\Icons\Achievement_PVP_G_01"),
+(3464,"Interface\Icons\Achievement_PVP_G_09"),
+(3465,"Interface\Icons\Achievement_PVP_G_11"),
+(3466,"Interface\Icons\Achievement_PVP_G_14"),
+(3467,"Interface\Icons\Achievement_PVP_G_15"),
+(3468,"Interface\Icons\Achievement_BG_overcome500disadvantage"),
+(3469,"Interface\Icons\Achievement_BG_ABshutout"),
+(3470,"Interface\Icons\Achievement_BG_takeXflags_AB"),
+(3471,"Interface\Icons\Achievement_Zone_CrystalSong_01"),
+(3472,"Interface\Icons\INV_Offhand_Hyjal_D_01"),
+(3473,"Interface\Icons\Achievement_Zone_IceCrown_01"),
+(3474,"Interface\Icons\Achievement_Zone_IceCrown_07"),
+(3475,"Interface\Icons\Achievement_Zone_IceCrown_05"),
+(3476,"Interface\Icons\Achievement_Zone_BoreanTundra_11"),
+(3477,"Interface\Icons\Achievement_Zone_Sholazar_08"),
+(3478,"Interface\Icons\Achievement_Zone_Sholazar_11"),
+(3479,"Interface\Icons\Achievement_Zone_ZulDrak_05"),
+(3480,"Interface\Icons\Achievement_Halloween_RottenEgg_01"),
+(3481,"Interface\Icons\Achievement_Quests_Completed_Daily_x5"),
+(3482,"Interface\Icons\Achievement_BG_3flagcap_nodeaths"),
+(3483,"Interface\Icons\Achievement_BG_grab_cap_flagunderXseconds"),
+(3484,"Interface\Icons\Achievement_BG_returnXflags_def_WSG"),
+(3485,"Interface\Icons\Achievement_BG_winWSG_3-0"),
+(3486,"Interface\Icons\Ability_Hunter_MastersCall"),
+(3487,"Interface\Icons\Ability_Hunter_Invigeration"),
+(3488,"Interface\Icons\INV_Gauntlets_22"),
+(3489,"Interface\Icons\INV_Gauntlets_15"),
+(3490,"Interface\Icons\Achievement_Zone_EasternKingdoms_01"),
+(3491,"Interface\Icons\Achievement_Zone_Kalimdor_01"),
+(3492,"Interface\Icons\Achievement_Zone_Outland_01"),
+(3493,"Interface\Icons\Achievement_Zone_Northrend_01"),
+(3494,"Interface\Icons\INV_Helmet_25"),
+(3495,"Interface\Icons\Ability_Mount_Drake_Red"),
+(3496,"Interface\Icons\Ability_Mount_PolarBear_White"),
+(3497,"Interface\Icons\Ability_Mount_PolarBear_Brown"),
+(3498,"Interface\Icons\Ability_Mount_PolarBear_Black"),
+(3499,"Interface\Icons\INV_Helmet_22"),
+(3500,"Interface\Icons\Achievement_BG_masterofallBGs"),
+(3501,"Interface\Icons\INV_Elemental_Mote_Shadow01"),
+(3502,"Interface\Icons\Achievement_Dungeon_Drak'Tharon_25man"),
+(3503,"Interface\Icons\INV_Misc_EngGizmos_EssenceDistiller"),
+(3504,"Interface\Icons\INV_Misc_EngGizmos_02"),
+(3505,"Interface\Icons\Spell_Fire_BlueFlameStrike"),
+(3506,"Interface\Icons\INV_Titanium_Shield_Spike"),
+(3507,"Interface\Icons\INV_Misc_EngGizmos_08"),
+(3508,"Interface\Icons\Achievement_BG_hld4bases_EOS"),
+(3509,"Interface\Icons\Achievement_Halloween_Candy_01"),
+(3510,"Interface\Icons\Achievement_Halloween_Smiley_01"),
+(3511,"Interface\Icons\Achievement_Halloween_Cat_01"),
+(3512,"Interface\Icons\Achievement_Halloween_Bat_01"),
+(3513,"Interface\Icons\Achievement_Halloween_Ghost_01"),
+(3514,"Interface\Icons\Achievement_Halloween_Witch_01"),
+(3515,"Interface\Icons\Achievement_Halloween_Spider_01"),
+(3516,"Interface\Icons\INV_Shoulder_22"),
+(3517,"Interface\Icons\INV_Drink_22"),
+(3518,"Interface\Icons\Ability_Warrior_Warbringer"),
+(3519,"Interface\Icons\Ability_Hunter_BeastMastery"),
+(3520,"Interface\Icons\Ability_Hunter_PointofNoEscape"),
+(3521,"Interface\Icons\Ability_Hunter_PotentVenom"),
+(3522,"Interface\Icons\Ability_Hunter_ImprovedTracking"),
+(3523,"Interface\Icons\Ability_Hunter_AspectMastery"),
+(3524,"Interface\Icons\Ability_Hunter_Assassinate"),
+(3525,"Interface\Icons\INV_Misc_Toy_05"),
+(3526,"Interface\Icons\INV_Misc_Toy_08"),
+(3527,"Interface\Icons\INV_Misc_Note_05"),
+(3528,"Interface\Icons\Achievement_Zone_Darnassus"),
+(3529,"Interface\Icons\Achievement_Zone_DeadwindPass"),
+(3530,"Interface\Icons\Achievement_Zone_Desolace"),
+(3531,"Interface\Icons\Achievement_Zone_DunMorogh"),
+(3532,"Interface\Icons\Achievement_Zone_Durotar"),
+(3533,"Interface\Icons\Achievement_Zone_Duskwood"),
+(3534,"Interface\Icons\Achievement_Zone_DustwallowMarsh"),
+(3535,"Interface\Icons\Achievement_Zone_EasternPlaguelands"),
+(3536,"Interface\Icons\Achievement_Zone_ElwynnForest"),
+(3537,"Interface\Icons\Achievement_Zone_EversongWoods"),
+(3538,"Interface\Icons\Achievement_Zone_Felwood"),
+(3539,"Interface\Icons\Achievement_Zone_Feralas"),
+(3540,"Interface\Icons\Achievement_Zone_Ghostlands"),
+(3541,"Interface\Icons\Achievement_Zone_AlteracMountains_01"),
+(3542,"Interface\Icons\Achievement_Zone_ArathiHighlands_01"),
+(3543,"Interface\Icons\Achievement_Zone_Ashenvale_01"),
+(3544,"Interface\Icons\Achievement_Zone_Azshara_01"),
+(3545,"Interface\Icons\Achievement_Zone_AzuremystIsle_01"),
+(3546,"Interface\Icons\Achievement_Zone_Badlands_01"),
+(3547,"Interface\Icons\Achievement_Zone_Barrens_01"),
+(3548,"Interface\Icons\Achievement_Zone_Blackrock_01"),
+(3549,"Interface\Icons\Achievement_Zone_BladesEdgeMtns_01"),
+(3550,"Interface\Icons\Achievement_Zone_BlastedLands_01"),
+(3551,"Interface\Icons\Achievement_Zone_BloodmystIsle_01"),
+(3552,"Interface\Icons\Achievement_Zone_BurningSteppes_01"),
+(3553,"Interface\Icons\Achievement_Zone_Darkshore_01"),
+(3554,"Interface\Icons\Achievement_Zone_HellfirePeninsula_01"),
+(3555,"Interface\Icons\Achievement_Zone_HillsbradFoothills"),
+(3556,"Interface\Icons\Achievement_Zone_Hinterlands_01"),
+(3557,"Interface\Icons\Achievement_Zone_IsleOfQuelDanas"),
+(3558,"Interface\Icons\Achievement_Zone_LochModan"),
+(3559,"Interface\Icons\Ability_Hunter_SeparationAnxiety"),
+(3560,"Interface\Icons\Ability_Hunter_RapidRegeneration"),
+(3561,"Interface\Icons\Ability_Hunter_Longevity"),
+(3562,"Interface\Icons\Achievement_Zone_Mulgore_01"),
+(3563,"Interface\Icons\Achievement_Zone_Nagrand_01"),
+(3564,"Interface\Icons\Achievement_Zone_Netherstorm_01"),
+(3565,"Interface\Icons\Achievement_Zone_RedridgeMountains"),
+(3566,"Interface\Icons\Achievement_Zone_SearingGorge_01"),
+(3567,"Interface\Icons\Achievement_Zone_Silithus_01"),
+(3568,"Interface\Icons\Achievement_Zone_Stranglethorn_01"),
+(3569,"Interface\Icons\Achievement_Zone_SwampSorrows_01"),
+(3570,"Interface\Icons\Achievement_Zone_TirisfalGlades_01"),
+(3571,"Interface\Icons\Achievement_Zone_WesternPlaguelands_01"),
+(3572,"Interface\Icons\Achievement_Zone_WestFall_01"),
+(3573,"Interface\Icons\Achievement_Zone_Wetlands_01"),
+(3574,"Interface\Icons\Achievement_PVP_A_A"),
+(3575,"Interface\Icons\Achievement_PVP_H_H"),
+(3576,"Interface\Icons\Achievement_Zone_Silverpine_01"),
+(3577,"Interface\Icons\Achievement_Zone_Tanaris_01"),
+(3578,"Interface\Icons\Achievement_Zone_Stonetalon_01"),
+(3579,"Interface\Icons\Ability_Hunter_LockAndLoad"),
+(3580,"Interface\Icons\Achievement_Zone_ThousandNeedles_01"),
+(3581,"Interface\Icons\Achievement_BG_DefendXtowers_AV"),
+(3582,"Interface\Icons\Achievement_BG_KillXEnemies_GeneralsRoom"),
+(3583,"Interface\Icons\Achievement_BG_KillFlagCarriers_grabFlag_CapIt"),
+(3584,"Interface\Icons\Achievement_Zone_Shadowmoon"),
+(3585,"Interface\Icons\Achievement_Zone_Zangarmarsh"),
+(3586,"Interface\Icons\Achievement_Zone_Terrokar"),
+(3587,"Interface\Icons\Achievement_Zone_Winterspring"),
+(3588,"Interface\Icons\Achievement_Zone_UnGoroCrater_01"),
+(3589,"Interface\Icons\INV_Torch_Unlit"),
+(3590,"Interface\Icons\Achievement_Boss_Exarch_Maladaar"),
+(3591,"Interface\Icons\Achievement_Boss_Quagmirran"),
+(3592,"Interface\Icons\Achievement_Boss_Kiljaedan"),
+(3593,"Interface\Icons\Achievement_FeatsOfStrength_Gladiator_01"),
+(3594,"Interface\Icons\Achievement_FeatsOfStrength_Gladiator_02"),
+(3595,"Interface\Icons\Achievement_FeatsOfStrength_Gladiator_03"),
+(3596,"Interface\Icons\Achievement_FeatsOfStrength_Gladiator_04"),
+(3597,"Interface\Icons\Achievement_FeatsOfStrength_Gladiator_05"),
+(3598,"Interface\Icons\Achievement_FeatsOfStrength_Gladiator_06"),
+(3599,"Interface\Icons\Achievement_FeatsOfStrength_Gladiator_07"),
+(3600,"Interface\Icons\Achievement_FeatsOfStrength_Gladiator_08"),
+(3601,"Interface\Icons\Achievement_FeatsOfStrength_Gladiator_10"),
+(3602,"Interface\Icons\Achievement_Reputation_08"),
+(3603,"Interface\Icons\Achievement_Reputation_07"),
+(3604,"Interface\Icons\Achievement_Reputation_06"),
+(3605,"Interface\Icons\Achievement_Reputation_05"),
+(3606,"Interface\Icons\Achievement_Reputation_04"),
+(3607,"Interface\Icons\Achievement_Reputation_03"),
+(3608,"Interface\Icons\Achievement_Reputation_02"),
+(3609,"Interface\Icons\Achievement_Reputation_01"),
+(3610,"Interface\Icons\Achievement_Dungeon_TheVioletHold"),
+(3611,"Interface\Icons\INV_Potion_114"),
+(3612,"Interface\Icons\INV_Alchemy_Potion_05"),
+(3613,"Interface\Icons\INV_Alchemy_Potion_Empty"),
+(3614,"Interface\Icons\INV_Potion_161"),
+(3615,"Interface\Icons\INV_Alchemy_Potion_03"),
+(3616,"Interface\Icons\INV_Alchemy_Potion_04"),
+(3617,"Interface\Icons\INV_Alchemy_Potion_01"),
+(3618,"Interface\Icons\INV_Alchemy_Potion_02"),
+(3619,"Interface\Icons\INV_Alchemy_Potion_06"),
+(3620,"Interface\Icons\INV_Alchemy_EndlessFlask_06"),
+(3621,"Interface\Icons\INV_Alchemy_EndlessFlask_03"),
+(3622,"Interface\Icons\INV_Alchemy_EndlessFlask_05"),
+(3623,"Interface\Icons\INV_Alchemy_EndlessFlask_04"),
+(3624,"Interface\Icons\INV_Alchemy_EndlessFlask_02"),
+(3625,"Interface\Icons\INV_Alchemy_Elixir_Empty"),
+(3626,"Interface\Icons\Ability_Mount_Mammoth_Brown_3seater"),
+(3627,"Interface\Icons\Achievement_Boss_EdwinVancleef"),
+(3628,"Interface\Icons\Achievement_Boss_GruulTheDragonkiller"),
+(3629,"Interface\Icons\Achievement_Boss_KelidanTheBreaker"),
+(3630,"Interface\Icons\Achievement_Boss_Zuljin"),
+(3631,"Interface\Icons\Achievement_Boss_TalonKingIkiss"),
+(3632,"Interface\Icons\INV_Fabric_MoonRag_Primal"),
+(3633,"Interface\Icons\INV_Fabric_Felcloth_Ebon"),
+(3634,"Interface\Icons\INV_Fabric_Mageweave_01"),
+(3635,"Interface\Icons\INV_Fabric_PurpleFire_01"),
+(3636,"Interface\Icons\Achievement_Zone_StormPeaks_12"),
+(3637,"Interface\Icons\Achievement_Zone_StormPeaks_03"),
+(3638,"Interface\Icons\Achievement_Zone_DragonBlight_09"),
+(3639,"Interface\Icons\Achievement_Boss_Archimonde "),
+(3640,"Interface\Icons\Achievement_Boss_Magtheridon"),
+(3641,"Interface\Icons\Achievement_Boss_Mekgineer_Thermaplugg "),
+(3642,"Interface\Icons\Achievement_Boss_WarpSplinter"),
+(3643,"Interface\Icons\Ability_Mount_Mammoth_Black_3seater"),
+(3644,"Interface\Icons\Ability_Mount_Mammoth_White_3seater"),
+(3645,"Interface\Icons\Spell_Holy_ProclaimChampion_02"),
+(3646,"Interface\Icons\INV_Misc_Toy_10"),
+(3647,"Interface\Icons\Ability_Hunter_HunterVsWild"),
+(3648,"Interface\Icons\INV_Misc_MonsterTail_06"),
+(3649,"Interface\Icons\Achievement_Boss_Hakkar"),
+(3650,"Interface\Icons\Achievement_Boss_Overlord_Wyrmthalak"),
+(3651,"Interface\Icons\Achievement_Boss_Hakkar"),
+(3652,"Interface\Icons\Achievement_Boss_Bazil_Thredd"),
+(3653,"Interface\Icons\Achievement_Boss_Bazil_Akumai"),
+(3654,"Interface\Icons\Achievement_Boss_Mutanus_the_Devourer"),
+(3655,"Interface\Icons\Achievement_Boss_Amnennar_the_Coldbringer"),
+(3656,"Interface\Icons\Achievement_Boss_Archaedas"),
+(3657,"Interface\Icons\Achievement_Boss_Warlord_Kalithresh"),
+(3658,"Interface\Icons\Achievement_Boss_LadyVashj"),
+(3659,"Interface\Icons\Achievement_Boss_Harbinger_Skyriss"),
+(3660,"Interface\Icons\Achievement_Leader_ Thrall"),
+(3661,"Interface\Icons\Achievement_Leader_Sylvanas"),
+(3662,"Interface\Icons\Achievement_Boss_EmperorDagranThaurissan"),
+(3663,"Interface\Icons\Achievement_Boss_Illidan"),
+(3664,"Interface\Icons\Achievement_Boss_Kael'thasSunstrider_01"),
+(3665,"Interface\Icons\Achievement_Boss_Kael'thasSunstrider_01"),
+(3666,"Interface\Icons\Achievement_Boss_Nexus_Prince_Shaffar"),
+(3667,"Interface\Icons\Ability_Mount_Drake_Azure"),
+(3668,"Interface\Icons\Ability_Mount_Drake_Twilight"),
+(3669,"Interface\Icons\Achievement_Leader_Cairne Bloodhoof"),
+(3670,"Interface\Icons\Achievement_Leader_Lorthemar_Theron "),
+(3671,"Interface\Icons\Achievement_Leader_King_Varian_Wrynn"),
+(3672,"Interface\Icons\Achievement_Leader_King_Magni_Bronzebeard"),
+(3673,"Interface\Icons\Achievement_Leader_Tyrande_Whisperwind"),
+(3674,"Interface\Icons\Achievement_Leader_Prophet_Velen"),
+(3675,"Interface\Icons\Achievement_Character_Troll_Female"),
+(3676,"Interface\Icons\Ability_Hunter_Assassinate2"),
+(3677,"Interface\Icons\Achievement_Boss_CThun"),
+(3678,"Interface\Icons\Achievement_Profession_ChefHat"),
+(3679,"Interface\Icons\Achievement_WorldEvent_LittleHelper"),
+(3680,"Interface\Icons\Achievement_Boss_OmarTheUnscarred_01"),
+(3681,"Interface\Icons\Achievement_Boss_OssirianTheUnscarred"),
+(3682,"Interface\Icons\Achievement_Reputation_KirinTor"),
+(3683,"Interface\Icons\Achievement_Reputation_KnightsoftheEbonBlade"),
+(3684,"Interface\Icons\Achievement_Reputation_WyrmrestTemple"),
+(3685,"Interface\Icons\Achievement_Reputation_timbermaw"),
+(3686,"Interface\Icons\Achievement_Boss_CharlgaRazorflank"),
+(3687,"Interface\Icons\Achievement_Boss_ChiefUkorzSandscalp"),
+(3688,"Interface\Icons\Achievement_Boss_PathaleonTheCalculator"),
+(3689,"Interface\Icons\Achievement_Boss_PrincessTheradras"),
+(3690,"Interface\Icons\Achievement_Boss_ShadeOfEranikus"),
+(3691,"Interface\Icons\Achievement_Profession_Fishing_OutlandAngler"),
+(3692,"Interface\Icons\Achievement_Profession_Fishing_NorthrendAngler"),
+(3693,"Interface\Icons\Achievement_Profession_Fishing_OldManBarlowned"),
+(3694,"Interface\Icons\Achievement_Profession_Fishing_JourneymanFisher"),
+(3695,"Interface\Icons\Achievement_WorldEvent_Merrymaker"),
+(3696,"Interface\Icons\Achievement_Reputation_AshtongueDeathsworn"),
+(3697,"Interface\Icons\Achievement_WorldEvent_Brewmaster"),
+(3698,"Interface\Icons\Achievement_WorldEvent_Lunar"),
+(3699,"Interface\Icons\Achievement_WorldEvent_Valentine"),
+(3700,"Interface\Icons\Achievement_WorldEvent_XmasOgre"),
+(3701,"Interface\Icons\Achievement_Profession_Fishing_FindFish"),
+(3702,"Interface\Icons\Achievement_Reputation_Tuskarr"),
+(3703,"Interface\Icons\Achievement_WorldEvent_Reindeer"),
+(3704,"Interface\Icons\Achievement_WorldEvent_Thanksgiving"),
+(3705,"Interface\Icons\INV_Misc_Food_106_FjordPeach"),
+(3706,"Interface\Icons\Achievement_Noblegarden_Chocolate_Egg"),
+(3707,"Interface\Icons\Ability_Druid_TigersRoar"),
+(3708,"Interface\Icons\INV_Misc_Bag_10_Blue"),
+(3709,"Interface\Icons\INV_Misc_Organ_10"),
+(3710,"Interface\Icons\INV_Misc_Food_147_Cake"),
+(3711,"Interface\Icons\INV_Egg_07"),
+(3712,"Interface\Icons\INV_Shirt_08"),
+(3713,"Interface\Icons\INV_Chest_Cloth_04"),
+(3714,"Interface\Icons\INV_Misc_Gem_Pearl_03"),
+(3715,"Interface\Icons\INV_Misc_Gem_FlameSpessarite_03"),
+(3716,"Interface\Icons\INV_Hammer_15"),
+(3717,"Interface\Icons\Spell_Shaman_ImprovedEarthShield"),
+(3718,"Interface\Icons\INV_Misc_Plant_03"),
+(3721,"Interface\Icons\INV_Misc_Note_04"),
+(3722,"Interface\Icons\Spell_Holy_UnyieldingFaith"),
+(3723,"Interface\Icons\ACHIEVEMENT_WIN_WINTERGRASP"),
+(3724,"Interface\Icons\Ability_WIntergrasp_rank1"),
+(3725,"Interface\Icons\Ability_WIntergrasp_rank2"),
+(3726,"Interface\Icons\INV_Sword_130"),
+(3727,"Interface\Icons\INV_Shirt_Black_01"),
+(3728,"Interface\Icons\INV_Misc_Map09"),
+(3729,"Interface\Icons\INV_Alchemy_Elixir_04"),
+(3730,"Interface\Icons\INV_Alchemy_Elixir_01"),
+(3731,"Interface\Icons\INV_EssenceOfWintergrasp"),
+(3732,"Interface\Icons\INV_Ammo_Bullet_08"),
+(3733,"Interface\Icons\INV_Ore_Cobalt"),
+(3734,"Interface\Icons\inv_misc_enggizmos_27"),
+(3735,"Interface\Icons\INV_Misc_ScrewDriver_01"),
+(3736,"Interface\Icons\INV_Gizmo_Pipe_03"),
+(3737,"Interface\Icons\Trade_Engineering"),
+(3738,"Interface\Icons\inv_weapon_rifle_31"),
+(3739,"Interface\Icons\inv_misc_book_03"),
+(3740,"Interface\Icons\Ability_Shaman_CleanseSpirit"),
+(3741,"Interface\Icons\Ability_Shaman_Lavalash"),
+(3742,"Interface\Icons\inv_inscription_inkbluewhite01"),
+(3743,"Interface\Icons\INV_Weapon_Shortblade_68"),
+(3744,"Interface\Icons\Achievement_Reputation_ArgentChampion"),
+(3745,"Interface\Icons\INV_Ammo_Bullet_06"),
+(3747,"Interface\Icons\INV_GAUNTLETS_66"),
+(3748,"Interface\Icons\INV_Misc_Horn_04"),
+(3751,"Interface\Icons\INV_Axe_19"),
+(3752,"Interface\Icons\INV_PET_FROSTWYRM"),
+(3753,"Interface\Icons\inv_hammer_02"),
+(3754,"Interface\Icons\inv_mace_28"),
+(3755,"Interface\Icons\INV_Rod_Adamantite"),
+(3757,"Interface\Icons\inv_ingot_titansteel_dark"),
+(3758,"Interface\Icons\inv_belt_02"),
+(3759,"Interface\Icons\inv_misc_root_01"),
+(3760,"Interface\Icons\Ability_Vehicle_DemolisherFlameCatapult"),
+(3761,"Interface\Icons\ability_vehicle_siegeenginecannon"),
+(3762,"Interface\Icons\ability_vehicle_demolisherram"),
+(3763,"Interface\Icons\ability_vehicle_siegeengineram"),
+(3764,"Interface\Icons\ability_vehicle_plaguebarrel"),
+(3765,"Interface\Icons\ability_vehicle_liquidpyrite"),
+(3766,"Interface\Icons\ability_vehicle_powertowheels"),
+(3767,"Interface\Icons\ability_vehicle_reloadammo"),
+(3768,"Interface\Icons\ability_vehicle_launchplayer"),
+(3769,"Interface\Icons\ability_vehicle_sonicshockwave"),
+(3770,"Interface\Icons\ability_vehicle_oiljets"),
+(3771,"Interface\Icons\ability_vehicle_playerloaded"),
+(3772,"Interface\Icons\ability_vehicle_loadselfcatapult"),
+(3773,"Interface\Icons\ability_vehicle_rocketboost"),
+(3774,"Interface\Icons\ability_vehicle_siegeenginecharge"),
+(3775,"Interface\Icons\achievement_reputation_wolvar"),
+(3776,"Interface\Icons\INV_Shield_02"),
+(3777,"Interface\Icons\inv_misc_monsterclaw_06"),
+(3778,"Interface\Icons\Trade_Engineering"),
+(3779,"Interface\Icons\ability_vehicle_liquidpyrite _blue"),
+(3780,"Interface\Icons\Spell_Fire_BlueCano"),
+(3781,"Interface\Icons\inv_ore_saronite_01"),
+(3782,"Interface\Icons\inv_shield_14"),
+(3783,"Interface\Icons\inv_shirt_orange_01"),
+(3784,"Interface\Icons\achievement_zone_ironforge"),
+(3785,"Interface\Icons\Spell_Deathknight_IcyTalons"),
+(3786,"Interface\Icons\spell_nature_riptide"),
+(3787,"Interface\Icons\inv_belt_06"),
+(3788,"Interface\Icons\inv_shirt_purple_01"),
+(3789,"Interface\Icons\Spell_Shadow_DevouringPlague"),
+(3790,"Interface\Icons\Spell_Shadow_DevouringPlague."),
+(3791,"Interface\Icons\inv_stone_weightstone_08"),
+(3792,"Interface\Icons\inv_misc_spyglass_03"),
+(3794,"Interface\Icons\inv_fabric_moonshroud"),
+(3795,"Interface\Icons\inv_misc_tournaments_symbol_bloodelf"),
+(3796,"Interface\Icons\inv_misc_tournaments_symbol_draenei"),
+(3797,"Interface\Icons\inv_misc_tournaments_symbol_dwarf"),
+(3798,"Interface\Icons\inv_misc_tournaments_symbol_scourge"),
+(3799,"Interface\Icons\inv_misc_tournaments_symbol_gnome"),
+(3800,"Interface\Icons\inv_misc_tournaments_symbol_human"),
+(3801,"Interface\Icons\inv_misc_tournaments_symbol_nightelf"),
+(3802,"Interface\Icons\inv_misc_tournaments_symbol_orc"),
+(3803,"Interface\Icons\inv_misc_tournaments_symbol_tauren"),
+(3804,"Interface\Icons\inv_misc_tournaments_symbol_troll"),
+(3805,"Interface\Icons\achievement_reputation_argentcrusader"),
+(3806,"Interface\Icons\inv_misc_tournaments_banner_orc"),
+(3807,"Interface\Icons\inv_misc_tournaments_banner_human"),
+(3808,"Interface\Icons\inv_sword_65"),
+(3809,"Interface\Icons\inv_boots_cloth_08"),
+(3811,"Interface\Icons\achievement_boss_xt002deconstructor_01"),
+(3812,"Interface\Icons\inv_misc_fish_56"),
+(3813,"Interface\Icons\inv_misc_idol_05"),
+(3814,"Interface\Icons\inv_inscription_pigment_bug07"),
+(3815,"Interface\Icons\trade_engineering"),
+(3816,"Interface\Icons\trade_engineering"),
+(3817,"Interface\Icons\Achievement_Boss_Nefarion"),
+(3818,"Interface\Icons\INV_Mace_99"),
+(3819,"Interface\Icons\Achievement_Boss_Ragnaros"),
+(3820,"Interface\Icons\Achievement_Boss_Onyxia"),
+(3821,"Interface\Icons\Achievement_Boss_GeneralDrakkisath"),
+(3822,"Interface\Icons\Achievement_Boss_ArchmageArugal"),
+(3823,"Interface\Icons\Achievement_Boss_theBlackStalker"),
+(3824,"Interface\Icons\Achievement_Boss_EpochHunter"),
+(3825,"Interface\Icons\Achievement_Boss_Murmur"),
+(3826,"Interface\Icons\Achievement_Boss_Aeonus_01"),
+(3827,"Interface\Icons\Achievement_Boss_KargathBladefist_01"),
+(3828,"Interface\Icons\Achievement_Boss_PrinceMalchezaar_02"),
+(3829,"Interface\Icons\inv_sword_121"),
+(3830,"Interface\Icons\inv_misc_runedorb_01"),
+(3831,"Interface\Icons\achievement_bg_killingblow_most"),
+(3833,"Interface\Icons\ability_mount_flyingcarpet"),
+(3835,"Interface\Icons\inv_misc_leatherscrap_17"),
+(3836,"Interface\Icons\inv_misc_gem_bloodstone_03"),
+(3837,"Interface\Icons\spell_holy_powerwordbarrier"),
+(3838,"Interface\Icons\inv_enchant_dustsoul"),
+(3839,"Interface\Icons\inv_misc_enggizmos_16"),
+(3840,"Interface\Icons\inv_gizmo_healthpotionpack"),
+(3841,"Interface\Icons\inv_misc_bone_skull_02"),
+(3842,"Interface\Icons\ability_mount_goldengryphon"),
+(3843,"Interface\Icons\ability_mount_tawnywindrider"),
+(3844,"Interface\Icons\Achievement_Dungeon_UlduarRaid_Archway_01"),
+(3845,"Interface\Icons\ability_vehicle_shellshieldgenerator"),
+(3846,"Interface\Icons\Achievement_Boss_TribunalofAges"),
+(3847,"Interface\Icons\Achievement_Dungeon_UlduarRaid_Misc_05"),
+(3848,"Interface\Icons\Achievement_Boss_YoggSaron_01"),
+(3849,"Interface\Icons\Achievement_Dungeon_UlduarRaid_Misc_01"),
+(3850,"Interface\Icons\INV_Misc_Orb_05"),
+(3851,"Interface\Icons\Achievement_Boss_Razorscale"),
+(3852,"Interface\Icons\Achievement_Boss_Razorscale_01"),
+(3853,"Interface\Icons\Achievement_Dungeon_UlduarRaid_IronDwarf_01"),
+(3854,"Interface\Icons\Achievement_Boss_TheFlameLeviathan_01"),
+(3855,"Interface\Icons\Achievement_Boss_Ignis_01"),
+(3856,"Interface\Icons\INV_Gizmo_BronzeFramework_01"),
+(3857,"Interface\Icons\INV_Misc_EngGizmos_14"),
+(3858,"Interface\Icons\Achievement_Boss_TheIronCouncil_01"),
+(3859,"Interface\Icons\Achievement_Boss_Kologarn_01"),
+(3860,"Interface\Icons\INV_Helmet_51"),
+(3861,"Interface\Icons\INV_Helmet_50"),
+(3862,"Interface\Icons\Achievement_Boss_Hodir_01"),
+(3863,"Interface\Icons\Achievement_Boss_Thorim"),
+(3864,"Interface\Icons\Achievement_Dungeon_UlduarRaid_IronSentinel_01"),
+(3865,"Interface\Icons\Achievement_Boss_Freya_01"),
+(3866,"Interface\Icons\INV_Misc_MissileSmallCluster_Yellow"),
+(3867,"Interface\Icons\Achievement_Boss_Mimiron_01"),
+(3868,"Interface\Icons\Achievement_Boss_GeneralVezax_01"),
+(3869,"Interface\Icons\Achievement_Boss_Algalon_01"),
+(3870,"Interface\Icons\Achievement_Boss_Auriaya_01"),
+(3871,"Interface\Icons\Achievement_Boss_HeraldVolazj"),
+(3872,"Interface\Icons\INV_SpiritShard_02"),
+(3873,"Interface\Icons\inv_misc_fish_turtle_03"),
+(3874,"Interface\Icons\INV_Pet_ScorchedStone"),
+(3875,"Interface\Icons\INV_ValentinesCardTornLeft"),
+(3876,"Interface\Icons\INV_Helmet_19"),
+(3877,"Interface\Icons\INV_Helmet_122"),
+(3878,"Interface\Icons\spell_fire_rune"),
+(3879,"Interface\Icons\achievement_dungeon_ulduarraid_irongolem_01"),
+(3880,"Interface\Icons\trade_engineering"),
+(3881,"Interface\Icons\trade_engineering"),
+(3882,"Interface\Icons\trade_engineering"),
+(3883,"Interface\Icons\trade_engineering"),
+(3884,"Interface\Icons\trade_engineering"),
+(3885,"Interface\Icons\trade_engineering"),
+(3886,"Interface\Icons\trade_engineering"),
+(3887,"Interface\Icons\trade_engineering"),
+(3888,"Interface\Icons\trade_engineering"),
+(3889,"Interface\Icons\trade_engineering"),
+(3890,"Interface\Icons\inv_misc_fish_turtle_02"),
+(3891,"Interface\Icons\ability_mount_spectraltiger"),
+(3892,"Interface\Icons\ability_mount_blackbattlestrider"),
+(3893,"Interface\Icons\ability_mount_magnificentflyingcarpet"),
+(3894,"Interface\Icons\ability_mount_ebonblade"),
+(3895,"Interface\Icons\ability_mount_bigblizzardbear"),
+(3896,"Interface\Icons\inv_pet_babyblizzardbear"),
+(3897,"Interface\Icons\ability_mount_swiftpurplewindrider"),
+(3898,"Interface\Icons\ability_mount_swiftgreenwindrider"),
+(3899,"Interface\Icons\ability_mount_swiftredwindrider"),
+(3900,"Interface\Icons\ability_mount_swiftyellowwindrider"),
+(3901,"Interface\Icons\ability_mount_greenwindrider"),
+(3902,"Interface\Icons\ability_mount_bluewindrider"),
+(3903,"Interface\Icons\ability_mount_snowygryphon"),
+(3904,"Interface\Icons\ability_mount_ebongryphon"),
+(3905,"Interface\Icons\inv_pet_cockroach"),
+(3906,"Interface\Icons\inv_pet_lilsmoky"),
+(3907,"Interface\Icons\inv_pet_ratcage"),
+(3908,"Interface\Icons\inv_pet_sleepywilly"),
+(3909,"Interface\Icons\inv_pet_babyshark"),
+(3910,"Interface\Icons\inv_pet_egbert"),
+(3911,"Interface\Icons\inv_pet_nurturedpenguinegg"),
+(3912,"Interface\Icons\inv_pet_pinkmurlocegg"),
+(3913,"Interface\Icons\ability_mount_redfrostwyrm_01"),
+(3914,"Interface\Icons\INV_Misc_Gem_AzureDraenite_01"),
+(3915,"Interface\Icons\inv_misc_eye_02"),
+(3916,"Interface\Icons\inv_crown_13"),
+(3917,"Interface\Icons\Achievement_Dungeon_UlduarRaid_Titan_01"),
+(3918,"Interface\Icons\inv_weapon_hand_07"),
+(3919,"Interface\Icons\inv_misc_pocketwatch_03"),
+(3920,"Interface\Icons\inv_drink_08"),
+(3921,"Interface\Icons\inv_potion_129"),
+(3922,"Interface\Icons\inv_potion_156"),
+(3923,"Interface\Icons\spell_nature_rune"),
+(3924,"Interface\Icons\spell_holy_rune"),
+(3925,"Interface\Icons\spell_ice_rune"),
+(3927,"Interface\Icons\INV_Box_04"),
+(3928,"Interface\Icons\INV_Misc_Food_132_Meat"),
+(3930,"Interface\Icons\spell_druid_feralchargecat"),
+(3931,"Interface\Icons\achievement_reputation_murlocoracle"),
+(3932,"Interface\Icons\inv_misc_bone_humanskull_02"),
+(3933,"Interface\Icons\inv_thanksgiving_cranberrysauce"),
+(3934,"Interface\Icons\inv_thanksgiving_pumpkinpie"),
+(3935,"Interface\Icons\inv_thanksgiving_stuffing"),
+(3936,"Interface\Icons\inv_thanksgiving_turkey"),
+(3937,"Interface\Icons\inv_thanksgiving_sweetpotato "),
+(3938,"Interface\Icons\inv_misc_herb_tigerlily"),
+(3940,"Interface\Icons\INV_Misc_Orb_05"),
+(3941,"Interface\Icons\ability_mount_razorscale"),
+(3947,"Interface\Icons\achievement_worldevent_mistletoe"),
+(3949,"Interface\Icons\INV_Weapon_Shortblade_92"),
+(3952,"Interface\Icons\INV_Potion_120"),
+(3953,"Interface\Icons\inv_inscription_inkred01"),
+(3954,"Interface\Icons\achievement_reputation_ogre"),
+(3956,"Interface\Icons\inv_misc_trailofflowers"),
+(3957,"Interface\Icons\inv_misc_ogrepinata"),
+(3958,"Interface\Icons\inv_elemental_mote_mana"),
+(3959,"Interface\Icons\INV_Misc_NerubianChitin_01"),
+(3960,"Interface\Icons\Spell_Fire_BlueFireward"),
+(3961,"Interface\Icons\Ability_Hunter_Pet_Silithid"),
+(3964,"Interface\Icons\inv_rod_platinum"),
+(3966,"Interface\Icons\inv_helmet_65"),
+(3967,"Interface\Icons\inv_holiday_thanksgiving_cornucopia"),
+(3968,"Interface\Icons\inv_alchemy_elixir_05"),
+(3970,"Interface\Icons\inv_thanksgiving_cranberrysauce_act"),
+(3971,"Interface\Icons\inv_thanksgiving_pumpkinpie_act"),
+(3972,"Interface\Icons\inv_thanksgiving_stuffing_act"),
+(3973,"Interface\Icons\inv_thanksgiving_sweetpotato_act "),
+(3974,"Interface\Icons\inv_thanksgiving_turkey_act"),
+(3975,"Interface\Icons\INV_Misc_Statue_01"),
+(3976,"Interface\Icons\inv_elemental_primal_nether"),
+(3978,"Interface\Icons\inv_misc_monsterhorn_07"),
+(3979,"Interface\Icons\inv_jewelcrafting_gem_41"),
+(3980,"Interface\Icons\INV_Staff_14"),
+(3981,"Interface\Icons\INV_Staff_19"),
+(3982,"Interface\Icons\INV_Staff_20"),
+(3983,"Interface\Icons\INV_Staff_18"),
+(3984,"Interface\Icons\inv_jewelcrafting_gem_39"),
+(3985,"Interface\Icons\inv_jewelcrafting_gem_33"),
+(3986,"Interface\Icons\inv_jewelcrafting_gem_36"),
+(3987,"Interface\Icons\inv_jewelcrafting_gem_35"),
+(3988,"Interface\Icons\inv_jewelcrafting_gem_32"),
+(3989,"Interface\Icons\inv_jewelcrafting_gem_34"),
+(3990,"Interface\Icons\inv_jewelcrafting_gem_31"),
+(3991,"Interface\Icons\Spell_Shaman_Dropall_01"),
+(3992,"Interface\Icons\Spell_Shaman_Dropall_02"),
+(3993,"Interface\Icons\Spell_Shaman_Dropall_03"),
+(3994,"Interface\Icons\Spell_Shaman_TotemRecall"),
+(3997,"Interface\Icons\inv_weapon_shortblade_06"),
+(3998,"Interface\Icons\Ability_Warrior_ShatteringThrow"),
+(4000,"Interface\Icons\inv_letter_06"),
+(4001,"Interface\Icons\inv_misc_monsterclaw_09"),
+(4002,"Interface\Icons\INV_Shield_61"),
+(4003,"Interface\Icons\INV_Helmet_134"),
+(4004,"Interface\Icons\INV_Helmet_138"),
+(4005,"Interface\Icons\Achievement_Boss_SvalaSorrowgrave"),
+(4006,"Interface\Icons\Achievement_Boss_Anubarak"),
+(4007,"Interface\Icons\Achievement_Arena_5v5_3"),
+(4008,"Interface\Icons\INV_Crown_15"),
+(4009,"Interface\Icons\INV_Helmet_78"),
+(4016,"Interface\Icons\INV_Ingot_Cobalt"),
+(4017,"Interface\Icons\INV_Weapon_Shortblade_37"),
+(4022,"Interface\Icons\inv_gauntlets_12"),
+(4025,"INTERFACE\ICONS\ability_hunter_pet_worm"),
+(4034,"INTERFACE\ICONS\inv_inscription_weaponscroll01"),
+(4035,"INTERFACE\ICONS\inv_letter_09"),
+(4037,"INTERFACE\ICONS\inv_misc_gear_05"),
+(4038,"INTERFACE\ICONS\inv_shirt_09"),
+(4040,"INTERFACE\ICONS\inv_misc_pet_01"),
+(4041,"INTERFACE\ICONS\inv_belt_19"),
+(4052,"INTERFACE\ICONS\achievement_zone_icecrown_06"),
+(4054,"INTERFACE\ICONS\inv_shield_49"),
+(4055,"INTERFACE\ICONS\trade_engineering"),
+(4059,"INTERFACE\ICONS\trade_engineering"),
+(4061,"INTERFACE\ICONS\inv_enchant_abysscrystal"),
+(4062,"INTERFACE\ICONS\ability_hunter_pet_corehound"),
+(4064,"INTERFACE\ICONS\inv_relics_totemofrebirth"),
+(4065,"INTERFACE\ICONS\inv_jewelcrafting_gem_23"),
+(4066,"INTERFACE\ICONS\inv_jewelcrafting_gem_06"),
+(4067,"INTERFACE\ICONS\spell_magic_polymorphrabbit"),
+(4068,"INTERFACE\ICONS\spell_shadow_rune"),
+(4069,"INTERFACE\ICONS\inv_misc_shovel_01"),
+(4071,"INTERFACE\ICONS\inv_misc_pet_02"),
+(4072,"INTERFACE\ICONS\inv_misc_pet_03"),
+(4073,"INTERFACE\ICONS\inv_misc_pet_04"),
+(4074,"INTERFACE\ICONS\inv_misc_penguinpet"),
+(4075,"INTERFACE\ICONS\achievement_boss_kelthuzad_01"),
+(4092,"INTERFACE\ICONS\inv_misc_mohawkgrenade"),
+(4094,"INTERFACE\ICONS\inv_misc_herb_frostlotus"),
+(4106,"INTERFACE\ICONS\inv_inscription_inkgreen03"),
+(4107,"INTERFACE\ICONS\inv_inscription_inkorange01"),
+(4108,"INTERFACE\ICONS\achievement_boss_maexxna"),
+(4110,"INTERFACE\ICONS\inv_jewelcrafting_shadowspirit_02"),
+(4111,"INTERFACE\ICONS\trade_engineering"),
+(4112,"INTERFACE\ICONS\trade_engineering"),
+(4114,"INTERFACE\ICONS\inv_misc_monsterclaw_05"),
+(4115,"INTERFACE\ICONS\inv_misc_monsterhorn_06"),
+(4116,"INTERFACE\ICONS\trade_engineering"),
+(4118,"INTERFACE\ICONS\inv_misc_herb_evergreenmoss"),
+(4119,"INTERFACE\ICONS\inv_misc_tabardpvp_02"),
+(4120,"INTERFACE\ICONS\inv_misc_tabardpvp_01"),
+(4122,"INTERFACE\ICONS\achievement_bg_ab_kill_in_mine"),
+(4124,"INTERFACE\ICONS\achievement_pvp_o_02"),
+(4125,"INTERFACE\ICONS\ability_creature_cursed_03"),
+(4126,"INTERFACE\ICONS\inv_helmet_146"),
+(4127,"INTERFACE\ICONS\inv_helmet_96"),
+(4128,"INTERFACE\ICONS\inv_inscription_inkpurple04"),
+(4129,"INTERFACE\ICONS\inv_inscription_inkpurple02"),
+(4130,"INTERFACE\ICONS\inv_inscription_inkpurple03"),
+(4131,"INTERFACE\ICONS\inv_inscription_inkgreen02"),
+(4132,"INTERFACE\ICONS\inv_inscription_inkgreen04"),
+(4134,"INTERFACE\ICONS\inv_jewelry_necklace_43"),
+(4135,"INTERFACE\ICONS\inv_jewelry_talisman_03"),
+(4139,"INTERFACE\ICONS\inv_shirt_03"),
+(4140,"INTERFACE\ICONS\trade_engineering"),
+(4141,"INTERFACE\ICONS\axe_1h_draenei_b_01"),
+(4142,"INTERFACE\ICONS\inv_axe_113"),
+(4143,"INTERFACE\ICONS\inv_sword_155"),
+(4144,"INTERFACE\ICONS\inv_ingot_platinum"),
+(4145,"INTERFACE\ICONS\achievement_dungeon_hordeairship"),
+(4148,"INTERFACE\ICONS\achievement_boss_lichking"),
+(4149,"INTERFACE\ICONS\achievement_dungeon_icecrown_forgeofsouls"),
+(4150,"INTERFACE\ICONS\achievement_dungeon_icecrown_pitofsaron"),
+(4151,"INTERFACE\ICONS\achievement_dungeon_icecrown_hallsofreflection"),
+(4152,"INTERFACE\ICONS\achievement_boss_bronjahm"),
+(4153,"INTERFACE\ICONS\achievement_boss_devourerofsouls"),
+(4154,"INTERFACE\ICONS\achievement_boss_forgemaster"),
+(4155,"INTERFACE\ICONS\achievement_boss_scourgelordtyrannus"),
+(4156,"INTERFACE\ICONS\inv_helmet_151"),
+(4157,"INTERFACE\ICONS\achievement_dungeon_icecrown_frostmourne"),
+(4158,"INTERFACE\ICONS\achievement_dungeon_icecrown_frostwinghalls"),
+(4159,"INTERFACE\ICONS\achievement_boss_lordmarrowgar"),
+(4160,"INTERFACE\ICONS\achievement_boss_ladydeathwhisper"),
+(4161,"INTERFACE\ICONS\achievement_boss_saurfang"),
+(4162,"INTERFACE\ICONS\achievement_boss_festergutrotface"),
+(4163,"INTERFACE\ICONS\achievement_boss_profputricide"),
+(4164,"INTERFACE\ICONS\achievement_boss_princetaldaram"),
+(4165,"INTERFACE\ICONS\achievement_boss_lanathel"),
+(4166,"INTERFACE\ICONS\achievement_boss_sindragosa"),
+(4167,"INTERFACE\ICONS\achievement_dungeon_icecrown_icecrownentrance"),
+(4168,"INTERFACE\ICONS\inv_helmet_142"),
+(4169,"INTERFACE\ICONS\achievement_zone_icecrown_03"),
+(4170,"INTERFACE\ICONS\inv_gizmo_runichealthinjector"),
+(4173,"INTERFACE\ICONS\achievement_dungeon_gloryoftheraider"),
+(4174,"INTERFACE\ICONS\spell_holy_persuitofjustice"),
+(4175,"INTERFACE\ICONS\inv_misc_dice_01"),
+(4176,"INTERFACE\ICONS\inv_weapon_shortblade_59"),
+(4177,"INTERFACE\ICONS\achievement_dungeon_plaguewing"),
+(4178,"INTERFACE\ICONS\achievement_dungeon_crimsonhall"),
+(4179,"INTERFACE\ICONS\achievement_dungeon_frozenthrone"),
+(4180,"INTERFACE\ICONS\achievement_dungeon_naxxramas"),
+(4181,"INTERFACE\ICONS\achievement_dungeon_naxxramas_25man"),
+(4182,"INTERFACE\ICONS\inv_axe_114"),
+(4185,"INTERFACE\ICONS\inv_misc_leatherscrap_11"),
+(4189,"INTERFACE\ICONS\inv_staff_97"),
+(4190,"INTERFACE\ICONS\inv_staff_96"),
+(4191,"INTERFACE\ICONS\inv_staff_107"),
+(4216,"INTERFACE\ICONS\inv_valentinescardtornright"),
+(4220,"INTERFACE\ICONS\inv_chest_cloth_17"),
+(4223,"INTERFACE\ICONS\inv_misc_beer_06"),
+(4230,"INTERFACE\ICONS\inv_misc_orb_05"),
+(4231,"INTERFACE\ICONS\inv_misc_orb_05"),
+(4232,"INTERFACE\ICONS\inv_misc_tournaments_banner_gnome"),
+(4233,"INTERFACE\ICONS\inv_misc_note_06"),
+(4234,"INTERFACE\ICONS\inv_misc_frostemblem_01"),
+(4237,"INTERFACE\ICONS\inv_potion_34"),
+(4239,"INTERFACE\ICONS\inv_misc_tournaments_banner_troll"),
+(4240,"INTERFACE\ICONS\inv_misc_statue_02"),
+(4242,"INTERFACE\ICONS\ability_hunter_pet_rhino"),
+(4244,"INTERFACE\ICONS\inv_misc_bag_10_green"),
+(4248,"INTERFACE\ICONS\inv_misc_orb_05"),
+(4249,"INTERFACE\ICONS\inv_misc_orb_05"),
+(4250,"INTERFACE\ICONS\inv_misc_orb_05"),
+(4253,"INTERFACE\ICONS\inv_potion_94"),
+(4254,"INTERFACE\ICONS\inv_misc_tournaments_banner_scourge"),
+(4261,"INTERFACE\ICONS\inv_gizmo_04"),
+(4262,"INTERFACE\ICONS\inv_gizmo_05"),
+(4267,"INTERFACE\ICONS\inv_chest_cloth_52"),
+(4276,"INTERFACE\ICONS\ability_mount_celestialhorse"),
+(4280,"INTERFACE\ICONS\ability_mount_rocketmountblue"),
+(4286,"INTERFACE\ICONS\ability_mount_rocketmount2"),
+(4289,"INTERFACE\ICONS\ability_mount_frostyflyingcarpet"),
+(4347,"INTERFACE\ICONS\inv_sigil_thorim"),
+(4350,"INTERFACE\ICONS\inv_misc_rubysanctum1"),
+(4351,"INTERFACE\ICONS\inv_misc_rubysanctum4"),
+(4373,"INTERFACE\ICONS\inv_misc_ammo_arrow_01"),
+(4375,"INTERFACE\ICONS\t_roboticon"); 

@@ -1,33 +1,33 @@
 DROP TABLE IF EXISTS `SpellMechanic`; 
 CREATE TABLE `SpellMechanic` ( `ID` INT NOT NULL DEFAULT '0', `StateName_Lang_enUS` TEXT NULL, `StateName_Lang_enGB` TEXT NULL, `StateName_Lang_koKR` TEXT NULL, `StateName_Lang_frFR` TEXT NULL, `StateName_Lang_deDE` TEXT NULL, `StateName_Lang_enCN` TEXT NULL, `StateName_Lang_zhCN` TEXT NULL, `StateName_Lang_enTW` TEXT NULL, `StateName_Lang_zhTW` TEXT NULL, `StateName_Lang_esES` TEXT NULL, `StateName_Lang_esMX` TEXT NULL, `StateName_Lang_ruRU` TEXT NULL, `StateName_Lang_ptPT` TEXT NULL, `StateName_Lang_ptBR` TEXT NULL, `StateName_Lang_itIT` TEXT NULL, `StateName_Lang_Unk` TEXT NULL, `StateName_Lang_Mask` INT UNSIGNED NOT NULL DEFAULT '0', PRIMARY KEY (`ID`)) ENGINE=InnoDB DEFAULT CHARSET=utf8; 
-INSERT INTO `SpellMechanic` VALUES (1,"charmed","","","","","","","","","","","","","","","",16712190); 
-INSERT INTO `SpellMechanic` VALUES (2,"disoriented","","","","","","","","","","","","","","","",16712190); 
-INSERT INTO `SpellMechanic` VALUES (3,"disarmed","","","","","","","","","","","","","","","",16712190); 
-INSERT INTO `SpellMechanic` VALUES (4,"distracted","","","","","","","","","","","","","","","",16712190); 
-INSERT INTO `SpellMechanic` VALUES (5,"fleeing","","","","","","","","","","","","","","","",16712190); 
-INSERT INTO `SpellMechanic` VALUES (6,"gripped","","","","","","","","","","","","","","","",16712190); 
-INSERT INTO `SpellMechanic` VALUES (7,"rooted","","","","","","","","","","","","","","","",16712190); 
-INSERT INTO `SpellMechanic` VALUES (8,"slowed","","","","","","","","","","","","","","","",16712190); 
-INSERT INTO `SpellMechanic` VALUES (9,"silenced","","","","","","","","","","","","","","","",16712190); 
-INSERT INTO `SpellMechanic` VALUES (10,"asleep","","","","","","","","","","","","","","","",16712190); 
-INSERT INTO `SpellMechanic` VALUES (11,"snared","","","","","","","","","","","","","","","",16712190); 
-INSERT INTO `SpellMechanic` VALUES (12,"stunned","","","","","","","","","","","","","","","",16712190); 
-INSERT INTO `SpellMechanic` VALUES (13,"frozen","","","","","","","","","","","","","","","",16712190); 
-INSERT INTO `SpellMechanic` VALUES (14,"incapacitated","","","","","","","","","","","","","","","",16712190); 
-INSERT INTO `SpellMechanic` VALUES (15,"bleeding","","","","","","","","","","","","","","","",16712190); 
-INSERT INTO `SpellMechanic` VALUES (16,"healing","","","","","","","","","","","","","","","",16712190); 
-INSERT INTO `SpellMechanic` VALUES (17,"polymorphed","","","","","","","","","","","","","","","",16712190); 
-INSERT INTO `SpellMechanic` VALUES (18,"banished","","","","","","","","","","","","","","","",16712190); 
-INSERT INTO `SpellMechanic` VALUES (19,"shielded","","","","","","","","","","","","","","","",16712190); 
-INSERT INTO `SpellMechanic` VALUES (20,"shackled","","","","","","","","","","","","","","","",16712190); 
-INSERT INTO `SpellMechanic` VALUES (21,"mounted","","","","","","","","","","","","","","","",16712190); 
-INSERT INTO `SpellMechanic` VALUES (22,"infected","","","","","","","","","","","","","","","",16712190); 
-INSERT INTO `SpellMechanic` VALUES (23,"turned","","","","","","","","","","","","","","","",16712190); 
-INSERT INTO `SpellMechanic` VALUES (24,"horrified","","","","","","","","","","","","","","","",16712190); 
-INSERT INTO `SpellMechanic` VALUES (25,"invulnerable","","","","","","","","","","","","","","","",16712190); 
-INSERT INTO `SpellMechanic` VALUES (26,"interrupted","","","","","","","","","","","","","","","",16712190); 
-INSERT INTO `SpellMechanic` VALUES (27,"dazed","","","","","","","","","","","","","","","",16712190); 
-INSERT INTO `SpellMechanic` VALUES (28,"discovery","","","","","","","","","","","","","","","",16712190); 
-INSERT INTO `SpellMechanic` VALUES (29,"invulnerable","","","","","","","","","","","","","","","",16712190); 
-INSERT INTO `SpellMechanic` VALUES (30,"sapped","","","","","","","","","","","","","","","",16712190); 
-INSERT INTO `SpellMechanic` VALUES (31,"enraged","","","","","","","","","","","","","","","",16712190); 
+INSERT INTO `SpellMechanic` VALUES (1,"charmed","","","","","","","","","","","","","","","",16712190),
+(2,"disoriented","","","","","","","","","","","","","","","",16712190),
+(3,"disarmed","","","","","","","","","","","","","","","",16712190),
+(4,"distracted","","","","","","","","","","","","","","","",16712190),
+(5,"fleeing","","","","","","","","","","","","","","","",16712190),
+(6,"gripped","","","","","","","","","","","","","","","",16712190),
+(7,"rooted","","","","","","","","","","","","","","","",16712190),
+(8,"slowed","","","","","","","","","","","","","","","",16712190),
+(9,"silenced","","","","","","","","","","","","","","","",16712190),
+(10,"asleep","","","","","","","","","","","","","","","",16712190),
+(11,"snared","","","","","","","","","","","","","","","",16712190),
+(12,"stunned","","","","","","","","","","","","","","","",16712190),
+(13,"frozen","","","","","","","","","","","","","","","",16712190),
+(14,"incapacitated","","","","","","","","","","","","","","","",16712190),
+(15,"bleeding","","","","","","","","","","","","","","","",16712190),
+(16,"healing","","","","","","","","","","","","","","","",16712190),
+(17,"polymorphed","","","","","","","","","","","","","","","",16712190),
+(18,"banished","","","","","","","","","","","","","","","",16712190),
+(19,"shielded","","","","","","","","","","","","","","","",16712190),
+(20,"shackled","","","","","","","","","","","","","","","",16712190),
+(21,"mounted","","","","","","","","","","","","","","","",16712190),
+(22,"infected","","","","","","","","","","","","","","","",16712190),
+(23,"turned","","","","","","","","","","","","","","","",16712190),
+(24,"horrified","","","","","","","","","","","","","","","",16712190),
+(25,"invulnerable","","","","","","","","","","","","","","","",16712190),
+(26,"interrupted","","","","","","","","","","","","","","","",16712190),
+(27,"dazed","","","","","","","","","","","","","","","",16712190),
+(28,"discovery","","","","","","","","","","","","","","","",16712190),
+(29,"invulnerable","","","","","","","","","","","","","","","",16712190),
+(30,"sapped","","","","","","","","","","","","","","","",16712190),
+(31,"enraged","","","","","","","","","","","","","","","",16712190); 

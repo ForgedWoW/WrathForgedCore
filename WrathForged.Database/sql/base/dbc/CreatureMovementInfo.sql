@@ -1,256 +1,256 @@
 DROP TABLE IF EXISTS `CreatureMovementInfo`; 
 CREATE TABLE `CreatureMovementInfo` ( `ID` INT NOT NULL DEFAULT '0', `SmoothFacingChaseRate` FLOAT NOT NULL DEFAULT '0', PRIMARY KEY (`ID`)) ENGINE=InnoDB DEFAULT CHARSET=utf8; 
-INSERT INTO `CreatureMovementInfo` VALUES (1,2); 
-INSERT INTO `CreatureMovementInfo` VALUES (41,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (42,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (43,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (44,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (45,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (46,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (47,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (48,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (49,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (50,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (51,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (52,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (53,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (54,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (55,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (56,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (57,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (58,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (59,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (60,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (61,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (62,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (63,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (64,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (65,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (66,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (67,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (68,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (69,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (70,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (71,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (72,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (73,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (74,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (75,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (76,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (77,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (78,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (79,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (80,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (81,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (82,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (83,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (84,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (85,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (86,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (87,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (88,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (89,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (90,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (91,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (92,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (93,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (94,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (95,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (96,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (97,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (98,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (99,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (100,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (101,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (102,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (103,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (104,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (105,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (106,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (107,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (108,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (109,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (110,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (111,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (112,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (113,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (114,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (115,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (116,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (117,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (118,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (119,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (120,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (121,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (122,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (123,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (124,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (125,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (126,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (127,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (128,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (129,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (130,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (131,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (132,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (133,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (134,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (135,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (136,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (137,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (138,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (139,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (140,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (141,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (142,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (143,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (144,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (145,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (146,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (147,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (148,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (149,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (150,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (151,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (152,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (153,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (154,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (155,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (156,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (157,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (158,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (159,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (160,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (161,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (162,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (163,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (164,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (165,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (166,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (167,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (168,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (169,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (170,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (171,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (172,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (173,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (174,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (175,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (176,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (177,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (178,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (179,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (180,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (181,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (182,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (183,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (184,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (185,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (186,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (187,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (188,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (189,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (190,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (191,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (192,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (193,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (194,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (195,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (196,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (197,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (198,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (199,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (200,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (201,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (202,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (203,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (204,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (205,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (206,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (207,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (208,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (209,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (210,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (211,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (212,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (213,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (214,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (215,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (216,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (217,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (218,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (219,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (220,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (221,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (222,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (223,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (224,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (225,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (226,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (227,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (228,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (229,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (230,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (231,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (232,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (233,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (234,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (235,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (236,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (237,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (238,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (239,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (240,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (241,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (242,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (243,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (244,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (245,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (246,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (247,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (248,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (249,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (250,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (251,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (252,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (253,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (254,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (255,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (256,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (257,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (258,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (259,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (260,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (261,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (262,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (263,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (264,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (265,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (266,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (267,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (268,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (269,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (270,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (271,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (272,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (273,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (301,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (321,4); 
-INSERT INTO `CreatureMovementInfo` VALUES (341,5); 
-INSERT INTO `CreatureMovementInfo` VALUES (361,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (381,6); 
-INSERT INTO `CreatureMovementInfo` VALUES (401,5); 
-INSERT INTO `CreatureMovementInfo` VALUES (421,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (441,10); 
-INSERT INTO `CreatureMovementInfo` VALUES (481,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (541,10); 
-INSERT INTO `CreatureMovementInfo` VALUES (601,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (602,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (661,5); 
-INSERT INTO `CreatureMovementInfo` VALUES (681,5); 
-INSERT INTO `CreatureMovementInfo` VALUES (701,0); 
-INSERT INTO `CreatureMovementInfo` VALUES (721,10); 
-INSERT INTO `CreatureMovementInfo` VALUES (741,10); 
-INSERT INTO `CreatureMovementInfo` VALUES (781,1); 
-INSERT INTO `CreatureMovementInfo` VALUES (801,0.25); 
-INSERT INTO `CreatureMovementInfo` VALUES (821,0); 
+INSERT INTO `CreatureMovementInfo` VALUES (1,2),
+(41,0),
+(42,0),
+(43,0),
+(44,0),
+(45,0),
+(46,0),
+(47,0),
+(48,0),
+(49,0),
+(50,0),
+(51,0),
+(52,0),
+(53,0),
+(54,0),
+(55,0),
+(56,0),
+(57,0),
+(58,0),
+(59,0),
+(60,0),
+(61,0),
+(62,0),
+(63,0),
+(64,0),
+(65,0),
+(66,0),
+(67,0),
+(68,0),
+(69,0),
+(70,0),
+(71,0),
+(72,0),
+(73,0),
+(74,0),
+(75,0),
+(76,0),
+(77,0),
+(78,0),
+(79,0),
+(80,0),
+(81,0),
+(82,0),
+(83,0),
+(84,0),
+(85,0),
+(86,0),
+(87,0),
+(88,0),
+(89,0),
+(90,0),
+(91,0),
+(92,0),
+(93,0),
+(94,0),
+(95,0),
+(96,0),
+(97,0),
+(98,0),
+(99,0),
+(100,0),
+(101,0),
+(102,0),
+(103,0),
+(104,0),
+(105,0),
+(106,0),
+(107,0),
+(108,0),
+(109,0),
+(110,0),
+(111,0),
+(112,0),
+(113,0),
+(114,0),
+(115,0),
+(116,0),
+(117,0),
+(118,0),
+(119,0),
+(120,0),
+(121,0),
+(122,0),
+(123,0),
+(124,0),
+(125,0),
+(126,0),
+(127,0),
+(128,0),
+(129,0),
+(130,0),
+(131,0),
+(132,0),
+(133,0),
+(134,0),
+(135,0),
+(136,0),
+(137,0),
+(138,0),
+(139,0),
+(140,0),
+(141,0),
+(142,0),
+(143,0),
+(144,0),
+(145,0),
+(146,0),
+(147,0),
+(148,0),
+(149,0),
+(150,0),
+(151,0),
+(152,0),
+(153,0),
+(154,0),
+(155,0),
+(156,0),
+(157,0),
+(158,0),
+(159,0),
+(160,0),
+(161,0),
+(162,0),
+(163,0),
+(164,0),
+(165,0),
+(166,0),
+(167,0),
+(168,0),
+(169,0),
+(170,0),
+(171,0),
+(172,0),
+(173,0),
+(174,0),
+(175,0),
+(176,0),
+(177,0),
+(178,0),
+(179,0),
+(180,0),
+(181,0),
+(182,0),
+(183,0),
+(184,0),
+(185,0),
+(186,0),
+(187,0),
+(188,0),
+(189,0),
+(190,0),
+(191,0),
+(192,0),
+(193,0),
+(194,0),
+(195,0),
+(196,0),
+(197,0),
+(198,0),
+(199,0),
+(200,0),
+(201,0),
+(202,0),
+(203,0),
+(204,0),
+(205,0),
+(206,0),
+(207,0),
+(208,0),
+(209,0),
+(210,0),
+(211,0),
+(212,0),
+(213,0),
+(214,0),
+(215,0),
+(216,0),
+(217,0),
+(218,0),
+(219,0),
+(220,0),
+(221,0),
+(222,0),
+(223,0),
+(224,0),
+(225,0),
+(226,0),
+(227,0),
+(228,0),
+(229,0),
+(230,0),
+(231,0),
+(232,0),
+(233,0),
+(234,0),
+(235,0),
+(236,0),
+(237,0),
+(238,0),
+(239,0),
+(240,0),
+(241,0),
+(242,0),
+(243,0),
+(244,0),
+(245,0),
+(246,0),
+(247,0),
+(248,0),
+(249,0),
+(250,0),
+(251,0),
+(252,0),
+(253,0),
+(254,0),
+(255,0),
+(256,0),
+(257,0),
+(258,0),
+(259,0),
+(260,0),
+(261,0),
+(262,0),
+(263,0),
+(264,0),
+(265,0),
+(266,0),
+(267,0),
+(268,0),
+(269,0),
+(270,0),
+(271,0),
+(272,0),
+(273,0),
+(301,0),
+(321,4),
+(341,5),
+(361,0),
+(381,6),
+(401,5),
+(421,0),
+(441,10),
+(481,0),
+(541,10),
+(601,0),
+(602,0),
+(661,5),
+(681,5),
+(701,0),
+(721,10),
+(741,10),
+(781,1),
+(801,0.25),
+(821,0); 
