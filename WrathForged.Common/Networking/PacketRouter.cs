@@ -9,7 +9,7 @@ namespace WrathForged.Common.Networking
 {
     public class PacketRouter
     {
-        public Dictionary<PacketScope, Dictionary<int, List<MethodInfo>>> PacketHandlerCache = new();
+        public Dictionary<PacketScope, Dictionary<uint, List<MethodInfo>>> PacketHandlerCache = new();
 
         public PacketRouter(ClassFactory classFactory)
         {
@@ -26,7 +26,7 @@ namespace WrathForged.Common.Networking
                     var attribute = (PacketHandlerAttribute)method.GetCustomAttributes(typeof(PacketHandlerAttribute), false).First();
                     if (!PacketHandlerCache.TryGetValue(attribute.Scope, out var scopeDictionary))
                     {
-                        scopeDictionary = new Dictionary<int, List<MethodInfo>>();
+                        scopeDictionary = new Dictionary<uint, List<MethodInfo>>();
                         PacketHandlerCache[attribute.Scope] = scopeDictionary;
                     }
 
@@ -53,7 +53,7 @@ namespace WrathForged.Common.Networking
                 return;
             }
 
-            if (!scopeDictionary.TryGetValue((int)packetId.Id, out var methodList))
+            if (!scopeDictionary.TryGetValue(packetId.Id, out var methodList))
             {
                 return;
             }
