@@ -1,4 +1,7 @@
-﻿namespace WrathForged.Models.Auth
+﻿// Copyright (c) Forged WoW LLC <https://github.com/ForgedWoW/WrathForgedCore>
+// Licensed under GPL-3.0 license. See <https://github.com/ForgedWoW/WrathForgedCore/blob/master/LICENSE> for full information.
+
+namespace WrathForged.Models.Auth.Enum
 {
     //In Trinitycore this is uint8 error but according to https://github.com/EmberEmu/Ember/blob/spark-new/src/login/grunt/client/LoginChallenge.h
     //It is the protocol version

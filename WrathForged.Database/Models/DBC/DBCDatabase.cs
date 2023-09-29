@@ -1,7 +1,6 @@
 ﻿// Copyright (c) Forged WoW LLC <https://github.com/ForgedWoW/WrathForgedCore>
 // Licensed under GPL-3.0 license. See <https://github.com/ForgedWoW/WrathForgedCore/blob/master/LICENSE> for full information.
 using Microsoft.EntityFrameworkCore;
-using WrathForged.Database.Models;
 
 namespace WrathForged.Database.Models.DBC;
 
@@ -510,8 +509,8 @@ public partial class DBCDatabase : DbContext
 
     public void RunSqlFile(string filePath)
     {
-        string sql = File.ReadAllText(filePath);
-        Database.ExecuteSqlRaw(sql);
+        var sql = File.ReadAllText(filePath);
+        _ = Database.ExecuteSqlRaw(sql);
     }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -12024,52 +12023,52 @@ public partial class DBCDatabase : DbContext
             _ = entity.Property(e => e.Violencelevel3).HasColumnName("Violencelevel_3");
         });
 
-        modelBuilder.Entity<Update>(entity =>
+        _ = modelBuilder.Entity<Update>(entity =>
         {
-            entity.HasKey(e => e.Name).HasName("PRIMARY");
+            _ = entity.HasKey(e => e.Name).HasName("PRIMARY");
 
-            entity
+            _ = entity
                 .ToTable("updates", tb => tb.HasComment("List of all applied updates in this database."))
                 .UseCollation("utf8mb4_unicode_ci");
 
-            entity.Property(e => e.Name)
+            _ = entity.Property(e => e.Name)
                 .HasMaxLength(200)
                 .HasComment("filename with extension of the update.")
                 .HasColumnName("name");
-            entity.Property(e => e.Hash)
+            _ = entity.Property(e => e.Hash)
                 .HasMaxLength(40)
                 .HasDefaultValueSql("''")
                 .IsFixedLength()
                 .HasComment("sha1 hash of the sql file.")
                 .HasColumnName("hash");
-            entity.Property(e => e.Speed)
+            _ = entity.Property(e => e.Speed)
                 .HasComment("time the query takes to apply in ms.")
                 .HasColumnName("speed");
-            entity.Property(e => e.State)
+            _ = entity.Property(e => e.State)
                 .HasDefaultValueSql("'RELEASED'")
                 .HasComment("defines if an update is released or archived.")
                 .HasColumnType("enum('RELEASED','ARCHIVED')")
                 .HasColumnName("state");
-            entity.Property(e => e.Timestamp)
+            _ = entity.Property(e => e.Timestamp)
                 .HasDefaultValueSql("CURRENT_TIMESTAMP")
                 .HasComment("timestamp when the query was applied.")
                 .HasColumnType("timestamp")
                 .HasColumnName("timestamp");
         });
 
-        modelBuilder.Entity<UpdatesInclude>(entity =>
+        _ = modelBuilder.Entity<UpdatesInclude>(entity =>
         {
-            entity.HasKey(e => e.Path).HasName("PRIMARY");
+            _ = entity.HasKey(e => e.Path).HasName("PRIMARY");
 
-            entity
+            _ = entity
                 .ToTable("updates_include", tb => tb.HasComment("List of directories where we want to include sql updates."))
                 .UseCollation("utf8mb4_unicode_ci");
 
-            entity.Property(e => e.Path)
+            _ = entity.Property(e => e.Path)
                 .HasMaxLength(200)
                 .HasComment("directory to include. $ means relative to the source directory.")
                 .HasColumnName("path");
-            entity.Property(e => e.State)
+            _ = entity.Property(e => e.State)
                 .HasDefaultValueSql("'RELEASED'")
                 .HasComment("defines if the directory contains released or archived updates.")
                 .HasColumnType("enum('RELEASED','ARCHIVED')")

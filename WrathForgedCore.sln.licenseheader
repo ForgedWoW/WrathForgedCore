@@ -1,0 +1,14 @@
+﻿extensions: designer.cs generated.cs
+extensions: .cs .cpp .h
+// Copyright (c) Forged WoW LLC <https://github.com/ForgedWoW/WrathForgedCore>
+// Licensed under GPL-3.0 license. See <https://github.com/ForgedWoW/WrathForgedCore/blob/master/LICENSE> for full information.
+extensions: .aspx .ascx
+<%-- 
+Copyright (c) Forged WoW LLC <https://github.com/ForgedWoW/WrathForgedCore>
+Licensed under GPL-3.0 license. See <https://github.com/ForgedWoW/WrathForgedCore/blob/master/LICENSE> for full information.
+--%>
+extensions:  .xml .config .xsd
+<!--
+Copyright (c) Forged WoW LLC <https://github.com/ForgedWoW/WrathForgedCore>
+Licensed under GPL-3.0 license. See <https://github.com/ForgedWoW/WrathForgedCore/blob/master/LICENSE> for full information.
+-->

@@ -15,14 +15,13 @@ var configBuilder = new ConfigurationBuilder()
                     .AddJsonFile("WrathForged.Authorization.Server.Config.json", false, true);
 
 IConfiguration configuration = configBuilder.Build();
-DependencyInjectionContainer container = new DependencyInjectionContainer();
+var container = new DependencyInjectionContainer();
 container.Configure(c =>
 {
-    c.ExportInstance(configuration).As<IConfiguration>().Lifestyle.SingletonPerScope();
-    c.RegisterDatabase(configuration, Log.Logger);
-    c.RegisterAuth();
+    _ = c.ExportInstance(configuration).As<IConfiguration>().Lifestyle.SingletonPerScope();
+    _ = c.RegisterDatabase(configuration, Log.Logger);
+    _ = c.RegisterAuth();
 });
-
 
 container.InitializeCommon();
 container.Locate<CacheBuilder>().Build();

@@ -1,6 +1,5 @@
 ﻿// Copyright (c) Forged WoW LLC <https://github.com/ForgedWoW/WrathForgedCore>
 // Licensed under GPL-3.0 license. See <https://github.com/ForgedWoW/WrathForgedCore/blob/master/LICENSE> for full information.
-
 using System.Diagnostics.Metrics;
 using System.Net;
 using Microsoft.Extensions.Configuration;
@@ -8,7 +7,6 @@ using Serilog;
 using WrathForged.Common.Observability;
 using WrathForged.Common.Serialization;
 using WrathForged.Models.Networking;
-using WrathForged.Serialization;
 using WrathForged.Serialization.Models;
 
 namespace WrathForged.Common.Networking

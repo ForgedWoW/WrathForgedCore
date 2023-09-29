@@ -1,5 +1,5 @@
-﻿// Copyright (c) Forged WoW LLC <https://github.com/ForgedWoW/WrathForgedCore> Licensed under
-// GPL-3.0 license. See <https://github.com/ForgedWoW/WrathForgedCore/blob/master/LICENSE> for full information.
+﻿// Copyright (c) Forged WoW LLC <https://github.com/ForgedWoW/WrathForgedCore>
+// Licensed under GPL-3.0 license. See <https://github.com/ForgedWoW/WrathForgedCore/blob/master/LICENSE> for full information.
 using System.Collections;
 using System.Reflection;
 using Serilog;
@@ -7,7 +7,6 @@ using WrathForged.Common.Networking;
 using WrathForged.Common.Scripting;
 using WrathForged.Common.Serialization.Serializers;
 using WrathForged.Models;
-using WrathForged.Serialization;
 using WrathForged.Serialization.Models;
 
 namespace WrathForged.Common.Serialization
