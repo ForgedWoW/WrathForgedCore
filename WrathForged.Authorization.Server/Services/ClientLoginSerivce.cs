@@ -12,6 +12,7 @@ using WrathForged.Common.Networking;
 using WrathForged.Database.Models.Auth;
 using WrathForged.Models.Auth;
 using WrathForged.Models.Auth.Enum;
+using WrathForged.Serialization.Models;
 
 namespace WrathForged.Authorization.Server.Services
 {
@@ -34,7 +35,7 @@ namespace WrathForged.Authorization.Server.Services
             _logger = logger;
         }
 
-        [PacketHandler(Serialization.PacketScope.Auth, AuthServerOpCode.AUTH_LOGON_CHALLENGE)]
+        [PacketHandler(PacketScope.Auth, AuthServerOpCode.AUTH_LOGON_CHALLENGE)]
         public async void ChallangeRequest(WoWClientSession session, AuthLogonChallengeRequest authLogonChallenge)
         {
             using var authDatabase = _classFactory.Resolve<AuthDatabase>();

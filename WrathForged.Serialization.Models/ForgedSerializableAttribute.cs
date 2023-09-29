@@ -6,8 +6,19 @@ namespace WrathForged.Serialization.Models
     [AttributeUsage(AttributeTargets.Class)]
     public class ForgedSerializableAttribute : Attribute
     {
+        public ForgedSerializableAttribute(PacketScope packetScope = PacketScope.System)
+        {
+            Scope = packetScope;
+            PacketIDs = new[] { 0u };
+        }
+
+        public ForgedSerializableAttribute(PacketScope packetScope, params uint[] packetIDs)
+        {
+            Scope = packetScope;
+            PacketIDs = packetIDs;
+        }
         public PacketScope Scope { get; set; }
 
-        public uint[] PacketIDs { get; set; } = Array.Empty<uint>();
+        public uint[] PacketIDs { get; set; }
     }
 }

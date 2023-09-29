@@ -3,7 +3,7 @@
 
 using System.Reflection;
 using WrathForged.Models.Networking;
-using WrathForged.Serialization;
+using WrathForged.Serialization.Models;
 
 namespace WrathForged.Common.Networking
 {
@@ -38,6 +38,29 @@ namespace WrathForged.Common.Networking
 
                     methodList.Add(method);
                 }
+            }
+        }
+
+        public void Route(ClientSocket socket, PacketId packetId, object packet)
+        {
+            if (packet == null)
+            {
+                return;
+            }
+
+            if (!PacketHandlerCache.TryGetValue(packetId.Scope, out var scopeDictionary))
+            {
+                return;
+            }
+
+            if (!scopeDictionary.TryGetValue(packetId.Id, out var methodList))
+            {
+                return;
+            }
+
+            foreach (var method in methodList)
+            {
+                _ = method.Invoke(null, new object[] { socket, packet });
             }
         }
 

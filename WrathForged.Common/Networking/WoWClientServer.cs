@@ -9,6 +9,7 @@ using WrathForged.Common.Observability;
 using WrathForged.Common.Serialization;
 using WrathForged.Models.Networking;
 using WrathForged.Serialization;
+using WrathForged.Serialization.Models;
 
 namespace WrathForged.Common.Networking
 {

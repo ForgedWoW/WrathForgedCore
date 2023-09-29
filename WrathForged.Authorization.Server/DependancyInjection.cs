@@ -4,7 +4,7 @@ using Grace.DependencyInjection;
 using WrathForged.Authorization.Server.Caching;
 using WrathForged.Authorization.Server.Validators;
 using WrathForged.Common.Networking;
-using WrathForged.Serialization;
+using WrathForged.Serialization.Models;
 
 namespace WrathForged.Authorization.Server
 {

@@ -2,16 +2,33 @@
 // Licensed under GPL-3.0 license. See <https://github.com/ForgedWoW/WrathForgedCore/blob/master/LICENSE> for full information.
 
 using WrathForged.Models.Auth.Enum;
+using WrathForged.Models.Instance.Enum;
 using WrathForged.Models.Realm.Enum;
-using WrathForged.Serialization;
+using WrathForged.Serialization.Models;
 
 namespace WrathForged.Models.Networking
 {
     public readonly struct PacketId
     {
+        public enum PacketIdType
+        {
+            Auth,
+            Realm,
+            Instance
+        }
+
         public PacketScope Scope { get; }
         public AuthServerOpCode AuthOpCode { get; }
         public RealmServerOpCode RealmOpCode { get; }
+        public InstanceServerOpCode InstanceOpCode { get; }
+        public PacketIdType Type => Scope switch
+        {
+            PacketScope.Auth => PacketIdType.Auth,
+            PacketScope.ClientToInstance => PacketIdType.Realm,
+            PacketScope.InstanceToRealm => PacketIdType.Instance,
+            PacketScope.RealmToInstance => PacketIdType.Realm,
+            _ => PacketIdType.Realm
+        };
         public uint Id { get; }
 
         public PacketId(AuthServerOpCode opCode)
@@ -28,6 +45,13 @@ namespace WrathForged.Models.Networking
             Id = (uint)opCode;
         }
 
+        public PacketId(InstanceServerOpCode opCode, PacketScope packetScope)
+        {
+            Scope = packetScope;
+            InstanceOpCode = opCode;
+            Id = (uint)opCode;
+        }
+
         public PacketId(uint id, PacketScope packetScope)
         {
             Scope = packetScope;
@@ -36,6 +60,10 @@ namespace WrathForged.Models.Networking
             {
                 case PacketScope.Auth:
                     AuthOpCode = (AuthServerOpCode)id;
+                    break;
+
+                case PacketScope.RealmToInstance:
+                    InstanceOpCode = (InstanceServerOpCode)id;
                     break;
 
                 default:
@@ -54,6 +82,10 @@ namespace WrathForged.Models.Networking
                     AuthOpCode = (AuthServerOpCode)id;
                     break;
 
+                case PacketScope.RealmToInstance:
+                    InstanceOpCode = (InstanceServerOpCode)id;
+                    break;
+
                 default:
                     RealmOpCode = (RealmServerOpCode)id;
                     break;
@@ -64,11 +96,15 @@ namespace WrathForged.Models.Networking
 
         public static implicit operator PacketId(RealmServerOpCode val) => new(val, PacketScope.ClientToInstance);
 
+        public static implicit operator PacketId(InstanceServerOpCode val) => new(val, PacketScope.RealmToInstance);
+
         public static implicit operator uint(PacketId val) => val.Id;
 
         public static implicit operator AuthServerOpCode(PacketId val) => val.AuthOpCode;
 
         public static implicit operator RealmServerOpCode(PacketId val) => val.RealmOpCode;
+
+        public static implicit operator InstanceServerOpCode(PacketId val) => val.InstanceOpCode;
 
         public static implicit operator PacketScope(PacketId val) => val.Scope;
 

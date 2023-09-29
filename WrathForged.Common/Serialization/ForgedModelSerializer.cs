@@ -20,7 +20,7 @@ namespace WrathForged.Common.Serialization
         /// </summary>
         // Scope OpCode ObjType PropertyName, SerializationMetadata
         private readonly Dictionary<PacketScope, Dictionary<uint, (Type, List<PropertyMeta>)>> _deserializationMethodsCache = new();
-
+        private readonly Dictionary<Type, List<PropertyMeta>> _systemScope = new();
         private readonly Dictionary<Type, IForgedTypeSerialization> _serializers = new();
         private readonly Dictionary<ForgedTypeCode, IForgedTypeSerialization> _forgedTypeCodeSerializers = new();
 
@@ -32,27 +32,59 @@ namespace WrathForged.Common.Serialization
             foreach (var cls in classesWithAttribute)
             {
                 var attribute = (ForgedSerializableAttribute)cls.GetCustomAttributes(typeof(ForgedSerializableAttribute), false).First();
+                Queue<PacketScope> scopes = new();
+                scopes.Enqueue(attribute.Scope);
 
-                if (!_deserializationMethodsCache.TryGetValue(attribute.Scope, out var scopeDictionary))
+                while (scopes.TryDequeue(out var scope))
                 {
-                    scopeDictionary = new Dictionary<uint, (Type, List<PropertyMeta>)>();
-                    _deserializationMethodsCache[attribute.Scope] = scopeDictionary;
-                }
-
-                foreach (var packetId in attribute.PacketIDs)
-                {
-                    var propertyAttributes = new List<PropertyMeta>();
-
-                    foreach (var prop in cls.GetProperties())
+                    if (scope == PacketScope.All)
                     {
-                        var propAtt = prop.GetCustomAttribute<SerializablePropertyAttribute>();
+                        foreach (var s in (PacketScope[])Enum.GetValues(typeof(PacketScope)))
+                        {
+                            if (s == PacketScope.All)
+                                continue;
 
-                        if (propAtt != null)
-                            propertyAttributes.Add(new PropertyMeta(propAtt, prop));
+                            scopes.Enqueue(s);
+                        }
                     }
 
-                    propertyAttributes.Sort();
-                    scopeDictionary[packetId] = (cls, propertyAttributes);
+                    if (!_systemScope.TryGetValue(cls, out var propatr))
+                    {
+                        propatr = new List<PropertyMeta>();
+
+                        foreach (var prop in cls.GetProperties())
+                        {
+                            var propAtt = prop.GetCustomAttribute<SerializablePropertyAttribute>();
+
+                            if (propAtt != null)
+                                propatr.Add(new PropertyMeta(propAtt, prop));
+                        }
+
+                        propatr.Sort();
+                        _systemScope[cls] = propatr;
+                    }
+
+                    if (!_deserializationMethodsCache.TryGetValue(attribute.Scope, out var scopeDictionary))
+                    {
+                        scopeDictionary = new Dictionary<uint, (Type, List<PropertyMeta>)>();
+                        _deserializationMethodsCache[attribute.Scope] = scopeDictionary;
+                    }
+
+                    foreach (var packetId in attribute.PacketIDs)
+                    {
+                        var propertyAttributes = new List<PropertyMeta>();
+
+                        foreach (var prop in cls.GetProperties())
+                        {
+                            var propAtt = prop.GetCustomAttribute<SerializablePropertyAttribute>();
+
+                            if (propAtt != null)
+                                propertyAttributes.Add(new PropertyMeta(propAtt, prop));
+                        }
+
+                        propertyAttributes.Sort();
+                        scopeDictionary[packetId] = (cls, propertyAttributes);
+                    }
                 }
             }
 
@@ -92,17 +124,60 @@ namespace WrathForged.Common.Serialization
             }
         }
 
-        public DeserializationResult TryDeserialize(PacketScope scope, uint packetId, PacketBuffer buffer, out object? packet)
+        public DeserializationResult TryDeserialize<T>(PacketBuffer buffer, out T packet)
+        {
+            var t = typeof(T);
+
+            if (!_systemScope.TryGetValue(t, out var propertyMetas))
+            {
+                packet = default!;
+                return DeserializationResult.UnknownPacket;
+            }
+
+            try
+            {
+                var instance = Activator.CreateInstance<T>();
+                Dictionary<uint, int> collectionSizes = new();
+                foreach (var prop in propertyMetas)
+                {
+                    var isCollection = prop.ReflectedProperty.PropertyType.IsArray ||
+                                        (prop.ReflectedProperty.PropertyType.IsGenericType && prop.ReflectedProperty.PropertyType.GetGenericTypeDefinition() == typeof(List<>)) ||
+                                        (prop.ReflectedProperty.PropertyType.IsGenericType && prop.ReflectedProperty.PropertyType.GetGenericTypeDefinition() == typeof(HashSet<>));
+
+                    var result = isCollection ? DeserializeCollection(buffer, prop, collectionSizes)
+                        : prop.ReflectedProperty.PropertyType.IsEnum
+                        ? _forgedTypeCodeSerializers[ForgedTypeCode.Enum].Deserialize(buffer, prop, collectionSizes)
+                        : DeserializeProperty(buffer, prop, collectionSizes);
+
+                    result = EvaluateSpecialCasting(prop, result);
+
+                    if (result != null)
+                        prop.ReflectedProperty.SetValue(instance, result);
+                }
+
+                packet = instance;
+                return DeserializationResult.Success;
+            }
+            catch (Exception ex)
+            {
+                _logger.Error(ex, "Failed to deserialize packet {PacketId}", t.Name);
+            }
+
+            packet = default!;
+            return DeserializationResult.Error;
+        }
+
+        public DeserializationResult TryDeserialize(PacketScope scope, uint packetId, PacketBuffer buffer, out object packet)
         {
             if (!_deserializationMethodsCache.TryGetValue(scope, out var scopeDictionary))
             {
-                packet = null;
+                packet = default!;
                 return DeserializationResult.UnknownPacket;
             }
 
             if (!scopeDictionary.TryGetValue(packetId, out var deserializationDefinition))
             {
-                packet = null;
+                packet = default!;
                 return DeserializationResult.UnknownPacket;
             }
 
@@ -127,7 +202,8 @@ namespace WrathForged.Common.Serialization
                         prop.ReflectedProperty.SetValue(instance, result);
                 }
 
-                packet = instance;
+                packet = instance ?? default!;
+
                 return DeserializationResult.Success;
             }
             catch (Exception ex)
@@ -135,7 +211,7 @@ namespace WrathForged.Common.Serialization
                 _logger.Error(ex, "Failed to deserialize packet {PacketId} for scope {Scope}", packetId, scope);
             }
 
-            packet = null;
+            packet = default!;
             return DeserializationResult.Error;
         }
 

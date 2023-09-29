@@ -7,7 +7,6 @@ using WrathForged.Common;
 using WrathForged.Common.CommandLine;
 using WrathForged.Common.Networking;
 using WrathForged.Database;
-using WrathForged.Serialization;
 using WrathForged.Serialization.Models;
 
 var initializationStart = DateTime.UtcNow;
