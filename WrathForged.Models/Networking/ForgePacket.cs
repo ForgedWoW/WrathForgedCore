@@ -1,4 +1,5 @@
-﻿using WrathForged.Serialization.Models;
+﻿using WrathForged.Models.Core.Comm;
+using WrathForged.Serialization.Models;
 
 namespace WrathForged.Models.Networking
 {
@@ -9,7 +10,7 @@ namespace WrathForged.Models.Networking
         public PacketScope Scope { get; set; }
 
         [SerializableProperty(1)]
-        public uint Id { get; set; }
+        public ForgedCoreOpCode OpCode { get; set; }
 
         [SerializableProperty(2)]
         public uint Size { get; set; }

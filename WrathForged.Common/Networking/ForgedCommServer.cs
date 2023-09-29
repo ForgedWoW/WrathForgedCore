@@ -13,20 +13,14 @@ namespace WrathForged.Common.Networking
 {
     public class ForgedCommServer
     {
-        public const int HEADER_SIZE = 6;
-        public const int LARGE_PACKET_HEADER_SIZE = 7;
-        public const int LARGE_PACKET_THRESHOLD = 32767;
-
-        private readonly PacketScope _packetScope;
         private readonly ForgedModelSerializer _forgedModelDeserialization;
         private readonly PacketRouter _packetRouter;
         private readonly ILogger _logger;
         private readonly IConfiguration _configuration;
         private readonly Dictionary<ClientSocket, PacketBuffer> _packetBuffers = new();
 
-        public ForgedCommServer(PacketScope packetScope, ForgedModelSerializer forgedModelDeserialization, TCPServer tCPServer, PacketRouter packetRouter, ILogger logger, IConfiguration configuration)
+        public ForgedCommServer(ForgedModelSerializer forgedModelDeserialization, TCPServer tCPServer, PacketRouter packetRouter, ILogger logger, IConfiguration configuration)
         {
-            _packetScope = packetScope;
             _forgedModelDeserialization = forgedModelDeserialization;
             TCPServer = tCPServer;
             _packetRouter = packetRouter;
@@ -38,14 +32,14 @@ namespace WrathForged.Common.Networking
         public TCPServer TCPServer { get; }
 
         /// <summary>
-        ///     Starts the server on the configured port "ClientTCPServer:Port" or default port of 8085 if not configured.
+        ///     Starts the server on the configured port
         /// </summary>
-        /// <param name="defaultPort"></param>
-        public void Start(int defaultPort = 8085)
+        /// <param name="port"></param>
+        public void Start(int port)
         {
             var bindIp = GertBindIP();
 
-            TCPServer.Start(_configuration.GetDefaultValue("ClientTCPServer:Port", defaultPort), bindIp);
+            TCPServer.Start(port, bindIp);
         }
 
         /// <summary>
@@ -103,16 +97,24 @@ namespace WrathForged.Common.Networking
         {
             var buffer = GetOrCreateBufferForClient(e.Client);
             buffer.AppendData(e.Data);
-            if (_forgedModelDeserialization.TryDeserialize<ForgePacket>(buffer, out var packet) == DeserializationResult.Success)
+
+            while (buffer.Reader.RemainingLength > 0)
             {
-                if (_forgedModelDeserialization.TryDeserialize(packet.Scope, packet.Id, buffer, out var packetData) == DeserializationResult.Success)
+                if (_forgedModelDeserialization.TryDeserialize<ForgePacket>(buffer, out var packet) == DeserializationResult.Success)
                 {
-                    _packetRouter.Route(e.Client, new PacketId(packet.Id, _packetScope), packetData);
+                    var result = _forgedModelDeserialization.TryDeserialize(packet.Scope, (uint)packet.OpCode, buffer, out var packetData);
+                    if (result == DeserializationResult.Success)
+                    {
+                        _packetRouter.Route(e.Client, new PacketId(packet.OpCode, PacketScope.System), packetData);
+                    }
+                    else if (result is DeserializationResult.UnknownPacket or DeserializationResult.Error)
+                    {
+                        buffer.Clear();
+                        _logger.Error("Failed to deserialize packet data for packet {PacketId} in scope {PacketScope}", packet.OpCode, packet.Scope);
+                    }
                 }
-                else
-                {
-                    _logger.Error("Failed to deserialize packet data for packet {PacketId} in scope {PacketScope}", packet.Id, packet.Scope);
-                }
+
+                buffer.ClearReadData();
             }
         }
 

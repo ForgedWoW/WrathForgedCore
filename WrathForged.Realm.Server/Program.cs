@@ -23,11 +23,13 @@ container.Configure(c =>
     _ = c.RegisterCommon(configuration);
     _ = c.RegisterDatabase(configuration, Log.Logger);
     _ = c.Export<WoWClientServer>().WithCtorParam(() => PacketScope.ClientToRealm).Lifestyle.Singleton();
+    _ = c.Export<ForgedCommServer>().Lifestyle.Singleton();
 });
 
 container.InitializeCommon();
 
 container.Locate<WoWClientServer>().Start();
+container.Locate<ForgedCommServer>().Start(configuration.GetDefaultValue("ForgedServerComm:Port", 8783));
 
 Log.Logger.Information("Realm Server started in {InitializationTime}.", (DateTime.UtcNow - initializationStart).ToReadableString());
 var notifier = container.Locate<ProgramExitNotifier>();

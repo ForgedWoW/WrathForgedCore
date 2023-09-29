@@ -72,7 +72,6 @@ namespace WrathForged.Common
             _ = builder.Export<CommandLineReader>().Lifestyle.Singleton();
             _ = builder.Export<DBCSerializer>().Lifestyle.Singleton();
             _ = builder.Export<DBCDeserializer>().Lifestyle.Singleton();
-
             _ = builder.Export<ClientLocalizer>();
             _ = builder.Export<Localizer>().Lifestyle.Singleton();
             _ = builder.Export<ScriptLoader>().Lifestyle.Singleton();

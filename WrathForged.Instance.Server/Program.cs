@@ -21,12 +21,13 @@ container.Configure(c =>
     _ = c.RegisterCommon(configuration);
     _ = c.RegisterDatabase(configuration, Log.Logger);
     _ = c.Export<WoWClientServer>().WithCtorParam(() => PacketScope.ClientToInstance).Lifestyle.Singleton();
+    _ = c.Export<ForgedCommServer>().Lifestyle.Singleton();
 });
 
 container.InitializeCommon();
 
-container.Locate<WoWClientServer>().Start();
-
+container.Locate<WoWClientServer>().Start(8185);
+container.Locate<ForgedCommServer>().Start(configuration.GetDefaultValue("ForgedServerComm:Port", 8783));
 Log.Logger.Information("Instance Server started.");
 var notifier = container.Locate<ProgramExitNotifier>();
 

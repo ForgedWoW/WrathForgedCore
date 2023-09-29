@@ -6,6 +6,7 @@ using Serilog;
 using WrathForged.Common.Networking;
 using WrathForged.Common.Scripting;
 using WrathForged.Common.Serialization.Serializers;
+using WrathForged.Models;
 using WrathForged.Serialization;
 using WrathForged.Serialization.Models;
 

@@ -11,10 +11,33 @@ public class PacketBuffer : IDisposable
 
     public PrimitiveReader Reader { get; }
 
+    public long UnreadData => _internalStream.Length - _internalStream.Position;
+
     public PacketBuffer(ILogger logger)
     {
         _internalStream = new MemoryStream();
         Reader = new PrimitiveReader(_internalStream, logger);
+    }
+
+    /// <summary>
+    ///     Clears the read data from the buffer. If data is unread, it will be compacted to the beginning of the buffer. The buffer position will be reset to 0.
+    /// </summary>
+    public void ClearReadData()
+    {
+        var unreadData = UnreadData;
+        if (unreadData > 0)
+        {
+            var memory = new Memory<byte>(_internalStream.GetBuffer());
+            var slice = memory.Slice((int)_internalStream.Position, (int)unreadData);
+            _internalStream.SetLength(0);
+            _internalStream.Write(slice.Span);
+        }
+        else
+        {
+            _internalStream.SetLength(0); // If no unread data, simply reset the stream
+        }
+
+        _internalStream.Position = 0; // Reset position for reading
     }
 
     public void AppendData(byte[] data)
@@ -22,18 +45,7 @@ public class PacketBuffer : IDisposable
         // If there's unread data at the end of the stream, we need to compact the buffer
         if (_internalStream.Position > 0)
         {
-            var unreadData = _internalStream.Length - _internalStream.Position;
-            if (unreadData > 0)
-            {
-                var memory = new Memory<byte>(_internalStream.GetBuffer());
-                var slice = memory.Slice((int)_internalStream.Position, (int)unreadData);
-                _internalStream.SetLength(0);
-                _internalStream.Write(slice.Span);
-            }
-            else
-            {
-                _internalStream.SetLength(0); // If no unread data, simply reset the stream
-            }
+            ClearReadData();
         }
 
         _internalStream.Position = _internalStream.Length; // Move position to the end for appending

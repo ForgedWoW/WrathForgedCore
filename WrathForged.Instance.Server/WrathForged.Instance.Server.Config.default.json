@@ -9,6 +9,9 @@
     "SlidingCacheTimeout_Hours": 2,
     "SQLDir": ".\\sql"
   },
+  "ForgedServerComm": {
+    "Port": 8783
+  },
   "ClientTCPServer": {
     "BindIP": "*",
     "Port": 8185,

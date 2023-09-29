@@ -2,6 +2,7 @@
 // Licensed under GPL-3.0 license. See <https://github.com/ForgedWoW/WrathForgedCore/blob/master/LICENSE> for full information.
 
 using WrathForged.Models.Auth.Enum;
+using WrathForged.Models.Core.Comm;
 using WrathForged.Models.Instance.Enum;
 using WrathForged.Models.Realm.Enum;
 using WrathForged.Serialization.Models;
@@ -21,6 +22,7 @@ namespace WrathForged.Models.Networking
         public AuthServerOpCode AuthOpCode { get; }
         public RealmServerOpCode RealmOpCode { get; }
         public InstanceServerOpCode InstanceOpCode { get; }
+        public ForgedCoreOpCode ForgeCoreOpCode { get; }
         public PacketIdType Type => Scope switch
         {
             PacketScope.Auth => PacketIdType.Auth,
@@ -49,6 +51,13 @@ namespace WrathForged.Models.Networking
         {
             Scope = packetScope;
             InstanceOpCode = opCode;
+            Id = (uint)opCode;
+        }
+
+        public PacketId(ForgedCoreOpCode opCode, PacketScope packetScope)
+        {
+            Scope = packetScope;
+            ForgeCoreOpCode = opCode;
             Id = (uint)opCode;
         }
 
@@ -98,6 +107,8 @@ namespace WrathForged.Models.Networking
 
         public static implicit operator PacketId(InstanceServerOpCode val) => new(val, PacketScope.RealmToInstance);
 
+        public static implicit operator PacketId(ForgedCoreOpCode val) => new(val, PacketScope.System);
+
         public static implicit operator uint(PacketId val) => val.Id;
 
         public static implicit operator AuthServerOpCode(PacketId val) => val.AuthOpCode;
@@ -105,6 +116,8 @@ namespace WrathForged.Models.Networking
         public static implicit operator RealmServerOpCode(PacketId val) => val.RealmOpCode;
 
         public static implicit operator InstanceServerOpCode(PacketId val) => val.InstanceOpCode;
+
+        public static implicit operator ForgedCoreOpCode(PacketId val) => val.ForgeCoreOpCode;
 
         public static implicit operator PacketScope(PacketId val) => val.Scope;
 
