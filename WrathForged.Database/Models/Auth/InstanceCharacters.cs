@@ -4,9 +4,9 @@ namespace WrathForged.Database.Models.Auth
 {
     public class InstanceCharacters
     {
-        public int InstanceId { get; set; }
-        public int AccountId { get; set; }
-        public int CharacterId { get; set; }
+        public uint InstanceId { get; set; }
+        public uint AccountId { get; set; }
+        public uint CharacterId { get; set; }
         public DateTime JoinTime { get; set; }
         public DateTime LastLeaveTime { get; set; }
         public DateTime LeaveCount { get; set; }

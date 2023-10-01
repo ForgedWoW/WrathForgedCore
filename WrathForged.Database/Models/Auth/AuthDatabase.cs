@@ -292,7 +292,7 @@ public partial class AuthDatabase : DbContext
 
         _ = modelBuilder.Entity<InstanceMaps>(entity =>
         {
-            _ = entity.HasKey(e => new { e.InstanceId, e.MapId });
+            _ = entity.HasKey(e => new { e.InstanceId, e.MapId, e.Difficulty });
             _ = entity.HasOne(d => d.InstanceList).WithMany(p => p.InstanceMaps).HasForeignKey(d => d.InstanceId);
         });
 

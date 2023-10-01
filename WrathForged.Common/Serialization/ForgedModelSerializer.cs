@@ -3,6 +3,7 @@
 using System.Collections;
 using System.Reflection;
 using Serilog;
+using SharpCompress.Writers;
 using WrathForged.Common.Networking;
 using WrathForged.Common.Scripting;
 using WrathForged.Common.Serialization.Serializers;
@@ -20,6 +21,7 @@ namespace WrathForged.Common.Serialization
         /// </summary>
         // Scope OpCode ObjType PropertyName, SerializationMetadata
         private readonly Dictionary<PacketScope, Dictionary<uint, (Type, List<PropertyMeta>)>> _deserializationMethodsCache = new();
+        private readonly Dictionary<Type, List<PropertyMeta>> _deserializationMethodsCacheByType = new();
         private readonly Dictionary<Type, List<PropertyMeta>> _systemScope = new();
         private readonly Dictionary<Type, IForgedTypeSerialization> _serializers = new();
         private readonly Dictionary<ForgedTypeCode, IForgedTypeSerialization> _forgedTypeCodeSerializers = new();
@@ -84,6 +86,7 @@ namespace WrathForged.Common.Serialization
 
                         propertyAttributes.Sort();
                         scopeDictionary[packetId] = (cls, propertyAttributes);
+                        _deserializationMethodsCacheByType[cls] = propertyAttributes;
                     }
                 }
             }
@@ -102,6 +105,16 @@ namespace WrathForged.Common.Serialization
             _logger = logger;
         }
 
+        public void Serialize<T>(PrimitiveWriter writer, T obj)
+        {
+            if (obj == null)
+                return;
+
+            var t = typeof(T);
+            if (_deserializationMethodsCacheByType.TryGetValue(t, out var deserializationDefinition))
+                Serialize(writer, obj, deserializationDefinition);
+        }
+
         public void Serialize(PacketScope scope, uint packetId, PrimitiveWriter writer, object obj)
         {
             if (!_deserializationMethodsCache.TryGetValue(scope, out var scopeDictionary) ||
@@ -110,17 +123,22 @@ namespace WrathForged.Common.Serialization
                 return;
             }
 
-            foreach (var prop in deserializationDefinition.Item2)
+            Serialize(writer, obj, deserializationDefinition.Item2);
+        }
+
+        private void Serialize(PrimitiveWriter writer, object obj, List<PropertyMeta> deserializationDefinition)
+        {
+            foreach (var prop in deserializationDefinition)
             {
                 if (prop.ReflectedProperty.PropertyType.IsArray ||
                                        (prop.ReflectedProperty.PropertyType.IsGenericType && prop.ReflectedProperty.PropertyType.GetGenericTypeDefinition() == typeof(List<>)) ||
                                        (prop.ReflectedProperty.PropertyType.IsGenericType && prop.ReflectedProperty.PropertyType.GetGenericTypeDefinition() == typeof(HashSet<>)))
                 {
-                    SerializeCollection(writer, prop, deserializationDefinition.Item2, obj);
+                    SerializeCollection(writer, prop, deserializationDefinition, obj);
                     continue;
                 }
 
-                SerializeProperty(writer, prop, deserializationDefinition.Item2, obj);
+                SerializeProperty(writer, prop, deserializationDefinition, obj);
             }
         }
 

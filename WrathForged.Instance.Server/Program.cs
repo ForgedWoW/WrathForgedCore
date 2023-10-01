@@ -28,6 +28,8 @@ container.InitializeCommon();
 
 container.Locate<WoWClientServer>().Start(8185);
 container.Locate<ForgedCommServer>().Start(configuration.GetDefaultValue("ForgedServerComm:Port", 8783));
+
+
 Log.Logger.Information("Instance Server started.");
 var notifier = container.Locate<ProgramExitNotifier>();
 

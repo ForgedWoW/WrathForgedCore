@@ -5,8 +5,8 @@ using WrathForged.Serialization.Models;
 
 namespace WrathForged.Models.Networking
 {
-    [ForgedSerializable]
-    public class ForgePacket
+    [ForgedSerializable(PacketScope.System)]
+    public class ForgedPacket
     {
         [SerializableProperty(0)]
         public PacketScope Scope { get; set; }

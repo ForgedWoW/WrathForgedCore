@@ -14,7 +14,8 @@ CREATE TABLE IF NOT EXISTS  `instancelist` (
 CREATE TABLE IF NOT EXISTS  `instancemaps` (
 	`instanceid` INT(10) UNSIGNED NOT NULL,
 	`mapid` INT(10) UNSIGNED NOT NULL,
-	PRIMARY KEY (`instanceid`, `mapid`) USING BTREE,
+	`difficulty` INT(10) UNSIGNED NOT NULL,
+	PRIMARY KEY (`instanceid`, `mapid`, `difficulty`) USING BTREE,
 	INDEX `instanceid` (`instanceid`) USING BTREE,
 	INDEX `mapid` (`mapid`) USING BTREE,
 	CONSTRAINT `FK_instancemaps_instancelist` FOREIGN KEY (`instanceid`) REFERENCES `instancelist` (`id`) ON UPDATE NO ACTION ON DELETE NO ACTION

@@ -29,7 +29,7 @@ container.Configure(c =>
 container.InitializeCommon();
 
 container.Locate<WoWClientServer>().Start();
-container.Locate<ForgedCommServer>().Start(configuration.GetDefaultValue("ForgedServerComm:Port", 8783));
+container.Locate<ForgedCommServer>().Start(configuration.GetDefaultValue("ForgedServerComm:Port", 8780));
 
 Log.Logger.Information("Realm Server started in {InitializationTime}.", (DateTime.UtcNow - initializationStart).ToReadableString());
 var notifier = container.Locate<ProgramExitNotifier>();

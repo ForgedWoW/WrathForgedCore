@@ -1,4 +1,6 @@
 {
+  "InstanceServerId": 1,
+  "RealmId": 1,
   "ConnectionStrings": {
     "auth": "server=127.0.0.1; database=auth; user=trinity; password=trinity",
     "dbc": "server=127.0.0.1; database=dbc; user=trinity; password=trinity",
@@ -10,7 +12,12 @@
     "SQLDir": ".\\sql"
   },
   "ForgedServerComm": {
-    "Port": 8783
+    "Port": 8783,
+    "LocalAddress": "*",
+    "Realm": {
+      "Address": "127.0.0.1",
+      "Port": 8780
+    }
   },
   "ClientTCPServer": {
     "BindIP": "*",

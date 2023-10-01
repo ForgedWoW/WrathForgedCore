@@ -98,7 +98,7 @@ namespace WrathForged.Common.Networking
 
             while (buffer.Reader.RemainingLength > 0)
             {
-                if (_forgedModelDeserialization.TryDeserialize<ForgePacket>(buffer, out var packet) == DeserializationResult.Success)
+                if (_forgedModelDeserialization.TryDeserialize<ForgedPacket>(buffer, out var packet) == DeserializationResult.Success)
                 {
                     var result = _forgedModelDeserialization.TryDeserialize(packet.Scope, (uint)packet.OpCode, buffer, out var packetData);
                     if (result == DeserializationResult.Success)

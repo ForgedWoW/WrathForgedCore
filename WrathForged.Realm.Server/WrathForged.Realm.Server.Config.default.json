@@ -1,4 +1,5 @@
 {
+  "RealmId": 1,
   "ConnectionStrings": {
     "auth": "server=127.0.0.1; database=auth; user=trinity; password=trinity",
     "dbc": "server=127.0.0.1; database=dbc; user=trinity; password=trinity",

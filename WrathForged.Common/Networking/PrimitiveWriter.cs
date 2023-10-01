@@ -18,6 +18,10 @@ namespace WrathForged.Common.Networking
         {
         }
 
+        public PrimitiveWriter(Stream stream) : base(stream)
+        {
+        }
+
         #region WriteByte
 
         /// <summary>

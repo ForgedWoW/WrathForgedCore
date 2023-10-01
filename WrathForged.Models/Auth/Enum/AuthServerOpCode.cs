@@ -6,7 +6,7 @@ namespace WrathForged.Models.Auth.Enum
     /// <summary>
     /// Enumeration of all authentication operations.
     /// </summary>
-    public enum AuthServerOpCode : byte
+    public enum AuthServerOpCode : uint
     {
         AUTH_LOGON_CHALLENGE = 0x00,
         AUTH_LOGON_PROOF = 0x01,

@@ -4,11 +4,11 @@ namespace WrathForged.Database.Models.Auth
 {
     public class InstanceList
     {
-        public int Id { get; set; }
-        public int Realm { get; set; }
+        public uint Id { get; set; }
+        public uint Realm { get; set; }
         public string IpAddress { get; set; } = string.Empty;
-        public int Port { get; set; }
-        public int PlayerCount { get; set; }
+        public uint Port { get; set; }
+        public uint PlayerCount { get; set; }
         public DateTime Created { get; set; }
         public DateTime Expires { get; set; }
 

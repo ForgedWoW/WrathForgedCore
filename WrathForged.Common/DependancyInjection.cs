@@ -74,6 +74,7 @@ namespace WrathForged.Common
             _ = builder.Export<ClientLocalizer>();
             _ = builder.Export<Localizer>().Lifestyle.Singleton();
             _ = builder.Export<ScriptLoader>().Lifestyle.Singleton();
+            _ = builder.Export<ForgedTCPClient>();
 
             // configure OpenTelemetry
             var telemetryType = configuration.GetDefaultValue("Telemetry:Types", "").Split(',', StringSplitOptions.TrimEntries | StringSplitOptions.TrimEntries).ToList(); // Assuming you have a key like this in your JSON
