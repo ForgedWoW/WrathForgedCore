@@ -22,7 +22,7 @@ namespace WrathForged.Realm.Server.Services
         [PacketHandler(PacketScope.System, ForgedCoreOpCode.AddInstanceServer)]
         public void HandleForgePacket(ClientSocket socket, InstanceServerRegistration serverRegistration)
         {
-            _authDatabase.
+            
         }
     }
 }
