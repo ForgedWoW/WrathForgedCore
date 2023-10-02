@@ -1,6 +1,12 @@
 ﻿// Copyright (c) Forged WoW LLC <https://github.com/ForgedWoW/WrathForgedCore>
 // Licensed under GPL-3.0 license. See <https://github.com/ForgedWoW/WrathForgedCore/blob/master/LICENSE> for full information.
 
+using WrathForged.Common.Networking;
+using WrathForged.Database.Models.Auth;
+using WrathForged.Database.Models.World;
+using WrathForged.Models.Core.Comm;
+using WrathForged.Serialization.Models;
+
 namespace WrathForged.Realm.Server.Services
 {
     public class InstanceServerService : IPacketService
@@ -16,10 +22,10 @@ namespace WrathForged.Realm.Server.Services
 
         public Dictionary<uint, InstanceServerRegistration> InstanceServers { get; } = new();
 
-        [PacketHandler(PacketScope.System, ForgedCoreOpCode.AddInstanceServer)]
+        [PacketRoute(PacketScope.System, ForgedCoreOpCode.AddInstanceServer)]
         public void RegisterInstanceServer(ClientSocket socket, InstanceServerRegistration serverRegistration) => InstanceServers[serverRegistration.Id] = serverRegistration;
 
-        [PacketHandler(PacketScope.System, ForgedCoreOpCode.AddInstanceServer)]
+        [PacketRoute(PacketScope.System, ForgedCoreOpCode.AddInstanceServer)]
         public void UnregisterInstanceServer(ClientSocket socket, InsanceServerShutdown serverShutdown) => InstanceServers.Remove(serverShutdown.Id);
     }
 }
