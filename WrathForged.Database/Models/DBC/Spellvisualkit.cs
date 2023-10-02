@@ -122,35 +122,61 @@ namespace WrathForged.Database.Models.DBC
         public int Flags { get; set; }
 
         public virtual Animationdatum? Anim { get; set; }
+
         public virtual Spellvisualeffectname? BaseEffectNavigation { get; set; }
+
         public virtual Spellvisualeffectname? BreathEffectNavigation { get; set; }
+
         public virtual Spellvisualeffectname? ChestEffectNavigation { get; set; }
+
         public virtual Spellvisualeffectname? HeadEffectNavigation { get; set; }
+
         public virtual Spellvisualeffectname? LeftHandEffectNavigation { get; set; }
+
         public virtual Spellvisualeffectname? LeftWeaponEffectNavigation { get; set; }
+
         public virtual Spellvisualeffectname? RightHandEffectNavigation { get; set; }
+
         public virtual Spellvisualeffectname? RightWeaponEffectNavigation { get; set; }
+
         public virtual Spelleffectcamerashake? Shake { get; set; }
+
         public virtual Soundentry? Sound { get; set; }
+
         public virtual Spellvisualeffectname? SpecialEffect1Navigation { get; set; }
+
         public virtual Spellvisualeffectname? SpecialEffect2Navigation { get; set; }
+
         public virtual Spellvisualeffectname? SpecialEffect3Navigation { get; set; }
+
         public virtual ICollection<Spellvisual> SpellvisualCastKitNavigations { get; set; } = new List<Spellvisual>();
+
         public virtual ICollection<Spellvisual> SpellvisualCasterImpactKitNavigations { get; set; } = new List<Spellvisual>();
+
         public virtual ICollection<Spellvisual> SpellvisualChannelKitNavigations { get; set; } = new List<Spellvisual>();
-        public virtual ICollection<Spellvisual> SpellvisualChannelImpactKitNavigations { get; set; } = new List<Spellvisual>();
+
+        public virtual ICollection<Spellvisual> SpellvisualImpactAreaKitNavigations { get; set; } = new List<Spellvisual>();
+
         public virtual ICollection<Spellvisual> SpellvisualImpactKitNavigations { get; set; } = new List<Spellvisual>();
+
         public virtual ICollection<Spellvisual> SpellvisualInstantAreaKitNavigations { get; set; } = new List<Spellvisual>();
-        public virtual ICollection<Spellvisual> SpellvisualReflectedImpactKitNavigations { get; set; } = new List<Spellvisual>();
-        public virtual ICollection<Spellvisual> SpellvisualReflectedMissileKitNavigations { get; set; } = new List<Spellvisual>();
+
+        public virtual ICollection<Spellvisual> SpellvisualMissileTargetingKitNavigations { get; set; } = new List<Spellvisual>();
+
+        public virtual ICollection<Spellvisual> SpellvisualPersistentAreaKitNavigations { get; set; } = new List<Spellvisual>();
+
+        public virtual ICollection<Spellvisual> SpellvisualPrecastKitNavigations { get; set; } = new List<Spellvisual>();
+
+        public virtual ICollection<Spellvisual> SpellvisualStateDoneKitNavigations { get; set; } = new List<Spellvisual>();
+
         public virtual ICollection<Spellvisual> SpellvisualStateKitNavigations { get; set; } = new List<Spellvisual>();
-        public virtual ICollection<Spellvisual> SpellvisualStateFinishKitNavigations { get; set; } = new List<Spellvisual>();
-        public virtual ICollection<Spellvisual> SpellvisualStateFinishCasterKitNavigations { get; set; } = new List<Spellvisual>();
-        public virtual ICollection<Spellvisual> SpellvisualStateStartKitNavigations { get; set; } = new List<Spellvisual>();
-        public virtual ICollection<Spellvisual> SpellvisualStateStartCasterKitNavigations { get; set; } = new List<Spellvisual>();
+
         public virtual ICollection<Spellvisual> SpellvisualTargetImpactKitNavigations { get; set; } = new List<Spellvisual>();
-        public virtual ICollection<Spellvisual> SpellvisualTargetMissileKitNavigations { get; set; } = new List<Spellvisual>();
-        public virtual ICollection<Spellvisual> SpellvisualWorldImpactKitNavigations { get; set; } = new List<Spellvisual>();
-        public virtual ICollection<Spellvisual> SpellvisualWorldMissileKitNavigations { get; set; } = new List<Spellvisual>();
+
+        public virtual ICollection<Spellvisualkitmodelattach> Spellvisualkitmodelattaches { get; set; } = new List<Spellvisualkitmodelattach>();
+
+        public virtual Animationdatum? StartAnim { get; set; }
+
+        public virtual Spellvisualeffectname? WorldEffectNavigation { get; set; }
     }
 }
