@@ -31,7 +31,7 @@ namespace WrathForged.Common.Networking
         private PrimitiveWriter _writeBuffer;
         private bool _loggedDisconnect;
 
-        public ForgedTCPClient(string bindIP, string address, int port, ILogger logger, ProgramExitNotifier programExitNotifier, 
+        public ForgedTCPClient(string bindIP, string address, int port, ILogger logger, ProgramExitNotifier programExitNotifier,
                                 IConfiguration configuration, ForgedModelSerializer forgedModelDeserialization, PacketRouter packetRouter)
         {
             _address = address;
@@ -41,6 +41,7 @@ namespace WrathForged.Common.Networking
             _packetRouter = packetRouter;
 
             IncomingDataBuffer = new PacketBuffer(logger);
+            ModelPacketBuffer = new PacketBuffer(logger);
 
             _dataProcessingBlock = new ActionBlock<DataReceivedEventArgs>(data =>
             {
@@ -65,10 +66,10 @@ namespace WrathForged.Common.Networking
             },
             new ExecutionDataflowBlockOptions
             {
-                MaxDegreeOfParallelism = configuration.GetDefaultValue("ClientTCPServer:Threads", 20), // Limit the number of concurrent operations
+                MaxDegreeOfParallelism = 1,
                 CancellationToken = programExitNotifier.GetCancellationToken(),
                 EnsureOrdered = true,
-                NameFormat = "ClientTCPServer Data Processing Thread {1}"
+                NameFormat = "ForgedTCPClient Data Processing Thread {1}"
             });
 
             if (string.IsNullOrEmpty(bindIP) || bindIP == "*")
@@ -79,7 +80,7 @@ namespace WrathForged.Common.Networking
                     LowerClient = new TcpClient(new IPEndPoint(newAddress, 0));
                 else
                 {
-                    _logger.Error("Invalid IP address specified for configuration: ClientTCPServer:BindIP");
+                    _logger.Error("Invalid IP address specified for bindIP");
                     LowerClient = new TcpClient();
                 }
             }
@@ -90,6 +91,7 @@ namespace WrathForged.Common.Networking
         public TcpClient LowerClient { get; set; }
         public ClientSocket ClientSocket { get; set; }
         public PacketBuffer IncomingDataBuffer { get; set; }
+        public PacketBuffer ModelPacketBuffer { get; set; }
 
         public void Connect()
         {
@@ -108,7 +110,7 @@ namespace WrathForged.Common.Networking
                 if (!LowerClient.Connected)
                 {
                     if (!_loggedDisconnect)
-                    { 
+                    {
                         _logger.Warning("Failed to connect to {Address}:{Port}. Retrying every 5 seconds...", _address, _port);
                         _loggedDisconnect = true;
                     }
@@ -120,7 +122,7 @@ namespace WrathForged.Common.Networking
             _logger.Information("Connected to {Address}:{Port}", _address, _port);
             _loggedDisconnect = false;
             _writeBuffer = new PrimitiveWriter(LowerClient.GetStream());
-        }   
+        }
 
         public void Send<T>(T data)
         {
@@ -184,7 +186,8 @@ namespace WrathForged.Common.Networking
             {
                 if (_forgedModelSerializer.TryDeserialize<ForgedPacket>(IncomingDataBuffer, out var packet) == DeserializationResult.Success)
                 {
-                    var result = _forgedModelSerializer.TryDeserialize(packet.Scope, (uint)packet.OpCode, IncomingDataBuffer, out var packetData);
+                    ModelPacketBuffer.AppendData(packet.Data);
+                    var result = _forgedModelSerializer.TryDeserialize(packet.Scope, (uint)packet.OpCode, ModelPacketBuffer, out var packetData);
                     if (result == DeserializationResult.Success)
                     {
                         _packetRouter.Route(e.Client, new PacketId(packet.OpCode, PacketScope.System), packetData);
@@ -194,6 +197,7 @@ namespace WrathForged.Common.Networking
                         IncomingDataBuffer.Clear();
                         _logger.Error("Failed to deserialize packet data for packet {PacketId} in scope {PacketScope}", packet.OpCode, packet.Scope);
                     }
+                    ModelPacketBuffer.Clear();
                 }
 
                 IncomingDataBuffer.ClearReadData();
