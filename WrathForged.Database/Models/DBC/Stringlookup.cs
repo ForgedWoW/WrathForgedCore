@@ -1,11 +1,16 @@
 ﻿// Copyright (c) Forged WoW LLC <https://github.com/ForgedWoW/WrathForgedCore>
 // Licensed under GPL-3.0 license. See <https://github.com/ForgedWoW/WrathForgedCore/blob/master/LICENSE> for full information.
+using WrathForged.Database.DBC;
 
-namespace WrathForged.Database.Models.DBC;
-
-public partial class Stringlookup
+namespace WrathForged.Database.Models.DBC
 {
-    public int Id { get; set; }
+    [DBCBound("StringLookups.dbc")]
+    public partial class Stringlookup : IDBCRecord
+    {
+        [DBCPropertyBinding(0, DBCBindingType.INT32)]
+        public int Id { get; set; }
 
-    public string? String { get; set; }
+        [DBCPropertyBinding(1, DBCBindingType.STRING, Nullable = true)]
+        public string? String { get; set; }
+    }
 }

@@ -1,15 +1,19 @@
 ﻿// Copyright (c) Forged WoW LLC <https://github.com/ForgedWoW/WrathForgedCore>
 // Licensed under GPL-3.0 license. See <https://github.com/ForgedWoW/WrathForgedCore/blob/master/LICENSE> for full information.
-using System;
-using System.Collections.Generic;
+using WrathForged.Database.DBC;
 
-namespace WrathForged.Database.Models.DBC;
-
-public partial class Spellvisualkitareamodel
+namespace WrathForged.Database.Models.DBC
 {
-    public int Id { get; set; }
+    [DBCBound("SpellVisualKitAreaModel.dbc")]
+    public partial class Spellvisualkitareamodel : IDBCRecord
+    {
+        [DBCPropertyBinding(0, DBCBindingType.INT32)]
+        public int Id { get; set; }
 
-    public string? Name { get; set; }
+        [DBCPropertyBinding(1, DBCBindingType.STRING)]
+        public string? Name { get; set; }
 
-    public int EnumId { get; set; }
+        [DBCPropertyBinding(2, DBCBindingType.INT32)]
+        public int EnumId { get; set; }
+    }
 }
