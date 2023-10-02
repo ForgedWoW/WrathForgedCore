@@ -6,7 +6,7 @@ namespace WrathForged.Models.Auth
     /// <summary>
     /// Holds authentication information
     /// </summary>
-    public partial record AuthenticationInfo
+    public partial class AuthenticationInfo
     {
         /// <summary>
         /// Session key used for the session

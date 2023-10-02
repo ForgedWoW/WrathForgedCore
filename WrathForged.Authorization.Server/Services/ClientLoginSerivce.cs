@@ -93,9 +93,13 @@ namespace WrathForged.Authorization.Server.Services
             
             authDatabase.Accounts.Update(account);
 
-            packet.WriteObject(new AuthResponse()
+            packet.WriteObject(new AuthLogonChallengeResponse()
             {
                 Status = AuthStatus.WOW_SUCCESS,
+                B = session.PasswordAuthenticator.SRP.PublicEphemeralValueB,
+                Generator = SecureRemotePassword.Generator,
+                Modulus = SecureRemotePassword.Modulus,
+                Salt = session.PasswordAuthenticator.SRP.Salt
             });
             session.ClientSocket.EnqueueWrite(packet);
         }
@@ -133,6 +137,7 @@ namespace WrathForged.Authorization.Server.Services
                 session.Account.Salt = session.PasswordAuthenticator.SRP.Salt.GetBytes(32);
                 session.Account.Verifier = session.PasswordAuthenticator.SRP.Verifier.GetBytes(32);
                 session.Account.Online = true;
+                session.State = WoWClientSession.AuthState.LoggingIn;
 
                 authDatabase.Accounts.Update(session.Account);
 
