@@ -10,7 +10,6 @@ namespace WrathForged.Database.Models.Auth
         public uint Port { get; set; }
         public uint PlayerCount { get; set; }
         public DateTime Created { get; set; }
-        public DateTime Expires { get; set; }
 
         public virtual Realmlist? RealmList { get; set; }
         public virtual ICollection<InstanceMaps> InstanceMaps { get; set; } = new List<InstanceMaps>();

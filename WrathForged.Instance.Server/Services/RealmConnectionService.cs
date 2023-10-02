@@ -32,10 +32,31 @@ namespace WrathForged.Instance.Server.Services
                 IpAddress = InstanceServer.Address.ToString(),
                 Port = InstanceServer.Port,
                 Created = DateTime.UtcNow,
-                Expires = DateTime.UtcNow.AddDays(1),
                 Realm = configuration.GetDefaultValue("RealmId", 1u),
                 PlayerCount = 0
             });
+
+            var maps = authDatabase.InstanceMaps.Where(x => x.InstanceId == InstanceServer.Id).ToList();
+            Dictionary<uint, InstanceMapInfo> mapInfos = new();
+
+            foreach (var map in maps)
+            {
+                if (mapInfos.TryGetValue(map.MapId, out var mapInfo))
+                {
+                    mapInfo.Difficulties.Add(map.Difficulty);
+                }
+                else
+                {
+                    mapInfos[map.MapId] = new InstanceMapInfo
+                    {
+                        MapId = map.MapId,
+                        Difficulties = new List<uint> { map.Difficulty }
+                    };
+                }                       
+            }
+
+            InstanceServer.MapIDs = mapInfos.Values.ToList();
+
             ClientConnection = classFactory.Container.Locate<ForgedTCPClient>(new
             {
                 bindIP = configuration.GetDefaultValue("ForgedServerComm:LocalAddress", "*"),
