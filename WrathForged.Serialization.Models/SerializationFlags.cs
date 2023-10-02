@@ -17,6 +17,6 @@ namespace WrathForged.Serialization.Models
 
         UTF8CString = 1 << 1,
         BigIntegerWithLength = 1 << 2,
-        BENetworkOrder = 1 << 3,
+        BENetworkOrder = 1 << 3
     }
 }

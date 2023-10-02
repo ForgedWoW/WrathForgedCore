@@ -110,7 +110,7 @@ namespace WrathForged.Common.Networking
         {
             var session = GetOrCreateSessionForClient(e.Client);
             session.PacketBuffer.AppendData(e.Data);
-
+            var packetLength = 0;
             do
             {
                 PacketId packetId;
@@ -125,7 +125,6 @@ namespace WrathForged.Common.Networking
                 else
                 {
                     var currentBufferPosition = (int)session.PacketBuffer.Reader.BaseStream.Position;
-                    var packetLength = 0;
 
                     int headerSize;
 
@@ -177,7 +176,7 @@ namespace WrathForged.Common.Networking
                     }
                 }
 
-                var packetIdPosition = session.PacketBuffer.Reader.BaseStream.Position;
+                var posBeforeDeserialization = session.PacketBuffer.Reader.BaseStream.Position;
                 var result = _forgedModelDeserialization.TryDeserialize(_packetScope, packetId.Id, session.PacketBuffer, out var packet);
 
                 if (result == DeserializationResult.Success && packet != null)
@@ -186,8 +185,8 @@ namespace WrathForged.Common.Networking
                 }
                 else
                 {
-                    if (result == DeserializationResult.EndOfStream)
-                        session.PacketBuffer.Reader.BaseStream.Position = packetIdPosition;
+                    if (result == DeserializationResult.EndOfStream) // we need to read the rest of the packet yet.
+                        session.PacketBuffer.Reader.BaseStream.Position = posBeforeDeserialization;
                     else
                         session.PacketBuffer.Clear();
 

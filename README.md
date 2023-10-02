@@ -28,8 +28,7 @@ Actively accepts Pull Requests.
 - .NET 7.0 installed
 - [Trinity Core Database: Create](https://github.com/TrinityCore/TrinityCore/blob/3.3.5/sql/create/create_mysql.sql)
     - [world](https://trinitycore.info/install/Database-Installation)
-    - [Auth & Character](https://github.com/TrinityCore/TrinityCore/tree/3.3.5/sql/base) 
-- [Trinity Core AuthServer](https://github.com/TrinityCore/TrinityCore/tree/3.3.5)
+    - [Auth & Character](https://github.com/TrinityCore/TrinityCore/tree/3.3.5/sql/base)
 
 ### Importing Existing DBC
 This process is required for entity framework to work with the DBC files. This is a one time process. After all data is manipulated in the database. dbcs can be exported using the realm server command line.
@@ -39,7 +38,7 @@ Use your existing DBC files from your TrinityCore installation and import them i
 2. Use [WDBX Editor](https://github.com/robinsch/WDBXEditor) to run the following command:
 
 NOTE: change the paths to match your environment
-Quicky convvert all dbc files to sql files using a batch file.
+Quicky convert all dbc files to sql files using a batch file.
 ```bash
 cd "C:\WoWData\3.3.5 AC\dbc"
 for %%F in (*.dbc) do (
@@ -47,7 +46,7 @@ for %%F in (*.dbc) do (
 )
 ```
 
-3. Import the SQL files into your `dbc` database
+3. Import the SQL files into your `dbc` database, [HeidiSQL](https://www.heidisql.com/) is a good tool for this.
 4. Run the following SQL in this order to perpare the dbc database
     1. https://github.com/ForgedWoW/WrathForgedCore/blob/main/WrathForged.Database/sql/base/dbc/zzzAllowFK.sql - This allows foreign keys to be created by setting fields to allow null. These fields have default 0 or -1 and dont have valid mappings. in SQL with FK, these need to be null.
     2. https://github.com/ForgedWoW/WrathForgedCore/blob/main/WrathForged.Database/sql/base/dbc/zzzCleanupInvaiMappings.sql - This cleans up invalid mappings, there is invalid mappings and dead data in 3.3.5 dbc files. these are non existing mappings from over versions.

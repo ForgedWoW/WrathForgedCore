@@ -46,6 +46,21 @@ namespace WrathForged.Models.Auth.Enum
         /// <summary>
         /// 7.x.x
         /// </summary>
-        Legion = 7
+        Legion = 7,
+
+        /// <summary>
+        /// 8.x.x
+        /// </summary>
+        BoA = 8,
+
+        /// <summary>
+        /// 9.x.x
+        /// </summary>
+        Shadowlands = 9,
+
+        /// <summary>
+        /// 10.x.x
+        /// </summary>
+        Dragonflight = 10
     }
 }

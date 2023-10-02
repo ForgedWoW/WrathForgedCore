@@ -10,33 +10,33 @@ using WrathForged.Serialization.Models;
 namespace WrathForged.Common.Networking
 {
     [AttributeUsage(AttributeTargets.Method, AllowMultiple = true)]
-    public sealed class PacketHandlerAttribute : Attribute
+    public sealed class PacketRouteAttribute : Attribute
     {
-        public PacketHandlerAttribute(PacketScope scope, uint id)
+        public PacketRouteAttribute(PacketScope scope, uint id)
         {
             Scope = scope;
             Id = new PacketId(id, scope);
         }
 
-        public PacketHandlerAttribute(PacketScope scope, AuthServerOpCode id)
+        public PacketRouteAttribute(PacketScope scope, AuthServerOpCode id)
         {
             Scope = scope;
             Id = new PacketId(id);
         }
 
-        public PacketHandlerAttribute(PacketScope scope, RealmServerOpCode id)
+        public PacketRouteAttribute(PacketScope scope, RealmServerOpCode id)
         {
             Scope = scope;
             Id = new PacketId(id, scope);
         }
 
-        public PacketHandlerAttribute(PacketScope scope, InstanceServerOpCode id)
+        public PacketRouteAttribute(PacketScope scope, InstanceServerOpCode id)
         {
             Scope = scope;
             Id = new PacketId(id, scope);
         }
 
-        public PacketHandlerAttribute(PacketScope scope, ForgedCoreOpCode id)
+        public PacketRouteAttribute(PacketScope scope, ForgedCoreOpCode id)
         {
             Scope = scope;
             Id = new PacketId(id, scope);
@@ -44,5 +44,11 @@ namespace WrathForged.Common.Networking
 
         public PacketScope Scope { get; }
         public PacketId Id { get; }
+        public bool RequireAuthentication { get; set; }
+
+        /// <summary>
+        /// If true, the <see cref="PacketId"/> and <see cref="PacketBuffer"/> will be passed in place of the deserialized packet model.
+        /// </summary>
+        public bool DirectReader { get; set; }
     }
 }

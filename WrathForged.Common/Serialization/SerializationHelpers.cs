@@ -2,6 +2,7 @@
 // Licensed under GPL-3.0 license. See <https://github.com/ForgedWoW/WrathForgedCore/blob/master/LICENSE> for full information.
 using System.Collections;
 using WrathForged.Common.Networking;
+using WrathForged.Models;
 using WrathForged.Serialization.Models;
 
 namespace WrathForged.Common.Serialization

@@ -20,6 +20,28 @@ public class PacketBuffer : IDisposable
     }
 
     /// <summary>
+    ///     Sets the internal stream to the specified packet buffer.
+    /// </summary>
+    /// <param name="packetBuffer"></param>
+    /// <param name="logger"></param>
+    public PacketBuffer(byte[] packetBuffer, ILogger logger)
+    {
+        _internalStream = new MemoryStream(packetBuffer);
+        Reader = new PrimitiveReader(_internalStream, logger);
+    }
+
+    /// <summary>
+    ///     Copies the data from the specified packet buffer into a new packet buffer.
+    /// </summary>
+    /// <param name="packetBuffer"></param>
+    /// <param name="logger"></param>
+    public PacketBuffer(PacketBuffer packetBuffer, ILogger logger)
+    {
+        _internalStream = new MemoryStream(packetBuffer._internalStream.ToArray());
+        Reader = new PrimitiveReader(_internalStream, logger);
+    }
+
+    /// <summary>
     ///     Clears the read data from the buffer. If data is unread, it will be compacted to the beginning of the buffer. The buffer position will be reset to 0.
     /// </summary>
     public void ClearReadData()

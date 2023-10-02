@@ -54,5 +54,6 @@ namespace WrathForged.Models
         ///     Flags for specific serialization behaviors
         /// </summary>
         public SerializationFlags Flags { get; set; } = SerializationFlags.None;
+
     }
 }

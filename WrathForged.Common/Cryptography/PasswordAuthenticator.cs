@@ -45,53 +45,11 @@ namespace WrathForged.Common.Cryptography
         /// </summary>
         /// <param name="packet">the packet to read from</param>
         /// <returns>true if the client proof matches; false otherwise</returns>
-        public bool IsClientProofValid(PrimitiveReader packet)
+        public bool IsClientProofValid(AuthLoginProof packet)
         {
-            SRP.PublicEphemeralValueA = packet.ReadBigInteger(32);
+            SRP.PublicEphemeralValueA = packet.PublicEphemeralValueA;
 
-            var proof = packet.ReadBigInteger(20);
-
-            // SHA1 of PublicEphemeralValueA and the 16 random bytes sent in
-            // AUTH_LOGON_CHALLENGE from the server
-            _ = packet.ReadBytes(20);
-
-            var keyCount = packet.ReadByte();
-            for (var i = 0; i < keyCount; i++)
-            {
-                _ = packet.ReadUInt16();
-
-                _ = packet.ReadUInt32();
-
-                _ = packet.ReadBytes(4);
-
-                // sha of the SRP's PublicEphemeralValueA, PublicEphemeralValueB,
-                // and 20 unknown bytes
-                _ = packet.ReadBytes(20);
-            }
-
-            var securityFlags = packet.ReadByte();
-
-            if ((securityFlags & 1) != 0)
-            {
-                // PIN
-                _ = packet.ReadBytes(16);
-
-                _ = packet.ReadBytes(20);
-            }
-
-            if ((securityFlags & 2) != 0)
-            {
-                _ = packet.ReadBytes(20);
-            }
-
-            if ((securityFlags & 4) != 0)
-            {
-                var arrLen = packet.ReadByte();
-
-                _ = packet.ReadBytes(arrLen);
-            }
-
-            return SRP.IsClientProofValid(proof);
+            return SRP.IsClientProofValid(packet.Proof);
         }
 
         /// <summary>

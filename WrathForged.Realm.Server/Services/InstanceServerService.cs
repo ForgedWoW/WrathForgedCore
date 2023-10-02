@@ -19,7 +19,7 @@ namespace WrathForged.Realm.Server.Services
             _authDatabase = authDatabase;
         }
 
-        [PacketHandler(PacketScope.System, ForgedCoreOpCode.AddInstanceServer)]
+        [PacketRoute(PacketScope.System, ForgedCoreOpCode.AddInstanceServer)]
         public void HandleForgePacket(ClientSocket socket, InstanceServerRegistration serverRegistration)
         {
             

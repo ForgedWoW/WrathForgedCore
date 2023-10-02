@@ -3,7 +3,6 @@
 using System.Collections;
 using System.Reflection;
 using Serilog;
-using SharpCompress.Writers;
 using WrathForged.Common.Networking;
 using WrathForged.Common.Scripting;
 using WrathForged.Common.Serialization.Serializers;
@@ -57,9 +56,17 @@ namespace WrathForged.Common.Serialization
                         foreach (var prop in cls.GetProperties())
                         {
                             var propAtt = prop.GetCustomAttribute<SerializablePropertyAttribute>();
+                            IConditionalSerialization? condAtt = null;
+
+                            foreach (var att in prop.GetCustomAttributes())
+                                if (att is IConditionalSerialization conditionalSerialization)
+                                {
+                                    condAtt = conditionalSerialization;
+                                    break;
+                                }
 
                             if (propAtt != null)
-                                propatr.Add(new PropertyMeta(propAtt, prop));
+                                propatr.Add(new PropertyMeta(propAtt, prop, condAtt));
                         }
 
                         propatr.Sort();
@@ -79,9 +86,17 @@ namespace WrathForged.Common.Serialization
                         foreach (var prop in cls.GetProperties())
                         {
                             var propAtt = prop.GetCustomAttribute<SerializablePropertyAttribute>();
+                            IConditionalSerialization? condAtt = null;
+
+                            foreach (var att in prop.GetCustomAttributes())
+                                if (att is IConditionalSerialization conditionalSerialization)
+                                {
+                                    condAtt = conditionalSerialization;
+                                    break;
+                                }
 
                             if (propAtt != null)
-                                propertyAttributes.Add(new PropertyMeta(propAtt, prop));
+                                propertyAttributes.Add(new PropertyMeta(propAtt, prop, condAtt));
                         }
 
                         propertyAttributes.Sort();
@@ -155,9 +170,19 @@ namespace WrathForged.Common.Serialization
             try
             {
                 var instance = Activator.CreateInstance<T>();
+
+                if (instance == null)
+                {
+                    packet = default!;
+                    return DeserializationResult.Error;
+                }
+
                 Dictionary<uint, int> collectionSizes = new();
                 foreach (var prop in propertyMetas)
                 {
+                    if (prop.ConditionalSerialization != null && !prop.ConditionalSerialization.ShouldDeserialize(instance, prop, propertyMetas))
+                        continue;
+
                     var isCollection = prop.ReflectedProperty.PropertyType.IsArray ||
                                         (prop.ReflectedProperty.PropertyType.IsGenericType && prop.ReflectedProperty.PropertyType.GetGenericTypeDefinition() == typeof(List<>)) ||
                                         (prop.ReflectedProperty.PropertyType.IsGenericType && prop.ReflectedProperty.PropertyType.GetGenericTypeDefinition() == typeof(HashSet<>));
@@ -202,9 +227,19 @@ namespace WrathForged.Common.Serialization
             try
             {
                 var instance = Activator.CreateInstance(deserializationDefinition.Item1);
+
+                if (instance == null)
+                {
+                    packet = default!;
+                    return DeserializationResult.Error;
+                }
+
                 Dictionary<uint, int> collectionSizes = new();
                 foreach (var prop in deserializationDefinition.Item2)
                 {
+                    if (prop.ConditionalSerialization != null && !prop.ConditionalSerialization.ShouldDeserialize(instance, prop, deserializationDefinition.Item2))
+                        continue;
+
                     var isCollection = prop.ReflectedProperty.PropertyType.IsArray ||
                                         (prop.ReflectedProperty.PropertyType.IsGenericType && prop.ReflectedProperty.PropertyType.GetGenericTypeDefinition() == typeof(List<>)) ||
                                         (prop.ReflectedProperty.PropertyType.IsGenericType && prop.ReflectedProperty.PropertyType.GetGenericTypeDefinition() == typeof(HashSet<>));

@@ -26,6 +26,7 @@ namespace WrathForged.Common.Networking
         {
             ClientSocket = clientSocket;
             PacketBuffer = packetBuffer;
+            PacketBufferBaseStream = (MemoryStream)packetBuffer.Reader.BaseStream;
             _logger = logger;
             _forgedModelSerializer = forgedModelSerializer;
             _sessionKey = _defaultSessionKey;
@@ -54,6 +55,7 @@ namespace WrathForged.Common.Networking
         public PacketEncryption PacketEncryption { get; private set; }
         public ClientSocket ClientSocket { get; }
         public PacketBuffer PacketBuffer { get; }
+        public MemoryStream PacketBufferBaseStream { get; }
         public Account? Account { get; set; }
         public PasswordAuthenticator? PasswordAuthenticator { get; set; }
 
