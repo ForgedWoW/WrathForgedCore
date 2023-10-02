@@ -4,7 +4,7 @@ using WrathForged.Models.Auth.Enum;
 
 namespace WrathForged.Models.Auth
 {
-    [ForgedSerializable]
+    [ForgedSerializable(Serialization.Models.PacketScope.AuthToClient, AuthServerOpCode.AUTH_LOGON_CHALLENGE)]
     public partial record AuthResponse
     {
         [SerializableProperty(0)]

@@ -115,10 +115,10 @@ namespace WrathForged.Common.Networking
             {
                 PacketId packetId;
 
-                if (_packetScope == PacketScope.Auth)
+                if (_packetScope == PacketScope.ClientToAuth)
                 {
                     if (session.PacketBuffer.CanReadLength(sizeof(byte)))
-                        packetId = new PacketId(session.PacketBuffer.Reader.ReadByte(), PacketScope.Auth);
+                        packetId = new PacketId(session.PacketBuffer.Reader.ReadByte(), PacketScope.ClientToAuth);
                     else
                         return;
                 }

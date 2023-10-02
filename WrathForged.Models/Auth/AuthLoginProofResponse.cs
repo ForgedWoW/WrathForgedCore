@@ -5,7 +5,7 @@ using WrathForged.Models.Realm.Enum;
 
 namespace WrathForged.Models.Auth
 {
-    [ForgedSerializable(Serialization.Models.PacketScope.Auth, Enum.AuthServerOpCode.AUTH_LOGON_PROOF)]
+    [ForgedSerializable(Serialization.Models.PacketScope.AuthToClient, Enum.AuthServerOpCode.AUTH_LOGON_PROOF)]
     public class AuthLoginProofResponse
     {
         [SerializableProperty(0)]

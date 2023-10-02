@@ -19,7 +19,7 @@ namespace WrathForged.Common.Networking
             MemoryStream = (MemoryStream)Writer.BaseStream;
 
             if (headerSize == -1)
-                headerSize = packetId.Scope == PacketScope.Auth ? 2 : 4;
+                headerSize = packetId.Scope == PacketScope.ClientToAuth ? 2 : 4;
 
             Writer.Write(new byte[headerSize]);
         }
@@ -43,7 +43,7 @@ namespace WrathForged.Common.Networking
             var buffer = MemoryStream.GetBuffer();
 
             // Step 3: Write the header to the start of the existing buffer.
-            if (PacketId.Scope == PacketScope.Auth)
+            if (PacketId.Scope == PacketScope.ClientToAuth)
                 WriteAuthHeader(buffer);
             else
                 WriteRealmHeader(buffer);

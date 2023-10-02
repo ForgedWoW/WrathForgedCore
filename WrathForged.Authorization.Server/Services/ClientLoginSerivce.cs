@@ -34,7 +34,7 @@ namespace WrathForged.Authorization.Server.Services
             _logger = logger;
         }
 
-        [PacketRoute(PacketScope.Auth, AuthServerOpCode.AUTH_LOGON_CHALLENGE)]
+        [PacketRoute(PacketScope.ClientToAuth, AuthServerOpCode.AUTH_LOGON_CHALLENGE)]
         public void ChallangeRequest(WoWClientSession session, AuthLogonChallengeRequest authLogonChallenge)
         {
             using var authDatabase = _classFactory.Resolve<AuthDatabase>();
@@ -90,11 +90,17 @@ namespace WrathForged.Authorization.Server.Services
             session.SessionKey = _randomUtilities.RandomBytes(16);
             session.PasswordAuthenticator = new PasswordAuthenticator(new SecureRemotePassword(account.Username, new BigInteger(account.SessionKeyAuth), true));
             session.State = WoWClientSession.AuthState.AwaitingCredentials;
-
+            
             authDatabase.Accounts.Update(account);
+
+            packet.WriteObject(new AuthResponse()
+            {
+                Status = AuthStatus.WOW_SUCCESS,
+            });
+            session.ClientSocket.EnqueueWrite(packet);
         }
 
-        [PacketRoute(PacketScope.Auth, AuthServerOpCode.AUTH_LOGON_PROOF)]
+        [PacketRoute(PacketScope.ClientToAuth, AuthServerOpCode.AUTH_LOGON_PROOF)]
         public void LogonProof(WoWClientSession session, AuthLoginProof proof)
         {
             if (session.PasswordAuthenticator == null)
@@ -130,14 +136,11 @@ namespace WrathForged.Authorization.Server.Services
 
                 authDatabase.Accounts.Update(session.Account);
 
-                var packet = session.NewClientMessage(AuthServerOpCode.AUTH_LOGON_PROOF);
-                packet.WriteObject(new AuthLoginProofResponse()
+                session.Write(new AuthLoginProofResponse()
                 {
                     Status = AccountStatus.Success,
                     Proof = session.PasswordAuthenticator.SRP.ServerSessionKeyProof
                 });
-
-                session.ClientSocket.EnqueueWrite(packet);
             }
             else
                 LoginFailed(session, AuthStatus.WOW_FAIL_UNKNOWN_ACCOUNT, session.NewClientMessage(AuthServerOpCode.AUTH_LOGON_PROOF));

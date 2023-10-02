@@ -5,7 +5,7 @@ using WrathForged.Models.ConditionalSerializers;
 
 namespace WrathForged.Models.Auth
 {
-    [ForgedSerializable(Serialization.Models.PacketScope.Auth, Enum.AuthServerOpCode.AUTH_LOGON_PROOF)]
+    [ForgedSerializable(Serialization.Models.PacketScope.ClientToAuth, Enum.AuthServerOpCode.AUTH_LOGON_PROOF)]
     public class AuthLoginProof
     {
         [SerializableProperty(0, FixedCollectionSize = 32)]

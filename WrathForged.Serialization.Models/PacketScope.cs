@@ -4,7 +4,8 @@ namespace WrathForged.Serialization.Models
 {
     public enum PacketScope
     {
-        Auth,
+        ClientToAuth,
+        AuthToClient,
         ClientToRealm,
         RealmToClient,
         ClientToInstance,

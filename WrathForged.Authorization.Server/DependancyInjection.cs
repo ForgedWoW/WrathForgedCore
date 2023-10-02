@@ -12,7 +12,7 @@ namespace WrathForged.Authorization.Server
     {
         public static IExportRegistrationBlock RegisterAuth(this IExportRegistrationBlock builder)
         {
-            _ = builder.Export<WoWClientServer>().WithCtorParam(() => PacketScope.Auth).Lifestyle.Singleton();
+            _ = builder.Export<WoWClientServer>().WithCtorParam(() => PacketScope.ClientToAuth).Lifestyle.Singleton();
             _ = builder.Export<BanValidator>().Lifestyle.Singleton();
             _ = builder.Export<CacheBuilder>().Lifestyle.Singleton();
             return builder;

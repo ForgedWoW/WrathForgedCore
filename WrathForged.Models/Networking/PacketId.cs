@@ -24,7 +24,7 @@ namespace WrathForged.Models.Networking
         public ForgedCoreOpCode ForgeCoreOpCode { get; }
         public PacketIdType Type => Scope switch
         {
-            PacketScope.Auth => PacketIdType.Auth,
+            PacketScope.ClientToAuth => PacketIdType.Auth,
             PacketScope.ClientToInstance => PacketIdType.Realm,
             PacketScope.InstanceToRealm => PacketIdType.Instance,
             PacketScope.RealmToInstance => PacketIdType.Realm,
@@ -34,7 +34,7 @@ namespace WrathForged.Models.Networking
 
         public PacketId(AuthServerOpCode opCode)
         {
-            Scope = PacketScope.Auth;
+            Scope = PacketScope.ClientToAuth;
             AuthOpCode = opCode;
             Id = (uint)opCode;
         }
@@ -66,7 +66,7 @@ namespace WrathForged.Models.Networking
             Id = id;
             switch (packetScope)
             {
-                case PacketScope.Auth:
+                case PacketScope.ClientToAuth:
                     AuthOpCode = (AuthServerOpCode)id;
                     break;
 
@@ -86,7 +86,7 @@ namespace WrathForged.Models.Networking
             Id = (uint)id;
             switch (packetScope)
             {
-                case PacketScope.Auth:
+                case PacketScope.ClientToAuth:
                     AuthOpCode = (AuthServerOpCode)id;
                     break;
 
@@ -123,8 +123,8 @@ namespace WrathForged.Models.Networking
         public static bool operator ==(PacketId a, PacketId b)
         {
             return a.Id == b.Id &&
-                ((a.Scope == PacketScope.Auth && b.Scope == PacketScope.Auth) || // if both are auth packets, they are equal
-                (a.Scope != PacketScope.Auth && b.Scope != PacketScope.Auth && a.Scope != b.Scope) || // if both are realm packets, they are equal event if they are different realm scopes
+                ((a.Scope == PacketScope.ClientToAuth && b.Scope == PacketScope.ClientToAuth) || // if both are auth packets, they are equal
+                (a.Scope != PacketScope.ClientToAuth && b.Scope != PacketScope.ClientToAuth && a.Scope != b.Scope) || // if both are realm packets, they are equal event if they are different realm scopes
                 a.Scope == b.Scope); // if both are equil
         }
 
@@ -132,7 +132,7 @@ namespace WrathForged.Models.Networking
 
         public override string ToString()
         {
-            var packetName = Scope == PacketScope.Auth ? AuthOpCode.ToString() : RealmOpCode.ToString();
+            var packetName = Scope == PacketScope.ClientToAuth ? AuthOpCode.ToString() : RealmOpCode.ToString();
             return $"{Scope} {packetName}:{Id}";
         }
 

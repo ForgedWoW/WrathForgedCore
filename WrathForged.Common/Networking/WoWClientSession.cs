@@ -1,9 +1,11 @@
 ﻿// Copyright (c) Forged WoW LLC <https://github.com/ForgedWoW/WrathForgedCore>
 // Licensed under GPL-3.0 license. See <https://github.com/ForgedWoW/WrathForgedCore/blob/master/LICENSE> for full information.
+using System.Reflection;
 using Serilog;
 using WrathForged.Common.Cryptography;
 using WrathForged.Common.Serialization;
 using WrathForged.Database.Models.Auth;
+using WrathForged.Models;
 using WrathForged.Models.Networking;
 
 namespace WrathForged.Common.Networking
@@ -60,5 +62,25 @@ namespace WrathForged.Common.Networking
         public PasswordAuthenticator? PasswordAuthenticator { get; set; }
 
         public WoWClientPacketOut NewClientMessage(PacketId packetId, int headerSize = -1) => new(_forgedModelSerializer, packetId, headerSize);
+
+        public void Write(object obj, PacketId packetId = default)
+        {
+            if (obj == null)
+                return;
+
+            if (packetId == default)
+            {
+                var att = obj.GetType().GetCustomAttribute<ForgedSerializableAttribute>();
+
+                if (att == null)
+                    return;
+
+                packetId = new PacketId(att.PacketIDs.First(), WrathForged.Serialization.Models.PacketScope.RealmToClient);
+            }
+
+            var packet = NewClientMessage(packetId);
+            packet.WriteObject(obj);
+            ClientSocket.EnqueueWrite(packet);
+        }
     }
 }
