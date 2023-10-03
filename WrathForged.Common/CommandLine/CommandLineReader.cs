@@ -5,55 +5,46 @@ using Microsoft.Extensions.Configuration;
 using Serilog;
 using WrathForged.Common.Util.ConvertConfigValue;
 
-namespace WrathForged.Common.CommandLine
-{
-    public class CommandLineReader
-    {
-        private readonly ProgramExitNotifier _programExitNotifier;
-        private readonly ILogger _logger;
-        private readonly ClassFactory _classFactory;
-        private readonly IConfiguration _configuration;
+namespace WrathForged.Common.CommandLine;
 
-        public CommandLineReader(ProgramExitNotifier programExitNotifier, ILogger logger, ClassFactory classFactory, IConfiguration configuration)
+public class CommandLineReader(ProgramExitNotifier programExitNotifier, ILogger logger, ClassFactory classFactory, IConfiguration configuration)
+{
+    private readonly ProgramExitNotifier _programExitNotifier = programExitNotifier;
+    private readonly ILogger _logger = logger;
+    private readonly ClassFactory _classFactory = classFactory;
+    private readonly IConfiguration _configuration = configuration;
+
+    public async void ReadCommandLineUntilProgramExit()
+    {
+        var commandLineArgumentHandlers = _classFactory.ResolveAll<ICommandLineArgumentHandler>().ToList();
+
+        var rootCommand = new RootCommand();
+
+        foreach (var commandLineArgumentHandler in commandLineArgumentHandlers)
         {
-            _programExitNotifier = programExitNotifier;
-            _logger = logger;
-            _classFactory = classFactory;
-            _configuration = configuration;
+            rootCommand.AddCommand(commandLineArgumentHandler.AddCommand());
         }
 
-        public async void ReadCommandLineUntilProgramExit()
+        Console.ForegroundColor = _configuration.GetDefaultValueWithConverter<WrathEnumConverter, ConsoleColor>("Console:HighlightColor", ConsoleColor.DarkRed);
+
+        if (_configuration.GetDefaultValueWithConverter<BoolConverter, bool>("Console:BeepOnStartup", true))
+            Console.Beep();
+
+        while (!_programExitNotifier.IsExiting)
         {
-            var commandLineArgumentHandlers = _classFactory.ResolveAll<ICommandLineArgumentHandler>().ToList();
-
-            var rootCommand = new RootCommand();
-
-            foreach (var commandLineArgumentHandler in commandLineArgumentHandlers)
-            {
-                rootCommand.AddCommand(commandLineArgumentHandler.AddCommand());
-            }
-
             Console.ForegroundColor = _configuration.GetDefaultValueWithConverter<WrathEnumConverter, ConsoleColor>("Console:HighlightColor", ConsoleColor.DarkRed);
+            Console.Write("> ");
+            Console.ForegroundColor = _configuration.GetDefaultValueWithConverter<WrathEnumConverter, ConsoleColor>("Console:DefaultColor", ConsoleColor.White);
+            var commandLine = Console.ReadLine();
 
-            if (_configuration.GetDefaultValueWithConverter<BoolConverter, bool>("Console:BeepOnStartup", true))
-                Console.Beep();
+            if (string.IsNullOrWhiteSpace(commandLine))
+                continue;
 
-            while (!_programExitNotifier.IsExiting)
-            {
-                Console.ForegroundColor = _configuration.GetDefaultValueWithConverter<WrathEnumConverter, ConsoleColor>("Console:HighlightColor", ConsoleColor.DarkRed);
-                Console.Write("> ");
-                Console.ForegroundColor = _configuration.GetDefaultValueWithConverter<WrathEnumConverter, ConsoleColor>("Console:DefaultColor", ConsoleColor.White);
-                var commandLine = Console.ReadLine();
+            var args = commandLine.Split(' ', StringSplitOptions.RemoveEmptyEntries);
+            var code = await rootCommand.InvokeAsync(args);
 
-                if (string.IsNullOrWhiteSpace(commandLine))
-                    continue;
-
-                var args = commandLine.Split(' ', StringSplitOptions.RemoveEmptyEntries);
-                var code = await rootCommand.InvokeAsync(args);
-
-                if (code != 0)
-                    _logger.Error("Command exited with code {Code}", code);
-            }
+            if (code != 0)
+                _logger.Error("Command exited with code {Code}", code);
         }
     }
 }

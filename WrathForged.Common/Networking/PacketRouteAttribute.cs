@@ -7,48 +7,47 @@ using WrathForged.Models.Networking;
 using WrathForged.Models.Realm.Enum;
 using WrathForged.Serialization.Models;
 
-namespace WrathForged.Common.Networking
+namespace WrathForged.Common.Networking;
+
+[AttributeUsage(AttributeTargets.Method, AllowMultiple = true)]
+public sealed class PacketRouteAttribute : Attribute
 {
-    [AttributeUsage(AttributeTargets.Method, AllowMultiple = true)]
-    public sealed class PacketRouteAttribute : Attribute
+    public PacketRouteAttribute(PacketScope scope, uint id)
     {
-        public PacketRouteAttribute(PacketScope scope, uint id)
-        {
-            Scope = scope;
-            Id = new PacketId(id, scope);
-        }
-
-        public PacketRouteAttribute(PacketScope scope, AuthServerOpCode id)
-        {
-            Scope = scope;
-            Id = new PacketId(id);
-        }
-
-        public PacketRouteAttribute(PacketScope scope, RealmServerOpCode id)
-        {
-            Scope = scope;
-            Id = new PacketId(id, scope);
-        }
-
-        public PacketRouteAttribute(PacketScope scope, InstanceServerOpCode id)
-        {
-            Scope = scope;
-            Id = new PacketId(id, scope);
-        }
-
-        public PacketRouteAttribute(PacketScope scope, ForgedCoreOpCode id)
-        {
-            Scope = scope;
-            Id = new PacketId(id, scope);
-        }
-
-        public PacketScope Scope { get; }
-        public PacketId Id { get; }
-        public bool RequireAuthentication { get; set; }
-
-        /// <summary>
-        /// If true, the <see cref="PacketId"/> and <see cref="PacketBuffer"/> will be passed in place of the deserialized packet model.
-        /// </summary>
-        public bool DirectReader { get; set; }
+        Scope = scope;
+        Id = new PacketId(id, scope);
     }
+
+    public PacketRouteAttribute(PacketScope scope, AuthServerOpCode id)
+    {
+        Scope = scope;
+        Id = new PacketId(id, scope);
+    }
+
+    public PacketRouteAttribute(PacketScope scope, RealmServerOpCode id)
+    {
+        Scope = scope;
+        Id = new PacketId(id, scope);
+    }
+
+    public PacketRouteAttribute(PacketScope scope, InstanceServerOpCode id)
+    {
+        Scope = scope;
+        Id = new PacketId(id, scope);
+    }
+
+    public PacketRouteAttribute(PacketScope scope, ForgedCoreOpCode id)
+    {
+        Scope = scope;
+        Id = new PacketId(id, scope);
+    }
+
+    public PacketScope Scope { get; }
+    public PacketId Id { get; }
+    public bool RequireAuthentication { get; set; }
+
+    /// <summary>
+    /// If true, the <see cref="PacketId"/> and <see cref="PacketBuffer"/> will be passed in place of the deserialized packet model.
+    /// </summary>
+    public bool DirectReader { get; set; }
 }

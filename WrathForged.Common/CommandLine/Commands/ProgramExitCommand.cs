@@ -3,43 +3,42 @@
 using System.CommandLine;
 using WrathForged.Common.Localization;
 
-namespace WrathForged.Common.CommandLine.Commands
+namespace WrathForged.Common.CommandLine.Commands;
+
+public class ProgramExitCommand : ICommandLineArgumentHandler
 {
-    public class ProgramExitCommand : ICommandLineArgumentHandler
+    private readonly ProgramExitNotifier _programExitNotifier;
+    private readonly Localizer _localizer;
+
+    public ProgramExitCommand(ProgramExitNotifier programExitNotifier, Localizer localizer)
     {
-        private readonly ProgramExitNotifier _programExitNotifier;
-        private readonly Localizer _localizer;
+        _programExitNotifier = programExitNotifier;
+        _localizer = localizer;
+    }
 
-        public ProgramExitCommand(ProgramExitNotifier programExitNotifier, Localizer localizer)
+    public Command AddCommand()
+    {
+        var command = new Command("--" + _localizer.Localize(30006), _localizer.Localize(30000));
+        command.AddAlias("--" + _localizer.Localize(30007));
+        command.AddAlias("--" + _localizer.Localize(30008));
+        var timeArg = new Argument<int>(_localizer.Localize(30004), _localizer.Localize(30001))
         {
-            _programExitNotifier = programExitNotifier;
-            _localizer = localizer;
-        }
-
-        public Command AddCommand()
+            Arity = ArgumentArity.ZeroOrOne
+        };
+        var reasonArg = new Argument<string>(_localizer.Localize(30005), _localizer.Localize(30002))
         {
-            var command = new Command("--" + _localizer.Localize(30006), _localizer.Localize(30000));
-            command.AddAlias("--" + _localizer.Localize(30007));
-            command.AddAlias("--" + _localizer.Localize(30008));
-            var timeArg = new Argument<int>(_localizer.Localize(30004), _localizer.Localize(30001))
-            {
-                Arity = ArgumentArity.ZeroOrOne
-            };
-            var reasonArg = new Argument<string>(_localizer.Localize(30005), _localizer.Localize(30002))
-            {
-                Arity = ArgumentArity.ZeroOrOne
-            };
-            command.AddArgument(timeArg);
-            command.AddArgument(reasonArg);
-            command.SetHandler((time, reason) =>
-            {
-                if (time != 0)
-                    _programExitNotifier.NotifyStopDelayed(time, reason ?? _localizer.Localize(30003));
-                else
-                    _programExitNotifier.NotifyStop(reason ?? _localizer.Localize(30003));
-            }, timeArg, reasonArg);
-
-            return command;
-        }
+            Arity = ArgumentArity.ZeroOrOne
+        };
+        command.AddArgument(timeArg);
+        command.AddArgument(reasonArg);
+        command.SetHandler((time, reason) =>
+        {
+            if (time != 0)
+                _programExitNotifier.NotifyStopDelayed(time, reason ?? _localizer.Localize(30003));
+            else
+                _programExitNotifier.NotifyStop(reason ?? _localizer.Localize(30003));
+        }, timeArg, reasonArg);
+            
+        return command;
     }
 }

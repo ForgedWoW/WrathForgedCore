@@ -5,93 +5,92 @@ using System.Text;
 using Serilog;
 using WrathForged.Database.DBC;
 
-namespace WrathForged.Common.DBC
+namespace WrathForged.Common.DBC;
+
+public class DBCDeserializer
 {
-    public class DBCDeserializer
+    private readonly ILogger _logger;
+
+    public DBCDeserializer(ILogger logger) => _logger = logger;
+
+    public IEnumerable<T> Deserialize<T>(string filePath) where T : class, new()
     {
-        private readonly ILogger _logger;
+        if (typeof(T).GetCustomAttribute(typeof(DBCBoundAttribute)) is not DBCBoundAttribute dbcAtt)
+            return Enumerable.Empty<T>();
 
-        public DBCDeserializer(ILogger logger) => _logger = logger;
+        using var reader = new BinaryReader(File.Open(filePath, FileMode.Open));
+        var type = typeof(T);
+        var properties = type.GetProperties()
+                             .Where(p => Attribute.IsDefined(p, typeof(DBCPropertyBindingAttribute)))
+                             .ToArray();
 
-        public IEnumerable<T> Deserialize<T>(string filePath) where T : class, new()
+        var header = new DBCHeader
         {
-            if (typeof(T).GetCustomAttribute(typeof(DBCBoundAttribute)) is not DBCBoundAttribute dbcAtt)
-                return Enumerable.Empty<T>();
+            Magic = reader.ReadUInt32(),
+            RecordCount = (uint)reader.ReadInt32(),
+            FieldCount = reader.ReadUInt32(),
+            RecordSize = reader.ReadUInt32(),
+            StringBlockSize = reader.ReadUInt32()
+        };
 
-            using var reader = new BinaryReader(File.Open(filePath, FileMode.Open));
-            var type = typeof(T);
-            var properties = type.GetProperties()
-                                 .Where(p => Attribute.IsDefined(p, typeof(DBCPropertyBindingAttribute)))
-                                 .ToArray();
+        if (header.Magic != 0x43424457)
+        {
+            throw new InvalidOperationException("Invalid DBC file");
+        }
 
-            var header = new DBCHeader
+        var stringBlock = reader.ReadBytes((int)header.StringBlockSize);
+        var items = new List<T>();
+
+        for (var i = 0; i < header.RecordCount; i++)
+        {
+            var item = new T();
+
+            foreach (var property in properties)
             {
-                Magic = reader.ReadUInt32(),
-                RecordCount = (uint)reader.ReadInt32(),
-                FieldCount = reader.ReadUInt32(),
-                RecordSize = reader.ReadUInt32(),
-                StringBlockSize = reader.ReadUInt32()
-            };
+                if (property.GetCustomAttribute(typeof(DBCPropertyBindingAttribute)) is not DBCPropertyBindingAttribute attribute)
+                    continue;
 
-            if (header.Magic != 0x43424457)
-            {
-                throw new InvalidOperationException("Invalid DBC file");
-            }
-
-            var stringBlock = reader.ReadBytes((int)header.StringBlockSize);
-            var items = new List<T>();
-
-            for (var i = 0; i < header.RecordCount; i++)
-            {
-                var item = new T();
-
-                foreach (var property in properties)
+                object? value;
+                switch (attribute.BindingType)
                 {
-                    if (property.GetCustomAttribute(typeof(DBCPropertyBindingAttribute)) is not DBCPropertyBindingAttribute attribute)
-                        continue;
+                    case DBCBindingType.INT32:
+                        value = reader.ReadInt32();
+                        break;
 
-                    object? value;
-                    switch (attribute.BindingType)
-                    {
-                        case DBCBindingType.INT32:
-                            value = reader.ReadInt32();
-                            break;
+                    case DBCBindingType.UINT32:
+                        value = reader.ReadUInt32();
+                        break;
 
-                        case DBCBindingType.UINT32:
-                            value = reader.ReadUInt32();
-                            break;
+                    case DBCBindingType.BYTE:
+                        value = reader.ReadByte();
+                        break;
 
-                        case DBCBindingType.BYTE:
-                            value = reader.ReadByte();
-                            break;
+                    case DBCBindingType.FLOAT:
+                        value = reader.ReadSingle();
+                        break;
 
-                        case DBCBindingType.FLOAT:
-                            value = reader.ReadSingle();
-                            break;
+                    case DBCBindingType.DOUBLE:
+                        value = reader.ReadDouble();
+                        break;
 
-                        case DBCBindingType.DOUBLE:
-                            value = reader.ReadDouble();
-                            break;
+                    case DBCBindingType.STRING:
+                        value = Encoding.UTF8.GetString(stringBlock, reader.ReadInt32(), (int)(stringBlock.Length - reader.BaseStream.Position));
+                        break;
 
-                        case DBCBindingType.STRING:
-                            value = Encoding.UTF8.GetString(stringBlock, reader.ReadInt32(), (int)(stringBlock.Length - reader.BaseStream.Position));
-                            break;
-
-                        case DBCBindingType.UNKNOWN:
-                        default:
-                            _logger.Warning("Unsupported binding type {BindingType}", attribute.BindingType);
-                            value = null;
-                            break;
-                    }
-
-                    if (value != null)
-                        property.SetValue(item, value);
+                    case DBCBindingType.UNKNOWN:
+                    default:
+                        _logger.Warning("Unsupported binding type {BindingType}", attribute.BindingType);
+                        value = null;
+                        break;
                 }
 
-                items.Add(item);
+                if (value != null)
+                    property.SetValue(item, value);
             }
 
-            return items;
+            items.Add(item);
         }
+
+        return items;
     }
 }

@@ -4,42 +4,41 @@ using WrathForged.Common.Networking;
 using WrathForged.Models;
 using WrathForged.Serialization.Models;
 
-namespace WrathForged.Common.Serialization.Serializers
+namespace WrathForged.Common.Serialization.Serializers;
+
+public class StringSerialization : IForgedTypeSerialization
 {
-    public class StringSerialization : IForgedTypeSerialization
+    public HashSet<Type> SupportedTypes { get; } = new HashSet<Type>();
+    public HashSet<ForgedTypeCode> SupportedForgedTypeCodes { get; } = new HashSet<ForgedTypeCode>();
+
+    public object? Deserialize(PacketBuffer packetBuffer, PropertyMeta propertyMeta, Dictionary<uint, int> collectionSizes)
     {
-        public HashSet<Type> SupportedTypes { get; } = new HashSet<Type>();
-        public HashSet<ForgedTypeCode> SupportedForgedTypeCodes { get; } = new HashSet<ForgedTypeCode>();
+        var length = packetBuffer.GetCollectionSize(propertyMeta, collectionSizes);
+        var text = PrimitiveWriter.DefaultEncoding.GetString(packetBuffer.Reader.ReadBytes(length)).TrimEnd('\0');
 
-        public object? Deserialize(PacketBuffer packetBuffer, PropertyMeta propertyMeta, Dictionary<uint, int> collectionSizes)
+        if (propertyMeta.SerializationMetadata.Flags.HasFlag(SerializationFlags.ReversedString))
         {
-            var length = packetBuffer.GetCollectionSize(propertyMeta, collectionSizes);
-            var text = PrimitiveWriter.DefaultEncoding.GetString(packetBuffer.Reader.ReadBytes(length)).TrimEnd('\0');
-
-            if (propertyMeta.SerializationMetadata.Flags.HasFlag(SerializationFlags.ReversedString))
-            {
-                var charArray = text.ToCharArray();
-                Array.Reverse(charArray);
-                text = new string(charArray);
-            }
-
-            return text;
+            var charArray = text.ToCharArray();
+            Array.Reverse(charArray);
+            text = new string(charArray);
         }
 
-        public void Serialize(PrimitiveWriter writer, PropertyMeta propertyMeta, List<PropertyMeta> otherMeta, object obj, object? val)
+        return text;
+    }
+
+    public void Serialize(PrimitiveWriter writer, PropertyMeta propertyMeta, List<PropertyMeta> otherMeta, object obj, object? val)
+    {
+        var text = val as string ?? string.Empty;
+        writer.SerializeCollectionSize(propertyMeta, otherMeta, obj);
+
+        if (propertyMeta.SerializationMetadata.Flags.HasFlag(SerializationFlags.ReversedString))
         {
-            var text = val as string ?? string.Empty;
-            writer.SerializeCollectionSize(propertyMeta, otherMeta, obj);
-
-            if (propertyMeta.SerializationMetadata.Flags.HasFlag(SerializationFlags.ReversedString))
-            {
-                var charArray = text.ToCharArray();
-                Array.Reverse(charArray);
-                text = new string(charArray);
-            }
-
-            var bytes = PrimitiveWriter.DefaultEncoding.GetBytes(text);
-            writer.Write(bytes);
+            var charArray = text.ToCharArray();
+            Array.Reverse(charArray);
+            text = new string(charArray);
         }
+
+        var bytes = PrimitiveWriter.DefaultEncoding.GetBytes(text);
+        writer.Write(bytes);
     }
 }

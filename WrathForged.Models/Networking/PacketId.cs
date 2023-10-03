@@ -32,9 +32,9 @@ namespace WrathForged.Models.Networking
         };
         public uint Id { get; }
 
-        public PacketId(AuthServerOpCode opCode)
+        public PacketId(AuthServerOpCode opCode, PacketScope packetScope)
         {
-            Scope = PacketScope.ClientToAuth;
+            Scope = packetScope;
             AuthOpCode = opCode;
             Id = (uint)opCode;
         }
@@ -100,7 +100,7 @@ namespace WrathForged.Models.Networking
             }
         }
 
-        public static implicit operator PacketId(AuthServerOpCode val) => new(val);
+        public static implicit operator PacketId(AuthServerOpCode val) => new(val, PacketScope.ClientToAuth);
 
         public static implicit operator PacketId(RealmServerOpCode val) => new(val, PacketScope.ClientToInstance);
 
@@ -125,7 +125,7 @@ namespace WrathForged.Models.Networking
             return a.Id == b.Id &&
                 ((a.Scope == PacketScope.ClientToAuth && b.Scope == PacketScope.ClientToAuth) || // if both are auth packets, they are equal
                 (a.Scope != PacketScope.ClientToAuth && b.Scope != PacketScope.ClientToAuth && a.Scope != b.Scope) || // if both are realm packets, they are equal event if they are different realm scopes
-                a.Scope == b.Scope); // if both are equil
+                a.Scope == b.Scope); // if both are equal
         }
 
         public static bool operator !=(PacketId a, PacketId b) => !(a == b);

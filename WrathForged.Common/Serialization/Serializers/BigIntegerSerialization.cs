@@ -5,34 +5,33 @@ using WrathForged.Common.Networking;
 using WrathForged.Models;
 using WrathForged.Serialization.Models;
 
-namespace WrathForged.Common.Serialization.Serializers
+namespace WrathForged.Common.Serialization.Serializers;
+
+public class BigIntegerSerialization : IForgedTypeSerialization
 {
-    public class BigIntegerSerialization : IForgedTypeSerialization
+    public HashSet<Type> SupportedTypes { get; } = new HashSet<Type>()
     {
-        public HashSet<Type> SupportedTypes { get; } = new HashSet<Type>()
-        {
-            typeof(BigInteger)
-        };
+        typeof(BigInteger)
+    };
 
-        public HashSet<ForgedTypeCode> SupportedForgedTypeCodes { get; } = new HashSet<ForgedTypeCode>();
+    public HashSet<ForgedTypeCode> SupportedForgedTypeCodes { get; } = new HashSet<ForgedTypeCode>();
 
-        public object? Deserialize(PacketBuffer packetBuffer, PropertyMeta propertyMeta, Dictionary<uint, int> collectionSizes)
-        {
-            var size = propertyMeta.SerializationMetadata.FixedCollectionSize;
+    public object? Deserialize(PacketBuffer packetBuffer, PropertyMeta propertyMeta, Dictionary<uint, int> collectionSizes)
+    {
+        var size = propertyMeta.SerializationMetadata.FixedCollectionSize;
 
-            if (propertyMeta.SerializationMetadata.Flags.HasFlag(SerializationFlags.BigIntegerWithLength) && size == 0)
-                size = packetBuffer.GetCollectionSize(propertyMeta, collectionSizes);
+        if (propertyMeta.SerializationMetadata.Flags.HasFlag(SerializationFlags.BigIntegerWithLength) && size == 0)
+            size = packetBuffer.GetCollectionSize(propertyMeta, collectionSizes);
 
-            return new BigInteger(packetBuffer.Reader.ReadBytes(size));
-        }
+        return new BigInteger(packetBuffer.Reader.ReadBytes(size));
+    }
 
-        public void Serialize(PrimitiveWriter writer, PropertyMeta propertyMeta, List<PropertyMeta> otherMeta, object obj, object? val)
-        {
-            if (propertyMeta.SerializationMetadata.Flags.HasFlag(SerializationFlags.BigIntegerWithLength) && propertyMeta.SerializationMetadata.FixedCollectionSize == 0)
-                writer.SerializeCollectionSize(propertyMeta, otherMeta, obj);
+    public void Serialize(PrimitiveWriter writer, PropertyMeta propertyMeta, List<PropertyMeta> otherMeta, object obj, object? val)
+    {
+        if (propertyMeta.SerializationMetadata.Flags.HasFlag(SerializationFlags.BigIntegerWithLength) && propertyMeta.SerializationMetadata.FixedCollectionSize == 0)
+            writer.SerializeCollectionSize(propertyMeta, otherMeta, obj);
 
-            if (val != null)
-                writer.Write(((BigInteger)val).ToByteArray());
-        }
+        if (val != null)
+            writer.Write(((BigInteger)val).ToByteArray());
     }
 }

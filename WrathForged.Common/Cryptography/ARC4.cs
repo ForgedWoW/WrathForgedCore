@@ -1,59 +1,58 @@
 ﻿// Copyright (c) Forged WoW LLC <https://github.com/ForgedWoW/WrathForgedCore>
 // Licensed under GPL-3.0 license. See <https://github.com/ForgedWoW/WrathForgedCore/blob/master/LICENSE> for full information.
-namespace WrathForged.Common.Cryptography
+namespace WrathForged.Common.Cryptography;
+
+public class ARC4
 {
-    public class ARC4
+    private readonly byte[] _state;
+    private byte _x, _y;
+
+    public ARC4(byte[] key)
     {
-        private readonly byte[] _state;
-        private byte _x, _y;
+        _state = new byte[256];
+        _x = _y = 0;
+        KeySetup(key);
+    }
 
-        public ARC4(byte[] key)
+    public int Process(Memory<byte> buffer, int start, int count) => InternalTransformBlock(buffer, start, count, buffer, start);
+
+    private void KeySetup(byte[] key)
+    {
+        byte index1 = 0;
+        byte index2 = 0;
+
+        for (var counter = 0; counter < 256; counter++)
         {
-            _state = new byte[256];
-            _x = _y = 0;
-            KeySetup(key);
+            _state[counter] = (byte)counter;
         }
 
-        public int Process(Memory<byte> buffer, int start, int count) => InternalTransformBlock(buffer, start, count, buffer, start);
-
-        private void KeySetup(byte[] key)
+        _x = 0;
+        _y = 0;
+        for (var counter = 0; counter < 256; counter++)
         {
-            byte index1 = 0;
-            byte index2 = 0;
+            index2 = (byte)(key[index1] + _state[counter] + index2);
+            // swap byte
+            (_state[index2], _state[counter]) = (_state[counter], _state[index2]);
+            index1 = (byte)((index1 + 1) % key.Length);
+        }
+    }
 
-            for (var counter = 0; counter < 256; counter++)
-            {
-                _state[counter] = (byte)counter;
-            }
+    private int InternalTransformBlock(Memory<byte> inputBuffer, int inputOffset, int inputCount, Memory<byte> outputBuffer, int outputOffset)
+    {
+        var inputSpan = inputBuffer.Span;
+        var outputSpan = outputBuffer.Span;
 
-            _x = 0;
-            _y = 0;
-            for (var counter = 0; counter < 256; counter++)
-            {
-                index2 = (byte)(key[index1] + _state[counter] + index2);
-                // swap byte
-                (_state[index2], _state[counter]) = (_state[counter], _state[index2]);
-                index1 = (byte)((index1 + 1) % key.Length);
-            }
+        for (var counter = 0; counter < inputCount; counter++)
+        {
+            _x = (byte)(_x + 1);
+            _y = (byte)(_state[_x] + _y);
+            // swap byte
+            (_state[_y], _state[_x]) = (_state[_x], _state[_y]);
+
+            var xorIndex = (byte)(_state[_x] + _state[_y]);
+            outputSpan[outputOffset + counter] = (byte)(inputSpan[inputOffset + counter] ^ _state[xorIndex]);
         }
 
-        private int InternalTransformBlock(Memory<byte> inputBuffer, int inputOffset, int inputCount, Memory<byte> outputBuffer, int outputOffset)
-        {
-            var inputSpan = inputBuffer.Span;
-            var outputSpan = outputBuffer.Span;
-
-            for (var counter = 0; counter < inputCount; counter++)
-            {
-                _x = (byte)(_x + 1);
-                _y = (byte)(_state[_x] + _y);
-                // swap byte
-                (_state[_y], _state[_x]) = (_state[_x], _state[_y]);
-
-                var xorIndex = (byte)(_state[_x] + _state[_y]);
-                outputSpan[outputOffset + counter] = (byte)(inputSpan[inputOffset + counter] ^ _state[xorIndex]);
-            }
-
-            return inputCount;
-        }
+        return inputCount;
     }
 }

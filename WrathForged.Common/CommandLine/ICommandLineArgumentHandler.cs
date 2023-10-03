@@ -4,10 +4,9 @@ using System.CommandLine;
 
 using WrathForged.Common.Scripting.Interfaces;
 
-namespace WrathForged.Common.CommandLine
+namespace WrathForged.Common.CommandLine;
+
+public interface ICommandLineArgumentHandler : IForgedScript
 {
-    public interface ICommandLineArgumentHandler : IForgedScript
-    {
-        Command AddCommand();
-    }
+    Command AddCommand();
 }

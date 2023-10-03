@@ -6,51 +6,75 @@ using Microsoft.Extensions.Configuration;
 using Serilog;
 using WrathForged.Common.Scripting.Interfaces.CoreEvents;
 
-namespace WrathForged.Common.Scripting
+namespace WrathForged.Common.Scripting;
+
+/// <summary>
+///     Loads assemblies and registers all objects to Dependency Injected in and available to use via <see cref="ClassFactory" />
+/// </summary>
+public class ScriptLoader
 {
-    /// <summary>
-    ///     Loads assemblies and registers all objects to Dependency Injected in and available to use via <see cref="ClassFactory" />
-    /// </summary>
-    public class ScriptLoader
+    private readonly ClassFactory _classFactory;
+    private readonly ILogger _logger;
+    private readonly IConfiguration _configuration;
+
+    public ReadOnlyCollection<Assembly> Assemblies { get; private set; }
+
+    public ScriptLoader(ClassFactory classFactory, ILogger logger, IConfiguration configuration)
     {
-        private readonly ClassFactory _classFactory;
-        private readonly ILogger _logger;
-        private readonly IConfiguration _configuration;
+        Assemblies = new ReadOnlyCollection<Assembly>(IOHelpers.GetAllAssembliesInDir(configuration.GetDefaultValue("Scripting:Directory", ".\\Scripts")).ToList());
+        _classFactory = classFactory;
+        _logger = logger;
+        _configuration = configuration;
+    }
 
-        public ReadOnlyCollection<Assembly> Assemblies { get; private set; }
-
-        public ScriptLoader(ClassFactory classFactory, ILogger logger, IConfiguration configuration)
+    /// <summary>
+    ///    Loads the assembly at the path provided
+    /// </summary>
+    /// <param name="assemblyPath"></param>
+    public void LoadAssembly(string assemblyPath)
+    {
+        var assembly = Assembly.LoadFrom(assemblyPath);
+        var assemblies = new List<Assembly>(Assemblies) { assembly };
+        Assemblies = new ReadOnlyCollection<Assembly>(assemblies);
+        _classFactory.Container.Configure(c =>
         {
-            Assemblies = new ReadOnlyCollection<Assembly>(IOHelpers.GetAllAssembliesInDir(configuration.GetDefaultValue("Scripting:Directory", ".\\Scripts")).ToList());
-            _classFactory = classFactory;
-            _logger = logger;
-            _configuration = configuration;
-        }
+            foreach (var di in assembly.GetAllObjectsThatUseInterface<IRegisterDependancyInjection>())
+                di.RegisterDependancyInjection(c, _configuration, _logger);
+        });
+    }
 
-        /// <summary>
-        ///    Loads the assembly at the path provided
-        /// </summary>
-        /// <param name="assemblyPath"></param>
-        public void LoadAssembly(string assemblyPath)
+    /// <summary>
+    ///     Loads all the assemblies in the path provided. This will recursively search for all dlls in the path provided.
+    /// </summary>
+    /// <param name="path"></param>
+    public void LoadAssemblies(string path)
+    {
+        var assemblies = new List<Assembly>(Assemblies);
+        _classFactory.Container.Configure(c =>
         {
-            var assembly = Assembly.LoadFrom(assemblyPath);
-            var assemblies = new List<Assembly>(Assemblies) { assembly };
-            Assemblies = new ReadOnlyCollection<Assembly>(assemblies);
-            _classFactory.Container.Configure(c =>
+            foreach (var assemblyPath in Directory.GetFiles(path, "*.dll", SearchOption.AllDirectories))
             {
+                var assembly = Assembly.LoadFrom(assemblyPath);
+                assemblies.Add(assembly);
+
                 foreach (var di in assembly.GetAllObjectsThatUseInterface<IRegisterDependancyInjection>())
                     di.RegisterDependancyInjection(c, _configuration, _logger);
-            });
-        }
+            }
+        });
 
-        /// <summary>
-        ///     Loads all the assemblies in the path provided. This will recursively search for all dlls in the path provided.
-        /// </summary>
-        /// <param name="path"></param>
-        public void LoadAssemblies(string path)
+        Assemblies = new ReadOnlyCollection<Assembly>(assemblies);
+    }
+
+    /// <summary>
+    ///     Provide a list of paths to load dlls from. This will recursively search for all dlls in the paths provided.
+    /// </summary>
+    /// <param name="paths"></param>
+    public void LoadAssemblies(params string[] paths)
+    {
+        var assemblies = new List<Assembly>(Assemblies);
+        _classFactory.Container.Configure(c =>
         {
-            var assemblies = new List<Assembly>(Assemblies);
-            _classFactory.Container.Configure(c =>
+            foreach (var path in paths)
             {
                 foreach (var assemblyPath in Directory.GetFiles(path, "*.dll", SearchOption.AllDirectories))
                 {
@@ -60,157 +84,132 @@ namespace WrathForged.Common.Scripting
                     foreach (var di in assembly.GetAllObjectsThatUseInterface<IRegisterDependancyInjection>())
                         di.RegisterDependancyInjection(c, _configuration, _logger);
                 }
-            });
+            }
+        });
 
-            Assemblies = new ReadOnlyCollection<Assembly>(assemblies);
+        Assemblies = new ReadOnlyCollection<Assembly>(assemblies);
+    }
+
+    /// <summary>
+    ///     Gets all the types that have the attribute
+    /// </summary>
+    /// <typeparam name="T">The type of attribute on the class</typeparam>
+    /// <returns></returns>
+    public List<Type> GetAllTypesWithClassAttribute<T>()
+    {
+        var types = new List<Type>();
+        foreach (var assembly in Assemblies)
+        {
+            foreach (var type in assembly.GetTypes())
+            {
+                if (type.GetCustomAttributes(typeof(T), false).Length > 0)
+                    types.Add(type);
+            }
         }
 
-        /// <summary>
-        ///     Provide a list of paths to load dlls from. This will recursively search for all dlls in the paths provided.
-        /// </summary>
-        /// <param name="paths"></param>
-        public void LoadAssemblies(params string[] paths)
-        {
-            var assemblies = new List<Assembly>(Assemblies);
-            _classFactory.Container.Configure(c =>
-            {
-                foreach (var path in paths)
-                {
-                    foreach (var assemblyPath in Directory.GetFiles(path, "*.dll", SearchOption.AllDirectories))
-                    {
-                        var assembly = Assembly.LoadFrom(assemblyPath);
-                        assemblies.Add(assembly);
+        return types;
+    }
 
-                        foreach (var di in assembly.GetAllObjectsThatUseInterface<IRegisterDependancyInjection>())
-                            di.RegisterDependancyInjection(c, _configuration, _logger);
+    /// <summary>
+    ///     Gets all the types that use the interface
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
+    /// <returns></returns>
+    public List<Type> GetAllTypesThatUseInterface<T>()
+    {
+        var types = new List<Type>();
+        foreach (var assembly in Assemblies)
+        {
+            foreach (var type in assembly.GetTypes())
+            {
+                if (type.IsClass && IOHelpers.DoesTypeSupportInterface(type, typeof(T)))
+                    types.Add(type);
+            }
+        }
+
+        return types;
+    }
+
+    /// <summary>
+    ///     Gets all the interfaces that is not the interface provided that use the interface.
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
+    /// <returns></returns>
+    public List<Type> GetAllInterfacesThatUseInterface<T>()
+    {
+        var types = new List<Type>();
+        var interf = typeof(T);
+        foreach (var assembly in Assemblies)
+        {
+            foreach (var type in assembly.GetTypes())
+            {
+                if (type.IsInterface && IOHelpers.DoesTypeSupportInterface(type, typeof(T)) && type != interf)
+                    types.Add(type);
+            }
+        }
+
+        return types;
+    }
+
+    /// <summary>
+    ///     Creates new instances of all the objects that use the interface
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
+    /// <returns></returns>
+    public IEnumerable<T> GetAllObjectsWithInterface<T>()
+    {
+        var types = GetAllTypesThatUseInterface<T>();
+        foreach (var type in types)
+        {
+            var obj = Activator.CreateInstance(type);
+
+            if (obj != null)
+                yield return (T)obj;
+        }
+    }
+
+    /// <summary>
+    ///     Adds all the objects that use the interface to the <see cref="ClassFactory" /> container
+    /// </summary>
+    /// <typeparam name="T">A interface</typeparam>
+    public void RegisterAllObjectsWithInterface<T>()
+    {
+        var types = GetAllTypesThatUseInterface<T>();
+        _classFactory.Container.Configure(c =>
+        {
+            foreach (var t in types)
+            {
+                if (t != null)
+                    _ = c.Export(t).As(typeof(T));
+            }
+        });
+    }
+
+    /// <summary>
+    ///     Searches registered assemblies for all types that use the interface as a base and registers them to the <see cref="ClassFactory" /> container
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
+    public void RegisterAllTypesThatUseBaseInterface<T>() => RegisterAllObjectsWithInterfaces(GetAllInterfacesThatUseInterface<T>().ToArray());
+
+    /// <summary>
+    ///     Registers all interfaces to the <see cref="ClassFactory" /> container
+    /// </summary>
+    /// <param name="interfaces"></param>
+    public void RegisterAllObjectsWithInterfaces(params Type[] interfaces)
+    {
+        _classFactory.Container.Configure(c =>
+        {
+            foreach (var iface in interfaces)
+            {
+                foreach (var assembly in Assemblies)
+                {
+                    foreach (var t in assembly.GetTypes())
+                    {
+                        if (t.IsClass && IOHelpers.DoesTypeSupportInterface(t, iface))
+                            _ = c.Export(t).As(iface);
                     }
                 }
-            });
-
-            Assemblies = new ReadOnlyCollection<Assembly>(assemblies);
-        }
-
-        /// <summary>
-        ///     Gets all the types that have the attribute
-        /// </summary>
-        /// <typeparam name="T">The type of attribute on the class</typeparam>
-        /// <returns></returns>
-        public List<Type> GetAllTypesWithClassAttribute<T>()
-        {
-            var types = new List<Type>();
-            foreach (var assembly in Assemblies)
-            {
-                foreach (var type in assembly.GetTypes())
-                {
-                    if (type.GetCustomAttributes(typeof(T), false).Length > 0)
-                        types.Add(type);
-                }
             }
-
-            return types;
-        }
-
-        /// <summary>
-        ///     Gets all the types that use the interface
-        /// </summary>
-        /// <typeparam name="T"></typeparam>
-        /// <returns></returns>
-        public List<Type> GetAllTypesThatUseInterface<T>()
-        {
-            var types = new List<Type>();
-            foreach (var assembly in Assemblies)
-            {
-                foreach (var type in assembly.GetTypes())
-                {
-                    if (type.IsClass && IOHelpers.DoesTypeSupportInterface(type, typeof(T)))
-                        types.Add(type);
-                }
-            }
-
-            return types;
-        }
-
-        /// <summary>
-        ///     Gets all the interfaces that is not the interface provided that use the interface.
-        /// </summary>
-        /// <typeparam name="T"></typeparam>
-        /// <returns></returns>
-        public List<Type> GetAllInterfacesThatUseInterface<T>()
-        {
-            var types = new List<Type>();
-            var interf = typeof(T);
-            foreach (var assembly in Assemblies)
-            {
-                foreach (var type in assembly.GetTypes())
-                {
-                    if (type.IsInterface && IOHelpers.DoesTypeSupportInterface(type, typeof(T)) && type != interf)
-                        types.Add(type);
-                }
-            }
-
-            return types;
-        }
-
-        /// <summary>
-        ///     Creates new instances of all the objects that use the interface
-        /// </summary>
-        /// <typeparam name="T"></typeparam>
-        /// <returns></returns>
-        public IEnumerable<T> GetAllObjectsWithInterface<T>()
-        {
-            var types = GetAllTypesThatUseInterface<T>();
-            foreach (var type in types)
-            {
-                var obj = Activator.CreateInstance(type);
-
-                if (obj != null)
-                    yield return (T)obj;
-            }
-        }
-
-        /// <summary>
-        ///     Adds all the objects that use the interface to the <see cref="ClassFactory" /> container
-        /// </summary>
-        /// <typeparam name="T">A interface</typeparam>
-        public void RegisterAllObjectsWithInterface<T>()
-        {
-            var types = GetAllTypesThatUseInterface<T>();
-            _classFactory.Container.Configure(c =>
-            {
-                foreach (var t in types)
-                {
-                    if (t != null)
-                        _ = c.Export(t).As(typeof(T));
-                }
-            });
-        }
-
-        /// <summary>
-        ///     Searches registered assemblies for all types that use the interface as a base and registers them to the <see cref="ClassFactory" /> container
-        /// </summary>
-        /// <typeparam name="T"></typeparam>
-        public void RegisterAllTypesThatUseBaseInterface<T>() => RegisterAllObjectsWithInterfaces(GetAllInterfacesThatUseInterface<T>().ToArray());
-
-        /// <summary>
-        ///     Registers all interfaces to the <see cref="ClassFactory" /> container
-        /// </summary>
-        /// <param name="interfaces"></param>
-        public void RegisterAllObjectsWithInterfaces(params Type[] interfaces)
-        {
-            _classFactory.Container.Configure(c =>
-            {
-                foreach (var iface in interfaces)
-                {
-                    foreach (var assembly in Assemblies)
-                    {
-                        foreach (var t in assembly.GetTypes())
-                        {
-                            if (t.IsClass && IOHelpers.DoesTypeSupportInterface(t, iface))
-                                _ = c.Export(t).As(iface);
-                        }
-                    }
-                }
-            });
-        }
+        });
     }
 }

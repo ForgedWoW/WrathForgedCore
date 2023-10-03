@@ -4,16 +4,15 @@ using WrathForged.Common.Networking;
 using WrathForged.Models;
 using WrathForged.Serialization.Models;
 
-namespace WrathForged.Common.Serialization.Serializers
+namespace WrathForged.Common.Serialization.Serializers;
+
+public interface IForgedTypeSerialization
 {
-    public interface IForgedTypeSerialization
-    {
-        HashSet<Type> SupportedTypes { get; }
+    HashSet<Type> SupportedTypes { get; }
 
-        HashSet<ForgedTypeCode> SupportedForgedTypeCodes { get; }
+    HashSet<ForgedTypeCode> SupportedForgedTypeCodes { get; }
 
-        object? Deserialize(PacketBuffer packetBuffer, PropertyMeta propertyMeta, Dictionary<uint, int> collectionSizes);
+    object? Deserialize(PacketBuffer packetBuffer, PropertyMeta propertyMeta, Dictionary<uint, int> collectionSizes);
 
-        void Serialize(PrimitiveWriter writer, PropertyMeta propertyMeta, List<PropertyMeta> otherMeta, object obj, object? val);
-    }
+    void Serialize(PrimitiveWriter writer, PropertyMeta propertyMeta, List<PropertyMeta> otherMeta, object obj, object? val);
 }

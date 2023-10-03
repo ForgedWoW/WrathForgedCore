@@ -31,21 +31,21 @@ namespace WrathForged.Authorization.Server.Services
             using var authDatabase = _classFactory.Resolve<AuthDatabase>();
 
             var account = authDatabase.Accounts.FirstOrDefault(x => x.Username == authLogonChallenge.Identity || x.RegMail == authLogonChallenge.Identity);
-            var packet = session.NewClientMessage(AuthServerOpCode.AUTH_LOGON_CHALLENGE);
+            var packet = session.Network.NewClientMessage(AuthServerOpCode.AUTH_LOGON_CHALLENGE);
 
             if (account == null)
             {
-                _logger.Debug("Failed login attempt for {Identity} from {Address}. Account not found.", authLogonChallenge.Identity, session.ClientSocket.IPEndPoint.Address);
+                _logger.Debug("Failed login attempt for {Identity} from {Address}. Account not found.", authLogonChallenge.Identity, session.Network.ClientSocket.IPEndPoint.Address);
                 LoginFailed(session, AuthStatus.WOW_FAIL_UNKNOWN_ACCOUNT, packet);
                 return;
             }
 
-            var ipString = session.ClientSocket.IPEndPoint.Address.ToString();
+            var ipString = session.Network.ClientSocket.IPEndPoint.Address.ToString();
             account.LastAttemptIp = ipString;
 
             if (account.Locked && account.LastIp != ipString)
             {
-                _logger.Debug("Failed login attempt for {Identity} from {Address}. Account locked to IpAddress {LockedIp}", authLogonChallenge.Identity, session.ClientSocket.IPEndPoint.Address, account.LastIp);
+                _logger.Debug("Failed login attempt for {Identity} from {Address}. Account locked to IpAddress {LockedIp}", authLogonChallenge.Identity, session.Network.ClientSocket.IPEndPoint.Address, account.LastIp);
                 LoginFailed(session, AuthStatus.WOW_FAIL_LOCKED_ENFORCED, packet);
                 account.FailedLogins++;
                 authDatabase.Accounts.Update(account);
@@ -57,89 +57,89 @@ namespace WrathForged.Authorization.Server.Services
             switch (banState)
             {
                 case BanValidator.BanType.Banned:
-                    _logger.Debug("Failed login attempt for {Identity} from {Address}. Account banned.", authLogonChallenge.Identity, session.ClientSocket.IPEndPoint.Address);
+                    _logger.Debug("Failed login attempt for {Identity} from {Address}. Account banned.", authLogonChallenge.Identity, session.Network.ClientSocket.IPEndPoint.Address);
                     LoginFailed(session, AuthStatus.WOW_FAIL_BANNED, packet);
                     account.FailedLogins++;
                     authDatabase.Accounts.Update(account);
                     return;
 
                 case BanValidator.BanType.Suspended:
-                    _logger.Debug("Failed login attempt for {Identity} from {Address}. Account suspended.", authLogonChallenge.Identity, session.ClientSocket.IPEndPoint.Address);
+                    _logger.Debug("Failed login attempt for {Identity} from {Address}. Account suspended.", authLogonChallenge.Identity, session.Network.ClientSocket.IPEndPoint.Address);
                     LoginFailed(session, AuthStatus.WOW_FAIL_SUSPENDED, packet);
                     account.FailedLogins++;
                     authDatabase.Accounts.Update(account);
                     return;
             }
 
-            _logger.Debug("Login attempt for {Identity} from {Address}. Assigning session token.", authLogonChallenge.Identity, session.ClientSocket.IPEndPoint.Address);
+            _logger.Debug("Login attempt for {Identity} from {Address}. Assigning session token.", authLogonChallenge.Identity, session.Network.ClientSocket.IPEndPoint.Address);
             account.Locale = (byte)authLogonChallenge.Locale;
             account.Os = authLogonChallenge.Architecture.ToString();
-            account.SessionKeyAuth = session.SessionKey;
+            account.SessionKeyAuth = session.Security.SessionKey;
             account.Expansion = (byte)authLogonChallenge.Major;
 
-            session.Account = account;
-            session.SessionKey = _randomUtilities.RandomBytes(16);
-            session.PasswordAuthenticator = new PasswordAuthenticator(new SecureRemotePassword(account.Username, new BigInteger(account.SessionKeyAuth), true));
-            session.AuthenticationState = WoWClientSession.AuthState.AwaitingCredentials;
-            
+            session.Security.Account = account;
+            session.Security.SessionKey = _randomUtilities.RandomBytes(16);
+            session.Security.PasswordAuthenticator = new PasswordAuthenticator(new SecureRemotePassword(account.Username, new BigInteger(account.SessionKeyAuth), true));
+            session.Security.AuthenticationState = WoWClientSession.AuthState.AwaitingCredentials;
+
             authDatabase.Accounts.Update(account);
 
             packet.WriteObject(new AuthLogonChallengeResponse()
             {
                 Status = AuthStatus.WOW_SUCCESS,
-                B = session.PasswordAuthenticator.SRP.PublicEphemeralValueB,
+                B = session.Security.PasswordAuthenticator.SRP.PublicEphemeralValueB,
                 Generator = SecureRemotePassword.Generator,
                 Modulus = SecureRemotePassword.Modulus,
-                Salt = session.PasswordAuthenticator.SRP.Salt
+                Salt = session.Security.PasswordAuthenticator.SRP.Salt
             });
-            session.ClientSocket.EnqueueWrite(packet);
+            session.Network.ClientSocket.EnqueueWrite(packet);
         }
 
         [PacketRoute(PacketScope.ClientToAuth, AuthServerOpCode.AUTH_LOGON_PROOF)]
         public void LogonProof(WoWClientSession session, AuthLoginProof proof)
         {
-            if (session.PasswordAuthenticator == null)
+            if (session.Security.PasswordAuthenticator == null)
             {
-                session.ClientSocket.Disconnect();
+                session.Network.ClientSocket.Disconnect();
                 return;
             }
 
-            if (session.PasswordAuthenticator.IsClientProofValid(proof))
+            if (session.Security.PasswordAuthenticator.IsClientProofValid(proof))
             {
                 using var authDatabase = _classFactory.Resolve<AuthDatabase>();
 
-                if (session.Account == null)
+                if (session.Security.Account == null)
                 {
-                    LoginFailed(session, AuthStatus.WOW_FAIL_UNKNOWN_ACCOUNT, session.NewClientMessage(AuthServerOpCode.AUTH_LOGON_PROOF));
+                    LoginFailed(session, AuthStatus.WOW_FAIL_UNKNOWN_ACCOUNT, session.Network.NewClientMessage(AuthServerOpCode.AUTH_LOGON_PROOF));
                     return;
                 }
 
-                session.Account = authDatabase.Accounts.Find(session.Account.Id);
+                session.Security.Account = authDatabase.Accounts.Find(session.Security.Account.Id);
 
-                if (session.Account == null)
+                if (session.Security.Account == null)
                 {
-                    LoginFailed(session, AuthStatus.WOW_FAIL_UNKNOWN_ACCOUNT, session.NewClientMessage(AuthServerOpCode.AUTH_LOGON_PROOF));
+                    LoginFailed(session, AuthStatus.WOW_FAIL_UNKNOWN_ACCOUNT, session.Network.NewClientMessage(AuthServerOpCode.AUTH_LOGON_PROOF));
                     return;
                 }
 
-                session.Account.LastIp = session.ClientSocket.IPEndPoint.Address.ToString();
-                session.Account.LastLogin = DateTime.UtcNow;
-                session.Account.SessionKeyAuth = session.SessionKey;
-                session.Account.Salt = session.PasswordAuthenticator.SRP.Salt.GetBytes(32);
-                session.Account.Verifier = session.PasswordAuthenticator.SRP.Verifier.GetBytes(32);
-                session.Account.Online = true;
-                session.AuthenticationState = WoWClientSession.AuthState.LoggingIn;
+                session.Security.Account.LastIp = session.Network.ClientSocket.IPEndPoint.Address.ToString();
+                session.Security.Account.LastLogin = DateTime.UtcNow;
+                session.Security.Account.SessionKeyAuth = session.Security.SessionKey;
+                session.Security.Account.Salt = session.Security.PasswordAuthenticator.SRP.Salt.GetBytes(32);
+                session.Security.Account.Verifier = session.Security.PasswordAuthenticator.SRP.Verifier.GetBytes(32);
+                session.Security.Account.Online = true;
+                session.Security.AuthenticationState = WoWClientSession.AuthState.LoggingIn;
 
-                authDatabase.Accounts.Update(session.Account);
+                authDatabase.Accounts.Update(session.Security.Account);
 
-                session.Send(new AuthLoginProofResponse()
+                session.Network.Send(new AuthLoginProofResponse()
                 {
                     Status = AccountStatus.Success,
-                    Proof = session.PasswordAuthenticator.SRP.ServerSessionKeyProof
-                });
+                    Proof = session.Security.PasswordAuthenticator.SRP.ServerSessionKeyProof
+                }, new Models.Networking.PacketId(AuthServerOpCode.AUTH_LOGON_PROOF, PacketScope.AuthToClient));
             }
             else
-                LoginFailed(session, AuthStatus.WOW_FAIL_UNKNOWN_ACCOUNT, session.NewClientMessage(AuthServerOpCode.AUTH_LOGON_PROOF));
+                LoginFailed(session, AuthStatus.WOW_FAIL_UNKNOWN_ACCOUNT, session.Network.NewClientMessage(AuthServerOpCode.AUTH_LOGON_PROOF));
         }
 
         [PacketRoute(PacketScope.ClientToAuth, AuthServerOpCode.AUTH_RECONNECT_CHALLENGE)]
@@ -148,64 +148,64 @@ namespace WrathForged.Authorization.Server.Services
             using var authDatabase = _classFactory.Resolve<AuthDatabase>();
 
             var account = authDatabase.Accounts.FirstOrDefault(x => x.Username == authLogonChallenge.Identity || x.RegMail == authLogonChallenge.Identity);
-            var packet = session.NewClientMessage(AuthServerOpCode.AUTH_LOGON_CHALLENGE);
+            var packet = session.Network.NewClientMessage(AuthServerOpCode.AUTH_LOGON_CHALLENGE);
 
-            if (account == null || session.PasswordAuthenticator == null)
+            if (account == null || session.Security.PasswordAuthenticator == null)
             {
-                _logger.Debug("Failed login attempt for {Identity} from {Address}. Account not found.", authLogonChallenge.Identity, session.ClientSocket.IPEndPoint.Address);
+                _logger.Debug("Failed login attempt for {Identity} from {Address}. Account not found.", authLogonChallenge.Identity, session.Network.ClientSocket.IPEndPoint.Address);
                 LoginFailed(session, AuthStatus.WOW_FAIL_UNKNOWN_ACCOUNT, packet);
                 return;
             }
 
-            var ipString = session.ClientSocket.IPEndPoint.Address.ToString();
+            var ipString = session.Network.ClientSocket.IPEndPoint.Address.ToString();
             account.LastAttemptIp = ipString;
             account.LastIp = ipString;
-            session.AuthenticationState = WoWClientSession.AuthState.AwaitingCredentials;
-            session.PasswordAuthenticator.ReconnectProof = _randomUtilities.RandomBytes(16);
+            session.Security.AuthenticationState = WoWClientSession.AuthState.AwaitingCredentials;
+            session.Security.PasswordAuthenticator.ReconnectProof = _randomUtilities.RandomBytes(16);
 
-            session.Send(new AuthReconnectedResponse()
+            session.Network.Send(new AuthReconnectedResponse()
             {
                 Status = AuthStatus.WOW_SUCCESS,
-                ReconnectProof = session.PasswordAuthenticator.ReconnectProof
-            });
+                ReconnectProof = session.Security.PasswordAuthenticator.ReconnectProof
+            }, new Models.Networking.PacketId(AuthServerOpCode.AUTH_RECONNECT_CHALLENGE, PacketScope.AuthToClient));
         }
 
         [PacketRoute(PacketScope.ClientToAuth, AuthServerOpCode.AUTH_RECONNECT_PROOF)]
         public void ReconnectProof(WoWClientSession session, AuthReconnectedProof proof)
         {
-            if (session.Account == null || session.PasswordAuthenticator == null)
+            if (session.Security.Account == null || session.Security.PasswordAuthenticator == null)
             {
-                session.ClientSocket.Disconnect();
+                session.Network.ClientSocket.Disconnect();
                 return;
             }
 
-            if (session.Account.SessionKeyAuth == null)
+            if (session.Security.Account.SessionKeyAuth == null)
             {
-                session.ClientSocket.Disconnect();
+                session.Network.ClientSocket.Disconnect();
                 return;
             }
 
-            if (session.PasswordAuthenticator.IsReconnectProofValid(proof, session.Account))
+            if (session.Security.PasswordAuthenticator.IsReconnectProofValid(proof, session.Security.Account))
             {
-                session.AuthenticationState = WoWClientSession.AuthState.LoggingIn;
-                session.Send(new AuthReconnectProofResponse()
+                session.Security.AuthenticationState = WoWClientSession.AuthState.LoggingIn;
+                session.Network.Send(new AuthReconnectProofResponse()
                 {
                     Status = AuthStatus.WOW_SUCCESS
-                });
+                }, new Models.Networking.PacketId(AuthServerOpCode.AUTH_RECONNECT_PROOF, PacketScope.AuthToClient));
             }
             else
             {
-                LoginFailed(session, AuthStatus.WOW_FAIL_DISCONNECTED, session.NewClientMessage(AuthServerOpCode.AUTH_RECONNECT_PROOF));
-                session.ClientSocket.Disconnect();
+                LoginFailed(session, AuthStatus.WOW_FAIL_DISCONNECTED, session.Network.NewClientMessage(AuthServerOpCode.AUTH_RECONNECT_PROOF));
+                session.Network.ClientSocket.Disconnect();
             }
         }
 
         private void LoginFailed(WoWClientSession session, AuthStatus status, WoWClientPacketOut packet)
         {
-            if (!_loginTracker.TryGetValue(session.ClientSocket.IPEndPoint.Address.ToString(), out var tracker))
+            if (!_loginTracker.TryGetValue(session.Network.ClientSocket.IPEndPoint.Address.ToString(), out var tracker))
             {
                 tracker = new LoginTracker();
-                _loginTracker[session.ClientSocket.IPEndPoint.Address.ToString()] = tracker;
+                _loginTracker[session.Network.ClientSocket.IPEndPoint.Address.ToString()] = tracker;
             }
 
             tracker.Attempts++;
@@ -213,8 +213,8 @@ namespace WrathForged.Authorization.Server.Services
 
             if (_configuration.GetDefaultValue("MaxLoginAttempts", 5) <= tracker.Attempts)
             {
-                _logger.Debug("Too many failed login attempts from {Address}. Disconnecting.", session.ClientSocket.IPEndPoint.Address);
-                session.ClientSocket.Disconnect();
+                _logger.Debug("Too many failed login attempts from {Address}. Disconnecting.", session.Network.ClientSocket.IPEndPoint.Address);
+                session.Network.ClientSocket.Disconnect();
                 return;
             }
 
@@ -223,7 +223,7 @@ namespace WrathForged.Authorization.Server.Services
                 Status = status
             });
 
-            session.ClientSocket.EnqueueWrite(packet);
+            session.Network.ClientSocket.EnqueueWrite(packet);
         }
     }
 }

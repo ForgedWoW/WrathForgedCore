@@ -5,138 +5,137 @@ using Serilog;
 using WrathForged.Models.Networking;
 using WrathForged.Serialization.Models;
 
-namespace WrathForged.Common.Networking
+namespace WrathForged.Common.Networking;
+
+public class PacketRouter
 {
-    public class PacketRouter
+    public Dictionary<PacketScope, Dictionary<uint, List<(MethodInfo, PacketRouteAttribute)>>> PacketHandlerCache = new();
+    private readonly ILogger _logger;
+
+    public PacketRouter(ClassFactory classFactory, ILogger logger)
     {
-        public Dictionary<PacketScope, Dictionary<uint, List<(MethodInfo, PacketRouteAttribute)>>> PacketHandlerCache = new();
-        private readonly ILogger _logger;
+        var packetHandlers = classFactory.ResolveAll<IPacketService>();
 
-        public PacketRouter(ClassFactory classFactory, ILogger logger)
+        foreach (var handler in packetHandlers)
         {
-            var packetHandlers = classFactory.ResolveAll<IPacketService>();
+            var type = handler.GetType();
+            var methods = type.GetMethods(BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic)
+                              .Where(method => method.GetCustomAttributes(typeof(PacketRouteAttribute), false).Length > 0);
 
-            foreach (var handler in packetHandlers)
+            foreach (var method in methods)
             {
-                var type = handler.GetType();
-                var methods = type.GetMethods(BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic)
-                    .Where(method => method.GetCustomAttributes(typeof(PacketRouteAttribute), false).Length > 0);
-
-                foreach (var method in methods)
+                var attribute = (PacketRouteAttribute)method.GetCustomAttributes(typeof(PacketRouteAttribute), false).First();
+                if (!PacketHandlerCache.TryGetValue(attribute.Scope, out var scopeDictionary))
                 {
-                    var attribute = (PacketRouteAttribute)method.GetCustomAttributes(typeof(PacketRouteAttribute), false).First();
-                    if (!PacketHandlerCache.TryGetValue(attribute.Scope, out var scopeDictionary))
-                    {
-                        scopeDictionary = [];
-                        PacketHandlerCache[attribute.Scope] = scopeDictionary;
-                    }
-
-                    if (!scopeDictionary.TryGetValue(attribute.Id, out var methodList))
-                    {
-                        methodList = [];
-                        scopeDictionary[attribute.Id] = methodList;
-                    }
-
-                    methodList.Add((method, attribute));
+                    scopeDictionary = [];
+                    PacketHandlerCache[attribute.Scope] = scopeDictionary;
                 }
+
+                if (!scopeDictionary.TryGetValue(attribute.Id, out var methodList))
+                {
+                    methodList = [];
+                    scopeDictionary[attribute.Id] = methodList;
+                }
+
+                methodList.Add((method, attribute));
             }
-            _logger = logger;
         }
+        _logger = logger;
+    }
 
-        public bool RouteDirect(ClientSocket socket, PacketId packetId, PacketBuffer packetBuffer)
+    public bool RouteDirect(ClientSocket socket, PacketId packetId, PacketBuffer packetBuffer)
+    {
+        if (!PacketHandlerCache.TryGetValue(packetId.Scope, out var scopeDictionary))
         {
-            if (!PacketHandlerCache.TryGetValue(packetId.Scope, out var scopeDictionary))
-            {
-                return false;
-            }
-
-            if (!scopeDictionary.TryGetValue(packetId.Id, out var methodList))
-            {
-                return false;
-            }
-
-            foreach (var method in methodList)
-            {
-                if (method.Item2.DirectReader)
-                {
-                    _ = method.Item1.Invoke(null, new object[] { socket, packetId, packetBuffer });
-                    return true;
-                }
-            }
-
             return false;
         }
 
-        public bool RouteDirect(ClientSocket socket, PacketId packetId, byte[] packetBuffer)
+        if (!scopeDictionary.TryGetValue(packetId.Id, out var methodList))
         {
-            if (!PacketHandlerCache.TryGetValue(packetId.Scope, out var scopeDictionary))
-            {
-                return false;
-            }
-
-            if (!scopeDictionary.TryGetValue(packetId.Id, out var methodList))
-            {
-                return false;
-            }
-
-            bool evented = false;
-
-            foreach (var method in methodList)
-            {
-                if (method.Item2.DirectReader)
-                {
-                    _ = method.Item1.Invoke(null, new object[] { socket, packetId, new PacketBuffer(packetBuffer, _logger) });
-                    evented = true;
-                }
-            }
-
-            return evented;
+            return false;
         }
 
-        public void Route(ClientSocket socket, PacketId packetId, object packet)
+        foreach (var method in methodList)
         {
-            if (packet == null)
+            if (method.Item2.DirectReader)
             {
-                return;
-            }
-
-            if (!PacketHandlerCache.TryGetValue(packetId.Scope, out var scopeDictionary))
-            {
-                return;
-            }
-
-            if (!scopeDictionary.TryGetValue(packetId.Id, out var methodList))
-            {
-                return;
-            }
-
-            foreach (var method in methodList)
-            {
-                _ = method.Item1.Invoke(null, new object[] { socket, packet });
+                _ = method.Item1.Invoke(null, new object[] { socket, packetId, packetBuffer });
+                return true;
             }
         }
 
-        public void Route(WoWClientSession session, PacketId packetId, object packet)
+        return false;
+    }
+
+    public bool RouteDirect(ClientSocket socket, PacketId packetId, byte[] packetBuffer)
+    {
+        if (!PacketHandlerCache.TryGetValue(packetId.Scope, out var scopeDictionary))
         {
-            if (packet == null)
-            {
-                return;
-            }
+            return false;
+        }
 
-            if (!PacketHandlerCache.TryGetValue(packetId.Scope, out var scopeDictionary))
-            {
-                return;
-            }
+        if (!scopeDictionary.TryGetValue(packetId.Id, out var methodList))
+        {
+            return false;
+        }
 
-            if (!scopeDictionary.TryGetValue(packetId.Id, out var methodList))
-            {
-                return;
-            }
+        bool evented = false;
 
-            foreach (var method in methodList)
+        foreach (var method in methodList)
+        {
+            if (method.Item2.DirectReader)
             {
-                _ = method.Item1.Invoke(null, new object[] { session, packet });
+                _ = method.Item1.Invoke(null, new object[] { socket, packetId, new PacketBuffer(packetBuffer, _logger) });
+                evented = true;
             }
+        }
+
+        return evented;
+    }
+
+    public void Route(ClientSocket socket, PacketId packetId, object packet)
+    {
+        if (packet == null)
+        {
+            return;
+        }
+
+        if (!PacketHandlerCache.TryGetValue(packetId.Scope, out var scopeDictionary))
+        {
+            return;
+        }
+
+        if (!scopeDictionary.TryGetValue(packetId.Id, out var methodList))
+        {
+            return;
+        }
+
+        foreach (var method in methodList)
+        {
+            _ = method.Item1.Invoke(null, new object[] { socket, packet });
+        }
+    }
+
+    public void Route(WoWClientSession session, PacketId packetId, object packet)
+    {
+        if (packet == null)
+        {
+            return;
+        }
+
+        if (!PacketHandlerCache.TryGetValue(packetId.Scope, out var scopeDictionary))
+        {
+            return;
+        }
+
+        if (!scopeDictionary.TryGetValue(packetId.Id, out var methodList))
+        {
+            return;
+        }
+
+        foreach (var method in methodList)
+        {
+            _ = method.Item1.Invoke(null, new object[] { session, packet });
         }
     }
 }

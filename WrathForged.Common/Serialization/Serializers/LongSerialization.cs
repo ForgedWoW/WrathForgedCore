@@ -4,19 +4,18 @@ using WrathForged.Common.Networking;
 using WrathForged.Models;
 using WrathForged.Serialization.Models;
 
-namespace WrathForged.Common.Serialization.Serializers
+namespace WrathForged.Common.Serialization.Serializers;
+
+public class LongSerialization : IForgedTypeSerialization
 {
-    public class LongSerialization : IForgedTypeSerialization
+    public HashSet<Type> SupportedTypes { get; } = new HashSet<Type>() { typeof(long) };
+    public HashSet<ForgedTypeCode> SupportedForgedTypeCodes { get; } = new HashSet<ForgedTypeCode>();
+
+    public object? Deserialize(PacketBuffer packetBuffer, PropertyMeta propertyMeta, Dictionary<uint, int> collectionSizes) => packetBuffer.Reader.ReadInt64();
+
+    public void Serialize(PrimitiveWriter writer, PropertyMeta propertyMeta, List<PropertyMeta> otherMeta, object obj, object? val)
     {
-        public HashSet<Type> SupportedTypes { get; } = new HashSet<Type>() { typeof(long) };
-        public HashSet<ForgedTypeCode> SupportedForgedTypeCodes { get; } = new HashSet<ForgedTypeCode>();
-
-        public object? Deserialize(PacketBuffer packetBuffer, PropertyMeta propertyMeta, Dictionary<uint, int> collectionSizes) => packetBuffer.Reader.ReadInt64();
-
-        public void Serialize(PrimitiveWriter writer, PropertyMeta propertyMeta, List<PropertyMeta> otherMeta, object obj, object? val)
-        {
-            if (val != null)
-                writer.Write((long)val);
-        }
+        if (val != null)
+            writer.Write((long)val);
     }
 }
