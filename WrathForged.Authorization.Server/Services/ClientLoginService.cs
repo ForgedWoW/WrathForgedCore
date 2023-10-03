@@ -150,7 +150,7 @@ namespace WrathForged.Authorization.Server.Services
             var account = authDatabase.Accounts.FirstOrDefault(x => x.Username == authLogonChallenge.Identity || x.RegMail == authLogonChallenge.Identity);
             var packet = session.NewClientMessage(AuthServerOpCode.AUTH_LOGON_CHALLENGE);
 
-            if (account == null)
+            if (account == null || session.PasswordAuthenticator == null)
             {
                 _logger.Debug("Failed login attempt for {Identity} from {Address}. Account not found.", authLogonChallenge.Identity, session.ClientSocket.IPEndPoint.Address);
                 LoginFailed(session, AuthStatus.WOW_FAIL_UNKNOWN_ACCOUNT, packet);
@@ -161,18 +161,19 @@ namespace WrathForged.Authorization.Server.Services
             account.LastAttemptIp = ipString;
             account.LastIp = ipString;
             session.AuthenticationState = WoWClientSession.AuthState.AwaitingCredentials;
+            session.PasswordAuthenticator.ReconnectProof = _randomUtilities.RandomBytes(16);
 
             session.Send(new AuthReconnectedResponse()
             {
                 Status = AuthStatus.WOW_SUCCESS,
-                ReconnectProof = _randomUtilities.RandomBytes(16)
+                ReconnectProof = session.PasswordAuthenticator.ReconnectProof
             });
         }
 
         [PacketRoute(PacketScope.ClientToAuth, AuthServerOpCode.AUTH_RECONNECT_PROOF)]
         public void ReconnectProof(WoWClientSession session, AuthReconnectedProof proof)
         {
-            if (session.Account == null)
+            if (session.Account == null || session.PasswordAuthenticator == null)
             {
                 session.ClientSocket.Disconnect();
                 return;
@@ -184,11 +185,19 @@ namespace WrathForged.Authorization.Server.Services
                 return;
             }
 
-            session.AuthenticationState = WoWClientSession.AuthState.LoggingIn;
-            session.Send(new AuthReconnectProofResponse()
+            if (session.PasswordAuthenticator.IsReconnectProofValid(proof, session.Account))
             {
-                Status = AuthStatus.WOW_SUCCESS
-            });
+                session.AuthenticationState = WoWClientSession.AuthState.LoggingIn;
+                session.Send(new AuthReconnectProofResponse()
+                {
+                    Status = AuthStatus.WOW_SUCCESS
+                });
+            }
+            else
+            {
+                LoginFailed(session, AuthStatus.WOW_FAIL_DISCONNECTED, session.NewClientMessage(AuthServerOpCode.AUTH_RECONNECT_PROOF));
+                session.ClientSocket.Disconnect();
+            }
         }
 
         private void LoginFailed(WoWClientSession session, AuthStatus status, WoWClientPacketOut packet)
