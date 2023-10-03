@@ -128,7 +128,7 @@
   "Scripting": {
     "Directory": ".\\Scripts"
   },
-  "RealmStatusUpdateTime_Seconds": 20,
+  "RealmStatusUpdateTime_Seconds": 120,
   "BackgroundWorkProcessor": {
     "ThreadCount": 10
   },

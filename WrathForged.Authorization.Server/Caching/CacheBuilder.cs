@@ -14,7 +14,7 @@ namespace WrathForged.Authorization.Server.Caching
 
         public void Build()
         {
-            var cacheUpdate = TimeSpan.FromSeconds(_configuration.GetDefaultValue("RealmStatusUpdateTime_Seconds", 20));
+            var cacheUpdate = TimeSpan.FromSeconds(_configuration.GetDefaultValue("RealmStatusUpdateTime_Seconds", 120));
             _forgeCache.Set(AuthCacheKeys.REALM_LISTS, cacheUpdate, () =>
             {
                 using var authDatabase = _classFactory.Resolve<AuthDatabase>();
