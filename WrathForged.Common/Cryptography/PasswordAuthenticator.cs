@@ -24,7 +24,7 @@ namespace WrathForged.Common.Cryptography
         {
             get;
             set;
-        } = Array.Empty<byte>();
+        } = [];
 
         /// <summary>
         /// Writes the server's challenge.
@@ -87,7 +87,7 @@ namespace WrathForged.Common.Cryptography
             _ = sha.TransformBlock(md5Hash, 0, md5Hash.Length, md5Hash, 0);
             _ = sha.TransformBlock(ReconnectProof, 0, ReconnectProof.Length, ReconnectProof, 0);
             _ = sha.TransformBlock(authInfo.SessionKey, 0, authInfo.SessionKey.Length, authInfo.SessionKey, 0);
-            var hash = sha.TransformFinalBlock(Array.Empty<byte>(), 0, 0);
+            var hash = sha.TransformFinalBlock([], 0, 0);
 
             for (var i = 0; i < 20; i++)
             {

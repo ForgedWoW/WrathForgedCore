@@ -18,6 +18,6 @@ namespace WrathForged.Models.Networking
         public uint Size { get; set; }
 
         [SerializableProperty(3, CollectionSizeIndex = 2)]
-        public byte[] Data { get; set; } = Array.Empty<byte>();
+        public byte[] Data { get; set; } = [];
     }
 }

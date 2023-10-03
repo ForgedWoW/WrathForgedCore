@@ -26,10 +26,8 @@ namespace WrathForged.Common.Serialization.Serializers
             return new BigInteger(packetBuffer.Reader.ReadBytes(size));
         }
 
-        public void Serialize(PrimitiveWriter writer, PropertyMeta propertyMeta, List<PropertyMeta> otherMeta, object obj)
+        public void Serialize(PrimitiveWriter writer, PropertyMeta propertyMeta, List<PropertyMeta> otherMeta, object obj, object? val)
         {
-            var val = propertyMeta.ReflectedProperty.GetValue(obj);
-
             if (propertyMeta.SerializationMetadata.Flags.HasFlag(SerializationFlags.BigIntegerWithLength) && propertyMeta.SerializationMetadata.FixedCollectionSize == 0)
                 writer.SerializeCollectionSize(propertyMeta, otherMeta, obj);
 

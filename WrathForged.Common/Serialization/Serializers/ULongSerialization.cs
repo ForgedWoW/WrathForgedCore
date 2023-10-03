@@ -13,10 +13,8 @@ namespace WrathForged.Common.Serialization.Serializers
 
         public object? Deserialize(PacketBuffer packetBuffer, PropertyMeta propertyMeta, Dictionary<uint, int> collectionSizes) => packetBuffer.Reader.ReadUInt64();
 
-        public void Serialize(PrimitiveWriter writer, PropertyMeta propertyMeta, List<PropertyMeta> otherMeta, object obj)
+        public void Serialize(PrimitiveWriter writer, PropertyMeta propertyMeta, List<PropertyMeta> otherMeta, object obj, object? val)
         {
-            var val = propertyMeta.ReflectedProperty.GetValue(obj);
-
             if (val != null)
                 writer.Write((ulong)val);
         }

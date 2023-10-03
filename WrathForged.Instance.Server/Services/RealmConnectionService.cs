@@ -37,7 +37,7 @@ namespace WrathForged.Instance.Server.Services
             });
 
             var maps = authDatabase.InstanceMaps.Where(x => x.InstanceId == InstanceServer.Id).ToList();
-            Dictionary<uint, InstanceMapInfo> mapInfos = new();
+            Dictionary<uint, InstanceMapInfo> mapInfos = [];
 
             foreach (var map in maps)
             {

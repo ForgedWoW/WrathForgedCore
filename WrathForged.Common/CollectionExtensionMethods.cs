@@ -17,7 +17,7 @@ namespace WrathForged.Common
 
             if (!dict.TryGetValue(key, out var list))
             {
-                list = new List<V>();
+                list = [];
                 dict.Add(key, list);
             }
 
@@ -31,7 +31,7 @@ namespace WrathForged.Common
 
             if (!dict.TryGetValue(key, out var list))
             {
-                list = new HashSet<V>();
+                list = [];
                 dict.Add(key, list);
             }
 
@@ -42,7 +42,7 @@ namespace WrathForged.Common
         {
             if (!dict.TryGetValue(key1, out var innerDict))
             {
-                innerDict = new Dictionary<TKey2, TVal>();
+                innerDict = [];
                 dict[key1] = innerDict;
             }
 
@@ -53,7 +53,7 @@ namespace WrathForged.Common
         {
             if (!dict.TryGetValue(key, out var val))
             {
-                val = new List<TValue>();
+                val = [];
                 dict.Add(key, val);
             }
 
@@ -77,7 +77,7 @@ namespace WrathForged.Common
         {
             if (!dict.TryGetValue(key, out var list))
             {
-                list = new List<L>();
+                list = [];
                 dict.Add(key, list);
             }
 
@@ -88,7 +88,7 @@ namespace WrathForged.Common
         {
             if (!dict.TryGetValue(key, out var val))
             {
-                val = new List<TValue>();
+                val = [];
                 dict.Add(key, val);
             }
 
@@ -99,7 +99,7 @@ namespace WrathForged.Common
         {
             if (!dict.TryGetValue(key, out var val))
             {
-                val = new HashSet<TValue>();
+                val = [];
                 dict.Add(key, val);
             }
 
@@ -112,7 +112,7 @@ namespace WrathForged.Common
         {
             if (!dict.TryGetValue(key, out var val))
             {
-                val = new List<TValue>();
+                val = [];
                 dict.Add(key, val);
             }
 
@@ -279,7 +279,7 @@ namespace WrathForged.Common
         {
             if (!dict.TryGetValue(key, out var item))
             {
-                item = new Dictionary<T2, K>();
+                item = [];
                 dict.Add(key, item);
             }
 

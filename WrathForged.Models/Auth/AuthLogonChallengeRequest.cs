@@ -5,10 +5,10 @@ using WrathForged.Models.Auth.Enum;
 using WrathForged.Serialization.Models;
 
 #pragma warning disable CS8618
-
 namespace WrathForged.Models.Auth
+
 {
-    [ForgedSerializable(Scope = PacketScope.ClientToAuth, PacketIDs = new[] { (uint)AuthServerOpCode.AUTH_LOGON_CHALLENGE, (uint)AuthServerOpCode.AUTH_RECONNECT_CHALLENGE })]
+    [ForgedSerializable(PacketScope.ClientToAuth, AuthServerOpCode.AUTH_LOGON_CHALLENGE, AuthServerOpCode.AUTH_RECONNECT_CHALLENGE)]
     public partial record AuthLogonChallengeRequest
     {
         /// <summary>

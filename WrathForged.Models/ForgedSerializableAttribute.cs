@@ -14,7 +14,7 @@ namespace WrathForged.Models
         public ForgedSerializableAttribute(PacketScope packetScope = PacketScope.System)
         {
             Scope = packetScope;
-            PacketIDs = Array.Empty<uint>();
+            PacketIDs = [];
         }
 
         public ForgedSerializableAttribute(PacketScope packetScope, params uint[] packetIDs)

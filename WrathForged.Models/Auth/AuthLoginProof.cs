@@ -26,11 +26,11 @@ namespace WrathForged.Models.Auth
 
         [SerializableProperty(5, FixedCollectionSize = 20)]
         [BitwiseCondition(3, BitwiseCondition.BitwiseOperation.And, 2, BitwiseCondition.EqualityOperation.NotEqual, 0)]
-        public byte[] Unk1 { get; set; } = Array.Empty<byte>();
+        public byte[] Unk1 { get; set; } = [];
 
         [SerializableProperty(6, CollectionSizeLengthType = TypeCode.Byte)]
         [BitwiseCondition(3, BitwiseCondition.BitwiseOperation.And, 4, BitwiseCondition.EqualityOperation.NotEqual, 0)]
-        public byte[] Unk2 { get; set; } = Array.Empty<byte>();
+        public byte[] Unk2 { get; set; } = [];
     }
 
     [ForgedSerializable]
@@ -43,10 +43,10 @@ namespace WrathForged.Models.Auth
         public uint Value { get; set; }
 
         [SerializableProperty(2, FixedCollectionSize = 4)]
-        public byte[] Unk1 { get; set; } = Array.Empty<byte>();
+        public byte[] Unk1 { get; set; } = [];
 
         [SerializableProperty(3, FixedCollectionSize = 20)]
-        public byte[] SHA { get; set; } = Array.Empty<byte>();
+        public byte[] SHA { get; set; } = [];
     }
 
 
@@ -54,9 +54,9 @@ namespace WrathForged.Models.Auth
     public class AuthPIN
     {
         [SerializableProperty(0, FixedCollectionSize = 16)]
-        public byte[] PIN { get; set; } = Array.Empty<byte>();
+        public byte[] PIN { get; set; } = [];
 
         [SerializableProperty(1, FixedCollectionSize = 20)]
-        public byte[] PIN2 { get; set; } = Array.Empty<byte>();
+        public byte[] PIN2 { get; set; } = [];
     }
 }

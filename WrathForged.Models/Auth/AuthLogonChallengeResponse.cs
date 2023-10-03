@@ -9,7 +9,7 @@ namespace WrathForged.Models.Auth
     [ForgedSerializable(Serialization.Models.PacketScope.AuthToClient, AuthServerOpCode.AUTH_LOGON_CHALLENGE)]
     public class AuthLogonChallengeResponse
     {
-        private static readonly byte[] _versionChallangeConst = [0xBA, 0xA3, 0x1E, 0x99, 0xA0, 0x0B, 0x21, 0x57, 0xFC, 0x37, 0x3F, 0xB3, 0x69, 0xCD, 0xD2, 0xF1];
+        private static readonly byte[] _versionChallengeConst = [0xBA, 0xA3, 0x1E, 0x99, 0xA0, 0x0B, 0x21, 0x57, 0xFC, 0x37, 0x3F, 0xB3, 0x69, 0xCD, 0xD2, 0xF1];
 
         [SerializableProperty(0)]
         public AuthStatus Status { get; set; }
@@ -33,7 +33,7 @@ namespace WrathForged.Models.Auth
         public BigInteger Salt { get; set; }
 
         [SerializableProperty(7)]
-        public byte[] VersionChallange { get; set; } = _versionChallangeConst;
+        public byte[] VersionChallenge { get; set; } = _versionChallengeConst;
 
         [SerializableProperty(8)]
         public byte SecurityFlags { get; set; }
@@ -44,7 +44,7 @@ namespace WrathForged.Models.Auth
 
         [SerializableProperty(10)]
         [BitwiseCondition(8, BitwiseCondition.BitwiseOperation.And, 2, BitwiseCondition.EqualityOperation.Equal, 2)]
-        public MaxtrixInput? Matrix { get; set; }
+        public MatrixInput? Matrix { get; set; }
 
         [SerializableProperty(11)]
         [BitwiseCondition(8, BitwiseCondition.BitwiseOperation.And, 4, BitwiseCondition.EqualityOperation.Equal, 4)]
@@ -58,11 +58,11 @@ namespace WrathForged.Models.Auth
         public uint PIN { get; set; }
 
         [SerializableProperty(1, FixedCollectionSize = 16)]
-        public byte[] Hash { get; set; } = Array.Empty<byte>();
+        public byte[] Hash { get; set; } = [];
     }
 
     [ForgedSerializable]
-    public class MaxtrixInput
+    public class MatrixInput
     {
         [SerializableProperty(0)]
         public byte A { get; set; }

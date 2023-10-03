@@ -53,7 +53,7 @@ namespace WrathForged.Common.Networking
         }
 
         public bool IsEncrypted => _sessionKey != _defaultSessionKey;
-        public AuthState State { get; set; } = AuthState.LoggedOut;
+        public AuthState AuthenticationState { get; set; } = AuthState.LoggedOut;
         public PacketEncryption PacketEncryption { get; private set; }
         public ClientSocket ClientSocket { get; }
         public PacketBuffer PacketBuffer { get; }
@@ -63,7 +63,7 @@ namespace WrathForged.Common.Networking
 
         public WoWClientPacketOut NewClientMessage(PacketId packetId, int headerSize = -1) => new(_forgedModelSerializer, packetId, headerSize);
 
-        public void Write(object obj, PacketId packetId = default)
+        public void Send(object obj, PacketId packetId = default)
         {
             if (obj == null)
                 return;

@@ -31,9 +31,9 @@ namespace WrathForged.Common.Serialization.Serializers
             return text;
         }
 
-        public void Serialize(PrimitiveWriter writer, PropertyMeta propertyMeta, List<PropertyMeta> otherMeta, object obj)
+        public void Serialize(PrimitiveWriter writer, PropertyMeta propertyMeta, List<PropertyMeta> otherMeta, object obj, object? val)
         {
-            var text = propertyMeta.ReflectedProperty.GetValue(obj) as string ?? string.Empty;
+            var text = val as string ?? string.Empty;
             writer.SerializeCollectionSize(propertyMeta, otherMeta, obj);
 
             if (propertyMeta.SerializationMetadata.Flags.HasFlag(SerializationFlags.ReversedString))

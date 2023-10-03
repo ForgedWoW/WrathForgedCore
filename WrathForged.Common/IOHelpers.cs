@@ -62,7 +62,7 @@ namespace WrathForged.Common
             if (path.Length == 0)
                 path = new[] { ".\\Scripts" };
 
-            HashSet<Assembly> assemblies = new();
+            HashSet<Assembly> assemblies = [];
 
             foreach (var pathPart in path)
             {

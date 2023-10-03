@@ -27,13 +27,13 @@ namespace WrathForged.Common.Networking
                     var attribute = (PacketRouteAttribute)method.GetCustomAttributes(typeof(PacketRouteAttribute), false).First();
                     if (!PacketHandlerCache.TryGetValue(attribute.Scope, out var scopeDictionary))
                     {
-                        scopeDictionary = new Dictionary<uint, List<(MethodInfo, PacketRouteAttribute)>>();
+                        scopeDictionary = [];
                         PacketHandlerCache[attribute.Scope] = scopeDictionary;
                     }
 
                     if (!scopeDictionary.TryGetValue(attribute.Id, out var methodList))
                     {
-                        methodList = new List<(MethodInfo, PacketRouteAttribute)>();
+                        methodList = [];
                         scopeDictionary[attribute.Id] = methodList;
                     }
 

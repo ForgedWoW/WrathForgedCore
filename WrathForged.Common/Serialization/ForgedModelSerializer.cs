@@ -49,33 +49,33 @@ namespace WrathForged.Common.Serialization
                         }
                     }
 
-                    if (!_systemScope.TryGetValue(cls, out var propatr))
+                    if (!_systemScope.TryGetValue(cls, out var propertyAttr))
                     {
-                        propatr = new List<PropertyMeta>();
+                        propertyAttr = [];
 
                         foreach (var prop in cls.GetProperties())
                         {
                             var propAtt = prop.GetCustomAttribute<SerializablePropertyAttribute>();
-                            IConditionalSerialization? condAtt = null;
+                            IConditionalSerialization? conditionalAtt = null;
 
                             foreach (var att in prop.GetCustomAttributes())
                                 if (att is IConditionalSerialization conditionalSerialization)
                                 {
-                                    condAtt = conditionalSerialization;
+                                    conditionalAtt = conditionalSerialization;
                                     break;
                                 }
 
                             if (propAtt != null)
-                                propatr.Add(new PropertyMeta(propAtt, prop, condAtt));
+                                propertyAttr.Add(new PropertyMeta(propAtt, prop, conditionalAtt));
                         }
 
-                        propatr.Sort();
-                        _systemScope[cls] = propatr;
+                        propertyAttr.Sort();
+                        _systemScope[cls] = propertyAttr;
                     }
 
                     if (!_deserializationMethodsCache.TryGetValue(attribute.Scope, out var scopeDictionary))
                     {
-                        scopeDictionary = new Dictionary<uint, (Type, List<PropertyMeta>)>();
+                        scopeDictionary = [];
                         _deserializationMethodsCache[attribute.Scope] = scopeDictionary;
                     }
 
@@ -86,17 +86,17 @@ namespace WrathForged.Common.Serialization
                         foreach (var prop in cls.GetProperties())
                         {
                             var propAtt = prop.GetCustomAttribute<SerializablePropertyAttribute>();
-                            IConditionalSerialization? condAtt = null;
+                            IConditionalSerialization? conditionalAtt = null;
 
                             foreach (var att in prop.GetCustomAttributes())
                                 if (att is IConditionalSerialization conditionalSerialization)
                                 {
-                                    condAtt = conditionalSerialization;
+                                    conditionalAtt = conditionalSerialization;
                                     break;
                                 }
 
                             if (propAtt != null)
-                                propertyAttributes.Add(new PropertyMeta(propAtt, prop, condAtt));
+                                propertyAttributes.Add(new PropertyMeta(propAtt, prop, conditionalAtt));
                         }
 
                         propertyAttributes.Sort();
@@ -153,7 +153,7 @@ namespace WrathForged.Common.Serialization
                     continue;
                 }
 
-                SerializeProperty(writer, prop, deserializationDefinition, obj);
+                SerializeProperty(writer, prop, deserializationDefinition, obj, prop.ReflectedProperty.GetValue(obj));
             }
         }
 
@@ -177,7 +177,7 @@ namespace WrathForged.Common.Serialization
                     return DeserializationResult.Error;
                 }
 
-                Dictionary<uint, int> collectionSizes = new();
+                Dictionary<uint, int> collectionSizes = [];
                 foreach (var prop in propertyMetas)
                 {
                     if (prop.ConditionalSerialization != null && !prop.ConditionalSerialization.ShouldDeserialize(instance, prop, propertyMetas))
@@ -234,7 +234,7 @@ namespace WrathForged.Common.Serialization
                     return DeserializationResult.Error;
                 }
 
-                Dictionary<uint, int> collectionSizes = new();
+                Dictionary<uint, int> collectionSizes = [];
                 foreach (var prop in deserializationDefinition.Item2)
                 {
                     if (prop.ConditionalSerialization != null && !prop.ConditionalSerialization.ShouldDeserialize(instance, prop, deserializationDefinition.Item2))
@@ -271,7 +271,7 @@ namespace WrathForged.Common.Serialization
         private object? DeserializeCollection(PacketBuffer buffer, PropertyMeta prop, Dictionary<uint, int> collectionSizes)
         {
             var collectionSize = buffer.GetCollectionSize(prop, collectionSizes);
-            List<object?> collection = new();
+            List<object?> collection = [];
             for (var i = 0; i < collectionSize; i++)
                 collection.Add(EvaluateSpecialCasting(prop, DeserializeProperty(buffer, prop, collectionSizes)));
 
@@ -284,28 +284,64 @@ namespace WrathForged.Common.Serialization
 
         private void SerializeCollection(PrimitiveWriter writer, PropertyMeta prop, List<PropertyMeta> otherMeta, object obj)
         {
-            var collection = (IEnumerable)obj;
+            int i = 0;
+
             writer.SerializeCollectionSize(prop, otherMeta, obj);
-            foreach (var item in collection)
-                SerializeProperty(writer, prop, otherMeta, item);
+
+            if (prop.ReflectedProperty.GetValue(obj) is IEnumerable collection)
+                foreach (var item in collection)
+                {
+                    SerializeProperty(writer, prop, otherMeta, obj, item);
+                    i++;
+                }
+
+            if (prop.SerializationMetadata.FixedCollectionSize > i)
+            {
+                for (; i < prop.SerializationMetadata.FixedCollectionSize; i++)
+                    SerializeProperty(writer, prop, otherMeta, obj, 0);
+            }
         }
 
         private object? DeserializeProperty(PacketBuffer buffer, PropertyMeta prop, Dictionary<uint, int> collectionSizes)
         {
-            return _forgedTypeCodeSerializers.TryGetValue(prop.SerializationMetadata.OverrideType, out var forgedTypeSerialization) ||
-                       _serializers.TryGetValue(prop.ReflectedProperty.PropertyType, out forgedTypeSerialization)
+            return TryGetSerializerFromType(prop, out var forgedTypeSerialization)
                 ? forgedTypeSerialization?.Deserialize(buffer, prop, collectionSizes)
                 : null;
         }
 
-        private void SerializeProperty(PrimitiveWriter writer, PropertyMeta prop, List<PropertyMeta> otherMeta, object obj)
+        private void SerializeProperty(PrimitiveWriter writer, PropertyMeta prop, List<PropertyMeta> otherMeta, object obj, object? val)
         {
-            if (_forgedTypeCodeSerializers.TryGetValue(prop.SerializationMetadata.OverrideType, out var forgedTypeSerialization) ||
-                            _serializers.TryGetValue(prop.ReflectedProperty.PropertyType, out forgedTypeSerialization))
+            if (TryGetSerializerFromType(prop, out var forgedTypeSerialization))
             {
-                forgedTypeSerialization?.Serialize(writer, prop, otherMeta, obj);
+                forgedTypeSerialization?.Serialize(writer, prop, otherMeta, obj, val);
             }
         }
+
+#pragma warning disable CS8601
+        private bool TryGetSerializerFromType(PropertyMeta prop, out IForgedTypeSerialization forgedTypeSerialization)
+        {
+            Type propertyType = prop.ReflectedProperty.PropertyType;
+
+            if (propertyType.IsArray)
+            {
+                var elementType = propertyType.GetElementType() ?? typeof(int); // this should never happen, its to keep the compiler happy.
+
+                return _serializers.TryGetValue(elementType, out forgedTypeSerialization);
+            }
+            else if (propertyType.IsGenericType &&
+                     (propertyType.GetGenericTypeDefinition() == typeof(List<>) ||
+                      propertyType.GetGenericTypeDefinition() == typeof(HashSet<>)))
+            {
+                return _serializers.TryGetValue(propertyType.GetGenericArguments()[0], out forgedTypeSerialization);
+            }
+            else
+            {
+                return _forgedTypeCodeSerializers.TryGetValue(prop.SerializationMetadata.OverrideType, out forgedTypeSerialization) ||
+                       _serializers.TryGetValue(propertyType, out forgedTypeSerialization);
+            }
+        }
+
+#pragma warning restore CS8601
 
         private static object? EvaluateSpecialCasting(PropertyMeta prop, object? val)
         {
