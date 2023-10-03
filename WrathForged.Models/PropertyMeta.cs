@@ -5,18 +5,11 @@ using WrathForged.Serialization.Models;
 
 namespace WrathForged.Models
 {
-    public class PropertyMeta : IComparable<PropertyMeta>
+    public class PropertyMeta(SerializablePropertyAttribute attribute, PropertyInfo property, IConditionalSerialization? conditionalSerialization) : IComparable<PropertyMeta>
     {
-        public PropertyMeta(SerializablePropertyAttribute attribute, PropertyInfo property, IConditionalSerialization? conditionalSerialization)
-        {
-            SerializationMetadata = attribute;
-            ReflectedProperty = property;
-            ConditionalSerialization = conditionalSerialization;
-        }
-
-        public SerializablePropertyAttribute SerializationMetadata { get; set; }
-        public PropertyInfo ReflectedProperty { get; set; }
-        public IConditionalSerialization? ConditionalSerialization { get; set; }
+        public SerializablePropertyAttribute SerializationMetadata { get; set; } = attribute;
+        public PropertyInfo ReflectedProperty { get; set; } = property;
+        public IConditionalSerialization? ConditionalSerialization { get; set; } = conditionalSerialization;
 
         public int CompareTo(PropertyMeta? other)
         {

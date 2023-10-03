@@ -6,16 +6,10 @@ namespace WrathForged.Database.DBC
     ///     Used for serializing DBC Models from the database to DBC Files.
     /// </summary>
     [AttributeUsage(AttributeTargets.Property)]
-    public class DBCPropertyBindingAttribute : Attribute
+    public class DBCPropertyBindingAttribute(uint columnIndex, DBCBindingType bindingType) : Attribute
     {
-        public DBCPropertyBindingAttribute(uint columnIndex, DBCBindingType bindingType)
-        {
-            BindingType = bindingType;
-            ColumnIndex = columnIndex;
-        }
-
-        public uint ColumnIndex { get; set; }
-        public DBCBindingType BindingType { get; set; }
+        public uint ColumnIndex { get; set; } = columnIndex;
+        public DBCBindingType BindingType { get; set; } = bindingType;
 
         /// <summary>
         /// ONLY SET IF IT DIFFERS FROM THE DEFAULT VALUE OF THE PROPERTY TYPE

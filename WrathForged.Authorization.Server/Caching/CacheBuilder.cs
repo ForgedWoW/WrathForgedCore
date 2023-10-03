@@ -6,18 +6,11 @@ using WrathForged.Database.Models.Auth;
 
 namespace WrathForged.Authorization.Server.Caching
 {
-    public class CacheBuilder
+    public class CacheBuilder(ClassFactory classFactory, IConfiguration configuration, ForgeCache forgeCache)
     {
-        private readonly ClassFactory _classFactory;
-        private readonly IConfiguration _configuration;
-        private readonly ForgeCache _forgeCache;
-
-        public CacheBuilder(ClassFactory classFactory, IConfiguration configuration, ForgeCache forgeCache)
-        {
-            _classFactory = classFactory;
-            _configuration = configuration;
-            _forgeCache = forgeCache;
-        }
+        private readonly ClassFactory _classFactory = classFactory;
+        private readonly IConfiguration _configuration = configuration;
+        private readonly ForgeCache _forgeCache = forgeCache;
 
         public void Build()
         {

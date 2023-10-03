@@ -3,10 +3,8 @@
 namespace WrathForged.Database.DBC
 {
     [AttributeUsage(AttributeTargets.Class)]
-    public class DBCBoundAttribute : Attribute
+    public class DBCBoundAttribute(string name) : Attribute
     {
-        public DBCBoundAttribute(string name) => Name = name;
-
-        public string Name { get; set; }
+        public string Name { get; set; } = name;
     }
 }

@@ -7,13 +7,10 @@ using Serilog;
 
 namespace WrathForged.Common.Networking;
 
-public class PrimitiveReader : BinaryReader
+public class PrimitiveReader(MemoryStream memoryStream, ILogger logger) : BinaryReader(memoryStream, DefaultEncoding)
 {
     public static Encoding DefaultEncoding { get; } = Encoding.UTF8;
-    private readonly ILogger _logger;
-
-    public PrimitiveReader(MemoryStream memoryStream, ILogger logger)
-        : base(memoryStream, DefaultEncoding) => _logger = logger;
+    private readonly ILogger _logger = logger;
 
     /// <summary>
     /// Number of bytes available in the packet data.

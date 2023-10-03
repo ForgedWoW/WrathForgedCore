@@ -5,7 +5,7 @@ using WrathForged.Database.Models.Auth;
 
 namespace WrathForged.Authorization.Server.Validators
 {
-    public class BanValidator
+    public class BanValidator(ForgeCache forgeCache, ClassFactory classFactory)
     {
         public enum BanType
         {
@@ -14,14 +14,8 @@ namespace WrathForged.Authorization.Server.Validators
             Suspended
         }
 
-        private readonly ForgeCache _forgeCache;
-        private readonly ClassFactory _classFactory;
-
-        public BanValidator(ForgeCache forgeCache, ClassFactory classFactory)
-        {
-            _forgeCache = forgeCache;
-            _classFactory = classFactory;
-        }
+        private readonly ForgeCache _forgeCache = forgeCache;
+        private readonly ClassFactory _classFactory = classFactory;
 
         public BanType GetBanState(uint accountId, string ipAddress)
         {

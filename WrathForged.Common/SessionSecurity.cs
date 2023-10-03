@@ -26,7 +26,7 @@ namespace WrathForged.Common
             PacketEncryption = new PacketEncryption(_defaultSessionKey, _logger);
         }
 
-        public PasswordAuthenticator? PasswordAuthenticator { get; set; }
+
         public Dictionary<int, AuthorizedRole> Roles { get; set; } = new();
 
         public byte[] SessionKey
@@ -49,6 +49,9 @@ namespace WrathForged.Common
         public bool IsEncrypted => _sessionKey != _defaultSessionKey;
         public WoWClientSession.AuthState AuthenticationState { get; set; } = WoWClientSession.AuthState.LoggedOut;
         public PacketEncryption PacketEncryption { get; private set; }
+        public byte[] ReconnectProof { get; set; } = [];
+
+        public SRP6 SRP6 { get; private set; } = new SRP6("", "");
 
         public Account? Account
         {
@@ -59,6 +62,7 @@ namespace WrathForged.Common
                 {
                     Roles = _forgedAuthorization.GetAccountRolesByRealm(value.Id);
                     DefaultRole = GetRole();
+                    SRP6 = new SRP6(value.Username, value.Salt.ToBigInteger(), value.Verifier.ToBigInteger());
                 }
                 _account = value;
             }

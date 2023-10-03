@@ -9,16 +9,10 @@ using WrathForged.Serialization.Models;
 
 namespace WrathForged.Realm.Server.Services
 {
-    public class InstanceServerService : IPacketService
+    public class InstanceServerService(WorldDatabase worldDatabase, AuthDatabase authDatabase) : IPacketService
     {
-        private readonly WorldDatabase _worldDatabase;
-        private readonly AuthDatabase _authDatabase;
-
-        public InstanceServerService(WorldDatabase worldDatabase, AuthDatabase authDatabase)
-        {
-            _worldDatabase = worldDatabase;
-            _authDatabase = authDatabase;
-        }
+        private readonly WorldDatabase _worldDatabase = worldDatabase;
+        private readonly AuthDatabase _authDatabase = authDatabase;
 
         public Dictionary<uint, InstanceServerRegistration> InstanceServers { get; } = new();
 

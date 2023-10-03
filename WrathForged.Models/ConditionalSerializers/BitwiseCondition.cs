@@ -6,13 +6,13 @@ using WrathForged.Serialization.Models;
 namespace WrathForged.Models.ConditionalSerializers
 {
     [AttributeUsage(AttributeTargets.Property)]
-    public class BitwiseCondition : Attribute, IConditionalSerialization
+    public class BitwiseCondition(int valIndex, BitwiseCondition.BitwiseOperation operation, int vsValue, BitwiseCondition.EqualityOperation equalityOperation, int equalityValue) : Attribute, IConditionalSerialization
     {
-        private readonly int _valIndex;
-        private readonly BitwiseOperation _operation;
-        private readonly int _vsValue;
-        private readonly EqualityOperation _equalityOperation;
-        private readonly int _equalityValue;
+        private readonly int _valIndex = valIndex;
+        private readonly BitwiseOperation _operation = operation;
+        private readonly int _vsValue = vsValue;
+        private readonly EqualityOperation _equalityOperation = equalityOperation;
+        private readonly int _equalityValue = equalityValue;
 
         public enum BitwiseOperation
         {
@@ -30,15 +30,6 @@ namespace WrathForged.Models.ConditionalSerializers
             LessThan,
             GreaterThanOrEqual,
             LessThanOrEqual
-        }
-
-        public BitwiseCondition(int valIndex, BitwiseOperation operation, int vsValue, EqualityOperation equalityOperation, int equalityValue)
-        {
-            _valIndex = valIndex;
-            _operation = operation;
-            _vsValue = vsValue;
-            _equalityOperation = equalityOperation;
-            _equalityValue = equalityValue;
         }
 
         public bool ShouldDeserialize(object obj, PropertyMeta currentProperty, List<PropertyMeta> allProperties)

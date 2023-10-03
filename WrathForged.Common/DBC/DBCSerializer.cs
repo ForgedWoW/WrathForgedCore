@@ -8,11 +8,9 @@ using WrathForged.Database.DBC;
 
 namespace WrathForged.Common.DBC;
 
-public class DBCSerializer
+public class DBCSerializer(ILogger logger)
 {
-    private readonly ILogger _logger;
-
-    public DBCSerializer(ILogger logger) => _logger = logger;
+    private readonly ILogger _logger = logger;
 
     public void Serialize<T>(IEnumerable<T> itemsEn, string filePath, PropertyInfo prop) where T : class, IDBCRecord
     {

@@ -1,8 +1,6 @@
 ﻿// Copyright (c) Forged WoW LLC <https://github.com/ForgedWoW/WrathForgedCore>
 // Licensed under GPL-3.0 license. See <https://github.com/ForgedWoW/WrathForgedCore/blob/master/LICENSE> for full information.
-using System.Numerics;
 using WrathForged.Models.Auth.Enum;
-using WrathForged.Models.ConditionalSerializers;
 
 namespace WrathForged.Models.Auth
 {
@@ -16,7 +14,7 @@ namespace WrathForged.Models.Auth
         public byte[] ReconnectProof { get; set; } = [];
 
         [SerializableProperty(3, FixedCollectionSize = 20)]
-        public byte[] R2 { get; set; } = [];
+        public byte[] ClientProof { get; set; } = [];
 
         [SerializableProperty(4, FixedCollectionSize = 20)]
         public byte[] R3 { get; set; } = [];

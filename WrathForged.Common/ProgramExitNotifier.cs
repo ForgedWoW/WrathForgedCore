@@ -7,20 +7,14 @@ using WrathForged.Database;
 
 namespace WrathForged.Common;
 
-public class ProgramExitNotifier
+public class ProgramExitNotifier(ILogger logger, ClassFactory classFactory)
 {
     private const int TIMER_STOPPED = -1;
     private Task? _timer;
     private int _secondsTilStop = TIMER_STOPPED;
-    private readonly ILogger _logger;
-    private readonly ClassFactory _classFactory;
+    private readonly ILogger _logger = logger;
+    private readonly ClassFactory _classFactory = classFactory;
     private readonly CancellationTokenSource _cancelationTokenSource = new(); // Global cancellation token source for stopping the server.
-
-    public ProgramExitNotifier(ILogger logger, ClassFactory classFactory)
-    {
-        _logger = logger;
-        _classFactory = classFactory;
-    }
 
     /// <summary>
     ///     <see langword="true"/> if a delayed stop is requested, <see langword="false"/> otherwise.

@@ -1,6 +1,6 @@
 ﻿// Copyright (c) Forged WoW LLC <https://github.com/ForgedWoW/WrathForgedCore>
 // Licensed under GPL-3.0 license. See <https://github.com/ForgedWoW/WrathForgedCore/blob/master/LICENSE> for full information.
-using System.Numerics;
+using System.Text;
 using Microsoft.Extensions.Configuration;
 using Serilog;
 using WrathForged.Authorization.Server.Validators;
@@ -72,14 +72,17 @@ namespace WrathForged.Authorization.Server.Services
             }
 
             _logger.Debug("Login attempt for {Identity} from {Address}. Assigning session token.", authLogonChallenge.Identity, session.Network.ClientSocket.IPEndPoint.Address);
+
+
+            session.Security.Account = account;
+            session.Security.SessionKey = _randomUtilities.RandomBytes(16);
+
             account.Locale = (byte)authLogonChallenge.Locale;
             account.Os = authLogonChallenge.Architecture.ToString();
             account.SessionKeyAuth = session.Security.SessionKey;
             account.Expansion = (byte)authLogonChallenge.Major;
 
-            session.Security.Account = account;
-            session.Security.SessionKey = _randomUtilities.RandomBytes(16);
-            session.Security.PasswordAuthenticator = new PasswordAuthenticator(new SecureRemotePassword(account.Username, new BigInteger(account.SessionKeyAuth), true));
+
             session.Security.AuthenticationState = WoWClientSession.AuthState.AwaitingCredentials;
 
             authDatabase.Accounts.Update(account);
@@ -87,10 +90,10 @@ namespace WrathForged.Authorization.Server.Services
             packet.WriteObject(new AuthLogonChallengeResponse()
             {
                 Status = AuthStatus.WOW_SUCCESS,
-                B = session.Security.PasswordAuthenticator.SRP.PublicEphemeralValueB,
-                Generator = SecureRemotePassword.Generator,
-                Modulus = SecureRemotePassword.Modulus,
-                Salt = session.Security.PasswordAuthenticator.SRP.Salt
+                ServerEphemeral = session.Security.SRP6.ServerEphemeral.ToProperByteArray().Pad(32),
+                Generator = session.Security.SRP6.Generator.ToProperByteArray(),
+                Modulus = session.Security.SRP6.Modulus.ToProperByteArray().Pad(32),
+                Salt = session.Security.SRP6.Salt.ToProperByteArray().Pad(32)
             });
             session.Network.ClientSocket.EnqueueWrite(packet);
         }
@@ -98,13 +101,10 @@ namespace WrathForged.Authorization.Server.Services
         [PacketRoute(PacketScope.ClientToAuth, AuthServerOpCode.AUTH_LOGON_PROOF)]
         public void LogonProof(WoWClientSession session, AuthLoginProof proof)
         {
-            if (session.Security.PasswordAuthenticator == null)
-            {
-                session.Network.ClientSocket.Disconnect();
-                return;
-            }
+            session.Security.SRP6.ClientEphemeral = proof.PublicEphemeralValueA;
+            session.Security.SRP6.ClientProof = proof.Proof;
 
-            if (session.Security.PasswordAuthenticator.IsClientProofValid(proof))
+            if (session.Security.SRP6.ClientProof == session.Security.SRP6.GenerateClientProof())
             {
                 using var authDatabase = _classFactory.Resolve<AuthDatabase>();
 
@@ -125,8 +125,6 @@ namespace WrathForged.Authorization.Server.Services
                 session.Security.Account.LastIp = session.Network.ClientSocket.IPEndPoint.Address.ToString();
                 session.Security.Account.LastLogin = DateTime.UtcNow;
                 session.Security.Account.SessionKeyAuth = session.Security.SessionKey;
-                session.Security.Account.Salt = session.Security.PasswordAuthenticator.SRP.Salt.GetBytes(32);
-                session.Security.Account.Verifier = session.Security.PasswordAuthenticator.SRP.Verifier.GetBytes(32);
                 session.Security.Account.Online = true;
                 session.Security.AuthenticationState = WoWClientSession.AuthState.LoggingIn;
 
@@ -135,7 +133,7 @@ namespace WrathForged.Authorization.Server.Services
                 session.Network.Send(new AuthLoginProofResponse()
                 {
                     Status = AccountStatus.Success,
-                    Proof = session.Security.PasswordAuthenticator.SRP.ServerSessionKeyProof
+                    Proof = session.Security.SRP6.ServerProof
                 }, new Models.Networking.PacketId(AuthServerOpCode.AUTH_LOGON_PROOF, PacketScope.AuthToClient));
             }
             else
@@ -150,7 +148,7 @@ namespace WrathForged.Authorization.Server.Services
             var account = authDatabase.Accounts.FirstOrDefault(x => x.Username == authLogonChallenge.Identity || x.RegMail == authLogonChallenge.Identity);
             var packet = session.Network.NewClientMessage(AuthServerOpCode.AUTH_LOGON_CHALLENGE);
 
-            if (account == null || session.Security.PasswordAuthenticator == null)
+            if (account == null)
             {
                 _logger.Debug("Failed login attempt for {Identity} from {Address}. Account not found.", authLogonChallenge.Identity, session.Network.ClientSocket.IPEndPoint.Address);
                 LoginFailed(session, AuthStatus.WOW_FAIL_UNKNOWN_ACCOUNT, packet);
@@ -161,19 +159,19 @@ namespace WrathForged.Authorization.Server.Services
             account.LastAttemptIp = ipString;
             account.LastIp = ipString;
             session.Security.AuthenticationState = WoWClientSession.AuthState.AwaitingCredentials;
-            session.Security.PasswordAuthenticator.ReconnectProof = _randomUtilities.RandomBytes(16);
+            session.Security.ReconnectProof = _randomUtilities.RandomBytes(16);
 
             session.Network.Send(new AuthReconnectedResponse()
             {
                 Status = AuthStatus.WOW_SUCCESS,
-                ReconnectProof = session.Security.PasswordAuthenticator.ReconnectProof
+                ReconnectProof = session.Security.ReconnectProof
             }, new Models.Networking.PacketId(AuthServerOpCode.AUTH_RECONNECT_CHALLENGE, PacketScope.AuthToClient));
         }
 
         [PacketRoute(PacketScope.ClientToAuth, AuthServerOpCode.AUTH_RECONNECT_PROOF)]
         public void ReconnectProof(WoWClientSession session, AuthReconnectedProof proof)
         {
-            if (session.Security.Account == null || session.Security.PasswordAuthenticator == null)
+            if (session.Security.Account == null)
             {
                 session.Network.ClientSocket.Disconnect();
                 return;
@@ -185,7 +183,13 @@ namespace WrathForged.Authorization.Server.Services
                 return;
             }
 
-            if (session.Security.PasswordAuthenticator.IsReconnectProofValid(proof, session.Security.Account))
+            var serverProof = HashUtil.ComputeHash(
+                Encoding.ASCII.GetBytes(session.Security.Account.Username),
+                proof.ReconnectProof,
+                session.Security.ReconnectProof,
+                session.Security.SRP6.SessionKey.ToProperByteArray());
+
+            if (serverProof.SequenceEqual(proof.ClientProof))
             {
                 session.Security.AuthenticationState = WoWClientSession.AuthState.LoggingIn;
                 session.Network.Send(new AuthReconnectProofResponse()

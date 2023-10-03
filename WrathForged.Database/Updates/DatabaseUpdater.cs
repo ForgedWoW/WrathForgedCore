@@ -14,7 +14,8 @@ using WrathForged.Serialization.Models;
 
 namespace WrathForged.Database.Updates
 {
-    public class DatabaseUpdater
+    public class DatabaseUpdater(WorldDatabase worldDatabase, CharacterDatabase characterDatabase, AuthDatabase authDatabase, DBCDatabase dBCDatabase,
+                            IConfiguration configuration, ILogger logger)
     {
         internal struct SQLUpdates
         {
@@ -26,23 +27,12 @@ namespace WrathForged.Database.Updates
         public const string CHARACTER_DATABASE = "characters";
         public const string AUTH_DATABASE = "auth";
         public const string DBC_DATABASE = "dbc";
-        private readonly WorldDatabase _worldDatabase;
-        private readonly CharacterDatabase _characterDatabase;
-        private readonly AuthDatabase _authDatabase;
-        private readonly DBCDatabase _dBCDatabase;
-        private readonly IConfiguration _configuration;
-        private readonly ILogger _logger;
-
-        public DatabaseUpdater(WorldDatabase worldDatabase, CharacterDatabase characterDatabase, AuthDatabase authDatabase, DBCDatabase dBCDatabase,
-                                IConfiguration configuration, ILogger logger)
-        {
-            _worldDatabase = worldDatabase;
-            _characterDatabase = characterDatabase;
-            _authDatabase = authDatabase;
-            _dBCDatabase = dBCDatabase;
-            _configuration = configuration;
-            _logger = logger;
-        }
+        private readonly WorldDatabase _worldDatabase = worldDatabase;
+        private readonly CharacterDatabase _characterDatabase = characterDatabase;
+        private readonly AuthDatabase _authDatabase = authDatabase;
+        private readonly DBCDatabase _dBCDatabase = dBCDatabase;
+        private readonly IConfiguration _configuration = configuration;
+        private readonly ILogger _logger = logger;
 
         public void Update()
         {

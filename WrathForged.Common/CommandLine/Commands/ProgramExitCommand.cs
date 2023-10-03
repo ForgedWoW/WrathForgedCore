@@ -5,16 +5,10 @@ using WrathForged.Common.Localization;
 
 namespace WrathForged.Common.CommandLine.Commands;
 
-public class ProgramExitCommand : ICommandLineArgumentHandler
+public class ProgramExitCommand(ProgramExitNotifier programExitNotifier, Localizer localizer) : ICommandLineArgumentHandler
 {
-    private readonly ProgramExitNotifier _programExitNotifier;
-    private readonly Localizer _localizer;
-
-    public ProgramExitCommand(ProgramExitNotifier programExitNotifier, Localizer localizer)
-    {
-        _programExitNotifier = programExitNotifier;
-        _localizer = localizer;
-    }
+    private readonly ProgramExitNotifier _programExitNotifier = programExitNotifier;
+    private readonly Localizer _localizer = localizer;
 
     public Command AddCommand()
     {
@@ -38,7 +32,7 @@ public class ProgramExitCommand : ICommandLineArgumentHandler
             else
                 _programExitNotifier.NotifyStop(reason ?? _localizer.Localize(30003));
         }, timeArg, reasonArg);
-            
+
         return command;
     }
 }

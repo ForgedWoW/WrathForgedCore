@@ -7,11 +7,9 @@ using WrathForged.Database.DBC;
 
 namespace WrathForged.Common.DBC;
 
-public class DBCDeserializer
+public class DBCDeserializer(ILogger logger)
 {
-    private readonly ILogger _logger;
-
-    public DBCDeserializer(ILogger logger) => _logger = logger;
+    private readonly ILogger _logger = logger;
 
     public IEnumerable<T> Deserialize<T>(string filePath) where T : class, new()
     {

@@ -64,7 +64,12 @@ public static class SerializationHelpers
         uint size = 0;
         // Fixed size, so no need to write the size.
         if (prop.SerializationMetadata.FixedCollectionSize != 0)
-            return;
+            if (prop.SerializationMetadata.Flags.HasFlag(SerializationFlags.SendFixedSize))
+            {
+                size = (uint)prop.SerializationMetadata.FixedCollectionSize;
+            }
+            else
+                return;
 
         if (prop.SerializationMetadata.CollectionSizeIndex != 0)
         {
@@ -75,7 +80,7 @@ public static class SerializationHelpers
             if (val != null)
                 size = (uint)val;
         }
-        else
+        else if (size == 0)
         {
             // Retrieve the actual collection object using reflection
             var collection = prop.ReflectedProperty.GetValue(obj);
@@ -149,25 +154,25 @@ public static class SerializationHelpers
     {
         return Type.GetTypeCode(t) switch
         {
-            TypeCode.Byte     => ForgedTypeCode.Byte,
-            TypeCode.SByte    => ForgedTypeCode.SByte,
-            TypeCode.Int16    => ForgedTypeCode.Int16,
-            TypeCode.UInt16   => ForgedTypeCode.UInt16,
-            TypeCode.Int32    => ForgedTypeCode.Int32,
-            TypeCode.UInt32   => ForgedTypeCode.UInt32,
-            TypeCode.Int64    => ForgedTypeCode.Int64,
-            TypeCode.UInt64   => ForgedTypeCode.UInt64,
-            TypeCode.Single   => ForgedTypeCode.Single,
-            TypeCode.Double   => ForgedTypeCode.Double,
-            TypeCode.String   => ForgedTypeCode.String,
-            TypeCode.Boolean  => ForgedTypeCode.Boolean,
-            TypeCode.Char     => ForgedTypeCode.Char,
+            TypeCode.Byte => ForgedTypeCode.Byte,
+            TypeCode.SByte => ForgedTypeCode.SByte,
+            TypeCode.Int16 => ForgedTypeCode.Int16,
+            TypeCode.UInt16 => ForgedTypeCode.UInt16,
+            TypeCode.Int32 => ForgedTypeCode.Int32,
+            TypeCode.UInt32 => ForgedTypeCode.UInt32,
+            TypeCode.Int64 => ForgedTypeCode.Int64,
+            TypeCode.UInt64 => ForgedTypeCode.UInt64,
+            TypeCode.Single => ForgedTypeCode.Single,
+            TypeCode.Double => ForgedTypeCode.Double,
+            TypeCode.String => ForgedTypeCode.String,
+            TypeCode.Boolean => ForgedTypeCode.Boolean,
+            TypeCode.Char => ForgedTypeCode.Char,
             TypeCode.DateTime => ForgedTypeCode.DateTime,
-            TypeCode.Decimal  => ForgedTypeCode.Decimal,
-            TypeCode.Empty    => ForgedTypeCode.Empty,
-            TypeCode.Object   => ForgedTypeCode.Object,
-            TypeCode.DBNull   => ForgedTypeCode.DBNull,
-            _                 => ForgedTypeCode.Empty,
+            TypeCode.Decimal => ForgedTypeCode.Decimal,
+            TypeCode.Empty => ForgedTypeCode.Empty,
+            TypeCode.Object => ForgedTypeCode.Object,
+            TypeCode.DBNull => ForgedTypeCode.DBNull,
+            _ => ForgedTypeCode.Empty,
         };
     }
 }

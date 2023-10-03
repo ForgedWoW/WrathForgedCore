@@ -11,21 +11,13 @@ namespace WrathForged.Common.Scripting;
 /// <summary>
 ///     Loads assemblies and registers all objects to Dependency Injected in and available to use via <see cref="ClassFactory" />
 /// </summary>
-public class ScriptLoader
+public class ScriptLoader(ClassFactory classFactory, ILogger logger, IConfiguration configuration)
 {
-    private readonly ClassFactory _classFactory;
-    private readonly ILogger _logger;
-    private readonly IConfiguration _configuration;
+    private readonly ClassFactory _classFactory = classFactory;
+    private readonly ILogger _logger = logger;
+    private readonly IConfiguration _configuration = configuration;
 
-    public ReadOnlyCollection<Assembly> Assemblies { get; private set; }
-
-    public ScriptLoader(ClassFactory classFactory, ILogger logger, IConfiguration configuration)
-    {
-        Assemblies = new ReadOnlyCollection<Assembly>(IOHelpers.GetAllAssembliesInDir(configuration.GetDefaultValue("Scripting:Directory", ".\\Scripts")).ToList());
-        _classFactory = classFactory;
-        _logger = logger;
-        _configuration = configuration;
-    }
+    public ReadOnlyCollection<Assembly> Assemblies { get; private set; } = new ReadOnlyCollection<Assembly>(IOHelpers.GetAllAssembliesInDir(configuration.GetDefaultValue("Scripting:Directory", ".\\Scripts")).ToList());
 
     /// <summary>
     ///    Loads the assembly at the path provided

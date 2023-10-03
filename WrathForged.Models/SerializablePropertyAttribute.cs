@@ -5,14 +5,13 @@ using WrathForged.Serialization.Models;
 namespace WrathForged.Models
 {
     [AttributeUsage(AttributeTargets.Property)]
-    public class SerializablePropertyAttribute : Attribute
+    public class SerializablePropertyAttribute(uint index) : Attribute
     {
-        public SerializablePropertyAttribute(uint index) => Index = index;
 
         /// <summary>
         ///     The index of the property in the serialized stream.
         /// </summary>
-        public uint Index { get; set; }
+        public uint Index { get; set; } = index;
 
         /// <summary>
         ///     The type code to use when serializing this property. Defaults to <see

@@ -1,8 +1,8 @@
 ﻿// Copyright (c) Forged WoW LLC <https://github.com/ForgedWoW/WrathForgedCore>
 // Licensed under GPL-3.0 license. See <https://github.com/ForgedWoW/WrathForgedCore/blob/master/LICENSE> for full information.
-using System.Numerics;
 using WrathForged.Models.Auth.Enum;
 using WrathForged.Models.ConditionalSerializers;
+using WrathForged.Serialization.Models;
 
 namespace WrathForged.Models.Auth
 {
@@ -21,16 +21,16 @@ namespace WrathForged.Models.Auth
         public byte Unknown { get; set; }
 
         [SerializableProperty(3, FixedCollectionSize = 32)]
-        public BigInteger B { get; set; }
+        public byte[] ServerEphemeral { get; set; } = [];
 
-        [SerializableProperty(4, FixedCollectionSize = 1)]
-        public BigInteger Generator { get; set; }
+        [SerializableProperty(4, CollectionSizeLengthType = TypeCode.Byte, FixedCollectionSize = 1, Flags = SerializationFlags.SendFixedSize)]
+        public byte[] Generator { get; set; } = [];
 
-        [SerializableProperty(5, FixedCollectionSize = 32)]
-        public BigInteger Modulus { get; set; }
+        [SerializableProperty(5, CollectionSizeLengthType = TypeCode.Byte, FixedCollectionSize = 1, Flags = SerializationFlags.SendFixedSize)]
+        public byte[] Modulus { get; set; } = [];
 
         [SerializableProperty(6)]
-        public BigInteger Salt { get; set; }
+        public byte[] Salt { get; set; } = [];
 
         [SerializableProperty(7)]
         public byte[] VersionChallenge { get; set; } = _versionChallengeConst;
