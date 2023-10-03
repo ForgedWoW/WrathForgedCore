@@ -227,6 +227,7 @@ namespace WrathForged.Authorization.Server.Services
                 Status = status
             });
 
+            session.Security.AuthenticationState = WoWClientSession.AuthState.LoggedOut;
             session.Network.ClientSocket.EnqueueWrite(packet);
         }
     }

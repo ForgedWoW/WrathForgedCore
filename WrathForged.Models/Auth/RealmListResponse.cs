@@ -1,18 +1,17 @@
 ﻿// Copyright (c) Forged WoW LLC <https://github.com/ForgedWoW/WrathForgedCore>
 // Licensed under GPL-3.0 license. See <https://github.com/ForgedWoW/WrathForgedCore/blob/master/LICENSE> for full information.
-
 namespace WrathForged.Models.Auth
 {
-    [ForgedSerializable]
-    public partial record RealmIdentification
+    [ForgedSerializable(Serialization.Models.PacketScope.AuthToClient, Enum.AuthServerOpCode.REALM_LIST)]
+    public class RealmListResponse
     {
         [SerializableProperty(0)]
-        public uint RegionID { get; set; }
+        public List<AuthRealm> Realms { get; set; } = new List<AuthRealm>();
 
         [SerializableProperty(1)]
-        public uint BattlegroupID { get; set; }
+        public byte Unk1 { get; set; } = 0x10;
 
         [SerializableProperty(2)]
-        public uint RealmID { get; set; }
+        public byte Unk2 { get; set; } = 0x00;
     }
 }
