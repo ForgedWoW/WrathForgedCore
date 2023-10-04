@@ -26,7 +26,7 @@ namespace WrathForged.Models.Auth
         [SerializableProperty(4, CollectionSizeLengthType = TypeCode.Byte, FixedCollectionSize = 1, Flags = SerializationFlags.SendFixedSize)]
         public byte[] Generator { get; set; } = [];
 
-        [SerializableProperty(5, CollectionSizeLengthType = TypeCode.Byte, FixedCollectionSize = 1, Flags = SerializationFlags.SendFixedSize)]
+        [SerializableProperty(5, CollectionSizeLengthType = TypeCode.Byte, FixedCollectionSize = 32, Flags = SerializationFlags.SendFixedSize)]
         public byte[] Modulus { get; set; } = [];
 
         [SerializableProperty(6)]

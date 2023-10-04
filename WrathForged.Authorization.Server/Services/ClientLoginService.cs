@@ -77,7 +77,6 @@ namespace WrathForged.Authorization.Server.Services
 
             _logger.Debug("Login attempt for {Identity} from {Address}. Assigning session token.", authLogonChallenge.Identity, session.Network.ClientSocket.IPEndPoint.Address);
 
-
             session.Security.Account = account;
             session.Security.SessionKey = _randomUtilities.RandomBytes(16);
 
@@ -85,7 +84,6 @@ namespace WrathForged.Authorization.Server.Services
             account.Os = authLogonChallenge.Architecture.ToString();
             account.SessionKeyAuth = session.Security.SessionKey;
             account.Expansion = (byte)authLogonChallenge.Major;
-
 
             session.Security.AuthenticationState = WoWClientSession.AuthState.AwaitingCredentials;
 

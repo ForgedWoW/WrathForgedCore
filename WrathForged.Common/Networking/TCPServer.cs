@@ -12,6 +12,12 @@ namespace WrathForged.Common.Networking;
 
 public class TCPServer
 {
+    public enum ConnectionState
+    {
+        Connected,
+        Disconnected
+    }
+
     private readonly IConfiguration _configuration;
     private readonly ILogger _logger;
     private readonly ProgramExitNotifier _programExit;
@@ -75,7 +81,7 @@ public class TCPServer
             _ = _clients.Remove(clientSocket);
         }
 
-        _ = _connectionProcessingBlock.Post(new ClientConnectionChangeEvent(clientSocket, OnClientDisconnected));
+        _ = _connectionProcessingBlock.Post(new ClientConnectionChangeEvent(clientSocket, OnClientDisconnected, ConnectionState.Disconnected));
     }
 
     private void SetupTPL()
@@ -87,6 +93,8 @@ public class TCPServer
                                     {
                                         return;
                                     }
+
+                                    _logger.Verbose("Received {DataLength} bytes from {Address}", data.Data.Length, data.Client.IPEndPoint.Address.ToString());
 
                                     foreach (var handler in data.EventHandler.GetInvocationList().Cast<EventHandler<DataReceivedEventArgs>>())
                                     {
@@ -115,6 +123,8 @@ public class TCPServer
                                         {
                                             return;
                                         }
+
+                                        _logger.Verbose("Client connection change: {Status} from {Address}", data.ConnectionState.ToString(), data.Client.IPEndPoint.Address.ToString());
 
                                         foreach (var handler in data.EventHandler.GetInvocationList().Cast<EventHandler<ClientSocket>>())
                                         {
@@ -155,7 +165,7 @@ public class TCPServer
                 lock (_clients)
                     _clients.Add(clientSocket);
 
-                _ = _connectionProcessingBlock.Post(new ClientConnectionChangeEvent(clientSocket, OnClientConnected));
+                _ = _connectionProcessingBlock.Post(new ClientConnectionChangeEvent(clientSocket, OnClientConnected, ConnectionState.Connected));
             }
             catch (Exception ex)
             {
