@@ -154,15 +154,23 @@ public class ForgedModelSerializer
         var startTimestamp = DateTime.UtcNow;
         foreach (var prop in deserializationDefinition)
         {
-            if (prop.ReflectedProperty.PropertyType.IsArray ||
-                (prop.ReflectedProperty.PropertyType.IsGenericType && prop.ReflectedProperty.PropertyType.GetGenericTypeDefinition() == typeof(List<>)) ||
-                (prop.ReflectedProperty.PropertyType.IsGenericType && prop.ReflectedProperty.PropertyType.GetGenericTypeDefinition() == typeof(HashSet<>)))
+            try
             {
-                SerializeCollection(writer, prop, deserializationDefinition, obj);
-                continue;
-            }
+                if (prop.ReflectedProperty.PropertyType.IsArray ||
+                    (prop.ReflectedProperty.PropertyType.IsGenericType && prop.ReflectedProperty.PropertyType.GetGenericTypeDefinition() == typeof(List<>)) ||
+                    (prop.ReflectedProperty.PropertyType.IsGenericType && prop.ReflectedProperty.PropertyType.GetGenericTypeDefinition() == typeof(HashSet<>)))
+                {
+                    SerializeCollection(writer, prop, deserializationDefinition, obj);
+                    continue;
+                }
 
-            SerializeProperty(writer, prop, deserializationDefinition, obj, prop.ReflectedProperty.GetValue(obj));
+                SerializeProperty(writer, prop, deserializationDefinition, obj, prop.ReflectedProperty.GetValue(obj));
+            }
+            catch
+            {
+                _logger.Error("Failed to serialize property {PropertyName} for packet {Name}.", prop.ReflectedProperty.Name, obj.GetType().Name);
+                throw;
+            }
         }
         _serializeTime.Record((DateTime.UtcNow - startTimestamp).TotalMilliseconds);
     }
