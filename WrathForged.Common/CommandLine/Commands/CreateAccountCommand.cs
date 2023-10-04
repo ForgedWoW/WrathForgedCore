@@ -49,6 +49,7 @@ public class CreateAccountCommand(ClassFactory classFactory, ILogger logger) : I
                 Salt = srp.Salt.ToProperByteArray()
             });
 
+            authDb.SaveChanges();
             _logger.Information("User account {User} under email {Email} successfully created", user, email);
         }, emailArg, usernameArg, passwordArg);
 

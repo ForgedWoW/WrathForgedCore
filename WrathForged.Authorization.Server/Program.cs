@@ -9,6 +9,9 @@ using WrathForged.Common;
 using WrathForged.Common.CommandLine;
 using WrathForged.Common.Networking;
 using WrathForged.Database;
+using WrathForged.Serialization.Models;
+
+var initializationStart = DateTime.UtcNow;
 
 var configBuilder = new ConfigurationBuilder()
                     .SetBasePath(Directory.GetCurrentDirectory())
@@ -19,6 +22,7 @@ var container = new DependencyInjectionContainer();
 container.Configure(c =>
 {
     _ = c.ExportInstance(configuration).As<IConfiguration>().Lifestyle.SingletonPerScope();
+    _ = c.RegisterCommon(configuration);
     _ = c.RegisterDatabase(configuration, Log.Logger);
     _ = c.RegisterAuth();
 });
@@ -27,7 +31,7 @@ container.InitializeCommon();
 container.Locate<CacheBuilder>().Build();
 container.Locate<WoWClientServer>().Start();
 
-Log.Logger.Information("Auth Server started.");
+Log.Logger.Information("Auth Server  started in {InitializationTime}.", (DateTime.UtcNow - initializationStart).ToReadableString());
 var notifier = container.Locate<ProgramExitNotifier>();
 
 Console.CancelKeyPress += (sender, e) =>

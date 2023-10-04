@@ -1,6 +1,5 @@
 ﻿// Copyright (c) Forged WoW LLC <https://github.com/ForgedWoW/WrathForgedCore>
 // Licensed under GPL-3.0 license. See <https://github.com/ForgedWoW/WrathForgedCore/blob/master/LICENSE> for full information.
-using Microsoft.EntityFrameworkCore;
 using Serilog;
 using WrathForged.Common.Threading;
 using WrathForged.Database.Models.Auth;
@@ -34,8 +33,6 @@ public class ForgedAuthorization
 
 
         _accountPermissions = authDB.RbacAccountPermissions
-                                    .Include(x => x.Account)
-                                    .Include(x => x.RealmId)
                                     .AsEnumerable()
                                     .GroupBy(x => x.AccountId)
                                     .ToDictionary(x => x.Key, x => x.ToDictionary(y => y.RealmId, y => y));
@@ -44,7 +41,7 @@ public class ForgedAuthorization
 
         _permissions.Clear();
 
-        foreach (var defaultPerm in authDB.RbacDefaultPermissions)
+        foreach (var defaultPerm in authDB.RbacDefaultPermissions.ToList())
         {
             if (!_permissions.TryGetValue(defaultPerm.SecId, out var perm))
             {
@@ -52,10 +49,13 @@ public class ForgedAuthorization
                 _permissions[defaultPerm.SecId] = perm;
             }
 
-            foreach (var access in defaultPerm.Permission.Linkeds)
-            {
-                perm[access.Id] = access;
-            }
+            var defPermission = authDB.RbacPermissions.FirstOrDefault(x => x.Id == defaultPerm.PermissionId);
+
+            if (defPermission != null)
+                foreach (var access in defPermission.Linkeds)
+                {
+                    perm[access.Id] = access;
+                }
         }
     }
 

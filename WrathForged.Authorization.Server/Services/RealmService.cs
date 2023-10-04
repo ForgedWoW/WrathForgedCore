@@ -1,4 +1,5 @@
-﻿using WrathForged.Common;
+﻿using Serilog;
+using WrathForged.Common;
 using WrathForged.Common.Networking;
 using WrathForged.Database.Models.Auth;
 using WrathForged.Models.Auth;
@@ -7,13 +8,15 @@ using WrathForged.Serialization.Models;
 
 namespace WrathForged.Authorization.Server.Services
 {
-    public class RealmService(ClassFactory classFactory) : IPacketService
+    public class RealmService(ClassFactory classFactory, ILogger logger) : IPacketService
     {
         private readonly ClassFactory _classFactory = classFactory;
+        private readonly ILogger _logger = logger;
 
         [PacketRoute(PacketScope.ClientToAuth, AuthServerOpCode.REALM_LIST)]
         public void RealmRequest(WoWClientSession session)
         {
+            _logger.Debug("Realm list request from {Address}", session.Network.ClientSocket.IPEndPoint.Address.ToString());
             var packet = session.Network.NewClientMessage(new Models.Networking.PacketId(AuthServerOpCode.REALM_LIST, PacketScope.AuthToClient));
 
             var response = new RealmListResponse();

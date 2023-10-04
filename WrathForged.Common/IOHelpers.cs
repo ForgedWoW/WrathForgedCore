@@ -60,7 +60,7 @@ public static class IOHelpers
     public static HashSet<Assembly> GetAllAssembliesInDir(params string[] path)
     {
         if (path.Length == 0)
-            path = new[] { ".\\Scripts" };
+            path = [".\\Scripts"];
 
         HashSet<Assembly> assemblies = [];
 
@@ -76,7 +76,7 @@ public static class IOHelpers
             assemblies.AddRange(dlls.Select(dll => Assembly.LoadFile(dll.FullName)));
         }
 
-        assemblies.AddRange(AppDomain.CurrentDomain.GetAssemblies());
+        assemblies.AddRange(AppDomain.CurrentDomain.GetAssemblies().Where(a => a.GetName()?.Name?.Contains("WrathForged") == true));
 
         return assemblies;
     }

@@ -9,6 +9,8 @@ using WrathForged.Common.Networking;
 using WrathForged.Database;
 using WrathForged.Serialization.Models;
 
+var initializationStart = DateTime.UtcNow;
+
 var configBuilder = new ConfigurationBuilder()
                     .SetBasePath(Directory.GetCurrentDirectory())
                     .AddJsonFile("WrathForged.Instance.Server.Config.json", false, true);
@@ -18,6 +20,7 @@ IConfiguration configuration = configBuilder.Build();
 var container = new DependencyInjectionContainer();
 container.Configure(c =>
 {
+    _ = c.ExportInstance(configuration).As<IConfiguration>().Lifestyle.SingletonPerScope();
     _ = c.RegisterCommon(configuration);
     _ = c.RegisterDatabase(configuration, Log.Logger);
     _ = c.Export<WoWClientServer>().WithCtorParam(() => PacketScope.ClientToInstance).Lifestyle.Singleton();
@@ -30,7 +33,7 @@ container.Locate<WoWClientServer>().Start(8185);
 container.Locate<ForgedCommServer>().Start(configuration.GetDefaultValue("ForgedServerComm:Port", 8783));
 
 
-Log.Logger.Information("Instance Server started.");
+Log.Logger.Information("Instance Server  started in {InitializationTime}.", (DateTime.UtcNow - initializationStart).ToReadableString());
 var notifier = container.Locate<ProgramExitNotifier>();
 
 Console.CancelKeyPress += (sender, e) =>

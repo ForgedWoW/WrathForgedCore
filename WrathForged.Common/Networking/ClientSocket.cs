@@ -27,8 +27,6 @@ public class ClientSocket
         _logger = logger;
         _actionBlock = actionBlock;
         _client.ReceiveBufferSize = 0x4000;
-        _client.NoDelay = true;
-        _client.LingerState = new LingerOption(true, 0);
 
         if (_client.Client.RemoteEndPoint is IPEndPoint iPEndPoint)
         {
@@ -36,8 +34,8 @@ public class ClientSocket
         }
 
         _stream = _client.GetStream();
-        _ = StartListening();
-        _ = ProcessWriteQueue();
+        Task.Run(StartListening);
+        Task.Run(ProcessWriteQueue);
     }
 
     private EventHandler _onDisconnect;

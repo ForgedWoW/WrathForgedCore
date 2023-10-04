@@ -20,6 +20,7 @@ IConfiguration configuration = configBuilder.Build();
 var container = new DependencyInjectionContainer();
 container.Configure(c =>
 {
+    _ = c.ExportInstance(configuration).As<IConfiguration>().Lifestyle.SingletonPerScope();
     _ = c.RegisterCommon(configuration);
     _ = c.RegisterDatabase(configuration, Log.Logger);
     _ = c.Export<WoWClientServer>().WithCtorParam(() => PacketScope.ClientToRealm).Lifestyle.Singleton();

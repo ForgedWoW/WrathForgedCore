@@ -90,11 +90,14 @@ public class ScriptLoader(ClassFactory classFactory, ILogger logger, IConfigurat
     public List<Type> GetAllTypesWithClassAttribute<T>()
     {
         var types = new List<Type>();
+        var t = typeof(T);
+
         foreach (var assembly in Assemblies)
         {
-            foreach (var type in assembly.GetTypes())
+            var assemblyTypes = assembly.GetTypes();
+            foreach (var type in assemblyTypes)
             {
-                if (type.GetCustomAttributes(typeof(T), false).Length > 0)
+                if (type.GetCustomAttribute(t, false) != null)
                     types.Add(type);
             }
         }

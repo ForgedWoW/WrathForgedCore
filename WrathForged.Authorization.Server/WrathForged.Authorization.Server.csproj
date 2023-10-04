@@ -8,19 +8,15 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-	  <None Remove="WrathForged.Authorization.Server.Config.default.json" />
-	</ItemGroup>
-
-	<ItemGroup>
 		<ProjectReference Include="..\WrathForged.Common\WrathForged.Common.csproj" />
 		<ProjectReference Include="..\WrathForged.Database\WrathForged.Database.csproj" />
 		<ProjectReference Include="..\WrathForged.Models\WrathForged.Models.csproj" />
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Resource Include="WrathForged.Authorization.Server.Config.default.json">
+	  <None Update="WrathForged.Authorization.Server.Config.default.json">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-	  </Resource>
+	  </None>
 	</ItemGroup>
 
 </Project>

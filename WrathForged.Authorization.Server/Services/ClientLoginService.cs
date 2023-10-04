@@ -28,6 +28,7 @@ namespace WrathForged.Authorization.Server.Services
         [PacketRoute(PacketScope.ClientToAuth, AuthServerOpCode.AUTH_LOGON_CHALLENGE)]
         public void ChallengeRequest(WoWClientSession session, AuthLogonChallengeRequest authLogonChallenge)
         {
+            _logger.Debug("Login challange request from {Address}", session.Network.ClientSocket.IPEndPoint.Address.ToString());
             using var authDatabase = _classFactory.Resolve<AuthDatabase>();
 
             var account = authDatabase.Accounts.FirstOrDefault(x => x.Username == authLogonChallenge.Identity || x.RegMail == authLogonChallenge.Identity);
@@ -49,6 +50,7 @@ namespace WrathForged.Authorization.Server.Services
                 LoginFailed(session, AuthStatus.WOW_FAIL_LOCKED_ENFORCED, packet);
                 account.FailedLogins++;
                 authDatabase.Accounts.Update(account);
+                authDatabase.SaveChanges();
                 return;
             }
 
@@ -61,6 +63,7 @@ namespace WrathForged.Authorization.Server.Services
                     LoginFailed(session, AuthStatus.WOW_FAIL_BANNED, packet);
                     account.FailedLogins++;
                     authDatabase.Accounts.Update(account);
+                    authDatabase.SaveChanges();
                     return;
 
                 case BanValidator.BanType.Suspended:
@@ -68,6 +71,7 @@ namespace WrathForged.Authorization.Server.Services
                     LoginFailed(session, AuthStatus.WOW_FAIL_SUSPENDED, packet);
                     account.FailedLogins++;
                     authDatabase.Accounts.Update(account);
+                    authDatabase.SaveChanges();
                     return;
             }
 
@@ -96,11 +100,14 @@ namespace WrathForged.Authorization.Server.Services
                 Salt = session.Security.SRP6.Salt.ToProperByteArray().Pad(32)
             });
             session.Network.ClientSocket.EnqueueWrite(packet);
+
+            authDatabase.SaveChanges();
         }
 
         [PacketRoute(PacketScope.ClientToAuth, AuthServerOpCode.AUTH_LOGON_PROOF)]
         public void LogonProof(WoWClientSession session, AuthLoginProof proof)
         {
+            _logger.Debug("Logon proof request from {Address}", session.Network.ClientSocket.IPEndPoint.Address.ToString());
             session.Security.SRP6.ClientEphemeral = proof.PublicEphemeralValueA;
             session.Security.SRP6.ClientProof = proof.Proof;
 
@@ -129,6 +136,7 @@ namespace WrathForged.Authorization.Server.Services
                 session.Security.AuthenticationState = WoWClientSession.AuthState.LoggingIn;
 
                 authDatabase.Accounts.Update(session.Security.Account);
+                authDatabase.SaveChanges();
 
                 session.Network.Send(new AuthLoginProofResponse()
                 {
@@ -143,6 +151,7 @@ namespace WrathForged.Authorization.Server.Services
         [PacketRoute(PacketScope.ClientToAuth, AuthServerOpCode.AUTH_RECONNECT_CHALLENGE)]
         public void ReconnectChallengeRequest(WoWClientSession session, AuthLogonChallengeRequest authLogonChallenge)
         {
+            _logger.Debug("AUTH_RECONNECT_CHALLENGE from {Address}", session.Network.ClientSocket.IPEndPoint.Address.ToString());
             using var authDatabase = _classFactory.Resolve<AuthDatabase>();
 
             var account = authDatabase.Accounts.FirstOrDefault(x => x.Username == authLogonChallenge.Identity || x.RegMail == authLogonChallenge.Identity);
@@ -161,6 +170,9 @@ namespace WrathForged.Authorization.Server.Services
             session.Security.AuthenticationState = WoWClientSession.AuthState.AwaitingCredentials;
             session.Security.ReconnectProof = _randomUtilities.RandomBytes(16);
 
+            authDatabase.Accounts.Update(account);
+            authDatabase.SaveChanges();
+
             session.Network.Send(new AuthReconnectedResponse()
             {
                 Status = AuthStatus.WOW_SUCCESS,
@@ -171,6 +183,7 @@ namespace WrathForged.Authorization.Server.Services
         [PacketRoute(PacketScope.ClientToAuth, AuthServerOpCode.AUTH_RECONNECT_PROOF)]
         public void ReconnectProof(WoWClientSession session, AuthReconnectedProof proof)
         {
+            _logger.Debug("AUTH_RECONNECT_PROOF from {Address}", session.Network.ClientSocket.IPEndPoint.Address.ToString());
             if (session.Security.Account == null)
             {
                 session.Network.ClientSocket.Disconnect();
@@ -191,6 +204,17 @@ namespace WrathForged.Authorization.Server.Services
 
             if (serverProof.SequenceEqual(proof.ClientProof))
             {
+                using var authDatabase = _classFactory.Resolve<AuthDatabase>();
+                session.Security.Account = authDatabase.Accounts.FirstOrDefault(x => x.Id == session.Security.Account.Id);
+
+                if (session.Security.Account != null)
+                {
+                    session.Security.Account.LastLogin = DateTime.UtcNow;
+                    session.Security.Account.Online = true;
+                    authDatabase.Accounts.Update(session.Security.Account);
+                    authDatabase.SaveChanges();
+                }
+
                 session.Security.AuthenticationState = WoWClientSession.AuthState.LoggingIn;
                 session.Network.Send(new AuthReconnectProofResponse()
                 {

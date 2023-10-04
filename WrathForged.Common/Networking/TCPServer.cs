@@ -116,11 +116,11 @@ public class TCPServer
                                                                                           return;
                                                                                       }
 
-                                                                                      foreach (var handler in data.EventHandler.GetInvocationList().Cast<EventHandler<ClientConnectionChangeEvent>>())
+                                                                                      foreach (var handler in data.EventHandler.GetInvocationList().Cast<EventHandler<ClientSocket>>())
                                                                                       {
                                                                                           try
                                                                                           {
-                                                                                              handler?.Invoke(this, data);
+                                                                                              handler?.Invoke(this, data.Client);
                                                                                           }
                                                                                           catch (Exception ex)
                                                                                           {
@@ -144,21 +144,30 @@ public class TCPServer
             return;
         }
 
-        var client = _tcpListener.EndAcceptTcpClient(ar);
-
-        if (client == null || !client.Connected)
+        _ = _tcpListener.BeginAcceptTcpClient(OnAccept, _tcpListener);
+        try
         {
-            return;
+            var client = _tcpListener.EndAcceptTcpClient(ar);
+
+            if (client == null || !client.Connected)
+            {
+                return;
+            }
+
+            _logger.Debug("TCP Listener: Client connected from {Address}", client.Client.RemoteEndPoint);
+            var clientSocket = new ClientSocket(client, _logger, _dataProcessingBlock);
+            clientSocket.OnDisconnect += (sender, args) => RemoveClient(clientSocket);
+
+            lock (_clients)
+            {
+                _clients.Add(clientSocket);
+            }
+
+            _ = _connectionProcessingBlock.Post(new ClientConnectionChangeEvent(clientSocket, OnClientConnected));
         }
-
-        var clientSocket = new ClientSocket(client, _logger, _dataProcessingBlock);
-        clientSocket.OnDisconnect += (sender, args) => RemoveClient(clientSocket);
-
-        lock (_clients)
+        catch (Exception ex)
         {
-            _clients.Add(clientSocket);
+            _logger.Error(ex, "Error accepting client");
         }
-
-        _ = _connectionProcessingBlock.Post(new ClientConnectionChangeEvent(clientSocket, OnClientConnected));
     }
 }

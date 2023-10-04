@@ -119,6 +119,7 @@ public static class DependencyInjection
         container.InitializeDatabase();
 
         var sl = container.Locate<ScriptLoader>();
+
         container.Configure(c =>
         {
             var config = container.Locate<IConfiguration>();
