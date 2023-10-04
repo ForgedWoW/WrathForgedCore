@@ -59,9 +59,8 @@ public static class SerializationHelpers
         return size;
     }
 
-    public static void SerializeCollectionSize(this PrimitiveWriter writer, PropertyMeta prop, List<PropertyMeta> otherMeta, object obj)
+    public static void SerializeCollectionSize(this PrimitiveWriter writer, PropertyMeta prop, List<PropertyMeta> otherMeta, object obj, uint size = 0)
     {
-        uint size = 0;
         // Fixed size, so no need to write the size.
         if (prop.SerializationMetadata.FixedCollectionSize != 0)
             if (prop.SerializationMetadata.Flags.HasFlag(SerializationFlags.SendFixedSize))

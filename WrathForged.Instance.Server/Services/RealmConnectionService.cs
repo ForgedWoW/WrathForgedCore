@@ -37,25 +37,25 @@ namespace WrathForged.Instance.Server.Services
             });
 
             var maps = authDatabase.InstanceMaps.Where(x => x.InstanceId == InstanceServer.Id).ToList();
-            Dictionary<uint, InstanceMapInfo> mapInfos = [];
+            Dictionary<uint, InstanceMapInfo> mapInfoDict = [];
 
             foreach (var map in maps)
             {
-                if (mapInfos.TryGetValue(map.MapId, out var mapInfo))
+                if (mapInfoDict.TryGetValue(map.MapId, out var mapInfo))
                 {
                     mapInfo.Difficulties.Add(map.Difficulty);
                 }
                 else
                 {
-                    mapInfos[map.MapId] = new InstanceMapInfo
+                    mapInfoDict[map.MapId] = new InstanceMapInfo
                     {
                         MapId = map.MapId,
                         Difficulties = new List<uint> { map.Difficulty }
                     };
-                }                       
+                }
             }
 
-            InstanceServer.MapIDs = [.. mapInfos.Values];
+            InstanceServer.MapIDs = [.. mapInfoDict.Values];
 
             ClientConnection = classFactory.Container.Locate<ForgedTCPClient>(new
             {

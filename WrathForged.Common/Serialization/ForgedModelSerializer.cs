@@ -1,9 +1,11 @@
 ﻿// Copyright (c) Forged WoW LLC <https://github.com/ForgedWoW/WrathForgedCore>
 // Licensed under GPL-3.0 license. See <https://github.com/ForgedWoW/WrathForgedCore/blob/master/LICENSE> for full information.
 using System.Collections;
+using System.Diagnostics.Metrics;
 using System.Reflection;
 using Serilog;
 using WrathForged.Common.Networking;
+using WrathForged.Common.Observability;
 using WrathForged.Common.Scripting;
 using WrathForged.Common.Serialization.Serializers;
 using WrathForged.Models;
@@ -24,10 +26,16 @@ public class ForgedModelSerializer
     private readonly Dictionary<Type, List<PropertyMeta>> _systemScope = new();
     private readonly Dictionary<Type, IForgedTypeSerialization> _serializers = new();
     private readonly Dictionary<ForgedTypeCode, IForgedTypeSerialization> _forgedTypeCodeSerializers = new();
+    private readonly Histogram<double> _deserializeTime;
+    private readonly Histogram<double> _serializeTime;
+    private readonly Meter _meter;
 
-    public ForgedModelSerializer(ILogger logger, ScriptLoader assemblyLoader, ClassFactory classFactory)
+    public ForgedModelSerializer(ILogger logger, ScriptLoader assemblyLoader, ClassFactory classFactory, MeterFactory meterFactory)
     {
         var classesWithAttribute = assemblyLoader.GetAllTypesWithClassAttribute<ForgedSerializableAttribute>();
+        _meter = meterFactory.GetOrCreateMeter(MeterKeys.WRATHFORGED_COMMON);
+        _deserializeTime = _meter.CreateHistogram<double>("DeserializationTime", "Time", "Time to deserialize a packet");
+        _serializeTime = _meter.CreateHistogram<double>("SerializationTime", "Time", "Time to serialize a packet");
 
         // Build the deserialization cache
         foreach (var cls in classesWithAttribute)
@@ -143,6 +151,7 @@ public class ForgedModelSerializer
 
     private void Serialize(PrimitiveWriter writer, object obj, List<PropertyMeta> deserializationDefinition)
     {
+        var startTimestamp = DateTime.UtcNow;
         foreach (var prop in deserializationDefinition)
         {
             if (prop.ReflectedProperty.PropertyType.IsArray ||
@@ -155,10 +164,12 @@ public class ForgedModelSerializer
 
             SerializeProperty(writer, prop, deserializationDefinition, obj, prop.ReflectedProperty.GetValue(obj));
         }
+        _serializeTime.Record((DateTime.UtcNow - startTimestamp).TotalMilliseconds);
     }
 
     public DeserializationResult TryDeserialize<T>(PacketBuffer buffer, out T packet)
     {
+        var startTimestamp = DateTime.UtcNow;
         var t = typeof(T);
 
         if (!_systemScope.TryGetValue(t, out var propertyMetas))
@@ -180,24 +191,40 @@ public class ForgedModelSerializer
             Dictionary<uint, int> collectionSizes = [];
             foreach (var prop in propertyMetas)
             {
-                if (prop.ConditionalSerialization != null && !prop.ConditionalSerialization.ShouldDeserialize(instance, prop, propertyMetas))
-                    continue;
+                try
+                {
+                    if (prop.ConditionalSerialization != null && !prop.ConditionalSerialization.ShouldDeserialize(instance, prop, propertyMetas))
+                        continue;
 
-                var isCollection = prop.ReflectedProperty.PropertyType.IsArray ||
-                                   (prop.ReflectedProperty.PropertyType.IsGenericType && prop.ReflectedProperty.PropertyType.GetGenericTypeDefinition() == typeof(List<>)) ||
-                                   (prop.ReflectedProperty.PropertyType.IsGenericType && prop.ReflectedProperty.PropertyType.GetGenericTypeDefinition() == typeof(HashSet<>));
+                    var isCollection = prop.ReflectedProperty.PropertyType.IsArray ||
+                                       (prop.ReflectedProperty.PropertyType.IsGenericType && prop.ReflectedProperty.PropertyType.GetGenericTypeDefinition() == typeof(List<>)) ||
+                                       (prop.ReflectedProperty.PropertyType.IsGenericType && prop.ReflectedProperty.PropertyType.GetGenericTypeDefinition() == typeof(HashSet<>));
 
-                var result = isCollection ? DeserializeCollection(buffer, prop, collectionSizes)
-                                 : prop.ReflectedProperty.PropertyType.IsEnum && !IsStringEnum(prop)
-                                     ? _forgedTypeCodeSerializers[ForgedTypeCode.Enum].Deserialize(buffer, prop, collectionSizes)
-                                     : DeserializeProperty(buffer, prop, collectionSizes);
+                    var result = isCollection ? DeserializeCollection(buffer, prop, collectionSizes)
+                                     : prop.ReflectedProperty.PropertyType.IsEnum && !IsStringEnum(prop)
+                                         ? _forgedTypeCodeSerializers[ForgedTypeCode.Enum].Deserialize(buffer, prop, collectionSizes)
+                                         : DeserializeProperty(buffer, prop, collectionSizes);
 
-                if (result != null)
-                    prop.ReflectedProperty.SetValue(instance, EvaluateSpecialCasting(prop, result));
+                    if (result != null)
+                        prop.ReflectedProperty.SetValue(instance, EvaluateSpecialCasting(prop, result));
+                }
+                catch
+                {
+                    _logger.Error("Failed to deserialize property {PropertyName} for packet {Name}.", prop.ReflectedProperty.Name, t.Name);
+                    throw;
+                }
             }
 
             packet = instance;
+            var ms = (DateTime.UtcNow - startTimestamp).TotalMilliseconds;
+            _deserializeTime.Record(ms);
             return DeserializationResult.Success;
+        }
+        catch (EndOfStreamException eos)
+        {
+            _logger.Error(eos, "Failed to deserialize packet {Name} end of stream.", t.Name);
+            packet = default!;
+            return DeserializationResult.EndOfStream;
         }
         catch (Exception ex)
         {
@@ -210,6 +237,7 @@ public class ForgedModelSerializer
 
     public DeserializationResult TryDeserialize(PacketScope scope, uint packetId, PacketBuffer buffer, out object packet)
     {
+        var startTimestamp = DateTime.UtcNow;
         if (!_deserializationMethodsCache.TryGetValue(scope, out var scopeDictionary))
         {
             packet = default!;
@@ -235,25 +263,40 @@ public class ForgedModelSerializer
             Dictionary<uint, int> collectionSizes = [];
             foreach (var prop in deserializationDefinition.Item2)
             {
-                if (prop.ConditionalSerialization != null && !prop.ConditionalSerialization.ShouldDeserialize(instance, prop, deserializationDefinition.Item2))
-                    continue;
+                try
+                {
+                    if (prop.ConditionalSerialization != null && !prop.ConditionalSerialization.ShouldDeserialize(instance, prop, deserializationDefinition.Item2))
+                        continue;
 
-                var isCollection = prop.ReflectedProperty.PropertyType.IsArray ||
-                                   (prop.ReflectedProperty.PropertyType.IsGenericType && prop.ReflectedProperty.PropertyType.GetGenericTypeDefinition() == typeof(List<>)) ||
-                                   (prop.ReflectedProperty.PropertyType.IsGenericType && prop.ReflectedProperty.PropertyType.GetGenericTypeDefinition() == typeof(HashSet<>));
+                    var isCollection = prop.ReflectedProperty.PropertyType.IsArray ||
+                                       (prop.ReflectedProperty.PropertyType.IsGenericType && prop.ReflectedProperty.PropertyType.GetGenericTypeDefinition() == typeof(List<>)) ||
+                                       (prop.ReflectedProperty.PropertyType.IsGenericType && prop.ReflectedProperty.PropertyType.GetGenericTypeDefinition() == typeof(HashSet<>));
 
-                var result = isCollection ? DeserializeCollection(buffer, prop, collectionSizes)
-                                 : prop.ReflectedProperty.PropertyType.IsEnum && !IsStringEnum(prop)
-                                     ? _forgedTypeCodeSerializers[ForgedTypeCode.Enum].Deserialize(buffer, prop, collectionSizes)
-                                     : DeserializeProperty(buffer, prop, collectionSizes);
+                    var result = isCollection ? DeserializeCollection(buffer, prop, collectionSizes)
+                                     : prop.ReflectedProperty.PropertyType.IsEnum && !IsStringEnum(prop)
+                                         ? _forgedTypeCodeSerializers[ForgedTypeCode.Enum].Deserialize(buffer, prop, collectionSizes)
+                                         : DeserializeProperty(buffer, prop, collectionSizes);
 
-                if (result != null)
-                    prop.ReflectedProperty.SetValue(instance, EvaluateSpecialCasting(prop, result));
+                    if (result != null)
+                        prop.ReflectedProperty.SetValue(instance, EvaluateSpecialCasting(prop, result));
+                }
+                catch
+                {
+                    _logger.Error("Failed to deserialize property {PropertyName} for packet {PacketId} for scope {Scope}", prop.ReflectedProperty.Name, packetId, scope);
+                    throw;
+                }
             }
 
             packet = instance ?? default!;
-
+            var ms = (DateTime.UtcNow - startTimestamp).TotalMilliseconds;
+            _deserializeTime.Record(ms);
             return DeserializationResult.Success;
+        }
+        catch (EndOfStreamException eos)
+        {
+            _logger.Error(eos, "Failed to deserialize packet {Name} {PacketId} for scope {Scope}. End of stream.", deserializationDefinition.Item1.Name, packetId, scope);
+            packet = default!;
+            return DeserializationResult.EndOfStream;
         }
         catch (Exception ex)
         {
@@ -344,12 +387,15 @@ public class ForgedModelSerializer
         if (val == null)
             return null;
 
-        // check of its a enum we need to parse its value from a string.
-        return IsStringEnum(prop) &&
-               Enum.TryParse(prop.ReflectedProperty.PropertyType, (string)val, true, out var result) &&
-               result != null
-                   ? result
-                   : val;
+        if (IsStringEnum(prop))
+        {
+            if (Enum.TryParse(prop.ReflectedProperty.PropertyType, (string)val, true, out var result) && result != null)
+                return result;
+            else
+                return Activator.CreateInstance(prop.ReflectedProperty.PropertyType); // default enum value if we fail to parse.
+        }
+
+        return val;
     }
 
     private static bool IsStringEnum(PropertyMeta prop)

@@ -13,8 +13,7 @@ public class FourCCStringSerialization : IForgedTypeSerialization
 
     public object? Deserialize(PacketBuffer packetBuffer, PropertyMeta propertyMeta, Dictionary<uint, int> collectionSizes)
     {
-        _ = packetBuffer.GetCollectionSize(propertyMeta, collectionSizes);
-        var text = packetBuffer.Reader.ReadFourCC();
+        var text = packetBuffer.Reader.ReadFourCC().TrimEnd('\0');
 
         if (propertyMeta.SerializationMetadata.Flags.HasFlag(SerializationFlags.ReversedString))
         {
@@ -29,7 +28,7 @@ public class FourCCStringSerialization : IForgedTypeSerialization
     public void Serialize(PrimitiveWriter writer, PropertyMeta propertyMeta, List<PropertyMeta> otherMeta, object obj, object? val)
     {
         var text = val as string ?? string.Empty;
-        writer.SerializeCollectionSize(propertyMeta, otherMeta, obj);
+        writer.SerializeCollectionSize(propertyMeta, otherMeta, obj, 4);
 
         if (propertyMeta.SerializationMetadata.Flags.HasFlag(SerializationFlags.ReversedString))
         {

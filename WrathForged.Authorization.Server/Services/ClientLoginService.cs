@@ -81,7 +81,7 @@ namespace WrathForged.Authorization.Server.Services
             session.Security.Account = account;
             session.Security.SessionKey = _randomUtilities.RandomBytes(16);
 
-            account.Locale = (byte)Enum.Parse(typeof(ClientLocale), authLogonChallenge.Locale, true);
+            account.Locale = (byte)authLogonChallenge.Locale;
             account.Os = authLogonChallenge.Architecture.ToString();
             account.SessionKeyAuth = session.Security.SessionKey;
             account.Expansion = (byte)authLogonChallenge.Major;

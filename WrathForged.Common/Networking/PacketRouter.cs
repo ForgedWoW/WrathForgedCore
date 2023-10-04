@@ -9,7 +9,7 @@ namespace WrathForged.Common.Networking;
 
 public class PacketRouter
 {
-    public Dictionary<PacketScope, Dictionary<uint, List<(MethodInfo, PacketRouteAttribute)>>> PacketHandlerCache = new();
+    public Dictionary<PacketScope, Dictionary<uint, List<(MethodInfo, PacketRouteAttribute, IPacketService)>>> PacketHandlerCache = new();
     private readonly ILogger _logger;
 
     public PacketRouter(ClassFactory classFactory, ILogger logger)
@@ -37,7 +37,7 @@ public class PacketRouter
                     scopeDictionary[attribute.Id] = methodList;
                 }
 
-                methodList.Add((method, attribute));
+                methodList.Add((method, attribute, handler));
             }
         }
         _logger = logger;
@@ -59,7 +59,7 @@ public class PacketRouter
         {
             if (method.Item2.DirectReader)
             {
-                _ = method.Item1.Invoke(null, new object[] { socket, packetId, packetBuffer });
+                _ = method.Item1.Invoke(method.Item3, new object[] { socket, packetId, packetBuffer });
                 return true;
             }
         }
@@ -85,7 +85,7 @@ public class PacketRouter
         {
             if (method.Item2.DirectReader)
             {
-                _ = method.Item1.Invoke(null, new object[] { socket, packetId, new PacketBuffer(packetBuffer, _logger) });
+                _ = method.Item1.Invoke(method.Item3, new object[] { socket, packetId, new PacketBuffer(packetBuffer, _logger) });
                 evented = true;
             }
         }
@@ -112,7 +112,7 @@ public class PacketRouter
 
         foreach (var method in methodList)
         {
-            _ = method.Item1.Invoke(null, new object[] { socket, packet });
+            _ = method.Item1.Invoke(method.Item3, new object[] { socket, packet });
         }
     }
 
@@ -135,7 +135,7 @@ public class PacketRouter
 
         foreach (var method in methodList)
         {
-            _ = method.Item1.Invoke(null, new object[] { session, packet });
+            _ = method.Item1.Invoke(method.Item3, new object[] { session, packet });
         }
     }
 }

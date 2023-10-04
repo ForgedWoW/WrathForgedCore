@@ -5,10 +5,6 @@ namespace WrathForged.Models.Auth.Enum
 {
     public enum ClientType
     {
-        Test = 0,
-        Beta = 1,
-        Normal = 2,
-        Installing = 3,
-        Invalid = 4
+        WoW = 1
     }
 }

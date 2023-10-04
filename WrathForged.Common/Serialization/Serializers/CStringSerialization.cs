@@ -14,7 +14,7 @@ public class CStringSerialization : IForgedTypeSerialization
     public object? Deserialize(PacketBuffer packetBuffer, PropertyMeta propertyMeta, Dictionary<uint, int> collectionSizes)
     {
         _ = packetBuffer.GetCollectionSize(propertyMeta, collectionSizes);
-        var text = packetBuffer.Reader.ReadCString();
+        var text = packetBuffer.Reader.ReadCString().TrimEnd('\0');
 
         if (propertyMeta.SerializationMetadata.Flags.HasFlag(SerializationFlags.ReversedString))
         {

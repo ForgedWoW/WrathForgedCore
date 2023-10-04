@@ -29,8 +29,8 @@ namespace WrathForged.Models.Auth
         /// <summary>
         ///     Game the client is for.
         /// </summary>
-        [SerializableProperty(2, OverrideType = ForgedTypeCode.FourCCString, FixedCollectionSize = 4)]
-        public string ClientType { get; set; }
+        [SerializableProperty(2, OverrideType = ForgedTypeCode.FourCCString)]
+        public ClientType ClientType { get; set; }
 
         /// <summary>
         ///     Indicates the Major patch version (Ex. 3.x.x.x)
@@ -54,25 +54,25 @@ namespace WrathForged.Models.Auth
         ///     Indicates the Build patch version (Ex. x.x.x.12340)
         /// </summary>
         [SerializableProperty(6)]
-        public byte Build { get; set; }
+        public short Build { get; set; }
 
         /// <summary>
         ///     Indicates the platform/arc (Ex. 32bit or 64bit)
         /// </summary>
         [SerializableProperty(7, OverrideType = ForgedTypeCode.FourCCString)]
-        public string Architecture { get; set; }
+        public ProcessorArchitecture Architecture { get; set; }
 
         /// <summary>
         ///     Indicates the operating system the client is running on (Ex. Win or Mac)
         /// </summary>
         [SerializableProperty(8, OverrideType = ForgedTypeCode.FourCCString)]
-        public string OperatingSystem { get; set; }
+        public OperatingSystemType OperatingSystem { get; set; }
 
         /// <summary>
         ///     Indicates the Locale of the client. (Ex. En-US)
         /// </summary>
         [SerializableProperty(9, OverrideType = ForgedTypeCode.FourCCString)]
-        public string Locale { get; set; }
+        public ClientLocale Locale { get; set; }
 
         [SerializableProperty(10)]
         public uint TimeZoneBias { get; set; }
@@ -83,7 +83,7 @@ namespace WrathForged.Models.Auth
         /// <summary>
         ///     Could be Username or maybe Email.
         /// </summary>
-        [SerializableProperty(12)]
+        [SerializableProperty(12, CollectionSizeLengthType = TypeCode.Byte)]
         public string Identity { get; set; }
     }
 }
