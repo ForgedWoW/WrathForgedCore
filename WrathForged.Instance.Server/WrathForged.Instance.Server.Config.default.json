@@ -9,7 +9,8 @@
   },
   "Database": {
     "SlidingCacheTimeout_Hours": 2,
-    "SQLDir": ".\\sql"
+    "SQLDir": ".\\sql",
+    "UpdateEnabled": "true"
   },
   "ForgedServerComm": {
     "Port": 8783,

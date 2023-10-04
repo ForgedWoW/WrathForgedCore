@@ -36,6 +36,11 @@ namespace WrathForged.Database.Updates
 
         public void Update()
         {
+            var updateEnabled = GetDefaultValue(_configuration, "Database:UpdateEnabled", true);
+
+            if (!updateEnabled)
+                return;
+
             var startTime = DateTime.UtcNow;
             if (IsDatabaseConnected(_worldDatabase))
                 UpdateWorld();
