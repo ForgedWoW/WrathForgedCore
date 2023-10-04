@@ -36,6 +36,7 @@ namespace WrathForged.Database.Updates
 
         public void Update()
         {
+            var startTime = DateTime.UtcNow;
             if (IsDatabaseConnected(_worldDatabase))
                 UpdateWorld();
 
@@ -47,27 +48,34 @@ namespace WrathForged.Database.Updates
 
             if (IsDatabaseConnected(_dBCDatabase))
                 UpdateDBC();
+
+            _logger.Information("Database updates completed in {0}.", (DateTime.UtcNow - startTime).ToReadableString());
         }
 
-        private static bool IsDatabaseConnected(DbContext context)
+        private bool IsDatabaseConnected(DbContext context)
         {
+            var startTime = DateTime.UtcNow;
+            _logger.Information("Checking if {0} database is connected.", context.Database.GetDbConnection().Database);
             try
             {
                 context.Database.GetDbConnection().Open();
+                _logger.Information("{0} database is connected in {1}.", context.Database.GetDbConnection().Database, (DateTime.UtcNow - startTime).ToReadableString());
                 return true;
             }
             catch
             {
+                _logger.Warning("{0} database is not connected in {1}.", context.Database.GetDbConnection().Database, (DateTime.UtcNow - startTime).ToReadableString());
                 return false;
             }
         }
 
         private void UpdateWorld()
         {
+            var startTime = DateTime.UtcNow;
             var updates = new SQLUpdates()
             {
-                Updates = _worldDatabase.Updates.ToList(),
-                UpdatesIncludes = _worldDatabase.UpdatesIncludes.ToList()
+                Updates = [.. _worldDatabase.Updates],
+                UpdatesIncludes = [.. _worldDatabase.UpdatesIncludes]
             };
 
             updates = Update(updates, WORLD_DATABASE, _worldDatabase);
@@ -80,14 +88,17 @@ namespace WrathForged.Database.Updates
 
             if (updates.Updates != null || updates.UpdatesIncludes != null)
                 _ = _worldDatabase.SaveChanges();
+
+            _logger.Information("World updates completed in {0}.", (DateTime.UtcNow - startTime).ToReadableString());
         }
 
         private void UpdateCharacters()
         {
+            var startTime = DateTime.UtcNow;
             var updates = new SQLUpdates()
             {
-                Updates = _characterDatabase.Updates.ToList(),
-                UpdatesIncludes = _characterDatabase.UpdatesIncludes.ToList()
+                Updates = [.. _characterDatabase.Updates],
+                UpdatesIncludes = [.. _characterDatabase.UpdatesIncludes]
             };
 
             updates = Update(updates, CHARACTER_DATABASE, _characterDatabase);
@@ -100,14 +111,17 @@ namespace WrathForged.Database.Updates
 
             if (updates.Updates != null || updates.UpdatesIncludes != null)
                 _ = _characterDatabase.SaveChanges();
+
+            _logger.Information("Character updates completed in {0}.", (DateTime.UtcNow - startTime).ToReadableString());
         }
 
         private void UpdateAuth()
         {
+            var startTime = DateTime.UtcNow;
             var updates = new SQLUpdates()
             {
-                Updates = _authDatabase.Updates.ToList(),
-                UpdatesIncludes = _authDatabase.UpdatesIncludes.ToList()
+                Updates = [.. _authDatabase.Updates],
+                UpdatesIncludes = [.. _authDatabase.UpdatesIncludes]
             };
 
             updates = Update(updates, AUTH_DATABASE, _authDatabase);
@@ -120,14 +134,17 @@ namespace WrathForged.Database.Updates
 
             if (updates.Updates != null || updates.UpdatesIncludes != null)
                 _ = _authDatabase.SaveChanges();
+
+            _logger.Information("Auth updates completed in {0}.", (DateTime.UtcNow - startTime).ToReadableString());
         }
 
         private void UpdateDBC()
         {
+            var startTime = DateTime.UtcNow;
             var updates = new SQLUpdates()
             {
-                Updates = _dBCDatabase.Updates.ToList(),
-                UpdatesIncludes = _dBCDatabase.UpdatesIncludes.ToList()
+                Updates = [.. _dBCDatabase.Updates],
+                UpdatesIncludes = [.. _dBCDatabase.UpdatesIncludes]
             };
 
             updates = Update(updates, DBC_DATABASE, _dBCDatabase);
@@ -140,6 +157,8 @@ namespace WrathForged.Database.Updates
 
             if (updates.Updates != null || updates.UpdatesIncludes != null)
                 _ = _dBCDatabase.SaveChanges();
+
+            _logger.Information("DBC updates completed in {0}.", (DateTime.UtcNow - startTime).ToReadableString());
         }
 
         private SQLUpdates Update(SQLUpdates updates, string dbName, DbContext dbContext)

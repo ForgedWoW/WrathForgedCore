@@ -6,18 +6,15 @@ using WrathForged.Serialization.Models;
 
 namespace WrathForged.Common.Serialization.Serializers;
 
-public class StringSerialization : IForgedTypeSerialization
+public class FourCCStringSerialization : IForgedTypeSerialization
 {
-    public HashSet<Type> SupportedTypes { get; } = new HashSet<Type>()
-    {
-        typeof(string)
-    };
-    public HashSet<ForgedTypeCode> SupportedForgedTypeCodes { get; } = new HashSet<ForgedTypeCode>();
+    public HashSet<Type> SupportedTypes { get; } = new HashSet<Type>();
+    public HashSet<ForgedTypeCode> SupportedForgedTypeCodes { get; } = new HashSet<ForgedTypeCode>() { ForgedTypeCode.FourCCString };
 
     public object? Deserialize(PacketBuffer packetBuffer, PropertyMeta propertyMeta, Dictionary<uint, int> collectionSizes)
     {
-        var length = packetBuffer.GetCollectionSize(propertyMeta, collectionSizes);
-        var text = PrimitiveWriter.DefaultEncoding.GetString(packetBuffer.Reader.ReadBytes(length)).TrimEnd('\0');
+        _ = packetBuffer.GetCollectionSize(propertyMeta, collectionSizes);
+        var text = packetBuffer.Reader.ReadFourCC();
 
         if (propertyMeta.SerializationMetadata.Flags.HasFlag(SerializationFlags.ReversedString))
         {
@@ -41,7 +38,6 @@ public class StringSerialization : IForgedTypeSerialization
             text = new string(charArray);
         }
 
-        var bytes = PrimitiveWriter.DefaultEncoding.GetBytes(text);
-        writer.Write(bytes);
+        writer.WriteCString(text);
     }
 }

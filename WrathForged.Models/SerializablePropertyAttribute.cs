@@ -44,7 +44,7 @@ namespace WrathForged.Models
 
         /// <summary>
         ///     If the value of the property index is default value then this property will not be
-        ///     serialized and sent to the stream. The index must apper before this property in the
+        ///     serialized and sent to the stream. The index must appear before this property in the
         ///     serialized stream.
         /// </summary>
         public uint DontSerializeWhenIndexIsDefaultValue { get; set; } = uint.MaxValue;

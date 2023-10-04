@@ -28,7 +28,7 @@ namespace WrathForged.Authorization.Server.Services
         [PacketRoute(PacketScope.ClientToAuth, AuthServerOpCode.AUTH_LOGON_CHALLENGE)]
         public void ChallengeRequest(WoWClientSession session, AuthLogonChallengeRequest authLogonChallenge)
         {
-            _logger.Debug("Login challange request from {Address}", session.Network.ClientSocket.IPEndPoint.Address.ToString());
+            _logger.Debug("Login challenge request from {Address}", session.Network.ClientSocket.IPEndPoint.Address.ToString());
             using var authDatabase = _classFactory.Resolve<AuthDatabase>();
 
             var account = authDatabase.Accounts.FirstOrDefault(x => x.Username == authLogonChallenge.Identity || x.RegMail == authLogonChallenge.Identity);
@@ -81,7 +81,7 @@ namespace WrathForged.Authorization.Server.Services
             session.Security.Account = account;
             session.Security.SessionKey = _randomUtilities.RandomBytes(16);
 
-            account.Locale = (byte)authLogonChallenge.Locale;
+            account.Locale = (byte)Enum.Parse(typeof(ClientLocale), authLogonChallenge.Locale, true);
             account.Os = authLogonChallenge.Architecture.ToString();
             account.SessionKeyAuth = session.Security.SessionKey;
             account.Expansion = (byte)authLogonChallenge.Major;

@@ -9,6 +9,7 @@ using WrathForged.Common;
 using WrathForged.Common.CommandLine;
 using WrathForged.Common.Networking;
 using WrathForged.Database;
+using WrathForged.Models;
 using WrathForged.Serialization.Models;
 
 var initializationStart = DateTime.UtcNow;
@@ -25,6 +26,7 @@ container.Configure(c =>
     _ = c.RegisterCommon(configuration);
     _ = c.RegisterDatabase(configuration, Log.Logger);
     _ = c.RegisterAuth();
+    ModelsDependencyInjection.RegisterModels(); // do not remove this. it allows Models to be reflected on. c# does not load assemblies unless they are used.
 });
 
 container.InitializeCommon();

@@ -30,7 +30,7 @@ namespace WrathForged.Models.Auth
         ///     Game the client is for.
         /// </summary>
         [SerializableProperty(2, OverrideType = ForgedTypeCode.FourCCString, FixedCollectionSize = 4)]
-        public ClientType ClientType { get; set; }
+        public string ClientType { get; set; }
 
         /// <summary>
         ///     Indicates the Major patch version (Ex. 3.x.x.x)
@@ -60,19 +60,19 @@ namespace WrathForged.Models.Auth
         ///     Indicates the platform/arc (Ex. 32bit or 64bit)
         /// </summary>
         [SerializableProperty(7, OverrideType = ForgedTypeCode.FourCCString)]
-        public ProcessorArchitecture Architecture { get; set; }
+        public string Architecture { get; set; }
 
         /// <summary>
         ///     Indicates the operating system the client is running on (Ex. Win or Mac)
         /// </summary>
         [SerializableProperty(8, OverrideType = ForgedTypeCode.FourCCString)]
-        public OperatingSystemType OperatingSystem { get; set; }
+        public string OperatingSystem { get; set; }
 
         /// <summary>
         ///     Indicates the Locale of the client. (Ex. En-US)
         /// </summary>
         [SerializableProperty(9, OverrideType = ForgedTypeCode.FourCCString)]
-        public ClientLocale Locale { get; set; }
+        public string Locale { get; set; }
 
         [SerializableProperty(10)]
         public uint TimeZoneBias { get; set; }

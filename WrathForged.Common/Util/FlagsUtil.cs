@@ -16,7 +16,7 @@ public static class FlagsUtil
             GetSetIndices(indices, flags);
         }
 
-        return indices.ToArray();
+        return [.. indices];
     }
 
     public static uint Sum(this IEnumerable<uint> arr) => arr.Aggregate(0u, (current, n) => current + n);
@@ -29,7 +29,7 @@ public static class FlagsUtil
     {
         var indices = new List<uint>();
         GetSetIndices(indices, flags);
-        return indices.ToArray();
+        return [.. indices];
     }
 
     public static T[] GetSetIndicesEnum<T>(T flags) where T : Enum
@@ -87,6 +87,6 @@ public static class FlagsUtil
             }
         }
 
-        return indices.ToArray();
+        return [.. indices];
     }
 }

@@ -27,6 +27,7 @@ public class ClientSocket
         _logger = logger;
         _actionBlock = actionBlock;
         _client.ReceiveBufferSize = 0x4000;
+        _client.LingerState = new LingerOption(true, 0);
 
         if (_client.Client.RemoteEndPoint is IPEndPoint iPEndPoint)
         {

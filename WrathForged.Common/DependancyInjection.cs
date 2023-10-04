@@ -19,6 +19,7 @@ using WrathForged.Common.Scripting.Interfaces.CoreEvents;
 using WrathForged.Common.Serialization;
 using WrathForged.Common.Threading;
 using WrathForged.Database;
+using WrathForged.Serialization.Models;
 
 namespace WrathForged.Common;
 
@@ -26,6 +27,7 @@ public static class DependencyInjection
 {
     public static IExportRegistrationBlock RegisterCommon(this IExportRegistrationBlock builder, IConfiguration configuration)
     {
+        var startTime = DateTime.UtcNow;
         Console.ForegroundColor = ConsoleColor.DarkRed;
         Console.WriteLine(@"```````````````````````````````````````````````````````````````````````````````````````");
         Console.WriteLine(@"███████╗ ██████╗ ██████╗  ██████╗ ███████╗██████╗      ██████╗ ██████╗ ██████╗ ███████╗");
@@ -109,11 +111,13 @@ public static class DependencyInjection
             Log.Logger.Warning("Telemetry is not configured or there was an error setting it up. Please configure it in the appsettings.json file.");
         }
 
+        Log.Logger.Information("WrathForged.Common initialized in {InitializationTime}.", (DateTime.UtcNow - startTime).ToReadableString());
         return builder;
     }
 
     public static DependencyInjectionContainer InitializeCommon(this DependencyInjectionContainer container)
     {
+        var startTime = DateTime.UtcNow;
         var cf = container.Locate<ClassFactory>();
         cf.SetContainer(container);
         container.InitializeDatabase();
@@ -135,6 +139,8 @@ public static class DependencyInjection
             f.OnServerInitialize();
 
         ConfigExtensionMethods.AddConverter(cf.ResolveAll<IConvertConfigValue>());
+
+        container.Locate<ILogger>().Information("WrathForged.Common initialized in {InitializationTime}.", (DateTime.UtcNow - startTime).ToReadableString());
 
         return container;
     }

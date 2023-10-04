@@ -55,7 +55,7 @@ namespace WrathForged.Instance.Server.Services
                 }                       
             }
 
-            InstanceServer.MapIDs = mapInfos.Values.ToList();
+            InstanceServer.MapIDs = [.. mapInfos.Values];
 
             ClientConnection = classFactory.Container.Locate<ForgedTCPClient>(new
             {

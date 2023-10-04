@@ -71,7 +71,7 @@ public class PrimitiveReader(MemoryStream memoryStream, ILogger logger) : Binary
             chrBuffer.Add(tempByte);
         }
 
-        var stringChrs = DefaultEncoding.GetChars(chrBuffer.ToArray());
+        var stringChrs = DefaultEncoding.GetChars([.. chrBuffer]);
         _ = stringChrs.Reverse();
 
         return new string(stringChrs);

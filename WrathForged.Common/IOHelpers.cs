@@ -76,6 +76,7 @@ public static class IOHelpers
             assemblies.AddRange(dlls.Select(dll => Assembly.LoadFile(dll.FullName)));
         }
 
+
         assemblies.AddRange(AppDomain.CurrentDomain.GetAssemblies().Where(a => a.GetName()?.Name?.Contains("WrathForged") == true));
 
         return assemblies;
@@ -83,8 +84,8 @@ public static class IOHelpers
 
     public static IEnumerable<T> GetAllObjectsThatUseInterface<T>(this Assembly assembly)
     {
-        var interf = typeof(T);
-        var types = assembly.GetTypes().Where(t => DoesTypeSupportInterface(t, interf));
+        var interF = typeof(T);
+        var types = assembly.GetTypes().Where(t => DoesTypeSupportInterface(t, interF));
 
         foreach (var type in types)
         {

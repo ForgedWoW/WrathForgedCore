@@ -11,6 +11,7 @@ using WrathForged.Database.Models.Characters;
 using WrathForged.Database.Models.DBC;
 using WrathForged.Database.Models.World;
 using WrathForged.Database.Updates;
+using WrathForged.Serialization.Models;
 using Z.EntityFramework.Plus;
 
 namespace WrathForged.Database
@@ -19,6 +20,7 @@ namespace WrathForged.Database
     {
         public static IExportRegistrationBlock RegisterDatabase(this IExportRegistrationBlock builder, IConfiguration configuration, Serilog.ILogger logger)
         {
+            var startTime = DateTime.UtcNow;
             var loggerFactory = new LoggerFactory().AddSerilog(logger);
 
             _ = builder.Export<AuthDatabase>()
@@ -56,6 +58,7 @@ namespace WrathForged.Database
 
             _ = builder.Export<DatabaseUpdater>().Lifestyle.Singleton();
 
+            logger.Information("WrathForged.Database registered in {InitializationTime}.", (DateTime.UtcNow - startTime).ToReadableString());
             return builder;
         }
 

@@ -133,12 +133,12 @@ public class ScriptLoader(ClassFactory classFactory, ILogger logger, IConfigurat
     public List<Type> GetAllInterfacesThatUseInterface<T>()
     {
         var types = new List<Type>();
-        var interf = typeof(T);
+        var interF = typeof(T);
         foreach (var assembly in Assemblies)
         {
             foreach (var type in assembly.GetTypes())
             {
-                if (type.IsInterface && IOHelpers.DoesTypeSupportInterface(type, typeof(T)) && type != interf)
+                if (type.IsInterface && IOHelpers.DoesTypeSupportInterface(type, typeof(T)) && type != interF)
                     types.Add(type);
             }
         }
@@ -184,7 +184,7 @@ public class ScriptLoader(ClassFactory classFactory, ILogger logger, IConfigurat
     ///     Searches registered assemblies for all types that use the interface as a base and registers them to the <see cref="ClassFactory" /> container
     /// </summary>
     /// <typeparam name="T"></typeparam>
-    public void RegisterAllTypesThatUseBaseInterface<T>() => RegisterAllObjectsWithInterfaces(GetAllInterfacesThatUseInterface<T>().ToArray());
+    public void RegisterAllTypesThatUseBaseInterface<T>() => RegisterAllObjectsWithInterfaces([.. GetAllInterfacesThatUseInterface<T>()]);
 
     /// <summary>
     ///     Registers all interfaces to the <see cref="ClassFactory" /> container
@@ -194,14 +194,14 @@ public class ScriptLoader(ClassFactory classFactory, ILogger logger, IConfigurat
     {
         _classFactory.Container.Configure(c =>
         {
-            foreach (var iface in interfaces)
+            foreach (var iFace in interfaces)
             {
                 foreach (var assembly in Assemblies)
                 {
                     foreach (var t in assembly.GetTypes())
                     {
-                        if (t.IsClass && IOHelpers.DoesTypeSupportInterface(t, iface))
-                            _ = c.Export(t).As(iface);
+                        if (t.IsClass && IOHelpers.DoesTypeSupportInterface(t, iFace))
+                            _ = c.Export(t).As(iFace);
                     }
                 }
             }

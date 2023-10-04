@@ -188,14 +188,12 @@ public class ForgedModelSerializer
                                    (prop.ReflectedProperty.PropertyType.IsGenericType && prop.ReflectedProperty.PropertyType.GetGenericTypeDefinition() == typeof(HashSet<>));
 
                 var result = isCollection ? DeserializeCollection(buffer, prop, collectionSizes)
-                                 : prop.ReflectedProperty.PropertyType.IsEnum
+                                 : prop.ReflectedProperty.PropertyType.IsEnum && !IsStringEnum(prop)
                                      ? _forgedTypeCodeSerializers[ForgedTypeCode.Enum].Deserialize(buffer, prop, collectionSizes)
                                      : DeserializeProperty(buffer, prop, collectionSizes);
 
-                result = EvaluateSpecialCasting(prop, result);
-
                 if (result != null)
-                    prop.ReflectedProperty.SetValue(instance, result);
+                    prop.ReflectedProperty.SetValue(instance, EvaluateSpecialCasting(prop, result));
             }
 
             packet = instance;
@@ -245,14 +243,12 @@ public class ForgedModelSerializer
                                    (prop.ReflectedProperty.PropertyType.IsGenericType && prop.ReflectedProperty.PropertyType.GetGenericTypeDefinition() == typeof(HashSet<>));
 
                 var result = isCollection ? DeserializeCollection(buffer, prop, collectionSizes)
-                                 : prop.ReflectedProperty.PropertyType.IsEnum
+                                 : prop.ReflectedProperty.PropertyType.IsEnum && !IsStringEnum(prop)
                                      ? _forgedTypeCodeSerializers[ForgedTypeCode.Enum].Deserialize(buffer, prop, collectionSizes)
                                      : DeserializeProperty(buffer, prop, collectionSizes);
 
-                result = EvaluateSpecialCasting(prop, result);
-
                 if (result != null)
-                    prop.ReflectedProperty.SetValue(instance, result);
+                    prop.ReflectedProperty.SetValue(instance, EvaluateSpecialCasting(prop, result));
             }
 
             packet = instance ?? default!;
@@ -261,7 +257,7 @@ public class ForgedModelSerializer
         }
         catch (Exception ex)
         {
-            _logger.Error(ex, "Failed to deserialize packet {PacketId} for scope {Scope}", packetId, scope);
+            _logger.Error(ex, "Failed to deserialize packet {Name} {PacketId} for scope {Scope}", deserializationDefinition.Item1.Name, packetId, scope);
         }
 
         packet = default!;
@@ -349,15 +345,20 @@ public class ForgedModelSerializer
             return null;
 
         // check of its a enum we need to parse its value from a string.
-        return prop.ReflectedProperty.PropertyType.IsEnum &&
-               (prop.SerializationMetadata.OverrideType is ForgedTypeCode.String or
-                                                           ForgedTypeCode.ASCIIString or
-                                                           ForgedTypeCode.CString or
-                                                           ForgedTypeCode.PascalString or
-                                                           ForgedTypeCode.FourCCString) &&
+        return IsStringEnum(prop) &&
                Enum.TryParse(prop.ReflectedProperty.PropertyType, (string)val, true, out var result) &&
                result != null
                    ? result
                    : val;
+    }
+
+    private static bool IsStringEnum(PropertyMeta prop)
+    {
+        return prop.ReflectedProperty.PropertyType.IsEnum &&
+                       (prop.SerializationMetadata.OverrideType is ForgedTypeCode.String or
+                                                                   ForgedTypeCode.ASCIIString or
+                                                                   ForgedTypeCode.CString or
+                                                                   ForgedTypeCode.PascalString or
+                                                                   ForgedTypeCode.FourCCString);
     }
 }

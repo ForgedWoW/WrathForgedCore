@@ -30,18 +30,27 @@ public class EnumSerialization : IForgedTypeSerialization
                 typeToUse = ForgedTypeCode.Int32;
         }
 
-        return typeToUse switch
+        object value = typeToUse switch
         {
-            ForgedTypeCode.Byte   => Convert.ChangeType(packetBuffer.Reader.ReadByte(), propertyMeta.ReflectedProperty.PropertyType),
-            ForgedTypeCode.SByte  => Convert.ChangeType(packetBuffer.Reader.ReadSByte(), propertyMeta.ReflectedProperty.PropertyType),
-            ForgedTypeCode.Int16  => Convert.ChangeType(packetBuffer.Reader.ReadInt16(), propertyMeta.ReflectedProperty.PropertyType),
-            ForgedTypeCode.UInt16 => Convert.ChangeType(packetBuffer.Reader.ReadUInt16(), propertyMeta.ReflectedProperty.PropertyType),
-            ForgedTypeCode.Int32  => Convert.ChangeType(packetBuffer.Reader.ReadInt32(), propertyMeta.ReflectedProperty.PropertyType),
-            ForgedTypeCode.UInt32 => Convert.ChangeType(packetBuffer.Reader.ReadUInt32(), propertyMeta.ReflectedProperty.PropertyType),
-            ForgedTypeCode.Int64  => Convert.ChangeType(packetBuffer.Reader.ReadInt64(), propertyMeta.ReflectedProperty.PropertyType),
-            ForgedTypeCode.UInt64 => Convert.ChangeType(packetBuffer.Reader.ReadUInt64(), propertyMeta.ReflectedProperty.PropertyType),
-            _                     => Convert.ChangeType(packetBuffer.Reader.ReadInt32(), propertyMeta.ReflectedProperty.PropertyType),
+            ForgedTypeCode.Byte => packetBuffer.Reader.ReadByte(),
+            ForgedTypeCode.SByte => packetBuffer.Reader.ReadSByte(),
+            ForgedTypeCode.Int16 => packetBuffer.Reader.ReadInt16(),
+            ForgedTypeCode.UInt16 => packetBuffer.Reader.ReadUInt16(),
+            ForgedTypeCode.Int32 => packetBuffer.Reader.ReadInt32(),
+            ForgedTypeCode.UInt32 => packetBuffer.Reader.ReadUInt32(),
+            ForgedTypeCode.Int64 => packetBuffer.Reader.ReadInt64(),
+            ForgedTypeCode.UInt64 => packetBuffer.Reader.ReadUInt64(),
+            _ => packetBuffer.Reader.ReadInt32(),
         };
+
+        if (propertyMeta.ReflectedProperty.PropertyType.IsEnum)
+        {
+            return Enum.ToObject(propertyMeta.ReflectedProperty.PropertyType, value);
+        }
+        else
+        {
+            return Convert.ChangeType(value, propertyMeta.ReflectedProperty.PropertyType);
+        }
     }
 
     public void Serialize(PrimitiveWriter writer, PropertyMeta propertyMeta, List<PropertyMeta> otherMeta, object obj, object? val)
