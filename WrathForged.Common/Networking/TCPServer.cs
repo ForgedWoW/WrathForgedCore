@@ -44,7 +44,7 @@ public class TCPServer
 
         _tcpListener = new TcpListener(bindIp, port);
         _tcpListener.Start();
-        _ = _tcpListener.BeginAcceptTcpClient(OnAccept, _tcpListener);
+        Task.Run(ListenForConnections);
         _logger.Information("Listening for TCP connections on {BindIP}:{Port}", bindIp, port);
     }
 
@@ -81,93 +81,86 @@ public class TCPServer
     private void SetupTPL()
     {
         _dataProcessingBlock = new ActionBlock<DataReceivedEventArgs>(
-                                                                      data =>
-                                                                      {
-                                                                          if (data.EventHandler == null)
-                                                                          {
-                                                                              return;
-                                                                          }
+                                data =>
+                                {
+                                    if (data.EventHandler == null)
+                                    {
+                                        return;
+                                    }
 
-                                                                          foreach (var handler in data.EventHandler.GetInvocationList().Cast<EventHandler<DataReceivedEventArgs>>())
-                                                                          {
-                                                                              try
-                                                                              {
-                                                                                  handler?.Invoke(this, data);
-                                                                              }
-                                                                              catch (Exception ex)
-                                                                              {
-                                                                                  _logger.Error(ex, "Error processing data from client");
-                                                                              }
-                                                                          }
-                                                                      },
-                                                                      new ExecutionDataflowBlockOptions
-                                                                      {
-                                                                          MaxDegreeOfParallelism = _configuration.GetDefaultValue("ClientTCPServer:Threads", 20), // Limit the number of concurrent operations
-                                                                          CancellationToken = _programExit.GetCancellationToken(),
-                                                                          EnsureOrdered = true,
-                                                                          NameFormat = "ClientTCPServer Data Processing Thread {1}"
-                                                                      });
+                                    foreach (var handler in data.EventHandler.GetInvocationList().Cast<EventHandler<DataReceivedEventArgs>>())
+                                    {
+                                        try
+                                        {
+                                            handler?.Invoke(this, data);
+                                        }
+                                        catch (Exception ex)
+                                        {
+                                            _logger.Error(ex, "Error processing data from client");
+                                        }
+                                    }
+                                },
+                                new ExecutionDataflowBlockOptions
+                                {
+                                    MaxDegreeOfParallelism = _configuration.GetDefaultValue("ClientTCPServer:Threads", 20), // Limit the number of concurrent operations
+                                    CancellationToken = _programExit.GetCancellationToken(),
+                                    EnsureOrdered = true,
+                                    NameFormat = "ClientTCPServer Data Processing Thread {1}"
+                                });
 
         _connectionProcessingBlock = new ActionBlock<ClientConnectionChangeEvent>(
-                                                                                  data =>
-                                                                                  {
-                                                                                      if (data.EventHandler == null)
-                                                                                      {
-                                                                                          return;
-                                                                                      }
+                                    data =>
+                                    {
+                                        if (data.EventHandler == null)
+                                        {
+                                            return;
+                                        }
 
-                                                                                      foreach (var handler in data.EventHandler.GetInvocationList().Cast<EventHandler<ClientSocket>>())
-                                                                                      {
-                                                                                          try
-                                                                                          {
-                                                                                              handler?.Invoke(this, data.Client);
-                                                                                          }
-                                                                                          catch (Exception ex)
-                                                                                          {
-                                                                                              _logger.Error(ex, "Error connection change of client");
-                                                                                          }
-                                                                                      }
-                                                                                  },
-                                                                                  new ExecutionDataflowBlockOptions
-                                                                                  {
-                                                                                      MaxDegreeOfParallelism = _configuration.GetDefaultValue("ClientTCPServer:Threads", 20), // Limit the number of concurrent operations
-                                                                                      CancellationToken = _programExit.GetCancellationToken(),
-                                                                                      EnsureOrdered = true,
-                                                                                      NameFormat = "Client Connection Change Thread {1}"
-                                                                                  });
+                                        foreach (var handler in data.EventHandler.GetInvocationList().Cast<EventHandler<ClientSocket>>())
+                                        {
+                                            try
+                                            {
+                                                handler?.Invoke(this, data.Client);
+                                            }
+                                            catch (Exception ex)
+                                            {
+                                                _logger.Error(ex, "Error connection change of client");
+                                            }
+                                        }
+                                    },
+                                    new ExecutionDataflowBlockOptions
+                                    {
+                                        MaxDegreeOfParallelism = _configuration.GetDefaultValue("ClientTCPServer:Threads", 20), // Limit the number of concurrent operations
+                                        CancellationToken = _programExit.GetCancellationToken(),
+                                        EnsureOrdered = true,
+                                        NameFormat = "Client Connection Change Thread {1}"
+                                    });
     }
 
-    private void OnAccept(IAsyncResult ar)
+    private void ListenForConnections()
     {
-        if (_programExit.IsExiting)
+        while (!_programExit.IsExiting)
         {
-            return;
-        }
-
-        _ = _tcpListener.BeginAcceptTcpClient(OnAccept, _tcpListener);
-        try
-        {
-            var client = _tcpListener.EndAcceptTcpClient(ar);
-
-            if (client == null || !client.Connected)
+            try
             {
-                return;
+                var client = _tcpListener.AcceptTcpClient();
+
+                if (client == null || !client.Connected)
+                    continue;
+
+                _logger.Debug("TCP Listener: Client connected from {Address}", client.Client.RemoteEndPoint);
+                var clientSocket = new ClientSocket(client, _logger, _dataProcessingBlock);
+                clientSocket.OnDisconnect += (sender, args) => RemoveClient(clientSocket);
+
+                lock (_clients)
+                    _clients.Add(clientSocket);
+
+                _ = _connectionProcessingBlock.Post(new ClientConnectionChangeEvent(clientSocket, OnClientConnected));
             }
-
-            _logger.Debug("TCP Listener: Client connected from {Address}", client.Client.RemoteEndPoint);
-            var clientSocket = new ClientSocket(client, _logger, _dataProcessingBlock);
-            clientSocket.OnDisconnect += (sender, args) => RemoveClient(clientSocket);
-
-            lock (_clients)
+            catch (Exception ex)
             {
-                _clients.Add(clientSocket);
+                _logger.Error(ex, "Error accepting client");
             }
-
-            _ = _connectionProcessingBlock.Post(new ClientConnectionChangeEvent(clientSocket, OnClientConnected));
-        }
-        catch (Exception ex)
-        {
-            _logger.Error(ex, "Error accepting client");
         }
     }
 }
