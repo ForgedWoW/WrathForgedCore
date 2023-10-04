@@ -78,16 +78,16 @@ public class ForgedCommServer
         e.OnDisconnect += Disconnected;
     }
 
-    private void Disconnected(object? sender, EventArgs e)
+    private void Disconnected(object? sender, ClientSocket e)
     {
         if (sender is not ClientSocket clientSocket)
             return;
 
         // Remove the buffer associated with the disconnected client
-        if (!_packetBuffers.ContainsKey(clientSocket))
+        if (!_packetBuffers.TryGetValue(clientSocket, out var value))
             return;
 
-        _packetBuffers[clientSocket].Dispose();
+        value.Dispose();
         _ = _packetBuffers.Remove(clientSocket);
     }
 

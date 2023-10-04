@@ -4,7 +4,6 @@
 using System.Net;
 using System.Net.Sockets;
 using System.Threading.Tasks.Dataflow;
-using Microsoft.Extensions.Configuration;
 using Serilog;
 using WrathForged.Common.Serialization;
 using WrathForged.Models;
@@ -32,7 +31,7 @@ public class ForgedTCPClient
     private bool _loggedDisconnect;
 
     public ForgedTCPClient(string bindIP, string address, int port, ILogger logger, ProgramExitNotifier programExitNotifier,
-                           IConfiguration configuration, ForgedModelSerializer forgedModelDeserialization, PacketRouter packetRouter)
+                            ForgedModelSerializer forgedModelDeserialization, PacketRouter packetRouter)
     {
         _address = address;
         _port = port;

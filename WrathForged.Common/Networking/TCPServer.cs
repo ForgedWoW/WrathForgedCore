@@ -63,7 +63,7 @@ public class TCPServer
 
         lock (_clients)
         {
-            foreach (var client in _clients)
+            foreach (var client in _clients.ToList()) // avoid modifying the collection while iterating
             {
                 client.Disconnect();
             }
@@ -80,6 +80,8 @@ public class TCPServer
         {
             _ = _clients.Remove(clientSocket);
         }
+
+        _logger.Debug("Client removed from TCPServer from {Address}", clientSocket.IPEndPoint.Address.ToString());
 
         _ = _connectionProcessingBlock.Post(new ClientConnectionChangeEvent(clientSocket, OnClientDisconnected, ConnectionState.Disconnected));
     }
@@ -160,7 +162,7 @@ public class TCPServer
 
                 _logger.Debug("TCP Listener: Client connected from {Address}", client.Client.RemoteEndPoint);
                 var clientSocket = new ClientSocket(client, _logger, _dataProcessingBlock);
-                clientSocket.OnDisconnect += (sender, args) => RemoveClient(clientSocket);
+                clientSocket.OnDisconnect += (sender, args) => RemoveClient(args);
 
                 lock (_clients)
                     _clients.Add(clientSocket);

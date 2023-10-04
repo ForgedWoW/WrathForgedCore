@@ -95,7 +95,7 @@ public class WoWClientServer
         _connectionCounter.Add(1);
     }
 
-    private void Disconnected(object? sender, EventArgs e)
+    private void Disconnected(object? sender, ClientSocket e)
     {
         if (sender is not ClientSocket clientSocket)
             return;

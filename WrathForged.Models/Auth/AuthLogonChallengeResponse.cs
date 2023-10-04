@@ -6,7 +6,7 @@ using WrathForged.Serialization.Models;
 
 namespace WrathForged.Models.Auth
 {
-    [ForgedSerializable(Serialization.Models.PacketScope.AuthToClient, AuthServerOpCode.AUTH_LOGON_CHALLENGE)]
+    [ForgedSerializable(PacketScope.AuthToClient, AuthServerOpCode.AUTH_LOGON_CHALLENGE)]
     public class AuthLogonChallengeResponse
     {
         private static readonly byte[] _versionChallengeConst = [0xBA, 0xA3, 0x1E, 0x99, 0xA0, 0x0B, 0x21, 0x57, 0xFC, 0x37, 0x3F, 0xB3, 0x69, 0xCD, 0xD2, 0xF1];
@@ -14,39 +14,33 @@ namespace WrathForged.Models.Auth
         [SerializableProperty(0)]
         public AuthStatus Status { get; set; }
 
-        [SerializableProperty(1)]
-        public byte GruntCommand { get; set; }
-
-        [SerializableProperty(2)]
-        public byte Unknown { get; set; }
-
-        [SerializableProperty(3, FixedCollectionSize = 32)]
+        [SerializableProperty(1, FixedCollectionSize = 32)]
         public byte[] ServerEphemeral { get; set; } = [];
 
-        [SerializableProperty(4, CollectionSizeLengthType = TypeCode.Byte, FixedCollectionSize = 1, Flags = SerializationFlags.SendFixedSize)]
+        [SerializableProperty(2, CollectionSizeLengthType = TypeCode.Byte, FixedCollectionSize = 1, Flags = SerializationFlags.SendFixedSize)]
         public byte[] Generator { get; set; } = [];
 
-        [SerializableProperty(5, CollectionSizeLengthType = TypeCode.Byte, FixedCollectionSize = 32, Flags = SerializationFlags.SendFixedSize)]
+        [SerializableProperty(3, CollectionSizeLengthType = TypeCode.Byte, FixedCollectionSize = 32, Flags = SerializationFlags.SendFixedSize)]
         public byte[] Modulus { get; set; } = [];
 
-        [SerializableProperty(6)]
+        [SerializableProperty(4)]
         public byte[] Salt { get; set; } = [];
 
-        [SerializableProperty(7)]
+        [SerializableProperty(5)]
         public byte[] VersionChallenge { get; set; } = _versionChallengeConst;
 
-        [SerializableProperty(8)]
+        [SerializableProperty(6)]
         public byte SecurityFlags { get; set; }
 
-        [SerializableProperty(9)]
+        [SerializableProperty(7)]
         [BitwiseCondition(8, BitwiseCondition.BitwiseOperation.And, 1, BitwiseCondition.EqualityOperation.Equal, 1)]
         public RequiredPin? Pin { get; set; }
 
-        [SerializableProperty(10)]
+        [SerializableProperty(8)]
         [BitwiseCondition(8, BitwiseCondition.BitwiseOperation.And, 2, BitwiseCondition.EqualityOperation.Equal, 2)]
         public MatrixInput? Matrix { get; set; }
 
-        [SerializableProperty(11)]
+        [SerializableProperty(9)]
         [BitwiseCondition(8, BitwiseCondition.BitwiseOperation.And, 4, BitwiseCondition.EqualityOperation.Equal, 4)]
         public byte RequireSecurityToken { get; set; }
     }

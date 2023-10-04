@@ -20,6 +20,7 @@ public class ClientSocket
     private readonly ConcurrentQueue<byte[]> _writeQueue = new();
 
     private readonly NetworkStream _stream;
+    private bool _processedDisconnect;
 
     public ClientSocket(TcpClient client, ILogger logger, ActionBlock<DataReceivedEventArgs> actionBlock)
     {
@@ -35,17 +36,18 @@ public class ClientSocket
         }
 
         _stream = _client.GetStream();
+        _stream.ReadTimeout = -1;
         Task.Run(StartListening);
         Task.Run(ProcessWriteQueue);
     }
 
-    private EventHandler _onDisconnect;
+    private EventHandler<ClientSocket> _onDisconnect;
     private EventHandler<DataReceivedEventArgs> _onDataReceived;
 
 #pragma warning disable CS8601 // Possible null reference assignment. -= is causing this warning for some reason.
 
     // with client disconnects, we need to remove the delegates from the backing fields so the GC can collect them
-    public event EventHandler OnDisconnect
+    public event EventHandler<ClientSocket> OnDisconnect
     {
         add => _onDisconnect += value;
         remove
@@ -77,22 +79,33 @@ public class ClientSocket
 
     public void EnqueueWrite(WoWClientPacketOut data)
     {
+        if (_processedDisconnect)
+            return;
+
         _writeClientPacketQueue.Enqueue(data);
         _ = _writeSemaphore.Set();
     }
 
     public void EnqueueWrite(byte[] data)
     {
+        if (_processedDisconnect)
+            return;
+
         _writeQueue.Enqueue(data);
         _ = _writeSemaphore.Set();
     }
 
     public void Disconnect()
     {
+        if (_processedDisconnect)
+            return;
+
+        _processedDisconnect = true;
+        _logger.Debug("Disconnecting client {IPEndPoint}", IPEndPoint);
         _client.Close();
 
         // Raise the OnDisconnect event
-        _onDisconnect?.Invoke(this, EventArgs.Empty);
+        _onDisconnect?.Invoke(this, this);
 
 #pragma warning disable CS8601 // Possible null reference assignment. -= is causing this warning for some reason.
         // Clear all delegates from the backing fields
@@ -101,7 +114,7 @@ public class ClientSocket
             foreach (var d in _onDisconnect.GetInvocationList())
             {
                 if (d != null)
-                    _onDisconnect -= (EventHandler)d;
+                    _onDisconnect -= (EventHandler<ClientSocket>)d;
             }
         }
 
@@ -116,18 +129,24 @@ public class ClientSocket
 #pragma warning restore CS8601 // Possible null reference assignment.
     }
 
-    private async Task StartListening()
+    private void StartListening()
     {
-        var buffer = new Memory<byte>(new byte[0x4000]);
+        var buffer = new byte[0x4000];
         while (_client.Connected)
         {
             try
             {
-                var bytesRead = await _stream.ReadAsync(buffer);
+                var bytesRead = _stream.Read(buffer, 0, buffer.Length);
                 if (bytesRead > 0)
                 {
                     var data = buffer[..bytesRead].ToArray();
                     _ = _actionBlock.Post(new DataReceivedEventArgs(this, data, _onDataReceived));
+                }
+                else
+                {
+                    // read of 0 is disconnect
+                    Disconnect();
+                    break;
                 }
             }
             catch (Exception ex)
@@ -172,5 +191,7 @@ public class ClientSocket
                 }
             }
         }
+
+        Disconnect();
     }
 }

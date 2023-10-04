@@ -4,6 +4,7 @@ using WrathForged.Common.Networking;
 using WrathForged.Database.Models.Auth;
 using WrathForged.Models.Auth;
 using WrathForged.Models.Auth.Enum;
+using WrathForged.Models.Networking;
 using WrathForged.Serialization.Models;
 
 namespace WrathForged.Authorization.Server.Services
@@ -17,7 +18,7 @@ namespace WrathForged.Authorization.Server.Services
         public void RealmRequest(WoWClientSession session)
         {
             _logger.Debug("Realm list request from {Address}", session.Network.ClientSocket.IPEndPoint.Address.ToString());
-            var packet = session.Network.NewClientMessage(new Models.Networking.PacketId(AuthServerOpCode.REALM_LIST, PacketScope.AuthToClient));
+            var packet = session.Network.NewClientMessage(new PacketId(AuthServerOpCode.REALM_LIST, PacketScope.AuthToClient), PacketHeaderType.OnlyOpCode);
 
             var response = new RealmListResponse();
 

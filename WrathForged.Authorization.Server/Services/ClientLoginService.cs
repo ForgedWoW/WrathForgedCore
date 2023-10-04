@@ -32,7 +32,7 @@ namespace WrathForged.Authorization.Server.Services
             using var authDatabase = _classFactory.Resolve<AuthDatabase>();
 
             var account = authDatabase.Accounts.FirstOrDefault(x => x.Username == authLogonChallenge.Identity || x.RegMail == authLogonChallenge.Identity);
-            var packet = session.Network.NewClientMessage(AuthServerOpCode.AUTH_LOGON_CHALLENGE);
+            var packet = session.Network.NewClientMessage(AuthServerOpCode.AUTH_LOGON_CHALLENGE, PacketHeaderType.NullTerminatedOpCode);
 
             if (account == null)
             {
@@ -115,7 +115,7 @@ namespace WrathForged.Authorization.Server.Services
 
                 if (session.Security.Account == null)
                 {
-                    LoginFailed(session, AuthStatus.WOW_FAIL_UNKNOWN_ACCOUNT, session.Network.NewClientMessage(AuthServerOpCode.AUTH_LOGON_PROOF));
+                    LoginFailed(session, AuthStatus.WOW_FAIL_UNKNOWN_ACCOUNT, session.Network.NewClientMessage(AuthServerOpCode.AUTH_LOGON_PROOF, PacketHeaderType.OnlyOpCode));
                     return;
                 }
 
@@ -123,7 +123,7 @@ namespace WrathForged.Authorization.Server.Services
 
                 if (session.Security.Account == null)
                 {
-                    LoginFailed(session, AuthStatus.WOW_FAIL_UNKNOWN_ACCOUNT, session.Network.NewClientMessage(AuthServerOpCode.AUTH_LOGON_PROOF));
+                    LoginFailed(session, AuthStatus.WOW_FAIL_UNKNOWN_ACCOUNT, session.Network.NewClientMessage(AuthServerOpCode.AUTH_LOGON_PROOF, PacketHeaderType.OnlyOpCode));
                     return;
                 }
 
@@ -140,10 +140,10 @@ namespace WrathForged.Authorization.Server.Services
                 {
                     Status = AccountStatus.Success,
                     Proof = session.Security.SRP6.ServerProof
-                }, new Models.Networking.PacketId(AuthServerOpCode.AUTH_LOGON_PROOF, PacketScope.AuthToClient));
+                }, PacketHeaderType.OnlyOpCode);
             }
             else
-                LoginFailed(session, AuthStatus.WOW_FAIL_UNKNOWN_ACCOUNT, session.Network.NewClientMessage(AuthServerOpCode.AUTH_LOGON_PROOF));
+                LoginFailed(session, AuthStatus.WOW_FAIL_UNKNOWN_ACCOUNT, session.Network.NewClientMessage(AuthServerOpCode.AUTH_LOGON_PROOF, PacketHeaderType.OnlyOpCode));
         }
 
         [PacketRoute(PacketScope.ClientToAuth, AuthServerOpCode.AUTH_RECONNECT_CHALLENGE)]
@@ -153,7 +153,7 @@ namespace WrathForged.Authorization.Server.Services
             using var authDatabase = _classFactory.Resolve<AuthDatabase>();
 
             var account = authDatabase.Accounts.FirstOrDefault(x => x.Username == authLogonChallenge.Identity || x.RegMail == authLogonChallenge.Identity);
-            var packet = session.Network.NewClientMessage(AuthServerOpCode.AUTH_LOGON_CHALLENGE);
+            var packet = session.Network.NewClientMessage(AuthServerOpCode.AUTH_LOGON_CHALLENGE, PacketHeaderType.OnlyOpCode);
 
             if (account == null)
             {
@@ -175,7 +175,8 @@ namespace WrathForged.Authorization.Server.Services
             {
                 Status = AuthStatus.WOW_SUCCESS,
                 ReconnectProof = session.Security.ReconnectProof
-            }, new Models.Networking.PacketId(AuthServerOpCode.AUTH_RECONNECT_CHALLENGE, PacketScope.AuthToClient));
+            },
+            new Models.Networking.PacketId(AuthServerOpCode.AUTH_RECONNECT_CHALLENGE, PacketScope.AuthToClient), PacketHeaderType.OnlyOpCode);
         }
 
         [PacketRoute(PacketScope.ClientToAuth, AuthServerOpCode.AUTH_RECONNECT_PROOF)]
@@ -217,11 +218,11 @@ namespace WrathForged.Authorization.Server.Services
                 session.Network.Send(new AuthReconnectProofResponse()
                 {
                     Status = AuthStatus.WOW_SUCCESS
-                }, new Models.Networking.PacketId(AuthServerOpCode.AUTH_RECONNECT_PROOF, PacketScope.AuthToClient));
+                }, new Models.Networking.PacketId(AuthServerOpCode.AUTH_RECONNECT_PROOF, PacketScope.AuthToClient), PacketHeaderType.OnlyOpCode);
             }
             else
             {
-                LoginFailed(session, AuthStatus.WOW_FAIL_DISCONNECTED, session.Network.NewClientMessage(AuthServerOpCode.AUTH_RECONNECT_PROOF));
+                LoginFailed(session, AuthStatus.WOW_FAIL_DISCONNECTED, session.Network.NewClientMessage(AuthServerOpCode.AUTH_RECONNECT_PROOF, PacketHeaderType.OnlyOpCode));
                 session.Network.ClientSocket.Disconnect();
             }
         }
