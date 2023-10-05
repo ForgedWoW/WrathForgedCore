@@ -75,6 +75,16 @@ namespace WrathForged.Authorization.Server.Services
                     return;
             }
 
+            if (authLogonChallenge.Major != ExpansionType.WrathOfTheLichKing ||
+                authLogonChallenge.Minor != 3 ||
+                authLogonChallenge.Revision != 5 ||
+                authLogonChallenge.Build != 12340)
+            {
+                _logger.Debug("Failed login attempt for {Identity} from {Address}. Invalid Build {Major}.{Minor}.{Revision}.{Build}", authLogonChallenge.Identity, session.Network.ClientSocket.IPEndPoint.Address, (byte)authLogonChallenge.Major, authLogonChallenge.Minor, authLogonChallenge.Revision, authLogonChallenge.Build);
+                LoginFailed(session, AuthStatus.WOW_FAIL_VERSION_INVALID, packet);
+                return;
+            }
+
             _logger.Debug("Login attempt for {Identity} from {Address}. Assigning session token.", authLogonChallenge.Identity, session.Network.ClientSocket.IPEndPoint.Address);
 
             session.Security.Account = account;
