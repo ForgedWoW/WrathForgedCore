@@ -23,7 +23,11 @@
   "ClientTCPServer": {
     "BindIP": "*",
     "Port": 8185,
-    "Threads": 10
+    "Threads": 10,
+    "CaptureIncomingData": "false",
+    "IncomingDataCaptureDir": ".\\Capture\\Incoming",
+    "CaptureOutgoingData": "false",
+    "OutgoingDataCaptureDir": ".\\Capture\\Outgoing"
   },
   "Serilog LINKS": [
     "The Following are installed by default and availabe for use via config:",
@@ -46,7 +50,8 @@
       "Serilog.Sinks.Console",
       "Serilog.Sinks.File",
       "Serilog.Exceptions",
-      "Serilog.Sinks.Async"
+      "Serilog.Sinks.Async",
+      "Serilog.Expressions"
     ],
     "MinimumLevel": {
       "Default": "Debug",

@@ -43,6 +43,7 @@ public class ClientSocket
 
     private EventHandler<ClientSocket> _onDisconnect;
     private EventHandler<DataReceivedEventArgs> _onDataReceived;
+    private EventHandler<Memory<byte>> _onDataSent;
 
 #pragma warning disable CS8601 // Possible null reference assignment. -= is causing this warning for some reason.
 
@@ -67,6 +68,18 @@ public class ClientSocket
             if (_onDataReceived != null && value != null)
             {
                 _onDataReceived -= value;
+            }
+        }
+    }
+
+    public event EventHandler<Memory<byte>> OnDataSent
+    {
+        add => _onDataSent += value;
+        remove
+        {
+            if (_onDataSent != null && value != null)
+            {
+                _onDataSent -= value;
             }
         }
     }
@@ -126,6 +139,15 @@ public class ClientSocket
                     _onDataReceived -= (EventHandler<DataReceivedEventArgs>)d;
             }
         }
+
+        if (_onDataSent != null)
+        {
+            foreach (var d in _onDataSent.GetInvocationList())
+            {
+                if (d != null)
+                    _onDataSent -= (EventHandler<Memory<byte>>)d;
+            }
+        }
 #pragma warning restore CS8601 // Possible null reference assignment.
     }
 
@@ -168,7 +190,9 @@ public class ClientSocket
             {
                 try
                 {
-                    await _stream.WriteAsync(data.GetBuffer());
+                    var buffer = data.GetBuffer();
+                    _onDataSent?.Invoke(this, buffer);
+                    await _stream.WriteAsync(buffer);
                     data.Dispose();
                 }
                 catch (Exception ex)
@@ -182,6 +206,7 @@ public class ClientSocket
             {
                 try
                 {
+                    _onDataSent?.Invoke(this, data);
                     await _stream.WriteAsync(data);
                 }
                 catch (Exception ex)

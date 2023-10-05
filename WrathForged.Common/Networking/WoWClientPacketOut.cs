@@ -59,6 +59,8 @@ public class WoWClientPacketOut : IDisposable
     /// <returns></returns>
     public Memory<byte> GetBuffer()
     {
+        int dataPos = (int)Writer.BaseStream.Position;
+
         // Step 3: Write the header to the start of the existing buffer.
         switch (_headerType)
         {
@@ -84,7 +86,7 @@ public class WoWClientPacketOut : IDisposable
         MemoryStream.Flush();
 
         var buffer = MemoryStream.GetBuffer();
-        return new Memory<byte>(buffer, 0, buffer.Length);
+        return new Memory<byte>(buffer, 0, dataPos);
     }
 
     private void HeaderWithLenNullT()
