@@ -3,7 +3,7 @@
 
 namespace WrathForged.Models.Auth.Enum
 {
-    public enum AuthStatus
+    public enum AuthStatus : byte
     {
         WOW_SUCCESS = 0x00,
         WOW_FAIL_BANNED = 0x03,

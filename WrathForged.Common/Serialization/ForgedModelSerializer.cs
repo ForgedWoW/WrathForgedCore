@@ -384,6 +384,11 @@ public class ForgedModelSerializer
         {
             return _serializers.TryGetValue(propertyType.GetGenericArguments()[0], out forgedTypeSerialization);
         }
+        else if (propertyType.IsEnum)
+        {
+            forgedTypeSerialization = _forgedTypeCodeSerializers[ForgedTypeCode.Enum];
+            return true;
+        }
         else
         {
             return _forgedTypeCodeSerializers.TryGetValue(prop.SerializationMetadata.OverrideType, out forgedTypeSerialization) ||
@@ -400,7 +405,7 @@ public class ForgedModelSerializer
 
         if (IsStringEnum(prop))
         {
-            if (Enum.TryParse(prop.ReflectedProperty.PropertyType, (string)val, true, out var result) && result != null)
+            if (Enum.TryParse(prop.ReflectedProperty.PropertyType, val.ToString(), true, out var result) && result != null)
                 return result;
             else
                 return Activator.CreateInstance(prop.ReflectedProperty.PropertyType); // default enum value if we fail to parse.

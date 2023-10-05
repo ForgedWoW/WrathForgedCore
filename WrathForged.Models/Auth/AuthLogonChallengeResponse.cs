@@ -11,25 +11,25 @@ namespace WrathForged.Models.Auth
     {
         private static readonly byte[] _versionChallengeConst = [0xBA, 0xA3, 0x1E, 0x99, 0xA0, 0x0B, 0x21, 0x57, 0xFC, 0x37, 0x3F, 0xB3, 0x69, 0xCD, 0xD2, 0xF1];
 
-        [SerializableProperty(0)]
+        [SerializableProperty(0)] // 3
         public AuthStatus Status { get; set; }
 
-        [SerializableProperty(1, FixedCollectionSize = 32)]
+        [SerializableProperty(1, FixedCollectionSize = 32)] // 35
         public byte[] ServerEphemeral { get; set; } = [];
 
-        [SerializableProperty(2, CollectionSizeLengthType = TypeCode.Byte, FixedCollectionSize = 1, Flags = SerializationFlags.SendFixedSize)]
+        [SerializableProperty(2, CollectionSizeLengthType = TypeCode.Byte, FixedCollectionSize = 1, Flags = SerializationFlags.SendFixedSize)] // 37
         public byte[] Generator { get; set; } = [];
 
-        [SerializableProperty(3, CollectionSizeLengthType = TypeCode.Byte, FixedCollectionSize = 32, Flags = SerializationFlags.SendFixedSize)]
+        [SerializableProperty(3, CollectionSizeLengthType = TypeCode.Byte, FixedCollectionSize = 32, Flags = SerializationFlags.SendFixedSize)] // 70
         public byte[] Modulus { get; set; } = [];
 
-        [SerializableProperty(4, FixedCollectionSize = 32)]
+        [SerializableProperty(4, FixedCollectionSize = 32)] // 102
         public byte[] Salt { get; set; } = [];
 
-        [SerializableProperty(5)]
+        [SerializableProperty(5, FixedCollectionSize = 16)] // 118
         public byte[] VersionChallenge { get; set; } = _versionChallengeConst;
 
-        [SerializableProperty(6)]
+        [SerializableProperty(6)] // 119
         public byte SecurityFlags { get; set; }
 
         [SerializableProperty(7)]

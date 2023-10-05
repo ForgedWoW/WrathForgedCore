@@ -66,42 +66,47 @@ public class EnumSerialization : IForgedTypeSerialization
                 typeToUse = ForgedTypeCode.Int32;
         }
 
+        val ??= Activator.CreateInstance(propertyMeta.ReflectedProperty.PropertyType);
+
+        if (val == null)
+            return;
+
         switch (typeToUse)
         {
             case ForgedTypeCode.Byte:
-                writer.Write((byte)obj);
+                writer.Write((byte)val);
                 break;
 
             case ForgedTypeCode.SByte:
-                writer.Write((sbyte)obj);
+                writer.Write((sbyte)val);
                 break;
 
             case ForgedTypeCode.Int16:
-                writer.Write((short)obj);
+                writer.Write((short)val);
                 break;
 
             case ForgedTypeCode.UInt16:
-                writer.Write((ushort)obj);
+                writer.Write((ushort)val);
                 break;
 
             case ForgedTypeCode.Int32:
-                writer.Write((int)obj);
+                writer.Write((int)val);
                 break;
 
             case ForgedTypeCode.UInt32:
-                writer.Write((uint)obj);
+                writer.Write((uint)val);
                 break;
 
             case ForgedTypeCode.Int64:
-                writer.Write((long)obj);
+                writer.Write((long)val);
                 break;
 
             case ForgedTypeCode.UInt64:
-                writer.Write((ulong)obj);
+                writer.Write((ulong)val);
                 break;
 
             default:
-                writer.Write((int)obj);
+                writer.Write((int)val);
                 break;
         }
     }
