@@ -14,37 +14,34 @@ namespace WrathForged.Models.Auth
         [SerializableProperty(0)]
         public AuthStatus Status { get; set; }
 
-        [SerializableProperty(1)]
-        public byte Grunt { get; set; }
-
-        [SerializableProperty(2, FixedCollectionSize = 32)]
+        [SerializableProperty(1, FixedCollectionSize = 32)]
         public byte[] ServerEphemeral { get; set; } = [];
 
-        [SerializableProperty(3, CollectionSizeLengthType = TypeCode.Byte, FixedCollectionSize = 1, Flags = SerializationFlags.SendFixedSize)]
+        [SerializableProperty(2, CollectionSizeLengthType = TypeCode.Byte, FixedCollectionSize = 1, Flags = SerializationFlags.SendFixedSize)]
         public byte[] Generator { get; set; } = [];
 
-        [SerializableProperty(4, CollectionSizeLengthType = TypeCode.Byte, FixedCollectionSize = 32, Flags = SerializationFlags.SendFixedSize)]
+        [SerializableProperty(3, CollectionSizeLengthType = TypeCode.Byte, FixedCollectionSize = 32, Flags = SerializationFlags.SendFixedSize)]
         public byte[] Modulus { get; set; } = [];
 
-        [SerializableProperty(5)]
+        [SerializableProperty(4, FixedCollectionSize = 32)]
         public byte[] Salt { get; set; } = [];
 
-        [SerializableProperty(6)]
+        [SerializableProperty(5)]
         public byte[] VersionChallenge { get; set; } = _versionChallengeConst;
 
-        [SerializableProperty(7)]
+        [SerializableProperty(6)]
         public byte SecurityFlags { get; set; }
 
-        [SerializableProperty(8)]
-        [BitwiseCondition(7, BitwiseCondition.BitwiseOperation.And, 1, BitwiseCondition.EqualityOperation.Equal, 1)]
+        [SerializableProperty(7)]
+        [BitwiseCondition(6, BitwiseCondition.BitwiseOperation.And, 1, BitwiseCondition.EqualityOperation.Equal, 1)]
         public RequiredPin? Pin { get; set; }
 
-        [SerializableProperty(9)]
-        [BitwiseCondition(7, BitwiseCondition.BitwiseOperation.And, 2, BitwiseCondition.EqualityOperation.Equal, 2)]
+        [SerializableProperty(8)]
+        [BitwiseCondition(6, BitwiseCondition.BitwiseOperation.And, 2, BitwiseCondition.EqualityOperation.Equal, 2)]
         public MatrixInput? Matrix { get; set; }
 
-        [SerializableProperty(10)]
-        [BitwiseCondition(7, BitwiseCondition.BitwiseOperation.And, 4, BitwiseCondition.EqualityOperation.Equal, 4)]
+        [SerializableProperty(9)]
+        [BitwiseCondition(6, BitwiseCondition.BitwiseOperation.And, 4, BitwiseCondition.EqualityOperation.Equal, 4)]
         public byte RequireSecurityToken { get; set; }
     }
 

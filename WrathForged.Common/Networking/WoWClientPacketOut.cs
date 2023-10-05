@@ -63,13 +63,9 @@ public class WoWClientPacketOut : IDisposable
         switch (_headerType)
         {
             case PacketHeaderType.OnlyOpCode:
-                Writer.BaseStream.Position = 0;
-                Writer.Write((byte)PacketId.Id);
-                break;
             case PacketHeaderType.NullTerminatedOpCode:
                 Writer.BaseStream.Position = 0;
                 Writer.Write((byte)PacketId.Id);
-                Writer.Write((byte)0); // Zero terminator
                 break;
             case PacketHeaderType.NullTerminatedWithLength:
                 HeaderWithLenNullT();

@@ -154,6 +154,9 @@ public class ForgedModelSerializer
         var startTimestamp = DateTime.UtcNow;
         foreach (var prop in deserializationDefinition)
         {
+            if (prop.ConditionalSerialization != null && !prop.ConditionalSerialization.ShouldDeserialize(obj, prop, deserializationDefinition))
+                continue;
+
             try
             {
                 if (prop.ReflectedProperty.PropertyType.IsArray ||
