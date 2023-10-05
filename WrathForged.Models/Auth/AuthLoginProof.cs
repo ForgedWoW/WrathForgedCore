@@ -14,22 +14,25 @@ namespace WrathForged.Models.Auth
         [SerializableProperty(1, FixedCollectionSize = 20)]
         public BigInteger Proof { get; set; }
 
-        [SerializableProperty(2, CollectionSizeLengthType = TypeCode.Byte)]
+        [SerializableProperty(2, FixedCollectionSize = 20)]
+        public byte[] SHA1 { get; set; } = [];
+
+        [SerializableProperty(3, CollectionSizeLengthType = TypeCode.Byte)]
         public List<SHA1Key> PublicEphemeralKeys { get; set; } = new();
 
-        [SerializableProperty(3)]
+        [SerializableProperty(4)]
         public byte SecurityFlags { get; set; }
 
-        [SerializableProperty(4)]
-        [BitwiseCondition(3, BitwiseCondition.BitwiseOperation.And, 1, BitwiseCondition.EqualityOperation.NotEqual, 0)]
+        [SerializableProperty(5)]
+        [BitwiseCondition(4, BitwiseCondition.BitwiseOperation.And, 1, BitwiseCondition.EqualityOperation.NotEqual, 0)]
         public AuthPIN? Pin { get; set; }
 
-        [SerializableProperty(5, FixedCollectionSize = 20)]
-        [BitwiseCondition(3, BitwiseCondition.BitwiseOperation.And, 2, BitwiseCondition.EqualityOperation.NotEqual, 0)]
+        [SerializableProperty(6, FixedCollectionSize = 20)]
+        [BitwiseCondition(4, BitwiseCondition.BitwiseOperation.And, 2, BitwiseCondition.EqualityOperation.NotEqual, 0)]
         public byte[] Unk1 { get; set; } = [];
 
-        [SerializableProperty(6, CollectionSizeLengthType = TypeCode.Byte)]
-        [BitwiseCondition(3, BitwiseCondition.BitwiseOperation.And, 4, BitwiseCondition.EqualityOperation.NotEqual, 0)]
+        [SerializableProperty(7, CollectionSizeLengthType = TypeCode.Byte)]
+        [BitwiseCondition(4, BitwiseCondition.BitwiseOperation.And, 4, BitwiseCondition.EqualityOperation.NotEqual, 0)]
         public byte[] Unk2 { get; set; } = [];
     }
 

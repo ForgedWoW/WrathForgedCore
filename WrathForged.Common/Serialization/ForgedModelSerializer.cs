@@ -305,13 +305,13 @@ public class ForgedModelSerializer
         }
         catch (EndOfStreamException eos)
         {
-            _logger.Error(eos, "Failed to deserialize packet {Name} {PacketId} for scope {Scope}. End of stream.", deserializationDefinition.Item1.Name, packetId, scope);
+            _logger.Error(eos, "Failed to deserialize packet {Name} with packet id: {PacketId} for scope: {Scope}. End of stream.", deserializationDefinition.Item1.Name, packetId, scope);
             packet = default!;
             return DeserializationResult.EndOfStream;
         }
         catch (Exception ex)
         {
-            _logger.Error(ex, "Failed to deserialize packet {Name} {PacketId} for scope {Scope}", deserializationDefinition.Item1.Name, packetId, scope);
+            _logger.Error(ex, "Failed to deserialize packet {Name} with packet id: {PacketId} for scope {Scope}", deserializationDefinition.Item1.Name, packetId, scope);
         }
 
         packet = default!;
@@ -321,16 +321,58 @@ public class ForgedModelSerializer
     private object? DeserializeCollection(PacketBuffer buffer, PropertyMeta prop, Dictionary<uint, int> collectionSizes)
     {
         var collectionSize = buffer.GetCollectionSize(prop, collectionSizes);
-        List<object?> collection = [];
-        for (var i = 0; i < collectionSize; i++)
-            collection.Add(EvaluateSpecialCasting(prop, DeserializeProperty(buffer, prop, collectionSizes)));
+        Type targetType = prop.ReflectedProperty.PropertyType;
 
-        return prop.ReflectedProperty.PropertyType.IsArray
-                   ? collection.ToArray()
-                   : prop.ReflectedProperty.PropertyType.GetGenericTypeDefinition() == typeof(List<>)
-                       ? collection
-                       : collection.ToHashSet();
+        if (targetType.IsArray)
+        {
+            var elementType = targetType.GetElementType();
+
+            if (elementType == null)
+                return null;
+
+            Array array = Array.CreateInstance(elementType, collectionSize);
+            for (var i = 0; i < collectionSize; i++)
+            {
+                array.SetValue(EvaluateSpecialCasting(prop, DeserializeProperty(buffer, prop, collectionSizes)), i);
+            }
+            return array;
+        }
+        else if (targetType.IsGenericType && targetType.GetGenericTypeDefinition() == typeof(List<>))
+        {
+            var elementType = targetType.GetGenericArguments()[0];
+            var listType = typeof(List<>).MakeGenericType(elementType);
+            var list = Activator.CreateInstance(listType) as IList;
+
+            if (list == null)
+                return null;
+
+            for (var i = 0; i < collectionSize; i++)
+            {
+                list.Add(EvaluateSpecialCasting(prop, DeserializeProperty(buffer, prop, collectionSizes)));
+            }
+            return list;
+        }
+        else if (targetType.IsGenericType && targetType.GetGenericTypeDefinition() == typeof(HashSet<>))
+        {
+            var elementType = targetType.GetGenericArguments()[0];
+            var hashSetType = typeof(HashSet<>).MakeGenericType(elementType);
+            var hashSet = Activator.CreateInstance(hashSetType) as dynamic;
+
+            if (hashSet == null)
+                return null;
+
+            for (var i = 0; i < collectionSize; i++)
+            {
+                hashSet.Add(EvaluateSpecialCasting(prop, DeserializeProperty(buffer, prop, collectionSizes)));
+            }
+            return hashSet;
+        }
+        else
+        {
+            return null;
+        }
     }
+
 
     private void SerializeCollection(PrimitiveWriter writer, PropertyMeta prop, List<PropertyMeta> otherMeta, object obj)
     {
