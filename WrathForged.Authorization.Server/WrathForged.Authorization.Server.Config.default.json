@@ -20,8 +20,10 @@
     "OutgoingDataCaptureDir": ".\\Capture\\Outgoing"
   },
   "Security": {
-    "MaxLoginAttempts": 5,
+    "MaxLoginAttempts": 10,
     "MaxLoginAttempts_BanTime_Minutes": 5,
+    "MaxLoginAttempts_ResetTime_Minutes_NOTE": "If the MaxLoginAttempts has not been reached, the attempt count is reset to 0 after this amount of time has passed.",
+    "MaxLoginAttempts_ResetTime_Minutes": 5,
     "AccountWideGMLevel_NOTE": [
       "The SecurityLevel from the database table auth.account_access when RealmID is -1 to tell the client the entire account is GM.",
       "This does not effect priviges graned or removed from the rbac tables."

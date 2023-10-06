@@ -23,10 +23,15 @@ namespace WrathForged.Common.Cryptography
             PrivateServerEphemeral = GetRandomNumber(19) % Modulus;
         }
 
-        public SRP6(string username, string password)
+        public SRP6(string username, string password, BigInteger? salt = null)
         {
             Username = username;
-            Salt = GetRandomNumber(32) % Modulus;
+
+            if (salt != null)
+                Salt = salt.Value;
+            else
+                Salt = GetRandomNumber(32) % Modulus;
+
             Verifier = GenerateVerifier(username, password);
 
             PrivateServerEphemeral = GetRandomNumber(19) % Modulus;
@@ -34,49 +39,75 @@ namespace WrathForged.Common.Cryptography
 
         private static readonly RandomNumberGenerator _rng = RandomNumberGenerator.Create();
 
-        // I
+        /// <summary>
+        /// I
+        /// </summary>
         public string Username { get; private set; }
 
-        // N                                                   Taken from TrinityCore, same Modulus.
+        /// <summary>
+        /// N                                                   Taken from TrinityCore, same Modulus.
+        /// </summary>
         public BigInteger Modulus { get; } = BigInteger.Parse("894B645E89E1535BBDAD5B8B290650530801B18EBFBF5E8FAB3C82872A3E9BB7", NumberStyles.HexNumber);
 
-        // g
+        /// <summary>
+        /// g
+        /// </summary>
         public BigInteger Generator { get; } = 7;
 
-        // k
+        /// <summary>
+        /// k
+        /// </summary>
         public BigInteger Multiplier { get; } = 3;
 
-        // x
+        /// <summary>
+        /// x
+        /// </summary>
         public BigInteger PrivateKey { get; private set; }
 
-        // v
+        /// <summary>
+        /// v
+        /// </summary>
         public BigInteger Verifier { get; private set; }
 
-        // b
+        /// <summary>
+        /// b
+        /// </summary>
         public BigInteger PrivateServerEphemeral { get; private set; }
 
-        // s
+        /// <summary>
+        /// s
+        /// </summary>
         public BigInteger Salt { get; private set; }
 
-        // A
+        /// <summary>
+        /// A
+        /// </summary>
         public BigInteger ClientEphemeral { get; set; }
 
-        // B
+        /// <summary>
+        /// B
+        /// </summary>
         public BigInteger ServerEphemeral
         {
             get { return (Multiplier * Verifier + BigInteger.ModPow(Generator, PrivateServerEphemeral, Modulus)) % Modulus; }
         }
 
-        // K_s
+        /// <summary>
+        /// K_s
+        /// </summary>
         public BigInteger SessionKey
         {
             get { return GenerateSessionKey(ClientEphemeral, ServerEphemeral, PrivateServerEphemeral, Modulus, Verifier); }
         }
 
-        // M_c
+        /// <summary>
+        /// M_c
+        /// </summary>
         public BigInteger ClientProof { get; set; }
 
-        // M_s
+        /// <summary>
+        /// M_s
+        /// </summary>
         public BigInteger ServerProof
         {
             get { return GenerateServerProof(ClientEphemeral, ClientProof, SessionKey); }
@@ -87,17 +118,12 @@ namespace WrathForged.Common.Cryptography
             return GenerateClientProof(Username, Modulus, Generator, Salt, SessionKey, ClientEphemeral, ServerEphemeral);
         }
 
-        private BigInteger GenerateVerifier(string identifier, string password)
-        {
-            return GenerateVerifier(identifier, password, Modulus, Generator, Salt);
-        }
-
         #region Static members
 
-        private static BigInteger GenerateVerifier(string identifier, string password, BigInteger modulus, BigInteger generator, BigInteger salt)
+        private BigInteger GenerateVerifier(string username, string password)
         {
-            var privateKey = Hash(salt.ToProperByteArray(), Hash(Encoding.ASCII.GetBytes(identifier + ":" + password)).ToProperByteArray());
-            return BigInteger.ModPow(generator, privateKey, modulus);
+            var privateKey = Hash(Salt.ToProperByteArray(), Hash(Encoding.ASCII.GetBytes($"{username}:{password}".ToUpper())).ToProperByteArray());
+            return Generator.ModPow(privateKey, Modulus);
         }
 
         private static BigInteger GenerateScrambler(BigInteger A, BigInteger B)

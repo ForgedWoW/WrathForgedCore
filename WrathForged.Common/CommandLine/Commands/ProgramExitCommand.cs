@@ -10,6 +10,8 @@ public class ProgramExitCommand(ProgramExitNotifier programExitNotifier, Localiz
     private readonly ProgramExitNotifier _programExitNotifier = programExitNotifier;
     private readonly Localizer _localizer = localizer;
 
+    public string CommandName { get; } = "exit";
+
     public Command AddCommand()
     {
         var command = new Command("--" + _localizer.Localize(30006), _localizer.Localize(30000));

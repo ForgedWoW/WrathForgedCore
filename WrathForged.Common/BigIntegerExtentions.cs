@@ -11,7 +11,7 @@ public static class BigIntegerExtensions
     public static byte[] ToProperByteArray(this BigInteger b)
     {
         var bytes = b.ToByteArray();
-        if (b.Sign == 1 && (bytes.Length > 1 && bytes[^1] == 0))
+        if (b.Sign == 1 && bytes.Length > 1 && bytes[^1] == 0)
             Array.Resize(ref bytes, bytes.Length - 1);
         return bytes;
     }

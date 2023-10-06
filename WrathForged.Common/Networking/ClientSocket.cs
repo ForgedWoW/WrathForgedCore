@@ -173,8 +173,10 @@ public class ClientSocket
             }
             catch (Exception ex)
             {
+                if (!_processedDisconnect)
+                    _logger.Debug(ex, "Error while reading from client");
+
                 Disconnect();
-                _logger.Debug(ex, "Error while reading from client");
                 break;
             }
         }
@@ -188,30 +190,39 @@ public class ClientSocket
 
             while (_writeClientPacketQueue.TryDequeue(out var data))
             {
+                if (_processedDisconnect)
+                    break;
+
                 try
                 {
                     var buffer = data.GetBuffer();
-                    _onDataSent?.Invoke(this, buffer);
                     await _stream.WriteAsync(buffer);
+                    _onDataSent?.Invoke(this, buffer);
                     data.Dispose();
                 }
                 catch (Exception ex)
                 {
-                    _logger.Debug(ex, "Error while sending data to client");
+                    if (!_processedDisconnect)
+                        _logger.Debug(ex, "Error while sending data to client");
+
                     Disconnect();
                 }
             }
 
             while (_writeQueue.TryDequeue(out var data))
             {
+                if (_processedDisconnect)
+                    break;
+
                 try
                 {
-                    _onDataSent?.Invoke(this, data);
                     await _stream.WriteAsync(data);
+                    _onDataSent?.Invoke(this, data);
                 }
                 catch (Exception ex)
                 {
-                    _logger.Debug(ex, "Error while sending data to client");
+                    if (!_processedDisconnect)
+                        _logger.Debug(ex, "Error while sending data to client");
                     Disconnect();
                 }
             }

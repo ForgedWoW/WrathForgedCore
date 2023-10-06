@@ -33,7 +33,7 @@ container.InitializeCommon();
 container.Locate<CacheBuilder>().Build();
 container.Locate<WoWClientServer>().Start();
 
-Log.Logger.Information("Auth Server  started in {InitializationTime}.", (DateTime.UtcNow - initializationStart).ToReadableString());
+Log.Logger.Information("Auth Server started in {InitializationTime}.", (DateTime.UtcNow - initializationStart).ToReadableString());
 var notifier = container.Locate<ProgramExitNotifier>();
 
 Console.CancelKeyPress += (sender, e) =>

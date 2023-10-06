@@ -16,7 +16,7 @@ using Z.EntityFramework.Plus;
 
 namespace WrathForged.Database
 {
-    public static class DependancyInjection
+    public static class DependencyInjection
     {
         public static IExportRegistrationBlock RegisterDatabase(this IExportRegistrationBlock builder, IConfiguration configuration, Serilog.ILogger logger)
         {
@@ -45,10 +45,10 @@ namespace WrathForged.Database
                 .UseMemoryCache(new MemoryCache(new MemoryCacheOptions()))
                 .UseMySql(configuration.GetConnectionString("dbc"), ServerVersion.AutoDetect(configuration.GetConnectionString("dbc")), options => options.EnableRetryOnFailure()).Options).Named("options");
 
-            var slidingTimeoutstr = configuration["Database:SlidingCacheTimeout_Hours"];
+            var slidingTimeoutStr = configuration["Database:SlidingCacheTimeout_Hours"];
             var hours = 2;
 
-            if (!string.IsNullOrEmpty(slidingTimeoutstr) && int.TryParse(slidingTimeoutstr, out var parsedTimeout))
+            if (!string.IsNullOrEmpty(slidingTimeoutStr) && int.TryParse(slidingTimeoutStr, out var parsedTimeout))
                 hours = parsedTimeout;
 
             var options = new MemoryCacheEntryOptions() { SlidingExpiration = TimeSpan.FromHours(hours) };

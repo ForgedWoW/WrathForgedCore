@@ -12,9 +12,13 @@ public class CreateAccountCommand(ClassFactory classFactory, ILogger logger) : I
     private readonly ClassFactory _classFactory = classFactory;
     private readonly ILogger _logger = logger;
 
+    public string CommandName { get; } = "account";
+
     public Command AddCommand()
     {
-        var command = new Command("--createAccount", "Creates a new account");
+        var accountCommands = new Command("--account", "Commands for account management");
+
+        var newAccountCommand = new Command("create", "Creates a new account");
         var emailArg = new Argument<string>("email", "The accounts email address")
         {
             Arity = ArgumentArity.ExactlyOne
@@ -28,13 +32,14 @@ public class CreateAccountCommand(ClassFactory classFactory, ILogger logger) : I
             Arity = ArgumentArity.ExactlyOne
         };
 
-        command.AddArgument(emailArg);
-        command.AddArgument(usernameArg);
-        command.AddArgument(passwordArg);
-        command.SetHandler((email, user, password) =>
+        newAccountCommand.AddArgument(emailArg);
+        newAccountCommand.AddArgument(usernameArg);
+        newAccountCommand.AddArgument(passwordArg);
+        newAccountCommand.SetHandler((email, user, password) =>
         {
             user = user.ToUpper();
             password = password.ToUpper();
+            email = email.ToUpper();
             var srp = new SRP6(user, password);
 
             using var authDb = _classFactory.Resolve<AuthDatabase>();
@@ -53,6 +58,8 @@ public class CreateAccountCommand(ClassFactory classFactory, ILogger logger) : I
             _logger.Information("User account {User} under email {Email} successfully created", user, email);
         }, emailArg, usernameArg, passwordArg);
 
-        return command;
+        accountCommands.AddCommand(newAccountCommand);
+
+        return accountCommands;
     }
 }

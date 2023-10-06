@@ -30,6 +30,10 @@ Actively accepts Pull Requests.
     - [world](https://trinitycore.info/install/Database-Installation)
     - [Auth & Character](https://github.com/TrinityCore/TrinityCore/tree/3.3.5/sql/base)
 
+## Server Commands
+See [Command Line Commands](https://github.com/ForgedWoW/WrathForgedCore/blob/main/WrathForged.Common/Help/CommandLine.md) for available available commands.
+
+
 ### Importing Existing DBC
 This process is required for entity framework to work with the DBC files. This is a one time process. After all data is manipulated in the database. dbcs can be exported using the realm server command line.
 Use your existing DBC files from your TrinityCore installation and import them into the database.
@@ -52,7 +56,6 @@ for %%F in (*.dbc) do (
     2. https://github.com/ForgedWoW/WrathForgedCore/blob/main/WrathForged.Database/sql/base/dbc/zzzCleanupInvaiMappings.sql - This cleans up invalid mappings, there is invalid mappings and dead data in 3.3.5 dbc files. these are non existing mappings from over versions.
     3. https://github.com/ForgedWoW/WrathForgedCore/blob/main/WrathForged.Database/sql/base/dbc/zzzUpdateDefaultValues.sql - fields that have foreign keys and have a default value such as 0 or -1, these need to be null to denote to the foreign key that there is no mapping as the value is default.
     4. https://github.com/ForgedWoW/WrathForgedCore/blob/main/WrathForged.Database/sql/base/dbc/zzzzAlterTables.sql - Sets the FK on the tables.
-
 
 
 ## Extendability

@@ -17,12 +17,17 @@ public class CommandLineReader(ProgramExitNotifier programExitNotifier, ILogger 
     public async void ReadCommandLineUntilProgramExit()
     {
         var commandLineArgumentHandlers = _classFactory.ResolveAll<ICommandLineArgumentHandler>().ToList();
+        var commandLineAddedEvent = _classFactory.ResolveAll<IRootCommandAdded>();
 
         var rootCommand = new RootCommand();
 
         foreach (var commandLineArgumentHandler in commandLineArgumentHandlers)
         {
-            rootCommand.AddCommand(commandLineArgumentHandler.AddCommand());
+            var newCommand = commandLineArgumentHandler.AddCommand();
+            rootCommand.AddCommand(newCommand);
+
+            foreach (var commandLineAdded in commandLineAddedEvent)
+                commandLineAdded.CommandAdded(commandLineArgumentHandler.CommandName, newCommand);
         }
 
         Console.ForegroundColor = _configuration.GetDefaultValueWithConverter<WrathEnumConverter, ConsoleColor>("Console:HighlightColor", ConsoleColor.DarkRed);

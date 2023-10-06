@@ -17,7 +17,7 @@ public class DBCExportCommand : ICommandLineArgumentHandler
     private readonly DBCSerializer _dbcSerializer;
     private readonly DBCDatabase _dbcDatabase;
     private readonly ILogger _logger;
-    private readonly List<string> _dbcDefs = new();
+    private readonly List<string> _dbcDefinitions = new();
     private readonly Dictionary<string, PropertyInfo> _dbSets = new(StringComparer.InvariantCultureIgnoreCase);
 
     public DBCExportCommand(DBCSerializer dbcSerializer, DBCDatabase dbcDatabase, ScriptLoader scriptLoader, ILogger logger)
@@ -32,7 +32,7 @@ public class DBCExportCommand : ICommandLineArgumentHandler
             if (att == null)
                 continue;
 
-            _dbcDefs.Add(((DBCBoundAttribute)att).Name);
+            _dbcDefinitions.Add(((DBCBoundAttribute)att).Name);
         }
 
         var dbcSets = typeof(DBCDatabase).GetProperties(System.Reflection.BindingFlags.Public | System.Reflection.BindingFlags.Instance);
@@ -53,9 +53,12 @@ public class DBCExportCommand : ICommandLineArgumentHandler
         }
     }
 
+    public string CommandName { get; } = "dbc";
+
     public Command AddCommand()
     {
-        var command = new Command("--dbcExport", "Exports the SQL DBC database to DBC files.");
+        var dbcBaseCommand = new Command("--dbc", "Commands for DBC management");
+        var command = new Command("export", "Exports the SQL DBC database to DBC files.");
         var outputPath = new Argument<string>("outputPath", "if provided, it will be the output directory given. If none is used they will be added to .\\dbc\\")
         {
             Arity = ArgumentArity.ZeroOrOne
@@ -81,7 +84,7 @@ public class DBCExportCommand : ICommandLineArgumentHandler
                 if (!string.IsNullOrWhiteSpace(names))
                     Export(names.Split(',', StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries), outputDir);
                 else
-                    Export(_dbcDefs, outputDir);
+                    Export(_dbcDefinitions, outputDir);
             }
             catch (Exception ex)
             {
@@ -89,7 +92,9 @@ public class DBCExportCommand : ICommandLineArgumentHandler
             }
         }, outputPath, dbcs);
 
-        return command;
+        dbcBaseCommand.AddCommand(command);
+
+        return dbcBaseCommand;
     }
 
     private void Export(IEnumerable<string> names, string outputDir)

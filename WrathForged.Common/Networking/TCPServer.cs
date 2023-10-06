@@ -124,11 +124,13 @@ public class TCPServer
                                     {
                                         try
                                         {
-                                            handler?.Invoke(this, data);
+                                            if (data.Client.IsConnected)
+                                                handler?.Invoke(this, data);
                                         }
                                         catch (Exception ex)
                                         {
-                                            _logger.Error(ex, "Error processing data from client");
+                                            if (data.Client.IsConnected)
+                                                _logger.Error(ex, "Error processing data from client");
                                         }
                                     }
                                 },

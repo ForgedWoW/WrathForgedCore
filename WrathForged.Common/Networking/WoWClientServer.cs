@@ -195,7 +195,7 @@ public class WoWClientServer
 
                 break;
             }
-        } while (session.Network.PacketBuffer.Reader.BaseStream.Position < session.Network.PacketBuffer.Reader.BaseStream.Length);
+        } while (e.Client.IsConnected && session.Network.PacketBuffer.Reader.BaseStream.Position < session.Network.PacketBuffer.Reader.BaseStream.Length);
     }
 
     private WoWClientSession GetOrCreateSessionForClient(ClientSocket client)

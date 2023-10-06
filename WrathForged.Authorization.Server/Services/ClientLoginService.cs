@@ -17,13 +17,14 @@ using WrathForged.Serialization.Models;
 namespace WrathForged.Authorization.Server.Services
 {
     public class ClientLoginService(IConfiguration configuration, BanValidator banValidator, ClassFactory classFactory, RandomUtilities randomUtilities,
-                              ILogger logger) : IPacketService
+                              ILogger logger, ForgeCache forgeCache) : IPacketService
     {
         private readonly IConfiguration _configuration = configuration;
         private readonly BanValidator _banValidator = banValidator;
         private readonly ClassFactory _classFactory = classFactory;
         private readonly RandomUtilities _randomUtilities = randomUtilities;
         private readonly ILogger _logger = logger;
+        private readonly ForgeCache _forgeCache = forgeCache;
         private readonly Dictionary<string, LoginTracker> _loginTracker = new();
 
         [PacketRoute(PacketScope.ClientToAuth, AuthServerOpCode.AUTH_LOGON_CHALLENGE)]
@@ -32,7 +33,7 @@ namespace WrathForged.Authorization.Server.Services
             _logger.Debug("Login challenge request from {Address}", session.Network.ClientSocket.IPEndPoint.Address.ToString());
             using var authDatabase = _classFactory.Resolve<AuthDatabase>();
 
-            var account = authDatabase.Accounts.FirstOrDefault(x => x.Username == authLogonChallenge.Identity || x.RegMail == authLogonChallenge.Identity);
+            var account = authDatabase.Accounts.FirstOrDefault(x => x.Username == authLogonChallenge.Identity || x.RegMail == authLogonChallenge.Identity || x.Email == authLogonChallenge.Identity);
             var packet = session.Network.NewClientMessage(AuthServerOpCode.AUTH_LOGON_CHALLENGE, PacketHeaderType.NullTerminatedOpCode);
 
             if (account == null)
@@ -250,12 +251,16 @@ namespace WrathForged.Authorization.Server.Services
                 _loginTracker[ipAddress] = tracker;
             }
 
+            if (tracker.LastAttempt.AddMinutes(_configuration.GetDefaultValue("Security:MaxLoginAttempts_ResetTime_Minutes", 5)) < DateTime.UtcNow)
+                tracker.Attempts = 0;
+
             tracker.Attempts++;
             tracker.LastAttempt = DateTime.UtcNow;
 
-            if (_configuration.GetDefaultValue("Security:MaxLoginAttempts", 5) <= tracker.Attempts)
+            if (_configuration.GetDefaultValue("Security:MaxLoginAttempts", 10) <= tracker.Attempts)
             {
-                _logger.Debug("Too many failed login attempts from {Address}. Disconnecting.", session.Network.ClientSocket.IPEndPoint.Address);
+                var banTime = _configuration.GetDefaultValue("Security:MaxLoginAttempts_BanTime_Minutes", 5);
+                _logger.Debug("Too many failed login attempts from {Address}. Banning for {BanTime}.", session.Network.ClientSocket.IPEndPoint.Address, TimeSpan.FromMinutes(banTime).ToReadableString());
                 session.Network.ClientSocket.Disconnect();
                 tracker.Attempts = 0;
                 using var authDatabase = _classFactory.Resolve<AuthDatabase>();
@@ -266,18 +271,19 @@ namespace WrathForged.Authorization.Server.Services
                     Ip = ipAddress
                 };
 
-                var bannedTil = DateTime.UtcNow.AddMinutes(_configuration.GetDefaultValue("Security:MaxLoginAttempts_BanTime_Minutes", 5)).ToUnixTime();
+                var bannedTil = DateTime.UtcNow.AddMinutes(banTime).ToUnixTime();
 
                 if (bannedTil < ipBan.Unbandate)
                     return; // Already banned for longer, just return.
 
-                ipBan.Banreason = "Too many failed login attempts";
+                ipBan.Banreason = "Too many failed login attempts from IP";
                 ipBan.Bannedby = "Auth Server";
                 ipBan.Bandate = DateTime.UtcNow.ToUnixTime();
                 ipBan.Unbandate = bannedTil;
 
-                authDatabase.IpBanneds.Upsert(ipBan).Run();
+                authDatabase.IpBanneds.Upsert(ipBan).On(i => i.Ip).Run();
                 session.Network.ClientSocket.Disconnect();
+                _forgeCache.UpdateKey(AuthCacheKeys.IP_BANS);
                 return;
             }
 
