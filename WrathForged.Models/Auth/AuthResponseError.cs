@@ -5,7 +5,7 @@ using WrathForged.Models.Auth.Enum;
 namespace WrathForged.Models.Auth
 {
     [ForgedSerializable(Serialization.Models.PacketScope.AuthToClient)]
-    public partial record AuthResponse
+    public class AuthResponseError
     {
         [SerializableProperty(0)]
         public AuthStatus Status { get; set; }

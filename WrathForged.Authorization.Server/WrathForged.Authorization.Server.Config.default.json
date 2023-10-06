@@ -19,6 +19,15 @@
     "CaptureOutgoingData": "false",
     "OutgoingDataCaptureDir": ".\\Capture\\Outgoing"
   },
+  "Security": {
+    "MaxLoginAttempts": 5,
+    "MaxLoginAttempts_BanTime_Minutes": 5,
+    "AccountWideGMLevel_NOTE": [
+      "The SecurityLevel from the database table auth.account_access when RealmID is -1 to tell the client the entire account is GM.",
+      "This does not effect priviges graned or removed from the rbac tables."
+    ],
+    "AccountWideGMLevel": 4
+  },
   "Serilog LINKS": [
     "The Following are installed by default and availabe for use via config:",
     "https://serilog.net/",
@@ -123,7 +132,7 @@
     ]
   },
   "Telemetry": {
-    "NOTE": "Types is comma delimited. Tt can be `OpenTelemetryProtocol` or Zipkin or `Zipkin,OpenTelemetryProtocol` for both",
+    "NOTE": "Types is comma delimited. It can be `OpenTelemetryProtocol` or Zipkin or `Zipkin,OpenTelemetryProtocol` for both",
     "Types": "",
     "OpenTelemetryProtocol": {
       "Endpoint": "http://localhost:4317"

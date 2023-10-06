@@ -87,17 +87,24 @@ public static class DependencyInjection
 
         if (telemetryType.Contains("OpenTelemetryProtocol", StringComparer.InvariantCultureIgnoreCase))
         {
+            var url = configuration.GetDefaultValue("Telemetry:OpenTelemetryProtocol:Endpoint", "http://localhost:4317");
             _ = tracerProviderBuilder.AddOtlpExporter(options =>
             {
-                options.Endpoint = new Uri(configuration.GetDefaultValue("Telemetry:OpenTelemetryProtocol:Endpoint", "http://localhost:4317"));
+                options.Endpoint = new Uri(url);
             });
+
+            Log.Logger.Information("OpenTelemetryProtocol is configured to run on {Uri}.", url);
         }
-        else if (telemetryType.Contains("Zipkin", StringComparer.InvariantCultureIgnoreCase))
+
+        if (telemetryType.Contains("Zipkin", StringComparer.InvariantCultureIgnoreCase))
         {
+            var uri = configuration.GetDefaultValue("Telemetry:Zipkin:Endpoint", "http://localhost:9411/api/v2/spans");
             _ = tracerProviderBuilder.AddZipkinExporter(options =>
             {
-                options.Endpoint = new Uri(configuration.GetDefaultValue("Telemetry:Zipkin:Endpoint", "http://localhost:9411/api/v2/spans"));
+                options.Endpoint = new Uri(uri);
             });
+
+            Log.Logger.Information("Zipkin is configured to run on {Uri}.", uri);
         }
 
         var tracerProvider = tracerProviderBuilder.Build();

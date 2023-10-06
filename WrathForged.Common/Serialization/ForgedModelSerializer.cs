@@ -41,9 +41,36 @@ public class ForgedModelSerializer
         foreach (var cls in classesWithAttribute)
         {
             var attribute = (ForgedSerializableAttribute)cls.GetCustomAttributes(typeof(ForgedSerializableAttribute), false).First();
+
+            var propertyAttributes = new List<PropertyMeta>();
+
+            foreach (var prop in cls.GetProperties())
+            {
+                var propAtt = prop.GetCustomAttribute<SerializablePropertyAttribute>();
+                IConditionalSerialization? conditionalAtt = null;
+
+                foreach (var att in prop.GetCustomAttributes())
+                    if (att is IConditionalSerialization conditionalSerialization)
+                    {
+                        conditionalAtt = conditionalSerialization;
+                        break;
+                    }
+
+                if (propAtt != null)
+                    propertyAttributes.Add(new PropertyMeta(propAtt, prop, conditionalAtt));
+            }
+
+            propertyAttributes.Sort();
+
+            _deserializationMethodsCacheByType[cls] = propertyAttributes;
+
+            if (!_systemScope.TryGetValue(cls, out var propertyAttr))
+                _systemScope[cls] = propertyAttributes;
+
             Queue<PacketScope> scopes = new();
             scopes.Enqueue(attribute.Scope);
 
+            // cache all scopes.
             while (scopes.TryDequeue(out var scope))
             {
                 if (scope == PacketScope.All)
@@ -57,30 +84,6 @@ public class ForgedModelSerializer
                     }
                 }
 
-                if (!_systemScope.TryGetValue(cls, out var propertyAttr))
-                {
-                    propertyAttr = [];
-
-                    foreach (var prop in cls.GetProperties())
-                    {
-                        var propAtt = prop.GetCustomAttribute<SerializablePropertyAttribute>();
-                        IConditionalSerialization? conditionalAtt = null;
-
-                        foreach (var att in prop.GetCustomAttributes())
-                            if (att is IConditionalSerialization conditionalSerialization)
-                            {
-                                conditionalAtt = conditionalSerialization;
-                                break;
-                            }
-
-                        if (propAtt != null)
-                            propertyAttr.Add(new PropertyMeta(propAtt, prop, conditionalAtt));
-                    }
-
-                    propertyAttr.Sort();
-                    _systemScope[cls] = propertyAttr;
-                }
-
                 if (!_deserializationMethodsCache.TryGetValue(attribute.Scope, out var scopeDictionary))
                 {
                     scopeDictionary = [];
@@ -88,29 +91,7 @@ public class ForgedModelSerializer
                 }
 
                 foreach (var packetId in attribute.PacketIDs)
-                {
-                    var propertyAttributes = new List<PropertyMeta>();
-
-                    foreach (var prop in cls.GetProperties())
-                    {
-                        var propAtt = prop.GetCustomAttribute<SerializablePropertyAttribute>();
-                        IConditionalSerialization? conditionalAtt = null;
-
-                        foreach (var att in prop.GetCustomAttributes())
-                            if (att is IConditionalSerialization conditionalSerialization)
-                            {
-                                conditionalAtt = conditionalSerialization;
-                                break;
-                            }
-
-                        if (propAtt != null)
-                            propertyAttributes.Add(new PropertyMeta(propAtt, prop, conditionalAtt));
-                    }
-
-                    propertyAttributes.Sort();
                     scopeDictionary[packetId] = (cls, propertyAttributes);
-                    _deserializationMethodsCacheByType[cls] = propertyAttributes;
-                }
             }
         }
 
@@ -167,7 +148,8 @@ public class ForgedModelSerializer
                     continue;
                 }
 
-                SerializeProperty(writer, prop, deserializationDefinition, obj, prop.ReflectedProperty.GetValue(obj));
+                var propertyValue = prop.ReflectedProperty.GetValue(obj);
+                SerializeProperty(writer, prop, deserializationDefinition, obj, propertyValue);
             }
             catch
             {
@@ -341,9 +323,8 @@ public class ForgedModelSerializer
         {
             var elementType = targetType.GetGenericArguments()[0];
             var listType = typeof(List<>).MakeGenericType(elementType);
-            var list = Activator.CreateInstance(listType) as IList;
 
-            if (list == null)
+            if (Activator.CreateInstance(listType) is not IList list)
                 return null;
 
             for (var i = 0; i < collectionSize; i++)

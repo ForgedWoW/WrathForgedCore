@@ -16,6 +16,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
+		<PackageReference Include="FlexLabs.EntityFrameworkCore.Upsert" Version="7.0.0" />
 		<PackageReference Include="Grace" Version="7.2.1" />
 		<PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.2">
 		  <PrivateAssets>all</PrivateAssets>

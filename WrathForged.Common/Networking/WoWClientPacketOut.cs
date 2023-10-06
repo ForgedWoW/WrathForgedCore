@@ -117,7 +117,7 @@ public class WoWClientPacketOut : IDisposable
         if (obj == null)
             return;
 
-        _forgedModelSerializer.Serialize(PacketId, PacketId, Writer, obj);
+        _forgedModelSerializer.Serialize(Writer, obj);
     }
 
     protected virtual void Dispose(bool disposing)
