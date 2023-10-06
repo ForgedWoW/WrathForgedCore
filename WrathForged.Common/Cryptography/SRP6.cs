@@ -3,159 +3,59 @@
 using System.Globalization;
 using System.Numerics;
 using System.Security.Cryptography;
-using System.Text;
 
 namespace WrathForged.Common.Cryptography
 {
     /// <summary>
-	/// Provides SRP6 public component hashing service.
-	/// Review: u on http://srp.stanford.edu/design.html
-	/// Or this diagram: https://www.codeproject.com/articles/1082676/communication-using-secure-remote-password-protoco
-	/// </summary>
-	public class SRP6
+    /// Provides SRP6 public component hashing service.
+    /// Review: u on http://srp.stanford.edu/design.html
+    /// Or this diagram: https://www.codeproject.com/articles/1082676/communication-using-secure-remote-password-protoco
+    /// </summary>
+    public class SRP6
     {
-        public SRP6(string username, BigInteger salt, BigInteger verifier)
-        {
-            Username = username;
-            Salt = salt;
-            Verifier = verifier;
+        public static RandomUtilities Crypto = new RandomUtilities();
+        public const int SALT_LENGTH = 32;
+        public const int VERIFIER_LENGTH = 32;
+        public const int EPHEMERAL_KEY_LENGTH = 32;
 
-            PrivateServerEphemeral = GetRandomNumber(19) % Modulus;
+
+        private static readonly BigInteger _g = new BigInteger(7);
+        private static readonly BigInteger _n = BigInteger.Parse("894B645E89E1535BBDAD5B8B290650530801B18EBFBF5E8FAB3C82872A3E9BB7", NumberStyles.HexNumber);
+
+        public static readonly byte[] G = _g.ToByteArray();
+        public static readonly byte[] N = _n.ToByteArray();
+
+        public static Tuple<byte[], byte[]> MakeRegistrationData(string username, string password)
+        {
+            byte[] salt = Crypto.RandomBytes(SALT_LENGTH);
+            byte[] verifier = CalculateVerifier(username, password, salt);
+            return new Tuple<byte[], byte[]>(salt, verifier);
         }
 
-        public SRP6(string username, string password, BigInteger? salt = null)
+        public static bool CheckLogin(string username, string password, byte[] salt, byte[] verifier)
         {
-            Username = username;
-
-            if (salt != null)
-                Salt = salt.Value;
-            else
-                Salt = GetRandomNumber(32) % Modulus;
-
-            Verifier = GenerateVerifier(username, password);
-
-            PrivateServerEphemeral = GetRandomNumber(19) % Modulus;
+            return verifier.SequenceEqual(CalculateVerifier(username, password, salt));
         }
 
-        private static readonly RandomNumberGenerator _rng = RandomNumberGenerator.Create();
-
-        /// <summary>
-        /// I
-        /// </summary>
-        public string Username { get; private set; }
-
-        /// <summary>
-        /// N                                                   Taken from TrinityCore, same Modulus.
-        /// </summary>
-        public BigInteger Modulus { get; } = BigInteger.Parse("894B645E89E1535BBDAD5B8B290650530801B18EBFBF5E8FAB3C82872A3E9BB7", NumberStyles.HexNumber);
-
-        /// <summary>
-        /// g
-        /// </summary>
-        public BigInteger Generator { get; } = 7;
-
-        /// <summary>
-        /// k
-        /// </summary>
-        public BigInteger Multiplier { get; } = 3;
-
-        /// <summary>
-        /// x
-        /// </summary>
-        public BigInteger PrivateKey { get; private set; }
-
-        /// <summary>
-        /// v
-        /// </summary>
-        public BigInteger Verifier { get; private set; }
-
-        /// <summary>
-        /// b
-        /// </summary>
-        public BigInteger PrivateServerEphemeral { get; private set; }
-
-        /// <summary>
-        /// s
-        /// </summary>
-        public BigInteger Salt { get; private set; }
-
-        /// <summary>
-        /// A
-        /// </summary>
-        public BigInteger ClientEphemeral { get; set; }
-
-        /// <summary>
-        /// B
-        /// </summary>
-        public BigInteger ServerEphemeral
+        public static byte[] GetSessionVerifier(byte[] A, byte[] clientM, byte[] K)
         {
-            get { return (Multiplier * Verifier + BigInteger.ModPow(Generator, PrivateServerEphemeral, Modulus)) % Modulus; }
+            return SHA1.HashData(A.Concat(clientM).Concat(K).ToArray());
         }
 
-        /// <summary>
-        /// K_s
-        /// </summary>
-        public BigInteger SessionKey
+        private static byte[] CalculateVerifier(string username, string password, byte[] salt)
         {
-            get { return GenerateSessionKey(ClientEphemeral, ServerEphemeral, PrivateServerEphemeral, Modulus, Verifier); }
+            return BigInteger.ModPow(_g,
+                SHA1.HashData(
+                    salt.Concat(
+                        SHA1.HashData(
+                            System.Text.Encoding.UTF8.GetBytes(username + ":" + password)
+                        )
+                    ).ToArray()
+                ).ToPositiveBigInteger(),
+                _n
+            ).ToByteArray();
         }
 
-        /// <summary>
-        /// M_c
-        /// </summary>
-        public BigInteger ClientProof { get; set; }
-
-        /// <summary>
-        /// M_s
-        /// </summary>
-        public BigInteger ServerProof
-        {
-            get { return GenerateServerProof(ClientEphemeral, ClientProof, SessionKey); }
-        }
-
-        public BigInteger GenerateClientProof()
-        {
-            return GenerateClientProof(Username, Modulus, Generator, Salt, SessionKey, ClientEphemeral, ServerEphemeral);
-        }
-
-        #region Static members
-
-        private BigInteger GenerateVerifier(string username, string password)
-        {
-            var privateKey = Hash(Salt.ToProperByteArray(), Hash(Encoding.ASCII.GetBytes($"{username}:{password}".ToUpper())).ToProperByteArray());
-            return Generator.ModPow(privateKey, Modulus);
-        }
-
-        private static BigInteger GenerateScrambler(BigInteger A, BigInteger B)
-        {
-            return Hash(A.ToProperByteArray(), B.ToProperByteArray());
-        }
-
-        private static BigInteger GenerateClientProof(string identifier, BigInteger modulus, BigInteger generator, BigInteger salt, BigInteger sessionKey, BigInteger A, BigInteger B)
-        {
-            // M = H(H(N) xor H(g), H(I), s, A, B, K)
-            var N_hash = SHA1.HashData(modulus.ToProperByteArray());
-            var g_hash = SHA1.HashData(generator.ToProperByteArray());
-
-            // H(N) XOR H(g)
-            for (int i = 0, j = N_hash.Length; i < j; i++)
-                N_hash[i] ^= g_hash[i];
-
-            return Hash(N_hash, SHA1.HashData(Encoding.ASCII.GetBytes(identifier)), salt.ToProperByteArray(), A.ToProperByteArray(), B.ToProperByteArray(), sessionKey.ToProperByteArray());
-        }
-
-        private static BigInteger GenerateSessionKey(BigInteger clientEphemeral, BigInteger serverEphemeral, BigInteger privateServerEphemeral, BigInteger modulus, BigInteger verifier)
-        {
-            return Interleave(BigInteger.ModPow(clientEphemeral * BigInteger.ModPow(verifier, GenerateScrambler(clientEphemeral, serverEphemeral), modulus), privateServerEphemeral, modulus));
-        }
-
-        private static BigInteger GenerateServerProof(BigInteger A, BigInteger clientProof, BigInteger sessionKey)
-        {
-            return Hash(A.ToProperByteArray(), clientProof.ToProperByteArray(), sessionKey.ToProperByteArray());
-        }
-
-        // http://www.ietf.org/rfc/rfc2945.txt
-        // Chapter 3.1
         private static BigInteger Interleave(BigInteger sessionKey)
         {
             var T = sessionKey.ToProperByteArray().SkipWhile(b => b == 0).ToArray(); // Remove all leading 0-bytes
@@ -175,18 +75,72 @@ namespace WrathForged.Common.Cryptography
             return result.ToPositiveBigInteger();
         }
 
-        private static BigInteger Hash(params byte[][] args)
+        private bool _used = false;
+        private readonly byte[] _i;
+        private readonly BigInteger _b;
+        private readonly BigInteger _v;
+
+        public readonly byte[] Salt;
+        public readonly byte[] B;
+
+        public static SRP6 Default { get; } = new SRP6();
+
+        private SRP6()
         {
-            return SHA1.HashData(args.SelectMany(b => b).ToArray()).ToPositiveBigInteger();
+            _i = new byte[32];
+            _b = new BigInteger();
+            _v = new BigInteger();
+            Salt = new byte[32];
+            B = new byte[32];
         }
 
-        private static BigInteger GetRandomNumber(uint bytes)
+        public SRP6(string username, byte[] salt, byte[] verifier)
         {
-            var data = new byte[bytes];
-            _rng.GetNonZeroBytes(data);
-            return data.ToPositiveBigInteger();
+            _i = SHA1.HashData(System.Text.Encoding.UTF8.GetBytes(username));
+            _b = new BigInteger(Crypto.RandomBytes(32));
+            _v = new BigInteger(verifier);
+            Salt = salt;
+            B = GenerateB(_b, _v);
         }
 
-        #endregion
+        private byte[] GenerateB(BigInteger b, BigInteger v)
+        {
+            return ((BigInteger.ModPow(_g, b, _n) + (v * 3)) % _n).ToByteArray();
+        }
+
+        public byte[]? VerifyChallengeResponse(byte[] A, byte[] clientM)
+        {
+            if (_used)
+            {
+                throw new InvalidOperationException("A single SRP6 object must only ever be used to verify ONCE!");
+            }
+            _used = true;
+            BigInteger _A = new BigInteger(A);
+            if ((_A % _n) == 0)
+            {
+                return null;
+            }
+
+            BigInteger u = new BigInteger(SHA1.HashData(A.Concat(B).ToArray()));
+            BigInteger S = (_A * (BigInteger.ModPow(BigInteger.ModPow(_v, u, _n), _b, _n)));
+            byte[] K = Interleave(S).ToProperByteArray();
+
+            byte[] NHash = SHA1.HashData(N);
+            byte[] gHash = SHA1.HashData(G);
+            byte[] NgHash = NHash.Zip(gHash, (n, g) => (byte)(n ^ g)).ToArray();
+            SHA1 sha1 = SHA1.Create();
+
+            byte[] ourM = SHA1.HashData(NgHash.Concat(_i).Concat(S.ToProperByteArray()).Concat(A).Concat(B).Concat(K).ToArray());
+
+            if (ourM.SequenceEqual(clientM))
+            {
+                return K;
+            }
+            else
+            {
+                return null;
+            }
+        }
     }
 }
+

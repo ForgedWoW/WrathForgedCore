@@ -8,13 +8,13 @@ namespace WrathForged.Models.Auth
     public class AuthLoginProof
     {
         [SerializableProperty(0, FixedCollectionSize = 32)]
-        public byte[] PublicEphemeralValueA { get; set; } = [];
+        public byte[] A { get; set; } = [];
 
         [SerializableProperty(1, FixedCollectionSize = 20)]
-        public byte[] Proof { get; set; } = [];
+        public byte[] ClientM { get; set; } = [];
 
         [SerializableProperty(2, FixedCollectionSize = 20)]
-        public byte[] SHA1 { get; set; } = [];
+        public byte[] CRCHash { get; set; } = [];
 
         [SerializableProperty(3, CollectionSizeLengthType = TypeCode.Byte)]
         public List<SHA1Key> PublicEphemeralKeys { get; set; } = new();

@@ -42,6 +42,9 @@ namespace WrathForged.Common
                 }
 
                 PacketEncryption = new PacketEncryption(value, _logger);
+
+                if (Account != null)
+                    Account.SessionKeyAuth = value;
             }
         }
 
@@ -50,10 +53,8 @@ namespace WrathForged.Common
         public PacketEncryption PacketEncryption { get; private set; }
         public byte[] ReconnectProof { get; set; } = [];
 
-        public PasswordHasher PasswordHasher { get; private set; } = new PasswordHasher("NULL", "NULL");
-        public SecureRemotePassword SecureRemotePassword { get; private set; } = new SecureRemotePassword(true);
+        public SRP6 SRP6 { get; set; } = SRP6.Default;
 
-        public SRP6 SRP6 { get; set; } = new SRP6("", "");
         public Account? Account
         {
             get => _account;
@@ -63,9 +64,7 @@ namespace WrathForged.Common
                 {
                     Roles = _forgedAuthorization.GetAccountRolesByRealm(value.Id);
                     DefaultRole = GetRole();
-                    PasswordHasher = new PasswordHasher(value.Username, value.Salt, value.Verifier);
-                    SRP6 = new SRP6(value.Username, value.Salt.ToPositiveBigInteger(), value.Verifier.ToPositiveBigInteger());
-                    SecureRemotePassword = new SecureRemotePassword(value.Username, value.Salt.ToPositiveBigInteger(), value.Verifier.ToPositiveBigInteger());
+                    SRP6 = new SRP6(value.Username, value.Salt, value.Verifier);
                 }
                 _account = value;
             }

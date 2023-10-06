@@ -104,10 +104,10 @@ namespace WrathForged.Authorization.Server.Services
             packet.WriteObject(new AuthLogonChallengeResponse()
             {
                 Status = AuthStatus.WOW_SUCCESS,
-                ServerEphemeral = session.Security.PasswordHasher.B,
-                Generator = PasswordHasher.G.ToProperByteArray(),
-                Modulus = session.Security.PasswordHasher.N.ToProperByteArray(),
-                Salt = session.Security.PasswordHasher.S
+                ServerEphemeral = session.Security.SRP6.B,
+                Generator = SRP6.G,
+                Modulus = SRP6.N,
+                Salt = session.Security.Account.Salt
             });
             session.Network.ClientSocket.EnqueueWrite(packet);
 
@@ -118,12 +118,12 @@ namespace WrathForged.Authorization.Server.Services
         public void LogonProof(WoWClientSession session, AuthLoginProof proof)
         {
             _logger.Debug("Logon proof request from {Address}", session.Network.ClientSocket.IPEndPoint.Address.ToString());
-            session.Security.SecureRemotePassword.PublicEphemeralValueA = proof.PublicEphemeralValueA.ToPositiveBigInteger();
-            session.Security.SRP6.ClientEphemeral = proof.PublicEphemeralValueA.ToPositiveBigInteger();
-            session.Security.SRP6.ClientProof = proof.Proof.ToPositiveBigInteger();
+            var sessionKey = session.Security.SRP6.VerifyChallengeResponse(proof.A, proof.ClientM);
 
-            if (session.Security.SecureRemotePassword.ClientSessionKeyProof == proof.Proof.ToPositiveBigInteger())
+
+            if (sessionKey != null)
             {
+                session.Security.SessionKey = sessionKey; // also sets the session key on the account.
                 using var authDatabase = _classFactory.Resolve<AuthDatabase>();
 
                 if (session.Security.Account == null)
@@ -148,11 +148,18 @@ namespace WrathForged.Authorization.Server.Services
 
                 authDatabase.Accounts.Update(session.Security.Account);
                 authDatabase.SaveChanges();
+                var sessionProof = SRP6.GetSessionVerifier(proof.A, proof.ClientM, sessionKey);
+
+                if (sessionProof == null)
+                {
+                    LoginFailed(session, AuthStatus.WOW_FAIL_UNKNOWN_ACCOUNT, AuthServerOpCode.AUTH_LOGON_CHALLENGE);
+                    return;
+                }
 
                 session.Network.Send(new AuthLoginProofResponse()
                 {
                     Status = AccountStatus.Success,
-                    Proof = session.Security.PasswordHasher.M,
+                    Proof = sessionProof,
                     AccountFlags = session.Security.DefaultRole.SecurityLevel >= _configuration.GetDefaultValue("Security:AccountWideGMLevel", 4) ? 0x01 : 0, // 0x01 = GM
                 }, PacketHeaderType.OnlyOpCode);
             }
@@ -216,7 +223,7 @@ namespace WrathForged.Authorization.Server.Services
                 Encoding.ASCII.GetBytes(session.Security.Account.Username),
                 proof.ReconnectProof,
                 session.Security.ReconnectProof,
-                session.Security.PasswordHasher.SessionKey);
+                session.Security.SessionKey);
 
             if (serverProof.SequenceEqual(proof.ClientProof))
             {
