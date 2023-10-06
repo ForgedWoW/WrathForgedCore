@@ -51,6 +51,8 @@ namespace WrathForged.Common
         public byte[] ReconnectProof { get; set; } = [];
 
         public PasswordHasher PasswordHasher { get; private set; } = new PasswordHasher("NULL", "NULL");
+        public SecureRemotePassword SecureRemotePassword { get; private set; } = new SecureRemotePassword(true);
+
         public SRP6 SRP6 { get; set; } = new SRP6("", "");
         public Account? Account
         {
@@ -63,6 +65,7 @@ namespace WrathForged.Common
                     DefaultRole = GetRole();
                     PasswordHasher = new PasswordHasher(value.Username, value.Salt, value.Verifier);
                     SRP6 = new SRP6(value.Username, value.Salt.ToPositiveBigInteger(), value.Verifier.ToPositiveBigInteger());
+                    SecureRemotePassword = new SecureRemotePassword(value.Username, value.Salt.ToPositiveBigInteger(), value.Verifier.ToPositiveBigInteger());
                 }
                 _account = value;
             }

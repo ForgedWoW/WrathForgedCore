@@ -118,8 +118,11 @@ namespace WrathForged.Authorization.Server.Services
         public void LogonProof(WoWClientSession session, AuthLoginProof proof)
         {
             _logger.Debug("Logon proof request from {Address}", session.Network.ClientSocket.IPEndPoint.Address.ToString());
+            session.Security.SecureRemotePassword.PublicEphemeralValueA = proof.PublicEphemeralValueA.ToPositiveBigInteger();
+            session.Security.SRP6.ClientEphemeral = proof.PublicEphemeralValueA.ToPositiveBigInteger();
+            session.Security.SRP6.ClientProof = proof.Proof.ToPositiveBigInteger();
 
-            if (session.Security.PasswordHasher.ValidateClientProof(proof.PublicEphemeralValueA, proof.Proof))
+            if (session.Security.SecureRemotePassword.ClientSessionKeyProof == proof.Proof.ToPositiveBigInteger())
             {
                 using var authDatabase = _classFactory.Resolve<AuthDatabase>();
 

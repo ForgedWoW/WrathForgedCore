@@ -62,4 +62,28 @@ public static class BigIntegerExtensions
         Array.Resize(ref bytes, count);
         return bytes;
     }
+
+    public static byte[] GetBytes(this BigInteger bigInt, int numBytes)
+    {
+        byte[] result = new byte[numBytes];
+
+        int numBits = bigInt.GetByteCount();
+        int realNumBytes = numBits >> 3;
+        if ((numBits & 0x7) != 0)
+            realNumBytes++;
+
+        var data = bigInt.ToProperByteArray();
+
+        for (int i = 0; i < realNumBytes; i++)
+        {
+            for (int b = 0; b < 4; b++)
+            {
+                if (i * 4 + b >= realNumBytes)
+                    return result;
+                result[i * 4 + b] = (byte)(data[i] >> (b * 8) & 0xff);
+            }
+        }
+
+        return result;
+    }
 }
