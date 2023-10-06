@@ -66,6 +66,7 @@ public class PacketEncryption
         //var decryptServerData = new ARC4(encryptHash); // CLIENT-SIDE
         // Used by the server to decrypt packets sent by the client
         _decryptClientData = new ARC4(decryptHash); // SERVER-SIDE
+
         // Used by the server to encrypt packets sent to the client
         _encryptServerData = new ARC4(encryptHash); // SERVER-SIDE
         // Used by the client to encrypt packets sent to the server

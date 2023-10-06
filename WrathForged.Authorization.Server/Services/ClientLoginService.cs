@@ -104,10 +104,10 @@ namespace WrathForged.Authorization.Server.Services
             packet.WriteObject(new AuthLogonChallengeResponse()
             {
                 Status = AuthStatus.WOW_SUCCESS,
-                ServerEphemeral = session.Security.SRP6.ServerEphemeral.ToProperByteArray().Pad(32),
-                Generator = session.Security.SRP6.Generator.ToProperByteArray(),
-                Modulus = session.Security.SRP6.Modulus.ToProperByteArray().Pad(32),
-                Salt = session.Security.SRP6.Salt.ToProperByteArray().Pad(32)
+                ServerEphemeral = session.Security.PasswordHasher.B,
+                Generator = PasswordHasher.G.ToProperByteArray(),
+                Modulus = session.Security.PasswordHasher.N.ToProperByteArray(),
+                Salt = session.Security.PasswordHasher.S
             });
             session.Network.ClientSocket.EnqueueWrite(packet);
 
@@ -118,10 +118,8 @@ namespace WrathForged.Authorization.Server.Services
         public void LogonProof(WoWClientSession session, AuthLoginProof proof)
         {
             _logger.Debug("Logon proof request from {Address}", session.Network.ClientSocket.IPEndPoint.Address.ToString());
-            session.Security.SRP6.ClientEphemeral = proof.PublicEphemeralValueA;
-            session.Security.SRP6.ClientProof = proof.Proof;
-            var serverProof = session.Security.SRP6.GenerateClientProof();
-            if (session.Security.SRP6.ClientProof == serverProof)
+
+            if (session.Security.PasswordHasher.ValidateClientProof(proof.PublicEphemeralValueA, proof.Proof))
             {
                 using var authDatabase = _classFactory.Resolve<AuthDatabase>();
 
@@ -151,7 +149,7 @@ namespace WrathForged.Authorization.Server.Services
                 session.Network.Send(new AuthLoginProofResponse()
                 {
                     Status = AccountStatus.Success,
-                    Proof = session.Security.SRP6.ServerProof,
+                    Proof = session.Security.PasswordHasher.M,
                     AccountFlags = session.Security.DefaultRole.SecurityLevel >= _configuration.GetDefaultValue("Security:AccountWideGMLevel", 4) ? 0x01 : 0, // 0x01 = GM
                 }, PacketHeaderType.OnlyOpCode);
             }
@@ -215,7 +213,7 @@ namespace WrathForged.Authorization.Server.Services
                 Encoding.ASCII.GetBytes(session.Security.Account.Username),
                 proof.ReconnectProof,
                 session.Security.ReconnectProof,
-                session.Security.SRP6.SessionKey.ToProperByteArray());
+                session.Security.PasswordHasher.SessionKey);
 
             if (serverProof.SequenceEqual(proof.ClientProof))
             {

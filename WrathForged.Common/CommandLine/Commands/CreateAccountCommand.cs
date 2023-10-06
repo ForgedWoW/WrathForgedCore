@@ -40,7 +40,7 @@ public class CreateAccountCommand(ClassFactory classFactory, ILogger logger) : I
             user = user.ToUpper();
             password = password.ToUpper();
             email = email.ToUpper();
-            var srp = new SRP6(user, password);
+            var srp = new PasswordHasher(user, password);
 
             using var authDb = _classFactory.Resolve<AuthDatabase>();
 
@@ -50,8 +50,8 @@ public class CreateAccountCommand(ClassFactory classFactory, ILogger logger) : I
                 Joindate = DateTime.UtcNow,
                 RegMail = email,
                 Username = user,
-                Verifier = srp.Verifier.ToProperByteArray(),
-                Salt = srp.Salt.ToProperByteArray()
+                Verifier = srp.V.ToProperByteArray(),
+                Salt = srp.S
             });
 
             authDb.SaveChanges();

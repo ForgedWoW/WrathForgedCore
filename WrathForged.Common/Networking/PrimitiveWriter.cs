@@ -334,18 +334,6 @@ public class PrimitiveWriter : BinaryWriter
     }
 
     /// <summary>
-    /// Writes a BigInteger to the stream
-    /// </summary>
-    /// <param name="bigInt">BigInteger to write</param>
-    /// <param name="length">maximum numbers of bytes to write for the BigInteger</param>
-    public virtual void WriteBigInt(BigInteger bigInt, int length)
-    {
-        var data = bigInt.GetBytes(length);
-
-        base.Write(data);
-    }
-
-    /// <summary>
     /// Writes a BigInteger to the stream, while writing the length before it
     /// </summary>
     /// <param name="bigInt">BigInteger to write</param>
@@ -354,19 +342,6 @@ public class PrimitiveWriter : BinaryWriter
         var data = bigInt.ToByteArray();
 
         base.Write((byte)data.Length);
-        base.Write(data);
-    }
-
-    /// <summary>
-    /// Writes a BigInteger to the stream, while writing the length before it
-    /// </summary>
-    /// <param name="bigInt">BigInteger to write</param>
-    /// <param name="length">maximum numbers of bytes to write for th BigInteger</param>
-    public virtual void WriteBigIntLength(BigInteger bigInt, int length)
-    {
-        var data = bigInt.GetBytes(length);
-
-        base.Write((byte)length);
         base.Write(data);
     }
 

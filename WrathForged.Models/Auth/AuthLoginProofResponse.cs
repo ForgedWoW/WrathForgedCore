@@ -1,6 +1,5 @@
 ﻿// Copyright (c) Forged WoW LLC <https://github.com/ForgedWoW/WrathForgedCore>
 // Licensed under GPL-3.0 license. See <https://github.com/ForgedWoW/WrathForgedCore/blob/master/LICENSE> for full information.
-using System.Numerics;
 using WrathForged.Models.Realm.Enum;
 
 namespace WrathForged.Models.Auth
@@ -12,7 +11,7 @@ namespace WrathForged.Models.Auth
         public AccountStatus Status { get; set; }
 
         [SerializableProperty(1, FixedCollectionSize = 20)]
-        public BigInteger Proof { get; set; }
+        public byte[] Proof { get; set; } = [];
 
         /// <summary>
         /// 0x01 = GM, 0x08 = Trial, 0x00800000 = Pro pass (arena tournament)

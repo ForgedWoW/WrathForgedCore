@@ -6,8 +6,6 @@ namespace WrathForged.Common;
 
 public static class BigIntegerExtensions
 {
-    public static byte[] GetBytes(this BigInteger bigInteger, int count) => new Memory<byte>(bigInteger.ToByteArray())[..count].ToArray();
-
     public static byte[] ToProperByteArray(this BigInteger b)
     {
         var bytes = b.ToByteArray();
@@ -27,28 +25,6 @@ public static class BigIntegerExtensions
         var tmp = BitConverter.GetBytes(old);
         Array.Reverse(tmp);
         return BitConverter.ToUInt16(tmp, 0);
-    }
-
-    /// <summary>
-    /// Returns <see cref="BigInteger"/> in byte form but truncates
-    /// the final field if it's 0.
-    /// (The MSB)
-    /// </summary>
-    /// <param name="bigInt"></param>
-    /// <returns></returns>
-    public static byte[] ToCleanByteArray(this BigInteger bigInt)
-    {
-        //We removed the array header memory hack
-        //due to it likely causes the runtime crashes
-        byte[] array = bigInt.ToByteArray();
-
-        if (array.Length == 0 || array[^1] != 0)
-            return array;
-
-        byte[] temp = new byte[array.Length - 1];
-        Array.Copy(array, temp, temp.Length);
-
-        return temp;
     }
 
     //Bouncy has this implemented

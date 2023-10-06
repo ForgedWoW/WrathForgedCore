@@ -50,8 +50,8 @@ namespace WrathForged.Common
         public PacketEncryption PacketEncryption { get; private set; }
         public byte[] ReconnectProof { get; set; } = [];
 
-        public SRP6 SRP6 { get; private set; } = new SRP6("", "");
-
+        public PasswordHasher PasswordHasher { get; private set; } = new PasswordHasher("NULL", "NULL");
+        public SRP6 SRP6 { get; set; } = new SRP6("", "");
         public Account? Account
         {
             get => _account;
@@ -61,7 +61,8 @@ namespace WrathForged.Common
                 {
                     Roles = _forgedAuthorization.GetAccountRolesByRealm(value.Id);
                     DefaultRole = GetRole();
-                    SRP6 = new SRP6(value.Username, value.Salt.ToBigInteger(), value.Verifier.ToBigInteger());
+                    PasswordHasher = new PasswordHasher(value.Username, value.Salt, value.Verifier);
+                    SRP6 = new SRP6(value.Username, value.Salt.ToPositiveBigInteger(), value.Verifier.ToPositiveBigInteger());
                 }
                 _account = value;
             }
