@@ -238,7 +238,6 @@ namespace WrathForged.Authorization.Server.Services
             else
             {
                 LoginFailed(session, AuthStatus.WOW_FAIL_UNKNOWN_ACCOUNT, AuthServerOpCode.AUTH_RECONNECT_PROOF);
-                session.Network.ClientSocket.Disconnect();
             }
         }
 
@@ -278,6 +277,7 @@ namespace WrathForged.Authorization.Server.Services
                 ipBan.Unbandate = bannedTil;
 
                 authDatabase.IpBanneds.Upsert(ipBan).Run();
+                session.Network.ClientSocket.Disconnect();
                 return;
             }
 
@@ -297,6 +297,7 @@ namespace WrathForged.Authorization.Server.Services
             session.Network.ClientSocket.EnqueueWrite(errorPkt);
 
             session.Security.AuthenticationState = WoWClientSession.AuthState.LoggedOut;
+            session.Network.ClientSocket.Disconnect();
         }
     }
 }

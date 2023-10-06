@@ -27,23 +27,23 @@ namespace WrathForged.Database
                 .WithCtorParam(() => new DbContextOptionsBuilder<AuthDatabase>()
                 .UseLoggerFactory(loggerFactory)
                 .UseMySql(configuration.GetConnectionString("auth"),
-                            ServerVersion.AutoDetect(configuration.GetConnectionString("auth")), options => options.EnableRetryOnFailure())).Named("options");
+                            ServerVersion.AutoDetect(configuration.GetConnectionString("auth")), options => options.EnableRetryOnFailure()).Options).Named("options");
 
             _ = builder.Export<WorldDatabase>()
                 .WithCtorParam(() => new DbContextOptionsBuilder<WorldDatabase>()
                 .UseLoggerFactory(loggerFactory)
-                .UseMySql(configuration.GetConnectionString("world"), ServerVersion.AutoDetect(configuration.GetConnectionString("world")), options => options.EnableRetryOnFailure())).Named("options");
+                .UseMySql(configuration.GetConnectionString("world"), ServerVersion.AutoDetect(configuration.GetConnectionString("world")), options => options.EnableRetryOnFailure()).Options).Named("options");
 
             _ = builder.Export<CharacterDatabase>()
                 .WithCtorParam(() => new DbContextOptionsBuilder<CharacterDatabase>()
                 .UseLoggerFactory(loggerFactory)
-                .UseMySql(configuration.GetConnectionString("characters"), ServerVersion.AutoDetect(configuration.GetConnectionString("characters")), options => options.EnableRetryOnFailure())).Named("options");
+                .UseMySql(configuration.GetConnectionString("characters"), ServerVersion.AutoDetect(configuration.GetConnectionString("characters")), options => options.EnableRetryOnFailure()).Options).Named("options");
 
             _ = builder.Export<DBCDatabase>()
                 .WithCtorParam(() => new DbContextOptionsBuilder<DBCDatabase>()
                 .UseLoggerFactory(loggerFactory)
                 .UseMemoryCache(new MemoryCache(new MemoryCacheOptions()))
-                .UseMySql(configuration.GetConnectionString("dbc"), ServerVersion.AutoDetect(configuration.GetConnectionString("dbc")), options => options.EnableRetryOnFailure())).Named("options");
+                .UseMySql(configuration.GetConnectionString("dbc"), ServerVersion.AutoDetect(configuration.GetConnectionString("dbc")), options => options.EnableRetryOnFailure()).Options).Named("options");
 
             var slidingTimeoutstr = configuration["Database:SlidingCacheTimeout_Hours"];
             var hours = 2;
