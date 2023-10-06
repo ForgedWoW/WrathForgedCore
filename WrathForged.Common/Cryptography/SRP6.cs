@@ -34,34 +34,50 @@ namespace WrathForged.Common.Cryptography
 
         private static readonly RandomNumberGenerator _rng = RandomNumberGenerator.Create();
 
-        public string Username { get; private set; }                  // I
+        // I
+        public string Username { get; private set; }
 
-        public BigInteger Modulus { get; }                              // N
-            = BigInteger.Parse("0894B645E89E1535BBDAD5B8B290650530801B18EBFBF5E8FAB3C82872A3E9BB7", NumberStyles.HexNumber);
-        public BigInteger Generator { get; }                            // g
-            = 7;
+        // N                                                   Taken from TrinityCore, same Modulus.
+        public BigInteger Modulus { get; } = BigInteger.Parse("894B645E89E1535BBDAD5B8B290650530801B18EBFBF5E8FAB3C82872A3E9BB7", NumberStyles.HexNumber);
 
-        public BigInteger Multiplier { get; } = 3;                      // k
+        // g
+        public BigInteger Generator { get; } = 7;
 
-        public BigInteger PrivateKey { get; private set; }              // x
+        // k
+        public BigInteger Multiplier { get; } = 3;
 
-        public BigInteger Verifier { get; private set; }                // v
-        public BigInteger PrivateServerEphemeral { get; private set; }  // b
+        // x
+        public BigInteger PrivateKey { get; private set; }
 
-        public BigInteger Salt { get; private set; }                    // s
+        // v
+        public BigInteger Verifier { get; private set; }
 
-        public BigInteger ClientEphemeral { get; set; }                 // A
-        public BigInteger ServerEphemeral                               // B
+        // b
+        public BigInteger PrivateServerEphemeral { get; private set; }
+
+        // s
+        public BigInteger Salt { get; private set; }
+
+        // A
+        public BigInteger ClientEphemeral { get; set; }
+
+        // B
+        public BigInteger ServerEphemeral
         {
             get { return (Multiplier * Verifier + BigInteger.ModPow(Generator, PrivateServerEphemeral, Modulus)) % Modulus; }
         }
 
-        public BigInteger SessionKey                                    // K_s
+        // K_s
+        public BigInteger SessionKey
         {
             get { return GenerateSessionKey(ClientEphemeral, ServerEphemeral, PrivateServerEphemeral, Modulus, Verifier); }
         }
-        public BigInteger ClientProof { get; set; }                     // M_c
-        public BigInteger ServerProof                                   // M_s
+
+        // M_c
+        public BigInteger ClientProof { get; set; }
+
+        // M_s
+        public BigInteger ServerProof
         {
             get { return GenerateServerProof(ClientEphemeral, ClientProof, SessionKey); }
         }
@@ -92,14 +108,14 @@ namespace WrathForged.Common.Cryptography
         private static BigInteger GenerateClientProof(string identifier, BigInteger modulus, BigInteger generator, BigInteger salt, BigInteger sessionKey, BigInteger A, BigInteger B)
         {
             // M = H(H(N) xor H(g), H(I), s, A, B, K)
-            var N_hash = SHA1Hash(modulus.ToProperByteArray());
-            var g_hash = SHA1Hash(generator.ToProperByteArray());
+            var N_hash = SHA1.HashData(modulus.ToProperByteArray());
+            var g_hash = SHA1.HashData(generator.ToProperByteArray());
 
             // H(N) XOR H(g)
             for (int i = 0, j = N_hash.Length; i < j; i++)
                 N_hash[i] ^= g_hash[i];
 
-            return Hash(N_hash, SHA1Hash(Encoding.ASCII.GetBytes(identifier)), salt.ToProperByteArray(), A.ToProperByteArray(), B.ToProperByteArray(), sessionKey.ToProperByteArray());
+            return Hash(N_hash, SHA1.HashData(Encoding.ASCII.GetBytes(identifier)), salt.ToProperByteArray(), A.ToProperByteArray(), B.ToProperByteArray(), sessionKey.ToProperByteArray());
         }
 
         private static BigInteger GenerateSessionKey(BigInteger clientEphemeral, BigInteger serverEphemeral, BigInteger privateServerEphemeral, BigInteger modulus, BigInteger verifier)
@@ -119,8 +135,8 @@ namespace WrathForged.Common.Cryptography
             var T = sessionKey.ToProperByteArray().SkipWhile(b => b == 0).ToArray(); // Remove all leading 0-bytes
             if ((T.Length & 0x1) == 0x1)
                 T = T.Skip(1).ToArray(); // Needs to be an even length, skip 1 byte if not
-            var G = SHA1Hash(Enumerable.Range(0, T.Length).Where(i => (i & 0x1) == 0x0).Select(i => T[i]).ToArray());
-            var H = SHA1Hash(Enumerable.Range(0, T.Length).Where(i => (i & 0x1) == 0x1).Select(i => T[i]).ToArray());
+            var G = SHA1.HashData(Enumerable.Range(0, T.Length).Where(i => (i & 0x1) == 0x0).Select(i => T[i]).ToArray());
+            var H = SHA1.HashData(Enumerable.Range(0, T.Length).Where(i => (i & 0x1) == 0x1).Select(i => T[i]).ToArray());
 
             var result = new byte[40];
             for (int i = 0, r_c = 0; i < result.Length / 2; i++)
@@ -135,23 +151,14 @@ namespace WrathForged.Common.Cryptography
 
         private static BigInteger Hash(params byte[][] args)
         {
-            return SHA1Hash(args.SelectMany(b => b).ToArray()).ToPositiveBigInteger();
+            return SHA1.HashData(args.SelectMany(b => b).ToArray()).ToPositiveBigInteger();
         }
-
-        #endregion
-
-        #region Helper functions
 
         private static BigInteger GetRandomNumber(uint bytes)
         {
             var data = new byte[bytes];
             _rng.GetNonZeroBytes(data);
             return data.ToPositiveBigInteger();
-        }
-
-        private static byte[] SHA1Hash(byte[] bytes)
-        {
-            return SHA1.HashData(bytes);
         }
 
         #endregion
