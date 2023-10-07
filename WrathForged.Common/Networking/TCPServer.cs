@@ -226,7 +226,6 @@ public class TCPServer
 
                             clientSocket.OnDataSent += (sender, args) =>
                             {
-                                _logger.Verbose("Sent {DataLength} bytes to {Address}", args.Length, client.Client.RemoteEndPoint);
                                 fileStreams.OutgoingFileStream?.Write(args.ToArray());
                             };
                         }

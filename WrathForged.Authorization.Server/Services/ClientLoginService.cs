@@ -11,6 +11,7 @@ using WrathForged.Common.Networking;
 using WrathForged.Database.Models.Auth;
 using WrathForged.Models.Auth;
 using WrathForged.Models.Auth.Enum;
+using WrathForged.Models.Networking;
 using WrathForged.Models.Realm.Enum;
 using WrathForged.Serialization.Models;
 
@@ -104,7 +105,7 @@ namespace WrathForged.Authorization.Server.Services
             packet.WriteObject(new AuthLogonChallengeResponse()
             {
                 Status = AuthStatus.WOW_SUCCESS,
-                ServerEphemeral = session.Security.SRP6.B,
+                ServerEphemeral = session.Security.SRP6.ServerEphemeral.ToProperByteArray(),
                 Generator = SRP6.G,
                 Modulus = SRP6.N,
                 Salt = session.Security.Account.Salt
@@ -118,11 +119,14 @@ namespace WrathForged.Authorization.Server.Services
         public void LogonProof(WoWClientSession session, AuthLoginProof proof)
         {
             _logger.Debug("Logon proof request from {Address}", session.Network.ClientSocket.IPEndPoint.Address.ToString());
-            var sessionKey = session.Security.SRP6.VerifyChallengeResponse(proof.A, proof.ClientM);
+            session.Security.SRP6.ClientEphemeral = proof.A.ToBigInteger();
+            session.Security.SRP6.ClientProof = proof.ClientM.ToBigInteger();
+            var clientProof = session.Security.SRP6.GenerateClientProof();
 
-
-            if (sessionKey != null)
+            if (clientProof == session.Security.SRP6.ClientProof)
             {
+                _logger.Debug("Account {Username} with id {Id} successfully logged in from {Address}.", session.Security.Account?.Username, session.Security.Account?.Id, session.Network.ClientSocket.IPEndPoint.Address.ToString());
+                var sessionKey = session.Security.SRP6.SessionKey.ToProperByteArray();
                 session.Security.SessionKey = sessionKey; // also sets the session key on the account.
                 using var authDatabase = _classFactory.Resolve<AuthDatabase>();
 
@@ -148,20 +152,14 @@ namespace WrathForged.Authorization.Server.Services
 
                 authDatabase.Accounts.Update(session.Security.Account);
                 authDatabase.SaveChanges();
-                var sessionProof = SRP6.GetSessionVerifier(proof.A, proof.ClientM, sessionKey);
-
-                if (sessionProof == null)
-                {
-                    LoginFailed(session, AuthStatus.WOW_FAIL_UNKNOWN_ACCOUNT, AuthServerOpCode.AUTH_LOGON_CHALLENGE);
-                    return;
-                }
+                var serverProof = session.Security.SRP6.ServerProof;
 
                 session.Network.Send(new AuthLoginProofResponse()
                 {
                     Status = AccountStatus.Success,
-                    Proof = sessionProof,
+                    Proof = serverProof,
                     AccountFlags = session.Security.DefaultRole.SecurityLevel >= _configuration.GetDefaultValue("Security:AccountWideGMLevel", 4) ? 0x01 : 0, // 0x01 = GM
-                }, PacketHeaderType.OnlyOpCode);
+                }, PacketHeaderType.OnlyOpCode, new PacketId(AuthServerOpCode.AUTH_LOGON_PROOF, PacketScope.AuthToClient));
             }
             else
             {

@@ -193,9 +193,11 @@ public class ClientSocket
                 if (_processedDisconnect)
                     break;
 
+
                 try
                 {
                     var buffer = data.GetBuffer();
+                    _logger.Verbose("Sending packet {Opcode} to {IPEndPoint} with length {Length}", data.PacketId.Id, IPEndPoint, buffer.Length);
                     await _stream.WriteAsync(buffer);
                     _onDataSent?.Invoke(this, buffer);
                     data.Dispose();
@@ -213,6 +215,8 @@ public class ClientSocket
             {
                 if (_processedDisconnect)
                     break;
+
+                _logger.Verbose("Sending data to {IPEndPoint} with length {Length}", IPEndPoint, data.Length);
 
                 try
                 {

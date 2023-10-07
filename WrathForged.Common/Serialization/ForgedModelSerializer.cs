@@ -114,7 +114,7 @@ public class ForgedModelSerializer
         if (obj == null)
             return;
 
-        var t = typeof(T);
+        var t = obj.GetType();
         if (_deserializationMethodsCacheByType.TryGetValue(t, out var deserializationDefinition))
             Serialize(writer, obj, deserializationDefinition);
     }
@@ -312,6 +312,10 @@ public class ForgedModelSerializer
             if (elementType == null)
                 return null;
 
+            // common case that can save a lot of time.
+            if (elementType == typeof(byte))
+                return buffer.Reader.ReadBytes(collectionSize);
+
             Array array = Array.CreateInstance(elementType, collectionSize);
             for (var i = 0; i < collectionSize; i++)
             {
@@ -360,6 +364,14 @@ public class ForgedModelSerializer
         int i = 0;
 
         writer.SerializeCollectionSize(prop, otherMeta, obj);
+
+        // common case that can save a lot of time.
+        if (prop.ReflectedProperty.PropertyType == typeof(byte[]))
+        {
+            if (prop.ReflectedProperty.GetValue(obj) is byte[] bytes)
+                writer.Write(bytes);
+            return;
+        }
 
         if (prop.ReflectedProperty.GetValue(obj) is IEnumerable collection)
             foreach (var item in collection)

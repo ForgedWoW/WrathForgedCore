@@ -13,6 +13,16 @@ namespace WrathForged.Common.Cryptography
 	/// </summary>
 	public class SRP
     {
+        public static SRP Default { get; } = new();
+        private BigInteger _sesssionKey;
+        private BigInteger _serverEphemeral;
+        private byte[] _serverProof = [];
+
+        private SRP()
+        {
+            Username = "";
+        }
+
         public SRP(string username, BigInteger salt, BigInteger verifier)
         {
             Username = username;
@@ -92,7 +102,13 @@ namespace WrathForged.Common.Cryptography
         /// </summary>
         public BigInteger ServerEphemeral
         {
-            get { return (Multiplier * Verifier + BigInteger.ModPow(Generator, PrivateServerEphemeral, Modulus)) % Modulus; }
+            get
+            {
+                if (_serverEphemeral == default)
+                    _serverEphemeral = (Multiplier * Verifier + BigInteger.ModPow(Generator, PrivateServerEphemeral, Modulus)) % Modulus;
+
+                return _serverEphemeral;
+            }
         }
 
         /// <summary>
@@ -100,7 +116,13 @@ namespace WrathForged.Common.Cryptography
         /// </summary>
         public BigInteger SessionKey
         {
-            get { return GenerateSessionKey(ClientEphemeral, ServerEphemeral, PrivateServerEphemeral, Modulus, Verifier); }
+            get
+            {
+                if (_sesssionKey == default)
+                    _sesssionKey = GenerateSessionKey(ClientEphemeral, ServerEphemeral, PrivateServerEphemeral, Modulus, Verifier);
+
+                return _sesssionKey;
+            }
         }
 
         /// <summary>
@@ -111,9 +133,15 @@ namespace WrathForged.Common.Cryptography
         /// <summary>
         /// M_s
         /// </summary>
-        public BigInteger ServerProof
+        public byte[] ServerProof
         {
-            get { return GenerateServerProof(ClientEphemeral, ClientProof, SessionKey); }
+            get
+            {
+                if (_serverProof.Length == 0)
+                    _serverProof = GenerateServerProof(ClientEphemeral, ClientProof, SessionKey);
+
+                return _serverProof;
+            }
         }
 
         public BigInteger GenerateClientProof()
@@ -152,9 +180,9 @@ namespace WrathForged.Common.Cryptography
             return Interleave(BigInteger.ModPow(clientEphemeral * BigInteger.ModPow(verifier, GenerateScrambler(clientEphemeral, serverEphemeral), modulus), privateServerEphemeral, modulus));
         }
 
-        private static BigInteger GenerateServerProof(BigInteger A, BigInteger clientProof, BigInteger sessionKey)
+        private static byte[] GenerateServerProof(BigInteger A, BigInteger clientProof, BigInteger sessionKey)
         {
-            return Hash(A.ToProperByteArray(), clientProof.ToProperByteArray(), sessionKey.ToProperByteArray());
+            return SHA1.HashData(A.ToProperByteArray().Concat(clientProof.ToProperByteArray()).Concat(sessionKey.ToProperByteArray()).ToArray());
         }
 
         // http://www.ietf.org/rfc/rfc2945.txt
