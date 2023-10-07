@@ -35,7 +35,7 @@ namespace WrathForged.Common.Cryptography
             return hash.Digest;
         }
 
-        private SHA1 _hashAlgorithm;
+        private readonly SHA1 _hashAlgorithm;
 
         public GenericHash()
         {
@@ -59,8 +59,8 @@ namespace WrathForged.Common.Cryptography
 
         public void FinalizeHash()
         {
-            _hashAlgorithm.TransformFinalBlock(Array.Empty<byte>(), 0, 0);
-            Digest = _hashAlgorithm.Hash != null ? _hashAlgorithm.Hash : new byte[DIGEST_LENGTH];
+            _hashAlgorithm.TransformFinalBlock([], 0, 0);
+            Digest = _hashAlgorithm.Hash ?? (new byte[DIGEST_LENGTH]);
         }
     }
 

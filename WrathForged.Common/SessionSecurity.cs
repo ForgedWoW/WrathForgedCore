@@ -10,7 +10,6 @@ namespace WrathForged.Common
 {
     public class SessionSecurity
     {
-        private byte[] _sessionKey;
         private readonly ILogger _logger;
         private readonly ForgedAuthorization _forgedAuthorization;
         private static readonly byte[] _defaultSessionKey = new byte[32];
@@ -21,7 +20,6 @@ namespace WrathForged.Common
         {
             _logger = logger;
             _forgedAuthorization = forgedAuthorization;
-            _sessionKey = _defaultSessionKey;
             PacketEncryption = new PacketEncryption(_defaultSessionKey, _logger);
         }
 
@@ -30,11 +28,9 @@ namespace WrathForged.Common
 
         public byte[] SessionKey
         {
-            get => _sessionKey;
+            get => _account != null ? _account.SessionKeyAuth ?? _defaultSessionKey : _defaultSessionKey;
             set
             {
-                _sessionKey = value;
-
                 if (value == null)
                 {
                     PacketEncryption = new PacketEncryption(_defaultSessionKey, _logger);
@@ -48,7 +44,7 @@ namespace WrathForged.Common
             }
         }
 
-        public bool IsEncrypted => _sessionKey != _defaultSessionKey;
+        public bool IsEncrypted => SessionKey != _defaultSessionKey;
         public WoWClientSession.AuthState AuthenticationState { get; set; } = WoWClientSession.AuthState.LoggedOut;
         public PacketEncryption PacketEncryption { get; private set; }
         public byte[] ReconnectProof { get; set; } = [];

@@ -3,6 +3,7 @@
 using System.Globalization;
 using System.Numerics;
 using System.Security.Cryptography;
+using System.Text;
 
 namespace WrathForged.Common.Cryptography
 {
@@ -27,14 +28,9 @@ namespace WrathForged.Common.Cryptography
 
         public static Tuple<byte[], byte[]> MakeRegistrationData(string username, string password)
         {
-            byte[] salt = _crypto.RandomBytes(SALT_LENGTH);
-            byte[] verifier = CalculateVerifier(username, password, salt);
+            byte[] salt = (_crypto.RandomBytes(SALT_LENGTH).ToPositiveBigInteger() % _n).ToProperByteArray();
+            byte[] verifier = GenerateVerifier(username, password, salt);
             return new Tuple<byte[], byte[]>(salt, verifier);
-        }
-
-        public static bool CheckLogin(string username, string password, byte[] salt, byte[] verifier)
-        {
-            return verifier.SequenceEqual(CalculateVerifier(username, password, salt));
         }
 
         public static byte[] GetSessionVerifier(byte[] A, byte[] clientM, byte[] K)
@@ -42,55 +38,31 @@ namespace WrathForged.Common.Cryptography
             return SHA1.HashData(A.Concat(clientM).Concat(K).ToArray());
         }
 
-        private static byte[] CalculateVerifier(string username, string password, byte[] salt)
+        private static byte[] GenerateVerifier(string username, string password, byte[] salt)
         {
-            return BigInteger.ModPow(_g,
-                SHA1.HashData(
-                    salt.Concat(
-                        SHA1.HashData(
-                            System.Text.Encoding.UTF8.GetBytes(username + ":" + password)
-                        )
-                    ).ToArray()
-                ).ToPositiveBigInteger(),
-                _n
-            ).ToByteArray();
+            var temp = SHA1.HashData(Encoding.ASCII.GetBytes($"{username}:{password}".ToUpper()));
+            var hash = SHA1.HashData(salt.Concat(temp).ToArray());
+            return hash;
         }
 
         private static byte[] SHA1Interleave(byte[] S)
         {
-            // Constants
-            const int EPHEMERAL_KEY_LENGTH = 32;
-            const int SHA1_DIGEST_LENGTH = 20;
+            var T = S.SkipWhile(b => b == 0).ToArray(); // Remove all leading 0-bytes
 
-            // Split S into two buffers
-            byte[] buf0 = new byte[EPHEMERAL_KEY_LENGTH / 2];
-            byte[] buf1 = new byte[EPHEMERAL_KEY_LENGTH / 2];
-            for (int i = 0; i < EPHEMERAL_KEY_LENGTH / 2; ++i)
+            if ((T.Length & 0x1) == 0x1)
+                T = T.Skip(1).ToArray(); // Needs to be an even length, skip 1 byte if not
+
+            var G = SHA1.HashData(Enumerable.Range(0, T.Length).Where(i => (i & 0x1) == 0x0).Select(i => T[i]).ToArray());
+            var H = SHA1.HashData(Enumerable.Range(0, T.Length).Where(i => (i & 0x1) == 0x1).Select(i => T[i]).ToArray());
+
+            var result = new byte[40];
+            for (int i = 0, r_c = 0; i < result.Length / 2; i++)
             {
-                buf0[i] = S[2 * i + 0];
-                buf1[i] = S[2 * i + 1];
+                result[r_c++] = G[i];
+                result[r_c++] = H[i];
             }
 
-            // Find position of first nonzero byte
-            int p = 0;
-            while (p < EPHEMERAL_KEY_LENGTH && S[p] == 0)
-                ++p;
-            if ((p & 1) == 1)
-                ++p; // Skip one extra byte if p is odd
-            p /= 2; // Offset into buffers
-
-            // Hash each of the halves, starting at the first nonzero byte
-            byte[] hash0 = SHA1.HashData(buf0.Skip(p).ToArray());
-            byte[] hash1 = SHA1.HashData(buf1.Skip(p).ToArray());
-
-            // Stick the two hashes back together
-            byte[] K = new byte[SHA1_DIGEST_LENGTH * 2];
-            for (int i = 0; i < SHA1_DIGEST_LENGTH; ++i)
-            {
-                K[2 * i + 0] = hash0[i];
-                K[2 * i + 1] = hash1[i];
-            }
-            return K;
+            return result;
         }
 
         private readonly byte[] _i;

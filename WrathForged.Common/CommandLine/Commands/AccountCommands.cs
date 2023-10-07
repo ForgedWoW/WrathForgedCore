@@ -28,6 +28,10 @@ public class AccountCommands(ClassFactory classFactory, ILogger logger) : IComma
     private Command ChangePasswordCommand()
     {
         var accountCommand = new Command("changePassword", "Changes a users password");
+        accountCommand.AddAlias("cp");
+        accountCommand.AddAlias("changepass");
+        accountCommand.AddAlias("changepassword");
+
         var usernameArg = new Argument<string>("user", "username or email")
         {
             Arity = ArgumentArity.ExactlyOne
@@ -50,10 +54,10 @@ public class AccountCommands(ClassFactory classFactory, ILogger logger) : IComma
                 return;
             }
 
-            var srp = SRP6.MakeRegistrationData(user, password);
+            var srp = new PasswordHasher(user, password);
             var account = authDb.Accounts.First(x => x.Username == user || x.Email == user || x.RegMail == user);
-            account.Verifier = srp.Item2;
-            account.Salt = srp.Item1;
+            account.Verifier = srp.V.ToProperByteArray();
+            account.Salt = srp.S;
             authDb.SaveChanges();
             _logger.Information("User account {User} successfully updated", user);
         }, usernameArg, passwordArg);
@@ -63,6 +67,9 @@ public class AccountCommands(ClassFactory classFactory, ILogger logger) : IComma
     private Command DeleteAccountCommand()
     {
         var accountCommand = new Command("delete", "Deletes a new account");
+        accountCommand.AddAlias("remove");
+        accountCommand.AddAlias("del");
+        accountCommand.AddAlias("d");
         var usernameArg = new Argument<string>("user", "username or email")
         {
             Arity = ArgumentArity.ExactlyOne
@@ -90,6 +97,12 @@ public class AccountCommands(ClassFactory classFactory, ILogger logger) : IComma
     private Command CreateAccountCommand()
     {
         var accountCommand = new Command("create", "Creates a new account");
+        accountCommand.AddAlias("add");
+        accountCommand.AddAlias("new");
+        accountCommand.AddAlias("register");
+        accountCommand.AddAlias("c");
+        accountCommand.AddAlias("reg");
+
         var emailArg = new Argument<string>("email", "The accounts email address")
         {
             Arity = ArgumentArity.ExactlyOne
@@ -111,7 +124,7 @@ public class AccountCommands(ClassFactory classFactory, ILogger logger) : IComma
             user = user.ToUpper();
             password = password.ToUpper();
             email = email.ToUpper();
-            var srp = SRP6.MakeRegistrationData(user, password);
+            var srp = new PasswordHasher(user, password);
 
             using var authDb = _classFactory.Resolve<AuthDatabase>();
 
@@ -127,8 +140,8 @@ public class AccountCommands(ClassFactory classFactory, ILogger logger) : IComma
                 Joindate = DateTime.UtcNow,
                 RegMail = email,
                 Username = user,
-                Verifier = srp.Item2,
-                Salt = srp.Item1
+                Verifier = srp.V.ToProperByteArray(),
+                Salt = srp.S
             });
 
             authDb.SaveChanges();

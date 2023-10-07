@@ -1,5 +1,7 @@
 ﻿// Copyright (c) Forged WoW LLC <https://github.com/ForgedWoW/WrathForgedCore>
 // Licensed under GPL-3.0 license. See <https://github.com/ForgedWoW/WrathForgedCore/blob/master/LICENSE> for full information.
+using System.Security.Cryptography;
+
 namespace WrathForged.Common.Cryptography;
 
 public class RandomUtilities
@@ -9,19 +11,20 @@ public class RandomUtilities
 
     public RandomUtilities()
     {
-        var seendGenerator = new Random();
+        var seedGenerator = new Random();
         for (var i = 0; i < RAND_LIST_LEN; i++)
         {
-            _randoms.Add(new Random(seendGenerator.Next()));
+            _randoms.Add(new Random(seedGenerator.Next()));
         }
     }
 
     public Random GetRandom() => _randoms[Environment.TickCount % RAND_LIST_LEN];
+    private readonly RandomNumberGenerator _rng = RandomNumberGenerator.Create();
 
     public byte[] RandomBytes(int length)
     {
         var bytes = new byte[length];
-        GetRandom().NextBytes(bytes);
+        _rng.GetNonZeroBytes(bytes);
         return bytes;
     }
 
