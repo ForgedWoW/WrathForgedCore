@@ -13,13 +13,13 @@ namespace WrathForged.Common.Cryptography
     /// </summary>
     public class SRP6
     {
-        public static RandomUtilities Crypto = new RandomUtilities();
+        private static readonly RandomUtilities _crypto = new();
         public const int SALT_LENGTH = 32;
         public const int VERIFIER_LENGTH = 32;
         public const int EPHEMERAL_KEY_LENGTH = 32;
 
 
-        private static readonly BigInteger _g = new BigInteger(7);
+        private static readonly BigInteger _g = new(7);
         private static readonly BigInteger _n = BigInteger.Parse("894B645E89E1535BBDAD5B8B290650530801B18EBFBF5E8FAB3C82872A3E9BB7", NumberStyles.HexNumber);
 
         public static readonly byte[] G = _g.ToByteArray();
@@ -27,7 +27,7 @@ namespace WrathForged.Common.Cryptography
 
         public static Tuple<byte[], byte[]> MakeRegistrationData(string username, string password)
         {
-            byte[] salt = Crypto.RandomBytes(SALT_LENGTH);
+            byte[] salt = _crypto.RandomBytes(SALT_LENGTH);
             byte[] verifier = CalculateVerifier(username, password, salt);
             return new Tuple<byte[], byte[]>(salt, verifier);
         }
@@ -56,26 +56,43 @@ namespace WrathForged.Common.Cryptography
             ).ToByteArray();
         }
 
-        private static BigInteger Interleave(BigInteger sessionKey)
+        private static byte[] SHA1Interleave(byte[] S)
         {
-            var T = sessionKey.ToProperByteArray().SkipWhile(b => b == 0).ToArray(); // Remove all leading 0-bytes
-            if ((T.Length & 0x1) == 0x1)
-                T = T.Skip(1).ToArray(); // Needs to be an even length, skip 1 byte if not
-            var G = SHA1.HashData(Enumerable.Range(0, T.Length).Where(i => (i & 0x1) == 0x0).Select(i => T[i]).ToArray());
-            var H = SHA1.HashData(Enumerable.Range(0, T.Length).Where(i => (i & 0x1) == 0x1).Select(i => T[i]).ToArray());
+            // Constants
+            const int EPHEMERAL_KEY_LENGTH = 32;
+            const int SHA1_DIGEST_LENGTH = 20;
 
-            var result = new byte[40];
-            for (int i = 0, r_c = 0; i < result.Length / 2; i++)
+            // Split S into two buffers
+            byte[] buf0 = new byte[EPHEMERAL_KEY_LENGTH / 2];
+            byte[] buf1 = new byte[EPHEMERAL_KEY_LENGTH / 2];
+            for (int i = 0; i < EPHEMERAL_KEY_LENGTH / 2; ++i)
             {
-                result[r_c++] = G[i];
-                result[r_c++] = H[i];
+                buf0[i] = S[2 * i + 0];
+                buf1[i] = S[2 * i + 1];
             }
 
+            // Find position of first nonzero byte
+            int p = 0;
+            while (p < EPHEMERAL_KEY_LENGTH && S[p] == 0)
+                ++p;
+            if ((p & 1) == 1)
+                ++p; // Skip one extra byte if p is odd
+            p /= 2; // Offset into buffers
 
-            return result.ToPositiveBigInteger();
+            // Hash each of the halves, starting at the first nonzero byte
+            byte[] hash0 = SHA1.HashData(buf0.Skip(p).ToArray());
+            byte[] hash1 = SHA1.HashData(buf1.Skip(p).ToArray());
+
+            // Stick the two hashes back together
+            byte[] K = new byte[SHA1_DIGEST_LENGTH * 2];
+            for (int i = 0; i < SHA1_DIGEST_LENGTH; ++i)
+            {
+                K[2 * i + 0] = hash0[i];
+                K[2 * i + 1] = hash1[i];
+            }
+            return K;
         }
 
-        private bool _used = false;
         private readonly byte[] _i;
         private readonly BigInteger _b;
         private readonly BigInteger _v;
@@ -88,8 +105,8 @@ namespace WrathForged.Common.Cryptography
         private SRP6()
         {
             _i = new byte[32];
-            _b = new BigInteger();
-            _v = new BigInteger();
+            _b = default;
+            _v = default;
             Salt = new byte[32];
             B = new byte[32];
         }
@@ -97,49 +114,33 @@ namespace WrathForged.Common.Cryptography
         public SRP6(string username, byte[] salt, byte[] verifier)
         {
             _i = SHA1.HashData(System.Text.Encoding.UTF8.GetBytes(username));
-            _b = new BigInteger(Crypto.RandomBytes(32));
-            _v = new BigInteger(verifier);
+            _b = _crypto.RandomBytes(32).ToPositiveBigInteger();
+            _v = verifier.ToPositiveBigInteger();
             Salt = salt;
-            B = GenerateB(_b, _v);
+            B = ((BigInteger.ModPow(_g, _b, _n) + (_v * 3)) % _n).ToByteArray();
         }
 
-        private byte[] GenerateB(BigInteger b, BigInteger v)
+        public byte[]? VerifyChallengeResponse(byte[] a, byte[] clientM)
         {
-            return ((BigInteger.ModPow(_g, b, _n) + (v * 3)) % _n).ToByteArray();
-        }
+            BigInteger aaBigInt = a.ToPositiveBigInteger();
 
-        public byte[]? VerifyChallengeResponse(byte[] A, byte[] clientM)
-        {
-            if (_used)
-            {
-                throw new InvalidOperationException("A single SRP6 object must only ever be used to verify ONCE!");
-            }
-            _used = true;
-            BigInteger _A = new BigInteger(A);
-            if ((_A % _n) == 0)
+            if ((aaBigInt % _n) == 0)
             {
                 return null;
             }
 
-            BigInteger u = new BigInteger(SHA1.HashData(A.Concat(B).ToArray()));
-            BigInteger S = (_A * (BigInteger.ModPow(BigInteger.ModPow(_v, u, _n), _b, _n)));
-            byte[] K = Interleave(S).ToProperByteArray();
+            BigInteger u = new BigInteger(SHA1.HashData(a.Concat(B).ToArray()));
+            BigInteger S = (aaBigInt * (BigInteger.ModPow(BigInteger.ModPow(_v, u, _n), _b, _n)));
+            byte[] k = SHA1Interleave(S.ToProperByteArray());
 
             byte[] NHash = SHA1.HashData(N);
             byte[] gHash = SHA1.HashData(G);
             byte[] NgHash = NHash.Zip(gHash, (n, g) => (byte)(n ^ g)).ToArray();
             SHA1 sha1 = SHA1.Create();
 
-            byte[] ourM = SHA1.HashData(NgHash.Concat(_i).Concat(S.ToProperByteArray()).Concat(A).Concat(B).Concat(K).ToArray());
+            byte[] ourM = SHA1.HashData(NgHash.Concat(_i).Concat(S.ToProperByteArray()).Concat(a).Concat(B).Concat(k).ToArray());
 
-            if (ourM.SequenceEqual(clientM))
-            {
-                return K;
-            }
-            else
-            {
-                return null;
-            }
+            return ourM.SequenceEqual(clientM) ? k : null;
         }
     }
 }
