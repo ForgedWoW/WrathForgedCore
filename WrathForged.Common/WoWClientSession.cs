@@ -13,7 +13,7 @@ public class WoWClientSession(ClientSocket clientSocket, PacketBuffer packetBuff
     {
         LoggedOut,
         AwaitingCredentials,
-        LoggingIn,
+        LoggedIn,
     };
 
     public SessionSecurity Security { get; } = new SessionSecurity(logger, forgedAuthorization);

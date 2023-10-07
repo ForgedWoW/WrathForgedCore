@@ -148,7 +148,7 @@ namespace WrathForged.Authorization.Server.Services
                 session.Security.Account.LastLogin = DateTime.UtcNow;
                 session.Security.Account.SessionKeyAuth = session.Security.SessionKey;
                 session.Security.Account.Online = true;
-                session.Security.AuthenticationState = WoWClientSession.AuthState.LoggingIn;
+                session.Security.AuthenticationState = WoWClientSession.AuthState.LoggedIn;
 
                 authDatabase.Accounts.Update(session.Security.Account);
                 authDatabase.SaveChanges();
