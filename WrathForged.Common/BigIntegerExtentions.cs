@@ -15,9 +15,9 @@ public static class BigIntegerExtensions
     }
 
     // http://stackoverflow.com/a/5649264
-    public static BigInteger ToPositiveBigInteger(this byte[] bytes)
+    public static BigInteger ToBigInteger(this byte[] bytes)
     {
-        return new BigInteger(bytes.Concat(new byte[] { 0 }).ToArray());
+        return new BigInteger(bytes, true);
     }
 
     public static ushort SwitchEndian(this ushort old)
@@ -31,30 +31,6 @@ public static class BigIntegerExtensions
     public static BigInteger ModPow(this BigInteger number, BigInteger exp, BigInteger modulus)
     {
         return BigInteger.ModPow(number, exp, modulus);
-    }
-
-    //From Jackpoz's 3.3.5 bot
-    /// <summary>
-    /// places a non-negative value (0) at the MSB, then converts to a BigInteger.
-    /// This ensures a non-negative value without changing the binary representation.
-    /// </summary>
-    public static BigInteger ToBigInteger(this byte[] array)
-    {
-        //This can't be hacked like with ToCleanArray
-        byte[] temp;
-        if ((array[^1] & 0x80) == 0x80)
-        {
-            temp = new byte[array.Length + 1];
-            temp[array.Length] = 0;
-
-            //Copies the contents of the array into temp
-            //There is no way to memory hack this
-            Array.Copy(array, temp, array.Length);
-        }
-        else
-            temp = array;
-
-        return new BigInteger(temp);
     }
 
     public static byte[] Pad(this byte[] bytes, int count)

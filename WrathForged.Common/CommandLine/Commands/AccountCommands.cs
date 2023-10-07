@@ -54,10 +54,10 @@ public class AccountCommands(ClassFactory classFactory, ILogger logger) : IComma
                 return;
             }
 
-            var srp = new PasswordHasher(user, password);
+            var (Salt, Verifier) = SRP6.MakeRegistrationData(user, password);
             var account = authDb.Accounts.First(x => x.Username == user || x.Email == user || x.RegMail == user);
-            account.Verifier = srp.V.ToProperByteArray();
-            account.Salt = srp.S;
+            account.Verifier = Verifier;
+            account.Salt = Salt;
             authDb.SaveChanges();
             _logger.Information("User account {User} successfully updated", user);
         }, usernameArg, passwordArg);
@@ -124,7 +124,7 @@ public class AccountCommands(ClassFactory classFactory, ILogger logger) : IComma
             user = user.ToUpper();
             password = password.ToUpper();
             email = email.ToUpper();
-            var srp = new PasswordHasher(user, password);
+            var (Salt, Verifier) = SRP6.MakeRegistrationData(user, password);
 
             using var authDb = _classFactory.Resolve<AuthDatabase>();
 
@@ -140,8 +140,8 @@ public class AccountCommands(ClassFactory classFactory, ILogger logger) : IComma
                 Joindate = DateTime.UtcNow,
                 RegMail = email,
                 Username = user,
-                Verifier = srp.V.ToProperByteArray(),
-                Salt = srp.S
+                Verifier = Verifier,
+                Salt = Salt
             });
 
             authDb.SaveChanges();

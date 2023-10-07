@@ -1,6 +1,5 @@
 ﻿// Copyright (c) Forged WoW LLC <https://github.com/ForgedWoW/WrathForgedCore>
 // Licensed under GPL-3.0 license. See <https://github.com/ForgedWoW/WrathForgedCore/blob/master/LICENSE> for full information.
-using System.Globalization;
 using System.Numerics;
 using System.Security.Cryptography;
 using System.Text;
@@ -29,8 +28,12 @@ namespace WrathForged.Common.Cryptography
 
         public PasswordHasher(string username, string password)
         {
-            N = BigInteger.Parse("894B645E89E1535BBDAD5B8B290650530801B18EBFBF5E8FAB3C82872A3E9BB7", NumberStyles.HexNumber);
-            RN = N.ToProperByteArray().Reverse().ToArray().ToPositiveBigInteger();
+            N = new(new byte[]
+            {
+                0x89, 0x4B, 0x64, 0x5E, 0x89, 0xE1, 0x53, 0x5B, 0xBD, 0xAD, 0x5B, 0x8B, 0x29, 0x06, 0x50, 0x53,
+                0x08, 0x01, 0xB1, 0x8E, 0xBF, 0xBF, 0x5E, 0x8F, 0xAB, 0x3C, 0x82, 0x87, 0x2A, 0x3E, 0x9B, 0xB7,
+            }, true, true);
+            RN = N.ToProperByteArray().Reverse().ToArray().ToBigInteger();
             I = username;
             _b = GetRandom(19);
             S = GetRandom(32).ToProperByteArray();
@@ -49,13 +52,17 @@ namespace WrathForged.Common.Cryptography
 
         public PasswordHasher(string username, byte[] salt, byte[] verifier)
         {
-            N = BigInteger.Parse("894B645E89E1535BBDAD5B8B290650530801B18EBFBF5E8FAB3C82872A3E9BB7", NumberStyles.HexNumber);
-            RN = N.ToProperByteArray().Reverse().ToArray().ToPositiveBigInteger();
+            N = new(new byte[]
+            {
+                0x89, 0x4B, 0x64, 0x5E, 0x89, 0xE1, 0x53, 0x5B, 0xBD, 0xAD, 0x5B, 0x8B, 0x29, 0x06, 0x50, 0x53,
+                0x08, 0x01, 0xB1, 0x8E, 0xBF, 0xBF, 0x5E, 0x8F, 0xAB, 0x3C, 0x82, 0x87, 0x2A, 0x3E, 0x9B, 0xB7,
+            }, true, true);
+            RN = N.ToProperByteArray().Reverse().ToArray().ToBigInteger();
             I = username;
             _b = GetRandom(19);
             S = salt;
 
-            V = verifier.ToPositiveBigInteger();
+            V = verifier.ToBigInteger();
 
             var gmod = BigInteger.ModPow(G, _b, N);
             var tempB = (3 * V + gmod) % N;
@@ -109,7 +116,7 @@ namespace WrathForged.Common.Cryptography
 
             // u = H(A, B)
             // u is the so called "Random scrambling parameter".
-            var u = SHA1.HashData(A.Concat(B).ToArray()).ToPositiveBigInteger();
+            var u = SHA1.HashData(A.Concat(B).ToArray()).ToBigInteger();
 
             var sessionKeyAsByte = CalculateSessionKey(u).ToProperByteArray();
             K = SHA1.HashData(sessionKeyAsByte);
@@ -167,13 +174,13 @@ namespace WrathForged.Common.Cryptography
             return BigInteger.ModPow(intA * innerModPow, _b, N);
         }
 
-        private BigInteger GetRandom(int length) => GetBytes(length).ToPositiveBigInteger() % N;
+        private BigInteger GetRandom(int length) => GetBytes(length).ToBigInteger() % N;
 
         private BigInteger GetHashedCredentials(string password)
         {
             var temp = SHA1.HashData(Encoding.ASCII.GetBytes($"{I}:{password}".ToUpper()));
             var hash = SHA1.HashData(S.Concat(temp).ToArray());
-            return hash.ToPositiveBigInteger();
+            return hash.ToBigInteger();
         }
 
         private static readonly RandomNumberGenerator _rng = RandomNumberGenerator.Create();

@@ -1,6 +1,5 @@
 ﻿// Copyright (c) Forged WoW LLC <https://github.com/ForgedWoW/WrathForgedCore>
 // Licensed under GPL-3.0 license. See <https://github.com/ForgedWoW/WrathForgedCore/blob/master/LICENSE> for full information.
-using System.Globalization;
 using System.Numerics;
 using System.Security.Cryptography;
 using System.Text;
@@ -21,16 +20,20 @@ namespace WrathForged.Common.Cryptography
 
 
         private static readonly BigInteger _g = new(7);
-        private static readonly BigInteger _n = BigInteger.Parse("894B645E89E1535BBDAD5B8B290650530801B18EBFBF5E8FAB3C82872A3E9BB7", NumberStyles.HexNumber);
+        private static readonly BigInteger _n = new(new byte[]
+            {
+                0x89, 0x4B, 0x64, 0x5E, 0x89, 0xE1, 0x53, 0x5B, 0xBD, 0xAD, 0x5B, 0x8B, 0x29, 0x06, 0x50, 0x53,
+                0x08, 0x01, 0xB1, 0x8E, 0xBF, 0xBF, 0x5E, 0x8F, 0xAB, 0x3C, 0x82, 0x87, 0x2A, 0x3E, 0x9B, 0xB7,
+            }, true, true);
 
-        public static readonly byte[] G = _g.ToByteArray();
-        public static readonly byte[] N = _n.ToByteArray();
+        public static readonly byte[] G = _g.ToProperByteArray();
+        public static readonly byte[] N = _n.ToProperByteArray();
 
-        public static Tuple<byte[], byte[]> MakeRegistrationData(string username, string password)
+        public static (byte[] Salt, byte[] Verifier) MakeRegistrationData(string username, string password)
         {
-            byte[] salt = (_crypto.RandomBytes(SALT_LENGTH).ToPositiveBigInteger() % _n).ToProperByteArray();
+            byte[] salt = (_crypto.RandomBytes(SALT_LENGTH).ToBigInteger() % _n).ToProperByteArray();
             byte[] verifier = GenerateVerifier(username, password, salt);
-            return new Tuple<byte[], byte[]>(salt, verifier);
+            return (salt, verifier);
         }
 
         public static byte[] GetSessionVerifier(byte[] A, byte[] clientM, byte[] K)
@@ -40,9 +43,7 @@ namespace WrathForged.Common.Cryptography
 
         private static byte[] GenerateVerifier(string username, string password, byte[] salt)
         {
-            var temp = SHA1.HashData(Encoding.ASCII.GetBytes($"{username}:{password}".ToUpper()));
-            var hash = SHA1.HashData(salt.Concat(temp).ToArray());
-            return hash;
+            return BigInteger.ModPow(_g, new BigInteger(SHA1.HashData(salt.Combine(SHA1.HashData(Encoding.UTF8.GetBytes(username.ToUpperInvariant() + ":" + password.ToUpperInvariant())))), true), _n).ToProperByteArray();
         }
 
         private static byte[] SHA1Interleave(byte[] S)
@@ -86,15 +87,15 @@ namespace WrathForged.Common.Cryptography
         public SRP6(string username, byte[] salt, byte[] verifier)
         {
             _i = SHA1.HashData(System.Text.Encoding.UTF8.GetBytes(username));
-            _b = _crypto.RandomBytes(32).ToPositiveBigInteger();
-            _v = verifier.ToPositiveBigInteger();
+            _b = _crypto.RandomBytes(32).ToBigInteger();
+            _v = verifier.ToBigInteger();
             Salt = salt;
-            B = ((BigInteger.ModPow(_g, _b, _n) + (_v * 3)) % _n).ToByteArray();
+            B = ((BigInteger.ModPow(_g, _b, _n) + (_v * 3)) % _n).ToProperByteArray();
         }
 
         public byte[]? VerifyChallengeResponse(byte[] a, byte[] clientM)
         {
-            BigInteger aaBigInt = a.ToPositiveBigInteger();
+            BigInteger aaBigInt = a.ToBigInteger();
 
             if ((aaBigInt % _n) == 0)
             {

@@ -23,7 +23,7 @@ public class BigIntegerSerialization : IForgedTypeSerialization
         if (propertyMeta.SerializationMetadata.Flags.HasFlag(SerializationFlags.BigIntegerWithLength) && size == 0)
             size = packetBuffer.GetCollectionSize(propertyMeta, collectionSizes);
 
-        return packetBuffer.Reader.ReadBytes(size).ToPositiveBigInteger();
+        return packetBuffer.Reader.ReadBytes(size).ToBigInteger();
     }
 
     public void Serialize(PrimitiveWriter writer, PropertyMeta propertyMeta, List<PropertyMeta> otherMeta, object obj, object? val)

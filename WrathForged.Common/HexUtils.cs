@@ -4,7 +4,7 @@ namespace WrathForged.Common;
 
 public static class HexUtils
 {
-    public static byte[] StringToByteArray(string hex)
+    public static byte[] StringToProperByteArray(string hex)
     {
         var length = hex.Length;
         var bytes = new byte[length / 2];

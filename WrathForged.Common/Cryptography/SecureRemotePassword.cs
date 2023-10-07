@@ -1,6 +1,5 @@
 ﻿// Copyright (c) Forged WoW LLC <https://github.com/ForgedWoW/WrathForgedCore>
 // Licensed under GPL-3.0 license. See <https://github.com/ForgedWoW/WrathForgedCore/blob/master/LICENSE> for full information.
-using System.Globalization;
 using System.Numerics;
 using System.Security.Cryptography;
 using System.Text;
@@ -121,7 +120,7 @@ namespace WrathForged.Common.Cryptography
             get
             {
                 return
-                    Hash((Hash(Modulus).ToPositiveBigInteger() ^ Hash(Generator).ToPositiveBigInteger()).ToProperByteArray(), SHA1.HashData(Encoding.ASCII.GetBytes(Username)), Salt.ToProperByteArray(), PublicEphemeralValueA.ToProperByteArray(),
+                    Hash((Hash(Modulus).ToBigInteger() ^ Hash(Generator).ToBigInteger()).ToProperByteArray(), SHA1.HashData(Encoding.ASCII.GetBytes(Username)), Salt.ToProperByteArray(), PublicEphemeralValueA.ToProperByteArray(),
                          PublicEphemeralValueB.ToProperByteArray(), SessionKey.ToProperByteArray());
             }
         }
@@ -132,7 +131,7 @@ namespace WrathForged.Common.Cryptography
         /// </summary>
         public BigInteger ServerSessionKeyProof
         {
-            get { return Hash(PublicEphemeralValueA, ClientSessionKeyProof, SessionKey).ToPositiveBigInteger(); }
+            get { return Hash(PublicEphemeralValueA, ClientSessionKeyProof, SessionKey).ToBigInteger(); }
         }
 
         /// <summary>
@@ -164,7 +163,7 @@ namespace WrathForged.Common.Cryptography
                 if (Parameters.AlgorithmVersion == SRPParameters.SRPVersion.SRP6)
                     return (BigInteger)3;
 
-                return Hash(Modulus, Generator).ToPositiveBigInteger();
+                return Hash(Modulus, Generator).ToBigInteger();
             }
         }
 
@@ -203,7 +202,7 @@ namespace WrathForged.Common.Cryptography
             {
                 if (_credentialsHash == default)
                 {
-                    _credentialsHash = Hash(Salt, Credentials).ToPositiveBigInteger();
+                    _credentialsHash = Hash(Salt, Credentials).ToBigInteger();
                 }
 
                 return _credentialsHash;
@@ -296,7 +295,7 @@ namespace WrathForged.Common.Cryptography
         /// </summary>
         public BigInteger ScramblingParameter
         {
-            get { return Hash(PublicEphemeralValueA, PublicEphemeralValueB).ToPositiveBigInteger(); }
+            get { return Hash(PublicEphemeralValueA, PublicEphemeralValueB).ToBigInteger(); }
         }
 
         /// <summary>
@@ -410,7 +409,7 @@ namespace WrathForged.Common.Cryptography
 
         public BigInteger Hash(params byte[][] args)
         {
-            return SHA1.HashData(args.SelectMany(b => b).ToArray()).ToPositiveBigInteger();
+            return SHA1.HashData(args.SelectMany(b => b).ToArray()).ToBigInteger();
         }
 
         /// <summary>
@@ -488,7 +487,11 @@ namespace WrathForged.Common.Cryptography
             /// </summary>
             private static readonly BigInteger _generator = new BigInteger(7);
 
-            private static readonly BigInteger _modulus = BigInteger.Parse("894B645E89E1535BBDAD5B8B290650530801B18EBFBF5E8FAB3C82872A3E9BB7", NumberStyles.HexNumber);
+            private static readonly BigInteger _modulus = new(new byte[]
+            {
+                0x89, 0x4B, 0x64, 0x5E, 0x89, 0xE1, 0x53, 0x5B, 0xBD, 0xAD, 0x5B, 0x8B, 0x29, 0x06, 0x50, 0x53,
+                0x08, 0x01, 0xB1, 0x8E, 0xBF, 0xBF, 0x5E, 0x8F, 0xAB, 0x3C, 0x82, 0x87, 0x2A, 0x3E, 0x9B, 0xB7,
+            }, true, true);
 
             /// <summary>
             /// All operations are mod this number. It should be a large prime.
