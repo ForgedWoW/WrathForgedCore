@@ -14,7 +14,7 @@ namespace WrathForged.Common.Cryptography
 	public class SRP
     {
         public static SRP Default { get; } = new();
-        private BigInteger _sesssionKey;
+        private BigInteger _sessionKey;
         private BigInteger _serverEphemeral;
         private byte[] _serverProof = [];
 
@@ -118,10 +118,10 @@ namespace WrathForged.Common.Cryptography
         {
             get
             {
-                if (_sesssionKey == default)
-                    _sesssionKey = GenerateSessionKey(ClientEphemeral, ServerEphemeral, PrivateServerEphemeral, Modulus, Verifier);
+                if (_sessionKey == default)
+                    _sessionKey = GenerateSessionKey(ClientEphemeral, ServerEphemeral, PrivateServerEphemeral, Modulus, Verifier);
 
-                return _sesssionKey;
+                return _sessionKey;
             }
         }
 

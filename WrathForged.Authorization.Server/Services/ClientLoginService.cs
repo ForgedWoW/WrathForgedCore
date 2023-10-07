@@ -236,7 +236,7 @@ namespace WrathForged.Authorization.Server.Services
                     authDatabase.SaveChanges();
                 }
 
-                session.Security.AuthenticationState = WoWClientSession.AuthState.LoggingIn;
+                session.Security.AuthenticationState = WoWClientSession.AuthState.LoggedIn;
                 session.Network.Send(new AuthReconnectProofResponse()
                 {
                     Status = AuthStatus.WOW_SUCCESS
