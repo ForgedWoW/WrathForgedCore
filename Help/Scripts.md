@@ -14,7 +14,7 @@ See [Command Line Commands](https://github.com/ForgedWoW/WrathForgedCore/blob/ma
 | Interface | Description |
 | --------- | ----------- |
 | [ICommandLineArgumentHandler](https://github.com/ForgedWoW/WrathForgedCore/blob/main/WrathForged.Common/CommandLine/ICommandLineArgumentHandler.cs)|Registers a new command line for the server to use. Automatically adds it to --help. [Example Impl](https://github.com/ForgedWoW/WrathForgedCore/blob/main/WrathForged.Common/CommandLine/Commands/ProgramExitCommand.cs)|
-| [IRootCommandAdded](https://github.com/ForgedWoW/WrathForgedCore/blob/main/WrathForged.Common/CommandLine/IRootCommandAdded.cs)|Called when the root command is added to the command line. For example --acount is added, create might be a subcommand of --acount. You would add the sub commands in this call. You could also alter the existing root command.|
+| [IRootCommandAdded](https://github.com/ForgedWoW/WrathForgedCore/blob/main/WrathForged.Common/CommandLine/IRootCommandAdded.cs)|Called when the root command is added to the command line. For example --account is added, create might be a subcommand of --account. You would add the sub commands in this call. You could also alter the existing root command.|
 
 ### Configuration
 | Interface | Description |
