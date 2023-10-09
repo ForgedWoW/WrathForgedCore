@@ -43,33 +43,33 @@ public class ForgedTCPClient
         ModelPacketBuffer = new PacketBuffer(logger);
 
         _dataProcessingBlock = new ActionBlock<DataReceivedEventArgs>(data =>
-                                                                      {
-                                                                          if (data.EventHandler == null)
-                                                                          {
-                                                                              return;
-                                                                          }
+                            {
+                                if (data.EventHandler == null)
+                                {
+                                    return;
+                                }
 
-                                                                          foreach (var handler in data.EventHandler.GetInvocationList().Cast<EventHandler<DataReceivedEventArgs>>())
-                                                                          {
-                                                                              try
-                                                                              {
-                                                                                  handler?.Invoke(this, data);
-                                                                              }
-                                                                              catch (Exception ex)
-                                                                              {
-                                                                                  _logger.Error(ex, "Error processing data from client");
-                                                                              }
-                                                                          }
+                                foreach (var handler in data.EventHandler.GetInvocationList().Cast<EventHandler<DataReceivedEventArgs>>())
+                                {
+                                    try
+                                    {
+                                        handler?.Invoke(this, data);
+                                    }
+                                    catch (Exception ex)
+                                    {
+                                        _logger.Error(ex, "Error processing data from client");
+                                    }
+                                }
 
-                                                                          HandleData(data);
-                                                                      },
-                                                                      new ExecutionDataflowBlockOptions
-                                                                      {
-                                                                          MaxDegreeOfParallelism = 1,
-                                                                          CancellationToken = programExitNotifier.GetCancellationToken(),
-                                                                          EnsureOrdered = true,
-                                                                          NameFormat = "ForgedTCPClient Data Processing Thread {1}"
-                                                                      });
+                                HandleData(data);
+                            },
+                            new ExecutionDataflowBlockOptions
+                            {
+                                MaxDegreeOfParallelism = 1,
+                                CancellationToken = programExitNotifier.GetCancellationToken(),
+                                EnsureOrdered = true,
+                                NameFormat = "ForgedTCPClient Data Processing Thread {1}"
+                            });
 
         if (string.IsNullOrEmpty(bindIP) || bindIP == "*")
             LowerClient = new TcpClient();

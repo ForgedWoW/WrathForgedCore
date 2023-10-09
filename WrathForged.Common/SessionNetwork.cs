@@ -5,7 +5,6 @@ using WrathForged.Common.Networking;
 using WrathForged.Common.Serialization;
 using WrathForged.Models;
 using WrathForged.Models.Auth.Enum;
-using WrathForged.Models.Core.Comm;
 using WrathForged.Models.Instance.Enum;
 using WrathForged.Models.Networking;
 using WrathForged.Models.Realm.Enum;
@@ -21,13 +20,12 @@ namespace WrathForged.Common
         public PacketBuffer PacketBuffer { get; } = packetBuffer;
         public MemoryStream PacketBufferBaseStream { get; } = packetBufferBaseStream;
 
-        public WoWClientPacketOut NewClientMessage(PacketId packetId, PacketHeaderType packetHeaderType, byte[]? header = null) => new(_forgedModelSerializer, packetId, packetHeaderType, header);
-        public WoWClientPacketOut NewClientMessage(AuthServerOpCode opCode, PacketHeaderType packetHeaderType, byte[]? header = null) => new(_forgedModelSerializer, new PacketId(opCode, PacketScope.AuthToClient), packetHeaderType, header);
-        public WoWClientPacketOut NewClientMessage(RealmServerOpCode opCode, PacketHeaderType packetHeaderType, byte[]? header = null) => new(_forgedModelSerializer, new PacketId(opCode, PacketScope.RealmToClient), packetHeaderType, header);
-        public WoWClientPacketOut NewClientMessage(InstanceServerOpCode opCode, PacketHeaderType packetHeaderType, byte[]? header = null) => new(_forgedModelSerializer, new PacketId(opCode, PacketScope.InstanceToClient), packetHeaderType, header);
-        public WoWClientPacketOut NewClientMessage(ForgedCoreOpCode opCode, PacketHeaderType packetHeaderType, byte[]? header = null) => new(_forgedModelSerializer, new PacketId(opCode, PacketScope.System), packetHeaderType, header);
+        public WoWClientPacketOut NewClientMessage(PacketId packetId, PacketHeaderType packetHeaderType, ContentLengthType contentLengthType = ContentLengthType.None, byte[]? header = null) => new(_forgedModelSerializer, packetId, packetHeaderType, contentLengthType, header);
+        public WoWClientPacketOut NewClientMessage(AuthServerOpCode opCode, PacketHeaderType packetHeaderType, ContentLengthType contentLengthType = ContentLengthType.None, byte[]? header = null) => new(_forgedModelSerializer, new PacketId(opCode, PacketScope.AuthToClient), packetHeaderType, contentLengthType, header);
+        public WoWClientPacketOut NewClientMessage(RealmServerOpCode opCode, PacketHeaderType packetHeaderType = PacketHeaderType.WithBELength, ContentLengthType contentLengthType = ContentLengthType.UShort, byte[]? header = null) => new(_forgedModelSerializer, new PacketId(opCode, PacketScope.RealmToClient), packetHeaderType, contentLengthType, header);
+        public WoWClientPacketOut NewClientMessage(InstanceServerOpCode opCode, PacketHeaderType packetHeaderType = PacketHeaderType.WithBELength, ContentLengthType contentLengthType = ContentLengthType.UShort, byte[]? header = null) => new(_forgedModelSerializer, new PacketId(opCode, PacketScope.InstanceToClient), packetHeaderType, contentLengthType, header);
 
-        public void Send(object obj, PacketHeaderType packetHeaderType, PacketId packetId = default, byte[]? header = null)
+        public void Send(object obj, PacketHeaderType packetHeaderType, PacketId packetId = default, ContentLengthType contentLengthType = ContentLengthType.None, byte[]? header = null)
         {
             if (obj == null)
                 return;
@@ -42,12 +40,12 @@ namespace WrathForged.Common
                 packetId = new PacketId(att.PacketIDs.First(), att.Scope);
             }
 
-            var packet = NewClientMessage(packetId, packetHeaderType, header);
+            var packet = NewClientMessage(packetId, packetHeaderType, contentLengthType, header);
             packet.WriteObject(obj);
             ClientSocket.EnqueueWrite(packet);
         }
 
-        public void Send(object obj, PacketScope scope, PacketHeaderType packetHeaderType, byte[]? header = null)
+        public void Send(object obj, PacketScope scope, PacketHeaderType packetHeaderType, ContentLengthType contentLengthType = ContentLengthType.None, byte[]? header = null)
         {
             if (obj == null)
                 return;
@@ -59,7 +57,7 @@ namespace WrathForged.Common
 
             var packetId = new PacketId(att.PacketIDs.First(), scope);
 
-            var packet = NewClientMessage(packetId, packetHeaderType, header);
+            var packet = NewClientMessage(packetId, packetHeaderType, contentLengthType, header);
             packet.WriteObject(obj);
             ClientSocket.EnqueueWrite(packet);
         }

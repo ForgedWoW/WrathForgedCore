@@ -12,8 +12,7 @@ public static class CollectionExtensionMethods
 
     public static void Add<T, V>(this IDictionary<T, List<V>> dict, T key, V val)
     {
-        if (dict == null)
-            throw new ArgumentNullException(nameof(dict));
+        ArgumentNullException.ThrowIfNull(dict);
 
         if (!dict.TryGetValue(key, out var list))
         {
@@ -26,8 +25,7 @@ public static class CollectionExtensionMethods
 
     public static void Add<T, V>(this IDictionary<T, HashSet<V>> dict, T key, V val)
     {
-        if (dict == null)
-            throw new ArgumentNullException(nameof(dict));
+        ArgumentNullException.ThrowIfNull(dict);
 
         if (!dict.TryGetValue(key, out var list))
         {

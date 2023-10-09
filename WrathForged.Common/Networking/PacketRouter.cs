@@ -1,7 +1,6 @@
 ﻿// Copyright (c) Forged WoW LLC <https://github.com/ForgedWoW/WrathForgedCore>
 // Licensed under GPL-3.0 license. See <https://github.com/ForgedWoW/WrathForgedCore/blob/master/LICENSE> for full information.
 using System.Reflection;
-using Serilog;
 using WrathForged.Models.Networking;
 using WrathForged.Serialization.Models;
 
@@ -17,11 +16,10 @@ public class PacketRouter
         NoPacket
     }
 
-    private Dictionary<PacketScope, Dictionary<uint, List<(MethodInfo, PacketRouteAttribute, IPacketService)>>> _packetHandlerCache = new();
+    private readonly Dictionary<PacketScope, Dictionary<uint, List<(MethodInfo, PacketRouteAttribute, IPacketService)>>> _packetHandlerCache = new();
     private readonly Dictionary<PacketScope, Dictionary<uint, RoutType>> _hasPacketArg = new();
-    private readonly ILogger _logger;
 
-    public PacketRouter(ClassFactory classFactory, ILogger logger)
+    public PacketRouter(ClassFactory classFactory)
     {
         var packetHandlers = classFactory.ResolveAll<IPacketService>();
 
@@ -43,8 +41,6 @@ public class PacketRouter
                 _packetHandlerCache.AddToList(attribute.Scope, attribute.Id, (method, attribute, handler));
             }
         }
-
-        _logger = logger;
     }
 
     public RoutType GetRouteType(PacketScope scope, uint id)

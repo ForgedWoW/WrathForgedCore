@@ -3,7 +3,6 @@
 using Serilog;
 using WrathForged.Common;
 using WrathForged.Common.Networking;
-using WrathForged.Common.Serialization;
 using WrathForged.Database.Models.Auth;
 using WrathForged.Models.Auth;
 using WrathForged.Models.Auth.Enum;
@@ -12,17 +11,16 @@ using WrathForged.Serialization.Models;
 
 namespace WrathForged.Authorization.Server.Services
 {
-    public class RealmService(ClassFactory classFactory, ILogger logger, ForgedModelSerializer forgedModelSerializer) : IPacketService
+    public class RealmService(ClassFactory classFactory, ILogger logger) : IPacketService
     {
         private readonly ClassFactory _classFactory = classFactory;
         private readonly ILogger _logger = logger;
-        private readonly ForgedModelSerializer _forgedModelSerializer = forgedModelSerializer;
 
         [PacketRoute(PacketScope.ClientToAuth, AuthServerOpCode.REALM_LIST)]
         public void RealmRequest(WoWClientSession session)
         {
             _logger.Debug("Realm list request from {Address}", session.Network.ClientSocket.IPEndPoint.Address.ToString());
-            var packet = session.Network.NewClientMessage(new PacketId(AuthServerOpCode.REALM_LIST, PacketScope.AuthToClient), PacketHeaderType.OnlyOpCode);
+            var packet = session.Network.NewClientMessage(new PacketId(AuthServerOpCode.REALM_LIST, PacketScope.AuthToClient), PacketHeaderType.WithLength, ContentLengthType.Short);
 
             var response = new RealmListResponse();
 
@@ -50,7 +48,7 @@ namespace WrathForged.Authorization.Server.Services
                     Population = realm.Population,
                     Characters = numChars,
                     Category = (RealmCategory)realm.Timezone,
-                    RealmId = (byte)realm.Id,
+                    RealmId = 0, //(byte)realm.Id,
                     Version = new RealmClientVersion
                     {
                         Major = 3,
@@ -63,13 +61,10 @@ namespace WrathForged.Authorization.Server.Services
                 response.Realms.Add(authRealm);
             }
 
-            var pw = new PrimitiveWriter();
-            pw.Write(0);
-            pw.Write((short)response.Realms.Count);
-            _forgedModelSerializer.Serialize(pw, response);
 
-            packet.Writer.Write((short)pw.BaseStream.Length);
-            packet.Writer.Write(pw);
+            packet.Writer.Write(0);
+            packet.Writer.Write((short)response.Realms.Count);
+            packet.WriteObject(response);
 
             session.Network.ClientSocket.EnqueueWrite(packet);
         }

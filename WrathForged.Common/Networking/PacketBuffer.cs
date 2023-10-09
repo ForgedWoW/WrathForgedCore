@@ -89,7 +89,7 @@ public class PacketBuffer : IDisposable
         else
         {
             Span<byte> bufferSpan = new Span<byte>(_internalStream.GetBuffer());
-            var remainingSpan = bufferSpan.Slice(length.Value);
+            var remainingSpan = bufferSpan[length.Value..];
             remainingSpan.CopyTo(bufferSpan);
             _internalStream.SetLength(_internalStream.Length - length.Value);
             _internalStream.Position = 0;

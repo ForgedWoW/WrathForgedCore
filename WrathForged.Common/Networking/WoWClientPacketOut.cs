@@ -2,49 +2,56 @@
 // Licensed under GPL-3.0 license. See <https://github.com/ForgedWoW/WrathForgedCore/blob/master/LICENSE> for full information.
 using WrathForged.Common.Serialization;
 using WrathForged.Models.Networking;
+using WrathForged.Serialization.Models;
 
 namespace WrathForged.Common.Networking;
 
 public class WoWClientPacketOut : IDisposable
 {
-
     private bool _disposedValue;
     private readonly ForgedModelSerializer _forgedModelSerializer;
     private readonly PacketHeaderType _headerType;
+    private readonly ContentLengthType _contentLengthType;
     private readonly byte[]? _header;
+    private int _headerSize;
 
-    public WoWClientPacketOut(ForgedModelSerializer forgedModelSerializer, PacketId packetId, PacketHeaderType headerType, byte[]? header = null)
+    public WoWClientPacketOut(ForgedModelSerializer forgedModelSerializer, PacketId packetId, PacketHeaderType headerType, ContentLengthType contentLengthType = ContentLengthType.None, byte[]? header = null)
     {
         _forgedModelSerializer = forgedModelSerializer;
         PacketId = packetId;
         _headerType = headerType;
+        _contentLengthType = contentLengthType;
         Writer = new PrimitiveWriter();
         MemoryStream = (MemoryStream)Writer.BaseStream;
         _header = header;
 
-        int headerSize = -1;
-
         switch (headerType)
         {
             case PacketHeaderType.OnlyOpCode:
-                headerSize = 1;
+                _headerSize = 1;
                 break;
             case PacketHeaderType.NullTerminatedOpCode:
-                headerSize = 2;
+                _headerSize = 2;
                 break;
             case PacketHeaderType.NullTerminatedWithLength:
-                headerSize = 4;
+                _headerSize = 2;
+                AddContentLengthTypeToHeaderSize();
                 break;
+            case PacketHeaderType.WithBELength:
             case PacketHeaderType.WithLength:
-                headerSize = 3;
+                _headerSize = 1;
+                AddContentLengthTypeToHeaderSize();
                 break;
             case PacketHeaderType.Custom:
                 ArgumentNullException.ThrowIfNull(header);
-                headerSize = header.Length;
+                _headerSize = header.Length;
                 break;
         }
 
-        Writer.Write(new byte[headerSize]);
+        if (packetId.Type != PacketId.PacketIdType.Auth)
+            _headerSize++; // non auth op codes are short not byte
+
+        Writer.Write(new byte[_headerSize]);
     }
 
     public PacketId PacketId { get; }
@@ -67,13 +74,16 @@ public class WoWClientPacketOut : IDisposable
             case PacketHeaderType.OnlyOpCode:
             case PacketHeaderType.NullTerminatedOpCode:
                 Writer.BaseStream.Position = 0;
-                Writer.Write((byte)PacketId.Id);
+                WriteOpCode();
                 break;
             case PacketHeaderType.NullTerminatedWithLength:
                 HeaderWithLenNullT();
                 break;
             case PacketHeaderType.WithLength:
                 HeaderWithLen();
+                break;
+            case PacketHeaderType.WithBELength:
+                HeaderWithBELen();
                 break;
             case PacketHeaderType.Custom:
                 Writer.BaseStream.Position = 0;
@@ -89,29 +99,6 @@ public class WoWClientPacketOut : IDisposable
         return new Memory<byte>(buffer, 0, dataPos);
     }
 
-    private void HeaderWithLenNullT()
-    {
-        var buffer = MemoryStream.GetBuffer();
-        var headerSize = 4; // 1 byte for content length, 2 bytes for PacketId.Id, and 1 byte for terminator
-        var contentLength = buffer.Length - headerSize;
-
-        var span = buffer.AsSpan();
-        span[0] = (byte)contentLength;
-        _ = BitConverter.TryWriteBytes(span.Slice(1, 2), (ushort)PacketId.Id);
-        span[3] = 0; // Zero terminator
-    }
-
-    private void HeaderWithLen()
-    {
-        var buffer = MemoryStream.GetBuffer();
-        var headerSize = 3; // 1 byte for content length, 2 bytes for PacketId.Id, and 1 byte for terminator
-        var contentLength = buffer.Length - headerSize;
-
-        var span = buffer.AsSpan();
-        span[0] = (byte)contentLength;
-        _ = BitConverter.TryWriteBytes(span.Slice(1, 2), (ushort)PacketId.Id);
-    }
-
     public void WriteObject<T>(T obj)
     {
         if (obj == null)
@@ -119,6 +106,115 @@ public class WoWClientPacketOut : IDisposable
 
         _forgedModelSerializer.Serialize(Writer, obj);
     }
+
+    private void HeaderWithLenNullT()
+    {
+        MemoryStream.Position = 0;
+        WriteOpCode();
+        WriteContentLength();
+        Writer.Write((byte)0); // Zero terminator
+    }
+
+    private void HeaderWithLen()
+    {
+        MemoryStream.Position = 0;
+        WriteOpCode();
+        WriteContentLength();
+    }
+
+    private void HeaderWithBELen()
+    {
+        MemoryStream.Position = 0;
+        WriteContentLengthBE();
+        WriteOpCode();
+    }
+
+    private void WriteOpCode()
+    {
+        if (PacketId.Type == PacketId.PacketIdType.Auth)
+            Writer.Write((byte)PacketId.Id);
+        else
+            Writer.Write((ushort)PacketId.Id);
+    }
+
+    private void WriteContentLength()
+    {
+        switch (_contentLengthType)
+        {
+            case ContentLengthType.Byte:
+                Writer.Write((byte)(MemoryStream.Length - _headerSize));
+                break;
+            case ContentLengthType.Short:
+                Writer.Write((short)(MemoryStream.Length - _headerSize));
+                break;
+            case ContentLengthType.UShort:
+                Writer.Write((ushort)(MemoryStream.Length - _headerSize));
+                break;
+            case ContentLengthType.Int:
+                Writer.Write((int)(MemoryStream.Length - _headerSize));
+                break;
+            case ContentLengthType.UInt:
+                Writer.Write((uint)(MemoryStream.Length - _headerSize));
+                break;
+            case ContentLengthType.Long:
+                Writer.Write(MemoryStream.Length - _headerSize);
+                break;
+            case ContentLengthType.ULong:
+                Writer.Write((ulong)(MemoryStream.Length - _headerSize));
+                break;
+        }
+    }
+
+    private void WriteContentLengthBE()
+    {
+        switch (_contentLengthType)
+        {
+            case ContentLengthType.Byte:
+                Writer.WriteByte((byte)(MemoryStream.Length - _headerSize));
+                break;
+            case ContentLengthType.Short:
+                Writer.WriteShortBE((short)(MemoryStream.Length - _headerSize));
+                break;
+            case ContentLengthType.UShort:
+                Writer.WriteUShortBE((ushort)(MemoryStream.Length - _headerSize));
+                break;
+            case ContentLengthType.Int:
+                Writer.WriteIntBE((int)(MemoryStream.Length - _headerSize));
+                break;
+            case ContentLengthType.UInt:
+                Writer.WriteUInt((uint)(MemoryStream.Length - _headerSize));
+                break;
+            case ContentLengthType.Long:
+                Writer.WriteLongBE(MemoryStream.Length - _headerSize);
+                break;
+            case ContentLengthType.ULong:
+                Writer.WriteULong((ulong)(MemoryStream.Length - _headerSize));
+                break;
+        }
+    }
+
+    private void AddContentLengthTypeToHeaderSize()
+    {
+        switch (_contentLengthType)
+        {
+            case ContentLengthType.Byte:
+                _headerSize += 1;
+                break;
+            case ContentLengthType.Short:
+            case ContentLengthType.UShort:
+                _headerSize += 2;
+                break;
+            case ContentLengthType.Int:
+            case ContentLengthType.UInt:
+                _headerSize += 4;
+                break;
+            case ContentLengthType.Long:
+            case ContentLengthType.ULong:
+                _headerSize += 8;
+                break;
+        }
+    }
+
 
     protected virtual void Dispose(bool disposing)
     {
