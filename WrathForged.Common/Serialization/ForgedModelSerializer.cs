@@ -405,6 +405,8 @@ public class ForgedModelSerializer
         {
             forgedTypeSerialization?.Serialize(writer, prop, otherMeta, obj, val);
         }
+        else if (val != null && _deserializationMethodsCacheByType.ContainsKey(val.GetType())) // its an object, so serialize it.
+            Serialize(writer, val);
     }
 
 #pragma warning disable CS8601

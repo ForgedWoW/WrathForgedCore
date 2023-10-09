@@ -197,7 +197,7 @@ public class ClientSocket
                 try
                 {
                     var buffer = data.GetBuffer();
-                    _logger.Verbose("Sending packet {Opcode} to {IPEndPoint} with length {Length}", data.PacketId.Id, IPEndPoint, buffer.Length);
+                    _logger.Verbose("Sending packet {Opcode} to {IPEndPoint} with length {Length}", data.PacketId, IPEndPoint, buffer.Length);
                     await _stream.WriteAsync(buffer);
                     _onDataSent?.Invoke(this, buffer);
                     data.Dispose();

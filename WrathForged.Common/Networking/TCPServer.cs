@@ -199,7 +199,7 @@ public class TCPServer
 
                         if (_configuration.GetDefaultValue("ClientTCPServer:CaptureIncomingData", false))
                         {
-                            var incomingFileName = Path.Combine(_configuration.GetDefaultValue("ClientTCPServer:IncomingDataCaptureDir", ".\\Capture\\Incoming"), $"{DateTime.Now:yyyy-MM-dd}");
+                            var incomingFileName = Path.Combine(_configuration.GetDefaultValue("ClientTCPServer:IncomingDataCaptureDir", ".\\Capture\\Incoming"), $"{DateTime.Now:yyyy-MM-dd-HH-mm-ss}");
 
                             if (!Directory.Exists(incomingFileName))
                                 _ = Directory.CreateDirectory(incomingFileName);
@@ -216,7 +216,7 @@ public class TCPServer
 
                         if (_configuration.GetDefaultValue("ClientTCPServer:CaptureOutgoingData", false))
                         {
-                            var outgoingFileName = Path.Combine(_configuration.GetDefaultValue("ClientTCPServer:OutgoingDataCaptureDir", ".\\Capture\\Outgoing"), $"{DateTime.Now:yyyy-MM-dd}");
+                            var outgoingFileName = Path.Combine(_configuration.GetDefaultValue("ClientTCPServer:OutgoingDataCaptureDir", ".\\Capture\\Outgoing"), $"{DateTime.Now:yyyy-MM-dd-HH-mm-ss}");
 
                             if (!Directory.Exists(outgoingFileName))
                                 _ = Directory.CreateDirectory(outgoingFileName);
