@@ -69,8 +69,13 @@ namespace WrathForged.Models.Networking
                     AuthOpCode = (AuthServerOpCode)id;
                     break;
 
+                case PacketScope.InstanceToClient:
                 case PacketScope.ClientToInstance:
                     InstanceOpCode = (InstanceServerOpCode)id;
+                    break;
+
+                case PacketScope.System:
+                    ForgeCoreOpCode = (ForgedCoreOpCode)id;
                     break;
 
                 default:
@@ -89,8 +94,13 @@ namespace WrathForged.Models.Networking
                     AuthOpCode = (AuthServerOpCode)id;
                     break;
 
+                case PacketScope.InstanceToClient:
                 case PacketScope.ClientToInstance:
                     InstanceOpCode = (InstanceServerOpCode)id;
+                    break;
+
+                case PacketScope.System:
+                    ForgeCoreOpCode = (ForgedCoreOpCode)id;
                     break;
 
                 default:

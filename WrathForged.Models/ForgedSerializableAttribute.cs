@@ -50,5 +50,7 @@ namespace WrathForged.Models
         public PacketScope Scope { get; set; }
 
         public uint[] PacketIDs { get; set; }
+
+        public bool RequiresAuthentication { get; set; }
     }
 }

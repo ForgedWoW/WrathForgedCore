@@ -15,6 +15,9 @@ namespace WrathForged.Common
     public class SessionNetwork(ClientSocket clientSocket, PacketBuffer packetBuffer, MemoryStream packetBufferBaseStream, ForgedModelSerializer forgedModelSerializer)
     {
         private readonly ForgedModelSerializer _forgedModelSerializer = forgedModelSerializer;
+        public int Latency { get; set; }
+        public DateTime LastPing { get; set; } = DateTime.UtcNow;
+        public int OverspeedPingCount { get; set; }
 
         public ClientSocket ClientSocket { get; } = clientSocket;
         public PacketBuffer PacketBuffer { get; } = packetBuffer;
@@ -45,7 +48,40 @@ namespace WrathForged.Common
             ClientSocket.EnqueueWrite(packet);
         }
 
-        public void Send(object obj, PacketScope scope, PacketHeaderType packetHeaderType, ContentLengthType contentLengthType = ContentLengthType.None, byte[]? header = null)
+
+        /// <summary>
+        ///     Sends the model to the client. if the model does not have a ForgedSerializableAttribute defined, it will not be sent.
+        ///     if opCode is not defined, it will use the first opCode defined in the ForgedSerializableAttribute.
+        /// </summary>
+        /// <param name="obj"></param>
+        /// <param name="opCode"></param>
+        public void Send(object obj, RealmServerOpCode? opCode = null)
+        {
+            if (obj == null)
+                return;
+
+            PacketId packetId;
+
+            if (opCode == null)
+            {
+                var att = obj.GetType().GetCustomAttribute<ForgedSerializableAttribute>();
+
+                if (att == null)
+                    return;
+
+                packetId = new PacketId(att.PacketIDs.First(), PacketScope.RealmToClient);
+            }
+            else
+            {
+                packetId = new PacketId(opCode.Value, PacketScope.RealmToClient);
+            }
+
+            var packet = NewClientMessage(packetId, PacketHeaderType.WithBELength, ContentLengthType.UShort);
+            packet.WriteObject(obj);
+            ClientSocket.EnqueueWrite(packet);
+        }
+
+        public void Send(object obj, PacketScope scope, PacketHeaderType packetHeaderType = PacketHeaderType.WithBELength, ContentLengthType contentLengthType = ContentLengthType.UShort, byte[]? header = null)
         {
             if (obj == null)
                 return;
