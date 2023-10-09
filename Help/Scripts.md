@@ -9,7 +9,7 @@
 Use to add addtional commands to the servers command line window.
 All commands are also localized using [Localizer](https://github.com/ForgedWoW/WrathForgedCore/blob/main/WrathForged.Common/Localization/Localizer.cs), has base class of [ClientLocalizer](https://github.com/ForgedWoW/WrathForgedCore/blob/main/WrathForged.Common/Localization/ClientLocalizer.cs) and [Localization SQL](https://github.com/ForgedWoW/WrathForgedCore/blob/main/WrathForged.Database/sql/updates/world/Locale.sql)
 
-See [Command Line Commands](https://github.com/ForgedWoW/WrathForgedCore/blob/main/WrathForged.Common/Help/CommandLine.md) for available IRootCommandAdded names.
+See [Command Line Commands](https://github.com/ForgedWoW/WrathForgedCore/blob/main/Help/CommandLine.md) for available IRootCommandAdded names.
 
 | Interface | Description |
 | --------- | ----------- |
