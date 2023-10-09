@@ -5,5 +5,5 @@ Similarly `--command subcommand -h` for example `--account create -h` to get inf
 | Command | IRootCommandAdded Name | Description | Current Sub Commands |
 | --------- | --------- | ----------- | ----------- |
 | `--exit`, `--quit`, `--stop` | exit | Exits the server. ||
-| `--account` | account | Account related commands. | `create` |
+| `--account` | account | Account related commands. | `create`, `delete`, `changePassword` |
 | `--dbc` | dbc | DBC related commands. | `export` |
