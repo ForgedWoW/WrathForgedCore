@@ -105,7 +105,7 @@ namespace WrathForged.Authorization.Server.Services
             packet.WriteObject(new AuthLogonChallengeResponse()
             {
                 Status = AuthStatus.WOW_SUCCESS,
-                ServerEphemeral = session.Security.SRP6.ServerEphemeral.ToProperByteArray(),
+                ServerEphemeral = session.Security.SRP6.B,
                 Generator = SRP6.G,
                 Modulus = SRP6.N,
                 Salt = session.Security.Account.Salt
@@ -119,14 +119,13 @@ namespace WrathForged.Authorization.Server.Services
         public void LogonProof(WoWClientSession session, AuthLoginProof proof)
         {
             _logger.Debug("Logon proof request from {Address}", session.Network.ClientSocket.IPEndPoint.Address.ToString());
-            session.Security.SRP6.ClientEphemeral = proof.A.ToBigInteger();
-            session.Security.SRP6.ClientProof = proof.ClientM.ToBigInteger();
-            var clientProof = session.Security.SRP6.GenerateClientProof();
 
-            if (clientProof == session.Security.SRP6.ClientProof)
+            var sessionKey = session.Security.SRP6.VerifyChallengeResponse(proof.A, proof.ClientM);
+
+            if (sessionKey != null)
             {
                 _logger.Debug("Account {Username} with id {Id} successfully logged in from {Address}.", session.Security.Account?.Username, session.Security.Account?.Id, session.Network.ClientSocket.IPEndPoint.Address.ToString());
-                var sessionKey = session.Security.SRP6.SessionKey.ToProperByteArray();
+
                 session.Security.SessionKey = sessionKey; // also sets the session key on the account.
                 using var authDatabase = _classFactory.Resolve<AuthDatabase>();
 
@@ -152,7 +151,7 @@ namespace WrathForged.Authorization.Server.Services
 
                 authDatabase.Accounts.Update(session.Security.Account);
                 authDatabase.SaveChanges();
-                var serverProof = session.Security.SRP6.ServerProof;
+                var serverProof = SRP6.GetSessionVerifier(proof.A, proof.ClientM, sessionKey);
 
                 session.Network.Send(new AuthLoginProofResponse()
                 {

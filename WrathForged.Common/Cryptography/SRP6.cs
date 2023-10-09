@@ -86,11 +86,11 @@ namespace WrathForged.Common.Cryptography
 
         public SRP6(string username, byte[] salt, byte[] verifier)
         {
-            _i = SHA1.HashData(System.Text.Encoding.UTF8.GetBytes(username));
+            _i = SHA1.HashData(Encoding.UTF8.GetBytes(username));
             _b = _crypto.RandomBytes(32).ToBigInteger();
             _v = verifier.ToBigInteger();
             Salt = salt;
-            B = ((BigInteger.ModPow(_g, _b, _n) + (_v * 3)) % _n).ToByteArray(true);
+            B = ((BigInteger.ModPow(_g, _b, _n) + (_v * 3)) % _n).ToProperByteArray();
         }
 
         public byte[]? VerifyChallengeResponse(byte[] a, byte[] clientM)
@@ -102,16 +102,16 @@ namespace WrathForged.Common.Cryptography
                 return null;
             }
 
-            BigInteger u = new BigInteger(SHA1.HashData(a.Concat(B).ToArray()));
-            BigInteger S = (aaBigInt * (BigInteger.ModPow(BigInteger.ModPow(_v, u, _n), _b, _n)));
-            byte[] k = SHA1Interleave(S.ToByteArray(true));
+            BigInteger u = SHA1.HashData(a.Concat(B).ToArray()).ToBigInteger();
+            byte[] k = SHA1Interleave(BigInteger.ModPow(aaBigInt * BigInteger.ModPow(_v, u, _n), _b, _n).ToProperByteArray());
 
             byte[] NHash = SHA1.HashData(N);
             byte[] gHash = SHA1.HashData(G);
-            byte[] NgHash = NHash.Zip(gHash, (n, g) => (byte)(n ^ g)).ToArray();
-            SHA1 sha1 = SHA1.Create();
 
-            byte[] ourM = SHA1.HashData(NgHash.Concat(_i).Concat(S.ToByteArray(true)).Concat(a).Concat(B).Concat(k).ToArray());
+            for (int i = 0, j = NHash.Length; i < j; i++)
+                NHash[i] ^= gHash[i];
+
+            byte[] ourM = SHA1.HashData(NHash.Concat(_i).Concat(Salt).Concat(a).Concat(B).Concat(k).ToArray());
 
             return ourM.SequenceEqual(clientM) ? k : null;
         }
