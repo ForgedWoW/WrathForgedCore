@@ -31,7 +31,7 @@ namespace WrathForged.Authorization.Server.Services
         [PacketRoute(PacketScope.ClientToAuth, AuthServerOpCode.AUTH_LOGON_CHALLENGE)]
         public void ChallengeRequest(WoWClientSession session, AuthLogonChallengeRequest authLogonChallenge)
         {
-            _logger.Debug("Login challenge request from {Address}", session.Network.ClientSocket.IPEndPoint.Address.ToString());
+            _logger.Debug("Login challenge request from {Address}", session.Network.ClientSocket.IPEndPoint);
             using var authDatabase = _classFactory.Resolve<AuthDatabase>();
 
             var account = authDatabase.Accounts.FirstOrDefault(x => x.Username == authLogonChallenge.Identity || x.RegMail == authLogonChallenge.Identity || x.Email == authLogonChallenge.Identity);
@@ -39,7 +39,7 @@ namespace WrathForged.Authorization.Server.Services
 
             if (account == null)
             {
-                _logger.Debug("Failed login attempt for {Identity} from {Address}. Account not found.", authLogonChallenge.Identity, session.Network.ClientSocket.IPEndPoint.Address);
+                _logger.Debug("Failed login attempt for {Identity} from {Address}. Account not found.", authLogonChallenge.Identity, session.Network.ClientSocket.IPEndPoint);
                 LoginFailed(session, AuthStatus.WOW_FAIL_UNKNOWN_ACCOUNT, AuthServerOpCode.AUTH_LOGON_CHALLENGE);
                 return;
             }
@@ -49,7 +49,7 @@ namespace WrathForged.Authorization.Server.Services
 
             if (account.Locked && account.LastIp != ipString)
             {
-                _logger.Debug("Failed login attempt for {Identity} from {Address}. Account locked to IpAddress {LockedIp}", authLogonChallenge.Identity, session.Network.ClientSocket.IPEndPoint.Address, account.LastIp);
+                _logger.Debug("Failed login attempt for {Identity} from {Address}. Account locked to IpAddress {LockedIp}", authLogonChallenge.Identity, session.Network.ClientSocket.IPEndPoint, account.LastIp);
                 LoginFailed(session, AuthStatus.WOW_FAIL_LOCKED_ENFORCED, AuthServerOpCode.AUTH_LOGON_CHALLENGE);
                 account.FailedLogins++;
                 authDatabase.Accounts.Update(account);
@@ -62,7 +62,7 @@ namespace WrathForged.Authorization.Server.Services
             switch (banState)
             {
                 case BanValidator.BanType.Banned:
-                    _logger.Debug("Failed login attempt for {Identity} from {Address}. Account banned.", authLogonChallenge.Identity, session.Network.ClientSocket.IPEndPoint.Address);
+                    _logger.Debug("Failed login attempt for {Identity} from {Address}. Account banned.", authLogonChallenge.Identity, session.Network.ClientSocket.IPEndPoint);
                     LoginFailed(session, AuthStatus.WOW_FAIL_BANNED, AuthServerOpCode.AUTH_LOGON_CHALLENGE);
                     account.FailedLogins++;
                     authDatabase.Accounts.Update(account);
@@ -70,7 +70,7 @@ namespace WrathForged.Authorization.Server.Services
                     return;
 
                 case BanValidator.BanType.Suspended:
-                    _logger.Debug("Failed login attempt for {Identity} from {Address}. Account suspended.", authLogonChallenge.Identity, session.Network.ClientSocket.IPEndPoint.Address);
+                    _logger.Debug("Failed login attempt for {Identity} from {Address}. Account suspended.", authLogonChallenge.Identity, session.Network.ClientSocket.IPEndPoint);
                     LoginFailed(session, AuthStatus.WOW_FAIL_SUSPENDED, AuthServerOpCode.AUTH_LOGON_CHALLENGE);
                     account.FailedLogins++;
                     authDatabase.Accounts.Update(account);
@@ -83,12 +83,12 @@ namespace WrathForged.Authorization.Server.Services
                 authLogonChallenge.Revision != 5 ||
                 authLogonChallenge.Build != 12340)
             {
-                _logger.Debug("Failed login attempt for {Identity} from {Address}. Invalid Build {Major}.{Minor}.{Revision}.{Build}", authLogonChallenge.Identity, session.Network.ClientSocket.IPEndPoint.Address, (byte)authLogonChallenge.Major, authLogonChallenge.Minor, authLogonChallenge.Revision, authLogonChallenge.Build);
+                _logger.Debug("Failed login attempt for {Identity} from {Address}. Invalid Build {Major}.{Minor}.{Revision}.{Build}", authLogonChallenge.Identity, session.Network.ClientSocket.IPEndPoint, (byte)authLogonChallenge.Major, authLogonChallenge.Minor, authLogonChallenge.Revision, authLogonChallenge.Build);
                 LoginFailed(session, AuthStatus.WOW_FAIL_VERSION_INVALID, AuthServerOpCode.AUTH_LOGON_CHALLENGE);
                 return;
             }
 
-            _logger.Debug("Login attempt for {Identity} from {Address}. Assigning session token.", authLogonChallenge.Identity, session.Network.ClientSocket.IPEndPoint.Address);
+            _logger.Debug("Login attempt for {Identity} from {Address}. Assigning session token.", authLogonChallenge.Identity, session.Network.ClientSocket.IPEndPoint);
 
             session.Security.Account = account;
             session.Security.SessionKey = _randomUtilities.RandomBytes(16);
@@ -118,13 +118,13 @@ namespace WrathForged.Authorization.Server.Services
         [PacketRoute(PacketScope.ClientToAuth, AuthServerOpCode.AUTH_LOGON_PROOF)]
         public void LogonProof(WoWClientSession session, AuthLoginProof proof)
         {
-            _logger.Debug("Logon proof request from {Address}", session.Network.ClientSocket.IPEndPoint.Address.ToString());
+            _logger.Debug("Logon proof request from {Address}", session.Network.ClientSocket.IPEndPoint);
 
             var sessionKey = session.Security.SRP6.VerifyChallengeResponse(proof.A, proof.ClientM);
 
             if (sessionKey != null)
             {
-                _logger.Debug("Account {Username} with id {Id} successfully logged in from {Address}.", session.Security.Account?.Username, session.Security.Account?.Id, session.Network.ClientSocket.IPEndPoint.Address.ToString());
+                _logger.Debug("Account {Username} with id {Id} successfully logged in from {Address}.", session.Security.Account?.Username, session.Security.Account?.Id, session.Network.ClientSocket.IPEndPoint);
 
                 session.Security.SessionKey = sessionKey; // also sets the session key on the account.
                 using var authDatabase = _classFactory.Resolve<AuthDatabase>();
@@ -162,7 +162,7 @@ namespace WrathForged.Authorization.Server.Services
             }
             else
             {
-                _logger.Debug("Account {Username} with id {Id} failed login from {Address}. Invalid password.", session.Security.Account?.Username, session.Security.Account?.Id, session.Network.ClientSocket.IPEndPoint.Address.ToString());
+                _logger.Debug("Account {Username} with id {Id} failed login from {Address}. Invalid password.", session.Security.Account?.Username, session.Security.Account?.Id, session.Network.ClientSocket.IPEndPoint);
                 LoginFailed(session, AuthStatus.WOW_FAIL_UNKNOWN_ACCOUNT, AuthServerOpCode.AUTH_LOGON_PROOF);
             }
         }
@@ -170,7 +170,7 @@ namespace WrathForged.Authorization.Server.Services
         [PacketRoute(PacketScope.ClientToAuth, AuthServerOpCode.AUTH_RECONNECT_CHALLENGE)]
         public void ReconnectChallengeRequest(WoWClientSession session, AuthLogonChallengeRequest authLogonChallenge)
         {
-            _logger.Debug("AUTH_RECONNECT_CHALLENGE from {Address}", session.Network.ClientSocket.IPEndPoint.Address.ToString());
+            _logger.Debug("AUTH_RECONNECT_CHALLENGE from {Address}", session.Network.ClientSocket.IPEndPoint);
             using var authDatabase = _classFactory.Resolve<AuthDatabase>();
 
             var account = authDatabase.Accounts.FirstOrDefault(x => x.Username == authLogonChallenge.Identity || x.RegMail == authLogonChallenge.Identity);
@@ -178,7 +178,7 @@ namespace WrathForged.Authorization.Server.Services
 
             if (account == null)
             {
-                _logger.Debug("Failed login attempt for {Identity} from {Address}. Account not found.", authLogonChallenge.Identity, session.Network.ClientSocket.IPEndPoint.Address);
+                _logger.Debug("Failed login attempt for {Identity} from {Address}. Account not found.", authLogonChallenge.Identity, session.Network.ClientSocket.IPEndPoint);
                 LoginFailed(session, AuthStatus.WOW_FAIL_UNKNOWN_ACCOUNT, AuthServerOpCode.AUTH_LOGON_CHALLENGE);
                 return;
             }
@@ -203,16 +203,16 @@ namespace WrathForged.Authorization.Server.Services
         [PacketRoute(PacketScope.ClientToAuth, AuthServerOpCode.AUTH_RECONNECT_PROOF)]
         public void ReconnectProof(WoWClientSession session, AuthReconnectedProof proof)
         {
-            _logger.Debug("AUTH_RECONNECT_PROOF from {Address}", session.Network.ClientSocket.IPEndPoint.Address.ToString());
+            _logger.Debug("AUTH_RECONNECT_PROOF from {Address}", session.Network.ClientSocket.IPEndPoint);
             if (session.Security.Account == null)
             {
-                session.Network.ClientSocket.Disconnect();
+                LoginFailed(session, AuthStatus.WOW_FAIL_UNKNOWN_ACCOUNT, AuthServerOpCode.AUTH_RECONNECT_PROOF);
                 return;
             }
 
             if (session.Security.Account.SessionKeyAuth == null)
             {
-                session.Network.ClientSocket.Disconnect();
+                LoginFailed(session, AuthStatus.WOW_FAIL_UNKNOWN_ACCOUNT, AuthServerOpCode.AUTH_RECONNECT_PROOF);
                 return;
             }
 
@@ -265,7 +265,7 @@ namespace WrathForged.Authorization.Server.Services
             if (_configuration.GetDefaultValue("Security:MaxLoginAttempts", 10) <= tracker.Attempts)
             {
                 var banTime = _configuration.GetDefaultValue("Security:MaxLoginAttempts_BanTime_Minutes", 5);
-                _logger.Debug("Too many failed login attempts from {Address}. Banning for {BanTime}.", session.Network.ClientSocket.IPEndPoint.Address, TimeSpan.FromMinutes(banTime).ToReadableString());
+                _logger.Debug("Too many failed login attempts from {Address}. Banning for {BanTime}.", session.Network.ClientSocket.IPEndPoint, TimeSpan.FromMinutes(banTime).ToReadableString());
                 session.Network.ClientSocket.Disconnect();
                 tracker.Attempts = 0;
                 using var authDatabase = _classFactory.Resolve<AuthDatabase>();
@@ -308,7 +308,6 @@ namespace WrathForged.Authorization.Server.Services
             session.Network.ClientSocket.EnqueueWrite(errorPkt);
 
             session.Security.AuthenticationState = WoWClientSession.AuthState.LoggedOut;
-            session.Network.ClientSocket.Disconnect();
         }
     }
 }
