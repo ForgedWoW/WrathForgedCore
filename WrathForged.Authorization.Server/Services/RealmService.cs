@@ -48,7 +48,7 @@ namespace WrathForged.Authorization.Server.Services
                     Population = realm.Population,
                     Characters = numChars,
                     Category = (RealmCategory)realm.Timezone,
-                    RealmId = 0, //(byte)realm.Id,
+                    RealmId = (byte)realm.Id,
                     Version = new RealmClientVersion
                     {
                         Major = 3,

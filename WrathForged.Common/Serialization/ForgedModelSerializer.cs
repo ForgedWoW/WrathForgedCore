@@ -21,9 +21,9 @@ public class ForgedModelSerializer
     ///     A cache of all the deserialization definitions for each object and their properties
     /// </summary>
     // Scope OpCode ObjType PropertyName, SerializationMetadata
-    private readonly Dictionary<PacketScope, Dictionary<uint, (Type, List<PropertyMeta>)>> _deserializationMethodsCache = new();
-    private readonly Dictionary<Type, List<PropertyMeta>> _deserializationMethodsCacheByType = new();
-    private readonly Dictionary<Type, List<PropertyMeta>> _systemScope = new();
+    private readonly Dictionary<PacketScope, Dictionary<uint, (Type, ModelInfo)>> _deserializationMethodsCache = new();
+    private readonly Dictionary<Type, ModelInfo> _deserializationMethodsCacheByType = new();
+    private readonly Dictionary<Type, ModelInfo> _systemScope = new();
     private readonly Dictionary<Type, IForgedTypeSerialization> _serializers = new();
     private readonly Dictionary<ForgedTypeCode, IForgedTypeSerialization> _forgedTypeCodeSerializers = new();
     private readonly Histogram<double> _deserializeTime;
@@ -43,6 +43,7 @@ public class ForgedModelSerializer
             var attribute = (ForgedSerializableAttribute)cls.GetCustomAttributes(typeof(ForgedSerializableAttribute), false).First();
 
             var propertyAttributes = new List<PropertyMeta>();
+            var size = 0;
 
             foreach (var prop in cls.GetProperties())
             {
@@ -57,15 +58,18 @@ public class ForgedModelSerializer
                     }
 
                 if (propAtt != null)
+                {
                     propertyAttributes.Add(new PropertyMeta(propAtt, prop, conditionalAtt));
+                    size += GetPropertySize(prop, propAtt);
+                }
             }
 
             propertyAttributes.Sort();
-
-            _deserializationMethodsCacheByType[cls] = propertyAttributes;
+            var mi = new ModelInfo(cls, propertyAttributes, size);
+            _deserializationMethodsCacheByType[cls] = mi;
 
             if (!_systemScope.TryGetValue(cls, out var propertyAttr))
-                _systemScope[cls] = propertyAttributes;
+                _systemScope[cls] = mi;
 
             Queue<PacketScope> scopes = new();
             scopes.Enqueue(attribute.Scope);
@@ -91,7 +95,7 @@ public class ForgedModelSerializer
                 }
 
                 foreach (var packetId in attribute.PacketIDs)
-                    scopeDictionary[packetId] = (cls, propertyAttributes);
+                    scopeDictionary[packetId] = (cls, mi);
             }
         }
 
@@ -130,12 +134,12 @@ public class ForgedModelSerializer
         Serialize(writer, obj, deserializationDefinition.Item2);
     }
 
-    private void Serialize(PrimitiveWriter writer, object obj, List<PropertyMeta> deserializationDefinition)
+    private void Serialize(PrimitiveWriter writer, object obj, ModelInfo deserializationDefinition)
     {
         var startTimestamp = DateTime.UtcNow;
-        foreach (var prop in deserializationDefinition)
+        foreach (var prop in deserializationDefinition.Properties)
         {
-            if (prop.ConditionalSerialization != null && !prop.ConditionalSerialization.ShouldDeserialize(obj, prop, deserializationDefinition))
+            if (prop.ConditionalSerialization != null && !prop.ConditionalSerialization.ShouldDeserialize(obj, prop, deserializationDefinition.Properties))
                 continue;
 
             try
@@ -171,6 +175,12 @@ public class ForgedModelSerializer
             return DeserializationResult.UnknownPacket;
         }
 
+        if (!buffer.CanReadLength(propertyMetas.Size))
+        {
+            packet = default!;
+            return DeserializationResult.EndOfStream;
+        }
+
         try
         {
             var instance = Activator.CreateInstance<T>();
@@ -182,11 +192,11 @@ public class ForgedModelSerializer
             }
 
             Dictionary<uint, int> collectionSizes = [];
-            foreach (var prop in propertyMetas)
+            foreach (var prop in propertyMetas.Properties)
             {
                 try
                 {
-                    if (prop.ConditionalSerialization != null && !prop.ConditionalSerialization.ShouldDeserialize(instance, prop, propertyMetas))
+                    if (prop.ConditionalSerialization != null && !prop.ConditionalSerialization.ShouldDeserialize(instance, prop, propertyMetas.Properties))
                         continue;
 
                     var isCollection = prop.ReflectedProperty.PropertyType.IsArray ||
@@ -200,6 +210,11 @@ public class ForgedModelSerializer
 
                     if (result != null)
                         prop.ReflectedProperty.SetValue(instance, EvaluateSpecialCasting(prop, result));
+                }
+                catch (EndOfStreamException)
+                {
+                    _logger.Verbose("Failed to deserialize property {PropertyName} for packet {Name}. End of stream.", prop.ReflectedProperty.Name, t.Name);
+                    throw;
                 }
                 catch
                 {
@@ -215,7 +230,7 @@ public class ForgedModelSerializer
         }
         catch (EndOfStreamException eos)
         {
-            _logger.Error(eos, "Failed to deserialize packet {Name} end of stream.", t.Name);
+            _logger.Verbose(eos, "Failed to deserialize packet {Name} end of stream.", t.Name);
             packet = default!;
             return DeserializationResult.EndOfStream;
         }
@@ -243,6 +258,12 @@ public class ForgedModelSerializer
             return DeserializationResult.UnknownPacket;
         }
 
+        if (!buffer.CanReadLength(deserializationDefinition.Item2.Size))
+        {
+            packet = default!;
+            return DeserializationResult.EndOfStream;
+        }
+
         try
         {
             var instance = Activator.CreateInstance(deserializationDefinition.Item1);
@@ -254,11 +275,11 @@ public class ForgedModelSerializer
             }
 
             Dictionary<uint, int> collectionSizes = [];
-            foreach (var prop in deserializationDefinition.Item2)
+            foreach (var prop in deserializationDefinition.Item2.Properties)
             {
                 try
                 {
-                    if (prop.ConditionalSerialization != null && !prop.ConditionalSerialization.ShouldDeserialize(instance, prop, deserializationDefinition.Item2))
+                    if (prop.ConditionalSerialization != null && !prop.ConditionalSerialization.ShouldDeserialize(instance, prop, deserializationDefinition.Item2.Properties))
                         continue;
 
                     var isCollection = prop.ReflectedProperty.PropertyType.IsArray ||
@@ -275,7 +296,7 @@ public class ForgedModelSerializer
                 }
                 catch (EndOfStreamException)
                 {
-                    _logger.Debug("Failed to deserialize property {PropertyName} for packet {PacketId} for scope {Scope}. End of stream.", prop.ReflectedProperty.Name, packetId, scope);
+                    _logger.Verbose("Failed to deserialize property {PropertyName} for packet {PacketId} for scope {Scope}. End of stream.", prop.ReflectedProperty.Name, packetId, scope);
                     throw;
                 }
                 catch
@@ -292,7 +313,7 @@ public class ForgedModelSerializer
         }
         catch (EndOfStreamException eos)
         {
-            _logger.Debug(eos, "Failed to deserialize packet {Name} with packet id: {PacketId} for scope: {Scope}. End of stream.", deserializationDefinition.Item1.Name, packetId, scope);
+            _logger.Verbose(eos, "Failed to deserialize packet {Name} with packet id: {PacketId} for scope: {Scope}. End of stream.", deserializationDefinition.Item1.Name, packetId, scope);
             packet = default!;
             return DeserializationResult.EndOfStream;
         }
@@ -364,11 +385,11 @@ public class ForgedModelSerializer
     }
 
 
-    private void SerializeCollection(PrimitiveWriter writer, PropertyMeta prop, List<PropertyMeta> otherMeta, object obj)
+    private void SerializeCollection(PrimitiveWriter writer, PropertyMeta prop, ModelInfo otherMeta, object obj)
     {
         int i = 0;
 
-        writer.SerializeCollectionSize(prop, otherMeta, obj);
+        writer.SerializeCollectionSize(prop, otherMeta.Properties, obj);
 
         // common case that can save a lot of time.
         if (prop.ReflectedProperty.PropertyType == typeof(byte[]))
@@ -399,11 +420,11 @@ public class ForgedModelSerializer
                    : null;
     }
 
-    private void SerializeProperty(PrimitiveWriter writer, PropertyMeta prop, List<PropertyMeta> otherMeta, object obj, object? val)
+    private void SerializeProperty(PrimitiveWriter writer, PropertyMeta prop, ModelInfo otherMeta, object obj, object? val)
     {
         if (TryGetSerializerFromType(prop, out var forgedTypeSerialization))
         {
-            forgedTypeSerialization?.Serialize(writer, prop, otherMeta, obj, val);
+            forgedTypeSerialization?.Serialize(writer, prop, otherMeta.Properties, obj, val);
         }
         else if (val != null && _deserializationMethodsCacheByType.ContainsKey(val.GetType())) // its an object, so serialize it.
             Serialize(writer, val);
@@ -465,4 +486,66 @@ public class ForgedModelSerializer
                                                                    ForgedTypeCode.PascalString or
                                                                    ForgedTypeCode.FourCCString);
     }
+
+
+    public static int GetPropertySize(PropertyInfo property, SerializablePropertyAttribute attribute)
+    {
+        int size = 0;
+        TypeCode typeCode = attribute.CollectionSizeLengthType != TypeCode.Empty ? attribute.CollectionSizeLengthType : Type.GetTypeCode(property.PropertyType);
+
+        switch (typeCode)
+        {
+            case TypeCode.Boolean:
+                size = sizeof(bool);
+                break;
+            case TypeCode.Byte:
+                size = sizeof(byte);
+                break;
+            case TypeCode.Char:
+                size = sizeof(char);
+                break;
+            case TypeCode.Decimal:
+                size = sizeof(decimal);
+                break;
+            case TypeCode.Double:
+                size = sizeof(double);
+                break;
+            case TypeCode.Int16:
+                size = sizeof(short);
+                break;
+            case TypeCode.Int32:
+                size = sizeof(int);
+                break;
+            case TypeCode.Int64:
+                size = sizeof(long);
+                break;
+            case TypeCode.SByte:
+                size = sizeof(sbyte);
+                break;
+            case TypeCode.Single:
+                size = sizeof(float);
+                break;
+            case TypeCode.UInt16:
+                size = sizeof(ushort);
+                break;
+            case TypeCode.UInt32:
+                size = sizeof(uint);
+                break;
+            case TypeCode.UInt64:
+                size = sizeof(ulong);
+                break;
+            case TypeCode.String:
+                size = 2; // Assuming string length as short
+                break;
+            case TypeCode.Empty:
+            case TypeCode.Object:
+            case TypeCode.DBNull:
+            case TypeCode.DateTime:
+
+                break;
+        }
+
+        return size;
+    }
+
 }
