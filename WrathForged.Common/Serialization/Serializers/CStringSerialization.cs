@@ -13,7 +13,6 @@ public class CStringSerialization : IForgedTypeSerialization
 
     public object? Deserialize(PacketBuffer packetBuffer, PropertyMeta propertyMeta, Dictionary<uint, int> collectionSizes)
     {
-        _ = packetBuffer.GetCollectionSize(propertyMeta, collectionSizes);
         var text = packetBuffer.Reader.ReadCString().TrimEnd('\0');
 
         if (propertyMeta.SerializationMetadata.Flags.HasFlag(SerializationFlags.ReversedString))
@@ -29,7 +28,6 @@ public class CStringSerialization : IForgedTypeSerialization
     public void Serialize(PrimitiveWriter writer, PropertyMeta propertyMeta, List<PropertyMeta> otherMeta, object obj, object? val)
     {
         var text = val as string ?? string.Empty;
-        writer.SerializeCollectionSize(propertyMeta, otherMeta, obj);
 
         if (propertyMeta.SerializationMetadata.Flags.HasFlag(SerializationFlags.ReversedString))
         {
