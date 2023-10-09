@@ -19,7 +19,7 @@ namespace WrathForged.Authorization.Server.Services
         [PacketRoute(PacketScope.ClientToAuth, AuthServerOpCode.REALM_LIST)]
         public void RealmRequest(WoWClientSession session)
         {
-            _logger.Debug("Realm list request from {Address}", session.Network.ClientSocket.IPEndPoint.Address.ToString());
+            _logger.Debug("Realm list request from {Address}", session.Network.ClientSocket.IPEndPoint);
             var packet = session.Network.NewClientMessage(new PacketId(AuthServerOpCode.REALM_LIST, PacketScope.AuthToClient), PacketHeaderType.WithLength, ContentLengthType.Short);
 
             var response = new RealmListResponse();
@@ -48,7 +48,7 @@ namespace WrathForged.Authorization.Server.Services
                     Population = realm.Population,
                     Characters = numChars,
                     Category = (RealmCategory)realm.Timezone,
-                    RealmId = 0, //(byte)realm.Id,
+                    RealmId = (byte)realm.Id,
                     Version = new RealmClientVersion
                     {
                         Major = 3,

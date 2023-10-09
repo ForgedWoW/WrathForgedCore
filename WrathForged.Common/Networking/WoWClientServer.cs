@@ -111,9 +111,11 @@ public class WoWClientServer
 
     private void DataReceived(object? sender, DataReceivedEventArgs e)
     {
-        var session = GetOrCreateSessionForClient(e.Client);
+        WoWClientSession session = GetOrCreateSessionForClient(e.Client);
         session.Network.PacketBuffer.AppendData(e.Data);
         var packetLength = 0;
+        var packetReadTryCount = 0;
+
         do
         {
             PacketId packetId;
@@ -123,7 +125,7 @@ public class WoWClientServer
                 if (session.Network.PacketBuffer.CanReadLength(sizeof(byte)))
                     packetId = new PacketId(session.Network.PacketBuffer.Reader.ReadByte(), PacketScope.ClientToAuth);
                 else
-                    return;
+                    continue;
             }
             else
             {
@@ -141,7 +143,7 @@ public class WoWClientServer
                         if (session.Network.PacketBuffer.Reader.BaseStream.Length - currentBufferPosition < LARGE_PACKET_HEADER_SIZE)
                         {
                             session.Security.PacketEncryption.DecryptUntil = 0;
-                            return;
+                            continue;
                         }
 
                         packetLength = (firstByte & 0x7F) << 16;
@@ -175,7 +177,7 @@ public class WoWClientServer
                     if (session.Security.IsEncrypted && session.Security.PacketEncryption != null)
                         session.Security.PacketEncryption.DecryptUntil = headerSize;
 
-                    return;
+                    continue;
                 }
             }
 
@@ -185,7 +187,7 @@ public class WoWClientServer
             {
                 case PacketRouter.RoutType.None:
                     session.Network.PacketBuffer.Clear(packetLength);
-                    return;
+                    break;
 
                 case PacketRouter.RoutType.NoPacket:
                     _packetRouter.Route(session, packetId);
@@ -196,16 +198,23 @@ public class WoWClientServer
                     break;
 
                 case PacketRouter.RoutType.DeserializedPacket:
+                    if (session.Network.PacketBuffer.UnreadData == 0)
+                        continue;
+
                     var posBeforeDeserialization = session.Network.PacketBuffer.Reader.BaseStream.Position;
                     var result = _forgedModelDeserialization.TryDeserialize(_packetScope, packetId.Id, session.Network.PacketBuffer, out var packet);
+                    packetReadTryCount++;
 
                     if (result == DeserializationResult.Success && packet != null)
                     {
+                        packetReadTryCount = 0;
                         _packetRouter.Route(session, packetId, packet);
                     }
                     else
                     {
-                        if (result == DeserializationResult.EndOfStream) // we need to read the rest of the packet yet.
+                        if (result == DeserializationResult.EndOfStream &&
+                            ((_packetScope == PacketScope.ClientToAuth && packetReadTryCount >= 2) // we need to read the rest of the packet yet. if we cannot read it after 2 tries, we clear the buffer theres no packet that big.
+                            || _packetScope != PacketScope.ClientToAuth))
                             session.Network.PacketBuffer.Reader.BaseStream.Position = posBeforeDeserialization;
                         else
                             session.Network.PacketBuffer.Clear();

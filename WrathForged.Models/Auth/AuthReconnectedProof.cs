@@ -7,19 +7,22 @@ namespace WrathForged.Models.Auth
     [ForgedSerializable(Serialization.Models.PacketScope.ClientToAuth, AuthServerOpCode.AUTH_RECONNECT_PROOF)]
     public class AuthReconnectedProof
     {
-        [SerializableProperty(0)]
-        public AuthStatus Status { get; set; }
-
-        [SerializableProperty(1, FixedCollectionSize = 16)]
+        /// <summary>
+        ///     R1
+        /// </summary>
+        [SerializableProperty(0, FixedCollectionSize = 16)]
         public byte[] ReconnectProof { get; set; } = [];
 
-        [SerializableProperty(3, FixedCollectionSize = 20)]
+        /// <summary>
+        ///    R2
+        /// </summary>
+        [SerializableProperty(1, FixedCollectionSize = 20)]
         public byte[] ClientProof { get; set; } = [];
 
-        [SerializableProperty(4, FixedCollectionSize = 20)]
+        [SerializableProperty(2, FixedCollectionSize = 20)]
         public byte[] R3 { get; set; } = [];
 
-        [SerializableProperty(5)]
+        [SerializableProperty(3)]
         public byte NumberOfKeys { get; set; }
     }
 
