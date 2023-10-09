@@ -24,5 +24,7 @@ namespace WrathForged.Serialization.Models
         ///     For use on byte[] only, will read the rest of the packet into the array.
         /// </summary>
         ReadRestOfPacket = 1 << 5,
+
+        DontSerializeCollectionSize = 1 << 6,
     }
 }

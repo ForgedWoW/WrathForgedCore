@@ -18,8 +18,37 @@ namespace WrathForged.Models.ConditionalSerializers
             if (checkValRaw == null)
                 return false;
 
+            if (_enumType.IsEnum && checkValRaw.GetType() == _enumType)
+            {
+                switch (Type.GetTypeCode(_enumType))
+                {
+                    case TypeCode.Byte:
+                        return (((byte)checkValRaw) & (byte)_enumVal) == (byte)_enumVal;
 
-            return true;
+                    case TypeCode.SByte:
+                        return (((sbyte)checkValRaw) & (sbyte)_enumVal) == (sbyte)_enumVal;
+
+                    case TypeCode.Int16:
+                        return (((short)checkValRaw) & (short)_enumVal) == (short)_enumVal;
+
+                    case TypeCode.UInt16:
+                        return (((ushort)checkValRaw) & (ushort)_enumVal) == (ushort)_enumVal;
+
+                    case TypeCode.Int32:
+                        return (((int)checkValRaw) & _enumVal) == _enumVal;
+
+                    case TypeCode.UInt32:
+                        return (((uint)checkValRaw) & (uint)_enumVal) == (uint)_enumVal;
+
+                    case TypeCode.Int64:
+                        return (((long)checkValRaw) & _enumVal) == _enumVal;
+
+                    case TypeCode.UInt64:
+                        return (((ulong)checkValRaw) & (ulong)_enumVal) == (ulong)_enumVal;
+                }
+            }
+
+            return false;
         }
     }
 

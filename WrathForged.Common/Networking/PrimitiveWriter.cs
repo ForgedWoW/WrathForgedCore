@@ -22,6 +22,13 @@ public class PrimitiveWriter : BinaryWriter
     {
     }
 
+    public void Write(PrimitiveWriter writer)
+    {
+        var data = ((MemoryStream)writer.BaseStream).GetBuffer();
+
+        Write(data);
+    }
+
     #region WriteByte
 
     /// <summary>
