@@ -184,7 +184,7 @@ public class WoWClientServer
             switch (_packetRouter.GetRouteType(packetId.Scope, packetId.Id))
             {
                 case PacketRouter.RoutType.None:
-                    session.Network.PacketBuffer.Clear();
+                    session.Network.PacketBuffer.Clear(packetLength);
                     return;
 
                 case PacketRouter.RoutType.NoPacket:

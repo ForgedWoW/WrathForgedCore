@@ -79,10 +79,21 @@ public class PacketBuffer : IDisposable
 
     public Memory<byte> GetBuffer() => new(_internalStream.GetBuffer(), 0, (int)_internalStream.Length);
 
-    public void Clear()
+    public void Clear(int? length = null)
     {
-        _internalStream.SetLength(0);
-        _internalStream.Position = 0;
+        if (length == null || length == 0 || length.Value >= _internalStream.Length)
+        {
+            _internalStream.SetLength(0);
+            _internalStream.Position = 0;
+        }
+        else
+        {
+            Span<byte> bufferSpan = new Span<byte>(_internalStream.GetBuffer());
+            var remainingSpan = bufferSpan.Slice(length.Value);
+            remainingSpan.CopyTo(bufferSpan);
+            _internalStream.SetLength(_internalStream.Length - length.Value);
+            _internalStream.Position = 0;
+        }
     }
 
     protected virtual void Dispose(bool disposing)
