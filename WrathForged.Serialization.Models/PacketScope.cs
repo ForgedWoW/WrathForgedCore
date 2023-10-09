@@ -10,8 +10,6 @@ namespace WrathForged.Serialization.Models
         RealmToClient,
         ClientToInstance,
         InstanceToClient,
-        RealmToInstance,
-        InstanceToRealm,
         System,
         All
     }

@@ -18,6 +18,11 @@ namespace WrathForged.Serialization.Models
         UTF8CString = 1 << 1,
         BigIntegerWithLength = 1 << 2,
         BENetworkOrder = 1 << 3,
-        SendFixedSize
+        SendFixedSize = 1 << 4,
+
+        /// <summary>
+        ///     For use on byte[] only, will read the rest of the packet into the array.
+        /// </summary>
+        ReadRestOfPacket = 1 << 5,
     }
 }

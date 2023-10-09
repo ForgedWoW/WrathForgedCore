@@ -9,7 +9,16 @@ namespace WrathForged.Common.Networking;
 
 public class PacketRouter
 {
-    public Dictionary<PacketScope, Dictionary<uint, List<(MethodInfo, PacketRouteAttribute, IPacketService)>>> PacketHandlerCache = new();
+    public enum RoutType
+    {
+        None,
+        DeserializedPacket,
+        DirectPacket,
+        NoPacket
+    }
+
+    private Dictionary<PacketScope, Dictionary<uint, List<(MethodInfo, PacketRouteAttribute, IPacketService)>>> _packetHandlerCache = new();
+    private readonly Dictionary<PacketScope, Dictionary<uint, RoutType>> _hasPacketArg = new();
     private readonly ILogger _logger;
 
     public PacketRouter(ClassFactory classFactory, ILogger logger)
@@ -24,28 +33,38 @@ public class PacketRouter
 
             foreach (var method in methods)
             {
+                var parameters = method.GetParameters();
                 var attribute = (PacketRouteAttribute)method.GetCustomAttributes(typeof(PacketRouteAttribute), false).First();
-                if (!PacketHandlerCache.TryGetValue(attribute.Scope, out var scopeDictionary))
-                {
-                    scopeDictionary = [];
-                    PacketHandlerCache[attribute.Scope] = scopeDictionary;
-                }
-
-                if (!scopeDictionary.TryGetValue(attribute.Id, out var methodList))
-                {
-                    methodList = [];
-                    scopeDictionary[attribute.Id] = methodList;
-                }
-
-                methodList.Add((method, attribute, handler));
+                _hasPacketArg.Add(attribute.Scope, attribute.Id, parameters.Length == 1
+                                                                    ? RoutType.NoPacket
+                                                                    : parameters[1].ParameterType == typeof(PacketBuffer)
+                                                                    ? RoutType.DirectPacket
+                                                                    : RoutType.DeserializedPacket);
+                _packetHandlerCache.AddToList(attribute.Scope, attribute.Id, (method, attribute, handler));
             }
         }
+
         _logger = logger;
     }
 
-    public bool RouteDirect(ClientSocket socket, PacketId packetId, PacketBuffer packetBuffer)
+    public RoutType GetRouteType(PacketScope scope, uint id)
     {
-        if (!PacketHandlerCache.TryGetValue(packetId.Scope, out var scopeDictionary))
+        if (!_hasPacketArg.TryGetValue(scope, out var scopeDictionary))
+        {
+            return RoutType.None;
+        }
+
+        if (!scopeDictionary.TryGetValue(id, out var hasPacketArg))
+        {
+            return RoutType.None;
+        }
+
+        return hasPacketArg;
+    }
+
+    public bool Route(WoWClientSession socket, PacketId packetId)
+    {
+        if (!_packetHandlerCache.TryGetValue(packetId.Scope, out var scopeDictionary))
         {
             return false;
         }
@@ -57,9 +76,9 @@ public class PacketRouter
 
         foreach (var method in methodList)
         {
-            if (method.Item2.DirectReader)
+            if (!method.Item2.DirectReader)
             {
-                _ = method.Item1.Invoke(method.Item3, new object[] { socket, packetId, packetBuffer });
+                _ = method.Item1.Invoke(method.Item3, new object[] { socket });
                 return true;
             }
         }
@@ -67,9 +86,9 @@ public class PacketRouter
         return false;
     }
 
-    public bool RouteDirect(ClientSocket socket, PacketId packetId, byte[] packetBuffer)
+    public bool RouteDirect(WoWClientSession socket, PacketId packetId, PacketBuffer packetBuffer)
     {
-        if (!PacketHandlerCache.TryGetValue(packetId.Scope, out var scopeDictionary))
+        if (!_packetHandlerCache.TryGetValue(packetId.Scope, out var scopeDictionary))
         {
             return false;
         }
@@ -79,18 +98,16 @@ public class PacketRouter
             return false;
         }
 
-        bool evented = false;
-
         foreach (var method in methodList)
         {
             if (method.Item2.DirectReader)
             {
-                _ = method.Item1.Invoke(method.Item3, new object[] { socket, packetId, new PacketBuffer(packetBuffer, _logger) });
-                evented = true;
+                _ = method.Item1.Invoke(method.Item3, new object[] { socket, packetBuffer });
+                return true;
             }
         }
 
-        return evented;
+        return false;
     }
 
     public void Route(ClientSocket socket, PacketId packetId, object packet)
@@ -100,7 +117,7 @@ public class PacketRouter
             return;
         }
 
-        if (!PacketHandlerCache.TryGetValue(packetId.Scope, out var scopeDictionary))
+        if (!_packetHandlerCache.TryGetValue(packetId.Scope, out var scopeDictionary))
         {
             return;
         }
@@ -123,7 +140,7 @@ public class PacketRouter
             return;
         }
 
-        if (!PacketHandlerCache.TryGetValue(packetId.Scope, out var scopeDictionary))
+        if (!_packetHandlerCache.TryGetValue(packetId.Scope, out var scopeDictionary))
         {
             return;
         }

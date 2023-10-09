@@ -24,10 +24,9 @@ namespace WrathForged.Models.Networking
         public ForgedCoreOpCode ForgeCoreOpCode { get; }
         public PacketIdType Type => Scope switch
         {
-            PacketScope.ClientToAuth => PacketIdType.Auth,
-            PacketScope.ClientToInstance => PacketIdType.Realm,
-            PacketScope.InstanceToRealm => PacketIdType.Instance,
-            PacketScope.RealmToInstance => PacketIdType.Realm,
+            PacketScope.ClientToAuth or PacketScope.AuthToClient => PacketIdType.Auth,
+            PacketScope.ClientToRealm or PacketScope.RealmToClient => PacketIdType.Realm,
+            PacketScope.InstanceToClient or PacketScope.ClientToInstance => PacketIdType.Instance,
             _ => PacketIdType.Realm
         };
         public uint Id { get; }
@@ -70,7 +69,7 @@ namespace WrathForged.Models.Networking
                     AuthOpCode = (AuthServerOpCode)id;
                     break;
 
-                case PacketScope.RealmToInstance:
+                case PacketScope.ClientToInstance:
                     InstanceOpCode = (InstanceServerOpCode)id;
                     break;
 
@@ -90,7 +89,7 @@ namespace WrathForged.Models.Networking
                     AuthOpCode = (AuthServerOpCode)id;
                     break;
 
-                case PacketScope.RealmToInstance:
+                case PacketScope.ClientToInstance:
                     InstanceOpCode = (InstanceServerOpCode)id;
                     break;
 
@@ -102,9 +101,9 @@ namespace WrathForged.Models.Networking
 
         public static implicit operator PacketId(AuthServerOpCode val) => new(val, PacketScope.ClientToAuth);
 
-        public static implicit operator PacketId(RealmServerOpCode val) => new(val, PacketScope.ClientToInstance);
+        public static implicit operator PacketId(RealmServerOpCode val) => new(val, PacketScope.ClientToRealm);
 
-        public static implicit operator PacketId(InstanceServerOpCode val) => new(val, PacketScope.RealmToInstance);
+        public static implicit operator PacketId(InstanceServerOpCode val) => new(val, PacketScope.ClientToInstance);
 
         public static implicit operator PacketId(ForgedCoreOpCode val) => new(val, PacketScope.System);
 
@@ -132,7 +131,13 @@ namespace WrathForged.Models.Networking
 
         public override string ToString()
         {
-            var packetName = Scope == PacketScope.ClientToAuth ? AuthOpCode.ToString() : RealmOpCode.ToString();
+            var packetName = Scope is PacketScope.ClientToAuth or PacketScope.AuthToClient
+                                        ? AuthOpCode.ToString()
+                                        : Scope is PacketScope.ClientToInstance or PacketScope.InstanceToClient
+                                        ? InstanceOpCode.ToString()
+                                        : Scope is PacketScope.RealmToClient or PacketScope.ClientToRealm
+                                        ? RealmOpCode.ToString()
+                                        : ForgeCoreOpCode.ToString();
             return $"{Scope} {packetName}:{Id}";
         }
 

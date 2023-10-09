@@ -179,22 +179,40 @@ public class WoWClientServer
                 }
             }
 
-            var posBeforeDeserialization = session.Network.PacketBuffer.Reader.BaseStream.Position;
-            var result = _forgedModelDeserialization.TryDeserialize(_packetScope, packetId.Id, session.Network.PacketBuffer, out var packet);
+            _logger.Verbose("Received packet {PacketId} from {Client}. Unread buffer size: {BufferSize}", packetId, e.Client.IPEndPoint, session.Network.PacketBuffer.UnreadData);
 
-            if (result == DeserializationResult.Success && packet != null)
+            switch (_packetRouter.GetRouteType(packetId.Scope, packetId.Id))
             {
-                _packetRouter.Route(session, packetId, packet);
-            }
-            else
-            {
-                if (result == DeserializationResult.EndOfStream) // we need to read the rest of the packet yet.
-                    session.Network.PacketBuffer.Reader.BaseStream.Position = posBeforeDeserialization;
-                else
+                case PacketRouter.RoutType.None:
                     session.Network.PacketBuffer.Clear();
+                    return;
 
-                break;
+                case PacketRouter.RoutType.NoPacket:
+                    _packetRouter.Route(session, packetId);
+                    break;
+
+                case PacketRouter.RoutType.DirectPacket:
+                    _packetRouter.RouteDirect(session, packetId, session.Network.PacketBuffer);
+                    break;
+
+                case PacketRouter.RoutType.DeserializedPacket:
+                    var posBeforeDeserialization = session.Network.PacketBuffer.Reader.BaseStream.Position;
+                    var result = _forgedModelDeserialization.TryDeserialize(_packetScope, packetId.Id, session.Network.PacketBuffer, out var packet);
+
+                    if (result == DeserializationResult.Success && packet != null)
+                    {
+                        _packetRouter.Route(session, packetId, packet);
+                    }
+                    else
+                    {
+                        if (result == DeserializationResult.EndOfStream) // we need to read the rest of the packet yet.
+                            session.Network.PacketBuffer.Reader.BaseStream.Position = posBeforeDeserialization;
+                        else
+                            session.Network.PacketBuffer.Clear();
+                    }
+                    break;
             }
+
         } while (e.Client.IsConnected && session.Network.PacketBuffer.Reader.BaseStream.Position < session.Network.PacketBuffer.Reader.BaseStream.Length);
     }
 

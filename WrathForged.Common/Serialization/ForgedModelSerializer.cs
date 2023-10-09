@@ -273,6 +273,11 @@ public class ForgedModelSerializer
                     if (result != null)
                         prop.ReflectedProperty.SetValue(instance, EvaluateSpecialCasting(prop, result));
                 }
+                catch (EndOfStreamException)
+                {
+                    _logger.Debug("Failed to deserialize property {PropertyName} for packet {PacketId} for scope {Scope}. End of stream.", prop.ReflectedProperty.Name, packetId, scope);
+                    throw;
+                }
                 catch
                 {
                     _logger.Error("Failed to deserialize property {PropertyName} for packet {PacketId} for scope {Scope}", prop.ReflectedProperty.Name, packetId, scope);
@@ -287,7 +292,7 @@ public class ForgedModelSerializer
         }
         catch (EndOfStreamException eos)
         {
-            _logger.Error(eos, "Failed to deserialize packet {Name} with packet id: {PacketId} for scope: {Scope}. End of stream.", deserializationDefinition.Item1.Name, packetId, scope);
+            _logger.Debug(eos, "Failed to deserialize packet {Name} with packet id: {PacketId} for scope: {Scope}. End of stream.", deserializationDefinition.Item1.Name, packetId, scope);
             packet = default!;
             return DeserializationResult.EndOfStream;
         }

@@ -106,6 +106,17 @@ public static class CollectionExtensionMethods
         _ = val.Add(value);
     }
 
+    public static void AddToList<TKey1, TKey2, TVal>(this Dictionary<TKey1, Dictionary<TKey2, List<TVal>>> dict, TKey1 key1, TKey2 key2, TVal newVal)
+    {
+        if (!dict.TryGetValue(key1, out var innerDict))
+        {
+            innerDict = [];
+            dict[key1] = innerDict;
+        }
+
+        innerDict.AddToList(key2, newVal);
+    }
+
     public static void AddToList<TKey, TValue>(this IDictionary<TKey, List<TValue>> dict, KeyValuePair<TKey, TValue> item) => dict.AddToList(item.Key, item.Value);
 
     public static void AddUniqueToList<TKey, TValue>(this IDictionary<TKey, List<TValue>> dict, TKey key, TValue value)

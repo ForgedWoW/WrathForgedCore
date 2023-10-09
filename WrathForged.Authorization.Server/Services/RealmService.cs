@@ -56,6 +56,8 @@ namespace WrathForged.Authorization.Server.Services
                 response.Realms.Add(authRealm);
             }
 
+            packet.WriteObject(response);
+
             session.Network.ClientSocket.EnqueueWrite(packet);
         }
     }
