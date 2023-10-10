@@ -33,7 +33,7 @@ namespace WrathForged.Authorization.Server.Services
         public void ChallengeRequest(WoWClientSession session, AuthLogonChallengeRequest authLogonChallenge)
         {
             _logger.Debug("Login challenge request from {Address}", session.Network.ClientSocket.IPEndPoint);
-            using var authDatabase = _classFactory.Resolve<AuthDatabase>();
+            using var authDatabase = _classFactory.Locate<AuthDatabase>();
 
             var account = authDatabase.Accounts.FirstOrDefault(x => x.Username == authLogonChallenge.Identity || x.RegMail == authLogonChallenge.Identity || x.Email == authLogonChallenge.Identity);
             var packet = session.Network.NewClientMessage(AuthServerOpCode.AUTH_LOGON_CHALLENGE, PacketHeaderType.NullTerminatedOpCode);
@@ -128,7 +128,7 @@ namespace WrathForged.Authorization.Server.Services
                 _logger.Debug("Account {Username} with id {Id} successfully logged in from {Address}.", session.Security.Account?.Username, session.Security.Account?.Id, session.Network.ClientSocket.IPEndPoint);
 
                 session.Security.SessionKey = sessionKey; // also sets the session key on the account.
-                using var authDatabase = _classFactory.Resolve<AuthDatabase>();
+                using var authDatabase = _classFactory.Locate<AuthDatabase>();
 
                 if (session.Security.Account == null)
                 {
@@ -172,7 +172,7 @@ namespace WrathForged.Authorization.Server.Services
         public void ReconnectChallengeRequest(WoWClientSession session, AuthLogonChallengeRequest authLogonChallenge)
         {
             _logger.Debug("AUTH_RECONNECT_CHALLENGE from {Address}", session.Network.ClientSocket.IPEndPoint);
-            using var authDatabase = _classFactory.Resolve<AuthDatabase>();
+            using var authDatabase = _classFactory.Locate<AuthDatabase>();
 
             var account = authDatabase.Accounts.FirstOrDefault(x => x.Username == authLogonChallenge.Identity || x.RegMail == authLogonChallenge.Identity);
             var packet = session.Network.NewClientMessage(AuthServerOpCode.AUTH_LOGON_CHALLENGE, PacketHeaderType.OnlyOpCode);
@@ -225,7 +225,7 @@ namespace WrathForged.Authorization.Server.Services
 
             if (serverProof.SequenceEqual(proof.ClientProof))
             {
-                using var authDatabase = _classFactory.Resolve<AuthDatabase>();
+                using var authDatabase = _classFactory.Locate<AuthDatabase>();
                 session.Security.Account = authDatabase.Accounts.FirstOrDefault(x => x.Id == session.Security.Account.Id);
 
                 if (session.Security.Account != null)
@@ -269,7 +269,7 @@ namespace WrathForged.Authorization.Server.Services
                 _logger.Debug("Too many failed login attempts from {Address}. Banning for {BanTime}.", session.Network.ClientSocket.IPEndPoint, TimeSpan.FromMinutes(banTime).ToReadableString());
                 session.Network.ClientSocket.Disconnect();
                 tracker.Attempts = 0;
-                using var authDatabase = _classFactory.Resolve<AuthDatabase>();
+                using var authDatabase = _classFactory.Locate<AuthDatabase>();
                 var ipBan = authDatabase.IpBanneds.FirstOrDefault(x => x.Ip == ipAddress);
 
                 ipBan ??= new IpBanned()

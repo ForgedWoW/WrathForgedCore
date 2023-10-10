@@ -29,7 +29,7 @@ public class ForgedAuthorization
 
     public void ReloadPermissions()
     {
-        var authDB = _classFactory.Resolve<AuthDatabase>();
+        var authDB = _classFactory.Locate<AuthDatabase>();
 
 
         _accountPermissions = authDB.RbacAccountPermissions

@@ -8,7 +8,7 @@ namespace WrathForged.Common.Networking;
 
 public class PacketRouter
 {
-    public enum RoutType
+    public enum RouteType
     {
         None,
         DeserializedPacket,
@@ -17,11 +17,11 @@ public class PacketRouter
     }
 
     private readonly Dictionary<PacketScope, Dictionary<uint, List<(MethodInfo, PacketRouteAttribute, IPacketService)>>> _packetHandlerCache = new();
-    private readonly Dictionary<PacketScope, Dictionary<uint, RoutType>> _hasPacketArg = new();
+    private readonly Dictionary<PacketScope, Dictionary<uint, RouteType>> _hasPacketArg = new();
 
     public PacketRouter(ClassFactory classFactory)
     {
-        var packetHandlers = classFactory.ResolveAll<IPacketService>();
+        var packetHandlers = classFactory.LocateAll<IPacketService>();
 
         foreach (var handler in packetHandlers)
         {
@@ -34,25 +34,25 @@ public class PacketRouter
                 var parameters = method.GetParameters();
                 var attribute = (PacketRouteAttribute)method.GetCustomAttributes(typeof(PacketRouteAttribute), false).First();
                 _hasPacketArg.Add(attribute.Scope, attribute.Id, parameters.Length == 1
-                                                                    ? RoutType.NoPacket
+                                                                    ? RouteType.NoPacket
                                                                     : parameters[1].ParameterType == typeof(PacketBuffer)
-                                                                    ? RoutType.DirectPacket
-                                                                    : RoutType.DeserializedPacket);
+                                                                    ? RouteType.DirectPacket
+                                                                    : RouteType.DeserializedPacket);
                 _packetHandlerCache.AddToList(attribute.Scope, attribute.Id, (method, attribute, handler));
             }
         }
     }
 
-    public RoutType GetRouteType(PacketScope scope, uint id)
+    public RouteType GetRouteType(PacketScope scope, uint id)
     {
         if (!_hasPacketArg.TryGetValue(scope, out var scopeDictionary))
         {
-            return RoutType.None;
+            return RouteType.None;
         }
 
         if (!scopeDictionary.TryGetValue(id, out var hasPacketArg))
         {
-            return RoutType.None;
+            return RouteType.None;
         }
 
         return hasPacketArg;
@@ -74,7 +74,10 @@ public class PacketRouter
         {
             if (!method.Item2.DirectReader)
             {
-                _ = method.Item1.Invoke(method.Item3, new object[] { socket });
+                if (method.Item1.IsStatic)
+                    _ = method.Item1.Invoke(null, new object[] { socket });
+                else
+                    _ = method.Item1.Invoke(method.Item3, new object[] { socket });
                 return true;
             }
         }
@@ -98,7 +101,10 @@ public class PacketRouter
         {
             if (method.Item2.DirectReader)
             {
-                _ = method.Item1.Invoke(method.Item3, new object[] { socket, packetBuffer });
+                if (method.Item1.IsStatic)
+                    _ = method.Item1.Invoke(null, new object[] { socket, packetBuffer });
+                else
+                    _ = method.Item1.Invoke(method.Item3, new object[] { socket, packetBuffer });
                 return true;
             }
         }
@@ -125,7 +131,10 @@ public class PacketRouter
 
         foreach (var method in methodList)
         {
-            _ = method.Item1.Invoke(method.Item3, new object[] { socket, packet });
+            if (method.Item1.IsStatic)
+                _ = method.Item1.Invoke(null, new object[] { socket, packet });
+            else
+                _ = method.Item1.Invoke(method.Item3, new object[] { socket, packet });
         }
     }
 
@@ -148,7 +157,13 @@ public class PacketRouter
 
         foreach (var method in methodList)
         {
-            _ = method.Item1.Invoke(method.Item3, new object[] { session, packet });
+            if (method.Item2.RequireAuthentication && session.Security.AuthenticationState != WoWClientSession.AuthState.LoggedIn)
+                continue;
+
+            if (method.Item1.IsStatic)
+                _ = method.Item1.Invoke(null, new object[] { session, packet });
+            else
+                _ = method.Item1.Invoke(method.Item3, new object[] { session, packet });
         }
     }
 }

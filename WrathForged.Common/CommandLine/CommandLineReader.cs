@@ -16,8 +16,8 @@ public class CommandLineReader(ProgramExitNotifier programExitNotifier, ILogger 
 
     public async void ReadCommandLineUntilProgramExit()
     {
-        var commandLineArgumentHandlers = _classFactory.ResolveAll<ICommandLineArgumentHandler>().ToList();
-        var commandLineAddedEvent = _classFactory.ResolveAll<IRootCommandAdded>();
+        var commandLineArgumentHandlers = _classFactory.LocateAll<ICommandLineArgumentHandler>().ToList();
+        var commandLineAddedEvent = _classFactory.LocateAll<IRootCommandAdded>();
 
         var rootCommand = new RootCommand();
 

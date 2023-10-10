@@ -45,7 +45,7 @@ namespace WrathForged.Authorization.Server.Validators
         /// <param name="unbanDate"></param>
         public void BanAccount(uint accountId, string banReason, string bannedBy, DateTime unbanDate = default)
         {
-            using var authDatabase = _classFactory.Resolve<AuthDatabase>();
+            using var authDatabase = _classFactory.Locate<AuthDatabase>();
             var accountBan = new AccountBanned
             {
                 Id = accountId,
@@ -63,7 +63,7 @@ namespace WrathForged.Authorization.Server.Validators
 
         public void BanIp(string ipAddress, string banReason, string bannedBy, DateTime unbanDate)
         {
-            using var authDatabase = _classFactory.Resolve<AuthDatabase>();
+            using var authDatabase = _classFactory.Locate<AuthDatabase>();
 
             var ipBan = new IpBanned
             {
@@ -81,7 +81,7 @@ namespace WrathForged.Authorization.Server.Validators
 
         public void UnbanAccount(uint accountId)
         {
-            using var authDatabase = _classFactory.Resolve<AuthDatabase>();
+            using var authDatabase = _classFactory.Locate<AuthDatabase>();
             var accountBan = authDatabase.AccountBanneds.FirstOrDefault(x => x.Id == accountId);
 
             if (accountBan != null)
@@ -95,7 +95,7 @@ namespace WrathForged.Authorization.Server.Validators
 
         public void UnbanIp(string ipAddress)
         {
-            using var authDatabase = _classFactory.Resolve<AuthDatabase>();
+            using var authDatabase = _classFactory.Locate<AuthDatabase>();
             var ipBan = authDatabase.IpBanneds.FirstOrDefault(x => x.Ip == ipAddress);
 
             if (ipBan != null)

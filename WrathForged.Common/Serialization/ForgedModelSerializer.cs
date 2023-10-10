@@ -48,16 +48,18 @@ public class ForgedModelSerializer
                 continue;
 
             var propertyAttributes = new List<PropertyMeta>();
-            var size = 0;
+            var estimatedSize = 0; // get a rough idea if we have enough data to read the packet. This is mainly for packets that dont send the size.
 
             foreach (var prop in cls.GetProperties())
             {
                 var propAtt = serializableAttributeCache.GetAttribute(prop);
                 IConditionalSerialization? conditionalAtt = null;
+                var hasConditional = false;
 
                 foreach (var att in prop.GetCustomAttributes())
                     if (att is IConditionalSerialization conditionalSerialization)
                     {
+                        hasConditional = true;
                         conditionalAtt = conditionalSerialization;
                         break;
                     }
@@ -65,12 +67,14 @@ public class ForgedModelSerializer
                 if (propAtt != null)
                 {
                     propertyAttributes.Add(new PropertyMeta(propAtt, prop, conditionalAtt));
-                    size += GetPropertySize(prop, propAtt);
+
+                    if (!hasConditional) // we don't want to count conditional properties in the size.
+                        estimatedSize += GetPropertySize(prop, propAtt);
                 }
             }
 
             propertyAttributes.Sort();
-            var mi = new ModelInfo(cls, propertyAttributes, size);
+            var mi = new ModelInfo(cls, propertyAttributes, estimatedSize);
             _deserializationMethodsCacheByType[cls] = mi;
 
             if (!_systemScope.TryGetValue(cls, out var propertyAttr))
@@ -104,7 +108,7 @@ public class ForgedModelSerializer
             }
         }
 
-        var serializers = classFactory.ResolveAll<IForgedTypeSerialization>();
+        var serializers = classFactory.LocateAll<IForgedTypeSerialization>();
 
         foreach (var s in serializers)
         {
@@ -180,7 +184,7 @@ public class ForgedModelSerializer
             return DeserializationResult.UnknownPacket;
         }
 
-        if (!buffer.CanReadLength(propertyMetas.Size))
+        if (!buffer.CanReadLength(propertyMetas.EstimatedSize))
         {
             packet = default!;
             return DeserializationResult.EndOfStream;
@@ -263,7 +267,7 @@ public class ForgedModelSerializer
             return DeserializationResult.UnknownPacket;
         }
 
-        if (!buffer.CanReadLength(deserializationDefinition.Item2.Size))
+        if (!buffer.CanReadLength(deserializationDefinition.Item2.EstimatedSize))
         {
             packet = default!;
             return DeserializationResult.EndOfStream;
@@ -498,57 +502,59 @@ public class ForgedModelSerializer
         int size = 0;
         TypeCode typeCode = attribute.CollectionSizeLengthType != TypeCode.Empty ? attribute.CollectionSizeLengthType : Type.GetTypeCode(property.PropertyType);
 
-        switch (typeCode)
-        {
-            case TypeCode.Boolean:
-                size = sizeof(bool);
-                break;
-            case TypeCode.Byte:
-                size = sizeof(byte);
-                break;
-            case TypeCode.Char:
-                size = sizeof(char);
-                break;
-            case TypeCode.Decimal:
-                size = sizeof(decimal);
-                break;
-            case TypeCode.Double:
-                size = sizeof(double);
-                break;
-            case TypeCode.Int16:
-                size = sizeof(short);
-                break;
-            case TypeCode.Int32:
-                size = sizeof(int);
-                break;
-            case TypeCode.Int64:
-                size = sizeof(long);
-                break;
-            case TypeCode.SByte:
-                size = sizeof(sbyte);
-                break;
-            case TypeCode.Single:
-                size = sizeof(float);
-                break;
-            case TypeCode.UInt16:
-                size = sizeof(ushort);
-                break;
-            case TypeCode.UInt32:
-                size = sizeof(uint);
-                break;
-            case TypeCode.UInt64:
-                size = sizeof(ulong);
-                break;
-            case TypeCode.String:
-                size = 2; // Assuming string length as short
-                break;
-            case TypeCode.Empty:
-            case TypeCode.Object:
-            case TypeCode.DBNull:
-            case TypeCode.DateTime:
+        if (attribute.DontSerializeWhenDefaultValue)
 
-                break;
-        }
+            switch (typeCode)
+            {
+                case TypeCode.Boolean:
+                    size = sizeof(bool);
+                    break;
+                case TypeCode.Byte:
+                    size = sizeof(byte);
+                    break;
+                case TypeCode.Char:
+                    size = sizeof(char);
+                    break;
+                case TypeCode.Decimal:
+                    size = sizeof(decimal);
+                    break;
+                case TypeCode.Double:
+                    size = sizeof(double);
+                    break;
+                case TypeCode.Int16:
+                    size = sizeof(short);
+                    break;
+                case TypeCode.Int32:
+                    size = sizeof(int);
+                    break;
+                case TypeCode.Int64:
+                    size = sizeof(long);
+                    break;
+                case TypeCode.SByte:
+                    size = sizeof(sbyte);
+                    break;
+                case TypeCode.Single:
+                    size = sizeof(float);
+                    break;
+                case TypeCode.UInt16:
+                    size = sizeof(ushort);
+                    break;
+                case TypeCode.UInt32:
+                    size = sizeof(uint);
+                    break;
+                case TypeCode.UInt64:
+                    size = sizeof(ulong);
+                    break;
+                case TypeCode.String:
+                    size = 2; // Assuming string length as short
+                    break;
+                case TypeCode.Empty:
+                case TypeCode.Object:
+                case TypeCode.DBNull:
+                case TypeCode.DateTime:
+
+                    break;
+            }
 
         return size;
     }

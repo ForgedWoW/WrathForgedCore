@@ -154,7 +154,7 @@ public class ForgedTCPClient
         _forgedModelSerializer.Serialize(packet.Scope, (uint)packet.OpCode, writer, data);
 
         packet.Data = stream.ToArray();
-        packet.Size = (uint)packet.Data.Length;
+        packet.Size = packet.Data.Length;
 
         try
         {
@@ -177,9 +177,17 @@ public class ForgedTCPClient
 
         while (IncomingDataBuffer.Reader.RemainingLength > 0)
         {
+            var position = IncomingDataBuffer.Reader.BaseStream.Position;
             if (_forgedModelSerializer.TryDeserialize<ForgedPacket>(IncomingDataBuffer, out var packet) == DeserializationResult.Success)
             {
                 ModelPacketBuffer.AppendData(packet.Data);
+
+                if (!ModelPacketBuffer.CanReadLength(packet.Size)) // ensure we got the entire packet. if not reset the position and wait for more data
+                {
+                    IncomingDataBuffer.Reader.BaseStream.Position = position;
+                    break;
+                }
+
                 var result = _forgedModelSerializer.TryDeserialize(packet.Scope, (uint)packet.OpCode, ModelPacketBuffer, out var packetData);
                 if (result == DeserializationResult.Success)
                 {

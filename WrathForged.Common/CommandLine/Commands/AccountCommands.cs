@@ -46,7 +46,7 @@ public class AccountCommands(ClassFactory classFactory, ILogger logger) : IComma
         {
             user = user.ToUpper();
             password = password.ToUpper();
-            using var authDb = _classFactory.Resolve<AuthDatabase>();
+            using var authDb = _classFactory.Locate<AuthDatabase>();
 
             if (!authDb.Accounts.Any(x => x.Username == user || x.Email == user || x.RegMail == user))
             {
@@ -79,7 +79,7 @@ public class AccountCommands(ClassFactory classFactory, ILogger logger) : IComma
         accountCommand.SetHandler((user) =>
         {
             user = user.ToUpper();
-            using var authDb = _classFactory.Resolve<AuthDatabase>();
+            using var authDb = _classFactory.Locate<AuthDatabase>();
 
             if (!authDb.Accounts.Any(x => x.Username == user || x.Email == user || x.RegMail == user))
             {
@@ -126,7 +126,7 @@ public class AccountCommands(ClassFactory classFactory, ILogger logger) : IComma
             email = email.ToUpper();
             var (Salt, Verifier) = SRP6.MakeRegistrationData(user, password);
 
-            using var authDb = _classFactory.Resolve<AuthDatabase>();
+            using var authDb = _classFactory.Locate<AuthDatabase>();
 
             if (authDb.Accounts.Any(x => x.Username == user || x.Email == email || x.RegMail == email))
             {

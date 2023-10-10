@@ -17,7 +17,8 @@
     "CaptureIncomingData": "false",
     "IncomingDataCaptureDir": ".\\Capture\\Incoming",
     "CaptureOutgoingData": "false",
-    "OutgoingDataCaptureDir": ".\\Capture\\Outgoing"
+    "OutgoingDataCaptureDir": ".\\Capture\\Outgoing",
+    "SocketTimeoutSeconds": 90
   },
   "Security": {
     "MaxLoginAttempts": 10,

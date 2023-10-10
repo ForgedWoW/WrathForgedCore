@@ -20,28 +20,28 @@ public class ClassFactory
     /// </summary>
     /// <typeparam name="T"></typeparam>
     /// <returns></returns>
-    public T Resolve<T>() => Container.Locate<T>();
+    public T Locate<T>() => Container.Locate<T>();
 
     /// <summary>
-    ///     Gets all instances of specificed type from the container. Useful for when you have multiple implementations of a interface. At time of registration the type must be registered with the container. <see cref="Container"/> to register a type.
+    ///     Gets all instances of specified type from the container. Useful for when you have multiple implementations of a interface. At time of registration the type must be registered with the container. <see cref="Container"/> to register a type.
     /// </summary>
     /// <typeparam name="T"></typeparam>
     /// <returns></returns>
-    public IEnumerable<T> ResolveAll<T>() => Container.Locate<IEnumerable<T>>();
+    public IEnumerable<T> LocateAll<T>() => Container.Locate<IEnumerable<T>>();
 
     /// <summary>
     ///     Gets a object from the container with the given parameters. The parameters must be keyed by the parameter name. At time of registration the type must be registered with the container. <see cref="Container"/> to register a type.
     /// </summary>
     /// <typeparam name="T">The object type</typeparam>
-    /// <param name="parameters">Addtional parameters keyed by the parameter name</param>
+    /// <param name="parameters">Additional parameters keyed by the parameter name</param>
     /// <returns>The resolved object</returns>
-    public T Resolve<T>(Dictionary<string, object> parameters) => Container.Locate<T>(parameters);
+    public T Locate<T>(Dictionary<string, object> parameters) => Container.Locate<T>(parameters);
 
     /// <summary>
     ///     Gets a object from the container with the given parameters in the order they appear in the constructor. At time of registration the type must be registered with the container. <see cref="Container"/> to register a type.
     /// </summary>
     /// <typeparam name="T">The object type</typeparam>
     /// <param name="parameters">The parameters in the order they appear in the constructor</param>
-    /// <returns>The resloved object</returns>
-    public T ResolveWithPositionalParameters<T>(params object[] parameters) => Container.Locate<T>(parameters);
+    /// <returns>The resolved object</returns>
+    public T Locate<T>(dynamic parameters) => Container.Locate<T>(parameters);
 }

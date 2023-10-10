@@ -6,6 +6,7 @@ using Serilog;
 using WrathForged.Common;
 using WrathForged.Common.CommandLine;
 using WrathForged.Common.Networking;
+using WrathForged.Common.Scripting;
 using WrathForged.Database;
 using WrathForged.Models;
 using WrathForged.Serialization.Models;
@@ -31,6 +32,7 @@ container.Configure(c =>
 
 container.InitializeCommon();
 
+container.Locate<ServerUpdateLoop>().Start();
 container.Locate<WoWClientServer>().Start(8185);
 container.Locate<ForgedCommServer>().Start(configuration.GetDefaultValue("ForgedServerComm:Port", 8783));
 

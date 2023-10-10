@@ -24,7 +24,7 @@ namespace WrathForged.Authorization.Server.Services
 
             var response = new RealmListResponse();
 
-            using var authDb = _classFactory.Resolve<AuthDatabase>();
+            using var authDb = _classFactory.Locate<AuthDatabase>();
 
             foreach (var realm in authDb.Realmlists.ToList())
             {

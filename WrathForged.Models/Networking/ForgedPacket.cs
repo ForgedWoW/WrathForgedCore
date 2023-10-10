@@ -15,7 +15,7 @@ namespace WrathForged.Models.Networking
         public ForgedCoreOpCode OpCode { get; set; }
 
         [SerializableProperty(2)]
-        public uint Size { get; set; }
+        public int Size { get; set; }
 
         [SerializableProperty(3, CollectionSizeIndex = 2)]
         public byte[] Data { get; set; } = [];

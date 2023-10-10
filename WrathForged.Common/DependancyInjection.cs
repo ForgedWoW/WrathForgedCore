@@ -19,6 +19,7 @@ using WrathForged.Common.Scripting.Interfaces;
 using WrathForged.Common.Scripting.Interfaces.CoreEvents;
 using WrathForged.Common.Serialization;
 using WrathForged.Common.Threading;
+using WrathForged.Common.Time;
 using WrathForged.Database;
 using WrathForged.Database.DBC;
 using WrathForged.Models;
@@ -31,6 +32,7 @@ public static class DependencyInjection
     public static IExportRegistrationBlock RegisterCommon(this IExportRegistrationBlock builder, IConfiguration configuration)
     {
         var startTime = DateTime.UtcNow;
+        TimeUtil.ApplicationStartTime = DateTime.Now;
         Console.ForegroundColor = ConsoleColor.DarkRed;
         Console.WriteLine(@"```````````````````````````````````````````````````````````````````````````````````````");
         Console.WriteLine(@"███████╗ ██████╗ ██████╗  ██████╗ ███████╗██████╗      ██████╗ ██████╗ ██████╗ ███████╗");
@@ -86,6 +88,12 @@ public static class DependencyInjection
         _ = builder.Export<AttributeCache<SerializablePropertyAttribute>>().Lifestyle.Singleton();
         _ = builder.Export<AttributeCache<DBCBoundAttribute>>().Lifestyle.Singleton();
         _ = builder.Export<AttributeCache<DBCPropertyBindingAttribute>>().Lifestyle.Singleton();
+        _ = builder.Export<SessionNetwork>();
+        _ = builder.Export<SessionSecurity>();
+        _ = builder.Export<WoWClientSession>();
+        _ = builder.Export<PacketBuffer>();
+        _ = builder.Export<ClientTime>();
+        _ = builder.Export<ServerUpdateLoop>().Lifestyle.Singleton();
 
         // configure OpenTelemetry
         var telemetryType = configuration.GetDefaultValue("Telemetry:Types", "").Split(',', StringSplitOptions.TrimEntries | StringSplitOptions.TrimEntries).ToList(); // Assuming you have a key like this in your JSON
@@ -149,10 +157,10 @@ public static class DependencyInjection
 
         sl.RegisterAllTypesThatUseBaseInterface<IForgedScript>();
 
-        foreach (var f in cf.ResolveAll<IOnServerInitialize>())
+        foreach (var f in cf.LocateAll<IOnServerInitialize>())
             f.OnServerInitialize();
 
-        ConfigExtensionMethods.AddConverter(cf.ResolveAll<IConvertConfigValue>());
+        ConfigExtensionMethods.AddConverter(cf.LocateAll<IConvertConfigValue>());
 
         container.Locate<ILogger>().Information("WrathForged.Common initialized in {InitializationTime}.", (DateTime.UtcNow - startTime).ToReadableString());
 

@@ -5,7 +5,6 @@ using System.Net;
 using Microsoft.Extensions.Configuration;
 using Serilog;
 using WrathForged.Common.Observability;
-using WrathForged.Common.RBAC;
 using WrathForged.Common.Serialization;
 using WrathForged.Models.Networking;
 using WrathForged.Serialization.Models;
@@ -23,13 +22,13 @@ public class WoWClientServer
     private readonly PacketRouter _packetRouter;
     private readonly ILogger _logger;
     private readonly IConfiguration _configuration;
-    private readonly ForgedAuthorization _forgedAuthorization;
+    private readonly ClassFactory _classFactory;
     private readonly Dictionary<ClientSocket, WoWClientSession> _clientSessions = new();
     private readonly Meter _meter;
     private readonly Counter<long> _connectionCounter;
 
     public WoWClientServer(PacketScope packetScope, ForgedModelSerializer forgedModelDeserialization, TCPServer tCPServer, PacketRouter packetRouter, ILogger logger,
-                           MeterFactory meterFactory, IConfiguration configuration, ForgedAuthorization forgedAuthorization)
+                           MeterFactory meterFactory, IConfiguration configuration, ClassFactory classFactory)
     {
         _packetScope = packetScope;
         _forgedModelDeserialization = forgedModelDeserialization;
@@ -37,7 +36,7 @@ public class WoWClientServer
         _packetRouter = packetRouter;
         _logger = logger;
         _configuration = configuration;
-        _forgedAuthorization = forgedAuthorization;
+        _classFactory = classFactory;
         TCPServer.OnClientConnected += TCPServer_OnClientConnected;
         _meter = meterFactory.GetOrCreateMeter(MeterKeys.WRATHFORGED_COMMON);
         _connectionCounter = _meter.CreateCounter<long>("WoWClientConnections", "Number of connections from WoW Clients");
@@ -135,6 +134,9 @@ public class WoWClientServer
 
                 if (session.Security.IsEncrypted)
                 {
+                    if (session.Security.PacketEncryption == null)
+                        continue;
+
                     var firstByte = session.Security.PacketEncryption.GetDecryptedByte(session.Network.PacketBuffer.GetBuffer().Slice(currentBufferPosition, 1), 0);
                     var isLargePacket = (firstByte & 0x80) != 0;
 
@@ -185,19 +187,19 @@ public class WoWClientServer
 
             switch (_packetRouter.GetRouteType(packetId.Scope, packetId.Id))
             {
-                case PacketRouter.RoutType.None:
+                case PacketRouter.RouteType.None:
                     session.Network.PacketBuffer.Clear(packetLength);
                     break;
 
-                case PacketRouter.RoutType.NoPacket:
+                case PacketRouter.RouteType.NoPacket:
                     _packetRouter.Route(session, packetId);
                     break;
 
-                case PacketRouter.RoutType.DirectPacket:
+                case PacketRouter.RouteType.DirectPacket:
                     _packetRouter.RouteDirect(session, packetId, session.Network.PacketBuffer);
                     break;
 
-                case PacketRouter.RoutType.DeserializedPacket:
+                case PacketRouter.RouteType.DeserializedPacket:
                     if (session.Network.PacketBuffer.UnreadData == 0)
                         continue;
 
@@ -213,7 +215,7 @@ public class WoWClientServer
                     else
                     {
                         if (result == DeserializationResult.EndOfStream &&
-                            ((_packetScope == PacketScope.ClientToAuth && packetReadTryCount >= 2) // we need to read the rest of the packet yet. if we cannot read it after 2 tries, we clear the buffer theres no packet that big.
+                            ((_packetScope == PacketScope.ClientToAuth && packetReadTryCount >= 2) // we need to read the rest of the packet yet. if we cannot read it after 2 tries, we clear the buffer there's no packet that big.
                             || _packetScope != PacketScope.ClientToAuth))
                             session.Network.PacketBuffer.Reader.BaseStream.Position = posBeforeDeserialization;
                         else
@@ -229,7 +231,7 @@ public class WoWClientServer
     {
         if (!_clientSessions.TryGetValue(client, out var session))
         {
-            session = new WoWClientSession(client, new PacketBuffer(_logger), _logger, _forgedModelDeserialization, _forgedAuthorization);
+            session = _classFactory.Locate<WoWClientSession>(new { clientSocket = client });
             _clientSessions[client] = session;
         }
 

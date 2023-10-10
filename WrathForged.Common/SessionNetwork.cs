@@ -1,5 +1,6 @@
 ﻿// Copyright (c) Forged WoW LLC <https://github.com/ForgedWoW/WrathForgedCore>
 // Licensed under GPL-3.0 license. See <https://github.com/ForgedWoW/WrathForgedCore/blob/master/LICENSE> for full information.
+using Microsoft.Extensions.Configuration;
 using WrathForged.Common.Caching;
 using WrathForged.Common.Networking;
 using WrathForged.Common.Serialization;
@@ -13,19 +14,31 @@ using WrathForged.Serialization.Models;
 namespace WrathForged.Common
 {
     public class SessionNetwork(ClientSocket clientSocket, PacketBuffer packetBuffer, MemoryStream packetBufferBaseStream, ForgedModelSerializer forgedModelSerializer,
-                                AttributeCache<ForgedSerializableAttribute> forgedSerializableAttributeCache, AttributeCache<SerializablePropertyAttribute> serializableAttributeCache)
+                                AttributeCache<ForgedSerializableAttribute> forgedSerializableAttributeCache, IConfiguration configuration)
     {
         private readonly ForgedModelSerializer _forgedModelSerializer = forgedModelSerializer;
         private readonly AttributeCache<ForgedSerializableAttribute> _forgedSerializableAttributeCache = forgedSerializableAttributeCache;
-        private readonly AttributeCache<SerializablePropertyAttribute> _serializableAttributeCache = serializableAttributeCache;
+        private readonly TimeSpan _keepAliveTimeout = TimeSpan.FromSeconds(configuration.GetDefaultValue("ClientTCPServer:SocketTimeoutSeconds", 90));
+        private DateTime _lastKeepAlive = DateTime.UtcNow;
+        private DateTime _nextKeepAliveTimeout = DateTime.UtcNow + TimeSpan.FromSeconds(configuration.GetDefaultValue("ClientTCPServer:SocketTimeoutSeconds", 90));
 
         public int Latency { get; set; }
         public DateTime LastPing { get; set; } = DateTime.UtcNow;
         public int OverspeedPingCount { get; set; }
-
+        public DateTime LastKeepAlive
+        {
+            get => _lastKeepAlive;
+            set
+            {
+                _lastKeepAlive = value;
+                _nextKeepAliveTimeout = value + _keepAliveTimeout;
+            }
+        }
         public ClientSocket ClientSocket { get; } = clientSocket;
         public PacketBuffer PacketBuffer { get; } = packetBuffer;
         public MemoryStream PacketBufferBaseStream { get; } = packetBufferBaseStream;
+
+        public bool IsSocketTimedOut => DateTime.UtcNow > _nextKeepAliveTimeout;
 
         public WoWClientPacketOut NewClientMessage(PacketId packetId, PacketHeaderType packetHeaderType, ContentLengthType contentLengthType = ContentLengthType.None, byte[]? header = null) => new(_forgedModelSerializer, packetId, packetHeaderType, contentLengthType, header);
         public WoWClientPacketOut NewClientMessage(AuthServerOpCode opCode, PacketHeaderType packetHeaderType, ContentLengthType contentLengthType = ContentLengthType.None, byte[]? header = null) => new(_forgedModelSerializer, new PacketId(opCode, PacketScope.AuthToClient), packetHeaderType, contentLengthType, header);

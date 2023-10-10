@@ -10,7 +10,7 @@ using WrathForged.Serialization.Models;
 
 namespace WrathForged.Realm.Server.Services
 {
-    public class PingRouter(IConfiguration configuration, ILogger logger) : IPacketService
+    public class ClientSyncRouter(IConfiguration configuration, ILogger logger) : IPacketService
     {
         private readonly IConfiguration _configuration = configuration;
         private readonly ILogger _logger = logger;
@@ -45,6 +45,18 @@ namespace WrathForged.Realm.Server.Services
             session.Network.Latency = pingRequest.Latency;
 
             session.Network.Send(pingResponse);
+        }
+
+        [PacketRoute(PacketScope.ClientToRealm, RealmServerOpCode.CMSG_KEEP_ALIVE)]
+        public static void KeepAlive(WoWClientSession session)
+        {
+            session.Network.LastKeepAlive = DateTime.UtcNow;
+        }
+
+        [PacketRoute(PacketScope.ClientToRealm, RealmServerOpCode.CMSG_TIME_SYNC_RESP)]
+        public static void TimeSync(WoWClientSession session, TimeSyncResponse timeSyncRequest)
+        {
+            session.ClientTime.TimeSync(timeSyncRequest.TimeSyncCounter, timeSyncRequest.ClientTimestamp);
         }
     }
 }

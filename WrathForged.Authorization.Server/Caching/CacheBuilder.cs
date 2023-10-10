@@ -18,25 +18,25 @@ namespace WrathForged.Authorization.Server.Caching
             var cacheUpdate = TimeSpan.FromSeconds(_configuration.GetDefaultValue("RealmStatusUpdateTime_Seconds", 120));
             _forgeCache.Set(AuthCacheKeys.REALM_LISTS, cacheUpdate, () =>
             {
-                using var authDatabase = _classFactory.Resolve<AuthDatabase>();
+                using var authDatabase = _classFactory.Locate<AuthDatabase>();
                 return authDatabase.Realmlists.ToDictionary(d => d.Id, d => d);
             });
 
             _forgeCache.Set(AuthCacheKeys.BUILD_INFOS, cacheUpdate, () =>
             {
-                using var buildInfoContext = _classFactory.Resolve<AuthDatabase>();
+                using var buildInfoContext = _classFactory.Locate<AuthDatabase>();
                 return buildInfoContext.BuildInfos.ToDictionary(d => d.Build, d => d);
             });
 
             _forgeCache.Set(AuthCacheKeys.ACCOUNT_BANS, cacheUpdate, () =>
             {
-                using var bannedAccountsContext = _classFactory.Resolve<AuthDatabase>();
+                using var bannedAccountsContext = _classFactory.Locate<AuthDatabase>();
                 return bannedAccountsContext.AccountBanneds.ToDictionary(d => d.Id, d => d).Where(b => b.Value.Active || b.Value.Unbandate.FromUnixTime() < DateTime.UtcNow).ToDictionary(d => d.Key, d => d.Value);
             });
 
             _forgeCache.Set(AuthCacheKeys.IP_BANS, cacheUpdate, () =>
             {
-                using var bannedIpsContext = _classFactory.Resolve<AuthDatabase>();
+                using var bannedIpsContext = _classFactory.Locate<AuthDatabase>();
                 return bannedIpsContext.IpBanneds.ToDictionary(d => d.Ip, d => d).Where(kvp => CheckBanDate(kvp.Value)).ToDictionary(d => d.Key, d => d.Value);
             });
         }

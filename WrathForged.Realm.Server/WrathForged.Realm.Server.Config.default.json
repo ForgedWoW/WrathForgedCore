@@ -22,7 +22,11 @@
     "IncomingDataCaptureDir": ".\\Capture\\Incoming",
     "CaptureOutgoingData": "false",
     "OutgoingDataCaptureDir": ".\\Capture\\Outgoing",
-    "MaxOverPingCount": 2
+    "MaxOverPingCount": 2,
+    "SocketTimeoutSeconds": 90
+  },
+  "ServerUpdate": {
+    "MinTickTimeMilliseconds": 1
   },
   "Serilog LINKS": [
     "The Following are installed by default and availabe for use via config:",

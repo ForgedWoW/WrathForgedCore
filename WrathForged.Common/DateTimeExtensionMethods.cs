@@ -4,7 +4,10 @@ namespace WrathForged.Common;
 
 public static class DateTimeExtensionMethods
 {
-    public static DateTime UnixEpoch { get; } = new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc);
+    public const int TICKS_PER_SECOND = 10000;
+    private const long TICKS_SINCE_1970 = 621355968000000000; // .NET ticks for 1970
+
+    public static DateTime UnixEpoch { get; } = new DateTime(1970, 1, 1, 0, 0, 0);
 
     public static long ToUnixTime(this DateTime dateTime) => (long)(dateTime - UnixEpoch).TotalSeconds;
 
@@ -39,4 +42,26 @@ public static class DateTimeExtensionMethods
 
         return new DateTime(year + 2000, month + 1, day + 1, hour, minute, 0);
     }
+
+    /// <summary>
+    /// Gets the time between the Unix epoch and a specific <see cref="DateTime">time</see>.
+    /// </summary>
+    /// <param name="time">the end time</param>
+    /// <returns>the time between the Unix epoch and the supplied <see cref="DateTime">time</see> in seconds</returns>
+    public static uint GetEpochTimeFromDT(this DateTime time)
+    {
+        return (uint)((time.Ticks - TICKS_SINCE_1970) / 10000000L);
+    }
+
+    public static int ToMilliSecondsInt(this DateTime time)
+    {
+        return (int)(time.Ticks / TICKS_PER_SECOND);
+    }
+
+    public static int ToMilliSecondsInt(this TimeSpan time)
+    {
+        return (int)(time.Ticks / TICKS_PER_SECOND);
+    }
+
+
 }

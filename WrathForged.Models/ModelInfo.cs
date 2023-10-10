@@ -6,13 +6,13 @@ namespace WrathForged.Models
     {
         public Type Type { get; set; }
         public List<PropertyMeta> Properties { get; set; } = [];
-        public int Size { get; set; }
+        public int EstimatedSize { get; set; }
 
         public ModelInfo(Type type, List<PropertyMeta> properties, int size)
         {
             Type = type;
             Properties = properties;
-            Size = size;
+            EstimatedSize = size;
         }
     }
 }

@@ -1,14 +1,26 @@
 ﻿// Copyright (c) Forged WoW LLC <https://github.com/ForgedWoW/WrathForgedCore>
 // Licensed under GPL-3.0 license. See <https://github.com/ForgedWoW/WrathForgedCore/blob/master/LICENSE> for full information.
-using Serilog;
 using WrathForged.Common.Networking;
-using WrathForged.Common.RBAC;
-using WrathForged.Common.Serialization;
+using WrathForged.Common.Scripting;
+using WrathForged.Common.Time;
 
 namespace WrathForged.Common;
 
-public class WoWClientSession(ClientSocket clientSocket, PacketBuffer packetBuffer, ILogger logger, ForgedModelSerializer forgedModelSerializer, ForgedAuthorization forgedAuthorization)
+public partial class WoWClientSession
 {
+    private ServerUpdateLoop _serverUpdateLoop;
+
+    public WoWClientSession(ClientSocket clientSocket, PacketBuffer packetBuffer, ClassFactory classFactory)
+    {
+        Security = classFactory.Locate<SessionSecurity>();
+        Network = classFactory.Locate<SessionNetwork>(new { clientSocket, packetBuffer, packetBufferBaseStream = (MemoryStream)packetBuffer.Reader.BaseStream });
+        ClientTime = classFactory.Locate<ClientTime>(new { clientSession = this });
+        _serverUpdateLoop = classFactory.Locate<ServerUpdateLoop>();
+        _serverUpdateLoop.RegisterUpdateLoop(ClientTime, UpdateLoopPriorities.CLIENT_TIME);
+
+        Network.ClientSocket.OnDisconnect += (sender, args) => _serverUpdateLoop.UnregisterUpdateLoop(ClientTime, UpdateLoopPriorities.CLIENT_TIME);
+    }
+
     public enum AuthState
     {
         LoggedOut,
@@ -16,7 +28,9 @@ public class WoWClientSession(ClientSocket clientSocket, PacketBuffer packetBuff
         LoggedIn,
     };
 
-    public SessionSecurity Security { get; } = new SessionSecurity(logger, forgedAuthorization);
+    public SessionSecurity Security { get; }
 
-    public SessionNetwork Network { get; } = new SessionNetwork(clientSocket, packetBuffer, (MemoryStream)packetBuffer.Reader.BaseStream, forgedModelSerializer);
+    public SessionNetwork Network { get; }
+
+    public ClientTime ClientTime { get; }
 }
