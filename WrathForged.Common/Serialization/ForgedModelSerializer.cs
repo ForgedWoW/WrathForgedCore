@@ -40,14 +40,17 @@ public class ForgedModelSerializer
         // Build the deserialization cache
         foreach (var cls in classesWithAttribute)
         {
-            var attribute = (ForgedSerializableAttribute)cls.GetCustomAttributes(typeof(ForgedSerializableAttribute), false).First();
+            var attribute = cls.GetCustomAttribute<ForgedSerializableAttribute>(false);
+
+            if (attribute == null)
+                continue;
 
             var propertyAttributes = new List<PropertyMeta>();
             var size = 0;
 
             foreach (var prop in cls.GetProperties())
             {
-                var propAtt = prop.GetCustomAttribute<SerializablePropertyAttribute>();
+                var propAtt = prop.GetCustomAttribute<SerializablePropertyAttribute>(false);
                 IConditionalSerialization? conditionalAtt = null;
 
                 foreach (var att in prop.GetCustomAttributes())

@@ -13,13 +13,13 @@ public class DBCDeserializer(ILogger logger)
 
     public IEnumerable<T> Deserialize<T>(string filePath) where T : class, new()
     {
-        if (typeof(T).GetCustomAttribute(typeof(DBCBoundAttribute)) is not DBCBoundAttribute dbcAtt)
+        if (typeof(T).GetCustomAttribute(typeof(DBCBoundAttribute), false) is not DBCBoundAttribute dbcAtt)
             return Enumerable.Empty<T>();
 
         using var reader = new BinaryReader(File.Open(filePath, FileMode.Open));
         var type = typeof(T);
         var properties = type.GetProperties()
-                             .Where(p => Attribute.IsDefined(p, typeof(DBCPropertyBindingAttribute)))
+                             .Where(p => Attribute.IsDefined(p, typeof(DBCPropertyBindingAttribute), false))
                              .ToArray();
 
         var header = new DBCHeader
@@ -45,7 +45,7 @@ public class DBCDeserializer(ILogger logger)
 
             foreach (var property in properties)
             {
-                if (property.GetCustomAttribute(typeof(DBCPropertyBindingAttribute)) is not DBCPropertyBindingAttribute attribute)
+                if (property.GetCustomAttribute(typeof(DBCPropertyBindingAttribute), false) is not DBCPropertyBindingAttribute attribute)
                     continue;
 
                 object? value;

@@ -3,6 +3,7 @@
 
 using System.Net;
 using System.Net.Sockets;
+using System.Reflection;
 using System.Threading.Tasks.Dataflow;
 using Serilog;
 using WrathForged.Common.Serialization;
@@ -138,7 +139,7 @@ public class ForgedTCPClient
 
         if (!_attributeMap.TryGetValue(type, out var serializableAttribute))
         {
-            serializableAttribute = type.GetCustomAttributes(typeof(ForgedSerializableAttribute), false).Cast<ForgedSerializableAttribute>().FirstOrDefault();
+            serializableAttribute = type.GetCustomAttribute<ForgedSerializableAttribute>(false);
 
             if (serializableAttribute == null)
             {

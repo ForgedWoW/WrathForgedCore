@@ -35,7 +35,7 @@ namespace WrathForged.Common
 
             if (packetId == default)
             {
-                var att = obj.GetType().GetCustomAttribute<ForgedSerializableAttribute>() ?? throw new InvalidOperationException($"ForgedSerializableAttribute is not defined on object {obj.GetType().Name}. Please populate packetId parameter or update the model to include ForgedSerializableAttribute.");
+                var att = obj.GetType().GetCustomAttribute<ForgedSerializableAttribute>(false) ?? throw new InvalidOperationException($"ForgedSerializableAttribute is not defined on object {obj.GetType().Name}. Please populate packetId parameter or update the model to include ForgedSerializableAttribute.");
 
                 if (att.PacketIDs.Length == 0)
                     throw new InvalidOperationException($"PacketIDs in ForgedSerializableAttribute on object {obj.GetType().Name} is not defined. Please populate packetId parameter or update the models ForgedSerializableAttribute to include at least one OpCode.");
@@ -64,7 +64,7 @@ namespace WrathForged.Common
 
             if (opCode == null)
             {
-                var att = obj.GetType().GetCustomAttribute<ForgedSerializableAttribute>();
+                var att = obj.GetType().GetCustomAttribute<ForgedSerializableAttribute>(false);
 
                 if (att == null)
                     return;
@@ -86,7 +86,7 @@ namespace WrathForged.Common
             if (obj == null)
                 return;
 
-            var att = obj.GetType().GetCustomAttribute<ForgedSerializableAttribute>();
+            var att = obj.GetType().GetCustomAttribute<ForgedSerializableAttribute>(false);
 
             if (att == null)
                 return;

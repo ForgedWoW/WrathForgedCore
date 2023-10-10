@@ -27,7 +27,7 @@ public class DBCExportCommand : ICommandLineArgumentHandler
         _logger = logger;
         foreach (var record in scriptLoader.GetAllTypesThatUseInterface<IDBCRecord>())
         {
-            var att = record.GetCustomAttributes(typeof(DBCBoundAttribute), true).FirstOrDefault();
+            var att = record.GetCustomAttribute<DBCBoundAttribute>(false);
 
             if (att == null)
                 continue;
@@ -42,7 +42,7 @@ public class DBCExportCommand : ICommandLineArgumentHandler
             if (prop.PropertyType.IsGenericType && prop.PropertyType.GetGenericTypeDefinition() == typeof(DbSet<>))
             {
                 var type = prop.PropertyType.GetGenericArguments()[0];
-                var att = type.GetCustomAttributes(typeof(DBCBoundAttribute), true).FirstOrDefault();
+                var att = type.GetCustomAttribute<DBCBoundAttribute>(false);
 
                 if (att == null)
                     continue;

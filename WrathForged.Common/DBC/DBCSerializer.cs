@@ -21,14 +21,14 @@ public class DBCSerializer(ILogger logger)
         else
             return;
 
-        if (type.GetCustomAttribute(typeof(DBCBoundAttribute)) is not DBCBoundAttribute dbcAtt)
+        if (type.GetCustomAttribute(typeof(DBCBoundAttribute), false) is not DBCBoundAttribute dbcAtt)
             return;
 
         using var writer = new BinaryWriter(File.Open(Path.Combine(filePath, dbcAtt.Name), FileMode.Create));
 
         var properties = type.GetProperties()
-                             .Where(p => Attribute.IsDefined(p, typeof(DBCPropertyBindingAttribute)))
-                             .OrderBy(p => (p.GetCustomAttribute(typeof(DBCPropertyBindingAttribute)) as DBCPropertyBindingAttribute)?.ColumnIndex)
+                             .Where(p => Attribute.IsDefined(p, typeof(DBCPropertyBindingAttribute), false))
+                             .OrderBy(p => (p.GetCustomAttribute(typeof(DBCPropertyBindingAttribute), false) as DBCPropertyBindingAttribute)?.ColumnIndex)
                              .ToList();
 
         var items = itemsEn.ToList(); // execute the sql query, load all into memory
@@ -97,7 +97,7 @@ public class DBCSerializer(ILogger logger)
         {
             foreach (var property in properties)
             {
-                if (property.GetCustomAttribute(typeof(DBCPropertyBindingAttribute)) is not DBCPropertyBindingAttribute attribute)
+                if (property.GetCustomAttribute(typeof(DBCPropertyBindingAttribute), false) is not DBCPropertyBindingAttribute attribute)
                     continue;
 
                 var value = property.GetValue(item);
