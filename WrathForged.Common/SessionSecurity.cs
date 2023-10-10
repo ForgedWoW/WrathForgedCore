@@ -23,7 +23,6 @@ namespace WrathForged.Common
             PacketEncryption = new PacketEncryption(_defaultSessionKey, _logger);
         }
 
-
         public Dictionary<int, AuthorizedRole> Roles { get; set; } = new();
 
         public byte[] SessionKey
@@ -62,13 +61,14 @@ namespace WrathForged.Common
                     DefaultRole = GetRole();
                     SRP6 = new SRP6(value.Username, value.Salt, value.Verifier);
                 }
+
                 _account = value;
             }
         }
 
         public int CurrentRealm
         {
-            get { return _currentRealm; }
+            get => _currentRealm;
             set
             {
                 _currentRealm = value;
@@ -79,17 +79,8 @@ namespace WrathForged.Common
         public AuthorizedRole CurrentRealmRole { get; set; } = AuthorizedRole.None;
         public AuthorizedRole DefaultRole { get; set; } = AuthorizedRole.None;
 
-        public AuthorizedRole GetRole(int realm = -1)
-        {
-            if (Roles.TryGetValue(realm, out var role))
-                return role;
+        public AuthorizedRole GetRole(int realm = -1) => Roles.TryGetValue(realm, out var role) ? role : AuthorizedRole.None;
 
-            return AuthorizedRole.None;
-        }
-
-        public bool HasPermission(uint permissionId)
-        {
-            return CurrentRealmRole.HasPermission(permissionId) || DefaultRole.HasPermission(permissionId);
-        }
+        public bool HasPermission(uint permissionId) => CurrentRealmRole.HasPermission(permissionId) || DefaultRole.HasPermission(permissionId);
     }
 }

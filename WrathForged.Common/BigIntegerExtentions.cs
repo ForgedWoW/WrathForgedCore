@@ -15,10 +15,7 @@ public static class BigIntegerExtensions
     }
 
     // http://stackoverflow.com/a/5649264
-    public static BigInteger ToBigInteger(this byte[] bytes)
-    {
-        return new BigInteger(bytes, true);
-    }
+    public static BigInteger ToBigInteger(this byte[] bytes) => new(bytes, true);
 
     public static ushort SwitchEndian(this ushort old)
     {
@@ -28,10 +25,7 @@ public static class BigIntegerExtensions
     }
 
     //Bouncy has this implemented
-    public static BigInteger ModPow(this BigInteger number, BigInteger exp, BigInteger modulus)
-    {
-        return BigInteger.ModPow(number, exp, modulus);
-    }
+    public static BigInteger ModPow(this BigInteger number, BigInteger exp, BigInteger modulus) => BigInteger.ModPow(number, exp, modulus);
 
     public static byte[] Pad(this byte[] bytes, int count)
     {
@@ -41,22 +35,22 @@ public static class BigIntegerExtensions
 
     public static byte[] GetBytes(this BigInteger bigInt, int numBytes)
     {
-        byte[] result = new byte[numBytes];
+        var result = new byte[numBytes];
 
-        int numBits = bigInt.GetByteCount();
-        int realNumBytes = numBits >> 3;
+        var numBits = bigInt.GetByteCount();
+        var realNumBytes = numBits >> 3;
         if ((numBits & 0x7) != 0)
             realNumBytes++;
 
         var data = bigInt.ToProperByteArray();
 
-        for (int i = 0; i < realNumBytes; i++)
+        for (var i = 0; i < realNumBytes; i++)
         {
-            for (int b = 0; b < 4; b++)
+            for (var b = 0; b < 4; b++)
             {
-                if (i * 4 + b >= realNumBytes)
+                if ((i * 4) + b >= realNumBytes)
                     return result;
-                result[i * 4 + b] = (byte)(data[i] >> (b * 8) & 0xff);
+                result[(i * 4) + b] = (byte)((data[i] >> (b * 8)) & 0xff);
             }
         }
 

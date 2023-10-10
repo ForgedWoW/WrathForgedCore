@@ -18,7 +18,6 @@ namespace WrathForged.Common.Cryptography
         public const int VERIFIER_LENGTH = 32;
         public const int EPHEMERAL_KEY_LENGTH = 32;
 
-
         private static readonly BigInteger _g = new(7);
         private static readonly BigInteger _n = new(new byte[]
             {
@@ -31,20 +30,14 @@ namespace WrathForged.Common.Cryptography
 
         public static (byte[] Salt, byte[] Verifier) MakeRegistrationData(string username, string password)
         {
-            byte[] salt = (_crypto.RandomBytes(SALT_LENGTH).ToBigInteger() % _n).ToProperByteArray();
-            byte[] verifier = GenerateVerifier(username, password, salt);
+            var salt = (_crypto.RandomBytes(SALT_LENGTH).ToBigInteger() % _n).ToProperByteArray();
+            var verifier = GenerateVerifier(username, password, salt);
             return (salt, verifier);
         }
 
-        public static byte[] GetSessionVerifier(byte[] A, byte[] clientM, byte[] K)
-        {
-            return SHA1.HashData(A.Concat(clientM).Concat(K).ToArray());
-        }
+        public static byte[] GetSessionVerifier(byte[] A, byte[] clientM, byte[] K) => SHA1.HashData(A.Concat(clientM).Concat(K).ToArray());
 
-        private static byte[] GenerateVerifier(string username, string password, byte[] salt)
-        {
-            return BigInteger.ModPow(_g, new BigInteger(SHA1.HashData(salt.Combine(SHA1.HashData(Encoding.UTF8.GetBytes(username.ToUpperInvariant() + ":" + password.ToUpperInvariant())))), true), _n).ToProperByteArray();
-        }
+        private static byte[] GenerateVerifier(string username, string password, byte[] salt) => BigInteger.ModPow(_g, new BigInteger(SHA1.HashData(salt.Combine(SHA1.HashData(Encoding.UTF8.GetBytes(username.ToUpperInvariant() + ":" + password.ToUpperInvariant())))), true), _n).ToProperByteArray();
 
         private static byte[] SHA1Interleave(byte[] S)
         {
@@ -95,23 +88,23 @@ namespace WrathForged.Common.Cryptography
 
         public byte[]? VerifyChallengeResponse(byte[] a, byte[] clientM)
         {
-            BigInteger aaBigInt = a.ToBigInteger();
+            var aaBigInt = a.ToBigInteger();
 
             if ((aaBigInt % _n) == 0)
             {
                 return null;
             }
 
-            BigInteger u = SHA1.HashData(a.Concat(B).ToArray()).ToBigInteger();
-            byte[] k = SHA1Interleave(BigInteger.ModPow(aaBigInt * BigInteger.ModPow(_v, u, _n), _b, _n).ToProperByteArray());
+            var u = SHA1.HashData(a.Concat(B).ToArray()).ToBigInteger();
+            var k = SHA1Interleave(BigInteger.ModPow(aaBigInt * BigInteger.ModPow(_v, u, _n), _b, _n).ToProperByteArray());
 
-            byte[] NHash = SHA1.HashData(N);
-            byte[] gHash = SHA1.HashData(G);
+            var NHash = SHA1.HashData(N);
+            var gHash = SHA1.HashData(G);
 
             for (int i = 0, j = NHash.Length; i < j; i++)
                 NHash[i] ^= gHash[i];
 
-            byte[] ourM = SHA1.HashData(NHash.Concat(_i).Concat(Salt).Concat(a).Concat(B).Concat(k).ToArray());
+            var ourM = SHA1.HashData(NHash.Concat(_i).Concat(Salt).Concat(a).Concat(B).Concat(k).ToArray());
 
             return ourM.SequenceEqual(clientM) ? k : null;
         }

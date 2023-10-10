@@ -31,7 +31,6 @@ public class ForgedAuthorization
     {
         var authDB = _classFactory.Locate<AuthDatabase>();
 
-
         _accountPermissions = authDB.RbacAccountPermissions
                                     .AsEnumerable()
                                     .GroupBy(x => x.AccountId)
@@ -90,7 +89,7 @@ public class ForgedAuthorization
                 }
 
                 if (kvp.Value.Granted == false)
-                    role.Permissions.Remove(kvp.Value.PermissionId);
+                    _ = role.Permissions.Remove(kvp.Value.PermissionId);
                 else
                     role.Permissions[kvp.Value.PermissionId] = kvp.Value.Permission;
             }

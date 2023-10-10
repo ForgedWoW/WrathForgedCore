@@ -24,7 +24,7 @@ namespace WrathForged.Authorization.Server.Services
 
             var response = new RealmListResponse();
 
-            using var authDb = _classFactory.Locate<AuthDatabase>();
+            using var authDb = _classFactory.Resolve<AuthDatabase>();
 
             foreach (var realm in authDb.Realmlists.ToList())
             {
@@ -60,7 +60,6 @@ namespace WrathForged.Authorization.Server.Services
 
                 response.Realms.Add(authRealm);
             }
-
 
             packet.Writer.Write(0);
             packet.Writer.Write((short)response.Realms.Count);

@@ -51,7 +51,6 @@ namespace WrathForged.Models.Auth
         public byte[] SHA { get; set; } = [];
     }
 
-
     [ForgedSerializable]
     public class AuthPIN
     {

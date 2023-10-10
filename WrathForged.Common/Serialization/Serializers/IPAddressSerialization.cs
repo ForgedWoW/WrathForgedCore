@@ -12,10 +12,7 @@ public class IPAddressSerialization : IForgedTypeSerialization
     public HashSet<Type> SupportedTypes { get; } = new HashSet<Type>() { typeof(IPAddress) };
     public HashSet<ForgedTypeCode> SupportedForgedTypeCodes { get; } = new HashSet<ForgedTypeCode>();
 
-    public object? Deserialize(PacketBuffer packetBuffer, PropertyMeta propertyMeta, Dictionary<uint, int> collectionSizes)
-    {
-        return new IPAddress(packetBuffer.Reader.ReadBytes(4));
-    }
+    public object? Deserialize(PacketBuffer packetBuffer, PropertyMeta propertyMeta, Dictionary<uint, int> collectionSizes) => new IPAddress(packetBuffer.Reader.ReadBytes(4));
 
     public void Serialize(PrimitiveWriter writer, PropertyMeta propertyMeta, List<PropertyMeta> otherMeta, object obj, object? val)
     {

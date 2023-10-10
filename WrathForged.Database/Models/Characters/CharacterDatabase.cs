@@ -1,9 +1,6 @@
 ﻿// Copyright (c) Forged WoW LLC <https://github.com/ForgedWoW/WrathForgedCore>
 // Licensed under GPL-3.0 license. See <https://github.com/ForgedWoW/WrathForgedCore/blob/master/LICENSE> for full information.
-using System;
-using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
-using WrathForged.Database.Models;
 
 namespace WrathForged.Database.Models.Characters;
 
@@ -202,2298 +199,2298 @@ public partial class CharacterDatabase : DbContext
 
     public void RunSqlFile(string filePath)
     {
-        string sql = File.ReadAllText(filePath);
-        Database.ExecuteSqlRaw(sql);
+        var sql = File.ReadAllText(filePath);
+        _ = Database.ExecuteSqlRaw(sql);
     }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        modelBuilder
+        _ = modelBuilder
             .UseCollation("utf8mb4_0900_ai_ci")
             .HasCharSet("utf8mb4");
 
-        modelBuilder.Entity<AccountDatum>(entity =>
+        _ = modelBuilder.Entity<AccountDatum>(entity =>
         {
-            entity.HasKey(e => new { e.AccountId, e.Type })
+            _ = entity.HasKey(e => new { e.AccountId, e.Type })
                 .HasName("PRIMARY")
                 .HasAnnotation("MySql:IndexPrefixLength", new[] { 0, 0 });
 
-            entity
+            _ = entity
                 .ToTable("account_data")
                 .UseCollation("utf8mb4_unicode_ci");
 
-            entity.Property(e => e.AccountId)
+            _ = entity.Property(e => e.AccountId)
                 .HasComment("Account Identifier")
                 .HasColumnName("accountId");
-            entity.Property(e => e.Type).HasColumnName("type");
-            entity.Property(e => e.Data)
+            _ = entity.Property(e => e.Type).HasColumnName("type");
+            _ = entity.Property(e => e.Data)
                 .HasColumnType("blob")
                 .HasColumnName("data");
-            entity.Property(e => e.Time).HasColumnName("time");
+            _ = entity.Property(e => e.Time).HasColumnName("time");
         });
 
-        modelBuilder.Entity<AccountInstanceTime>(entity =>
+        _ = modelBuilder.Entity<AccountInstanceTime>(entity =>
         {
-            entity.HasKey(e => new { e.AccountId, e.InstanceId })
+            _ = entity.HasKey(e => new { e.AccountId, e.InstanceId })
                 .HasName("PRIMARY")
                 .HasAnnotation("MySql:IndexPrefixLength", new[] { 0, 0 });
 
-            entity
+            _ = entity
                 .ToTable("account_instance_times")
                 .UseCollation("utf8mb4_unicode_ci");
 
-            entity.Property(e => e.AccountId).HasColumnName("accountId");
-            entity.Property(e => e.InstanceId).HasColumnName("instanceId");
-            entity.Property(e => e.ReleaseTime).HasColumnName("releaseTime");
+            _ = entity.Property(e => e.AccountId).HasColumnName("accountId");
+            _ = entity.Property(e => e.InstanceId).HasColumnName("instanceId");
+            _ = entity.Property(e => e.ReleaseTime).HasColumnName("releaseTime");
         });
 
-        modelBuilder.Entity<AccountTutorial>(entity =>
+        _ = modelBuilder.Entity<AccountTutorial>(entity =>
         {
-            entity.HasKey(e => e.AccountId).HasName("PRIMARY");
+            _ = entity.HasKey(e => e.AccountId).HasName("PRIMARY");
 
-            entity
+            _ = entity
                 .ToTable("account_tutorial")
                 .UseCollation("utf8mb4_unicode_ci");
 
-            entity.Property(e => e.AccountId)
+            _ = entity.Property(e => e.AccountId)
                 .ValueGeneratedNever()
                 .HasComment("Account Identifier")
                 .HasColumnName("accountId");
-            entity.Property(e => e.Tut0).HasColumnName("tut0");
-            entity.Property(e => e.Tut1).HasColumnName("tut1");
-            entity.Property(e => e.Tut2).HasColumnName("tut2");
-            entity.Property(e => e.Tut3).HasColumnName("tut3");
-            entity.Property(e => e.Tut4).HasColumnName("tut4");
-            entity.Property(e => e.Tut5).HasColumnName("tut5");
-            entity.Property(e => e.Tut6).HasColumnName("tut6");
-            entity.Property(e => e.Tut7).HasColumnName("tut7");
+            _ = entity.Property(e => e.Tut0).HasColumnName("tut0");
+            _ = entity.Property(e => e.Tut1).HasColumnName("tut1");
+            _ = entity.Property(e => e.Tut2).HasColumnName("tut2");
+            _ = entity.Property(e => e.Tut3).HasColumnName("tut3");
+            _ = entity.Property(e => e.Tut4).HasColumnName("tut4");
+            _ = entity.Property(e => e.Tut5).HasColumnName("tut5");
+            _ = entity.Property(e => e.Tut6).HasColumnName("tut6");
+            _ = entity.Property(e => e.Tut7).HasColumnName("tut7");
         });
 
-        modelBuilder.Entity<Addon>(entity =>
+        _ = modelBuilder.Entity<Addon>(entity =>
         {
-            entity.HasKey(e => e.Name).HasName("PRIMARY");
+            _ = entity.HasKey(e => e.Name).HasName("PRIMARY");
 
-            entity
+            _ = entity
                 .ToTable("addons", tb => tb.HasComment("Addons"))
                 .UseCollation("utf8mb4_unicode_ci");
 
-            entity.Property(e => e.Name)
+            _ = entity.Property(e => e.Name)
                 .HasMaxLength(120)
                 .HasDefaultValueSql("''")
                 .HasColumnName("name");
-            entity.Property(e => e.Crc).HasColumnName("crc");
+            _ = entity.Property(e => e.Crc).HasColumnName("crc");
         });
 
-        modelBuilder.Entity<ArenaTeam>(entity =>
+        _ = modelBuilder.Entity<ArenaTeam>(entity =>
         {
-            entity.HasKey(e => e.ArenaTeamId).HasName("PRIMARY");
+            _ = entity.HasKey(e => e.ArenaTeamId).HasName("PRIMARY");
 
-            entity
+            _ = entity
                 .ToTable("arena_team")
                 .UseCollation("utf8mb4_unicode_ci");
 
-            entity.Property(e => e.ArenaTeamId)
+            _ = entity.Property(e => e.ArenaTeamId)
                 .ValueGeneratedNever()
                 .HasColumnName("arenaTeamId");
-            entity.Property(e => e.BackgroundColor).HasColumnName("backgroundColor");
-            entity.Property(e => e.BorderColor).HasColumnName("borderColor");
-            entity.Property(e => e.BorderStyle).HasColumnName("borderStyle");
-            entity.Property(e => e.CaptainGuid).HasColumnName("captainGuid");
-            entity.Property(e => e.EmblemColor).HasColumnName("emblemColor");
-            entity.Property(e => e.EmblemStyle).HasColumnName("emblemStyle");
-            entity.Property(e => e.Name)
+            _ = entity.Property(e => e.BackgroundColor).HasColumnName("backgroundColor");
+            _ = entity.Property(e => e.BorderColor).HasColumnName("borderColor");
+            _ = entity.Property(e => e.BorderStyle).HasColumnName("borderStyle");
+            _ = entity.Property(e => e.CaptainGuid).HasColumnName("captainGuid");
+            _ = entity.Property(e => e.EmblemColor).HasColumnName("emblemColor");
+            _ = entity.Property(e => e.EmblemStyle).HasColumnName("emblemStyle");
+            _ = entity.Property(e => e.Name)
                 .HasMaxLength(24)
                 .HasColumnName("name");
-            entity.Property(e => e.Rank).HasColumnName("rank");
-            entity.Property(e => e.Rating).HasColumnName("rating");
-            entity.Property(e => e.SeasonGames).HasColumnName("seasonGames");
-            entity.Property(e => e.SeasonWins).HasColumnName("seasonWins");
-            entity.Property(e => e.Type).HasColumnName("type");
-            entity.Property(e => e.WeekGames).HasColumnName("weekGames");
-            entity.Property(e => e.WeekWins).HasColumnName("weekWins");
+            _ = entity.Property(e => e.Rank).HasColumnName("rank");
+            _ = entity.Property(e => e.Rating).HasColumnName("rating");
+            _ = entity.Property(e => e.SeasonGames).HasColumnName("seasonGames");
+            _ = entity.Property(e => e.SeasonWins).HasColumnName("seasonWins");
+            _ = entity.Property(e => e.Type).HasColumnName("type");
+            _ = entity.Property(e => e.WeekGames).HasColumnName("weekGames");
+            _ = entity.Property(e => e.WeekWins).HasColumnName("weekWins");
         });
 
-        modelBuilder.Entity<ArenaTeamMember>(entity =>
+        _ = modelBuilder.Entity<ArenaTeamMember>(entity =>
         {
-            entity.HasKey(e => new { e.ArenaTeamId, e.Guid })
+            _ = entity.HasKey(e => new { e.ArenaTeamId, e.Guid })
                 .HasName("PRIMARY")
                 .HasAnnotation("MySql:IndexPrefixLength", new[] { 0, 0 });
 
-            entity
+            _ = entity
                 .ToTable("arena_team_member")
                 .UseCollation("utf8mb4_unicode_ci");
 
-            entity.Property(e => e.ArenaTeamId).HasColumnName("arenaTeamId");
-            entity.Property(e => e.Guid).HasColumnName("guid");
-            entity.Property(e => e.PersonalRating).HasColumnName("personalRating");
-            entity.Property(e => e.SeasonGames).HasColumnName("seasonGames");
-            entity.Property(e => e.SeasonWins).HasColumnName("seasonWins");
-            entity.Property(e => e.WeekGames).HasColumnName("weekGames");
-            entity.Property(e => e.WeekWins).HasColumnName("weekWins");
+            _ = entity.Property(e => e.ArenaTeamId).HasColumnName("arenaTeamId");
+            _ = entity.Property(e => e.Guid).HasColumnName("guid");
+            _ = entity.Property(e => e.PersonalRating).HasColumnName("personalRating");
+            _ = entity.Property(e => e.SeasonGames).HasColumnName("seasonGames");
+            _ = entity.Property(e => e.SeasonWins).HasColumnName("seasonWins");
+            _ = entity.Property(e => e.WeekGames).HasColumnName("weekGames");
+            _ = entity.Property(e => e.WeekWins).HasColumnName("weekWins");
         });
 
-        modelBuilder.Entity<Auctionbidder>(entity =>
+        _ = modelBuilder.Entity<Auctionbidder>(entity =>
         {
-            entity.HasKey(e => new { e.Id, e.Bidderguid })
+            _ = entity.HasKey(e => new { e.Id, e.Bidderguid })
                 .HasName("PRIMARY")
                 .HasAnnotation("MySql:IndexPrefixLength", new[] { 0, 0 });
 
-            entity
+            _ = entity
                 .ToTable("auctionbidders")
                 .UseCollation("utf8mb4_unicode_ci");
 
-            entity.Property(e => e.Id).HasColumnName("id");
-            entity.Property(e => e.Bidderguid).HasColumnName("bidderguid");
+            _ = entity.Property(e => e.Id).HasColumnName("id");
+            _ = entity.Property(e => e.Bidderguid).HasColumnName("bidderguid");
         });
 
-        modelBuilder.Entity<Auctionhouse>(entity =>
+        _ = modelBuilder.Entity<Auctionhouse>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PRIMARY");
+            _ = entity.HasKey(e => e.Id).HasName("PRIMARY");
 
-            entity
+            _ = entity
                 .ToTable("auctionhouse")
                 .UseCollation("utf8mb4_unicode_ci");
 
-            entity.HasIndex(e => e.Itemguid, "item_guid").IsUnique();
+            _ = entity.HasIndex(e => e.Itemguid, "item_guid").IsUnique();
 
-            entity.Property(e => e.Id)
+            _ = entity.Property(e => e.Id)
                 .ValueGeneratedNever()
                 .HasColumnName("id");
-            entity.Property(e => e.Buyguid).HasColumnName("buyguid");
-            entity.Property(e => e.Buyoutprice).HasColumnName("buyoutprice");
-            entity.Property(e => e.Deposit).HasColumnName("deposit");
-            entity.Property(e => e.Houseid)
+            _ = entity.Property(e => e.Buyguid).HasColumnName("buyguid");
+            _ = entity.Property(e => e.Buyoutprice).HasColumnName("buyoutprice");
+            _ = entity.Property(e => e.Deposit).HasColumnName("deposit");
+            _ = entity.Property(e => e.Houseid)
                 .HasDefaultValueSql("'7'")
                 .HasColumnName("houseid");
-            entity.Property(e => e.Itemguid).HasColumnName("itemguid");
-            entity.Property(e => e.Itemowner).HasColumnName("itemowner");
-            entity.Property(e => e.Lastbid).HasColumnName("lastbid");
-            entity.Property(e => e.Startbid).HasColumnName("startbid");
-            entity.Property(e => e.Time).HasColumnName("time");
+            _ = entity.Property(e => e.Itemguid).HasColumnName("itemguid");
+            _ = entity.Property(e => e.Itemowner).HasColumnName("itemowner");
+            _ = entity.Property(e => e.Lastbid).HasColumnName("lastbid");
+            _ = entity.Property(e => e.Startbid).HasColumnName("startbid");
+            _ = entity.Property(e => e.Time).HasColumnName("time");
         });
 
-        modelBuilder.Entity<BannedAddon>(entity =>
+        _ = modelBuilder.Entity<BannedAddon>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PRIMARY");
+            _ = entity.HasKey(e => e.Id).HasName("PRIMARY");
 
-            entity
+            _ = entity
                 .ToTable("banned_addons")
                 .UseCollation("utf8mb4_unicode_ci");
 
-            entity.HasIndex(e => new { e.Name, e.Version }, "idx_name_ver").IsUnique();
+            _ = entity.HasIndex(e => new { e.Name, e.Version }, "idx_name_ver").IsUnique();
 
-            entity.Property(e => e.Timestamp)
+            _ = entity.Property(e => e.Timestamp)
                 .ValueGeneratedOnAddOrUpdate()
                 .HasDefaultValueSql("CURRENT_TIMESTAMP")
                 .HasColumnType("timestamp");
-            entity.Property(e => e.Version).HasDefaultValueSql("''");
+            _ = entity.Property(e => e.Version).HasDefaultValueSql("''");
         });
 
-        modelBuilder.Entity<BattlegroundDeserter>(entity =>
+        _ = modelBuilder.Entity<BattlegroundDeserter>(entity =>
         {
-            entity
+            _ = entity
                 .HasNoKey()
                 .ToTable("battleground_deserters")
                 .UseCollation("utf8mb4_unicode_ci");
 
-            entity.Property(e => e.Datetime)
+            _ = entity.Property(e => e.Datetime)
                 .HasComment("datetime of the desertion")
                 .HasColumnType("datetime")
                 .HasColumnName("datetime");
-            entity.Property(e => e.Guid)
+            _ = entity.Property(e => e.Guid)
                 .HasComment("characters.guid")
                 .HasColumnName("guid");
-            entity.Property(e => e.Type)
+            _ = entity.Property(e => e.Type)
                 .HasComment("type of the desertion")
                 .HasColumnName("type");
         });
 
-        modelBuilder.Entity<Bugreport>(entity =>
+        _ = modelBuilder.Entity<Bugreport>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PRIMARY");
+            _ = entity.HasKey(e => e.Id).HasName("PRIMARY");
 
-            entity
+            _ = entity
                 .ToTable("bugreport", tb => tb.HasComment("Debug System"))
                 .UseCollation("utf8mb4_unicode_ci");
 
-            entity.Property(e => e.Id)
+            _ = entity.Property(e => e.Id)
                 .HasComment("Identifier")
                 .HasColumnName("id");
-            entity.Property(e => e.Content).HasColumnName("content");
-            entity.Property(e => e.Type).HasColumnName("type");
+            _ = entity.Property(e => e.Content).HasColumnName("content");
+            _ = entity.Property(e => e.Type).HasColumnName("type");
         });
 
-        modelBuilder.Entity<CalendarEvent>(entity =>
+        _ = modelBuilder.Entity<CalendarEvent>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PRIMARY");
+            _ = entity.HasKey(e => e.Id).HasName("PRIMARY");
 
-            entity
+            _ = entity
                 .ToTable("calendar_events")
                 .UseCollation("utf8mb4_unicode_ci");
 
-            entity.Property(e => e.Id)
+            _ = entity.Property(e => e.Id)
                 .ValueGeneratedNever()
                 .HasColumnName("id");
-            entity.Property(e => e.Creator).HasColumnName("creator");
-            entity.Property(e => e.Description)
+            _ = entity.Property(e => e.Creator).HasColumnName("creator");
+            _ = entity.Property(e => e.Description)
                 .HasMaxLength(255)
                 .HasDefaultValueSql("''")
                 .HasColumnName("description");
-            entity.Property(e => e.Dungeon)
+            _ = entity.Property(e => e.Dungeon)
                 .HasDefaultValueSql("'-1'")
                 .HasColumnName("dungeon");
-            entity.Property(e => e.Eventtime).HasColumnName("eventtime");
-            entity.Property(e => e.Flags).HasColumnName("flags");
-            entity.Property(e => e.Time2).HasColumnName("time2");
-            entity.Property(e => e.Title)
+            _ = entity.Property(e => e.Eventtime).HasColumnName("eventtime");
+            _ = entity.Property(e => e.Flags).HasColumnName("flags");
+            _ = entity.Property(e => e.Time2).HasColumnName("time2");
+            _ = entity.Property(e => e.Title)
                 .HasMaxLength(255)
                 .HasDefaultValueSql("''")
                 .HasColumnName("title");
-            entity.Property(e => e.Type)
+            _ = entity.Property(e => e.Type)
                 .HasDefaultValueSql("'4'")
                 .HasColumnName("type");
         });
 
-        modelBuilder.Entity<CalendarInvite>(entity =>
+        _ = modelBuilder.Entity<CalendarInvite>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PRIMARY");
+            _ = entity.HasKey(e => e.Id).HasName("PRIMARY");
 
-            entity
+            _ = entity
                 .ToTable("calendar_invites")
                 .UseCollation("utf8mb4_unicode_ci");
 
-            entity.Property(e => e.Id)
+            _ = entity.Property(e => e.Id)
                 .ValueGeneratedNever()
                 .HasColumnName("id");
-            entity.Property(e => e.Event).HasColumnName("event");
-            entity.Property(e => e.Invitee).HasColumnName("invitee");
-            entity.Property(e => e.Rank).HasColumnName("rank");
-            entity.Property(e => e.Sender).HasColumnName("sender");
-            entity.Property(e => e.Status).HasColumnName("status");
-            entity.Property(e => e.Statustime).HasColumnName("statustime");
-            entity.Property(e => e.Text)
+            _ = entity.Property(e => e.Event).HasColumnName("event");
+            _ = entity.Property(e => e.Invitee).HasColumnName("invitee");
+            _ = entity.Property(e => e.Rank).HasColumnName("rank");
+            _ = entity.Property(e => e.Sender).HasColumnName("sender");
+            _ = entity.Property(e => e.Status).HasColumnName("status");
+            _ = entity.Property(e => e.Statustime).HasColumnName("statustime");
+            _ = entity.Property(e => e.Text)
                 .HasMaxLength(255)
                 .HasDefaultValueSql("''")
                 .HasColumnName("text");
         });
 
-        modelBuilder.Entity<Channel>(entity =>
+        _ = modelBuilder.Entity<Channel>(entity =>
         {
-            entity.HasKey(e => new { e.Name, e.Team })
+            _ = entity.HasKey(e => new { e.Name, e.Team })
                 .HasName("PRIMARY")
                 .HasAnnotation("MySql:IndexPrefixLength", new[] { 0, 0 });
 
-            entity
+            _ = entity
                 .ToTable("channels", tb => tb.HasComment("Channel System"))
                 .UseCollation("utf8mb4_unicode_ci");
 
-            entity.Property(e => e.Name)
+            _ = entity.Property(e => e.Name)
                 .HasMaxLength(128)
                 .HasColumnName("name");
-            entity.Property(e => e.Team).HasColumnName("team");
-            entity.Property(e => e.Announce)
+            _ = entity.Property(e => e.Team).HasColumnName("team");
+            _ = entity.Property(e => e.Announce)
                 .HasDefaultValueSql("'1'")
                 .HasColumnName("announce");
-            entity.Property(e => e.BannedList)
+            _ = entity.Property(e => e.BannedList)
                 .HasColumnType("text")
                 .HasColumnName("bannedList");
-            entity.Property(e => e.LastUsed).HasColumnName("lastUsed");
-            entity.Property(e => e.Ownership)
+            _ = entity.Property(e => e.LastUsed).HasColumnName("lastUsed");
+            _ = entity.Property(e => e.Ownership)
                 .HasDefaultValueSql("'1'")
                 .HasColumnName("ownership");
-            entity.Property(e => e.Password)
+            _ = entity.Property(e => e.Password)
                 .HasMaxLength(32)
                 .HasColumnName("password");
         });
 
-        modelBuilder.Entity<Character>(entity =>
+        _ = modelBuilder.Entity<Character>(entity =>
         {
-            entity.HasKey(e => e.Guid).HasName("PRIMARY");
+            _ = entity.HasKey(e => e.Guid).HasName("PRIMARY");
 
-            entity
+            _ = entity
                 .ToTable("characters", tb => tb.HasComment("Player System"))
                 .UseCollation("utf8mb4_unicode_ci");
 
-            entity.HasIndex(e => e.Account, "idx_account");
+            _ = entity.HasIndex(e => e.Account, "idx_account");
 
-            entity.HasIndex(e => e.Name, "idx_name");
+            _ = entity.HasIndex(e => e.Name, "idx_name");
 
-            entity.HasIndex(e => e.Online, "idx_online");
+            _ = entity.HasIndex(e => e.Online, "idx_online");
 
-            entity.Property(e => e.Guid)
+            _ = entity.Property(e => e.Guid)
                 .ValueGeneratedNever()
                 .HasComment("Global Unique Identifier")
                 .HasColumnName("guid");
-            entity.Property(e => e.Account)
+            _ = entity.Property(e => e.Account)
                 .HasComment("Account Identifier")
                 .HasColumnName("account");
-            entity.Property(e => e.ActionBars).HasColumnName("actionBars");
-            entity.Property(e => e.ActiveTalentGroup).HasColumnName("activeTalentGroup");
-            entity.Property(e => e.AmmoId).HasColumnName("ammoId");
-            entity.Property(e => e.ArenaPoints).HasColumnName("arenaPoints");
-            entity.Property(e => e.AtLogin).HasColumnName("at_login");
-            entity.Property(e => e.BankSlots).HasColumnName("bankSlots");
-            entity.Property(e => e.ChosenTitle).HasColumnName("chosenTitle");
-            entity.Property(e => e.Cinematic).HasColumnName("cinematic");
-            entity.Property(e => e.Class).HasColumnName("class");
-            entity.Property(e => e.DeathExpireTime).HasColumnName("death_expire_time");
-            entity.Property(e => e.DeleteDate).HasColumnName("deleteDate");
-            entity.Property(e => e.DeleteInfosAccount).HasColumnName("deleteInfos_Account");
-            entity.Property(e => e.DeleteInfosName)
+            _ = entity.Property(e => e.ActionBars).HasColumnName("actionBars");
+            _ = entity.Property(e => e.ActiveTalentGroup).HasColumnName("activeTalentGroup");
+            _ = entity.Property(e => e.AmmoId).HasColumnName("ammoId");
+            _ = entity.Property(e => e.ArenaPoints).HasColumnName("arenaPoints");
+            _ = entity.Property(e => e.AtLogin).HasColumnName("at_login");
+            _ = entity.Property(e => e.BankSlots).HasColumnName("bankSlots");
+            _ = entity.Property(e => e.ChosenTitle).HasColumnName("chosenTitle");
+            _ = entity.Property(e => e.Cinematic).HasColumnName("cinematic");
+            _ = entity.Property(e => e.Class).HasColumnName("class");
+            _ = entity.Property(e => e.DeathExpireTime).HasColumnName("death_expire_time");
+            _ = entity.Property(e => e.DeleteDate).HasColumnName("deleteDate");
+            _ = entity.Property(e => e.DeleteInfosAccount).HasColumnName("deleteInfos_Account");
+            _ = entity.Property(e => e.DeleteInfosName)
                 .HasMaxLength(12)
                 .HasColumnName("deleteInfos_Name");
-            entity.Property(e => e.Drunk).HasColumnName("drunk");
-            entity.Property(e => e.EquipmentCache).HasColumnName("equipmentCache");
-            entity.Property(e => e.ExploredZones).HasColumnName("exploredZones");
-            entity.Property(e => e.ExtraFlags).HasColumnName("extra_flags");
-            entity.Property(e => e.Face).HasColumnName("face");
-            entity.Property(e => e.FacialStyle).HasColumnName("facialStyle");
-            entity.Property(e => e.Gender).HasColumnName("gender");
-            entity.Property(e => e.GrantableLevels).HasColumnName("grantableLevels");
-            entity.Property(e => e.HairColor).HasColumnName("hairColor");
-            entity.Property(e => e.HairStyle).HasColumnName("hairStyle");
-            entity.Property(e => e.Health).HasColumnName("health");
-            entity.Property(e => e.InstanceId).HasColumnName("instance_id");
-            entity.Property(e => e.InstanceModeMask).HasColumnName("instance_mode_mask");
-            entity.Property(e => e.IsLogoutResting).HasColumnName("is_logout_resting");
-            entity.Property(e => e.KnownCurrencies).HasColumnName("knownCurrencies");
-            entity.Property(e => e.KnownTitles).HasColumnName("knownTitles");
-            entity.Property(e => e.Latency)
+            _ = entity.Property(e => e.Drunk).HasColumnName("drunk");
+            _ = entity.Property(e => e.EquipmentCache).HasColumnName("equipmentCache");
+            _ = entity.Property(e => e.ExploredZones).HasColumnName("exploredZones");
+            _ = entity.Property(e => e.ExtraFlags).HasColumnName("extra_flags");
+            _ = entity.Property(e => e.Face).HasColumnName("face");
+            _ = entity.Property(e => e.FacialStyle).HasColumnName("facialStyle");
+            _ = entity.Property(e => e.Gender).HasColumnName("gender");
+            _ = entity.Property(e => e.GrantableLevels).HasColumnName("grantableLevels");
+            _ = entity.Property(e => e.HairColor).HasColumnName("hairColor");
+            _ = entity.Property(e => e.HairStyle).HasColumnName("hairStyle");
+            _ = entity.Property(e => e.Health).HasColumnName("health");
+            _ = entity.Property(e => e.InstanceId).HasColumnName("instance_id");
+            _ = entity.Property(e => e.InstanceModeMask).HasColumnName("instance_mode_mask");
+            _ = entity.Property(e => e.IsLogoutResting).HasColumnName("is_logout_resting");
+            _ = entity.Property(e => e.KnownCurrencies).HasColumnName("knownCurrencies");
+            _ = entity.Property(e => e.KnownTitles).HasColumnName("knownTitles");
+            _ = entity.Property(e => e.Latency)
                 .HasDefaultValueSql("'0'")
                 .HasColumnType("mediumint unsigned")
                 .HasColumnName("latency");
-            entity.Property(e => e.Level).HasColumnName("level");
-            entity.Property(e => e.Leveltime).HasColumnName("leveltime");
-            entity.Property(e => e.LogoutTime).HasColumnName("logout_time");
-            entity.Property(e => e.Map)
+            _ = entity.Property(e => e.Level).HasColumnName("level");
+            _ = entity.Property(e => e.Leveltime).HasColumnName("leveltime");
+            _ = entity.Property(e => e.LogoutTime).HasColumnName("logout_time");
+            _ = entity.Property(e => e.Map)
                 .HasComment("Map Identifier")
                 .HasColumnName("map");
-            entity.Property(e => e.Money).HasColumnName("money");
-            entity.Property(e => e.Name)
+            _ = entity.Property(e => e.Money).HasColumnName("money");
+            _ = entity.Property(e => e.Name)
                 .HasMaxLength(12)
                 .HasColumnName("name")
                 .UseCollation("utf8mb4_bin");
-            entity.Property(e => e.Online).HasColumnName("online");
-            entity.Property(e => e.Orientation).HasColumnName("orientation");
-            entity.Property(e => e.PlayerFlags).HasColumnName("playerFlags");
-            entity.Property(e => e.PositionX).HasColumnName("position_x");
-            entity.Property(e => e.PositionY).HasColumnName("position_y");
-            entity.Property(e => e.PositionZ).HasColumnName("position_z");
-            entity.Property(e => e.Power1).HasColumnName("power1");
-            entity.Property(e => e.Power2).HasColumnName("power2");
-            entity.Property(e => e.Power3).HasColumnName("power3");
-            entity.Property(e => e.Power4).HasColumnName("power4");
-            entity.Property(e => e.Power5).HasColumnName("power5");
-            entity.Property(e => e.Power6).HasColumnName("power6");
-            entity.Property(e => e.Power7).HasColumnName("power7");
-            entity.Property(e => e.Race).HasColumnName("race");
-            entity.Property(e => e.ResettalentsCost).HasColumnName("resettalents_cost");
-            entity.Property(e => e.ResettalentsTime).HasColumnName("resettalents_time");
-            entity.Property(e => e.RestBonus).HasColumnName("rest_bonus");
-            entity.Property(e => e.RestState).HasColumnName("restState");
-            entity.Property(e => e.Skin).HasColumnName("skin");
-            entity.Property(e => e.StableSlots).HasColumnName("stable_slots");
-            entity.Property(e => e.TalentGroupsCount)
+            _ = entity.Property(e => e.Online).HasColumnName("online");
+            _ = entity.Property(e => e.Orientation).HasColumnName("orientation");
+            _ = entity.Property(e => e.PlayerFlags).HasColumnName("playerFlags");
+            _ = entity.Property(e => e.PositionX).HasColumnName("position_x");
+            _ = entity.Property(e => e.PositionY).HasColumnName("position_y");
+            _ = entity.Property(e => e.PositionZ).HasColumnName("position_z");
+            _ = entity.Property(e => e.Power1).HasColumnName("power1");
+            _ = entity.Property(e => e.Power2).HasColumnName("power2");
+            _ = entity.Property(e => e.Power3).HasColumnName("power3");
+            _ = entity.Property(e => e.Power4).HasColumnName("power4");
+            _ = entity.Property(e => e.Power5).HasColumnName("power5");
+            _ = entity.Property(e => e.Power6).HasColumnName("power6");
+            _ = entity.Property(e => e.Power7).HasColumnName("power7");
+            _ = entity.Property(e => e.Race).HasColumnName("race");
+            _ = entity.Property(e => e.ResettalentsCost).HasColumnName("resettalents_cost");
+            _ = entity.Property(e => e.ResettalentsTime).HasColumnName("resettalents_time");
+            _ = entity.Property(e => e.RestBonus).HasColumnName("rest_bonus");
+            _ = entity.Property(e => e.RestState).HasColumnName("restState");
+            _ = entity.Property(e => e.Skin).HasColumnName("skin");
+            _ = entity.Property(e => e.StableSlots).HasColumnName("stable_slots");
+            _ = entity.Property(e => e.TalentGroupsCount)
                 .HasDefaultValueSql("'1'")
                 .HasColumnName("talentGroupsCount");
-            entity.Property(e => e.TaxiPath)
+            _ = entity.Property(e => e.TaxiPath)
                 .HasColumnType("text")
                 .HasColumnName("taxi_path");
-            entity.Property(e => e.Taximask)
+            _ = entity.Property(e => e.Taximask)
                 .HasColumnType("text")
                 .HasColumnName("taximask");
-            entity.Property(e => e.TodayHonorPoints).HasColumnName("todayHonorPoints");
-            entity.Property(e => e.TodayKills).HasColumnName("todayKills");
-            entity.Property(e => e.TotalHonorPoints).HasColumnName("totalHonorPoints");
-            entity.Property(e => e.TotalKills).HasColumnName("totalKills");
-            entity.Property(e => e.Totaltime).HasColumnName("totaltime");
-            entity.Property(e => e.TransO).HasColumnName("trans_o");
-            entity.Property(e => e.TransX).HasColumnName("trans_x");
-            entity.Property(e => e.TransY).HasColumnName("trans_y");
-            entity.Property(e => e.TransZ).HasColumnName("trans_z");
-            entity.Property(e => e.Transguid)
+            _ = entity.Property(e => e.TodayHonorPoints).HasColumnName("todayHonorPoints");
+            _ = entity.Property(e => e.TodayKills).HasColumnName("todayKills");
+            _ = entity.Property(e => e.TotalHonorPoints).HasColumnName("totalHonorPoints");
+            _ = entity.Property(e => e.TotalKills).HasColumnName("totalKills");
+            _ = entity.Property(e => e.Totaltime).HasColumnName("totaltime");
+            _ = entity.Property(e => e.TransO).HasColumnName("trans_o");
+            _ = entity.Property(e => e.TransX).HasColumnName("trans_x");
+            _ = entity.Property(e => e.TransY).HasColumnName("trans_y");
+            _ = entity.Property(e => e.TransZ).HasColumnName("trans_z");
+            _ = entity.Property(e => e.Transguid)
                 .HasDefaultValueSql("'0'")
                 .HasColumnType("mediumint unsigned")
                 .HasColumnName("transguid");
-            entity.Property(e => e.WatchedFaction).HasColumnName("watchedFaction");
-            entity.Property(e => e.Xp).HasColumnName("xp");
-            entity.Property(e => e.YesterdayHonorPoints).HasColumnName("yesterdayHonorPoints");
-            entity.Property(e => e.YesterdayKills).HasColumnName("yesterdayKills");
-            entity.Property(e => e.Zone).HasColumnName("zone");
+            _ = entity.Property(e => e.WatchedFaction).HasColumnName("watchedFaction");
+            _ = entity.Property(e => e.Xp).HasColumnName("xp");
+            _ = entity.Property(e => e.YesterdayHonorPoints).HasColumnName("yesterdayHonorPoints");
+            _ = entity.Property(e => e.YesterdayKills).HasColumnName("yesterdayKills");
+            _ = entity.Property(e => e.Zone).HasColumnName("zone");
         });
 
-        modelBuilder.Entity<CharacterAccountDatum>(entity =>
+        _ = modelBuilder.Entity<CharacterAccountDatum>(entity =>
         {
-            entity.HasKey(e => new { e.Guid, e.Type })
+            _ = entity.HasKey(e => new { e.Guid, e.Type })
                 .HasName("PRIMARY")
                 .HasAnnotation("MySql:IndexPrefixLength", new[] { 0, 0 });
 
-            entity
+            _ = entity
                 .ToTable("character_account_data")
                 .UseCollation("utf8mb4_unicode_ci");
 
-            entity.Property(e => e.Guid).HasColumnName("guid");
-            entity.Property(e => e.Type).HasColumnName("type");
-            entity.Property(e => e.Data)
+            _ = entity.Property(e => e.Guid).HasColumnName("guid");
+            _ = entity.Property(e => e.Type).HasColumnName("type");
+            _ = entity.Property(e => e.Data)
                 .HasColumnType("blob")
                 .HasColumnName("data");
-            entity.Property(e => e.Time).HasColumnName("time");
+            _ = entity.Property(e => e.Time).HasColumnName("time");
         });
 
-        modelBuilder.Entity<CharacterAchievement>(entity =>
+        _ = modelBuilder.Entity<CharacterAchievement>(entity =>
         {
-            entity.HasKey(e => new { e.Guid, e.Achievement })
+            _ = entity.HasKey(e => new { e.Guid, e.Achievement })
                 .HasName("PRIMARY")
                 .HasAnnotation("MySql:IndexPrefixLength", new[] { 0, 0 });
 
-            entity
+            _ = entity
                 .ToTable("character_achievement")
                 .UseCollation("utf8mb4_unicode_ci");
 
-            entity.Property(e => e.Guid).HasColumnName("guid");
-            entity.Property(e => e.Achievement).HasColumnName("achievement");
-            entity.Property(e => e.Date).HasColumnName("date");
+            _ = entity.Property(e => e.Guid).HasColumnName("guid");
+            _ = entity.Property(e => e.Achievement).HasColumnName("achievement");
+            _ = entity.Property(e => e.Date).HasColumnName("date");
         });
 
-        modelBuilder.Entity<CharacterAchievementProgress>(entity =>
+        _ = modelBuilder.Entity<CharacterAchievementProgress>(entity =>
         {
-            entity.HasKey(e => new { e.Guid, e.Criteria })
+            _ = entity.HasKey(e => new { e.Guid, e.Criteria })
                 .HasName("PRIMARY")
                 .HasAnnotation("MySql:IndexPrefixLength", new[] { 0, 0 });
 
-            entity
+            _ = entity
                 .ToTable("character_achievement_progress")
                 .UseCollation("utf8mb4_unicode_ci");
 
-            entity.Property(e => e.Guid).HasColumnName("guid");
-            entity.Property(e => e.Criteria).HasColumnName("criteria");
-            entity.Property(e => e.Counter).HasColumnName("counter");
-            entity.Property(e => e.Date).HasColumnName("date");
+            _ = entity.Property(e => e.Guid).HasColumnName("guid");
+            _ = entity.Property(e => e.Criteria).HasColumnName("criteria");
+            _ = entity.Property(e => e.Counter).HasColumnName("counter");
+            _ = entity.Property(e => e.Date).HasColumnName("date");
         });
 
-        modelBuilder.Entity<CharacterAction>(entity =>
+        _ = modelBuilder.Entity<CharacterAction>(entity =>
         {
-            entity.HasKey(e => new { e.Guid, e.Spec, e.Button })
+            _ = entity.HasKey(e => new { e.Guid, e.Spec, e.Button })
                 .HasName("PRIMARY")
                 .HasAnnotation("MySql:IndexPrefixLength", new[] { 0, 0, 0 });
 
-            entity
+            _ = entity
                 .ToTable("character_action")
                 .UseCollation("utf8mb4_unicode_ci");
 
-            entity.Property(e => e.Guid).HasColumnName("guid");
-            entity.Property(e => e.Spec).HasColumnName("spec");
-            entity.Property(e => e.Button).HasColumnName("button");
-            entity.Property(e => e.Action).HasColumnName("action");
-            entity.Property(e => e.Type).HasColumnName("type");
+            _ = entity.Property(e => e.Guid).HasColumnName("guid");
+            _ = entity.Property(e => e.Spec).HasColumnName("spec");
+            _ = entity.Property(e => e.Button).HasColumnName("button");
+            _ = entity.Property(e => e.Action).HasColumnName("action");
+            _ = entity.Property(e => e.Type).HasColumnName("type");
         });
 
-        modelBuilder.Entity<CharacterArenaStat>(entity =>
+        _ = modelBuilder.Entity<CharacterArenaStat>(entity =>
         {
-            entity.HasKey(e => new { e.Guid, e.Slot })
+            _ = entity.HasKey(e => new { e.Guid, e.Slot })
                 .HasName("PRIMARY")
                 .HasAnnotation("MySql:IndexPrefixLength", new[] { 0, 0 });
 
-            entity
+            _ = entity
                 .ToTable("character_arena_stats")
                 .UseCollation("utf8mb4_unicode_ci");
 
-            entity.Property(e => e.Guid).HasColumnName("guid");
-            entity.Property(e => e.Slot).HasColumnName("slot");
-            entity.Property(e => e.MatchMakerRating).HasColumnName("matchMakerRating");
+            _ = entity.Property(e => e.Guid).HasColumnName("guid");
+            _ = entity.Property(e => e.Slot).HasColumnName("slot");
+            _ = entity.Property(e => e.MatchMakerRating).HasColumnName("matchMakerRating");
         });
 
-        modelBuilder.Entity<CharacterAura>(entity =>
+        _ = modelBuilder.Entity<CharacterAura>(entity =>
         {
-            entity.HasKey(e => new { e.Guid, e.CasterGuid, e.ItemGuid, e.Spell, e.EffectMask })
+            _ = entity.HasKey(e => new { e.Guid, e.CasterGuid, e.ItemGuid, e.Spell, e.EffectMask })
                 .HasName("PRIMARY")
                 .HasAnnotation("MySql:IndexPrefixLength", new[] { 0, 0, 0, 0, 0 });
 
-            entity
+            _ = entity
                 .ToTable("character_aura", tb => tb.HasComment("Player System"))
                 .UseCollation("utf8mb4_unicode_ci");
 
-            entity.Property(e => e.Guid)
+            _ = entity.Property(e => e.Guid)
                 .HasComment("Global Unique Identifier")
                 .HasColumnName("guid");
-            entity.Property(e => e.CasterGuid)
+            _ = entity.Property(e => e.CasterGuid)
                 .HasComment("Full Global Unique Identifier")
                 .HasColumnName("casterGuid");
-            entity.Property(e => e.ItemGuid).HasColumnName("itemGuid");
-            entity.Property(e => e.Spell)
+            _ = entity.Property(e => e.ItemGuid).HasColumnName("itemGuid");
+            _ = entity.Property(e => e.Spell)
                 .HasDefaultValueSql("'0'")
                 .HasColumnType("mediumint unsigned")
                 .HasColumnName("spell");
-            entity.Property(e => e.EffectMask).HasColumnName("effectMask");
-            entity.Property(e => e.Amount0).HasColumnName("amount0");
-            entity.Property(e => e.Amount1).HasColumnName("amount1");
-            entity.Property(e => e.Amount2).HasColumnName("amount2");
-            entity.Property(e => e.ApplyResilience).HasColumnName("applyResilience");
-            entity.Property(e => e.BaseAmount0).HasColumnName("base_amount0");
-            entity.Property(e => e.BaseAmount1).HasColumnName("base_amount1");
-            entity.Property(e => e.BaseAmount2).HasColumnName("base_amount2");
-            entity.Property(e => e.CritChance).HasColumnName("critChance");
-            entity.Property(e => e.MaxDuration).HasColumnName("maxDuration");
-            entity.Property(e => e.RecalculateMask).HasColumnName("recalculateMask");
-            entity.Property(e => e.RemainCharges).HasColumnName("remainCharges");
-            entity.Property(e => e.RemainTime).HasColumnName("remainTime");
-            entity.Property(e => e.StackCount)
+            _ = entity.Property(e => e.EffectMask).HasColumnName("effectMask");
+            _ = entity.Property(e => e.Amount0).HasColumnName("amount0");
+            _ = entity.Property(e => e.Amount1).HasColumnName("amount1");
+            _ = entity.Property(e => e.Amount2).HasColumnName("amount2");
+            _ = entity.Property(e => e.ApplyResilience).HasColumnName("applyResilience");
+            _ = entity.Property(e => e.BaseAmount0).HasColumnName("base_amount0");
+            _ = entity.Property(e => e.BaseAmount1).HasColumnName("base_amount1");
+            _ = entity.Property(e => e.BaseAmount2).HasColumnName("base_amount2");
+            _ = entity.Property(e => e.CritChance).HasColumnName("critChance");
+            _ = entity.Property(e => e.MaxDuration).HasColumnName("maxDuration");
+            _ = entity.Property(e => e.RecalculateMask).HasColumnName("recalculateMask");
+            _ = entity.Property(e => e.RemainCharges).HasColumnName("remainCharges");
+            _ = entity.Property(e => e.RemainTime).HasColumnName("remainTime");
+            _ = entity.Property(e => e.StackCount)
                 .HasDefaultValueSql("'1'")
                 .HasColumnName("stackCount");
         });
 
-        modelBuilder.Entity<CharacterBanned>(entity =>
+        _ = modelBuilder.Entity<CharacterBanned>(entity =>
         {
-            entity.HasKey(e => new { e.Guid, e.Bandate })
+            _ = entity.HasKey(e => new { e.Guid, e.Bandate })
                 .HasName("PRIMARY")
                 .HasAnnotation("MySql:IndexPrefixLength", new[] { 0, 0 });
 
-            entity
+            _ = entity
                 .ToTable("character_banned", tb => tb.HasComment("Ban List"))
                 .UseCollation("utf8mb4_unicode_ci");
 
-            entity.Property(e => e.Guid)
+            _ = entity.Property(e => e.Guid)
                 .HasComment("Global Unique Identifier")
                 .HasColumnName("guid");
-            entity.Property(e => e.Bandate).HasColumnName("bandate");
-            entity.Property(e => e.Active)
+            _ = entity.Property(e => e.Bandate).HasColumnName("bandate");
+            _ = entity.Property(e => e.Active)
                 .HasDefaultValueSql("'1'")
                 .HasColumnName("active");
-            entity.Property(e => e.Bannedby)
+            _ = entity.Property(e => e.Bannedby)
                 .HasMaxLength(50)
                 .HasColumnName("bannedby");
-            entity.Property(e => e.Banreason)
+            _ = entity.Property(e => e.Banreason)
                 .HasMaxLength(255)
                 .HasColumnName("banreason");
-            entity.Property(e => e.Unbandate).HasColumnName("unbandate");
+            _ = entity.Property(e => e.Unbandate).HasColumnName("unbandate");
         });
 
-        modelBuilder.Entity<CharacterBattlegroundDatum>(entity =>
+        _ = modelBuilder.Entity<CharacterBattlegroundDatum>(entity =>
         {
-            entity.HasKey(e => e.Guid).HasName("PRIMARY");
+            _ = entity.HasKey(e => e.Guid).HasName("PRIMARY");
 
-            entity
+            _ = entity
                 .ToTable("character_battleground_data", tb => tb.HasComment("Player System"))
                 .UseCollation("utf8mb4_unicode_ci");
 
-            entity.Property(e => e.Guid)
+            _ = entity.Property(e => e.Guid)
                 .ValueGeneratedNever()
                 .HasComment("Global Unique Identifier")
                 .HasColumnName("guid");
-            entity.Property(e => e.InstanceId)
+            _ = entity.Property(e => e.InstanceId)
                 .HasComment("Instance Identifier")
                 .HasColumnName("instanceId");
-            entity.Property(e => e.JoinMapId)
+            _ = entity.Property(e => e.JoinMapId)
                 .HasComment("Map Identifier")
                 .HasColumnName("joinMapId");
-            entity.Property(e => e.JoinO).HasColumnName("joinO");
-            entity.Property(e => e.JoinX).HasColumnName("joinX");
-            entity.Property(e => e.JoinY).HasColumnName("joinY");
-            entity.Property(e => e.JoinZ).HasColumnName("joinZ");
-            entity.Property(e => e.MountSpell).HasColumnName("mountSpell");
-            entity.Property(e => e.TaxiEnd).HasColumnName("taxiEnd");
-            entity.Property(e => e.TaxiStart).HasColumnName("taxiStart");
-            entity.Property(e => e.Team).HasColumnName("team");
+            _ = entity.Property(e => e.JoinO).HasColumnName("joinO");
+            _ = entity.Property(e => e.JoinX).HasColumnName("joinX");
+            _ = entity.Property(e => e.JoinY).HasColumnName("joinY");
+            _ = entity.Property(e => e.JoinZ).HasColumnName("joinZ");
+            _ = entity.Property(e => e.MountSpell).HasColumnName("mountSpell");
+            _ = entity.Property(e => e.TaxiEnd).HasColumnName("taxiEnd");
+            _ = entity.Property(e => e.TaxiStart).HasColumnName("taxiStart");
+            _ = entity.Property(e => e.Team).HasColumnName("team");
         });
 
-        modelBuilder.Entity<CharacterBattlegroundRandom>(entity =>
+        _ = modelBuilder.Entity<CharacterBattlegroundRandom>(entity =>
         {
-            entity.HasKey(e => e.Guid).HasName("PRIMARY");
+            _ = entity.HasKey(e => e.Guid).HasName("PRIMARY");
 
-            entity
+            _ = entity
                 .ToTable("character_battleground_random")
                 .UseCollation("utf8mb4_unicode_ci");
 
-            entity.Property(e => e.Guid)
+            _ = entity.Property(e => e.Guid)
                 .ValueGeneratedNever()
                 .HasColumnName("guid");
         });
 
-        modelBuilder.Entity<CharacterDeclinedname>(entity =>
+        _ = modelBuilder.Entity<CharacterDeclinedname>(entity =>
         {
-            entity.HasKey(e => e.Guid).HasName("PRIMARY");
+            _ = entity.HasKey(e => e.Guid).HasName("PRIMARY");
 
-            entity
+            _ = entity
                 .ToTable("character_declinedname")
                 .UseCollation("utf8mb4_unicode_ci");
 
-            entity.Property(e => e.Guid)
+            _ = entity.Property(e => e.Guid)
                 .ValueGeneratedNever()
                 .HasComment("Global Unique Identifier")
                 .HasColumnName("guid");
-            entity.Property(e => e.Accusative)
+            _ = entity.Property(e => e.Accusative)
                 .HasMaxLength(15)
                 .HasDefaultValueSql("''")
                 .HasColumnName("accusative");
-            entity.Property(e => e.Dative)
+            _ = entity.Property(e => e.Dative)
                 .HasMaxLength(15)
                 .HasDefaultValueSql("''")
                 .HasColumnName("dative");
-            entity.Property(e => e.Genitive)
+            _ = entity.Property(e => e.Genitive)
                 .HasMaxLength(15)
                 .HasDefaultValueSql("''")
                 .HasColumnName("genitive");
-            entity.Property(e => e.Instrumental)
+            _ = entity.Property(e => e.Instrumental)
                 .HasMaxLength(15)
                 .HasDefaultValueSql("''")
                 .HasColumnName("instrumental");
-            entity.Property(e => e.Prepositional)
+            _ = entity.Property(e => e.Prepositional)
                 .HasMaxLength(15)
                 .HasDefaultValueSql("''")
                 .HasColumnName("prepositional");
         });
 
-        modelBuilder.Entity<CharacterEquipmentset>(entity =>
+        _ = modelBuilder.Entity<CharacterEquipmentset>(entity =>
         {
-            entity.HasKey(e => e.Setguid).HasName("PRIMARY");
+            _ = entity.HasKey(e => e.Setguid).HasName("PRIMARY");
 
-            entity
+            _ = entity
                 .ToTable("character_equipmentsets")
                 .UseCollation("utf8mb4_unicode_ci");
 
-            entity.HasIndex(e => e.Setindex, "Idx_setindex");
+            _ = entity.HasIndex(e => e.Setindex, "Idx_setindex");
 
-            entity.HasIndex(e => new { e.Guid, e.Setguid, e.Setindex }, "idx_set").IsUnique();
+            _ = entity.HasIndex(e => new { e.Guid, e.Setguid, e.Setindex }, "idx_set").IsUnique();
 
-            entity.Property(e => e.Setguid).HasColumnName("setguid");
-            entity.Property(e => e.Guid).HasColumnName("guid");
-            entity.Property(e => e.Iconname)
+            _ = entity.Property(e => e.Setguid).HasColumnName("setguid");
+            _ = entity.Property(e => e.Guid).HasColumnName("guid");
+            _ = entity.Property(e => e.Iconname)
                 .HasMaxLength(100)
                 .HasColumnName("iconname");
-            entity.Property(e => e.IgnoreMask).HasColumnName("ignore_mask");
-            entity.Property(e => e.Item0).HasColumnName("item0");
-            entity.Property(e => e.Item1).HasColumnName("item1");
-            entity.Property(e => e.Item10).HasColumnName("item10");
-            entity.Property(e => e.Item11).HasColumnName("item11");
-            entity.Property(e => e.Item12).HasColumnName("item12");
-            entity.Property(e => e.Item13).HasColumnName("item13");
-            entity.Property(e => e.Item14).HasColumnName("item14");
-            entity.Property(e => e.Item15).HasColumnName("item15");
-            entity.Property(e => e.Item16).HasColumnName("item16");
-            entity.Property(e => e.Item17).HasColumnName("item17");
-            entity.Property(e => e.Item18).HasColumnName("item18");
-            entity.Property(e => e.Item2).HasColumnName("item2");
-            entity.Property(e => e.Item3).HasColumnName("item3");
-            entity.Property(e => e.Item4).HasColumnName("item4");
-            entity.Property(e => e.Item5).HasColumnName("item5");
-            entity.Property(e => e.Item6).HasColumnName("item6");
-            entity.Property(e => e.Item7).HasColumnName("item7");
-            entity.Property(e => e.Item8).HasColumnName("item8");
-            entity.Property(e => e.Item9).HasColumnName("item9");
-            entity.Property(e => e.Name)
+            _ = entity.Property(e => e.IgnoreMask).HasColumnName("ignore_mask");
+            _ = entity.Property(e => e.Item0).HasColumnName("item0");
+            _ = entity.Property(e => e.Item1).HasColumnName("item1");
+            _ = entity.Property(e => e.Item10).HasColumnName("item10");
+            _ = entity.Property(e => e.Item11).HasColumnName("item11");
+            _ = entity.Property(e => e.Item12).HasColumnName("item12");
+            _ = entity.Property(e => e.Item13).HasColumnName("item13");
+            _ = entity.Property(e => e.Item14).HasColumnName("item14");
+            _ = entity.Property(e => e.Item15).HasColumnName("item15");
+            _ = entity.Property(e => e.Item16).HasColumnName("item16");
+            _ = entity.Property(e => e.Item17).HasColumnName("item17");
+            _ = entity.Property(e => e.Item18).HasColumnName("item18");
+            _ = entity.Property(e => e.Item2).HasColumnName("item2");
+            _ = entity.Property(e => e.Item3).HasColumnName("item3");
+            _ = entity.Property(e => e.Item4).HasColumnName("item4");
+            _ = entity.Property(e => e.Item5).HasColumnName("item5");
+            _ = entity.Property(e => e.Item6).HasColumnName("item6");
+            _ = entity.Property(e => e.Item7).HasColumnName("item7");
+            _ = entity.Property(e => e.Item8).HasColumnName("item8");
+            _ = entity.Property(e => e.Item9).HasColumnName("item9");
+            _ = entity.Property(e => e.Name)
                 .HasMaxLength(31)
                 .HasColumnName("name");
-            entity.Property(e => e.Setindex).HasColumnName("setindex");
+            _ = entity.Property(e => e.Setindex).HasColumnName("setindex");
         });
 
-        modelBuilder.Entity<CharacterFishingstep>(entity =>
+        _ = modelBuilder.Entity<CharacterFishingstep>(entity =>
         {
-            entity.HasKey(e => e.Guid).HasName("PRIMARY");
+            _ = entity.HasKey(e => e.Guid).HasName("PRIMARY");
 
-            entity
+            _ = entity
                 .ToTable("character_fishingsteps")
                 .UseCollation("utf8mb4_unicode_ci");
 
-            entity.Property(e => e.Guid)
+            _ = entity.Property(e => e.Guid)
                 .ValueGeneratedNever()
                 .HasComment("Global Unique Identifier")
                 .HasColumnName("guid");
-            entity.Property(e => e.FishingSteps).HasColumnName("fishingSteps");
+            _ = entity.Property(e => e.FishingSteps).HasColumnName("fishingSteps");
         });
 
-        modelBuilder.Entity<CharacterGift>(entity =>
+        _ = modelBuilder.Entity<CharacterGift>(entity =>
         {
-            entity.HasKey(e => e.ItemGuid).HasName("PRIMARY");
+            _ = entity.HasKey(e => e.ItemGuid).HasName("PRIMARY");
 
-            entity
+            _ = entity
                 .ToTable("character_gifts")
                 .UseCollation("utf8mb4_unicode_ci");
 
-            entity.HasIndex(e => e.Guid, "idx_guid");
+            _ = entity.HasIndex(e => e.Guid, "idx_guid");
 
-            entity.Property(e => e.ItemGuid)
+            _ = entity.Property(e => e.ItemGuid)
                 .ValueGeneratedNever()
                 .HasColumnName("item_guid");
-            entity.Property(e => e.Entry).HasColumnName("entry");
-            entity.Property(e => e.Flags).HasColumnName("flags");
-            entity.Property(e => e.Guid).HasColumnName("guid");
+            _ = entity.Property(e => e.Entry).HasColumnName("entry");
+            _ = entity.Property(e => e.Flags).HasColumnName("flags");
+            _ = entity.Property(e => e.Guid).HasColumnName("guid");
         });
 
-        modelBuilder.Entity<CharacterGlyph>(entity =>
+        _ = modelBuilder.Entity<CharacterGlyph>(entity =>
         {
-            entity.HasKey(e => new { e.Guid, e.TalentGroup })
+            _ = entity.HasKey(e => new { e.Guid, e.TalentGroup })
                 .HasName("PRIMARY")
                 .HasAnnotation("MySql:IndexPrefixLength", new[] { 0, 0 });
 
-            entity
+            _ = entity
                 .ToTable("character_glyphs")
                 .UseCollation("utf8mb4_unicode_ci");
 
-            entity.Property(e => e.Guid).HasColumnName("guid");
-            entity.Property(e => e.TalentGroup).HasColumnName("talentGroup");
-            entity.Property(e => e.Glyph1)
+            _ = entity.Property(e => e.Guid).HasColumnName("guid");
+            _ = entity.Property(e => e.TalentGroup).HasColumnName("talentGroup");
+            _ = entity.Property(e => e.Glyph1)
                 .HasDefaultValueSql("'0'")
                 .HasColumnName("glyph1");
-            entity.Property(e => e.Glyph2)
+            _ = entity.Property(e => e.Glyph2)
                 .HasDefaultValueSql("'0'")
                 .HasColumnName("glyph2");
-            entity.Property(e => e.Glyph3)
+            _ = entity.Property(e => e.Glyph3)
                 .HasDefaultValueSql("'0'")
                 .HasColumnName("glyph3");
-            entity.Property(e => e.Glyph4)
+            _ = entity.Property(e => e.Glyph4)
                 .HasDefaultValueSql("'0'")
                 .HasColumnName("glyph4");
-            entity.Property(e => e.Glyph5)
+            _ = entity.Property(e => e.Glyph5)
                 .HasDefaultValueSql("'0'")
                 .HasColumnName("glyph5");
-            entity.Property(e => e.Glyph6)
+            _ = entity.Property(e => e.Glyph6)
                 .HasDefaultValueSql("'0'")
                 .HasColumnName("glyph6");
         });
 
-        modelBuilder.Entity<CharacterHomebind>(entity =>
+        _ = modelBuilder.Entity<CharacterHomebind>(entity =>
         {
-            entity.HasKey(e => e.Guid).HasName("PRIMARY");
+            _ = entity.HasKey(e => e.Guid).HasName("PRIMARY");
 
-            entity
+            _ = entity
                 .ToTable("character_homebind", tb => tb.HasComment("Player System"))
                 .UseCollation("utf8mb4_unicode_ci");
 
-            entity.Property(e => e.Guid)
+            _ = entity.Property(e => e.Guid)
                 .ValueGeneratedNever()
                 .HasComment("Global Unique Identifier")
                 .HasColumnName("guid");
-            entity.Property(e => e.MapId)
+            _ = entity.Property(e => e.MapId)
                 .HasComment("Map Identifier")
                 .HasColumnName("mapId");
-            entity.Property(e => e.PosX).HasColumnName("posX");
-            entity.Property(e => e.PosY).HasColumnName("posY");
-            entity.Property(e => e.PosZ).HasColumnName("posZ");
-            entity.Property(e => e.ZoneId)
+            _ = entity.Property(e => e.PosX).HasColumnName("posX");
+            _ = entity.Property(e => e.PosY).HasColumnName("posY");
+            _ = entity.Property(e => e.PosZ).HasColumnName("posZ");
+            _ = entity.Property(e => e.ZoneId)
                 .HasComment("Zone Identifier")
                 .HasColumnName("zoneId");
         });
 
-        modelBuilder.Entity<CharacterInstance>(entity =>
+        _ = modelBuilder.Entity<CharacterInstance>(entity =>
         {
-            entity.HasKey(e => new { e.Guid, e.Instance })
+            _ = entity.HasKey(e => new { e.Guid, e.Instance })
                 .HasName("PRIMARY")
                 .HasAnnotation("MySql:IndexPrefixLength", new[] { 0, 0 });
 
-            entity
+            _ = entity
                 .ToTable("character_instance")
                 .UseCollation("utf8mb4_unicode_ci");
 
-            entity.HasIndex(e => e.Instance, "instance");
+            _ = entity.HasIndex(e => e.Instance, "instance");
 
-            entity.Property(e => e.Guid).HasColumnName("guid");
-            entity.Property(e => e.Instance).HasColumnName("instance");
-            entity.Property(e => e.ExtendState)
+            _ = entity.Property(e => e.Guid).HasColumnName("guid");
+            _ = entity.Property(e => e.Instance).HasColumnName("instance");
+            _ = entity.Property(e => e.ExtendState)
                 .HasDefaultValueSql("'1'")
                 .HasColumnName("extendState");
-            entity.Property(e => e.Permanent).HasColumnName("permanent");
+            _ = entity.Property(e => e.Permanent).HasColumnName("permanent");
         });
 
-        modelBuilder.Entity<CharacterInventory>(entity =>
+        _ = modelBuilder.Entity<CharacterInventory>(entity =>
         {
-            entity.HasKey(e => e.Item).HasName("PRIMARY");
+            _ = entity.HasKey(e => e.Item).HasName("PRIMARY");
 
-            entity
+            _ = entity
                 .ToTable("character_inventory", tb => tb.HasComment("Player System"))
                 .UseCollation("utf8mb4_unicode_ci");
 
-            entity.HasIndex(e => new { e.Guid, e.Bag, e.Slot }, "guid").IsUnique();
+            _ = entity.HasIndex(e => new { e.Guid, e.Bag, e.Slot }, "guid").IsUnique();
 
-            entity.HasIndex(e => e.Guid, "idx_guid");
+            _ = entity.HasIndex(e => e.Guid, "idx_guid");
 
-            entity.Property(e => e.Item)
+            _ = entity.Property(e => e.Item)
                 .ValueGeneratedNever()
                 .HasComment("Item Global Unique Identifier")
                 .HasColumnName("item");
-            entity.Property(e => e.Bag).HasColumnName("bag");
-            entity.Property(e => e.Guid)
+            _ = entity.Property(e => e.Bag).HasColumnName("bag");
+            _ = entity.Property(e => e.Guid)
                 .HasComment("Global Unique Identifier")
                 .HasColumnName("guid");
-            entity.Property(e => e.Slot).HasColumnName("slot");
+            _ = entity.Property(e => e.Slot).HasColumnName("slot");
         });
 
-        modelBuilder.Entity<CharacterPet>(entity =>
+        _ = modelBuilder.Entity<CharacterPet>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PRIMARY");
+            _ = entity.HasKey(e => e.Id).HasName("PRIMARY");
 
-            entity
+            _ = entity
                 .ToTable("character_pet", tb => tb.HasComment("Pet System"))
                 .UseCollation("utf8mb4_unicode_ci");
 
-            entity.HasIndex(e => e.Slot, "idx_slot");
+            _ = entity.HasIndex(e => e.Slot, "idx_slot");
 
-            entity.HasIndex(e => e.Owner, "owner");
+            _ = entity.HasIndex(e => e.Owner, "owner");
 
-            entity.Property(e => e.Id)
+            _ = entity.Property(e => e.Id)
                 .ValueGeneratedNever()
                 .HasColumnName("id");
-            entity.Property(e => e.Abdata)
+            _ = entity.Property(e => e.Abdata)
                 .HasColumnType("text")
                 .HasColumnName("abdata");
-            entity.Property(e => e.CreatedBySpell)
+            _ = entity.Property(e => e.CreatedBySpell)
                 .HasDefaultValueSql("'0'")
                 .HasColumnType("mediumint unsigned");
-            entity.Property(e => e.Curhappiness).HasColumnName("curhappiness");
-            entity.Property(e => e.Curhealth)
+            _ = entity.Property(e => e.Curhappiness).HasColumnName("curhappiness");
+            _ = entity.Property(e => e.Curhealth)
                 .HasDefaultValueSql("'1'")
                 .HasColumnName("curhealth");
-            entity.Property(e => e.Curmana).HasColumnName("curmana");
-            entity.Property(e => e.Entry).HasColumnName("entry");
-            entity.Property(e => e.Exp).HasColumnName("exp");
-            entity.Property(e => e.Level)
+            _ = entity.Property(e => e.Curmana).HasColumnName("curmana");
+            _ = entity.Property(e => e.Entry).HasColumnName("entry");
+            _ = entity.Property(e => e.Exp).HasColumnName("exp");
+            _ = entity.Property(e => e.Level)
                 .HasDefaultValueSql("'1'")
                 .HasColumnName("level");
-            entity.Property(e => e.Modelid)
+            _ = entity.Property(e => e.Modelid)
                 .HasDefaultValueSql("'0'")
                 .HasColumnName("modelid");
-            entity.Property(e => e.Name)
+            _ = entity.Property(e => e.Name)
                 .HasMaxLength(21)
                 .HasDefaultValueSql("'Pet'")
                 .HasColumnName("name");
-            entity.Property(e => e.Owner).HasColumnName("owner");
-            entity.Property(e => e.Renamed).HasColumnName("renamed");
-            entity.Property(e => e.Savetime).HasColumnName("savetime");
-            entity.Property(e => e.Slot).HasColumnName("slot");
+            _ = entity.Property(e => e.Owner).HasColumnName("owner");
+            _ = entity.Property(e => e.Renamed).HasColumnName("renamed");
+            _ = entity.Property(e => e.Savetime).HasColumnName("savetime");
+            _ = entity.Property(e => e.Slot).HasColumnName("slot");
         });
 
-        modelBuilder.Entity<CharacterPetDeclinedname>(entity =>
+        _ = modelBuilder.Entity<CharacterPetDeclinedname>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PRIMARY");
+            _ = entity.HasKey(e => e.Id).HasName("PRIMARY");
 
-            entity
+            _ = entity
                 .ToTable("character_pet_declinedname")
                 .UseCollation("utf8mb4_unicode_ci");
 
-            entity.HasIndex(e => e.Owner, "owner_key");
+            _ = entity.HasIndex(e => e.Owner, "owner_key");
 
-            entity.Property(e => e.Id)
+            _ = entity.Property(e => e.Id)
                 .ValueGeneratedNever()
                 .HasColumnName("id");
-            entity.Property(e => e.Accusative)
+            _ = entity.Property(e => e.Accusative)
                 .HasMaxLength(12)
                 .HasDefaultValueSql("''")
                 .HasColumnName("accusative");
-            entity.Property(e => e.Dative)
+            _ = entity.Property(e => e.Dative)
                 .HasMaxLength(12)
                 .HasDefaultValueSql("''")
                 .HasColumnName("dative");
-            entity.Property(e => e.Genitive)
+            _ = entity.Property(e => e.Genitive)
                 .HasMaxLength(12)
                 .HasDefaultValueSql("''")
                 .HasColumnName("genitive");
-            entity.Property(e => e.Instrumental)
+            _ = entity.Property(e => e.Instrumental)
                 .HasMaxLength(12)
                 .HasDefaultValueSql("''")
                 .HasColumnName("instrumental");
-            entity.Property(e => e.Owner).HasColumnName("owner");
-            entity.Property(e => e.Prepositional)
+            _ = entity.Property(e => e.Owner).HasColumnName("owner");
+            _ = entity.Property(e => e.Prepositional)
                 .HasMaxLength(12)
                 .HasDefaultValueSql("''")
                 .HasColumnName("prepositional");
         });
 
-        modelBuilder.Entity<CharacterQueststatus>(entity =>
+        _ = modelBuilder.Entity<CharacterQueststatus>(entity =>
         {
-            entity.HasKey(e => new { e.Guid, e.Quest })
+            _ = entity.HasKey(e => new { e.Guid, e.Quest })
                 .HasName("PRIMARY")
                 .HasAnnotation("MySql:IndexPrefixLength", new[] { 0, 0 });
 
-            entity
+            _ = entity
                 .ToTable("character_queststatus", tb => tb.HasComment("Player System"))
                 .UseCollation("utf8mb4_unicode_ci");
 
-            entity.Property(e => e.Guid)
+            _ = entity.Property(e => e.Guid)
                 .HasComment("Global Unique Identifier")
                 .HasColumnName("guid");
-            entity.Property(e => e.Quest)
+            _ = entity.Property(e => e.Quest)
                 .HasComment("Quest Identifier")
                 .HasColumnName("quest");
-            entity.Property(e => e.Explored).HasColumnName("explored");
-            entity.Property(e => e.Itemcount1).HasColumnName("itemcount1");
-            entity.Property(e => e.Itemcount2).HasColumnName("itemcount2");
-            entity.Property(e => e.Itemcount3).HasColumnName("itemcount3");
-            entity.Property(e => e.Itemcount4).HasColumnName("itemcount4");
-            entity.Property(e => e.Itemcount5).HasColumnName("itemcount5");
-            entity.Property(e => e.Itemcount6).HasColumnName("itemcount6");
-            entity.Property(e => e.Mobcount1).HasColumnName("mobcount1");
-            entity.Property(e => e.Mobcount2).HasColumnName("mobcount2");
-            entity.Property(e => e.Mobcount3).HasColumnName("mobcount3");
-            entity.Property(e => e.Mobcount4).HasColumnName("mobcount4");
-            entity.Property(e => e.Playercount).HasColumnName("playercount");
-            entity.Property(e => e.Status).HasColumnName("status");
-            entity.Property(e => e.Timer).HasColumnName("timer");
+            _ = entity.Property(e => e.Explored).HasColumnName("explored");
+            _ = entity.Property(e => e.Itemcount1).HasColumnName("itemcount1");
+            _ = entity.Property(e => e.Itemcount2).HasColumnName("itemcount2");
+            _ = entity.Property(e => e.Itemcount3).HasColumnName("itemcount3");
+            _ = entity.Property(e => e.Itemcount4).HasColumnName("itemcount4");
+            _ = entity.Property(e => e.Itemcount5).HasColumnName("itemcount5");
+            _ = entity.Property(e => e.Itemcount6).HasColumnName("itemcount6");
+            _ = entity.Property(e => e.Mobcount1).HasColumnName("mobcount1");
+            _ = entity.Property(e => e.Mobcount2).HasColumnName("mobcount2");
+            _ = entity.Property(e => e.Mobcount3).HasColumnName("mobcount3");
+            _ = entity.Property(e => e.Mobcount4).HasColumnName("mobcount4");
+            _ = entity.Property(e => e.Playercount).HasColumnName("playercount");
+            _ = entity.Property(e => e.Status).HasColumnName("status");
+            _ = entity.Property(e => e.Timer).HasColumnName("timer");
         });
 
-        modelBuilder.Entity<CharacterQueststatusDaily>(entity =>
+        _ = modelBuilder.Entity<CharacterQueststatusDaily>(entity =>
         {
-            entity.HasKey(e => new { e.Guid, e.Quest })
+            _ = entity.HasKey(e => new { e.Guid, e.Quest })
                 .HasName("PRIMARY")
                 .HasAnnotation("MySql:IndexPrefixLength", new[] { 0, 0 });
 
-            entity
+            _ = entity
                 .ToTable("character_queststatus_daily", tb => tb.HasComment("Player System"))
                 .UseCollation("utf8mb4_unicode_ci");
 
-            entity.HasIndex(e => e.Guid, "idx_guid");
+            _ = entity.HasIndex(e => e.Guid, "idx_guid");
 
-            entity.Property(e => e.Guid)
+            _ = entity.Property(e => e.Guid)
                 .HasComment("Global Unique Identifier")
                 .HasColumnName("guid");
-            entity.Property(e => e.Quest)
+            _ = entity.Property(e => e.Quest)
                 .HasComment("Quest Identifier")
                 .HasColumnName("quest");
-            entity.Property(e => e.Time).HasColumnName("time");
+            _ = entity.Property(e => e.Time).HasColumnName("time");
         });
 
-        modelBuilder.Entity<CharacterQueststatusMonthly>(entity =>
+        _ = modelBuilder.Entity<CharacterQueststatusMonthly>(entity =>
         {
-            entity.HasKey(e => new { e.Guid, e.Quest })
+            _ = entity.HasKey(e => new { e.Guid, e.Quest })
                 .HasName("PRIMARY")
                 .HasAnnotation("MySql:IndexPrefixLength", new[] { 0, 0 });
 
-            entity
+            _ = entity
                 .ToTable("character_queststatus_monthly", tb => tb.HasComment("Player System"))
                 .UseCollation("utf8mb4_unicode_ci");
 
-            entity.HasIndex(e => e.Guid, "idx_guid");
+            _ = entity.HasIndex(e => e.Guid, "idx_guid");
 
-            entity.Property(e => e.Guid)
+            _ = entity.Property(e => e.Guid)
                 .HasComment("Global Unique Identifier")
                 .HasColumnName("guid");
-            entity.Property(e => e.Quest)
+            _ = entity.Property(e => e.Quest)
                 .HasComment("Quest Identifier")
                 .HasColumnName("quest");
         });
 
-        modelBuilder.Entity<CharacterQueststatusRewarded>(entity =>
+        _ = modelBuilder.Entity<CharacterQueststatusRewarded>(entity =>
         {
-            entity.HasKey(e => new { e.Guid, e.Quest })
+            _ = entity.HasKey(e => new { e.Guid, e.Quest })
                 .HasName("PRIMARY")
                 .HasAnnotation("MySql:IndexPrefixLength", new[] { 0, 0 });
 
-            entity
+            _ = entity
                 .ToTable("character_queststatus_rewarded", tb => tb.HasComment("Player System"))
                 .UseCollation("utf8mb4_unicode_ci");
 
-            entity.Property(e => e.Guid)
+            _ = entity.Property(e => e.Guid)
                 .HasComment("Global Unique Identifier")
                 .HasColumnName("guid");
-            entity.Property(e => e.Quest)
+            _ = entity.Property(e => e.Quest)
                 .HasComment("Quest Identifier")
                 .HasColumnName("quest");
-            entity.Property(e => e.Active)
+            _ = entity.Property(e => e.Active)
                 .HasDefaultValueSql("'1'")
                 .HasColumnName("active");
         });
 
-        modelBuilder.Entity<CharacterQueststatusSeasonal>(entity =>
+        _ = modelBuilder.Entity<CharacterQueststatusSeasonal>(entity =>
         {
-            entity.HasKey(e => new { e.Guid, e.Quest })
+            _ = entity.HasKey(e => new { e.Guid, e.Quest })
                 .HasName("PRIMARY")
                 .HasAnnotation("MySql:IndexPrefixLength", new[] { 0, 0 });
 
-            entity
+            _ = entity
                 .ToTable("character_queststatus_seasonal", tb => tb.HasComment("Player System"))
                 .UseCollation("utf8mb4_unicode_ci");
 
-            entity.HasIndex(e => e.Guid, "idx_guid");
+            _ = entity.HasIndex(e => e.Guid, "idx_guid");
 
-            entity.Property(e => e.Guid)
+            _ = entity.Property(e => e.Guid)
                 .HasComment("Global Unique Identifier")
                 .HasColumnName("guid");
-            entity.Property(e => e.Quest)
+            _ = entity.Property(e => e.Quest)
                 .HasComment("Quest Identifier")
                 .HasColumnName("quest");
-            entity.Property(e => e.Event)
+            _ = entity.Property(e => e.Event)
                 .HasComment("Event Identifier")
                 .HasColumnName("event");
         });
 
-        modelBuilder.Entity<CharacterQueststatusWeekly>(entity =>
+        _ = modelBuilder.Entity<CharacterQueststatusWeekly>(entity =>
         {
-            entity.HasKey(e => new { e.Guid, e.Quest })
+            _ = entity.HasKey(e => new { e.Guid, e.Quest })
                 .HasName("PRIMARY")
                 .HasAnnotation("MySql:IndexPrefixLength", new[] { 0, 0 });
 
-            entity
+            _ = entity
                 .ToTable("character_queststatus_weekly", tb => tb.HasComment("Player System"))
                 .UseCollation("utf8mb4_unicode_ci");
 
-            entity.HasIndex(e => e.Guid, "idx_guid");
+            _ = entity.HasIndex(e => e.Guid, "idx_guid");
 
-            entity.Property(e => e.Guid)
+            _ = entity.Property(e => e.Guid)
                 .HasComment("Global Unique Identifier")
                 .HasColumnName("guid");
-            entity.Property(e => e.Quest)
+            _ = entity.Property(e => e.Quest)
                 .HasComment("Quest Identifier")
                 .HasColumnName("quest");
         });
 
-        modelBuilder.Entity<CharacterReputation>(entity =>
+        _ = modelBuilder.Entity<CharacterReputation>(entity =>
         {
-            entity.HasKey(e => new { e.Guid, e.Faction })
+            _ = entity.HasKey(e => new { e.Guid, e.Faction })
                 .HasName("PRIMARY")
                 .HasAnnotation("MySql:IndexPrefixLength", new[] { 0, 0 });
 
-            entity
+            _ = entity
                 .ToTable("character_reputation", tb => tb.HasComment("Player System"))
                 .UseCollation("utf8mb4_unicode_ci");
 
-            entity.Property(e => e.Guid)
+            _ = entity.Property(e => e.Guid)
                 .HasComment("Global Unique Identifier")
                 .HasColumnName("guid");
-            entity.Property(e => e.Faction).HasColumnName("faction");
-            entity.Property(e => e.Flags).HasColumnName("flags");
-            entity.Property(e => e.Standing).HasColumnName("standing");
+            _ = entity.Property(e => e.Faction).HasColumnName("faction");
+            _ = entity.Property(e => e.Flags).HasColumnName("flags");
+            _ = entity.Property(e => e.Standing).HasColumnName("standing");
         });
 
-        modelBuilder.Entity<CharacterSkill>(entity =>
+        _ = modelBuilder.Entity<CharacterSkill>(entity =>
         {
-            entity.HasKey(e => new { e.Guid, e.Skill })
+            _ = entity.HasKey(e => new { e.Guid, e.Skill })
                 .HasName("PRIMARY")
                 .HasAnnotation("MySql:IndexPrefixLength", new[] { 0, 0 });
 
-            entity
+            _ = entity
                 .ToTable("character_skills", tb => tb.HasComment("Player System"))
                 .UseCollation("utf8mb4_unicode_ci");
 
-            entity.Property(e => e.Guid)
+            _ = entity.Property(e => e.Guid)
                 .HasComment("Global Unique Identifier")
                 .HasColumnName("guid");
-            entity.Property(e => e.Skill).HasColumnName("skill");
-            entity.Property(e => e.Max).HasColumnName("max");
-            entity.Property(e => e.Value).HasColumnName("value");
+            _ = entity.Property(e => e.Skill).HasColumnName("skill");
+            _ = entity.Property(e => e.Max).HasColumnName("max");
+            _ = entity.Property(e => e.Value).HasColumnName("value");
         });
 
-        modelBuilder.Entity<CharacterSocial>(entity =>
+        _ = modelBuilder.Entity<CharacterSocial>(entity =>
         {
-            entity.HasKey(e => new { e.Guid, e.Friend, e.Flags })
+            _ = entity.HasKey(e => new { e.Guid, e.Friend, e.Flags })
                 .HasName("PRIMARY")
                 .HasAnnotation("MySql:IndexPrefixLength", new[] { 0, 0, 0 });
 
-            entity
+            _ = entity
                 .ToTable("character_social", tb => tb.HasComment("Player System"))
                 .UseCollation("utf8mb4_unicode_ci");
 
-            entity.HasIndex(e => e.Friend, "friend");
+            _ = entity.HasIndex(e => e.Friend, "friend");
 
-            entity.Property(e => e.Guid)
+            _ = entity.Property(e => e.Guid)
                 .HasComment("Character Global Unique Identifier")
                 .HasColumnName("guid");
-            entity.Property(e => e.Friend)
+            _ = entity.Property(e => e.Friend)
                 .HasComment("Friend Global Unique Identifier")
                 .HasColumnName("friend");
-            entity.Property(e => e.Flags)
+            _ = entity.Property(e => e.Flags)
                 .HasComment("Friend Flags")
                 .HasColumnName("flags");
-            entity.Property(e => e.Note)
+            _ = entity.Property(e => e.Note)
                 .HasMaxLength(48)
                 .HasDefaultValueSql("''")
                 .HasComment("Friend Note")
                 .HasColumnName("note");
         });
 
-        modelBuilder.Entity<CharacterSpell>(entity =>
+        _ = modelBuilder.Entity<CharacterSpell>(entity =>
         {
-            entity.HasKey(e => new { e.Guid, e.Spell })
+            _ = entity.HasKey(e => new { e.Guid, e.Spell })
                 .HasName("PRIMARY")
                 .HasAnnotation("MySql:IndexPrefixLength", new[] { 0, 0 });
 
-            entity
+            _ = entity
                 .ToTable("character_spell", tb => tb.HasComment("Player System"))
                 .UseCollation("utf8mb4_unicode_ci");
 
-            entity.Property(e => e.Guid)
+            _ = entity.Property(e => e.Guid)
                 .HasComment("Global Unique Identifier")
                 .HasColumnName("guid");
-            entity.Property(e => e.Spell)
+            _ = entity.Property(e => e.Spell)
                 .HasDefaultValueSql("'0'")
                 .HasComment("Spell Identifier")
                 .HasColumnType("mediumint unsigned")
                 .HasColumnName("spell");
-            entity.Property(e => e.Active)
+            _ = entity.Property(e => e.Active)
                 .HasDefaultValueSql("'1'")
                 .HasColumnName("active");
-            entity.Property(e => e.Disabled).HasColumnName("disabled");
+            _ = entity.Property(e => e.Disabled).HasColumnName("disabled");
         });
 
-        modelBuilder.Entity<CharacterSpellCooldown>(entity =>
+        _ = modelBuilder.Entity<CharacterSpellCooldown>(entity =>
         {
-            entity.HasKey(e => new { e.Guid, e.Spell })
+            _ = entity.HasKey(e => new { e.Guid, e.Spell })
                 .HasName("PRIMARY")
                 .HasAnnotation("MySql:IndexPrefixLength", new[] { 0, 0 });
 
-            entity
+            _ = entity
                 .ToTable("character_spell_cooldown")
                 .UseCollation("utf8mb4_unicode_ci");
 
-            entity.Property(e => e.Guid)
+            _ = entity.Property(e => e.Guid)
                 .HasComment("Global Unique Identifier, Low part")
                 .HasColumnName("guid");
-            entity.Property(e => e.Spell)
+            _ = entity.Property(e => e.Spell)
                 .HasDefaultValueSql("'0'")
                 .HasComment("Spell Identifier")
                 .HasColumnType("mediumint unsigned")
                 .HasColumnName("spell");
-            entity.Property(e => e.CategoryEnd).HasColumnName("categoryEnd");
-            entity.Property(e => e.CategoryId)
+            _ = entity.Property(e => e.CategoryEnd).HasColumnName("categoryEnd");
+            _ = entity.Property(e => e.CategoryId)
                 .HasComment("Spell category Id")
                 .HasColumnName("categoryId");
-            entity.Property(e => e.Item)
+            _ = entity.Property(e => e.Item)
                 .HasComment("Item Identifier")
                 .HasColumnName("item");
-            entity.Property(e => e.Time).HasColumnName("time");
+            _ = entity.Property(e => e.Time).HasColumnName("time");
         });
 
-        modelBuilder.Entity<CharacterStat>(entity =>
+        _ = modelBuilder.Entity<CharacterStat>(entity =>
         {
-            entity.HasKey(e => e.Guid).HasName("PRIMARY");
+            _ = entity.HasKey(e => e.Guid).HasName("PRIMARY");
 
-            entity
+            _ = entity
                 .ToTable("character_stats")
                 .UseCollation("utf8mb4_unicode_ci");
 
-            entity.Property(e => e.Guid)
+            _ = entity.Property(e => e.Guid)
                 .ValueGeneratedNever()
                 .HasComment("Global Unique Identifier, Low part")
                 .HasColumnName("guid");
-            entity.Property(e => e.Agility).HasColumnName("agility");
-            entity.Property(e => e.Armor).HasColumnName("armor");
-            entity.Property(e => e.AttackPower).HasColumnName("attackPower");
-            entity.Property(e => e.BlockPct)
+            _ = entity.Property(e => e.Agility).HasColumnName("agility");
+            _ = entity.Property(e => e.Armor).HasColumnName("armor");
+            _ = entity.Property(e => e.AttackPower).HasColumnName("attackPower");
+            _ = entity.Property(e => e.BlockPct)
                 .HasColumnType("float unsigned")
                 .HasColumnName("blockPct");
-            entity.Property(e => e.CritPct)
+            _ = entity.Property(e => e.CritPct)
                 .HasColumnType("float unsigned")
                 .HasColumnName("critPct");
-            entity.Property(e => e.DodgePct)
+            _ = entity.Property(e => e.DodgePct)
                 .HasColumnType("float unsigned")
                 .HasColumnName("dodgePct");
-            entity.Property(e => e.Intellect).HasColumnName("intellect");
-            entity.Property(e => e.Maxhealth).HasColumnName("maxhealth");
-            entity.Property(e => e.Maxpower1).HasColumnName("maxpower1");
-            entity.Property(e => e.Maxpower2).HasColumnName("maxpower2");
-            entity.Property(e => e.Maxpower3).HasColumnName("maxpower3");
-            entity.Property(e => e.Maxpower4).HasColumnName("maxpower4");
-            entity.Property(e => e.Maxpower5).HasColumnName("maxpower5");
-            entity.Property(e => e.Maxpower6).HasColumnName("maxpower6");
-            entity.Property(e => e.Maxpower7).HasColumnName("maxpower7");
-            entity.Property(e => e.ParryPct)
+            _ = entity.Property(e => e.Intellect).HasColumnName("intellect");
+            _ = entity.Property(e => e.Maxhealth).HasColumnName("maxhealth");
+            _ = entity.Property(e => e.Maxpower1).HasColumnName("maxpower1");
+            _ = entity.Property(e => e.Maxpower2).HasColumnName("maxpower2");
+            _ = entity.Property(e => e.Maxpower3).HasColumnName("maxpower3");
+            _ = entity.Property(e => e.Maxpower4).HasColumnName("maxpower4");
+            _ = entity.Property(e => e.Maxpower5).HasColumnName("maxpower5");
+            _ = entity.Property(e => e.Maxpower6).HasColumnName("maxpower6");
+            _ = entity.Property(e => e.Maxpower7).HasColumnName("maxpower7");
+            _ = entity.Property(e => e.ParryPct)
                 .HasColumnType("float unsigned")
                 .HasColumnName("parryPct");
-            entity.Property(e => e.RangedAttackPower).HasColumnName("rangedAttackPower");
-            entity.Property(e => e.RangedCritPct)
+            _ = entity.Property(e => e.RangedAttackPower).HasColumnName("rangedAttackPower");
+            _ = entity.Property(e => e.RangedCritPct)
                 .HasColumnType("float unsigned")
                 .HasColumnName("rangedCritPct");
-            entity.Property(e => e.ResArcane).HasColumnName("resArcane");
-            entity.Property(e => e.ResFire).HasColumnName("resFire");
-            entity.Property(e => e.ResFrost).HasColumnName("resFrost");
-            entity.Property(e => e.ResHoly).HasColumnName("resHoly");
-            entity.Property(e => e.ResNature).HasColumnName("resNature");
-            entity.Property(e => e.ResShadow).HasColumnName("resShadow");
-            entity.Property(e => e.Resilience).HasColumnName("resilience");
-            entity.Property(e => e.SpellCritPct)
+            _ = entity.Property(e => e.ResArcane).HasColumnName("resArcane");
+            _ = entity.Property(e => e.ResFire).HasColumnName("resFire");
+            _ = entity.Property(e => e.ResFrost).HasColumnName("resFrost");
+            _ = entity.Property(e => e.ResHoly).HasColumnName("resHoly");
+            _ = entity.Property(e => e.ResNature).HasColumnName("resNature");
+            _ = entity.Property(e => e.ResShadow).HasColumnName("resShadow");
+            _ = entity.Property(e => e.Resilience).HasColumnName("resilience");
+            _ = entity.Property(e => e.SpellCritPct)
                 .HasColumnType("float unsigned")
                 .HasColumnName("spellCritPct");
-            entity.Property(e => e.SpellPower).HasColumnName("spellPower");
-            entity.Property(e => e.Spirit).HasColumnName("spirit");
-            entity.Property(e => e.Stamina).HasColumnName("stamina");
-            entity.Property(e => e.Strength).HasColumnName("strength");
+            _ = entity.Property(e => e.SpellPower).HasColumnName("spellPower");
+            _ = entity.Property(e => e.Spirit).HasColumnName("spirit");
+            _ = entity.Property(e => e.Stamina).HasColumnName("stamina");
+            _ = entity.Property(e => e.Strength).HasColumnName("strength");
         });
 
-        modelBuilder.Entity<CharacterTalent>(entity =>
+        _ = modelBuilder.Entity<CharacterTalent>(entity =>
         {
-            entity.HasKey(e => new { e.Guid, e.Spell, e.TalentGroup })
+            _ = entity.HasKey(e => new { e.Guid, e.Spell, e.TalentGroup })
                 .HasName("PRIMARY")
                 .HasAnnotation("MySql:IndexPrefixLength", new[] { 0, 0, 0 });
 
-            entity
+            _ = entity
                 .ToTable("character_talent")
                 .UseCollation("utf8mb4_unicode_ci");
 
-            entity.Property(e => e.Guid).HasColumnName("guid");
-            entity.Property(e => e.Spell)
+            _ = entity.Property(e => e.Guid).HasColumnName("guid");
+            _ = entity.Property(e => e.Spell)
                 .HasColumnType("mediumint unsigned")
                 .HasColumnName("spell");
-            entity.Property(e => e.TalentGroup).HasColumnName("talentGroup");
+            _ = entity.Property(e => e.TalentGroup).HasColumnName("talentGroup");
         });
 
-        modelBuilder.Entity<Corpse>(entity =>
+        _ = modelBuilder.Entity<Corpse>(entity =>
         {
-            entity.HasKey(e => e.Guid).HasName("PRIMARY");
+            _ = entity.HasKey(e => e.Guid).HasName("PRIMARY");
 
-            entity
+            _ = entity
                 .ToTable("corpse", tb => tb.HasComment("Death System"))
                 .UseCollation("utf8mb4_unicode_ci");
 
-            entity.HasIndex(e => e.InstanceId, "idx_instance");
+            _ = entity.HasIndex(e => e.InstanceId, "idx_instance");
 
-            entity.HasIndex(e => e.Time, "idx_time");
+            _ = entity.HasIndex(e => e.Time, "idx_time");
 
-            entity.HasIndex(e => e.CorpseType, "idx_type");
+            _ = entity.HasIndex(e => e.CorpseType, "idx_type");
 
-            entity.Property(e => e.Guid)
+            _ = entity.Property(e => e.Guid)
                 .ValueGeneratedNever()
                 .HasComment("Character Global Unique Identifier")
                 .HasColumnName("guid");
-            entity.Property(e => e.Bytes1).HasColumnName("bytes1");
-            entity.Property(e => e.Bytes2).HasColumnName("bytes2");
-            entity.Property(e => e.CorpseType).HasColumnName("corpseType");
-            entity.Property(e => e.DisplayId).HasColumnName("displayId");
-            entity.Property(e => e.DynFlags).HasColumnName("dynFlags");
-            entity.Property(e => e.Flags).HasColumnName("flags");
-            entity.Property(e => e.GuildId).HasColumnName("guildId");
-            entity.Property(e => e.InstanceId)
+            _ = entity.Property(e => e.Bytes1).HasColumnName("bytes1");
+            _ = entity.Property(e => e.Bytes2).HasColumnName("bytes2");
+            _ = entity.Property(e => e.CorpseType).HasColumnName("corpseType");
+            _ = entity.Property(e => e.DisplayId).HasColumnName("displayId");
+            _ = entity.Property(e => e.DynFlags).HasColumnName("dynFlags");
+            _ = entity.Property(e => e.Flags).HasColumnName("flags");
+            _ = entity.Property(e => e.GuildId).HasColumnName("guildId");
+            _ = entity.Property(e => e.InstanceId)
                 .HasComment("Instance Identifier")
                 .HasColumnName("instanceId");
-            entity.Property(e => e.ItemCache)
+            _ = entity.Property(e => e.ItemCache)
                 .HasColumnType("text")
                 .HasColumnName("itemCache");
-            entity.Property(e => e.MapId)
+            _ = entity.Property(e => e.MapId)
                 .HasComment("Map Identifier")
                 .HasColumnName("mapId");
-            entity.Property(e => e.Orientation).HasColumnName("orientation");
-            entity.Property(e => e.PhaseMask)
+            _ = entity.Property(e => e.Orientation).HasColumnName("orientation");
+            _ = entity.Property(e => e.PhaseMask)
                 .HasDefaultValueSql("'1'")
                 .HasColumnName("phaseMask");
-            entity.Property(e => e.PosX).HasColumnName("posX");
-            entity.Property(e => e.PosY).HasColumnName("posY");
-            entity.Property(e => e.PosZ).HasColumnName("posZ");
-            entity.Property(e => e.Time).HasColumnName("time");
+            _ = entity.Property(e => e.PosX).HasColumnName("posX");
+            _ = entity.Property(e => e.PosY).HasColumnName("posY");
+            _ = entity.Property(e => e.PosZ).HasColumnName("posZ");
+            _ = entity.Property(e => e.Time).HasColumnName("time");
         });
 
-        modelBuilder.Entity<GameEventConditionSave>(entity =>
+        _ = modelBuilder.Entity<GameEventConditionSave>(entity =>
         {
-            entity.HasKey(e => new { e.EventEntry, e.ConditionId })
+            _ = entity.HasKey(e => new { e.EventEntry, e.ConditionId })
                 .HasName("PRIMARY")
                 .HasAnnotation("MySql:IndexPrefixLength", new[] { 0, 0 });
 
-            entity
+            _ = entity
                 .ToTable("game_event_condition_save")
                 .UseCollation("utf8mb4_unicode_ci");
 
-            entity.Property(e => e.EventEntry).HasColumnName("eventEntry");
-            entity.Property(e => e.ConditionId).HasColumnName("condition_id");
-            entity.Property(e => e.Done)
+            _ = entity.Property(e => e.EventEntry).HasColumnName("eventEntry");
+            _ = entity.Property(e => e.ConditionId).HasColumnName("condition_id");
+            _ = entity.Property(e => e.Done)
                 .HasDefaultValueSql("'0'")
                 .HasColumnName("done");
         });
 
-        modelBuilder.Entity<GameEventSave>(entity =>
+        _ = modelBuilder.Entity<GameEventSave>(entity =>
         {
-            entity.HasKey(e => e.EventEntry).HasName("PRIMARY");
+            _ = entity.HasKey(e => e.EventEntry).HasName("PRIMARY");
 
-            entity
+            _ = entity
                 .ToTable("game_event_save")
                 .UseCollation("utf8mb4_unicode_ci");
 
-            entity.Property(e => e.EventEntry).HasColumnName("eventEntry");
-            entity.Property(e => e.NextStart).HasColumnName("next_start");
-            entity.Property(e => e.State)
+            _ = entity.Property(e => e.EventEntry).HasColumnName("eventEntry");
+            _ = entity.Property(e => e.NextStart).HasColumnName("next_start");
+            _ = entity.Property(e => e.State)
                 .HasDefaultValueSql("'1'")
                 .HasColumnName("state");
         });
 
-        modelBuilder.Entity<GmSubsurvey>(entity =>
+        _ = modelBuilder.Entity<GmSubsurvey>(entity =>
         {
-            entity.HasKey(e => new { e.SurveyId, e.QuestionId })
+            _ = entity.HasKey(e => new { e.SurveyId, e.QuestionId })
                 .HasName("PRIMARY")
                 .HasAnnotation("MySql:IndexPrefixLength", new[] { 0, 0 });
 
-            entity
+            _ = entity
                 .ToTable("gm_subsurvey", tb => tb.HasComment("Player System"))
                 .UseCollation("utf8mb4_unicode_ci");
 
-            entity.Property(e => e.SurveyId)
+            _ = entity.Property(e => e.SurveyId)
                 .ValueGeneratedOnAdd()
                 .HasColumnName("surveyId");
-            entity.Property(e => e.QuestionId).HasColumnName("questionId");
-            entity.Property(e => e.Answer).HasColumnName("answer");
-            entity.Property(e => e.AnswerComment)
+            _ = entity.Property(e => e.QuestionId).HasColumnName("questionId");
+            _ = entity.Property(e => e.Answer).HasColumnName("answer");
+            _ = entity.Property(e => e.AnswerComment)
                 .HasColumnType("text")
                 .HasColumnName("answerComment");
         });
 
-        modelBuilder.Entity<GmSurvey>(entity =>
+        _ = modelBuilder.Entity<GmSurvey>(entity =>
         {
-            entity.HasKey(e => e.SurveyId).HasName("PRIMARY");
+            _ = entity.HasKey(e => e.SurveyId).HasName("PRIMARY");
 
-            entity
+            _ = entity
                 .ToTable("gm_survey", tb => tb.HasComment("Player System"))
                 .UseCollation("utf8mb4_unicode_ci");
 
-            entity.Property(e => e.SurveyId).HasColumnName("surveyId");
-            entity.Property(e => e.Comment).HasColumnName("comment");
-            entity.Property(e => e.CreateTime).HasColumnName("createTime");
-            entity.Property(e => e.Guid).HasColumnName("guid");
-            entity.Property(e => e.MainSurvey).HasColumnName("mainSurvey");
+            _ = entity.Property(e => e.SurveyId).HasColumnName("surveyId");
+            _ = entity.Property(e => e.Comment).HasColumnName("comment");
+            _ = entity.Property(e => e.CreateTime).HasColumnName("createTime");
+            _ = entity.Property(e => e.Guid).HasColumnName("guid");
+            _ = entity.Property(e => e.MainSurvey).HasColumnName("mainSurvey");
         });
 
-        modelBuilder.Entity<GmTicket>(entity =>
+        _ = modelBuilder.Entity<GmTicket>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PRIMARY");
+            _ = entity.HasKey(e => e.Id).HasName("PRIMARY");
 
-            entity
+            _ = entity
                 .ToTable("gm_ticket", tb => tb.HasComment("Player System"))
                 .UseCollation("utf8mb4_unicode_ci");
 
-            entity.Property(e => e.Id).HasColumnName("id");
-            entity.Property(e => e.AssignedTo)
+            _ = entity.Property(e => e.Id).HasColumnName("id");
+            _ = entity.Property(e => e.AssignedTo)
                 .HasComment("GUID of admin to whom ticket is assigned")
                 .HasColumnName("assignedTo");
-            entity.Property(e => e.ClosedBy).HasColumnName("closedBy");
-            entity.Property(e => e.Comment)
+            _ = entity.Property(e => e.ClosedBy).HasColumnName("closedBy");
+            _ = entity.Property(e => e.Comment)
                 .HasColumnType("text")
                 .HasColumnName("comment");
-            entity.Property(e => e.Completed).HasColumnName("completed");
-            entity.Property(e => e.CreateTime).HasColumnName("createTime");
-            entity.Property(e => e.Description)
+            _ = entity.Property(e => e.Completed).HasColumnName("completed");
+            _ = entity.Property(e => e.CreateTime).HasColumnName("createTime");
+            _ = entity.Property(e => e.Description)
                 .HasColumnType("text")
                 .HasColumnName("description");
-            entity.Property(e => e.Escalated).HasColumnName("escalated");
-            entity.Property(e => e.LastModifiedTime).HasColumnName("lastModifiedTime");
-            entity.Property(e => e.MapId).HasColumnName("mapId");
-            entity.Property(e => e.Name)
+            _ = entity.Property(e => e.Escalated).HasColumnName("escalated");
+            _ = entity.Property(e => e.LastModifiedTime).HasColumnName("lastModifiedTime");
+            _ = entity.Property(e => e.MapId).HasColumnName("mapId");
+            _ = entity.Property(e => e.Name)
                 .HasMaxLength(12)
                 .HasComment("Name of ticket creator")
                 .HasColumnName("name");
-            entity.Property(e => e.NeedMoreHelp).HasColumnName("needMoreHelp");
-            entity.Property(e => e.PlayerGuid)
+            _ = entity.Property(e => e.NeedMoreHelp).HasColumnName("needMoreHelp");
+            _ = entity.Property(e => e.PlayerGuid)
                 .HasComment("Global Unique Identifier of ticket creator")
                 .HasColumnName("playerGuid");
-            entity.Property(e => e.PosX).HasColumnName("posX");
-            entity.Property(e => e.PosY).HasColumnName("posY");
-            entity.Property(e => e.PosZ).HasColumnName("posZ");
-            entity.Property(e => e.ResolvedBy)
+            _ = entity.Property(e => e.PosX).HasColumnName("posX");
+            _ = entity.Property(e => e.PosY).HasColumnName("posY");
+            _ = entity.Property(e => e.PosZ).HasColumnName("posZ");
+            _ = entity.Property(e => e.ResolvedBy)
                 .HasComment("GUID of GM who resolved the ticket")
                 .HasColumnName("resolvedBy");
-            entity.Property(e => e.Response)
+            _ = entity.Property(e => e.Response)
                 .HasColumnType("text")
                 .HasColumnName("response");
-            entity.Property(e => e.Type)
+            _ = entity.Property(e => e.Type)
                 .HasComment("0 open, 1 closed, 2 character deleted")
                 .HasColumnName("type");
-            entity.Property(e => e.Viewed).HasColumnName("viewed");
+            _ = entity.Property(e => e.Viewed).HasColumnName("viewed");
         });
 
-        modelBuilder.Entity<Group>(entity =>
+        _ = modelBuilder.Entity<Group>(entity =>
         {
-            entity.HasKey(e => e.Guid).HasName("PRIMARY");
+            _ = entity.HasKey(e => e.Guid).HasName("PRIMARY");
 
-            entity
+            _ = entity
                 .ToTable("groups", tb => tb.HasComment("Groups"))
                 .UseCollation("utf8mb4_unicode_ci");
 
-            entity.HasIndex(e => e.LeaderGuid, "leaderGuid");
+            _ = entity.HasIndex(e => e.LeaderGuid, "leaderGuid");
 
-            entity.Property(e => e.Guid)
+            _ = entity.Property(e => e.Guid)
                 .ValueGeneratedNever()
                 .HasColumnName("guid");
-            entity.Property(e => e.Difficulty).HasColumnName("difficulty");
-            entity.Property(e => e.GroupType).HasColumnName("groupType");
-            entity.Property(e => e.Icon1).HasColumnName("icon1");
-            entity.Property(e => e.Icon2).HasColumnName("icon2");
-            entity.Property(e => e.Icon3).HasColumnName("icon3");
-            entity.Property(e => e.Icon4).HasColumnName("icon4");
-            entity.Property(e => e.Icon5).HasColumnName("icon5");
-            entity.Property(e => e.Icon6).HasColumnName("icon6");
-            entity.Property(e => e.Icon7).HasColumnName("icon7");
-            entity.Property(e => e.Icon8).HasColumnName("icon8");
-            entity.Property(e => e.LeaderGuid).HasColumnName("leaderGuid");
-            entity.Property(e => e.LootMethod).HasColumnName("lootMethod");
-            entity.Property(e => e.LootThreshold).HasColumnName("lootThreshold");
-            entity.Property(e => e.LooterGuid).HasColumnName("looterGuid");
-            entity.Property(e => e.MasterLooterGuid).HasColumnName("masterLooterGuid");
-            entity.Property(e => e.RaidDifficulty).HasColumnName("raidDifficulty");
+            _ = entity.Property(e => e.Difficulty).HasColumnName("difficulty");
+            _ = entity.Property(e => e.GroupType).HasColumnName("groupType");
+            _ = entity.Property(e => e.Icon1).HasColumnName("icon1");
+            _ = entity.Property(e => e.Icon2).HasColumnName("icon2");
+            _ = entity.Property(e => e.Icon3).HasColumnName("icon3");
+            _ = entity.Property(e => e.Icon4).HasColumnName("icon4");
+            _ = entity.Property(e => e.Icon5).HasColumnName("icon5");
+            _ = entity.Property(e => e.Icon6).HasColumnName("icon6");
+            _ = entity.Property(e => e.Icon7).HasColumnName("icon7");
+            _ = entity.Property(e => e.Icon8).HasColumnName("icon8");
+            _ = entity.Property(e => e.LeaderGuid).HasColumnName("leaderGuid");
+            _ = entity.Property(e => e.LootMethod).HasColumnName("lootMethod");
+            _ = entity.Property(e => e.LootThreshold).HasColumnName("lootThreshold");
+            _ = entity.Property(e => e.LooterGuid).HasColumnName("looterGuid");
+            _ = entity.Property(e => e.MasterLooterGuid).HasColumnName("masterLooterGuid");
+            _ = entity.Property(e => e.RaidDifficulty).HasColumnName("raidDifficulty");
         });
 
-        modelBuilder.Entity<GroupInstance>(entity =>
+        _ = modelBuilder.Entity<GroupInstance>(entity =>
         {
-            entity.HasKey(e => new { e.Guid, e.Instance })
+            _ = entity.HasKey(e => new { e.Guid, e.Instance })
                 .HasName("PRIMARY")
                 .HasAnnotation("MySql:IndexPrefixLength", new[] { 0, 0 });
 
-            entity
+            _ = entity
                 .ToTable("group_instance")
                 .UseCollation("utf8mb4_unicode_ci");
 
-            entity.HasIndex(e => e.Instance, "instance");
+            _ = entity.HasIndex(e => e.Instance, "instance");
 
-            entity.Property(e => e.Guid).HasColumnName("guid");
-            entity.Property(e => e.Instance).HasColumnName("instance");
-            entity.Property(e => e.Permanent).HasColumnName("permanent");
+            _ = entity.Property(e => e.Guid).HasColumnName("guid");
+            _ = entity.Property(e => e.Instance).HasColumnName("instance");
+            _ = entity.Property(e => e.Permanent).HasColumnName("permanent");
         });
 
-        modelBuilder.Entity<GroupMember>(entity =>
+        _ = modelBuilder.Entity<GroupMember>(entity =>
         {
-            entity.HasKey(e => e.MemberGuid).HasName("PRIMARY");
+            _ = entity.HasKey(e => e.MemberGuid).HasName("PRIMARY");
 
-            entity
+            _ = entity
                 .ToTable("group_member", tb => tb.HasComment("Groups"))
                 .UseCollation("utf8mb4_unicode_ci");
 
-            entity.Property(e => e.MemberGuid)
+            _ = entity.Property(e => e.MemberGuid)
                 .ValueGeneratedNever()
                 .HasColumnName("memberGuid");
-            entity.Property(e => e.Guid).HasColumnName("guid");
-            entity.Property(e => e.MemberFlags).HasColumnName("memberFlags");
-            entity.Property(e => e.Roles).HasColumnName("roles");
-            entity.Property(e => e.Subgroup).HasColumnName("subgroup");
+            _ = entity.Property(e => e.Guid).HasColumnName("guid");
+            _ = entity.Property(e => e.MemberFlags).HasColumnName("memberFlags");
+            _ = entity.Property(e => e.Roles).HasColumnName("roles");
+            _ = entity.Property(e => e.Subgroup).HasColumnName("subgroup");
         });
 
-        modelBuilder.Entity<Guild>(entity =>
+        _ = modelBuilder.Entity<Guild>(entity =>
         {
-            entity.HasKey(e => e.Guildid).HasName("PRIMARY");
+            _ = entity.HasKey(e => e.Guildid).HasName("PRIMARY");
 
-            entity
+            _ = entity
                 .ToTable("guild", tb => tb.HasComment("Guild System"))
                 .UseCollation("utf8mb4_unicode_ci");
 
-            entity.Property(e => e.Guildid)
+            _ = entity.Property(e => e.Guildid)
                 .ValueGeneratedNever()
                 .HasColumnName("guildid");
-            entity.Property(e => e.Createdate).HasColumnName("createdate");
-            entity.Property(e => e.Info)
+            _ = entity.Property(e => e.Createdate).HasColumnName("createdate");
+            _ = entity.Property(e => e.Info)
                 .HasMaxLength(500)
                 .HasDefaultValueSql("''")
                 .HasColumnName("info");
-            entity.Property(e => e.Leaderguid).HasColumnName("leaderguid");
-            entity.Property(e => e.Motd)
+            _ = entity.Property(e => e.Leaderguid).HasColumnName("leaderguid");
+            _ = entity.Property(e => e.Motd)
                 .HasMaxLength(128)
                 .HasDefaultValueSql("''")
                 .HasColumnName("motd");
-            entity.Property(e => e.Name)
+            _ = entity.Property(e => e.Name)
                 .HasMaxLength(24)
                 .HasDefaultValueSql("''")
                 .HasColumnName("name");
         });
 
-        modelBuilder.Entity<GuildBankEventlog>(entity =>
+        _ = modelBuilder.Entity<GuildBankEventlog>(entity =>
         {
-            entity.HasKey(e => new { e.Guildid, e.LogGuid, e.TabId })
+            _ = entity.HasKey(e => new { e.Guildid, e.LogGuid, e.TabId })
                 .HasName("PRIMARY")
                 .HasAnnotation("MySql:IndexPrefixLength", new[] { 0, 0, 0 });
 
-            entity
+            _ = entity
                 .ToTable("guild_bank_eventlog")
                 .UseCollation("utf8mb4_unicode_ci");
 
-            entity.HasIndex(e => e.LogGuid, "Idx_LogGuid");
+            _ = entity.HasIndex(e => e.LogGuid, "Idx_LogGuid");
 
-            entity.HasIndex(e => e.PlayerGuid, "Idx_PlayerGuid");
+            _ = entity.HasIndex(e => e.PlayerGuid, "Idx_PlayerGuid");
 
-            entity.HasIndex(e => e.Guildid, "guildid_key");
+            _ = entity.HasIndex(e => e.Guildid, "guildid_key");
 
-            entity.Property(e => e.Guildid)
+            _ = entity.Property(e => e.Guildid)
                 .HasComment("Guild Identificator")
                 .HasColumnName("guildid");
-            entity.Property(e => e.LogGuid).HasComment("Log record identificator - auxiliary column");
-            entity.Property(e => e.TabId).HasComment("Guild bank TabId");
-            entity.Property(e => e.DestTabId).HasComment("Destination Tab Id");
-            entity.Property(e => e.EventType).HasComment("Event type");
-            entity.Property(e => e.TimeStamp).HasComment("Event UNIX time");
+            _ = entity.Property(e => e.LogGuid).HasComment("Log record identificator - auxiliary column");
+            _ = entity.Property(e => e.TabId).HasComment("Guild bank TabId");
+            _ = entity.Property(e => e.DestTabId).HasComment("Destination Tab Id");
+            _ = entity.Property(e => e.EventType).HasComment("Event type");
+            _ = entity.Property(e => e.TimeStamp).HasComment("Event UNIX time");
         });
 
-        modelBuilder.Entity<GuildBankItem>(entity =>
+        _ = modelBuilder.Entity<GuildBankItem>(entity =>
         {
-            entity.HasKey(e => new { e.Guildid, e.TabId, e.SlotId })
+            _ = entity.HasKey(e => new { e.Guildid, e.TabId, e.SlotId })
                 .HasName("PRIMARY")
                 .HasAnnotation("MySql:IndexPrefixLength", new[] { 0, 0, 0 });
 
-            entity
+            _ = entity
                 .ToTable("guild_bank_item")
                 .UseCollation("utf8mb4_unicode_ci");
 
-            entity.HasIndex(e => e.ItemGuid, "Idx_item_guid");
+            _ = entity.HasIndex(e => e.ItemGuid, "Idx_item_guid");
 
-            entity.HasIndex(e => e.Guildid, "guildid_key");
+            _ = entity.HasIndex(e => e.Guildid, "guildid_key");
 
-            entity.Property(e => e.Guildid).HasColumnName("guildid");
-            entity.Property(e => e.ItemGuid).HasColumnName("item_guid");
+            _ = entity.Property(e => e.Guildid).HasColumnName("guildid");
+            _ = entity.Property(e => e.ItemGuid).HasColumnName("item_guid");
         });
 
-        modelBuilder.Entity<GuildBankRight>(entity =>
+        _ = modelBuilder.Entity<GuildBankRight>(entity =>
         {
-            entity.HasKey(e => new { e.Guildid, e.TabId, e.Rid })
+            _ = entity.HasKey(e => new { e.Guildid, e.TabId, e.Rid })
                 .HasName("PRIMARY")
                 .HasAnnotation("MySql:IndexPrefixLength", new[] { 0, 0, 0 });
 
-            entity
+            _ = entity
                 .ToTable("guild_bank_right")
                 .UseCollation("utf8mb4_unicode_ci");
 
-            entity.HasIndex(e => e.Guildid, "guildid_key");
+            _ = entity.HasIndex(e => e.Guildid, "guildid_key");
 
-            entity.Property(e => e.Guildid).HasColumnName("guildid");
-            entity.Property(e => e.Rid).HasColumnName("rid");
-            entity.Property(e => e.Gbright).HasColumnName("gbright");
+            _ = entity.Property(e => e.Guildid).HasColumnName("guildid");
+            _ = entity.Property(e => e.Rid).HasColumnName("rid");
+            _ = entity.Property(e => e.Gbright).HasColumnName("gbright");
         });
 
-        modelBuilder.Entity<GuildBankTab>(entity =>
+        _ = modelBuilder.Entity<GuildBankTab>(entity =>
         {
-            entity.HasKey(e => new { e.Guildid, e.TabId })
+            _ = entity.HasKey(e => new { e.Guildid, e.TabId })
                 .HasName("PRIMARY")
                 .HasAnnotation("MySql:IndexPrefixLength", new[] { 0, 0 });
 
-            entity
+            _ = entity
                 .ToTable("guild_bank_tab")
                 .UseCollation("utf8mb4_unicode_ci");
 
-            entity.HasIndex(e => e.Guildid, "guildid_key");
+            _ = entity.HasIndex(e => e.Guildid, "guildid_key");
 
-            entity.Property(e => e.Guildid).HasColumnName("guildid");
-            entity.Property(e => e.TabIcon)
+            _ = entity.Property(e => e.Guildid).HasColumnName("guildid");
+            _ = entity.Property(e => e.TabIcon)
                 .HasMaxLength(100)
                 .HasDefaultValueSql("''");
-            entity.Property(e => e.TabName)
+            _ = entity.Property(e => e.TabName)
                 .HasMaxLength(16)
                 .HasDefaultValueSql("''");
-            entity.Property(e => e.TabText).HasMaxLength(500);
+            _ = entity.Property(e => e.TabText).HasMaxLength(500);
         });
 
-        modelBuilder.Entity<GuildEventlog>(entity =>
+        _ = modelBuilder.Entity<GuildEventlog>(entity =>
         {
-            entity.HasKey(e => new { e.Guildid, e.LogGuid })
+            _ = entity.HasKey(e => new { e.Guildid, e.LogGuid })
                 .HasName("PRIMARY")
                 .HasAnnotation("MySql:IndexPrefixLength", new[] { 0, 0 });
 
-            entity
+            _ = entity
                 .ToTable("guild_eventlog", tb => tb.HasComment("Guild Eventlog"))
                 .UseCollation("utf8mb4_unicode_ci");
 
-            entity.HasIndex(e => e.LogGuid, "Idx_LogGuid");
+            _ = entity.HasIndex(e => e.LogGuid, "Idx_LogGuid");
 
-            entity.HasIndex(e => e.PlayerGuid1, "Idx_PlayerGuid1");
+            _ = entity.HasIndex(e => e.PlayerGuid1, "Idx_PlayerGuid1");
 
-            entity.HasIndex(e => e.PlayerGuid2, "Idx_PlayerGuid2");
+            _ = entity.HasIndex(e => e.PlayerGuid2, "Idx_PlayerGuid2");
 
-            entity.Property(e => e.Guildid)
+            _ = entity.Property(e => e.Guildid)
                 .HasComment("Guild Identificator")
                 .HasColumnName("guildid");
-            entity.Property(e => e.LogGuid).HasComment("Log record identificator - auxiliary column");
-            entity.Property(e => e.EventType).HasComment("Event type");
-            entity.Property(e => e.NewRank).HasComment("New rank(in case promotion/demotion)");
-            entity.Property(e => e.PlayerGuid1).HasComment("Player 1");
-            entity.Property(e => e.PlayerGuid2).HasComment("Player 2");
-            entity.Property(e => e.TimeStamp).HasComment("Event UNIX time");
+            _ = entity.Property(e => e.LogGuid).HasComment("Log record identificator - auxiliary column");
+            _ = entity.Property(e => e.EventType).HasComment("Event type");
+            _ = entity.Property(e => e.NewRank).HasComment("New rank(in case promotion/demotion)");
+            _ = entity.Property(e => e.PlayerGuid1).HasComment("Player 1");
+            _ = entity.Property(e => e.PlayerGuid2).HasComment("Player 2");
+            _ = entity.Property(e => e.TimeStamp).HasComment("Event UNIX time");
         });
 
-        modelBuilder.Entity<GuildMember>(entity =>
+        _ = modelBuilder.Entity<GuildMember>(entity =>
         {
-            entity
+            _ = entity
                 .HasNoKey()
                 .ToTable("guild_member", tb => tb.HasComment("Guild System"))
                 .UseCollation("utf8mb4_unicode_ci");
 
-            entity.HasIndex(e => e.Guid, "guid_key").IsUnique();
+            _ = entity.HasIndex(e => e.Guid, "guid_key").IsUnique();
 
-            entity.HasIndex(e => e.Guildid, "guildid_key");
+            _ = entity.HasIndex(e => e.Guildid, "guildid_key");
 
-            entity.HasIndex(e => new { e.Guildid, e.Rank }, "guildid_rank_key");
+            _ = entity.HasIndex(e => new { e.Guildid, e.Rank }, "guildid_rank_key");
 
-            entity.Property(e => e.Guid).HasColumnName("guid");
-            entity.Property(e => e.Guildid)
+            _ = entity.Property(e => e.Guid).HasColumnName("guid");
+            _ = entity.Property(e => e.Guildid)
                 .HasComment("Guild Identificator")
                 .HasColumnName("guildid");
-            entity.Property(e => e.Offnote)
+            _ = entity.Property(e => e.Offnote)
                 .HasMaxLength(31)
                 .HasDefaultValueSql("''")
                 .HasColumnName("offnote");
-            entity.Property(e => e.Pnote)
+            _ = entity.Property(e => e.Pnote)
                 .HasMaxLength(31)
                 .HasDefaultValueSql("''")
                 .HasColumnName("pnote");
-            entity.Property(e => e.Rank).HasColumnName("rank");
+            _ = entity.Property(e => e.Rank).HasColumnName("rank");
         });
 
-        modelBuilder.Entity<GuildMemberWithdraw>(entity =>
+        _ = modelBuilder.Entity<GuildMemberWithdraw>(entity =>
         {
-            entity.HasKey(e => e.Guid).HasName("PRIMARY");
+            _ = entity.HasKey(e => e.Guid).HasName("PRIMARY");
 
-            entity
+            _ = entity
                 .ToTable("guild_member_withdraw", tb => tb.HasComment("Guild Member Daily Withdraws"))
                 .UseCollation("utf8mb4_unicode_ci");
 
-            entity.Property(e => e.Guid)
+            _ = entity.Property(e => e.Guid)
                 .ValueGeneratedNever()
                 .HasColumnName("guid");
-            entity.Property(e => e.Money).HasColumnName("money");
-            entity.Property(e => e.Tab0).HasColumnName("tab0");
-            entity.Property(e => e.Tab1).HasColumnName("tab1");
-            entity.Property(e => e.Tab2).HasColumnName("tab2");
-            entity.Property(e => e.Tab3).HasColumnName("tab3");
-            entity.Property(e => e.Tab4).HasColumnName("tab4");
-            entity.Property(e => e.Tab5).HasColumnName("tab5");
+            _ = entity.Property(e => e.Money).HasColumnName("money");
+            _ = entity.Property(e => e.Tab0).HasColumnName("tab0");
+            _ = entity.Property(e => e.Tab1).HasColumnName("tab1");
+            _ = entity.Property(e => e.Tab2).HasColumnName("tab2");
+            _ = entity.Property(e => e.Tab3).HasColumnName("tab3");
+            _ = entity.Property(e => e.Tab4).HasColumnName("tab4");
+            _ = entity.Property(e => e.Tab5).HasColumnName("tab5");
         });
 
-        modelBuilder.Entity<GuildRank>(entity =>
+        _ = modelBuilder.Entity<GuildRank>(entity =>
         {
-            entity.HasKey(e => new { e.Guildid, e.Rid })
+            _ = entity.HasKey(e => new { e.Guildid, e.Rid })
                 .HasName("PRIMARY")
                 .HasAnnotation("MySql:IndexPrefixLength", new[] { 0, 0 });
 
-            entity
+            _ = entity
                 .ToTable("guild_rank", tb => tb.HasComment("Guild System"))
                 .UseCollation("utf8mb4_unicode_ci");
 
-            entity.HasIndex(e => e.Rid, "Idx_rid");
+            _ = entity.HasIndex(e => e.Rid, "Idx_rid");
 
-            entity.Property(e => e.Guildid).HasColumnName("guildid");
-            entity.Property(e => e.Rid).HasColumnName("rid");
-            entity.Property(e => e.Rights)
+            _ = entity.Property(e => e.Guildid).HasColumnName("guildid");
+            _ = entity.Property(e => e.Rid).HasColumnName("rid");
+            _ = entity.Property(e => e.Rights)
                 .HasDefaultValueSql("'0'")
                 .HasColumnType("mediumint unsigned")
                 .HasColumnName("rights");
-            entity.Property(e => e.Rname)
+            _ = entity.Property(e => e.Rname)
                 .HasMaxLength(20)
                 .HasDefaultValueSql("''")
                 .HasColumnName("rname");
         });
 
-        modelBuilder.Entity<Instance>(entity =>
+        _ = modelBuilder.Entity<Instance>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PRIMARY");
+            _ = entity.HasKey(e => e.Id).HasName("PRIMARY");
 
-            entity
+            _ = entity
                 .ToTable("instance")
                 .UseCollation("utf8mb4_unicode_ci");
 
-            entity.HasIndex(e => e.Difficulty, "difficulty");
+            _ = entity.HasIndex(e => e.Difficulty, "difficulty");
 
-            entity.HasIndex(e => e.Map, "map");
+            _ = entity.HasIndex(e => e.Map, "map");
 
-            entity.HasIndex(e => e.Resettime, "resettime");
+            _ = entity.HasIndex(e => e.Resettime, "resettime");
 
-            entity.Property(e => e.Id)
+            _ = entity.Property(e => e.Id)
                 .ValueGeneratedNever()
                 .HasColumnName("id");
-            entity.Property(e => e.CompletedEncounters).HasColumnName("completedEncounters");
-            entity.Property(e => e.Data)
+            _ = entity.Property(e => e.CompletedEncounters).HasColumnName("completedEncounters");
+            _ = entity.Property(e => e.Data)
                 .HasColumnType("tinytext")
                 .HasColumnName("data");
-            entity.Property(e => e.Difficulty).HasColumnName("difficulty");
-            entity.Property(e => e.Map).HasColumnName("map");
-            entity.Property(e => e.Resettime).HasColumnName("resettime");
+            _ = entity.Property(e => e.Difficulty).HasColumnName("difficulty");
+            _ = entity.Property(e => e.Map).HasColumnName("map");
+            _ = entity.Property(e => e.Resettime).HasColumnName("resettime");
         });
 
-        modelBuilder.Entity<InstanceReset>(entity =>
+        _ = modelBuilder.Entity<InstanceReset>(entity =>
         {
-            entity.HasKey(e => new { e.Mapid, e.Difficulty })
+            _ = entity.HasKey(e => new { e.Mapid, e.Difficulty })
                 .HasName("PRIMARY")
                 .HasAnnotation("MySql:IndexPrefixLength", new[] { 0, 0 });
 
-            entity
+            _ = entity
                 .ToTable("instance_reset")
                 .UseCollation("utf8mb4_unicode_ci");
 
-            entity.HasIndex(e => e.Difficulty, "difficulty");
+            _ = entity.HasIndex(e => e.Difficulty, "difficulty");
 
-            entity.Property(e => e.Mapid).HasColumnName("mapid");
-            entity.Property(e => e.Difficulty).HasColumnName("difficulty");
-            entity.Property(e => e.Resettime).HasColumnName("resettime");
+            _ = entity.Property(e => e.Mapid).HasColumnName("mapid");
+            _ = entity.Property(e => e.Difficulty).HasColumnName("difficulty");
+            _ = entity.Property(e => e.Resettime).HasColumnName("resettime");
         });
 
-        modelBuilder.Entity<ItemInstance>(entity =>
+        _ = modelBuilder.Entity<ItemInstance>(entity =>
         {
-            entity.HasKey(e => e.Guid).HasName("PRIMARY");
+            _ = entity.HasKey(e => e.Guid).HasName("PRIMARY");
 
-            entity
+            _ = entity
                 .ToTable("item_instance", tb => tb.HasComment("Item System"))
                 .UseCollation("utf8mb4_unicode_ci");
 
-            entity.HasIndex(e => e.OwnerGuid, "idx_owner_guid");
+            _ = entity.HasIndex(e => e.OwnerGuid, "idx_owner_guid");
 
-            entity.Property(e => e.Guid)
+            _ = entity.Property(e => e.Guid)
                 .ValueGeneratedNever()
                 .HasColumnName("guid");
-            entity.Property(e => e.Charges)
+            _ = entity.Property(e => e.Charges)
                 .HasColumnType("tinytext")
                 .HasColumnName("charges");
-            entity.Property(e => e.Count)
+            _ = entity.Property(e => e.Count)
                 .HasDefaultValueSql("'1'")
                 .HasColumnName("count");
-            entity.Property(e => e.CreatorGuid).HasColumnName("creatorGuid");
-            entity.Property(e => e.Durability).HasColumnName("durability");
-            entity.Property(e => e.Duration).HasColumnName("duration");
-            entity.Property(e => e.Enchantments)
+            _ = entity.Property(e => e.CreatorGuid).HasColumnName("creatorGuid");
+            _ = entity.Property(e => e.Durability).HasColumnName("durability");
+            _ = entity.Property(e => e.Duration).HasColumnName("duration");
+            _ = entity.Property(e => e.Enchantments)
                 .HasColumnType("text")
                 .HasColumnName("enchantments");
-            entity.Property(e => e.Flags)
+            _ = entity.Property(e => e.Flags)
                 .HasDefaultValueSql("'0'")
                 .HasColumnType("mediumint unsigned")
                 .HasColumnName("flags");
-            entity.Property(e => e.GiftCreatorGuid).HasColumnName("giftCreatorGuid");
-            entity.Property(e => e.ItemEntry)
+            _ = entity.Property(e => e.GiftCreatorGuid).HasColumnName("giftCreatorGuid");
+            _ = entity.Property(e => e.ItemEntry)
                 .HasDefaultValueSql("'0'")
                 .HasColumnType("mediumint unsigned")
                 .HasColumnName("itemEntry");
-            entity.Property(e => e.OwnerGuid).HasColumnName("owner_guid");
-            entity.Property(e => e.PlayedTime).HasColumnName("playedTime");
-            entity.Property(e => e.RandomPropertyId).HasColumnName("randomPropertyId");
-            entity.Property(e => e.Text)
+            _ = entity.Property(e => e.OwnerGuid).HasColumnName("owner_guid");
+            _ = entity.Property(e => e.PlayedTime).HasColumnName("playedTime");
+            _ = entity.Property(e => e.RandomPropertyId).HasColumnName("randomPropertyId");
+            _ = entity.Property(e => e.Text)
                 .HasColumnType("text")
                 .HasColumnName("text");
         });
 
-        modelBuilder.Entity<ItemLootItem>(entity =>
+        _ = modelBuilder.Entity<ItemLootItem>(entity =>
         {
-            entity
+            _ = entity
                 .HasNoKey()
                 .ToTable("item_loot_items")
                 .UseCollation("utf8mb4_unicode_ci");
 
-            entity.Property(e => e.Blocked).HasColumnName("blocked");
-            entity.Property(e => e.ContainerId)
+            _ = entity.Property(e => e.Blocked).HasColumnName("blocked");
+            _ = entity.Property(e => e.ContainerId)
                 .HasComment("guid of container (item_instance.guid)")
                 .HasColumnName("container_id");
-            entity.Property(e => e.Counted).HasColumnName("counted");
-            entity.Property(e => e.Ffa)
+            _ = entity.Property(e => e.Counted).HasColumnName("counted");
+            _ = entity.Property(e => e.Ffa)
                 .HasComment("free-for-all")
                 .HasColumnName("ffa");
-            entity.Property(e => e.FollowRules)
+            _ = entity.Property(e => e.FollowRules)
                 .HasComment("follow loot rules")
                 .HasColumnName("follow_rules");
-            entity.Property(e => e.ItemCount)
+            _ = entity.Property(e => e.ItemCount)
                 .HasComment("stack size")
                 .HasColumnName("item_count");
-            entity.Property(e => e.ItemId)
+            _ = entity.Property(e => e.ItemId)
                 .HasComment("loot item entry (item_instance.itemEntry)")
                 .HasColumnName("item_id");
-            entity.Property(e => e.ItemIndex).HasColumnName("item_index");
-            entity.Property(e => e.NeedsQuest)
+            _ = entity.Property(e => e.ItemIndex).HasColumnName("item_index");
+            _ = entity.Property(e => e.NeedsQuest)
                 .HasComment("quest drop")
                 .HasColumnName("needs_quest");
-            entity.Property(e => e.RndProp)
+            _ = entity.Property(e => e.RndProp)
                 .HasComment("random enchantment added when originally rolled")
                 .HasColumnName("rnd_prop");
-            entity.Property(e => e.RndSuffix)
+            _ = entity.Property(e => e.RndSuffix)
                 .HasComment("random suffix added when originally rolled")
                 .HasColumnName("rnd_suffix");
-            entity.Property(e => e.UnderThreshold).HasColumnName("under_threshold");
+            _ = entity.Property(e => e.UnderThreshold).HasColumnName("under_threshold");
         });
 
-        modelBuilder.Entity<ItemLootMoney>(entity =>
+        _ = modelBuilder.Entity<ItemLootMoney>(entity =>
         {
-            entity.HasKey(e => e.ContainerId).HasName("PRIMARY");
+            _ = entity.HasKey(e => e.ContainerId).HasName("PRIMARY");
 
-            entity
+            _ = entity
                 .ToTable("item_loot_money")
                 .UseCollation("utf8mb4_unicode_ci");
 
-            entity.Property(e => e.ContainerId)
+            _ = entity.Property(e => e.ContainerId)
                 .ValueGeneratedNever()
                 .HasComment("guid of container (item_instance.guid)")
                 .HasColumnName("container_id");
-            entity.Property(e => e.Money)
+            _ = entity.Property(e => e.Money)
                 .HasComment("money loot (in copper)")
                 .HasColumnName("money");
         });
 
-        modelBuilder.Entity<ItemRefundInstance>(entity =>
+        _ = modelBuilder.Entity<ItemRefundInstance>(entity =>
         {
-            entity.HasKey(e => new { e.ItemGuid, e.PlayerGuid })
+            _ = entity.HasKey(e => new { e.ItemGuid, e.PlayerGuid })
                 .HasName("PRIMARY")
                 .HasAnnotation("MySql:IndexPrefixLength", new[] { 0, 0 });
 
-            entity
+            _ = entity
                 .ToTable("item_refund_instance", tb => tb.HasComment("Item Refund System"))
                 .UseCollation("utf8mb4_unicode_ci");
 
-            entity.Property(e => e.ItemGuid)
+            _ = entity.Property(e => e.ItemGuid)
                 .HasComment("Item GUID")
                 .HasColumnName("item_guid");
-            entity.Property(e => e.PlayerGuid)
+            _ = entity.Property(e => e.PlayerGuid)
                 .HasComment("Player GUID")
                 .HasColumnName("player_guid");
-            entity.Property(e => e.PaidExtendedCost).HasColumnName("paidExtendedCost");
-            entity.Property(e => e.PaidMoney).HasColumnName("paidMoney");
+            _ = entity.Property(e => e.PaidExtendedCost).HasColumnName("paidExtendedCost");
+            _ = entity.Property(e => e.PaidMoney).HasColumnName("paidMoney");
         });
 
-        modelBuilder.Entity<ItemSoulboundTradeDatum>(entity =>
+        _ = modelBuilder.Entity<ItemSoulboundTradeDatum>(entity =>
         {
-            entity.HasKey(e => e.ItemGuid).HasName("PRIMARY");
+            _ = entity.HasKey(e => e.ItemGuid).HasName("PRIMARY");
 
-            entity
+            _ = entity
                 .ToTable("item_soulbound_trade_data", tb => tb.HasComment("Item Refund System"))
                 .UseCollation("utf8mb4_unicode_ci");
 
-            entity.Property(e => e.ItemGuid)
+            _ = entity.Property(e => e.ItemGuid)
                 .ValueGeneratedNever()
                 .HasComment("Item GUID")
                 .HasColumnName("itemGuid");
-            entity.Property(e => e.AllowedPlayers)
+            _ = entity.Property(e => e.AllowedPlayers)
                 .HasComment("Space separated GUID list of players who can receive this item in trade")
                 .HasColumnType("text")
                 .HasColumnName("allowedPlayers");
         });
 
-        modelBuilder.Entity<LagReport>(entity =>
+        _ = modelBuilder.Entity<LagReport>(entity =>
         {
-            entity.HasKey(e => e.ReportId).HasName("PRIMARY");
+            _ = entity.HasKey(e => e.ReportId).HasName("PRIMARY");
 
-            entity
+            _ = entity
                 .ToTable("lag_reports", tb => tb.HasComment("Player System"))
                 .UseCollation("utf8mb4_unicode_ci");
 
-            entity.Property(e => e.ReportId).HasColumnName("reportId");
-            entity.Property(e => e.CreateTime).HasColumnName("createTime");
-            entity.Property(e => e.Guid).HasColumnName("guid");
-            entity.Property(e => e.LagType).HasColumnName("lagType");
-            entity.Property(e => e.Latency).HasColumnName("latency");
-            entity.Property(e => e.MapId).HasColumnName("mapId");
-            entity.Property(e => e.PosX).HasColumnName("posX");
-            entity.Property(e => e.PosY).HasColumnName("posY");
-            entity.Property(e => e.PosZ).HasColumnName("posZ");
+            _ = entity.Property(e => e.ReportId).HasColumnName("reportId");
+            _ = entity.Property(e => e.CreateTime).HasColumnName("createTime");
+            _ = entity.Property(e => e.Guid).HasColumnName("guid");
+            _ = entity.Property(e => e.LagType).HasColumnName("lagType");
+            _ = entity.Property(e => e.Latency).HasColumnName("latency");
+            _ = entity.Property(e => e.MapId).HasColumnName("mapId");
+            _ = entity.Property(e => e.PosX).HasColumnName("posX");
+            _ = entity.Property(e => e.PosY).HasColumnName("posY");
+            _ = entity.Property(e => e.PosZ).HasColumnName("posZ");
         });
 
-        modelBuilder.Entity<LfgDatum>(entity =>
+        _ = modelBuilder.Entity<LfgDatum>(entity =>
         {
-            entity.HasKey(e => e.Guid).HasName("PRIMARY");
+            _ = entity.HasKey(e => e.Guid).HasName("PRIMARY");
 
-            entity
+            _ = entity
                 .ToTable("lfg_data", tb => tb.HasComment("LFG Data"))
                 .UseCollation("utf8mb4_unicode_ci");
 
-            entity.Property(e => e.Guid)
+            _ = entity.Property(e => e.Guid)
                 .ValueGeneratedNever()
                 .HasComment("Global Unique Identifier")
                 .HasColumnName("guid");
-            entity.Property(e => e.Dungeon).HasColumnName("dungeon");
-            entity.Property(e => e.State).HasColumnName("state");
+            _ = entity.Property(e => e.Dungeon).HasColumnName("dungeon");
+            _ = entity.Property(e => e.State).HasColumnName("state");
         });
 
-        modelBuilder.Entity<Mail>(entity =>
+        _ = modelBuilder.Entity<Mail>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PRIMARY");
+            _ = entity.HasKey(e => e.Id).HasName("PRIMARY");
 
-            entity
+            _ = entity
                 .ToTable("mail", tb => tb.HasComment("Mail System"))
                 .UseCollation("utf8mb4_unicode_ci");
 
-            entity.HasIndex(e => e.Receiver, "idx_receiver");
+            _ = entity.HasIndex(e => e.Receiver, "idx_receiver");
 
-            entity.Property(e => e.Id)
+            _ = entity.Property(e => e.Id)
                 .ValueGeneratedNever()
                 .HasComment("Identifier")
                 .HasColumnName("id");
-            entity.Property(e => e.Body).HasColumnName("body");
-            entity.Property(e => e.Checked).HasColumnName("checked");
-            entity.Property(e => e.Cod).HasColumnName("cod");
-            entity.Property(e => e.DeliverTime).HasColumnName("deliver_time");
-            entity.Property(e => e.ExpireTime).HasColumnName("expire_time");
-            entity.Property(e => e.HasItems).HasColumnName("has_items");
-            entity.Property(e => e.MailTemplateId).HasColumnName("mailTemplateId");
-            entity.Property(e => e.MessageType).HasColumnName("messageType");
-            entity.Property(e => e.Money).HasColumnName("money");
-            entity.Property(e => e.Receiver)
+            _ = entity.Property(e => e.Body).HasColumnName("body");
+            _ = entity.Property(e => e.Checked).HasColumnName("checked");
+            _ = entity.Property(e => e.Cod).HasColumnName("cod");
+            _ = entity.Property(e => e.DeliverTime).HasColumnName("deliver_time");
+            _ = entity.Property(e => e.ExpireTime).HasColumnName("expire_time");
+            _ = entity.Property(e => e.HasItems).HasColumnName("has_items");
+            _ = entity.Property(e => e.MailTemplateId).HasColumnName("mailTemplateId");
+            _ = entity.Property(e => e.MessageType).HasColumnName("messageType");
+            _ = entity.Property(e => e.Money).HasColumnName("money");
+            _ = entity.Property(e => e.Receiver)
                 .HasComment("Character Global Unique Identifier")
                 .HasColumnName("receiver");
-            entity.Property(e => e.Sender)
+            _ = entity.Property(e => e.Sender)
                 .HasComment("Character Global Unique Identifier")
                 .HasColumnName("sender");
-            entity.Property(e => e.Stationery)
+            _ = entity.Property(e => e.Stationery)
                 .HasDefaultValueSql("'41'")
                 .HasColumnName("stationery");
-            entity.Property(e => e.Subject).HasColumnName("subject");
+            _ = entity.Property(e => e.Subject).HasColumnName("subject");
         });
 
-        modelBuilder.Entity<MailItem>(entity =>
+        _ = modelBuilder.Entity<MailItem>(entity =>
         {
-            entity.HasKey(e => e.ItemGuid).HasName("PRIMARY");
+            _ = entity.HasKey(e => e.ItemGuid).HasName("PRIMARY");
 
-            entity
+            _ = entity
                 .ToTable("mail_items")
                 .UseCollation("utf8mb4_unicode_ci");
 
-            entity.HasIndex(e => e.MailId, "idx_mail_id");
+            _ = entity.HasIndex(e => e.MailId, "idx_mail_id");
 
-            entity.HasIndex(e => e.Receiver, "idx_receiver");
+            _ = entity.HasIndex(e => e.Receiver, "idx_receiver");
 
-            entity.Property(e => e.ItemGuid)
+            _ = entity.Property(e => e.ItemGuid)
                 .ValueGeneratedNever()
                 .HasColumnName("item_guid");
-            entity.Property(e => e.MailId).HasColumnName("mail_id");
-            entity.Property(e => e.Receiver)
+            _ = entity.Property(e => e.MailId).HasColumnName("mail_id");
+            _ = entity.Property(e => e.Receiver)
                 .HasComment("Character Global Unique Identifier")
                 .HasColumnName("receiver");
         });
 
-        modelBuilder.Entity<PetAura>(entity =>
+        _ = modelBuilder.Entity<PetAura>(entity =>
         {
-            entity.HasKey(e => new { e.Guid, e.CasterGuid, e.Spell, e.EffectMask })
+            _ = entity.HasKey(e => new { e.Guid, e.CasterGuid, e.Spell, e.EffectMask })
                 .HasName("PRIMARY")
                 .HasAnnotation("MySql:IndexPrefixLength", new[] { 0, 0, 0, 0 });
 
-            entity
+            _ = entity
                 .ToTable("pet_aura", tb => tb.HasComment("Pet System"))
                 .UseCollation("utf8mb4_unicode_ci");
 
-            entity.Property(e => e.Guid)
+            _ = entity.Property(e => e.Guid)
                 .HasComment("Global Unique Identifier")
                 .HasColumnName("guid");
-            entity.Property(e => e.CasterGuid)
+            _ = entity.Property(e => e.CasterGuid)
                 .HasComment("Full Global Unique Identifier")
                 .HasColumnName("casterGuid");
-            entity.Property(e => e.Spell)
+            _ = entity.Property(e => e.Spell)
                 .HasDefaultValueSql("'0'")
                 .HasColumnType("mediumint unsigned")
                 .HasColumnName("spell");
-            entity.Property(e => e.EffectMask).HasColumnName("effectMask");
-            entity.Property(e => e.Amount0)
+            _ = entity.Property(e => e.EffectMask).HasColumnName("effectMask");
+            _ = entity.Property(e => e.Amount0)
                 .HasColumnType("mediumint")
                 .HasColumnName("amount0");
-            entity.Property(e => e.Amount1)
+            _ = entity.Property(e => e.Amount1)
                 .HasColumnType("mediumint")
                 .HasColumnName("amount1");
-            entity.Property(e => e.Amount2)
+            _ = entity.Property(e => e.Amount2)
                 .HasColumnType("mediumint")
                 .HasColumnName("amount2");
-            entity.Property(e => e.ApplyResilience).HasColumnName("applyResilience");
-            entity.Property(e => e.BaseAmount0)
+            _ = entity.Property(e => e.ApplyResilience).HasColumnName("applyResilience");
+            _ = entity.Property(e => e.BaseAmount0)
                 .HasColumnType("mediumint")
                 .HasColumnName("base_amount0");
-            entity.Property(e => e.BaseAmount1)
+            _ = entity.Property(e => e.BaseAmount1)
                 .HasColumnType("mediumint")
                 .HasColumnName("base_amount1");
-            entity.Property(e => e.BaseAmount2)
+            _ = entity.Property(e => e.BaseAmount2)
                 .HasColumnType("mediumint")
                 .HasColumnName("base_amount2");
-            entity.Property(e => e.CritChance).HasColumnName("critChance");
-            entity.Property(e => e.MaxDuration).HasColumnName("maxDuration");
-            entity.Property(e => e.RecalculateMask).HasColumnName("recalculateMask");
-            entity.Property(e => e.RemainCharges).HasColumnName("remainCharges");
-            entity.Property(e => e.RemainTime).HasColumnName("remainTime");
-            entity.Property(e => e.StackCount)
+            _ = entity.Property(e => e.CritChance).HasColumnName("critChance");
+            _ = entity.Property(e => e.MaxDuration).HasColumnName("maxDuration");
+            _ = entity.Property(e => e.RecalculateMask).HasColumnName("recalculateMask");
+            _ = entity.Property(e => e.RemainCharges).HasColumnName("remainCharges");
+            _ = entity.Property(e => e.RemainTime).HasColumnName("remainTime");
+            _ = entity.Property(e => e.StackCount)
                 .HasDefaultValueSql("'1'")
                 .HasColumnName("stackCount");
         });
 
-        modelBuilder.Entity<PetSpell>(entity =>
+        _ = modelBuilder.Entity<PetSpell>(entity =>
         {
-            entity.HasKey(e => new { e.Guid, e.Spell })
+            _ = entity.HasKey(e => new { e.Guid, e.Spell })
                 .HasName("PRIMARY")
                 .HasAnnotation("MySql:IndexPrefixLength", new[] { 0, 0 });
 
-            entity
+            _ = entity
                 .ToTable("pet_spell", tb => tb.HasComment("Pet System"))
                 .UseCollation("utf8mb4_unicode_ci");
 
-            entity.Property(e => e.Guid)
+            _ = entity.Property(e => e.Guid)
                 .HasComment("Global Unique Identifier")
                 .HasColumnName("guid");
-            entity.Property(e => e.Spell)
+            _ = entity.Property(e => e.Spell)
                 .HasDefaultValueSql("'0'")
                 .HasComment("Spell Identifier")
                 .HasColumnType("mediumint unsigned")
                 .HasColumnName("spell");
-            entity.Property(e => e.Active).HasColumnName("active");
+            _ = entity.Property(e => e.Active).HasColumnName("active");
         });
 
-        modelBuilder.Entity<PetSpellCooldown>(entity =>
+        _ = modelBuilder.Entity<PetSpellCooldown>(entity =>
         {
-            entity.HasKey(e => new { e.Guid, e.Spell })
+            _ = entity.HasKey(e => new { e.Guid, e.Spell })
                 .HasName("PRIMARY")
                 .HasAnnotation("MySql:IndexPrefixLength", new[] { 0, 0 });
 
-            entity
+            _ = entity
                 .ToTable("pet_spell_cooldown")
                 .UseCollation("utf8mb4_unicode_ci");
 
-            entity.Property(e => e.Guid)
+            _ = entity.Property(e => e.Guid)
                 .HasComment("Global Unique Identifier, Low part")
                 .HasColumnName("guid");
-            entity.Property(e => e.Spell)
+            _ = entity.Property(e => e.Spell)
                 .HasDefaultValueSql("'0'")
                 .HasComment("Spell Identifier")
                 .HasColumnType("mediumint unsigned")
                 .HasColumnName("spell");
-            entity.Property(e => e.CategoryEnd).HasColumnName("categoryEnd");
-            entity.Property(e => e.CategoryId)
+            _ = entity.Property(e => e.CategoryEnd).HasColumnName("categoryEnd");
+            _ = entity.Property(e => e.CategoryId)
                 .HasComment("Spell category Id")
                 .HasColumnName("categoryId");
-            entity.Property(e => e.Time).HasColumnName("time");
+            _ = entity.Property(e => e.Time).HasColumnName("time");
         });
 
-        modelBuilder.Entity<Petition>(entity =>
+        _ = modelBuilder.Entity<Petition>(entity =>
         {
-            entity.HasKey(e => new { e.Ownerguid, e.Type })
+            _ = entity.HasKey(e => new { e.Ownerguid, e.Type })
                 .HasName("PRIMARY")
                 .HasAnnotation("MySql:IndexPrefixLength", new[] { 0, 0 });
 
-            entity
+            _ = entity
                 .ToTable("petition", tb => tb.HasComment("Guild System"))
                 .UseCollation("utf8mb4_unicode_ci");
 
-            entity.HasIndex(e => new { e.Ownerguid, e.Petitionguid }, "index_ownerguid_petitionguid").IsUnique();
+            _ = entity.HasIndex(e => new { e.Ownerguid, e.Petitionguid }, "index_ownerguid_petitionguid").IsUnique();
 
-            entity.Property(e => e.Ownerguid).HasColumnName("ownerguid");
-            entity.Property(e => e.Type).HasColumnName("type");
-            entity.Property(e => e.Name)
+            _ = entity.Property(e => e.Ownerguid).HasColumnName("ownerguid");
+            _ = entity.Property(e => e.Type).HasColumnName("type");
+            _ = entity.Property(e => e.Name)
                 .HasMaxLength(24)
                 .HasColumnName("name");
-            entity.Property(e => e.Petitionguid)
+            _ = entity.Property(e => e.Petitionguid)
                 .HasDefaultValueSql("'0'")
                 .HasColumnName("petitionguid");
         });
 
-        modelBuilder.Entity<PetitionSign>(entity =>
+        _ = modelBuilder.Entity<PetitionSign>(entity =>
         {
-            entity.HasKey(e => new { e.Petitionguid, e.Playerguid })
+            _ = entity.HasKey(e => new { e.Petitionguid, e.Playerguid })
                 .HasName("PRIMARY")
                 .HasAnnotation("MySql:IndexPrefixLength", new[] { 0, 0 });
 
-            entity
+            _ = entity
                 .ToTable("petition_sign", tb => tb.HasComment("Guild System"))
                 .UseCollation("utf8mb4_unicode_ci");
 
-            entity.HasIndex(e => e.Ownerguid, "Idx_ownerguid");
+            _ = entity.HasIndex(e => e.Ownerguid, "Idx_ownerguid");
 
-            entity.HasIndex(e => e.Playerguid, "Idx_playerguid");
+            _ = entity.HasIndex(e => e.Playerguid, "Idx_playerguid");
 
-            entity.Property(e => e.Petitionguid).HasColumnName("petitionguid");
-            entity.Property(e => e.Playerguid).HasColumnName("playerguid");
-            entity.Property(e => e.Ownerguid).HasColumnName("ownerguid");
-            entity.Property(e => e.PlayerAccount).HasColumnName("player_account");
-            entity.Property(e => e.Type).HasColumnName("type");
+            _ = entity.Property(e => e.Petitionguid).HasColumnName("petitionguid");
+            _ = entity.Property(e => e.Playerguid).HasColumnName("playerguid");
+            _ = entity.Property(e => e.Ownerguid).HasColumnName("ownerguid");
+            _ = entity.Property(e => e.PlayerAccount).HasColumnName("player_account");
+            _ = entity.Property(e => e.Type).HasColumnName("type");
         });
 
-        modelBuilder.Entity<PoolQuestSave>(entity =>
+        _ = modelBuilder.Entity<PoolQuestSave>(entity =>
         {
-            entity.HasKey(e => new { e.PoolId, e.QuestId })
+            _ = entity.HasKey(e => new { e.PoolId, e.QuestId })
                 .HasName("PRIMARY")
                 .HasAnnotation("MySql:IndexPrefixLength", new[] { 0, 0 });
 
-            entity
+            _ = entity
                 .ToTable("pool_quest_save")
                 .UseCollation("utf8mb4_unicode_ci");
 
-            entity.Property(e => e.PoolId).HasColumnName("pool_id");
-            entity.Property(e => e.QuestId).HasColumnName("quest_id");
+            _ = entity.Property(e => e.PoolId).HasColumnName("pool_id");
+            _ = entity.Property(e => e.QuestId).HasColumnName("quest_id");
         });
 
-        modelBuilder.Entity<PvpstatsBattleground>(entity =>
+        _ = modelBuilder.Entity<PvpstatsBattleground>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PRIMARY");
+            _ = entity.HasKey(e => e.Id).HasName("PRIMARY");
 
-            entity
+            _ = entity
                 .ToTable("pvpstats_battlegrounds")
                 .UseCollation("utf8mb4_unicode_ci");
 
-            entity.Property(e => e.Id).HasColumnName("id");
-            entity.Property(e => e.BracketId).HasColumnName("bracket_id");
-            entity.Property(e => e.Date)
+            _ = entity.Property(e => e.Id).HasColumnName("id");
+            _ = entity.Property(e => e.BracketId).HasColumnName("bracket_id");
+            _ = entity.Property(e => e.Date)
                 .HasColumnType("datetime")
                 .HasColumnName("date");
-            entity.Property(e => e.Type).HasColumnName("type");
-            entity.Property(e => e.WinnerFaction).HasColumnName("winner_faction");
+            _ = entity.Property(e => e.Type).HasColumnName("type");
+            _ = entity.Property(e => e.WinnerFaction).HasColumnName("winner_faction");
         });
 
-        modelBuilder.Entity<PvpstatsPlayer>(entity =>
+        _ = modelBuilder.Entity<PvpstatsPlayer>(entity =>
         {
-            entity.HasKey(e => new { e.BattlegroundId, e.CharacterGuid })
+            _ = entity.HasKey(e => new { e.BattlegroundId, e.CharacterGuid })
                 .HasName("PRIMARY")
                 .HasAnnotation("MySql:IndexPrefixLength", new[] { 0, 0 });
 
-            entity
+            _ = entity
                 .ToTable("pvpstats_players")
                 .UseCollation("utf8mb4_unicode_ci");
 
-            entity.Property(e => e.BattlegroundId).HasColumnName("battleground_id");
-            entity.Property(e => e.CharacterGuid).HasColumnName("character_guid");
-            entity.Property(e => e.Attr1)
+            _ = entity.Property(e => e.BattlegroundId).HasColumnName("battleground_id");
+            _ = entity.Property(e => e.CharacterGuid).HasColumnName("character_guid");
+            _ = entity.Property(e => e.Attr1)
                 .HasDefaultValueSql("'0'")
                 .HasColumnType("mediumint unsigned")
                 .HasColumnName("attr_1");
-            entity.Property(e => e.Attr2)
+            _ = entity.Property(e => e.Attr2)
                 .HasDefaultValueSql("'0'")
                 .HasColumnType("mediumint unsigned")
                 .HasColumnName("attr_2");
-            entity.Property(e => e.Attr3)
+            _ = entity.Property(e => e.Attr3)
                 .HasDefaultValueSql("'0'")
                 .HasColumnType("mediumint unsigned")
                 .HasColumnName("attr_3");
-            entity.Property(e => e.Attr4)
+            _ = entity.Property(e => e.Attr4)
                 .HasDefaultValueSql("'0'")
                 .HasColumnType("mediumint unsigned")
                 .HasColumnName("attr_4");
-            entity.Property(e => e.Attr5)
+            _ = entity.Property(e => e.Attr5)
                 .HasDefaultValueSql("'0'")
                 .HasColumnType("mediumint unsigned")
                 .HasColumnName("attr_5");
-            entity.Property(e => e.ScoreBonusHonor)
+            _ = entity.Property(e => e.ScoreBonusHonor)
                 .HasColumnType("mediumint unsigned")
                 .HasColumnName("score_bonus_honor");
-            entity.Property(e => e.ScoreDamageDone)
+            _ = entity.Property(e => e.ScoreDamageDone)
                 .HasColumnType("mediumint unsigned")
                 .HasColumnName("score_damage_done");
-            entity.Property(e => e.ScoreDeaths)
+            _ = entity.Property(e => e.ScoreDeaths)
                 .HasColumnType("mediumint unsigned")
                 .HasColumnName("score_deaths");
-            entity.Property(e => e.ScoreHealingDone)
+            _ = entity.Property(e => e.ScoreHealingDone)
                 .HasColumnType("mediumint unsigned")
                 .HasColumnName("score_healing_done");
-            entity.Property(e => e.ScoreHonorableKills)
+            _ = entity.Property(e => e.ScoreHonorableKills)
                 .HasColumnType("mediumint unsigned")
                 .HasColumnName("score_honorable_kills");
-            entity.Property(e => e.ScoreKillingBlows)
+            _ = entity.Property(e => e.ScoreKillingBlows)
                 .HasColumnType("mediumint unsigned")
                 .HasColumnName("score_killing_blows");
-            entity.Property(e => e.Winner)
+            _ = entity.Property(e => e.Winner)
                 .HasColumnType("bit(1)")
                 .HasColumnName("winner");
         });
 
-        modelBuilder.Entity<QuestTracker>(entity =>
+        _ = modelBuilder.Entity<QuestTracker>(entity =>
         {
-            entity
+            _ = entity
                 .HasNoKey()
                 .ToTable("quest_tracker")
                 .UseCollation("utf8mb4_unicode_ci");
 
-            entity.Property(e => e.CharacterGuid).HasColumnName("character_guid");
-            entity.Property(e => e.CompletedByGm).HasColumnName("completed_by_gm");
-            entity.Property(e => e.CoreHash)
+            _ = entity.Property(e => e.CharacterGuid).HasColumnName("character_guid");
+            _ = entity.Property(e => e.CompletedByGm).HasColumnName("completed_by_gm");
+            _ = entity.Property(e => e.CoreHash)
                 .HasMaxLength(120)
                 .HasDefaultValueSql("'0'")
                 .HasColumnName("core_hash");
-            entity.Property(e => e.CoreRevision)
+            _ = entity.Property(e => e.CoreRevision)
                 .HasMaxLength(120)
                 .HasDefaultValueSql("'0'")
                 .HasColumnName("core_revision");
-            entity.Property(e => e.Id)
+            _ = entity.Property(e => e.Id)
                 .HasDefaultValueSql("'0'")
                 .HasColumnType("mediumint unsigned")
                 .HasColumnName("id");
-            entity.Property(e => e.QuestAbandonTime)
+            _ = entity.Property(e => e.QuestAbandonTime)
                 .HasColumnType("datetime")
                 .HasColumnName("quest_abandon_time");
-            entity.Property(e => e.QuestAcceptTime)
+            _ = entity.Property(e => e.QuestAcceptTime)
                 .HasColumnType("datetime")
                 .HasColumnName("quest_accept_time");
-            entity.Property(e => e.QuestCompleteTime)
+            _ = entity.Property(e => e.QuestCompleteTime)
                 .HasColumnType("datetime")
                 .HasColumnName("quest_complete_time");
         });
 
-        modelBuilder.Entity<ReservedName>(entity =>
+        _ = modelBuilder.Entity<ReservedName>(entity =>
         {
-            entity.HasKey(e => e.Name).HasName("PRIMARY");
+            _ = entity.HasKey(e => e.Name).HasName("PRIMARY");
 
-            entity
+            _ = entity
                 .ToTable("reserved_name", tb => tb.HasComment("Player Reserved Names"))
                 .UseCollation("utf8mb4_unicode_ci");
 
-            entity.Property(e => e.Name)
+            _ = entity.Property(e => e.Name)
                 .HasMaxLength(12)
                 .HasDefaultValueSql("''")
                 .HasColumnName("name");
         });
 
-        modelBuilder.Entity<Respawn>(entity =>
+        _ = modelBuilder.Entity<Respawn>(entity =>
         {
-            entity.HasKey(e => new { e.Type, e.SpawnId, e.InstanceId })
+            _ = entity.HasKey(e => new { e.Type, e.SpawnId, e.InstanceId })
                 .HasName("PRIMARY")
                 .HasAnnotation("MySql:IndexPrefixLength", new[] { 0, 0, 0 });
 
-            entity
+            _ = entity
                 .ToTable("respawn", tb => tb.HasComment("Stored respawn times"))
                 .UseCollation("utf8mb4_unicode_ci");
 
-            entity.HasIndex(e => e.InstanceId, "idx_instance");
+            _ = entity.HasIndex(e => e.InstanceId, "idx_instance");
 
-            entity.Property(e => e.Type).HasColumnName("type");
-            entity.Property(e => e.SpawnId).HasColumnName("spawnId");
-            entity.Property(e => e.InstanceId).HasColumnName("instanceId");
-            entity.Property(e => e.MapId).HasColumnName("mapId");
-            entity.Property(e => e.RespawnTime).HasColumnName("respawnTime");
+            _ = entity.Property(e => e.Type).HasColumnName("type");
+            _ = entity.Property(e => e.SpawnId).HasColumnName("spawnId");
+            _ = entity.Property(e => e.InstanceId).HasColumnName("instanceId");
+            _ = entity.Property(e => e.MapId).HasColumnName("mapId");
+            _ = entity.Property(e => e.RespawnTime).HasColumnName("respawnTime");
         });
 
-        modelBuilder.Entity<Update>(entity =>
+        _ = modelBuilder.Entity<Update>(entity =>
         {
-            entity.HasKey(e => e.Name).HasName("PRIMARY");
+            _ = entity.HasKey(e => e.Name).HasName("PRIMARY");
 
-            entity
+            _ = entity
                 .ToTable("updates", tb => tb.HasComment("List of all applied updates in this database."))
                 .UseCollation("utf8mb4_unicode_ci");
 
-            entity.Property(e => e.Name)
+            _ = entity.Property(e => e.Name)
                 .HasMaxLength(200)
                 .HasComment("filename with extension of the update.")
                 .HasColumnName("name");
-            entity.Property(e => e.Hash)
+            _ = entity.Property(e => e.Hash)
                 .HasMaxLength(40)
                 .HasDefaultValueSql("''")
                 .IsFixedLength()
                 .HasComment("sha1 hash of the sql file.")
                 .HasColumnName("hash");
-            entity.Property(e => e.Speed)
+            _ = entity.Property(e => e.Speed)
                 .HasComment("time the query takes to apply in ms.")
                 .HasColumnName("speed");
-            entity.Property(e => e.State)
+            _ = entity.Property(e => e.State)
                 .HasDefaultValueSql("'RELEASED'")
                 .HasComment("defines if an update is released or archived.")
                 .HasColumnType("enum('RELEASED','ARCHIVED')")
                 .HasColumnName("state");
-            entity.Property(e => e.Timestamp)
+            _ = entity.Property(e => e.Timestamp)
                 .HasDefaultValueSql("CURRENT_TIMESTAMP")
                 .HasComment("timestamp when the query was applied.")
                 .HasColumnType("timestamp")
                 .HasColumnName("timestamp");
         });
 
-        modelBuilder.Entity<UpdatesInclude>(entity =>
+        _ = modelBuilder.Entity<UpdatesInclude>(entity =>
         {
-            entity.HasKey(e => e.Path).HasName("PRIMARY");
+            _ = entity.HasKey(e => e.Path).HasName("PRIMARY");
 
-            entity
+            _ = entity
                 .ToTable("updates_include", tb => tb.HasComment("List of directories where we want to include sql updates."))
                 .UseCollation("utf8mb4_unicode_ci");
 
-            entity.Property(e => e.Path)
+            _ = entity.Property(e => e.Path)
                 .HasMaxLength(200)
                 .HasComment("directory to include. $ means relative to the source directory.")
                 .HasColumnName("path");
-            entity.Property(e => e.State)
+            _ = entity.Property(e => e.State)
                 .HasDefaultValueSql("'RELEASED'")
                 .HasComment("defines if the directory contains released or archived updates.")
                 .HasColumnType("enum('RELEASED','ARCHIVED')")
                 .HasColumnName("state");
         });
 
-        modelBuilder.Entity<WardenAction>(entity =>
+        _ = modelBuilder.Entity<WardenAction>(entity =>
         {
-            entity.HasKey(e => e.WardenId).HasName("PRIMARY");
+            _ = entity.HasKey(e => e.WardenId).HasName("PRIMARY");
 
-            entity
+            _ = entity
                 .ToTable("warden_action")
                 .UseCollation("utf8mb4_unicode_ci");
 
-            entity.Property(e => e.WardenId)
+            _ = entity.Property(e => e.WardenId)
                 .ValueGeneratedNever()
                 .HasColumnName("wardenId");
-            entity.Property(e => e.Action).HasColumnName("action");
+            _ = entity.Property(e => e.Action).HasColumnName("action");
         });
 
-        modelBuilder.Entity<Worldstate>(entity =>
+        _ = modelBuilder.Entity<Worldstate>(entity =>
         {
-            entity.HasKey(e => e.Entry).HasName("PRIMARY");
+            _ = entity.HasKey(e => e.Entry).HasName("PRIMARY");
 
-            entity
+            _ = entity
                 .ToTable("worldstates", tb => tb.HasComment("Variable Saves"))
                 .UseCollation("utf8mb4_unicode_ci");
 
-            entity.Property(e => e.Entry)
+            _ = entity.Property(e => e.Entry)
                 .ValueGeneratedNever()
                 .HasColumnName("entry");
-            entity.Property(e => e.Comment)
+            _ = entity.Property(e => e.Comment)
                 .HasColumnType("tinytext")
                 .HasColumnName("comment");
-            entity.Property(e => e.Value).HasColumnName("value");
+            _ = entity.Property(e => e.Value).HasColumnName("value");
         });
 
         OnModelCreatingPartial(modelBuilder);

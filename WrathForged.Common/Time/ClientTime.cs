@@ -30,7 +30,7 @@ namespace WrathForged.Common.Time
         public void SendTimeSync()
         {
             _clientSession.Network.Send(new TimeSyncRequest() { TimeSyncCounter = _nextTimeSyncCounter });
-            _pendingTimeSyncRequests.TryAdd(_nextTimeSyncCounter, TimeUtil.GetMillisecondsSinceStartup());
+            _ = _pendingTimeSyncRequests.TryAdd(_nextTimeSyncCounter, TimeUtil.GetMillisecondsSinceStartup());
             _timeSyncTimer = _nextTimeSyncCounter == 0u ? 5000u : 10000u;
             _nextTimeSyncCounter++;
         }
@@ -39,7 +39,7 @@ namespace WrathForged.Common.Time
         {
             ClientTimestamp = clientTimestamp;
 
-            if (_pendingTimeSyncRequests.TryRemove(timeSyncCounter, out uint timeSyncRequestTime))
+            if (_pendingTimeSyncRequests.TryRemove(timeSyncCounter, out var timeSyncRequestTime))
             {
                 var roundTripTime = TimeUtil.GetMillisecondsSinceStartup() - timeSyncRequestTime;
                 ClientLatency = roundTripTime / 2;
@@ -57,8 +57,8 @@ namespace WrathForged.Common.Time
                 latencies.Add(clockDelta);
             }
 
-            double latencyMedian = Statistics.Median(latencies);
-            double latencyStandardDeviation = Statistics.StandardDeviation(latencies);
+            var latencyMedian = Statistics.Median(latencies);
+            var latencyStandardDeviation = Statistics.StandardDeviation(latencies);
 
             List<double> filteredClockDeltas = [];
             foreach (var (clockDelta, roundTripTime) in _timeSyncClockDeltaQueue)
@@ -71,7 +71,7 @@ namespace WrathForged.Common.Time
 
             if (filteredClockDeltas.Count != 0)
             {
-                long meanClockDelta = (long)Math.Round(Statistics.Mean(filteredClockDeltas));
+                var meanClockDelta = (long)Math.Round(Statistics.Mean(filteredClockDeltas));
                 if (Math.Abs(meanClockDelta - TimeSyncClockDelta) > 25)
                 {
                     TimeSyncClockDelta = meanClockDelta;
@@ -95,5 +95,4 @@ namespace WrathForged.Common.Time
         }
     }
 }
-
 

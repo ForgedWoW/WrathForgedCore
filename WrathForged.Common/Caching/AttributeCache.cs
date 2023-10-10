@@ -25,46 +25,19 @@ namespace WrathForged.Common.Caching
             return attribute;
         }
 
-        public T? GetAttribute(PropertyInfo property)
-        {
-            return GetAttribute(property.PropertyType);
-        }
+        public T? GetAttribute(PropertyInfo property) => GetAttribute(property.PropertyType);
 
-        public T? GetAttribute(FieldInfo field)
-        {
-            return GetAttribute(field.FieldType);
-        }
+        public T? GetAttribute(FieldInfo field) => GetAttribute(field.FieldType);
 
-        public T? GetAttribute(MethodInfo method)
-        {
-            return GetAttribute(method.ReturnType);
-        }
+        public T? GetAttribute(MethodInfo method) => GetAttribute(method.ReturnType);
 
-        public T? GetAttribute(EventInfo evnt)
-        {
-            if (evnt.EventHandlerType == null)
-                return null;
+        public T? GetAttribute(EventInfo evnt) => evnt.EventHandlerType == null ? null : GetAttribute(evnt.EventHandlerType);
 
-            return GetAttribute(evnt.EventHandlerType);
-        }
+        public T? GetAttribute(ParameterInfo parameter) => GetAttribute(parameter.ParameterType);
 
-        public T? GetAttribute(ParameterInfo parameter)
-        {
-            return GetAttribute(parameter.ParameterType);
-        }
+        public T? GetAttribute(ConstructorInfo constructor) => constructor.DeclaringType == null ? null : GetAttribute(constructor.DeclaringType);
 
-        public T? GetAttribute(ConstructorInfo constructor)
-        {
-            if (constructor.DeclaringType == null)
-                return null;
-
-            return GetAttribute(constructor.DeclaringType);
-        }
-
-        public T? GetAttributeFromObject(object obj)
-        {
-            return GetAttribute(obj.GetType());
-        }
+        public T? GetAttributeFromObject(object obj) => GetAttribute(obj.GetType());
 
         public bool TryGetAttribute(Type type, out T attribute)
         {

@@ -33,7 +33,7 @@ namespace WrathForged.Common.Scripting
                 foreach (var updateLoop in _classFactory.LocateAll<IUpdateLoopScript>())
                     RegisterUpdateLoop(updateLoop);
 
-                Task.Run(UpdateLoop, _programExitNotifier.GetCancellationToken());
+                _ = Task.Run(UpdateLoop, _programExitNotifier.GetCancellationToken());
             }
         }
 
@@ -44,15 +44,9 @@ namespace WrathForged.Common.Scripting
         /// </summary>
         /// <param name="updateLoop"></param>
         /// <param name="priority"></param>
-        public void RegisterUpdateLoop(IUpdateLoop updateLoop, int priority = UPDATE_LOOP_PRIORITY_LOW)
-        {
-            _registerQueue.Enqueue((updateLoop, priority));
-        }
+        public void RegisterUpdateLoop(IUpdateLoop updateLoop, int priority = UPDATE_LOOP_PRIORITY_LOW) => _registerQueue.Enqueue((updateLoop, priority));
 
-        public void UnregisterUpdateLoop(IUpdateLoop updateLoop, int priority = UPDATE_LOOP_PRIORITY_LOW)
-        {
-            _unRegisterQueue.Enqueue((updateLoop, priority));
-        }
+        public void UnregisterUpdateLoop(IUpdateLoop updateLoop, int priority = UPDATE_LOOP_PRIORITY_LOW) => _unRegisterQueue.Enqueue((updateLoop, priority));
 
         private void UpdateLoop()
         {
@@ -81,7 +75,7 @@ namespace WrathForged.Common.Scripting
                 _lastTickTime = realTime;
 
                 if (tickDelayDiff < _minTickTime)
-                    Task.Delay((int)(_minTickTime - tickDelayDiff));
+                    _ = Task.Delay((int)(_minTickTime - tickDelayDiff));
             }
         }
 
@@ -95,7 +89,7 @@ namespace WrathForged.Common.Scripting
                     _updateMethods.Add(updateLoop.priority, updates);
                 }
 
-                updates.Add(updateLoop.loop);
+                _ = updates.Add(updateLoop.loop);
             }
         }
 
@@ -104,7 +98,7 @@ namespace WrathForged.Common.Scripting
             while (_unRegisterQueue.TryDequeue(out var updateLoop))
             {
                 if (_updateMethods.TryGetValue(updateLoop.priority, out var value))
-                    value.Remove(updateLoop.loop);
+                    _ = value.Remove(updateLoop.loop);
             }
         }
     }

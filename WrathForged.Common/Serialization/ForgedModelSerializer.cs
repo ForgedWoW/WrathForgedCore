@@ -170,6 +170,7 @@ public class ForgedModelSerializer
                 throw;
             }
         }
+
         _serializeTime.Record((DateTime.UtcNow - startTimestamp).TotalMilliseconds);
     }
 
@@ -338,7 +339,7 @@ public class ForgedModelSerializer
     private object? DeserializeCollection(PacketBuffer buffer, PropertyMeta prop, Dictionary<uint, int> collectionSizes)
     {
         var collectionSize = buffer.GetCollectionSize(prop, collectionSizes);
-        Type targetType = prop.ReflectedProperty.PropertyType;
+        var targetType = prop.ReflectedProperty.PropertyType;
 
         if (targetType.IsArray)
         {
@@ -351,11 +352,12 @@ public class ForgedModelSerializer
             if (elementType == typeof(byte))
                 return buffer.Reader.ReadBytes(collectionSize);
 
-            Array array = Array.CreateInstance(elementType, collectionSize);
+            var array = Array.CreateInstance(elementType, collectionSize);
             for (var i = 0; i < collectionSize; i++)
             {
                 array.SetValue(EvaluateSpecialCasting(prop, DeserializeProperty(buffer, prop, collectionSizes)), i);
             }
+
             return array;
         }
         else if (targetType.IsGenericType && targetType.GetGenericTypeDefinition() == typeof(List<>))
@@ -368,8 +370,9 @@ public class ForgedModelSerializer
 
             for (var i = 0; i < collectionSize; i++)
             {
-                list.Add(EvaluateSpecialCasting(prop, DeserializeProperty(buffer, prop, collectionSizes)));
+                _ = list.Add(EvaluateSpecialCasting(prop, DeserializeProperty(buffer, prop, collectionSizes)));
             }
+
             return list;
         }
         else if (targetType.IsGenericType && targetType.GetGenericTypeDefinition() == typeof(HashSet<>))
@@ -385,6 +388,7 @@ public class ForgedModelSerializer
             {
                 hashSet.Add(EvaluateSpecialCasting(prop, DeserializeProperty(buffer, prop, collectionSizes)));
             }
+
             return hashSet;
         }
         else
@@ -393,10 +397,9 @@ public class ForgedModelSerializer
         }
     }
 
-
     private void SerializeCollection(PrimitiveWriter writer, PropertyMeta prop, ModelInfo otherMeta, object obj)
     {
-        int i = 0;
+        var i = 0;
 
         writer.SerializeCollectionSize(prop, otherMeta.Properties, obj);
 
@@ -442,7 +445,7 @@ public class ForgedModelSerializer
 #pragma warning disable CS8601
     private bool TryGetSerializerFromType(PropertyMeta prop, out IForgedTypeSerialization forgedTypeSerialization)
     {
-        Type propertyType = prop.ReflectedProperty.PropertyType;
+        var propertyType = prop.ReflectedProperty.PropertyType;
 
         if (propertyType.IsArray)
         {
@@ -496,11 +499,10 @@ public class ForgedModelSerializer
                                                                    ForgedTypeCode.FourCCString);
     }
 
-
     public static int GetPropertySize(PropertyInfo property, SerializablePropertyAttribute attribute)
     {
-        int size = 0;
-        TypeCode typeCode = attribute.CollectionSizeLengthType != TypeCode.Empty ? attribute.CollectionSizeLengthType : Type.GetTypeCode(property.PropertyType);
+        var size = 0;
+        var typeCode = attribute.CollectionSizeLengthType != TypeCode.Empty ? attribute.CollectionSizeLengthType : Type.GetTypeCode(property.PropertyType);
 
         if (attribute.DontSerializeWhenDefaultValue)
 
@@ -558,5 +560,4 @@ public class ForgedModelSerializer
 
         return size;
     }
-
 }

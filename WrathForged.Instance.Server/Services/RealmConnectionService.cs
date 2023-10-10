@@ -24,7 +24,7 @@ namespace WrathForged.Instance.Server.Services
                 Address = System.Net.IPAddress.Parse(configuration.GetDefaultValue("ForgedServerComm:LocalAddress", "*")),
                 Port = (ushort)configuration.GetDefaultValue("ForgedServerComm:Port", 8783)
             };
-            authDatabase.InstanceLists.DeleteByKey(InstanceServer.Id);
+            _ = authDatabase.InstanceLists.DeleteByKey(InstanceServer.Id);
 
             authDatabase.InstanceLists.SingleInsert(new InstanceList()
             {
@@ -70,7 +70,6 @@ namespace WrathForged.Instance.Server.Services
             ClientConnection.Connect();
             ClientConnection.Send(InstanceServer);
         }
-
 
         public ForgedTCPClient ClientConnection { get; set; }
         public InstanceServerRegistration InstanceServer { get; set; }

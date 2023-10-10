@@ -56,7 +56,7 @@ public class TCPServer
 
         _tcpListener = new TcpListener(bindIp, port);
         _tcpListener.Start();
-        Task.Run(ListenForConnections);
+        _ = Task.Run(ListenForConnections);
         _logger.Information("Listening for TCP connections on {BindIP}:{Port}", bindIp, port);
     }
 
@@ -190,12 +190,12 @@ public class TCPServer
                 var fileStreams = new ClientFileStreams();
 
                 //  Allow more connections to be accepted while we setup the capture
-                Task.Run(() =>
+                _ = Task.Run(() =>
                     {
                         if (client.Client.RemoteEndPoint == null)
                             return;
 
-                        string ipAddress = ((IPEndPoint)client.Client.RemoteEndPoint).Address.ToString().Replace(".", "_");
+                        var ipAddress = ((IPEndPoint)client.Client.RemoteEndPoint).Address.ToString().Replace(".", "_");
 
                         if (_configuration.GetDefaultValue("ClientTCPServer:CaptureIncomingData", false))
                         {
@@ -230,7 +230,6 @@ public class TCPServer
                             };
                         }
                     });
-
 
                 lock (_clients)
                     _clients.Add(clientSocket, fileStreams);

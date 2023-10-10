@@ -13,34 +13,19 @@ namespace WrathForged.Common.Time
 		/// Gets the system uptime.
 		/// </summary>
 		/// <returns>the system uptime in milliseconds</returns>
-		public static uint GetSystemTime()
-        {
-            return (uint)Environment.TickCount;
-        }
+		public static uint GetSystemTime() => (uint)Environment.TickCount;
 
         /// <summary>
         /// Gets the time since the Unix epoch.
         /// </summary>
         /// <returns>the time since the Unix epoch in seconds</returns>
-        public static uint GetEpochTime()
-        {
-            return (uint)((DateTime.UtcNow.Ticks - TICKS_SINCE_1970) / TimeSpan.TicksPerSecond);
-        }
+        public static uint GetEpochTime() => (uint)((DateTime.UtcNow.Ticks - TICKS_SINCE_1970) / TimeSpan.TicksPerSecond);
 
-        public static DateTime GetDateTimeFromUnixTime(uint unixTime)
-        {
-            return new DateTime(1970, 1, 1, 0, 0, 0, 0).AddSeconds(unixTime);
-        }
+        public static DateTime GetDateTimeFromUnixTime(uint unixTime) => new DateTime(1970, 1, 1, 0, 0, 0, 0).AddSeconds(unixTime);
 
-        public static DateTime GetUTCTimeSeconds(long seconds)
-        {
-            return UnixTimeStart.AddSeconds(seconds);
-        }
+        public static DateTime GetUTCTimeSeconds(long seconds) => UnixTimeStart.AddSeconds(seconds);
 
-        public static DateTime GetUTCTimeMillis(long milliseconds)
-        {
-            return UnixTimeStart.AddMilliseconds(milliseconds);
-        }
+        public static DateTime GetUTCTimeMillis(long milliseconds) => UnixTimeStart.AddMilliseconds(milliseconds);
 
         /// <summary>
         /// Gets the system uptime.
@@ -50,29 +35,17 @@ namespace WrathForged.Common.Time
         /// so it will wrap back to 0 after approximately 49 and half days of system uptime.
         /// </remarks>
         /// <returns>the system uptime in milliseconds</returns>
-        public static long GetSystemTimeLong()
-        {
-            return (uint)Environment.TickCount;
-        }
+        public static long GetSystemTimeLong() => (uint)Environment.TickCount;
 
         /// <summary>
 		/// Gets the time between the Unix epoch and a specific <see cref="DateTime">time</see>.
 		/// </summary>
 		/// <param name="time">the end time</param>
 		/// <returns>the time between the unix epoch and the supplied <see cref="DateTime">time</see> in seconds</returns>
-		public static uint GetEpochTimeFromDT()
-        {
-            return DateTime.Now.GetEpochTimeFromDT();
-        }
+		public static uint GetEpochTimeFromDT() => DateTime.Now.GetEpochTimeFromDT();
 
-        public static int ToMilliSecondsInt(int ticks)
-        {
-            return ticks / TICKS_PER_SECOND;
-        }
+        public static int ToMilliSecondsInt(int ticks) => ticks / TICKS_PER_SECOND;
 
-        public static uint GetMillisecondsSinceStartup()
-        {
-            return (uint)(DateTime.Now - ApplicationStartTime).TotalMilliseconds;
-        }
+        public static uint GetMillisecondsSinceStartup() => (uint)(DateTime.Now - ApplicationStartTime).TotalMilliseconds;
     }
 }

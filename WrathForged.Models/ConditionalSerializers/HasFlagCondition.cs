@@ -51,6 +51,4 @@ namespace WrathForged.Models.ConditionalSerializers
             return false;
         }
     }
-
-
 }

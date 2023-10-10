@@ -198,6 +198,7 @@ public class ForgedTCPClient
                     IncomingDataBuffer.Clear();
                     _logger.Error("Failed to deserialize packet data for packet {PacketId} in scope {PacketScope}", packet.OpCode, packet.Scope);
                 }
+
                 ModelPacketBuffer.Clear();
             }
 

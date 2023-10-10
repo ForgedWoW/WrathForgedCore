@@ -25,5 +25,4 @@ namespace WrathForged.Models.Auth
         [SerializableProperty(3)]
         public byte NumberOfKeys { get; set; }
     }
-
 }

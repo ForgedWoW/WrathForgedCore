@@ -110,7 +110,7 @@ public class WoWClientServer
 
     private void DataReceived(object? sender, DataReceivedEventArgs e)
     {
-        WoWClientSession session = GetOrCreateSessionForClient(e.Client);
+        var session = GetOrCreateSessionForClient(e.Client);
         session.Network.PacketBuffer.AppendData(e.Data);
         var packetLength = 0;
         var packetReadTryCount = 0;
@@ -192,11 +192,11 @@ public class WoWClientServer
                     break;
 
                 case PacketRouter.RouteType.NoPacket:
-                    _packetRouter.Route(session, packetId);
+                    _ = _packetRouter.Route(session, packetId);
                     break;
 
                 case PacketRouter.RouteType.DirectPacket:
-                    _packetRouter.RouteDirect(session, packetId, session.Network.PacketBuffer);
+                    _ = _packetRouter.RouteDirect(session, packetId, session.Network.PacketBuffer);
                     break;
 
                 case PacketRouter.RouteType.DeserializedPacket:
@@ -221,9 +221,9 @@ public class WoWClientServer
                         else
                             session.Network.PacketBuffer.Clear();
                     }
+
                     break;
             }
-
         } while (e.Client.IsConnected && session.Network.PacketBuffer.Reader.BaseStream.Position < session.Network.PacketBuffer.Reader.BaseStream.Length);
     }
 

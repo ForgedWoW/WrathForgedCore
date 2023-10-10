@@ -45,17 +45,9 @@ public class PacketRouter
 
     public RouteType GetRouteType(PacketScope scope, uint id)
     {
-        if (!_hasPacketArg.TryGetValue(scope, out var scopeDictionary))
-        {
-            return RouteType.None;
-        }
-
-        if (!scopeDictionary.TryGetValue(id, out var hasPacketArg))
-        {
-            return RouteType.None;
-        }
-
-        return hasPacketArg;
+        return !_hasPacketArg.TryGetValue(scope, out var scopeDictionary)
+            ? RouteType.None
+            : !scopeDictionary.TryGetValue(id, out var hasPacketArg) ? RouteType.None : hasPacketArg;
     }
 
     public bool Route(WoWClientSession socket, PacketId packetId)
@@ -74,10 +66,9 @@ public class PacketRouter
         {
             if (!method.Item2.DirectReader)
             {
-                if (method.Item1.IsStatic)
-                    _ = method.Item1.Invoke(null, new object[] { socket });
-                else
-                    _ = method.Item1.Invoke(method.Item3, new object[] { socket });
+                _ = method.Item1.IsStatic
+                    ? method.Item1.Invoke(null, new object[] { socket })
+                    : method.Item1.Invoke(method.Item3, new object[] { socket });
                 return true;
             }
         }
@@ -101,10 +92,9 @@ public class PacketRouter
         {
             if (method.Item2.DirectReader)
             {
-                if (method.Item1.IsStatic)
-                    _ = method.Item1.Invoke(null, new object[] { socket, packetBuffer });
-                else
-                    _ = method.Item1.Invoke(method.Item3, new object[] { socket, packetBuffer });
+                _ = method.Item1.IsStatic
+                    ? method.Item1.Invoke(null, new object[] { socket, packetBuffer })
+                    : method.Item1.Invoke(method.Item3, new object[] { socket, packetBuffer });
                 return true;
             }
         }
@@ -131,10 +121,9 @@ public class PacketRouter
 
         foreach (var method in methodList)
         {
-            if (method.Item1.IsStatic)
-                _ = method.Item1.Invoke(null, new object[] { socket, packet });
-            else
-                _ = method.Item1.Invoke(method.Item3, new object[] { socket, packet });
+            _ = method.Item1.IsStatic
+                ? method.Item1.Invoke(null, new object[] { socket, packet })
+                : method.Item1.Invoke(method.Item3, new object[] { socket, packet });
         }
     }
 
@@ -160,10 +149,9 @@ public class PacketRouter
             if (method.Item2.RequireAuthentication && session.Security.AuthenticationState != WoWClientSession.AuthState.LoggedIn)
                 continue;
 
-            if (method.Item1.IsStatic)
-                _ = method.Item1.Invoke(null, new object[] { session, packet });
-            else
-                _ = method.Item1.Invoke(method.Item3, new object[] { session, packet });
+            _ = method.Item1.IsStatic
+                ? method.Item1.Invoke(null, new object[] { session, packet })
+                : method.Item1.Invoke(method.Item3, new object[] { session, packet });
         }
     }
 }

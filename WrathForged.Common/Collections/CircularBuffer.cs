@@ -31,11 +31,6 @@ namespace WrathForged.Common.Collections
         private int _end;
 
         /// <summary>
-        /// The _size. Buffer size.
-        /// </summary>
-        private int _size;
-
-        /// <summary>
         /// Initializes a new instance of the <see cref="CircularBuffer{T}"/> class.
         /// 
         /// </summary>
@@ -78,17 +73,17 @@ namespace WrathForged.Common.Collections
             _buffer = new T[capacity];
 
             Array.Copy(items, _buffer, items.Length);
-            _size = items.Length;
+            Size = items.Length;
 
             _start = 0;
-            _end = _size == capacity ? 0 : _size;
+            _end = Size == capacity ? 0 : Size;
         }
 
         /// <summary>
         /// Maximum capacity of the buffer. Elements pushed into the buffer after
         /// maximum capacity is reached (IsFull = true), will remove an element.
         /// </summary>
-        public int Capacity { get { return _buffer.Length; } }
+        public int Capacity => _buffer.Length;
 
         /// <summary>
         /// Boolean indicating if Circular is at full capacity.
@@ -96,29 +91,17 @@ namespace WrathForged.Common.Collections
         /// cause elements to be removed from the other end
         /// of the buffer.
         /// </summary>
-        public bool IsFull
-        {
-            get
-            {
-                return Size == Capacity;
-            }
-        }
+        public bool IsFull => Size == Capacity;
 
         /// <summary>
         /// True if has no elements.
         /// </summary>
-        public bool IsEmpty
-        {
-            get
-            {
-                return Size == 0;
-            }
-        }
+        public bool IsEmpty => Size == 0;
 
         /// <summary>
         /// Current buffer size (the number of elements that the buffer has).
         /// </summary>
-        public int Size { get { return _size; } }
+        public int Size { get; private set; }
 
         /// <summary>
         /// Element at the front of the buffer - this[0].
@@ -155,11 +138,13 @@ namespace WrathForged.Common.Collections
                 {
                     throw new IndexOutOfRangeException(string.Format("Cannot access index {0}. Buffer is empty", index));
                 }
-                if (index >= _size)
+
+                if (index >= Size)
                 {
-                    throw new IndexOutOfRangeException(string.Format("Cannot access index {0}. Buffer size is {1}", index, _size));
+                    throw new IndexOutOfRangeException(string.Format("Cannot access index {0}. Buffer size is {1}", index, Size));
                 }
-                int actualIndex = InternalIndex(index);
+
+                var actualIndex = InternalIndex(index);
                 return _buffer[actualIndex];
             }
             set
@@ -168,11 +153,13 @@ namespace WrathForged.Common.Collections
                 {
                     throw new IndexOutOfRangeException(string.Format("Cannot access index {0}. Buffer is empty", index));
                 }
-                if (index >= _size)
+
+                if (index >= Size)
                 {
-                    throw new IndexOutOfRangeException(string.Format("Cannot access index {0}. Buffer size is {1}", index, _size));
+                    throw new IndexOutOfRangeException(string.Format("Cannot access index {0}. Buffer size is {1}", index, Size));
                 }
-                int actualIndex = InternalIndex(index);
+
+                var actualIndex = InternalIndex(index);
                 _buffer[actualIndex] = value;
             }
         }
@@ -197,7 +184,7 @@ namespace WrathForged.Common.Collections
             {
                 _buffer[_end] = item;
                 Increment(ref _end);
-                ++_size;
+                ++Size;
             }
         }
 
@@ -221,7 +208,7 @@ namespace WrathForged.Common.Collections
             {
                 Decrement(ref _start);
                 _buffer[_start] = item;
-                ++_size;
+                ++Size;
             }
         }
 
@@ -234,7 +221,7 @@ namespace WrathForged.Common.Collections
             ThrowIfEmpty("Cannot take elements from an empty buffer.");
             Decrement(ref _end);
             _buffer[_end] = default!;
-            --_size;
+            --Size;
         }
 
         /// <summary>
@@ -246,7 +233,7 @@ namespace WrathForged.Common.Collections
             ThrowIfEmpty("Cannot take elements from an empty buffer.");
             _buffer[_start] = default!;
             Increment(ref _start);
-            --_size;
+            --Size;
         }
 
         /// <summary>
@@ -258,7 +245,7 @@ namespace WrathForged.Common.Collections
             // to clear we just reset everything.
             _start = 0;
             _end = 0;
-            _size = 0;
+            Size = 0;
             Array.Clear(_buffer, 0, _buffer.Length);
         }
 
@@ -270,10 +257,10 @@ namespace WrathForged.Common.Collections
         /// <returns>A new array with a copy of the buffer contents.</returns>
         public T[] ToArray()
         {
-            T[] newArray = new T[Size];
-            int newArrayOffset = 0;
+            var newArray = new T[Size];
+            var newArrayOffset = 0;
             var segments = ToArraySegments();
-            foreach (ArraySegment<T> segment in segments)
+            foreach (var segment in segments)
             {
                 if (segment.Array != null)
                 {
@@ -281,6 +268,7 @@ namespace WrathForged.Common.Collections
                     newArrayOffset += segment.Count;
                 }
             }
+
             return newArray;
         }
 
@@ -296,10 +284,7 @@ namespace WrathForged.Common.Collections
         /// <remarks>Segments may be empty.</remarks>
         /// </summary>
         /// <returns>An IList with 2 segments corresponding to the buffer content.</returns>
-        public IList<ArraySegment<T>> ToArraySegments()
-        {
-            return new[] { ArrayOne(), ArrayTwo() };
-        }
+        public IList<ArraySegment<T>> ToArraySegments() => new[] { ArrayOne(), ArrayTwo() };
 
         #region IEnumerable<T> implementation
         /// <summary>
@@ -309,9 +294,9 @@ namespace WrathForged.Common.Collections
         public IEnumerator<T> GetEnumerator()
         {
             var segments = ToArraySegments();
-            foreach (ArraySegment<T> segment in segments)
+            foreach (var segment in segments)
             {
-                for (int i = 0; i < segment.Count; i++)
+                for (var i = 0; i < segment.Count; i++)
                 {
                     if (segment.Array != null)
                         yield return segment.Array[segment.Offset + i];
@@ -320,10 +305,7 @@ namespace WrathForged.Common.Collections
         }
         #endregion
         #region IEnumerable implementation
-        IEnumerator IEnumerable.GetEnumerator()
-        {
-            return GetEnumerator();
-        }
+        IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
         #endregion
 
         private void ThrowIfEmpty(string message = "Cannot access an empty buffer.")
@@ -358,6 +340,7 @@ namespace WrathForged.Common.Collections
             {
                 index = Capacity;
             }
+
             index--;
         }
 
@@ -370,10 +353,7 @@ namespace WrathForged.Common.Collections
         /// <param name='index'>
         /// External index.
         /// </param>
-        private int InternalIndex(int index)
-        {
-            return _start + (index < (Capacity - _start) ? index : index - Capacity);
-        }
+        private int InternalIndex(int index) => _start + (index < (Capacity - _start) ? index : index - Capacity);
 
         // doing ArrayOne and ArrayTwo methods returning ArraySegment<T> as seen here: 
         // http://www.boost.org/doc/libs/1_37_0/libs/circular_buffer/doc/circular_buffer.html#classboost_1_1circular__buffer_1957cccdcb0c4ef7d80a34a990065818d
@@ -386,34 +366,18 @@ namespace WrathForged.Common.Collections
 
         private ArraySegment<T> ArrayOne()
         {
-            if (IsEmpty)
-            {
-                return new ArraySegment<T>([]);
-            }
-            else if (_start < _end)
-            {
-                return new ArraySegment<T>(_buffer, _start, _end - _start);
-            }
-            else
-            {
-                return new ArraySegment<T>(_buffer, _start, _buffer.Length - _start);
-            }
+            return IsEmpty
+                ? new ArraySegment<T>([])
+                : _start < _end
+                    ? new ArraySegment<T>(_buffer, _start, _end - _start)
+                    : new ArraySegment<T>(_buffer, _start, _buffer.Length - _start);
         }
 
         private ArraySegment<T> ArrayTwo()
         {
-            if (IsEmpty)
-            {
-                return new ArraySegment<T>([]);
-            }
-            else if (_start < _end)
-            {
-                return new ArraySegment<T>(_buffer, _end, 0);
-            }
-            else
-            {
-                return new ArraySegment<T>(_buffer, 0, _end);
-            }
+            return IsEmpty
+                ? new ArraySegment<T>([])
+                : _start < _end ? new ArraySegment<T>(_buffer, _end, 0) : new ArraySegment<T>(_buffer, 0, _end);
         }
         #endregion
     }

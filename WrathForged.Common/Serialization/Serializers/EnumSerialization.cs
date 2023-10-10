@@ -43,14 +43,9 @@ public class EnumSerialization : IForgedTypeSerialization
             _ => packetBuffer.Reader.ReadInt32(),
         };
 
-        if (propertyMeta.ReflectedProperty.PropertyType.IsEnum)
-        {
-            return Enum.ToObject(propertyMeta.ReflectedProperty.PropertyType, value);
-        }
-        else
-        {
-            return Convert.ChangeType(value, propertyMeta.ReflectedProperty.PropertyType);
-        }
+        return propertyMeta.ReflectedProperty.PropertyType.IsEnum
+            ? Enum.ToObject(propertyMeta.ReflectedProperty.PropertyType, value)
+            : Convert.ChangeType(value, propertyMeta.ReflectedProperty.PropertyType);
     }
 
     public void Serialize(PrimitiveWriter writer, PropertyMeta propertyMeta, List<PropertyMeta> otherMeta, object obj, object? val)

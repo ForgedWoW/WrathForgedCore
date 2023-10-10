@@ -13,8 +13,5 @@ public class AuthorizedRole(byte securityLevel, int realmId, Dictionary<uint, Rb
 
     public Dictionary<uint, RbacPermission> Permissions { get; set; } = permissions;
 
-    public bool HasPermission(uint permissionId)
-    {
-        return Permissions.ContainsKey(permissionId);
-    }
+    public bool HasPermission(uint permissionId) => Permissions.ContainsKey(permissionId);
 }

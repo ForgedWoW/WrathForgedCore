@@ -65,7 +65,6 @@ namespace WrathForged.Common
             ClientSocket.EnqueueWrite(packet);
         }
 
-
         /// <summary>
         ///     Sends the model to the client. if the model does not have a ForgedSerializableAttribute defined, it will not be sent.
         ///     if opCode is not defined, it will use the first opCode defined in the ForgedSerializableAttribute.

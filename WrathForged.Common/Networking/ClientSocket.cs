@@ -37,8 +37,8 @@ public class ClientSocket
 
         _stream = _client.GetStream();
         _stream.ReadTimeout = -1;
-        Task.Run(StartListening);
-        Task.Run(ProcessWriteQueue);
+        _ = Task.Run(StartListening);
+        _ = Task.Run(ProcessWriteQueue);
     }
 
     private EventHandler<ClientSocket> _onDisconnect;
@@ -192,7 +192,6 @@ public class ClientSocket
             {
                 if (_processedDisconnect)
                     break;
-
 
                 try
                 {

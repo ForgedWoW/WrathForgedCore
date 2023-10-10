@@ -66,7 +66,7 @@ public class WoWClientPacketOut : IDisposable
     /// <returns></returns>
     public Memory<byte> GetBuffer()
     {
-        int dataPos = (int)Writer.BaseStream.Position;
+        var dataPos = (int)Writer.BaseStream.Position;
 
         // Step 3: Write the header to the start of the existing buffer.
         switch (_headerType)
@@ -214,7 +214,6 @@ public class WoWClientPacketOut : IDisposable
                 break;
         }
     }
-
 
     protected virtual void Dispose(bool disposing)
     {

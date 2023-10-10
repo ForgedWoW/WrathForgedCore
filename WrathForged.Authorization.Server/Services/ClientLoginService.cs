@@ -6,7 +6,6 @@ using Microsoft.Extensions.Configuration;
 using Serilog;
 using WrathForged.Authorization.Server.Validators;
 using WrathForged.Common;
-using WrathForged.Common.Caching;
 using WrathForged.Common.Cryptography;
 using WrathForged.Common.Networking;
 using WrathForged.Database.Models.Auth;
@@ -33,7 +32,7 @@ namespace WrathForged.Authorization.Server.Services
         public void ChallengeRequest(WoWClientSession session, AuthLogonChallengeRequest authLogonChallenge)
         {
             _logger.Debug("Login challenge request from {Address}", session.Network.ClientSocket.IPEndPoint);
-            using var authDatabase = _classFactory.Locate<AuthDatabase>();
+            using var authDatabase = _classFactory.Resolve<AuthDatabase>();
 
             var account = authDatabase.Accounts.FirstOrDefault(x => x.Username == authLogonChallenge.Identity || x.RegMail == authLogonChallenge.Identity || x.Email == authLogonChallenge.Identity);
             var packet = session.Network.NewClientMessage(AuthServerOpCode.AUTH_LOGON_CHALLENGE, PacketHeaderType.NullTerminatedOpCode);
@@ -53,8 +52,8 @@ namespace WrathForged.Authorization.Server.Services
                 _logger.Debug("Failed login attempt for {Identity} from {Address}. Account locked to IpAddress {LockedIp}", authLogonChallenge.Identity, session.Network.ClientSocket.IPEndPoint, account.LastIp);
                 LoginFailed(session, AuthStatus.WOW_FAIL_LOCKED_ENFORCED, AuthServerOpCode.AUTH_LOGON_CHALLENGE);
                 account.FailedLogins++;
-                authDatabase.Accounts.Update(account);
-                authDatabase.SaveChanges();
+                _ = authDatabase.Accounts.Update(account);
+                _ = authDatabase.SaveChanges();
                 return;
             }
 
@@ -66,16 +65,16 @@ namespace WrathForged.Authorization.Server.Services
                     _logger.Debug("Failed login attempt for {Identity} from {Address}. Account banned.", authLogonChallenge.Identity, session.Network.ClientSocket.IPEndPoint);
                     LoginFailed(session, AuthStatus.WOW_FAIL_BANNED, AuthServerOpCode.AUTH_LOGON_CHALLENGE);
                     account.FailedLogins++;
-                    authDatabase.Accounts.Update(account);
-                    authDatabase.SaveChanges();
+                    _ = authDatabase.Accounts.Update(account);
+                    _ = authDatabase.SaveChanges();
                     return;
 
                 case BanValidator.BanType.Suspended:
                     _logger.Debug("Failed login attempt for {Identity} from {Address}. Account suspended.", authLogonChallenge.Identity, session.Network.ClientSocket.IPEndPoint);
                     LoginFailed(session, AuthStatus.WOW_FAIL_SUSPENDED, AuthServerOpCode.AUTH_LOGON_CHALLENGE);
                     account.FailedLogins++;
-                    authDatabase.Accounts.Update(account);
-                    authDatabase.SaveChanges();
+                    _ = authDatabase.Accounts.Update(account);
+                    _ = authDatabase.SaveChanges();
                     return;
             }
 
@@ -101,7 +100,7 @@ namespace WrathForged.Authorization.Server.Services
 
             session.Security.AuthenticationState = WoWClientSession.AuthState.AwaitingCredentials;
 
-            authDatabase.Accounts.Update(account);
+            _ = authDatabase.Accounts.Update(account);
 
             packet.WriteObject(new AuthLogonChallengeResponse()
             {
@@ -113,7 +112,7 @@ namespace WrathForged.Authorization.Server.Services
             });
             session.Network.ClientSocket.EnqueueWrite(packet);
 
-            authDatabase.SaveChanges();
+            _ = authDatabase.SaveChanges();
         }
 
         [PacketRoute(PacketScope.ClientToAuth, AuthServerOpCode.AUTH_LOGON_PROOF)]
@@ -128,7 +127,7 @@ namespace WrathForged.Authorization.Server.Services
                 _logger.Debug("Account {Username} with id {Id} successfully logged in from {Address}.", session.Security.Account?.Username, session.Security.Account?.Id, session.Network.ClientSocket.IPEndPoint);
 
                 session.Security.SessionKey = sessionKey; // also sets the session key on the account.
-                using var authDatabase = _classFactory.Locate<AuthDatabase>();
+                using var authDatabase = _classFactory.Resolve<AuthDatabase>();
 
                 if (session.Security.Account == null)
                 {
@@ -150,8 +149,8 @@ namespace WrathForged.Authorization.Server.Services
                 session.Security.Account.Online = true;
                 session.Security.AuthenticationState = WoWClientSession.AuthState.LoggedIn;
 
-                authDatabase.Accounts.Update(session.Security.Account);
-                authDatabase.SaveChanges();
+                _ = authDatabase.Accounts.Update(session.Security.Account);
+                _ = authDatabase.SaveChanges();
                 var serverProof = SRP6.GetSessionVerifier(proof.A, proof.ClientM, sessionKey);
 
                 session.Network.Send(new AuthLoginProofResponse()
@@ -172,7 +171,7 @@ namespace WrathForged.Authorization.Server.Services
         public void ReconnectChallengeRequest(WoWClientSession session, AuthLogonChallengeRequest authLogonChallenge)
         {
             _logger.Debug("AUTH_RECONNECT_CHALLENGE from {Address}", session.Network.ClientSocket.IPEndPoint);
-            using var authDatabase = _classFactory.Locate<AuthDatabase>();
+            using var authDatabase = _classFactory.Resolve<AuthDatabase>();
 
             var account = authDatabase.Accounts.FirstOrDefault(x => x.Username == authLogonChallenge.Identity || x.RegMail == authLogonChallenge.Identity);
             var packet = session.Network.NewClientMessage(AuthServerOpCode.AUTH_LOGON_CHALLENGE, PacketHeaderType.OnlyOpCode);
@@ -190,8 +189,8 @@ namespace WrathForged.Authorization.Server.Services
             session.Security.AuthenticationState = WoWClientSession.AuthState.AwaitingCredentials;
             session.Security.ReconnectProof = _randomUtilities.RandomBytes(16);
 
-            authDatabase.Accounts.Update(account);
-            authDatabase.SaveChanges();
+            _ = authDatabase.Accounts.Update(account);
+            _ = authDatabase.SaveChanges();
 
             session.Network.Send(new AuthReconnectedResponse()
             {
@@ -225,15 +224,15 @@ namespace WrathForged.Authorization.Server.Services
 
             if (serverProof.SequenceEqual(proof.ClientProof))
             {
-                using var authDatabase = _classFactory.Locate<AuthDatabase>();
+                using var authDatabase = _classFactory.Resolve<AuthDatabase>();
                 session.Security.Account = authDatabase.Accounts.FirstOrDefault(x => x.Id == session.Security.Account.Id);
 
                 if (session.Security.Account != null)
                 {
                     session.Security.Account.LastLogin = DateTime.UtcNow;
                     session.Security.Account.Online = true;
-                    authDatabase.Accounts.Update(session.Security.Account);
-                    authDatabase.SaveChanges();
+                    _ = authDatabase.Accounts.Update(session.Security.Account);
+                    _ = authDatabase.SaveChanges();
                 }
 
                 session.Security.AuthenticationState = WoWClientSession.AuthState.LoggedIn;
@@ -269,7 +268,7 @@ namespace WrathForged.Authorization.Server.Services
                 _logger.Debug("Too many failed login attempts from {Address}. Banning for {BanTime}.", session.Network.ClientSocket.IPEndPoint, TimeSpan.FromMinutes(banTime).ToReadableString());
                 session.Network.ClientSocket.Disconnect();
                 tracker.Attempts = 0;
-                using var authDatabase = _classFactory.Locate<AuthDatabase>();
+                using var authDatabase = _classFactory.Resolve<AuthDatabase>();
                 var ipBan = authDatabase.IpBanneds.FirstOrDefault(x => x.Ip == ipAddress);
 
                 ipBan ??= new IpBanned()
@@ -287,7 +286,7 @@ namespace WrathForged.Authorization.Server.Services
                 ipBan.Bandate = DateTime.UtcNow.ToUnixTime();
                 ipBan.Unbandate = bannedTil;
 
-                authDatabase.IpBanneds.Upsert(ipBan).On(i => i.Ip).Run();
+                _ = authDatabase.IpBanneds.Upsert(ipBan).On(i => i.Ip).Run();
                 session.Network.ClientSocket.Disconnect();
                 _forgeCache.UpdateKey(AuthCacheKeys.IP_BANS);
                 return;

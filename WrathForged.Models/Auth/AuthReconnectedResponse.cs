@@ -18,5 +18,4 @@ namespace WrathForged.Models.Auth
         [SerializableProperty(3)]
         public byte[] VersionChallenge { get; set; } = _versionChallengeConst;
     }
-
 }
