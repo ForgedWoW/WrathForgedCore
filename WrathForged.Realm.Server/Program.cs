@@ -50,6 +50,7 @@ container.Locate<WoWClientServer>().Start();
 container.Locate<ForgedCommServer>().Start(configuration.GetDefaultValue("ForgedServerComm:Port", 8780));
 container.Locate<ServerUpdateLoop>().Start();
 
+realm = authDatabase.Realmlists.Find(configuration.GetDefaultValue("RealmId", 1)) ?? realm;
 realm.Flag &= (byte)~RealmFlags.Offline;
 realm.Population = 0;
 authDatabase.Update(realm);
@@ -60,6 +61,7 @@ var notifier = container.Locate<ProgramExitNotifier>();
 
 notifier.ExitProgram += (sender, e) =>
     {
+        realm = authDatabase.Realmlists.Find(configuration.GetDefaultValue("RealmId", 1)) ?? realm;
         realm.Flag |= (byte)RealmFlags.Offline;
         _ = authDatabase.Update(realm);
         _ = authDatabase.SaveChanges();
