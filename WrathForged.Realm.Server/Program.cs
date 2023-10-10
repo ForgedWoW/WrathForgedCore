@@ -58,6 +58,13 @@ authDatabase.SaveChanges();
 Serilog.Log.Logger.Information("Realm Server started in {InitializationTime}.", (DateTime.UtcNow - initializationStart).ToReadableString());
 var notifier = container.Locate<ProgramExitNotifier>();
 
+notifier.ExitProgram += (sender, e) =>
+    {
+        realm.Flag |= (byte)RealmFlags.Offline;
+        _ = authDatabase.Update(realm);
+        _ = authDatabase.SaveChanges();
+    };
+
 Console.CancelKeyPress += (sender, e) =>
 {
     e.Cancel = true;
