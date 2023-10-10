@@ -2,18 +2,24 @@
 // Licensed under GPL-3.0 license. See <https://github.com/ForgedWoW/WrathForgedCore/blob/master/LICENSE> for full information.
 using System.Collections.Concurrent;
 using Microsoft.Extensions.Configuration;
+using Serilog;
 using WrathForged.Common.Scripting.Interfaces.CoreEvents;
 using WrathForged.Common.Time;
+using WrathForged.Serialization.Models;
 
 namespace WrathForged.Common.Scripting
 {
-    public class ServerUpdateLoop(IConfiguration configuration, ProgramExitNotifier programExitNotifier, ClassFactory classFactory)
+    public class ServerUpdateLoop(IConfiguration configuration, ProgramExitNotifier programExitNotifier, ClassFactory classFactory, ILogger logger)
     {
         private readonly ProgramExitNotifier _programExitNotifier = programExitNotifier;
         private readonly ClassFactory _classFactory = classFactory;
+        private readonly ILogger _logger = logger;
         private bool _started;
         private readonly uint _minTickTime = configuration.GetDefaultValue("ServerUpdate:MinTickTimeMilliseconds", 1u);
+        private readonly int _maxStuckTime = configuration.GetDefaultValue("ServerUpdate:MaxCoreStuckTimeSeconds", 60);
         private uint _lastTickTime = 0;
+        private DateTime _lastTickDateTime = DateTime.UtcNow;
+        private Task? _updateLoop;
         private readonly ConcurrentQueue<(IUpdateLoop loop, int priority)> _registerQueue = new();
         private readonly ConcurrentQueue<(IUpdateLoop loop, int priority)> _unRegisterQueue = new();
 
@@ -22,7 +28,7 @@ namespace WrathForged.Common.Scripting
         public const int UPDATE_LOOP_PRIORITY_HIGH = 10;
 
         // We use HashSet to prevent duplicate updates
-        private readonly SortedDictionary<int, HashSet<IUpdateLoop>> _updateMethods = new();
+        private readonly SortedDictionary<int, HashSet<IUpdateLoop>> _updateMethods = [];
 
         public void Start()
         {
@@ -33,7 +39,7 @@ namespace WrathForged.Common.Scripting
                 foreach (var updateLoop in _classFactory.LocateAll<IUpdateLoopScript>())
                     RegisterUpdateLoop(updateLoop);
 
-                _ = Task.Run(UpdateLoop, _programExitNotifier.GetCancellationToken());
+                _updateLoop = Task.Run(UpdateLoop, _programExitNotifier.GetCancellationToken());
             }
         }
 
@@ -48,12 +54,30 @@ namespace WrathForged.Common.Scripting
 
         public void UnregisterUpdateLoop(IUpdateLoop updateLoop, int priority = UPDATE_LOOP_PRIORITY_LOW) => _unRegisterQueue.Enqueue((updateLoop, priority));
 
+        private void MonitorUpdateLoop()
+        {
+            while (!_programExitNotifier.IsExiting)
+            {
+                var timeDiff = DateTime.UtcNow - _lastTickDateTime;
+
+                if (timeDiff.TotalSeconds > _maxStuckTime)
+                {
+                    _logger.Fatal("Core has been stuck for {TimeDiff}.", timeDiff.ToReadableString());
+                    _updateLoop?.Dispose();
+                    _programExitNotifier.NotifyStop($"Core has been stuck for {timeDiff.ToReadableString()}.");
+                }
+
+                _ = Task.Delay(10000, _programExitNotifier.GetCancellationToken());
+            }
+        }
+
         private void UpdateLoop()
         {
             _lastTickTime = TimeUtil.GetMillisecondsSinceStartup();
 
             while (!_programExitNotifier.IsExiting)
             {
+                _lastTickDateTime = DateTime.UtcNow;
                 var realTime = TimeUtil.GetMillisecondsSinceStartup();
                 var startTime = DateTime.UtcNow;
                 var tickDiff = realTime - _lastTickTime;

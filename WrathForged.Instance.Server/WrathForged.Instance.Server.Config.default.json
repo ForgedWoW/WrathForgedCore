@@ -31,7 +31,8 @@
     "SocketTimeoutSeconds": 90
   },
   "ServerUpdate": {
-    "MinTickTimeMilliseconds" : 1
+    "MinTickTimeMilliseconds": 1,
+    "MaxCoreStuckTimeSeconds": 60
   },
   "Serilog LINKS": [
     "The Following are installed by default and availabe for use via config:",
