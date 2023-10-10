@@ -4,6 +4,7 @@ using System.CommandLine;
 using System.Reflection;
 using Microsoft.EntityFrameworkCore;
 using Serilog;
+using WrathForged.Common.Caching;
 using WrathForged.Common.CommandLine;
 using WrathForged.Common.Scripting;
 using WrathForged.Database.DBC;
@@ -20,35 +21,34 @@ public class DBCExportCommand : ICommandLineArgumentHandler
     private readonly List<string> _dbcDefinitions = new();
     private readonly Dictionary<string, PropertyInfo> _dbSets = new(StringComparer.InvariantCultureIgnoreCase);
 
-    public DBCExportCommand(DBCSerializer dbcSerializer, DBCDatabase dbcDatabase, ScriptLoader scriptLoader, ILogger logger)
+    public DBCExportCommand(DBCSerializer dbcSerializer, DBCDatabase dbcDatabase, ScriptLoader scriptLoader, ILogger logger, AttributeCache<DBCBoundAttribute> attributeCache)
     {
         _dbcSerializer = dbcSerializer;
         _dbcDatabase = dbcDatabase;
         _logger = logger;
         foreach (var record in scriptLoader.GetAllTypesThatUseInterface<IDBCRecord>())
         {
-            var att = record.GetCustomAttribute<DBCBoundAttribute>(false);
+            var att = attributeCache.GetAttribute(record);
 
             if (att == null)
                 continue;
 
-            _dbcDefinitions.Add(((DBCBoundAttribute)att).Name);
+            _dbcDefinitions.Add(att.Name);
         }
 
-        var dbcSets = typeof(DBCDatabase).GetProperties(System.Reflection.BindingFlags.Public | System.Reflection.BindingFlags.Instance);
+        var dbcSets = typeof(DBCDatabase).GetProperties(BindingFlags.Public | BindingFlags.Instance);
 
         foreach (var prop in dbcSets)
         {
             if (prop.PropertyType.IsGenericType && prop.PropertyType.GetGenericTypeDefinition() == typeof(DbSet<>))
             {
                 var type = prop.PropertyType.GetGenericArguments()[0];
-                var att = type.GetCustomAttribute<DBCBoundAttribute>(false);
+                var att = attributeCache.GetAttribute(type);
 
                 if (att == null)
                     continue;
 
-                var at = (DBCBoundAttribute)att;
-                _dbSets[at.Name] = prop;
+                _dbSets[att.Name] = prop;
             }
         }
     }

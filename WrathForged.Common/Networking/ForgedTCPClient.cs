@@ -3,9 +3,9 @@
 
 using System.Net;
 using System.Net.Sockets;
-using System.Reflection;
 using System.Threading.Tasks.Dataflow;
 using Serilog;
+using WrathForged.Common.Caching;
 using WrathForged.Common.Serialization;
 using WrathForged.Models;
 using WrathForged.Models.Core.Comm;
@@ -26,20 +26,20 @@ public class ForgedTCPClient
     private readonly ILogger _logger;
     private readonly ForgedModelSerializer _forgedModelSerializer;
     private readonly PacketRouter _packetRouter;
+    private readonly AttributeCache<ForgedSerializableAttribute> _forgedSerializableAttributeCache;
     private readonly ActionBlock<DataReceivedEventArgs> _dataProcessingBlock;
-    private readonly Dictionary<Type, ForgedSerializableAttribute> _attributeMap = new();
     private PrimitiveWriter _writeBuffer;
     private bool _loggedDisconnect;
 
     public ForgedTCPClient(string bindIP, string address, int port, ILogger logger, ProgramExitNotifier programExitNotifier,
-                            ForgedModelSerializer forgedModelDeserialization, PacketRouter packetRouter)
+                            ForgedModelSerializer forgedModelDeserialization, PacketRouter packetRouter, AttributeCache<ForgedSerializableAttribute> forgedSerializableAttributeCache)
     {
         _address = address;
         _port = port;
         _logger = logger;
         _forgedModelSerializer = forgedModelDeserialization;
         _packetRouter = packetRouter;
-
+        _forgedSerializableAttributeCache = forgedSerializableAttributeCache;
         IncomingDataBuffer = new PacketBuffer(logger);
         ModelPacketBuffer = new PacketBuffer(logger);
 
@@ -137,17 +137,10 @@ public class ForgedTCPClient
 
         var type = typeof(T);
 
-        if (!_attributeMap.TryGetValue(type, out var serializableAttribute))
+        if (!_forgedSerializableAttributeCache.TryGetAttribute(type, out var serializableAttribute))
         {
-            serializableAttribute = type.GetCustomAttribute<ForgedSerializableAttribute>(false);
-
-            if (serializableAttribute == null)
-            {
-                _logger.Error("Failed to find serializable attribute for type {Type}", type);
-                return;
-            }
-
-            _attributeMap[type] = serializableAttribute;
+            _logger.Error("Failed to find serializable attribute for type {Type}", type);
+            return;
         }
 
         var packet = new ForgedPacket

@@ -1,19 +1,23 @@
 ﻿// Copyright (c) Forged WoW LLC <https://github.com/ForgedWoW/WrathForgedCore>
 // Licensed under GPL-3.0 license. See <https://github.com/ForgedWoW/WrathForgedCore/blob/master/LICENSE> for full information.
-using System.Reflection;
 using System.Text;
 using Serilog;
+using WrathForged.Common.Caching;
 using WrathForged.Database.DBC;
 
 namespace WrathForged.Common.DBC;
 
-public class DBCDeserializer(ILogger logger)
+public class DBCDeserializer(ILogger logger, AttributeCache<DBCBoundAttribute> dbcBoundAttributeCache, AttributeCache<DBCPropertyBindingAttribute> dbcPropertyAttributeCache)
 {
     private readonly ILogger _logger = logger;
+    private readonly AttributeCache<DBCBoundAttribute> _dbcBoundAttributeCache = dbcBoundAttributeCache;
+    private readonly AttributeCache<DBCPropertyBindingAttribute> _dbcPropertyAttributeCache = dbcPropertyAttributeCache;
 
     public IEnumerable<T> Deserialize<T>(string filePath) where T : class, new()
     {
-        if (typeof(T).GetCustomAttribute(typeof(DBCBoundAttribute), false) is not DBCBoundAttribute dbcAtt)
+        var dbcAtt = _dbcBoundAttributeCache.GetAttribute(typeof(T));
+
+        if (dbcAtt == null)
             return Enumerable.Empty<T>();
 
         using var reader = new BinaryReader(File.Open(filePath, FileMode.Open));
@@ -45,7 +49,9 @@ public class DBCDeserializer(ILogger logger)
 
             foreach (var property in properties)
             {
-                if (property.GetCustomAttribute(typeof(DBCPropertyBindingAttribute), false) is not DBCPropertyBindingAttribute attribute)
+                var attribute = _dbcPropertyAttributeCache.GetAttribute(property);
+
+                if (attribute == null)
                     continue;
 
                 object? value;

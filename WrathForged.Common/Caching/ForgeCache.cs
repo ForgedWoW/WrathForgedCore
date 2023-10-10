@@ -5,7 +5,7 @@ using System.Runtime.Caching;
 #pragma warning disable CS8601
 #pragma warning disable CS8603
 
-namespace WrathForged.Common;
+namespace WrathForged.Common.Caching;
 
 public class ForgeCache
 {
@@ -47,14 +47,10 @@ public class ForgeCache
     public void Set<T>(TimeSpan expiration, Func<T> refresh)
     {
         if (refresh == null)
-        {
             throw new ArgumentNullException(nameof(refresh));
-        }
 
         if (expiration == TimeSpan.Zero)
-        {
             throw new ArgumentException("Must be greater than zero", nameof(expiration));
-        }
 
         var value = refresh() ?? throw new InvalidDataException(nameof(refresh) + $" returned null data");
 
@@ -64,14 +60,10 @@ public class ForgeCache
     public void Set<T>(string key, TimeSpan expiration, Func<T> refresh)
     {
         if (refresh == null)
-        {
             throw new ArgumentNullException(nameof(refresh));
-        }
 
         if (expiration == TimeSpan.Zero)
-        {
             throw new ArgumentException("Must be greater than zero", nameof(expiration));
-        }
 
         var value = refresh() ?? throw new InvalidDataException(nameof(refresh) + $" returned null data for key {key}");
 
@@ -81,19 +73,13 @@ public class ForgeCache
     public void Set<T>(T value, TimeSpan expiration, Func<T> refresh)
     {
         if (value == null)
-        {
             throw new ArgumentNullException(nameof(value));
-        }
 
         if (refresh == null)
-        {
             throw new ArgumentNullException(nameof(refresh));
-        }
 
         if (expiration == TimeSpan.Zero)
-        {
             throw new ArgumentException("Must be greater than zero", nameof(expiration));
-        }
 
         Set(value.GetType().Name, value, expiration, refresh);
     }
@@ -101,24 +87,16 @@ public class ForgeCache
     public void Set<T>(string key, T value, TimeSpan expiration, Func<T> refresh)
     {
         if (value == null)
-        {
             throw new ArgumentNullException(nameof(value));
-        }
 
         if (refresh == null)
-        {
             throw new ArgumentNullException(nameof(refresh));
-        }
 
         if (expiration == TimeSpan.Zero)
-        {
             throw new ArgumentException("Must be greater than zero", nameof(expiration));
-        }
 
         if (string.IsNullOrEmpty(key))
-        {
             throw new ArgumentException("Must be set", nameof(key));
-        }
 
         _refreshFunctions[key] = () => refresh();
         _cache.Set(key, value, new CacheItemPolicy()
@@ -127,9 +105,7 @@ public class ForgeCache
             RemovedCallback = (arguments) =>
             {
                 if (arguments.RemovedReason == CacheEntryRemovedReason.Expired)
-                {
                     Set(key, refresh(), expiration, refresh);
-                }
             }
         });
     }
@@ -137,19 +113,13 @@ public class ForgeCache
     public void Set<T>(string key, T value, TimeSpan expiration)
     {
         if (value == null)
-        {
             throw new ArgumentNullException(nameof(value));
-        }
 
         if (expiration == TimeSpan.Zero)
-        {
             throw new ArgumentException("Must be greater than zero", nameof(expiration));
-        }
 
         if (string.IsNullOrEmpty(key))
-        {
             throw new ArgumentException("Must be set", nameof(key));
-        }
 
         _cache.Set(key, value, new CacheItemPolicy() { AbsoluteExpiration = DateTime.UtcNow.Add(expiration) });
     }
@@ -166,9 +136,7 @@ public class ForgeCache
 
             // Update the cache with the new value
             if (_cache.Get(key) is CacheItemPolicy cacheItemPolicy)
-            {
                 _cache.Set(key, updatedValue, cacheItemPolicy);
-            }
         }
     }
 

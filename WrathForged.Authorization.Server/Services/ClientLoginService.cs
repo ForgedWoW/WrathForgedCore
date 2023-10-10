@@ -6,6 +6,7 @@ using Microsoft.Extensions.Configuration;
 using Serilog;
 using WrathForged.Authorization.Server.Validators;
 using WrathForged.Common;
+using WrathForged.Common.Caching;
 using WrathForged.Common.Cryptography;
 using WrathForged.Common.Networking;
 using WrathForged.Database.Models.Auth;

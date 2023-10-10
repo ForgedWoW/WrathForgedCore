@@ -6,6 +6,7 @@ using Microsoft.Extensions.Configuration;
 using OpenTelemetry;
 using OpenTelemetry.Trace;
 using Serilog;
+using WrathForged.Common.Caching;
 using WrathForged.Common.CommandLine;
 using WrathForged.Common.Cryptography;
 using WrathForged.Common.DBC;
@@ -19,6 +20,8 @@ using WrathForged.Common.Scripting.Interfaces.CoreEvents;
 using WrathForged.Common.Serialization;
 using WrathForged.Common.Threading;
 using WrathForged.Database;
+using WrathForged.Database.DBC;
+using WrathForged.Models;
 using WrathForged.Serialization.Models;
 
 namespace WrathForged.Common;
@@ -79,6 +82,10 @@ public static class DependencyInjection
         _ = builder.Export<ScriptLoader>().Lifestyle.Singleton();
         _ = builder.Export<ForgedTCPClient>();
         _ = builder.Export<ForgedAuthorization>().Lifestyle.Singleton();
+        _ = builder.Export<AttributeCache<ForgedSerializableAttribute>>().Lifestyle.Singleton();
+        _ = builder.Export<AttributeCache<SerializablePropertyAttribute>>().Lifestyle.Singleton();
+        _ = builder.Export<AttributeCache<DBCBoundAttribute>>().Lifestyle.Singleton();
+        _ = builder.Export<AttributeCache<DBCPropertyBindingAttribute>>().Lifestyle.Singleton();
 
         // configure OpenTelemetry
         var telemetryType = configuration.GetDefaultValue("Telemetry:Types", "").Split(',', StringSplitOptions.TrimEntries | StringSplitOptions.TrimEntries).ToList(); // Assuming you have a key like this in your JSON

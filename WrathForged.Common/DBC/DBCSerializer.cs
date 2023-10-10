@@ -4,13 +4,16 @@ using System.Reflection;
 using System.Text;
 using Microsoft.EntityFrameworkCore;
 using Serilog;
+using WrathForged.Common.Caching;
 using WrathForged.Database.DBC;
 
 namespace WrathForged.Common.DBC;
 
-public class DBCSerializer(ILogger logger)
+public class DBCSerializer(ILogger logger, AttributeCache<DBCBoundAttribute> dbcBoundAttributeCache, AttributeCache<DBCPropertyBindingAttribute> dbcPropertyAttributeCache)
 {
     private readonly ILogger _logger = logger;
+    private readonly AttributeCache<DBCBoundAttribute> _dbcBoundAttributeCache = dbcBoundAttributeCache;
+    private readonly AttributeCache<DBCPropertyBindingAttribute> _dbcPropertyAttributeCache = dbcPropertyAttributeCache;
 
     public void Serialize<T>(IEnumerable<T> itemsEn, string filePath, PropertyInfo prop) where T : class, IDBCRecord
     {
@@ -21,7 +24,9 @@ public class DBCSerializer(ILogger logger)
         else
             return;
 
-        if (type.GetCustomAttribute(typeof(DBCBoundAttribute), false) is not DBCBoundAttribute dbcAtt)
+        var dbcAtt = _dbcBoundAttributeCache.GetAttribute(type);
+
+        if (dbcAtt == null)
             return;
 
         using var writer = new BinaryWriter(File.Open(Path.Combine(filePath, dbcAtt.Name), FileMode.Create));
@@ -41,7 +46,9 @@ public class DBCSerializer(ILogger logger)
 
         foreach (var property in properties)
         {
-            if (property.GetCustomAttribute(typeof(DBCPropertyBindingAttribute)) is not DBCPropertyBindingAttribute attribute)
+            var attribute = _dbcPropertyAttributeCache.GetAttribute(property);
+
+            if (attribute == null)
                 continue;
 
             switch (attribute.BindingType)
@@ -97,7 +104,7 @@ public class DBCSerializer(ILogger logger)
         {
             foreach (var property in properties)
             {
-                if (property.GetCustomAttribute(typeof(DBCPropertyBindingAttribute), false) is not DBCPropertyBindingAttribute attribute)
+                if (_dbcPropertyAttributeCache.TryGetAttribute(property, out var attribute))
                     continue;
 
                 var value = property.GetValue(item);

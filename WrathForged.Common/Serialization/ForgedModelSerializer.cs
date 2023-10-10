@@ -4,6 +4,7 @@ using System.Collections;
 using System.Diagnostics.Metrics;
 using System.Reflection;
 using Serilog;
+using WrathForged.Common.Caching;
 using WrathForged.Common.Networking;
 using WrathForged.Common.Observability;
 using WrathForged.Common.Scripting;
@@ -30,7 +31,8 @@ public class ForgedModelSerializer
     private readonly Histogram<double> _serializeTime;
     private readonly Meter _meter;
 
-    public ForgedModelSerializer(ILogger logger, ScriptLoader assemblyLoader, ClassFactory classFactory, MeterFactory meterFactory)
+    public ForgedModelSerializer(ILogger logger, ScriptLoader assemblyLoader, ClassFactory classFactory, MeterFactory meterFactory,
+                                 AttributeCache<ForgedSerializableAttribute> forgedSerializableAttributeCache, AttributeCache<SerializablePropertyAttribute> serializableAttributeCache)
     {
         var classesWithAttribute = assemblyLoader.GetAllTypesWithClassAttribute<ForgedSerializableAttribute>();
         _meter = meterFactory.GetOrCreateMeter(MeterKeys.WRATHFORGED_COMMON);
@@ -40,7 +42,7 @@ public class ForgedModelSerializer
         // Build the deserialization cache
         foreach (var cls in classesWithAttribute)
         {
-            var attribute = cls.GetCustomAttribute<ForgedSerializableAttribute>(false);
+            var attribute = forgedSerializableAttributeCache.GetAttribute(cls);
 
             if (attribute == null)
                 continue;
@@ -50,7 +52,7 @@ public class ForgedModelSerializer
 
             foreach (var prop in cls.GetProperties())
             {
-                var propAtt = prop.GetCustomAttribute<SerializablePropertyAttribute>(false);
+                var propAtt = serializableAttributeCache.GetAttribute(prop);
                 IConditionalSerialization? conditionalAtt = null;
 
                 foreach (var att in prop.GetCustomAttributes())
