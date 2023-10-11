@@ -15,7 +15,7 @@ namespace WrathForged.Realm.Server
             _ = builder.Export<WoWClientServer>().WithCtorParam(() => PacketScope.ClientToRealm).Lifestyle.Singleton();
             _ = builder.Export<ForgedCommServer>().Lifestyle.Singleton();
             _ = builder.Export<WoWClientSession>().As<IWoWClientSession>();
-            _ = builder.Export<RealmClientAddonInfo>().As<IPacketService>();
+            _ = builder.Export<RealmClientAddonInfo>();
             return builder;
         }
     }
