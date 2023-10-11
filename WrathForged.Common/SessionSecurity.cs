@@ -1,5 +1,12 @@
 ﻿// Copyright (c) Forged WoW LLC <https://github.com/ForgedWoW/WrathForgedCore>
 // Licensed under GPL-3.0 license. See <https://github.com/ForgedWoW/WrathForgedCore/blob/master/LICENSE> for full information.
+
+using Serilog;
+using WrathForged.Common.Cryptography;
+using WrathForged.Common.Networking;
+using WrathForged.Common.RBAC;
+using WrathForged.Database.Models.Auth;
+
 namespace WrathForged.Common
 {
     public class SessionSecurity(ILogger logger, ForgedAuthorization forgedAuthorization)
