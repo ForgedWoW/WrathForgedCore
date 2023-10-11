@@ -21,6 +21,7 @@ public class ClientSocket
 
     private readonly NetworkStream _stream;
     private bool _processedDisconnect;
+    private bool _disconnectAfterWrite;
 
     public ClientSocket(TcpClient client, ILogger logger, ActionBlock<DataReceivedEventArgs> actionBlock)
     {
@@ -110,7 +111,32 @@ public class ClientSocket
         _ = _writeSemaphore.Set();
     }
 
+    /// <summary>
+    ///     Finishes writing all data in the write queue, then disconnects the client.
+    /// </summary>
     public void Disconnect()
+    {
+        if (_processedDisconnect)
+            return;
+
+        if (_writeClientPacketQueue.Count > 0 || _writeQueue.Count > 0)
+        {
+            _disconnectAfterWrite = true;
+            return;
+        }
+
+        InternalDisconnect();
+    }
+
+    /// <summary>
+    ///     Does not wait for the write queue to finish, and disconnects the client immediately.
+    /// </summary>
+    public void DisconnectNoDelay()
+    {
+        InternalDisconnect();
+    }
+
+    private void InternalDisconnect()
     {
         if (_processedDisconnect)
             return;
@@ -169,7 +195,7 @@ public class ClientSocket
                 else
                 {
                     // read of 0 is disconnect
-                    Disconnect();
+                    InternalDisconnect();
                     break;
                 }
             }
@@ -178,7 +204,7 @@ public class ClientSocket
                 if (!_processedDisconnect)
                     _logger.Debug(ex, "Error while reading from client");
 
-                Disconnect();
+                InternalDisconnect();
                 break;
             }
         }
@@ -208,7 +234,7 @@ public class ClientSocket
                     if (!_processedDisconnect)
                         _logger.Debug(ex, "Error while sending data to client");
 
-                    Disconnect();
+                    InternalDisconnect();
                 }
             }
 
@@ -228,11 +254,17 @@ public class ClientSocket
                 {
                     if (!_processedDisconnect)
                         _logger.Debug(ex, "Error while sending data to client");
-                    Disconnect();
+                    InternalDisconnect();
                 }
+            }
+
+            if (_disconnectAfterWrite)
+            {
+                InternalDisconnect();
+                break;
             }
         }
 
-        Disconnect();
+        InternalDisconnect();
     }
 }

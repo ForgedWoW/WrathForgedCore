@@ -67,7 +67,7 @@ namespace WrathForged.Common.Scripting
                     _programExitNotifier.NotifyStop($"Core has been stuck for {timeDiff.ToReadableString()}.");
                 }
 
-                _ = Task.Delay(10000, _programExitNotifier.GetCancellationToken());
+                _ = Task.Delay(10000, _programExitNotifier.GetCancellationToken()).Wait();
             }
         }
 
@@ -99,7 +99,7 @@ namespace WrathForged.Common.Scripting
                 _lastTickTime = realTime;
 
                 if (tickDelayDiff < _minTickTime)
-                    _ = Task.Delay((int)(_minTickTime - tickDelayDiff));
+                    _ = Task.Delay((int)(_minTickTime - tickDelayDiff)).Wait();
             }
         }
 
