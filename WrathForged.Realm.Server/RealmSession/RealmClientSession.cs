@@ -8,7 +8,7 @@ namespace WrathForged.Realm.Server.RealmSession
     public class RealmClientSession : WoWClientSession
     {
         public RealmClientSession(ClientSocket clientSocket, PacketBuffer packetBuffer, ClassFactory classFactory) :
-                base(clientSocket, packetBuffer, classFactory) => AddonInfo = classFactory.Locate<RealmClientAddonInfo>();
+                base(clientSocket, packetBuffer, classFactory) => AddonInfo = classFactory.Locate<RealmClientAddonInfo>(new { session = this });
 
         public RealmClientAddonInfo AddonInfo { get; }
     }
