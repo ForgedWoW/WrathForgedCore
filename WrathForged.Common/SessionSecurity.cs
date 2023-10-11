@@ -16,6 +16,7 @@ namespace WrathForged.Common
         private static readonly byte[] _defaultSessionKey = new byte[32];
         private int _currentRealm = -1;
         private Account? _account;
+        private static readonly Account _defaultAccount = new();
 
         public Dictionary<int, AuthorizedRole> Roles { get; set; } = [];
 
@@ -44,19 +45,20 @@ namespace WrathForged.Common
 
         public SRP6 SRP6 { get; set; } = SRP6.Default;
 
-        public Account? Account
+        public Account Account
         {
-            get => _account;
+            get => _account ?? _defaultAccount;
             set
             {
                 if (value != null)
                 {
+                    _account = value;
                     Roles = _forgedAuthorization.GetAccountRolesByRealm(value.Id);
                     DefaultRole = GetRole();
                     SRP6 = new SRP6(value.Username, value.Salt, value.Verifier);
                 }
-
-                _account = value;
+                else
+                    _account = _defaultAccount;
             }
         }
 

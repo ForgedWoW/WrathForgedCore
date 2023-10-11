@@ -6,7 +6,7 @@ namespace WrathForged.Models.Auth
     public class ClientAddons
     {
         [SerializableProperty(0)]
-        private List<ClientAddonInfo> Addons { get; set; } = [];
+        public List<ClientAddonInfo> Addons { get; set; } = [];
 
         [SerializableProperty(1, BitRangeStart = -4, BitRangeEnd = -1, Flags = Serialization.Models.SerializationFlags.UseBitRange)]
         public uint LastBannedAddonTimestamp { get; set; }

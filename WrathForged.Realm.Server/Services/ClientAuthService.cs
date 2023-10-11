@@ -33,9 +33,9 @@ namespace WrathForged.Realm.Server.Services
         {
             using var authDatabase = _classFactory.Locate<AuthDatabase>();
 
-            session.Security.Account = authDatabase.Accounts.Find(realmAuthSessionRequest.AccountName);
+            var account = authDatabase.Accounts.Find(realmAuthSessionRequest.AccountName);
 
-            if (session.Security.Account == null)
+            if (account == null)
             {
                 _logger.Warning("Unknown account {AccountName} from {Address}", realmAuthSessionRequest.AccountName, session.Network.ClientSocket.IPEndPoint);
                 session.Network.Send(new RealmAuthErrorResponse() { Code = ResponseCodes.AUTH_UNKNOWN_ACCOUNT });
@@ -43,6 +43,7 @@ namespace WrathForged.Realm.Server.Services
                 return;
             }
 
+            session.Security.Account = account;
             session.Security.Account.LastAttemptIp = session.Network.ClientSocket.IPEndPoint.Address.ToString();
 
             _ = authDatabase.Update(session.Security.Account);
@@ -122,7 +123,8 @@ namespace WrathForged.Realm.Server.Services
             session.Security.Account.LastLogin = DateTime.UtcNow;
             _ = authDatabase.Update(session.Security.Account);
             _ = authDatabase.SaveChanges();
-            session.As<RealmClientSession>().AddonInfo.ClientAddons = realmAuthSessionRequest.AddonInfo;
+
+            session.As<RealmClientSession>().AddonInfo.SetClientAddons(realmAuthSessionRequest.AddonInfo ?? new ClientAddons());
         }
     }
 }
