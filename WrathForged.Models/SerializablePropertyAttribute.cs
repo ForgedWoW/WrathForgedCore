@@ -52,12 +52,24 @@ namespace WrathForged.Models
         /// <summary>
         ///     Read the property from a known index in the stream. If start is a negative number, start will be from the end of the stream, if -1 for end then the end of the stream will be used.
         ///     The stream position will be advanced to the end of the read property. This is useful for skipping bytes in the stream.
+        ///     <see cref="SerializationFlags.UseBitRange"/> must be set in the <see cref="Flags"/> property.
         ///     <code>
         ///         BitRange = (start: 0, end: 1) // Read the first byte of the stream
-        ///         BitRange = (start: -4, end: -1) // Read the last byte of the stream
+        ///         BitRange = (start: -4, end: -1) // Read the last 4 bytes of the stream
         ///     </code>
         /// </summary>
-        public (int start, int end)? BitRange { get; set; }
+        public int BitRangeStart { get; set; }
+
+        /// <summary>
+        ///     Read the property from a known index in the stream. If start is a negative number, start will be from the end of the stream, if -1 for end then the end of the stream will be used.
+        ///     The stream position will be advanced to the end of the read property. This is useful for skipping bytes in the stream.
+        ///     <see cref="SerializationFlags.UseBitRange"/> must be set in the <see cref="Flags"/> property.
+        ///     <code>
+        ///         BitRange = (start: 0, end: 1) // Read the first byte of the stream
+        ///         BitRange = (start: -4, end: -1) // Read the last 4 bytes of the stream
+        ///     </code>
+        /// </summary>
+        public int BitRangeEnd { get; set; }
 
         /// <summary>
         ///     Flags for specific serialization behaviors

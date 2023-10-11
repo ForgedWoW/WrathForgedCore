@@ -358,10 +358,10 @@ public class ForgedModelSerializer
         {
             byte[] compressedData = [];
 
-            if (prop.SerializationMetadata.BitRange != null)
+            if (prop.SerializationMetadata.Flags.HasFlag(SerializationFlags.UseBitRange))
             {
-                var end = prop.SerializationMetadata.BitRange.Value.end == -1 ? (int)buffer.Reader.BaseStream.Length : prop.SerializationMetadata.BitRange.Value.end;
-                var start = prop.SerializationMetadata.BitRange.Value.start < 0 ? prop.SerializationMetadata.BitRange.Value.start + (int)buffer.Reader.BaseStream.Length : prop.SerializationMetadata.BitRange.Value.start;
+                var end = prop.SerializationMetadata.BitRangeEnd == -1 ? (int)buffer.Reader.BaseStream.Length : prop.SerializationMetadata.BitRangeEnd;
+                var start = prop.SerializationMetadata.BitRangeStart < 0 ? prop.SerializationMetadata.BitRangeStart + (int)buffer.Reader.BaseStream.Length : prop.SerializationMetadata.BitRangeStart;
                 compressedData = buffer.GetBuffer().Slice(start, end).ToArray();
                 oldBuffer.Reader.BaseStream.Position = end;
             }
@@ -483,10 +483,10 @@ public class ForgedModelSerializer
                 : null;
         }
 
-        if (prop.SerializationMetadata.BitRange != null && !prop.SerializationMetadata.Flags.HasFlag(SerializationFlags.ZLibCompressedCollection))
+        if (prop.SerializationMetadata.Flags.HasFlag(SerializationFlags.UseBitRange) && !prop.SerializationMetadata.Flags.HasFlag(SerializationFlags.ZLibCompressedCollection))
         {
-            var end = prop.SerializationMetadata.BitRange.Value.end == -1 ? (int)buffer.Reader.BaseStream.Length : prop.SerializationMetadata.BitRange.Value.end;
-            var start = prop.SerializationMetadata.BitRange.Value.start < 0 ? prop.SerializationMetadata.BitRange.Value.start + (int)buffer.Reader.BaseStream.Length : prop.SerializationMetadata.BitRange.Value.start;
+            var end = prop.SerializationMetadata.BitRangeEnd == -1 ? (int)buffer.Reader.BaseStream.Length : prop.SerializationMetadata.BitRangeEnd;
+            var start = prop.SerializationMetadata.BitRangeStart < 0 ? prop.SerializationMetadata.BitRangeStart + (int)buffer.Reader.BaseStream.Length : prop.SerializationMetadata.BitRangeStart;
             var newBuffer = new PacketBuffer(buffer.GetBuffer().Slice(start, end), _logger);
             buffer.Reader.BaseStream.Position = end;
             return forgedTypeSerialization?.Deserialize(newBuffer, prop, collectionSizes);

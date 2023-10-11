@@ -33,6 +33,11 @@ namespace WrathForged.Serialization.Models
         ///    Optionally you can define BitRange if the range of the packets is known as an alternative to FixedCollectionSize or size being written in the stream.
         ///    The actual type of the property can be the deserialized type of the decompressed data.
         /// </summary>
-        ZLibCompressedCollection = 1 << 7
+        ZLibCompressedCollection = 1 << 7,
+
+        /// <summary>
+        ///     When reading the property from the stream use the BitRangeStart and BitRangeEnd to read the property.
+        /// </summary>
+        UseBitRange = 1 << 8,
     }
 }
