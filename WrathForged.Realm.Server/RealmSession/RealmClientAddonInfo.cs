@@ -6,7 +6,8 @@ namespace WrathForged.Realm.Server.RealmSession
 {
     public class RealmClientAddonInfo(RealmClientSession session)
     {
+        private readonly RealmClientSession _session = session;
 
-        public ClientAddons ClientAddons { get; set; }
+        public ClientAddons? ClientAddons { get; set; }
     }
 }
