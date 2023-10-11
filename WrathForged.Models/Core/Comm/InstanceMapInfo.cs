@@ -7,6 +7,6 @@
         public uint MapId { get; set; }
 
         [SerializableProperty(1)]
-        public List<uint> Difficulties { get; set; } = new List<uint>();
+        public List<uint> Difficulties { get; set; } = [];
     }
 }

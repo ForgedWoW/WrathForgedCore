@@ -8,8 +8,8 @@ namespace WrathForged.Common.Serialization.Serializers;
 
 public class FourCCStringSerialization : IForgedTypeSerialization
 {
-    public HashSet<Type> SupportedTypes { get; } = new HashSet<Type>();
-    public HashSet<ForgedTypeCode> SupportedForgedTypeCodes { get; } = new HashSet<ForgedTypeCode>() { ForgedTypeCode.FourCCString };
+    public HashSet<Type> SupportedTypes { get; } = [];
+    public HashSet<ForgedTypeCode> SupportedForgedTypeCodes { get; } = [ForgedTypeCode.FourCCString];
 
     public object? Deserialize(PacketBuffer packetBuffer, PropertyMeta propertyMeta, Dictionary<uint, int> collectionSizes)
     {

@@ -10,7 +10,7 @@ using WrathForged.Serialization.Models;
 
 namespace WrathForged.Realm.Server.Services
 {
-    public class ClientSyncRouter(IConfiguration configuration, ILogger logger) : IPacketService
+    public class ClientSyncService(IConfiguration configuration, ILogger logger) : IPacketService
     {
         private readonly IConfiguration _configuration = configuration;
         private readonly ILogger _logger = logger;

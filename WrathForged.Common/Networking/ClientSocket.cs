@@ -90,6 +90,8 @@ public class ClientSocket
 
     public IPEndPoint IPEndPoint { get; }
 
+    public WoWClientSession? ClientSession { get; set; }
+
     public void EnqueueWrite(WoWClientPacketOut data)
     {
         if (_processedDisconnect)
@@ -195,7 +197,7 @@ public class ClientSocket
 
                 try
                 {
-                    var buffer = data.GetBuffer();
+                    var buffer = data.GetBuffer(ClientSession?.Security?.PacketEncryption);
                     _logger.Verbose("Sending packet {Opcode} to {IPEndPoint} with length {Length}", data.PacketId, IPEndPoint, buffer.Length);
                     await _stream.WriteAsync(buffer);
                     _onDataSent?.Invoke(this, buffer);

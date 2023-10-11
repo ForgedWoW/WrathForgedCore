@@ -8,7 +8,7 @@ namespace WrathForged.Common.Caching
     {
         // we cache the attributes so we don't have to use reflection every time, c# creates a new instance of the attribute every time you use GetCustomAttribute
         // we dont need a lock as we only ever read from this dictionary and we only add to it.
-        private readonly Dictionary<Type, T> _cachedAttributes = new();
+        private readonly Dictionary<Type, T> _cachedAttributes = [];
 
         public T? GetAttribute(Type type)
         {

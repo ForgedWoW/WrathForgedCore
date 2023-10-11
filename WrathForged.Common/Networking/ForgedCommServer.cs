@@ -15,7 +15,7 @@ public class ForgedCommServer
     private readonly PacketRouter _packetRouter;
     private readonly ILogger _logger;
     private readonly IConfiguration _configuration;
-    private readonly Dictionary<ClientSocket, PacketBuffer> _packetBuffers = new();
+    private readonly Dictionary<ClientSocket, PacketBuffer> _packetBuffers = [];
 
     public ForgedCommServer(ForgedModelSerializer forgedModelDeserialization, TCPServer tCPServer, PacketRouter packetRouter, ILogger logger, IConfiguration configuration)
     {

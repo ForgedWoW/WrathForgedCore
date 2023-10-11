@@ -50,7 +50,7 @@ namespace WrathForged.Instance.Server.Services
                     mapInfoDict[map.MapId] = new InstanceMapInfo
                     {
                         MapId = map.MapId,
-                        Difficulties = new List<uint> { map.Difficulty }
+                        Difficulties = [map.Difficulty]
                     };
                 }
             }

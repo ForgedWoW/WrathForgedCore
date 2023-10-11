@@ -220,7 +220,7 @@ namespace WrathForged.Database.Updates
                     var elapsed = DateTime.UtcNow - updateStart;
                     _logger.Information("SQL update {0} took {1}.", sql.Name, elapsed.ToReadableString());
 
-                    newUpdates.Updates ??= new List<Update>();
+                    newUpdates.Updates ??= [];
 
                     newUpdates.Updates.Add(new Update()
                     {

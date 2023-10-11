@@ -18,6 +18,6 @@ namespace WrathForged.Models.Core.Comm
         public ushort Port { get; set; }
 
         [SerializableProperty(3)]
-        public List<InstanceMapInfo> MapIDs { get; set; } = new List<InstanceMapInfo>();
+        public List<InstanceMapInfo> MapIDs { get; set; } = [];
     }
 }

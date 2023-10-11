@@ -6,7 +6,7 @@ namespace WrathForged.Models.Auth
     public class RealmListResponse
     {
         [SerializableProperty(0, Flags = Serialization.Models.SerializationFlags.DontSerializeCollectionSize)]
-        public List<AuthRealm> Realms { get; set; } = new List<AuthRealm>();
+        public List<AuthRealm> Realms { get; set; } = [];
 
         [SerializableProperty(1)]
         public byte Unk1 { get; set; } = 0x10;

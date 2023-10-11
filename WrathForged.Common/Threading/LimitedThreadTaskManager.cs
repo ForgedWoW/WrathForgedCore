@@ -8,7 +8,7 @@ namespace WrathForged.Common.Threading;
 public class LimitedThreadTaskManager
 {
     private readonly ExecutionDataflowBlockOptions _blockOptions;
-    private readonly List<Action> _staged = new();
+    private readonly List<Action> _staged = [];
     private ActionBlock<Action> _actionBlock;
     private CancellationTokenSource _cancellationToken;
 

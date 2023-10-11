@@ -6,7 +6,7 @@ namespace WrathForged.Common.RBAC;
 
 public class AuthorizedRole(byte securityLevel, int realmId, Dictionary<uint, RbacPermission> permissions)
 {
-    public static AuthorizedRole None => new(0, 0, new Dictionary<uint, RbacPermission>());
+    public static AuthorizedRole None => new(0, 0, []);
 
     public byte SecurityLevel { get; set; } = securityLevel;
     public int RealmId { get; set; } = realmId;

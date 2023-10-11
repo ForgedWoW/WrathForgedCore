@@ -1,13 +1,6 @@
 ﻿// Copyright (c) Forged WoW LLC <https://github.com/ForgedWoW/WrathForgedCore>
 // Licensed under GPL-3.0 license. See <https://github.com/ForgedWoW/WrathForgedCore/blob/master/LICENSE> for full information.
-using System.Diagnostics.Metrics;
 using System.Net;
-using Microsoft.Extensions.Configuration;
-using Serilog;
-using WrathForged.Common.Observability;
-using WrathForged.Common.Serialization;
-using WrathForged.Models.Networking;
-using WrathForged.Serialization.Models;
 
 namespace WrathForged.Common.Networking;
 
@@ -23,7 +16,7 @@ public class WoWClientServer
     private readonly ILogger _logger;
     private readonly IConfiguration _configuration;
     private readonly ClassFactory _classFactory;
-    private readonly Dictionary<ClientSocket, WoWClientSession> _clientSessions = new();
+    private readonly Dictionary<ClientSocket, WoWClientSession> _clientSessions = [];
     private readonly Meter _meter;
     private readonly Counter<long> _connectionCounter;
 
@@ -110,7 +103,11 @@ public class WoWClientServer
 
     private void DataReceived(object? sender, DataReceivedEventArgs e)
     {
-        var session = GetOrCreateSessionForClient(e.Client);
+        WoWClientSession session = GetOrCreateSessionForClient(e.Client);
+
+        if (e.Client.ClientSession == null)
+            e.Client.ClientSession = session;
+
         session.Network.PacketBuffer.AppendData(e.Data);
         var packetLength = 0;
         var packetReadTryCount = 0;

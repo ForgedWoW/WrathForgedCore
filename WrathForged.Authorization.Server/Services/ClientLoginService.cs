@@ -26,7 +26,7 @@ namespace WrathForged.Authorization.Server.Services
         private readonly RandomUtilities _randomUtilities = randomUtilities;
         private readonly ILogger _logger = logger;
         private readonly ForgeCache _forgeCache = forgeCache;
-        private readonly Dictionary<string, LoginTracker> _loginTracker = new();
+        private readonly Dictionary<string, LoginTracker> _loginTracker = [];
 
         [PacketRoute(PacketScope.ClientToAuth, AuthServerOpCode.AUTH_LOGON_CHALLENGE)]
         public void ChallengeRequest(WoWClientSession session, AuthLogonChallengeRequest authLogonChallenge)

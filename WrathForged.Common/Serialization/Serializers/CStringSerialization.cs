@@ -8,8 +8,8 @@ namespace WrathForged.Common.Serialization.Serializers;
 
 public class CStringSerialization : IForgedTypeSerialization
 {
-    public HashSet<Type> SupportedTypes { get; } = new HashSet<Type>();
-    public HashSet<ForgedTypeCode> SupportedForgedTypeCodes { get; } = new HashSet<ForgedTypeCode>() { ForgedTypeCode.CString };
+    public HashSet<Type> SupportedTypes { get; } = [];
+    public HashSet<ForgedTypeCode> SupportedForgedTypeCodes { get; } = [ForgedTypeCode.CString];
 
     public object? Deserialize(PacketBuffer packetBuffer, PropertyMeta propertyMeta, Dictionary<uint, int> collectionSizes)
     {

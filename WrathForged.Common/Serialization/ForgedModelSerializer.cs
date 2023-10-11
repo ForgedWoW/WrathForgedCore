@@ -22,11 +22,11 @@ public class ForgedModelSerializer
     ///     A cache of all the deserialization definitions for each object and their properties
     /// </summary>
     // Scope OpCode ObjType PropertyName, SerializationMetadata
-    private readonly Dictionary<PacketScope, Dictionary<uint, (Type, ModelInfo)>> _deserializationMethodsCache = new();
-    private readonly Dictionary<Type, ModelInfo> _deserializationMethodsCacheByType = new();
-    private readonly Dictionary<Type, ModelInfo> _systemScope = new();
-    private readonly Dictionary<Type, IForgedTypeSerialization> _serializers = new();
-    private readonly Dictionary<ForgedTypeCode, IForgedTypeSerialization> _forgedTypeCodeSerializers = new();
+    private readonly Dictionary<PacketScope, Dictionary<uint, (Type, ModelInfo)>> _deserializationMethodsCache = [];
+    private readonly Dictionary<Type, ModelInfo> _deserializationMethodsCacheByType = [];
+    private readonly Dictionary<Type, ModelInfo> _systemScope = [];
+    private readonly Dictionary<Type, IForgedTypeSerialization> _serializers = [];
+    private readonly Dictionary<ForgedTypeCode, IForgedTypeSerialization> _forgedTypeCodeSerializers = [];
     private readonly Histogram<double> _deserializeTime;
     private readonly Histogram<double> _serializeTime;
     private readonly Meter _meter;

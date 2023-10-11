@@ -64,7 +64,7 @@ public class WoWClientPacketOut : IDisposable
     ///     We use memory to avoid copying the buffer, and manipulating the buffer in the stream directly.
     /// </summary>
     /// <returns></returns>
-    public Memory<byte> GetBuffer()
+    public Memory<byte> GetBuffer(PacketEncryption? packetEncryption = null)
     {
         var dataPos = (int)Writer.BaseStream.Position;
 
@@ -94,6 +94,10 @@ public class WoWClientPacketOut : IDisposable
         }
 
         MemoryStream.Flush();
+
+        // For realm and instance packets, we need to encrypt the header and the data.
+        // Its always 4 bytes.
+        packetEncryption?.Encrypt(MemoryStream.GetBuffer(), 0, _headerSize);
 
         var buffer = MemoryStream.GetBuffer();
         return new Memory<byte>(buffer, 0, dataPos);
