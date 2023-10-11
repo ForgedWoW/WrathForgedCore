@@ -28,7 +28,7 @@ public class TCPServer
     private readonly ILogger _logger;
     private readonly ProgramExitNotifier _programExit;
     private TcpListener _tcpListener;
-    private readonly Dictionary<ClientSocket, ClientFileStreams> _clients = new();
+    private readonly Dictionary<ClientSocket, ClientFileStreams> _clients = [];
     private ActionBlock<DataReceivedEventArgs> _dataProcessingBlock;
     private ActionBlock<ClientConnectionChangeEvent> _connectionProcessingBlock;
 

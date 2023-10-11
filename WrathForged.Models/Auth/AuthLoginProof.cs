@@ -17,7 +17,7 @@ namespace WrathForged.Models.Auth
         public byte[] CRCHash { get; set; } = [];
 
         [SerializableProperty(3, CollectionSizeLengthType = TypeCode.Byte)]
-        public List<SHA1Key> PublicEphemeralKeys { get; set; } = new();
+        public List<SHA1Key> PublicEphemeralKeys { get; set; } = [];
 
         [SerializableProperty(4)]
         public byte SecurityFlags { get; set; }

@@ -8,23 +8,15 @@ using WrathForged.Database.Models.Auth;
 
 namespace WrathForged.Common
 {
-    public class SessionSecurity
+    public class SessionSecurity(ILogger logger, ForgedAuthorization forgedAuthorization)
     {
-        private readonly ILogger _logger;
-        private readonly ForgedAuthorization _forgedAuthorization;
+        private readonly ILogger _logger = logger;
+        private readonly ForgedAuthorization _forgedAuthorization = forgedAuthorization;
         private static readonly byte[] _defaultSessionKey = new byte[32];
         private int _currentRealm = -1;
         private Account? _account;
 
-        public SessionSecurity(ILogger logger, ForgedAuthorization forgedAuthorization)
-        {
-            _logger = logger;
-            _forgedAuthorization = forgedAuthorization;
-            PacketEncryption = new PacketEncryption(_defaultSessionKey, _logger);
-        }
-
-
-        public Dictionary<int, AuthorizedRole> Roles { get; set; } = new();
+        public Dictionary<int, AuthorizedRole> Roles { get; set; } = [];
 
         public byte[] SessionKey
         {
@@ -33,7 +25,7 @@ namespace WrathForged.Common
             {
                 if (value == null)
                 {
-                    PacketEncryption = new PacketEncryption(_defaultSessionKey, _logger);
+                    PacketEncryption = null;
                     return;
                 }
 
@@ -46,7 +38,7 @@ namespace WrathForged.Common
 
         public bool IsEncrypted => SessionKey != _defaultSessionKey;
         public WoWClientSession.AuthState AuthenticationState { get; set; } = WoWClientSession.AuthState.LoggedOut;
-        public PacketEncryption PacketEncryption { get; private set; }
+        public PacketEncryption? PacketEncryption { get; private set; }
         public byte[] ReconnectProof { get; set; } = [];
 
         public SRP6 SRP6 { get; set; } = SRP6.Default;

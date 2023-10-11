@@ -7,7 +7,7 @@ namespace WrathForged.Common.Cryptography;
 public class RandomUtilities
 {
     private const int RAND_LIST_LEN = 40;
-    private readonly List<Random> _randoms = new();
+    private readonly List<Random> _randoms = [];
 
     public RandomUtilities()
     {

@@ -8,7 +8,7 @@ namespace WrathForged.Common;
 
 public partial class WoWClientSession
 {
-    private ServerUpdateLoop _serverUpdateLoop;
+    private readonly ServerUpdateLoop _serverUpdateLoop;
 
     public WoWClientSession(ClientSocket clientSocket, PacketBuffer packetBuffer, ClassFactory classFactory)
     {

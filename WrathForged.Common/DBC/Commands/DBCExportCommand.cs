@@ -18,7 +18,7 @@ public class DBCExportCommand : ICommandLineArgumentHandler
     private readonly DBCSerializer _dbcSerializer;
     private readonly DBCDatabase _dbcDatabase;
     private readonly ILogger _logger;
-    private readonly List<string> _dbcDefinitions = new();
+    private readonly List<string> _dbcDefinitions = [];
     private readonly Dictionary<string, PropertyInfo> _dbSets = new(StringComparer.InvariantCultureIgnoreCase);
 
     public DBCExportCommand(DBCSerializer dbcSerializer, DBCDatabase dbcDatabase, ScriptLoader scriptLoader, ILogger logger, AttributeCache<DBCBoundAttribute> attributeCache)

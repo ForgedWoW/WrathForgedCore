@@ -6,7 +6,7 @@ namespace WrathForged.Common.Observability;
 
 public class MeterFactory
 {
-    private readonly Dictionary<string, Meter> _meters = new();
+    private readonly Dictionary<string, Meter> _meters = [];
 
     public Meter GetOrCreateMeter(string meterName, string version = "1.0.0")
     {

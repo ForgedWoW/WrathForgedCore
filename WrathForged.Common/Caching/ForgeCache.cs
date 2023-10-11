@@ -14,7 +14,7 @@ public class ForgeCache
     private void ProgramExitNotifier_ExitProgram(object? sender, EventArgs e) => _cache.Dispose();
 
     private readonly MemoryCache _cache = new("ForgeCache");
-    private readonly Dictionary<string, Func<object>> _refreshFunctions = new();
+    private readonly Dictionary<string, Func<object>> _refreshFunctions = [];
 
     public T? Get<T>(string key) => !_cache.Contains(typeof(T).Name) ? default : (T)_cache.Get(key);
 

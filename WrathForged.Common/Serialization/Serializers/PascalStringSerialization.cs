@@ -9,8 +9,8 @@ namespace WrathForged.Common.Serialization.Serializers;
 
 public class PascalStringSerialization : IForgedTypeSerialization
 {
-    public HashSet<Type> SupportedTypes { get; } = new HashSet<Type>();
-    public HashSet<ForgedTypeCode> SupportedForgedTypeCodes { get; } = new HashSet<ForgedTypeCode>() { ForgedTypeCode.PascalString };
+    public HashSet<Type> SupportedTypes { get; } = [];
+    public HashSet<ForgedTypeCode> SupportedForgedTypeCodes { get; } = [ForgedTypeCode.PascalString];
 
     public object? Deserialize(PacketBuffer packetBuffer, PropertyMeta propertyMeta, Dictionary<uint, int> collectionSizes)
     {

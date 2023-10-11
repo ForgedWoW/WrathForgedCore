@@ -8,8 +8,8 @@ namespace WrathForged.Common.Serialization.Serializers;
 
 public class SByteSerialization : IForgedTypeSerialization
 {
-    public HashSet<Type> SupportedTypes { get; } = new HashSet<Type>() { typeof(sbyte) };
-    public HashSet<ForgedTypeCode> SupportedForgedTypeCodes { get; } = new HashSet<ForgedTypeCode>();
+    public HashSet<Type> SupportedTypes { get; } = [typeof(sbyte)];
+    public HashSet<ForgedTypeCode> SupportedForgedTypeCodes { get; } = [];
 
     public object? Deserialize(PacketBuffer packetBuffer, PropertyMeta propertyMeta, Dictionary<uint, int> collectionSizes) => packetBuffer.Reader.ReadSByte();
 

@@ -12,10 +12,10 @@ public class ForgedAuthorization
     private readonly ClassFactory _classFactory;
 
     //                 RoleId           permissionId
-    private readonly Dictionary<uint, Dictionary<uint, RbacPermission>> _permissions = new();
+    private readonly Dictionary<uint, Dictionary<uint, RbacPermission>> _permissions = [];
     //                 account id, realm id, permission
     private Dictionary<uint, Dictionary<int, RbacAccountPermission>> _accountPermissions;
-    private Dictionary<uint, Dictionary<int, AccountAccess>> _accountAccess = new();
+    private Dictionary<uint, Dictionary<int, AccountAccess>> _accountAccess = [];
 
 #pragma warning disable CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
     public ForgedAuthorization(ILogger logger, ClassFactory classFactory, BackgroundWorkProcessor backgroundWorkProcessor)
@@ -68,7 +68,7 @@ public class ForgedAuthorization
             {
                 if (!retVal.TryGetValue(kvp.Key, out var role))
                 {
-                    role = new AuthorizedRole(kvp.Value.SecurityLevel, kvp.Key, new Dictionary<uint, RbacPermission>());
+                    role = new AuthorizedRole(kvp.Value.SecurityLevel, kvp.Key, []);
                     retVal[kvp.Key] = role;
                 }
 
@@ -85,7 +85,7 @@ public class ForgedAuthorization
             {
                 if (!retVal.TryGetValue(kvp.Key, out var role))
                 {
-                    role = new AuthorizedRole(0, kvp.Key, new Dictionary<uint, RbacPermission>());
+                    role = new AuthorizedRole(0, kvp.Key, []);
                     retVal[kvp.Key] = role;
                 }
 

@@ -22,7 +22,7 @@ namespace WrathForged.Common.Scripting
         public const int UPDATE_LOOP_PRIORITY_HIGH = 10;
 
         // We use HashSet to prevent duplicate updates
-        private readonly SortedDictionary<int, HashSet<IUpdateLoop>> _updateMethods = new();
+        private readonly SortedDictionary<int, HashSet<IUpdateLoop>> _updateMethods = [];
 
         public void Start()
         {

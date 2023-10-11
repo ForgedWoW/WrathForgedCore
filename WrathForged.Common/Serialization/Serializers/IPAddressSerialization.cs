@@ -9,8 +9,8 @@ namespace WrathForged.Common.Serialization.Serializers;
 
 public class IPAddressSerialization : IForgedTypeSerialization
 {
-    public HashSet<Type> SupportedTypes { get; } = new HashSet<Type>() { typeof(IPAddress) };
-    public HashSet<ForgedTypeCode> SupportedForgedTypeCodes { get; } = new HashSet<ForgedTypeCode>();
+    public HashSet<Type> SupportedTypes { get; } = [typeof(IPAddress)];
+    public HashSet<ForgedTypeCode> SupportedForgedTypeCodes { get; } = [];
 
     public object? Deserialize(PacketBuffer packetBuffer, PropertyMeta propertyMeta, Dictionary<uint, int> collectionSizes)
     {

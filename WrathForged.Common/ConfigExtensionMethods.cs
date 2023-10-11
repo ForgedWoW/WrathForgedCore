@@ -7,7 +7,7 @@ namespace WrathForged.Common;
 
 public static class ConfigExtensionMethods
 {
-    private static readonly Dictionary<Type, IConvertConfigValue> _converters = new();
+    private static readonly Dictionary<Type, IConvertConfigValue> _converters = [];
 
     public static void AddConverter(IConvertConfigValue converter) => _converters[converter.GetType()] = converter;
 

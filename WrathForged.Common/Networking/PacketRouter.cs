@@ -16,8 +16,8 @@ public class PacketRouter
         NoPacket
     }
 
-    private readonly Dictionary<PacketScope, Dictionary<uint, List<(MethodInfo, PacketRouteAttribute, IPacketService)>>> _packetHandlerCache = new();
-    private readonly Dictionary<PacketScope, Dictionary<uint, RouteType>> _hasPacketArg = new();
+    private readonly Dictionary<PacketScope, Dictionary<uint, List<(MethodInfo, PacketRouteAttribute, IPacketService)>>> _packetHandlerCache = [];
+    private readonly Dictionary<PacketScope, Dictionary<uint, RouteType>> _hasPacketArg = [];
 
     public PacketRouter(ClassFactory classFactory)
     {

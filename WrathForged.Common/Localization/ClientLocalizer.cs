@@ -6,7 +6,7 @@ namespace WrathForged.Common.Localization;
 
 public class ClientLocalizer
 {
-    private readonly Dictionary<uint, string> _locale = new();
+    private readonly Dictionary<uint, string> _locale = [];
     private readonly WorldDatabase _worldDatabase;
 
     public int CurrentLocale { get; }

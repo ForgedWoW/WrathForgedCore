@@ -14,7 +14,7 @@ namespace WrathForged.Realm.Server.Services
         private readonly WorldDatabase _worldDatabase = worldDatabase;
         private readonly AuthDatabase _authDatabase = authDatabase;
 
-        public Dictionary<uint, InstanceServerRegistration> InstanceServers { get; } = new();
+        public Dictionary<uint, InstanceServerRegistration> InstanceServers { get; } = [];
 
         [PacketRoute(PacketScope.System, ForgedCoreOpCode.AddInstanceServer)]
         public void RegisterInstanceServer(ClientSocket socket, InstanceServerRegistration serverRegistration) => InstanceServers[serverRegistration.Id] = serverRegistration;

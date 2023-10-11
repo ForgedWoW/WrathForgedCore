@@ -8,11 +8,11 @@ namespace WrathForged.Common.Serialization.Serializers;
 
 public class StringSerialization : IForgedTypeSerialization
 {
-    public HashSet<Type> SupportedTypes { get; } = new HashSet<Type>()
-    {
+    public HashSet<Type> SupportedTypes { get; } =
+    [
         typeof(string)
-    };
-    public HashSet<ForgedTypeCode> SupportedForgedTypeCodes { get; } = new HashSet<ForgedTypeCode>();
+    ];
+    public HashSet<ForgedTypeCode> SupportedForgedTypeCodes { get; } = [];
 
     public object? Deserialize(PacketBuffer packetBuffer, PropertyMeta propertyMeta, Dictionary<uint, int> collectionSizes)
     {

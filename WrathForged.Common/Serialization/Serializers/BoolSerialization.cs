@@ -8,8 +8,8 @@ namespace WrathForged.Common.Serialization.Serializers;
 
 public class BoolSerialization : IForgedTypeSerialization
 {
-    public HashSet<Type> SupportedTypes { get; } = new HashSet<Type>() { typeof(bool) };
-    public HashSet<ForgedTypeCode> SupportedForgedTypeCodes { get; } = new HashSet<ForgedTypeCode>();
+    public HashSet<Type> SupportedTypes { get; } = [typeof(bool)];
+    public HashSet<ForgedTypeCode> SupportedForgedTypeCodes { get; } = [];
 
     public object? Deserialize(PacketBuffer packetBuffer, PropertyMeta propertyMeta, Dictionary<uint, int> collectionSizes) => packetBuffer.Reader.ReadBoolean();
 

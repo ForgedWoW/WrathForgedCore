@@ -9,12 +9,12 @@ namespace WrathForged.Common.Serialization.Serializers;
 
 public class ASCIIStringSerialization : IForgedTypeSerialization
 {
-    public HashSet<Type> SupportedTypes { get; } = new HashSet<Type>();
+    public HashSet<Type> SupportedTypes { get; } = [];
 
-    public HashSet<ForgedTypeCode> SupportedForgedTypeCodes { get; } = new HashSet<ForgedTypeCode>()
-    {
+    public HashSet<ForgedTypeCode> SupportedForgedTypeCodes { get; } =
+    [
         ForgedTypeCode.ASCIIString
-    };
+    ];
 
     public object? Deserialize(PacketBuffer packetBuffer, PropertyMeta propertyMeta, Dictionary<uint, int> collectionSizes)
     {

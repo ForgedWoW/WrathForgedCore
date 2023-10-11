@@ -7,7 +7,7 @@ namespace WrathForged.Common.Threading;
 
 public class BackgroundWorkProcessor
 {
-    private readonly List<ScheduledAction> _scheduledActions = new();
+    private readonly List<ScheduledAction> _scheduledActions = [];
     private readonly Timer _timer;
     private readonly SemaphoreSlim _semaphore;
     private readonly ILogger _logger;
