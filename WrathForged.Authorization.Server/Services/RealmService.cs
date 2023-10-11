@@ -17,7 +17,7 @@ namespace WrathForged.Authorization.Server.Services
         private readonly ILogger _logger = logger;
 
         [PacketRoute(PacketScope.ClientToAuth, AuthServerOpCode.REALM_LIST)]
-        public void RealmRequest(WoWClientSession session)
+        public void RealmRequest(IWoWClientSession session)
         {
             _logger.Debug("Realm list request from {Address}", session.Network.ClientSocket.IPEndPoint);
             var packet = session.Network.NewClientMessage(new PacketId(AuthServerOpCode.REALM_LIST, PacketScope.AuthToClient), PacketHeaderType.WithLength, ContentLengthType.Short);

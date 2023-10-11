@@ -31,6 +31,17 @@ public class PacketBuffer : IDisposable
     }
 
     /// <summary>
+    ///     Sets the internal stream to the specified packet buffer.
+    /// </summary>
+    /// <param name="packetBuffer"></param>
+    /// <param name="logger"></param>
+    public PacketBuffer(Memory<byte> packetBuffer, ILogger logger)
+    {
+        _internalStream = new MemoryStream(packetBuffer.ToArray());
+        Reader = new PrimitiveReader(_internalStream, logger);
+    }
+
+    /// <summary>
     ///     Copies the data from the specified packet buffer into a new packet buffer.
     /// </summary>
     /// <param name="packetBuffer"></param>

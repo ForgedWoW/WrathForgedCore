@@ -8,6 +8,7 @@ using WrathForged.Authorization.Server.Validators;
 using WrathForged.Common;
 using WrathForged.Common.Caching;
 using WrathForged.Common.Cryptography;
+using WrathForged.Common.External;
 using WrathForged.Common.Networking;
 using WrathForged.Database.Models.Auth;
 using WrathForged.Models.Auth;
@@ -19,7 +20,7 @@ using WrathForged.Serialization.Models;
 namespace WrathForged.Authorization.Server.Services
 {
     public class ClientLoginService(IConfiguration configuration, BanValidator banValidator, ClassFactory classFactory, RandomUtilities randomUtilities,
-                              ILogger logger, ForgeCache forgeCache) : IPacketService
+                              ILogger logger, ForgeCache forgeCache, IpStackGeoLocationService ipStackGeoLocationService) : IPacketService
     {
         private readonly IConfiguration _configuration = configuration;
         private readonly BanValidator _banValidator = banValidator;
@@ -30,7 +31,7 @@ namespace WrathForged.Authorization.Server.Services
         private readonly Dictionary<string, LoginTracker> _loginTracker = [];
 
         [PacketRoute(PacketScope.ClientToAuth, AuthServerOpCode.AUTH_LOGON_CHALLENGE)]
-        public void ChallengeRequest(WoWClientSession session, AuthLogonChallengeRequest authLogonChallenge)
+        public void ChallengeRequest(IWoWClientSession session, AuthLogonChallengeRequest authLogonChallenge)
         {
             _logger.Debug("Login challenge request from {Address}", session.Network.ClientSocket.IPEndPoint);
             using var authDatabase = _classFactory.Locate<AuthDatabase>();
@@ -79,6 +80,21 @@ namespace WrathForged.Authorization.Server.Services
                     return;
             }
 
+            if (!string.IsNullOrEmpty(account.LockCountry) && _configuration.GetDefaultValue("IpStack:Enabled", false))
+            {
+                var geoLocation = ipStackGeoLocationService.GetServiceResponse(ipString);
+
+                if (geoLocation != null && geoLocation.country_code.Equals(account.LockCountry, StringComparison.InvariantCultureIgnoreCase))
+                {
+                    _logger.Debug("Failed login attempt for {Identity} from {Address}. Account locked to country {LockedCountry}", authLogonChallenge.Identity, session.Network.ClientSocket.IPEndPoint, account.LockCountry);
+                    LoginFailed(session, AuthStatus.WOW_FAIL_LOCKED_ENFORCED, AuthServerOpCode.AUTH_LOGON_CHALLENGE);
+                    account.FailedLogins++;
+                    _ = authDatabase.Accounts.Update(account);
+                    _ = authDatabase.SaveChanges();
+                    return;
+                }
+            }
+
             if (authLogonChallenge.Major != ExpansionType.WrathOfTheLichKing ||
                 authLogonChallenge.Minor != 3 ||
                 authLogonChallenge.Revision != 5 ||
@@ -117,7 +133,7 @@ namespace WrathForged.Authorization.Server.Services
         }
 
         [PacketRoute(PacketScope.ClientToAuth, AuthServerOpCode.AUTH_LOGON_PROOF)]
-        public void LogonProof(WoWClientSession session, AuthLoginProof proof)
+        public void LogonProof(IWoWClientSession session, AuthLoginProof proof)
         {
             _logger.Debug("Logon proof request from {Address}", session.Network.ClientSocket.IPEndPoint);
 
@@ -169,7 +185,7 @@ namespace WrathForged.Authorization.Server.Services
         }
 
         [PacketRoute(PacketScope.ClientToAuth, AuthServerOpCode.AUTH_RECONNECT_CHALLENGE)]
-        public void ReconnectChallengeRequest(WoWClientSession session, AuthLogonChallengeRequest authLogonChallenge)
+        public void ReconnectChallengeRequest(IWoWClientSession session, AuthLogonChallengeRequest authLogonChallenge)
         {
             _logger.Debug("AUTH_RECONNECT_CHALLENGE from {Address}", session.Network.ClientSocket.IPEndPoint);
             using var authDatabase = _classFactory.Locate<AuthDatabase>();
@@ -202,7 +218,7 @@ namespace WrathForged.Authorization.Server.Services
         }
 
         [PacketRoute(PacketScope.ClientToAuth, AuthServerOpCode.AUTH_RECONNECT_PROOF)]
-        public void ReconnectProof(WoWClientSession session, AuthReconnectedProof proof)
+        public void ReconnectProof(IWoWClientSession session, AuthReconnectedProof proof)
         {
             _logger.Debug("AUTH_RECONNECT_PROOF from {Address}", session.Network.ClientSocket.IPEndPoint);
             if (session.Security.Account == null)
@@ -248,7 +264,7 @@ namespace WrathForged.Authorization.Server.Services
             }
         }
 
-        private void LoginFailed(WoWClientSession session, AuthStatus status, AuthServerOpCode authServerOpCode)
+        private void LoginFailed(IWoWClientSession session, AuthStatus status, AuthServerOpCode authServerOpCode)
         {
             var ipAddress = session.Network.ClientSocket.IPEndPoint.Address.ToString();
             if (!_loginTracker.TryGetValue(ipAddress, out var tracker))

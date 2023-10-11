@@ -35,7 +35,7 @@ namespace WrathForged.Models.Auth
         [SerializableProperty(9)]
         public byte[] Digest { get; set; } = [];
 
-        [SerializableProperty(10, Flags = Serialization.Models.SerializationFlags.ReadRestOfPacket)]
-        public byte[] AddonInfo { get; set; } = [];
+        [SerializableProperty(11, CollectionSizeLengthType = TypeCode.UInt64, Flags = Serialization.Models.SerializationFlags.ZLibCompressedCollection)]
+        public ClientAddons? AddonInfo { get; set; }
     }
 }

@@ -23,7 +23,7 @@ public class WoWClientServer
     private readonly ILogger _logger;
     private readonly IConfiguration _configuration;
     private readonly ClassFactory _classFactory;
-    private readonly Dictionary<ClientSocket, WoWClientSession> _clientSessions = [];
+    private readonly Dictionary<ClientSocket, IWoWClientSession> _clientSessions = [];
     private readonly Meter _meter;
     private readonly Counter<long> _connectionCounter;
 
@@ -110,7 +110,7 @@ public class WoWClientServer
 
     private void DataReceived(object? sender, DataReceivedEventArgs e)
     {
-        WoWClientSession session = GetOrCreateSessionForClient(e.Client);
+        var session = GetOrCreateSessionForClient(e.Client);
 
         if (e.Client.ClientSession == null)
             e.Client.ClientSession = session;
@@ -231,11 +231,11 @@ public class WoWClientServer
         } while (e.Client.IsConnected && session.Network.PacketBuffer.Reader.BaseStream.Position < session.Network.PacketBuffer.Reader.BaseStream.Length);
     }
 
-    private WoWClientSession GetOrCreateSessionForClient(ClientSocket client)
+    private IWoWClientSession GetOrCreateSessionForClient(ClientSocket client)
     {
         if (!_clientSessions.TryGetValue(client, out var session))
         {
-            session = _classFactory.Locate<WoWClientSession>(new { clientSocket = client });
+            session = _classFactory.Locate<IWoWClientSession>(new { clientSocket = client });
             _clientSessions[client] = session;
         }
 

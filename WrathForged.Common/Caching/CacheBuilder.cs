@@ -1,11 +1,9 @@
 ﻿// Copyright (c) Forged WoW LLC <https://github.com/ForgedWoW/WrathForgedCore>
 // Licensed under GPL-3.0 license. See <https://github.com/ForgedWoW/WrathForgedCore/blob/master/LICENSE> for full information.
 using Microsoft.Extensions.Configuration;
-using WrathForged.Common;
-using WrathForged.Common.Caching;
 using WrathForged.Database.Models.Auth;
 
-namespace WrathForged.Authorization.Server.Caching
+namespace WrathForged.Common.Caching
 {
     public class CacheBuilder(ClassFactory classFactory, IConfiguration configuration, ForgeCache forgeCache)
     {
@@ -13,7 +11,7 @@ namespace WrathForged.Authorization.Server.Caching
         private readonly IConfiguration _configuration = configuration;
         private readonly ForgeCache _forgeCache = forgeCache;
 
-        public void Build()
+        public void BuildAuthCache()
         {
             var cacheUpdate = TimeSpan.FromSeconds(_configuration.GetDefaultValue("RealmStatusUpdateTime_Seconds", 120));
             _forgeCache.Set(AuthCacheKeys.REALM_LISTS, cacheUpdate, () =>

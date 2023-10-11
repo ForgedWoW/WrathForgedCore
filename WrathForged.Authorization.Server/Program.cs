@@ -4,8 +4,8 @@ using Grace.DependencyInjection;
 using Microsoft.Extensions.Configuration;
 using Serilog;
 using WrathForged.Authorization.Server;
-using WrathForged.Authorization.Server.Caching;
 using WrathForged.Common;
+using WrathForged.Common.Caching;
 using WrathForged.Common.CommandLine;
 using WrathForged.Common.Networking;
 using WrathForged.Database;
@@ -30,7 +30,7 @@ container.Configure(c =>
 });
 
 container.InitializeCommon();
-container.Locate<CacheBuilder>().Build();
+container.Locate<CacheBuilder>().BuildAuthCache();
 container.Locate<WoWClientServer>().Start();
 
 Log.Logger.Information("Auth Server started in {InitializationTime}.", (DateTime.UtcNow - initializationStart).ToReadableString());

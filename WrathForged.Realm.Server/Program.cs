@@ -10,6 +10,7 @@ using WrathForged.Database;
 using WrathForged.Database.Models.Auth;
 using WrathForged.Models;
 using WrathForged.Models.Auth.Enum;
+using WrathForged.Realm.Server;
 using WrathForged.Serialization.Models;
 
 var initializationStart = DateTime.UtcNow;
@@ -26,8 +27,7 @@ container.Configure(c =>
     _ = c.ExportInstance(configuration).As<IConfiguration>().Lifestyle.SingletonPerScope();
     _ = c.RegisterCommon(configuration);
     _ = c.RegisterDatabase(configuration, Serilog.Log.Logger);
-    _ = c.Export<WoWClientServer>().WithCtorParam(() => PacketScope.ClientToRealm).Lifestyle.Singleton();
-    _ = c.Export<ForgedCommServer>().Lifestyle.Singleton();
+    _ = c.RegisterRealm();
     ModelsDependencyInjection.RegisterModels(); // do not remove this. it allows Models to be reflected on. c# does not load assemblies unless they are used.
 });
 

@@ -16,7 +16,7 @@ namespace WrathForged.Realm.Server.Services
         private readonly ILogger _logger = logger;
 
         [PacketRoute(PacketScope.ClientToRealm, RealmServerOpCode.CMSG_PING)]
-        public void PingRequest(WoWClientSession session, PingRequest pingRequest)
+        public void PingRequest(IWoWClientSession session, PingRequest pingRequest)
         {
             var pingResponse = new PingResponse
             {
@@ -48,9 +48,9 @@ namespace WrathForged.Realm.Server.Services
         }
 
         [PacketRoute(PacketScope.ClientToRealm, RealmServerOpCode.CMSG_KEEP_ALIVE)]
-        public static void KeepAlive(WoWClientSession session) => session.Network.LastKeepAlive = DateTime.UtcNow;
+        public static void KeepAlive(IWoWClientSession session) => session.Network.LastKeepAlive = DateTime.UtcNow;
 
         [PacketRoute(PacketScope.ClientToRealm, RealmServerOpCode.CMSG_TIME_SYNC_RESP)]
-        public static void TimeSync(WoWClientSession session, TimeSyncResponse timeSyncRequest) => session.ClientTime.TimeSync(timeSyncRequest.TimeSyncCounter, timeSyncRequest.ClientTimestamp);
+        public static void TimeSync(IWoWClientSession session, TimeSyncResponse timeSyncRequest) => session.ClientTime.TimeSync(timeSyncRequest.TimeSyncCounter, timeSyncRequest.ClientTimestamp);
     }
 }

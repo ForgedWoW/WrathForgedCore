@@ -6,10 +6,12 @@ using Microsoft.Extensions.Configuration;
 using OpenTelemetry;
 using OpenTelemetry.Trace;
 using Serilog;
+using WrathForged.Authorization.Server.Validators;
 using WrathForged.Common.Caching;
 using WrathForged.Common.CommandLine;
 using WrathForged.Common.Cryptography;
 using WrathForged.Common.DBC;
+using WrathForged.Common.External;
 using WrathForged.Common.Localization;
 using WrathForged.Common.Networking;
 using WrathForged.Common.Observability;
@@ -90,10 +92,12 @@ public static class DependencyInjection
         _ = builder.Export<AttributeCache<DBCPropertyBindingAttribute>>().Lifestyle.Singleton();
         _ = builder.Export<SessionNetwork>();
         _ = builder.Export<SessionSecurity>();
-        _ = builder.Export<WoWClientSession>();
         _ = builder.Export<PacketBuffer>();
         _ = builder.Export<ClientTime>();
         _ = builder.Export<ServerUpdateLoop>().Lifestyle.Singleton();
+        _ = builder.Export<BanValidator>().Lifestyle.Singleton();
+        _ = builder.Export<CacheBuilder>().Lifestyle.Singleton();
+        _ = builder.Export<IpStackGeoLocationService>().Lifestyle.Singleton();
 
         // configure OpenTelemetry
         var telemetryType = configuration.GetDefaultValue("Telemetry:Types", "").Split(',', StringSplitOptions.TrimEntries | StringSplitOptions.TrimEntries).ToList(); // Assuming you have a key like this in your JSON

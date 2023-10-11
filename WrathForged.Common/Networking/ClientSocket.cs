@@ -91,7 +91,7 @@ public class ClientSocket
 
     public IPEndPoint IPEndPoint { get; }
 
-    public WoWClientSession? ClientSession { get; set; }
+    public IWoWClientSession? ClientSession { get; set; }
 
     public void EnqueueWrite(WoWClientPacketOut data)
     {
@@ -119,7 +119,7 @@ public class ClientSocket
         if (_processedDisconnect)
             return;
 
-        if (_writeClientPacketQueue.Count > 0 || _writeQueue.Count > 0)
+        if (!_writeClientPacketQueue.IsEmpty || !_writeQueue.IsEmpty)
         {
             _disconnectAfterWrite = true;
             return;
@@ -131,10 +131,7 @@ public class ClientSocket
     /// <summary>
     ///     Does not wait for the write queue to finish, and disconnects the client immediately.
     /// </summary>
-    public void DisconnectNoDelay()
-    {
-        InternalDisconnect();
-    }
+    public void DisconnectNoDelay() => InternalDisconnect();
 
     private void InternalDisconnect()
     {

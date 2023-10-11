@@ -50,6 +50,16 @@ namespace WrathForged.Models
         public uint DontSerializeWhenIndexIsDefaultValue { get; set; } = uint.MaxValue;
 
         /// <summary>
+        ///     Read the property from a known index in the stream. If start is a negative number, start will be from the end of the stream, if -1 for end then the end of the stream will be used.
+        ///     The stream position will be advanced to the end of the read property. This is useful for skipping bytes in the stream.
+        ///     <code>
+        ///         BitRange = (start: 0, end: 1) // Read the first byte of the stream
+        ///         BitRange = (start: -4, end: -1) // Read the last byte of the stream
+        ///     </code>
+        /// </summary>
+        public (int start, int end)? BitRange { get; set; }
+
+        /// <summary>
         ///     Flags for specific serialization behaviors
         /// </summary>
         public SerializationFlags Flags { get; set; } = SerializationFlags.None;

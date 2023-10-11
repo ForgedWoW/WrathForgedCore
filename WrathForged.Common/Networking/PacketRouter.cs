@@ -50,7 +50,7 @@ public class PacketRouter
             : !scopeDictionary.TryGetValue(id, out var hasPacketArg) ? RouteType.None : hasPacketArg;
     }
 
-    public bool Route(WoWClientSession socket, PacketId packetId)
+    public bool Route(IWoWClientSession socket, PacketId packetId)
     {
         if (!_packetHandlerCache.TryGetValue(packetId.Scope, out var scopeDictionary))
         {
@@ -76,7 +76,7 @@ public class PacketRouter
         return false;
     }
 
-    public bool RouteDirect(WoWClientSession socket, PacketId packetId, PacketBuffer packetBuffer)
+    public bool RouteDirect(IWoWClientSession socket, PacketId packetId, PacketBuffer packetBuffer)
     {
         if (!_packetHandlerCache.TryGetValue(packetId.Scope, out var scopeDictionary))
         {
@@ -127,7 +127,7 @@ public class PacketRouter
         }
     }
 
-    public void Route(WoWClientSession session, PacketId packetId, object packet)
+    public void Route(IWoWClientSession session, PacketId packetId, object packet)
     {
         if (packet == null)
         {

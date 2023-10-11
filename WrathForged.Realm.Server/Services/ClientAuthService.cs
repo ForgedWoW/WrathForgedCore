@@ -3,26 +3,33 @@
 using System.Text;
 using Microsoft.Extensions.Configuration;
 using Serilog;
+using WrathForged.Authorization.Server.Validators;
 using WrathForged.Common;
 using WrathForged.Common.Cryptography;
+using WrathForged.Common.External;
 using WrathForged.Common.Networking;
 using WrathForged.Database.Models.Auth;
 using WrathForged.Models.Auth;
 using WrathForged.Models.Auth.Enum;
 using WrathForged.Models.Realm.Enum;
+using WrathForged.Realm.Server.RealmSession;
 using WrathForged.Serialization.Models;
+using Z.EntityFramework.Plus;
 
 namespace WrathForged.Realm.Server.Services
 {
-    public class ClientAuthService(IConfiguration configuration, ILogger logger, ClassFactory classFactory, RandomUtilities random) : IPacketService
+    public class ClientAuthService(IConfiguration configuration, ILogger logger, ClassFactory classFactory, RandomUtilities random,
+                                    BanValidator banValidator, IpStackGeoLocationService ipStackGeoLocationService) : IPacketService
     {
         private readonly IConfiguration _configuration = configuration;
         private readonly ILogger _logger = logger;
         private readonly ClassFactory _classFactory = classFactory;
-        private byte[] _authSeed = random.RandomBytes(4);
+        private readonly BanValidator _banValidator = banValidator;
+        private readonly IpStackGeoLocationService _ipStackGeoLocationService = ipStackGeoLocationService;
+        private readonly byte[] _authSeed = random.RandomBytes(4);
 
         [PacketRoute(PacketScope.ClientToRealm, RealmServerOpCode.CMSG_AUTH_SESSION)]
-        public void AuthSession(WoWClientSession session, RealmAuthSessionRequest realmAuthSessionRequest)
+        public void AuthSession(IWoWClientSession session, RealmAuthSessionRequest realmAuthSessionRequest)
         {
             using var authDatabase = _classFactory.Locate<AuthDatabase>();
 
@@ -30,20 +37,22 @@ namespace WrathForged.Realm.Server.Services
 
             if (session.Security.Account == null)
             {
+                _logger.Warning("Unknown account {AccountName} from {Address}", realmAuthSessionRequest.AccountName, session.Network.ClientSocket.IPEndPoint);
                 session.Network.Send(new RealmAuthErrorResponse() { Code = ResponseCodes.AUTH_UNKNOWN_ACCOUNT });
                 session.Network.ClientSocket.Disconnect();
                 return;
             }
 
-            session.Security.Account.LastIp = session.Network.ClientSocket.IPEndPoint.Address.ToString();
-            session.Security.Account.LastLogin = DateTime.UtcNow;
-            authDatabase.Update(session.Security.Account);
-            authDatabase.SaveChanges();
+            session.Security.Account.LastAttemptIp = session.Network.ClientSocket.IPEndPoint.Address.ToString();
+
+            _ = authDatabase.Update(session.Security.Account);
+            _ = authDatabase.SaveChanges();
 
             var realmId = _configuration.GetDefaultValue("RealmId", 1);
 
             if (realmId != realmAuthSessionRequest.RealmId)
             {
+                _logger.Warning("Realm ID mismatch. Expected {ExpectedRealmId}, got {RealmId} from {Address}", realmId, realmAuthSessionRequest.RealmId, session.Network.ClientSocket.IPEndPoint);
                 session.Network.Send(new RealmAuthErrorResponse() { Code = ResponseCodes.REALM_LIST_REALM_NOT_FOUND });
                 session.Network.ClientSocket.Disconnect();
                 return;
@@ -59,10 +68,61 @@ namespace WrathForged.Realm.Server.Services
 
             if (!serverDigest.SequenceEqual(realmAuthSessionRequest.Digest))
             {
+                _logger.Warning("Invalid digest from {Address}", session.Network.ClientSocket.IPEndPoint);
                 session.Network.Send(new RealmAuthErrorResponse() { Code = ResponseCodes.AUTH_FAILED });
                 session.Network.ClientSocket.Disconnect();
                 return;
             }
+
+            var banState = _banValidator.GetBanState(session.Security.Account.Id, session.Network.ClientSocket.IPEndPoint.Address.ToString());
+
+            if (banState != BanValidator.BanType.None)
+            {
+                _logger.Warning("Account {AccountName} is {BanState} from {Address}", session.Security.Account.Username, banState.ToString(), session.Network.ClientSocket.IPEndPoint);
+                session.Network.Send(new RealmAuthErrorResponse() { Code = ResponseCodes.AUTH_BANNED });
+                session.Network.ClientSocket.Disconnect();
+                return;
+            }
+
+            if (session.Security.Account.Locked && session.Security.Account.LastIp != session.Network.ClientSocket.IPEndPoint.Address.ToString())
+            {
+                _logger.Warning("Account {AccountName} is locked from {Address}", session.Security.Account.Username, session.Network.ClientSocket.IPEndPoint);
+                session.Network.Send(new RealmAuthErrorResponse() { Code = ResponseCodes.AUTH_BANNED });
+                session.Network.ClientSocket.Disconnect();
+                return;
+            }
+
+            if (!string.IsNullOrEmpty(session.Security.Account.LockCountry) && _configuration.GetDefaultValue("IpStack:Enabled", false))
+            {
+                var geoLocation = _ipStackGeoLocationService.GetServiceResponse(session.Network.ClientSocket.IPEndPoint.Address.ToString());
+
+                if (geoLocation != null && geoLocation.country_code.Equals(session.Security.Account.LockCountry, StringComparison.InvariantCultureIgnoreCase))
+                {
+                    _logger.Warning("Failed login attempt for {AccountName} from {Address}. Account locked to country {LockedCountry}", session.Security.Account.Username, session.Network.ClientSocket.IPEndPoint, session.Security.Account.LockCountry);
+                    session.Network.Send(new RealmAuthErrorResponse() { Code = ResponseCodes.AUTH_BANNED });
+                    session.Network.ClientSocket.Disconnect();
+                    return;
+                }
+            }
+
+            var realm = authDatabase.Realmlists.FromCache().FirstOrDefault(r => r.Id == realmId);
+
+            if (realm != null && realm.AllowedSecurityLevel > 0 && session.Security.CurrentRealmRole.SecurityLevel < realm.AllowedSecurityLevel)
+            {
+                _logger.Warning("Account {AccountName} is not authorized to access realm {RealmName} from {Address}", session.Security.Account.Username, realm.Name, session.Network.ClientSocket.IPEndPoint);
+                session.Network.Send(new RealmAuthErrorResponse() { Code = ResponseCodes.AUTH_UNAVAILABLE });
+                session.Network.ClientSocket.Disconnect();
+                return;
+            }
+
+            if (!session.Security.Account.Locked)
+                session.Security.Account.LastIp = session.Network.ClientSocket.IPEndPoint.Address.ToString();
+
+            session.Security.AuthenticationState = WoWClientSession.AuthState.LoggedIn;
+            session.Security.Account.LastLogin = DateTime.UtcNow;
+            _ = authDatabase.Update(session.Security.Account);
+            _ = authDatabase.SaveChanges();
+            session.As<RealmClientSession>().AddonInfo.ClientAddons = realmAuthSessionRequest.AddonInfo;
         }
     }
 }

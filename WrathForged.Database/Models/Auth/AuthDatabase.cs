@@ -35,6 +35,8 @@ public partial class AuthDatabase : DbContext
 
     public virtual DbSet<IpBanned> IpBanneds { get; set; }
 
+    public virtual DbSet<IpLocation> IpLocations { get; set; }
+
     public virtual DbSet<Log> Logs { get; set; }
 
     public virtual DbSet<LogsIpAction> LogsIpActions { get; set; }
@@ -327,6 +329,13 @@ public partial class AuthDatabase : DbContext
                 .HasDefaultValueSql("'no reason'")
                 .HasColumnName("banreason");
             _ = entity.Property(e => e.Unbandate).HasColumnName("unbandate");
+        });
+
+        _ = modelBuilder.Entity<IpLocation>(entity =>
+        {
+            _ = entity.HasKey(e => e.IpAddress).HasName("PRIMARY");
+            _ = entity.Property(e => e.IpAddress).HasMaxLength(15).HasColumnName("ipaddress");
+            _ = entity.Property(e => e.AddressInfo).HasMaxLength(4000).HasColumnName("addressinfo");
         });
 
         _ = modelBuilder.Entity<Log>(entity =>

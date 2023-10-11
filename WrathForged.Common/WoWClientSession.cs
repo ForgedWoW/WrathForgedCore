@@ -6,7 +6,7 @@ using WrathForged.Common.Time;
 
 namespace WrathForged.Common;
 
-public partial class WoWClientSession
+public class WoWClientSession : IWoWClientSession
 {
     private readonly ServerUpdateLoop _serverUpdateLoop;
 

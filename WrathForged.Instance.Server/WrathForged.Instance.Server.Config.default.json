@@ -161,5 +161,15 @@
     "BackgroundColor": "Black",
     "DefaultColor": "White",
     "HighlightColor": "DarkRed"
+  },
+  "IpStack": {
+    "INFO": [
+      "Used for when account. account.lock_country in authdb is set using the country code (i.e US would lock that account to login from US only)",
+      "UseDatabaseCache caches all requests in auth.ip_location and will check the db before making the reqest to minimize the reqests",
+      "https://ipstack.com/"
+    ],
+    "ApiKey": "",
+    "Enabled": "false",
+    "UseDatabaseCache": "true"
   }
 }

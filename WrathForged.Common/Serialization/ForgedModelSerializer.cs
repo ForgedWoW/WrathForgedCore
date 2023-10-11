@@ -3,6 +3,7 @@
 using System.Collections;
 using System.Diagnostics.Metrics;
 using System.Reflection;
+using Ionic.Zlib;
 using Serilog;
 using WrathForged.Common.Caching;
 using WrathForged.Common.Networking;
@@ -176,8 +177,17 @@ public class ForgedModelSerializer
 
     public DeserializationResult TryDeserialize<T>(PacketBuffer buffer, out T packet)
     {
-        var startTimestamp = DateTime.UtcNow;
         var t = typeof(T);
+        var result = TryDeserialize(buffer, t, out var obj);
+
+        packet = result == DeserializationResult.Success ? (T)obj! : default!;
+
+        return result;
+    }
+
+    public DeserializationResult TryDeserialize(PacketBuffer buffer, Type t, out object packet)
+    {
+        var startTimestamp = DateTime.UtcNow;
 
         if (!_systemScope.TryGetValue(t, out var propertyMetas))
         {
@@ -193,7 +203,7 @@ public class ForgedModelSerializer
 
         try
         {
-            var instance = Activator.CreateInstance<T>();
+            var instance = Activator.CreateInstance(t);
 
             if (instance == null)
             {
@@ -209,7 +219,9 @@ public class ForgedModelSerializer
                     if (prop.ConditionalSerialization != null && !prop.ConditionalSerialization.ShouldDeserialize(instance, prop, propertyMetas.Properties))
                         continue;
 
-                    var isCollection = prop.ReflectedProperty.PropertyType.IsArray ||
+                    // we need to decompress the collection before we can read it. This means even if its a object or a list of objects, the underlying type is a byte array.
+                    var isCollection = prop.SerializationMetadata.Flags.HasFlag(SerializationFlags.ZLibCompressedCollection) ||
+                                        prop.ReflectedProperty.PropertyType.IsArray ||
                                        (prop.ReflectedProperty.PropertyType.IsGenericType && prop.ReflectedProperty.PropertyType.GetGenericTypeDefinition() == typeof(List<>)) ||
                                        (prop.ReflectedProperty.PropertyType.IsGenericType && prop.ReflectedProperty.PropertyType.GetGenericTypeDefinition() == typeof(HashSet<>));
 
@@ -336,10 +348,47 @@ public class ForgedModelSerializer
         return DeserializationResult.Error;
     }
 
-    private object? DeserializeCollection(PacketBuffer buffer, PropertyMeta prop, Dictionary<uint, int> collectionSizes)
+    private object? DeserializeCollection(PacketBuffer oldBuffer, PropertyMeta prop, Dictionary<uint, int> collectionSizes)
     {
+        var buffer = oldBuffer;
         var collectionSize = buffer.GetCollectionSize(prop, collectionSizes);
         var targetType = prop.ReflectedProperty.PropertyType;
+
+        if (prop.SerializationMetadata.Flags.HasFlag(SerializationFlags.ZLibCompressedCollection))
+        {
+            byte[] compressedData = [];
+
+            if (prop.SerializationMetadata.BitRange != null)
+            {
+                var end = prop.SerializationMetadata.BitRange.Value.end == -1 ? (int)buffer.Reader.BaseStream.Length : prop.SerializationMetadata.BitRange.Value.end;
+                var start = prop.SerializationMetadata.BitRange.Value.start < 0 ? prop.SerializationMetadata.BitRange.Value.start + (int)buffer.Reader.BaseStream.Length : prop.SerializationMetadata.BitRange.Value.start;
+                compressedData = buffer.GetBuffer().Slice(start, end).ToArray();
+                oldBuffer.Reader.BaseStream.Position = end;
+            }
+            else
+            {
+                compressedData = buffer.Reader.ReadBytes(collectionSize);
+            }
+
+            var decompressor = new ZlibCodec(CompressionMode.Decompress)
+            {
+                InputBuffer = compressedData,
+                NextIn = 0
+            };
+            var decompressedData = new byte[collectionSize];
+            decompressor.OutputBuffer = decompressedData;
+            decompressor.NextOut = 0;
+
+            if (decompressor.Inflate(FlushType.Finish) == 0)
+                buffer = new PacketBuffer(decompressedData, _logger);
+
+            var isCollection = targetType.IsArray ||
+                               (targetType.IsGenericType && targetType.GetGenericTypeDefinition() == typeof(List<>)) ||
+                               (targetType.IsGenericType && targetType.GetGenericTypeDefinition() == typeof(HashSet<>));
+
+            if (!isCollection) // even though it was a byte buffer, the property is not a collection, so we need to deserialize it as a normal property.
+                return DeserializeProperty(buffer, prop, collectionSizes);
+        }
 
         if (targetType.IsArray)
         {
@@ -427,9 +476,23 @@ public class ForgedModelSerializer
 
     private object? DeserializeProperty(PacketBuffer buffer, PropertyMeta prop, Dictionary<uint, int> collectionSizes)
     {
-        return TryGetSerializerFromType(prop, out var forgedTypeSerialization)
-                   ? forgedTypeSerialization?.Deserialize(buffer, prop, collectionSizes)
-                   : null;
+        if (!TryGetSerializerFromType(prop, out var forgedTypeSerialization))
+        {
+            return _deserializationMethodsCacheByType.ContainsKey(prop.ReflectedProperty.PropertyType)
+                ? TryDeserialize(buffer, prop.ReflectedProperty.PropertyType, out var obj) == DeserializationResult.Success ? obj : null
+                : null;
+        }
+
+        if (prop.SerializationMetadata.BitRange != null && !prop.SerializationMetadata.Flags.HasFlag(SerializationFlags.ZLibCompressedCollection))
+        {
+            var end = prop.SerializationMetadata.BitRange.Value.end == -1 ? (int)buffer.Reader.BaseStream.Length : prop.SerializationMetadata.BitRange.Value.end;
+            var start = prop.SerializationMetadata.BitRange.Value.start < 0 ? prop.SerializationMetadata.BitRange.Value.start + (int)buffer.Reader.BaseStream.Length : prop.SerializationMetadata.BitRange.Value.start;
+            var newBuffer = new PacketBuffer(buffer.GetBuffer().Slice(start, end), _logger);
+            buffer.Reader.BaseStream.Position = end;
+            return forgedTypeSerialization?.Deserialize(newBuffer, prop, collectionSizes);
+        }
+
+        return forgedTypeSerialization?.Deserialize(buffer, prop, collectionSizes);
     }
 
     private void SerializeProperty(PrimitiveWriter writer, PropertyMeta prop, ModelInfo otherMeta, object obj, object? val)

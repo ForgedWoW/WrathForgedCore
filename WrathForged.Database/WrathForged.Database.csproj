@@ -799,6 +799,9 @@
 	  <None Update="sql\base\dbc\zzzzAlterTables.sql">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
+	  <None Update="sql\updates\auth\iplocation.sql">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </None>
 	</ItemGroup>
 
 </Project>
