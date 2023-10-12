@@ -89,6 +89,9 @@ public class WoWClientServer
 
     internal void AddClientSession(IWoWClientSession session)
     {
+        if (_clientSessions.TryGetValue(session.Security.Account.Id, out var existingSession)) // if the client is already connected, disconnect the old session
+            existingSession.Dispose();
+
         _clientSessions[session.Security.Account.Id] = session;
     }
 
