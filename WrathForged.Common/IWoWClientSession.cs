@@ -4,7 +4,7 @@ using WrathForged.Common.Time;
 
 namespace WrathForged.Common
 {
-    public interface IWoWClientSession
+    public interface IWoWClientSession : IDisposable
     {
         ClientTime ClientTime { get; }
         SessionNetwork Network { get; }

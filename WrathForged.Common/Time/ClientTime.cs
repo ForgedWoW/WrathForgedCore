@@ -8,9 +8,9 @@ using WrathForged.Models.Networking;
 
 namespace WrathForged.Common.Time
 {
-    public class ClientTime(WoWClientSession clientSession) : IUpdateLoop
+    public class ClientTime(IWoWClientSession clientSession) : IUpdateLoop
     {
-        private readonly WoWClientSession _clientSession = clientSession;
+        private readonly IWoWClientSession _clientSession = clientSession;
         private uint _timeSyncTimer;
         private uint _nextTimeSyncCounter;
         private readonly ConcurrentDictionary<uint, uint> _pendingTimeSyncRequests = new();

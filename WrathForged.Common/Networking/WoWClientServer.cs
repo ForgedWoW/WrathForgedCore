@@ -24,7 +24,7 @@ public class WoWClientServer
     private readonly ILogger _logger;
     private readonly IConfiguration _configuration;
     private readonly ClassFactory _classFactory;
-    private readonly ConcurrentDictionary<ClientSocket, IWoWClientSession> _clientSessions = [];
+    private readonly ConcurrentDictionary<uint, IWoWClientSession> _clientSessions = [];
     private readonly Meter _meter;
     private readonly Counter<long> _connectionCounter;
 
@@ -51,6 +51,18 @@ public class WoWClientServer
     {
         return _clientSessions.Values.OfType<T>();
     }
+
+    public bool TryGetClientSession<T>(uint accountId, out T session) where T : IWoWClientSession
+    {
+        if (_clientSessions.TryGetValue(accountId, out var value))
+        {
+            session = (T)value;
+            return true;
+        }
+
+        session = default!;
+        return false;
+    }
     
     /// <summary>
     ///     Starts the server on the configured port "ClientTCPServer:Port" or default port of 8085 if not configured.
@@ -73,6 +85,11 @@ public class WoWClientServer
         var bindIp = GertBindIP(ipAddress);
 
         TCPServer.Start(port, bindIp);
+    }
+
+    internal void AddClientSession(IWoWClientSession session)
+    {
+        _clientSessions[session.Security.Account.Id] = session;
     }
 
     private IPAddress GertBindIP(string? bindIpString = null)
@@ -104,24 +121,23 @@ public class WoWClientServer
 
     private void Disconnected(object? sender, ClientSocket e)
     {
-        if (sender is not ClientSocket clientSocket)
-            return;
-
         // Remove the buffer associated with the disconnected client
-        if (!_clientSessions.TryGetValue(clientSocket, out var value))
+        if (e.ClientSession == null)
             return;
 
-        value.Network.PacketBuffer.Dispose();
-        _ = _clientSessions.TryRemove(clientSocket, out _);
+        if (!_clientSessions.TryRemove(e.ClientSession.Security.Account.Id, out var value))
+            return;
+
+        value.Dispose();
         _connectionCounter.Add(-1);
     }
 
     private void DataReceived(object? sender, DataReceivedEventArgs e)
     {
-        var session = GetOrCreateSessionForClient(e.Client);
-
         if (e.Client.ClientSession == null)
-            e.Client.ClientSession = session;
+            e.Client.ClientSession = _classFactory.Locate<IWoWClientSession>(new { clientSocket = e.Client });
+
+        var session = e.Client.ClientSession;
 
         session.Network.PacketBuffer.AppendData(e.Data);
         var packetLength = 0;
@@ -237,16 +253,5 @@ public class WoWClientServer
                     break;
             }
         } while (e.Client.IsConnected && session.Network.PacketBuffer.Reader.BaseStream.Position < session.Network.PacketBuffer.Reader.BaseStream.Length);
-    }
-
-    private IWoWClientSession GetOrCreateSessionForClient(ClientSocket client)
-    {
-        if (!_clientSessions.TryGetValue(client, out var session))
-        {
-            session = _classFactory.Locate<IWoWClientSession>(new { clientSocket = client });
-            _clientSessions[client] = session;
-        }
-
-        return session;
     }
 }

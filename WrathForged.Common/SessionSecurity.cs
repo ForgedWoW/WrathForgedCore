@@ -9,10 +9,12 @@ using WrathForged.Database.Models.Auth;
 
 namespace WrathForged.Common
 {
-    public class SessionSecurity(ILogger logger, ForgedAuthorization forgedAuthorization)
+    public class SessionSecurity(IWoWClientSession clientSession, ILogger logger, ForgedAuthorization forgedAuthorization, WoWClientServer woWClientServer)
     {
+        private readonly IWoWClientSession _session = clientSession;
         private readonly ILogger _logger = logger;
         private readonly ForgedAuthorization _forgedAuthorization = forgedAuthorization;
+        private readonly WoWClientServer _woWClientServer = woWClientServer;
         private static readonly byte[] _defaultSessionKey = new byte[32];
         private int _currentRealm = -1;
         private Account? _account;
@@ -56,6 +58,7 @@ namespace WrathForged.Common
                 Roles = _forgedAuthorization.GetAccountRolesByRealm(value.Id);
                 DefaultRole = GetRole();
                 SRP6 = new SRP6(value.Username, value.Salt, value.Verifier);
+                _woWClientServer.AddClientSession(_session);
             }
         }
 

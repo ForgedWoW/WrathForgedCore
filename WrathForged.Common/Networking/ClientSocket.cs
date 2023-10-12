@@ -10,7 +10,7 @@ using Serilog;
 
 namespace WrathForged.Common.Networking;
 
-public class ClientSocket
+public class ClientSocket : IDisposable
 {
     private readonly TcpClient _client;
     private readonly ILogger _logger;
@@ -45,6 +45,7 @@ public class ClientSocket
     private EventHandler<ClientSocket> _onDisconnect;
     private EventHandler<DataReceivedEventArgs> _onDataReceived;
     private EventHandler<Memory<byte>> _onDataSent;
+    private bool _disposedValue;
 
 #pragma warning disable CS8601 // Possible null reference assignment. -= is causing this warning for some reason.
 
@@ -263,5 +264,27 @@ public class ClientSocket
         }
 
         InternalDisconnect();
+    }
+
+    protected virtual void Dispose(bool disposing)
+    {
+        if (!_disposedValue)
+        {
+            if (disposing)
+            {
+                Disconnect();
+                _stream.Dispose();
+                _client.Dispose();
+            }
+
+            _disposedValue = true;
+        }
+    }
+
+    public void Dispose()
+    {
+        // Do not change this code. Put cleanup code in 'Dispose(bool disposing)' method
+        Dispose(disposing: true);
+        GC.SuppressFinalize(this);
     }
 }

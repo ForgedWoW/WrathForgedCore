@@ -9,10 +9,11 @@ namespace WrathForged.Common;
 public class WoWClientSession : IWoWClientSession
 {
     private readonly ServerUpdateLoop _serverUpdateLoop;
+    private bool _disposedValue;
 
     public WoWClientSession(ClientSocket clientSocket, PacketBuffer packetBuffer, ClassFactory classFactory)
     {
-        Security = classFactory.Locate<SessionSecurity>();
+        Security = classFactory.Locate<SessionSecurity>(new { clientSession = this });
         Network = classFactory.Locate<SessionNetwork>(new { clientSocket, packetBuffer, packetBufferBaseStream = (MemoryStream)packetBuffer.Reader.BaseStream });
         ClientTime = classFactory.Locate<ClientTime>(new { clientSession = this });
         _serverUpdateLoop = classFactory.Locate<ServerUpdateLoop>();
@@ -33,4 +34,25 @@ public class WoWClientSession : IWoWClientSession
     public SessionNetwork Network { get; }
 
     public ClientTime ClientTime { get; }
+
+    protected virtual void Dispose(bool disposing)
+    {
+        if (!_disposedValue)
+        {
+            if (disposing)
+            {
+                Network.PacketBuffer.Dispose();
+                Network.ClientSocket.Dispose();
+            }
+
+            _disposedValue = true;
+        }
+    }
+
+    public void Dispose()
+    {
+        // Do not change this code. Put cleanup code in 'Dispose(bool disposing)' method
+        Dispose(disposing: true);
+        GC.SuppressFinalize(this);
+    }
 }
