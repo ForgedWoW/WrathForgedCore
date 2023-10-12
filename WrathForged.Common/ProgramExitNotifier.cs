@@ -66,6 +66,10 @@ public class ProgramExitNotifier(ILogger logger, ClassFactory classFactory)
             while (_secondsTilStop > 0)
             {
                 await Task.Delay(1000);
+
+                if (_secondsTilStop == TIMER_STOPPED)
+                    return;
+
                 _secondsTilStop--;
             }
 
