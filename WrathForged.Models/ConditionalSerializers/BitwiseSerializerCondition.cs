@@ -32,9 +32,9 @@ namespace WrathForged.Models.ConditionalSerializers
 
         public bool ShouldDeserialize(object obj, PropertyMeta currentProperty, List<PropertyMeta> allProperties)
         {
-            var indexofCheckVal = allProperties[_valIndex];
+            var indexOfCheckVal = allProperties[_valIndex];
 
-            var checkValRaw = indexofCheckVal.ReflectedProperty.GetValue(obj);
+            var checkValRaw = indexOfCheckVal.ReflectedProperty.GetValue(obj);
 
             if (checkValRaw == null)
                 return false;

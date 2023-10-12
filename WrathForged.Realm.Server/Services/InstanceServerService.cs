@@ -8,8 +8,6 @@ using WrathForged.Database.Models.World;
 using WrathForged.Models.Core.Comm;
 using WrathForged.Serialization.Models;
 
-#pragma warning disable IDE0060 // Remove unused parameter
-
 namespace WrathForged.Realm.Server.Services
 {
     public class InstanceServerService(WorldDatabase worldDatabase, AuthDatabase authDatabase) : IPacketService

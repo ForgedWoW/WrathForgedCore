@@ -45,20 +45,17 @@ namespace WrathForged.Common
 
         public SRP6 SRP6 { get; set; } = SRP6.Default;
 
+        public static Account DefaultAccount => _defaultAccount;
+
         public Account Account
         {
             get => _account ?? _defaultAccount;
             set
             {
-                if (value != null)
-                {
-                    _account = value;
-                    Roles = _forgedAuthorization.GetAccountRolesByRealm(value.Id);
-                    DefaultRole = GetRole();
-                    SRP6 = new SRP6(value.Username, value.Salt, value.Verifier);
-                }
-                else
-                    _account = _defaultAccount;
+                _account = value;
+                Roles = _forgedAuthorization.GetAccountRolesByRealm(value.Id);
+                DefaultRole = GetRole();
+                SRP6 = new SRP6(value.Username, value.Salt, value.Verifier);
             }
         }
 

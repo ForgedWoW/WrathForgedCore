@@ -197,6 +197,11 @@ public partial class CharacterDatabase : DbContext
 
     public virtual DbSet<Worldstate> Worldstates { get; set; }
 
+    private static readonly int[] _default2byteArray = [0, 0];
+    private static readonly int[] _default3byteArray = [0, 0, 0];
+    private static readonly int[] _default4byteArray = [0, 0, 0, 0];
+    private static readonly int[] _default5byteArray = [0, 0, 0, 0, 0];
+
     public void RunSqlFile(string filePath)
     {
         var sql = File.ReadAllText(filePath);
@@ -213,7 +218,7 @@ public partial class CharacterDatabase : DbContext
         {
             _ = entity.HasKey(e => new { e.AccountId, e.Type })
                 .HasName("PRIMARY")
-                .HasAnnotation("MySql:IndexPrefixLength", new[] { 0, 0 });
+                .HasAnnotation("MySql:IndexPrefixLength", _default2byteArray);
 
             _ = entity
                 .ToTable("account_data")
@@ -233,7 +238,7 @@ public partial class CharacterDatabase : DbContext
         {
             _ = entity.HasKey(e => new { e.AccountId, e.InstanceId })
                 .HasName("PRIMARY")
-                .HasAnnotation("MySql:IndexPrefixLength", new[] { 0, 0 });
+                .HasAnnotation("MySql:IndexPrefixLength", _default2byteArray);
 
             _ = entity
                 .ToTable("account_instance_times")
@@ -314,7 +319,7 @@ public partial class CharacterDatabase : DbContext
         {
             _ = entity.HasKey(e => new { e.ArenaTeamId, e.Guid })
                 .HasName("PRIMARY")
-                .HasAnnotation("MySql:IndexPrefixLength", new[] { 0, 0 });
+                .HasAnnotation("MySql:IndexPrefixLength", _default2byteArray);
 
             _ = entity
                 .ToTable("arena_team_member")
@@ -333,7 +338,7 @@ public partial class CharacterDatabase : DbContext
         {
             _ = entity.HasKey(e => new { e.Id, e.Bidderguid })
                 .HasName("PRIMARY")
-                .HasAnnotation("MySql:IndexPrefixLength", new[] { 0, 0 });
+                .HasAnnotation("MySql:IndexPrefixLength", _default2byteArray);
 
             _ = entity
                 .ToTable("auctionbidders")
@@ -478,7 +483,7 @@ public partial class CharacterDatabase : DbContext
         {
             _ = entity.HasKey(e => new { e.Name, e.Team })
                 .HasName("PRIMARY")
-                .HasAnnotation("MySql:IndexPrefixLength", new[] { 0, 0 });
+                .HasAnnotation("MySql:IndexPrefixLength", _default2byteArray);
 
             _ = entity
                 .ToTable("channels", tb => tb.HasComment("Channel System"))
@@ -623,7 +628,7 @@ public partial class CharacterDatabase : DbContext
         {
             _ = entity.HasKey(e => new { e.Guid, e.Type })
                 .HasName("PRIMARY")
-                .HasAnnotation("MySql:IndexPrefixLength", new[] { 0, 0 });
+                .HasAnnotation("MySql:IndexPrefixLength", _default2byteArray);
 
             _ = entity
                 .ToTable("character_account_data")
@@ -641,7 +646,7 @@ public partial class CharacterDatabase : DbContext
         {
             _ = entity.HasKey(e => new { e.Guid, e.Achievement })
                 .HasName("PRIMARY")
-                .HasAnnotation("MySql:IndexPrefixLength", new[] { 0, 0 });
+                .HasAnnotation("MySql:IndexPrefixLength", _default2byteArray);
 
             _ = entity
                 .ToTable("character_achievement")
@@ -656,7 +661,7 @@ public partial class CharacterDatabase : DbContext
         {
             _ = entity.HasKey(e => new { e.Guid, e.Criteria })
                 .HasName("PRIMARY")
-                .HasAnnotation("MySql:IndexPrefixLength", new[] { 0, 0 });
+                .HasAnnotation("MySql:IndexPrefixLength", _default2byteArray);
 
             _ = entity
                 .ToTable("character_achievement_progress")
@@ -672,7 +677,7 @@ public partial class CharacterDatabase : DbContext
         {
             _ = entity.HasKey(e => new { e.Guid, e.Spec, e.Button })
                 .HasName("PRIMARY")
-                .HasAnnotation("MySql:IndexPrefixLength", new[] { 0, 0, 0 });
+                .HasAnnotation("MySql:IndexPrefixLength", _default3byteArray);
 
             _ = entity
                 .ToTable("character_action")
@@ -689,7 +694,7 @@ public partial class CharacterDatabase : DbContext
         {
             _ = entity.HasKey(e => new { e.Guid, e.Slot })
                 .HasName("PRIMARY")
-                .HasAnnotation("MySql:IndexPrefixLength", new[] { 0, 0 });
+                .HasAnnotation("MySql:IndexPrefixLength", _default2byteArray);
 
             _ = entity
                 .ToTable("character_arena_stats")
@@ -704,7 +709,7 @@ public partial class CharacterDatabase : DbContext
         {
             _ = entity.HasKey(e => new { e.Guid, e.CasterGuid, e.ItemGuid, e.Spell, e.EffectMask })
                 .HasName("PRIMARY")
-                .HasAnnotation("MySql:IndexPrefixLength", new[] { 0, 0, 0, 0, 0 });
+                .HasAnnotation("MySql:IndexPrefixLength", _default5byteArray);
 
             _ = entity
                 .ToTable("character_aura", tb => tb.HasComment("Player System"))
@@ -743,7 +748,7 @@ public partial class CharacterDatabase : DbContext
         {
             _ = entity.HasKey(e => new { e.Guid, e.Bandate })
                 .HasName("PRIMARY")
-                .HasAnnotation("MySql:IndexPrefixLength", new[] { 0, 0 });
+                .HasAnnotation("MySql:IndexPrefixLength", _default2byteArray);
 
             _ = entity
                 .ToTable("character_banned", tb => tb.HasComment("Ban List"))
@@ -920,7 +925,7 @@ public partial class CharacterDatabase : DbContext
         {
             _ = entity.HasKey(e => new { e.Guid, e.TalentGroup })
                 .HasName("PRIMARY")
-                .HasAnnotation("MySql:IndexPrefixLength", new[] { 0, 0 });
+                .HasAnnotation("MySql:IndexPrefixLength", _default2byteArray);
 
             _ = entity
                 .ToTable("character_glyphs")
@@ -975,7 +980,7 @@ public partial class CharacterDatabase : DbContext
         {
             _ = entity.HasKey(e => new { e.Guid, e.Instance })
                 .HasName("PRIMARY")
-                .HasAnnotation("MySql:IndexPrefixLength", new[] { 0, 0 });
+                .HasAnnotation("MySql:IndexPrefixLength", _default2byteArray);
 
             _ = entity
                 .ToTable("character_instance")
@@ -1098,7 +1103,7 @@ public partial class CharacterDatabase : DbContext
         {
             _ = entity.HasKey(e => new { e.Guid, e.Quest })
                 .HasName("PRIMARY")
-                .HasAnnotation("MySql:IndexPrefixLength", new[] { 0, 0 });
+                .HasAnnotation("MySql:IndexPrefixLength", _default2byteArray);
 
             _ = entity
                 .ToTable("character_queststatus", tb => tb.HasComment("Player System"))
@@ -1130,7 +1135,7 @@ public partial class CharacterDatabase : DbContext
         {
             _ = entity.HasKey(e => new { e.Guid, e.Quest })
                 .HasName("PRIMARY")
-                .HasAnnotation("MySql:IndexPrefixLength", new[] { 0, 0 });
+                .HasAnnotation("MySql:IndexPrefixLength", _default2byteArray);
 
             _ = entity
                 .ToTable("character_queststatus_daily", tb => tb.HasComment("Player System"))
@@ -1151,7 +1156,7 @@ public partial class CharacterDatabase : DbContext
         {
             _ = entity.HasKey(e => new { e.Guid, e.Quest })
                 .HasName("PRIMARY")
-                .HasAnnotation("MySql:IndexPrefixLength", new[] { 0, 0 });
+                .HasAnnotation("MySql:IndexPrefixLength", _default2byteArray);
 
             _ = entity
                 .ToTable("character_queststatus_monthly", tb => tb.HasComment("Player System"))
@@ -1171,7 +1176,7 @@ public partial class CharacterDatabase : DbContext
         {
             _ = entity.HasKey(e => new { e.Guid, e.Quest })
                 .HasName("PRIMARY")
-                .HasAnnotation("MySql:IndexPrefixLength", new[] { 0, 0 });
+                .HasAnnotation("MySql:IndexPrefixLength", _default2byteArray);
 
             _ = entity
                 .ToTable("character_queststatus_rewarded", tb => tb.HasComment("Player System"))
@@ -1192,7 +1197,7 @@ public partial class CharacterDatabase : DbContext
         {
             _ = entity.HasKey(e => new { e.Guid, e.Quest })
                 .HasName("PRIMARY")
-                .HasAnnotation("MySql:IndexPrefixLength", new[] { 0, 0 });
+                .HasAnnotation("MySql:IndexPrefixLength", _default2byteArray);
 
             _ = entity
                 .ToTable("character_queststatus_seasonal", tb => tb.HasComment("Player System"))
@@ -1215,7 +1220,7 @@ public partial class CharacterDatabase : DbContext
         {
             _ = entity.HasKey(e => new { e.Guid, e.Quest })
                 .HasName("PRIMARY")
-                .HasAnnotation("MySql:IndexPrefixLength", new[] { 0, 0 });
+                .HasAnnotation("MySql:IndexPrefixLength", _default2byteArray);
 
             _ = entity
                 .ToTable("character_queststatus_weekly", tb => tb.HasComment("Player System"))
@@ -1235,7 +1240,7 @@ public partial class CharacterDatabase : DbContext
         {
             _ = entity.HasKey(e => new { e.Guid, e.Faction })
                 .HasName("PRIMARY")
-                .HasAnnotation("MySql:IndexPrefixLength", new[] { 0, 0 });
+                .HasAnnotation("MySql:IndexPrefixLength", _default2byteArray);
 
             _ = entity
                 .ToTable("character_reputation", tb => tb.HasComment("Player System"))
@@ -1253,7 +1258,7 @@ public partial class CharacterDatabase : DbContext
         {
             _ = entity.HasKey(e => new { e.Guid, e.Skill })
                 .HasName("PRIMARY")
-                .HasAnnotation("MySql:IndexPrefixLength", new[] { 0, 0 });
+                .HasAnnotation("MySql:IndexPrefixLength", _default2byteArray);
 
             _ = entity
                 .ToTable("character_skills", tb => tb.HasComment("Player System"))
@@ -1271,7 +1276,7 @@ public partial class CharacterDatabase : DbContext
         {
             _ = entity.HasKey(e => new { e.Guid, e.Friend, e.Flags })
                 .HasName("PRIMARY")
-                .HasAnnotation("MySql:IndexPrefixLength", new[] { 0, 0, 0 });
+                .HasAnnotation("MySql:IndexPrefixLength", _default3byteArray);
 
             _ = entity
                 .ToTable("character_social", tb => tb.HasComment("Player System"))
@@ -1299,7 +1304,7 @@ public partial class CharacterDatabase : DbContext
         {
             _ = entity.HasKey(e => new { e.Guid, e.Spell })
                 .HasName("PRIMARY")
-                .HasAnnotation("MySql:IndexPrefixLength", new[] { 0, 0 });
+                .HasAnnotation("MySql:IndexPrefixLength", _default2byteArray);
 
             _ = entity
                 .ToTable("character_spell", tb => tb.HasComment("Player System"))
@@ -1323,7 +1328,7 @@ public partial class CharacterDatabase : DbContext
         {
             _ = entity.HasKey(e => new { e.Guid, e.Spell })
                 .HasName("PRIMARY")
-                .HasAnnotation("MySql:IndexPrefixLength", new[] { 0, 0 });
+                .HasAnnotation("MySql:IndexPrefixLength", _default2byteArray);
 
             _ = entity
                 .ToTable("character_spell_cooldown")
@@ -1407,7 +1412,7 @@ public partial class CharacterDatabase : DbContext
         {
             _ = entity.HasKey(e => new { e.Guid, e.Spell, e.TalentGroup })
                 .HasName("PRIMARY")
-                .HasAnnotation("MySql:IndexPrefixLength", new[] { 0, 0, 0 });
+                .HasAnnotation("MySql:IndexPrefixLength", _default3byteArray);
 
             _ = entity
                 .ToTable("character_talent")
@@ -1468,7 +1473,7 @@ public partial class CharacterDatabase : DbContext
         {
             _ = entity.HasKey(e => new { e.EventEntry, e.ConditionId })
                 .HasName("PRIMARY")
-                .HasAnnotation("MySql:IndexPrefixLength", new[] { 0, 0 });
+                .HasAnnotation("MySql:IndexPrefixLength", _default2byteArray);
 
             _ = entity
                 .ToTable("game_event_condition_save")
@@ -1500,7 +1505,7 @@ public partial class CharacterDatabase : DbContext
         {
             _ = entity.HasKey(e => new { e.SurveyId, e.QuestionId })
                 .HasName("PRIMARY")
-                .HasAnnotation("MySql:IndexPrefixLength", new[] { 0, 0 });
+                .HasAnnotation("MySql:IndexPrefixLength", _default2byteArray);
 
             _ = entity
                 .ToTable("gm_subsurvey", tb => tb.HasComment("Player System"))
@@ -1613,7 +1618,7 @@ public partial class CharacterDatabase : DbContext
         {
             _ = entity.HasKey(e => new { e.Guid, e.Instance })
                 .HasName("PRIMARY")
-                .HasAnnotation("MySql:IndexPrefixLength", new[] { 0, 0 });
+                .HasAnnotation("MySql:IndexPrefixLength", _default2byteArray);
 
             _ = entity
                 .ToTable("group_instance")
@@ -1674,7 +1679,7 @@ public partial class CharacterDatabase : DbContext
         {
             _ = entity.HasKey(e => new { e.Guildid, e.LogGuid, e.TabId })
                 .HasName("PRIMARY")
-                .HasAnnotation("MySql:IndexPrefixLength", new[] { 0, 0, 0 });
+                .HasAnnotation("MySql:IndexPrefixLength", _default3byteArray);
 
             _ = entity
                 .ToTable("guild_bank_eventlog")
@@ -1700,7 +1705,7 @@ public partial class CharacterDatabase : DbContext
         {
             _ = entity.HasKey(e => new { e.Guildid, e.TabId, e.SlotId })
                 .HasName("PRIMARY")
-                .HasAnnotation("MySql:IndexPrefixLength", new[] { 0, 0, 0 });
+                .HasAnnotation("MySql:IndexPrefixLength", _default3byteArray);
 
             _ = entity
                 .ToTable("guild_bank_item")
@@ -1718,7 +1723,7 @@ public partial class CharacterDatabase : DbContext
         {
             _ = entity.HasKey(e => new { e.Guildid, e.TabId, e.Rid })
                 .HasName("PRIMARY")
-                .HasAnnotation("MySql:IndexPrefixLength", new[] { 0, 0, 0 });
+                .HasAnnotation("MySql:IndexPrefixLength", _default3byteArray);
 
             _ = entity
                 .ToTable("guild_bank_right")
@@ -1735,7 +1740,7 @@ public partial class CharacterDatabase : DbContext
         {
             _ = entity.HasKey(e => new { e.Guildid, e.TabId })
                 .HasName("PRIMARY")
-                .HasAnnotation("MySql:IndexPrefixLength", new[] { 0, 0 });
+                .HasAnnotation("MySql:IndexPrefixLength", _default2byteArray);
 
             _ = entity
                 .ToTable("guild_bank_tab")
@@ -1757,7 +1762,7 @@ public partial class CharacterDatabase : DbContext
         {
             _ = entity.HasKey(e => new { e.Guildid, e.LogGuid })
                 .HasName("PRIMARY")
-                .HasAnnotation("MySql:IndexPrefixLength", new[] { 0, 0 });
+                .HasAnnotation("MySql:IndexPrefixLength", _default2byteArray);
 
             _ = entity
                 .ToTable("guild_eventlog", tb => tb.HasComment("Guild Eventlog"))
@@ -1832,7 +1837,7 @@ public partial class CharacterDatabase : DbContext
         {
             _ = entity.HasKey(e => new { e.Guildid, e.Rid })
                 .HasName("PRIMARY")
-                .HasAnnotation("MySql:IndexPrefixLength", new[] { 0, 0 });
+                .HasAnnotation("MySql:IndexPrefixLength", _default2byteArray);
 
             _ = entity
                 .ToTable("guild_rank", tb => tb.HasComment("Guild System"))
@@ -1882,7 +1887,7 @@ public partial class CharacterDatabase : DbContext
         {
             _ = entity.HasKey(e => new { e.Mapid, e.Difficulty })
                 .HasName("PRIMARY")
-                .HasAnnotation("MySql:IndexPrefixLength", new[] { 0, 0 });
+                .HasAnnotation("MySql:IndexPrefixLength", _default2byteArray);
 
             _ = entity
                 .ToTable("instance_reset")
@@ -1995,7 +2000,7 @@ public partial class CharacterDatabase : DbContext
         {
             _ = entity.HasKey(e => new { e.ItemGuid, e.PlayerGuid })
                 .HasName("PRIMARY")
-                .HasAnnotation("MySql:IndexPrefixLength", new[] { 0, 0 });
+                .HasAnnotation("MySql:IndexPrefixLength", _default2byteArray);
 
             _ = entity
                 .ToTable("item_refund_instance", tb => tb.HasComment("Item Refund System"))
@@ -2124,7 +2129,7 @@ public partial class CharacterDatabase : DbContext
         {
             _ = entity.HasKey(e => new { e.Guid, e.CasterGuid, e.Spell, e.EffectMask })
                 .HasName("PRIMARY")
-                .HasAnnotation("MySql:IndexPrefixLength", new[] { 0, 0, 0, 0 });
+                .HasAnnotation("MySql:IndexPrefixLength", _default4byteArray);
 
             _ = entity
                 .ToTable("pet_aura", tb => tb.HasComment("Pet System"))
@@ -2174,7 +2179,7 @@ public partial class CharacterDatabase : DbContext
         {
             _ = entity.HasKey(e => new { e.Guid, e.Spell })
                 .HasName("PRIMARY")
-                .HasAnnotation("MySql:IndexPrefixLength", new[] { 0, 0 });
+                .HasAnnotation("MySql:IndexPrefixLength", _default2byteArray);
 
             _ = entity
                 .ToTable("pet_spell", tb => tb.HasComment("Pet System"))
@@ -2195,7 +2200,7 @@ public partial class CharacterDatabase : DbContext
         {
             _ = entity.HasKey(e => new { e.Guid, e.Spell })
                 .HasName("PRIMARY")
-                .HasAnnotation("MySql:IndexPrefixLength", new[] { 0, 0 });
+                .HasAnnotation("MySql:IndexPrefixLength", _default2byteArray);
 
             _ = entity
                 .ToTable("pet_spell_cooldown")
@@ -2220,7 +2225,7 @@ public partial class CharacterDatabase : DbContext
         {
             _ = entity.HasKey(e => new { e.Ownerguid, e.Type })
                 .HasName("PRIMARY")
-                .HasAnnotation("MySql:IndexPrefixLength", new[] { 0, 0 });
+                .HasAnnotation("MySql:IndexPrefixLength", _default2byteArray);
 
             _ = entity
                 .ToTable("petition", tb => tb.HasComment("Guild System"))
@@ -2242,7 +2247,7 @@ public partial class CharacterDatabase : DbContext
         {
             _ = entity.HasKey(e => new { e.Petitionguid, e.Playerguid })
                 .HasName("PRIMARY")
-                .HasAnnotation("MySql:IndexPrefixLength", new[] { 0, 0 });
+                .HasAnnotation("MySql:IndexPrefixLength", _default2byteArray);
 
             _ = entity
                 .ToTable("petition_sign", tb => tb.HasComment("Guild System"))
@@ -2263,7 +2268,7 @@ public partial class CharacterDatabase : DbContext
         {
             _ = entity.HasKey(e => new { e.PoolId, e.QuestId })
                 .HasName("PRIMARY")
-                .HasAnnotation("MySql:IndexPrefixLength", new[] { 0, 0 });
+                .HasAnnotation("MySql:IndexPrefixLength", _default2byteArray);
 
             _ = entity
                 .ToTable("pool_quest_save")
@@ -2294,7 +2299,7 @@ public partial class CharacterDatabase : DbContext
         {
             _ = entity.HasKey(e => new { e.BattlegroundId, e.CharacterGuid })
                 .HasName("PRIMARY")
-                .HasAnnotation("MySql:IndexPrefixLength", new[] { 0, 0 });
+                .HasAnnotation("MySql:IndexPrefixLength", _default2byteArray);
 
             _ = entity
                 .ToTable("pvpstats_players")
@@ -2395,7 +2400,7 @@ public partial class CharacterDatabase : DbContext
         {
             _ = entity.HasKey(e => new { e.Type, e.SpawnId, e.InstanceId })
                 .HasName("PRIMARY")
-                .HasAnnotation("MySql:IndexPrefixLength", new[] { 0, 0, 0 });
+                .HasAnnotation("MySql:IndexPrefixLength", _default3byteArray);
 
             _ = entity
                 .ToTable("respawn", tb => tb.HasComment("Stored respawn times"))

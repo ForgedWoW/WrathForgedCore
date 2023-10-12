@@ -146,19 +146,21 @@ namespace WrathForged.Authorization.Server.Services
                 session.Security.SessionKey = sessionKey; // also sets the session key on the account.
                 using var authDatabase = _classFactory.Locate<AuthDatabase>();
 
-                if (session.Security.Account == null)
+                if (session.Security.Account == SessionSecurity.DefaultAccount || session.Security.Account == null)
                 {
                     LoginFailed(session, AuthStatus.WOW_FAIL_UNKNOWN_ACCOUNT, AuthServerOpCode.AUTH_LOGON_CHALLENGE);
                     return;
                 }
 
-                session.Security.Account = authDatabase.Accounts.Find(session.Security.Account.Id);
+                var account = authDatabase.Accounts.Find(session.Security.Account.Id);
 
-                if (session.Security.Account == null)
+                if (account == null)
                 {
                     LoginFailed(session, AuthStatus.WOW_FAIL_UNKNOWN_ACCOUNT, AuthServerOpCode.AUTH_LOGON_CHALLENGE);
                     return;
                 }
+
+                session.Security.Account = account;
 
                 session.Security.Account.LastIp = session.Network.ClientSocket.IPEndPoint.Address.ToString();
                 session.Security.Account.LastLogin = DateTime.UtcNow;
@@ -242,9 +244,9 @@ namespace WrathForged.Authorization.Server.Services
             if (serverProof.SequenceEqual(proof.ClientProof))
             {
                 using var authDatabase = _classFactory.Locate<AuthDatabase>();
-                session.Security.Account = authDatabase.Accounts.FirstOrDefault(x => x.Id == session.Security.Account.Id);
+                session.Security.Account = authDatabase.Accounts.FirstOrDefault(x => x.Id == session.Security.Account.Id) ?? SessionSecurity.DefaultAccount;
 
-                if (session.Security.Account != null)
+                if (session.Security.Account != SessionSecurity.DefaultAccount)
                 {
                     session.Security.Account.LastLogin = DateTime.UtcNow;
                     session.Security.Account.Online = true;

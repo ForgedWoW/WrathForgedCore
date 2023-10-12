@@ -1,5 +1,6 @@
 ﻿// Copyright (c) Forged WoW LLC <https://github.com/ForgedWoW/WrathForgedCore>
 // Licensed under GPL-3.0 license. See <https://github.com/ForgedWoW/WrathForgedCore/blob/master/LICENSE> for full information.
+using System.Collections.Concurrent;
 using System.Diagnostics.Metrics;
 using System.Net;
 using Microsoft.Extensions.Configuration;
@@ -23,7 +24,7 @@ public class WoWClientServer
     private readonly ILogger _logger;
     private readonly IConfiguration _configuration;
     private readonly ClassFactory _classFactory;
-    private readonly Dictionary<ClientSocket, IWoWClientSession> _clientSessions = [];
+    private readonly ConcurrentDictionary<ClientSocket, IWoWClientSession> _clientSessions = [];
     private readonly Meter _meter;
     private readonly Counter<long> _connectionCounter;
 
@@ -44,6 +45,13 @@ public class WoWClientServer
 
     public TCPServer TCPServer { get; }
 
+    public int ConnectionCount => _clientSessions.Count;
+
+    public IEnumerable<T> GetClientSessions<T>() where T : IWoWClientSession
+    {
+        return _clientSessions.Values.OfType<T>();
+    }
+    
     /// <summary>
     ///     Starts the server on the configured port "ClientTCPServer:Port" or default port of 8085 if not configured.
     /// </summary>
@@ -104,7 +112,7 @@ public class WoWClientServer
             return;
 
         value.Network.PacketBuffer.Dispose();
-        _ = _clientSessions.Remove(clientSocket);
+        _ = _clientSessions.TryRemove(clientSocket, out _);
         _connectionCounter.Add(-1);
     }
 
