@@ -37,7 +37,7 @@ namespace WrathForged.Models.Auth
         public byte RealmId { get; set; }
 
         [SerializableProperty(9)]
-        [HasFlagCondition(2, typeof(RealmFlags), (int)RealmFlags.SpecifyBuild)]
+        [HasFlagSerializerCondition(2, typeof(RealmFlags), (int)RealmFlags.SpecifyBuild)]
         public RealmClientVersion Version { get; set; } = new RealmClientVersion();
     }
 }

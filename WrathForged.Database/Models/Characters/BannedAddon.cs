@@ -13,7 +13,7 @@ public partial class BannedAddon
 
     public string Version { get; set; } = string.Empty;
 
-    public DateTime Timestamp { get; set; }
+    public uint Timestamp { get; set; }
 
     public virtual byte[] NameMD5 => MD5.HashData(Encoding.ASCII.GetBytes(Name));
     public virtual byte[] VersionMD5 => MD5.HashData(Encoding.ASCII.GetBytes(Version));

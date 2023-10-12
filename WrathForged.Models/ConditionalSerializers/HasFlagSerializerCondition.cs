@@ -3,7 +3,7 @@
 namespace WrathForged.Models.ConditionalSerializers
 {
     [AttributeUsage(AttributeTargets.Property)]
-    public class HasFlagCondition(int valIndex, Type enumType, int enumVal) : Attribute, IConditionalSerialization
+    public class HasFlagSerializerCondition(int valIndex, Type enumType, int enumVal) : Attribute, IConditionalSerialization
     {
         private readonly int _valIndex = valIndex;
         private readonly Type _enumType = enumType;

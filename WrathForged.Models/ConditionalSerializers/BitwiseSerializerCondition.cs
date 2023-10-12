@@ -4,7 +4,7 @@
 namespace WrathForged.Models.ConditionalSerializers
 {
     [AttributeUsage(AttributeTargets.Property)]
-    public class BitwiseCondition(int valIndex, BitwiseCondition.BitwiseOperation operation, int vsValue, BitwiseCondition.EqualityOperation equalityOperation, int equalityValue) : Attribute, IConditionalSerialization
+    public class BitwiseSerializerCondition(int valIndex, BitwiseSerializerCondition.BitwiseOperation operation, int vsValue, BitwiseSerializerCondition.EqualityOperation equalityOperation, int equalityValue) : Attribute, IConditionalSerialization
     {
         private readonly int _valIndex = valIndex;
         private readonly BitwiseOperation _operation = operation;

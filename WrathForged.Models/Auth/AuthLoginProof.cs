@@ -23,15 +23,15 @@ namespace WrathForged.Models.Auth
         public byte SecurityFlags { get; set; }
 
         [SerializableProperty(5)]
-        [BitwiseCondition(4, BitwiseCondition.BitwiseOperation.And, 1, BitwiseCondition.EqualityOperation.NotEqual, 0)]
+        [BitwiseSerializerCondition(4, BitwiseSerializerCondition.BitwiseOperation.And, 1, BitwiseSerializerCondition.EqualityOperation.NotEqual, 0)]
         public AuthPIN? Pin { get; set; }
 
         [SerializableProperty(6, FixedCollectionSize = 20)]
-        [BitwiseCondition(4, BitwiseCondition.BitwiseOperation.And, 2, BitwiseCondition.EqualityOperation.NotEqual, 0)]
+        [BitwiseSerializerCondition(4, BitwiseSerializerCondition.BitwiseOperation.And, 2, BitwiseSerializerCondition.EqualityOperation.NotEqual, 0)]
         public byte[] Unk1 { get; set; } = [];
 
         [SerializableProperty(7, CollectionSizeLengthType = TypeCode.Byte)]
-        [BitwiseCondition(4, BitwiseCondition.BitwiseOperation.And, 4, BitwiseCondition.EqualityOperation.NotEqual, 0)]
+        [BitwiseSerializerCondition(4, BitwiseSerializerCondition.BitwiseOperation.And, 4, BitwiseSerializerCondition.EqualityOperation.NotEqual, 0)]
         public byte[] Unk2 { get; set; } = [];
     }
 
