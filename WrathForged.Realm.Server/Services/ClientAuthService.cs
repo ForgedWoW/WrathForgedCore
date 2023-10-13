@@ -108,7 +108,15 @@ namespace WrathForged.Realm.Server.Services
 
             var realm = authDatabase.Realmlists.FromCache().FirstOrDefault(r => r.Id == realmId);
 
-            if (realm != null && realm.AllowedSecurityLevel > 0 && session.Security.CurrentRealmRole.SecurityLevel < realm.AllowedSecurityLevel)
+            if (realm == null)
+            {
+                _logger.Warning("Unknown realm {RealmId} from {Address}", realmId, session.Network.ClientSocket.IPEndPoint);
+                session.Network.Send(new RealmAuthErrorResponse() { Code = ResponseCodes.REALM_LIST_REALM_NOT_FOUND });
+                session.Network.ClientSocket.Disconnect();
+                return;
+            }
+
+            if (realm.AllowedSecurityLevel > 0 && session.Security.CurrentRealmRole.SecurityLevel < realm.AllowedSecurityLevel)
             {
                 _logger.Warning("Account {AccountName} is not authorized to access realm {RealmName} from {Address}", session.Security.Account.Username, realm.Name, session.Network.ClientSocket.IPEndPoint);
                 session.Network.Send(new RealmAuthErrorResponse() { Code = ResponseCodes.AUTH_UNAVAILABLE });
@@ -119,6 +127,7 @@ namespace WrathForged.Realm.Server.Services
             if (!session.Security.Account.Locked)
                 session.Security.Account.LastIp = session.Network.ClientSocket.IPEndPoint.Address.ToString();
 
+            session.Security.CurrentRealm = realm;
             session.Security.AuthenticationState = WoWClientSession.AuthState.LoggedIn;
             session.Security.Account.LastLogin = DateTime.UtcNow;
             _ = authDatabase.Update(session.Security.Account);

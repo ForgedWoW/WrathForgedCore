@@ -29,10 +29,13 @@ public class WoWClientSession : IWoWClientSession
         LoggedIn,
     };
 
+    // <inheritdoc />
     public SessionSecurity Security { get; }
 
+    // <inheritdoc />
     public SessionNetwork Network { get; }
 
+    // <inheritdoc />
     public ClientTime ClientTime { get; }
 
     protected virtual void Dispose(bool disposing)
@@ -41,8 +44,8 @@ public class WoWClientSession : IWoWClientSession
         {
             if (disposing)
             {
-                Network.PacketBuffer.Dispose();
-                Network.ClientSocket.Dispose();
+                Network.Dispose();
+                Security.Dispose();
             }
 
             _disposedValue = true;

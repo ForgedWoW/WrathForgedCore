@@ -22,7 +22,7 @@ public class ForgedAuthorization
     {
         _logger = logger;
         _classFactory = classFactory;
-        backgroundWorkProcessor.Add(ReloadPermissions, TimeSpan.FromMinutes(10));
+        backgroundWorkProcessor.Add(ReloadPermissions, TimeSpan.FromMinutes(10), TimeSpan.FromMinutes(10));
         ReloadPermissions();
     }
 #pragma warning restore CS8618 // Im using ReloadPermissions() to set this value. the complier is dumb.

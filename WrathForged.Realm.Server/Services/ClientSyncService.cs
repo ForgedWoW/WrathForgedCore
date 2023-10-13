@@ -30,7 +30,7 @@ namespace WrathForged.Realm.Server.Services
                 session.Network.OverspeedPingCount++;
 
                 if (_configuration.GetDefaultValue("ClientTCPServer:MaxOverPingCount", 2) < session.Network.OverspeedPingCount &&
-                    !session.Security.CurrentRealmRole.HasPermission(23))
+                    !session.Security.HasPermission(23))
                 {
                     _logger.Information("Client {Address} has been disconnected for overspeed pinging.", session.Network.ClientSocket.IPEndPoint);
                     session.Network.ClientSocket.Disconnect();

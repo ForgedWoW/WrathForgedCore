@@ -14,13 +14,14 @@ using WrathForged.Serialization.Models;
 namespace WrathForged.Common
 {
     public class SessionNetwork(ClientSocket clientSocket, PacketBuffer packetBuffer, MemoryStream packetBufferBaseStream, ForgedModelSerializer forgedModelSerializer,
-                                AttributeCache<ForgedSerializableAttribute> forgedSerializableAttributeCache, IConfiguration configuration)
+                                AttributeCache<ForgedSerializableAttribute> forgedSerializableAttributeCache, IConfiguration configuration) : IDisposable
     {
         private readonly ForgedModelSerializer _forgedModelSerializer = forgedModelSerializer;
         private readonly AttributeCache<ForgedSerializableAttribute> _forgedSerializableAttributeCache = forgedSerializableAttributeCache;
         private readonly TimeSpan _keepAliveTimeout = TimeSpan.FromSeconds(configuration.GetDefaultValue("ClientTCPServer:SocketTimeoutSeconds", 90));
         private DateTime _lastKeepAlive = DateTime.UtcNow;
         private DateTime _nextKeepAliveTimeout = DateTime.UtcNow + TimeSpan.FromSeconds(configuration.GetDefaultValue("ClientTCPServer:SocketTimeoutSeconds", 90));
+        private bool _disposedValue;
 
         public int Latency { get; set; }
         public DateTime LastPing { get; set; } = DateTime.UtcNow;
@@ -112,6 +113,27 @@ namespace WrathForged.Common
             var packet = NewClientMessage(packetId, packetHeaderType, contentLengthType, header);
             packet.WriteObject(obj);
             ClientSocket.EnqueueWrite(packet);
+        }
+
+        protected virtual void Dispose(bool disposing)
+        {
+            if (!_disposedValue)
+            {
+                if (disposing)
+                {
+                    ClientSocket.Dispose();
+                    PacketBuffer.Dispose();
+                }
+
+                _disposedValue = true;
+            }
+        }
+
+        public void Dispose()
+        {
+            // Do not change this code. Put cleanup code in 'Dispose(bool disposing)' method
+            Dispose(disposing: true);
+            GC.SuppressFinalize(this);
         }
     }
 }
