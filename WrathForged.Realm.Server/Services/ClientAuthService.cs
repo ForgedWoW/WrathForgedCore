@@ -10,6 +10,7 @@ using WrathForged.Common.Networking;
 using WrathForged.Common.Validators;
 using WrathForged.Database.Models.Auth;
 using WrathForged.Database.Models.Characters;
+using WrathForged.Database.Models.World;
 using WrathForged.Models.Auth;
 using WrathForged.Models.Auth.Enum;
 using WrathForged.Models.Realm.Enum;
@@ -19,13 +20,14 @@ using WrathForged.Serialization.Models;
 namespace WrathForged.Realm.Server.Services;
 
 public class ClientAuthService(IConfiguration configuration, ILogger logger, ClassFactory classFactory, RandomUtilities random,
-                                BanValidator banValidator, IpStackGeoLocationService ipStackGeoLocationService) : IPacketService
+                                BanValidator banValidator, IpStackGeoLocationService ipStackGeoLocationService, AddonService addonService) : IPacketService
 {
     private readonly IConfiguration _configuration = configuration;
     private readonly ILogger _logger = logger;
     private readonly ClassFactory _classFactory = classFactory;
     private readonly BanValidator _banValidator = banValidator;
     private readonly IpStackGeoLocationService _ipStackGeoLocationService = ipStackGeoLocationService;
+    private readonly AddonService _addonService = addonService;
     private readonly byte[] _authSeed = random.RandomBytes(4);
     private readonly List<RealmClientSession> _loginQueue = [];
 
@@ -181,6 +183,10 @@ public class ClientAuthService(IConfiguration configuration, ILogger logger, Cla
     private void InitializeSession(RealmClientSession session)
     {
         using var characterDatabase = _classFactory.Locate<CharacterDatabase>();
+        using var worldDatabase = _classFactory.Locate<WorldDatabase>();
+
         session.Network.Send(new RealmAuthResponse() { Code = ResponseCodes.AUTH_OK });
+        _addonService.SendAddonInfo(session);
+        session.Network.Send(new ClientCacheVersion() { Version = worldDatabase.Versions.Select(v => v.CacheId != null ? (uint)v.CacheId : 0u).First() });
     }
 }
