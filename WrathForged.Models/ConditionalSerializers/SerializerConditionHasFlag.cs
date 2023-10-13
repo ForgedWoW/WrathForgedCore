@@ -2,8 +2,15 @@
 // Licensed under GPL-3.0 license. See <https://github.com/ForgedWoW/WrathForgedCore/blob/master/LICENSE> for full information.
 namespace WrathForged.Models.ConditionalSerializers;
 
+/// <summary>
+///    Gets the value of the <paramref name="valIndex"/> property and checks if it has the flag of <paramref name="expectedValue" /> for the input <paramref name="enumType"/>.
+///    If they are not null and the property has the flag, the property will be serialized.
+/// </summary>
+/// <param name="valIndex"></param>
+/// <param name="enumType"></param>
+/// <param name="enumVal"></param>
 [AttributeUsage(AttributeTargets.Property)]
-public class HasFlagSerializerCondition(int valIndex, Type enumType, int enumVal) : Attribute, IConditionalSerialization
+public class SerializerConditionHasFlag(int valIndex, Type enumType, int enumVal) : Attribute, IConditionalSerialization
 {
     private readonly int _valIndex = valIndex;
     private readonly Type _enumType = enumType;

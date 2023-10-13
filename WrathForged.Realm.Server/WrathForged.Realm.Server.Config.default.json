@@ -6,6 +6,9 @@
     "world": "server=127.0.0.1; database=world; user=trinity; password=trinity",
     "characters": "server=127.0.0.1; database=characters; user=trinity; password=trinity"
   },
+  "RealmSettings": {
+    "PlayerLimit": 1000
+  },
   "Database": {
     "SlidingCacheTimeout_Hours": 2,
     "SQLDir": ".\\sql",

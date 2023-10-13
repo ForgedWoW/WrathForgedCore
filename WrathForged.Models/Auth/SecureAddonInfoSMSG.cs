@@ -15,11 +15,11 @@ public class SecureAddonInfoSMSG
     public bool InfoProvided { get; set; }
 
     [SerializableProperty(2)]
-    [BoolSerializerCondition(1)]
+    [SerializerConditionBool(1)]
     public bool DoesNotHaveKey { get; set; }
 
     [SerializableProperty(3)]
-    [BoolSerializerCondition(2)]
+    [SerializerConditionBool(2)]
     public byte[] AddonPublicKey { get; set; } = [];
 
     [SerializableProperty(4)]

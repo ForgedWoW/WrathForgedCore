@@ -23,15 +23,15 @@ public class AuthLoginProof
     public byte SecurityFlags { get; set; }
 
     [SerializableProperty(5)]
-    [BitwiseSerializerCondition(4, BitwiseSerializerCondition.BitwiseOperation.And, 1, BitwiseSerializerCondition.EqualityOperation.NotEqual, 0)]
+    [SerializerConditionBitwise(4, SerializerConditionBitwise.BitwiseOperation.And, 1, SerializerConditionBitwise.EqualityOperation.NotEqual, 0)]
     public AuthPIN? Pin { get; set; }
 
     [SerializableProperty(6, FixedCollectionSize = 20)]
-    [BitwiseSerializerCondition(4, BitwiseSerializerCondition.BitwiseOperation.And, 2, BitwiseSerializerCondition.EqualityOperation.NotEqual, 0)]
+    [SerializerConditionBitwise(4, SerializerConditionBitwise.BitwiseOperation.And, 2, SerializerConditionBitwise.EqualityOperation.NotEqual, 0)]
     public byte[] Unk1 { get; set; } = [];
 
     [SerializableProperty(7, CollectionSizeLengthType = TypeCode.Byte)]
-    [BitwiseSerializerCondition(4, BitwiseSerializerCondition.BitwiseOperation.And, 4, BitwiseSerializerCondition.EqualityOperation.NotEqual, 0)]
+    [SerializerConditionBitwise(4, SerializerConditionBitwise.BitwiseOperation.And, 4, SerializerConditionBitwise.EqualityOperation.NotEqual, 0)]
     public byte[] Unk2 { get; set; } = [];
 }
 

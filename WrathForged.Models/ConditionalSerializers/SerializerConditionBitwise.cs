@@ -2,8 +2,17 @@
 // Licensed under GPL-3.0 license. See <https://github.com/ForgedWoW/WrathForgedCore/blob/master/LICENSE> for full information.
 namespace WrathForged.Models.ConditionalSerializers;
 
+/// <summary>
+///     Perform the input bitwise operation on the value of the <paramref name="valIndex"/> property and check if it equals the <paramref name="equalityValue" />.
+///     If they are not null and equal, the property will be serialized.
+/// </summary>
+/// <param name="valIndex"></param>
+/// <param name="operation"></param>
+/// <param name="vsValue"></param>
+/// <param name="equalityOperation"></param>
+/// <param name="equalityValue"></param>
 [AttributeUsage(AttributeTargets.Property)]
-public class BitwiseSerializerCondition(int valIndex, BitwiseSerializerCondition.BitwiseOperation operation, int vsValue, BitwiseSerializerCondition.EqualityOperation equalityOperation, int equalityValue) : Attribute, IConditionalSerialization
+public class SerializerConditionBitwise(int valIndex, SerializerConditionBitwise.BitwiseOperation operation, int vsValue, SerializerConditionBitwise.EqualityOperation equalityOperation, int equalityValue) : Attribute, IConditionalSerialization
 {
     private readonly int _valIndex = valIndex;
     private readonly BitwiseOperation _operation = operation;

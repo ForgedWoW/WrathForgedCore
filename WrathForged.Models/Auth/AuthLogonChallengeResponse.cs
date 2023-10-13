@@ -33,15 +33,15 @@ public class AuthLogonChallengeResponse
     public byte SecurityFlags { get; set; }
 
     [SerializableProperty(7)]
-    [BitwiseSerializerCondition(6, BitwiseSerializerCondition.BitwiseOperation.And, 1, BitwiseSerializerCondition.EqualityOperation.Equal, 1)]
+    [SerializerConditionBitwise(6, SerializerConditionBitwise.BitwiseOperation.And, 1, SerializerConditionBitwise.EqualityOperation.Equal, 1)]
     public RequiredPin? Pin { get; set; }
 
     [SerializableProperty(8)]
-    [BitwiseSerializerCondition(6, BitwiseSerializerCondition.BitwiseOperation.And, 2, BitwiseSerializerCondition.EqualityOperation.Equal, 2)]
+    [SerializerConditionBitwise(6, SerializerConditionBitwise.BitwiseOperation.And, 2, SerializerConditionBitwise.EqualityOperation.Equal, 2)]
     public MatrixInput? Matrix { get; set; }
 
     [SerializableProperty(9)]
-    [BitwiseSerializerCondition(6, BitwiseSerializerCondition.BitwiseOperation.And, 4, BitwiseSerializerCondition.EqualityOperation.Equal, 4)]
+    [SerializerConditionBitwise(6, SerializerConditionBitwise.BitwiseOperation.And, 4, SerializerConditionBitwise.EqualityOperation.Equal, 4)]
     public byte RequireSecurityToken { get; set; }
 }
 
