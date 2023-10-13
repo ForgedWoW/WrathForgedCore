@@ -1,6 +1,5 @@
 ﻿// Copyright (c) Forged WoW LLC <https://github.com/ForgedWoW/WrathForgedCore>
 // Licensed under GPL-3.0 license. See <https://github.com/ForgedWoW/WrathForgedCore/blob/master/LICENSE> for full information.
-using System.Collections.Concurrent;
 using System.Text;
 using Microsoft.Extensions.Configuration;
 using Serilog;
@@ -10,6 +9,7 @@ using WrathForged.Common.External;
 using WrathForged.Common.Networking;
 using WrathForged.Common.Validators;
 using WrathForged.Database.Models.Auth;
+using WrathForged.Database.Models.Characters;
 using WrathForged.Models.Auth;
 using WrathForged.Models.Auth.Enum;
 using WrathForged.Models.Realm.Enum;
@@ -27,8 +27,7 @@ public class ClientAuthService(IConfiguration configuration, ILogger logger, Cla
     private readonly BanValidator _banValidator = banValidator;
     private readonly IpStackGeoLocationService _ipStackGeoLocationService = ipStackGeoLocationService;
     private readonly byte[] _authSeed = random.RandomBytes(4);
-    private readonly ConcurrentQueue<RealmClientSession> _loginQueue = new();
-    private readonly Dictionary<uint, int> _queuePositions = [];
+    private readonly List<RealmClientSession> _loginQueue = [];
 
     [PacketRoute(PacketScope.ClientToRealm, RealmServerOpCode.CMSG_AUTH_SESSION)]
     public void AuthSession(IWoWClientSession session, RealmAuthSessionRequest realmAuthSessionRequest)
@@ -134,6 +133,7 @@ public class ClientAuthService(IConfiguration configuration, ILogger logger, Cla
         session.Security.CurrentRealm = realm;
         session.Security.AuthenticationState = WoWClientSession.AuthState.LoggedIn;
         session.Security.Account.LastLogin = DateTime.UtcNow;
+        session.Network.ClientSocket.OnDisconnect += ClientSocket_OnDisconnect;
         _ = authDatabase.Update(session.Security.Account);
         _ = authDatabase.SaveChanges();
 
@@ -143,12 +143,44 @@ public class ClientAuthService(IConfiguration configuration, ILogger logger, Cla
             realm.Population >= sessionLimit &&
             !session.Security.HasPermission(2))
         {
-            _loginQueue.Enqueue(session.As<RealmClientSession>());
             var queuePosition = _loginQueue.Count;
-            _queuePositions[session.Security.Account.Id] = queuePosition;
+
+            lock (_loginQueue)
+                _loginQueue.Add(session.As<RealmClientSession>());
+
             _logger.Information("Account {AccountName} is in position {QueuePosition} in the login queue for realm {RealmName} from {Address}", session.Security.Account.Username, _loginQueue.Count, realm.Name, session.Network.ClientSocket.IPEndPoint);
             session.Network.Send(new RealmAuthResponse() { Code = ResponseCodes.AUTH_WAIT_QUEUE, QueuePosition = queuePosition });
             return;
         }
+    }
+
+    private void ClientSocket_OnDisconnect(object? sender, ClientSocket e)
+    {
+        lock (_loginQueue)
+        {
+            if (e.ClientSession == null)
+                return;
+
+            _ = _loginQueue.Remove(e.ClientSession.As<RealmClientSession>());
+            var dequeuedSession = _loginQueue.FirstOrDefault();
+
+            if (dequeuedSession == null)
+                return; // No one in queue
+
+            _ = _loginQueue.Remove(dequeuedSession);
+            InitializeSession(dequeuedSession);
+
+            for (var i = 0; i < _loginQueue.Count; i++)
+            {
+                var session = _loginQueue[i];
+                session.Network.Send(new RealmAuthResponse() { Code = ResponseCodes.AUTH_WAIT_QUEUE, QueuePosition = i });
+            }
+        }
+    }
+
+    private void InitializeSession(RealmClientSession session)
+    {
+        using var characterDatabase = _classFactory.Locate<CharacterDatabase>();
+        session.Network.Send(new RealmAuthResponse() { Code = ResponseCodes.AUTH_OK });
     }
 }
