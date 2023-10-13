@@ -3,13 +3,12 @@
 using WrathForged.Common;
 using WrathForged.Common.Networking;
 
-namespace WrathForged.Instance.Server
+namespace WrathForged.Instance.Server;
+
+public class InstanceClientSession : WoWClientSession
 {
-    public class InstanceClientSession : WoWClientSession
+    public InstanceClientSession(ClientSocket clientSocket, PacketBuffer packetBuffer, ClassFactory classFactory) :
+            base(clientSocket, packetBuffer, classFactory)
     {
-        public InstanceClientSession(ClientSocket clientSocket, PacketBuffer packetBuffer, ClassFactory classFactory) :
-                base(clientSocket, packetBuffer, classFactory)
-        {
-        }
     }
 }

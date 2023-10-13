@@ -5,15 +5,14 @@ using WrathForged.Common;
 using WrathForged.Common.Networking;
 using WrathForged.Serialization.Models;
 
-namespace WrathForged.Authorization.Server
+namespace WrathForged.Authorization.Server;
+
+public static class DependencyInjection
 {
-    public static class DependencyInjection
+    public static IExportRegistrationBlock RegisterAuth(this IExportRegistrationBlock builder)
     {
-        public static IExportRegistrationBlock RegisterAuth(this IExportRegistrationBlock builder)
-        {
-            _ = builder.Export<WoWClientServer>().WithCtorParam(() => PacketScope.ClientToAuth).Lifestyle.Singleton();
-            _ = builder.Export<WoWClientSession>().As<IWoWClientSession>();
-            return builder;
-        }
+        _ = builder.Export<WoWClientServer>().WithCtorParam(() => PacketScope.ClientToAuth).Lifestyle.Singleton();
+        _ = builder.Export<WoWClientSession>().As<IWoWClientSession>();
+        return builder;
     }
 }

@@ -2,97 +2,96 @@
 // Licensed under GPL-3.0 license. See <https://github.com/ForgedWoW/WrathForgedCore/blob/master/LICENSE> for full information.
 using System.Reflection;
 
-namespace WrathForged.Common.Caching
+namespace WrathForged.Common.Caching;
+
+public class AttributeCache<T> where T : Attribute
 {
-    public class AttributeCache<T> where T : Attribute
+    // we cache the attributes so we don't have to use reflection every time, c# creates a new instance of the attribute every time you use GetCustomAttribute
+    // we dont need a lock as we only ever read from this dictionary and we only add to it.
+    private readonly Dictionary<Type, T> _cachedAttributes = [];
+
+    public T? GetAttribute(Type type)
     {
-        // we cache the attributes so we don't have to use reflection every time, c# creates a new instance of the attribute every time you use GetCustomAttribute
-        // we dont need a lock as we only ever read from this dictionary and we only add to it.
-        private readonly Dictionary<Type, T> _cachedAttributes = [];
-
-        public T? GetAttribute(Type type)
-        {
-            if (_cachedAttributes.TryGetValue(type, out var attribute))
-                return attribute;
-
-            attribute = type.GetCustomAttribute<T>(false);
-
-            if (attribute == null)
-                return null;
-
-            _cachedAttributes[type] = attribute;
-
+        if (_cachedAttributes.TryGetValue(type, out var attribute))
             return attribute;
-        }
 
-        public T? GetAttribute(PropertyInfo property) => GetAttribute(property.PropertyType);
+        attribute = type.GetCustomAttribute<T>(false);
 
-        public T? GetAttribute(FieldInfo field) => GetAttribute(field.FieldType);
+        if (attribute == null)
+            return null;
 
-        public T? GetAttribute(MethodInfo method) => GetAttribute(method.ReturnType);
+        _cachedAttributes[type] = attribute;
 
-        public T? GetAttribute(EventInfo evnt) => evnt.EventHandlerType == null ? null : GetAttribute(evnt.EventHandlerType);
+        return attribute;
+    }
 
-        public T? GetAttribute(ParameterInfo parameter) => GetAttribute(parameter.ParameterType);
+    public T? GetAttribute(PropertyInfo property) => GetAttribute(property.PropertyType);
 
-        public T? GetAttribute(ConstructorInfo constructor) => constructor.DeclaringType == null ? null : GetAttribute(constructor.DeclaringType);
+    public T? GetAttribute(FieldInfo field) => GetAttribute(field.FieldType);
 
-        public T? GetAttributeFromObject(object obj) => GetAttribute(obj.GetType());
+    public T? GetAttribute(MethodInfo method) => GetAttribute(method.ReturnType);
 
-        public bool TryGetAttribute(Type type, out T attribute)
-        {
-            attribute = GetAttribute(type) ?? default!;
+    public T? GetAttribute(EventInfo evnt) => evnt.EventHandlerType == null ? null : GetAttribute(evnt.EventHandlerType);
 
-            return attribute != default!;
-        }
+    public T? GetAttribute(ParameterInfo parameter) => GetAttribute(parameter.ParameterType);
 
-        public bool TryGetAttribute(PropertyInfo property, out T attribute)
-        {
-            attribute = GetAttribute(property) ?? default!;
+    public T? GetAttribute(ConstructorInfo constructor) => constructor.DeclaringType == null ? null : GetAttribute(constructor.DeclaringType);
 
-            return attribute != default!;
-        }
+    public T? GetAttributeFromObject(object obj) => GetAttribute(obj.GetType());
 
-        public bool TryGetAttribute(FieldInfo field, out T attribute)
-        {
-            attribute = GetAttribute(field) ?? default!;
+    public bool TryGetAttribute(Type type, out T attribute)
+    {
+        attribute = GetAttribute(type) ?? default!;
 
-            return attribute != default!;
-        }
+        return attribute != default!;
+    }
 
-        public bool TryGetAttribute(MethodInfo method, out T attribute)
-        {
-            attribute = GetAttribute(method) ?? default!;
+    public bool TryGetAttribute(PropertyInfo property, out T attribute)
+    {
+        attribute = GetAttribute(property) ?? default!;
 
-            return attribute != null;
-        }
+        return attribute != default!;
+    }
 
-        public bool TryGetAttribute(EventInfo evnt, out T attribute)
-        {
-            attribute = GetAttribute(evnt) ?? default!;
+    public bool TryGetAttribute(FieldInfo field, out T attribute)
+    {
+        attribute = GetAttribute(field) ?? default!;
 
-            return attribute != default!;
-        }
+        return attribute != default!;
+    }
 
-        public bool TryGetAttribute(ParameterInfo parameter, out T attribute)
-        {
-            attribute = GetAttribute(parameter) ?? default!;
+    public bool TryGetAttribute(MethodInfo method, out T attribute)
+    {
+        attribute = GetAttribute(method) ?? default!;
 
-            return attribute != default!;
-        }
+        return attribute != null;
+    }
 
-        public bool TryGetAttribute(ConstructorInfo constructor, out T attribute)
-        {
-            attribute = GetAttribute(constructor) ?? default!;
+    public bool TryGetAttribute(EventInfo evnt, out T attribute)
+    {
+        attribute = GetAttribute(evnt) ?? default!;
 
-            return attribute != default!;
-        }
+        return attribute != default!;
+    }
 
-        public bool TryGetAttributeFromObject(object obj, out T attribute)
-        {
-            attribute = GetAttributeFromObject(obj) ?? default!;
+    public bool TryGetAttribute(ParameterInfo parameter, out T attribute)
+    {
+        attribute = GetAttribute(parameter) ?? default!;
 
-            return attribute != default!;
-        }
+        return attribute != default!;
+    }
+
+    public bool TryGetAttribute(ConstructorInfo constructor, out T attribute)
+    {
+        attribute = GetAttribute(constructor) ?? default!;
+
+        return attribute != default!;
+    }
+
+    public bool TryGetAttributeFromObject(object obj, out T attribute)
+    {
+        attribute = GetAttributeFromObject(obj) ?? default!;
+
+        return attribute != default!;
     }
 }

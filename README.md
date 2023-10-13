@@ -4,6 +4,11 @@
 
 Actively accepts Pull Requests.
 
+#### Contributing
+When contributing, please enable code cleanup on save. Options > Text Editor > Code Cleanup and select Run Code Cleanup profile on save.
+
+To configure code cleanup to use the editorconfig within the project, go to Analyze > Code Cleanup > Configure Code Cleanup. Under Included Fixers only have  “Fix all warnings and errors set in EditorConfig” and “Fix analyzers warning and errors set in EditorConfig enabled.
+
 ## Architecture
 ![Architecture](Architecture.png)
 

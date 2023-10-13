@@ -9,63 +9,62 @@ using WrathForged.Models.Auth.Enum;
 using WrathForged.Models.Networking;
 using WrathForged.Serialization.Models;
 
-namespace WrathForged.Authorization.Server.Services
+namespace WrathForged.Authorization.Server.Services;
+
+public class RealmService(ClassFactory classFactory, ILogger logger) : IPacketService
 {
-    public class RealmService(ClassFactory classFactory, ILogger logger) : IPacketService
+    private readonly ClassFactory _classFactory = classFactory;
+    private readonly ILogger _logger = logger;
+
+    [PacketRoute(PacketScope.ClientToAuth, AuthServerOpCode.REALM_LIST)]
+    public void RealmRequest(IWoWClientSession session)
     {
-        private readonly ClassFactory _classFactory = classFactory;
-        private readonly ILogger _logger = logger;
+        _logger.Debug("Realm list request from {Address}", session.Network.ClientSocket.IPEndPoint);
+        var packet = session.Network.NewClientMessage(new PacketId(AuthServerOpCode.REALM_LIST, PacketScope.AuthToClient), PacketHeaderType.WithLength, ContentLengthType.Short);
 
-        [PacketRoute(PacketScope.ClientToAuth, AuthServerOpCode.REALM_LIST)]
-        public void RealmRequest(IWoWClientSession session)
+        var response = new RealmListResponse();
+
+        using var authDb = _classFactory.Locate<AuthDatabase>();
+
+        foreach (var realm in authDb.Realmlists.ToList())
         {
-            _logger.Debug("Realm list request from {Address}", session.Network.ClientSocket.IPEndPoint);
-            var packet = session.Network.NewClientMessage(new PacketId(AuthServerOpCode.REALM_LIST, PacketScope.AuthToClient), PacketHeaderType.WithLength, ContentLengthType.Short);
+            byte numChars = 0;
 
-            var response = new RealmListResponse();
+            if (session.Security.Account != null)
+                numChars = authDb.Realmcharacters.Where(r => r.Realmid == realm.Id && r.Acctid == session.Security.Account.Id).FirstOrDefault()?.Numchars ?? 0;
 
-            using var authDb = _classFactory.Locate<AuthDatabase>();
+            var realmStatus = RealmStatus.Open;
 
-            foreach (var realm in authDb.Realmlists.ToList())
+            if (realm.AllowedSecurityLevel > 0 && session.Security.Account != null && session.Security.CurrentRealmRole.SecurityLevel < realm.AllowedSecurityLevel)
+                realmStatus = RealmStatus.Locked;
+
+            var authRealm = new AuthRealm
             {
-                byte numChars = 0;
-
-                if (session.Security.Account != null)
-                    numChars = authDb.Realmcharacters.Where(r => r.Realmid == realm.Id && r.Acctid == session.Security.Account.Id).FirstOrDefault()?.Numchars ?? 0;
-
-                var realmStatus = RealmStatus.Open;
-
-                if (realm.AllowedSecurityLevel > 0 && session.Security.Account != null && session.Security.CurrentRealmRole.SecurityLevel < realm.AllowedSecurityLevel)
-                    realmStatus = RealmStatus.Locked;
-
-                var authRealm = new AuthRealm
+                Type = (RealmType)realm.Icon,
+                Status = realmStatus,
+                Flags = (RealmFlags)realm.Flag,
+                Name = realm.Name,
+                Address = realm.Address + ":" + realm.Port,
+                Population = realm.Population,
+                Characters = numChars,
+                Category = (RealmCategory)realm.Timezone,
+                RealmId = (byte)realm.Id,
+                Version = new RealmClientVersion
                 {
-                    Type = (RealmType)realm.Icon,
-                    Status = realmStatus,
-                    Flags = (RealmFlags)realm.Flag,
-                    Name = realm.Name,
-                    Address = realm.Address + ":" + realm.Port,
-                    Population = realm.Population,
-                    Characters = numChars,
-                    Category = (RealmCategory)realm.Timezone,
-                    RealmId = (byte)realm.Id,
-                    Version = new RealmClientVersion
-                    {
-                        Major = 3,
-                        Minor = 3,
-                        Revision = 5,
-                        Build = 12340
-                    }
-                };
+                    Major = 3,
+                    Minor = 3,
+                    Revision = 5,
+                    Build = 12340
+                }
+            };
 
-                response.Realms.Add(authRealm);
-            }
-
-            packet.Writer.Write(0);
-            packet.Writer.Write((short)response.Realms.Count);
-            packet.WriteObject(response);
-
-            session.Network.ClientSocket.EnqueueWrite(packet);
+            response.Realms.Add(authRealm);
         }
+
+        packet.Writer.Write(0);
+        packet.Writer.Write((short)response.Realms.Count);
+        packet.WriteObject(response);
+
+        session.Network.ClientSocket.EnqueueWrite(packet);
     }
 }

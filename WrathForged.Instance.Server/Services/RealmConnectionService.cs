@@ -8,70 +8,69 @@ using WrathForged.Common.Networking;
 using WrathForged.Database.Models.Auth;
 using WrathForged.Models.Core.Comm;
 
-namespace WrathForged.Instance.Server.Services
+namespace WrathForged.Instance.Server.Services;
+
+public class RealmConnectionService : IPacketService
 {
-    public class RealmConnectionService : IPacketService
+    private readonly IConfiguration _configuration;
+    private readonly ILogger _logger;
+    private readonly AuthDatabase _authDatabase;
+
+    public RealmConnectionService(ClassFactory classFactory, IConfiguration configuration, ILogger logger, AuthDatabase authDatabase)
     {
-        private readonly IConfiguration _configuration;
-        private readonly ILogger _logger;
-        private readonly AuthDatabase _authDatabase;
-
-        public RealmConnectionService(ClassFactory classFactory, IConfiguration configuration, ILogger logger, AuthDatabase authDatabase)
+        InstanceServer = new InstanceServerRegistration
         {
-            InstanceServer = new InstanceServerRegistration
-            {
-                Id = configuration.GetDefaultValue("InstanceServerId", 1u),
-                Address = System.Net.IPAddress.Parse(configuration.GetDefaultValue("ForgedServerComm:LocalAddress", "*")),
-                Port = (ushort)configuration.GetDefaultValue("ForgedServerComm:Port", 8783)
-            };
-            _ = authDatabase.InstanceLists.DeleteByKey(InstanceServer.Id);
+            Id = configuration.GetDefaultValue("InstanceServerId", 1u),
+            Address = System.Net.IPAddress.Parse(configuration.GetDefaultValue("ForgedServerComm:LocalAddress", "*")),
+            Port = (ushort)configuration.GetDefaultValue("ForgedServerComm:Port", 8783)
+        };
+        _ = authDatabase.InstanceLists.DeleteByKey(InstanceServer.Id);
 
-            authDatabase.InstanceLists.SingleInsert(new InstanceList()
-            {
-                Id = InstanceServer.Id,
-                IpAddress = InstanceServer.Address.ToString(),
-                Port = InstanceServer.Port,
-                Created = DateTime.UtcNow,
-                Realm = configuration.GetDefaultValue("RealmId", 1u),
-                PlayerCount = 0
-            });
+        authDatabase.InstanceLists.SingleInsert(new InstanceList()
+        {
+            Id = InstanceServer.Id,
+            IpAddress = InstanceServer.Address.ToString(),
+            Port = InstanceServer.Port,
+            Created = DateTime.UtcNow,
+            Realm = configuration.GetDefaultValue("RealmId", 1u),
+            PlayerCount = 0
+        });
 
-            var maps = authDatabase.InstanceMaps.Where(x => x.InstanceId == InstanceServer.Id).ToList();
-            Dictionary<uint, InstanceMapInfo> mapInfoDict = [];
+        var maps = authDatabase.InstanceMaps.Where(x => x.InstanceId == InstanceServer.Id).ToList();
+        Dictionary<uint, InstanceMapInfo> mapInfoDict = [];
 
-            foreach (var map in maps)
+        foreach (var map in maps)
+        {
+            if (mapInfoDict.TryGetValue(map.MapId, out var mapInfo))
             {
-                if (mapInfoDict.TryGetValue(map.MapId, out var mapInfo))
-                {
-                    mapInfo.Difficulties.Add(map.Difficulty);
-                }
-                else
-                {
-                    mapInfoDict[map.MapId] = new InstanceMapInfo
-                    {
-                        MapId = map.MapId,
-                        Difficulties = [map.Difficulty]
-                    };
-                }
+                mapInfo.Difficulties.Add(map.Difficulty);
             }
-
-            InstanceServer.MapIDs = [.. mapInfoDict.Values];
-
-            ClientConnection = classFactory.Container.Locate<ForgedTCPClient>(new
+            else
             {
-                bindIP = configuration.GetDefaultValue("ForgedServerComm:LocalAddress", "*"),
-                address = configuration.GetDefaultValue("ForgedServerComm:Realm:Address", "127.0.0.1"),
-                port = configuration.GetDefaultValue("ForgedServerComm:Realm:Port", 8780)
-            });
-
-            _configuration = configuration;
-            _logger = logger;
-            _authDatabase = authDatabase;
-            ClientConnection.Connect();
-            ClientConnection.Send(InstanceServer);
+                mapInfoDict[map.MapId] = new InstanceMapInfo
+                {
+                    MapId = map.MapId,
+                    Difficulties = [map.Difficulty]
+                };
+            }
         }
 
-        public ForgedTCPClient ClientConnection { get; set; }
-        public InstanceServerRegistration InstanceServer { get; set; }
+        InstanceServer.MapIDs = [.. mapInfoDict.Values];
+
+        ClientConnection = classFactory.Container.Locate<ForgedTCPClient>(new
+        {
+            bindIP = configuration.GetDefaultValue("ForgedServerComm:LocalAddress", "*"),
+            address = configuration.GetDefaultValue("ForgedServerComm:Realm:Address", "127.0.0.1"),
+            port = configuration.GetDefaultValue("ForgedServerComm:Realm:Port", 8780)
+        });
+
+        _configuration = configuration;
+        _logger = logger;
+        _authDatabase = authDatabase;
+        ClientConnection.Connect();
+        ClientConnection.Send(InstanceServer);
     }
+
+    public ForgedTCPClient ClientConnection { get; set; }
+    public InstanceServerRegistration InstanceServer { get; set; }
 }

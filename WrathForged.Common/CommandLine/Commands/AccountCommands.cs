@@ -58,7 +58,7 @@ public class AccountCommands(ClassFactory classFactory, ILogger logger) : IComma
             var account = authDb.Accounts.First(x => x.Username == user || x.Email == user || x.RegMail == user);
             account.Verifier = Verifier;
             account.Salt = Salt;
-            authDb.SaveChanges();
+            _ = authDb.SaveChanges();
             _logger.Information("User account {User} successfully updated", user);
         }, usernameArg, passwordArg);
         return accountCommand;
@@ -88,7 +88,7 @@ public class AccountCommands(ClassFactory classFactory, ILogger logger) : IComma
             }
 
             authDb.Accounts.RemoveRange(authDb.Accounts.Where(x => x.Username == user || x.Email == user || x.RegMail == user));
-            authDb.SaveChanges();
+            _ = authDb.SaveChanges();
             _logger.Information("User account {User} successfully deleted", user);
         }, usernameArg);
         return accountCommand;
@@ -144,7 +144,7 @@ public class AccountCommands(ClassFactory classFactory, ILogger logger) : IComma
                 Salt = Salt
             });
 
-            authDb.SaveChanges();
+            _ = authDb.SaveChanges();
             _logger.Information("User account {User} under email {Email} successfully created", user, email);
         }, emailArg, usernameArg, passwordArg);
         return accountCommand;

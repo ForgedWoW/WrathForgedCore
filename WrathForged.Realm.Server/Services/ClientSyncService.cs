@@ -8,49 +8,48 @@ using WrathForged.Models.Networking;
 using WrathForged.Models.Realm.Enum;
 using WrathForged.Serialization.Models;
 
-namespace WrathForged.Realm.Server.Services
+namespace WrathForged.Realm.Server.Services;
+
+public class ClientSyncService(IConfiguration configuration, ILogger logger) : IPacketService
 {
-    public class ClientSyncService(IConfiguration configuration, ILogger logger) : IPacketService
+    private readonly IConfiguration _configuration = configuration;
+    private readonly ILogger _logger = logger;
+
+    [PacketRoute(PacketScope.ClientToRealm, RealmServerOpCode.CMSG_PING)]
+    public void PingRequest(IWoWClientSession session, PingRequest pingRequest)
     {
-        private readonly IConfiguration _configuration = configuration;
-        private readonly ILogger _logger = logger;
-
-        [PacketRoute(PacketScope.ClientToRealm, RealmServerOpCode.CMSG_PING)]
-        public void PingRequest(IWoWClientSession session, PingRequest pingRequest)
+        var pingResponse = new PingResponse
         {
-            var pingResponse = new PingResponse
+            Sequence = pingRequest.Sequence
+        };
+
+        var timeDiff = session.Network.LastPing - DateTime.UtcNow;
+
+        if (timeDiff.TotalSeconds > 27)
+        {
+            session.Network.OverspeedPingCount++;
+
+            if (_configuration.GetDefaultValue("ClientTCPServer:MaxOverPingCount", 2) < session.Network.OverspeedPingCount &&
+                !session.Security.HasPermission(23))
             {
-                Sequence = pingRequest.Sequence
-            };
-
-            var timeDiff = session.Network.LastPing - DateTime.UtcNow;
-
-            if (timeDiff.TotalSeconds > 27)
-            {
-                session.Network.OverspeedPingCount++;
-
-                if (_configuration.GetDefaultValue("ClientTCPServer:MaxOverPingCount", 2) < session.Network.OverspeedPingCount &&
-                    !session.Security.HasPermission(23))
-                {
-                    _logger.Information("Client {Address} has been disconnected for overspeed pinging.", session.Network.ClientSocket.IPEndPoint);
-                    session.Network.ClientSocket.Disconnect();
-                    return;
-                }
+                _logger.Information("Client {Address} has been disconnected for overspeed pinging.", session.Network.ClientSocket.IPEndPoint);
+                session.Network.ClientSocket.Disconnect();
+                return;
             }
-            else
-            {
-                session.Network.OverspeedPingCount = 0;
-            }
-
-            session.Network.Latency = pingRequest.Latency;
-
-            session.Network.Send(pingResponse);
+        }
+        else
+        {
+            session.Network.OverspeedPingCount = 0;
         }
 
-        [PacketRoute(PacketScope.ClientToRealm, RealmServerOpCode.CMSG_KEEP_ALIVE)]
-        public static void KeepAlive(IWoWClientSession session) => session.Network.LastKeepAlive = DateTime.UtcNow;
+        session.Network.Latency = pingRequest.Latency;
 
-        [PacketRoute(PacketScope.ClientToRealm, RealmServerOpCode.CMSG_TIME_SYNC_RESP)]
-        public static void TimeSync(IWoWClientSession session, TimeSyncResponse timeSyncRequest) => session.ClientTime.TimeSync(timeSyncRequest.TimeSyncCounter, timeSyncRequest.ClientTimestamp);
+        session.Network.Send(pingResponse);
     }
+
+    [PacketRoute(PacketScope.ClientToRealm, RealmServerOpCode.CMSG_KEEP_ALIVE)]
+    public static void KeepAlive(IWoWClientSession session) => session.Network.LastKeepAlive = DateTime.UtcNow;
+
+    [PacketRoute(PacketScope.ClientToRealm, RealmServerOpCode.CMSG_TIME_SYNC_RESP)]
+    public static void TimeSync(IWoWClientSession session, TimeSyncResponse timeSyncRequest) => session.ClientTime.TimeSync(timeSyncRequest.TimeSyncCounter, timeSyncRequest.ClientTimestamp);
 }

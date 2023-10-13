@@ -6,63 +6,62 @@ using Microsoft.Extensions.Configuration;
 using WrathForged.Database.Models.Auth;
 using WrathForged.Models.Auth;
 
-namespace WrathForged.Common.External
+namespace WrathForged.Common.External;
+
+public class IpStackGeoLocationService(IConfiguration configuration, ClassFactory classFactory)
 {
-    public class IpStackGeoLocationService(IConfiguration configuration, ClassFactory classFactory)
+    private readonly ClassFactory _classFactory = classFactory;
+    private readonly string _ipStackApiKey = configuration.GetDefaultValue("IpStack:ApiKey", string.Empty);
+    private readonly bool _ipStackEnabled = configuration.GetDefaultValue("IpStack:Enabled", false);
+    private readonly bool _useCache = configuration.GetDefaultValue("IpStack:UseDatabaseCache", true);
+
+    public IPStackServiceResponse? GetServiceResponse(string ip)
     {
-        private readonly ClassFactory _classFactory = classFactory;
-        private readonly string _ipStackApiKey = configuration.GetDefaultValue("IpStack:ApiKey", string.Empty);
-        private readonly bool _ipStackEnabled = configuration.GetDefaultValue("IpStack:Enabled", false);
-        private readonly bool _useCache = configuration.GetDefaultValue("IpStack:UseDatabaseCache", true);
+        if (!_ipStackEnabled)
+            return null;
 
-        public IPStackServiceResponse? GetServiceResponse(string ip)
+        if (_useCache)
         {
-            if (!_ipStackEnabled)
-                return null;
+            using var authDatabase = _classFactory.Locate<AuthDatabase>();
 
-            if (_useCache)
+            var ipLocation = authDatabase.IpLocations.Find(ip);
+
+            if (ipLocation != null)
+                return JsonSerializer.Deserialize<IPStackServiceResponse>(ipLocation.AddressInfo);
+
+            var ipStackServiceResponse = GetServiceResponseInternal(ip);
+
+            if (ipStackServiceResponse != null)
             {
-                using var authDatabase = _classFactory.Locate<AuthDatabase>();
-
-                var ipLocation = authDatabase.IpLocations.Find(ip);
-
-                if (ipLocation != null)
-                    return JsonSerializer.Deserialize<IPStackServiceResponse>(ipLocation.AddressInfo);
-
-                var ipStackServiceResponse = GetServiceResponseInternal(ip);
-
-                if (ipStackServiceResponse != null)
+                ipLocation = new IpLocation
                 {
-                    ipLocation = new IpLocation
-                    {
-                        IpAddress = ip,
-                        AddressInfo = JsonSerializer.Serialize(ipStackServiceResponse)
-                    };
+                    IpAddress = ip,
+                    AddressInfo = JsonSerializer.Serialize(ipStackServiceResponse)
+                };
 
-                    _ = authDatabase.Add(ipLocation);
-                    _ = authDatabase.SaveChanges();
-                }
-
-                return ipStackServiceResponse;
+                _ = authDatabase.Add(ipLocation);
+                _ = authDatabase.SaveChanges();
             }
 
-            return GetServiceResponseInternal(ip);
-        }
-
-        private IPStackServiceResponse? GetServiceResponseInternal(string ip)
-        {
-            var webClient = new HttpClient();
-            var response = webClient.GetAsync($"http://api.ipstack.com/{ip}?access_key={_ipStackApiKey}");
-            response.Wait();
-
-            if (response.Result.StatusCode != HttpStatusCode.OK)
-                return null;
-
-            var result = response.Result.Content.ReadAsStringAsync();
-            result.Wait();
-
-            var ipStackServiceResponse = JsonSerializer.Deserialize<IPStackServiceResponse>(result.Result);
             return ipStackServiceResponse;
         }
+
+        return GetServiceResponseInternal(ip);
+    }
+
+    private IPStackServiceResponse? GetServiceResponseInternal(string ip)
+    {
+        var webClient = new HttpClient();
+        var response = webClient.GetAsync($"http://api.ipstack.com/{ip}?access_key={_ipStackApiKey}");
+        response.Wait();
+
+        if (response.Result.StatusCode != HttpStatusCode.OK)
+            return null;
+
+        var result = response.Result.Content.ReadAsStringAsync();
+        result.Wait();
+
+        var ipStackServiceResponse = JsonSerializer.Deserialize<IPStackServiceResponse>(result.Result);
+        return ipStackServiceResponse;
     }
 }

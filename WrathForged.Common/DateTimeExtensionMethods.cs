@@ -48,20 +48,10 @@ public static class DateTimeExtensionMethods
     /// </summary>
     /// <param name="time">the end time</param>
     /// <returns>the time between the Unix epoch and the supplied <see cref="DateTime">time</see> in seconds</returns>
-    public static uint GetEpochTimeFromDT(this DateTime time)
-    {
-        return (uint)((time.Ticks - TICKS_SINCE_1970) / 10000000L);
-    }
+    public static uint GetEpochTimeFromDT(this DateTime time) => (uint)((time.Ticks - TICKS_SINCE_1970) / 10000000L);
 
-    public static int ToMilliSecondsInt(this DateTime time)
-    {
-        return (int)(time.Ticks / TICKS_PER_SECOND);
-    }
+    public static int ToMilliSecondsInt(this DateTime time) => (int)(time.Ticks / TICKS_PER_SECOND);
 
-    public static int ToMilliSecondsInt(this TimeSpan time)
-    {
-        return (int)(time.Ticks / TICKS_PER_SECOND);
-    }
-
+    public static int ToMilliSecondsInt(this TimeSpan time) => (int)(time.Ticks / TICKS_PER_SECOND);
 
 }

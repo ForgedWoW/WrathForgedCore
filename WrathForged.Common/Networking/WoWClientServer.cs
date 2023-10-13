@@ -47,10 +47,7 @@ public class WoWClientServer
 
     public int ConnectionCount => _clientSessions.Count;
 
-    public IEnumerable<T> GetClientSessions<T>() where T : IWoWClientSession
-    {
-        return _clientSessions.Values.OfType<T>();
-    }
+    public IEnumerable<T> GetClientSessions<T>() where T : IWoWClientSession => _clientSessions.Values.OfType<T>();
 
     public bool TryGetClientSession<T>(uint accountId, out T session) where T : IWoWClientSession
     {
@@ -63,7 +60,7 @@ public class WoWClientServer
         session = default!;
         return false;
     }
-    
+
     /// <summary>
     ///     Starts the server on the configured port "ClientTCPServer:Port" or default port of 8085 if not configured.
     /// </summary>

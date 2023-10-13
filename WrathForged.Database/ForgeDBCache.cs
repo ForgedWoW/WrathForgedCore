@@ -4,16 +4,15 @@ using Microsoft.Extensions.Caching.Memory;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 
-namespace WrathForged.Database
-{
-    public class ForgeDBCache : MemoryCache
-    {
-        public ForgeDBCache(IOptions<MemoryCacheOptions> optionsAccessor) : base(optionsAccessor)
-        {
-        }
+namespace WrathForged.Database;
 
-        public ForgeDBCache(IOptions<MemoryCacheOptions> optionsAccessor, ILoggerFactory loggerFactory) : base(optionsAccessor, loggerFactory)
-        {
-        }
+public class ForgeDBCache : MemoryCache
+{
+    public ForgeDBCache(IOptions<MemoryCacheOptions> optionsAccessor) : base(optionsAccessor)
+    {
+    }
+
+    public ForgeDBCache(IOptions<MemoryCacheOptions> optionsAccessor, ILoggerFactory loggerFactory) : base(optionsAccessor, loggerFactory)
+    {
     }
 }

@@ -13,7 +13,7 @@ public class BackgroundWorkProcessor
     private readonly ProgramExitNotifier _programExitNotifier;
     private readonly List<ScheduledAction> _actionsToExecute = [];
     private readonly List<ScheduledAction> _actionsToRemove = [];
-    private readonly AutoResetEvent _queueSemaphore = new AutoResetEvent(false);
+    private readonly AutoResetEvent _queueSemaphore = new(false);
 
     public BackgroundWorkProcessor(ILogger logger, ProgramExitNotifier programExitNotifier, IConfiguration configuration)
     {
@@ -30,11 +30,11 @@ public class BackgroundWorkProcessor
             }
         };
 
-        Task.Run(() =>
+        _ = Task.Run(() =>
         {
             while (!_programExitNotifier.IsExiting)
             {
-                 _queueSemaphore.WaitOne(1000); // the semaphore could have been set. If it was, we don't want to wait a full second
+                _ = _queueSemaphore.WaitOne(1000); // the semaphore could have been set. If it was, we don't want to wait a full second
                 CheckScheduledActions();
             }
         });
@@ -75,16 +75,12 @@ public class BackgroundWorkProcessor
     /// <param name="interval">How often to trigger the work, <see langword="default"/> will not repeat.</param>
     public void Add(Action action, TimeSpan wait = default, TimeSpan interval = default) => Add(new Task(action), wait, interval);
 
-
     /// <summary>
     ///     Checks all scheduled actions and executes them if they are ready to be executed.
     ///     <br> Executes the actions that are ready.</br>
     ///     <br> This happens on a background thread. This call returns immediately.</br>
     /// </summary>
-    public void ExecuteNow()
-    {
-        _queueSemaphore.Set();
-    }
+    public void ExecuteNow() => _queueSemaphore.Set();
 
     private void CheckScheduledActions()
     {
@@ -122,9 +118,9 @@ public class BackgroundWorkProcessor
             if (_programExitNotifier.IsExiting)
                 return;
 
-            actionToExecute.Action.ContinueWith(task =>
+            _ = actionToExecute.Action.ContinueWith(task =>
             {
-                _semaphore.Release();
+                _ = _semaphore.Release();
                 if (task.Exception != null)
                     _logger.Error(task.Exception, "Error executing background work");
             });

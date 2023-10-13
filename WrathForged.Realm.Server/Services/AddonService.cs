@@ -13,6 +13,7 @@ namespace WrathForged.Realm.Server.Services;
 
 public class AddonService : IPacketService
 {
+    #pragma warning disable format
     private static readonly byte[] _addonPublicKey = 
     [
         0xC3, 0x5B, 0x50, 0x84, 0xB9, 0x3E, 0x32, 0x42, 0x8C, 0xD0, 0xC7, 0x48, 0xFA, 0x0E, 0x5D, 0x54,
@@ -32,6 +33,7 @@ public class AddonService : IPacketService
         0xC3, 0xFB, 0x1B, 0x8C, 0x29, 0xEF, 0x8E, 0xE5, 0x34, 0xCB, 0xD1, 0x2A, 0xCE, 0x79, 0xC3, 0x9A,
         0x0D, 0x36, 0xEA, 0x01, 0xE0, 0xAA, 0x91, 0x20, 0x54, 0xF0, 0x72, 0xD8, 0x1E, 0xC7, 0x89, 0xD2
     ];
+    #pragma warning disable format
 
     private readonly ILogger _logger;
 
@@ -73,8 +75,7 @@ public class AddonService : IPacketService
             }
         }
 
-
-        uint lastBannedAddonTimestamp = session.AddonInfo.ClientAddons.LastBannedAddonTimestamp;
+        var lastBannedAddonTimestamp = session.AddonInfo.ClientAddons.LastBannedAddonTimestamp;
 
         if (BannedAddons.Any(b => b.Timestamp < lastBannedAddonTimestamp))
             lastBannedAddonTimestamp = 0;

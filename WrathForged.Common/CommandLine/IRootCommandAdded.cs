@@ -3,10 +3,9 @@
 using System.CommandLine;
 using WrathForged.Common.Scripting.Interfaces;
 
-namespace WrathForged.Common.CommandLine
+namespace WrathForged.Common.CommandLine;
+
+public interface IRootCommandAdded : IForgedScript
 {
-    public interface IRootCommandAdded : IForgedScript
-    {
-        void CommandAdded(string name, Command command);
-    }
+    void CommandAdded(string name, Command command);
 }

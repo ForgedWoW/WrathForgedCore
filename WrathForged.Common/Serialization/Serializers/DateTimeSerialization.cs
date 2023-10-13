@@ -11,10 +11,7 @@ public class DateTimeSerialization : IForgedTypeSerialization
     public HashSet<Type> SupportedTypes { get; } = [typeof(DateTime)];
     public HashSet<ForgedTypeCode> SupportedForgedTypeCodes { get; } = [];
 
-    public object? Deserialize(PacketBuffer packetBuffer, PropertyMeta propertyMeta, Dictionary<uint, int> collectionSizes)
-    {
-        return packetBuffer.Reader.ReadUInt32().GetGameTimeToDateTime();
-    }
+    public object? Deserialize(PacketBuffer packetBuffer, PropertyMeta propertyMeta, Dictionary<uint, int> collectionSizes) => packetBuffer.Reader.ReadUInt32().GetGameTimeToDateTime();
 
     public void Serialize(PrimitiveWriter writer, PropertyMeta propertyMeta, List<PropertyMeta> otherMeta, object obj, object? val)
     {

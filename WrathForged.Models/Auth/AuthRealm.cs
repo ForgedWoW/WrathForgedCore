@@ -4,40 +4,39 @@ using WrathForged.Models.Auth.Enum;
 using WrathForged.Models.ConditionalSerializers;
 using WrathForged.Serialization.Models;
 
-namespace WrathForged.Models.Auth
+namespace WrathForged.Models.Auth;
+
+[ForgedSerializable]
+public class AuthRealm
 {
-    [ForgedSerializable]
-    public class AuthRealm
-    {
-        [SerializableProperty(0)]
-        public RealmType Type { get; set; }
+    [SerializableProperty(0)]
+    public RealmType Type { get; set; }
 
-        [SerializableProperty(1)]
-        public RealmStatus Status { get; set; }
+    [SerializableProperty(1)]
+    public RealmStatus Status { get; set; }
 
-        [SerializableProperty(2)]
-        public RealmFlags Flags { get; set; }
+    [SerializableProperty(2)]
+    public RealmFlags Flags { get; set; }
 
-        [SerializableProperty(3, OverrideType = ForgedTypeCode.CString)]
-        public string Name { get; set; } = string.Empty;
+    [SerializableProperty(3, OverrideType = ForgedTypeCode.CString)]
+    public string Name { get; set; } = string.Empty;
 
-        [SerializableProperty(4, OverrideType = ForgedTypeCode.CString)]
-        public string Address { get; set; } = string.Empty;
+    [SerializableProperty(4, OverrideType = ForgedTypeCode.CString)]
+    public string Address { get; set; } = string.Empty;
 
-        [SerializableProperty(5)]
-        public float Population { get; set; }
+    [SerializableProperty(5)]
+    public float Population { get; set; }
 
-        [SerializableProperty(6)]
-        public byte Characters { get; set; }
+    [SerializableProperty(6)]
+    public byte Characters { get; set; }
 
-        [SerializableProperty(7)]
-        public RealmCategory Category { get; set; }
+    [SerializableProperty(7)]
+    public RealmCategory Category { get; set; }
 
-        [SerializableProperty(8)]
-        public byte RealmId { get; set; }
+    [SerializableProperty(8)]
+    public byte RealmId { get; set; }
 
-        [SerializableProperty(9)]
-        [HasFlagSerializerCondition(2, typeof(RealmFlags), (int)RealmFlags.SpecifyBuild)]
-        public RealmClientVersion Version { get; set; } = new RealmClientVersion();
-    }
+    [SerializableProperty(9)]
+    [HasFlagSerializerCondition(2, typeof(RealmFlags), (int)RealmFlags.SpecifyBuild)]
+    public RealmClientVersion Version { get; set; } = new RealmClientVersion();
 }
