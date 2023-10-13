@@ -8,7 +8,19 @@
   "Database": {
     "SlidingCacheTimeout_Hours": 2,
     "SQLDir": ".\\sql",
-    "UpdateEnabled": "false"
+    "UpdateEnabled": "true",
+    "Auth": {
+      "UpadateEnabled": "true"
+    },
+    "Character": {
+      "UpadateEnabled": "false"
+    },
+    "World": {
+      "UpadateEnabled": "false"
+    },
+    "DBC": {
+      "UpadateEnabled": "false"
+    }
   },
   "ClientTCPServer": {
     "BindIP": "*",

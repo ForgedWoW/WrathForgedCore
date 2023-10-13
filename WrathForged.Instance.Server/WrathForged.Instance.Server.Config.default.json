@@ -10,7 +10,19 @@
   "Database": {
     "SlidingCacheTimeout_Hours": 2,
     "SQLDir": ".\\sql",
-    "UpdateEnabled": "true"
+    "UpdateEnabled": "true",
+    "Auth": {
+      "UpadateEnabled": "true"
+    },
+    "Character": {
+      "UpadateEnabled": "true"
+    },
+    "World": {
+      "UpadateEnabled": "true"
+    },
+    "DBC": {
+      "UpadateEnabled": "true"
+    }
   },
   "ForgedServerComm": {
     "Port": 8783,

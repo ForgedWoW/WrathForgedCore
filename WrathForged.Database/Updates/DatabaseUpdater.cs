@@ -42,16 +42,16 @@ public class DatabaseUpdater(WorldDatabase worldDatabase, CharacterDatabase char
             return;
 
         var startTime = DateTime.UtcNow;
-        if (IsDatabaseConnected(_worldDatabase))
+        if (GetDefaultValue(_configuration, "Database:World:UpdateEnabled", true) && IsDatabaseConnected(_worldDatabase))
             UpdateWorld();
 
-        if (IsDatabaseConnected(_characterDatabase))
+        if (GetDefaultValue(_configuration, "Database:Character:UpdateEnabled", true) && IsDatabaseConnected(_characterDatabase))
             UpdateCharacters();
 
-        if (IsDatabaseConnected(_authDatabase))
+        if (GetDefaultValue(_configuration, "Database:Auth:UpdateEnabled", true) && IsDatabaseConnected(_authDatabase))
             UpdateAuth();
 
-        if (IsDatabaseConnected(_dBCDatabase))
+        if (GetDefaultValue(_configuration, "Database:DBC:UpdateEnabled", true) && IsDatabaseConnected(_dBCDatabase))
             UpdateDBC();
 
         _logger.Information("Database updates completed in {0}.", (DateTime.UtcNow - startTime).ToReadableString());
