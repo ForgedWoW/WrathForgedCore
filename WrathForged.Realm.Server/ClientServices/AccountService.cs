@@ -16,6 +16,8 @@ public class AccountService(ClassFactory classFactory, ILogger logger) : IPacket
 {
     private readonly ClassFactory _classFactory = classFactory;
     private readonly ILogger _logger = logger;
+    private const uint GLOBAL_CACHE_MASK = 0x15;
+    private const uint PER_CHARACTER_CACHE_MASK = 0xEA;
 
     [PacketRoute(PacketScope.ClientToRealm, RealmServerOpCode.CMSG_REQUEST_ACCOUNT_DATA)]
     public void ClientAccountDataRequest(RealmClientSession session, AccountDataRequest packet)
@@ -24,9 +26,26 @@ public class AccountService(ClassFactory classFactory, ILogger logger) : IPacket
         SendAccountData(session, packet.AccountDataType);
     }
 
+    [PacketRoute(PacketScope.ClientToRealm, RealmServerOpCode.CMSG_READY_FOR_ACCOUNT_DATA_TIMES)]
+    public void ReadyForAccountData(RealmClientSession session)
+    {
+        _logger.Debug("Received account data times request from {AccountId}:{AccountName}", session.Security.Account.Id, session.Security.Account.Username);
+        SendAccountDataTimes(session, GLOBAL_CACHE_MASK);
+    }
+
+    public void SendAccountDataTimes(RealmClientSession session, uint mask)
+    {
+        session.Network.Send(new AccountDataTimesResponse()
+        {
+            Time = DateTime.Now,
+            Mask = mask,
+            Times = session.AccountSessionData.AccountData.Where(x => (mask & (1 << (int)x.Key)) != 0).Select(x => x.Value.Time).ToList()
+        }, RealmServerOpCode.SMSG_ACCOUNT_DATA_TIMES);
+    }
+
     public void SendAccountData(RealmClientSession session, uint type)
     {
-        if (session.AccountData.TryGetValue(type, out var accountData))
+        if (session.AccountSessionData.AccountData.TryGetValue(type, out var accountData))
         {
             session.Network.Send(new AccountDataResponse()
             {
@@ -44,16 +63,16 @@ public class AccountService(ClassFactory classFactory, ILogger logger) : IPacket
     public void LoadAccountData(RealmClientSession session)
     {
         _logger.Verbose("Loading account data for {AccountId}:{AccountName}", session.Security.Account.Id, session.Security.Account.Username);
-        session.AccountData.Clear();
+        session.AccountSessionData.AccountData.Clear();
         using var characterDatabase = _classFactory.Locate<CharacterDatabase>();
 
         foreach (var data in characterDatabase.AccountData.Where(x => x.AccountId == session.Security.Account.Id))
-            session.AccountData[data.Type] = new AccountData()
+            session.AccountSessionData.AccountData[data.Type] = new AccountData()
             {
                 Time = data.Time,
                 Data = data.Data
             };
 
-        _logger.Verbose("Loaded {Count} account data entries for {AccountId}:{AccountName}", session.AccountData.Count, session.Security.Account.Id, session.Security.Account.Username);
+        _logger.Verbose("Loaded {Count} account data entries for {AccountId}:{AccountName}", session.AccountSessionData.AccountData.Count, session.Security.Account.Id, session.Security.Account.Username);
     }
 }

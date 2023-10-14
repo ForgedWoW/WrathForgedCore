@@ -2,7 +2,6 @@
 // Licensed under GPL-3.0 license. See <https://github.com/ForgedWoW/WrathForgedCore/blob/master/LICENSE> for full information.
 using WrathForged.Common;
 using WrathForged.Common.Networking;
-using WrathForged.Models.Account;
 using WrathForged.Models.Entities.Player;
 
 namespace WrathForged.Realm.Server.RealmSession;
@@ -14,7 +13,7 @@ public class RealmClientSession : WoWClientSession
 
     public RealmClientAddonInfo AddonInfo { get; }
 
-    public Dictionary<uint, AccountData> AccountData { get; } = [];
+    public RealmAccountSessionData AccountSessionData { get; } = new();
 
     /// <summary>
     ///     Player object for this session. If the player is not logged in, this will be the <see cref="Player.DEFAULT_PLAYER"/>
