@@ -1,7 +1,7 @@
 ﻿// Copyright (c) Forged WoW LLC <https://github.com/ForgedWoW/WrathForgedCore>
 // Licensed under GPL-3.0 license. See <https://github.com/ForgedWoW/WrathForgedCore/blob/master/LICENSE> for full information.
 using WrathForged.Models.Auth.Enum;
-using WrathForged.Models.Core.Comm;
+using WrathForged.Models.Core.Enum;
 using WrathForged.Models.Instance.Enum;
 using WrathForged.Models.Networking;
 using WrathForged.Models.Realm.Enum;
@@ -24,10 +24,11 @@ public sealed class PacketRouteAttribute : Attribute
         Id = new PacketId(id, scope);
     }
 
-    public PacketRouteAttribute(PacketScope scope, RealmServerOpCode id)
+    public PacketRouteAttribute(PacketScope scope, RealmServerOpCode id, bool requiresAuthentication = true)
     {
         Scope = scope;
         Id = new PacketId(id, scope);
+        RequireAuthentication = requiresAuthentication;
     }
 
     public PacketRouteAttribute(PacketScope scope, InstanceServerOpCode id)

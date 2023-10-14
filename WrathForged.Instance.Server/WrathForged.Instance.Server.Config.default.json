@@ -42,7 +42,7 @@
     "OutgoingDataCaptureDir": ".\\Capture\\Outgoing",
     "SocketTimeoutSeconds": 90
   },
-  "ServerUpdate": {
+  "ServerUpdateLoop": {
     "MinTickTimeMilliseconds": 1,
     "MaxCoreStuckTimeSeconds": 60
   },

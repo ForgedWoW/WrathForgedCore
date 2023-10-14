@@ -28,7 +28,7 @@ public enum SerializationFlags
     DontSerializeCollectionSize = 1 << 6,
 
     /// <summary>
-    ///    For use on collections only, will compress/decompress the collection using ZLib using the raw byte[]
+    ///    Will compress/decompress the collection using ZLib using the raw byte[]
     ///    The underlying collection must be a byte[] for this to work. This means if the size is defined in the packet or FixedCollectionSize is used this size MUST be the size of the byte[] NOT the length of the collection of objects you are deserializing.
     ///    Optionally you can define BitRange if the range of the packets is known as an alternative to FixedCollectionSize or size being written in the stream.
     ///    The actual type of the property can be the deserialized type of the decompressed data.

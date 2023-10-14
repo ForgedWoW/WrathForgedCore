@@ -4,7 +4,7 @@ using System.Collections.Concurrent;
 using MathNet.Numerics.Statistics;
 using WrathForged.Common.Collections;
 using WrathForged.Common.Scripting.Interfaces.CoreEvents;
-using WrathForged.Models.Networking;
+using WrathForged.Models.Networking.Packets;
 
 namespace WrathForged.Common.Time;
 

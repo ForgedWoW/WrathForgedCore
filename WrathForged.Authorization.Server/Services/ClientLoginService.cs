@@ -13,6 +13,7 @@ using WrathForged.Common.Validators;
 using WrathForged.Database.Models.Auth;
 using WrathForged.Models.Auth;
 using WrathForged.Models.Auth.Enum;
+using WrathForged.Models.Auth.Packets;
 using WrathForged.Models.Networking;
 using WrathForged.Models.Realm.Enum;
 using WrathForged.Serialization.Models;

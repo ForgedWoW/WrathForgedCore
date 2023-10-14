@@ -140,6 +140,13 @@ public class SessionSecurity(IWoWClientSession clientSession, ILogger logger, Fo
     /// <returns></returns>
     public bool HasPermission(uint permissionId) => CurrentRealmRole.HasPermission(permissionId) || DefaultRole.HasPermission(permissionId);
 
+    /// <summary>
+    ///     Checks if the account has a permission to perform the action on the current realm under its roles. This checks <see cref="CurrentRealmRole"/> and <see cref="DefaultRole"/>
+    /// </summary>
+    /// <param name="securityLevel">The level the account must at least be at in order to pass the check.</param>
+    /// <returns></returns>
+    public bool IsAtLeastSecurityLevel(int securityLevel) => DefaultRole.SecurityLevel >= securityLevel || CurrentRealmRole.SecurityLevel >= securityLevel;
+
     protected virtual void Dispose(bool disposing)
     {
         if (!_disposedValue)

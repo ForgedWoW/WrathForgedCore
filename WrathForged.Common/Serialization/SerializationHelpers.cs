@@ -65,11 +65,8 @@ public static class SerializationHelpers
         return size;
     }
 
-    public static void SerializeCollectionSize(this PrimitiveWriter writer, PropertyMeta prop, List<PropertyMeta> otherMeta, object obj, uint size = 0)
+    public static uint SerializeCollectionSize(this PrimitiveWriter writer, PropertyMeta prop, List<PropertyMeta> otherMeta, object obj, uint size = 0)
     {
-        if (prop.SerializationMetadata.Flags.HasFlag(SerializationFlags.DontSerializeCollectionSize))
-            return;
-
         // Fixed size, so no need to write the size.
         if (prop.SerializationMetadata.FixedCollectionSize != 0)
             if (prop.SerializationMetadata.Flags.HasFlag(SerializationFlags.SendFixedSize))
@@ -77,7 +74,7 @@ public static class SerializationHelpers
                 size = (uint)prop.SerializationMetadata.FixedCollectionSize;
             }
             else
-                return;
+                return (uint)prop.SerializationMetadata.FixedCollectionSize;
 
         if (prop.SerializationMetadata.CollectionSizeIndex != 0)
         {
@@ -119,43 +116,46 @@ public static class SerializationHelpers
         }
 
         // Write the size based on the TypeCode
-        if (prop.SerializationMetadata.CollectionSizeLengthType != TypeCode.Empty)
-        {
-            switch (prop.SerializationMetadata.CollectionSizeLengthType)
+        if (prop.SerializationMetadata.Flags.HasFlag(SerializationFlags.DontSerializeCollectionSize))
+            if (prop.SerializationMetadata.CollectionSizeLengthType != TypeCode.Empty)
             {
-                case TypeCode.Byte:
-                    writer.WriteByte((byte)size);
-                    break;
+                switch (prop.SerializationMetadata.CollectionSizeLengthType)
+                {
+                    case TypeCode.Byte:
+                        writer.WriteByte((byte)size);
+                        break;
 
-                case TypeCode.UInt16:
-                    writer.WriteUShort((ushort)size);
-                    break;
+                    case TypeCode.UInt16:
+                        writer.WriteUShort((ushort)size);
+                        break;
 
-                case TypeCode.UInt32:
-                    writer.WriteUInt(size);
-                    break;
+                    case TypeCode.UInt32:
+                        writer.WriteUInt(size);
+                        break;
 
-                case TypeCode.Int16:
-                    writer.WriteShort((short)size);
-                    break;
+                    case TypeCode.Int16:
+                        writer.WriteShort((short)size);
+                        break;
 
-                case TypeCode.Int32:
-                    writer.WriteInt((int)size);
-                    break;
+                    case TypeCode.Int32:
+                        writer.WriteInt((int)size);
+                        break;
 
-                case TypeCode.Int64:
-                    writer.WriteLongBE(size);
-                    break;
+                    case TypeCode.Int64:
+                        writer.WriteLongBE(size);
+                        break;
 
-                default:
-                    throw new NotSupportedException("Unsupported TypeCode for collection size.");
+                    default:
+                        throw new NotSupportedException("Unsupported TypeCode for collection size.");
+                }
             }
-        }
-        else
-        {
-            // Default to UInt32 if TypeCode is Empty
-            writer.WriteUInt(size);
-        }
+            else
+            {
+                // Default to UInt32 if TypeCode is Empty
+                writer.WriteUInt(size);
+            }
+
+        return size;
     }
 
     public static ForgedTypeCode GetForgedTypeCode(this Type t)

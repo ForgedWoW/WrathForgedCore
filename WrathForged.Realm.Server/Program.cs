@@ -5,7 +5,7 @@ using Microsoft.Extensions.Configuration;
 using WrathForged.Common;
 using WrathForged.Common.CommandLine;
 using WrathForged.Common.Networking;
-using WrathForged.Common.Scripting;
+using WrathForged.Common.Threading;
 using WrathForged.Database;
 using WrathForged.Database.Models.Auth;
 using WrathForged.Models;

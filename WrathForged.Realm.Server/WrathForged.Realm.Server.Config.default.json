@@ -26,6 +26,11 @@
       "UpadateEnabled": "true"
     }
   },
+  "Security": {
+    "AccountSecurityLevel": {
+      "Override": 4
+    }
+  },
   "ForgedServerComm": {
     "Port": 8780
   },
@@ -40,7 +45,7 @@
     "MaxOverPingCount": 2,
     "SocketTimeoutSeconds": 90
   },
-  "ServerUpdate": {
+  "ServerUpdateLoop": {
     "MinTickTimeMilliseconds": 1,
     "MaxCoreStuckTimeSeconds": 60
   },

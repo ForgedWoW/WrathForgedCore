@@ -1,8 +1,8 @@
 ﻿// Copyright (c) Forged WoW LLC <https://github.com/ForgedWoW/WrathForgedCore>
 // Licensed under GPL-3.0 license. See <https://github.com/ForgedWoW/WrathForgedCore/blob/master/LICENSE> for full information.
 using Serilog;
-using WrathForged.Models.Auth;
-using WrathForged.Realm.Server.Services;
+using WrathForged.Models.Auth.Packets;
+using WrathForged.Realm.Server.ClientServices;
 
 namespace WrathForged.Realm.Server.RealmSession;
 

@@ -4,6 +4,7 @@ using System.Net;
 using System.Numerics;
 using System.Text;
 using Serilog;
+using WrathForged.Models;
 
 namespace WrathForged.Common.Networking;
 

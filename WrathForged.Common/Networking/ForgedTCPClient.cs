@@ -8,8 +8,9 @@ using Serilog;
 using WrathForged.Common.Caching;
 using WrathForged.Common.Serialization;
 using WrathForged.Models;
-using WrathForged.Models.Core.Comm;
+using WrathForged.Models.Core.Enum;
 using WrathForged.Models.Networking;
+using WrathForged.Models.Networking.Packets;
 using WrathForged.Serialization.Models;
 
 #pragma warning disable CS8618

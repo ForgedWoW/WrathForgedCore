@@ -6,7 +6,7 @@ using Serilog;
 using WrathForged.Common;
 using WrathForged.Common.Networking;
 using WrathForged.Database.Models.Auth;
-using WrathForged.Models.Core.Comm;
+using WrathForged.Models.Core.Packets;
 
 namespace WrathForged.Instance.Server.Services;
 

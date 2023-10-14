@@ -4,8 +4,8 @@ using Serilog;
 using WrathForged.Common;
 using WrathForged.Common.Networking;
 using WrathForged.Database.Models.Auth;
-using WrathForged.Models.Auth;
 using WrathForged.Models.Auth.Enum;
+using WrathForged.Models.Auth.Packets;
 using WrathForged.Models.Networking;
 using WrathForged.Serialization.Models;
 
@@ -35,7 +35,7 @@ public class RealmService(ClassFactory classFactory, ILogger logger) : IPacketSe
 
             var realmStatus = RealmStatus.Open;
 
-            if (realm.AllowedSecurityLevel > 0 && session.Security.Account != null && session.Security.CurrentRealmRole.SecurityLevel < realm.AllowedSecurityLevel)
+            if (realm.AllowedSecurityLevel > 0 && session.Security.Account != null && session.Security.IsAtLeastSecurityLevel(realm.AllowedSecurityLevel))
                 realmStatus = RealmStatus.Locked;
 
             var authRealm = new AuthRealm
