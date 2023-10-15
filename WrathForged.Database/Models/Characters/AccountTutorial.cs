@@ -25,4 +25,6 @@ public partial class AccountTutorial
     public uint Tut6 { get; set; }
 
     public uint Tut7 { get; set; }
+
+    public uint[] TutorialFlags => new uint[] { Tut0, Tut1, Tut2, Tut3, Tut4, Tut5, Tut6, Tut7 };
 }

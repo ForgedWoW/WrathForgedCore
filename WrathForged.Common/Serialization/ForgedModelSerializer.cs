@@ -154,16 +154,22 @@ public class ForgedModelSerializer
 
             try
             {
+                var propertyValue = prop.ReflectedProperty.GetValue(obj);
+
+                if (prop.SerializationMetadata.Flags.HasFlag(SerializationFlags.DontSerializeWhenDefaultValue) &&
+                    (propertyValue == null ||
+                    propertyValue == prop.ReflectedProperty.PropertyType.GetDefault()))
+                    continue;
+
                 if (prop.SerializationMetadata.Flags.HasFlag(SerializationFlags.ZLibCompressedCollection) ||
                     prop.ReflectedProperty.PropertyType.IsArray ||
                     (prop.ReflectedProperty.PropertyType.IsGenericType && prop.ReflectedProperty.PropertyType.GetGenericTypeDefinition() == typeof(List<>)) ||
                     (prop.ReflectedProperty.PropertyType.IsGenericType && prop.ReflectedProperty.PropertyType.GetGenericTypeDefinition() == typeof(HashSet<>)))
                 {
-                    SerializeCollection(writer, prop, deserializationDefinition, obj);
+                    SerializeCollection(writer, prop, deserializationDefinition, obj, propertyValue);
                     continue;
                 }
 
-                var propertyValue = prop.ReflectedProperty.GetValue(obj);
                 SerializeProperty(writer, prop, deserializationDefinition, obj, propertyValue);
             }
             catch
@@ -222,7 +228,7 @@ public class ForgedModelSerializer
 
                     // we need to decompress the collection before we can read it. This means even if its a object or a list of objects, the underlying type is a byte array.
                     var isCollection = prop.SerializationMetadata.Flags.HasFlag(SerializationFlags.ZLibCompressedCollection) ||
-                                        prop.ReflectedProperty.PropertyType.IsArray ||
+                                       prop.ReflectedProperty.PropertyType.IsArray ||
                                        (prop.ReflectedProperty.PropertyType.IsGenericType && prop.ReflectedProperty.PropertyType.GetGenericTypeDefinition() == typeof(List<>)) ||
                                        (prop.ReflectedProperty.PropertyType.IsGenericType && prop.ReflectedProperty.PropertyType.GetGenericTypeDefinition() == typeof(HashSet<>));
 
@@ -305,7 +311,8 @@ public class ForgedModelSerializer
                     if (prop.ConditionalSerialization != null && !prop.ConditionalSerialization.ShouldDeserialize(instance, prop, deserializationDefinition.Item2.Properties))
                         continue;
 
-                    var isCollection = prop.ReflectedProperty.PropertyType.IsArray ||
+                    var isCollection = prop.SerializationMetadata.Flags.HasFlag(SerializationFlags.ZLibCompressedCollection) ||
+                                        prop.ReflectedProperty.PropertyType.IsArray ||
                                        (prop.ReflectedProperty.PropertyType.IsGenericType && prop.ReflectedProperty.PropertyType.GetGenericTypeDefinition() == typeof(List<>)) ||
                                        (prop.ReflectedProperty.PropertyType.IsGenericType && prop.ReflectedProperty.PropertyType.GetGenericTypeDefinition() == typeof(HashSet<>));
 
@@ -440,7 +447,7 @@ public class ForgedModelSerializer
         }
     }
 
-    private void SerializeCollection(PrimitiveWriter oldWriter, PropertyMeta prop, ModelInfo otherMeta, object obj)
+    private void SerializeCollection(PrimitiveWriter oldWriter, PropertyMeta prop, ModelInfo otherMeta, object obj, object? val)
     {
         var i = 0;
         var writer = oldWriter;
@@ -461,22 +468,24 @@ public class ForgedModelSerializer
 
             if (!isCollection)
             {
-                SerializeProperty(writer, prop, otherMeta, obj, prop.ReflectedProperty.GetValue(obj));
+                SerializeProperty(writer, prop, otherMeta, obj, val);
                 MemoryZlib.Compress(((MemoryStream)writer.BaseStream).GetBuffer(), out var compressedData);
                 oldWriter.Write(compressedData);
                 return;
             }
         }
 
+        var elementType = prop.ReflectedProperty.PropertyType.GenericTypeArguments[0] ?? default!;
+
         // common case that can save a lot of time.
         if (prop.ReflectedProperty.PropertyType == typeof(byte[]))
         {
-            if (prop.ReflectedProperty.GetValue(obj) is byte[] bytes)
+            if (val is byte[] bytes)
                 writer.Write(bytes);
             return;
         }
 
-        if (prop.ReflectedProperty.GetValue(obj) is IEnumerable collection)
+        if (val is IEnumerable collection)
             foreach (var item in collection)
             {
                 SerializeProperty(writer, prop, otherMeta, obj, item);
@@ -486,7 +495,7 @@ public class ForgedModelSerializer
         if (prop.SerializationMetadata.FixedCollectionSize > i)
         {
             for (; i < prop.SerializationMetadata.FixedCollectionSize; i++)
-                SerializeProperty(writer, prop, otherMeta, obj, 0);
+                SerializeProperty(writer, prop, otherMeta, obj, elementType.GetDefault());
         }
 
         if (prop.SerializationMetadata.Flags.HasFlag(SerializationFlags.ZLibCompressedCollection))
@@ -589,7 +598,7 @@ public class ForgedModelSerializer
         var size = 0;
         var typeCode = attribute.CollectionSizeLengthType != TypeCode.Empty ? attribute.CollectionSizeLengthType : Type.GetTypeCode(property.PropertyType);
 
-        if (attribute.DontSerializeWhenDefaultValue)
+        if (attribute.Flags.HasFlag(SerializationFlags.DontSerializeWhenDefaultValue))
 
             switch (typeCode)
             {

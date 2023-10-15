@@ -13,7 +13,7 @@ public class AuthResponseError
     [SerializableProperty(0)]
     public AuthStatus Status { get; set; }
 
-    [SerializableProperty(1, DontSerializeWhenDefaultValue = true)]
+    [SerializableProperty(1, Flags = Serialization.Models.SerializationFlags.DontSerializeWhenDefaultValue)]
     public uint QueuePosition { get; set; }
 
     [SerializableProperty(2, DontSerializeWhenIndexIsDefaultValue = 1)]

@@ -15,9 +15,25 @@ public enum SerializationFlags
     /// </summary>
     ReversedString = 1 << 0,
 
+    /// <summary>
+    ///     Most strings in WoTLK are ASCII, but some are UTF8. This flag will force the serializer to read/write the string as UTF8.
+    /// </summary>
     UTF8CString = 1 << 1,
+
+    /// <summary>
+    ///    If the <see cref="BigInteger"/> is prefixed with the length of the BigInteger then it will be read/written.
+    ///    Most cases this is not needed as the size of the BigInteger is known.
+    /// </summary>
     BigIntegerWithLength = 1 << 2,
+
+    /// <summary>
+    ///     Big Endian Network Order
+    /// </summary>
     BENetworkOrder = 1 << 3,
+
+    /// <summary>
+    ///     The default behavior of the serializer is to not send/read FixedCollectionSize. This flag will force the serializer to send/read the FixedCollectionSize.
+    /// </summary>
     SendFixedSize = 1 << 4,
 
     /// <summary>
@@ -39,4 +55,9 @@ public enum SerializationFlags
     ///     When reading the property from the stream use the BitRangeStart and BitRangeEnd to read the property.
     /// </summary>
     UseBitRange = 1 << 8,
+
+    /// <summary>
+    ///     If this property is default value then it will not be serialized and sent to the stream.
+    /// </summary>
+    DontSerializeWhenDefaultValue = 1 << 9,
 }

@@ -2,7 +2,7 @@
 // Licensed under GPL-3.0 license. See <https://github.com/ForgedWoW/WrathForgedCore/blob/master/LICENSE> for full information.
 using System.Collections.Concurrent;
 using MathNet.Numerics.Statistics;
-using WrathForged.Common.Collections;
+using WrathForged.Common.ObjectTypes;
 using WrathForged.Common.Scripting.Interfaces.CoreEvents;
 using WrathForged.Models.Networking.Packets;
 

@@ -22,3 +22,10 @@ See [Command Line Commands](https://github.com/ForgedWoW/WrathForgedCore/blob/ma
 | Interface | Description |
 | --------- | ----------- |
 | [IConvertConfigValue](https://github.com/ForgedWoW/WrathForgedCore/blob/main/WrathForged.Common/IConvertConfigValue.cs)|Used for converting custom types from a config string value. To use impliment the Interface and use `IConfiguration.GetDefaultValueWithConverter<WrathEnumConverter, ConsoleColor>("Console:HighlightColor", ConsoleColor.DarkRed);` See [Configuration Extention Methods](https://github.com/ForgedWoW/WrathForgedCore/blob/main/WrathForged.Common/ConfigExtensionMethods.cs)|
+
+### Serialization
+You can also extend serialization to support additional types. This is useful for sending data between instance and realm server or receving data from the client.
+
+| Interface | Description |
+| --------- | ----------- |
+| [IForgedTypeSerialization](https://github.com/ForgedWoW/WrathForgedCore/blob/main/WrathForged.Common/Serialization/Serializers/IForgedTypeSerialization.cs)|Used for deserializing specific properties.  See a [Full list of implimentations here.](https://github.com/ForgedWoW/WrathForgedCore/tree/main/WrathForged.Common/Serialization/Serializers)

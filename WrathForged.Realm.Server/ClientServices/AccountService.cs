@@ -16,8 +16,9 @@ public class AccountService(ClassFactory classFactory, ILogger logger) : IPacket
 {
     private readonly ClassFactory _classFactory = classFactory;
     private readonly ILogger _logger = logger;
-    private const uint GLOBAL_CACHE_MASK = 0x15;
-    private const uint PER_CHARACTER_CACHE_MASK = 0xEA;
+    public const uint GLOBAL_CACHE_MASK = 0x15;
+    public const uint PER_CHARACTER_CACHE_MASK = 0xEA;
+    public const byte MAX_TUTORIAL_COUNT = 8;
 
     [PacketRoute(PacketScope.ClientToRealm, RealmServerOpCode.CMSG_REQUEST_ACCOUNT_DATA)]
     public void ClientAccountDataRequest(RealmClientSession session, AccountDataRequest packet)
@@ -35,6 +36,7 @@ public class AccountService(ClassFactory classFactory, ILogger logger) : IPacket
 
     public void SendAccountDataTimes(RealmClientSession session, uint mask)
     {
+        _logger.Verbose("Sending account data times to {AccountId}:{AccountName}", session.Security.Account.Id, session.Security.Account.Username);
         session.Network.Send(new AccountDataTimesResponse()
         {
             Time = DateTime.Now,
@@ -74,5 +76,57 @@ public class AccountService(ClassFactory classFactory, ILogger logger) : IPacket
             };
 
         _logger.Verbose("Loaded {Count} account data entries for {AccountId}:{AccountName}", session.AccountSessionData.AccountData.Count, session.Security.Account.Id, session.Security.Account.Username);
+    }
+
+    public void SendTutorialData(RealmClientSession session)
+    {
+        _logger.Verbose("Sending tutorial data to {AccountId}:{AccountName}", session.Security.Account.Id, session.Security.Account.Username);
+        session.Network.Send(new TutorialFlagsResponse()
+        {
+            Tutorials = session.AccountSessionData.Tutorials.Items.Select(x => x.Value).ToArray()
+        }, RealmServerOpCode.SMSG_TUTORIAL_FLAGS);
+    }
+
+    public void LoadTutorialData(RealmClientSession session)
+    {
+        using var characterDatabase = _classFactory.Locate<CharacterDatabase>();
+
+        var tutorialData = characterDatabase.AccountTutorials.FirstOrDefault(x => x.AccountId == session.Security.Account.Id);
+
+        if (tutorialData != null)
+        {
+            var tutorials = tutorialData.TutorialFlags;
+
+            for (byte i = 0; i < MAX_TUTORIAL_COUNT; i++)
+                session.AccountSessionData.Tutorials.Items[i] = tutorials[i];
+        }
+    }
+
+    public void SaveTutorialData(RealmClientSession session)
+    {
+        using var characterDatabase = _classFactory.Locate<CharacterDatabase>();
+
+        var tutorialData = characterDatabase.AccountTutorials.FirstOrDefault(x => x.AccountId == session.Security.Account.Id);
+
+        if (tutorialData == null)
+        {
+            tutorialData = new AccountTutorial()
+            {
+                AccountId = session.Security.Account.Id
+            };
+
+            _ = characterDatabase.AccountTutorials.Add(tutorialData);
+        }
+
+        tutorialData.Tut0 = session.AccountSessionData.Tutorials.Items[0];
+        tutorialData.Tut1 = session.AccountSessionData.Tutorials.Items[1];
+        tutorialData.Tut2 = session.AccountSessionData.Tutorials.Items[2];
+        tutorialData.Tut3 = session.AccountSessionData.Tutorials.Items[3];
+        tutorialData.Tut4 = session.AccountSessionData.Tutorials.Items[4];
+        tutorialData.Tut5 = session.AccountSessionData.Tutorials.Items[5];
+        tutorialData.Tut6 = session.AccountSessionData.Tutorials.Items[6];
+        tutorialData.Tut7 = session.AccountSessionData.Tutorials.Items[7];
+
+        _ = characterDatabase.SaveChanges();
     }
 }

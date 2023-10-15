@@ -14,6 +14,7 @@
 		<PackageReference Include="Microsoft.Extensions.Configuration.FileExtensions" Version="8.0.0-rc.1.23419.4" />
 		<PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="8.0.0-rc.1.23419.4" />
 		<PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="8.0.0-rc.1.23419.4" />
+		<PackageReference Include="ObservableCollections" Version="1.1.3" />
 		<PackageReference Include="OpenTelemetry" Version="1.6.0" />
 		<PackageReference Include="OpenTelemetry.Api" Version="1.6.0" />
 		<PackageReference Include="OpenTelemetry.Exporter.OpenTelemetryProtocol" Version="1.6.0" />

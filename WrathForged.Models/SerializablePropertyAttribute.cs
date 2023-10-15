@@ -38,11 +38,6 @@ public class SerializablePropertyAttribute(uint index) : Attribute
     public int FixedCollectionSize { get; set; }
 
     /// <summary>
-    ///     If this property is default value then it will not be serialized and sent to the stream.
-    /// </summary>
-    public bool DontSerializeWhenDefaultValue { get; set; }
-
-    /// <summary>
     ///     If the value of the property index is default value then this property will not be
     ///     serialized and sent to the stream. The index must appear before this property in the
     ///     serialized stream.

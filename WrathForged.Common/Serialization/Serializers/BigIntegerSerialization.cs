@@ -29,7 +29,7 @@ public class BigIntegerSerialization : IForgedTypeSerialization
     public void Serialize(PrimitiveWriter writer, PropertyMeta propertyMeta, List<PropertyMeta> otherMeta, object obj, object? val)
     {
         if (propertyMeta.SerializationMetadata.Flags.HasFlag(SerializationFlags.BigIntegerWithLength) && propertyMeta.SerializationMetadata.FixedCollectionSize == 0)
-            writer.SerializeCollectionSize(propertyMeta, otherMeta, obj);
+            _ = writer.SerializeCollectionSize(propertyMeta, otherMeta, obj);
 
         if (val != null)
             writer.Write(((BigInteger)val).ToProperByteArray());

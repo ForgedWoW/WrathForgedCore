@@ -189,10 +189,11 @@ public class ClientAuthService(IConfiguration configuration, ILogger logger, Cla
         using var worldDatabase = _classFactory.Locate<WorldDatabase>();
 
         _accountService.LoadAccountData(session);
+        _accountService.LoadTutorialData(session);
 
         session.Network.Send(new RealmAuthResponse() { Code = ResponseCodes.AUTH_OK });
         _addonService.SendAddonInfo(session);
-
         session.Network.Send(new ClientCacheVersion() { Version = worldDatabase.Versions.Select(v => v.CacheId != null ? (uint)v.CacheId : 0u).First() });
+        _accountService.SendTutorialData(session);
     }
 }

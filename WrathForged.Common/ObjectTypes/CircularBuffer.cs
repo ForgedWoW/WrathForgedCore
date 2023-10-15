@@ -2,7 +2,7 @@
 // Licensed under GPL-3.0 license. See <https://github.com/ForgedWoW/WrathForgedCore/blob/master/LICENSE> for full information.
 using System.Collections;
 
-namespace WrathForged.Common.Collections;
+namespace WrathForged.Common.ObjectTypes;
 
 /// <inheritdoc/>
 /// <summary>
@@ -57,18 +57,14 @@ public class CircularBuffer<T> : IEnumerable<T>
     public CircularBuffer(int capacity, T[] items)
     {
         if (capacity < 1)
-        {
             throw new ArgumentException(
                 "Circular buffer cannot have negative or zero capacity.", nameof(capacity));
-        }
 
         ArgumentNullException.ThrowIfNull(items);
 
         if (items.Length > capacity)
-        {
             throw new ArgumentException(
                 "Too many items to fit circular buffer", nameof(items));
-        }
 
         _buffer = new T[capacity];
 
@@ -135,14 +131,10 @@ public class CircularBuffer<T> : IEnumerable<T>
         get
         {
             if (IsEmpty)
-            {
                 throw new IndexOutOfRangeException(string.Format("Cannot access index {0}. Buffer is empty", index));
-            }
 
             if (index >= Size)
-            {
                 throw new IndexOutOfRangeException(string.Format("Cannot access index {0}. Buffer size is {1}", index, Size));
-            }
 
             var actualIndex = InternalIndex(index);
             return _buffer[actualIndex];
@@ -150,14 +142,10 @@ public class CircularBuffer<T> : IEnumerable<T>
         set
         {
             if (IsEmpty)
-            {
                 throw new IndexOutOfRangeException(string.Format("Cannot access index {0}. Buffer is empty", index));
-            }
 
             if (index >= Size)
-            {
                 throw new IndexOutOfRangeException(string.Format("Cannot access index {0}. Buffer size is {1}", index, Size));
-            }
 
             var actualIndex = InternalIndex(index);
             _buffer[actualIndex] = value;
@@ -261,13 +249,11 @@ public class CircularBuffer<T> : IEnumerable<T>
         var newArrayOffset = 0;
         var segments = ToArraySegments();
         foreach (var segment in segments)
-        {
             if (segment.Array != null)
             {
                 Array.Copy(segment.Array, segment.Offset, newArray, newArrayOffset, segment.Count);
                 newArrayOffset += segment.Count;
             }
-        }
 
         return newArray;
     }
@@ -295,13 +281,9 @@ public class CircularBuffer<T> : IEnumerable<T>
     {
         var segments = ToArraySegments();
         foreach (var segment in segments)
-        {
             for (var i = 0; i < segment.Count; i++)
-            {
                 if (segment.Array != null)
                     yield return segment.Array[segment.Offset + i];
-            }
-        }
     }
     #endregion
     #region IEnumerable implementation
@@ -311,9 +293,7 @@ public class CircularBuffer<T> : IEnumerable<T>
     private void ThrowIfEmpty(string message = "Cannot access an empty buffer.")
     {
         if (IsEmpty)
-        {
             throw new InvalidOperationException(message);
-        }
     }
 
     /// <summary>
@@ -324,9 +304,7 @@ public class CircularBuffer<T> : IEnumerable<T>
     private void Increment(ref int index)
     {
         if (++index == Capacity)
-        {
             index = 0;
-        }
     }
 
     /// <summary>
@@ -337,9 +315,7 @@ public class CircularBuffer<T> : IEnumerable<T>
     private void Decrement(ref int index)
     {
         if (index == 0)
-        {
             index = Capacity;
-        }
 
         index--;
     }
@@ -353,7 +329,7 @@ public class CircularBuffer<T> : IEnumerable<T>
     /// <param name='index'>
     /// External index.
     /// </param>
-    private int InternalIndex(int index) => _start + (index < (Capacity - _start) ? index : index - Capacity);
+    private int InternalIndex(int index) => _start + (index < Capacity - _start ? index : index - Capacity);
 
     // doing ArrayOne and ArrayTwo methods returning ArraySegment<T> as seen here: 
     // http://www.boost.org/doc/libs/1_37_0/libs/circular_buffer/doc/circular_buffer.html#classboost_1_1circular__buffer_1957cccdcb0c4ef7d80a34a990065818d
