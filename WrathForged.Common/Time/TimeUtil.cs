@@ -4,7 +4,6 @@ namespace WrathForged.Common.Time;
 
 public static class TimeUtil
 {
-    public static readonly DateTime UnixTimeStart = new(1970, 1, 1, 0, 0, 0);
     public const int TICKS_PER_SECOND = 10000;
     private const long TICKS_SINCE_1970 = 621355968000000000; // .NET ticks for 1970
     public static DateTime ApplicationStartTime { get; internal set; }
@@ -21,11 +20,11 @@ public static class TimeUtil
     /// <returns>the time since the Unix epoch in seconds</returns>
     public static uint GetEpochTime() => (uint)((DateTime.UtcNow.Ticks - TICKS_SINCE_1970) / TimeSpan.TicksPerSecond);
 
-    public static DateTime GetDateTimeFromUnixTime(uint unixTime) => new DateTime(1970, 1, 1, 0, 0, 0, 0).AddSeconds(unixTime);
+    public static DateTime GetDateTimeFromUnixTime(uint unixTime) => DateTime.UnixEpoch.AddSeconds(unixTime);
 
-    public static DateTime GetUTCTimeSeconds(long seconds) => UnixTimeStart.AddSeconds(seconds);
+    public static DateTime GetUTCTimeSeconds(long seconds) => DateTime.UnixEpoch.AddSeconds(seconds);
 
-    public static DateTime GetUTCTimeMillis(long milliseconds) => UnixTimeStart.AddMilliseconds(milliseconds);
+    public static DateTime GetUTCTimeMillis(long milliseconds) => DateTime.UnixEpoch.AddMilliseconds(milliseconds);
 
     /// <summary>
     /// Gets the system uptime.
@@ -36,13 +35,6 @@ public static class TimeUtil
     /// </remarks>
     /// <returns>the system uptime in milliseconds</returns>
     public static long GetSystemTimeLong() => (uint)Environment.TickCount;
-
-    /// <summary>
-    /// Gets the time between the Unix epoch and a specific <see cref="DateTime">time</see>.
-    /// </summary>
-    /// <param name="time">the end time</param>
-    /// <returns>the time between the unix epoch and the supplied <see cref="DateTime">time</see> in seconds</returns>
-    public static uint GetEpochTimeFromDT() => DateTime.Now.GetEpochTimeFromDT();
 
     public static int ToMilliSecondsInt(int ticks) => ticks / TICKS_PER_SECOND;
 

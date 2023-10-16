@@ -103,7 +103,7 @@ public class TCPServer
             _ = _clients.Remove(clientSocket);
         }
 
-        _logger.Debug("Client removed from TCPServer from {Address}", clientSocket.IPEndPoint.Address.ToString());
+        _logger.Debug("Client removed from TCPServer from {Address}", clientSocket.IPEndPoint);
 
         _ = _connectionProcessingBlock.Post(new ClientConnectionChangeEvent(clientSocket, OnClientDisconnected, ConnectionState.Disconnected));
     }
@@ -118,7 +118,7 @@ public class TCPServer
                                         return;
                                     }
 
-                                    _logger.Verbose("Received {DataLength} bytes from {Address}", data.Data.Length, data.Client.IPEndPoint.Address.ToString());
+                                    _logger.Verbose("Received {DataLength} bytes from {Address}", data.Data.Length, data.Client.IPEndPoint);
 
                                     foreach (var handler in data.EventHandler.GetInvocationList().Cast<EventHandler<DataReceivedEventArgs>>())
                                     {
@@ -150,7 +150,7 @@ public class TCPServer
                                             return;
                                         }
 
-                                        _logger.Verbose("Client connection change: {Status} from {Address}", data.ConnectionState.ToString(), data.Client.IPEndPoint.Address.ToString());
+                                        _logger.Verbose("Client connection change: {Status} from {Address}", data.ConnectionState.ToString(), data.Client.IPEndPoint);
 
                                         foreach (var handler in data.EventHandler.GetInvocationList().Cast<EventHandler<ClientSocket>>())
                                         {

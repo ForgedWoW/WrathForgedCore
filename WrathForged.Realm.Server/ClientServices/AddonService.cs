@@ -77,16 +77,16 @@ public class AddonService : IPacketService
 
         var lastBannedAddonTimestamp = session.AddonInfo.ClientAddons.LastBannedAddonTimestamp;
 
-        if (BannedAddons.Any(b => b.Timestamp < lastBannedAddonTimestamp))
+        if (BannedAddons.Any(b => b.Timestamp.ToUnixTime() < lastBannedAddonTimestamp))
             lastBannedAddonTimestamp = 0;
 
-        foreach (var bannedAddon in BannedAddons.Where(a => a.Timestamp < lastBannedAddonTimestamp))
+        foreach (var bannedAddon in BannedAddons.Where(a => a.Timestamp.ToUnixTime() < lastBannedAddonTimestamp))
             addonInfo.BannedAddons.Add(new BannedAddonInfoSMSG()
             {
                 Id = bannedAddon.Id,
                 NameMD5 = bannedAddon.NameMD5,
                 VersionMD5 = bannedAddon.VersionMD5,
-                Timestamp = bannedAddon.Timestamp,
+                Timestamp = (uint)bannedAddon.Timestamp.ToUnixTime(),
                 IsBanned = 1
             });
 

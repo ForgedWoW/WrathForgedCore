@@ -7,11 +7,9 @@ public static class DateTimeExtensionMethods
     public const int TICKS_PER_SECOND = 10000;
     private const long TICKS_SINCE_1970 = 621355968000000000; // .NET ticks for 1970
 
-    public static DateTime UnixEpoch { get; } = new DateTime(1970, 1, 1, 0, 0, 0);
+    public static long ToUnixTime(this DateTime dateTime) => (long)(dateTime - DateTime.UnixEpoch).TotalSeconds;
 
-    public static long ToUnixTime(this DateTime dateTime) => (long)(dateTime - UnixEpoch).TotalSeconds;
-
-    public static DateTime FromUnixTime(this long unixTime) => UnixEpoch.AddSeconds(unixTime);
+    public static DateTime FromUnixTime(this long unixTime) => DateTime.UnixEpoch.AddSeconds(unixTime);
 
     /// <summary>
     /// Converts the current time and date into the time and date format of the WoW client.

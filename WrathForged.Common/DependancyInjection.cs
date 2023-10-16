@@ -4,6 +4,7 @@ using System.Diagnostics;
 using Grace.DependencyInjection;
 using Microsoft.Extensions.Configuration;
 using OpenTelemetry;
+using OpenTelemetry.Metrics;
 using OpenTelemetry.Trace;
 using Serilog;
 using WrathForged.Common.Caching;
@@ -100,41 +101,28 @@ public static class DependencyInjection
         _ = builder.Export<IpStackGeoLocationService>().Lifestyle.Singleton();
 
         // configure OpenTelemetry
-        var telemetryType = configuration.GetDefaultValue("Telemetry:Types", "").Split(',', StringSplitOptions.TrimEntries | StringSplitOptions.TrimEntries).ToList(); // Assuming you have a key like this in your JSON
-
-        var tracerProviderBuilder = Sdk.CreateTracerProviderBuilder().AddSource(Process.GetCurrentProcess().ProcessName);
-
-        if (telemetryType.Contains("OpenTelemetryProtocol", StringComparer.InvariantCultureIgnoreCase))
+        if (configuration.GetDefaultValue("Telemetry:Enabled", false))
         {
+            var metricProviderBuilder = Sdk.CreateMeterProviderBuilder();
+
             var url = configuration.GetDefaultValue("Telemetry:OpenTelemetryProtocol:Endpoint", "http://localhost:4317");
-            _ = tracerProviderBuilder.AddOtlpExporter(options =>
+            _ = metricProviderBuilder.AddOtlpExporter(options =>
             {
                 options.Endpoint = new Uri(url);
             });
 
             Log.Logger.Information("OpenTelemetryProtocol is configured to run on {Uri}.", url);
-        }
 
-        if (telemetryType.Contains("Zipkin", StringComparer.InvariantCultureIgnoreCase))
-        {
-            var uri = configuration.GetDefaultValue("Telemetry:Zipkin:Endpoint", "http://localhost:9411/api/v2/spans");
-            _ = tracerProviderBuilder.AddZipkinExporter(options =>
+            var tracerProvider = metricProviderBuilder.Build();
+
+            if (tracerProvider != null)
             {
-                options.Endpoint = new Uri(uri);
-            });
-
-            Log.Logger.Information("Zipkin is configured to run on {Uri}.", uri);
-        }
-
-        var tracerProvider = tracerProviderBuilder.Build();
-
-        if (tracerProvider != null)
-        {
-            _ = builder.ExportInstance(tracerProvider.GetTracer(Process.GetCurrentProcess().ProcessName)).Lifestyle.Singleton();
-        }
-        else
-        {
-            Log.Logger.Warning("Telemetry is not configured or there was an error setting it up. Please configure it in the appsettings.json file.");
+                _ = builder.ExportInstance(tracerProvider).Lifestyle.Singleton();
+            }
+            else
+            {
+                Log.Logger.Warning("Telemetry is not configured or there was an error setting it up. Please configure it in the appsettings.json file.");
+            }
         }
 
         Log.Logger.Information("WrathForged.Common initialized in {InitializationTime}.", (DateTime.UtcNow - startTime).ToReadableString());

@@ -68,7 +68,7 @@
       "Serilog.Expressions"
     ],
     "MinimumLevel": {
-      "Default": "Debug",
+      "Default": "Information",
       "Override": {
         "Microsoft": "Warning",
         "Microsoft.EntityFrameworkCore": "Error"
@@ -147,13 +147,9 @@
     ]
   },
   "Telemetry": {
-    "NOTE": "Types is comma delimited. It can be `OpenTelemetryProtocol` or Zipkin or `Zipkin,OpenTelemetryProtocol` for both",
-    "Types": "",
+    "Enabled": "false",
     "OpenTelemetryProtocol": {
-      "Endpoint": "http://localhost:4317"
-    },
-    "Zipkin": {
-      "Endpoint": "http://localhost:9411/api/v2/spans"
+      "Endpoint": "http://localhost:4319"
     }
   },
   "Scripting": {

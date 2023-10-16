@@ -28,8 +28,8 @@ public class ForgedModelSerializer
     private readonly Dictionary<Type, ModelInfo> _systemScope = [];
     private readonly Dictionary<Type, IForgedTypeSerialization> _serializers = [];
     private readonly Dictionary<ForgedTypeCode, IForgedTypeSerialization> _forgedTypeCodeSerializers = [];
-    private readonly Histogram<double> _deserializeTime;
-    private readonly Histogram<double> _serializeTime;
+    private readonly Dictionary<Type, Histogram<double>> _classDeserializationHistograms = [];
+    private readonly Dictionary<Type, Histogram<double>> _classSerializationHistograms = [];
     private readonly Meter _meter;
 
     public ForgedModelSerializer(ILogger logger, ScriptLoader assemblyLoader, ClassFactory classFactory, MeterFactory meterFactory,
@@ -37,12 +37,12 @@ public class ForgedModelSerializer
     {
         var classesWithAttribute = assemblyLoader.GetAllTypesWithClassAttribute<ForgedSerializableAttribute>();
         _meter = meterFactory.GetOrCreateMeter(MeterKeys.WRATHFORGED_COMMON);
-        _deserializeTime = _meter.CreateHistogram<double>("DeserializationTime", "Time", "Time to deserialize a packet");
-        _serializeTime = _meter.CreateHistogram<double>("SerializationTime", "Time", "Time to serialize a packet");
 
         // Build the deserialization cache
         foreach (var cls in classesWithAttribute)
         {
+            _classDeserializationHistograms[cls] = _meter.CreateHistogram<double>($"{cls.FullName}.Deserialization");
+            _classSerializationHistograms[cls] = _meter.CreateHistogram<double>($"{cls.FullName}.Serialization");
             var attribute = forgedSerializableAttributeCache.GetAttribute(cls);
 
             if (attribute == null)
@@ -179,7 +179,7 @@ public class ForgedModelSerializer
             }
         }
 
-        _serializeTime.Record((DateTime.UtcNow - startTimestamp).TotalMilliseconds);
+        _classSerializationHistograms[obj.GetType()].Record((DateTime.UtcNow - startTimestamp).TotalMilliseconds);
     }
 
     public DeserializationResult TryDeserialize<T>(PacketBuffer buffer, out T packet)
@@ -254,7 +254,7 @@ public class ForgedModelSerializer
 
             packet = instance;
             var ms = (DateTime.UtcNow - startTimestamp).TotalMilliseconds;
-            _deserializeTime.Record(ms);
+            _classDeserializationHistograms[t].Record(ms);
             return DeserializationResult.Success;
         }
         catch (EndOfStreamException eos)
@@ -338,7 +338,7 @@ public class ForgedModelSerializer
 
             packet = instance ?? default!;
             var ms = (DateTime.UtcNow - startTimestamp).TotalMilliseconds;
-            _deserializeTime.Record(ms);
+            _classDeserializationHistograms[deserializationDefinition.Item1].Record(ms);
             return DeserializationResult.Success;
         }
         catch (EndOfStreamException eos)

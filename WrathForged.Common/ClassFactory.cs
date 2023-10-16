@@ -35,7 +35,7 @@ public class ClassFactory
     /// <typeparam name="T">The object type</typeparam>
     /// <param name="parameters">Additional parameters keyed by the parameter name</param>
     /// <returns>The resolved object</returns>
-    public T Locate<T>(Dictionary<string, object> parameters) => Container.Locate<T>(parameters);
+    public T Locate<T>(Dictionary<string, object> parameters) => Container.Locate<T>(extraData: parameters);
 
     /// <summary>
     ///     Gets a object from the container with the given parameters in the order they appear in the constructor. At time of registration the type must be registered with the container. <see cref="Container"/> to register a type.
@@ -43,5 +43,5 @@ public class ClassFactory
     /// <typeparam name="T">The object type</typeparam>
     /// <param name="parameters">The parameters in the order they appear in the constructor</param>
     /// <returns>The resolved object</returns>
-    public T Locate<T>(dynamic parameters) => Container.Locate<T>(parameters);
+    public T Locate<T>(dynamic parameters) => Container.Locate<T>(extraData: parameters);
 }
