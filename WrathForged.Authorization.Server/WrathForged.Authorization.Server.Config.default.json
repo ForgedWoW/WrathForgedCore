@@ -105,7 +105,7 @@
                   {
                     "Name": "ByExcluding",
                     "Args": {
-                      "expression": "StartsWith(SourceContext, 'Microsoft.EntityFrameworkCore')"
+                      "expression": "SourceContext = 'Microsoft' or StartsWith(SourceContext, 'Microsoft')"
                     }
                   }
                 ]
@@ -124,12 +124,13 @@
               "Args": {
                 "path": "Logs/WrathForged.Auth.DatabaseLogs..log",
                 "rollingInterval": "Day",
+                "retainedFileCountLimit": 31,
                 "formatter": "Serilog.Formatting.Compact.CompactJsonFormatter, Serilog.Formatting.Compact",
                 "filter": [
                   {
                     "Name": "ByIncludingOnly",
                     "Args": {
-                      "expression": "StartsWith(SourceContext, 'Microsoft.EntityFrameworkCore')"
+                      "expression": "SourceContext = 'Microsoft' or StartsWith(SourceContext, 'Microsoft')"
                     }
                   }
                 ]

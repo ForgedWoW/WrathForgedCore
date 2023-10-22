@@ -1,12 +1,13 @@
 ﻿// Copyright (c) Forged WoW LLC <https://github.com/ForgedWoW/WrathForgedCore>
 // Licensed under GPL-3.0 license. See <https://github.com/ForgedWoW/WrathForgedCore/blob/master/LICENSE> for full information.
 using System.Diagnostics;
-using Grace.DependencyInjection;
 using Microsoft.Extensions.Configuration;
 using OpenTelemetry;
 using OpenTelemetry.Metrics;
 using OpenTelemetry.Trace;
 using Serilog;
+using SSDI;
+using SSDI.Registration;
 using WrathForged.Common.Caching;
 using WrathForged.Common.CommandLine;
 using WrathForged.Common.Cryptography;
@@ -32,7 +33,7 @@ namespace WrathForged.Common;
 
 public static class DependencyInjection
 {
-    public static IExportRegistrationBlock RegisterCommon(this IExportRegistrationBlock builder, IConfiguration configuration)
+    public static ExportRegistration RegisterCommon(this ExportRegistration builder, IConfiguration configuration)
     {
         var startTime = DateTime.UtcNow;
         TimeUtil.ApplicationStartTime = DateTime.Now;

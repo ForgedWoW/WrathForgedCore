@@ -475,8 +475,6 @@ public class ForgedModelSerializer
             }
         }
 
-        var elementType = prop.ReflectedProperty.PropertyType.GenericTypeArguments[0] ?? default!;
-
         // common case that can save a lot of time.
         if (prop.ReflectedProperty.PropertyType == typeof(byte[]))
         {
@@ -484,6 +482,10 @@ public class ForgedModelSerializer
                 writer.Write(bytes);
             return;
         }
+
+        var elementType = prop.ReflectedProperty.PropertyType.GenericTypeArguments.Length != 0
+                            ? prop.ReflectedProperty.PropertyType.GenericTypeArguments[0]
+                            : prop.ReflectedProperty.PropertyType.GetElementType();
 
         if (val is IEnumerable collection)
             foreach (var item in collection)

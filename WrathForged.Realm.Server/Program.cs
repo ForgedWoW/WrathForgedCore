@@ -1,7 +1,7 @@
 ﻿// Copyright (c) Forged WoW LLC <https://github.com/ForgedWoW/WrathForgedCore>
 // Licensed under GPL-3.0 license. See <https://github.com/ForgedWoW/WrathForgedCore/blob/master/LICENSE> for full information.
-using Grace.DependencyInjection;
 using Microsoft.Extensions.Configuration;
+using SSDI;
 using WrathForged.Common;
 using WrathForged.Common.CommandLine;
 using WrathForged.Common.Networking;
@@ -24,7 +24,7 @@ IConfiguration configuration = configBuilder.Build();
 var container = new DependencyInjectionContainer();
 container.Configure(c =>
 {
-    _ = c.ExportInstance(configuration).As<IConfiguration>().Lifestyle.SingletonPerScope();
+    _ = c.ExportInstance(configuration).As<IConfiguration>().Lifestyle.Singleton();
     _ = c.RegisterCommon(configuration);
     _ = c.RegisterDatabase(configuration, Serilog.Log.Logger);
     _ = c.RegisterRealm();

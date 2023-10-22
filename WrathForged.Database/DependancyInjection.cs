@@ -1,11 +1,12 @@
 ﻿// Copyright (c) Forged WoW LLC <https://github.com/ForgedWoW/WrathForgedCore>
 // Licensed under GPL-3.0 license. See <https://github.com/ForgedWoW/WrathForgedCore/blob/master/LICENSE> for full information.
-using Grace.DependencyInjection;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Caching.Memory;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using Serilog;
+using SSDI;
+using SSDI.Registration;
 using WrathForged.Database.Models.Auth;
 using WrathForged.Database.Models.Characters;
 using WrathForged.Database.Models.DBC;
@@ -18,32 +19,32 @@ namespace WrathForged.Database;
 
 public static class DependencyInjection
 {
-    public static IExportRegistrationBlock RegisterDatabase(this IExportRegistrationBlock builder, IConfiguration configuration, Serilog.ILogger logger)
+    public static ExportRegistration RegisterDatabase(this ExportRegistration builder, IConfiguration configuration, Serilog.ILogger logger)
     {
         var startTime = DateTime.UtcNow;
         var loggerFactory = new LoggerFactory().AddSerilog(logger);
 
         _ = builder.Export<AuthDatabase>()
-            .WithCtorParam(() => new DbContextOptionsBuilder<AuthDatabase>()
+            .WithCtorParam("options", new DbContextOptionsBuilder<AuthDatabase>()
             .UseLoggerFactory(loggerFactory)
             .UseMySql(configuration.GetConnectionString("auth"),
-                        ServerVersion.AutoDetect(configuration.GetConnectionString("auth")), options => options.EnableRetryOnFailure()).Options).Named("options");
+                        ServerVersion.AutoDetect(configuration.GetConnectionString("auth")), options => options.EnableRetryOnFailure()).Options);
 
         _ = builder.Export<WorldDatabase>()
-            .WithCtorParam(() => new DbContextOptionsBuilder<WorldDatabase>()
+            .WithCtorParam("options", new DbContextOptionsBuilder<WorldDatabase>()
             .UseLoggerFactory(loggerFactory)
-            .UseMySql(configuration.GetConnectionString("world"), ServerVersion.AutoDetect(configuration.GetConnectionString("world")), options => options.EnableRetryOnFailure()).Options).Named("options");
+            .UseMySql(configuration.GetConnectionString("world"), ServerVersion.AutoDetect(configuration.GetConnectionString("world")), options => options.EnableRetryOnFailure()).Options);
 
         _ = builder.Export<CharacterDatabase>()
-            .WithCtorParam(() => new DbContextOptionsBuilder<CharacterDatabase>()
+            .WithCtorParam("options", new DbContextOptionsBuilder<CharacterDatabase>()
             .UseLoggerFactory(loggerFactory)
-            .UseMySql(configuration.GetConnectionString("characters"), ServerVersion.AutoDetect(configuration.GetConnectionString("characters")), options => options.EnableRetryOnFailure()).Options).Named("options");
+            .UseMySql(configuration.GetConnectionString("characters"), ServerVersion.AutoDetect(configuration.GetConnectionString("characters")), options => options.EnableRetryOnFailure()).Options);
 
         _ = builder.Export<DBCDatabase>()
-            .WithCtorParam(() => new DbContextOptionsBuilder<DBCDatabase>()
+            .WithCtorParam("options", new DbContextOptionsBuilder<DBCDatabase>()
             .UseLoggerFactory(loggerFactory)
             .UseMemoryCache(new MemoryCache(new MemoryCacheOptions()))
-            .UseMySql(configuration.GetConnectionString("dbc"), ServerVersion.AutoDetect(configuration.GetConnectionString("dbc")), options => options.EnableRetryOnFailure()).Options).Named("options");
+            .UseMySql(configuration.GetConnectionString("dbc"), ServerVersion.AutoDetect(configuration.GetConnectionString("dbc")), options => options.EnableRetryOnFailure()).Options);
 
         var slidingTimeoutStr = configuration["Database:SlidingCacheTimeout_Hours"];
         var hours = 2;

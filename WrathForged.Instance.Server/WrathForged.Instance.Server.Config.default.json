@@ -86,7 +86,7 @@
             {
               "Name": "ByExcluding",
               "Args": {
-                "expression": "StartsWith(SourceContext, 'Microsoft.EntityFrameworkCore')"
+                "expression": "SourceContext = 'Microsoft' or StartsWith(SourceContext, 'Microsoft')"
               }
             }
           ]
@@ -108,7 +108,7 @@
                   {
                     "Name": "ByExcluding",
                     "Args": {
-                      "expression": "StartsWith(SourceContext, 'Microsoft.EntityFrameworkCore')"
+                      "expression": "SourceContext = 'Microsoft' or StartsWith(SourceContext, 'Microsoft')"
                     }
                   }
                 ]
