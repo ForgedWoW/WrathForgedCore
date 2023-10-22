@@ -116,7 +116,7 @@ public static class SerializationHelpers
         }
 
         // Write the size based on the TypeCode
-        if (prop.SerializationMetadata.Flags.HasFlag(SerializationFlags.DontSerializeCollectionSize))
+        if (!prop.SerializationMetadata.Flags.HasFlag(SerializationFlags.DontSerializeCollectionSize))
             if (prop.SerializationMetadata.CollectionSizeLengthType != TypeCode.Empty)
             {
                 switch (prop.SerializationMetadata.CollectionSizeLengthType)
