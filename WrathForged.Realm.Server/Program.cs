@@ -24,7 +24,7 @@ IConfiguration configuration = configBuilder.Build();
 var container = new DependencyInjectionContainer();
 container.Configure(c =>
 {
-    _ = c.ExportInstance(configuration).As<IConfiguration>().Lifestyle.Singleton();
+    _ = c.ExportInstance(configuration).As<IConfiguration>();
     _ = c.RegisterCommon(configuration);
     _ = c.RegisterDatabase(configuration, Serilog.Log.Logger);
     _ = c.RegisterRealm();

@@ -59,9 +59,9 @@ public class ActivationBuilder
 
     public T LocateWithPositionalParams<T>(params object[] parameters) => (T)Locate(typeof(T), parameters.Select((p, i) => new PositionalParameter(i, p)).ToArray());
 
-    public T Locate<T>(params (string name, object value)[] parameters) => (T)Locate(typeof(T), parameters.Select(p => new NamedParameter(p.name, p.value)).ToArray());
+    public T LocateWithNamedParameters<T>(params (string name, object value)[] parameters) => (T)Locate(typeof(T), parameters.Select(p => new NamedParameter(p.name, p.value)).ToArray());
 
-    public T Locate<T>(params object[] parameters) => (T)Locate(typeof(T), parameters.Select(p => new TypedParameter(p)).ToArray());
+    public T LocateWithTypedParams<T>(params object[] parameters) => (T)Locate(typeof(T), parameters.Select(p => new TypedParameter(p)).ToArray());
 
     public T Locate<T>(params IDIParameter[] parameters) => (T)Locate(typeof(T), parameters);
 
@@ -147,12 +147,9 @@ public class ActivationBuilder
     private static IList CreateListOfTType(Type type)
     {
         var listType = typeof(List<>).MakeGenericType(type);
-        var listObj = Activator.CreateInstance(listType);
+        var listObj = Activator.CreateInstance(listType) ?? throw new Exception($"Could not create list of type {listType.FullName}");
 
-        if (listObj is null)
-            throw new Exception($"Could not create list of type {listType.FullName}");
-
-        var list = (System.Collections.IList)listObj;
+        var list = (IList)listObj;
         return list;
     }
 

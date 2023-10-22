@@ -135,7 +135,7 @@ public class WoWClientServer
     private void DataReceived(object? sender, DataReceivedEventArgs e)
     {
         if (e.Client.ClientSession == null)
-            e.Client.ClientSession = _classFactory.Container.Locate<IWoWClientSession>(e.Client);
+            e.Client.ClientSession = _classFactory.Container.LocateWithPositionalParams<IWoWClientSession>(e.Client);
 
         var session = e.Client.ClientSession;
 

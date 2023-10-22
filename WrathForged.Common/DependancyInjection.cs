@@ -68,10 +68,10 @@ public static class DependencyInjection
             Log.CloseAndFlush();
         };
 
-        _ = builder.ExportInstance(configuration).As<IConfiguration>().Lifestyle.Singleton();
-        _ = builder.ExportInstance(classFactory).Lifestyle.Singleton();
-        _ = builder.ExportInstance(Log.Logger).As<ILogger>().Lifestyle.Singleton();
-        _ = builder.ExportInstance(exitNotifier).Lifestyle.Singleton();
+        _ = builder.ExportInstance(configuration).As<IConfiguration>();
+        _ = builder.ExportInstance(classFactory);
+        _ = builder.ExportInstance(Log.Logger).As<ILogger>();
+        _ = builder.ExportInstance(exitNotifier);
         _ = builder.Export<TCPServer>();
         _ = builder.Export<ForgeCache>().Lifestyle.Singleton();
         _ = builder.Export<ForgedModelSerializer>().Lifestyle.Singleton();

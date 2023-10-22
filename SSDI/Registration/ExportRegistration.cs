@@ -16,6 +16,7 @@ public class ExportRegistration
     {
         var registration = new InternalRegistration(typeof(T), instance);
         Registrations.Add(registration);
+        _ = registration.FluentExportRegistration.Lifestyle.Singleton();
         return registration.FluentExportRegistration;
     }
 }

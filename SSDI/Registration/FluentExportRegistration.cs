@@ -42,6 +42,12 @@ public class FluentExportRegistration
         return this;
     }
 
+    public FluentExportRegistration WithCtorParam(int position, object value)
+    {
+        Parameters.Add(new PositionalParameter(position, value));
+        return this;
+    }
+
     /// <summary>
     ///     Adds a positional parameters to the constructor. The order of the parameters is important. Starts at 0.
     /// </summary>

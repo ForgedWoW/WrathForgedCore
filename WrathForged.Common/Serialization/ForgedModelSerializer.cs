@@ -497,7 +497,7 @@ public class ForgedModelSerializer
         if (prop.SerializationMetadata.FixedCollectionSize > i)
         {
             for (; i < prop.SerializationMetadata.FixedCollectionSize; i++)
-                SerializeProperty(writer, prop, otherMeta, obj, elementType.GetDefault());
+                SerializeProperty(writer, prop, otherMeta, obj, elementType?.GetDefault());
         }
 
         if (prop.SerializationMetadata.Flags.HasFlag(SerializationFlags.ZLibCompressedCollection))

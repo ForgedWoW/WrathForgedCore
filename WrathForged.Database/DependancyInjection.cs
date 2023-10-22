@@ -56,7 +56,7 @@ public static class DependencyInjection
         var queryCache = new ForgeDBCache(new MemoryCacheOptions(), loggerFactory);
         QueryCacheManager.Cache = queryCache;
         QueryCacheManager.DefaultMemoryCacheEntryOptions = options;
-        _ = builder.ExportInstance(queryCache).As<ForgeDBCache>().Lifestyle.Singleton();
+        _ = builder.ExportInstance(queryCache).As<ForgeDBCache>();
 
         _ = builder.Export<DatabaseUpdater>().Lifestyle.Singleton();
 

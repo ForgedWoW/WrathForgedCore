@@ -57,12 +57,10 @@ public class RealmConnectionService : IPacketService
 
         InstanceServer.MapIDs = [.. mapInfoDict.Values];
 
-        ClientConnection = classFactory.Container.Locate<ForgedTCPClient>(new
-        {
-            bindIP = configuration.GetDefaultValue("ForgedServerComm:LocalAddress", "*"),
-            address = configuration.GetDefaultValue("ForgedServerComm:Realm:Address", "127.0.0.1"),
-            port = configuration.GetDefaultValue("ForgedServerComm:Realm:Port", 8780)
-        });
+        ClientConnection = classFactory.Container.LocateWithPositionalParams<ForgedTCPClient>(
+                            configuration.GetDefaultValue("ForgedServerComm:LocalAddress", "*"),
+                            configuration.GetDefaultValue("ForgedServerComm:Realm:Address", "127.0.0.1"),
+                            configuration.GetDefaultValue("ForgedServerComm:Realm:Port", 8780));
 
         _configuration = configuration;
         _logger = logger;

@@ -14,9 +14,9 @@ public class WoWClientSession : IWoWClientSession
 
     public WoWClientSession(ClientSocket clientSocket, PacketBuffer packetBuffer, ClassFactory classFactory)
     {
-        Security = classFactory.Container.Locate<SessionSecurity>(this);
-        Network = classFactory.Container.Locate<SessionNetwork>(clientSocket, packetBuffer, (MemoryStream)packetBuffer.Reader.BaseStream);
-        ClientTime = classFactory.Container.Locate<ClientTime>(this);
+        Security = classFactory.Container.LocateWithPositionalParams<SessionSecurity>(this);
+        Network = classFactory.Container.LocateWithPositionalParams<SessionNetwork>(clientSocket, packetBuffer, (MemoryStream)packetBuffer.Reader.BaseStream);
+        ClientTime = classFactory.Container.LocateWithPositionalParams<ClientTime>(this);
         _serverUpdateLoop = classFactory.Locate<ServerUpdateLoop>();
         _serverUpdateLoop.RegisterUpdateLoop(ClientTime, UpdateLoopPriorities.CLIENT_TIME);
 
