@@ -24,6 +24,9 @@
       "UpadateEnabled": "true"
     }
   },
+  "Data": {
+    "DataDir": ".\\Data"
+  },
   "ForgedServerComm": {
     "Port": 8783,
     "LocalAddress": "*",
@@ -132,7 +135,7 @@
                   {
                     "Name": "ByIncludingOnly",
                     "Args": {
-                      "expression": "StartsWith(SourceContext, 'Microsoft.EntityFrameworkCore')"
+                      "expression": "SourceContext = 'Microsoft' or StartsWith(SourceContext, 'Microsoft')"
                     }
                   }
                 ]

@@ -196,7 +196,7 @@ public class ForgedModelSerializer
     {
         var startTimestamp = DateTime.UtcNow;
 
-        if (!_systemScope.TryGetValue(t, out var propertyMetas))
+        if (!_deserializationMethodsCacheByType.TryGetValue(t, out var propertyMetas))
         {
             packet = default!;
             return DeserializationResult.UnknownPacket;
@@ -210,13 +210,7 @@ public class ForgedModelSerializer
 
         try
         {
-            var instance = Activator.CreateInstance(t);
-
-            if (instance == null)
-            {
-                packet = default!;
-                return DeserializationResult.Error;
-            }
+            var instance = propertyMetas.CreateObj();
 
             Dictionary<uint, int> collectionSizes = [];
             foreach (var prop in propertyMetas.Properties)

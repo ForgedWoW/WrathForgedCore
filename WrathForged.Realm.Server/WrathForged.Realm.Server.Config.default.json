@@ -9,6 +9,9 @@
   "RealmSettings": {
     "PlayerLimit": 1000
   },
+  "Data": {
+    "DataDir": ".\\Data",
+  },
   "Database": {
     "SlidingCacheTimeout_Hours": 2,
     "SQLDir": ".\\sql",
@@ -135,7 +138,7 @@
                   {
                     "Name": "ByIncludingOnly",
                     "Args": {
-                      "expression": "StartsWith(SourceContext, 'Microsoft.EntityFrameworkCore')"
+                      "expression": "SourceContext = 'Microsoft' or StartsWith(SourceContext, 'Microsoft')"
                     }
                   }
                 ]
