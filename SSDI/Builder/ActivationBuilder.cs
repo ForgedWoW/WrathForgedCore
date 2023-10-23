@@ -157,7 +157,13 @@ public class ActivationBuilder
     {
         if (c.Parameters.Length == 0)
         {
-            var noParamsInstance = c.Constructor.Invoke(null);
+            var noParamsInstance = c.ConstructorDelegate.DynamicInvoke(null);
+
+            if (noParamsInstance is null)
+            {
+                val = default!;
+                return false;
+            }
 
             if (lifestyleType == LifestyleType.Singleton)
             {
@@ -222,7 +228,13 @@ public class ActivationBuilder
             return false;
         }
 
-        var instance = c.Constructor.Invoke(parameters);
+        var instance = c.ConstructorDelegate.DynamicInvoke(parameters);
+
+        if (instance is null)
+        {
+            val = default!;
+            return false;
+        }
 
         if (lifestyleType == LifestyleType.Singleton)
         {
