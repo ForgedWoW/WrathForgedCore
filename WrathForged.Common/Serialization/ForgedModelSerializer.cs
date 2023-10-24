@@ -54,14 +54,15 @@ public class ForgedModelSerializer
             foreach (var prop in cls.GetProperties())
             {
                 var propAtt = serializableAttributeCache.GetAttribute(prop);
-                IConditionalSerialization? conditionalAtt = null;
+                IConditionalSerialization[] conditionalAtt = [];
                 var hasConditional = false;
 
                 foreach (var att in prop.GetCustomAttributes())
                     if (att is IConditionalSerialization conditionalSerialization)
                     {
                         hasConditional = true;
-                        conditionalAtt = conditionalSerialization;
+                        Array.Resize(ref conditionalAtt, conditionalAtt.Length + 1);
+                        conditionalAtt[^1] = conditionalSerialization;
                         break;
                     }
 
@@ -149,7 +150,7 @@ public class ForgedModelSerializer
         var startTimestamp = DateTime.UtcNow;
         foreach (var prop in deserializationDefinition.Properties)
         {
-            if (prop.ConditionalSerialization != null && !prop.ConditionalSerialization.ShouldDeserialize(obj, prop, deserializationDefinition.Properties))
+            if (prop.ConditionalSerialization.Length != 0 && prop.ConditionalSerialization.Any(s => !s.ShouldDeserialize(obj, prop, deserializationDefinition.Properties)))
                 continue;
 
             try
@@ -217,7 +218,7 @@ public class ForgedModelSerializer
             {
                 try
                 {
-                    if (prop.ConditionalSerialization != null && !prop.ConditionalSerialization.ShouldDeserialize(instance, prop, propertyMetas.Properties))
+                    if (prop.ConditionalSerialization.Length != 0 && prop.ConditionalSerialization.Any(s => !s.ShouldDeserialize(instance, prop, propertyMetas.Properties)))
                         continue;
 
                     // we need to decompress the collection before we can read it. This means even if its a object or a list of objects, the underlying type is a byte array.
@@ -302,7 +303,7 @@ public class ForgedModelSerializer
             {
                 try
                 {
-                    if (prop.ConditionalSerialization != null && !prop.ConditionalSerialization.ShouldDeserialize(instance, prop, deserializationDefinition.Item2.Properties))
+                    if (prop.ConditionalSerialization.Length != 0 && prop.ConditionalSerialization.Any(s => !s.ShouldDeserialize(instance, prop, deserializationDefinition.Item2.Properties)))
                         continue;
 
                     var isCollection = prop.SerializationMetadata.Flags.HasFlag(SerializationFlags.ZLibCompressedCollection) ||
