@@ -8,7 +8,7 @@ namespace WrathForged.Models.ConditionalSerializers;
 /// </summary>
 /// <param name="valIndex">Index of the value you wish to compare the <paramref name="expectedValue"/> to.</param>
 /// <param name="expectedValue">The expected value of the <paramref name="valIndex"/> Property.</param>
-[AttributeUsage(AttributeTargets.Property)]
+[AttributeUsage(AttributeTargets.Property, AllowMultiple = true)]
 public class ValueDoesNotEqualSerializerCondition(int valIndex, object expectedValue) : Attribute, IConditionalSerialization
 {
     private readonly int _valIndex = valIndex;

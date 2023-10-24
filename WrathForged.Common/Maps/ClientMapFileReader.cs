@@ -33,9 +33,9 @@ public class ClientMapFileReader(ForgedModelSerializer serializer, IConfiguratio
             {
                 packetBuffer.Reader.BaseStream.Position = mapFileHeader.AreaMapOffset;
 
-                if (_serializer.TryDeserialize(packetBuffer, out MapAreaHeader mapAreaHeader) == DeserializationResult.Success)
+                if (_serializer.TryDeserialize(packetBuffer, out MapAreaData mapAreaData) == DeserializationResult.Success)
                 {
-                    gridMap.AreaHeader = mapAreaHeader;
+                    gridMap.AreaData = mapAreaData;
                 }
                 else
                 {

@@ -6,5 +6,5 @@ namespace WrathForged.Models.Maps;
 public class GridMap
 {
     public required MapFileHeader FileHeader { get; set; }
-    public MapAreaData? AreaHeader { get; set; }
+    public MapAreaData? AreaData { get; set; }
 }

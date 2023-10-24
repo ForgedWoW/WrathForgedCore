@@ -11,7 +11,7 @@ namespace WrathForged.Models.ConditionalSerializers;
 /// <param name="vsValue"></param>
 /// <param name="equalityOperation"></param>
 /// <param name="equalityValue"></param>
-[AttributeUsage(AttributeTargets.Property)]
+[AttributeUsage(AttributeTargets.Property, AllowMultiple = true)]
 public class SerializerConditionBitwise(int valIndex, SerializerConditionBitwise.BitwiseOperation operation, int vsValue, SerializerConditionBitwise.EqualityOperation equalityOperation, int equalityValue) : Attribute, IConditionalSerialization
 {
     private readonly int _valIndex = valIndex;

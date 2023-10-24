@@ -9,7 +9,7 @@ namespace WrathForged.Models.ConditionalSerializers;
 /// <param name="valIndex"></param>
 /// <param name="enumType"></param>
 /// <param name="enumVal"></param>
-[AttributeUsage(AttributeTargets.Property)]
+[AttributeUsage(AttributeTargets.Property, AllowMultiple = true)]
 public class SerializerConditionDoseNotHaveFlag(int valIndex, Type enumType, int enumVal) : Attribute, IConditionalSerialization
 {
     private readonly int _valIndex = valIndex;

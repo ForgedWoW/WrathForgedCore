@@ -1,5 +1,6 @@
 ﻿// Copyright (c) Forged WoW LLC <https://github.com/ForgedWoW/WrathForgedCore>
 // Licensed under GPL-3.0 license. See <https://github.com/ForgedWoW/WrathForgedCore/blob/master/LICENSE> for full information.
+using WrathForged.Models.ConditionalSerializers;
 using WrathForged.Models.Maps.Enum;
 
 namespace WrathForged.Models.Maps.MapFiles;
@@ -18,4 +19,46 @@ public class MapHeightData
 
     [SerializableProperty(3)]
     public float GridMaxHeight { get; set; }
+
+    [SerializableProperty(4, FixedCollectionSize = 129 * 129)]
+    [SerializerConditionDoseNotHaveFlag(1, typeof(MapHeightFlags), (int)MapHeightFlags.NoHeight)]
+    [SerializerConditionHasFlag(1, typeof(MapHeightFlags), (int)MapHeightFlags.AsShort)]
+    public ushort[]? UshortV9 { get; set; }
+
+    [SerializableProperty(5, FixedCollectionSize = 129 * 129)]
+    [SerializerConditionDoseNotHaveFlag(1, typeof(MapHeightFlags), (int)MapHeightFlags.NoHeight)]
+    [SerializerConditionHasFlag(1, typeof(MapHeightFlags), (int)MapHeightFlags.AsShort)]
+    public ushort[]? UshortV8 { get; set; }
+
+    [SerializableProperty(6, FixedCollectionSize = 129 * 129)]
+    [SerializerConditionDoseNotHaveFlag(1, typeof(MapHeightFlags), (int)MapHeightFlags.NoHeight)]
+    [SerializerConditionHasFlag(1, typeof(MapHeightFlags), (int)MapHeightFlags.AsByte)]
+    public byte[]? ByteV9 { get; set; }
+
+    [SerializableProperty(7, FixedCollectionSize = 129 * 129)]
+    [SerializerConditionDoseNotHaveFlag(1, typeof(MapHeightFlags), (int)MapHeightFlags.NoHeight)]
+    [SerializerConditionHasFlag(1, typeof(MapHeightFlags), (int)MapHeightFlags.AsByte)]
+    public byte[]? ByteV8 { get; set; }
+
+    [SerializableProperty(8, FixedCollectionSize = 129 * 129)]
+    [SerializerConditionDoseNotHaveFlag(1, typeof(MapHeightFlags), (int)MapHeightFlags.NoHeight)]
+    [SerializerConditionDoseNotHaveFlag(1, typeof(MapHeightFlags), (int)MapHeightFlags.AsShort)]
+    [SerializerConditionDoseNotHaveFlag(1, typeof(MapHeightFlags), (int)MapHeightFlags.AsByte)]
+    public float[]? FloatV9 { get; set; }
+
+    [SerializableProperty(9, FixedCollectionSize = 129 * 129)]
+    [SerializerConditionDoseNotHaveFlag(1, typeof(MapHeightFlags), (int)MapHeightFlags.NoHeight)]
+    [SerializerConditionDoseNotHaveFlag(1, typeof(MapHeightFlags), (int)MapHeightFlags.AsShort)]
+    [SerializerConditionDoseNotHaveFlag(1, typeof(MapHeightFlags), (int)MapHeightFlags.AsByte)]
+    public float[]? FloatV8 { get; set; }
+
+    [SerializableProperty(10)]
+    [SerializerConditionHasFlag(1, typeof(MapHeightFlags), (int)MapHeightFlags.HasFlightBounds)]
+    public ushort[]? MaxHeights { get; set; }
+
+    [SerializableProperty(10)]
+    [SerializerConditionHasFlag(1, typeof(MapHeightFlags), (int)MapHeightFlags.HasFlightBounds)]
+    public ushort[]? MinHeights { get; set; }
+
+    public float GridInitialHeightMultiplier { get; set; }
 }
