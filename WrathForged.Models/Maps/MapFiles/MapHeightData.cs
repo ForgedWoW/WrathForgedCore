@@ -21,43 +21,43 @@ public class MapHeightData
     public float GridMaxHeight { get; set; }
 
     [SerializableProperty(4, FixedCollectionSize = 129 * 129)]
-    [SerializerConditionDoseNotHaveFlag(1, typeof(MapHeightFlags), (int)MapHeightFlags.NoHeight)]
-    [SerializerConditionHasFlag(1, typeof(MapHeightFlags), (int)MapHeightFlags.AsShort)]
+    [SerializerConditionDoseNotHaveFlag<MapHeightFlags>(1, MapHeightFlags.NoHeight)]
+    [SerializerConditionHasFlag<MapHeightFlags>(1, MapHeightFlags.AsShort)]
     public ushort[]? UshortV9 { get; set; }
 
     [SerializableProperty(5, FixedCollectionSize = 129 * 129)]
-    [SerializerConditionDoseNotHaveFlag(1, typeof(MapHeightFlags), (int)MapHeightFlags.NoHeight)]
-    [SerializerConditionHasFlag(1, typeof(MapHeightFlags), (int)MapHeightFlags.AsShort)]
+    [SerializerConditionDoseNotHaveFlag<MapHeightFlags>(1, MapHeightFlags.NoHeight)]
+    [SerializerConditionHasFlag<MapHeightFlags>(1, MapHeightFlags.AsShort)]
     public ushort[]? UshortV8 { get; set; }
 
     [SerializableProperty(6, FixedCollectionSize = 129 * 129)]
-    [SerializerConditionDoseNotHaveFlag(1, typeof(MapHeightFlags), (int)MapHeightFlags.NoHeight)]
-    [SerializerConditionHasFlag(1, typeof(MapHeightFlags), (int)MapHeightFlags.AsByte)]
+    [SerializerConditionDoseNotHaveFlag<MapHeightFlags>(1, MapHeightFlags.NoHeight)]
+    [SerializerConditionHasFlag<MapHeightFlags>(1, MapHeightFlags.AsByte)]
     public byte[]? ByteV9 { get; set; }
 
     [SerializableProperty(7, FixedCollectionSize = 129 * 129)]
-    [SerializerConditionDoseNotHaveFlag(1, typeof(MapHeightFlags), (int)MapHeightFlags.NoHeight)]
-    [SerializerConditionHasFlag(1, typeof(MapHeightFlags), (int)MapHeightFlags.AsByte)]
+    [SerializerConditionDoseNotHaveFlag<MapHeightFlags>(1, MapHeightFlags.NoHeight)]
+    [SerializerConditionHasFlag<MapHeightFlags>(1, MapHeightFlags.AsByte)]
     public byte[]? ByteV8 { get; set; }
 
     [SerializableProperty(8, FixedCollectionSize = 129 * 129)]
-    [SerializerConditionDoseNotHaveFlag(1, typeof(MapHeightFlags), (int)MapHeightFlags.NoHeight)]
-    [SerializerConditionDoseNotHaveFlag(1, typeof(MapHeightFlags), (int)MapHeightFlags.AsShort)]
-    [SerializerConditionDoseNotHaveFlag(1, typeof(MapHeightFlags), (int)MapHeightFlags.AsByte)]
+    [SerializerConditionDoseNotHaveFlag<MapHeightFlags>(1, MapHeightFlags.NoHeight)]
+    [SerializerConditionHasFlag<MapHeightFlags>(1, MapHeightFlags.AsShort)]
+    [SerializerConditionHasFlag<MapHeightFlags>(1, MapHeightFlags.AsByte)]
     public float[]? FloatV9 { get; set; }
 
     [SerializableProperty(9, FixedCollectionSize = 129 * 129)]
-    [SerializerConditionDoseNotHaveFlag(1, typeof(MapHeightFlags), (int)MapHeightFlags.NoHeight)]
-    [SerializerConditionDoseNotHaveFlag(1, typeof(MapHeightFlags), (int)MapHeightFlags.AsShort)]
-    [SerializerConditionDoseNotHaveFlag(1, typeof(MapHeightFlags), (int)MapHeightFlags.AsByte)]
+    [SerializerConditionHasFlag<MapHeightFlags>(1, MapHeightFlags.NoHeight)]
+    [SerializerConditionHasFlag<MapHeightFlags>(1, MapHeightFlags.AsShort)]
+    [SerializerConditionHasFlag<MapHeightFlags>(1, MapHeightFlags.AsByte)]
     public float[]? FloatV8 { get; set; }
 
     [SerializableProperty(10)]
-    [SerializerConditionHasFlag(1, typeof(MapHeightFlags), (int)MapHeightFlags.HasFlightBounds)]
+    [SerializerConditionHasFlag<MapHeightFlags>(1, MapHeightFlags.HasFlightBounds)]
     public ushort[]? MaxHeights { get; set; }
 
     [SerializableProperty(10)]
-    [SerializerConditionHasFlag(1, typeof(MapHeightFlags), (int)MapHeightFlags.HasFlightBounds)]
+    [SerializerConditionHasFlag<MapHeightFlags>(1, MapHeightFlags.HasFlightBounds)]
     public ushort[]? MinHeights { get; set; }
 
     public float GridInitialHeightMultiplier { get; set; }

@@ -37,6 +37,6 @@ public class AuthRealm
     public byte RealmId { get; set; }
 
     [SerializableProperty(9)]
-    [SerializerConditionHasFlag(2, typeof(RealmFlags), (int)RealmFlags.SpecifyBuild)]
+    [SerializerConditionHasFlag<RealmFlags>(2, RealmFlags.SpecifyBuild)]
     public RealmClientVersion Version { get; set; } = new RealmClientVersion();
 }

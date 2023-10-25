@@ -18,6 +18,6 @@ public class MapAreaData
     public ushort GridArea { get; set; }
 
     [SerializableProperty(1, FixedCollectionSize = 16 * 16)]
-    [SerializerConditionDoseNotHaveFlag(1, typeof(MapAreaFlags), (int)MapAreaFlags.NoArea)]
+    [SerializerConditionDoseNotHaveFlag<MapAreaFlags>(1, MapAreaFlags.NoArea)]
     public ushort[] AreaMap { get; set; } = [];
 }
