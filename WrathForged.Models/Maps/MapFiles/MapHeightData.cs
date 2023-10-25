@@ -1,5 +1,6 @@
 ﻿// Copyright (c) Forged WoW LLC <https://github.com/ForgedWoW/WrathForgedCore>
 // Licensed under GPL-3.0 license. See <https://github.com/ForgedWoW/WrathForgedCore/blob/master/LICENSE> for full information.
+using System.Numerics;
 using WrathForged.Models.ConditionalSerializers;
 using WrathForged.Models.Maps.Enum;
 
@@ -61,4 +62,6 @@ public class MapHeightData
     public ushort[]? MinHeights { get; set; }
 
     public float GridInitialHeightMultiplier { get; set; }
+
+    public Plane[] MinHeightPlanes { get; set; } = new Plane[8];
 }

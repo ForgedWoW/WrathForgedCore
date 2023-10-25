@@ -3,8 +3,9 @@
 namespace WrathForged.Models.Maps.Enum;
 
 [Flags]
-public enum MapAreaFlags : ushort
+public enum MapLiquidFlags : byte
 {
     None,
-    NoArea = 0x0001
+    NoType = 0x0001,
+    NoHeight = 0x0002
 }

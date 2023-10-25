@@ -7,4 +7,7 @@ public class GridMap
 {
     public required MapFileHeader FileHeader { get; set; }
     public MapAreaData? AreaData { get; set; }
+    public MapHeightData? HeightData { get; set; }
+    public MapLiquidData? LiquidData { get; set; }
+    public MapHolesData? HolesData { get; set; }
 }

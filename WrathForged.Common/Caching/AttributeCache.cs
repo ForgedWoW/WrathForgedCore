@@ -8,13 +8,13 @@ public class AttributeCache<T> where T : Attribute
 {
     // we cache the attributes so we don't have to use reflection every time, c# creates a new instance of the attribute every time you use GetCustomAttribute
     // we dont need a lock as we only ever read from this dictionary and we only add to it.
-    private readonly Dictionary<Type, T> _cachedAttributes = [];
-    private readonly Dictionary<PropertyInfo, T> _cachedPropertyAttributes = [];
-    private readonly Dictionary<FieldInfo, T> _cachedFieldAttributes = [];
-    private readonly Dictionary<MethodInfo, T> _cachedMethodAttributes = [];
-    private readonly Dictionary<EventInfo, T> _cachedEventAttributes = [];
-    private readonly Dictionary<ParameterInfo, T> _cachedParameterAttributes = [];
-    private readonly Dictionary<ConstructorInfo, T> _cachedConstructorAttributes = [];
+    private readonly Dictionary<Type, T?> _cachedAttributes = [];
+    private readonly Dictionary<PropertyInfo, T?> _cachedPropertyAttributes = [];
+    private readonly Dictionary<FieldInfo, T?> _cachedFieldAttributes = [];
+    private readonly Dictionary<MethodInfo, T?> _cachedMethodAttributes = [];
+    private readonly Dictionary<EventInfo, T?> _cachedEventAttributes = [];
+    private readonly Dictionary<ParameterInfo, T?> _cachedParameterAttributes = [];
+    private readonly Dictionary<ConstructorInfo, T?> _cachedConstructorAttributes = [];
 
     public T? GetAttribute(Type type)
     {
@@ -22,9 +22,6 @@ public class AttributeCache<T> where T : Attribute
             return attribute;
 
         attribute = type.GetCustomAttribute<T>(false);
-
-        if (attribute == null)
-            return null;
 
         _cachedAttributes[type] = attribute;
 
@@ -38,9 +35,6 @@ public class AttributeCache<T> where T : Attribute
 
         attribute = property.GetCustomAttribute<T>(false);
 
-        if (attribute == null)
-            return null;
-
         _cachedPropertyAttributes[property] = attribute;
         return attribute;
     }
@@ -51,9 +45,6 @@ public class AttributeCache<T> where T : Attribute
             return attribute;
 
         attribute = field.GetCustomAttribute<T>(false);
-
-        if (attribute == null)
-            return null;
 
         _cachedFieldAttributes[field] = attribute;
         return attribute;
@@ -66,9 +57,6 @@ public class AttributeCache<T> where T : Attribute
 
         attribute = method.GetCustomAttribute<T>(false);
 
-        if (attribute == null)
-            return null;
-
         _cachedMethodAttributes[method] = attribute;
         return attribute;
     }
@@ -79,9 +67,6 @@ public class AttributeCache<T> where T : Attribute
             return attribute;
 
         attribute = evnt.GetCustomAttribute<T>(false);
-
-        if (attribute == null)
-            return null;
 
         _cachedEventAttributes[evnt] = attribute;
         return attribute;
@@ -94,9 +79,6 @@ public class AttributeCache<T> where T : Attribute
 
         attribute = parameter.GetCustomAttribute<T>(false);
 
-        if (attribute == null)
-            return null;
-
         _cachedParameterAttributes[parameter] = attribute;
         return attribute;
     }
@@ -107,9 +89,6 @@ public class AttributeCache<T> where T : Attribute
             return attribute;
 
         attribute = constructor.GetCustomAttribute<T>(false);
-
-        if (attribute == null)
-            return null;
 
         _cachedConstructorAttributes[constructor] = attribute;
         return attribute;

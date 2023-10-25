@@ -18,6 +18,7 @@ namespace WrathForged.Common.Serialization;
 public class ForgedModelSerializer
 {
     private readonly ILogger _logger;
+    private readonly AttributeCache<CalculatedCollectionSizeAttribute> _calculatedCollectionSizeAttributeCache;
 
     /// <summary>
     ///     A cache of all the deserialization definitions for each object and their properties
@@ -33,7 +34,8 @@ public class ForgedModelSerializer
     private readonly Meter _meter;
 
     public ForgedModelSerializer(ILogger logger, ScriptLoader assemblyLoader, ClassFactory classFactory, MeterFactory meterFactory,
-                                 AttributeCache<ForgedSerializableAttribute> forgedSerializableAttributeCache, AttributeCache<SerializablePropertyAttribute> serializableAttributeCache)
+                                 AttributeCache<ForgedSerializableAttribute> forgedSerializableAttributeCache, AttributeCache<SerializablePropertyAttribute> serializableAttributeCache,
+                                 AttributeCache<CalculatedCollectionSizeAttribute> calculatedCollectionSizeAttributeCache)
     {
         var classesWithAttribute = assemblyLoader.GetAllTypesWithClassAttribute<ForgedSerializableAttribute>();
         _meter = meterFactory.GetOrCreateMeter(MeterKeys.WRATHFORGED_COMMON);
@@ -122,6 +124,7 @@ public class ForgedModelSerializer
         }
 
         _logger = logger;
+        _calculatedCollectionSizeAttributeCache = calculatedCollectionSizeAttributeCache;
     }
 
     public void Serialize<T>(PrimitiveWriter writer, T obj)
@@ -227,7 +230,7 @@ public class ForgedModelSerializer
                                        (prop.ReflectedProperty.PropertyType.IsGenericType && prop.ReflectedProperty.PropertyType.GetGenericTypeDefinition() == typeof(List<>)) ||
                                        (prop.ReflectedProperty.PropertyType.IsGenericType && prop.ReflectedProperty.PropertyType.GetGenericTypeDefinition() == typeof(HashSet<>));
 
-                    var result = isCollection ? DeserializeCollection(buffer, prop, collectionSizes)
+                    var result = isCollection ? DeserializeCollection(buffer, prop, collectionSizes, instance, propertyMetas.Properties)
                                      : prop.ReflectedProperty.PropertyType.IsEnum && !IsStringEnum(prop)
                                          ? _forgedTypeCodeSerializers[ForgedTypeCode.Enum].Deserialize(buffer, prop, collectionSizes)
                                          : DeserializeProperty(buffer, prop, collectionSizes);
@@ -311,7 +314,7 @@ public class ForgedModelSerializer
                                        (prop.ReflectedProperty.PropertyType.IsGenericType && prop.ReflectedProperty.PropertyType.GetGenericTypeDefinition() == typeof(List<>)) ||
                                        (prop.ReflectedProperty.PropertyType.IsGenericType && prop.ReflectedProperty.PropertyType.GetGenericTypeDefinition() == typeof(HashSet<>));
 
-                    var result = isCollection ? DeserializeCollection(buffer, prop, collectionSizes)
+                    var result = isCollection ? DeserializeCollection(buffer, prop, collectionSizes, instance, deserializationDefinition.Item2.Properties)
                                      : prop.ReflectedProperty.PropertyType.IsEnum && !IsStringEnum(prop)
                                          ? _forgedTypeCodeSerializers[ForgedTypeCode.Enum].Deserialize(buffer, prop, collectionSizes)
                                          : DeserializeProperty(buffer, prop, collectionSizes);
@@ -351,10 +354,13 @@ public class ForgedModelSerializer
         return DeserializationResult.Error;
     }
 
-    private object? DeserializeCollection(PacketBuffer oldBuffer, PropertyMeta prop, Dictionary<uint, int> collectionSizes)
+    private object? DeserializeCollection(PacketBuffer oldBuffer, PropertyMeta prop, Dictionary<uint, int> collectionSizes, object obj, List<PropertyMeta> otherMeta)
     {
         var buffer = oldBuffer;
-        var collectionSize = buffer.GetCollectionSize(prop, collectionSizes);
+
+        var collectionSize = _calculatedCollectionSizeAttributeCache.TryGetAttribute(prop.ReflectedProperty, out var collSize)
+            ? collSize.GetCalculatedValue(obj, prop, otherMeta)
+            : buffer.GetCollectionSize(prop, collectionSizes);
         var targetType = prop.ReflectedProperty.PropertyType;
 
         if (prop.SerializationMetadata.Flags.HasFlag(SerializationFlags.ZLibCompressedCollection))
