@@ -3,7 +3,7 @@
 using WrathForged.Models.Maps.MapFiles;
 
 namespace WrathForged.Models.Maps;
-public class GridMap
+public class MapFileData
 {
     public required MapFileHeader FileHeader { get; set; }
     public MapAreaData? AreaData { get; set; }

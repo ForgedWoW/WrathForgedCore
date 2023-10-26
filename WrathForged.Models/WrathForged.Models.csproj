@@ -32,6 +32,14 @@
 	</ItemGroup>
 
 	<ItemGroup>
+		<ProjectReference Include="..\DotRaycast\DotRecast.Core\DotRecast.Core.csproj" />
+		<ProjectReference Include="..\DotRaycast\DotRecast.Detour.Crowd\DotRecast.Detour.Crowd.csproj" />
+		<ProjectReference Include="..\DotRaycast\DotRecast.Detour.Dynamic\DotRecast.Detour.Dynamic.csproj" />
+		<ProjectReference Include="..\DotRaycast\DotRecast.Detour.Extras\DotRecast.Detour.Extras.csproj" />
+		<ProjectReference Include="..\DotRaycast\DotRecast.Detour.TileCache\DotRecast.Detour.TileCache.csproj" />
+		<ProjectReference Include="..\DotRaycast\DotRecast.Detour\DotRecast.Detour.csproj" />
+		<ProjectReference Include="..\DotRaycast\DotRecast.Recast.Toolset\DotRecast.Recast.Toolset.csproj" />
+		<ProjectReference Include="..\DotRaycast\DotRecast.Recast\DotRecast.Recast.csproj" />
 		<ProjectReference Include="..\WrathForged.Serialization.Models\WrathForged.Serialization.Models.csproj" />
 	</ItemGroup>
 </Project>

@@ -3,6 +3,7 @@
 using System.Net;
 using System.Numerics;
 using System.Text;
+using DotRecast.Core.Numerics;
 
 namespace WrathForged.Common.Networking;
 
@@ -417,6 +418,42 @@ public class PrimitiveWriter : BinaryWriter
     /// </summary>
     /// <param name="dateTime">the time to write</param>
     public void WriteDateTime(DateTime dateTime) => Write(dateTime.GetDateTimeToGameTime());
+
+    public void Write(Vector2 vector2)
+    {
+        Write(vector2.X);
+        Write(vector2.Y);
+    }
+
+    public void Write(Vector3 vector3)
+    {
+        Write(vector3.X);
+        Write(vector3.Y);
+        Write(vector3.Z);
+    }
+
+    public void Write(Vector4 vector4)
+    {
+        Write(vector4.X);
+        Write(vector4.Y);
+        Write(vector4.Z);
+        Write(vector4.W);
+    }
+
+    public void Write(Quaternion quaternion)
+    {
+        Write(quaternion.X);
+        Write(quaternion.Y);
+        Write(quaternion.Z);
+        Write(quaternion.W);
+    }
+
+    public void Write(RcVec3f rcVec3f)
+    {
+        Write(rcVec3f.X);
+        Write(rcVec3f.Y);
+        Write(rcVec3f.Z);
+    }
 
     public void InsertByteAt(byte value, long pos, bool returnOrigPos)
     {

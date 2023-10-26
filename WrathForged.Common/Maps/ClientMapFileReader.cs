@@ -41,15 +41,15 @@ public class ClientMapFileReader(ForgedModelSerializer serializer, IConfiguratio
         new(-533.33331f, -533.33331f)
     ];
 
-    public GridMap? ReadMap(string mapName)
+    public MapFileData? ReadMap(string mapName)
     {
         var dataDir = _configuration.GetDefaultValue("Data:DataDir", ".\\WoWData");
 
-        using PacketBuffer packetBuffer = new(File.ReadAllBytes(Path.Combine(dataDir, mapName)), _logger);
+        using PacketBuffer packetBuffer = new(File.ReadAllBytes(Path.Combine(dataDir, "maps", mapName)), _logger);
 
         if (_serializer.TryDeserialize<MapFileHeader>(packetBuffer, out var mapFileHeader) == DeserializationResult.Success)
         {
-            GridMap gridMap = new()
+            MapFileData gridMap = new()
             {
                 FileHeader = mapFileHeader
             };
@@ -69,7 +69,7 @@ public class ClientMapFileReader(ForgedModelSerializer serializer, IConfiguratio
         return null;
     }
 
-    private void ReadMapHolesMap(string mapName, PacketBuffer packetBuffer, MapFileHeader mapFileHeader, GridMap gridMap)
+    private void ReadMapHolesMap(string mapName, PacketBuffer packetBuffer, MapFileHeader mapFileHeader, MapFileData gridMap)
     {
         if (mapFileHeader.HolesOffset > 0)
         {
@@ -86,7 +86,7 @@ public class ClientMapFileReader(ForgedModelSerializer serializer, IConfiguratio
         }
     }
 
-    private void ReadMapLiquidMap(string mapName, PacketBuffer packetBuffer, MapFileHeader mapFileHeader, GridMap gridMap)
+    private void ReadMapLiquidMap(string mapName, PacketBuffer packetBuffer, MapFileHeader mapFileHeader, MapFileData gridMap)
     {
         if (mapFileHeader.LiquidMapOffset > 0)
         {
@@ -103,7 +103,7 @@ public class ClientMapFileReader(ForgedModelSerializer serializer, IConfiguratio
         }
     }
 
-    private void ReadHeightMap(string mapName, PacketBuffer packetBuffer, MapFileHeader mapFileHeader, GridMap gridMap)
+    private void ReadHeightMap(string mapName, PacketBuffer packetBuffer, MapFileHeader mapFileHeader, MapFileData gridMap)
     {
         if (mapFileHeader.HeightMapOffset > 0)
         {
@@ -148,7 +148,7 @@ public class ClientMapFileReader(ForgedModelSerializer serializer, IConfiguratio
         }
     }
 
-    private void ReadAreaMap(string mapName, PacketBuffer packetBuffer, MapFileHeader mapFileHeader, GridMap gridMap)
+    private void ReadAreaMap(string mapName, PacketBuffer packetBuffer, MapFileHeader mapFileHeader, MapFileData gridMap)
     {
         if (mapFileHeader.AreaMapOffset > 0)
         {

@@ -1,6 +1,7 @@
 ﻿// Copyright (c) Forged WoW LLC <https://github.com/ForgedWoW/WrathForgedCore>
 // Licensed under GPL-3.0 license. See <https://github.com/ForgedWoW/WrathForgedCore/blob/master/LICENSE> for full information.
 using System.Diagnostics;
+using DotRecast.Detour.Io;
 using Microsoft.Extensions.Configuration;
 using OpenTelemetry;
 using OpenTelemetry.Metrics;
@@ -14,6 +15,7 @@ using WrathForged.Common.Cryptography;
 using WrathForged.Common.DBC;
 using WrathForged.Common.External;
 using WrathForged.Common.Localization;
+using WrathForged.Common.Maps;
 using WrathForged.Common.Networking;
 using WrathForged.Common.Observability;
 using WrathForged.Common.RBAC;
@@ -100,6 +102,8 @@ public static class DependencyInjection
         _ = builder.Export<BanValidator>().Lifestyle.Singleton();
         _ = builder.Export<CacheBuilder>().Lifestyle.Singleton();
         _ = builder.Export<IpStackGeoLocationService>().Lifestyle.Singleton();
+        _ = builder.Export<ClientMMapFileReader>().Lifestyle.Singleton();
+        _ = builder.Export<DtMeshDataReader>().Lifestyle.Singleton();
 
         // configure OpenTelemetry
         if (configuration.GetDefaultValue("Telemetry:Enabled", false))

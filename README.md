@@ -14,7 +14,7 @@ To configure code cleanup to use the editorconfig within the project, go to Anal
 
 
 ### Technologies
-- .NET 7.0
+- .NET 8.0
 - OpenTelemetry
     - Zipkin and OpenTelemetryProtocol supported
 - Entity Framework Core

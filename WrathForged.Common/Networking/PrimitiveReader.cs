@@ -3,6 +3,7 @@
 using System.Net;
 using System.Numerics;
 using System.Text;
+using DotRecast.Core.Numerics;
 using Serilog;
 using WrathForged.Models;
 
@@ -204,6 +205,10 @@ public class PrimitiveReader(MemoryStream memoryStream, ILogger logger) : Binary
 
         return new IPAddress(data);
     }
+
+    public RcVec3f ReadRcVec3f() => new(ReadSingle(), ReadSingle(), ReadSingle());
+
+    public Vector2 ReadVector2() => new(ReadSingle(), ReadSingle());
 
     /// <summary>
     /// Reads a <see cref="Vector3" /> from the current stream.
