@@ -8,15 +8,14 @@ using Serilog;
 using WrathForged.Models.Maps.MapFiles;
 
 namespace WrathForged.Common.Maps;
-#pragma warning disable CA2241 // Provide correct arguments to formatting methods
 
 public class ClientMMapFileReader(IConfiguration configuration, ILogger logger, DtMeshDataReader dtMeshDataReader)
 {
     private readonly IConfiguration _configuration = configuration;
     private readonly ILogger _logger = logger;
     private readonly DtMeshDataReader _dtMeshDataReader = dtMeshDataReader;
-    private const string MAP_FILE_NAME_FORMAT = "{1:D4}.mmap";
-    private const string TILE_FILE_NAME_FORMAT = "{1:D4}{2:D2}{3:D2}.mmtile";
+    private const string MAP_FILE_NAME_FORMAT = "{0:D4}.mmap";
+    private const string TILE_FILE_NAME_FORMAT = "{0:D4}{1:D2}{2:D2}.mmtile";
 
     public DtNavMeshParams LoadFileParams(uint mapId)
     {

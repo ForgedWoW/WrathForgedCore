@@ -7,6 +7,6 @@ namespace WrathForged.Models.Maps;
 public class MMapData(DtNavMesh navMesh)
 {
     public DtNavMesh NavMesh { get; } = navMesh;
-    public Dictionary<uint, long> LoadedTileRefs { get; } = [];
+    public Dictionary<int, long> LoadedTileRefs { get; } = [];
     public Dictionary<uint, DtNavMeshQuery> NavMeshQueries { get; } = [];
 }

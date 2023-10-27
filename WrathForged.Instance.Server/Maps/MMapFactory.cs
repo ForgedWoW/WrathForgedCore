@@ -2,18 +2,42 @@
 // Licensed under GPL-3.0 license. See <https://github.com/ForgedWoW/WrathForgedCore/blob/master/LICENSE> for full information.
 using DotRecast.Detour;
 using WrathForged.Common.Maps;
+using WrathForged.Database.Models.World;
 using WrathForged.Models.Maps;
 
 namespace WrathForged.Instance.Server.Maps;
 
-public class MMapFactory(ClientMMapFileReader clientMMapFileReader)
+public class MMapFactory
 {
-    private readonly ClientMMapFileReader _clientMMapFileReader = clientMMapFileReader;
+    private readonly ClientMMapFileReader _clientMMapFileReader;
     private readonly Dictionary<uint, MMapData> _mMapData = [];
+    private readonly HashSet<uint> _disabledMMaps = [];
 
-    public bool LoadMap(uint mapId, int x, int y)
+    public MMapFactory(ClientMMapFileReader clientMMapFileReader, WorldDatabase worldDatabase)
     {
-        if (!LoadMMapFile(mapId))
+        _clientMMapFileReader = clientMMapFileReader;
+
+        var disabledMMaps = worldDatabase.Disables.Where(x => x.SourceType == 7);
+
+        foreach (var disabledMMap in disabledMMaps)
+            _ = _disabledMMaps.Add(disabledMMap.Entry);
+    }
+
+    public bool TryGetMMap(uint mapId, out MMapData mmapData)
+    {
+        if (_mMapData.TryGetValue(mapId, out var data))
+        {
+            mmapData = data;
+            return true;
+        }
+
+        mmapData = default!;
+        return false;
+    }
+
+    public bool LoadMMap(uint mapId, int x, int y)
+    {
+        if (_disabledMMaps.Contains(mapId) || !LoadMMapFile(mapId))
             return false;
 
         // get this mmap data
@@ -36,6 +60,9 @@ public class MMapFactory(ClientMMapFileReader clientMMapFileReader)
 
     private bool LoadMMapFile(uint mapId)
     {
+        if (_disabledMMaps.Contains(mapId))
+            return false;
+
         if (_mMapData.ContainsKey(mapId))
             return true;
 
@@ -45,5 +72,5 @@ public class MMapFactory(ClientMMapFileReader clientMMapFileReader)
         return true;
     }
 
-    private static uint PackTileID(int x, int y) => (uint)((x << 16) | y);
+    private static int PackTileID(int x, int y) => (x << 16) | y;
 }

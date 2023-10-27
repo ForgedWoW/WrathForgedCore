@@ -33,6 +33,7 @@ public static class DependencyInjection
         _ = builder.Export<WorldDatabase>()
             .WithCtorParam("options", new DbContextOptionsBuilder<WorldDatabase>()
             .UseLoggerFactory(loggerFactory)
+            .UseMemoryCache(new MemoryCache(new MemoryCacheOptions()))
             .UseMySql(configuration.GetConnectionString("world"), ServerVersion.AutoDetect(configuration.GetConnectionString("world")), options => options.EnableRetryOnFailure()).Options);
 
         _ = builder.Export<CharacterDatabase>()
