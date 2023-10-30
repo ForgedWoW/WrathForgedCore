@@ -5,12 +5,13 @@ using static WrathForged.Models.CalculatedCollectionSizeAttribute;
 namespace WrathForged.Models;
 
 [AttributeUsage(AttributeTargets.Property)]
-public class CalculatedCollectionSizeAttribute(int propertyNumber, CalculationType calculationType, CalculateBy calculateBy, int valueOrPropertyNumber) : Attribute
+public class CalculatedCollectionSizeAttribute(int propertyNumber, CalculationType calculationType, CalculateBy calculateBy, int valueOrPropertyNumber, bool addOne = false) : Attribute
 {
     private readonly int _propertyNumber = propertyNumber;
     private readonly CalculationType _calculationType = calculationType;
     private readonly CalculateBy _calculateBy = calculateBy;
     private readonly int _valueOrPropertyNumber = valueOrPropertyNumber;
+    private readonly bool _addOne = addOne;
 
     public enum CalculationType
     {
@@ -36,6 +37,12 @@ public class CalculatedCollectionSizeAttribute(int propertyNumber, CalculationTy
             CalculateBy.Value => _valueOrPropertyNumber,
             _ => throw new NotImplementedException()
         };
+
+        if (_addOne)
+        {
+            calculatedValue++;
+            propertyVal++;
+        }
 
         return propertyVal == null || calculatedValue == null
             ? throw new InvalidOperationException("Cannot calculate collection size when one of the values is null.")

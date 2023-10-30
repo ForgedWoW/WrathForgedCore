@@ -75,4 +75,9 @@ public enum ForgedTypeCode
     PascalString = 22,
 
     Enum = 23,
+
+    /// <summary>
+    ///     Read as a string, but written as a char array.
+    /// </summary>
+    CharArray = 24,
 }

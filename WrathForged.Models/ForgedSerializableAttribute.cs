@@ -8,7 +8,7 @@ using WrathForged.Serialization.Models;
 
 namespace WrathForged.Models;
 
-[AttributeUsage(AttributeTargets.Class)]
+[AttributeUsage(AttributeTargets.Class | AttributeTargets.Struct)]
 public class ForgedSerializableAttribute : Attribute
 {
     public ForgedSerializableAttribute(PacketScope packetScope = PacketScope.System)

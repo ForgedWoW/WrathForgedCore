@@ -60,4 +60,8 @@ public enum SerializationFlags
     ///     If this property is default value then it will not be serialized and sent to the stream.
     /// </summary>
     DontSerializeWhenDefaultValue = 1 << 9,
+
+    DictionaryKeyIsIndex = 1 << 10,
+
+    DictionaryValueIsIndex = 1 << 11
 }

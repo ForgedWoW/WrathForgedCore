@@ -4,6 +4,8 @@ using System.Net;
 using System.Numerics;
 using System.Text;
 using DotRecast.Core.Numerics;
+using WrathForged.Models.GameMath;
+using WrathForged.Models.Maps;
 
 namespace WrathForged.Common.Networking;
 
@@ -419,6 +421,12 @@ public class PrimitiveWriter : BinaryWriter
     /// <param name="dateTime">the time to write</param>
     public void WriteDateTime(DateTime dateTime) => Write(dateTime.GetDateTimeToGameTime());
 
+    public void Write(AxisAlignedBox axisAlignedBox)
+    {
+        Write(axisAlignedBox.Lo);
+        Write(axisAlignedBox.Hi);
+    }
+
     public void Write(Vector2 vector2)
     {
         Write(vector2.X);
@@ -453,6 +461,13 @@ public class PrimitiveWriter : BinaryWriter
         Write(rcVec3f.X);
         Write(rcVec3f.Y);
         Write(rcVec3f.Z);
+    }
+
+    public void Write(MeshTriangle meshTriangle)
+    {
+        Write(meshTriangle.Idx0);
+        Write(meshTriangle.Idx1);
+        Write(meshTriangle.Idx2);
     }
 
     public void InsertByteAt(byte value, long pos, bool returnOrigPos)

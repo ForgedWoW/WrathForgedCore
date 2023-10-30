@@ -2,10 +2,14 @@
 // Licensed under GPL-3.0 license. See <https://github.com/ForgedWoW/WrathForgedCore/blob/master/LICENSE> for full information.
 using System.Net;
 using System.Numerics;
+using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
 using System.Text;
 using DotRecast.Core.Numerics;
 using Serilog;
 using WrathForged.Models;
+using WrathForged.Models.GameMath;
+using WrathForged.Models.Maps;
 
 namespace WrathForged.Common.Networking;
 
@@ -73,10 +77,10 @@ public class PrimitiveReader(MemoryStream memoryStream, ILogger logger) : Binary
             chrBuffer.Add(tempByte);
         }
 
-        var stringChrs = DefaultEncoding.GetChars([.. chrBuffer]);
-        _ = stringChrs.Reverse();
+        var stringChars = DefaultEncoding.GetChars([.. chrBuffer]);
+        _ = stringChars.Reverse();
 
-        return new string(stringChrs);
+        return new string(stringChars);
     }
 
     /// <summary>
@@ -128,10 +132,10 @@ public class PrimitiveReader(MemoryStream memoryStream, ILogger logger) : Binary
             return "";
         }
 
-        var chrs = ReadChars(length);
-        _ = chrs.Reverse();
+        var chars = ReadChars(length);
+        _ = chars.Reverse();
 
-        return new string(chrs);
+        return new string(chars);
     }
 
     public string ReadFourCC()
@@ -141,20 +145,20 @@ public class PrimitiveReader(MemoryStream memoryStream, ILogger logger) : Binary
             return "";
         }
 
-        var chrs = ReadChars(4);
+        var chars = ReadChars(4);
         //if the fourcc is null terminated
         //then we dont want to move the termination
         //character!
-        if (chrs[3] == 0)
+        if (chars[3] == 0)
         {
-            (chrs[2], chrs[0]) = (chrs[0], chrs[2]);
+            (chars[2], chars[0]) = (chars[0], chars[2]);
         }
         else
         {
-            _ = chrs.Reverse();
+            _ = chars.Reverse();
         }
 
-        return new string(chrs);
+        return new string(chars);
     }
 
     /// <summary>
@@ -206,7 +210,11 @@ public class PrimitiveReader(MemoryStream memoryStream, ILogger logger) : Binary
         return new IPAddress(data);
     }
 
+    public MeshTriangle ReadMeshTriangle() => new(ReadInt32(), ReadInt32(), ReadInt32());
+
     public RcVec3f ReadRcVec3f() => new(ReadSingle(), ReadSingle(), ReadSingle());
+
+    public AxisAlignedBox ReadAxisAlignedBox() => new(ReadVector3(), ReadVector3());
 
     public Vector2 ReadVector2() => new(ReadSingle(), ReadSingle());
 
@@ -234,7 +242,7 @@ public class PrimitiveReader(MemoryStream memoryStream, ILogger logger) : Binary
     }
 
     /// <summary>
-    /// Reads an EntitiyId packed
+    /// Reads an EntityId packed
     /// </summary>
     /// <returns></returns>
     public EntityId ReadPackedEntityId()
@@ -252,4 +260,48 @@ public class PrimitiveReader(MemoryStream memoryStream, ILogger logger) : Binary
 
         return new EntityId(guid);
     }
+
+    public T Read<T>() where T : struct
+    {
+        var result = ReadBytes(Unsafe.SizeOf<T>());
+
+        return Unsafe.ReadUnaligned<T>(ref result[0]);
+    }
+
+    public T[] ReadArray<T>(uint size) where T : struct
+    {
+        var numBytes = Unsafe.SizeOf<T>() * (int)size;
+
+        var source = ReadBytes(numBytes);
+
+        var result = new T[source.Length / Unsafe.SizeOf<T>()];
+
+        if (source.Length > 0)
+            unsafe
+            {
+                Unsafe.CopyBlockUnaligned(Unsafe.AsPointer(ref result[0]), Unsafe.AsPointer(ref source[0]), (uint)source.Length);
+            }
+
+        return result;
+    }
+
+    public object[] ReadArray(Type type, uint size)
+    {
+        var numBytes = Marshal.SizeOf(type) * (int)size;
+
+        var source = ReadBytes(numBytes);
+
+        var result = new object[source.Length / Marshal.SizeOf(type)];
+
+        if (source.Length > 0)
+            unsafe
+            {
+                Unsafe.CopyBlockUnaligned(Unsafe.AsPointer(ref result[0]), Unsafe.AsPointer(ref source[0]), (uint)source.Length);
+            }
+
+        return result;
+    }
+
+    public string ReadStringFromChars(int count) => new(ReadChars(count));
+
 }

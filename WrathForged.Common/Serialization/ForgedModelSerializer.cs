@@ -1,6 +1,7 @@
 ﻿// Copyright (c) Forged WoW LLC <https://github.com/ForgedWoW/WrathForgedCore>
 // Licensed under GPL-3.0 license. See <https://github.com/ForgedWoW/WrathForgedCore/blob/master/LICENSE> for full information.
 using System.Collections;
+using System.Collections.Concurrent;
 using System.Diagnostics.Metrics;
 using System.Reflection;
 using Elskom.Generic.Libs;
@@ -392,6 +393,8 @@ public class ForgedModelSerializer
             collectionSize = buffer.GetCollectionSize(prop, collectionSizes); // get the collection size from the decompressed data.
         }
 
+        var genericTypeDefinition = targetType.IsGenericType ? targetType.GetGenericTypeDefinition() : null;
+
         if (targetType.IsArray)
         {
             var elementType = targetType.GetElementType();
@@ -411,7 +414,7 @@ public class ForgedModelSerializer
 
             return array;
         }
-        else if (targetType.IsGenericType && targetType.GetGenericTypeDefinition() == typeof(List<>))
+        else if (genericTypeDefinition == typeof(List<>))
         {
             var elementType = targetType.GetGenericArguments()[0];
             var listType = typeof(List<>).MakeGenericType(elementType);
@@ -426,7 +429,7 @@ public class ForgedModelSerializer
 
             return list;
         }
-        else if (targetType.IsGenericType && targetType.GetGenericTypeDefinition() == typeof(HashSet<>))
+        else if (genericTypeDefinition == typeof(HashSet<>))
         {
             var elementType = targetType.GetGenericArguments()[0];
             var hashSetType = typeof(HashSet<>).MakeGenericType(elementType);
@@ -441,6 +444,70 @@ public class ForgedModelSerializer
             }
 
             return hashSet;
+        }
+        else if (genericTypeDefinition == typeof(Dictionary<,>))
+        {
+            var keyType = targetType.GetGenericArguments()[0];
+            var valueType = targetType.GetGenericArguments()[1];
+            var dictionaryType = typeof(Dictionary<,>).MakeGenericType(keyType, valueType);
+            var dictionary = Activator.CreateInstance(dictionaryType) as dynamic;
+            var keyIsIndex = prop.SerializationMetadata.Flags.HasFlag(SerializationFlags.DictionaryKeyIsIndex);
+            var valIsIndex = prop.SerializationMetadata.Flags.HasFlag(SerializationFlags.DictionaryValueIsIndex);
+
+            if (dictionary == null)
+                return null;
+
+            if (keyIsIndex)
+            {
+                for (var i = 0; i < collectionSize; i++)
+                    dictionary.Add(i, DeserializeProperty(buffer, prop, collectionSizes));
+            }
+            else if (valIsIndex)
+            {
+                for (var i = 0; i < collectionSize; i++)
+                    dictionary.Add(DeserializeProperty(buffer, prop, collectionSizes), i);
+            }
+            else
+                for (var i = 0; i < collectionSize; i++)
+                {
+                    var key = DeserializeProperty(buffer, prop, collectionSizes);
+                    var value = DeserializeProperty(buffer, prop, collectionSizes);
+                    dictionary.Add(key, value);
+                }
+
+            return dictionary;
+        }
+        else if (genericTypeDefinition == typeof(ConcurrentDictionary<,>))
+        {
+            var keyType = targetType.GetGenericArguments()[0];
+            var valueType = targetType.GetGenericArguments()[1];
+            var dictionaryType = typeof(ConcurrentDictionary<,>).MakeGenericType(keyType, valueType);
+            var dictionary = Activator.CreateInstance(dictionaryType) as dynamic;
+            var keyIsIndex = prop.SerializationMetadata.Flags.HasFlag(SerializationFlags.DictionaryKeyIsIndex);
+            var valIsIndex = prop.SerializationMetadata.Flags.HasFlag(SerializationFlags.DictionaryValueIsIndex);
+
+            if (dictionary == null)
+                return null;
+
+            if (keyIsIndex)
+            {
+                for (var i = 0; i < collectionSize; i++)
+                    dictionary.TryAdd(i, DeserializeProperty(buffer, prop, collectionSizes));
+            }
+            else if (valIsIndex)
+            {
+                for (var i = 0; i < collectionSize; i++)
+                    dictionary.TryAdd(DeserializeProperty(buffer, prop, collectionSizes), i);
+            }
+            else
+                for (var i = 0; i < collectionSize; i++)
+                {
+                    var key = DeserializeProperty(buffer, prop, collectionSizes);
+                    var value = DeserializeProperty(buffer, prop, collectionSizes);
+                    dictionary.TryAdd(key, value);
+                }
+
+            return dictionary;
         }
         else
         {
@@ -488,12 +555,40 @@ public class ForgedModelSerializer
                             ? prop.ReflectedProperty.PropertyType.GenericTypeArguments[0]
                             : prop.ReflectedProperty.PropertyType.GetElementType();
 
+        var genericTypeDefinition = prop.ReflectedProperty.PropertyType.IsGenericType ? prop.ReflectedProperty.PropertyType.GetGenericTypeDefinition() : null;
+
         if (val is IEnumerable collection)
-            foreach (var item in collection)
+        {
+            if (genericTypeDefinition == typeof(ConcurrentDictionary<,>) ||
+                genericTypeDefinition == typeof(Dictionary<,>))
             {
-                SerializeProperty(writer, prop, otherMeta, obj, item);
-                i++;
+                _ = prop.ReflectedProperty.PropertyType.GetGenericArguments();
+
+                var keyIsIndex = prop.SerializationMetadata.Flags.HasFlag(SerializationFlags.DictionaryKeyIsIndex);
+                var valIsIndex = prop.SerializationMetadata.Flags.HasFlag(SerializationFlags.DictionaryValueIsIndex);
+
+                foreach (var item in collection.Cast<dynamic>())
+                {
+                    if (keyIsIndex)
+                        SerializeProperty(writer, prop, otherMeta, obj, item.Key);
+                    else if (valIsIndex)
+                        SerializeProperty(writer, prop, otherMeta, obj, item.Value);
+                    else
+                    {
+                        SerializeProperty(writer, prop, otherMeta, obj, item.Key);
+                        SerializeProperty(writer, prop, otherMeta, obj, item.Value);
+                    }
+
+                    i++;
+                }
             }
+            else
+                foreach (var item in collection)
+                {
+                    SerializeProperty(writer, prop, otherMeta, obj, item);
+                    i++;
+                }
+        }
 
         if (prop.SerializationMetadata.FixedCollectionSize > i)
         {

@@ -2,8 +2,10 @@
 // Licensed under GPL-3.0 license. See <https://github.com/ForgedWoW/WrathForgedCore/blob/master/LICENSE> for full information.
 using DotRecast.Detour;
 using WrathForged.Common.Maps;
+using WrathForged.Database.Models.DBC;
 using WrathForged.Database.Models.World;
 using WrathForged.Models.Maps;
+using Z.EntityFramework.Plus;
 
 namespace WrathForged.Instance.Server.Maps;
 
@@ -13,7 +15,7 @@ public class MMapFactory
     private readonly Dictionary<uint, MMapData> _mMapData = [];
     private readonly HashSet<uint> _disabledMMaps = [];
 
-    public MMapFactory(ClientMMapFileReader clientMMapFileReader, WorldDatabase worldDatabase)
+    public MMapFactory(ClientMMapFileReader clientMMapFileReader, WorldDatabase worldDatabase, DBCDatabase dBCDatabase)
     {
         _clientMMapFileReader = clientMMapFileReader;
 

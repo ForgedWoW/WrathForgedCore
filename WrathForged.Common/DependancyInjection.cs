@@ -103,6 +103,7 @@ public static class DependencyInjection
         _ = builder.Export<CacheBuilder>().Lifestyle.Singleton();
         _ = builder.Export<IpStackGeoLocationService>().Lifestyle.Singleton();
         _ = builder.Export<ClientMMapFileReader>().Lifestyle.Singleton();
+        _ = builder.Export<ClientVMapFileReader>().Lifestyle.Singleton();
         _ = builder.Export<DtMeshDataReader>().Lifestyle.Singleton();
 
         // configure OpenTelemetry

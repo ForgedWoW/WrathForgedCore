@@ -24,10 +24,10 @@ public class RealmAuthResponse
     public byte Expansion { get; set; } = 2; // Wrath of the Lich King
 
     [SerializableProperty(5)]
-    [ValueDoesNotEqualSerializerCondition(5, 0)]
+    [SerializerConditionValue(5, SerializerConditionValue.ConditionalSerializationType.NotEqual, 0)]
     public int QueuePosition { get; set; }
 
     [SerializableProperty(6)]
-    [ValueDoesNotEqualSerializerCondition(5, 0)]
+    [SerializerConditionValue(5, SerializerConditionValue.ConditionalSerializationType.NotEqual, 0)]
     public bool RealmHasFreeCharacterMigration { get; set; }
 }

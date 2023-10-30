@@ -16,6 +16,7 @@ public static class DependencyInjection
         _ = builder.Export<WoWClientServer>().WithCtorParam(PacketScope.ClientToInstance).Lifestyle.Singleton();
         _ = builder.Export<InstanceClientSession>().As<IWoWClientSession>();
         _ = builder.Export<MMapFactory>().Lifestyle.Singleton();
+        _ = builder.Export<VMapFactory>().Lifestyle.Singleton();
         return builder;
     }
 }
