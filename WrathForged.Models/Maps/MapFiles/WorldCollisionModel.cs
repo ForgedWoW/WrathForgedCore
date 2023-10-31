@@ -1,5 +1,7 @@
 ﻿// Copyright (c) Forged WoW LLC <https://github.com/ForgedWoW/WrathForgedCore>
 // Licensed under GPL-3.0 license. See <https://github.com/ForgedWoW/WrathForgedCore/blob/master/LICENSE> for full information.
+using WrathForged.Models.Maps.Enum;
+
 namespace WrathForged.Models.Maps.MapFiles;
 
 [ForgedSerializable]
@@ -28,4 +30,6 @@ public class WorldCollisionModel
 
     [SerializableProperty(6)]
     public BoundingIntervalHierarchy GroupTree { get; set; } = new();
+
+    public CollisionModelSpawnFlags Flags { get; set; }
 }

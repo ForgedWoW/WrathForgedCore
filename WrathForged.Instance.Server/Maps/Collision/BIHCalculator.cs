@@ -168,7 +168,7 @@ public class BIHCalculator
         var invDir = r.InvDirection();
 
         for (var i = 0; i < 3; ++i)
-            if (MathFunctions.fuzzyNe(dir.GetAt(i), 0.0f))
+            if (MathFunctions.FuzzyNe(dir.GetAt(i), 0.0f))
             {
                 var t1 = (BIH.Bounds.Lo.GetAt(i) - org.GetAt(i)) * invDir.GetAt(i);
                 var t2 = (BIH.Bounds.Hi.GetAt(i) - org.GetAt(i)) * invDir.GetAt(i);
@@ -471,7 +471,7 @@ public class BIHCalculator
             if (right == rightOrig)
             {
                 // all left
-                if (prevAxis == axis && MathFunctions.fuzzyEq(prevSplit, split))
+                if (prevAxis == axis && MathFunctions.FuzzyEq(prevSplit, split))
                 {
                     // we are stuck here - create a leaf
                     CreateNode(tempTree, nodeIndex, left, right);
@@ -497,7 +497,7 @@ public class BIHCalculator
                 // all right
                 right = rightOrig;
 
-                if (prevAxis == axis && MathFunctions.fuzzyEq(prevSplit, split))
+                if (prevAxis == axis && MathFunctions.FuzzyEq(prevSplit, split))
                 {
                     // we are stuck here - create a leaf
                     CreateNode(tempTree, nodeIndex, left, right);

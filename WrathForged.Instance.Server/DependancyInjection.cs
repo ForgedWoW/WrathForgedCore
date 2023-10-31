@@ -4,6 +4,7 @@ using SSDI.Registration;
 using WrathForged.Common;
 using WrathForged.Common.Networking;
 using WrathForged.Instance.Server.Maps;
+using WrathForged.Instance.Server.Maps.Collision;
 using WrathForged.Serialization.Models;
 
 namespace WrathForged.Instance.Server;
@@ -17,6 +18,7 @@ public static class DependencyInjection
         _ = builder.Export<InstanceClientSession>().As<IWoWClientSession>();
         _ = builder.Export<MMapFactory>().Lifestyle.Singleton();
         _ = builder.Export<VMapFactory>().Lifestyle.Singleton();
+        _ = builder.Export<StaticMapTree>();
         return builder;
     }
 }

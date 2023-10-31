@@ -6,7 +6,7 @@ using WrathForged.Instance.Server.Maps.Collision.Interface;
 namespace WrathForged.Instance.Server.Maps.Collision.Callbacks;
 public class WModelAreaCallback(List<GroupCollisionCalculator> vals, Vector3 down) : IPointIntersect
 {
-    public GroupCollisionCalculator? Hit { get; set; } = null;
+    public GroupCollisionCalculator? Hit { get; set; }
     public float ZDist { get; set; } = float.PositiveInfinity;
 
     private readonly List<GroupCollisionCalculator> _prims = vals;

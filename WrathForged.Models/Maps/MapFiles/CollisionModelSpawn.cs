@@ -4,11 +4,12 @@ using System.Numerics;
 using WrathForged.Models.ConditionalSerializers;
 using WrathForged.Models.GameMath;
 using WrathForged.Models.Maps.Enum;
+using WrathForged.Models.Maps.Interfaces;
 
 namespace WrathForged.Models.Maps.MapFiles;
 
 [ForgedSerializable]
-public class CollisionModelSpawn
+public class CollisionModelSpawn : ICollisionModelMinimalData
 {
     [SerializableProperty(0)]
     public CollisionModelSpawnFlags Flags { get; set; }

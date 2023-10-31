@@ -102,6 +102,7 @@ public static class DependencyInjection
         _ = builder.Export<BanValidator>().Lifestyle.Singleton();
         _ = builder.Export<CacheBuilder>().Lifestyle.Singleton();
         _ = builder.Export<IpStackGeoLocationService>().Lifestyle.Singleton();
+        _ = builder.Export<ClientMapFileReader>().Lifestyle.Singleton();
         _ = builder.Export<ClientMMapFileReader>().Lifestyle.Singleton();
         _ = builder.Export<ClientVMapFileReader>().Lifestyle.Singleton();
         _ = builder.Export<DtMeshDataReader>().Lifestyle.Singleton();

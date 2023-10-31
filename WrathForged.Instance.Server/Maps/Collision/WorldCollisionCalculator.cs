@@ -14,9 +14,9 @@ namespace WrathForged.Instance.Server.Maps.Collision;
 public class WorldCollisionCalculator(WorldCollisionModel worldCollisionModel) : ICollisionModel
 {
     public uint Flags { get; set; }
-    public required WorldCollisionModel CollisionModel { get; set; } = worldCollisionModel;
+    public WorldCollisionModel CollisionModel { get; set; } = worldCollisionModel;
 
-    public required BIHCalculator GroupTree { get; set; } = new BIHCalculator(worldCollisionModel.GroupTree);
+    public BIHCalculator GroupTree { get; set; } = new BIHCalculator(worldCollisionModel.GroupTree);
 
     public AxisAlignedBox Bounds { get; set; }
 
@@ -24,25 +24,30 @@ public class WorldCollisionCalculator(WorldCollisionModel worldCollisionModel) :
 
     public List<GroupCollisionCalculator> GroupCollisionCalculators { get; } = worldCollisionModel.GroupModels.Select(x => new GroupCollisionCalculator(x)).ToList();
 
-    public bool GetLocationInfo(Vector3 p, Vector3 down, out float dist, GroupLocationCalculator info)
+    public bool GetLocationInfo(Vector3 p, Vector3 down, out float dist, out GroupLocationCalculator info)
     {
         dist = 0f;
 
         if (CollisionModel.GroupModels.Empty())
+        {
+            info = default!;
             return false;
+        }
 
         WModelAreaCallback callback = new(GroupCollisionCalculators, down);
         GroupTree.IntersectPoint(p, callback);
 
         if (callback.Hit != null)
         {
-            info.RootId = CollisionModel.RootWmoid;
-            info.HitModel = callback.Hit;
+            info = new GroupLocationCalculator(callback.Hit)
+            {
+                RootId = CollisionModel.RootWmoid
+            };
             dist = callback.ZDist;
-
             return true;
         }
 
+        info = default!;
         return false;
     }
 

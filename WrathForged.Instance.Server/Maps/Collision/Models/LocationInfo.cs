@@ -6,5 +6,5 @@ public class LocationInfo
     public float GroundZ { get; set; } = float.NegativeInfinity;
     public required CollisionModelInstance HitInstance { get; set; }
     public required GroupCollisionCalculator HitModel { get; set; }
-    public int RootId { get; set; }
+    public uint RootId { get; set; }
 }

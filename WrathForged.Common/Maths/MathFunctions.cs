@@ -194,13 +194,6 @@ public static class MathFunctions
 
     public static ulong MakePair64(uint l, uint h) => l | ((ulong)h << 32);
 
-    public static Vector3 Multiply(this Matrix4x4 elt, Vector3 v)
-    {
-        return new Vector3((elt.M11 * v.GetAt(0)) + (elt.M12 * v.GetAt(1)) + (elt.M13 * v.GetAt(2)),
-                           (elt.M21 * v.GetAt(0)) + (elt.M22 * v.GetAt(1)) + (elt.M23 * v.GetAt(2)),
-                           (elt.M31 * v.GetAt(0)) + (elt.M32 * v.GetAt(1)) + (elt.M33 * v.GetAt(2)));
-    }
-
     public static ushort Pair32_HiPart(uint x) => (ushort)((x >> 16) & 0x0000FFFF);
 
     public static ushort Pair32_LoPart(uint x) => (ushort)(x & 0x0000FFFF);
@@ -294,7 +287,7 @@ public static class MathFunctions
         return M2 / (n - 1);
     }
 
-    public static float wrap(float t, float lo, float hi)
+    public static float Wrap(float t, float lo, float hi)
     {
         if ((t >= lo) && (t < hi))
             return t;
@@ -304,14 +297,14 @@ public static class MathFunctions
         return (float)(t - (interval * Math.Floor((t - lo) / interval)));
     }
 
-    private static double eps(double a, double b)
+    private static double EPS(double a)
     {
         var aa = Math.Abs(a) + 1.0f;
 
         return double.IsPositiveInfinity(aa) ? (double)0.0000005f : 0.0000005f * aa;
     }
 
-    private static double eps(float a, float b)
+    private static double EPS(float a)
     {
         var aa = Math.Abs(a) + 1.0f;
 
@@ -348,21 +341,38 @@ public static class MathFunctions
 
     #region Fuzzy
 
-    public static bool fuzzyEq(double a, double b) => (a == b) || (Math.Abs(a - b) <= eps(a, b));
+    public static bool FuzzyEq(double a, double b) => (a == b) || (Math.Abs(a - b) <= EPS(a));
 
-    public static bool fuzzyEq(float a, float b) => (a == b) || (Math.Abs(a - b) <= eps(a, b));
+    public static bool FuzzyEq(float a, float b) => (a == b) || (Math.Abs(a - b) <= EPS(a));
 
-    public static bool fuzzyGe(float a, float b) => a > b - eps(a, b);
+    public static bool FuzzyGe(float a, float b) => a > b - EPS(a);
 
-    public static bool fuzzyGt(float a, float b) => a > b + eps(a, b);
+    public static bool FuzzyGt(float a, float b) => a > b + EPS(a);
 
-    public static bool fuzzyLe(float a, float b) => a < b + eps(a, b);
+    public static bool FuzzyLe(float a, float b) => a < b + EPS(a);
 
-    public static bool fuzzyLe(double a, double b) => a < b + eps(a, b);
+    public static bool FuzzyLe(double a, double b) => a < b + EPS(a);
 
-    public static bool fuzzyLt(float a, float b) => a < b - eps(a, b);
+    public static bool FuzzyLt(float a, float b) => a < b - EPS(a);
 
-    public static bool fuzzyNe(float a, float b) => !fuzzyEq(a, b);
+    public static bool FuzzyNe(float a, float b) => !FuzzyEq(a, b);
 
     #endregion Fuzzy
+
+    public static Matrix4x4 FromEulerAnglesZYX(float fYAngle, float fPAngle, float fRAngle)
+    {
+        var fCos = MathF.Cos(fYAngle);
+        var fSin = MathF.Sin(fYAngle);
+        Matrix4x4 kZMat = new(fCos, -fSin, 0.0f, 0.0f, fSin, fCos, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f);
+
+        fCos = MathF.Cos(fPAngle);
+        fSin = MathF.Sin(fPAngle);
+        Matrix4x4 kYMat = new(fCos, 0.0f, fSin, 0.0f, 0.0f, 1.0f, 0.0f, 0.0f, -fSin, 0.0f, fCos, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f);
+
+        fCos = MathF.Cos(fRAngle);
+        fSin = MathF.Sin(fRAngle);
+        Matrix4x4 kXMat = new(1.0f, 0.0f, 0.0f, 0.0f, 0.0f, fCos, -fSin, 0.0f, 0.0f, fSin, fCos, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f);
+
+        return kZMat * (kYMat * kXMat);
+    }
 }
