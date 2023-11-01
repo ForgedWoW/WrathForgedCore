@@ -11,14 +11,14 @@ namespace WrathForged.Common.Time;
 public class ClientTime(IWoWClientSession clientSession) : IUpdateLoop
 {
     private readonly IWoWClientSession _clientSession = clientSession;
-    private uint _timeSyncTimer;
+    private double _timeSyncTimer;
     private uint _nextTimeSyncCounter;
-    private readonly ConcurrentDictionary<uint, uint> _pendingTimeSyncRequests = new();
-    private readonly CircularBuffer<(long clockDelta, uint roundTripTime)> _timeSyncClockDeltaQueue = new(6);
+    private readonly ConcurrentDictionary<uint, double> _pendingTimeSyncRequests = new();
+    private readonly CircularBuffer<(double clockDelta, double roundTripTime)> _timeSyncClockDeltaQueue = new(6);
 
     public uint ClientTimestamp { get; private set; }
-    public uint ClientLatency { get; private set; }
-    public long TimeSyncClockDelta { get; private set; }
+    public double ClientLatency { get; private set; }
+    public double TimeSyncClockDelta { get; private set; }
 
     public void ResetTimeSync()
     {
@@ -43,7 +43,7 @@ public class ClientTime(IWoWClientSession clientSession) : IUpdateLoop
         {
             var roundTripTime = TimeUtil.GetMillisecondsSinceStartup() - timeSyncRequestTime;
             ClientLatency = roundTripTime / 2;
-            var clockDelta = (long)timeSyncRequestTime + ClientLatency - ClientTimestamp;
+            var clockDelta = timeSyncRequestTime + ClientLatency - ClientTimestamp;
             _timeSyncClockDeltaQueue.PushBack((clockDelta, roundTripTime));
             ComputeNewClockDelta();
         }
@@ -83,7 +83,7 @@ public class ClientTime(IWoWClientSession clientSession) : IUpdateLoop
         }
     }
 
-    public void UpdateTick(uint diff)
+    public void UpdateTick(double diff)
     {
         if (_timeSyncTimer > 0)
         {

@@ -29,7 +29,7 @@ public class StaticMapTree(uint mapId, VMapTreeData vMapTreeData, ILogger logger
         {
             if (_spawnIndices.TryGetValue(spawn.Id, out var referencedVal))
             {
-                if (!_loadedSpawns.ContainsKey(referencedVal))
+                if (!_loadedSpawns.TryGetValue(referencedVal, out var count))
                 {
                     if (referencedVal >= _nTreeValues)
                     {
@@ -42,7 +42,7 @@ public class StaticMapTree(uint mapId, VMapTreeData vMapTreeData, ILogger logger
                 }
                 else
                 {
-                    ++_loadedSpawns[referencedVal];
+                    _loadedSpawns[referencedVal] = count++;
                 }
             }
         }
@@ -50,27 +50,20 @@ public class StaticMapTree(uint mapId, VMapTreeData vMapTreeData, ILogger logger
         _loadedTiles[PackTileID(x, y)] = worldCollisionModels.Count != 0;
     }
 
-    public bool GetAreaInfo(ref Vector3 pos, out uint flags, out int adtId, out uint rootId, out uint groupId)
+    public bool GetAreaInfo(ref Vector3 pos, out AreaInfo areaInfo)
     {
-        flags = 0;
-        adtId = 0;
-        rootId = 0;
-        groupId = 0;
-
         AreaInfoCallback intersectionCallBack = new(_treeValues);
         _tree.IntersectPoint(pos, intersectionCallBack);
 
         if (intersectionCallBack.AreaInfo.Result)
         {
-            flags = intersectionCallBack.AreaInfo.Flags;
-            adtId = intersectionCallBack.AreaInfo.AdtId;
-            rootId = intersectionCallBack.AreaInfo.RootId;
-            groupId = intersectionCallBack.AreaInfo.GroupId;
+            areaInfo = intersectionCallBack.AreaInfo;
             pos.Z = intersectionCallBack.AreaInfo.GroundZ;
 
             return true;
         }
 
+        areaInfo = default!;
         return false;
     }
 
@@ -95,7 +88,7 @@ public class StaticMapTree(uint mapId, VMapTreeData vMapTreeData, ILogger logger
         return intersectionCallBack.Result;
     }
 
-    public bool GetObjectHitPos(Vector3 pPos1, Vector3 pPos2, out Vector3 pResultHitPos, float pModifyDist)
+    public bool TryGetObjectHitPos(Vector3 pPos1, Vector3 pPos2, float pModifyDist, out Vector3 pResultHitPos)
     {
         bool result;
         var maxDist = (pPos2 - pPos1).Length();

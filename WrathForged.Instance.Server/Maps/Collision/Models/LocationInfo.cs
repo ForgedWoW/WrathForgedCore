@@ -4,7 +4,7 @@ namespace WrathForged.Instance.Server.Maps.Collision.Models;
 public class LocationInfo
 {
     public float GroundZ { get; set; } = float.NegativeInfinity;
-    public required CollisionModelInstance HitInstance { get; set; }
-    public required GroupCollisionCalculator HitModel { get; set; }
+    public CollisionModelInstance? HitInstance { get; set; }
+    public GroupCollisionCalculator? HitModel { get; set; }
     public uint RootId { get; set; }
 }

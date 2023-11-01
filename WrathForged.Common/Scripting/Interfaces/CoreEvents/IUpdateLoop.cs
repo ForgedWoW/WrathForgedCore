@@ -14,5 +14,5 @@ namespace WrathForged.Common.Scripting.Interfaces.CoreEvents;
 /// </summary>
 public interface IUpdateLoop
 {
-    void UpdateTick(uint diff);
+    void UpdateTick(double diff);
 }

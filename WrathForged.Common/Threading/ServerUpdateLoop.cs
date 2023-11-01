@@ -18,7 +18,7 @@ public class ServerUpdateLoop(IConfiguration configuration, ProgramExitNotifier 
     private bool _started;
     private readonly uint _minTickTime = configuration.GetDefaultValue("ServerUpdateLoop:MinTickTimeMilliseconds", 1u);
     private readonly int _maxStuckTime = configuration.GetDefaultValue("ServerUpdateLoop:MaxCoreStuckTimeSeconds", 60);
-    private uint _lastTickTime = 0;
+    private double _lastTickTime = 0;
     private DateTime _lastTickDateTime = DateTime.UtcNow;
     private Task? _updateLoop;
     private readonly ConcurrentQueue<(IUpdateLoop loop, int priority)> _registerQueue = new();
