@@ -37,7 +37,7 @@ public enum SerializationFlags
     SendFixedSize = 1 << 4,
 
     /// <summary>
-    ///     For use on byte[] only, will read the rest of the packet into the array.
+    ///     Set the size of the collection to the rest of the packet.
     /// </summary>
     ReadRestOfPacket = 1 << 5,
 

@@ -24,11 +24,12 @@ public sealed class PacketRouteAttribute : Attribute
         Id = new PacketId(id, scope);
     }
 
-    public PacketRouteAttribute(PacketScope scope, RealmServerOpCode id, bool requiresAuthentication = true)
+    public PacketRouteAttribute(PacketScope scope, RealmServerOpCode id, bool requiresAuthentication = true, params uint[] requiredRoles)
     {
         Scope = scope;
         Id = new PacketId(id, scope);
         RequireAuthentication = requiresAuthentication;
+        RequiredRoles = requiredRoles;
     }
 
     public PacketRouteAttribute(PacketScope scope, InstanceServerOpCode id)
@@ -46,6 +47,8 @@ public sealed class PacketRouteAttribute : Attribute
     public PacketScope Scope { get; }
     public PacketId Id { get; }
     public bool RequireAuthentication { get; set; }
+    public uint[] RequiredRoles { get; set; } = [];
+    public int RequiredSecurityLevel { get; set; }
 
     /// <summary>
     /// If true, the <see cref="PacketId"/> and <see cref="PacketBuffer"/> will be passed in place of the deserialized packet model.

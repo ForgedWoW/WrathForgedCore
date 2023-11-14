@@ -12,7 +12,7 @@ namespace WrathForged.Models.GameMath;
 ///     An axis-aligned box is a box whose faces coincide with the standard basis axes.
 /// </remarks>
 [ForgedSerializable]
-public struct AxisAlignedBox : ISerializable, ICloneable
+public class AxisAlignedBox : ISerializable, ICloneable
 {
     #region Private Fields
 
@@ -22,6 +22,12 @@ public struct AxisAlignedBox : ISerializable, ICloneable
     #endregion Private Fields
 
     #region Constructors
+
+    public AxisAlignedBox()
+    {
+        _lo = Vector3.Zero;
+        _hi = Vector3.Zero;
+    }
 
     /// <summary>
     ///     Initializes a new instance of the <see cref="AxisAlignedBox" /> class using given minimum and maximum points.
@@ -54,7 +60,7 @@ public struct AxisAlignedBox : ISerializable, ICloneable
     [SerializableProperty(0)]
     public Vector3 Hi
     {
-        readonly get => _hi;
+        get => _hi;
         set => _hi = value;
     }
 
@@ -64,7 +70,7 @@ public struct AxisAlignedBox : ISerializable, ICloneable
     [SerializableProperty(1)]
     public Vector3 Lo
     {
-        readonly get => _lo;
+        get => _lo;
         set => _lo = value;
     }
 
@@ -78,7 +84,7 @@ public struct AxisAlignedBox : ISerializable, ICloneable
     /// <param name="info"> The <see cref="SerializationInfo" /> to populate with data. </param>
     /// <param name="context"> The destination (see <see cref="StreamingContext" />) for this serialization. </param>
     //[SecurityPermissionAttribute(SecurityAction.Demand, SerializationFormatter = true)]
-    public readonly void GetObjectData(SerializationInfo info, StreamingContext context)
+    public void GetObjectData(SerializationInfo info, StreamingContext context)
     {
         info.AddValue("Max", _hi, typeof(Vector3));
         info.AddValue("Min", _lo, typeof(Vector3));
@@ -92,13 +98,13 @@ public struct AxisAlignedBox : ISerializable, ICloneable
     ///     Creates an exact copy of this <see cref="AxisAlignedBox" /> object.
     /// </summary>
     /// <returns> The <see cref="AxisAlignedBox" /> object this method creates, cast as an object. </returns>
-    readonly object ICloneable.Clone() => new AxisAlignedBox(this);
+    object ICloneable.Clone() => new AxisAlignedBox(this);
 
     /// <summary>
     ///     Creates an exact copy of this <see cref="AxisAlignedBox" /> object.
     /// </summary>
     /// <returns> The <see cref="AxisAlignedBox" /> object this method creates. </returns>
-    public readonly AxisAlignedBox Clone() => new(this);
+    public AxisAlignedBox Clone() => new(this);
 
     #endregion ICloneable Members
 
@@ -108,7 +114,7 @@ public struct AxisAlignedBox : ISerializable, ICloneable
     ///     Computes the box vertices.
     /// </summary>
     /// <returns> An array of <see cref="Vector3" /> containing the box vertices. </returns>
-    public readonly Vector3[] ComputeVertices()
+    public Vector3[] ComputeVertices()
     {
         var vertices = new Vector3[8];
 
@@ -135,19 +141,19 @@ public struct AxisAlignedBox : ISerializable, ICloneable
     /// </summary>
     /// <param name="obj"> An object to compare to this instance. </param>
     /// <returns> True if <paramref name="obj" /> is a <see cref="Vector3" /> and has the same values as this instance; otherwise, False. </returns>
-    public override readonly bool Equals(object? obj) => obj is AxisAlignedBox box && (_lo == box.Lo) && (_hi == box.Hi);
+    public override bool Equals(object? obj) => obj is AxisAlignedBox box && (_lo == box.Lo) && (_hi == box.Hi);
 
     /// <summary>
     ///     Returns the hashcode for this instance.
     /// </summary>
     /// <returns> A 32-bit signed integer hash code. </returns>
-    public override readonly int GetHashCode() => _lo.GetHashCode() ^ _hi.GetHashCode();
+    public override int GetHashCode() => _lo.GetHashCode() ^ _hi.GetHashCode();
 
     /// <summary>
     ///     Returns a string representation of this object.
     /// </summary>
     /// <returns> A string representation of this object. </returns>
-    public override readonly string ToString() => $"AxisAlignedBox(Min={_lo}, Max={_hi})";
+    public override string ToString() => $"AxisAlignedBox(Min={_lo}, Max={_hi})";
 
     #endregion Overrides
 
@@ -190,7 +196,7 @@ public struct AxisAlignedBox : ISerializable, ICloneable
 
     public static AxisAlignedBox Zero() => new(Vector3.Zero, Vector3.Zero);
 
-    public readonly bool Contains(Vector3 point)
+    public bool Contains(Vector3 point)
     {
         return
             (point.X >= _lo.X) &&
@@ -201,7 +207,7 @@ public struct AxisAlignedBox : ISerializable, ICloneable
             (point.Z <= _hi.Z);
     }
 
-    public readonly Vector3 Corner(int index)
+    public Vector3 Corner(int index)
     {
         // default constructor inits all components to 0
         Vector3 v = new();

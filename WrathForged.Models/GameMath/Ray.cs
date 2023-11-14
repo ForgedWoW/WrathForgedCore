@@ -14,7 +14,7 @@ namespace WrathForged.Models.GameMath;
 /// </remarks>
 [ForgedSerializable]
 [TypeConverter(typeof(RayConverter))]
-public partial struct Ray : ICloneable
+public partial class Ray : ICloneable
 {
     #region Private Fields
 
@@ -26,6 +26,12 @@ public partial struct Ray : ICloneable
     #endregion Private Fields
 
     #region Constructors
+
+    public Ray()
+    {
+        _origin = Vector3.Zero;
+        _direction = Vector3.Zero;
+    }
 
     /// <summary>
     ///     Initializes a new instance of the <see cref="Ray" /> class using given origin and direction vectors.
@@ -58,7 +64,7 @@ public partial struct Ray : ICloneable
     [SerializableProperty(0)]
     public Vector3 Direction
     {
-        readonly get => _direction;
+        get => _direction;
         set => _direction = value;
     }
 
@@ -68,7 +74,7 @@ public partial struct Ray : ICloneable
     [SerializableProperty(1)]
     public Vector3 Origin
     {
-        readonly get => _origin;
+        get => _origin;
         set => _origin = value;
     }
 
@@ -80,13 +86,13 @@ public partial struct Ray : ICloneable
     ///     Creates an exact copy of this <see cref="Ray" /> object.
     /// </summary>
     /// <returns> The <see cref="Ray" /> object this method creates, cast as an object. </returns>
-    readonly object ICloneable.Clone() => new Ray(this);
+    object ICloneable.Clone() => new Ray(this);
 
     /// <summary>
     ///     Creates an exact copy of this <see cref="Ray" /> object.
     /// </summary>
     /// <returns> The <see cref="Ray" /> object this method creates. </returns>
-    public readonly Ray Clone() => new(this);
+    public Ray Clone() => new(this);
 
     #endregion ICloneable Members
 
@@ -116,7 +122,7 @@ public partial struct Ray : ICloneable
     /// </summary>
     /// <param name="t"> </param>
     /// <returns> </returns>
-    public readonly Vector3 GetPointOnRay(float t) => Origin + (Direction * t);
+    public Vector3 GetPointOnRay(float t) => Origin + (Direction * t);
 
     #endregion Public Methods
 
@@ -128,19 +134,19 @@ public partial struct Ray : ICloneable
     /// </summary>
     /// <param name="obj"> An object to compare to this instance. </param>
     /// <returns> <see langword="true" /> if <paramref name="obj" /> is a <see cref="Vector3" /> and has the same values as this instance; otherwise, <see langword="false" />. </returns>
-    public override readonly bool Equals(object? obj) => obj is Ray r && (_origin == r.Origin) && (_direction == r.Direction);
+    public override bool Equals(object? obj) => obj is Ray r && (_origin == r.Origin) && (_direction == r.Direction);
 
     /// <summary>
     ///     Get the hashcode for this instance.
     /// </summary>
     /// <returns> Returns the hash code for this vector instance. </returns>
-    public override readonly int GetHashCode() => _origin.GetHashCode() ^ _direction.GetHashCode();
+    public override int GetHashCode() => _origin.GetHashCode() ^ _direction.GetHashCode();
 
     /// <summary>
     ///     Returns a string representation of this object.
     /// </summary>
     /// <returns> A string representation of this object. </returns>
-    public override readonly string ToString() => $"({_origin}, {_direction})";
+    public override string ToString() => $"({_origin}, {_direction})";
 
     #endregion Overrides
 
@@ -164,7 +170,7 @@ public partial struct Ray : ICloneable
 
     #endregion Comparison Operators
 
-    public readonly Vector3 Intersection(Plane plane)
+    public Vector3 Intersection(Plane plane)
     {
         var rate = Vector3.Dot(Direction, plane.Normal);
 
@@ -180,7 +186,7 @@ public partial struct Ray : ICloneable
         }
     }
 
-    public readonly float IntersectionTime(AxisAlignedBox box)
+    public float IntersectionTime(AxisAlignedBox box)
     {
         var dummy = Vector3.Zero;
         var time = CollisionDetection.CollisionTimeForMovingPointFixedAABox(_origin, _direction, box, ref dummy, out var inside);
@@ -188,7 +194,7 @@ public partial struct Ray : ICloneable
         return float.IsInfinity(time) && inside ? 0.0f : time;
     }
 
-    public readonly Vector3 InvDirection() => Vector3.Divide(Vector3.One, Direction);
+    public Vector3 InvDirection() => Vector3.Divide(Vector3.One, Direction);
     [GeneratedRegex(@"\((?<origin>\([^\)]*\)), (?<direction>\([^\)]*\))\)", RegexOptions.None)]
     private static partial Regex RayStringFormatRegex();
 }

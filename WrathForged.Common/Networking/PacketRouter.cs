@@ -1,5 +1,6 @@
 ﻿// Copyright (c) Forged WoW LLC <https://github.com/ForgedWoW/WrathForgedCore>
 // Licensed under GPL-3.0 license. See <https://github.com/ForgedWoW/WrathForgedCore/blob/master/LICENSE> for full information.
+using System.Linq.Expressions;
 using System.Reflection;
 using WrathForged.Models.Networking;
 using WrathForged.Serialization.Models;
@@ -16,7 +17,7 @@ public class PacketRouter
         NoPacket
     }
 
-    private readonly Dictionary<PacketScope, Dictionary<uint, List<(MethodInfo, PacketRouteAttribute, IPacketService)>>> _packetHandlerCache = [];
+    private readonly Dictionary<PacketScope, Dictionary<uint, List<(Delegate, PacketRouteAttribute, IPacketService)>>> _packetHandlerCache = [];
     private readonly Dictionary<PacketScope, Dictionary<uint, RouteType>> _hasPacketArg = [];
 
     public PacketRouter(ClassFactory classFactory)
@@ -38,7 +39,8 @@ public class PacketRouter
                                                                     : parameters[1].ParameterType == typeof(PacketBuffer)
                                                                     ? RouteType.DirectPacket
                                                                     : RouteType.DeserializedPacket);
-                _packetHandlerCache.AddToList(attribute.Scope, attribute.Id, (method, attribute, handler));
+
+                _packetHandlerCache.AddToList(attribute.Scope, attribute.Id, (CreateDelegate(method, parameters, handler), attribute, handler));
             }
         }
     }
@@ -62,13 +64,11 @@ public class PacketRouter
             return false;
         }
 
-        foreach (var method in methodList)
+        foreach (var (handlerDelegate, attribute, _) in methodList)
         {
-            if (!method.Item2.DirectReader)
+            if (!attribute.DirectReader)
             {
-                _ = method.Item1.IsStatic
-                    ? method.Item1.Invoke(null, new object[] { socket })
-                    : method.Item1.Invoke(method.Item3, new object[] { socket });
+                _ = handlerDelegate.DynamicInvoke(socket);
                 return true;
             }
         }
@@ -88,13 +88,11 @@ public class PacketRouter
             return false;
         }
 
-        foreach (var method in methodList)
+        foreach (var (handlerDelegate, attribute, _) in methodList)
         {
-            if (method.Item2.DirectReader)
+            if (attribute.DirectReader)
             {
-                _ = method.Item1.IsStatic
-                    ? method.Item1.Invoke(null, new object[] { socket, packetBuffer })
-                    : method.Item1.Invoke(method.Item3, new object[] { socket, packetBuffer });
+                _ = handlerDelegate.DynamicInvoke(socket, packetBuffer);
                 return true;
             }
         }
@@ -119,11 +117,9 @@ public class PacketRouter
             return;
         }
 
-        foreach (var method in methodList)
+        foreach (var (handlerDelegate, _, _) in methodList)
         {
-            _ = method.Item1.IsStatic
-                ? method.Item1.Invoke(null, new object[] { socket, packet })
-                : method.Item1.Invoke(method.Item3, new object[] { socket, packet });
+            _ = handlerDelegate.DynamicInvoke(socket, packet);
         }
     }
 
@@ -144,14 +140,46 @@ public class PacketRouter
             return;
         }
 
-        foreach (var method in methodList)
+        foreach (var (handlerDelegate, attribute, service) in methodList)
         {
-            if (method.Item2.RequireAuthentication && session.Security.AuthenticationState != WoWClientSession.AuthState.LoggedIn)
+            if (attribute.RequireAuthentication && session.Security.IsAuthenticated)
                 continue;
 
-            _ = method.Item1.IsStatic
-                ? method.Item1.Invoke(null, new object[] { session, packet })
-                : method.Item1.Invoke(method.Item3, new object[] { session, packet });
+            if (attribute.RequiredRoles.Length > 0 && attribute.RequiredRoles.Any(r => !session.Security.HasPermission(r)))
+                continue;
+
+            if (attribute.RequiredSecurityLevel > 0 && !session.Security.IsAtLeastSecurityLevel(attribute.RequiredSecurityLevel))
+                continue;
+
+            _ = handlerDelegate.DynamicInvoke(session, packet);
         }
+    }
+
+    private Delegate CreateDelegate(MethodInfo method, ParameterInfo[] parameters, object target)
+    {
+        var paramExpressions = new ParameterExpression[parameters.Length];
+
+        // Create an expression for each parameter
+        for (var i = 0; i < parameters.Length; i++)
+        {
+            paramExpressions[i] = Expression.Parameter(parameters[i].ParameterType, parameters[i].Name);
+        }
+
+        // Create a method call expression
+        Expression callExpr;
+        if (method.IsStatic)
+        {
+            // For static methods, don't use an instance expression
+            callExpr = Expression.Call(null, method, paramExpressions);
+        }
+        else
+        {
+            // For instance methods, use a constant expression for the target instance
+            var instanceExpr = Expression.Constant(target);
+            callExpr = Expression.Call(instanceExpr, method, paramExpressions);
+        }
+
+        // Compile the expression into a delegate
+        return Expression.Lambda(callExpr, paramExpressions).Compile();
     }
 }

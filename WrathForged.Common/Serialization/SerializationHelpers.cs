@@ -13,9 +13,7 @@ public static class SerializationHelpers
     {
         var size = meta.SerializationMetadata.FixedCollectionSize;
 
-        if (meta.SerializationMetadata.Flags.HasFlag(SerializationFlags.ReadRestOfPacket) &&
-            meta.ReflectedProperty.PropertyType.IsArray &&
-            meta.ReflectedProperty.PropertyType.GetElementType() == typeof(byte))
+        if (meta.SerializationMetadata.Flags.HasFlag(SerializationFlags.ReadRestOfPacket))
             size = (int)packetBuffer.UnreadData - 1;
 
         if (size == 0 && meta.SerializationMetadata.CollectionSizeIndex != 0)

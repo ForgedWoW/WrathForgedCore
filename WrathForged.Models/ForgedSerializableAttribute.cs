@@ -50,6 +50,4 @@ public class ForgedSerializableAttribute : Attribute
     public PacketScope Scope { get; set; }
 
     public uint[] PacketIDs { get; set; }
-
-    public bool RequiresAuthentication { get; set; }
 }
