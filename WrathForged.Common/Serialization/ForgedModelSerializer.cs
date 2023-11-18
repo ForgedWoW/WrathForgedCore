@@ -547,7 +547,13 @@ public class ForgedModelSerializer
         if (prop.ReflectedProperty.PropertyType == typeof(byte[]))
         {
             if (val is byte[] bytes)
+            {
+                if (prop.SerializationMetadata.FixedCollectionSize > bytes.Length)
+                    Array.Resize(ref bytes, prop.SerializationMetadata.FixedCollectionSize);
+
                 writer.Write(bytes);
+            }
+
             return;
         }
 
@@ -556,6 +562,7 @@ public class ForgedModelSerializer
                             : prop.ReflectedProperty.PropertyType.GetElementType();
 
         var genericTypeDefinition = prop.ReflectedProperty.PropertyType.IsGenericType ? prop.ReflectedProperty.PropertyType.GetGenericTypeDefinition() : null;
+        var hasSerializer = TryGetSerializerFromType(prop, out var forgedTypeSerialization);
 
         if (val is IEnumerable collection)
         {
@@ -569,14 +576,17 @@ public class ForgedModelSerializer
 
                 foreach (var item in collection.Cast<dynamic>())
                 {
+                    if (prop.SerializationMetadata.FixedCollectionSize != 0 && i >= prop.SerializationMetadata.FixedCollectionSize)
+                        break;
+
                     if (keyIsIndex)
-                        SerializeProperty(writer, prop, otherMeta, obj, item.Key);
+                        SerializeProperty(writer, prop, otherMeta, obj, item.Key, hasSerializer, forgedTypeSerialization);
                     else if (valIsIndex)
-                        SerializeProperty(writer, prop, otherMeta, obj, item.Value);
+                        SerializeProperty(writer, prop, otherMeta, obj, item.Value, hasSerializer, forgedTypeSerialization);
                     else
                     {
-                        SerializeProperty(writer, prop, otherMeta, obj, item.Key);
-                        SerializeProperty(writer, prop, otherMeta, obj, item.Value);
+                        SerializeProperty(writer, prop, otherMeta, obj, item.Key, hasSerializer, forgedTypeSerialization);
+                        SerializeProperty(writer, prop, otherMeta, obj, item.Value, hasSerializer, forgedTypeSerialization);
                     }
 
                     i++;
@@ -585,7 +595,10 @@ public class ForgedModelSerializer
             else
                 foreach (var item in collection)
                 {
-                    SerializeProperty(writer, prop, otherMeta, obj, item);
+                    if (prop.SerializationMetadata.FixedCollectionSize != 0 && i >= prop.SerializationMetadata.FixedCollectionSize)
+                        break;
+
+                    SerializeProperty(writer, prop, otherMeta, obj, item, hasSerializer, forgedTypeSerialization);
                     i++;
                 }
         }
@@ -593,7 +606,7 @@ public class ForgedModelSerializer
         if (prop.SerializationMetadata.FixedCollectionSize > i)
         {
             for (; i < prop.SerializationMetadata.FixedCollectionSize; i++)
-                SerializeProperty(writer, prop, otherMeta, obj, elementType?.GetDefault());
+                SerializeProperty(writer, prop, otherMeta, obj, elementType?.GetDefault(), hasSerializer, forgedTypeSerialization);
         }
 
         if (prop.SerializationMetadata.Flags.HasFlag(SerializationFlags.ZLibCompressedCollection))
@@ -627,6 +640,16 @@ public class ForgedModelSerializer
     private void SerializeProperty(PrimitiveWriter writer, PropertyMeta prop, ModelInfo otherMeta, object obj, object? val)
     {
         if (TryGetSerializerFromType(prop, out var forgedTypeSerialization))
+        {
+            forgedTypeSerialization?.Serialize(writer, prop, otherMeta.Properties, obj, val);
+        }
+        else if (val != null && _deserializationMethodsCacheByType.ContainsKey(val.GetType())) // its an object, so serialize it.
+            Serialize(writer, val);
+    }
+
+    private void SerializeProperty(PrimitiveWriter writer, PropertyMeta prop, ModelInfo otherMeta, object obj, object? val, bool hasSerializer, IForgedTypeSerialization? forgedTypeSerialization)
+    {
+        if (hasSerializer)
         {
             forgedTypeSerialization?.Serialize(writer, prop, otherMeta.Properties, obj, val);
         }

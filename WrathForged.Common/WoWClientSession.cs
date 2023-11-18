@@ -1,5 +1,6 @@
 ﻿// Copyright (c) Forged WoW LLC <https://github.com/ForgedWoW/WrathForgedCore>
 // Licensed under GPL-3.0 license. See <https://github.com/ForgedWoW/WrathForgedCore/blob/master/LICENSE> for full information.
+using WrathForged.Common.Localization;
 using WrathForged.Common.Networking;
 using WrathForged.Common.Scripting;
 using WrathForged.Common.Threading;
@@ -17,6 +18,7 @@ public class WoWClientSession : IWoWClientSession
         Security = classFactory.Container.LocateWithPositionalParams<SessionSecurity>(this);
         Network = classFactory.Container.LocateWithPositionalParams<SessionNetwork>(clientSocket, packetBuffer, (MemoryStream)packetBuffer.Reader.BaseStream);
         ClientTime = classFactory.Container.LocateWithPositionalParams<ClientTime>(this);
+        Localizer = classFactory.Container.LocateWithPositionalParams<ClientLocalizer>(Security.Account.Locale);
         _serverUpdateLoop = classFactory.Locate<ServerUpdateLoop>();
         _serverUpdateLoop.RegisterUpdateLoop(ClientTime, UpdateLoopPriorities.CLIENT_TIME);
 
@@ -38,6 +40,9 @@ public class WoWClientSession : IWoWClientSession
 
     // <inheritdoc />
     public ClientTime ClientTime { get; }
+
+    // <inheritdoc />
+    public ClientLocalizer Localizer { get; }
 
     protected virtual void Dispose(bool disposing)
     {

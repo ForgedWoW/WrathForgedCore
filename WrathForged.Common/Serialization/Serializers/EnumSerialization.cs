@@ -42,8 +42,14 @@ public class EnumSerialization : IForgedTypeSerialization
         };
 
         return propertyMeta.ReflectedProperty.PropertyType.IsEnum
-            ? Enum.ToObject(propertyMeta.ReflectedProperty.PropertyType, value)
-            : Convert.ChangeType(value, propertyMeta.ReflectedProperty.PropertyType);
+            ?
+            Enum.IsDefined(propertyMeta.ReflectedProperty.PropertyType, value)
+            ?
+            Enum.ToObject(propertyMeta.ReflectedProperty.PropertyType, value) // if its defined, use it
+            :
+            Activator.CreateInstance(propertyMeta.ReflectedProperty.PropertyType) // if its not defined, use the default value
+            :
+            Convert.ChangeType(value, propertyMeta.ReflectedProperty.PropertyType);
     }
 
     public void Serialize(PrimitiveWriter writer, PropertyMeta propertyMeta, List<PropertyMeta> otherMeta, object obj, object? val)

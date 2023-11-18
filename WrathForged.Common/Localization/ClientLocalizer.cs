@@ -11,7 +11,7 @@ public class ClientLocalizer
 
     public int CurrentLocale { get; }
 
-    public ClientLocalizer(WorldDatabase worldDatabase, int locale)
+    public ClientLocalizer(int locale, WorldDatabase worldDatabase)
     {
         _worldDatabase = worldDatabase;
         CurrentLocale = locale;

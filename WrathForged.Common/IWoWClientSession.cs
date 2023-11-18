@@ -1,5 +1,6 @@
 ﻿// Copyright (c) Forged WoW LLC <https://github.com/ForgedWoW/WrathForgedCore>
 // Licensed under GPL-3.0 license. See <https://github.com/ForgedWoW/WrathForgedCore/blob/master/LICENSE> for full information.
+using WrathForged.Common.Localization;
 using WrathForged.Common.Time;
 
 namespace WrathForged.Common;
@@ -27,6 +28,11 @@ public interface IWoWClientSession : IDisposable
     ///    <br>* <see cref="SessionSecurity.IsAuthenticated"/>: To check if the account has been fully authenticated.</br>
     /// </summary>
     SessionSecurity Security { get; }
+
+    /// <summary>
+    ///     Used for localization of strings using the client's locale and the TrinityStrings table.
+    /// </summary>
+    ClientLocalizer Localizer { get; }
 
     public T As<T>() where T : IWoWClientSession => (T)this;
 }

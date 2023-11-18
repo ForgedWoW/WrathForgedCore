@@ -10,6 +10,7 @@ using Serilog;
 using SSDI;
 using SSDI.Registration;
 using WrathForged.Common.Caching;
+using WrathForged.Common.Chat;
 using WrathForged.Common.CommandLine;
 using WrathForged.Common.Cryptography;
 using WrathForged.Common.DBC;
@@ -106,6 +107,7 @@ public static class DependencyInjection
         _ = builder.Export<ClientMMapFileReader>().Lifestyle.Singleton();
         _ = builder.Export<ClientVMapFileReader>().Lifestyle.Singleton();
         _ = builder.Export<DtMeshDataReader>().Lifestyle.Singleton();
+        _ = builder.Export<ChatNotifications>().Lifestyle.Singleton();
 
         // configure OpenTelemetry
         if (configuration.GetDefaultValue("Telemetry:Enabled", false))

@@ -31,4 +31,8 @@
 		<ProjectReference Include="..\WrathForged.Database\WrathForged.Database.csproj" />
 	</ItemGroup>
 
+	<ItemGroup>
+	  <Folder Include="Entities\Players\" />
+	</ItemGroup>
+
 </Project>
