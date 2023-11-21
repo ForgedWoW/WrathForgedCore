@@ -155,7 +155,7 @@ public class PacketRouter
         }
     }
 
-    private Delegate CreateDelegate(MethodInfo method, ParameterInfo[] parameters, object target)
+    private static Delegate CreateDelegate(MethodInfo method, ParameterInfo[] parameters, object target)
     {
         var paramExpressions = new ParameterExpression[parameters.Length];
 
