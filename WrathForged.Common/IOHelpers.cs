@@ -62,7 +62,7 @@ public static class IOHelpers
         if (path.Length == 0)
             path = [".\\Scripts"];
 
-        HashSet<Assembly> assemblies = [];
+        var assemblies = new HashSet<Assembly>(AppDomain.CurrentDomain.GetAssemblies());
 
         foreach (var pathPart in path)
         {
