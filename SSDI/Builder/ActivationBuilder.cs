@@ -8,10 +8,10 @@ namespace SSDI.Builder;
 public class ActivationBuilder
 {
     private static readonly Type _loggerType = typeof(ILogger);
-    private readonly Dictionary<Type, List<CachedConstructor[]>> _constructors = new();
-    private readonly Dictionary<Type, LifestyleType> _lifetimes = new();
-    private readonly Dictionary<Type, HashSet<object>> _singletonInstances = new();
-    private readonly Dictionary<Type, HashSet<Type>> _alias = new();
+    private readonly Dictionary<Type, List<CachedConstructor[]>> _constructors = [];
+    private readonly Dictionary<Type, LifestyleType> _lifetimes = [];
+    private readonly Dictionary<Type, HashSet<object>> _singletonInstances = [];
+    private readonly Dictionary<Type, HashSet<Type>> _alias = [];
 
     internal void Add(ExportRegistration reg)
     {
@@ -23,7 +23,7 @@ public class ActivationBuilder
             {
                 if (!_alias.TryGetValue(aliasType, out var aliasSet))
                 {
-                    aliasSet = new HashSet<Type>();
+                    aliasSet = [];
                     _alias[aliasType] = aliasSet;
                 }
 
@@ -36,7 +36,7 @@ public class ActivationBuilder
             {
                 if (!_singletonInstances.TryGetValue(exportRegistration.ExportedType, out var singletons))
                 {
-                    singletons = new HashSet<object>();
+                    singletons = [];
                     _singletonInstances[exportRegistration.ExportedType] = singletons;
                 }
 
@@ -47,7 +47,7 @@ public class ActivationBuilder
             // Order constructors by parameter count, descending so we get the lowest parameter count constructor first
             if (!_constructors.TryGetValue(exportRegistration.ExportedType, out var constructors))
             {
-                constructors = new List<CachedConstructor[]>();
+                constructors = [];
                 _constructors[exportRegistration.ExportedType] = constructors;
             }
 
@@ -55,9 +55,13 @@ public class ActivationBuilder
         }
     }
 
+    public IEnumerable<T> LocateAll<T>() => (IEnumerable<T>)Locate(typeof(IEnumerable<T>));
+
     public T Locate<T>() => (T)Locate(typeof(T));
 
     public object Locate(Type type, Type? owner = null) => Locate(type, owner, Array.Empty<IDIParameter>());
+
+    public object Locate(Type type, Type? owner = null, params object[] parameters) => Locate(type, owner, parameters.Select((p, i) => new PositionalParameter(i, p)).ToArray());
 
     public T LocateWithPositionalParams<T>(params object[] parameters) => (T)Locate(typeof(T), null, parameters.Select((p, i) => new PositionalParameter(i, p)).ToArray());
 
@@ -173,7 +177,7 @@ public class ActivationBuilder
             {
                 if (!_singletonInstances.TryGetValue(type, out var singletons))
                 {
-                    singletons = new HashSet<object>();
+                    singletons = [];
                     _singletonInstances[type] = singletons;
                 }
 
@@ -244,7 +248,7 @@ public class ActivationBuilder
         {
             if (!_singletonInstances.TryGetValue(type, out var singletons))
             {
-                singletons = new HashSet<object>();
+                singletons = [];
                 _singletonInstances[type] = singletons;
             }
 

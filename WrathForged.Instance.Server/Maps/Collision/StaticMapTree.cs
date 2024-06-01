@@ -27,23 +27,23 @@ public class StaticMapTree(uint mapId, VMapTreeData vMapTreeData, ILogger logger
     {
         foreach (var (spawn, model) in worldCollisionModels)
         {
-            if (_spawnIndices.TryGetValue(spawn.Id, out var referencedVal))
-            {
-                if (!_loadedSpawns.TryGetValue(referencedVal, out var count))
-                {
-                    if (referencedVal >= _nTreeValues)
-                    {
-                        _logger.Warning("Invalid spawn index {Index} for map {MapId}", referencedVal, _mapId);
-                        continue;
-                    }
+            if (!_spawnIndices.TryGetValue(spawn.Id, out var referencedVal))
+                continue;
 
-                    _treeValues[referencedVal] = new CollisionModelInstance(spawn, model);
-                    _ = _loadedSpawns.TryAdd(referencedVal, 1);
-                }
-                else
+            if (!_loadedSpawns.TryGetValue(referencedVal, out var count))
+            {
+                if (referencedVal >= _nTreeValues)
                 {
-                    _loadedSpawns[referencedVal] = count++;
+                    _logger.Warning("Invalid spawn index {Index} for map {MapId}", referencedVal, _mapId);
+                    continue;
                 }
+
+                _treeValues[referencedVal] = new CollisionModelInstance(spawn, model);
+                _ = _loadedSpawns.TryAdd(referencedVal, 1);
+            }
+            else
+            {
+                _loadedSpawns[referencedVal] = count++;
             }
         }
 

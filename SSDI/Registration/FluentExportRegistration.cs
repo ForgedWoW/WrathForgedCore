@@ -9,13 +9,13 @@ public class FluentExportRegistration
 
     public LifestyleScope Lifestyle { get; }
 
-    public List<IDIParameter> Parameters { get; } = new();
+    public List<IDIParameter> Parameters { get; } = [];
 
     internal FluentExportRegistration(InternalRegistration registrationBlock)
     {
         RegistrationBlock = registrationBlock;
         Lifestyle = new LifestyleScope(this);
-        Alias = new HashSet<Type>();
+        Alias = [];
     }
 
     public FluentExportRegistration As<TAlias>()

@@ -1,15 +1,9 @@
 ﻿namespace SSDI.Parameters;
 
-public class TypedParameter : IDIParameter
+public class TypedParameter(object value) : IDIParameter
 {
-    public TypedParameter(object value)
-    {
-        Value = value;
-        ValueType = value.GetType();
-    }
-
-    public object Value { get; }
-    public Type ValueType { get; }
+    public object Value { get; } = value;
+    public Type ValueType { get; } = value.GetType();
 
     public bool GetParameterValue(string parameterName, int parameterPosition, Type parameterType) => parameterType == ValueType || ValueType.IsAssignableTo(parameterType);
 }

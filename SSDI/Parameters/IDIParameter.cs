@@ -1,8 +1,7 @@
-﻿namespace SSDI.Parameters
+﻿namespace SSDI.Parameters;
+
+public interface IDIParameter
 {
-    public interface IDIParameter
-    {
-        object Value { get; }
-        bool GetParameterValue(string parameterName, int parameterPosition, Type parameterType);
-    }
+    object Value { get; }
+    bool GetParameterValue(string parameterName, int parameterPosition, Type parameterType);
 }

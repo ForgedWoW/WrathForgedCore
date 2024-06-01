@@ -17,23 +17,22 @@ public static class DateTimeExtensionMethods
     /// <returns>a packed time and date</returns>
     public static uint GetDateTimeToGameTime(this DateTime n)
     {
-        var dayOfWeek = (uint)n.DayOfWeek == 0 ? 6 : ((uint)n.DayOfWeek) - 1;
+        var dayOfWeek = n.DayOfWeek == 0 ? 6 : (int)n.DayOfWeek - 1;
 
-        var gameTime = (uint)n.Minute & 0x3F;
-        gameTime |= ((uint)n.Hour << 6) & 0x7C0;
+        var gameTime = n.Minute & 0x3F;
+        gameTime |= (n.Hour << 6) & 0x7C0;
         gameTime |= (dayOfWeek << 11) & 0x3800;
-        gameTime |= ((uint)(n.Day - 1) << 14) & 0xFC000;
-        gameTime |= ((uint)(n.Month - 1) << 20) & 0xF00000;
-        gameTime |= ((uint)(n.Year - 2000) << 24) & 0x1F000000;
+        gameTime |= ((n.Day - 1) << 14) & 0xFC000;
+        gameTime |= ((n.Month - 1) << 20) & 0xF00000;
+        gameTime |= ((n.Year - 2000) << 24) & 0x1F000000;
 
-        return gameTime;
+        return (uint)gameTime;
     }
 
     public static DateTime GetGameTimeToDateTime(this uint packedDate)
     {
         var minute = (int)(packedDate & 0x3F);
         var hour = (int)((packedDate >> 6) & 0x1F);
-        //DayOfWeek dayOfWeek = (DayOfWeek) ((packedDate >> 11) & 0x3800);
         var day = (int)((packedDate >> 14) & 0x3F);
         var month = (int)((packedDate >> 20) & 0xF);
         var year = (int)((packedDate >> 24) & 0x1F);

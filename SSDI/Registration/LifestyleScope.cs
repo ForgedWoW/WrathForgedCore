@@ -13,12 +13,10 @@ public enum LifestyleType
     Singleton
 }
 
-public class LifestyleScope
+public class LifestyleScope(FluentExportRegistration registrationBlock)
 {
-    private readonly FluentExportRegistration _registrationBlock;
+    private readonly FluentExportRegistration _registrationBlock = registrationBlock;
     private bool _set = false;
-
-    public LifestyleScope(FluentExportRegistration registrationBlock) => _registrationBlock = registrationBlock;
 
     public LifestyleType Lifestyle { get; set; } = LifestyleType.Scoped;
 

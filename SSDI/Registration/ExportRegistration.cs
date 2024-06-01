@@ -2,7 +2,7 @@
 
 public class ExportRegistration
 {
-    internal List<InternalRegistration> Registrations { get; } = new List<InternalRegistration>();
+    internal List<InternalRegistration> Registrations { get; } = [];
 
     public FluentExportRegistration Export<T>() => Export(typeof(T));
     public FluentExportRegistration Export(Type t)
